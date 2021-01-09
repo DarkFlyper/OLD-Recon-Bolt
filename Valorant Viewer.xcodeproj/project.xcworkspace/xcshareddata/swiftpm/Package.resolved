@@ -1,0 +1,43 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "HandyOperators",
+        "repositoryURL": "git@github.com:juliand665/HandyOperators.git",
+        "state": {
+          "branch": "master",
+          "revision": "483aa96950ad3078d092b2ba8d9dda6ea6576244",
+          "version": null
+        }
+      },
+      {
+        "package": "KeychainSwift",
+        "repositoryURL": "https://github.com/evgenyneu/keychain-swift.git",
+        "state": {
+          "branch": null,
+          "revision": "96fb84f45a96630e7583903bd7e08cf095c7a7ef",
+          "version": "19.0.0"
+        }
+      },
+      {
+        "package": "SwiftUIMissingPieces",
+        "repositoryURL": "git@github.com:juliand665/SwifUI-Missing-Pieces.git",
+        "state": {
+          "branch": "main",
+          "revision": "481cbad6a4430bdd84e02c1323b833f7ece588c2",
+          "version": null
+        }
+      },
+      {
+        "package": "UserDefault",
+        "repositoryURL": "git@github.com:juliand665/UserDefault.git",
+        "state": {
+          "branch": "master",
+          "revision": "beebadb0be231090ea31e4ccfa71d687cf422c14",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

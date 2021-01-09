@@ -1,0 +1,685 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B941B65625A5BC8A00F675C1 /* ValorantViewerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B64325A5BC8800F675C1 /* ValorantViewerApp.swift */; };
+		B941B65725A5BC8A00F675C1 /* ValorantViewerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B64325A5BC8800F675C1 /* ValorantViewerApp.swift */; };
+		B941B65825A5BC8A00F675C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B64425A5BC8800F675C1 /* ContentView.swift */; };
+		B941B65925A5BC8A00F675C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B64425A5BC8800F675C1 /* ContentView.swift */; };
+		B941B65A25A5BC8A00F675C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B941B64525A5BC8A00F675C1 /* Assets.xcassets */; };
+		B941B65B25A5BC8A00F675C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B941B64525A5BC8A00F675C1 /* Assets.xcassets */; };
+		B941B66A25A5C36A00F675C1 /* HandyOperators in Frameworks */ = {isa = PBXBuildFile; productRef = B941B66925A5C36A00F675C1 /* HandyOperators */; };
+		B941B66F25A5C3AD00F675C1 /* HandyOperators in Frameworks */ = {isa = PBXBuildFile; productRef = B941B66E25A5C3AD00F675C1 /* HandyOperators */; };
+		B941B67325A5E68E00F675C1 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B67225A5E68E00F675C1 /* Client.swift */; };
+		B941B67425A5E68E00F675C1 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B67225A5E68E00F675C1 /* Client.swift */; };
+		B941B67825A5E6F200F675C1 /* Communication.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B67725A5E6F200F675C1 /* Communication.swift */; };
+		B941B67925A5E6F200F675C1 /* Communication.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B67725A5E6F200F675C1 /* Communication.swift */; };
+		B941B68125A5E79100F675C1 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B68025A5E79100F675C1 /* Authentication.swift */; };
+		B941B68225A5E79100F675C1 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B68025A5E79100F675C1 /* Authentication.swift */; };
+		B941B69325A62C9500F675C1 /* UserInfoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B69225A62C9500F675C1 /* UserInfoRequest.swift */; };
+		B941B69425A62C9500F675C1 /* UserInfoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B69225A62C9500F675C1 /* UserInfoRequest.swift */; };
+		B941B69B25A62FFB00F675C1 /* UserDefault in Frameworks */ = {isa = PBXBuildFile; productRef = B941B69A25A62FFB00F675C1 /* UserDefault */; };
+		B941B69F25A6300100F675C1 /* UserDefault in Frameworks */ = {isa = PBXBuildFile; productRef = B941B69E25A6300100F675C1 /* UserDefault */; };
+		B941B6B725A6490700F675C1 /* Entitlements.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B6B625A6490700F675C1 /* Entitlements.swift */; };
+		B941B6B825A6490700F675C1 /* Entitlements.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B6B625A6490700F675C1 /* Entitlements.swift */; };
+		B941B6BE25A649C700F675C1 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B6BD25A649C700F675C1 /* UserInfo.swift */; };
+		B941B6BF25A649C700F675C1 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B6BD25A649C700F675C1 /* UserInfo.swift */; };
+		B941B6C525A65E3500F675C1 /* CompetitiveUpdatesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B6C425A65E3500F675C1 /* CompetitiveUpdatesRequest.swift */; };
+		B941B6C625A65E3500F675C1 /* CompetitiveUpdatesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B6C425A65E3500F675C1 /* CompetitiveUpdatesRequest.swift */; };
+		B941B6CA25A7670900F675C1 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B6C925A7670900F675C1 /* Match.swift */; };
+		B941B6CB25A7670900F675C1 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B6C925A7670900F675C1 /* Match.swift */; };
+		B941B6D025A79A6400F675C1 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B941B6CF25A79A6400F675C1 /* KeychainSwift */; };
+		B941B6D425A79A6A00F675C1 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B941B6D325A79A6A00F675C1 /* KeychainSwift */; };
+		B941B6D825A7A09000F675C1 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B6D725A7A09000F675C1 /* Credentials.swift */; };
+		B941B6D925A7A09000F675C1 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B6D725A7A09000F675C1 /* Credentials.swift */; };
+		B941B6DE25A7BC3800F675C1 /* View+Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B6DD25A7BC3800F675C1 /* View+Styling.swift */; };
+		B941B6DF25A7BC3800F675C1 /* View+Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B6DD25A7BC3800F675C1 /* View+Styling.swift */; };
+		B941B6E525A7C48300F675C1 /* LoginSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B6E425A7C48300F675C1 /* LoginSheet.swift */; };
+		B941B6E625A7C48300F675C1 /* LoginSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B6E425A7C48300F675C1 /* LoginSheet.swift */; };
+		B941B6EC25A7C83700F675C1 /* example_matches.json in Resources */ = {isa = PBXBuildFile; fileRef = B941B6EB25A7C83700F675C1 /* example_matches.json */; };
+		B941B6ED25A7C83700F675C1 /* example_matches.json in Resources */ = {isa = PBXBuildFile; fileRef = B941B6EB25A7C83700F675C1 /* example_matches.json */; };
+		B97F8BAA25A8CE5E00553A83 /* MatchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97F8BA925A8CE5E00553A83 /* MatchList.swift */; };
+		B97F8BAB25A8CE5E00553A83 /* MatchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97F8BA925A8CE5E00553A83 /* MatchList.swift */; };
+		B9CF2E6225A81B48004A1458 /* PrettyTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CF2E6125A81B48004A1458 /* PrettyTextFieldStyle.swift */; };
+		B9CF2E6325A81B48004A1458 /* PrettyTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CF2E6125A81B48004A1458 /* PrettyTextFieldStyle.swift */; };
+		B9CF2E6C25A81F57004A1458 /* SwiftUIMissingPieces in Frameworks */ = {isa = PBXBuildFile; productRef = B9CF2E6B25A81F57004A1458 /* SwiftUIMissingPieces */; };
+		B9CF2E7025A81F5D004A1458 /* SwiftUIMissingPieces in Frameworks */ = {isa = PBXBuildFile; productRef = B9CF2E6F25A81F5D004A1458 /* SwiftUIMissingPieces */; };
+		B9CF2E7425A8217C004A1458 /* Combine+Ergonomics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CF2E7325A8217C004A1458 /* Combine+Ergonomics.swift */; };
+		B9CF2E7525A8217C004A1458 /* Combine+Ergonomics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CF2E7325A8217C004A1458 /* Combine+Ergonomics.swift */; };
+		B9CF2E7925A89976004A1458 /* MatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CF2E7825A89976004A1458 /* MatchCell.swift */; };
+		B9CF2E7A25A89976004A1458 /* MatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CF2E7825A89976004A1458 /* MatchCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B941B64325A5BC8800F675C1 /* ValorantViewerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValorantViewerApp.swift; sourceTree = "<group>"; };
+		B941B64425A5BC8800F675C1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B941B64525A5BC8A00F675C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B941B64A25A5BC8A00F675C1 /* Valorant Viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Valorant Viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B941B64D25A5BC8A00F675C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B941B65225A5BC8A00F675C1 /* Valorant Viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Valorant Viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B941B65425A5BC8A00F675C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B941B65525A5BC8A00F675C1 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		B941B67225A5E68E00F675C1 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Client.swift; path = Shared/API/Client.swift; sourceTree = SOURCE_ROOT; };
+		B941B67725A5E6F200F675C1 /* Communication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Communication.swift; sourceTree = "<group>"; };
+		B941B68025A5E79100F675C1 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		B941B69225A62C9500F675C1 /* UserInfoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoRequest.swift; sourceTree = "<group>"; };
+		B941B6B625A6490700F675C1 /* Entitlements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entitlements.swift; sourceTree = "<group>"; };
+		B941B6BD25A649C700F675C1 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		B941B6C425A65E3500F675C1 /* CompetitiveUpdatesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitiveUpdatesRequest.swift; sourceTree = "<group>"; };
+		B941B6C925A7670900F675C1 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
+		B941B6D725A7A09000F675C1 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		B941B6DD25A7BC3800F675C1 /* View+Styling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Styling.swift"; sourceTree = "<group>"; };
+		B941B6E425A7C48300F675C1 /* LoginSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSheet.swift; sourceTree = "<group>"; };
+		B941B6EB25A7C83700F675C1 /* example_matches.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_matches.json; sourceTree = "<group>"; };
+		B97F8BA925A8CE5E00553A83 /* MatchList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchList.swift; sourceTree = "<group>"; };
+		B9CF2E6125A81B48004A1458 /* PrettyTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrettyTextFieldStyle.swift; sourceTree = "<group>"; };
+		B9CF2E7325A8217C004A1458 /* Combine+Ergonomics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+Ergonomics.swift"; sourceTree = "<group>"; };
+		B9CF2E7825A89976004A1458 /* MatchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B941B64725A5BC8A00F675C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B941B6D025A79A6400F675C1 /* KeychainSwift in Frameworks */,
+				B941B66A25A5C36A00F675C1 /* HandyOperators in Frameworks */,
+				B9CF2E6C25A81F57004A1458 /* SwiftUIMissingPieces in Frameworks */,
+				B941B69B25A62FFB00F675C1 /* UserDefault in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B941B64F25A5BC8A00F675C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B941B6D425A79A6A00F675C1 /* KeychainSwift in Frameworks */,
+				B941B66F25A5C3AD00F675C1 /* HandyOperators in Frameworks */,
+				B9CF2E7025A81F5D004A1458 /* SwiftUIMissingPieces in Frameworks */,
+				B941B69F25A6300100F675C1 /* UserDefault in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B941B63D25A5BC8800F675C1 = {
+			isa = PBXGroup;
+			children = (
+				B941B64225A5BC8800F675C1 /* Shared */,
+				B941B64C25A5BC8A00F675C1 /* iOS */,
+				B941B65325A5BC8A00F675C1 /* macOS */,
+				B941B64B25A5BC8A00F675C1 /* Products */,
+				B941B66D25A5C3AD00F675C1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B941B64225A5BC8800F675C1 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				B941B6DC25A7BC3200F675C1 /* Helpers */,
+				B941B67E25A5E76E00F675C1 /* API */,
+				B941B64325A5BC8800F675C1 /* ValorantViewerApp.swift */,
+				B941B64425A5BC8800F675C1 /* ContentView.swift */,
+				B9CF2E7825A89976004A1458 /* MatchCell.swift */,
+				B941B6E425A7C48300F675C1 /* LoginSheet.swift */,
+				B941B6D725A7A09000F675C1 /* Credentials.swift */,
+				B97F8BA925A8CE5E00553A83 /* MatchList.swift */,
+				B941B64525A5BC8A00F675C1 /* Assets.xcassets */,
+				B941B6EB25A7C83700F675C1 /* example_matches.json */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		B941B64B25A5BC8A00F675C1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B941B64A25A5BC8A00F675C1 /* Valorant Viewer.app */,
+				B941B65225A5BC8A00F675C1 /* Valorant Viewer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B941B64C25A5BC8A00F675C1 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				B941B64D25A5BC8A00F675C1 /* Info.plist */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		B941B65325A5BC8A00F675C1 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				B941B65425A5BC8A00F675C1 /* Info.plist */,
+				B941B65525A5BC8A00F675C1 /* macOS.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		B941B66D25A5C3AD00F675C1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B941B67E25A5E76E00F675C1 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				B941B67F25A5E78100F675C1 /* Requests */,
+				B941B67725A5E6F200F675C1 /* Communication.swift */,
+				B941B67225A5E68E00F675C1 /* Client.swift */,
+				B941B6BD25A649C700F675C1 /* UserInfo.swift */,
+				B941B6C925A7670900F675C1 /* Match.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		B941B67F25A5E78100F675C1 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				B941B69225A62C9500F675C1 /* UserInfoRequest.swift */,
+				B941B68025A5E79100F675C1 /* Authentication.swift */,
+				B941B6B625A6490700F675C1 /* Entitlements.swift */,
+				B941B6C425A65E3500F675C1 /* CompetitiveUpdatesRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		B941B6DC25A7BC3200F675C1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B941B6DD25A7BC3800F675C1 /* View+Styling.swift */,
+				B9CF2E6125A81B48004A1458 /* PrettyTextFieldStyle.swift */,
+				B9CF2E7325A8217C004A1458 /* Combine+Ergonomics.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B941B64925A5BC8A00F675C1 /* Valorant Viewer (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B941B65E25A5BC8A00F675C1 /* Build configuration list for PBXNativeTarget "Valorant Viewer (iOS)" */;
+			buildPhases = (
+				B941B64625A5BC8A00F675C1 /* Sources */,
+				B941B64725A5BC8A00F675C1 /* Frameworks */,
+				B941B64825A5BC8A00F675C1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Valorant Viewer (iOS)";
+			packageProductDependencies = (
+				B941B66925A5C36A00F675C1 /* HandyOperators */,
+				B941B69A25A62FFB00F675C1 /* UserDefault */,
+				B941B6CF25A79A6400F675C1 /* KeychainSwift */,
+				B9CF2E6B25A81F57004A1458 /* SwiftUIMissingPieces */,
+			);
+			productName = "Valorant Viewer (iOS)";
+			productReference = B941B64A25A5BC8A00F675C1 /* Valorant Viewer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B941B65125A5BC8A00F675C1 /* Valorant Viewer (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B941B66125A5BC8A00F675C1 /* Build configuration list for PBXNativeTarget "Valorant Viewer (macOS)" */;
+			buildPhases = (
+				B941B64E25A5BC8A00F675C1 /* Sources */,
+				B941B64F25A5BC8A00F675C1 /* Frameworks */,
+				B941B65025A5BC8A00F675C1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Valorant Viewer (macOS)";
+			packageProductDependencies = (
+				B941B66E25A5C3AD00F675C1 /* HandyOperators */,
+				B941B69E25A6300100F675C1 /* UserDefault */,
+				B941B6D325A79A6A00F675C1 /* KeychainSwift */,
+				B9CF2E6F25A81F5D004A1458 /* SwiftUIMissingPieces */,
+			);
+			productName = "Valorant Viewer (macOS)";
+			productReference = B941B65225A5BC8A00F675C1 /* Valorant Viewer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B941B63E25A5BC8800F675C1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					B941B64925A5BC8A00F675C1 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					B941B65125A5BC8A00F675C1 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+				};
+			};
+			buildConfigurationList = B941B64125A5BC8800F675C1 /* Build configuration list for PBXProject "Valorant Viewer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B941B63D25A5BC8800F675C1;
+			packageReferences = (
+				B941B66825A5C36A00F675C1 /* XCRemoteSwiftPackageReference "HandyOperators" */,
+				B941B69925A62FFB00F675C1 /* XCRemoteSwiftPackageReference "UserDefault" */,
+				B941B6CE25A79A6400F675C1 /* XCRemoteSwiftPackageReference "keychain-swift" */,
+				B9CF2E6A25A81F57004A1458 /* XCRemoteSwiftPackageReference "SwifUI-Missing-Pieces" */,
+			);
+			productRefGroup = B941B64B25A5BC8A00F675C1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B941B64925A5BC8A00F675C1 /* Valorant Viewer (iOS) */,
+				B941B65125A5BC8A00F675C1 /* Valorant Viewer (macOS) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B941B64825A5BC8A00F675C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B941B6EC25A7C83700F675C1 /* example_matches.json in Resources */,
+				B941B65A25A5BC8A00F675C1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B941B65025A5BC8A00F675C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B941B6ED25A7C83700F675C1 /* example_matches.json in Resources */,
+				B941B65B25A5BC8A00F675C1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B941B64625A5BC8A00F675C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B941B69325A62C9500F675C1 /* UserInfoRequest.swift in Sources */,
+				B941B6DE25A7BC3800F675C1 /* View+Styling.swift in Sources */,
+				B941B6E525A7C48300F675C1 /* LoginSheet.swift in Sources */,
+				B941B6B725A6490700F675C1 /* Entitlements.swift in Sources */,
+				B941B67825A5E6F200F675C1 /* Communication.swift in Sources */,
+				B9CF2E7425A8217C004A1458 /* Combine+Ergonomics.swift in Sources */,
+				B941B6D825A7A09000F675C1 /* Credentials.swift in Sources */,
+				B9CF2E7925A89976004A1458 /* MatchCell.swift in Sources */,
+				B941B6CA25A7670900F675C1 /* Match.swift in Sources */,
+				B941B65825A5BC8A00F675C1 /* ContentView.swift in Sources */,
+				B941B65625A5BC8A00F675C1 /* ValorantViewerApp.swift in Sources */,
+				B9CF2E6225A81B48004A1458 /* PrettyTextFieldStyle.swift in Sources */,
+				B941B6C525A65E3500F675C1 /* CompetitiveUpdatesRequest.swift in Sources */,
+				B941B68125A5E79100F675C1 /* Authentication.swift in Sources */,
+				B941B6BE25A649C700F675C1 /* UserInfo.swift in Sources */,
+				B941B67325A5E68E00F675C1 /* Client.swift in Sources */,
+				B97F8BAA25A8CE5E00553A83 /* MatchList.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B941B64E25A5BC8A00F675C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B941B69425A62C9500F675C1 /* UserInfoRequest.swift in Sources */,
+				B941B6DF25A7BC3800F675C1 /* View+Styling.swift in Sources */,
+				B941B6E625A7C48300F675C1 /* LoginSheet.swift in Sources */,
+				B941B6B825A6490700F675C1 /* Entitlements.swift in Sources */,
+				B941B67925A5E6F200F675C1 /* Communication.swift in Sources */,
+				B9CF2E7525A8217C004A1458 /* Combine+Ergonomics.swift in Sources */,
+				B941B6D925A7A09000F675C1 /* Credentials.swift in Sources */,
+				B9CF2E7A25A89976004A1458 /* MatchCell.swift in Sources */,
+				B941B6CB25A7670900F675C1 /* Match.swift in Sources */,
+				B941B65925A5BC8A00F675C1 /* ContentView.swift in Sources */,
+				B941B65725A5BC8A00F675C1 /* ValorantViewerApp.swift in Sources */,
+				B9CF2E6325A81B48004A1458 /* PrettyTextFieldStyle.swift in Sources */,
+				B941B6C625A65E3500F675C1 /* CompetitiveUpdatesRequest.swift in Sources */,
+				B941B68225A5E79100F675C1 /* Authentication.swift in Sources */,
+				B941B6BF25A649C700F675C1 /* UserInfo.swift in Sources */,
+				B941B67425A5E68E00F675C1 /* Client.swift in Sources */,
+				B97F8BAB25A8CE5E00553A83 /* MatchList.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B941B65C25A5BC8A00F675C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B941B65D25A5BC8A00F675C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		B941B65F25A5BC8A00F675C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V2EPDFA9PV;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "juliand665.Valorant-Viewer";
+				PRODUCT_NAME = "Valorant Viewer";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B941B66025A5BC8A00F675C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V2EPDFA9PV;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "juliand665.Valorant-Viewer";
+				PRODUCT_NAME = "Valorant Viewer";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B941B66225A5BC8A00F675C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = V2EPDFA9PV;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				OTHER_SWIFT_FLAGS = "-Xfrontend -warn-long-expression-type-checking=200";
+				PRODUCT_BUNDLE_IDENTIFIER = "juliand665.Valorant-Viewer";
+				PRODUCT_NAME = "Valorant Viewer";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		B941B66325A5BC8A00F675C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = V2EPDFA9PV;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "juliand665.Valorant-Viewer";
+				PRODUCT_NAME = "Valorant Viewer";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B941B64125A5BC8800F675C1 /* Build configuration list for PBXProject "Valorant Viewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B941B65C25A5BC8A00F675C1 /* Debug */,
+				B941B65D25A5BC8A00F675C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B941B65E25A5BC8A00F675C1 /* Build configuration list for PBXNativeTarget "Valorant Viewer (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B941B65F25A5BC8A00F675C1 /* Debug */,
+				B941B66025A5BC8A00F675C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B941B66125A5BC8A00F675C1 /* Build configuration list for PBXNativeTarget "Valorant Viewer (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B941B66225A5BC8A00F675C1 /* Debug */,
+				B941B66325A5BC8A00F675C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B941B66825A5C36A00F675C1 /* XCRemoteSwiftPackageReference "HandyOperators" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:juliand665/HandyOperators.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		B941B69925A62FFB00F675C1 /* XCRemoteSwiftPackageReference "UserDefault" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:juliand665/UserDefault.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		B941B6CE25A79A6400F675C1 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 19.0.0;
+			};
+		};
+		B9CF2E6A25A81F57004A1458 /* XCRemoteSwiftPackageReference "SwifUI-Missing-Pieces" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:juliand665/SwifUI-Missing-Pieces.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B941B66925A5C36A00F675C1 /* HandyOperators */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B941B66825A5C36A00F675C1 /* XCRemoteSwiftPackageReference "HandyOperators" */;
+			productName = HandyOperators;
+		};
+		B941B66E25A5C3AD00F675C1 /* HandyOperators */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B941B66825A5C36A00F675C1 /* XCRemoteSwiftPackageReference "HandyOperators" */;
+			productName = HandyOperators;
+		};
+		B941B69A25A62FFB00F675C1 /* UserDefault */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B941B69925A62FFB00F675C1 /* XCRemoteSwiftPackageReference "UserDefault" */;
+			productName = UserDefault;
+		};
+		B941B69E25A6300100F675C1 /* UserDefault */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B941B69925A62FFB00F675C1 /* XCRemoteSwiftPackageReference "UserDefault" */;
+			productName = UserDefault;
+		};
+		B941B6CF25A79A6400F675C1 /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B941B6CE25A79A6400F675C1 /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
+		B941B6D325A79A6A00F675C1 /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B941B6CE25A79A6400F675C1 /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
+		B9CF2E6B25A81F57004A1458 /* SwiftUIMissingPieces */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B9CF2E6A25A81F57004A1458 /* XCRemoteSwiftPackageReference "SwifUI-Missing-Pieces" */;
+			productName = SwiftUIMissingPieces;
+		};
+		B9CF2E6F25A81F5D004A1458 /* SwiftUIMissingPieces */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B9CF2E6A25A81F57004A1458 /* XCRemoteSwiftPackageReference "SwifUI-Missing-Pieces" */;
+			productName = SwiftUIMissingPieces;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = B941B63E25A5BC8800F675C1 /* Project object */;
+}
