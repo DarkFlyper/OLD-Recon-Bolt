@@ -83,12 +83,60 @@ struct MatchCell: View {
 				
 				Image("tier_\(match.tierAfterUpdate)")
 					.resizable()
+					.overlay(
+						movementIndicator
+							.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomTrailing)
+					)
 					.padding(10)
 			}
 			.padding(lineWidth / 2)
 			.aspectRatio(contentMode: .fit)
 		}
 		.frame(height: 64)
+	}
+	
+	@ViewBuilder
+	var movementIndicator: some View {
+		Group {
+			switch match.movement {
+			case .promotion:
+				Image(systemName: "chevron.up.circle")
+					.foregroundColor(.green)
+			case .majorIncrease:
+				stackedChevrons(count: 3, direction: "up")
+					.foregroundColor(.green)
+			case .increase:
+				stackedChevrons(count: 2, direction: "up")
+					.foregroundColor(.green)
+			case .minorIncrease:
+				stackedChevrons(count: 1, direction: "up")
+					.foregroundColor(.green)
+			case .unknown:
+				Image(systemName: "equal")
+					.foregroundColor(.gray)
+			case .minorDecrease:
+				stackedChevrons(count: 1, direction: "down")
+					.foregroundColor(.red)
+			case .decrease:
+				stackedChevrons(count: 2, direction: "down")
+					.foregroundColor(.red)
+			case .majorDecrease:
+				stackedChevrons(count: 3, direction: "down")
+					.foregroundColor(.red)
+			case .demotion:
+				Image(systemName: "chevron.down.circle")
+					.foregroundColor(.red)
+			}
+		}
+		.shadow(radius: 1)
+	}
+	
+	private func stackedChevrons(count: Int, direction: String) -> some View {
+		VStack(spacing: -3) {
+			ForEach(0..<count) { _ in
+				Image(systemName: "chevron.compact.\(direction)")
+			}
+		}
 	}
 }
 
