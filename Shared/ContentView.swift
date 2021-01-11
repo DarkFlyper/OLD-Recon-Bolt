@@ -41,7 +41,13 @@ struct ContentView<ML: MatchList>: View {
 			)
 			.frame(maxWidth: .infinity, alignment: .center)
 		}
-		.listStyle(InsetGroupedListStyle())
+		.in {
+			#if os(macOS)
+			$0.listStyle(InsetListStyle())
+			#else
+			$0.listStyle(InsetGroupedListStyle())
+			#endif
+		}
 		.onAppear {
 			guard client == nil else { return }
 			isLoggingIn = true
@@ -97,6 +103,15 @@ struct ContentView<ML: MatchList>: View {
 			}
 		}
 		.disabled(loadTask != nil || client == nil)
+		.in {
+			#if os(macOS)
+			$0
+				.buttonStyle(LinkButtonStyle())
+				.foregroundColor(.accentColor)
+			#else
+			$0
+			#endif
+		}
 	}
 	
 	private func executeLoad(_ task: (Client) -> AnyPublisher<Void, Error>) {
