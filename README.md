@@ -1,4 +1,6 @@
-<img src="Resources/AppIcon.appiconset/mac_512x512@2x.png" alt="Icon" style="max-width: 512px" />
+<p align="center">
+  <img src="Resources/AppIcon.appiconset/mac_512x512@2x.png" alt="Icon" width=512 />
+</p>
 
 # Valorant Viewer
 
@@ -6,4 +8,12 @@
 
 Based on [RumbleMike/ValorantStreamOverlay](https://github.com/RumbleMike/ValorantStreamOverlay), using their assets (for ranks & maps) and interaction strategy for Valorant's Client API.
 
-<img src="Resources/GitHub/Screenshot.png" alt="Screenshot" style="max-width: 621px" />
+Unfortunately, this app needs your Riot username and password to function, but of course you can view the code yourself to check its safety, and the password is stored in the keychain rather than as plaintext.
+
+## Screenshot
+
+(Please ignore my horrible rank.)
+
+<p align="center">
+  <img src="Resources/GitHub/Screenshot.png" alt="Screenshot" width=621 />
+</p>
