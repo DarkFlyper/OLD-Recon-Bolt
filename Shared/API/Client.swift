@@ -11,7 +11,7 @@ final class Client {
 		$0.dateDecodingStrategy = .millisecondsSince1970
 	}
 	
-	let session = URLSession(configuration: .default)
+	let session = URLSession(configuration: .ephemeral)
 	
 	private var accessToken: String?
 	private var entitlementsToken: String?
