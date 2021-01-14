@@ -10,24 +10,39 @@ struct MatchCell: View {
 		$0.timeStyle = .short
 	}
 	
+	private let visualsHeight: CGFloat = 64
+	
 	let match: Match
 	
 	var body: some View {
+		if match.isRanked {
+			rankedBody
+		} else {
+			unrankedBody
+		}
+	}
+	
+	var unrankedBody: some View {
 		HStack {
-			Image("map_\(match.mapName.lowercased())")
-				.resizable()
-				.aspectRatio(contentMode: .fit)
-				.overlay(
-					Text(match.mapName)
-						.font(Font.callout.smallCaps())
-						.bold()
-						.foregroundColor(.white)
-						.shadow(radius: 1)
-						.padding(.leading, 4) // visual alignment
-						.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-						.blendMode(.overlay)
-				)
-				.mask(RoundedRectangle(cornerRadius: 4, style: .continuous))
+			mapIcon { $0
+				.opacity(0.8)
+				.aspectRatio(contentMode: .fill)
+				.frame(height: visualsHeight / 2, alignment: .top)
+			}
+			
+			Text(Self.dateFormatter.string(from: match.startTime))
+			Text(Self.timeFormatter.string(from: match.startTime))
+				.foregroundColor(.secondary)
+			Spacer()
+			Text("N/A")
+				.foregroundColor(.secondary)
+		}
+		.opacity(0.6)
+	}
+	
+	var rankedBody: some View {
+		HStack {
+			mapIcon { $0 }
 			
 			VStack(alignment: .leading) {
 				Text(Self.dateFormatter.string(from: match.startTime))
@@ -37,66 +52,96 @@ struct MatchCell: View {
 			
 			Spacer()
 			
-			let eloChange = match.eloAfterUpdate - match.eloBeforeUpdate
-			let changeColor: Color = eloChange > 0 ? .green : eloChange < 0 ? .red : .gray
-			
 			VStack(alignment: .trailing) {
+				let eloChange = match.eloChange
 				Text(eloChange > 0 ? "+\(eloChange)" : eloChange < 0 ? "\(eloChange)" : "=")
 					.foregroundColor(changeColor)
 				Text("\(match.tierProgressAfterUpdate)")
 					.foregroundColor(.gray)
 			}
 			
-			let lineWidth: CGFloat = 4
-			
-			ZStack {
-				let before = CGFloat(match.eloBeforeUpdate) / 100
-				let after = CGFloat(match.eloAfterUpdate) / 100
-				
-				let ring = Circle().rotation(Angle(degrees: -90))
-				let stroke = StrokeStyle(lineWidth: lineWidth, lineCap: .round)
-				
-				ring
-					.stroke(Color.gray.opacity(0.2), style: stroke)
-				
-				let changeRing = ring
-					.trim(from: 0, to: abs(after - before))
-					.rotation(Angle(degrees: Double(360 * min(before, after))))
-				
-				let invertedChangeRing = ZStack {
-					Rectangle()
-						.fill(Color.white)
-						.padding(-lineWidth - 1)
-					changeRing
-						.stroke(Color.black, style: stroke <- { $0.lineWidth += 2 })
-				}
-				.compositingGroup()
-				.luminanceToAlpha()
-				
-				ring
-					.trim(from: 0, to: after.truncatingRemainder(dividingBy: 1))
-					.stroke(Color.gray, style: stroke)
-					.mask(invertedChangeRing)
-				
-				changeRing
-					.stroke(changeColor, style: stroke)
-				
-				Image("tier_\(match.tierAfterUpdate)")
-					.resizable()
-					.overlay(
-						movementIndicator
-							.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomTrailing)
-					)
-					.padding(10)
-			}
-			.padding(lineWidth / 2)
-			.aspectRatio(contentMode: .fit)
+			changeRing
 		}
-		.frame(height: 64)
+	}
+	
+	private func mapIcon<V: View>(additionalModifiers: (AnyView) -> V) -> some View {
+		additionalModifiers(
+			AnyView(
+				Image("map_\(match.mapName.lowercased())")
+					.resizable()
+					.aspectRatio(contentMode: .fit)
+					.frame(height: visualsHeight)
+			)
+		)
+		.overlay(mapLabel)
+		.mask(RoundedRectangle(cornerRadius: 4, style: .continuous))
+	}
+	
+	private var mapLabel: some View {
+		Text(match.mapName)
+			.font(Font.callout.smallCaps())
+			.bold()
+			.foregroundColor(.white)
+			.shadow(radius: 1)
+			.padding(.leading, 4) // visual alignment
+			.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+			.blendMode(.overlay)
+	}
+	
+	private var changeColor: Color {
+		match.eloChange > 0 ? .green : match.eloChange < 0 ? .red : .gray
 	}
 	
 	@ViewBuilder
-	var movementIndicator: some View {
+	private var changeRing: some View {
+		let lineWidth: CGFloat = 4
+		
+		ZStack {
+			let before = CGFloat(match.eloBeforeUpdate) / 100
+			let after = CGFloat(match.eloAfterUpdate) / 100
+			
+			let ring = Circle().rotation(Angle(degrees: -90))
+			let stroke = StrokeStyle(lineWidth: lineWidth, lineCap: .round)
+			
+			ring
+				.stroke(Color.gray.opacity(0.2), style: stroke)
+			
+			let changeRing = ring
+				.trim(from: 0, to: abs(after - before))
+				.rotation(Angle(degrees: Double(360 * min(before, after))))
+			
+			let invertedChangeRing = ZStack {
+				Rectangle()
+					.fill(Color.white)
+					.padding(-lineWidth - 1)
+				changeRing
+					.stroke(Color.black, style: stroke <- { $0.lineWidth += 2 })
+			}
+			.compositingGroup()
+			.luminanceToAlpha()
+			
+			ring
+				.trim(from: 0, to: after.truncatingRemainder(dividingBy: 1))
+				.stroke(Color.gray, style: stroke)
+				.mask(invertedChangeRing)
+			
+			changeRing
+				.stroke(changeColor, style: stroke)
+			
+			Image("tier_\(match.tierAfterUpdate)")
+				.resizable()
+				.overlay(
+					movementIndicator
+						.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomTrailing)
+				)
+				.padding(10)
+		}
+		.padding(lineWidth / 2)
+		.aspectRatio(contentMode: .fit)
+		.frame(height: visualsHeight)
+	}
+	
+	private var movementIndicator: some View {
 		Group {
 			switch match.movement {
 			case .promotion:
@@ -149,7 +194,9 @@ struct MatchCell_Previews: PreviewProvider {
 	
 	static let jump = Match.example(tierChange: (11, 13), tierProgressChange: (90, 30))
 	
-	static let allExamples = [promotion, increase, unchanged, decrease, demotion, jump]
+	static let unranked = Match.example(tierChange: (0, 0), tierProgressChange: (0, 0))
+	
+	static let allExamples = [promotion, increase, unchanged, decrease, demotion, jump, unranked]
 	
 	static var previews: some View {
 		ForEach(ColorScheme.allCases, id: \.hashValue) {

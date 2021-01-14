@@ -5,6 +5,7 @@ import HandyOperators
 struct ContentView<ML: MatchList>: View {
 	@State private var isLoggingIn = false
 	@State private var client: Client?
+	@State private var shouldShowUnranked = true
 	
 	@StateObject var matchList: ML
 	
@@ -30,7 +31,7 @@ struct ContentView<ML: MatchList>: View {
 			.frame(maxWidth: .infinity, alignment: .center)
 			
 			ForEach(
-				matchList.matches.filter { $0.movement != .unknown },
+				shouldShowUnranked ? matchList.matches : matchList.matches.filter(\.isRanked),
 				id: \.id,
 				content: MatchCell.init(match:)
 			)
@@ -58,12 +59,16 @@ struct ContentView<ML: MatchList>: View {
 		}
 		.navigationTitle(userInfo?.account.name ?? "Matches")
 		.toolbar {
-			let button = Button("Account") { isLoggingIn = true }
+			let accountButton = Button("Account") { isLoggingIn = true }
+			let hideUnrankedButton = Button(shouldShowUnranked ? "Hide Unranked" : "Show Unranked")
+				{ shouldShowUnranked.toggle() }
 			#if os(macOS)
+			hideUnrankedButton
 			Spacer()
-			button
+			accountButton
 			#else
-			ToolbarItemGroup(placement: .navigationBarTrailing) { button }
+			ToolbarItemGroup(placement: .navigationBarLeading) { hideUnrankedButton }
+			ToolbarItemGroup(placement: .navigationBarTrailing) { accountButton }
 			#endif
 		}
 		// workaround for not being able to stack sheet modifiers yet
@@ -95,9 +100,7 @@ struct ContentView<ML: MatchList>: View {
 			executeLoad { client in
 				task(client)
 					.tryMap {
-						if !$0 {
-							throw LoadingError(message: "No further matches received.")
-						}
+						if !$0 { throw LoadingError(message: "No further matches received.") }
 					}
 					.eraseToAnyPublisher()
 			}

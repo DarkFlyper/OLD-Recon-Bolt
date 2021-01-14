@@ -11,6 +11,9 @@ struct Match: Codable, Identifiable {
 	var ratingEarned: Int
 	var movement: Movement
 	
+	var isRanked: Bool { tierAfterUpdate != 0 }
+	
+	var eloChange: Int { eloAfterUpdate - eloBeforeUpdate }
 	var eloBeforeUpdate: Int { tierBeforeUpdate * 100 + tierProgressBeforeUpdate }
 	var eloAfterUpdate: Int { tierAfterUpdate * 100 + tierProgressAfterUpdate }
 	
