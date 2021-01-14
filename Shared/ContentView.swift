@@ -52,7 +52,7 @@ struct ContentView<ML: MatchList>: View {
 			guard client == nil else { return }
 			isLoggingIn = true
 		}
-		.onChange(of: client != nil) { _ in
+		.onChange(of: client?.id) { _ in
 			isLoggingIn = false
 			loadMatches()
 		}

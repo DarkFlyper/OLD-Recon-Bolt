@@ -2,7 +2,7 @@ import Foundation
 import Combine
 import HandyOperators
 
-final class Client {
+final class Client: Identifiable {
 	let requestEncoder = JSONEncoder() <- {
 		$0.keyEncodingStrategy = .convertToSnakeCase
 	}

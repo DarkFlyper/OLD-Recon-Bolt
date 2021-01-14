@@ -56,6 +56,7 @@ struct LoginSheet: View {
 		isLoading = true
 		loginRequest = Client
 			.authenticated(username: credentials.username, password: credentials.password)
+			.receive(on: DispatchQueue.main)
 			.sinkResult { client = $0 }
 				onFailure: { loginError = .init($0) }
 				always: { isLoading = false }
