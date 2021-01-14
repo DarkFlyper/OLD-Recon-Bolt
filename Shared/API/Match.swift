@@ -35,8 +35,8 @@ struct Match: Codable, Identifiable {
 		case startTime = "MatchStartTime"
 		case tierAfterUpdate = "TierAfterUpdate"
 		case tierBeforeUpdate = "TierBeforeUpdate"
-		case tierProgressAfterUpdate = "TierProgressAfterUpdate"
-		case tierProgressBeforeUpdate = "TierProgressBeforeUpdate"
+		case tierProgressAfterUpdate = "RankedRatingAfterUpdate"
+		case tierProgressBeforeUpdate = "RankedRatingBeforeUpdate"
 		case ratingEarned = "RankedRatingEarned"
 		case movement = "CompetitiveMovement"
 	}
