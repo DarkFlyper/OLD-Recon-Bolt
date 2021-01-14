@@ -1,4 +1,5 @@
 import Foundation
+import HandyOperators
 
 let authBaseURL = URL(string: "https://auth.riotgames.com")!
 let authAPIBaseURL = authBaseURL.appendingPathComponent("api/v1")
@@ -73,6 +74,8 @@ struct JSONDecodingError: LocalizedError {
 	var errorDescription: String? {
 		"""
 		\(error.localizedDescription)
+		
+		\("" <- { dump(error, to: &$0) })
 		
 		The data to decode was:
 		\(String(bytes: toDecode, encoding: .utf8)!)
