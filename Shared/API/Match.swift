@@ -18,18 +18,18 @@ struct Match: Codable, Identifiable {
 	var eloAfterUpdate: Int { tierAfterUpdate * 100 + tierProgressAfterUpdate }
 	
 	private static let mapPaths = [
-		("Bonsai", "Split"),
-		("Triad", "Haven"),
-		("Duality", "Bind"),
-		("Ascent", "Ascent"),
-		("Port", "Icebox"),
+		("Bonsai", "split"),
+		("Triad", "haven"),
+		("Duality", "bind"),
+		("Ascent", "ascent"),
+		("Port", "icebox"),
 	]
 	.map { key, name in (path: "/Game/Maps/\(key)/\(key)", name: name) }
 	
 	private static let mapNames = Dictionary(uniqueKeysWithValues: mapPaths)
 	
-	var mapName: String {
-		Self.mapNames[mapPath] ?? "UNKNOWN"
+	var mapName: String? {
+		Self.mapNames[mapPath]
 	}
 	
 	private enum CodingKeys: String, CodingKey {

@@ -67,8 +67,7 @@ struct MatchCell: View {
 	private func mapIcon<V: View>(additionalModifiers: (AnyView) -> V) -> some View {
 		additionalModifiers(
 			AnyView(
-				Image("map_\(match.mapName.lowercased())")
-					.resizable()
+				match.mapImage
 					.aspectRatio(contentMode: .fit)
 					.frame(height: visualsHeight)
 			)
@@ -78,7 +77,7 @@ struct MatchCell: View {
 	}
 	
 	private var mapLabel: some View {
-		Text(match.mapName)
+		Text(match.mapName ?? "unknown")
 			.font(Font.callout.smallCaps())
 			.bold()
 			.foregroundColor(.white)
@@ -215,6 +214,20 @@ struct MatchCell_Previews: PreviewProvider {
 	}
 }
 
-let tiers: [String] = ["INVALID", "iron", "silver", "gold", "platinum", "diamond", "immortal"]
+private let tiers: [String] = ["INVALID", "iron", "silver", "gold", "platinum", "diamond", "immortal"]
 	.flatMap { rank in (1...3).map { "\(rank) \($0)" } }
 	+ ["radiant"]
+
+extension Match {
+	@ViewBuilder
+	var mapImage: some View {
+		if let name = mapName {
+			Image("maps/\(name)")
+				.resizable()
+		} else {
+			Rectangle()
+				.size(width: 400, height: 225)
+				.fill(Color.gray)
+		}
+	}
+}
