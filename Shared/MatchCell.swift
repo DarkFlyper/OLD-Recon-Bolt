@@ -48,6 +48,14 @@ struct MatchCell: View {
 				Text(Self.dateFormatter.string(from: match.startTime))
 				Text(Self.timeFormatter.string(from: match.startTime))
 					.foregroundColor(.secondary)
+				if match.performanceBonus != 0 {
+					Text("Performance Bonus: \(match.performanceBonus)")
+						.foregroundColor(.green)
+				}
+				if match.afkPenalty != 0 {
+					Text("AFK Penalty: \(match.afkPenalty)")
+						.foregroundColor(.red)
+				}
 			}
 			
 			Spacer()
@@ -105,89 +113,55 @@ struct MatchCell: View {
 			ring
 				.stroke(Color.gray.opacity(0.2), style: stroke)
 			
-			let changeRing = ring
-				.trim(from: 0, to: abs(after - before))
-				.rotation(Angle(degrees: Double(360 * min(before, after))))
-			
-			let invertedChangeRing = ZStack {
-				Rectangle()
-					.fill(Color.white)
-					.padding(-lineWidth - 1)
+			ZStack {
+				ring
+					.trim(from: 0, to: after.truncatingRemainder(dividingBy: 1))
+					.stroke(Color.gray, style: stroke)
+				
+				let changeRing = ring
+					.trim(from: 0, to: abs(after - before))
+					.rotation(Angle(degrees: Double(360 * min(before, after))))
+				
 				changeRing
 					.stroke(Color.black, style: stroke <- { $0.lineWidth += 2 })
+					.blendMode(.destinationOut)
+				
+				changeRing
+					.stroke(changeColor, style: stroke)
+				
+				Image("tier_\(match.tierAfterUpdate)")
+					.resizable()
+					.padding(10)
 			}
 			.compositingGroup()
-			.luminanceToAlpha()
 			
-			ring
-				.trim(from: 0, to: after.truncatingRemainder(dividingBy: 1))
-				.stroke(Color.gray, style: stroke)
-				.mask(invertedChangeRing)
-			
-			changeRing
-				.stroke(changeColor, style: stroke)
-			
-			Image("tier_\(match.tierAfterUpdate)")
-				.resizable()
-				.overlay(
-					movementIndicator
-						.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomTrailing)
-				)
-				.padding(10)
+			movementIndicator
+				.background(Circle().fill(Color.white).blendMode(.destinationOut))
+				.alignmentGuide(.top) { $0[VerticalAlignment.center] }
+				.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
 		}
+		.compositingGroup()
 		.padding(lineWidth / 2)
 		.aspectRatio(contentMode: .fit)
 		.frame(height: visualsHeight)
 	}
 	
+	@ViewBuilder
 	private var movementIndicator: some View {
-		Group {
-			switch match.movement {
-			case .promotion:
-				Image(systemName: "chevron.up.circle")
-					.foregroundColor(.green)
-			case .majorIncrease:
-				stackedChevrons(count: 3, direction: "up")
-					.foregroundColor(.green)
-			case .increase:
-				stackedChevrons(count: 2, direction: "up")
-					.foregroundColor(.green)
-			case .minorIncrease:
-				stackedChevrons(count: 1, direction: "up")
-					.foregroundColor(.green)
-			case .noChange:
-				Image(systemName: "equal")
-					.foregroundColor(.gray)
-			case .minorDecrease:
-				stackedChevrons(count: 1, direction: "down")
-					.foregroundColor(.red)
-			case .decrease:
-				stackedChevrons(count: 2, direction: "down")
-					.foregroundColor(.red)
-			case .majorDecrease:
-				stackedChevrons(count: 3, direction: "down")
-					.foregroundColor(.red)
-			case .demotion:
-				Image(systemName: "chevron.down.circle")
-					.foregroundColor(.red)
-			case .unknown:
-				EmptyView()
-			}
-		}
-		.shadow(radius: 1)
-	}
-	
-	private func stackedChevrons(count: Int, direction: String) -> some View {
-		VStack(spacing: -3) {
-			ForEach(0..<count) { _ in
-				Image(systemName: "chevron.compact.\(direction)")
-			}
+		if match.tierAfterUpdate > match.tierBeforeUpdate {
+			// promotion
+			Image(systemName: "chevron.up.circle.fill")
+				.foregroundColor(.green)
+		} else if match.tierAfterUpdate < match.tierBeforeUpdate {
+			// demotion
+			Image(systemName: "chevron.down.circle.fill")
+				.foregroundColor(.red)
 		}
 	}
 }
 
 struct MatchCell_Previews: PreviewProvider {
-	static let promotion = Match.example(tierChange: (5, 6), tierProgressChange: (80, 10), mapIndex: 0)
+	static let promotion = Match.example(tierChange: (21, 22), tierProgressChange: (80, 10), mapIndex: 0)
 	static let increase = Match.example(tierChange: (8, 8), tierProgressChange: (40, 60), mapIndex: 1)
 	static let unchanged = Match.example(tierChange: (12, 12), tierProgressChange: (50, 50), mapIndex: 2)
 	static let decrease = Match.example(tierChange: (8, 8), tierProgressChange: (60, 40), mapIndex: 3)

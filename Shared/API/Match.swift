@@ -9,7 +9,8 @@ struct Match: Codable, Identifiable {
 	var tierProgressBeforeUpdate: Int
 	var tierProgressAfterUpdate: Int
 	var ratingEarned: Int
-	var movement: Movement
+	var performanceBonus: Int
+	var afkPenalty: Int
 	
 	var isRanked: Bool { tierAfterUpdate != 0 }
 	
@@ -41,21 +42,8 @@ struct Match: Codable, Identifiable {
 		case tierProgressAfterUpdate = "RankedRatingAfterUpdate"
 		case tierProgressBeforeUpdate = "RankedRatingBeforeUpdate"
 		case ratingEarned = "RankedRatingEarned"
-		case movement = "CompetitiveMovement"
-	}
-	
-	enum Movement: String, Hashable, Codable {
-		case promotion = "PROMOTED"
-		case majorIncrease = "MAJOR_INCREASE"
-		case increase = "INCREASE"
-		case minorIncrease = "MINOR_INCREASE"
-		// TODO: this is almost certainly not called "NO_CHANGE", but I haven't had it yet
-		case noChange = "NO_CHANGE"
-		case minorDecrease = "MINOR_DECREASE"
-		case decrease = "DECREASE"
-		case majorDecrease = "MAJOR_DECREASE"
-		case demotion = "DEMOTED"
-		case unknown = "MOVEMENT_UNKNOWN"
+		case performanceBonus = "RankedRatingPerformanceBonus"
+		case afkPenalty = "AFKPenalty"
 	}
 }
 
@@ -78,11 +66,8 @@ extension Match {
 			tierBeforeUpdate: tierChange.0, tierAfterUpdate: tierChange.1,
 			tierProgressBeforeUpdate: tierProgressChange.0, tierProgressAfterUpdate: tierProgressChange.1,
 			ratingEarned: 0,
-			movement: tierChange.0 < tierChange.1 ? .promotion
-				: tierChange.0 > tierChange.1 ? .demotion
-				: tierProgressChange.0 < tierProgressChange.1 ? .increase
-				: tierProgressChange.0 > tierProgressChange.1 ? .decrease
-				: .unknown
+			performanceBonus: 0,
+			afkPenalty: 0
 		)
 	}
 }
