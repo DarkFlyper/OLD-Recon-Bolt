@@ -156,7 +156,7 @@ struct MatchCell: View {
 			case .minorIncrease:
 				stackedChevrons(count: 1, direction: "up")
 					.foregroundColor(.green)
-			case .unknown:
+			case .noChange:
 				Image(systemName: "equal")
 					.foregroundColor(.gray)
 			case .minorDecrease:
@@ -171,6 +171,8 @@ struct MatchCell: View {
 			case .demotion:
 				Image(systemName: "chevron.down.circle")
 					.foregroundColor(.red)
+			case .unknown:
+				EmptyView()
 			}
 		}
 		.shadow(radius: 1)

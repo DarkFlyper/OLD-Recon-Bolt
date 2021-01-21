@@ -43,10 +43,6 @@ final class FetchingMatchList: MatchList {
 		userID = id
 		if let stored = Self.stored, stored.userID == userID {
 			matches = stored.matches
-			for match in matches {
-				guard match.movement == .unknown else { continue }
-				assert(match.tierAfterUpdate == 0)
-			}
 			minMissedMatches = stored.minMissedMatches
 		} else {
 			matches = []

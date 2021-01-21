@@ -49,9 +49,11 @@ struct Match: Codable, Identifiable {
 		case majorIncrease = "MAJOR_INCREASE"
 		case increase = "INCREASE"
 		case minorIncrease = "MINOR_INCREASE"
-		case majorDecrease = "MAJOR_DECREASE"
-		case decrease = "DECREASE"
+		// TODO: this is almost certainly not called "NO_CHANGE", but I haven't had it yet
+		case noChange = "NO_CHANGE"
 		case minorDecrease = "MINOR_DECREASE"
+		case decrease = "DECREASE"
+		case majorDecrease = "MAJOR_DECREASE"
 		case demotion = "DEMOTED"
 		case unknown = "MOVEMENT_UNKNOWN"
 	}
