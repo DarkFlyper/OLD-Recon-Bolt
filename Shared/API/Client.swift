@@ -42,6 +42,7 @@ final class Client: Identifiable {
 			.eraseToAnyPublisher()
 	}
 	
+	private static let encodedPlatformInfo = (try! JSONEncoder().encode(PlatformInfo())).base64EncodedString()
 	private func rawRequest<R: Request>(for request: R) throws -> URLRequest {
 		try URLRequest(url: request.url) <- {
 			try request.encode(to: &$0, using: requestEncoder)
@@ -55,6 +56,14 @@ final class Client: Identifiable {
 			if let token = entitlementsToken {
 				$0.setValue(token, forHTTPHeaderField: "X-Riot-Entitlements-JWT")
 			}
+			$0.setValue(Self.encodedPlatformInfo, forHTTPHeaderField: "X-Riot-ClientPlatform")
 		}
 	}
+}
+
+private struct PlatformInfo: Encodable {
+	let platformType = "PC"
+	let platformOS = "Windows"
+	let platformOSVersion = "10.0.19042.1.256.64bit"
+	let platformChipset = "Unknown"
 }
