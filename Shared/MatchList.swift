@@ -110,7 +110,7 @@ final class FetchingMatchList: MatchList {
 			} else if matches.first!.startTime < lastNew.startTime {
 				// TODO: figure out how to handle this; easiest would be to just keep refreshing until we reach our newest existing match
 				print("non-contiguous match history: too many matches played since last refresh!")
-				minMissedMatches += 1
+				minMissedMatches += new.count
 			} else {
 				fatalError("unexpected state!")
 			}
