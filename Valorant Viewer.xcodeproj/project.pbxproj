@@ -120,6 +120,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B94091C925D0ACAC00EE5DF2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B941B6E425A7C48300F675C1 /* LoginSheet.swift */,
+				B941B64425A5BC8800F675C1 /* ContentView.swift */,
+				B94091B725D09F0200EE5DF2 /* MatchListView.swift */,
+				B9CF2E7825A89976004A1458 /* MatchCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B94091CC25D0ACB100EE5DF2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B941B6D725A7A09000F675C1 /* Credentials.swift */,
+				B97F8BA925A8CE5E00553A83 /* MatchList.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		B941B63D25A5BC8800F675C1 = {
 			isa = PBXGroup;
 			children = (
@@ -134,15 +154,11 @@
 		B941B64225A5BC8800F675C1 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				B941B6DC25A7BC3200F675C1 /* Helpers */,
-				B941B67E25A5E76E00F675C1 /* API */,
 				B941B64325A5BC8800F675C1 /* ValorantViewerApp.swift */,
-				B941B6E425A7C48300F675C1 /* LoginSheet.swift */,
-				B941B64425A5BC8800F675C1 /* ContentView.swift */,
-				B94091B725D09F0200EE5DF2 /* MatchListView.swift */,
-				B9CF2E7825A89976004A1458 /* MatchCell.swift */,
-				B941B6D725A7A09000F675C1 /* Credentials.swift */,
-				B97F8BA925A8CE5E00553A83 /* MatchList.swift */,
+				B94091C925D0ACAC00EE5DF2 /* Views */,
+				B94091CC25D0ACB100EE5DF2 /* Model */,
+				B941B67E25A5E76E00F675C1 /* API */,
+				B941B6DC25A7BC3200F675C1 /* Helpers */,
 				B941B64525A5BC8A00F675C1 /* Assets.xcassets */,
 				B941B6EB25A7C83700F675C1 /* example_matches.json */,
 			);
