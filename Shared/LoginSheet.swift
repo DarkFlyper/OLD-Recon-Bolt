@@ -4,15 +4,14 @@ import Combine
 
 struct LoginSheet: View {
 	@ObservedObject private var credentials = CredentialsStorage()
-	@State private var loginRequest: AnyCancellable?
 	@Binding var client: Client?
-	@State private var loginError: PresentedError?
-	@State private var isLoading = false
+	
+	@EnvironmentObject private var loadManager: LoadManager
 	
 	var body: some View {
 		ZStack {
 			ProgressView("logging in…")
-				.opacity(isLoading ? 1 : 0)
+				.opacity(loadManager.isLoading ? 1 : 0)
 			VStack(spacing: 12) {
 				Text("Log in with your Riot account")
 					.font(.title2)
@@ -34,7 +33,7 @@ struct LoginSheet: View {
 			}
 			.frame(idealWidth: 180)
 			.textFieldStyle(PrettyTextFieldStyle())
-			.opacity(isLoading ? 0.25 : 1)
+			.opacity(loadManager.isLoading ? 0.25 : 1)
 		}
 		.withoutSheetBottomPadding()
 		.padding()
@@ -43,23 +42,16 @@ struct LoginSheet: View {
 				Button("Log In", action: logIn)
 			}
 		}
-		.alert(item: $loginError) { error in
-			Alert(
-				title: Text("Could not log in!"),
-				message: Text(error.error.localizedDescription),
-				dismissButton: .default(Text("OK"))
-			)
-		}
+		.loadErrorTitle("Could not log in!")
 	}
 	
 	func logIn() {
-		isLoading = true
-		loginRequest = Client
-			.authenticated(username: credentials.username, password: credentials.password)
-			.receive(on: DispatchQueue.main)
-			.sinkResult { client = $0 }
-				onFailure: { loginError = .init($0) }
-				always: { isLoading = false }
+		loadManager.runTask(
+			Client.authenticated(
+				username: credentials.username,
+				password: credentials.password
+			)
+		) { client = $0 }
 	}
 }
 

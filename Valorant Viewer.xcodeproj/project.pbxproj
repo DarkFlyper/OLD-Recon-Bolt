@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B94091AE25D09D5A00EE5DF2 /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94091AD25D09D5A00EE5DF2 /* Loading.swift */; };
+		B94091AF25D09D5A00EE5DF2 /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94091AD25D09D5A00EE5DF2 /* Loading.swift */; };
+		B94091B325D09DF900EE5DF2 /* SwiftUI+CrossPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94091B225D09DF900EE5DF2 /* SwiftUI+CrossPlatform.swift */; };
+		B94091B425D09DF900EE5DF2 /* SwiftUI+CrossPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94091B225D09DF900EE5DF2 /* SwiftUI+CrossPlatform.swift */; };
+		B94091B825D09F0200EE5DF2 /* MatchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94091B725D09F0200EE5DF2 /* MatchListView.swift */; };
+		B94091B925D09F0200EE5DF2 /* MatchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94091B725D09F0200EE5DF2 /* MatchListView.swift */; };
 		B941B65625A5BC8A00F675C1 /* ValorantViewerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B64325A5BC8800F675C1 /* ValorantViewerApp.swift */; };
 		B941B65725A5BC8A00F675C1 /* ValorantViewerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B64325A5BC8800F675C1 /* ValorantViewerApp.swift */; };
 		B941B65825A5BC8A00F675C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B64425A5BC8800F675C1 /* ContentView.swift */; };
@@ -45,17 +51,22 @@
 		B941B6ED25A7C83700F675C1 /* example_matches.json in Resources */ = {isa = PBXBuildFile; fileRef = B941B6EB25A7C83700F675C1 /* example_matches.json */; };
 		B97F8BAA25A8CE5E00553A83 /* MatchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97F8BA925A8CE5E00553A83 /* MatchList.swift */; };
 		B97F8BAB25A8CE5E00553A83 /* MatchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97F8BA925A8CE5E00553A83 /* MatchList.swift */; };
-		B9CF2E6225A81B48004A1458 /* PrettyTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CF2E6125A81B48004A1458 /* PrettyTextFieldStyle.swift */; };
-		B9CF2E6325A81B48004A1458 /* PrettyTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CF2E6125A81B48004A1458 /* PrettyTextFieldStyle.swift */; };
+		B9CF2E6225A81B48004A1458 /* UnifiedStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CF2E6125A81B48004A1458 /* UnifiedStyles.swift */; };
+		B9CF2E6325A81B48004A1458 /* UnifiedStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CF2E6125A81B48004A1458 /* UnifiedStyles.swift */; };
 		B9CF2E6C25A81F57004A1458 /* SwiftUIMissingPieces in Frameworks */ = {isa = PBXBuildFile; productRef = B9CF2E6B25A81F57004A1458 /* SwiftUIMissingPieces */; };
 		B9CF2E7025A81F5D004A1458 /* SwiftUIMissingPieces in Frameworks */ = {isa = PBXBuildFile; productRef = B9CF2E6F25A81F5D004A1458 /* SwiftUIMissingPieces */; };
 		B9CF2E7425A8217C004A1458 /* Combine+Ergonomics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CF2E7325A8217C004A1458 /* Combine+Ergonomics.swift */; };
 		B9CF2E7525A8217C004A1458 /* Combine+Ergonomics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CF2E7325A8217C004A1458 /* Combine+Ergonomics.swift */; };
 		B9CF2E7925A89976004A1458 /* MatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CF2E7825A89976004A1458 /* MatchCell.swift */; };
 		B9CF2E7A25A89976004A1458 /* MatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CF2E7825A89976004A1458 /* MatchCell.swift */; };
+		B9E12B0C25BBD57D008E1E77 /* Optional+Functional.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E12B0B25BBD57D008E1E77 /* Optional+Functional.swift */; };
+		B9E12B0D25BBD57D008E1E77 /* Optional+Functional.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E12B0B25BBD57D008E1E77 /* Optional+Functional.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B94091AD25D09D5A00EE5DF2 /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
+		B94091B225D09DF900EE5DF2 /* SwiftUI+CrossPlatform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUI+CrossPlatform.swift"; sourceTree = "<group>"; };
+		B94091B725D09F0200EE5DF2 /* MatchListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListView.swift; sourceTree = "<group>"; };
 		B941B64325A5BC8800F675C1 /* ValorantViewerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValorantViewerApp.swift; sourceTree = "<group>"; };
 		B941B64425A5BC8800F675C1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B941B64525A5BC8A00F675C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -77,9 +88,10 @@
 		B941B6E425A7C48300F675C1 /* LoginSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSheet.swift; sourceTree = "<group>"; };
 		B941B6EB25A7C83700F675C1 /* example_matches.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_matches.json; sourceTree = "<group>"; };
 		B97F8BA925A8CE5E00553A83 /* MatchList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchList.swift; sourceTree = "<group>"; };
-		B9CF2E6125A81B48004A1458 /* PrettyTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrettyTextFieldStyle.swift; sourceTree = "<group>"; };
+		B9CF2E6125A81B48004A1458 /* UnifiedStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnifiedStyles.swift; sourceTree = "<group>"; };
 		B9CF2E7325A8217C004A1458 /* Combine+Ergonomics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+Ergonomics.swift"; sourceTree = "<group>"; };
 		B9CF2E7825A89976004A1458 /* MatchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCell.swift; sourceTree = "<group>"; };
+		B9E12B0B25BBD57D008E1E77 /* Optional+Functional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Functional.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,9 +137,10 @@
 				B941B6DC25A7BC3200F675C1 /* Helpers */,
 				B941B67E25A5E76E00F675C1 /* API */,
 				B941B64325A5BC8800F675C1 /* ValorantViewerApp.swift */,
-				B941B64425A5BC8800F675C1 /* ContentView.swift */,
-				B9CF2E7825A89976004A1458 /* MatchCell.swift */,
 				B941B6E425A7C48300F675C1 /* LoginSheet.swift */,
+				B941B64425A5BC8800F675C1 /* ContentView.swift */,
+				B94091B725D09F0200EE5DF2 /* MatchListView.swift */,
+				B9CF2E7825A89976004A1458 /* MatchCell.swift */,
 				B941B6D725A7A09000F675C1 /* Credentials.swift */,
 				B97F8BA925A8CE5E00553A83 /* MatchList.swift */,
 				B941B64525A5BC8A00F675C1 /* Assets.xcassets */,
@@ -196,8 +209,11 @@
 			isa = PBXGroup;
 			children = (
 				B941B6DD25A7BC3800F675C1 /* View+Styling.swift */,
-				B9CF2E6125A81B48004A1458 /* PrettyTextFieldStyle.swift */,
+				B9CF2E6125A81B48004A1458 /* UnifiedStyles.swift */,
 				B9CF2E7325A8217C004A1458 /* Combine+Ergonomics.swift */,
+				B9E12B0B25BBD57D008E1E77 /* Optional+Functional.swift */,
+				B94091B225D09DF900EE5DF2 /* SwiftUI+CrossPlatform.swift */,
+				B94091AD25D09D5A00EE5DF2 /* Loading.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -321,18 +337,22 @@
 			files = (
 				B941B69325A62C9500F675C1 /* UserInfoRequest.swift in Sources */,
 				B941B6DE25A7BC3800F675C1 /* View+Styling.swift in Sources */,
+				B94091AE25D09D5A00EE5DF2 /* Loading.swift in Sources */,
 				B941B6E525A7C48300F675C1 /* LoginSheet.swift in Sources */,
 				B941B6B725A6490700F675C1 /* Entitlements.swift in Sources */,
+				B94091B825D09F0200EE5DF2 /* MatchListView.swift in Sources */,
 				B941B67825A5E6F200F675C1 /* Communication.swift in Sources */,
 				B9CF2E7425A8217C004A1458 /* Combine+Ergonomics.swift in Sources */,
+				B94091B325D09DF900EE5DF2 /* SwiftUI+CrossPlatform.swift in Sources */,
 				B941B6D825A7A09000F675C1 /* Credentials.swift in Sources */,
 				B9CF2E7925A89976004A1458 /* MatchCell.swift in Sources */,
 				B941B6CA25A7670900F675C1 /* Match.swift in Sources */,
 				B941B65825A5BC8A00F675C1 /* ContentView.swift in Sources */,
 				B941B65625A5BC8A00F675C1 /* ValorantViewerApp.swift in Sources */,
-				B9CF2E6225A81B48004A1458 /* PrettyTextFieldStyle.swift in Sources */,
+				B9CF2E6225A81B48004A1458 /* UnifiedStyles.swift in Sources */,
 				B941B6C525A65E3500F675C1 /* CompetitiveUpdatesRequest.swift in Sources */,
 				B941B68125A5E79100F675C1 /* Authentication.swift in Sources */,
+				B9E12B0C25BBD57D008E1E77 /* Optional+Functional.swift in Sources */,
 				B941B6BE25A649C700F675C1 /* UserInfo.swift in Sources */,
 				B941B67325A5E68E00F675C1 /* Client.swift in Sources */,
 				B97F8BAA25A8CE5E00553A83 /* MatchList.swift in Sources */,
@@ -345,18 +365,22 @@
 			files = (
 				B941B69425A62C9500F675C1 /* UserInfoRequest.swift in Sources */,
 				B941B6DF25A7BC3800F675C1 /* View+Styling.swift in Sources */,
+				B94091AF25D09D5A00EE5DF2 /* Loading.swift in Sources */,
 				B941B6E625A7C48300F675C1 /* LoginSheet.swift in Sources */,
 				B941B6B825A6490700F675C1 /* Entitlements.swift in Sources */,
+				B94091B925D09F0200EE5DF2 /* MatchListView.swift in Sources */,
 				B941B67925A5E6F200F675C1 /* Communication.swift in Sources */,
 				B9CF2E7525A8217C004A1458 /* Combine+Ergonomics.swift in Sources */,
+				B94091B425D09DF900EE5DF2 /* SwiftUI+CrossPlatform.swift in Sources */,
 				B941B6D925A7A09000F675C1 /* Credentials.swift in Sources */,
 				B9CF2E7A25A89976004A1458 /* MatchCell.swift in Sources */,
 				B941B6CB25A7670900F675C1 /* Match.swift in Sources */,
 				B941B65925A5BC8A00F675C1 /* ContentView.swift in Sources */,
 				B941B65725A5BC8A00F675C1 /* ValorantViewerApp.swift in Sources */,
-				B9CF2E6325A81B48004A1458 /* PrettyTextFieldStyle.swift in Sources */,
+				B9CF2E6325A81B48004A1458 /* UnifiedStyles.swift in Sources */,
 				B941B6C625A65E3500F675C1 /* CompetitiveUpdatesRequest.swift in Sources */,
 				B941B68225A5E79100F675C1 /* Authentication.swift in Sources */,
+				B9E12B0D25BBD57D008E1E77 /* Optional+Functional.swift in Sources */,
 				B941B6BF25A649C700F675C1 /* UserInfo.swift in Sources */,
 				B941B67425A5E68E00F675C1 /* Client.swift in Sources */,
 				B97F8BAB25A8CE5E00553A83 /* MatchList.swift in Sources */,

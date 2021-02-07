@@ -148,15 +148,18 @@ struct MatchCell: View {
 	
 	@ViewBuilder
 	private var movementIndicator: some View {
-		if match.tierAfterUpdate > match.tierBeforeUpdate {
-			// promotion
-			Image(systemName: "chevron.up.circle.fill")
-				.foregroundColor(.green)
-		} else if match.tierAfterUpdate < match.tierBeforeUpdate {
-			// demotion
-			Image(systemName: "chevron.down.circle.fill")
-				.foregroundColor(.red)
+		Group {
+			if match.tierAfterUpdate > match.tierBeforeUpdate {
+				// promotion
+				Image(systemName: "chevron.up.circle.fill")
+					.foregroundColor(.green)
+			} else if match.tierAfterUpdate < match.tierBeforeUpdate {
+				// demotion
+				Image(systemName: "chevron.down.circle.fill")
+					.foregroundColor(.red)
+			}
 		}
+		.font(.system(size: 12))
 	}
 }
 

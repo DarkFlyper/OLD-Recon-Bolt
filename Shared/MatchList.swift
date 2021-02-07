@@ -1,82 +1,35 @@
 import Foundation
 import Combine
 import UserDefault
+import HandyOperators
 
-protocol MatchList: ObservableObject {
-	var userID: UUID { get }
-	var matches: [Match] { get }
-	var minMissedMatches: Int { get }
-	
-	func switchUser(to id: UUID)
-	func loadOlderMatches(using client: Client) -> AnyPublisher<Bool, Error>
-	func loadNewerMatches(using client: Client) -> AnyPublisher<Bool, Error>
-}
-
-final class PreviewMatchList: MatchList {
-	let userID = UUID()
-	let matches: [Match]
-	let minMissedMatches = 3
-	
-	init(matches: [Match]) {
-		self.matches = matches
-	}
-	
-	func switchUser(to id: UUID) { fatalError() }
-	func loadOlderMatches(using client: Client) -> AnyPublisher<Bool, Error> { fatalError() }
-	func loadNewerMatches(using client: Client) -> AnyPublisher<Bool, Error> { fatalError() }
-}
-
-final class FetchingMatchList: MatchList {
-	@UserDefault("storedMatchList") private static var stored: Storage?
-	static let requestSize = 20
-	
-	@Published private(set) var userID = UUID() // bogus id for "uninitialized" state (StateObjects can't be optional)
-	@Published private(set) var matches: [Match] = [] {
-		didSet { save() }
-	}
-	@Published private(set) var minMissedMatches = 0 {
+struct MatchList: Codable, DefaultsValueConvertible {
+	let user: UserInfo
+	private(set) var matches: [Match] = []
+	private(set) var minMissedMatches = 0 {
 		didSet { assert(minMissedMatches >= 0) }
 	}
 	
-	func switchUser(to id: UUID) {
-		guard id != userID else { return } // already switched to this user
-		userID = id
-		if let stored = Self.stored, stored.userID == userID {
-			matches = stored.matches
-			minMissedMatches = stored.minMissedMatches
-		} else {
-			matches = []
-			minMissedMatches = 0
-		}
+	/// - throws: if nothing changed (no new matches added and minMissedMatches unchanged)
+	func addingMatches(_ new: [Match], startIndex sentStartIndex: Int) throws -> Self {
+		let new = self <- { $0.tryToAddMatches(new, startIndex: sentStartIndex) }
+		
+		guard false
+				|| new.minMissedMatches != minMissedMatches
+				|| new.matches.count != matches.count
+		else { throw NoNewMatchesError() }
+		
+		return new
 	}
 	
-	func loadOlderMatches(using client: Client) -> AnyPublisher<Bool, Error> {
-		let startIndex = min(80, matches.count + minMissedMatches)
-		return client
-			.getCompetitiveUpdates(userID: userID, startIndex: startIndex)
-			.receive(on: DispatchQueue.main)
-			.map { self.addMatches($0, startIndex: startIndex) }
-			.eraseToAnyPublisher()
-	}
-	
-	func loadNewerMatches(using client: Client) -> AnyPublisher<Bool, Error> {
-		let startIndex = max(0, minMissedMatches - Self.requestSize + 1) // 1 overlap to check contiguity
-		return client
-			.getCompetitiveUpdates(userID: userID, startIndex: startIndex)
-			.receive(on: DispatchQueue.main)
-			.map { self.addMatches($0, startIndex: startIndex) }
-			.eraseToAnyPublisher()
-	}
-	
-	/// - returns: whethere anything changed (new matches added or minMissedMatches updated)
-	private func addMatches(_ new: [Match], startIndex sentStartIndex: Int) -> Bool {
+	private mutating func tryToAddMatches(_ new: [Match], startIndex sentStartIndex: Int) {
 		guard !new.isEmpty else {
 			print("no matches passed to addMatches!")
-			return false
+			return
 		}
 		guard !matches.isEmpty else {
 			matches = new
-			return true
+			return
 		}
 		
 		let firstNew = new.first!
@@ -85,20 +38,18 @@ final class FetchingMatchList: MatchList {
 		// oof
 		if let overlapStart = matches.firstIndexByID(of: firstNew) {
 			let expectedOverlapStart = sentStartIndex - minMissedMatches
-			let oldMin = minMissedMatches
 			minMissedMatches += max(0, expectedOverlapStart - overlapStart)
 			
-			if let lastIndex = new.firstIndexByID(of: matches.last!) {
-				let nonOverlapping = new.suffix(from: lastIndex + 1)
-				guard !nonOverlapping.isEmpty || minMissedMatches != oldMin else { return false }
-				matches.append(contentsOf: nonOverlapping)
-			} else {
-				return false
-			}
+			guard let lastIndex = new.firstIndexByID(of: matches.last!) else { return }
+			let nonOverlapping = new.suffix(from: lastIndex + 1)
+			guard !nonOverlapping.isEmpty else { return }
+			
+			matches.append(contentsOf: nonOverlapping)
 		} else if let overlapEnd = matches.firstIndexByID(of: lastNew) {
 			let overlap = matches.prefix(through: overlapEnd).count
 			let nonOverlapping = new.dropLast(overlap)
-			guard !nonOverlapping.isEmpty || minMissedMatches != sentStartIndex else { return false }
+			guard !nonOverlapping.isEmpty else { return }
+			
 			matches = nonOverlapping + matches
 			minMissedMatches = sentStartIndex
 		} else {
@@ -115,21 +66,49 @@ final class FetchingMatchList: MatchList {
 				fatalError("unexpected state!")
 			}
 		}
-		return true
+	}
+	
+	private struct NoNewMatchesError: LocalizedError {
+		let errorDescription: String? = "No further matches received."
+	}
+}
+
+extension MatchList {
+	@UserDefault("storedMatchList") private static var stored: Self?
+	
+	static func forUser(_ user: UserInfo) -> Self {
+		Self.stored
+			.filter { $0.user.id == user.id }
+			?? .init(user: user)
 	}
 	
 	func save() {
-		Self.stored = Storage(
-			userID: userID,
-			matches: matches,
-			minMissedMatches: minMissedMatches
+		Self.stored = self
+	}
+}
+
+extension Client {
+	private static let requestSize = 20
+	
+	func loadOlderMatches(for list: MatchList) -> AnyPublisher<MatchList, Error> {
+		loadMatches(
+			for: list,
+			startIndex: min(80, list.matches.count + list.minMissedMatches) // API seems to fail for startIndex > 80
 		)
 	}
 	
-	struct Storage: Codable, DefaultsValueConvertible {
-		var userID: UUID
-		var matches: [Match]
-		var minMissedMatches: Int
+	func loadNewerMatches(for list: MatchList) -> AnyPublisher<MatchList, Error> {
+		loadMatches(
+			for: list,
+			startIndex: max(0, list.minMissedMatches - Self.requestSize + 1) // 1 overlap to check contiguity
+		)
+	}
+	
+	private func loadMatches(for list: MatchList, startIndex: Int) -> AnyPublisher<MatchList, Error> {
+		getCompetitiveUpdates(userID: list.user.id, startIndex: startIndex)
+			.tryMap { try list.addingMatches($0, startIndex: startIndex) }
+			.receive(on: DispatchQueue.main)
+			.eraseToAnyPublisher()
 	}
 }
 
