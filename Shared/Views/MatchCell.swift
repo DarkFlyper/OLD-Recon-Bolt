@@ -49,7 +49,7 @@ struct MatchCell: View {
 				Text(Self.timeFormatter.string(from: match.startTime))
 					.foregroundColor(.secondary)
 				if match.performanceBonus != 0 {
-					Text("Performance Bonus: \(match.performanceBonus)")
+					Text("Bonus: +\(match.performanceBonus)")
 						.foregroundColor(.green)
 				}
 				if match.afkPenalty != 0 {

@@ -18,8 +18,8 @@ struct MatchListView: View {
 	var body: some View {
 		List {
 			loadButton(
-				title: matchList.minMissedMatches > 0
-					? "Load \(matchList.minMissedMatches)+ Newer Matches"
+				title: matchList.estimatedMissedMatches > 0
+					? "Load \(matchList.estimatedMissedMatches)+ Newer Matches"
 					: "Load Newer Matches",
 				task: Client.loadNewerMatches
 			)

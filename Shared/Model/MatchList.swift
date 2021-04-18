@@ -6,8 +6,8 @@ import HandyOperators
 struct MatchList: Codable, DefaultsValueConvertible {
 	let user: UserInfo
 	private(set) var matches: [Match] = []
-	private(set) var minMissedMatches = 0 {
-		didSet { assert(minMissedMatches >= 0) }
+	private(set) var estimatedMissedMatches = 0 {
+		didSet { assert(estimatedMissedMatches >= 0) }
 	}
 	
 	/// - throws: if nothing changed (no new matches added and minMissedMatches unchanged)
@@ -15,7 +15,7 @@ struct MatchList: Codable, DefaultsValueConvertible {
 		let new = self <- { $0.tryToAddMatches(new, startIndex: sentStartIndex) }
 		
 		guard false
-				|| new.minMissedMatches != minMissedMatches
+				|| new.estimatedMissedMatches != estimatedMissedMatches
 				|| new.matches.count != matches.count
 		else { throw NoNewMatchesError() }
 		
@@ -37,31 +37,38 @@ struct MatchList: Codable, DefaultsValueConvertible {
 		
 		// oof
 		if let overlapStart = matches.firstIndexByID(of: firstNew) {
-			let expectedOverlapStart = sentStartIndex - minMissedMatches
-			minMissedMatches += max(0, expectedOverlapStart - overlapStart)
+			let expectedOverlapStart = sentStartIndex - estimatedMissedMatches
+			estimatedMissedMatches += max(0, expectedOverlapStart - overlapStart)
 			
 			guard let lastIndex = new.firstIndexByID(of: matches.last!) else { return }
 			let nonOverlapping = new.suffix(from: lastIndex + 1)
 			guard !nonOverlapping.isEmpty else { return }
 			
 			matches.append(contentsOf: nonOverlapping)
-		} else if let overlapEnd = matches.firstIndexByID(of: lastNew) {
-			let overlap = matches.prefix(through: overlapEnd).count
-			let nonOverlapping = new.dropLast(overlap)
+		} else if let _ = matches.firstIndexByID(of: lastNew) {
+			// sometimes the api seems to decide to discard some older games?? let's work with that
+			estimatedMissedMatches = sentStartIndex
+			guard let firstKnown = new.firstIndexByID(of: matches.first!) else {
+				// all new matches already known
+				estimatedMissedMatches = sentStartIndex
+				return
+			}
+			
+			let nonOverlapping = new.prefix(upTo: firstKnown)
 			guard !nonOverlapping.isEmpty else { return }
 			
 			matches = nonOverlapping + matches
-			minMissedMatches = sentStartIndex
+			estimatedMissedMatches = sentStartIndex
 		} else {
 			// no overlap!
 			if matches.last!.startTime > firstNew.startTime {
-				assert(sentStartIndex == matches.count + minMissedMatches)
+				assert(sentStartIndex == matches.count + estimatedMissedMatches)
 				// first older match is right before our current oldest
 				matches.append(contentsOf: new)
 			} else if matches.first!.startTime < lastNew.startTime {
 				// TODO: figure out how to handle this; easiest would be to just keep refreshing until we reach our newest existing match
 				print("non-contiguous match history: too many matches played since last refresh!")
-				minMissedMatches += new.count
+				estimatedMissedMatches = sentStartIndex + new.count * 3/2
 			} else {
 				fatalError("unexpected state!")
 			}
@@ -93,14 +100,14 @@ extension Client {
 	func loadOlderMatches(for list: MatchList) -> AnyPublisher<MatchList, Error> {
 		loadMatches(
 			for: list,
-			startIndex: min(80, list.matches.count + list.minMissedMatches) // API seems to fail for startIndex > 80
+			startIndex: min(80, list.matches.count + list.estimatedMissedMatches) // API seems to fail for startIndex > 80
 		)
 	}
 	
 	func loadNewerMatches(for list: MatchList) -> AnyPublisher<MatchList, Error> {
 		loadMatches(
 			for: list,
-			startIndex: max(0, list.minMissedMatches - Self.requestSize + 1) // 1 overlap to check contiguity
+			startIndex: max(0, list.estimatedMissedMatches - Self.requestSize + 1) // 1 overlap to check contiguity
 		)
 	}
 	
