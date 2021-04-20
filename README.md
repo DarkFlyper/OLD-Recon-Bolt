@@ -10,6 +10,10 @@ Based on [RumbleMike/ValorantStreamOverlay](https://github.com/RumbleMike/Valora
 
 Unfortunately, this app needs your Riot username and password to function, but of course you can view the code yourself to check its safety, and the password is stored in the keychain rather than as plaintext.
 
+## TestFlight
+
+I've uploaded a build of the app to Apple and they approved it for beta testing! [Here's the link](https://testflight.apple.com/join/M1e2dgxj) to join the beta :)
+
 ## Screenshot
 
 (Please ignore my horrible rank.)
