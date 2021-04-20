@@ -12,12 +12,13 @@ final class Client: Identifiable {
 	}
 	
 	let session = URLSession(configuration: .ephemeral)
+	let region: Region
 	
 	private var accessToken: String?
 	private var entitlementsToken: String?
 	
-	static func authenticated(username: String, password: String) -> AnyPublisher<Client, Error> {
-		let client = Client()
+	static func authenticated(username: String, password: String, region: Region) -> AnyPublisher<Client, Error> {
+		let client = Client(region: region)
 		return client.establishSession()
 			.flatMap { client.getAccessToken(username: username, password: password) }
 			.map { client.accessToken = $0 }
@@ -27,7 +28,9 @@ final class Client: Identifiable {
 			.eraseToAnyPublisher()
 	}
 	
-	private init() {}
+	private init(region: Region) {
+		self.region = region
+	}
 	
 	func send<R: Request>(_ request: R) -> AnyPublisher<R.Response, Error> {
 		Just(request)

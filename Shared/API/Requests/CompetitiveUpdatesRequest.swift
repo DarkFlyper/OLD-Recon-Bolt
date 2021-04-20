@@ -6,7 +6,7 @@ struct CompetitiveUpdatesRequest: GetJSONRequest {
 	var url: URL {
 		(URLComponents() <- {
 			$0.scheme = "https"
-			$0.host = "pd.eu.a.pvp.net" // TODO: other regions—if queried in the wrong region, just returns no matches
+			$0.host = "pd.\(region.subdomain).a.pvp.net"
 			$0.path = "/mmr/v1/players/\(userID.uuidString.lowercased())/competitiveupdates"
 			$0.queryItems = [
 				URLQueryItem(name: "startIndex", value: "\(startIndex)"),
@@ -15,6 +15,7 @@ struct CompetitiveUpdatesRequest: GetJSONRequest {
 		}).url!
 	}
 	
+	var region: Region
 	var userID: UUID
 	var startIndex = 0
 	var endIndex = 20
@@ -35,6 +36,7 @@ struct CompetitiveUpdatesRequest: GetJSONRequest {
 extension Client {
 	func getCompetitiveUpdates(userID: UUID, startIndex: Int = 0) -> AnyPublisher<[Match], Error> {
 		send(CompetitiveUpdatesRequest(
+			region: region,
 			userID: userID,
 			startIndex: startIndex, endIndex: startIndex + 20
 		))

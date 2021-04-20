@@ -19,6 +19,13 @@ struct LoginSheet: View {
 					.lineLimit(2)
 					.fixedSize(horizontal: false, vertical: true) // without this the line limit doesn't seem to work
 				VStack {
+					Picker("Region: \(credentials.region.name)", selection: $credentials.region) {
+						ForEach(Region.allCases, id: \.rawValue) { region in
+							Text(verbatim: region.name).tag(region)
+						}
+					}
+					.pickerStyle(MenuPickerStyle())
+					
 					TextField("Username", text: $credentials.username)
 					SecureField("Password", text: $credentials.password) { logIn() }
 				}
@@ -49,7 +56,8 @@ struct LoginSheet: View {
 		loadManager.runTask(
 			Client.authenticated(
 				username: credentials.username,
-				password: credentials.password
+				password: credentials.password,
+				region: credentials.region
 			)
 		) { client = $0 }
 	}
@@ -59,5 +67,24 @@ struct LoginSheet_Previews: PreviewProvider {
 	static var previews: some View {
 		LoginSheet(client: .constant(nil)).preferredColorScheme(.light)
 		LoginSheet(client: .constant(nil)).preferredColorScheme(.dark)
+	}
+}
+
+extension Region {
+	var name: String {
+		switch self {
+		case .europe:
+			return "Europe"
+		case .northAmerica:
+			return "North America"
+		case .korea:
+			return "Korea"
+		case .asiaPacific:
+			return "Asia Pacific"
+		case .brazil:
+			return "Brazil"
+		case .latinAmerica:
+			return "Latin America"
+		}
 	}
 }

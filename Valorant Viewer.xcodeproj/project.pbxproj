@@ -59,6 +59,8 @@
 		B9CF2E7525A8217C004A1458 /* Combine+Ergonomics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CF2E7325A8217C004A1458 /* Combine+Ergonomics.swift */; };
 		B9CF2E7925A89976004A1458 /* MatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CF2E7825A89976004A1458 /* MatchCell.swift */; };
 		B9CF2E7A25A89976004A1458 /* MatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CF2E7825A89976004A1458 /* MatchCell.swift */; };
+		B9DBB290262F38260059E545 /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DBB28F262F38250059E545 /* Region.swift */; };
+		B9DBB291262F38260059E545 /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DBB28F262F38250059E545 /* Region.swift */; };
 		B9E12B0C25BBD57D008E1E77 /* Optional+Functional.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E12B0B25BBD57D008E1E77 /* Optional+Functional.swift */; };
 		B9E12B0D25BBD57D008E1E77 /* Optional+Functional.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E12B0B25BBD57D008E1E77 /* Optional+Functional.swift */; };
 /* End PBXBuildFile section */
@@ -91,6 +93,7 @@
 		B9CF2E6125A81B48004A1458 /* UnifiedStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnifiedStyles.swift; sourceTree = "<group>"; };
 		B9CF2E7325A8217C004A1458 /* Combine+Ergonomics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+Ergonomics.swift"; sourceTree = "<group>"; };
 		B9CF2E7825A89976004A1458 /* MatchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCell.swift; sourceTree = "<group>"; };
+		B9DBB28F262F38250059E545 /* Region.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Region.swift; sourceTree = "<group>"; };
 		B9E12B0B25BBD57D008E1E77 /* Optional+Functional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Functional.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -206,6 +209,7 @@
 				B941B67225A5E68E00F675C1 /* Client.swift */,
 				B941B6BD25A649C700F675C1 /* UserInfo.swift */,
 				B941B6C925A7670900F675C1 /* Match.swift */,
+				B9DBB28F262F38250059E545 /* Region.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -358,6 +362,7 @@
 				B941B6B725A6490700F675C1 /* Entitlements.swift in Sources */,
 				B94091B825D09F0200EE5DF2 /* MatchListView.swift in Sources */,
 				B941B67825A5E6F200F675C1 /* Communication.swift in Sources */,
+				B9DBB290262F38260059E545 /* Region.swift in Sources */,
 				B9CF2E7425A8217C004A1458 /* Combine+Ergonomics.swift in Sources */,
 				B94091B325D09DF900EE5DF2 /* SwiftUI+CrossPlatform.swift in Sources */,
 				B941B6D825A7A09000F675C1 /* Credentials.swift in Sources */,
@@ -386,6 +391,7 @@
 				B941B6B825A6490700F675C1 /* Entitlements.swift in Sources */,
 				B94091B925D09F0200EE5DF2 /* MatchListView.swift in Sources */,
 				B941B67925A5E6F200F675C1 /* Communication.swift in Sources */,
+				B9DBB291262F38260059E545 /* Region.swift in Sources */,
 				B9CF2E7525A8217C004A1458 /* Combine+Ergonomics.swift in Sources */,
 				B94091B425D09DF900EE5DF2 /* SwiftUI+CrossPlatform.swift in Sources */,
 				B941B6D925A7A09000F675C1 /* Credentials.swift in Sources */,
