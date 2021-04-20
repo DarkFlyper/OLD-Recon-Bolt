@@ -54,7 +54,6 @@ extension String {
 	}
 }
 
-#if DEBUG
 extension Match {
 	static func example(tierChange: (Int, Int), tierProgressChange: (Int, Int), mapIndex: Int? = nil) -> Match {
 		let mapIndex = mapIndex ?? Self.mapPaths.indices.randomElement()!
@@ -71,4 +70,3 @@ extension Match {
 		)
 	}
 }
-#endif
