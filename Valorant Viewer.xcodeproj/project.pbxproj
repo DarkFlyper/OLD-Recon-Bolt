@@ -531,7 +531,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "juliand665.Valorant-Viewer";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.juliand665.Valorant-Viewer";
 				PRODUCT_NAME = "Valorant Viewer";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -553,7 +553,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "juliand665.Valorant-Viewer";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.juliand665.Valorant-Viewer";
 				PRODUCT_NAME = "Valorant Viewer";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -581,7 +581,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				OTHER_SWIFT_FLAGS = "-Xfrontend -warn-long-expression-type-checking=200";
-				PRODUCT_BUNDLE_IDENTIFIER = "juliand665.Valorant-Viewer";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.juliand665.Valorant-Viewer";
 				PRODUCT_NAME = "Valorant Viewer";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
@@ -606,7 +606,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "juliand665.Valorant-Viewer";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.juliand665.Valorant-Viewer";
 				PRODUCT_NAME = "Valorant Viewer";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
