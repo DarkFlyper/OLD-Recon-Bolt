@@ -33,12 +33,14 @@
 		B941B6E625A7C48300F675C1 /* LoginSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B6E425A7C48300F675C1 /* LoginSheet.swift */; };
 		B941B6EC25A7C83700F675C1 /* example_matches.json in Resources */ = {isa = PBXBuildFile; fileRef = B941B6EB25A7C83700F675C1 /* example_matches.json */; };
 		B941B6ED25A7C83700F675C1 /* example_matches.json in Resources */ = {isa = PBXBuildFile; fileRef = B941B6EB25A7C83700F675C1 /* example_matches.json */; };
-		B97F8BAA25A8CE5E00553A83 /* MatchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97F8BA925A8CE5E00553A83 /* MatchList.swift */; };
-		B97F8BAB25A8CE5E00553A83 /* MatchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97F8BA925A8CE5E00553A83 /* MatchList.swift */; };
+		B97F8BAA25A8CE5E00553A83 /* Chronology.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97F8BA925A8CE5E00553A83 /* Chronology.swift */; };
+		B97F8BAB25A8CE5E00553A83 /* Chronology.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97F8BA925A8CE5E00553A83 /* Chronology.swift */; };
 		B9C97DC7263CADFC001E4D1B /* ValorantAPI+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C97DC6263CADFC001E4D1B /* ValorantAPI+Mock.swift */; };
 		B9C97DC8263CADFC001E4D1B /* ValorantAPI+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C97DC6263CADFC001E4D1B /* ValorantAPI+Mock.swift */; };
 		B9C97DCC263CB0D6001E4D1B /* ValorantAPI in Frameworks */ = {isa = PBXBuildFile; productRef = B9C97DCB263CB0D6001E4D1B /* ValorantAPI */; };
 		B9C97DCE263CB0F8001E4D1B /* ValorantAPI in Frameworks */ = {isa = PBXBuildFile; productRef = B9C97DCD263CB0F8001E4D1B /* ValorantAPI */; };
+		B9C97DD1263CB744001E4D1B /* MatchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C97DD0263CB744001E4D1B /* MatchList.swift */; };
+		B9C97DD2263CB744001E4D1B /* MatchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C97DD0263CB744001E4D1B /* MatchList.swift */; };
 		B9CF2E6225A81B48004A1458 /* UnifiedStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CF2E6125A81B48004A1458 /* UnifiedStyles.swift */; };
 		B9CF2E6325A81B48004A1458 /* UnifiedStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CF2E6125A81B48004A1458 /* UnifiedStyles.swift */; };
 		B9CF2E6C25A81F57004A1458 /* SwiftUIMissingPieces in Frameworks */ = {isa = PBXBuildFile; productRef = B9CF2E6B25A81F57004A1458 /* SwiftUIMissingPieces */; };
@@ -67,9 +69,10 @@
 		B941B6DD25A7BC3800F675C1 /* View+Styling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Styling.swift"; sourceTree = "<group>"; };
 		B941B6E425A7C48300F675C1 /* LoginSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSheet.swift; sourceTree = "<group>"; };
 		B941B6EB25A7C83700F675C1 /* example_matches.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_matches.json; sourceTree = "<group>"; };
-		B97F8BA925A8CE5E00553A83 /* MatchList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchList.swift; sourceTree = "<group>"; };
+		B97F8BA925A8CE5E00553A83 /* Chronology.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chronology.swift; sourceTree = "<group>"; };
 		B9C97DC6263CADFC001E4D1B /* ValorantAPI+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ValorantAPI+Mock.swift"; sourceTree = "<group>"; };
 		B9C97DCF263CB139001E4D1B /* ValorantAPI */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ValorantAPI; path = "../ Packages/ValorantAPI"; sourceTree = "<group>"; };
+		B9C97DD0263CB744001E4D1B /* MatchList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchList.swift; sourceTree = "<group>"; };
 		B9CF2E6125A81B48004A1458 /* UnifiedStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnifiedStyles.swift; sourceTree = "<group>"; };
 		B9CF2E7325A8217C004A1458 /* Combine+Ergonomics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+Ergonomics.swift"; sourceTree = "<group>"; };
 		B9CF2E7825A89976004A1458 /* MatchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCell.swift; sourceTree = "<group>"; };
@@ -119,7 +122,8 @@
 			isa = PBXGroup;
 			children = (
 				B941B6D725A7A09000F675C1 /* Credentials.swift */,
-				B97F8BA925A8CE5E00553A83 /* MatchList.swift */,
+				B97F8BA925A8CE5E00553A83 /* Chronology.swift */,
+				B9C97DD0263CB744001E4D1B /* MatchList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -326,10 +330,11 @@
 				B9CF2E7925A89976004A1458 /* MatchCell.swift in Sources */,
 				B941B65825A5BC8A00F675C1 /* ContentView.swift in Sources */,
 				B941B65625A5BC8A00F675C1 /* ValorantViewerApp.swift in Sources */,
+				B9C97DD1263CB744001E4D1B /* MatchList.swift in Sources */,
 				B9CF2E6225A81B48004A1458 /* UnifiedStyles.swift in Sources */,
 				B9C97DC7263CADFC001E4D1B /* ValorantAPI+Mock.swift in Sources */,
 				B9E12B0C25BBD57D008E1E77 /* Optional+Functional.swift in Sources */,
-				B97F8BAA25A8CE5E00553A83 /* MatchList.swift in Sources */,
+				B97F8BAA25A8CE5E00553A83 /* Chronology.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,10 +352,11 @@
 				B9CF2E7A25A89976004A1458 /* MatchCell.swift in Sources */,
 				B941B65925A5BC8A00F675C1 /* ContentView.swift in Sources */,
 				B941B65725A5BC8A00F675C1 /* ValorantViewerApp.swift in Sources */,
+				B9C97DD2263CB744001E4D1B /* MatchList.swift in Sources */,
 				B9CF2E6325A81B48004A1458 /* UnifiedStyles.swift in Sources */,
 				B9C97DC8263CADFC001E4D1B /* ValorantAPI+Mock.swift in Sources */,
 				B9E12B0D25BBD57D008E1E77 /* Optional+Functional.swift in Sources */,
-				B97F8BAB25A8CE5E00553A83 /* MatchList.swift in Sources */,
+				B97F8BAB25A8CE5E00553A83 /* Chronology.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

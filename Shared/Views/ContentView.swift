@@ -71,7 +71,10 @@ struct ContentView_Previews: PreviewProvider {
 		),
 		id: .init()
 	)
-	static let exampleMatchList = MatchList(user: exampleUser, matches: exampleMatches)
+	static let exampleMatchList = MatchList(
+		user: exampleUser,
+		chronology: .init(entries: exampleMatches)
+	)
 	
 	static var previews: some View {
 		ContentView(matchList: exampleMatchList)
