@@ -1,6 +1,7 @@
 import SwiftUI
 import Combine
 import HandyOperators
+import ValorantAPI
 
 struct ContentView: View {
 	@State private var isLoggingIn = false
@@ -62,7 +63,7 @@ struct ContentView_Previews: PreviewProvider {
 	)
 	static let decoder = JSONDecoder() <- { $0.dateDecodingStrategy = .millisecondsSince1970 }
 	static let exampleMatches = try! decoder
-		.decode([Match].self, from: exampleMatchData)
+		.decode([CompetitiveUpdate].self, from: exampleMatchData)
 	static let exampleUser = UserInfo(
 		account: .init(
 			gameName: "Julian", tagLine: "665",

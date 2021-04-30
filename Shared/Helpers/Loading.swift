@@ -1,6 +1,7 @@
 import SwiftUI
 import SwiftUIMissingPieces
 import Combine
+import ValorantAPI
 
 final class LoadManager: ObservableObject {
 	@Published var client: Client?

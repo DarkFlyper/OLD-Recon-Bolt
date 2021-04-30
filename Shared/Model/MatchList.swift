@@ -2,16 +2,17 @@ import Foundation
 import Combine
 import UserDefault
 import HandyOperators
+import ValorantAPI
 
 struct MatchList: Codable, DefaultsValueConvertible {
 	let user: UserInfo
-	private(set) var matches: [Match] = []
+	private(set) var matches: [CompetitiveUpdate] = []
 	private(set) var estimatedMissedMatches = 0 {
 		didSet { assert(estimatedMissedMatches >= 0) }
 	}
 	
 	/// - throws: if nothing changed (no new matches added and minMissedMatches unchanged)
-	func addingMatches(_ new: [Match], startIndex sentStartIndex: Int) throws -> Self {
+	func addingMatches(_ new: [CompetitiveUpdate], startIndex sentStartIndex: Int) throws -> Self {
 		let new = self <- { $0.tryToAddMatches(new, startIndex: sentStartIndex) }
 		
 		guard false
@@ -22,7 +23,7 @@ struct MatchList: Codable, DefaultsValueConvertible {
 		return new
 	}
 	
-	private mutating func tryToAddMatches(_ new: [Match], startIndex sentStartIndex: Int) {
+	private mutating func tryToAddMatches(_ new: [CompetitiveUpdate], startIndex sentStartIndex: Int) {
 		guard !new.isEmpty else {
 			print("no matches passed to addMatches!")
 			return

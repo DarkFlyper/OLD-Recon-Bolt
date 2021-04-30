@@ -1,6 +1,7 @@
 import Foundation
 import UserDefault
 import KeychainSwift
+import ValorantAPI
 
 private let keychain = KeychainSwift()
 
@@ -24,5 +25,5 @@ final class CredentialsStorage: ObservableObject {
 }
 
 extension Region: DefaultsValueConvertible {
-	typealias DefaultsRepresentation = RawValue
+	public typealias DefaultsRepresentation = RawValue
 }

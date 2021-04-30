@@ -1,6 +1,7 @@
 import SwiftUI
 import Combine
 import UserDefault
+import ValorantAPI
 
 struct MatchListView: View {
 	@Binding var matchList: MatchList {
@@ -9,7 +10,7 @@ struct MatchListView: View {
 	@State @UserDefault("shouldShowUnranked") private var shouldShowUnranked = true
 	@EnvironmentObject private var loadManager: LoadManager
 	
-	private var shownMatches: [Match] {
+	private var shownMatches: [CompetitiveUpdate] {
 		shouldShowUnranked
 			? matchList.matches
 			: matchList.matches.filter(\.isRanked)

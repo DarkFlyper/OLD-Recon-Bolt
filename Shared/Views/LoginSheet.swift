@@ -1,6 +1,7 @@
 import SwiftUI
 import SwiftUIMissingPieces
 import Combine
+import ValorantAPI
 
 struct LoginSheet: View {
 	@ObservedObject private var credentials = CredentialsStorage()

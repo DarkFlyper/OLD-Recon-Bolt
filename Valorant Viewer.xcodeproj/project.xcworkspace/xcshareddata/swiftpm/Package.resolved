@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "ArrayBuilder",
+        "repositoryURL": "https://github.com/juliand665/ArrayBuilder",
+        "state": {
+          "branch": "main",
+          "revision": "e92dd75e19f402ddcd4c4fd027795d98bc2898d8",
+          "version": null
+        }
+      },
+      {
         "package": "HandyOperators",
         "repositoryURL": "git@github.com:juliand665/HandyOperators.git",
         "state": {
@@ -24,7 +33,7 @@
         "repositoryURL": "git@github.com:juliand665/SwifUI-Missing-Pieces.git",
         "state": {
           "branch": "main",
-          "revision": "481cbad6a4430bdd84e02c1323b833f7ece588c2",
+          "revision": "536fc4c47a3df531619d24010eec67bf6bb19869",
           "version": null
         }
       },
@@ -33,7 +42,7 @@
         "repositoryURL": "git@github.com:juliand665/UserDefault.git",
         "state": {
           "branch": "master",
-          "revision": "beebadb0be231090ea31e4ccfa71d687cf422c14",
+          "revision": "a2549096615e808d2d4f4aa4a6fbacd6722e596d",
           "version": null
         }
       }

@@ -1,6 +1,7 @@
 import SwiftUI
 import SwiftUIMissingPieces
 import HandyOperators
+import ValorantAPI
 
 struct MatchCell: View {
 	static let dateFormatter = DateFormatter() <- {
@@ -12,7 +13,7 @@ struct MatchCell: View {
 	
 	private let visualsHeight: CGFloat = 64
 	
-	let match: Match
+	let match: CompetitiveUpdate
 	
 	var body: some View {
 		if match.isRanked {
@@ -85,7 +86,7 @@ struct MatchCell: View {
 	}
 	
 	private var mapLabel: some View {
-		Text(match.mapName ?? "unknown")
+		Text(match.mapID.mapName ?? "unknown")
 			.font(Font.callout.smallCaps())
 			.bold()
 			.foregroundColor(.white)
@@ -164,15 +165,15 @@ struct MatchCell: View {
 }
 
 struct MatchCell_Previews: PreviewProvider {
-	static let promotion = Match.example(tierChange: (21, 22), tierProgressChange: (80, 10), mapIndex: 0)
-	static let increase = Match.example(tierChange: (8, 8), tierProgressChange: (40, 60), mapIndex: 1)
-	static let unchanged = Match.example(tierChange: (12, 12), tierProgressChange: (50, 50), mapIndex: 2)
-	static let decrease = Match.example(tierChange: (8, 8), tierProgressChange: (60, 40), mapIndex: 3)
-	static let demotion = Match.example(tierChange: (6, 5), tierProgressChange: (10, 80), mapIndex: 4)
+	static let promotion = CompetitiveUpdate.example(tierChange: (21, 22), tierProgressChange: (80, 10), index: 0)
+	static let increase = CompetitiveUpdate.example(tierChange: (8, 8), tierProgressChange: (40, 60), index: 1)
+	static let unchanged = CompetitiveUpdate.example(tierChange: (12, 12), tierProgressChange: (50, 50), index: 2)
+	static let decrease = CompetitiveUpdate.example(tierChange: (8, 8), tierProgressChange: (60, 40), index: 3)
+	static let demotion = CompetitiveUpdate.example(tierChange: (6, 5), tierProgressChange: (10, 80), index: 4)
 	
-	static let jump = Match.example(tierChange: (11, 13), tierProgressChange: (90, 30))
+	static let jump = CompetitiveUpdate.example(tierChange: (11, 13), tierProgressChange: (90, 30))
 	
-	static let unranked = Match.example(tierChange: (0, 0), tierProgressChange: (0, 0))
+	static let unranked = CompetitiveUpdate.example(tierChange: (0, 0), tierProgressChange: (0, 0))
 	
 	static let allExamples = [promotion, increase, unchanged, decrease, demotion, jump, unranked]
 	
@@ -195,10 +196,10 @@ private let tiers: [String] = ["INVALID", "iron", "silver", "gold", "platinum", 
 	.flatMap { rank in (1...3).map { "\(rank) \($0)" } }
 	+ ["radiant"]
 
-extension Match {
+extension CompetitiveUpdate {
 	@ViewBuilder
 	var mapImage: some View {
-		if let name = mapName {
+		if let name = mapID.mapName {
 			Image("maps/\(name)")
 				.resizable()
 		} else {
