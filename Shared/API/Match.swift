@@ -24,6 +24,7 @@ struct Match: Codable, Identifiable {
 		("Duality", "bind"),
 		("Ascent", "ascent"),
 		("Port", "icebox"),
+		("Foxtrot", "breeze"),
 	]
 	.map { key, name in (path: "/Game/Maps/\(key)/\(key)", name: name) }
 	
