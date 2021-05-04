@@ -45,6 +45,15 @@
           "revision": "a2549096615e808d2d4f4aa4a6fbacd6722e596d",
           "version": null
         }
+      },
+      {
+        "package": "VisualEffects",
+        "repositoryURL": "https://github.com/twostraws/VisualEffects",
+        "state": {
+          "branch": null,
+          "revision": "8ff7f90f9650d9db5774275d0b1f07ef642ecf4d",
+          "version": "1.0.3"
+        }
       }
     ]
   },

@@ -49,17 +49,19 @@ final class LoadManager: ObservableObject {
 	}
 }
 
-struct LoadWrapper<Content: View>: View {
-	private let content: Content
+extension View {
+	func withLoadManager() -> some View {
+		LoadWrapper { self }
+	}
+}
+
+private struct LoadWrapper<Content: View>: View {
+	@ViewBuilder let content: () -> Content
 	@State private var errorTitle = "Error loading data!"
 	@StateObject private var loadManager = LoadManager()
 	
-	init(@ViewBuilder _ content: () -> Content) {
-		self.content = content()
-	}
-	
 	var body: some View {
-		content
+		content()
 			.onPreferenceChange(LoadErrorTitleKey.self) {
 				errorTitle = $0 ?? errorTitle
 			}

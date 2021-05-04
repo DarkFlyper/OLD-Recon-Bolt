@@ -12,7 +12,7 @@ extension MapID {
 extension CompetitiveUpdate {
 	static func example(tierChange: (Int, Int), tierProgressChange: (Int, Int), index: Int? = nil) -> Self {
 		Self(
-			id: UUID(),
+			id: .init(),
 			mapID: .example(index: index),
 			startTime: Date().addingTimeInterval(-Double(100 + (index ?? 0) * 50_000 as Int)),
 			tierBeforeUpdate: tierChange.0, tierAfterUpdate: tierChange.1,

@@ -4,7 +4,8 @@ import SwiftUI
 struct ValorantViewerApp: App {
 	var body: some Scene {
 		WindowGroup {
-			LoadWrapper { ContentView() }
+			ContentView()
+				.withLoadManager()
 		}
 	}
 }

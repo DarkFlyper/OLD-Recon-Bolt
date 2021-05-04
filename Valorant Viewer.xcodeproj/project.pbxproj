@@ -51,6 +51,14 @@
 		B9CF2E7A25A89976004A1458 /* MatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CF2E7825A89976004A1458 /* MatchCell.swift */; };
 		B9E12B0C25BBD57D008E1E77 /* Optional+Functional.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E12B0B25BBD57D008E1E77 /* Optional+Functional.swift */; };
 		B9E12B0D25BBD57D008E1E77 /* Optional+Functional.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E12B0B25BBD57D008E1E77 /* Optional+Functional.swift */; };
+		B9EF0F21263CFC870067176A /* MatchDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EF0F20263CFC870067176A /* MatchDetailsView.swift */; };
+		B9EF0F22263CFC870067176A /* MatchDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EF0F20263CFC870067176A /* MatchDetailsView.swift */; };
+		B9EF0F24263D091F0067176A /* example_match.json in Resources */ = {isa = PBXBuildFile; fileRef = B9EF0F23263D09120067176A /* example_match.json */; };
+		B9EF0F25263D09AD0067176A /* example_match.json in Resources */ = {isa = PBXBuildFile; fileRef = B9EF0F23263D09120067176A /* example_match.json */; };
+		B9EF0F27263D9D860067176A /* ValorantAPI+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EF0F26263D9D860067176A /* ValorantAPI+SwiftUI.swift */; };
+		B9EF0F28263D9D860067176A /* ValorantAPI+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EF0F26263D9D860067176A /* ValorantAPI+SwiftUI.swift */; };
+		B9EF0F2B263DEEA30067176A /* VisualEffects in Frameworks */ = {isa = PBXBuildFile; productRef = B9EF0F2A263DEEA30067176A /* VisualEffects */; };
+		B9EF0F2D263DEEAA0067176A /* VisualEffects in Frameworks */ = {isa = PBXBuildFile; productRef = B9EF0F2C263DEEAA0067176A /* VisualEffects */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +85,9 @@
 		B9CF2E7325A8217C004A1458 /* Combine+Ergonomics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+Ergonomics.swift"; sourceTree = "<group>"; };
 		B9CF2E7825A89976004A1458 /* MatchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCell.swift; sourceTree = "<group>"; };
 		B9E12B0B25BBD57D008E1E77 /* Optional+Functional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Functional.swift"; sourceTree = "<group>"; };
+		B9EF0F20263CFC870067176A /* MatchDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsView.swift; sourceTree = "<group>"; };
+		B9EF0F23263D09120067176A /* example_match.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = example_match.json; sourceTree = "<group>"; };
+		B9EF0F26263D9D860067176A /* ValorantAPI+SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ValorantAPI+SwiftUI.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +100,7 @@
 				B941B66A25A5C36A00F675C1 /* HandyOperators in Frameworks */,
 				B9CF2E6C25A81F57004A1458 /* SwiftUIMissingPieces in Frameworks */,
 				B941B69B25A62FFB00F675C1 /* UserDefault in Frameworks */,
+				B9EF0F2B263DEEA30067176A /* VisualEffects in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +113,7 @@
 				B941B66F25A5C3AD00F675C1 /* HandyOperators in Frameworks */,
 				B9CF2E7025A81F5D004A1458 /* SwiftUIMissingPieces in Frameworks */,
 				B941B69F25A6300100F675C1 /* UserDefault in Frameworks */,
+				B9EF0F2D263DEEAA0067176A /* VisualEffects in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +127,8 @@
 				B941B64425A5BC8800F675C1 /* ContentView.swift */,
 				B94091B725D09F0200EE5DF2 /* MatchListView.swift */,
 				B9CF2E7825A89976004A1458 /* MatchCell.swift */,
+				B9EF0F20263CFC870067176A /* MatchDetailsView.swift */,
+				B9EF0F26263D9D860067176A /* ValorantAPI+SwiftUI.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -148,6 +163,7 @@
 				B94091CC25D0ACB100EE5DF2 /* Model */,
 				B941B6DC25A7BC3200F675C1 /* Helpers */,
 				B941B64525A5BC8A00F675C1 /* Assets.xcassets */,
+				B9EF0F23263D09120067176A /* example_match.json */,
 				B941B6EB25A7C83700F675C1 /* example_matches.json */,
 			);
 			path = Shared;
@@ -222,6 +238,7 @@
 				B941B6CF25A79A6400F675C1 /* KeychainSwift */,
 				B9CF2E6B25A81F57004A1458 /* SwiftUIMissingPieces */,
 				B9C97DCB263CB0D6001E4D1B /* ValorantAPI */,
+				B9EF0F2A263DEEA30067176A /* VisualEffects */,
 			);
 			productName = "Valorant Viewer (iOS)";
 			productReference = B941B64A25A5BC8A00F675C1 /* Valorant Viewer.app */;
@@ -246,6 +263,7 @@
 				B941B6D325A79A6A00F675C1 /* KeychainSwift */,
 				B9CF2E6F25A81F5D004A1458 /* SwiftUIMissingPieces */,
 				B9C97DCD263CB0F8001E4D1B /* ValorantAPI */,
+				B9EF0F2C263DEEAA0067176A /* VisualEffects */,
 			);
 			productName = "Valorant Viewer (macOS)";
 			productReference = B941B65225A5BC8A00F675C1 /* Valorant Viewer.app */;
@@ -283,6 +301,7 @@
 				B941B6CE25A79A6400F675C1 /* XCRemoteSwiftPackageReference "keychain-swift" */,
 				B9CF2E6A25A81F57004A1458 /* XCRemoteSwiftPackageReference "SwifUI-Missing-Pieces" */,
 				B9C97DCA263CB0D6001E4D1B /* XCRemoteSwiftPackageReference "ValorantAPI" */,
+				B9EF0F29263DEEA30067176A /* XCRemoteSwiftPackageReference "VisualEffects" */,
 			);
 			productRefGroup = B941B64B25A5BC8A00F675C1 /* Products */;
 			projectDirPath = "";
@@ -299,6 +318,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9EF0F25263D09AD0067176A /* example_match.json in Resources */,
 				B941B6EC25A7C83700F675C1 /* example_matches.json in Resources */,
 				B941B65A25A5BC8A00F675C1 /* Assets.xcassets in Resources */,
 			);
@@ -309,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B941B6ED25A7C83700F675C1 /* example_matches.json in Resources */,
+				B9EF0F24263D091F0067176A /* example_match.json in Resources */,
 				B941B65B25A5BC8A00F675C1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,6 +349,7 @@
 				B94091B325D09DF900EE5DF2 /* SwiftUI+CrossPlatform.swift in Sources */,
 				B941B6D825A7A09000F675C1 /* Credentials.swift in Sources */,
 				B9CF2E7925A89976004A1458 /* MatchCell.swift in Sources */,
+				B9EF0F27263D9D860067176A /* ValorantAPI+SwiftUI.swift in Sources */,
 				B941B65825A5BC8A00F675C1 /* ContentView.swift in Sources */,
 				B941B65625A5BC8A00F675C1 /* ValorantViewerApp.swift in Sources */,
 				B9C97DD1263CB744001E4D1B /* MatchList.swift in Sources */,
@@ -335,6 +357,7 @@
 				B9C97DC7263CADFC001E4D1B /* ValorantAPI+Mock.swift in Sources */,
 				B9E12B0C25BBD57D008E1E77 /* Optional+Functional.swift in Sources */,
 				B97F8BAA25A8CE5E00553A83 /* Chronology.swift in Sources */,
+				B9EF0F21263CFC870067176A /* MatchDetailsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +373,7 @@
 				B94091B425D09DF900EE5DF2 /* SwiftUI+CrossPlatform.swift in Sources */,
 				B941B6D925A7A09000F675C1 /* Credentials.swift in Sources */,
 				B9CF2E7A25A89976004A1458 /* MatchCell.swift in Sources */,
+				B9EF0F28263D9D860067176A /* ValorantAPI+SwiftUI.swift in Sources */,
 				B941B65925A5BC8A00F675C1 /* ContentView.swift in Sources */,
 				B941B65725A5BC8A00F675C1 /* ValorantViewerApp.swift in Sources */,
 				B9C97DD2263CB744001E4D1B /* MatchList.swift in Sources */,
@@ -357,6 +381,7 @@
 				B9C97DC8263CADFC001E4D1B /* ValorantAPI+Mock.swift in Sources */,
 				B9E12B0D25BBD57D008E1E77 /* Optional+Functional.swift in Sources */,
 				B97F8BAB25A8CE5E00553A83 /* Chronology.swift in Sources */,
+				B9EF0F22263CFC870067176A /* MatchDetailsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -645,6 +670,14 @@
 				kind = branch;
 			};
 		};
+		B9EF0F29263DEEA30067176A /* XCRemoteSwiftPackageReference "VisualEffects" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/VisualEffects";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -697,6 +730,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B9CF2E6A25A81F57004A1458 /* XCRemoteSwiftPackageReference "SwifUI-Missing-Pieces" */;
 			productName = SwiftUIMissingPieces;
+		};
+		B9EF0F2A263DEEA30067176A /* VisualEffects */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B9EF0F29263DEEA30067176A /* XCRemoteSwiftPackageReference "VisualEffects" */;
+			productName = VisualEffects;
+		};
+		B9EF0F2C263DEEAA0067176A /* VisualEffects */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B9EF0F29263DEEA30067176A /* XCRemoteSwiftPackageReference "VisualEffects" */;
+			productName = VisualEffects;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

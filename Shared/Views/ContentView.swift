@@ -27,10 +27,12 @@ struct ContentView: View {
 				}
 			}
 			.sheet(isPresented: $isLoggingIn) {
-				LoadWrapper { LoginSheet(client: $loadManager.client) }
+				LoginSheet(client: $loadManager.client)
+					.withLoadManager()
 			}
 			.loadErrorTitle("Could not load matches!")
 			.withToolbar()
+			.environment(\.playerID, matchList?.user.id)
 	}
 	
 	@ViewBuilder
@@ -61,8 +63,7 @@ struct ContentView_Previews: PreviewProvider {
 		contentsOf: Bundle.main
 			.url(forResource: "example_matches", withExtension: "json")!
 	)
-	static let decoder = JSONDecoder() <- { $0.dateDecodingStrategy = .millisecondsSince1970 }
-	static let exampleMatches = try! decoder
+	static let exampleMatches = try! Client.responseDecoder
 		.decode([CompetitiveUpdate].self, from: exampleMatchData)
 	static let exampleUser = UserInfo(
 		account: .init(

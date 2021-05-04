@@ -16,10 +16,12 @@ struct MatchCell: View {
 	let match: CompetitiveUpdate
 	
 	var body: some View {
-		if match.isRanked {
-			rankedBody
-		} else {
-			unrankedBody
+		NavigationLink(destination: MatchDetailsContainer(matchID: match.id)) {
+			if match.isRanked {
+				rankedBody
+			} else {
+				unrankedBody
+			}
 		}
 	}
 	
@@ -38,7 +40,7 @@ struct MatchCell: View {
 			Text("N/A")
 				.foregroundColor(.secondary)
 		}
-		.opacity(0.6)
+		.opacity(0.8)
 	}
 	
 	var rankedBody: some View {
@@ -76,7 +78,7 @@ struct MatchCell: View {
 	private func mapIcon<V: View>(additionalModifiers: (AnyView) -> V) -> some View {
 		additionalModifiers(
 			AnyView(
-				match.mapImage
+				match.mapID.mapImage
 					.aspectRatio(contentMode: .fit)
 					.frame(height: visualsHeight)
 			)
@@ -195,17 +197,3 @@ struct MatchCell_Previews: PreviewProvider {
 private let tiers: [String] = ["INVALID", "iron", "silver", "gold", "platinum", "diamond", "immortal"]
 	.flatMap { rank in (1...3).map { "\(rank) \($0)" } }
 	+ ["radiant"]
-
-extension CompetitiveUpdate {
-	@ViewBuilder
-	var mapImage: some View {
-		if let name = mapID.mapName {
-			Image("maps/\(name)")
-				.resizable()
-		} else {
-			Rectangle()
-				.size(width: 400, height: 225)
-				.fill(Color.gray)
-		}
-	}
-}
