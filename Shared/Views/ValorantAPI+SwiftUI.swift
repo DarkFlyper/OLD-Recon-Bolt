@@ -2,9 +2,9 @@ import SwiftUI
 import ValorantAPI
 
 extension Color {
-	static let valorantBlue = Color(#colorLiteral(red: 0.4, green: 0.7607843137, blue: 0.662745098, alpha: 1))
-	static let valorantRed = Color(#colorLiteral(red: 0.9411764706, green: 0.3607843137, blue: 0.3411764706, alpha: 1))
-	static let valorantYellow = Color(#colorLiteral(red: 0.9176470588, green: 0.9333333333, blue: 0.6980392157, alpha: 1))
+	static let valorantBlue = Color("Valorant Blue")
+	static let valorantRed = Color("Valorant Red")
+	static let valorantSelf = Color("Valorant Self")
 }
 
 extension Team.ID {

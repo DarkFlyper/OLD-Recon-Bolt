@@ -40,6 +40,7 @@ private extension CoordinateSpace {
 struct MatchDetailsView: View {
 	let matchDetails: MatchDetails
 	let myself: Player?
+	@State var width: CGFloat = 0
 	
 	init(matchDetails: MatchDetails, playerID: Player.ID?) {
 		self.matchDetails = matchDetails
@@ -59,47 +60,68 @@ struct MatchDetailsView: View {
 			}
 		}
 		.coordinateSpace(name: CoordinateSpace.scrollView)
+		.measured { width = $0.width }
 	}
+	
+	private let scoreboardPadding: CGFloat = 6
 	
 	@ViewBuilder
 	private var scoreboard: some View {
-		let columns = [
-			GridItem(.flexible(), spacing: 1),
-			GridItem(.fixed(80), spacing: 1),
-			GridItem(.fixed(140), spacing: 1),
-		]
 		let sorted = matchDetails.players.sorted { $0.stats.score > $1.stats.score }
-		LazyVGrid(columns: columns, spacing: 1) {
-			ForEach(sorted) { player in
-				scoreboardRow(for: player)
+		
+		ScrollView(.horizontal) {
+			VStack(spacing: scoreboardPadding) {
+				ForEach(sorted) { player in
+					scoreboardRow(for: player)
+				}
 			}
+			.padding(scoreboardPadding)
+			.frame(minWidth: width)
 		}
-		.colorScheme(.dark)
-		.padding(1)
 	}
 	
 	@ViewBuilder
 	private func scoreboardRow(for player: Player) -> some View {
-		Group {
-			Text(verbatim: player.gameName)
-				.fontWeight(.medium)
-				.padding(6)
-				.frame(maxWidth: .infinity, alignment: .leading)
+		let divider = Rectangle()
+			.frame(width: 1)
+			.blendMode(.destinationOut)
+		let teamColor = color(for: player.teamID)
+		let teamOrSelfColor = player.id == myself?.id ? .valorantSelf : teamColor
+		
+		HStack(spacing: 0) {
+			teamOrSelfColor
+				.frame(width: scoreboardPadding)
 			
-			Text(verbatim: "\(player.stats.score)")
-				.padding(6)
-			
-			HStack {
-				Text(verbatim: "\(player.stats.kills)")
-				Text("/").opacity(0.5)
-				Text(verbatim: "\(player.stats.deaths)")
-				Text("/").opacity(0.5)
-				Text(verbatim: "\(player.stats.assists)")
+			HStack(spacing: scoreboardPadding) {
+				Group {
+					Text(verbatim: player.gameName)
+						.fontWeight(.medium)
+						.foregroundColor(teamOrSelfColor)
+						.fixedSize()
+						.frame(maxWidth: .infinity, alignment: .leading)
+					
+					divider
+					
+					Text(verbatim: "\(player.stats.score)")
+						.frame(width: 60)
+					
+					divider
+					
+					HStack {
+						Text(verbatim: "\(player.stats.kills)")
+						Text("/").opacity(0.5)
+						Text(verbatim: "\(player.stats.deaths)")
+						Text("/").opacity(0.5)
+						Text(verbatim: "\(player.stats.assists)")
+					}
+					.frame(width: 120)
+				}
+				.frame(maxHeight: .infinity)
 			}
-			.padding(6)
+			.padding(scoreboardPadding)
+			.background(teamOrSelfColor.opacity(0.25))
 		}
-		.frame(maxWidth: .infinity)
-		.background(color(for: player.teamID))
+		.cornerRadius(scoreboardPadding)
 	}
 	
 	func color(for teamID: Team.ID) -> Color? {
@@ -118,15 +140,23 @@ struct MatchDetailsView: View {
 				.clipped()
 				.overlay(mapLabel)
 			
-			scoreSummary(for: matchDetails.teams)
-				.font(.largeTitle.weight(.heavy))
-				.padding(.horizontal, 6)
-				.background(
-					VisualEffectBlur(blurStyle: .systemThinMaterialDark)
-						.roundedAndStroked(cornerRadius: 8)
-				)
-				.shadow(radius: 10)
-				.colorScheme(.dark)
+			VStack {
+				scoreSummary(for: matchDetails.teams)
+					.font(.largeTitle.weight(.heavy))
+				
+				Text(matchDetails.matchInfo.queueID.rawValue)
+					.font(.largeTitle.weight(.semibold).smallCaps())
+					.opacity(0.8)
+					.blendMode(.overlay)
+			}
+			.padding(.horizontal, 6)
+			.background(
+				VisualEffectBlur(blurStyle: .systemThinMaterialDark)
+					.roundedAndStroked(cornerRadius: 8)
+			)
+			.shadow(radius: 10)
+			.colorScheme(.dark)
+			
 		}
 	}
 	
@@ -141,7 +171,6 @@ struct MatchDetailsView: View {
 			.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomLeading)
 			.blendMode(.overlay)
 	}
-	
 	
 	@ViewBuilder
 	private func scoreSummary(for teams: [Team]) -> some View {
