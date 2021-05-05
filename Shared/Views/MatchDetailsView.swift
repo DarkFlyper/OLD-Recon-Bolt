@@ -144,7 +144,7 @@ struct MatchDetailsView: View {
 				scoreSummary(for: matchDetails.teams)
 					.font(.largeTitle.weight(.heavy))
 				
-				Text(matchDetails.matchInfo.queueID.rawValue)
+				Text(matchDetails.matchInfo.queueID.name)
 					.font(.largeTitle.weight(.semibold).smallCaps())
 					.opacity(0.8)
 					.blendMode(.overlay)

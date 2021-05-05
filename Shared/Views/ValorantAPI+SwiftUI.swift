@@ -33,3 +33,18 @@ extension MapID {
 		}
 	}
 }
+
+extension QueueID {
+	var name: String {
+		switch rawValue {
+		case "ggteam":
+			return "Escalation"
+		case "spikerush":
+			return "Spike Rush"
+		case "newmap":
+			return "New Map"
+		case let other:
+			return other.capitalized
+		}
+	}
+}
