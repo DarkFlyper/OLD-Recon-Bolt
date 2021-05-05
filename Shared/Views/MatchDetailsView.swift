@@ -40,7 +40,6 @@ private extension CoordinateSpace {
 struct MatchDetailsView: View {
 	let matchDetails: MatchDetails
 	let myself: Player?
-	@State var width: CGFloat = 0
 	
 	init(matchDetails: MatchDetails, playerID: Player.ID?) {
 		self.matchDetails = matchDetails
@@ -56,80 +55,10 @@ struct MatchDetailsView: View {
 				hero
 					.edgesIgnoringSafeArea(.horizontal)
 				
-				scoreboard
+				ScoreboardView(players: matchDetails.players, myself: myself)
 			}
 		}
 		.coordinateSpace(name: CoordinateSpace.scrollView)
-		.measured { width = $0.width }
-	}
-	
-	private let scoreboardPadding: CGFloat = 6
-	
-	@ViewBuilder
-	private var scoreboard: some View {
-		let sorted = matchDetails.players.sorted { $0.stats.score > $1.stats.score }
-		
-		ScrollView(.horizontal) {
-			VStack(spacing: scoreboardPadding) {
-				ForEach(sorted) { player in
-					scoreboardRow(for: player)
-				}
-			}
-			.padding(scoreboardPadding)
-			.frame(minWidth: width)
-		}
-	}
-	
-	@ViewBuilder
-	private func scoreboardRow(for player: Player) -> some View {
-		let divider = Rectangle()
-			.frame(width: 1)
-			.blendMode(.destinationOut)
-		let teamColor = color(for: player.teamID)
-		let teamOrSelfColor = player.id == myself?.id ? .valorantSelf : teamColor
-		
-		HStack(spacing: 0) {
-			teamOrSelfColor
-				.frame(width: scoreboardPadding)
-			
-			HStack(spacing: scoreboardPadding) {
-				Group {
-					Text(verbatim: player.gameName)
-						.fontWeight(.medium)
-						.foregroundColor(teamOrSelfColor)
-						.fixedSize()
-						.frame(maxWidth: .infinity, alignment: .leading)
-					
-					divider
-					
-					Text(verbatim: "\(player.stats.score)")
-						.frame(width: 60)
-					
-					divider
-					
-					HStack {
-						Text(verbatim: "\(player.stats.kills)")
-						Text("/").opacity(0.5)
-						Text(verbatim: "\(player.stats.deaths)")
-						Text("/").opacity(0.5)
-						Text(verbatim: "\(player.stats.assists)")
-					}
-					.frame(width: 120)
-				}
-				.frame(maxHeight: .infinity)
-			}
-			.padding(scoreboardPadding)
-			.background(teamOrSelfColor.opacity(0.25))
-		}
-		.cornerRadius(scoreboardPadding)
-	}
-	
-	func color(for teamID: Team.ID) -> Color? {
-		if let own = myself?.teamID {
-			return teamID == own ? .valorantBlue : .valorantRed
-		} else {
-			return teamID.color
-		}
 	}
 	
 	private var hero: some View {
@@ -162,13 +91,13 @@ struct MatchDetailsView: View {
 	
 	private var mapLabel: some View {
 		Text(matchDetails.matchInfo.mapID.mapName ?? "unknown")
-			.font(Font.callout.smallCaps())
+			.font(Font.body.smallCaps())
 			.bold()
 			.foregroundColor(.white)
 			.shadow(radius: 1)
 			.padding(.bottom, -2) // visual alignment
-			.padding()
-			.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomLeading)
+			.padding(6)
+			.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
 			.blendMode(.overlay)
 	}
 	

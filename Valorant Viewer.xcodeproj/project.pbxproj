@@ -49,6 +49,8 @@
 		B9CF2E7525A8217C004A1458 /* Combine+Ergonomics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CF2E7325A8217C004A1458 /* Combine+Ergonomics.swift */; };
 		B9CF2E7925A89976004A1458 /* MatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CF2E7825A89976004A1458 /* MatchCell.swift */; };
 		B9CF2E7A25A89976004A1458 /* MatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CF2E7825A89976004A1458 /* MatchCell.swift */; };
+		B9DCF9A72642E0EC00C39EC4 /* ScoreboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DCF9A62642E0EC00C39EC4 /* ScoreboardView.swift */; };
+		B9DCF9A82642E0EC00C39EC4 /* ScoreboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DCF9A62642E0EC00C39EC4 /* ScoreboardView.swift */; };
 		B9E12B0C25BBD57D008E1E77 /* Optional+Functional.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E12B0B25BBD57D008E1E77 /* Optional+Functional.swift */; };
 		B9E12B0D25BBD57D008E1E77 /* Optional+Functional.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E12B0B25BBD57D008E1E77 /* Optional+Functional.swift */; };
 		B9EF0F21263CFC870067176A /* MatchDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EF0F20263CFC870067176A /* MatchDetailsView.swift */; };
@@ -84,6 +86,7 @@
 		B9CF2E6125A81B48004A1458 /* UnifiedStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnifiedStyles.swift; sourceTree = "<group>"; };
 		B9CF2E7325A8217C004A1458 /* Combine+Ergonomics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+Ergonomics.swift"; sourceTree = "<group>"; };
 		B9CF2E7825A89976004A1458 /* MatchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCell.swift; sourceTree = "<group>"; };
+		B9DCF9A62642E0EC00C39EC4 /* ScoreboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreboardView.swift; sourceTree = "<group>"; };
 		B9E12B0B25BBD57D008E1E77 /* Optional+Functional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Functional.swift"; sourceTree = "<group>"; };
 		B9EF0F20263CFC870067176A /* MatchDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsView.swift; sourceTree = "<group>"; };
 		B9EF0F23263D09120067176A /* example_match.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = example_match.json; sourceTree = "<group>"; };
@@ -128,6 +131,7 @@
 				B94091B725D09F0200EE5DF2 /* MatchListView.swift */,
 				B9CF2E7825A89976004A1458 /* MatchCell.swift */,
 				B9EF0F20263CFC870067176A /* MatchDetailsView.swift */,
+				B9DCF9A62642E0EC00C39EC4 /* ScoreboardView.swift */,
 				B9EF0F26263D9D860067176A /* ValorantAPI+SwiftUI.swift */,
 			);
 			path = Views;
@@ -351,6 +355,7 @@
 				B9CF2E7925A89976004A1458 /* MatchCell.swift in Sources */,
 				B9EF0F27263D9D860067176A /* ValorantAPI+SwiftUI.swift in Sources */,
 				B941B65825A5BC8A00F675C1 /* ContentView.swift in Sources */,
+				B9DCF9A72642E0EC00C39EC4 /* ScoreboardView.swift in Sources */,
 				B941B65625A5BC8A00F675C1 /* ValorantViewerApp.swift in Sources */,
 				B9C97DD1263CB744001E4D1B /* MatchList.swift in Sources */,
 				B9CF2E6225A81B48004A1458 /* UnifiedStyles.swift in Sources */,
@@ -375,6 +380,7 @@
 				B9CF2E7A25A89976004A1458 /* MatchCell.swift in Sources */,
 				B9EF0F28263D9D860067176A /* ValorantAPI+SwiftUI.swift in Sources */,
 				B941B65925A5BC8A00F675C1 /* ContentView.swift in Sources */,
+				B9DCF9A82642E0EC00C39EC4 /* ScoreboardView.swift in Sources */,
 				B941B65725A5BC8A00F675C1 /* ValorantViewerApp.swift in Sources */,
 				B9C97DD2263CB744001E4D1B /* MatchList.swift in Sources */,
 				B9CF2E6325A81B48004A1458 /* UnifiedStyles.swift in Sources */,
