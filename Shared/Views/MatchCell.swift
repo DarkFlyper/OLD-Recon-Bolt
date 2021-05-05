@@ -28,8 +28,6 @@ struct MatchCell: View {
 	var unrankedBody: some View {
 		HStack {
 			mapIcon { $0
-				.opacity(0.8)
-				.aspectRatio(contentMode: .fill)
 				.frame(height: visualsHeight / 2, alignment: .top)
 			}
 			
@@ -40,7 +38,6 @@ struct MatchCell: View {
 			Text("N/A")
 				.foregroundColor(.secondary)
 		}
-		.opacity(0.8)
 	}
 	
 	var rankedBody: some View {
