@@ -911,16 +911,16 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:juliand665/HandyOperators.git";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
 			};
 		};
 		B941B69925A62FFB00F675C1 /* XCRemoteSwiftPackageReference "UserDefault" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:juliand665/UserDefault.git";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.2;
 			};
 		};
 		B941B6CE25A79A6400F675C1 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {

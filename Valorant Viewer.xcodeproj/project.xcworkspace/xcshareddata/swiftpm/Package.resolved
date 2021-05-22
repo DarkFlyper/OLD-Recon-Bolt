@@ -5,9 +5,9 @@
         "package": "ArrayBuilder",
         "repositoryURL": "https://github.com/juliand665/ArrayBuilder",
         "state": {
-          "branch": "main",
+          "branch": null,
           "revision": "1d7b2707ba07789b1ebe2589a40407849c43420c",
-          "version": null
+          "version": "1.0.0"
         }
       },
       {
@@ -23,9 +23,9 @@
         "package": "HandyOperators",
         "repositoryURL": "git@github.com:juliand665/HandyOperators.git",
         "state": {
-          "branch": "master",
-          "revision": "483aa96950ad3078d092b2ba8d9dda6ea6576244",
-          "version": null
+          "branch": null,
+          "revision": "27f60a00d9ad310afdf66cc7a25adc4bdb387d58",
+          "version": "2.0.1"
         }
       },
       {
@@ -50,9 +50,9 @@
         "package": "UserDefault",
         "repositoryURL": "git@github.com:juliand665/UserDefault.git",
         "state": {
-          "branch": "master",
-          "revision": "a2549096615e808d2d4f4aa4a6fbacd6722e596d",
-          "version": null
+          "branch": null,
+          "revision": "01f3380fb7ba86b4ac0c81d96c8992bed9f2b8f5",
+          "version": "1.0.2"
         }
       },
       {
