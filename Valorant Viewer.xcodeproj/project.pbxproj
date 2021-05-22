@@ -33,6 +33,12 @@
 		B941B6E625A7C48300F675C1 /* LoginSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B6E425A7C48300F675C1 /* LoginSheet.swift */; };
 		B941B6EC25A7C83700F675C1 /* example_matches.json in Resources */ = {isa = PBXBuildFile; fileRef = B941B6EB25A7C83700F675C1 /* example_matches.json */; };
 		B941B6ED25A7C83700F675C1 /* example_matches.json in Resources */ = {isa = PBXBuildFile; fileRef = B941B6EB25A7C83700F675C1 /* example_matches.json */; };
+		B9485F84264B1DD300AC3456 /* AgentAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9485F83264B1DD300AC3456 /* AgentAssets.swift */; };
+		B9485F85264B1DD300AC3456 /* AgentAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9485F83264B1DD300AC3456 /* AgentAssets.swift */; };
+		B9485F87264B5BD700AC3456 /* AssetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9485F86264B5BD700AC3456 /* AssetImage.swift */; };
+		B9485F88264B5BD700AC3456 /* AssetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9485F86264B5BD700AC3456 /* AssetImage.swift */; };
+		B9485F90264B639F00AC3456 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9485F8F264B639F00AC3456 /* Tests.swift */; };
+		B9485F99264B67EC00AC3456 /* CombineExpectations in Frameworks */ = {isa = PBXBuildFile; productRef = B9485F98264B67EC00AC3456 /* CombineExpectations */; };
 		B97F8BAA25A8CE5E00553A83 /* Chronology.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97F8BA925A8CE5E00553A83 /* Chronology.swift */; };
 		B97F8BAB25A8CE5E00553A83 /* Chronology.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97F8BA925A8CE5E00553A83 /* Chronology.swift */; };
 		B9C97DC7263CADFC001E4D1B /* ValorantAPI+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C97DC6263CADFC001E4D1B /* ValorantAPI+Mock.swift */; };
@@ -51,6 +57,10 @@
 		B9CF2E7A25A89976004A1458 /* MatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CF2E7825A89976004A1458 /* MatchCell.swift */; };
 		B9DCF9A72642E0EC00C39EC4 /* ScoreboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DCF9A62642E0EC00C39EC4 /* ScoreboardView.swift */; };
 		B9DCF9A82642E0EC00C39EC4 /* ScoreboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DCF9A62642E0EC00C39EC4 /* ScoreboardView.swift */; };
+		B9DCF9AB2642F7A100C39EC4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9DCF9AA2642F7A100C39EC4 /* Preview Assets.xcassets */; };
+		B9DCF9AC2642F7A100C39EC4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9DCF9AA2642F7A100C39EC4 /* Preview Assets.xcassets */; };
+		B9DCF9AE2642F8FD00C39EC4 /* AssetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DCF9AD2642F8FD00C39EC4 /* AssetManager.swift */; };
+		B9DCF9AF2642F8FD00C39EC4 /* AssetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DCF9AD2642F8FD00C39EC4 /* AssetManager.swift */; };
 		B9E12B0C25BBD57D008E1E77 /* Optional+Functional.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E12B0B25BBD57D008E1E77 /* Optional+Functional.swift */; };
 		B9E12B0D25BBD57D008E1E77 /* Optional+Functional.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E12B0B25BBD57D008E1E77 /* Optional+Functional.swift */; };
 		B9EF0F21263CFC870067176A /* MatchDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EF0F20263CFC870067176A /* MatchDetailsView.swift */; };
@@ -61,9 +71,30 @@
 		B9EF0F28263D9D860067176A /* ValorantAPI+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EF0F26263D9D860067176A /* ValorantAPI+SwiftUI.swift */; };
 		B9EF0F2B263DEEA30067176A /* VisualEffects in Frameworks */ = {isa = PBXBuildFile; productRef = B9EF0F2A263DEEA30067176A /* VisualEffects */; };
 		B9EF0F2D263DEEAA0067176A /* VisualEffects in Frameworks */ = {isa = PBXBuildFile; productRef = B9EF0F2C263DEEAA0067176A /* VisualEffects */; };
+		B9F07CB426474E8A006CD4F5 /* AssetClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F07CB326474E8A006CD4F5 /* AssetClient.swift */; };
+		B9F07CB526474E8A006CD4F5 /* AssetClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F07CB326474E8A006CD4F5 /* AssetClient.swift */; };
+		B9F07CB726474EB7006CD4F5 /* AssetVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F07CB626474EB7006CD4F5 /* AssetVersion.swift */; };
+		B9F07CB826474EB7006CD4F5 /* AssetVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F07CB626474EB7006CD4F5 /* AssetVersion.swift */; };
+		B9F07CBA26474F4E006CD4F5 /* MapAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F07CB926474F4E006CD4F5 /* MapAssets.swift */; };
+		B9F07CBB26474F4E006CD4F5 /* MapAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F07CB926474F4E006CD4F5 /* MapAssets.swift */; };
+		B9F65C472651D20200C9C34A /* MapImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F65C462651D20200C9C34A /* MapImage.swift */; };
+		B9F65C482651D20200C9C34A /* MapImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F65C462651D20200C9C34A /* MapImage.swift */; };
+		B9F65C4B2651DFB100C9C34A /* AgentImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F65C4A2651DFB100C9C34A /* AgentImage.swift */; };
+		B9F65C4C2651DFB100C9C34A /* AgentImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F65C4A2651DFB100C9C34A /* AgentImage.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B9485F92264B639F00AC3456 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B941B63E25A5BC8800F675C1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B941B65125A5BC8A00F675C1;
+			remoteInfo = "Valorant Viewer (macOS)";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		B91B2B94264384FD00074F7D /* Protoquest */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Protoquest; path = "../ Packages/Protoquest"; sourceTree = "<group>"; };
 		B94091AD25D09D5A00EE5DF2 /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
 		B94091B225D09DF900EE5DF2 /* SwiftUI+CrossPlatform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUI+CrossPlatform.swift"; sourceTree = "<group>"; };
 		B94091B725D09F0200EE5DF2 /* MatchListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListView.swift; sourceTree = "<group>"; };
@@ -79,7 +110,13 @@
 		B941B6DD25A7BC3800F675C1 /* View+Styling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Styling.swift"; sourceTree = "<group>"; };
 		B941B6E425A7C48300F675C1 /* LoginSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSheet.swift; sourceTree = "<group>"; };
 		B941B6EB25A7C83700F675C1 /* example_matches.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_matches.json; sourceTree = "<group>"; };
+		B9485F83264B1DD300AC3456 /* AgentAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentAssets.swift; sourceTree = "<group>"; };
+		B9485F86264B5BD700AC3456 /* AssetImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetImage.swift; sourceTree = "<group>"; };
+		B9485F8D264B639F00AC3456 /* Valorant Viewer Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Valorant Viewer Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9485F8F264B639F00AC3456 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		B9485F91264B639F00AC3456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B97F8BA925A8CE5E00553A83 /* Chronology.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chronology.swift; sourceTree = "<group>"; };
+		B99B75942655859C00FBEB60 /* Valorant Viewer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Valorant Viewer.entitlements"; sourceTree = "<group>"; };
 		B9C97DC6263CADFC001E4D1B /* ValorantAPI+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ValorantAPI+Mock.swift"; sourceTree = "<group>"; };
 		B9C97DCF263CB139001E4D1B /* ValorantAPI */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ValorantAPI; path = "../ Packages/ValorantAPI"; sourceTree = "<group>"; };
 		B9C97DD0263CB744001E4D1B /* MatchList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchList.swift; sourceTree = "<group>"; };
@@ -87,10 +124,17 @@
 		B9CF2E7325A8217C004A1458 /* Combine+Ergonomics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+Ergonomics.swift"; sourceTree = "<group>"; };
 		B9CF2E7825A89976004A1458 /* MatchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCell.swift; sourceTree = "<group>"; };
 		B9DCF9A62642E0EC00C39EC4 /* ScoreboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreboardView.swift; sourceTree = "<group>"; };
+		B9DCF9AA2642F7A100C39EC4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B9DCF9AD2642F8FD00C39EC4 /* AssetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetManager.swift; sourceTree = "<group>"; };
 		B9E12B0B25BBD57D008E1E77 /* Optional+Functional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Functional.swift"; sourceTree = "<group>"; };
 		B9EF0F20263CFC870067176A /* MatchDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsView.swift; sourceTree = "<group>"; };
 		B9EF0F23263D09120067176A /* example_match.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = example_match.json; sourceTree = "<group>"; };
 		B9EF0F26263D9D860067176A /* ValorantAPI+SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ValorantAPI+SwiftUI.swift"; sourceTree = "<group>"; };
+		B9F07CB326474E8A006CD4F5 /* AssetClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetClient.swift; sourceTree = "<group>"; };
+		B9F07CB626474EB7006CD4F5 /* AssetVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetVersion.swift; sourceTree = "<group>"; };
+		B9F07CB926474F4E006CD4F5 /* MapAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAssets.swift; sourceTree = "<group>"; };
+		B9F65C462651D20200C9C34A /* MapImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapImage.swift; sourceTree = "<group>"; };
+		B9F65C4A2651DFB100C9C34A /* AgentImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +164,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B9485F8A264B639F00AC3456 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9485F99264B67EC00AC3456 /* CombineExpectations in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -143,6 +195,7 @@
 				B941B6D725A7A09000F675C1 /* Credentials.swift */,
 				B97F8BA925A8CE5E00553A83 /* Chronology.swift */,
 				B9C97DD0263CB744001E4D1B /* MatchList.swift */,
+				B9F07CB226474E77006CD4F5 /* Assets */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -150,10 +203,13 @@
 		B941B63D25A5BC8800F675C1 = {
 			isa = PBXGroup;
 			children = (
+				B99B75942655859C00FBEB60 /* Valorant Viewer.entitlements */,
+				B91B2B94264384FD00074F7D /* Protoquest */,
 				B9C97DCF263CB139001E4D1B /* ValorantAPI */,
 				B941B64225A5BC8800F675C1 /* Shared */,
 				B941B64C25A5BC8A00F675C1 /* iOS */,
 				B941B65325A5BC8A00F675C1 /* macOS */,
+				B9485F8E264B639F00AC3456 /* Valorant Viewer Tests */,
 				B941B64B25A5BC8A00F675C1 /* Products */,
 				B941B66D25A5C3AD00F675C1 /* Frameworks */,
 			);
@@ -167,8 +223,7 @@
 				B94091CC25D0ACB100EE5DF2 /* Model */,
 				B941B6DC25A7BC3200F675C1 /* Helpers */,
 				B941B64525A5BC8A00F675C1 /* Assets.xcassets */,
-				B9EF0F23263D09120067176A /* example_match.json */,
-				B941B6EB25A7C83700F675C1 /* example_matches.json */,
+				B9DCF9A92642F78900C39EC4 /* Preview Content */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -178,6 +233,7 @@
 			children = (
 				B941B64A25A5BC8A00F675C1 /* Valorant Viewer.app */,
 				B941B65225A5BC8A00F675C1 /* Valorant Viewer.app */,
+				B9485F8D264B639F00AC3456 /* Valorant Viewer Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -218,6 +274,48 @@
 				B9C97DC6263CADFC001E4D1B /* ValorantAPI+Mock.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		B9485F8E264B639F00AC3456 /* Valorant Viewer Tests */ = {
+			isa = PBXGroup;
+			children = (
+				B9485F8F264B639F00AC3456 /* Tests.swift */,
+				B9485F91264B639F00AC3456 /* Info.plist */,
+			);
+			path = "Valorant Viewer Tests";
+			sourceTree = "<group>";
+		};
+		B9DCF9A92642F78900C39EC4 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				B9EF0F23263D09120067176A /* example_match.json */,
+				B941B6EB25A7C83700F675C1 /* example_matches.json */,
+				B9DCF9AA2642F7A100C39EC4 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B9F07CB226474E77006CD4F5 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				B9F65C492651DFA000C9C34A /* Views */,
+				B9DCF9AD2642F8FD00C39EC4 /* AssetManager.swift */,
+				B9F07CB326474E8A006CD4F5 /* AssetClient.swift */,
+				B9F07CB626474EB7006CD4F5 /* AssetVersion.swift */,
+				B9F07CB926474F4E006CD4F5 /* MapAssets.swift */,
+				B9485F83264B1DD300AC3456 /* AgentAssets.swift */,
+				B9485F86264B5BD700AC3456 /* AssetImage.swift */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		B9F65C492651DFA000C9C34A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B9F65C462651D20200C9C34A /* MapImage.swift */,
+				B9F65C4A2651DFB100C9C34A /* AgentImage.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,13 +371,34 @@
 			productReference = B941B65225A5BC8A00F675C1 /* Valorant Viewer.app */;
 			productType = "com.apple.product-type.application";
 		};
+		B9485F8C264B639F00AC3456 /* Valorant Viewer Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9485F94264B639F00AC3456 /* Build configuration list for PBXNativeTarget "Valorant Viewer Tests" */;
+			buildPhases = (
+				B9485F89264B639F00AC3456 /* Sources */,
+				B9485F8A264B639F00AC3456 /* Frameworks */,
+				B9485F8B264B639F00AC3456 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B9485F93264B639F00AC3456 /* PBXTargetDependency */,
+			);
+			name = "Valorant Viewer Tests";
+			packageProductDependencies = (
+				B9485F98264B67EC00AC3456 /* CombineExpectations */,
+			);
+			productName = "Valorant Viewer Tests";
+			productReference = B9485F8D264B639F00AC3456 /* Valorant Viewer Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		B941B63E25A5BC8800F675C1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1230;
+				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
 					B941B64925A5BC8A00F675C1 = {
@@ -287,6 +406,10 @@
 					};
 					B941B65125A5BC8A00F675C1 = {
 						CreatedOnToolsVersion = 12.3;
+					};
+					B9485F8C264B639F00AC3456 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = B941B65125A5BC8A00F675C1;
 					};
 				};
 			};
@@ -306,6 +429,7 @@
 				B9CF2E6A25A81F57004A1458 /* XCRemoteSwiftPackageReference "SwifUI-Missing-Pieces" */,
 				B9C97DCA263CB0D6001E4D1B /* XCRemoteSwiftPackageReference "ValorantAPI" */,
 				B9EF0F29263DEEA30067176A /* XCRemoteSwiftPackageReference "VisualEffects" */,
+				B9485F97264B67EC00AC3456 /* XCRemoteSwiftPackageReference "CombineExpectations" */,
 			);
 			productRefGroup = B941B64B25A5BC8A00F675C1 /* Products */;
 			projectDirPath = "";
@@ -313,6 +437,7 @@
 			targets = (
 				B941B64925A5BC8A00F675C1 /* Valorant Viewer (iOS) */,
 				B941B65125A5BC8A00F675C1 /* Valorant Viewer (macOS) */,
+				B9485F8C264B639F00AC3456 /* Valorant Viewer Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -322,6 +447,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9DCF9AB2642F7A100C39EC4 /* Preview Assets.xcassets in Resources */,
 				B9EF0F25263D09AD0067176A /* example_match.json in Resources */,
 				B941B6EC25A7C83700F675C1 /* example_matches.json in Resources */,
 				B941B65A25A5BC8A00F675C1 /* Assets.xcassets in Resources */,
@@ -332,9 +458,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9DCF9AC2642F7A100C39EC4 /* Preview Assets.xcassets in Resources */,
 				B941B6ED25A7C83700F675C1 /* example_matches.json in Resources */,
 				B9EF0F24263D091F0067176A /* example_match.json in Resources */,
 				B941B65B25A5BC8A00F675C1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9485F8B264B639F00AC3456 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,21 +481,29 @@
 			files = (
 				B941B6DE25A7BC3800F675C1 /* View+Styling.swift in Sources */,
 				B94091AE25D09D5A00EE5DF2 /* Loading.swift in Sources */,
+				B9DCF9AE2642F8FD00C39EC4 /* AssetManager.swift in Sources */,
 				B941B6E525A7C48300F675C1 /* LoginSheet.swift in Sources */,
 				B94091B825D09F0200EE5DF2 /* MatchListView.swift in Sources */,
 				B9CF2E7425A8217C004A1458 /* Combine+Ergonomics.swift in Sources */,
+				B9F65C472651D20200C9C34A /* MapImage.swift in Sources */,
 				B94091B325D09DF900EE5DF2 /* SwiftUI+CrossPlatform.swift in Sources */,
 				B941B6D825A7A09000F675C1 /* Credentials.swift in Sources */,
 				B9CF2E7925A89976004A1458 /* MatchCell.swift in Sources */,
 				B9EF0F27263D9D860067176A /* ValorantAPI+SwiftUI.swift in Sources */,
+				B9485F84264B1DD300AC3456 /* AgentAssets.swift in Sources */,
 				B941B65825A5BC8A00F675C1 /* ContentView.swift in Sources */,
 				B9DCF9A72642E0EC00C39EC4 /* ScoreboardView.swift in Sources */,
 				B941B65625A5BC8A00F675C1 /* ValorantViewerApp.swift in Sources */,
 				B9C97DD1263CB744001E4D1B /* MatchList.swift in Sources */,
+				B9F65C4B2651DFB100C9C34A /* AgentImage.swift in Sources */,
 				B9CF2E6225A81B48004A1458 /* UnifiedStyles.swift in Sources */,
+				B9F07CB726474EB7006CD4F5 /* AssetVersion.swift in Sources */,
+				B9F07CB426474E8A006CD4F5 /* AssetClient.swift in Sources */,
+				B9F07CBA26474F4E006CD4F5 /* MapAssets.swift in Sources */,
 				B9C97DC7263CADFC001E4D1B /* ValorantAPI+Mock.swift in Sources */,
 				B9E12B0C25BBD57D008E1E77 /* Optional+Functional.swift in Sources */,
 				B97F8BAA25A8CE5E00553A83 /* Chronology.swift in Sources */,
+				B9485F87264B5BD700AC3456 /* AssetImage.swift in Sources */,
 				B9EF0F21263CFC870067176A /* MatchDetailsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,26 +514,50 @@
 			files = (
 				B941B6DF25A7BC3800F675C1 /* View+Styling.swift in Sources */,
 				B94091AF25D09D5A00EE5DF2 /* Loading.swift in Sources */,
+				B9DCF9AF2642F8FD00C39EC4 /* AssetManager.swift in Sources */,
 				B941B6E625A7C48300F675C1 /* LoginSheet.swift in Sources */,
 				B94091B925D09F0200EE5DF2 /* MatchListView.swift in Sources */,
 				B9CF2E7525A8217C004A1458 /* Combine+Ergonomics.swift in Sources */,
+				B9F65C482651D20200C9C34A /* MapImage.swift in Sources */,
 				B94091B425D09DF900EE5DF2 /* SwiftUI+CrossPlatform.swift in Sources */,
 				B941B6D925A7A09000F675C1 /* Credentials.swift in Sources */,
 				B9CF2E7A25A89976004A1458 /* MatchCell.swift in Sources */,
 				B9EF0F28263D9D860067176A /* ValorantAPI+SwiftUI.swift in Sources */,
+				B9485F85264B1DD300AC3456 /* AgentAssets.swift in Sources */,
 				B941B65925A5BC8A00F675C1 /* ContentView.swift in Sources */,
 				B9DCF9A82642E0EC00C39EC4 /* ScoreboardView.swift in Sources */,
 				B941B65725A5BC8A00F675C1 /* ValorantViewerApp.swift in Sources */,
 				B9C97DD2263CB744001E4D1B /* MatchList.swift in Sources */,
+				B9F65C4C2651DFB100C9C34A /* AgentImage.swift in Sources */,
 				B9CF2E6325A81B48004A1458 /* UnifiedStyles.swift in Sources */,
+				B9F07CB826474EB7006CD4F5 /* AssetVersion.swift in Sources */,
+				B9F07CB526474E8A006CD4F5 /* AssetClient.swift in Sources */,
+				B9F07CBB26474F4E006CD4F5 /* MapAssets.swift in Sources */,
 				B9C97DC8263CADFC001E4D1B /* ValorantAPI+Mock.swift in Sources */,
 				B9E12B0D25BBD57D008E1E77 /* Optional+Functional.swift in Sources */,
 				B97F8BAB25A8CE5E00553A83 /* Chronology.swift in Sources */,
+				B9485F88264B5BD700AC3456 /* AssetImage.swift in Sources */,
 				B9EF0F22263CFC870067176A /* MatchDetailsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B9485F89264B639F00AC3456 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9485F90264B639F00AC3456 /* Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B9485F93264B639F00AC3456 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B941B65125A5BC8A00F675C1 /* Valorant Viewer (macOS) */;
+			targetProxy = B9485F92264B639F00AC3456 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		B941B65C25A5BC8A00F675C1 /* Debug */ = {
@@ -510,8 +676,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Valorant Viewer.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_ASSET_PATHS = "Shared/Preview\\ Content";
 				DEVELOPMENT_TEAM = V2EPDFA9PV;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
@@ -523,8 +691,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.juliand665.Valorant-Viewer";
 				PRODUCT_NAME = "Valorant Viewer";
 				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Debug;
 		};
@@ -533,8 +702,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Valorant Viewer.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_ASSET_PATHS = "Shared/Preview\\ Content";
 				DEVELOPMENT_TEAM = V2EPDFA9PV;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
@@ -546,8 +717,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.juliand665.Valorant-Viewer";
 				PRODUCT_NAME = "Valorant Viewer";
 				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -558,9 +730,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "Shared/Preview\\ Content";
 				DEVELOPMENT_TEAM = V2EPDFA9PV;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -584,9 +757,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "Shared/Preview\\ Content";
 				DEVELOPMENT_TEAM = V2EPDFA9PV;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -600,6 +774,50 @@
 				PRODUCT_NAME = "Valorant Viewer";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		B9485F95264B639F00AC3456 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = V2EPDFA9PV;
+				INFOPLIST_FILE = "Valorant Viewer Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				PRODUCT_BUNDLE_IDENTIFIER = "juliand665.Valorant-Viewer-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Valorant Viewer.app/Contents/MacOS/Valorant Viewer";
+			};
+			name = Debug;
+		};
+		B9485F96264B639F00AC3456 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = V2EPDFA9PV;
+				INFOPLIST_FILE = "Valorant Viewer Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				PRODUCT_BUNDLE_IDENTIFIER = "juliand665.Valorant-Viewer-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Valorant Viewer.app/Contents/MacOS/Valorant Viewer";
 			};
 			name = Release;
 		};
@@ -633,6 +851,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		B9485F94264B639F00AC3456 /* Build configuration list for PBXNativeTarget "Valorant Viewer Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9485F95264B639F00AC3456 /* Debug */,
+				B9485F96264B639F00AC3456 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -658,6 +885,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 19.0.0;
+			};
+		};
+		B9485F97264B67EC00AC3456 /* XCRemoteSwiftPackageReference "CombineExpectations" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/groue/CombineExpectations";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.7.0;
 			};
 		};
 		B9C97DCA263CB0D6001E4D1B /* XCRemoteSwiftPackageReference "ValorantAPI" */ = {
@@ -716,6 +951,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B941B6CE25A79A6400F675C1 /* XCRemoteSwiftPackageReference "keychain-swift" */;
 			productName = KeychainSwift;
+		};
+		B9485F98264B67EC00AC3456 /* CombineExpectations */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B9485F97264B67EC00AC3456 /* XCRemoteSwiftPackageReference "CombineExpectations" */;
+			productName = CombineExpectations;
 		};
 		B9C97DCB263CB0D6001E4D1B /* ValorantAPI */ = {
 			isa = XCSwiftPackageProductDependency;

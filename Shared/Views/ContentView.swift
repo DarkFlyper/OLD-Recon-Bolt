@@ -2,6 +2,7 @@ import SwiftUI
 import Combine
 import HandyOperators
 import ValorantAPI
+import KeychainSwift
 
 struct ContentView: View {
 	@State private var isLoggingIn = false
@@ -29,6 +30,7 @@ struct ContentView: View {
 			.sheet(isPresented: $isLoggingIn) {
 				LoginSheet(client: $loadManager.client)
 					.withLoadManager()
+					.environmentObject(CredentialsStorage(keychain: KeychainSwift()))
 			}
 			.loadErrorTitle("Could not load matches!")
 			.withToolbar()
@@ -63,7 +65,7 @@ struct ContentView_Previews: PreviewProvider {
 		contentsOf: Bundle.main
 			.url(forResource: "example_matches", withExtension: "json")!
 	)
-	static let exampleMatches = try! Client.responseDecoder
+	static let exampleMatches = try! ValorantClient.responseDecoder
 		.decode([CompetitiveUpdate].self, from: exampleMatchData)
 	static let exampleUser = UserInfo(
 		account: .init(

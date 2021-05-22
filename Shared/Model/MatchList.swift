@@ -36,7 +36,7 @@ extension CompetitiveUpdate: ChronologyEntry {
 	var time: Date { startTime }
 }
 
-extension Client {
+extension ValorantClient {
 	private static let requestSize = 20
 	
 	func loadOlderMatches(for list: MatchList) -> AnyPublisher<MatchList, Error> {

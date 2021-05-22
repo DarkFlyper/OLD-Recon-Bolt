@@ -4,7 +4,7 @@ import Combine
 import ValorantAPI
 
 final class LoadManager: ObservableObject {
-	@Published var client: Client?
+	@Published var client: ValorantClient?
 	@Published private var loadTask: AnyCancellable?
 	@Published fileprivate var loadError: PresentedError?
 	
@@ -17,7 +17,7 @@ final class LoadManager: ObservableObject {
 	}
 	
 	func load<P: Publisher>(
-		_ task: (Client) -> P,
+		_ task: (ValorantClient) -> P,
 		onSuccess: @escaping (P.Output) -> Void
 	) {
 		guard let client = client else { return }

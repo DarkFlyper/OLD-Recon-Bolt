@@ -43,8 +43,29 @@ extension QueueID {
 			return "Spike Rush"
 		case "newmap":
 			return "New Map"
+		case "onefa":
+			return "Replication"
 		case let other:
 			return other.capitalized
+		}
+	}
+}
+
+extension Region {
+	var name: String {
+		switch self {
+		case .europe:
+			return "Europe"
+		case .northAmerica:
+			return "North America"
+		case .korea:
+			return "Korea"
+		case .asiaPacific:
+			return "Asia Pacific"
+		case .brazil:
+			return "Brazil"
+		case .latinAmerica:
+			return "Latin America"
 		}
 	}
 }

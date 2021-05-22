@@ -6,8 +6,17 @@
         "repositoryURL": "https://github.com/juliand665/ArrayBuilder",
         "state": {
           "branch": "main",
-          "revision": "e92dd75e19f402ddcd4c4fd027795d98bc2898d8",
+          "revision": "1d7b2707ba07789b1ebe2589a40407849c43420c",
           "version": null
+        }
+      },
+      {
+        "package": "CombineExpectations",
+        "repositoryURL": "https://github.com/groue/CombineExpectations",
+        "state": {
+          "branch": null,
+          "revision": "5c36f3199960776fc055196a93ca04bfc00e1857",
+          "version": "0.7.0"
         }
       },
       {

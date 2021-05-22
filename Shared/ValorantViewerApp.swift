@@ -1,11 +1,19 @@
 import SwiftUI
+import KeychainSwift
 
 @main
 struct ValorantViewerApp: App {
+	private var isTesting: Bool {
+		ProcessInfo.processInfo.environment["XCInjectBundleInto"] != nil
+	}
+	
 	var body: some Scene {
 		WindowGroup {
-			ContentView()
-				.withLoadManager()
+			if !isTesting {
+				ContentView()
+					.withLoadManager()
+					.environmentObject(AssetManager())
+			}
 		}
 	}
 }

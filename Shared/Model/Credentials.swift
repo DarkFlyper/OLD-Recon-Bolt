@@ -3,7 +3,22 @@ import UserDefault
 import KeychainSwift
 import ValorantAPI
 
-private let keychain = KeychainSwift()
+protocol Keychain {
+	func get(_ key: String) -> String?
+	@discardableResult
+	func set(_ value: String, forKey key: String) -> Bool
+}
+
+extension KeychainSwift: Keychain {
+	func set(_ value: String, forKey key: String) -> Bool {
+		set(value, forKey: key, withAccess: nil)
+	}
+}
+
+struct MockKeychain: Keychain {
+	func get(_ key: String) -> String? { nil }
+	func set(_ value: String, forKey key: String) -> Bool { false }
+}
 
 final class CredentialsStorage: ObservableObject {
 	@UserDefault("username") private static var storedUsername = ""
@@ -13,7 +28,7 @@ final class CredentialsStorage: ObservableObject {
 		didSet { Self.storedUsername = username }
 	}
 	
-	@Published var password = keychain.get("password") ?? "" {
+	@Published var password = "" {
 		didSet { keychain.set(password, forKey: "password") }
 	}
 	
@@ -21,7 +36,14 @@ final class CredentialsStorage: ObservableObject {
 		didSet { Self.storedRegion = region }
 	}
 	
-	init() {}
+	private let keychain: Keychain
+	
+	init(keychain: Keychain) {
+		self.keychain = keychain
+		if let stored = keychain.get("password") {
+			password = stored
+		}
+	}
 }
 
 extension Region: DefaultsValueConvertible {

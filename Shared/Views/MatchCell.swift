@@ -28,8 +28,8 @@ struct MatchCell: View {
 	var unrankedBody: some View {
 		HStack {
 			mapIcon { $0
-				.frame(height: visualsHeight / 2, alignment: .top)
 			}
+			.frame(height: visualsHeight / 2, alignment: .top)
 			
 			Text(Self.dateFormatter.string(from: match.startTime))
 			Text(Self.timeFormatter.string(from: match.startTime))
@@ -75,24 +75,14 @@ struct MatchCell: View {
 	private func mapIcon<V: View>(additionalModifiers: (AnyView) -> V) -> some View {
 		additionalModifiers(
 			AnyView(
-				match.mapID.mapImage
-					.aspectRatio(contentMode: .fit)
-					.frame(height: visualsHeight)
+				MapImage.splash(match.mapID)
+					.scaledToFill()
+					.frame(width: visualsHeight * 16/9, height: visualsHeight)
 			)
 		)
-		.overlay(mapLabel)
+		.frame(minHeight: 0, alignment: .top) // text looks better on the top part
+		.overlay(MapImage.Label(mapID: match.mapID))
 		.mask(RoundedRectangle(cornerRadius: 4, style: .continuous))
-	}
-	
-	private var mapLabel: some View {
-		Text(match.mapID.mapName ?? "unknown")
-			.font(Font.callout.smallCaps())
-			.bold()
-			.foregroundColor(.white)
-			.shadow(radius: 1)
-			.padding(.leading, 4) // visual alignment
-			.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-			.blendMode(.overlay)
 	}
 	
 	private var changeColor: Color {
@@ -174,7 +164,7 @@ struct MatchCell_Previews: PreviewProvider {
 	
 	static let unranked = CompetitiveUpdate.example(tierChange: (0, 0), tierProgressChange: (0, 0))
 	
-	static let allExamples = [promotion, increase, unchanged, decrease, demotion, jump, unranked]
+	static let allExamples = [unranked, promotion, increase, unchanged, decrease, demotion, jump]
 	
 	static var previews: some View {
 		ForEach(ColorScheme.allCases, id: \.hashValue) {
@@ -188,9 +178,12 @@ struct MatchCell_Previews: PreviewProvider {
 			}
 			.preferredColorScheme($0)
 		}
+		.previewLayout(.sizeThatFits)
+		.environmentObject(AssetManager.forPreviews)
 	}
 }
 
+// FIXME: immortal is just one now
 private let tiers: [String] = ["INVALID", "iron", "silver", "gold", "platinum", "diamond", "immortal"]
 	.flatMap { rank in (1...3).map { "\(rank) \($0)" } }
 	+ ["radiant"]

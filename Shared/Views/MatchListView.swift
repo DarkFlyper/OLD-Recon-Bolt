@@ -22,14 +22,14 @@ struct MatchListView: View {
 				title: matchList.estimatedMissedMatches > 0
 					? "Load \(matchList.estimatedMissedMatches)+ Newer Matches"
 					: "Load Newer Matches",
-				task: Client.loadNewerMatches
+				task: ValorantClient.loadNewerMatches
 			)
 			
 			ForEach(shownMatches, id: \.id, content: MatchCell.init)
 			
 			loadButton(
 				title: "Load Older Matches",
-				task: Client.loadOlderMatches
+				task: ValorantClient.loadOlderMatches
 			)
 		}
 		.listStyle(PrettyListStyle())
@@ -43,7 +43,7 @@ struct MatchListView: View {
 	
 	private func loadButton(
 		title: String,
-		task: @escaping (Client) -> (MatchList) -> AnyPublisher<MatchList, Error>
+		task: @escaping (ValorantClient) -> (MatchList) -> AnyPublisher<MatchList, Error>
 	) -> some View {
 		loadManager.loadButton(title) {
 			$0.load { task($0)(matchList) }

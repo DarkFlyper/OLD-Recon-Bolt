@@ -28,8 +28,12 @@ struct MatchDetailsContainer: View {
 				} onSuccess: { matchDetails = $0 }
 			}
 		}
-		.navigationBarTitleDisplayMode(.inline)
 		.navigationTitle("Match Details")
+		.in {
+			#if os(iOS)
+			$0.navigationBarTitleDisplayMode(.inline)
+			#endif
+		}
 	}
 }
 
@@ -63,11 +67,18 @@ struct MatchDetailsView: View {
 	
 	private var hero: some View {
 		ZStack {
-			matchDetails.matchInfo.mapID.mapImage
+			let mapID = matchDetails.matchInfo.mapID
+			MapImage.splash(mapID)
 				.aspectRatio(contentMode: .fill)
 				.frame(height: 150)
 				.clipped()
-				.overlay(mapLabel)
+				.overlay(MapImage.Label(mapID: mapID).padding(6))
+			
+			#if os(macOS)
+			let blur = VisualEffectBlur(material: .toolTip, blendingMode: .withinWindow, state: .followsWindowActiveState)
+			#else
+			let blur = VisualEffectBlur(blurStyle: .systemThinMaterialDark)
+			#endif
 			
 			VStack {
 				scoreSummary(for: matchDetails.teams)
@@ -80,25 +91,12 @@ struct MatchDetailsView: View {
 			}
 			.padding(.horizontal, 6)
 			.background(
-				VisualEffectBlur(blurStyle: .systemThinMaterialDark)
-					.roundedAndStroked(cornerRadius: 8)
+				blur.roundedAndStroked(cornerRadius: 8)
 			)
 			.shadow(radius: 10)
 			.colorScheme(.dark)
 			
 		}
-	}
-	
-	private var mapLabel: some View {
-		Text(matchDetails.matchInfo.mapID.mapName ?? "unknown")
-			.font(Font.body.smallCaps())
-			.bold()
-			.foregroundColor(.white)
-			.shadow(radius: 1)
-			.padding(.bottom, -2) // visual alignment
-			.padding(6)
-			.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-			.blendMode(.overlay)
 	}
 	
 	@ViewBuilder
@@ -142,20 +140,19 @@ struct MatchDetailsView_Previews: PreviewProvider {
 		contentsOf: Bundle.main
 			.url(forResource: "example_match", withExtension: "json")!
 	)
-	static let exampleMatch = try! Client.responseDecoder
+	static let exampleMatch = try! ValorantClient.responseDecoder
 		.decode(MatchDetails.self, from: exampleMatchData)
 	static let playerID = Player.ID(.init(uuidString: "3FA8598D-066E-5BDB-998C-74C015C5DBA5")!)
 	
 	static var previews: some View {
 		ForEach(ColorScheme.allCases, id: \.self) { scheme in
-			NavigationView {
-				MatchDetailsView(matchDetails: exampleMatch, playerID: playerID)
-					.navigationBarTitleDisplayMode(.inline)
-					.navigationTitle("Match Details")
-			}
-			.navigationViewStyle(StackNavigationViewStyle())
-			.preferredColorScheme(scheme)
+			MatchDetailsView(matchDetails: exampleMatch, playerID: playerID)
+				//.navigationBarTitleDisplayMode(.inline)
+				.navigationTitle("Match Details")
+				.withToolbar()
+				.preferredColorScheme(scheme)
 		}
+		.environmentObject(AssetManager.forPreviews)
 	}
 }
 

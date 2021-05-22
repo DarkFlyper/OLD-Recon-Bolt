@@ -4,10 +4,10 @@ import Combine
 import ValorantAPI
 
 struct LoginSheet: View {
-	@ObservedObject private var credentials = CredentialsStorage()
-	@Binding var client: Client?
+	@Binding var client: ValorantClient?
 	
 	@EnvironmentObject private var loadManager: LoadManager
+	@EnvironmentObject private var credentials: CredentialsStorage
 	
 	var body: some View {
 		ZStack {
@@ -55,7 +55,7 @@ struct LoginSheet: View {
 	
 	func logIn() {
 		loadManager.runTask(
-			Client.authenticated(
+			ValorantClient.authenticated(
 				username: credentials.username,
 				password: credentials.password,
 				region: credentials.region
@@ -66,26 +66,9 @@ struct LoginSheet: View {
 
 struct LoginSheet_Previews: PreviewProvider {
 	static var previews: some View {
-		LoginSheet(client: .constant(nil)).preferredColorScheme(.light)
-		LoginSheet(client: .constant(nil)).preferredColorScheme(.dark)
-	}
-}
-
-extension Region {
-	var name: String {
-		switch self {
-		case .europe:
-			return "Europe"
-		case .northAmerica:
-			return "North America"
-		case .korea:
-			return "Korea"
-		case .asiaPacific:
-			return "Asia Pacific"
-		case .brazil:
-			return "Brazil"
-		case .latinAmerica:
-			return "Latin America"
-		}
+		Group {
+			LoginSheet(client: .constant(nil)).preferredColorScheme(.light)
+			LoginSheet(client: .constant(nil)).preferredColorScheme(.dark)
+		}.environmentObject(CredentialsStorage(keychain: MockKeychain()))
 	}
 }
