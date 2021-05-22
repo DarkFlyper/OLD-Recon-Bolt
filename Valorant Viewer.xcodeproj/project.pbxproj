@@ -81,6 +81,8 @@
 		B9F65C482651D20200C9C34A /* MapImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F65C462651D20200C9C34A /* MapImage.swift */; };
 		B9F65C4B2651DFB100C9C34A /* AgentImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F65C4A2651DFB100C9C34A /* AgentImage.swift */; };
 		B9F65C4C2651DFB100C9C34A /* AgentImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F65C4A2651DFB100C9C34A /* AgentImage.swift */; };
+		B9F65C4E2651EDA500C9C34A /* DynamicallyStroked.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F65C4D2651EDA500C9C34A /* DynamicallyStroked.swift */; };
+		B9F65C4F2651EDA500C9C34A /* DynamicallyStroked.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F65C4D2651EDA500C9C34A /* DynamicallyStroked.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +137,7 @@
 		B9F07CB926474F4E006CD4F5 /* MapAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAssets.swift; sourceTree = "<group>"; };
 		B9F65C462651D20200C9C34A /* MapImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapImage.swift; sourceTree = "<group>"; };
 		B9F65C4A2651DFB100C9C34A /* AgentImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentImage.swift; sourceTree = "<group>"; };
+		B9F65C4D2651EDA500C9C34A /* DynamicallyStroked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicallyStroked.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +187,7 @@
 				B9CF2E7825A89976004A1458 /* MatchCell.swift */,
 				B9EF0F20263CFC870067176A /* MatchDetailsView.swift */,
 				B9DCF9A62642E0EC00C39EC4 /* ScoreboardView.swift */,
+				B9F65C4D2651EDA500C9C34A /* DynamicallyStroked.swift */,
 				B9EF0F26263D9D860067176A /* ValorantAPI+SwiftUI.swift */,
 			);
 			path = Views;
@@ -481,6 +485,7 @@
 			files = (
 				B941B6DE25A7BC3800F675C1 /* View+Styling.swift in Sources */,
 				B94091AE25D09D5A00EE5DF2 /* Loading.swift in Sources */,
+				B9F65C4E2651EDA500C9C34A /* DynamicallyStroked.swift in Sources */,
 				B9DCF9AE2642F8FD00C39EC4 /* AssetManager.swift in Sources */,
 				B941B6E525A7C48300F675C1 /* LoginSheet.swift in Sources */,
 				B94091B825D09F0200EE5DF2 /* MatchListView.swift in Sources */,
@@ -514,6 +519,7 @@
 			files = (
 				B941B6DF25A7BC3800F675C1 /* View+Styling.swift in Sources */,
 				B94091AF25D09D5A00EE5DF2 /* Loading.swift in Sources */,
+				B9F65C4F2651EDA500C9C34A /* DynamicallyStroked.swift in Sources */,
 				B9DCF9AF2642F8FD00C39EC4 /* AssetManager.swift in Sources */,
 				B941B6E625A7C48300F675C1 /* LoginSheet.swift in Sources */,
 				B94091B925D09F0200EE5DF2 /* MatchListView.swift in Sources */,

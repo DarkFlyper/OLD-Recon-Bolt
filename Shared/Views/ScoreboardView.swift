@@ -14,6 +14,7 @@ struct ScoreboardView: View {
 		
 		ScrollView(.horizontal) {
 			VStack(spacing: scoreboardPadding) {
+				let _ = print("recreating!")
 				ForEach(sorted) { player in
 					scoreboardRow(for: player)
 				}
@@ -29,12 +30,14 @@ struct ScoreboardView: View {
 		let divider = Rectangle()
 			.frame(width: 1)
 			.blendMode(.destinationOut)
-		let teamColor = color(for: player.teamID)
+		let teamColor = color(for: player.teamID) ?? .valorantBlue
 		let teamOrSelfColor = player.id == myself?.id ? .valorantSelf : teamColor
 		
 		HStack(spacing: 0) {
-			teamOrSelfColor
-				.frame(width: scoreboardPadding)
+			AgentImage.displayIcon(player.agentID)
+				.frame(height: 40)
+				.dynamicallyStroked(radius: 1, color: .white)
+				.background(teamOrSelfColor.opacity(0.5))
 			
 			HStack(spacing: scoreboardPadding) {
 				Group {
@@ -63,8 +66,11 @@ struct ScoreboardView: View {
 				.frame(maxHeight: .infinity)
 			}
 			.padding(scoreboardPadding)
-			.background(teamOrSelfColor.opacity(0.25))
+			
+			teamOrSelfColor
+				.frame(width: scoreboardPadding)
 		}
+		.background(teamOrSelfColor.opacity(0.25))
 		.cornerRadius(scoreboardPadding)
 	}
 	
@@ -74,5 +80,23 @@ struct ScoreboardView: View {
 		} else {
 			return teamID.color
 		}
+	}
+}
+
+struct ScoreboardView_Previews: PreviewProvider {
+	static let exampleMatch = MatchDetailsView_Previews.exampleMatch
+	static let playerID = MatchDetailsView_Previews.playerID
+	
+	static var previews: some View {
+		ForEach(ColorScheme.allCases, id: \.self) { scheme in
+			ScoreboardView(
+				players: exampleMatch.players,
+				myself: exampleMatch.players.first { $0.id == playerID }
+			)
+			.preferredColorScheme(scheme)
+		}
+		.environmentObject(AssetManager.forPreviews)
+		.fixedSize(horizontal: true, vertical: true)
+		.previewLayout(.sizeThatFits)
 	}
 }
