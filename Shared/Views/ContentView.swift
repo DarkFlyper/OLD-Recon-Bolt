@@ -61,26 +61,8 @@ struct ContentView: View {
 }
 
 struct ContentView_Previews: PreviewProvider {
-	static let exampleMatchData = try! Data(
-		contentsOf: Bundle.main
-			.url(forResource: "example_matches", withExtension: "json")!
-	)
-	static let exampleMatches = try! ValorantClient.responseDecoder
-		.decode([CompetitiveUpdate].self, from: exampleMatchData)
-	static let exampleUser = UserInfo(
-		account: .init(
-			gameName: "Julian", tagLine: "665",
-			createdAt: Date().addingTimeInterval(-4000)
-		),
-		id: .init()
-	)
-	static let exampleMatchList = MatchList(
-		user: exampleUser,
-		chronology: .init(entries: exampleMatches)
-	)
-	
 	static var previews: some View {
-		ContentView(matchList: exampleMatchList)
+		ContentView(matchList: PreviewData.matchList)
 			.inEachColorScheme()
 	}
 }
