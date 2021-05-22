@@ -19,14 +19,15 @@ struct LoginSheet: View {
 					.multilineTextAlignment(.center)
 					.lineLimit(2)
 					.fixedSize(horizontal: false, vertical: true) // without this the line limit doesn't seem to work
-				VStack {
-					Picker("Region: \(credentials.region.name)", selection: $credentials.region) {
-						ForEach(Region.allCases, id: \.rawValue) { region in
-							Text(verbatim: region.name).tag(region)
-						}
+				
+				Picker("Region: \(credentials.region.name)", selection: $credentials.region) {
+					ForEach(Region.allCases, id: \.rawValue) { region in
+						Text(verbatim: region.name).tag(region)
 					}
-					.pickerStyle(MenuPickerStyle())
-					
+				}
+				.pickerStyle(MenuPickerStyle())
+				
+				VStack {
 					TextField("Username", text: $credentials.username)
 					SecureField("Password", text: $credentials.password) { logIn() }
 				}
@@ -67,7 +68,9 @@ struct LoginSheet: View {
 struct LoginSheet_Previews: PreviewProvider {
 	static var previews: some View {
 		LoginSheet(client: .constant(nil))
+			.withLoadManager()
 			.inEachColorScheme()
 			.environmentObject(CredentialsStorage(keychain: MockKeychain()))
+			.previewLayout(.sizeThatFits)
 	}
 }
