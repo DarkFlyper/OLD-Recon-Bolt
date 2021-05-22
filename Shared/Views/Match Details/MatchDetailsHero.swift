@@ -36,7 +36,6 @@ struct MatchDetailsHero: View {
 			)
 			.shadow(radius: 10)
 			.colorScheme(.dark)
-			
 		}
 	}
 	
@@ -73,5 +72,16 @@ struct MatchDetailsHero: View {
 	private func scoreText(for team: Team) -> some View {
 		Text(verbatim: "\(team.pointCount)")
 			.foregroundColor(team.id.color)
+	}
+}
+
+struct MatchDetailsHero_Previews: PreviewProvider {
+	static var previews: some View {
+		MatchDetailsHero(
+			matchDetails: PreviewData.singleMatch,
+			myself: PreviewData.singleMatch.players.first { $0.id == PreviewData.playerID }
+		)
+		.previewLayout(.sizeThatFits)
+		.environmentObject(AssetManager.forPreviews)
 	}
 }
