@@ -84,14 +84,11 @@ struct ScoreboardView: View {
 }
 
 struct ScoreboardView_Previews: PreviewProvider {
-	static let exampleMatch = MatchDetailsView_Previews.exampleMatch
-	static let playerID = MatchDetailsView_Previews.playerID
-	
 	static var previews: some View {
 		ForEach(ColorScheme.allCases, id: \.self) { scheme in
 			ScoreboardView(
-				players: exampleMatch.players,
-				myself: exampleMatch.players.first { $0.id == playerID }
+				players: PreviewData.singleMatch.players,
+				myself: PreviewData.singleMatch.players.first { $0.id == PreviewData.playerID }
 			)
 			.preferredColorScheme(scheme)
 		}

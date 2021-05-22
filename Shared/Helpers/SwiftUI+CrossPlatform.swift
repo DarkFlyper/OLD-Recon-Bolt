@@ -10,12 +10,16 @@ extension Color {
 
 extension View {
 	@ViewBuilder
-	func withToolbar() -> some View {
+	func withToolbar(allowLargeTitles: Bool = true) -> some View {
 		#if os(macOS)
 		self
 		#else
-		NavigationView { self }
-			.navigationViewStyle(StackNavigationViewStyle())
+		NavigationView {
+			self.if(!allowLargeTitles) {
+				$0.navigationBarTitleDisplayMode(.inline)
+			}
+		}
+		.navigationViewStyle(StackNavigationViewStyle())
 		#endif
 	}
 }
