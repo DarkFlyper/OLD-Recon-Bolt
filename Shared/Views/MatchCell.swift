@@ -167,17 +167,15 @@ struct MatchCell_Previews: PreviewProvider {
 	static let allExamples = [unranked, promotion, increase, unchanged, decrease, demotion, jump]
 	
 	static var previews: some View {
-		ForEach(ColorScheme.allCases, id: \.hashValue) {
-			VStack(spacing: 0) {
+		VStack(spacing: 0) {
+			Divider()
+			ForEach(allExamples) {
+				MatchCell(match: $0)
+					.padding()
 				Divider()
-				ForEach(allExamples) {
-					MatchCell(match: $0)
-						.padding()
-					Divider()
-				}
 			}
-			.preferredColorScheme($0)
 		}
+		.inEachColorScheme()
 		.previewLayout(.sizeThatFits)
 		.environmentObject(AssetManager.forPreviews)
 	}

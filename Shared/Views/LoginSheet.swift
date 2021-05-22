@@ -66,9 +66,8 @@ struct LoginSheet: View {
 
 struct LoginSheet_Previews: PreviewProvider {
 	static var previews: some View {
-		Group {
-			LoginSheet(client: .constant(nil)).preferredColorScheme(.light)
-			LoginSheet(client: .constant(nil)).preferredColorScheme(.dark)
-		}.environmentObject(CredentialsStorage(keychain: MockKeychain()))
+		LoginSheet(client: .constant(nil))
+			.inEachColorScheme()
+			.environmentObject(CredentialsStorage(keychain: MockKeychain()))
 	}
 }

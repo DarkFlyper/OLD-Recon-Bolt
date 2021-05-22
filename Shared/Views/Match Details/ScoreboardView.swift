@@ -85,13 +85,11 @@ struct ScoreboardView: View {
 
 struct ScoreboardView_Previews: PreviewProvider {
 	static var previews: some View {
-		ForEach(ColorScheme.allCases, id: \.self) { scheme in
-			ScoreboardView(
-				players: PreviewData.singleMatch.players,
-				myself: PreviewData.singleMatch.players.first { $0.id == PreviewData.playerID }
-			)
-			.preferredColorScheme(scheme)
-		}
+		ScoreboardView(
+			players: PreviewData.singleMatch.players,
+			myself: PreviewData.singleMatch.players.first { $0.id == PreviewData.playerID }
+		)
+		.inEachColorScheme()
 		.environmentObject(AssetManager.forPreviews)
 		.fixedSize(horizontal: true, vertical: true)
 		.previewLayout(.sizeThatFits)

@@ -30,15 +30,13 @@ struct MatchDetailsView: View {
 
 struct MatchDetailsView_Previews: PreviewProvider {
 	static var previews: some View {
-		ForEach(ColorScheme.allCases, id: \.self) { scheme in
-			MatchDetailsView(
-				matchDetails: PreviewData.singleMatch,
-				playerID: PreviewData.playerID
-			)
-			.preferredColorScheme(scheme)
-		}
+		MatchDetailsView(
+			matchDetails: PreviewData.singleMatch,
+			playerID: PreviewData.playerID
+		)
 		.navigationTitle("Match Details")
 		.withToolbar(allowLargeTitles: false)
+		.inEachColorScheme()
 		.environmentObject(AssetManager.forPreviews)
 	}
 }

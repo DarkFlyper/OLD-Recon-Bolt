@@ -81,8 +81,6 @@ struct ContentView_Previews: PreviewProvider {
 	
 	static var previews: some View {
 		ContentView(matchList: exampleMatchList)
-			.preferredColorScheme(.light)
-		ContentView(matchList: exampleMatchList)
-			.preferredColorScheme(.dark)
+			.inEachColorScheme()
 	}
 }

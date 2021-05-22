@@ -69,6 +69,8 @@
 		B9EE6E6026589EB8007E28B5 /* MatchDetailsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EE6E5E26589EB8007E28B5 /* MatchDetailsContainer.swift */; };
 		B9EE6E6226589FAA007E28B5 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EE6E6126589FAA007E28B5 /* PreviewData.swift */; };
 		B9EE6E6326589FAA007E28B5 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EE6E6126589FAA007E28B5 /* PreviewData.swift */; };
+		B9EE6E652658A363007E28B5 /* SwiftUI+Previews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EE6E642658A363007E28B5 /* SwiftUI+Previews.swift */; };
+		B9EE6E662658A363007E28B5 /* SwiftUI+Previews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EE6E642658A363007E28B5 /* SwiftUI+Previews.swift */; };
 		B9EF0F21263CFC870067176A /* MatchDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EF0F20263CFC870067176A /* MatchDetailsView.swift */; };
 		B9EF0F22263CFC870067176A /* MatchDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EF0F20263CFC870067176A /* MatchDetailsView.swift */; };
 		B9EF0F24263D091F0067176A /* example_match.json in Resources */ = {isa = PBXBuildFile; fileRef = B9EF0F23263D09120067176A /* example_match.json */; };
@@ -138,6 +140,7 @@
 		B9EE6E5A26589DE1007E28B5 /* MatchDetailsHero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsHero.swift; sourceTree = "<group>"; };
 		B9EE6E5E26589EB8007E28B5 /* MatchDetailsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsContainer.swift; sourceTree = "<group>"; };
 		B9EE6E6126589FAA007E28B5 /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
+		B9EE6E642658A363007E28B5 /* SwiftUI+Previews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUI+Previews.swift"; sourceTree = "<group>"; };
 		B9EF0F20263CFC870067176A /* MatchDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsView.swift; sourceTree = "<group>"; };
 		B9EF0F23263D09120067176A /* example_match.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = example_match.json; sourceTree = "<group>"; };
 		B9EF0F26263D9D860067176A /* ValorantAPI+SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ValorantAPI+SwiftUI.swift"; sourceTree = "<group>"; };
@@ -304,6 +307,7 @@
 				B9EF0F23263D09120067176A /* example_match.json */,
 				B941B6EB25A7C83700F675C1 /* example_updates.json */,
 				B9DCF9AA2642F7A100C39EC4 /* Preview Assets.xcassets */,
+				B9EE6E642658A363007E28B5 /* SwiftUI+Previews.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -522,6 +526,7 @@
 				B941B65625A5BC8A00F675C1 /* ValorantViewerApp.swift in Sources */,
 				B9C97DD1263CB744001E4D1B /* MatchList.swift in Sources */,
 				B9F65C4B2651DFB100C9C34A /* AgentImage.swift in Sources */,
+				B9EE6E652658A363007E28B5 /* SwiftUI+Previews.swift in Sources */,
 				B9EE6E5B26589DE1007E28B5 /* MatchDetailsHero.swift in Sources */,
 				B9EE6E6226589FAA007E28B5 /* PreviewData.swift in Sources */,
 				B9CF2E6225A81B48004A1458 /* UnifiedStyles.swift in Sources */,
@@ -559,6 +564,7 @@
 				B941B65725A5BC8A00F675C1 /* ValorantViewerApp.swift in Sources */,
 				B9C97DD2263CB744001E4D1B /* MatchList.swift in Sources */,
 				B9F65C4C2651DFB100C9C34A /* AgentImage.swift in Sources */,
+				B9EE6E662658A363007E28B5 /* SwiftUI+Previews.swift in Sources */,
 				B9EE6E5C26589DE1007E28B5 /* MatchDetailsHero.swift in Sources */,
 				B9EE6E6326589FAA007E28B5 /* PreviewData.swift in Sources */,
 				B9CF2E6325A81B48004A1458 /* UnifiedStyles.swift in Sources */,
