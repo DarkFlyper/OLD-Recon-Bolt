@@ -71,6 +71,8 @@
 		B9EE6E6326589FAA007E28B5 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EE6E6126589FAA007E28B5 /* PreviewData.swift */; };
 		B9EE6E652658A363007E28B5 /* SwiftUI+Previews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EE6E642658A363007E28B5 /* SwiftUI+Previews.swift */; };
 		B9EE6E662658A363007E28B5 /* SwiftUI+Previews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EE6E642658A363007E28B5 /* SwiftUI+Previews.swift */; };
+		B9EE6E682658A6D2007E28B5 /* AssetLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EE6E672658A6D2007E28B5 /* AssetLoading.swift */; };
+		B9EE6E692658A6D2007E28B5 /* AssetLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EE6E672658A6D2007E28B5 /* AssetLoading.swift */; };
 		B9EF0F21263CFC870067176A /* MatchDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EF0F20263CFC870067176A /* MatchDetailsView.swift */; };
 		B9EF0F22263CFC870067176A /* MatchDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EF0F20263CFC870067176A /* MatchDetailsView.swift */; };
 		B9EF0F24263D091F0067176A /* example_match.json in Resources */ = {isa = PBXBuildFile; fileRef = B9EF0F23263D09120067176A /* example_match.json */; };
@@ -141,6 +143,7 @@
 		B9EE6E5E26589EB8007E28B5 /* MatchDetailsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsContainer.swift; sourceTree = "<group>"; };
 		B9EE6E6126589FAA007E28B5 /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
 		B9EE6E642658A363007E28B5 /* SwiftUI+Previews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUI+Previews.swift"; sourceTree = "<group>"; };
+		B9EE6E672658A6D2007E28B5 /* AssetLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetLoading.swift; sourceTree = "<group>"; };
 		B9EF0F20263CFC870067176A /* MatchDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsView.swift; sourceTree = "<group>"; };
 		B9EF0F23263D09120067176A /* example_match.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = example_match.json; sourceTree = "<group>"; };
 		B9EF0F26263D9D860067176A /* ValorantAPI+SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ValorantAPI+SwiftUI.swift"; sourceTree = "<group>"; };
@@ -328,6 +331,7 @@
 			children = (
 				B9F65C492651DFA000C9C34A /* Views */,
 				B9DCF9AD2642F8FD00C39EC4 /* AssetManager.swift */,
+				B9EE6E672658A6D2007E28B5 /* AssetLoading.swift */,
 				B9F07CB326474E8A006CD4F5 /* AssetClient.swift */,
 				B9F07CB626474EB7006CD4F5 /* AssetVersion.swift */,
 				B9F07CB926474F4E006CD4F5 /* MapAssets.swift */,
@@ -518,6 +522,7 @@
 				B9F65C472651D20200C9C34A /* MapImage.swift in Sources */,
 				B94091B325D09DF900EE5DF2 /* SwiftUI+CrossPlatform.swift in Sources */,
 				B941B6D825A7A09000F675C1 /* Credentials.swift in Sources */,
+				B9EE6E682658A6D2007E28B5 /* AssetLoading.swift in Sources */,
 				B9CF2E7925A89976004A1458 /* MatchCell.swift in Sources */,
 				B9EF0F27263D9D860067176A /* ValorantAPI+SwiftUI.swift in Sources */,
 				B9485F84264B1DD300AC3456 /* AgentAssets.swift in Sources */,
@@ -556,6 +561,7 @@
 				B9F65C482651D20200C9C34A /* MapImage.swift in Sources */,
 				B94091B425D09DF900EE5DF2 /* SwiftUI+CrossPlatform.swift in Sources */,
 				B941B6D925A7A09000F675C1 /* Credentials.swift in Sources */,
+				B9EE6E692658A6D2007E28B5 /* AssetLoading.swift in Sources */,
 				B9CF2E7A25A89976004A1458 /* MatchCell.swift in Sources */,
 				B9EF0F28263D9D860067176A /* ValorantAPI+SwiftUI.swift in Sources */,
 				B9485F85264B1DD300AC3456 /* AgentAssets.swift in Sources */,

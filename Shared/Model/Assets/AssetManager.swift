@@ -32,7 +32,10 @@ final class AssetManager: ObservableObject {
 		self.assets = assets
 	}
 	
-	static func loadAssets(forceUpdate: Bool = false, onProgress: AssetProgressCallback? = nil) -> BasicPublisher<AssetCollection> {
+	static func loadAssets(
+		forceUpdate: Bool = false,
+		onProgress: AssetProgressCallback? = nil
+	) -> BasicPublisher<AssetCollection> {
 		client.getCurrentVersion()
 			.flatMap { [client] version -> BasicPublisher<AssetCollection> in
 				if !forceUpdate, let stored = stored, stored.version == version {
@@ -49,25 +52,10 @@ final class AssetManager: ObservableObject {
 			.eraseToAnyPublisher()
 	}
 	
-	@UserDefault("AssetManager.stored") // TODO: this doesn't work for iOS :<
+	@UserDefault("AssetManager.stored")
 	fileprivate static var stored: AssetCollection?
 	
 	private static let client = AssetClient()
-}
-
-typealias AssetProgressCallback = (AssetDownloadProgress) -> Void
-struct AssetDownloadProgress {
-	var completed, total: Int
-	
-	var fractionComplete: Double {
-		Double(completed) / Double(total)
-	}
-}
-
-extension AssetDownloadProgress: CustomStringConvertible {
-	var description: String {
-		"\(completed)/\(total) assets downloaded"
-	}
 }
 
 struct AssetCollection: Codable {
@@ -83,40 +71,6 @@ struct AssetCollection: Codable {
 
 extension AssetCollection: DefaultsValueConvertible {}
 
-extension AssetClient {
-	fileprivate func collectAssets(for version: AssetVersion, onProgress: AssetProgressCallback?) -> BasicPublisher<AssetCollection> {
-		// can't wait for async/await
-		getMapInfo()
-			.zip(getAgentInfo())
-			.map { (maps, agents) in
-				AssetCollection(
-					version: version,
-					maps: .init(uniqueKeysWithValues: maps.map { ($0.id, $0) }),
-					agents: .init(uniqueKeysWithValues: agents.map { ($0.id, $0) })
-				)
-			}
-			.flatMap { downloadAllImages(for: $0, onProgress: onProgress) }
-			.eraseToAnyPublisher()
-	}
-	
-	private func downloadAllImages(for collection: AssetCollection, onProgress: AssetProgressCallback?) -> BasicPublisher<AssetCollection> {
-		let images = collection.images
-		var completed: Int32 = 0
-		onProgress?(.init(completed: 0, total: images.count))
-		let concurrencyLimiter = DispatchSemaphore(value: 2) // this doesn't seem to slow it down and makes it more consistent
-		let scheduler = DispatchQueue(label: "image downloads", qos: .userInitiated)
-		return images.publisher
-			.receive(on: scheduler)
-			.also { _ in concurrencyLimiter.wait() }
-			.flatMap(download(_:))
-			.also { _ in concurrencyLimiter.signal() }
-			.also { onProgress?(.init(completed: Int(OSAtomicIncrement32(&completed)), total: images.count)) }
-			.collect()
-			.map { (_: [Void]) in collection }
-			.eraseToAnyPublisher()
-	}
-}
-
 struct AssetManager_Previews: PreviewProvider {
 	static var previews: some View {
 		PreviewView()
@@ -126,8 +80,9 @@ struct AssetManager_Previews: PreviewProvider {
 		@StateObject var manager = AssetManager()
 		
 		var body: some View {
-			VStack {
+			VStack(spacing: 10) {
 				Text(verbatim: "stored: \(AssetManager.stored as Any)")
+					.lineLimit(10)
 				Text(verbatim: "\(manager.progress?.description ?? "nothing in progress")")
 			}
 			.padding()
