@@ -77,7 +77,8 @@ struct KillBreakdownView: View {
 					LinearGradient(
 						gradient: .init(.valorantBlue),
 						startPoint: .bottom, endPoint: .top
-					).opacity(backgroundOpacity)
+					)
+					.opacity(backgroundOpacity)
 				)
 			
 			Text("\(round.result.number + 1)")
@@ -85,7 +86,10 @@ struct KillBreakdownView: View {
 				.blendMode(.destinationOut)
 				.padding(.vertical, 8)
 				.frame(maxWidth: .infinity)
-				.background(color(for: round.result.winningTeam)?.opacity(backgroundOpacity))
+				.background(
+					round.result.winningTeam.relativeColor(for: myself)?
+						.opacity(backgroundOpacity)
+				)
 			
 			killIcons(for: round.killsByTeam[1])
 				.measuring(\.height, as: BottomHeight.self)
@@ -94,7 +98,8 @@ struct KillBreakdownView: View {
 					LinearGradient(
 						gradient: .init(.valorantRed),
 						startPoint: .top, endPoint: .bottom
-					).opacity(backgroundOpacity)
+					)
+					.opacity(backgroundOpacity)
 				)
 		}
 		.fixedSize()
@@ -115,25 +120,22 @@ struct KillBreakdownView: View {
 	@ViewBuilder
 	private func playerIcon(for playerID: Player.ID) -> some View {
 		let player = players[playerID]!
-		let teamColor = color(for: player.teamID) ?? .valorantBlue
-		let teamOrSelfColor = player.id == myself?.id ? .valorantSelf : teamColor
-		let borderWidth: CGFloat = 1
+		let relativeColor = player.relativeColor(for: myself) ?? .valorantRed
 		
 		AgentImage.displayIcon(player.agentID)
 			.frame(width: 32, height: 32)
 			.dynamicallyStroked(radius: 1, color: .white)
-			.padding(borderWidth)
-			.background(teamOrSelfColor.opacity(0.5))
+			.background(Circle().fill(relativeColor).opacity(0.5).padding(1))
 			.mask(Circle())
-			.overlay(Circle().strokeBorder(teamOrSelfColor, lineWidth: borderWidth))
-	}
-	
-	private func color(for teamID: Team.ID) -> Color? {
-		if let own = myself?.teamID {
-			return teamID == own ? .valorantBlue : .valorantRed
-		} else {
-			return teamID.color
-		}
+			.padding(1)
+			.overlay(Circle().strokeBorder(relativeColor))
+			.background(
+				Circle()
+					.strokeBorder(lineWidth: 3)
+					.opacity(0.5)
+					.blendMode(.destinationOut)
+					.padding(-1)
+			)
 	}
 	
 	private func maximalRound() -> Round {
@@ -174,8 +176,7 @@ struct KillBreakdownView_Previews: PreviewProvider {
 		.padding(.vertical)
 		.inEachColorScheme()
 		.environmentObject(AssetManager.forPreviews)
-		//.fixedSize(horizontal: true, vertical: true)
-		.frame(maxWidth: 800)
+		.frame(maxWidth: 800, minHeight: 600)
 		.previewLayout(.sizeThatFits)
 	}
 }

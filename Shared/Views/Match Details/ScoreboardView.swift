@@ -29,20 +29,19 @@ struct ScoreboardView: View {
 		let divider = Rectangle()
 			.frame(width: 1)
 			.blendMode(.destinationOut)
-		let teamColor = color(for: player.teamID) ?? .valorantBlue
-		let teamOrSelfColor = player.id == myself?.id ? .valorantSelf : teamColor
+		let relativeColor = player.relativeColor(for: myself)
 		
 		HStack(spacing: 0) {
 			AgentImage.displayIcon(player.agentID)
 				.frame(height: 40)
 				.dynamicallyStroked(radius: 1, color: .white)
-				.background(teamOrSelfColor.opacity(0.5))
+				.background(relativeColor.opacity(0.5))
 			
 			HStack(spacing: scoreboardPadding) {
 				Group {
 					Text(verbatim: player.gameName)
 						.fontWeight(.medium)
-						.foregroundColor(teamOrSelfColor)
+						.foregroundColor(relativeColor)
 						.fixedSize()
 						.frame(maxWidth: .infinity, alignment: .leading)
 					
@@ -66,19 +65,11 @@ struct ScoreboardView: View {
 			}
 			.padding(scoreboardPadding)
 			
-			teamOrSelfColor
+			relativeColor
 				.frame(width: scoreboardPadding)
 		}
-		.background(teamOrSelfColor.opacity(0.25))
+		.background(relativeColor.opacity(0.25))
 		.cornerRadius(scoreboardPadding)
-	}
-	
-	private func color(for teamID: Team.ID) -> Color? {
-		if let own = myself?.teamID {
-			return teamID == own ? .valorantBlue : .valorantRed
-		} else {
-			return teamID.color
-		}
 	}
 }
 

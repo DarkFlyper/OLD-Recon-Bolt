@@ -65,11 +65,6 @@ struct MatchDetailsHero: View {
 			Text(verbatim: "\(sorted[0].pointCount) points")
 		}
 	}
-	
-	private func scoreText(for team: Team) -> some View {
-		Text(verbatim: "\(team.pointCount)")
-			.foregroundColor(team.id.color)
-	}
 }
 
 struct MatchDetailsHero_Previews: PreviewProvider {
