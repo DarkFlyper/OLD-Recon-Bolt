@@ -153,6 +153,7 @@ struct MatchCell: View {
 	}
 }
 
+#if DEBUG
 struct MatchCell_Previews: PreviewProvider {
 	static let promotion = CompetitiveUpdate.example(tierChange: (21, 22), tierProgressChange: (80, 10), index: 0)
 	static let increase = CompetitiveUpdate.example(tierChange: (8, 8), tierProgressChange: (40, 60), index: 1)
@@ -180,6 +181,7 @@ struct MatchCell_Previews: PreviewProvider {
 		.environmentObject(AssetManager.forPreviews)
 	}
 }
+#endif
 
 // FIXME: immortal is just one now
 private let tiers: [String] = ["INVALID", "iron", "silver", "gold", "platinum", "diamond", "immortal"]

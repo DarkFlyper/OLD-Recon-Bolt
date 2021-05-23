@@ -75,6 +75,7 @@ struct ScoreboardView: View {
 	}
 }
 
+#if DEBUG
 struct ScoreboardView_Previews: PreviewProvider {
 	static var previews: some View {
 		ScoreboardView(
@@ -88,3 +89,4 @@ struct ScoreboardView_Previews: PreviewProvider {
 		.previewLayout(.sizeThatFits)
 	}
 }
+#endif

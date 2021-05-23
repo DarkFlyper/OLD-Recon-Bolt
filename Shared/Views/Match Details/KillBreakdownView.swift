@@ -164,6 +164,7 @@ private struct MaxHeightPreference<Marker>: PreferenceKey {
 	}
 }
 
+#if DEBUG
 struct KillBreakdownView_Previews: PreviewProvider {
 	static var previews: some View {
 		// computing these previews takes a long time, so we'll limit ourselves to one match
@@ -180,6 +181,7 @@ struct KillBreakdownView_Previews: PreviewProvider {
 		.previewLayout(.sizeThatFits)
 	}
 }
+#endif
 
 private struct Round: Identifiable {
 	let id = UUID()

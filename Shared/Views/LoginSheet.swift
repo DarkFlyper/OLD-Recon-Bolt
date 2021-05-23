@@ -65,6 +65,7 @@ struct LoginSheet: View {
 	}
 }
 
+#if DEBUG
 struct LoginSheet_Previews: PreviewProvider {
 	static var previews: some View {
 		LoginSheet(client: .constant(nil))
@@ -74,3 +75,4 @@ struct LoginSheet_Previews: PreviewProvider {
 			.previewLayout(.sizeThatFits)
 	}
 }
+#endif

@@ -37,6 +37,7 @@ struct MatchDetailsView: View {
 	}
 }
 
+#if DEBUG
 struct MatchDetailsView_Previews: PreviewProvider {
 	static var previews: some View {
 		MatchDetailsView(
@@ -49,3 +50,4 @@ struct MatchDetailsView_Previews: PreviewProvider {
 		.environmentObject(AssetManager.forPreviews)
 	}
 }
+#endif
