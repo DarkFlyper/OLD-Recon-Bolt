@@ -3,7 +3,7 @@ import ValorantAPI
 
 struct ScoreboardView: View {
 	let players: [Player]
-	let myself: Player?
+	@Binding var myself: Player?
 	
 	@State private var width: CGFloat = 0
 	
@@ -70,6 +70,7 @@ struct ScoreboardView: View {
 		}
 		.background(relativeColor.opacity(0.25))
 		.cornerRadius(scoreboardPadding)
+		.onTapGesture { myself = player }
 	}
 }
 
@@ -77,7 +78,7 @@ struct ScoreboardView_Previews: PreviewProvider {
 	static var previews: some View {
 		ScoreboardView(
 			players: PreviewData.singleMatch.players,
-			myself: PreviewData.singleMatch.players.first { $0.id == PreviewData.playerID }
+			myself: .constant(PreviewData.singleMatch.players.first { $0.id == PreviewData.playerID })
 		)
 		.padding(.vertical)
 		.inEachColorScheme()

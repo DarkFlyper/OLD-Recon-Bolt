@@ -6,14 +6,14 @@ import HandyOperators
 
 struct MatchDetailsView: View {
 	let matchDetails: MatchDetails
-	let myself: Player?
+	@State var myself: Player?
 	
 	init(matchDetails: MatchDetails, playerID: Player.ID?) {
 		self.matchDetails = matchDetails
 		
 		let candidates = matchDetails.players.filter { $0.id == playerID }
 		assert(candidates.count <= 1)
-		myself = candidates.first
+		_myself = .init(wrappedValue: candidates.first)
 	}
 	
 	var body: some View {
@@ -23,7 +23,7 @@ struct MatchDetailsView: View {
 					.edgesIgnoringSafeArea(.horizontal)
 				
 				Group {
-					ScoreboardView(players: matchDetails.players, myself: myself)
+					ScoreboardView(players: matchDetails.players, myself: $myself)
 					
 					Divider().padding(.horizontal)
 					
