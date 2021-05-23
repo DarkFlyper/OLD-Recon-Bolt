@@ -14,12 +14,11 @@ struct ScoreboardView: View {
 		
 		ScrollView(.horizontal) {
 			VStack(spacing: scoreboardPadding) {
-				let _ = print("recreating!")
 				ForEach(sorted) { player in
 					scoreboardRow(for: player)
 				}
 			}
-			.padding(scoreboardPadding)
+			.padding(.horizontal)
 			.frame(minWidth: width)
 		}
 		.measured { width = $0.width }
@@ -89,6 +88,7 @@ struct ScoreboardView_Previews: PreviewProvider {
 			players: PreviewData.singleMatch.players,
 			myself: PreviewData.singleMatch.players.first { $0.id == PreviewData.playerID }
 		)
+		.padding(.vertical)
 		.inEachColorScheme()
 		.environmentObject(AssetManager.forPreviews)
 		.fixedSize(horizontal: true, vertical: true)

@@ -39,6 +39,8 @@
 		B9485F88264B5BD700AC3456 /* AssetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9485F86264B5BD700AC3456 /* AssetImage.swift */; };
 		B9485F90264B639F00AC3456 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9485F8F264B639F00AC3456 /* Tests.swift */; };
 		B9485F99264B67EC00AC3456 /* CombineExpectations in Frameworks */ = {isa = PBXBuildFile; productRef = B9485F98264B67EC00AC3456 /* CombineExpectations */; };
+		B96A0CA0265A8B4600844674 /* strange_match.json in Resources */ = {isa = PBXBuildFile; fileRef = B96A0C9F265A8B4600844674 /* strange_match.json */; };
+		B96A0CA1265A8B4600844674 /* strange_match.json in Resources */ = {isa = PBXBuildFile; fileRef = B96A0C9F265A8B4600844674 /* strange_match.json */; };
 		B97F8BAA25A8CE5E00553A83 /* Chronology.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97F8BA925A8CE5E00553A83 /* Chronology.swift */; };
 		B97F8BAB25A8CE5E00553A83 /* Chronology.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97F8BA925A8CE5E00553A83 /* Chronology.swift */; };
 		B9C97DC7263CADFC001E4D1B /* ValorantAPI+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C97DC6263CADFC001E4D1B /* ValorantAPI+Mock.swift */; };
@@ -73,6 +75,8 @@
 		B9EE6E662658A363007E28B5 /* SwiftUI+Previews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EE6E642658A363007E28B5 /* SwiftUI+Previews.swift */; };
 		B9EE6E682658A6D2007E28B5 /* AssetLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EE6E672658A6D2007E28B5 /* AssetLoading.swift */; };
 		B9EE6E692658A6D2007E28B5 /* AssetLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EE6E672658A6D2007E28B5 /* AssetLoading.swift */; };
+		B9EE6E6E26594374007E28B5 /* KillBreakdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EE6E6D26594374007E28B5 /* KillBreakdownView.swift */; };
+		B9EE6E6F26594374007E28B5 /* KillBreakdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EE6E6D26594374007E28B5 /* KillBreakdownView.swift */; };
 		B9EE6E712659D30A007E28B5 /* Swift+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EE6E702659D30A007E28B5 /* Swift+Helpers.swift */; };
 		B9EE6E722659D30A007E28B5 /* Swift+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EE6E702659D30A007E28B5 /* Swift+Helpers.swift */; };
 		B9EE6E752659D6DF007E28B5 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = B9EE6E742659D6DF007E28B5 /* Algorithms */; };
@@ -131,6 +135,7 @@
 		B9485F8D264B639F00AC3456 /* Valorant Viewer Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Valorant Viewer Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9485F8F264B639F00AC3456 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		B9485F91264B639F00AC3456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B96A0C9F265A8B4600844674 /* strange_match.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = strange_match.json; sourceTree = "<group>"; };
 		B97F8BA925A8CE5E00553A83 /* Chronology.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chronology.swift; sourceTree = "<group>"; };
 		B99B75942655859C00FBEB60 /* Valorant Viewer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Valorant Viewer.entitlements"; sourceTree = "<group>"; };
 		B9C97DC6263CADFC001E4D1B /* ValorantAPI+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ValorantAPI+Mock.swift"; sourceTree = "<group>"; };
@@ -148,6 +153,7 @@
 		B9EE6E6126589FAA007E28B5 /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
 		B9EE6E642658A363007E28B5 /* SwiftUI+Previews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUI+Previews.swift"; sourceTree = "<group>"; };
 		B9EE6E672658A6D2007E28B5 /* AssetLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetLoading.swift; sourceTree = "<group>"; };
+		B9EE6E6D26594374007E28B5 /* KillBreakdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KillBreakdownView.swift; sourceTree = "<group>"; };
 		B9EE6E702659D30A007E28B5 /* Swift+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Swift+Helpers.swift"; sourceTree = "<group>"; };
 		B9EF0F20263CFC870067176A /* MatchDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsView.swift; sourceTree = "<group>"; };
 		B9EF0F23263D09120067176A /* example_match.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = example_match.json; sourceTree = "<group>"; };
@@ -317,6 +323,7 @@
 				B9EE6E6126589FAA007E28B5 /* PreviewData.swift */,
 				B9EF0F23263D09120067176A /* example_match.json */,
 				B941B6EB25A7C83700F675C1 /* example_updates.json */,
+				B96A0C9F265A8B4600844674 /* strange_match.json */,
 				B9DCF9AA2642F7A100C39EC4 /* Preview Assets.xcassets */,
 				B9EE6E642658A363007E28B5 /* SwiftUI+Previews.swift */,
 			);
@@ -329,6 +336,7 @@
 				B9EF0F20263CFC870067176A /* MatchDetailsView.swift */,
 				B9EE6E5A26589DE1007E28B5 /* MatchDetailsHero.swift */,
 				B9DCF9A62642E0EC00C39EC4 /* ScoreboardView.swift */,
+				B9EE6E6D26594374007E28B5 /* KillBreakdownView.swift */,
 				B9EE6E5E26589EB8007E28B5 /* MatchDetailsContainer.swift */,
 			);
 			path = "Match Details";
@@ -494,6 +502,7 @@
 				B9EF0F25263D09AD0067176A /* example_match.json in Resources */,
 				B941B6EC25A7C83700F675C1 /* example_updates.json in Resources */,
 				B941B65A25A5BC8A00F675C1 /* Assets.xcassets in Resources */,
+				B96A0CA0265A8B4600844674 /* strange_match.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,6 +514,7 @@
 				B941B6ED25A7C83700F675C1 /* example_updates.json in Resources */,
 				B9EF0F24263D091F0067176A /* example_match.json in Resources */,
 				B941B65B25A5BC8A00F675C1 /* Assets.xcassets in Resources */,
+				B96A0CA1265A8B4600844674 /* strange_match.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,6 +537,7 @@
 				B94091AE25D09D5A00EE5DF2 /* Loading.swift in Sources */,
 				B9F65C4E2651EDA500C9C34A /* DynamicallyStroked.swift in Sources */,
 				B9DCF9AE2642F8FD00C39EC4 /* AssetManager.swift in Sources */,
+				B9EE6E6E26594374007E28B5 /* KillBreakdownView.swift in Sources */,
 				B941B6E525A7C48300F675C1 /* LoginSheet.swift in Sources */,
 				B94091B825D09F0200EE5DF2 /* MatchListView.swift in Sources */,
 				B9CF2E7425A8217C004A1458 /* Combine+Ergonomics.swift in Sources */,
@@ -567,6 +578,7 @@
 				B94091AF25D09D5A00EE5DF2 /* Loading.swift in Sources */,
 				B9F65C4F2651EDA500C9C34A /* DynamicallyStroked.swift in Sources */,
 				B9DCF9AF2642F8FD00C39EC4 /* AssetManager.swift in Sources */,
+				B9EE6E6F26594374007E28B5 /* KillBreakdownView.swift in Sources */,
 				B941B6E625A7C48300F675C1 /* LoginSheet.swift in Sources */,
 				B94091B925D09F0200EE5DF2 /* MatchListView.swift in Sources */,
 				B9CF2E7525A8217C004A1458 /* Combine+Ergonomics.swift in Sources */,

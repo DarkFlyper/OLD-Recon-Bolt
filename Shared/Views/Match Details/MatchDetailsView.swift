@@ -22,7 +22,16 @@ struct MatchDetailsView: View {
 				MatchDetailsHero(matchDetails: matchDetails, myself: myself)
 					.edgesIgnoringSafeArea(.horizontal)
 				
-				ScoreboardView(players: matchDetails.players, myself: myself)
+				Group {
+					ScoreboardView(players: matchDetails.players, myself: myself)
+					
+					Divider().padding(.horizontal)
+					
+					if KillBreakdownView.canDisplay(for: matchDetails) {
+						KillBreakdownView(matchDetails: matchDetails, myself: myself)
+					}
+				}
+				.padding(.top)
 			}
 		}
 	}

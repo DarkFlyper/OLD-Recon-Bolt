@@ -12,6 +12,8 @@ enum PreviewData {
 	)
 	
 	static let singleMatch = try! loadJSON(named: "example_match", as: MatchDetails.self)
+	/// A match with only a few rounds and very unbalanced kills, to push layouts to their limits.
+	static let strangeMatch = try! loadJSON(named: "strange_match", as: MatchDetails.self)
 	
 	static let compUpdates = try! loadJSON(named: "example_updates", as: [CompetitiveUpdate].self)
 	
