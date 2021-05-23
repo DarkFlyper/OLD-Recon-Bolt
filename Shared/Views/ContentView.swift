@@ -14,8 +14,11 @@ struct ContentView: View {
 	var body: some View {
 		matchListView
 			.onAppear {
-				guard loadManager.client == nil else { return }
-				isLoggingIn = true
+				if loadManager.client == nil {
+					isLoggingIn = true
+				} else {
+					loadMatches()
+				}
 			}
 			.onChange(of: loadManager.client?.id) { _ in
 				isLoggingIn = false

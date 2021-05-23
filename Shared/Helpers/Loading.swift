@@ -2,9 +2,15 @@ import SwiftUI
 import SwiftUIMissingPieces
 import Combine
 import ValorantAPI
+import UserDefault
 
 final class LoadManager: ObservableObject {
-	@Published var client: ValorantClient?
+	@UserDefault("LoadManager.client")
+	private static var storedClient: ValorantClient?
+	
+	@Published var client: ValorantClient? = LoadManager.storedClient {
+		didSet { Self.storedClient = client }
+	}
 	@Published private var loadTask: AnyCancellable?
 	@Published fileprivate var loadError: PresentedError?
 	
@@ -48,6 +54,8 @@ final class LoadManager: ObservableObject {
 		.buttonStyle(UnifiedLinkButtonStyle())
 	}
 }
+
+extension ValorantClient: DefaultsValueConvertible {}
 
 extension View {
 	func withLoadManager() -> some View {
