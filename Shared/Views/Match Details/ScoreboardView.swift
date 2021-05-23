@@ -44,6 +44,7 @@ struct ScoreboardView: View {
 						.foregroundColor(relativeColor)
 						.fixedSize()
 						.frame(maxWidth: .infinity, alignment: .leading)
+						.padding(.trailing, 4)
 					
 					divider
 					
