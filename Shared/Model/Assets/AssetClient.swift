@@ -9,6 +9,12 @@ struct AssetClient: Protoclient {
 		$0.dateDecodingStrategy = .iso8601
 	}
 	
+	let session: URLSession
+	
+	init(session: URLSession = .shared) {
+		self.session = session
+	}
+	
 	private let shouldTrace = true
 	
 	func traceOutgoing<R>(_ rawRequest: URLRequest, for request: R) where R : Request {
