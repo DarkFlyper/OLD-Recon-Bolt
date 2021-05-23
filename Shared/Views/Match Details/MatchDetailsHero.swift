@@ -42,11 +42,8 @@ struct MatchDetailsHero: View {
 	@ViewBuilder
 	private func scoreSummary(for teams: [Team]) -> some View {
 		let _ = assert(!teams.isEmpty)
-		let sorted = teams.sorted {
-			$0.id == myself?.teamID // self first
-				|| $1.id != myself?.teamID // self first
-				&& $0.pointCount > $1.pointCount // sort decreasingly by score
-		}
+		let sorted = teams.sorted(on: \.pointCount)
+			.movingToFront { $0.id == myself?.teamID }
 		
 		if sorted.count >= 2 {
 			HStack {

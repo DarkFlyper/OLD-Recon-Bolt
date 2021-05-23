@@ -73,6 +73,10 @@
 		B9EE6E662658A363007E28B5 /* SwiftUI+Previews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EE6E642658A363007E28B5 /* SwiftUI+Previews.swift */; };
 		B9EE6E682658A6D2007E28B5 /* AssetLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EE6E672658A6D2007E28B5 /* AssetLoading.swift */; };
 		B9EE6E692658A6D2007E28B5 /* AssetLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EE6E672658A6D2007E28B5 /* AssetLoading.swift */; };
+		B9EE6E712659D30A007E28B5 /* Swift+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EE6E702659D30A007E28B5 /* Swift+Helpers.swift */; };
+		B9EE6E722659D30A007E28B5 /* Swift+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EE6E702659D30A007E28B5 /* Swift+Helpers.swift */; };
+		B9EE6E752659D6DF007E28B5 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = B9EE6E742659D6DF007E28B5 /* Algorithms */; };
+		B9EE6E772659D6ED007E28B5 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = B9EE6E762659D6ED007E28B5 /* Algorithms */; };
 		B9EF0F21263CFC870067176A /* MatchDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EF0F20263CFC870067176A /* MatchDetailsView.swift */; };
 		B9EF0F22263CFC870067176A /* MatchDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EF0F20263CFC870067176A /* MatchDetailsView.swift */; };
 		B9EF0F24263D091F0067176A /* example_match.json in Resources */ = {isa = PBXBuildFile; fileRef = B9EF0F23263D09120067176A /* example_match.json */; };
@@ -144,6 +148,7 @@
 		B9EE6E6126589FAA007E28B5 /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
 		B9EE6E642658A363007E28B5 /* SwiftUI+Previews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUI+Previews.swift"; sourceTree = "<group>"; };
 		B9EE6E672658A6D2007E28B5 /* AssetLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetLoading.swift; sourceTree = "<group>"; };
+		B9EE6E702659D30A007E28B5 /* Swift+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Swift+Helpers.swift"; sourceTree = "<group>"; };
 		B9EF0F20263CFC870067176A /* MatchDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsView.swift; sourceTree = "<group>"; };
 		B9EF0F23263D09120067176A /* example_match.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = example_match.json; sourceTree = "<group>"; };
 		B9EF0F26263D9D860067176A /* ValorantAPI+SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ValorantAPI+SwiftUI.swift"; sourceTree = "<group>"; };
@@ -161,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9C97DCC263CB0D6001E4D1B /* ValorantAPI in Frameworks */,
+				B9EE6E752659D6DF007E28B5 /* Algorithms in Frameworks */,
 				B941B6D025A79A6400F675C1 /* KeychainSwift in Frameworks */,
 				B941B66A25A5C36A00F675C1 /* HandyOperators in Frameworks */,
 				B9CF2E6C25A81F57004A1458 /* SwiftUIMissingPieces in Frameworks */,
@@ -174,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9C97DCE263CB0F8001E4D1B /* ValorantAPI in Frameworks */,
+				B9EE6E772659D6ED007E28B5 /* Algorithms in Frameworks */,
 				B941B6D425A79A6A00F675C1 /* KeychainSwift in Frameworks */,
 				B941B66F25A5C3AD00F675C1 /* HandyOperators in Frameworks */,
 				B9CF2E7025A81F5D004A1458 /* SwiftUIMissingPieces in Frameworks */,
@@ -290,6 +297,7 @@
 				B94091B225D09DF900EE5DF2 /* SwiftUI+CrossPlatform.swift */,
 				B94091AD25D09D5A00EE5DF2 /* Loading.swift */,
 				B9C97DC6263CADFC001E4D1B /* ValorantAPI+Mock.swift */,
+				B9EE6E702659D30A007E28B5 /* Swift+Helpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -373,6 +381,7 @@
 				B9CF2E6B25A81F57004A1458 /* SwiftUIMissingPieces */,
 				B9C97DCB263CB0D6001E4D1B /* ValorantAPI */,
 				B9EF0F2A263DEEA30067176A /* VisualEffects */,
+				B9EE6E742659D6DF007E28B5 /* Algorithms */,
 			);
 			productName = "Valorant Viewer (iOS)";
 			productReference = B941B64A25A5BC8A00F675C1 /* Valorant Viewer.app */;
@@ -398,6 +407,7 @@
 				B9CF2E6F25A81F5D004A1458 /* SwiftUIMissingPieces */,
 				B9C97DCD263CB0F8001E4D1B /* ValorantAPI */,
 				B9EF0F2C263DEEAA0067176A /* VisualEffects */,
+				B9EE6E762659D6ED007E28B5 /* Algorithms */,
 			);
 			productName = "Valorant Viewer (macOS)";
 			productReference = B941B65225A5BC8A00F675C1 /* Valorant Viewer.app */;
@@ -462,6 +472,7 @@
 				B9C97DCA263CB0D6001E4D1B /* XCRemoteSwiftPackageReference "ValorantAPI" */,
 				B9EF0F29263DEEA30067176A /* XCRemoteSwiftPackageReference "VisualEffects" */,
 				B9485F97264B67EC00AC3456 /* XCRemoteSwiftPackageReference "CombineExpectations" */,
+				B9EE6E732659D6DF007E28B5 /* XCRemoteSwiftPackageReference "swift-algorithms" */,
 			);
 			productRefGroup = B941B64B25A5BC8A00F675C1 /* Products */;
 			projectDirPath = "";
@@ -542,6 +553,7 @@
 				B9E12B0C25BBD57D008E1E77 /* Optional+Functional.swift in Sources */,
 				B97F8BAA25A8CE5E00553A83 /* Chronology.swift in Sources */,
 				B9485F87264B5BD700AC3456 /* AssetImage.swift in Sources */,
+				B9EE6E712659D30A007E28B5 /* Swift+Helpers.swift in Sources */,
 				B9EF0F21263CFC870067176A /* MatchDetailsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -581,6 +593,7 @@
 				B9E12B0D25BBD57D008E1E77 /* Optional+Functional.swift in Sources */,
 				B97F8BAB25A8CE5E00553A83 /* Chronology.swift in Sources */,
 				B9485F88264B5BD700AC3456 /* AssetImage.swift in Sources */,
+				B9EE6E722659D30A007E28B5 /* Swift+Helpers.swift in Sources */,
 				B9EF0F22263CFC870067176A /* MatchDetailsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -955,6 +968,14 @@
 				kind = branch;
 			};
 		};
+		B9EE6E732659D6DF007E28B5 /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:apple/swift-algorithms.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.0;
+			};
+		};
 		B9EF0F29263DEEA30067176A /* XCRemoteSwiftPackageReference "VisualEffects" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/twostraws/VisualEffects";
@@ -1020,6 +1041,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B9CF2E6A25A81F57004A1458 /* XCRemoteSwiftPackageReference "SwifUI-Missing-Pieces" */;
 			productName = SwiftUIMissingPieces;
+		};
+		B9EE6E742659D6DF007E28B5 /* Algorithms */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B9EE6E732659D6DF007E28B5 /* XCRemoteSwiftPackageReference "swift-algorithms" */;
+			productName = Algorithms;
+		};
+		B9EE6E762659D6ED007E28B5 /* Algorithms */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B9EE6E732659D6DF007E28B5 /* XCRemoteSwiftPackageReference "swift-algorithms" */;
+			productName = Algorithms;
 		};
 		B9EF0F2A263DEEA30067176A /* VisualEffects */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/juliand665/ArrayBuilder",
         "state": {
           "branch": null,
-          "revision": "1d7b2707ba07789b1ebe2589a40407849c43420c",
-          "version": "1.0.0"
+          "revision": "f713ffd1432c5fb7cbf47a84bd634b18256957b6",
+          "version": "1.1.0"
         }
       },
       {
@@ -35,6 +35,24 @@
           "branch": null,
           "revision": "96fb84f45a96630e7583903bd7e08cf095c7a7ef",
           "version": "19.0.0"
+        }
+      },
+      {
+        "package": "swift-algorithms",
+        "repositoryURL": "git@github.com:apple/swift-algorithms.git",
+        "state": {
+          "branch": null,
+          "revision": "e25cf27e57fc3eec00ea2fc8ea7f99695c59966f",
+          "version": "0.2.0"
+        }
+      },
+      {
+        "package": "swift-numerics",
+        "repositoryURL": "https://github.com/apple/swift-numerics",
+        "state": {
+          "branch": null,
+          "revision": "6583ac70c326c3ee080c1d42d9ca3361dca816cd",
+          "version": "0.1.0"
         }
       },
       {
