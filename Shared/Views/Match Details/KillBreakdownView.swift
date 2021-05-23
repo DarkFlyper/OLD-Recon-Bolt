@@ -149,36 +149,12 @@ struct KillBreakdownView: View {
 	}
 }
 
-private extension Gradient {
-	init(_ color: Color, opacities: [Double] = [1, 0]) {
-		self.init(colors: opacities.map(color.opacity))
-	}
-}
-
-private extension View {
-	func measuring<Key: PreferenceKey>(
-		_ path: KeyPath<CGSize, CGFloat>, as key: Key.Type
-	) -> some View where Key.Value == CGFloat {
-		modifier(Measuring<Key>(measurePath: path))
-	}
-}
-
-private struct Measuring<Key: PreferenceKey>: ViewModifier where Key.Value == CGFloat {
-	let measurePath: KeyPath<CGSize, CGFloat>
-	
-	@State private var value: CGFloat = 0
-	
-	func body(content: Content) -> some View {
-		content
-			.measured { value = $0[keyPath: measurePath] }
-			.preference(key: Key.self, value: value)
-	}
-}
-
 private typealias TopHeight = MaxHeightPreference<TopMarker>
-private typealias BottomHeight = MaxHeightPreference<BottomMarker>
 private enum TopMarker {}
+
+private typealias BottomHeight = MaxHeightPreference<BottomMarker>
 private enum BottomMarker {}
+
 private struct MaxHeightPreference<Marker>: PreferenceKey {
 	static var defaultValue: CGFloat { -.infinity }
 	static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {
