@@ -321,6 +321,15 @@
 			path = "Valorant Viewer Tests";
 			sourceTree = "<group>";
 		};
+		B96A0CA5265ADEA000844674 /* Concrete Assets */ = {
+			isa = PBXGroup;
+			children = (
+				B9F07CB926474F4E006CD4F5 /* MapAssets.swift */,
+				B9485F83264B1DD300AC3456 /* AgentAssets.swift */,
+			);
+			path = "Concrete Assets";
+			sourceTree = "<group>";
+		};
 		B9DCF9A92642F78900C39EC4 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
@@ -350,12 +359,11 @@
 			isa = PBXGroup;
 			children = (
 				B9F65C492651DFA000C9C34A /* Views */,
+				B96A0CA5265ADEA000844674 /* Concrete Assets */,
 				B9DCF9AD2642F8FD00C39EC4 /* AssetManager.swift */,
 				B9EE6E672658A6D2007E28B5 /* AssetLoading.swift */,
 				B9F07CB326474E8A006CD4F5 /* AssetClient.swift */,
 				B9F07CB626474EB7006CD4F5 /* AssetVersion.swift */,
-				B9F07CB926474F4E006CD4F5 /* MapAssets.swift */,
-				B9485F83264B1DD300AC3456 /* AgentAssets.swift */,
 				B9485F86264B5BD700AC3456 /* AssetImage.swift */,
 			);
 			path = Assets;
