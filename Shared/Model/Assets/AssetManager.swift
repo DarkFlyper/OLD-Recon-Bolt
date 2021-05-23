@@ -63,6 +63,8 @@ struct AssetCollection: Codable {
 	
 	let maps: [MapID: MapInfo]
 	let agents: [Agent.ID: AgentInfo]
+	let missions: [MissionInfo.ID: MissionInfo]
+	let objectives: [ObjectiveInfo.ID: ObjectiveInfo]
 	
 	var images: Set<AssetImage> {
 		Set(maps.values.flatMap(\.images) + agents.values.flatMap(\.images))

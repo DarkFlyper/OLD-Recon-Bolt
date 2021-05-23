@@ -8,12 +8,17 @@ extension AssetClient {
 	) -> BasicPublisher<AssetCollection> {
 		// can't wait for async/await
 		getMapInfo()
-			.zip(getAgentInfo())
-			.map { (maps, agents) in
+			.zip(
+				getAgentInfo(),
+				getMissionInfo(),
+				getObjectiveInfo()
+			) { (maps, agents, missions, objectives) in
 				AssetCollection(
 					version: version,
-					maps: .init(uniqueKeysWithValues: maps.map { ($0.id, $0) }),
-					agents: .init(uniqueKeysWithValues: agents.map { ($0.id, $0) })
+					maps: .init(values: maps),
+					agents: .init(values: agents),
+					missions: .init(values: missions),
+					objectives: .init(values: objectives)
 				)
 			}
 			.flatMap { downloadAllImages(for: $0, onProgress: onProgress) }

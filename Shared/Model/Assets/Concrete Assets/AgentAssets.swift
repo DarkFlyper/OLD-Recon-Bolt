@@ -40,7 +40,7 @@ private struct BadDataWorkaround<Element>: Decodable where Element: Decodable {
 	private struct Dummy: Decodable {}
 }
 
-struct AgentInfo: Codable {
+struct AgentInfo: Codable, Identifiable {
 	typealias ID = Agent.ID
 	
 	private var uuid: ID

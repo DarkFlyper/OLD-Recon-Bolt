@@ -17,7 +17,7 @@ struct KillBreakdownView: View {
 		assert(matchDetails.teams.count == 2)
 		
 		self.myself = myself
-		self.players = .init(uniqueKeysWithValues: matchDetails.players.map { ($0.id, $0) })
+		self.players = .init(values: matchDetails.players)
 		
 		// order players by number of kills, with self in first place
 		let killsByPlayer = Dictionary(

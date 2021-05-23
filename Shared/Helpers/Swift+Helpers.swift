@@ -24,3 +24,13 @@ extension Collection where Element: RandomAccessCollection {
 		}
 	}
 }
+
+extension Dictionary {
+	init(values: [Value], keyedBy key: (Value) -> Key) {
+		self.init(uniqueKeysWithValues: values.map { (key($0), $0) })
+	}
+	
+	init(values: [Value]) where Value: Identifiable, Key == Value.ID {
+		self.init(values: values, keyedBy: \.id)
+	}
+}

@@ -14,7 +14,7 @@ private struct MapInfoRequest: AssetRequest {
 	typealias Response = [MapInfo]
 }
 
-struct MapInfo: Codable {
+struct MapInfo: Codable, Identifiable {
 	private var mapUrl: MapID
 	var id: MapID { mapUrl } // lazy rename
 	var displayName: String
