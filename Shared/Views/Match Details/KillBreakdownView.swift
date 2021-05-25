@@ -9,6 +9,8 @@ struct KillBreakdownView: View {
 	let myself: Player?
 	private let rounds: [Round]
 	
+	@State private var highlightedPlayer: Player.ID?
+	
 	static func canDisplay(for matchDetails: MatchDetails) -> Bool {
 		matchDetails.teams.count == 2
 	}
@@ -119,6 +121,7 @@ struct KillBreakdownView: View {
 	private func playerIcon(for playerID: Player.ID) -> some View {
 		let player = players[playerID]!
 		let relativeColor = player.relativeColor(for: myself) ?? .valorantRed
+		let shouldFade = highlightedPlayer != nil && player.id != highlightedPlayer
 		
 		AgentImage.displayIcon(player.agentID)
 			.frame(width: 32, height: 32)
@@ -134,6 +137,12 @@ struct KillBreakdownView: View {
 					.blendMode(.destinationOut)
 					.padding(-1)
 			)
+			.compositingGroup()
+			.opacity(shouldFade ? 0.5 : 1)
+			.onTapGesture {
+				// switch highlight to this player or toggle it off
+				highlightedPlayer = highlightedPlayer == playerID ? nil : playerID
+			}
 	}
 	
 	private func maximalRound() -> Round {
