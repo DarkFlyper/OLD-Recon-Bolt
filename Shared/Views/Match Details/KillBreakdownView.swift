@@ -68,7 +68,8 @@ struct KillBreakdownView: View {
 	
 	private func roundBreakdown(for round: Round) -> some View {
 		VStack(spacing: 1) {
-			let backgroundOpacity = 0.5
+			let backgroundOpacity = 0.25
+			let relativeColor = round.result.winningTeam.relativeColor(for: myself)
 			
 			killIcons(for: round.killsByTeam[0].reversed())
 				.measuring(\.height, as: TopHeight.self)
@@ -83,13 +84,10 @@ struct KillBreakdownView: View {
 			
 			Text("\(round.result.number + 1)")
 				.bold()
-				.blendMode(.destinationOut)
+				.foregroundColor(relativeColor)
 				.padding(.vertical, 8)
 				.frame(maxWidth: .infinity)
-				.background(
-					round.result.winningTeam.relativeColor(for: myself)?
-						.opacity(backgroundOpacity)
-				)
+				.background(relativeColor?.opacity(backgroundOpacity))
 			
 			killIcons(for: round.killsByTeam[1])
 				.measuring(\.height, as: BottomHeight.self)
