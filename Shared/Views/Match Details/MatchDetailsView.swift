@@ -6,14 +6,15 @@ import HandyOperators
 
 struct MatchDetailsView: View {
 	let matchDetails: MatchDetails
-	@State var myself: Player?
+	let myself: Player?
+	@State var highlightedPlayer: Player.ID?
 	
 	init(matchDetails: MatchDetails, playerID: Player.ID?) {
 		self.matchDetails = matchDetails
 		
 		let candidates = matchDetails.players.filter { $0.id == playerID }
 		assert(candidates.count <= 1)
-		_myself = .init(wrappedValue: candidates.first)
+		myself = candidates.first
 	}
 	
 	var body: some View {
@@ -23,12 +24,20 @@ struct MatchDetailsView: View {
 					.edgesIgnoringSafeArea(.horizontal)
 				
 				Group {
-					ScoreboardView(players: matchDetails.players, myself: $myself)
+					ScoreboardView(
+						players: matchDetails.players,
+						myself: myself,
+						highlightedPlayer: $highlightedPlayer
+					)
 					
 					Divider().padding(.horizontal)
 					
 					if KillBreakdownView.canDisplay(for: matchDetails) {
-						KillBreakdownView(matchDetails: matchDetails, myself: myself)
+						KillBreakdownView(
+							matchDetails: matchDetails,
+							myself: myself,
+							highlightedPlayer: $highlightedPlayer
+						)
 					}
 				}
 				.padding(.top)

@@ -9,17 +9,18 @@ struct KillBreakdownView: View {
 	let myself: Player?
 	private let rounds: [Round]
 	
-	@State private var highlightedPlayer: Player.ID?
+	@Binding var highlightedPlayer: Player.ID?
 	
 	static func canDisplay(for matchDetails: MatchDetails) -> Bool {
 		matchDetails.teams.count == 2
 	}
 	
-	init(matchDetails: MatchDetails, myself: Player?) {
+	init(matchDetails: MatchDetails, myself: Player?, highlightedPlayer: Binding<Player.ID?>) {
 		assert(matchDetails.teams.count == 2)
 		
 		self.myself = myself
 		self.players = .init(values: matchDetails.players)
+		self._highlightedPlayer = highlightedPlayer
 		
 		// order players by number of kills, with self in first place
 		let killsByPlayer = Dictionary(
@@ -179,7 +180,8 @@ struct KillBreakdownView_Previews: PreviewProvider {
 		
 		KillBreakdownView(
 			matchDetails: match,
-			myself: match.players.first { $0.id == PreviewData.playerID }
+			myself: match.players.first { $0.id == PreviewData.playerID },
+			highlightedPlayer: .constant(nil)
 		)
 		.padding(.vertical)
 		.inEachColorScheme()

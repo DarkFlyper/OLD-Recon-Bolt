@@ -3,7 +3,8 @@ import ValorantAPI
 
 struct ScoreboardView: View {
 	let players: [Player]
-	@Binding var myself: Player?
+	let myself: Player?
+	@Binding var highlightedPlayer: Player.ID?
 	
 	@State private var width: CGFloat = 0
 	
@@ -32,10 +33,13 @@ struct ScoreboardView: View {
 		let relativeColor = player.relativeColor(for: myself)
 		
 		HStack(spacing: 0) {
+			let shouldFade = highlightedPlayer != nil && player.id != highlightedPlayer
 			AgentImage.displayIcon(player.agentID)
 				.frame(height: 40)
 				.dynamicallyStroked(radius: 1, color: .white)
 				.background(relativeColor.opacity(0.5))
+				.compositingGroup()
+				.opacity(shouldFade ? 0.5 : 1)
 			
 			HStack(spacing: scoreboardPadding) {
 				Group {
@@ -71,7 +75,10 @@ struct ScoreboardView: View {
 		}
 		.background(relativeColor.opacity(0.25))
 		.cornerRadius(scoreboardPadding)
-		.onTapGesture { myself = player }
+		.onTapGesture {
+			// switch highlight to this player or toggle it off
+			highlightedPlayer = highlightedPlayer == player.id ? nil : player.id
+		}
 	}
 }
 
@@ -80,7 +87,8 @@ struct ScoreboardView_Previews: PreviewProvider {
 	static var previews: some View {
 		ScoreboardView(
 			players: PreviewData.singleMatch.players,
-			myself: .constant(PreviewData.singleMatch.players.first { $0.id == PreviewData.playerID })
+			myself: PreviewData.singleMatch.players.first { $0.id == PreviewData.playerID },
+			highlightedPlayer: .constant(nil)
 		)
 		.padding(.vertical)
 		.inEachColorScheme()
