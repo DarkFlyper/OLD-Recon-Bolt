@@ -12,7 +12,7 @@ struct ScoreboardView: View {
 	var body: some View {
 		let sorted = players.sorted { $0.stats.score > $1.stats.score }
 		
-		ScrollView(.horizontal) {
+		ScrollView(.horizontal, showsIndicators: false) {
 			VStack(spacing: scoreboardPadding) {
 				ForEach(sorted) { player in
 					scoreboardRow(for: player)

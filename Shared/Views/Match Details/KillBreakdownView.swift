@@ -55,7 +55,7 @@ struct KillBreakdownView: View {
 	@State private var bottomHeight: CGFloat = 0
 	
 	var body: some View {
-		ScrollView(.horizontal) {
+		ScrollView(.horizontal, showsIndicators: false) {
 			HStack(spacing: 1) {
 				ForEach(rounds, content: roundBreakdown)
 			}
