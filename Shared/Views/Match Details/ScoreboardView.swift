@@ -28,7 +28,7 @@ struct ScoreboardView: View {
 		let divider = Rectangle()
 			.frame(width: 1)
 			.blendMode(.destinationOut)
-		let relativeColor = player.relativeColor(for: data.myself)
+		let relativeColor = data.relativeColor(of: player)
 		
 		HStack(spacing: 0) {
 			AgentImage.displayIcon(player.agentID)

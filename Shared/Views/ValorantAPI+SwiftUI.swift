@@ -18,21 +18,6 @@ extension Team.ID {
 			return nil
 		}
 	}
-	
-	func relativeColor(for myself: Player?) -> Color? {
-		if let own = myself?.teamID {
-			return self == own ? .valorantBlue : .valorantRed
-		} else {
-			return self.color
-		}
-	}
-}
-
-extension Player {
-	func relativeColor(for myself: Player?) -> Color? {
-		let teamColor = teamID.relativeColor(for: myself) ?? .valorantBlue
-		return id == myself?.id ? .valorantSelf : teamColor
-	}
 }
 
 extension MapID {

@@ -66,7 +66,7 @@ struct KillBreakdownView: View {
 	private func roundBreakdown(for round: Round) -> some View {
 		VStack(spacing: 1) {
 			let backgroundOpacity = 0.25
-			let relativeColor = round.result.winningTeam.relativeColor(for: data.myself)
+			let relativeColor = data.relativeColor(of: round.result.winningTeam)
 			
 			killIcons(for: round.killsByTeam[0].reversed())
 				.measuring(\.height, as: TopHeight.self)
@@ -115,7 +115,7 @@ struct KillBreakdownView: View {
 	@ViewBuilder
 	private func playerIcon(for playerID: Player.ID) -> some View {
 		let player = data.players[playerID]!
-		let relativeColor = player.relativeColor(for: data.myself) ?? .valorantRed
+		let relativeColor = data.relativeColor(of: player) ?? .valorantRed
 		
 		AgentImage.displayIcon(player.agentID)
 			.frame(width: 32, height: 32)

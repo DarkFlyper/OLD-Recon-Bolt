@@ -1,4 +1,5 @@
 import ValorantAPI
+import SwiftUI
 
 /// View data for a match, used in many views involved in match details.
 struct MatchViewData {
@@ -25,5 +26,18 @@ struct MatchViewData {
 	mutating func switchHighlight(to playerID: Player.ID) {
 		// switch highlight to this player or toggle it off
 		highlightedPlayer = highlightedPlayer == playerID ? nil : playerID
+	}
+	
+	func relativeColor(of other: Player) -> Color? {
+		let teamColor = relativeColor(of: other.teamID) ?? .valorantBlue
+		return other.id == myself?.id ? .valorantSelf : teamColor
+	}
+	
+	func relativeColor(of teamID: Team.ID) -> Color? {
+		if let own = myself?.teamID {
+			return teamID == own ? .valorantBlue : .valorantRed
+		} else {
+			return teamID.color
+		}
 	}
 }
