@@ -69,3 +69,20 @@ extension Region {
 		}
 	}
 }
+
+extension ValorantClient.APIError: LocalizedError {
+	public var errorDescription: String? {
+		switch self {
+		case .unauthorized:
+			return "The API rejected your authorization."
+		case .tokenFailure(message: let message):
+			return "Your token has expired. \(message)"
+		case .scheduledDowntime(message: let message):
+			return "The API is down for scheduled maintenance. \(message)"
+		case .badResponseCode(let code, _, nil):
+			return "The API returned an error code \(code)."
+		case .badResponseCode(let code, _, let error?):
+			return "The API returned an error code \(code), i.e. \(error.errorCode). \(error.message)"
+		}
+	}
+}

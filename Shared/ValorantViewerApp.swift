@@ -13,6 +13,7 @@ struct ValorantViewerApp: App {
 				ContentView()
 					.withLoadManager()
 					.environmentObject(AssetManager())
+					.environmentObject(CredentialsStorage(keychain: KeychainSwift()))
 			}
 		}
 	}

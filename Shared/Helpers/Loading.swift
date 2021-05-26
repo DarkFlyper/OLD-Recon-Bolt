@@ -14,6 +14,12 @@ final class LoadManager: ObservableObject {
 	@Published private var loadTask: AnyCancellable?
 	@Published fileprivate var loadError: PresentedError?
 	
+	fileprivate let credentials: CredentialsStorage
+	
+	init(credentials: CredentialsStorage) {
+		self.credentials = credentials
+	}
+	
 	var canLoad: Bool {
 		!isLoading && client != nil
 	}
@@ -23,11 +29,30 @@ final class LoadManager: ObservableObject {
 	}
 	
 	func load<P: Publisher>(
-		_ task: (ValorantClient) -> P,
+		_ task: @escaping (ValorantClient) -> P,
 		onSuccess: @escaping (P.Output) -> Void
 	) {
 		guard let client = client else { return }
-		runTask(task(client), onSuccess: onSuccess)
+		runTask(
+			task(client).tryCatch { [credentials] error -> AnyPublisher<P.Output, Error> in
+				switch error {
+				case ValorantClient.APIError.tokenFailure as Error,
+					 ValorantClient.APIError.unauthorized as Error:
+					return ValorantClient.authenticated(
+						username: credentials.username,
+						password: credentials.password,
+						region: credentials.region
+					)
+					.receive(on: DispatchQueue.main)
+					.also { self.client = $0 }
+					.flatMap { task($0).mapError { $0 } }
+					.eraseToAnyPublisher()
+				default:
+					throw error
+				}
+			},
+			onSuccess: onSuccess
+		)
 	}
 	
 	func runTask<P: Publisher>(
@@ -59,14 +84,21 @@ extension ValorantClient: DefaultsValueConvertible {}
 
 extension View {
 	func withLoadManager() -> some View {
-		LoadWrapper { self }
+		LoadWrapper.EnvironmentAccessor { self }
 	}
 }
 
 private struct LoadWrapper<Content: View>: View {
 	@ViewBuilder let content: () -> Content
 	@State private var errorTitle = "Error loading data!"
-	@StateObject private var loadManager = LoadManager()
+	@StateObject private var loadManager: LoadManager
+	
+	@EnvironmentObject private var credentials: CredentialsStorage
+	
+	init(credentials: CredentialsStorage, @ViewBuilder content: @escaping () -> Content) {
+		self.content = content
+		self._loadManager = .init(wrappedValue: LoadManager(credentials: credentials)) // dw it's an autoclosure
+	}
 	
 	var body: some View {
 		content()
@@ -81,6 +113,15 @@ private struct LoadWrapper<Content: View>: View {
 					dismissButton: .default(Text("OK"))
 				)
 			}
+	}
+	
+	struct EnvironmentAccessor: View {
+		@EnvironmentObject private var credentials: CredentialsStorage
+		@ViewBuilder let content: () -> Content
+		
+		var body: some View {
+			LoadWrapper(credentials: credentials, content: content)
+		}
 	}
 }
 
