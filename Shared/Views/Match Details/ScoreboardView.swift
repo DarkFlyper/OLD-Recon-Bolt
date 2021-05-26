@@ -23,6 +23,9 @@ struct ScoreboardView: View {
 		.measured { width = $0.width }
 	}
 	
+	private static let partyLetters = (UnicodeScalar("A").value...UnicodeScalar("Z").value)
+		.map { String(UnicodeScalar($0)!) }
+	
 	@ViewBuilder
 	private func scoreboardRow(for player: Player) -> some View {
 		let divider = Rectangle()
@@ -41,7 +44,11 @@ struct ScoreboardView: View {
 			HStack(spacing: scoreboardPadding) {
 				Group {
 					Text(verbatim: player.gameName)
-						.fontWeight(.medium)
+						.fontWeight(
+							data.isHighlighting
+								? (data.shouldFade(player.partyID) ? .regular : .semibold)
+								: .medium
+						)
 						.foregroundColor(relativeColor)
 						.fixedSize()
 						.frame(maxWidth: .infinity, alignment: .leading)
@@ -62,6 +69,16 @@ struct ScoreboardView: View {
 						Text(verbatim: "\(player.stats.assists)")
 					}
 					.frame(width: 120)
+					
+					divider
+					
+					let partyIndex = data.parties.firstIndex(of: player.partyID)!
+					let partyLetter = Self.partyLetters[partyIndex]
+					let shouldEmphasize = data.isHighlighting && !data.shouldFade(player.partyID)
+					Text("Party \(partyLetter)")
+						.fontWeight(shouldEmphasize ? .medium : .regular)
+						.frame(width: 80)
+						.opacity(data.shouldFade(player.partyID) ? 0.5 : 1)
 				}
 				.frame(maxHeight: .infinity)
 			}
