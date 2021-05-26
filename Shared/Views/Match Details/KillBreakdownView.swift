@@ -1,52 +1,46 @@
 import SwiftUI
-import SwiftUIMissingPieces
 import ValorantAPI
 import HandyOperators
-import ArrayBuilder
 
 struct KillBreakdownView: View {
-	let players: [Player.ID: Player]
-	let myself: Player?
 	private let rounds: [Round]
 	
-	@Binding var highlightedPlayer: Player.ID?
+	@Binding var data: MatchViewData
 	
-	static func canDisplay(for matchDetails: MatchDetails) -> Bool {
-		matchDetails.teams.count == 2
+	static func canDisplay(for data: MatchViewData) -> Bool {
+		data.details.teams.count == 2
 	}
 	
-	init(matchDetails: MatchDetails, myself: Player?, highlightedPlayer: Binding<Player.ID?>) {
-		assert(matchDetails.teams.count == 2)
-		
-		self.myself = myself
-		self.players = .init(values: matchDetails.players)
-		self._highlightedPlayer = highlightedPlayer
+	init(data _data: Binding<MatchViewData>) {
+		self._data = _data
+		let data = _data.wrappedValue // can't wait for property wrapper arguments
+		assert(Self.canDisplay(for: data))
 		
 		// order players by number of kills, with self in first place
 		let killsByPlayer = Dictionary(
-			grouping: matchDetails.nonBombKills(),
+			grouping: data.details.nonBombKills(),
 			by: \.killer
 		)
 		let order = killsByPlayer
 			.sorted(on: \.value.count)
 			.map(\.key)
 			.reversed()
-			.movingToFront { $0 == myself?.id }
+			.movingToFront { $0 == data.myself?.id }
 		let playerOrder = Dictionary(uniqueKeysWithValues: order.enumerated().map { ($0.element, $0.offset) })
 		
-		let orderedTeams = matchDetails.teams
-			.movingToFront { $0.id == myself?.teamID }
+		let orderedTeams = data.details.teams
+			.movingToFront { $0.id == data.myself?.teamID }
 		
 		self.rounds = zip(
-			matchDetails.roundResults,
-			matchDetails.killsByRound()
-		).map { [players] result, kills in
+			data.details.roundResults,
+			data.details.killsByRound()
+		).map { result, kills in
 			Round(
 				result: result,
 				kills: kills,
 				killsByTeam: orderedTeams.map { team in
 					kills
-						.filter { players[$0.killer]!.teamID == team.id }
+						.filter { data.players[$0.killer]!.teamID == team.id }
 						.sorted { playerOrder[$0.killer]! }
 				}
 			)
@@ -72,7 +66,7 @@ struct KillBreakdownView: View {
 	private func roundBreakdown(for round: Round) -> some View {
 		VStack(spacing: 1) {
 			let backgroundOpacity = 0.25
-			let relativeColor = round.result.winningTeam.relativeColor(for: myself)
+			let relativeColor = round.result.winningTeam.relativeColor(for: data.myself)
 			
 			killIcons(for: round.killsByTeam[0].reversed())
 				.measuring(\.height, as: TopHeight.self)
@@ -120,9 +114,8 @@ struct KillBreakdownView: View {
 	
 	@ViewBuilder
 	private func playerIcon(for playerID: Player.ID) -> some View {
-		let player = players[playerID]!
-		let relativeColor = player.relativeColor(for: myself) ?? .valorantRed
-		let shouldFade = highlightedPlayer != nil && player.id != highlightedPlayer
+		let player = data.players[playerID]!
+		let relativeColor = player.relativeColor(for: data.myself) ?? .valorantRed
 		
 		AgentImage.displayIcon(player.agentID)
 			.frame(width: 32, height: 32)
@@ -139,10 +132,9 @@ struct KillBreakdownView: View {
 					.padding(-1)
 			)
 			.compositingGroup()
-			.opacity(shouldFade ? 0.5 : 1)
+			.opacity(data.shouldFade(playerID) ? 0.5 : 1)
 			.onTapGesture {
-				// switch highlight to this player or toggle it off
-				highlightedPlayer = highlightedPlayer == playerID ? nil : playerID
+				data.switchHighlight(to: playerID)
 			}
 	}
 	
@@ -176,18 +168,12 @@ private struct MaxHeightPreference<Marker>: PreferenceKey {
 struct KillBreakdownView_Previews: PreviewProvider {
 	static var previews: some View {
 		// computing these previews takes a long time, so we'll limit ourselves to one match
-		let match = PreviewData.singleMatch
-		
-		KillBreakdownView(
-			matchDetails: match,
-			myself: match.players.first { $0.id == PreviewData.playerID },
-			highlightedPlayer: .constant(nil)
-		)
-		.padding(.vertical)
-		.inEachColorScheme()
-		.environmentObject(AssetManager.forPreviews)
-		.frame(maxWidth: 800, minHeight: 600)
-		.previewLayout(.sizeThatFits)
+		KillBreakdownView(data: .constant(PreviewData.singleMatchData))
+			.padding(.vertical)
+			.inEachColorScheme()
+			.environmentObject(AssetManager.forPreviews)
+			.frame(maxWidth: 800, minHeight: 600)
+			.previewLayout(.sizeThatFits)
 	}
 }
 #endif

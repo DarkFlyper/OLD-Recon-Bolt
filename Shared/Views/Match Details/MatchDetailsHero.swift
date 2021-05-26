@@ -3,12 +3,11 @@ import VisualEffects
 import ValorantAPI
 
 struct MatchDetailsHero: View {
-	let matchDetails: MatchDetails
-	let myself: Player?
+	let data: MatchViewData
 	
 	var body: some View {
 		ZStack {
-			let mapID = matchDetails.matchInfo.mapID
+			let mapID = data.details.matchInfo.mapID
 			MapImage.splash(mapID)
 				.aspectRatio(contentMode: .fill)
 				.frame(height: 150)
@@ -22,10 +21,10 @@ struct MatchDetailsHero: View {
 			#endif
 			
 			VStack {
-				scoreSummary(for: matchDetails.teams)
+				scoreSummary(for: data.details.teams)
 					.font(.largeTitle.weight(.heavy))
 				
-				Text(matchDetails.matchInfo.queueID.name)
+				Text(data.details.matchInfo.queueID.name)
 					.font(.largeTitle.weight(.semibold).smallCaps())
 					.opacity(0.8)
 					.blendMode(.overlay)
@@ -43,7 +42,7 @@ struct MatchDetailsHero: View {
 	private func scoreSummary(for teams: [Team]) -> some View {
 		let _ = assert(!teams.isEmpty)
 		let sorted = teams.sorted(on: \.pointCount)
-			.movingToFront { $0.id == myself?.teamID }
+			.movingToFront { $0.id == data.myself?.teamID }
 		
 		if sorted.count >= 2 {
 			HStack {
@@ -70,12 +69,9 @@ struct MatchDetailsHero: View {
 #if DEBUG
 struct MatchDetailsHero_Previews: PreviewProvider {
 	static var previews: some View {
-		MatchDetailsHero(
-			matchDetails: PreviewData.singleMatch,
-			myself: PreviewData.singleMatch.players.first { $0.id == PreviewData.playerID }
-		)
-		.previewLayout(.sizeThatFits)
-		.environmentObject(AssetManager.forPreviews)
+		MatchDetailsHero(data: PreviewData.singleMatchData)
+			.previewLayout(.sizeThatFits)
+			.environmentObject(AssetManager.forPreviews)
 	}
 }
 #endif

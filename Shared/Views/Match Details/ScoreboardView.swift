@@ -2,16 +2,14 @@ import SwiftUI
 import ValorantAPI
 
 struct ScoreboardView: View {
-	let players: [Player]
-	let myself: Player?
-	@Binding var highlightedPlayer: Player.ID?
+	@Binding var data: MatchViewData
 	
 	@State private var width: CGFloat = 0
 	
 	private let scoreboardPadding: CGFloat = 6
 	
 	var body: some View {
-		let sorted = players.sorted { $0.stats.score > $1.stats.score }
+		let sorted = data.details.players.sorted { $0.stats.score > $1.stats.score }
 		
 		ScrollView(.horizontal, showsIndicators: false) {
 			VStack(spacing: scoreboardPadding) {
@@ -30,16 +28,15 @@ struct ScoreboardView: View {
 		let divider = Rectangle()
 			.frame(width: 1)
 			.blendMode(.destinationOut)
-		let relativeColor = player.relativeColor(for: myself)
+		let relativeColor = player.relativeColor(for: data.myself)
 		
 		HStack(spacing: 0) {
-			let shouldFade = highlightedPlayer != nil && player.id != highlightedPlayer
 			AgentImage.displayIcon(player.agentID)
 				.frame(height: 40)
 				.dynamicallyStroked(radius: 1, color: .white)
 				.background(relativeColor.opacity(0.5))
 				.compositingGroup()
-				.opacity(shouldFade ? 0.5 : 1)
+				.opacity(data.shouldFade(player.id) ? 0.5 : 1)
 			
 			HStack(spacing: scoreboardPadding) {
 				Group {
@@ -76,8 +73,7 @@ struct ScoreboardView: View {
 		.background(relativeColor.opacity(0.25))
 		.cornerRadius(scoreboardPadding)
 		.onTapGesture {
-			// switch highlight to this player or toggle it off
-			highlightedPlayer = highlightedPlayer == player.id ? nil : player.id
+			data.switchHighlight(to: player.id)
 		}
 	}
 }
@@ -85,16 +81,12 @@ struct ScoreboardView: View {
 #if DEBUG
 struct ScoreboardView_Previews: PreviewProvider {
 	static var previews: some View {
-		ScoreboardView(
-			players: PreviewData.singleMatch.players,
-			myself: PreviewData.singleMatch.players.first { $0.id == PreviewData.playerID },
-			highlightedPlayer: .constant(nil)
-		)
-		.padding(.vertical)
-		.inEachColorScheme()
-		.environmentObject(AssetManager.forPreviews)
-		.fixedSize(horizontal: true, vertical: true)
-		.previewLayout(.sizeThatFits)
+		ScoreboardView(data: .constant(PreviewData.singleMatchData))
+			.padding(.vertical)
+			.inEachColorScheme()
+			.environmentObject(AssetManager.forPreviews)
+			.fixedSize(horizontal: true, vertical: true)
+			.previewLayout(.sizeThatFits)
 	}
 }
 #endif

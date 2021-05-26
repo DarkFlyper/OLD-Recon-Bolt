@@ -1,43 +1,26 @@
 import SwiftUI
-import SwiftUIMissingPieces
 import ValorantAPI
-import VisualEffects
-import HandyOperators
 
 struct MatchDetailsView: View {
-	let matchDetails: MatchDetails
-	let myself: Player?
-	@State var highlightedPlayer: Player.ID?
+	@State var data: MatchViewData
 	
 	init(matchDetails: MatchDetails, playerID: Player.ID?) {
-		self.matchDetails = matchDetails
-		
-		let candidates = matchDetails.players.filter { $0.id == playerID }
-		assert(candidates.count <= 1)
-		myself = candidates.first
+		_data = .init(wrappedValue: .init(details: matchDetails, playerID: playerID))
 	}
 	
 	var body: some View {
 		ScrollView {
 			VStack(spacing: 0) {
-				MatchDetailsHero(matchDetails: matchDetails, myself: myself)
+				MatchDetailsHero(data: data)
 					.edgesIgnoringSafeArea(.horizontal)
 				
 				Group {
-					ScoreboardView(
-						players: matchDetails.players,
-						myself: myself,
-						highlightedPlayer: $highlightedPlayer
-					)
+					ScoreboardView(data: $data)
 					
 					Divider().padding(.horizontal)
 					
-					if KillBreakdownView.canDisplay(for: matchDetails) {
-						KillBreakdownView(
-							matchDetails: matchDetails,
-							myself: myself,
-							highlightedPlayer: $highlightedPlayer
-						)
+					if KillBreakdownView.canDisplay(for: data) {
+						KillBreakdownView(data: $data)
 					}
 				}
 				.padding(.top)

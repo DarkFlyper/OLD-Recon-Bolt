@@ -17,6 +17,8 @@ enum PreviewData {
 	
 	static let compUpdates = try! loadJSON(named: "example_updates", as: [CompetitiveUpdate].self)
 	
+	static let singleMatchData = MatchViewData(details: singleMatch, playerID: playerID)
+	
 	static let matchList = MatchList(
 		user: user,
 		chronology: .init(entries: compUpdates)
