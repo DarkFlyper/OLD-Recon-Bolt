@@ -37,24 +37,3 @@ struct MatchViewData {
 		}
 	}
 }
-
-struct PlayerHighlightInfo {
-	private var highlightedPlayer: Player?
-	
-	var isHighlighting: Bool { highlightedPlayer != nil }
-	
-	func shouldFade(_ playerID: Player.ID) -> Bool {
-		guard let highlightedPlayer = highlightedPlayer else { return false }
-		return playerID != highlightedPlayer.id
-	}
-	
-	func shouldFade(_ partyID: Party.ID) -> Bool {
-		guard let highlightedPlayer = highlightedPlayer else { return false }
-		return partyID != highlightedPlayer.partyID
-	}
-	
-	mutating func switchHighlight(to player: Player) {
-		// switch highlight to this player or toggle it off
-		highlightedPlayer = highlightedPlayer?.id == player.id ? nil : player
-	}
-}

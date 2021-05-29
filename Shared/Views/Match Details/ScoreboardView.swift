@@ -46,9 +46,9 @@ struct ScoreboardView: View {
 				Group {
 					Text(verbatim: player.gameName)
 						.fontWeight(
-							highlight.isHighlighting
-								? (highlight.shouldFade(player.partyID) ? .regular : .semibold)
-								: .medium
+							highlight.isHighlighting(player.partyID)
+								.map { $0 ? .semibold : .regular }
+								?? .medium
 						)
 						.foregroundColor(relativeColor)
 						.fixedSize()
@@ -75,7 +75,7 @@ struct ScoreboardView: View {
 					
 					let partyIndex = data.parties.firstIndex(of: player.partyID)!
 					let partyLetter = Self.partyLetters[partyIndex]
-					let shouldEmphasize = highlight.isHighlighting && !highlight.shouldFade(player.partyID)
+					let shouldEmphasize = highlight.isHighlighting(player.partyID) == true
 					Text("Party \(partyLetter)")
 						.fontWeight(shouldEmphasize ? .medium : .regular)
 						.frame(width: 80)
