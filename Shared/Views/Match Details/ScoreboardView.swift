@@ -2,7 +2,8 @@ import SwiftUI
 import ValorantAPI
 
 struct ScoreboardView: View {
-	@Binding var data: MatchViewData
+	let data: MatchViewData
+	@Binding var highlight: PlayerHighlightInfo
 	
 	@State private var width: CGFloat = 0
 	
@@ -39,14 +40,14 @@ struct ScoreboardView: View {
 				.dynamicallyStroked(radius: 1, color: .white)
 				.background(relativeColor.opacity(0.5))
 				.compositingGroup()
-				.opacity(data.shouldFade(player.id) ? 0.5 : 1)
+				.opacity(highlight.shouldFade(player.id) ? 0.5 : 1)
 			
 			HStack(spacing: scoreboardPadding) {
 				Group {
 					Text(verbatim: player.gameName)
 						.fontWeight(
-							data.isHighlighting
-								? (data.shouldFade(player.partyID) ? .regular : .semibold)
+							highlight.isHighlighting
+								? (highlight.shouldFade(player.partyID) ? .regular : .semibold)
 								: .medium
 						)
 						.foregroundColor(relativeColor)
@@ -74,11 +75,11 @@ struct ScoreboardView: View {
 					
 					let partyIndex = data.parties.firstIndex(of: player.partyID)!
 					let partyLetter = Self.partyLetters[partyIndex]
-					let shouldEmphasize = data.isHighlighting && !data.shouldFade(player.partyID)
+					let shouldEmphasize = highlight.isHighlighting && !highlight.shouldFade(player.partyID)
 					Text("Party \(partyLetter)")
 						.fontWeight(shouldEmphasize ? .medium : .regular)
 						.frame(width: 80)
-						.opacity(data.shouldFade(player.partyID) ? 0.5 : 1)
+						.opacity(highlight.shouldFade(player.partyID) ? 0.5 : 1)
 				}
 				.frame(maxHeight: .infinity)
 			}
@@ -90,7 +91,7 @@ struct ScoreboardView: View {
 		.background(relativeColor.opacity(0.25))
 		.cornerRadius(scoreboardPadding)
 		.onTapGesture {
-			data.switchHighlight(to: player.id)
+			highlight.switchHighlight(to: player)
 		}
 	}
 }
@@ -98,7 +99,7 @@ struct ScoreboardView: View {
 #if DEBUG
 struct ScoreboardView_Previews: PreviewProvider {
 	static var previews: some View {
-		ScoreboardView(data: .constant(PreviewData.singleMatchData))
+		ScoreboardView(data: PreviewData.singleMatchData, highlight: .constant(.init()))
 			.padding(.vertical)
 			.inEachColorScheme()
 			.environmentObject(AssetManager.forPreviews)

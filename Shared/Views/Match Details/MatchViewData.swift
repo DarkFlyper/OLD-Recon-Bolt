@@ -6,10 +6,7 @@ struct MatchViewData {
 	let details: MatchDetails
 	let myself: Player?
 	let players: [Player.ID: Player]
-	private var highlightedPlayer: Player?
 	let parties: [Party.ID]
-	
-	var isHighlighting: Bool { highlightedPlayer != nil }
 	
 	init(details: MatchDetails, playerID: Player.ID?) {
 		self.details = details
@@ -27,21 +24,6 @@ struct MatchViewData {
 			.map(\.key)
 	}
 	
-	func shouldFade(_ playerID: Player.ID) -> Bool {
-		guard let highlightedPlayer = highlightedPlayer else { return false }
-		return playerID != highlightedPlayer.id
-	}
-	
-	func shouldFade(_ partyID: Party.ID) -> Bool {
-		guard let highlightedPlayer = highlightedPlayer else { return false }
-		return partyID != highlightedPlayer.partyID
-	}
-	
-	mutating func switchHighlight(to playerID: Player.ID) {
-		// switch highlight to this player or toggle it off
-		highlightedPlayer = highlightedPlayer?.id == playerID ? nil : players[playerID]!
-	}
-	
 	func relativeColor(of other: Player) -> Color? {
 		let teamColor = relativeColor(of: other.teamID) ?? .valorantBlue
 		return other.id == myself?.id ? .valorantSelf : teamColor
@@ -53,5 +35,26 @@ struct MatchViewData {
 		} else {
 			return teamID.color
 		}
+	}
+}
+
+struct PlayerHighlightInfo {
+	private var highlightedPlayer: Player?
+	
+	var isHighlighting: Bool { highlightedPlayer != nil }
+	
+	func shouldFade(_ playerID: Player.ID) -> Bool {
+		guard let highlightedPlayer = highlightedPlayer else { return false }
+		return playerID != highlightedPlayer.id
+	}
+	
+	func shouldFade(_ partyID: Party.ID) -> Bool {
+		guard let highlightedPlayer = highlightedPlayer else { return false }
+		return partyID != highlightedPlayer.partyID
+	}
+	
+	mutating func switchHighlight(to player: Player) {
+		// switch highlight to this player or toggle it off
+		highlightedPlayer = highlightedPlayer?.id == player.id ? nil : player
 	}
 }

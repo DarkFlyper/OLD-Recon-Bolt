@@ -2,10 +2,11 @@ import SwiftUI
 import ValorantAPI
 
 struct MatchDetailsView: View {
-	@State var data: MatchViewData
+	let data: MatchViewData
+	@State var highlight = PlayerHighlightInfo()
 	
 	init(matchDetails: MatchDetails, playerID: Player.ID?) {
-		_data = .init(wrappedValue: .init(details: matchDetails, playerID: playerID))
+		data = .init(details: matchDetails, playerID: playerID)
 	}
 	
 	var body: some View {
@@ -15,12 +16,12 @@ struct MatchDetailsView: View {
 					.edgesIgnoringSafeArea(.horizontal)
 				
 				Group {
-					ScoreboardView(data: $data)
+					ScoreboardView(data: data, highlight: $highlight)
 					
 					Divider().padding(.horizontal)
 					
 					if KillBreakdownView.canDisplay(for: data) {
-						KillBreakdownView(data: $data)
+						KillBreakdownView(data: data, highlight: $highlight)
 					}
 				}
 				.padding(.top)

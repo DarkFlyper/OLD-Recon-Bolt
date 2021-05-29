@@ -3,17 +3,32 @@ import ValorantAPI
 import HandyOperators
 
 struct KillBreakdownView: View {
-	private let rounds: [Round]
-	
-	@Binding var data: MatchViewData
+	let data: MatchViewData
+	@Binding var highlight: PlayerHighlightInfo
 	
 	static func canDisplay(for data: MatchViewData) -> Bool {
 		data.details.teams.count == 2
+			&& data.details.roundResults.count > 1
 	}
 	
-	init(data _data: Binding<MatchViewData>) {
-		self._data = _data
-		let data = _data.wrappedValue // can't wait for property wrapper arguments
+	// I tried to do this with alignment guides but this solution ended up being cleaner
+	@State private var topHeight: CGFloat = 0
+	@State private var bottomHeight: CGFloat = 0
+	
+	var body: some View {
+		let rounds = collectRoundData()
+		ScrollView(.horizontal, showsIndicators: false) {
+			HStack(spacing: 1) {
+				ForEach(rounds, content: roundBreakdown)
+			}
+			.fixedSize()
+			.padding(.horizontal)
+		}
+		.onPreferenceChange(TopHeight.self) { topHeight = $0 }
+		.onPreferenceChange(BottomHeight.self) { bottomHeight = $0 }
+	}
+	
+	private func collectRoundData() -> [Round] {
 		assert(Self.canDisplay(for: data))
 		
 		// order players by number of kills, with self in first place
@@ -22,7 +37,8 @@ struct KillBreakdownView: View {
 			by: \.killer
 		)
 		let order = killsByPlayer
-			.sorted(on: \.value.count)
+			.sorted { data.players[$0.key]!.stats.score }
+				then: { $0.key.rawValue.uuidString }
 			.map(\.key)
 			.reversed()
 			.movingToFront { $0 == data.myself?.id }
@@ -31,7 +47,7 @@ struct KillBreakdownView: View {
 		let orderedTeams = data.details.teams
 			.movingToFront { $0.id == data.myself?.teamID }
 		
-		self.rounds = zip(
+		return zip(
 			data.details.roundResults,
 			data.details.killsByRound()
 		).map { result, kills in
@@ -45,22 +61,6 @@ struct KillBreakdownView: View {
 				}
 			)
 		}
-	}
-	
-	// I tried to do this with alignment guides but this solution ended up being cleaner
-	@State private var topHeight: CGFloat = 0
-	@State private var bottomHeight: CGFloat = 0
-	
-	var body: some View {
-		ScrollView(.horizontal, showsIndicators: false) {
-			HStack(spacing: 1) {
-				ForEach(rounds, content: roundBreakdown)
-			}
-			.fixedSize()
-			.padding(.horizontal)
-		}
-		.onPreferenceChange(TopHeight.self) { topHeight = $0 }
-		.onPreferenceChange(BottomHeight.self) { bottomHeight = $0 }
 	}
 	
 	private func roundBreakdown(for round: Round) -> some View {
@@ -132,22 +132,10 @@ struct KillBreakdownView: View {
 					.padding(-1)
 			)
 			.compositingGroup()
-			.opacity(data.shouldFade(playerID) ? 0.5 : 1)
+			.opacity(highlight.shouldFade(playerID) ? 0.5 : 1)
 			.onTapGesture {
-				data.switchHighlight(to: playerID)
+				highlight.switchHighlight(to: player)
 			}
-	}
-	
-	private func maximalRound() -> Round {
-		let maximalKills = rounds
-			.map(\.killsByTeam)
-			.transposed()
-			.map { $0.max { $0.count < $1.count }! }
-		return Round(
-			result: rounds.first!.result,
-			kills: maximalKills.flatMap { $0 },
-			killsByTeam: maximalKills
-		)
 	}
 }
 
@@ -168,7 +156,7 @@ private struct MaxHeightPreference<Marker>: PreferenceKey {
 struct KillBreakdownView_Previews: PreviewProvider {
 	static var previews: some View {
 		// computing these previews takes a long time, so we'll limit ourselves to one match
-		KillBreakdownView(data: .constant(PreviewData.singleMatchData))
+		KillBreakdownView(data: PreviewData.singleMatchData, highlight: .constant(.init()))
 			.padding(.vertical)
 			.inEachColorScheme()
 			.environmentObject(AssetManager.forPreviews)
