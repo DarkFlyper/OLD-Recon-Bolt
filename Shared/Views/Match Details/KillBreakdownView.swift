@@ -167,7 +167,7 @@ struct KillBreakdownView_Previews: PreviewProvider {
 #endif
 
 private struct Round: Identifiable {
-	let id = UUID()
+	var id: Int { result.number }
 	
 	let result: RoundResult
 	let kills: [Kill]
