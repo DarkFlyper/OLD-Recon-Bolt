@@ -27,9 +27,8 @@ struct MatchCell: View {
 	
 	var unrankedBody: some View {
 		HStack {
-			mapIcon { $0
-			}
-			.frame(height: visualsHeight / 2, alignment: .top)
+			mapIcon
+				.frame(height: visualsHeight / 2, alignment: .top)
 			
 			Text(Self.dateFormatter.string(from: match.startTime))
 			Text(Self.timeFormatter.string(from: match.startTime))
@@ -42,7 +41,7 @@ struct MatchCell: View {
 	
 	var rankedBody: some View {
 		HStack {
-			mapIcon { $0 }
+			mapIcon
 			
 			VStack(alignment: .leading) {
 				Text(Self.dateFormatter.string(from: match.startTime))
@@ -72,17 +71,13 @@ struct MatchCell: View {
 		}
 	}
 	
-	private func mapIcon<V: View>(additionalModifiers: (AnyView) -> V) -> some View {
-		additionalModifiers(
-			AnyView(
-				MapImage.splash(match.mapID)
-					.scaledToFill()
-					.frame(width: visualsHeight * 16/9, height: visualsHeight)
-			)
-		)
-		.frame(minHeight: 0, alignment: .top) // text looks better on the top part
-		.overlay(MapImage.Label(mapID: match.mapID))
-		.mask(RoundedRectangle(cornerRadius: 4, style: .continuous))
+	private var mapIcon: some View {
+		MapImage.splash(match.mapID)
+			.scaledToFill()
+			.frame(width: visualsHeight * 16/9, height: visualsHeight)
+			.frame(minHeight: 0, alignment: .top) // text looks better on the top part
+			.overlay(MapImage.Label(mapID: match.mapID))
+			.mask(RoundedRectangle(cornerRadius: 4, style: .continuous))
 	}
 	
 	private var changeColor: Color {
