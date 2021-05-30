@@ -5,6 +5,8 @@ import HandyOperators
 struct KillBreakdownView: View {
 	let data: MatchViewData
 	@Binding var highlight: PlayerHighlightInfo
+	@AppStorage("KillBreakdownView.isCompact")
+	private var isCompact = false
 	
 	static func canDisplay(for data: MatchViewData) -> Bool {
 		data.details.teams.count == 2
@@ -17,15 +19,33 @@ struct KillBreakdownView: View {
 	
 	var body: some View {
 		let rounds = collectRoundData()
-		ScrollView(.horizontal, showsIndicators: false) {
-			HStack(spacing: 1) {
-				ForEach(rounds, content: roundBreakdown)
+		VStack {
+			HStack {
+				Text("Kills by Round")
+					.font(.headline)
+				
+				Spacer()
+				
+				Button { isCompact.toggle() } label: {
+					Image(
+						systemName: isCompact
+							? "arrowtriangle.left.fill.and.line.vertical.and.arrowtriangle.right.fill"
+							: "arrowtriangle.right.fill.and.line.vertical.and.arrowtriangle.left.fill"
+					)
+				}
 			}
-			.fixedSize()
 			.padding(.horizontal)
+			
+			ScrollView(.horizontal, showsIndicators: false) {
+				HStack(spacing: 1) {
+					ForEach(rounds) { roundBreakdown(for: $0) }
+				}
+				.fixedSize()
+				.padding(.horizontal)
+			}
+			.onPreferenceChange(TopHeight.self) { topHeight = $0 }
+			.onPreferenceChange(BottomHeight.self) { bottomHeight = $0 }
 		}
-		.onPreferenceChange(TopHeight.self) { topHeight = $0 }
-		.onPreferenceChange(BottomHeight.self) { bottomHeight = $0 }
 	}
 	
 	private func collectRoundData() -> [Round] {
@@ -63,6 +83,8 @@ struct KillBreakdownView: View {
 		}
 	}
 	
+	private var spacing: CGFloat { isCompact ? 4 : 8 }
+	
 	private func roundBreakdown(for round: Round) -> some View {
 		VStack(spacing: 1) {
 			let backgroundOpacity = 0.25
@@ -82,7 +104,8 @@ struct KillBreakdownView: View {
 			Text("\(round.result.number + 1)")
 				.bold()
 				.foregroundColor(relativeColor)
-				.padding(.vertical, 8)
+				.scaleEffect(isCompact ? 0.75 : 1)
+				.padding(.vertical, spacing)
 				.frame(maxWidth: .infinity)
 				.background(relativeColor?.opacity(backgroundOpacity))
 			
@@ -102,12 +125,12 @@ struct KillBreakdownView: View {
 	
 	@ViewBuilder
 	private func killIcons(for kills: [Kill]) -> some View {
-		VStack(spacing: 8) {
+		VStack(spacing: spacing) {
 			ForEach(Array(kills.enumerated()), id: \.offset) { _, kill in
 				playerIcon(for: kill.killer)
 			}
 		}
-		.padding(8)
+		.padding(spacing)
 		.fixedSize()
 		.frame(maxWidth: .infinity)
 	}
@@ -117,8 +140,10 @@ struct KillBreakdownView: View {
 		let player = data.players[playerID]!
 		let relativeColor = data.relativeColor(of: player) ?? .valorantRed
 		
+		let size: CGFloat = isCompact ? 24 : 32
+		
 		AgentImage.displayIcon(player.agentID)
-			.frame(width: 32, height: 32)
+			.frame(width: size, height: size)
 			.dynamicallyStroked(radius: 1, color: .white)
 			.background(Circle().fill(relativeColor).opacity(0.5).padding(1))
 			.mask(Circle())
