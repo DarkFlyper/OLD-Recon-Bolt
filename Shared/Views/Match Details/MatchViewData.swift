@@ -18,6 +18,7 @@ struct MatchViewData {
 		self.players = .init(values: details.players)
 		
 		self.parties = Dictionary(grouping: details.players) { $0.partyID }
+			.filter { $0.value.count > 1 }
 			.sorted(on: \.value.count)
 			.reversed()
 			.movingToFront { $0.value.contains { $0.id == playerID } }

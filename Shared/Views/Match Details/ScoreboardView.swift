@@ -71,15 +71,22 @@ struct ScoreboardView: View {
 					}
 					.frame(width: 120)
 					
-					divider
-					
-					let partyIndex = data.parties.firstIndex(of: player.partyID)!
-					let partyLetter = Self.partyLetters[partyIndex]
-					let shouldEmphasize = highlight.isHighlighting(player.partyID) == true
-					Text("Party \(partyLetter)")
-						.fontWeight(shouldEmphasize ? .medium : .regular)
-						.frame(width: 80)
+					if !data.parties.isEmpty {
+						divider
+						
+						Group {
+							if let partyIndex = data.parties.firstIndex(of: player.partyID) {
+								let partyLetter = Self.partyLetters[partyIndex]
+								let shouldEmphasize = highlight.isHighlighting(player.partyID) == true
+								Text("Party \(partyLetter)")
+									.fontWeight(shouldEmphasize ? .medium : .regular)
+							} else {
+								Text("–")
+							}
+						}
 						.opacity(highlight.shouldFade(player.partyID) ? 0.5 : 1)
+						.frame(width: 80)
+					}
 				}
 				.frame(maxHeight: .infinity)
 			}
