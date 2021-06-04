@@ -17,10 +17,15 @@ struct MatchListView: View {
 	
 	var body: some View {
 		List {
-			loadManager.loadButton("Load Matches") {
-				$0.load { $0.loadMatches(for: matchList) }
+			Button {
+				loadManager.load { $0.loadMatches(for: matchList) }
 					onSuccess: { matchList = $0 }
+			} label: {
+				Label("Load Matches", systemImage: "arrow.clockwise")
 			}
+			.disabled(!loadManager.canLoad)
+			.buttonStyle(UnifiedLinkButtonStyle())
+			.padding(10)
 			.frame(maxWidth: .infinity, alignment: .center)
 			
 			ForEach(shownMatches, id: \.id, content: MatchCell.init)
@@ -35,17 +40,6 @@ struct MatchListView: View {
 		}
 		.loadErrorTitle("Could not load matches!")
 		.navigationTitle(matchList.user.account.name)
-	}
-	
-	private func loadButton(
-		title: String,
-		task: @escaping (ValorantClient) -> (MatchList) -> AnyPublisher<MatchList, Error>
-	) -> some View {
-		loadManager.loadButton(title) {
-			$0.load { task($0)(matchList) }
-				onSuccess: { matchList = $0 }
-		}
-		.frame(maxWidth: .infinity, alignment: .center)
 	}
 	
 	func loadMatches() {
