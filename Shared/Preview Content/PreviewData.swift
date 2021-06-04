@@ -1,4 +1,5 @@
 import Foundation
+import Combine
 import ValorantAPI
 
 enum PreviewData {
@@ -34,3 +35,32 @@ enum PreviewData {
 		return try decoder.decode(T.self, from: raw)
 	}
 }
+
+#if DEBUG
+struct MockClientData: ClientData {
+	let user = PreviewData.user
+	var matchList: MatchList = PreviewData.matchList
+	
+	var client: ValorantClient {
+		fatalError("no client in previews!")
+	}
+	
+	static func authenticated(using credentials: Credentials) -> AnyPublisher<ClientData, Error> { fatalError() }
+	func reauthenticated() -> AnyPublisher<ClientData, Error> { fatalError() }
+	
+	init?(using keychain: Keychain) {}
+	func save(using keychain: Keychain) {}
+}
+
+struct EmptyClientData: ClientData {
+	let user: UserInfo
+	var matchList: MatchList
+	let client: ValorantClient
+	
+	static func authenticated(using credentials: Credentials) -> AnyPublisher<ClientData, Error> { fatalError() }
+	func reauthenticated() -> AnyPublisher<ClientData, Error> { fatalError() }
+	
+	init?(using keychain: Keychain) { return nil }
+	func save(using keychain: Keychain) {}
+}
+#endif

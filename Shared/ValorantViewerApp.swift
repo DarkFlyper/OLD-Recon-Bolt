@@ -11,9 +11,9 @@ struct ValorantViewerApp: App {
 		WindowGroup {
 			if !isTesting {
 				ContentView()
-					.withLoadManager()
+					.withValorantLoadManager()
+					.environmentObject(ClientDataStore(keychain: KeychainSwift(), for: StandardClientData.self))
 					.environmentObject(AssetManager())
-					.environmentObject(CredentialsStorage(keychain: KeychainSwift()))
 			}
 		}
 	}

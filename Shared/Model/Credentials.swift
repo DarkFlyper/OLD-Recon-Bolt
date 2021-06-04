@@ -3,49 +3,52 @@ import UserDefault
 import KeychainSwift
 import ValorantAPI
 
+struct Credentials: Codable {
+	var region = Region.europe
+	var username = ""
+	var password = ""
+	
+	init() {}
+	
+	init?(from keychain: Keychain) {
+		guard let stored = keychain["credentials"] else { return nil }
+		do {
+			self = try JSONDecoder().decode(Self.self, from: stored)
+		} catch {
+			print("could not decode stored credentials!")
+			dump(error)
+			print()
+			return nil
+		}
+	}
+	
+	func save(to keychain: Keychain) {
+		keychain["credentials"] = try! JSONEncoder().encode(self)
+	}
+}
+
 protocol Keychain {
-	func get(_ key: String) -> String?
-	@discardableResult
-	func set(_ value: String, forKey key: String) -> Bool
+	subscript(key: String) -> Data? { get nonmutating set }
 }
 
 extension KeychainSwift: Keychain {
-	func set(_ value: String, forKey key: String) -> Bool {
-		set(value, forKey: key, withAccess: nil)
-	}
-}
-
-struct MockKeychain: Keychain {
-	func get(_ key: String) -> String? { nil }
-	func set(_ value: String, forKey key: String) -> Bool { false }
-}
-
-final class CredentialsStorage: ObservableObject {
-	@UserDefault("username") private static var storedUsername = ""
-	@UserDefault("region") private static var storedRegion = Region.europe
-	
-	@Published var username = storedUsername {
-		didSet { Self.storedUsername = username }
-	}
-	
-	@Published var password = "" {
-		didSet { keychain.set(password, forKey: "password") }
-	}
-	
-	@Published var region = storedRegion {
-		didSet { Self.storedRegion = region }
-	}
-	
-	private let keychain: Keychain
-	
-	init(keychain: Keychain) {
-		self.keychain = keychain
-		if let stored = keychain.get("password") {
-			password = stored
+	subscript(key: String) -> Data? {
+		get { getData(key) }
+		set {
+			if let newValue = newValue {
+				if !set(newValue, forKey: key) {
+					print("Could not store value to keychain for key \(key)!")
+				}
+			} else {
+				delete(key)
+			}
 		}
 	}
 }
 
-extension Region: DefaultsValueConvertible {
-	public typealias DefaultsRepresentation = RawValue
+struct MockKeychain: Keychain {
+	subscript(key: String) -> Data? {
+		get { nil }
+		nonmutating set {}
+	}
 }

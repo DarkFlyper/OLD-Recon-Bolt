@@ -2,7 +2,7 @@ import SwiftUI
 import ValorantAPI
 
 struct MatchDetailsContainer: View {
-	@EnvironmentObject private var loadManager: LoadManager
+	@EnvironmentObject private var loadManager: ValorantLoadManager
 	@Environment(\.playerID) private var playerID
 	
 	let matchID: Match.ID

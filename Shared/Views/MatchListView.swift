@@ -4,11 +4,10 @@ import UserDefault
 import ValorantAPI
 
 struct MatchListView: View {
-	@Binding var matchList: MatchList {
-		didSet { matchList.save() }
-	}
+	@Binding var matchList: MatchList
 	@State @UserDefault("shouldShowUnranked") private var shouldShowUnranked = true
-	@EnvironmentObject private var loadManager: LoadManager
+	@EnvironmentObject private var loadManager: ValorantLoadManager
+	@EnvironmentObject private var dataStore: ClientDataStore
 	
 	private var shownMatches: [CompetitiveUpdate] {
 		shouldShowUnranked
@@ -37,6 +36,11 @@ struct MatchListView: View {
 			Button(shouldShowUnranked ? "Hide Unranked" : "Show Unranked")
 				{ shouldShowUnranked.toggle() }
 		}
+		.onChange(of: dataStore.data?.id) { _ in
+			loadMatches()
+		}
+		.loadErrorTitle("Could not load matches!")
+		.navigationTitle(matchList.user.account.name)
 	}
 	
 	private func loadButton(
@@ -49,4 +53,23 @@ struct MatchListView: View {
 		}
 		.frame(maxWidth: .infinity, alignment: .center)
 	}
+	
+	func loadMatches() {
+		if matchList.matches.isEmpty {
+			loadManager
+				.load { $0.loadOlderMatches(for: matchList) }
+					onSuccess: { matchList = $0 }
+		}
+	}
 }
+
+#if DEBUG
+struct MatchListView_Previews: PreviewProvider {
+	static var previews: some View {
+		MatchListView(matchList: .constant(PreviewData.matchList))
+			.withToolbar()
+			.withMockData()
+			.inEachColorScheme()
+	}
+}
+#endif

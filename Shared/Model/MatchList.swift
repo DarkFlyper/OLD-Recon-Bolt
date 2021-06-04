@@ -5,24 +5,12 @@ import HandyOperators
 import ValorantAPI
 
 struct MatchList: Codable, DefaultsValueConvertible {
-	@UserDefault("storedMatchList") private static var stored: Self?
-	
 	let user: UserInfo
 	
 	var chronology = Chronology<CompetitiveUpdate>()
 	
 	var matches: [CompetitiveUpdate] { chronology.entries }
 	var estimatedMissedMatches: Int { chronology.estimatedMissedEntries }
-	
-	static func forUser(_ user: UserInfo) -> Self {
-		Self.stored
-			.filter { $0.user.id == user.id }
-			?? .init(user: user)
-	}
-	
-	func save() {
-		Self.stored = self
-	}
 	
 	func addingMatches(_ new: [CompetitiveUpdate], startIndex sentStartIndex: Int) throws -> Self {
 		try self <- {

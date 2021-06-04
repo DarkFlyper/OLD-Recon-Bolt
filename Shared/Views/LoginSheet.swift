@@ -4,10 +4,10 @@ import Combine
 import ValorantAPI
 
 struct LoginSheet: View {
-	@Binding var client: ValorantClient?
+	@Binding var data: ClientData?
+	@State private(set) var credentials: Credentials
 	
 	@EnvironmentObject private var loadManager: LoadManager
-	@EnvironmentObject private var credentials: CredentialsStorage
 	
 	var body: some View {
 		ZStack {
@@ -34,10 +34,10 @@ struct LoginSheet: View {
 				.frame(maxWidth: 180)
 				
 				#if os(iOS)
-				Button(action: logIn, label: {
+				Button(action: logIn) {
 					Text("Log In")
 						.bold()
-				})
+				}
 				#endif
 			}
 			.frame(idealWidth: 180)
@@ -55,23 +55,16 @@ struct LoginSheet: View {
 	}
 	
 	func logIn() {
-		loadManager.runTask(
-			ValorantClient.authenticated(
-				username: credentials.username,
-				password: credentials.password,
-				region: credentials.region
-			)
-		) { client = $0 }
+		loadManager.runTask(StandardClientData.authenticated(using: credentials)) { data = $0 }
 	}
 }
 
 #if DEBUG
 struct LoginSheet_Previews: PreviewProvider {
 	static var previews: some View {
-		LoginSheet(client: .constant(nil))
+		LoginSheet(data: .constant(nil), credentials: .init())
 			.withLoadManager()
 			.inEachColorScheme()
-			.environmentObject(CredentialsStorage(keychain: MockKeychain()))
 			.previewLayout(.sizeThatFits)
 	}
 }
