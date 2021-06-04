@@ -34,10 +34,8 @@ struct MatchListView: View {
 		}
 		.listStyle(PrettyListStyle())
 		.toolbar {
-			ToolbarItemGroup(placement: .leading) {
-				Button(shouldShowUnranked ? "Hide Unranked" : "Show Unranked")
-					{ shouldShowUnranked.toggle() }
-			}
+			Button(shouldShowUnranked ? "Hide Unranked" : "Show Unranked")
+				{ shouldShowUnranked.toggle() }
 		}
 	}
 	

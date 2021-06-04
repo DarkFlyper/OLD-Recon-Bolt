@@ -17,58 +17,40 @@ struct MatchCell: View {
 	
 	var body: some View {
 		NavigationLink(destination: MatchDetailsContainer(matchID: match.id)) {
-			if match.isRanked {
-				rankedBody
-			} else {
-				unrankedBody
-			}
-		}
-	}
-	
-	var unrankedBody: some View {
-		HStack {
-			mapIcon
-				.frame(height: visualsHeight / 2, alignment: .top)
-			
-			Text(Self.dateFormatter.string(from: match.startTime))
-			Text(Self.timeFormatter.string(from: match.startTime))
-				.foregroundColor(.secondary)
-			Spacer()
-			Text("N/A")
-				.foregroundColor(.secondary)
-		}
-	}
-	
-	var rankedBody: some View {
-		HStack {
-			mapIcon
-			
-			VStack(alignment: .leading) {
-				Text(Self.dateFormatter.string(from: match.startTime))
-				Text(Self.timeFormatter.string(from: match.startTime))
-					.foregroundColor(.secondary)
-				if match.performanceBonus != 0 {
-					Text("Bonus: +\(match.performanceBonus)")
-						.foregroundColor(.green)
+			HStack {
+				mapIcon
+					.frame(height: visualsHeight, alignment: .top)
+				
+				VStack(alignment: .leading) {
+					Text(Self.dateFormatter.string(from: match.startTime))
+					Text(Self.timeFormatter.string(from: match.startTime))
+						.foregroundColor(.secondary)
+					if match.performanceBonus != 0 {
+						Text("Bonus: +\(match.performanceBonus)")
+							.foregroundColor(.green)
+					}
+					if match.afkPenalty != 0 {
+						Text("AFK Penalty: \(match.afkPenalty)")
+							.foregroundColor(.red)
+					}
 				}
-				if match.afkPenalty != 0 {
-					Text("AFK Penalty: \(match.afkPenalty)")
-						.foregroundColor(.red)
+				
+				Spacer()
+				
+				if match.isRanked {
+					VStack(alignment: .trailing) {
+						let eloChange = match.eloChange
+						Text(eloChange > 0 ? "+\(eloChange)" : eloChange < 0 ? "\(eloChange)" : "=")
+							.foregroundColor(changeColor)
+						Text("\(match.tierProgressAfterUpdate)")
+							.foregroundColor(.gray)
+					}
+					
+					changeRing
 				}
 			}
-			
-			Spacer()
-			
-			VStack(alignment: .trailing) {
-				let eloChange = match.eloChange
-				Text(eloChange > 0 ? "+\(eloChange)" : eloChange < 0 ? "\(eloChange)" : "=")
-					.foregroundColor(changeColor)
-				Text("\(match.tierProgressAfterUpdate)")
-					.foregroundColor(.gray)
-			}
-			
-			changeRing
 		}
+		.padding(.vertical, 4)
 	}
 	
 	private var mapIcon: some View {

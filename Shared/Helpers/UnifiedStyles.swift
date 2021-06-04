@@ -3,7 +3,7 @@ import SwiftUI
 #if os(macOS)
 typealias PrettyListStyle = InsetListStyle
 #else
-typealias PrettyListStyle = InsetGroupedListStyle
+typealias PrettyListStyle = GroupedListStyle
 #endif
 
 struct PrettyTextFieldStyle: TextFieldStyle {
