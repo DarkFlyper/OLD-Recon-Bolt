@@ -51,7 +51,7 @@ struct ContentView: View {
 				}
 			}
 		} else {
-			LoginSheet(data: $dataStore.data, credentials: .init(from: dataStore.keychain) ?? .init())
+			LoginForm(data: $dataStore.data, credentials: .init(from: dataStore.keychain) ?? .init())
 				.withLoadManager()
 		}
 	}

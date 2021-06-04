@@ -3,7 +3,7 @@ import SwiftUIMissingPieces
 import Combine
 import ValorantAPI
 
-struct LoginSheet: View {
+struct LoginForm: View {
 	@Binding var data: ClientData?
 	@State private(set) var credentials: Credentials
 	
@@ -62,7 +62,7 @@ struct LoginSheet: View {
 #if DEBUG
 struct LoginSheet_Previews: PreviewProvider {
 	static var previews: some View {
-		LoginSheet(data: .constant(nil), credentials: .init())
+		LoginForm(data: .constant(nil), credentials: .init())
 			.withLoadManager()
 			.inEachColorScheme()
 			.previewLayout(.sizeThatFits)

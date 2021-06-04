@@ -33,8 +33,8 @@
 		B941B6D925A7A09000F675C1 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B6D725A7A09000F675C1 /* Credentials.swift */; };
 		B941B6DE25A7BC3800F675C1 /* View+Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B6DD25A7BC3800F675C1 /* View+Styling.swift */; };
 		B941B6DF25A7BC3800F675C1 /* View+Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B6DD25A7BC3800F675C1 /* View+Styling.swift */; };
-		B941B6E525A7C48300F675C1 /* LoginSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B6E425A7C48300F675C1 /* LoginSheet.swift */; };
-		B941B6E625A7C48300F675C1 /* LoginSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B6E425A7C48300F675C1 /* LoginSheet.swift */; };
+		B941B6E525A7C48300F675C1 /* LoginForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B6E425A7C48300F675C1 /* LoginForm.swift */; };
+		B941B6E625A7C48300F675C1 /* LoginForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B6E425A7C48300F675C1 /* LoginForm.swift */; };
 		B941B6EC25A7C83700F675C1 /* example_updates.json in Resources */ = {isa = PBXBuildFile; fileRef = B941B6EB25A7C83700F675C1 /* example_updates.json */; };
 		B941B6ED25A7C83700F675C1 /* example_updates.json in Resources */ = {isa = PBXBuildFile; fileRef = B941B6EB25A7C83700F675C1 /* example_updates.json */; };
 		B9485F84264B1DD300AC3456 /* AgentAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9485F83264B1DD300AC3456 /* AgentAssets.swift */; };
@@ -142,7 +142,7 @@
 		B941B65525A5BC8A00F675C1 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		B941B6D725A7A09000F675C1 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		B941B6DD25A7BC3800F675C1 /* View+Styling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Styling.swift"; sourceTree = "<group>"; };
-		B941B6E425A7C48300F675C1 /* LoginSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSheet.swift; sourceTree = "<group>"; };
+		B941B6E425A7C48300F675C1 /* LoginForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginForm.swift; sourceTree = "<group>"; };
 		B941B6EB25A7C83700F675C1 /* example_updates.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_updates.json; sourceTree = "<group>"; };
 		B9485F83264B1DD300AC3456 /* AgentAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentAssets.swift; sourceTree = "<group>"; };
 		B9485F86264B5BD700AC3456 /* AssetImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetImage.swift; sourceTree = "<group>"; };
@@ -227,7 +227,7 @@
 		B94091C925D0ACAC00EE5DF2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B941B6E425A7C48300F675C1 /* LoginSheet.swift */,
+				B941B6E425A7C48300F675C1 /* LoginForm.swift */,
 				B941B64425A5BC8800F675C1 /* ContentView.swift */,
 				B94091B725D09F0200EE5DF2 /* MatchListView.swift */,
 				B9CF2E7825A89976004A1458 /* MatchCell.swift */,
@@ -573,7 +573,7 @@
 				B9F65C4E2651EDA500C9C34A /* DynamicallyStroked.swift in Sources */,
 				B9DCF9AE2642F8FD00C39EC4 /* AssetManager.swift in Sources */,
 				B9EE6E6E26594374007E28B5 /* KillBreakdownView.swift in Sources */,
-				B941B6E525A7C48300F675C1 /* LoginSheet.swift in Sources */,
+				B941B6E525A7C48300F675C1 /* LoginForm.swift in Sources */,
 				B94091B825D09F0200EE5DF2 /* MatchListView.swift in Sources */,
 				B96A0CAD265B0FB500844674 /* ObjectiveAssets.swift in Sources */,
 				B9CF2E7425A8217C004A1458 /* Combine+Ergonomics.swift in Sources */,
@@ -620,7 +620,7 @@
 				B9F65C4F2651EDA500C9C34A /* DynamicallyStroked.swift in Sources */,
 				B9DCF9AF2642F8FD00C39EC4 /* AssetManager.swift in Sources */,
 				B9EE6E6F26594374007E28B5 /* KillBreakdownView.swift in Sources */,
-				B941B6E625A7C48300F675C1 /* LoginSheet.swift in Sources */,
+				B941B6E625A7C48300F675C1 /* LoginForm.swift in Sources */,
 				B94091B925D09F0200EE5DF2 /* MatchListView.swift in Sources */,
 				B96A0CAE265B0FB500844674 /* ObjectiveAssets.swift in Sources */,
 				B9CF2E7525A8217C004A1458 /* Combine+Ergonomics.swift in Sources */,
