@@ -22,7 +22,7 @@ enum PreviewData {
 	
 	static let matchList = MatchList(
 		user: user,
-		chronology: .init(entries: compUpdates)
+		matches: compUpdates
 	)
 	
 	private static func loadJSON<T>(

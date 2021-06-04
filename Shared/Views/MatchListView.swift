@@ -17,19 +17,13 @@ struct MatchListView: View {
 	
 	var body: some View {
 		List {
-			loadButton(
-				title: matchList.estimatedMissedMatches > 0
-					? "Load \(matchList.estimatedMissedMatches)+ Newer Matches"
-					: "Load Newer Matches",
-				task: ValorantClient.loadNewerMatches
-			)
+			loadManager.loadButton("Load Matches") {
+				$0.load { $0.loadMatches(for: matchList) }
+					onSuccess: { matchList = $0 }
+			}
+			.frame(maxWidth: .infinity, alignment: .center)
 			
 			ForEach(shownMatches, id: \.id, content: MatchCell.init)
-			
-			loadButton(
-				title: "Load Older Matches",
-				task: ValorantClient.loadOlderMatches
-			)
 		}
 		.listStyle(PrettyListStyle())
 		.toolbar {
@@ -57,7 +51,7 @@ struct MatchListView: View {
 	func loadMatches() {
 		if matchList.matches.isEmpty {
 			loadManager
-				.load { $0.loadOlderMatches(for: matchList) }
+				.load { $0.loadMatches(for: matchList) }
 					onSuccess: { matchList = $0 }
 		}
 	}

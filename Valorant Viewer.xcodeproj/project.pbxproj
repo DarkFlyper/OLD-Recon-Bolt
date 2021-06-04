@@ -53,8 +53,6 @@
 		B96A0CAB265AE32200844674 /* MissionAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96A0CA9265AE32200844674 /* MissionAssets.swift */; };
 		B96A0CAD265B0FB500844674 /* ObjectiveAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96A0CAC265B0FB500844674 /* ObjectiveAssets.swift */; };
 		B96A0CAE265B0FB500844674 /* ObjectiveAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96A0CAC265B0FB500844674 /* ObjectiveAssets.swift */; };
-		B97F8BAA25A8CE5E00553A83 /* Chronology.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97F8BA925A8CE5E00553A83 /* Chronology.swift */; };
-		B97F8BAB25A8CE5E00553A83 /* Chronology.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97F8BA925A8CE5E00553A83 /* Chronology.swift */; };
 		B9C97DC7263CADFC001E4D1B /* ValorantAPI+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C97DC6263CADFC001E4D1B /* ValorantAPI+Mock.swift */; };
 		B9C97DC8263CADFC001E4D1B /* ValorantAPI+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C97DC6263CADFC001E4D1B /* ValorantAPI+Mock.swift */; };
 		B9C97DCC263CB0D6001E4D1B /* ValorantAPI in Frameworks */ = {isa = PBXBuildFile; productRef = B9C97DCB263CB0D6001E4D1B /* ValorantAPI */; };
@@ -156,7 +154,6 @@
 		B96A0CA2265ABBC700844674 /* SwiftUI+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUI+Helpers.swift"; sourceTree = "<group>"; };
 		B96A0CA9265AE32200844674 /* MissionAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionAssets.swift; sourceTree = "<group>"; };
 		B96A0CAC265B0FB500844674 /* ObjectiveAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectiveAssets.swift; sourceTree = "<group>"; };
-		B97F8BA925A8CE5E00553A83 /* Chronology.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chronology.swift; sourceTree = "<group>"; };
 		B99B75942655859C00FBEB60 /* Valorant Viewer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Valorant Viewer.entitlements"; sourceTree = "<group>"; };
 		B9C97DC6263CADFC001E4D1B /* ValorantAPI+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ValorantAPI+Mock.swift"; sourceTree = "<group>"; };
 		B9C97DCF263CB139001E4D1B /* ValorantAPI */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ValorantAPI; path = "../ Packages/ValorantAPI"; sourceTree = "<group>"; };
@@ -245,7 +242,6 @@
 			isa = PBXGroup;
 			children = (
 				B941B6D725A7A09000F675C1 /* Credentials.swift */,
-				B97F8BA925A8CE5E00553A83 /* Chronology.swift */,
 				B9C97DD0263CB744001E4D1B /* MatchList.swift */,
 				B96845B22665C7B900DC59D2 /* ClientData.swift */,
 				B94091AD25D09D5A00EE5DF2 /* LoadManager.swift */,
@@ -604,7 +600,6 @@
 				B9F07CBA26474F4E006CD4F5 /* MapAssets.swift in Sources */,
 				B9C97DC7263CADFC001E4D1B /* ValorantAPI+Mock.swift in Sources */,
 				B9E12B0C25BBD57D008E1E77 /* Optional+Functional.swift in Sources */,
-				B97F8BAA25A8CE5E00553A83 /* Chronology.swift in Sources */,
 				B9485F87264B5BD700AC3456 /* AssetImage.swift in Sources */,
 				B9EE6E712659D30A007E28B5 /* Swift+Helpers.swift in Sources */,
 				B9EF0F21263CFC870067176A /* MatchDetailsView.swift in Sources */,
@@ -652,7 +647,6 @@
 				B9F07CBB26474F4E006CD4F5 /* MapAssets.swift in Sources */,
 				B9C97DC8263CADFC001E4D1B /* ValorantAPI+Mock.swift in Sources */,
 				B9E12B0D25BBD57D008E1E77 /* Optional+Functional.swift in Sources */,
-				B97F8BAB25A8CE5E00553A83 /* Chronology.swift in Sources */,
 				B9485F88264B5BD700AC3456 /* AssetImage.swift in Sources */,
 				B9EE6E722659D30A007E28B5 /* Swift+Helpers.swift in Sources */,
 				B9EF0F22263CFC870067176A /* MatchDetailsView.swift in Sources */,
@@ -807,6 +801,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_SWIFT_FLAGS = "-Xfrontend -warn-long-expression-type-checking=500";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.juliand665.Valorant-Viewer";
 				PRODUCT_NAME = "Valorant Viewer";
 				SDKROOT = iphoneos;
@@ -833,6 +828,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_SWIFT_FLAGS = "-Xfrontend -warn-long-expression-type-checking=500";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.juliand665.Valorant-Viewer";
 				PRODUCT_NAME = "Valorant Viewer";
 				SDKROOT = iphoneos;
