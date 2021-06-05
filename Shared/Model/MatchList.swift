@@ -10,7 +10,7 @@ struct MatchList: Codable, DefaultsValueConvertible {
 	var matches: [CompetitiveUpdate] = []
 	
 	mutating func addMatches(_ new: [CompetitiveUpdate]) throws {
-		let overlapStart = matches.firstIndex { $0.id == matches.first?.id } ?? new.endIndex
+		let overlapStart = matches.firstIndex { $0.id == new.first?.id } ?? new.endIndex
 		guard overlapStart > new.startIndex else { throw NoNewEntriesError() }
 		matches = new[..<overlapStart] + matches
 	}
