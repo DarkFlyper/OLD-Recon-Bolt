@@ -30,7 +30,6 @@ struct MatchListView: View {
 			
 			ForEach(shownMatches, id: \.id, content: MatchCell.init)
 		}
-		.listStyle(PrettyListStyle())
 		.toolbar {
 			Button(shouldShowUnranked ? "Hide Unranked" : "Show Unranked")
 				{ shouldShowUnranked.toggle() }

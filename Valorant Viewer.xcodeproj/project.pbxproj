@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		B9131D61266A707600E85F46 /* ValorantLoadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9131D60266A707600E85F46 /* ValorantLoadManager.swift */; };
 		B9131D62266A707600E85F46 /* ValorantLoadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9131D60266A707600E85F46 /* ValorantLoadManager.swift */; };
+		B9131D65266AF6C600E85F46 /* ReferenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9131D64266AF6C600E85F46 /* ReferenceView.swift */; };
+		B9131D66266AF6C600E85F46 /* ReferenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9131D64266AF6C600E85F46 /* ReferenceView.swift */; };
+		B9131D69266AFA4C00E85F46 /* MapListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9131D68266AFA4C00E85F46 /* MapListView.swift */; };
+		B9131D6A266AFA4C00E85F46 /* MapListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9131D68266AFA4C00E85F46 /* MapListView.swift */; };
+		B9131D6C266AFA7900E85F46 /* MapInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9131D6B266AFA7900E85F46 /* MapInfoView.swift */; };
+		B9131D6D266AFA7900E85F46 /* MapInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9131D6B266AFA7900E85F46 /* MapInfoView.swift */; };
 		B927614B266284B700CF2100 /* PlayerHighlightInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B927614A266284B700CF2100 /* PlayerHighlightInfo.swift */; };
 		B927614C266284B700CF2100 /* PlayerHighlightInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B927614A266284B700CF2100 /* PlayerHighlightInfo.swift */; };
 		B94091AE25D09D5A00EE5DF2 /* LoadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94091AD25D09D5A00EE5DF2 /* LoadManager.swift */; };
@@ -127,6 +133,9 @@
 
 /* Begin PBXFileReference section */
 		B9131D60266A707600E85F46 /* ValorantLoadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValorantLoadManager.swift; sourceTree = "<group>"; };
+		B9131D64266AF6C600E85F46 /* ReferenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferenceView.swift; sourceTree = "<group>"; };
+		B9131D68266AFA4C00E85F46 /* MapListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapListView.swift; sourceTree = "<group>"; };
+		B9131D6B266AFA7900E85F46 /* MapInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInfoView.swift; sourceTree = "<group>"; };
 		B91B2B94264384FD00074F7D /* Protoquest */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Protoquest; path = "../ Packages/Protoquest"; sourceTree = "<group>"; };
 		B927614A266284B700CF2100 /* PlayerHighlightInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerHighlightInfo.swift; sourceTree = "<group>"; };
 		B94091AD25D09D5A00EE5DF2 /* LoadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadManager.swift; sourceTree = "<group>"; };
@@ -224,6 +233,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B9131D67266AFA3B00E85F46 /* Reference */ = {
+			isa = PBXGroup;
+			children = (
+				B9131D64266AF6C600E85F46 /* ReferenceView.swift */,
+				B9131D68266AFA4C00E85F46 /* MapListView.swift */,
+				B9131D6B266AFA7900E85F46 /* MapInfoView.swift */,
+			);
+			path = Reference;
+			sourceTree = "<group>";
+		};
 		B94091C925D0ACAC00EE5DF2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +250,7 @@
 				B941B64425A5BC8800F675C1 /* ContentView.swift */,
 				B94091B725D09F0200EE5DF2 /* MatchListView.swift */,
 				B9CF2E7825A89976004A1458 /* MatchCell.swift */,
+				B9131D67266AFA3B00E85F46 /* Reference */,
 				B9EE6E5D26589E8F007E28B5 /* Match Details */,
 				B9F65C4D2651EDA500C9C34A /* DynamicallyStroked.swift */,
 				B9EF0F26263D9D860067176A /* ValorantAPI+SwiftUI.swift */,
@@ -569,15 +589,18 @@
 				B9EE6E5F26589EB8007E28B5 /* MatchDetailsContainer.swift in Sources */,
 				B941B6DE25A7BC3800F675C1 /* View+Styling.swift in Sources */,
 				B94091AE25D09D5A00EE5DF2 /* LoadManager.swift in Sources */,
+				B9131D69266AFA4C00E85F46 /* MapListView.swift in Sources */,
 				B96845B32665C7B900DC59D2 /* ClientData.swift in Sources */,
 				B9F65C4E2651EDA500C9C34A /* DynamicallyStroked.swift in Sources */,
 				B9DCF9AE2642F8FD00C39EC4 /* AssetManager.swift in Sources */,
 				B9EE6E6E26594374007E28B5 /* KillBreakdownView.swift in Sources */,
 				B941B6E525A7C48300F675C1 /* LoginForm.swift in Sources */,
+				B9131D65266AF6C600E85F46 /* ReferenceView.swift in Sources */,
 				B94091B825D09F0200EE5DF2 /* MatchListView.swift in Sources */,
 				B96A0CAD265B0FB500844674 /* ObjectiveAssets.swift in Sources */,
 				B9CF2E7425A8217C004A1458 /* Combine+Ergonomics.swift in Sources */,
 				B9F65C472651D20200C9C34A /* MapImage.swift in Sources */,
+				B9131D6C266AFA7900E85F46 /* MapInfoView.swift in Sources */,
 				B94091B325D09DF900EE5DF2 /* SwiftUI+CrossPlatform.swift in Sources */,
 				B941B6D825A7A09000F675C1 /* Credentials.swift in Sources */,
 				B9EE6E682658A6D2007E28B5 /* AssetLoading.swift in Sources */,
@@ -616,15 +639,18 @@
 				B9EE6E6026589EB8007E28B5 /* MatchDetailsContainer.swift in Sources */,
 				B941B6DF25A7BC3800F675C1 /* View+Styling.swift in Sources */,
 				B94091AF25D09D5A00EE5DF2 /* LoadManager.swift in Sources */,
+				B9131D6A266AFA4C00E85F46 /* MapListView.swift in Sources */,
 				B96845B42665C7B900DC59D2 /* ClientData.swift in Sources */,
 				B9F65C4F2651EDA500C9C34A /* DynamicallyStroked.swift in Sources */,
 				B9DCF9AF2642F8FD00C39EC4 /* AssetManager.swift in Sources */,
 				B9EE6E6F26594374007E28B5 /* KillBreakdownView.swift in Sources */,
 				B941B6E625A7C48300F675C1 /* LoginForm.swift in Sources */,
+				B9131D66266AF6C600E85F46 /* ReferenceView.swift in Sources */,
 				B94091B925D09F0200EE5DF2 /* MatchListView.swift in Sources */,
 				B96A0CAE265B0FB500844674 /* ObjectiveAssets.swift in Sources */,
 				B9CF2E7525A8217C004A1458 /* Combine+Ergonomics.swift in Sources */,
 				B9F65C482651D20200C9C34A /* MapImage.swift in Sources */,
+				B9131D6D266AFA7900E85F46 /* MapInfoView.swift in Sources */,
 				B94091B425D09DF900EE5DF2 /* SwiftUI+CrossPlatform.swift in Sources */,
 				B941B6D925A7A09000F675C1 /* Credentials.swift in Sources */,
 				B9EE6E692658A6D2007E28B5 /* AssetLoading.swift in Sources */,

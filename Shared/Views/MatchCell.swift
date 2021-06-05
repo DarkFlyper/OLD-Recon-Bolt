@@ -19,7 +19,6 @@ struct MatchCell: View {
 		NavigationLink(destination: MatchDetailsContainer(matchID: match.id)) {
 			HStack {
 				mapIcon
-					.frame(height: visualsHeight, alignment: .top)
 				
 				VStack(alignment: .leading) {
 					Text(Self.dateFormatter.string(from: match.startTime))

@@ -17,10 +17,16 @@ struct ContentView: View {
 				.tabItem { Label("Career", systemImage: "square.fill.text.grid.1x2") }
 				.tag(Tab.career)
 			
+			ReferenceView()
+				.withToolbar()
+				.tabItem { Label("Reference", systemImage: "books.vertical") }
+				.tag(Tab.reference)
+			
 			accountView
 				.tabItem { Label("Account", systemImage: "person.crop.circle") }
 				.tag(Tab.account)
 		}
+		.listStyle(PrettyListStyle())
 		.environment(\.playerID, dataStore.data?.user.id)
 		.onAppear {
 			if dataStore.data == nil {
@@ -58,6 +64,7 @@ struct ContentView: View {
 	
 	enum Tab {
 		case career
+		case reference
 		case account
 	}
 }

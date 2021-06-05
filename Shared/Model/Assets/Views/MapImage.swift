@@ -7,16 +7,22 @@ struct MapImage: View {
 	private var assetManager: AssetManager
 	
 	let mapID: MapID
-	let imageKeyPath: KeyPath<MapInfo, AssetImage>
+	private let imageGetter: (MapInfo) -> AssetImage?
+	
+	static subscript(
+		dynamicMember keyPath: KeyPath<MapInfo, AssetImage?>
+	) -> (MapID) -> Self {
+		{ Self(mapID: $0) { $0[keyPath: keyPath] } }
+	}
 	
 	static subscript(
 		dynamicMember keyPath: KeyPath<MapInfo, AssetImage>
 	) -> (MapID) -> Self {
-		{ Self(mapID: $0, imageKeyPath: keyPath) }
+		{ Self(mapID: $0) { $0[keyPath: keyPath] } }
 	}
 	
 	var body: some View {
-		if let splash = assetManager.assets?.maps[mapID]?[keyPath: imageKeyPath].imageIfLoaded {
+		if let splash = assetManager.assets?.maps[mapID].flatMap(imageGetter)?.imageIfLoaded {
 			splash
 				.resizable()
 				.scaledToFit()
