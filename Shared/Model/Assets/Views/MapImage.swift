@@ -22,8 +22,8 @@ struct MapImage: View {
 	}
 	
 	var body: some View {
-		if let splash = assetManager.assets?.maps[mapID].flatMap(imageGetter)?.imageIfLoaded {
-			splash
+		if let image = assetManager.assets?.maps[mapID].flatMap(imageGetter)?.imageIfLoaded {
+			image
 				.resizable()
 				.scaledToFit()
 		} else {

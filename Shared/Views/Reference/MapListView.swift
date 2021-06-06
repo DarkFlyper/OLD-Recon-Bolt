@@ -24,7 +24,7 @@ struct MapListView: View {
 		private let visualsHeight: CGFloat = 64
 		
 		var body: some View {
-			HStack {
+			HStack(spacing: 12) {
 				mapIcon
 				
 				Text("\(map.displayName)")
@@ -41,7 +41,6 @@ struct MapListView: View {
 				.scaledToFill()
 				.frame(width: visualsHeight * 16/9, height: visualsHeight)
 				.frame(minHeight: 0, alignment: .top) // text looks better on the top part
-				.overlay(MapImage.Label(mapID: map.id))
 				.mask(RoundedRectangle(cornerRadius: 4, style: .continuous))
 		}
 	}

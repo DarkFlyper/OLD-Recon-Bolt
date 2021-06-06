@@ -24,6 +24,7 @@ final class ValorantLoadManager: LoadManager {
 				case ValorantClient.APIError.tokenFailure as Error,
 					 ValorantClient.APIError.unauthorized as Error:
 					return data.reauthenticated()
+						.receive(on: DispatchQueue.main)
 						.also { self.dataStore.data = $0 }
 						.flatMap { task($0.client).mapError { $0 } }
 						.eraseToAnyPublisher()
