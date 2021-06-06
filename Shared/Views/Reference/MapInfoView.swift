@@ -4,6 +4,8 @@ import ValorantAPI
 struct MapInfoView: View {
 	let map: MapInfo
 	
+	@State private var isShowingFullscreenMap = false
+	
 	var body: some View {
 		ScrollView {
 			VStack {
@@ -18,21 +20,31 @@ struct MapInfoView: View {
 				
 				if map.displayIcon != nil {
 					MapImage.displayIcon(map.id)
+						.onTapGesture { isShowingFullscreenMap = true }
+						.fullScreenCover(isPresented: $isShowingFullscreenMap) {
+							Lightbox { MapImage.displayIcon(map.id) }
+						}
 				} else {
 					Text("No minimap available!")
 				}
 			}
 		}
 		.navigationTitle(map.displayName)
+		.navigationBarTitleDisplayMode(.inline)
 	}
 }
 
 #if DEBUG
 struct MapInfoView_Previews: PreviewProvider {
 	static var previews: some View {
+		Lightbox {
+			MapImage.displayIcon(MapID(path: "/Game/Maps/Foxtrot/Foxtrot"))
+		}
+		.environmentObject(AssetManager.forPreviews)
+		
 		MapInfoView(
 			map: AssetManager.forPreviews.assets!
-				.maps[MapID(path: "/Game/Maps/Triad/Triad")]!
+				.maps[MapID(path: "/Game/Maps/Foxtrot/Foxtrot")]!
 		)
 		.withToolbar()
 		.inEachColorScheme()

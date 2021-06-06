@@ -73,6 +73,8 @@
 		B9CF2E7525A8217C004A1458 /* Combine+Ergonomics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CF2E7325A8217C004A1458 /* Combine+Ergonomics.swift */; };
 		B9CF2E7925A89976004A1458 /* MatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CF2E7825A89976004A1458 /* MatchCell.swift */; };
 		B9CF2E7A25A89976004A1458 /* MatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CF2E7825A89976004A1458 /* MatchCell.swift */; };
+		B9D9E593266D358300827470 /* Lightbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D9E592266D358300827470 /* Lightbox.swift */; };
+		B9D9E594266D358300827470 /* Lightbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D9E592266D358300827470 /* Lightbox.swift */; };
 		B9DCF9A72642E0EC00C39EC4 /* ScoreboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DCF9A62642E0EC00C39EC4 /* ScoreboardView.swift */; };
 		B9DCF9A82642E0EC00C39EC4 /* ScoreboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DCF9A62642E0EC00C39EC4 /* ScoreboardView.swift */; };
 		B9DCF9AB2642F7A100C39EC4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9DCF9AA2642F7A100C39EC4 /* Preview Assets.xcassets */; };
@@ -170,6 +172,7 @@
 		B9CF2E6125A81B48004A1458 /* UnifiedStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnifiedStyles.swift; sourceTree = "<group>"; };
 		B9CF2E7325A8217C004A1458 /* Combine+Ergonomics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+Ergonomics.swift"; sourceTree = "<group>"; };
 		B9CF2E7825A89976004A1458 /* MatchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCell.swift; sourceTree = "<group>"; };
+		B9D9E592266D358300827470 /* Lightbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lightbox.swift; sourceTree = "<group>"; };
 		B9DCF9A62642E0EC00C39EC4 /* ScoreboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreboardView.swift; sourceTree = "<group>"; };
 		B9DCF9AA2642F7A100C39EC4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B9DCF9AD2642F8FD00C39EC4 /* AssetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetManager.swift; sourceTree = "<group>"; };
@@ -252,6 +255,7 @@
 				B9CF2E7825A89976004A1458 /* MatchCell.swift */,
 				B9131D67266AFA3B00E85F46 /* Reference */,
 				B9EE6E5D26589E8F007E28B5 /* Match Details */,
+				B9D9E592266D358300827470 /* Lightbox.swift */,
 				B9F65C4D2651EDA500C9C34A /* DynamicallyStroked.swift */,
 				B9EF0F26263D9D860067176A /* ValorantAPI+SwiftUI.swift */,
 			);
@@ -627,6 +631,7 @@
 				B9485F87264B5BD700AC3456 /* AssetImage.swift in Sources */,
 				B9EE6E712659D30A007E28B5 /* Swift+Helpers.swift in Sources */,
 				B9EF0F21263CFC870067176A /* MatchDetailsView.swift in Sources */,
+				B9D9E593266D358300827470 /* Lightbox.swift in Sources */,
 				B96A0CAA265AE32200844674 /* MissionAssets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -677,6 +682,7 @@
 				B9485F88264B5BD700AC3456 /* AssetImage.swift in Sources */,
 				B9EE6E722659D30A007E28B5 /* Swift+Helpers.swift in Sources */,
 				B9EF0F22263CFC870067176A /* MatchDetailsView.swift in Sources */,
+				B9D9E594266D358300827470 /* Lightbox.swift in Sources */,
 				B96A0CAB265AE32200844674 /* MissionAssets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
