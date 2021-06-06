@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B90BC2EE266D224F00C905D4 /* CGeometry in Frameworks */ = {isa = PBXBuildFile; productRef = B90BC2ED266D224F00C905D4 /* CGeometry */; };
+		B90BC2F1266D240000C905D4 /* HandyOperators in Frameworks */ = {isa = PBXBuildFile; productRef = B90BC2F0266D240000C905D4 /* HandyOperators */; };
 		B9131D61266A707600E85F46 /* ValorantLoadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9131D60266A707600E85F46 /* ValorantLoadManager.swift */; };
 		B9131D62266A707600E85F46 /* ValorantLoadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9131D60266A707600E85F46 /* ValorantLoadManager.swift */; };
 		B9131D65266AF6C600E85F46 /* ReferenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9131D64266AF6C600E85F46 /* ReferenceView.swift */; };
@@ -29,8 +31,6 @@
 		B941B65925A5BC8A00F675C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B64425A5BC8800F675C1 /* ContentView.swift */; };
 		B941B65A25A5BC8A00F675C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B941B64525A5BC8A00F675C1 /* Assets.xcassets */; };
 		B941B65B25A5BC8A00F675C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B941B64525A5BC8A00F675C1 /* Assets.xcassets */; };
-		B941B66A25A5C36A00F675C1 /* HandyOperators in Frameworks */ = {isa = PBXBuildFile; productRef = B941B66925A5C36A00F675C1 /* HandyOperators */; };
-		B941B66F25A5C3AD00F675C1 /* HandyOperators in Frameworks */ = {isa = PBXBuildFile; productRef = B941B66E25A5C3AD00F675C1 /* HandyOperators */; };
 		B941B69B25A62FFB00F675C1 /* UserDefault in Frameworks */ = {isa = PBXBuildFile; productRef = B941B69A25A62FFB00F675C1 /* UserDefault */; };
 		B941B69F25A6300100F675C1 /* UserDefault in Frameworks */ = {isa = PBXBuildFile; productRef = B941B69E25A6300100F675C1 /* UserDefault */; };
 		B941B6D025A79A6400F675C1 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B941B6CF25A79A6400F675C1 /* KeychainSwift */; };
@@ -198,10 +198,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B90BC2EE266D224F00C905D4 /* CGeometry in Frameworks */,
+				B90BC2F1266D240000C905D4 /* HandyOperators in Frameworks */,
 				B9C97DCC263CB0D6001E4D1B /* ValorantAPI in Frameworks */,
 				B9EE6E752659D6DF007E28B5 /* Algorithms in Frameworks */,
 				B941B6D025A79A6400F675C1 /* KeychainSwift in Frameworks */,
-				B941B66A25A5C36A00F675C1 /* HandyOperators in Frameworks */,
 				B9CF2E6C25A81F57004A1458 /* SwiftUIMissingPieces in Frameworks */,
 				B941B69B25A62FFB00F675C1 /* UserDefault in Frameworks */,
 				B9EF0F2B263DEEA30067176A /* VisualEffects in Frameworks */,
@@ -215,7 +216,6 @@
 				B9C97DCE263CB0F8001E4D1B /* ValorantAPI in Frameworks */,
 				B9EE6E772659D6ED007E28B5 /* Algorithms in Frameworks */,
 				B941B6D425A79A6A00F675C1 /* KeychainSwift in Frameworks */,
-				B941B66F25A5C3AD00F675C1 /* HandyOperators in Frameworks */,
 				B9CF2E7025A81F5D004A1458 /* SwiftUIMissingPieces in Frameworks */,
 				B941B69F25A6300100F675C1 /* UserDefault in Frameworks */,
 				B9EF0F2D263DEEAA0067176A /* VisualEffects in Frameworks */,
@@ -435,13 +435,14 @@
 			);
 			name = "Valorant Viewer (iOS)";
 			packageProductDependencies = (
-				B941B66925A5C36A00F675C1 /* HandyOperators */,
 				B941B69A25A62FFB00F675C1 /* UserDefault */,
 				B941B6CF25A79A6400F675C1 /* KeychainSwift */,
 				B9CF2E6B25A81F57004A1458 /* SwiftUIMissingPieces */,
 				B9C97DCB263CB0D6001E4D1B /* ValorantAPI */,
 				B9EF0F2A263DEEA30067176A /* VisualEffects */,
 				B9EE6E742659D6DF007E28B5 /* Algorithms */,
+				B90BC2ED266D224F00C905D4 /* CGeometry */,
+				B90BC2F0266D240000C905D4 /* HandyOperators */,
 			);
 			productName = "Valorant Viewer (iOS)";
 			productReference = B941B64A25A5BC8A00F675C1 /* Valorant Viewer.app */;
@@ -461,7 +462,6 @@
 			);
 			name = "Valorant Viewer (macOS)";
 			packageProductDependencies = (
-				B941B66E25A5C3AD00F675C1 /* HandyOperators */,
 				B941B69E25A6300100F675C1 /* UserDefault */,
 				B941B6D325A79A6A00F675C1 /* KeychainSwift */,
 				B9CF2E6F25A81F5D004A1458 /* SwiftUIMissingPieces */,
@@ -525,7 +525,6 @@
 			);
 			mainGroup = B941B63D25A5BC8800F675C1;
 			packageReferences = (
-				B941B66825A5C36A00F675C1 /* XCRemoteSwiftPackageReference "HandyOperators" */,
 				B941B69925A62FFB00F675C1 /* XCRemoteSwiftPackageReference "UserDefault" */,
 				B941B6CE25A79A6400F675C1 /* XCRemoteSwiftPackageReference "keychain-swift" */,
 				B9CF2E6A25A81F57004A1458 /* XCRemoteSwiftPackageReference "SwifUI-Missing-Pieces" */,
@@ -533,6 +532,8 @@
 				B9EF0F29263DEEA30067176A /* XCRemoteSwiftPackageReference "VisualEffects" */,
 				B9485F97264B67EC00AC3456 /* XCRemoteSwiftPackageReference "CombineExpectations" */,
 				B9EE6E732659D6DF007E28B5 /* XCRemoteSwiftPackageReference "swift-algorithms" */,
+				B90BC2EC266D224F00C905D4 /* XCRemoteSwiftPackageReference "CGeometry" */,
+				B90BC2EF266D240000C905D4 /* XCRemoteSwiftPackageReference "HandyOperators" */,
 			);
 			productRefGroup = B941B64B25A5BC8A00F675C1 /* Products */;
 			projectDirPath = "";
@@ -1004,7 +1005,15 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B941B66825A5C36A00F675C1 /* XCRemoteSwiftPackageReference "HandyOperators" */ = {
+		B90BC2EC266D224F00C905D4 /* XCRemoteSwiftPackageReference "CGeometry" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:juliand665/CGeometry.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.0;
+			};
+		};
+		B90BC2EF266D240000C905D4 /* XCRemoteSwiftPackageReference "HandyOperators" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:juliand665/HandyOperators.git";
 			requirement = {
@@ -1071,14 +1080,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B941B66925A5C36A00F675C1 /* HandyOperators */ = {
+		B90BC2ED266D224F00C905D4 /* CGeometry */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B941B66825A5C36A00F675C1 /* XCRemoteSwiftPackageReference "HandyOperators" */;
-			productName = HandyOperators;
+			package = B90BC2EC266D224F00C905D4 /* XCRemoteSwiftPackageReference "CGeometry" */;
+			productName = CGeometry;
 		};
-		B941B66E25A5C3AD00F675C1 /* HandyOperators */ = {
+		B90BC2F0266D240000C905D4 /* HandyOperators */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B941B66825A5C36A00F675C1 /* XCRemoteSwiftPackageReference "HandyOperators" */;
+			package = B90BC2EF266D240000C905D4 /* XCRemoteSwiftPackageReference "HandyOperators" */;
 			productName = HandyOperators;
 		};
 		B941B69A25A62FFB00F675C1 /* UserDefault */ = {
