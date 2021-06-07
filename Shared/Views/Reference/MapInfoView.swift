@@ -37,11 +37,6 @@ struct MapInfoView: View {
 #if DEBUG
 struct MapInfoView_Previews: PreviewProvider {
 	static var previews: some View {
-		Lightbox {
-			MapImage.displayIcon(MapID(path: "/Game/Maps/Foxtrot/Foxtrot"))
-		}
-		.withPreviewAssets()
-		
 		MapInfoView(
 			map: AssetManager.forPreviews.assets!
 				.maps[MapID(path: "/Game/Maps/Foxtrot/Foxtrot")]!

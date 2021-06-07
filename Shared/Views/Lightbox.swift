@@ -73,3 +73,16 @@ struct Lightbox<Content: View>: View {
 		.statusBar(hidden: true)
 	}
 }
+
+#if DEBUG
+import ValorantAPI
+
+struct Lightbox_Previews: PreviewProvider {
+	static var previews: some View {
+		Lightbox {
+			MapImage.displayIcon(MapID(path: "/Game/Maps/Foxtrot/Foxtrot"))
+		}
+		.withPreviewAssets()
+	}
+}
+#endif
