@@ -40,7 +40,9 @@ struct MatchListView: View {
 			.padding(10)
 			.frame(maxWidth: .infinity, alignment: .center)
 			
-			ForEach(shownMatches, id: \.id, content: MatchCell.init)
+			ForEach(shownMatches, id: \.id) {
+				MatchCell(match: $0, userID: matchList.user.id)
+			}
 		}
 		.toolbar {
 			Button(shouldShowUnranked ? "Hide Unranked" : "Show Unranked")

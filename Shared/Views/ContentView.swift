@@ -27,7 +27,6 @@ struct ContentView: View {
 				.tag(Tab.account)
 		}
 		.listStyle(PrettyListStyle())
-		.environment(\.playerID, dataStore.data?.user.id)
 		.onAppear {
 			if dataStore.data == nil {
 				tab = .account

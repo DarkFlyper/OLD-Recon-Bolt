@@ -3,16 +3,16 @@ import ValorantAPI
 
 struct MatchDetailsContainer: View {
 	@EnvironmentObject private var loadManager: ValorantLoadManager
-	@Environment(\.playerID) private var playerID
 	
 	let matchID: Match.ID
+	let userID: User.ID
 	
 	@State var matchDetails: MatchDetails?
 	
 	var body: some View {
 		Group {
 			if let details = matchDetails {
-				MatchDetailsView(matchDetails: details, playerID: playerID)
+				MatchDetailsView(matchDetails: details, userID: userID)
 			} else {
 				ProgressView()
 			}
@@ -31,16 +31,5 @@ struct MatchDetailsContainer: View {
 			$0.navigationBarTitleDisplayMode(.inline)
 			#endif
 		}
-	}
-}
-
-extension EnvironmentValues {
-	private enum PlayerIDKey: EnvironmentKey {
-		static let defaultValue: Player.ID? = nil
-	}
-	
-	var playerID: Player.ID? {
-		get { self[PlayerIDKey.self] }
-		set { self[PlayerIDKey.self] = newValue }
 	}
 }

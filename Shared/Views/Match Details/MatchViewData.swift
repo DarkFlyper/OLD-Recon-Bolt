@@ -8,10 +8,10 @@ struct MatchViewData {
 	let players: [Player.ID: Player]
 	let parties: [Party.ID]
 	
-	init(details: MatchDetails, playerID: Player.ID?) {
+	init(details: MatchDetails, userID: Player.ID?) {
 		self.details = details
 		
-		let candidates = details.players.filter { $0.id == playerID }
+		let candidates = details.players.filter { $0.id == userID }
 		assert(candidates.count <= 1)
 		self.myself = candidates.first
 		
@@ -21,7 +21,7 @@ struct MatchViewData {
 			.filter { $0.value.count > 1 }
 			.sorted(on: \.value.count)
 			.reversed()
-			.movingToFront { $0.value.contains { $0.id == playerID } }
+			.movingToFront { $0.value.contains { $0.id == userID } }
 			.map(\.key)
 	}
 	

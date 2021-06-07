@@ -3,13 +3,13 @@ import Combine
 import ValorantAPI
 
 enum PreviewData {
-	static let playerID = Player.ID(.init(uuidString: "3FA8598D-066E-5BDB-998C-74C015C5DBA5")!)
+	static let userID = Player.ID(.init(uuidString: "3FA8598D-066E-5BDB-998C-74C015C5DBA5")!)
 	static let userInfo = UserInfo(
 		account: .init(
 			gameName: "Julian", tagLine: "665",
 			createdAt: Date().addingTimeInterval(-4000)
 		),
-		id: playerID
+		id: userID
 	)
 	static let user = User(userInfo)
 	
@@ -19,7 +19,7 @@ enum PreviewData {
 	
 	static let compUpdates = try! loadJSON(named: "example_updates", as: [CompetitiveUpdate].self)
 	
-	static let singleMatchData = MatchViewData(details: singleMatch, playerID: playerID)
+	static let singleMatchData = MatchViewData(details: singleMatch, userID: userID)
 	
 	static let matchList = MatchList(
 		user: user,

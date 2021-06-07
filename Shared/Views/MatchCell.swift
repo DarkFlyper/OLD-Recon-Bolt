@@ -14,9 +14,12 @@ struct MatchCell: View {
 	private let visualsHeight: CGFloat = 64
 	
 	let match: CompetitiveUpdate
+	let userID: User.ID
 	
 	var body: some View {
-		NavigationLink(destination: MatchDetailsContainer(matchID: match.id)) {
+		NavigationLink(
+			destination: MatchDetailsContainer(matchID: match.id, userID: userID)
+		) {
 			HStack {
 				mapIcon
 				
@@ -147,7 +150,7 @@ struct MatchCell_Previews: PreviewProvider {
 		VStack(spacing: 0) {
 			Divider()
 			ForEach(allExamples) {
-				MatchCell(match: $0)
+				MatchCell(match: $0, userID: PreviewData.userID)
 					.padding()
 				Divider()
 			}
