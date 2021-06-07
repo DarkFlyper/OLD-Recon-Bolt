@@ -47,18 +47,3 @@ final class ValorantLoadManager: LoadManager {
 		.buttonStyle(UnifiedLinkButtonStyle())
 	}
 }
-
-private struct EnvironmentAccessor: ViewModifier {
-	@EnvironmentObject private var dataStore: ClientDataStore
-	
-	func body(content: Content) -> some View {
-		content
-			.withLoadManager(ValorantLoadManager(dataStore: dataStore))
-	}
-}
-
-extension View {
-	func withValorantLoadManager() -> some View {
-		modifier(EnvironmentAccessor())
-	}
-}

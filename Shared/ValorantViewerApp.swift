@@ -10,10 +10,10 @@ struct ValorantViewerApp: App {
 	var body: some Scene {
 		WindowGroup {
 			if !isTesting {
-				ContentView()
-					.withValorantLoadManager()
-					.environmentObject(ClientDataStore(keychain: KeychainSwift(), for: StandardClientData.self))
-					.environmentObject(AssetManager())
+				ContentView(
+					dataStore: ClientDataStore(keychain: KeychainSwift(), for: StandardClientData.self)
+				)
+				.environmentObject(AssetManager())
 			}
 		}
 	}

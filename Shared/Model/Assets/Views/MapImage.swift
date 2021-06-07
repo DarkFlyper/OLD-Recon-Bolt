@@ -56,6 +56,6 @@ struct MapImage_Previews: PreviewProvider {
 				.frame(height: 200)
 		}
 		.previewLayout(.sizeThatFits)
-		.environmentObject(AssetManager.forPreviews)
+		.withPreviewAssets()
 	}
 }

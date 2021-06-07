@@ -52,7 +52,7 @@ struct MapListView_Previews: PreviewProvider {
 		MapListView()
 			.withToolbar()
 			.inEachColorScheme()
-			.environmentObject(AssetManager.forPreviews)
+			.withPreviewAssets()
 	}
 }
 #endif

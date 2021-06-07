@@ -40,7 +40,7 @@ struct MapInfoView_Previews: PreviewProvider {
 		Lightbox {
 			MapImage.displayIcon(MapID(path: "/Game/Maps/Foxtrot/Foxtrot"))
 		}
-		.environmentObject(AssetManager.forPreviews)
+		.withPreviewAssets()
 		
 		MapInfoView(
 			map: AssetManager.forPreviews.assets!
@@ -48,7 +48,7 @@ struct MapInfoView_Previews: PreviewProvider {
 		)
 		.withToolbar()
 		.inEachColorScheme()
-		.environmentObject(AssetManager.forPreviews)
+		.withPreviewAssets()
 	}
 }
 #endif

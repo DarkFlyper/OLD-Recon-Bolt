@@ -37,6 +37,6 @@ struct AgentImage_Previews: PreviewProvider {
 			AgentImage.bustPortrait(agentID)
 		}
 		.previewLayout(.sizeThatFits)
-		.environmentObject(AssetManager.forPreviews)
+		.withPreviewAssets()
 	}
 }

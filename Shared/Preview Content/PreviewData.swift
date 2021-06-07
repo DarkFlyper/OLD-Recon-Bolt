@@ -26,6 +26,9 @@ enum PreviewData {
 		matches: compUpdates
 	)
 	
+	static let mockDataStore = ClientDataStore(keychain: MockKeychain(), for: MockClientData.self)
+	static let emptyDataStore = ClientDataStore(keychain: MockKeychain(), for: EmptyClientData.self)
+	
 	private static func loadJSON<T>(
 		named name: String,
 		as type: T.Type = T.self,
@@ -37,8 +40,7 @@ enum PreviewData {
 	}
 }
 
-#if DEBUG
-struct MockClientData: ClientData {
+private struct MockClientData: ClientData {
 	let user = PreviewData.user
 	var matchList: MatchList = PreviewData.matchList
 	
@@ -53,7 +55,7 @@ struct MockClientData: ClientData {
 	func save(using keychain: Keychain) {}
 }
 
-struct EmptyClientData: ClientData {
+private struct EmptyClientData: ClientData {
 	let user: User
 	var matchList: MatchList
 	let client: ValorantClient
@@ -64,4 +66,3 @@ struct EmptyClientData: ClientData {
 	init?(using keychain: Keychain) { return nil }
 	func save(using keychain: Keychain) {}
 }
-#endif

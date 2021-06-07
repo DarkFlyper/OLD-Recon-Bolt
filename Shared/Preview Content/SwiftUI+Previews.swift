@@ -4,13 +4,12 @@ extension View {
 	func inEachColorScheme() -> some View {
 		ForEach(ColorScheme.allCases, id: \.self, content: preferredColorScheme)
 	}
-}
-
-extension View {
-	func withMockData() -> some View {
-		self
-			.withValorantLoadManager()
-			.environmentObject(ClientDataStore(keychain: MockKeychain(), for: MockClientData.self))
-			.environmentObject(AssetManager.forPreviews)
+	
+	func withMockValorantLoadManager() -> some View {
+		withLoadManager(ValorantLoadManager(dataStore: PreviewData.mockDataStore))
+	}
+	
+	func withPreviewAssets() -> some View {
+		environmentObject(AssetManager.forPreviews)
 	}
 }

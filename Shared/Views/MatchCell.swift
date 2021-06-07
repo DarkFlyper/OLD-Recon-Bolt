@@ -158,7 +158,7 @@ struct MatchCell_Previews: PreviewProvider {
 		}
 		.inEachColorScheme()
 		.previewLayout(.sizeThatFits)
-		.environmentObject(AssetManager.forPreviews)
+		.withPreviewAssets()
 	}
 }
 #endif

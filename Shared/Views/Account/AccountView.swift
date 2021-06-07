@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct AccountView: View {
-	@EnvironmentObject private var dataStore: ClientDataStore
+	@ObservedObject var dataStore: ClientDataStore
 	@EnvironmentObject private var assetManager: AssetManager
 	
 	var body: some View {
@@ -43,12 +43,10 @@ struct AccountView: View {
 #if DEBUG
 struct AccountView_Previews: PreviewProvider {
 	static var previews: some View {
-		AccountView()
-			.withMockData()
+		AccountView(dataStore: PreviewData.mockDataStore)
+			.withPreviewAssets()
 		
-		AccountView()
-			.withValorantLoadManager()
-			.environmentObject(ClientDataStore(keychain: MockKeychain(), for: EmptyClientData.self))
+		AccountView(dataStore: PreviewData.emptyDataStore)
 			.environmentObject(AssetManager.mockDownloading)
 	}
 }

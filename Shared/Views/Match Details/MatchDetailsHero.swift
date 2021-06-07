@@ -71,7 +71,7 @@ struct MatchDetailsHero_Previews: PreviewProvider {
 	static var previews: some View {
 		MatchDetailsHero(data: PreviewData.singleMatchData)
 			.previewLayout(.sizeThatFits)
-			.environmentObject(AssetManager.forPreviews)
+			.withPreviewAssets()
 	}
 }
 #endif

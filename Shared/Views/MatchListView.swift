@@ -65,8 +65,9 @@ struct MatchListView_Previews: PreviewProvider {
 	static var previews: some View {
 		MatchListView(matchList: .constant(PreviewData.matchList))
 			.withToolbar()
-			.withMockData()
 			.inEachColorScheme()
+			.withMockValorantLoadManager()
+			.withPreviewAssets()
 	}
 }
 #endif

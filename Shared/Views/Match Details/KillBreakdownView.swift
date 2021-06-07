@@ -184,7 +184,7 @@ struct KillBreakdownView_Previews: PreviewProvider {
 		KillBreakdownView(data: PreviewData.singleMatchData, highlight: .constant(.init()))
 			.padding(.vertical)
 			.inEachColorScheme()
-			.environmentObject(AssetManager.forPreviews)
+			.withPreviewAssets()
 			.frame(maxWidth: 800, minHeight: 600)
 			.previewLayout(.sizeThatFits)
 	}

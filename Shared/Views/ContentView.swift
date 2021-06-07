@@ -5,24 +5,24 @@ import ValorantAPI
 import KeychainSwift
 
 struct ContentView: View {
+	@StateObject var dataStore: ClientDataStore
 	@SceneStorage("ContentView.state") var tab = Tab.career
-	
-	@EnvironmentObject private var loadManager: ValorantLoadManager
-	@EnvironmentObject private var dataStore: ClientDataStore
 	
 	var body: some View {
 		TabView(selection: $tab) {
-			matchListView
-				.withToolbar()
-				.tabItem { Label("Career", systemImage: "square.fill.text.grid.1x2") }
-				.tag(Tab.career)
+			onlineView {
+				MatchListView(matchList: $0.matchList)
+					.withToolbar()
+			}
+			.tabItem { Label("Career", systemImage: "square.fill.text.grid.1x2") }
+			.tag(Tab.career)
 			
 			ReferenceView()
 				.withToolbar()
 				.tabItem { Label("Reference", systemImage: "books.vertical") }
 				.tag(Tab.reference)
 			
-			AccountView()
+			AccountView(dataStore: dataStore)
 				.tabItem { Label("Account", systemImage: "person.crop.circle") }
 				.tag(Tab.account)
 		}
@@ -32,16 +32,18 @@ struct ContentView: View {
 				tab = .account
 			}
 		}
+		.withLoadManager(ValorantLoadManager(dataStore: dataStore))
 	}
 	
 	@ViewBuilder
-	private var matchListView: some View {
+	private func onlineView<Content: View>(
+		@ViewBuilder content: (Binding<ClientData>) -> Content
+	) -> some View {
 		if let data = Binding(optionalWorkaround: $dataStore.data) {
-			MatchListView(matchList: data.matchList)
+			content(data)
 		} else {
 			Text("Not signed in!")
 				.frame(maxWidth: .infinity, maxHeight: .infinity)
-				.navigationTitle("Matches")
 		}
 	}
 	
@@ -56,16 +58,14 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
 	static var previews: some View {
 		Group {
-			ContentView()
+			ContentView(dataStore: PreviewData.mockDataStore)
 				.inEachColorScheme()
 			
-			ContentView(tab: .account)
+			ContentView(dataStore: PreviewData.mockDataStore, tab: .account)
+			
+			ContentView(dataStore: PreviewData.emptyDataStore)
 		}
-		.withMockData()
-		
-		ContentView()
-			.withValorantLoadManager()
-			.environmentObject(ClientDataStore(keychain: MockKeychain(), for: EmptyClientData.self))
+		.withPreviewAssets()
 	}
 }
 #endif
