@@ -37,8 +37,8 @@ struct ContentView: View {
 	
 	@ViewBuilder
 	private var matchListView: some View {
-		if let matchList = Binding($dataStore.data)?.matchList {
-			MatchListView(matchList: matchList)
+		if let data = Binding(optionalWorkaround: $dataStore.data) {
+			MatchListView(matchList: data.matchList)
 		} else {
 			Text("Not signed in!")
 				.frame(maxWidth: .infinity, maxHeight: .infinity)
