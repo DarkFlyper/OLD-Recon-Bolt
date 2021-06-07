@@ -5,7 +5,7 @@ import ValorantAPI
 import KeychainSwift
 
 struct ContentView: View {
-	@State var tab = Tab.career
+	@SceneStorage("ContentView.state") var tab = Tab.career
 	
 	@EnvironmentObject private var loadManager: ValorantLoadManager
 	@EnvironmentObject private var dataStore: ClientDataStore
@@ -46,7 +46,7 @@ struct ContentView: View {
 		}
 	}
 	
-	enum Tab {
+	enum Tab: String {
 		case career
 		case reference
 		case account
