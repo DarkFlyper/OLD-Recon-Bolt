@@ -7,7 +7,6 @@ struct MatchListView: View {
 	@Binding var matchList: MatchList
 	@State @UserDefault("shouldShowUnranked") private var shouldShowUnranked = true
 	@EnvironmentObject private var loadManager: ValorantLoadManager
-	@EnvironmentObject private var dataStore: ClientDataStore
 	
 	private var shownMatches: [CompetitiveUpdate] {
 		shouldShowUnranked
@@ -34,8 +33,10 @@ struct MatchListView: View {
 			Button(shouldShowUnranked ? "Hide Unranked" : "Show Unranked")
 				{ shouldShowUnranked.toggle() }
 		}
-		.onChange(of: dataStore.data?.id) { _ in
-			loadMatches()
+		.onAppear {
+			if matchList.matches.isEmpty {
+				loadMatches()
+			}
 		}
 		.loadErrorTitle("Could not load matches!")
 		.navigationTitle(matchList.user.account.name)

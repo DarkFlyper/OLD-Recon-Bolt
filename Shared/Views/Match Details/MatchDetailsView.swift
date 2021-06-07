@@ -18,14 +18,15 @@ struct MatchDetailsView: View {
 				Group {
 					ScoreboardView(data: data, highlight: $highlight)
 					
-					Divider().padding(.horizontal)
-					
 					if KillBreakdownView.canDisplay(for: data) {
+						Divider().padding(.horizontal)
+						
 						KillBreakdownView(data: data, highlight: $highlight)
 					}
 				}
 				.padding(.top)
 			}
+			.padding(.bottom)
 		}
 	}
 }
