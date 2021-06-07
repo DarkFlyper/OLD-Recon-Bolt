@@ -2,6 +2,20 @@ import SwiftUI
 import Combine
 import ValorantAPI
 
+struct UserView: View {
+	@State private var matchList: MatchList
+	@EnvironmentObject private var loadManager: ValorantLoadManager
+	
+	init(for user: User) {
+		_matchList = .init(wrappedValue: .init(user: user))
+	}
+	
+	var body: some View {
+		MatchListView(matchList: $matchList)
+			.navigationBarTitleDisplayMode(.large)
+	}
+}
+
 struct MatchListView: View {
 	@Binding var matchList: MatchList
 	@AppStorage("MatchListView.shouldShowUnranked") private var shouldShowUnranked = true

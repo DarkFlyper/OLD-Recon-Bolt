@@ -44,48 +44,62 @@ struct ScoreboardView: View {
 			
 			HStack(spacing: scoreboardPadding) {
 				Group {
-					Text(verbatim: player.gameName)
-						.fontWeight(
-							highlight.isHighlighting(player.partyID)
-								.map { $0 ? .semibold : .regular }
-								?? .medium
-						)
-						.foregroundColor(relativeColor)
-						.fixedSize()
-						.frame(maxWidth: .infinity, alignment: .leading)
-						.padding(.trailing, 4)
-					
-					divider
-					
-					Text(verbatim: "\(player.stats.score)")
-						.frame(width: 60)
-					
-					divider
-					
-					HStack {
-						Text(verbatim: "\(player.stats.kills)")
-						Text("/").opacity(0.5)
-						Text(verbatim: "\(player.stats.deaths)")
-						Text("/").opacity(0.5)
-						Text(verbatim: "\(player.stats.assists)")
+					Group {
+						Text(verbatim: player.gameName)
+							.fontWeight(
+								highlight.isHighlighting(player.partyID)
+									.map { $0 ? .semibold : .regular }
+									?? .medium
+							)
+							.foregroundColor(relativeColor)
+							.fixedSize()
+							.frame(maxWidth: .infinity, alignment: .leading)
+							.padding(.trailing, 4)
+						
+						Spacer()
+						
+						if player.id != data.myself?.id {
+							NavigationLink(destination: UserView(for: User(player))) {
+								Image(systemName: "person.crop.circle.fill")
+									.padding(.horizontal, 4)
+							}
+							.foregroundColor(relativeColor)
+						}
 					}
-					.frame(width: 120)
 					
-					if !data.parties.isEmpty {
+					divider
+					
+					Group {
+						Text(verbatim: "\(player.stats.score)")
+							.frame(width: 60)
+						
 						divider
 						
-						Group {
-							if let partyIndex = data.parties.firstIndex(of: player.partyID) {
-								let partyLetter = Self.partyLetters[partyIndex]
-								let shouldEmphasize = highlight.isHighlighting(player.partyID) == true
-								Text("Party \(partyLetter)")
-									.fontWeight(shouldEmphasize ? .medium : .regular)
-							} else {
-								Text("–")
-							}
+						HStack {
+							Text(verbatim: "\(player.stats.kills)")
+							Text("/").opacity(0.5)
+							Text(verbatim: "\(player.stats.deaths)")
+							Text("/").opacity(0.5)
+							Text(verbatim: "\(player.stats.assists)")
 						}
-						.opacity(highlight.shouldFade(player.partyID) ? 0.5 : 1)
-						.frame(width: 80)
+						.frame(width: 120)
+						
+						if !data.parties.isEmpty {
+							divider
+							
+							Group {
+								if let partyIndex = data.parties.firstIndex(of: player.partyID) {
+									let partyLetter = Self.partyLetters[partyIndex]
+									let shouldEmphasize = highlight.isHighlighting(player.partyID) == true
+									Text("Party \(partyLetter)")
+										.fontWeight(shouldEmphasize ? .medium : .regular)
+								} else {
+									Text("–")
+								}
+							}
+							.opacity(highlight.shouldFade(player.partyID) ? 0.5 : 1)
+							.frame(width: 80)
+						}
 					}
 				}
 				.frame(maxHeight: .infinity)
