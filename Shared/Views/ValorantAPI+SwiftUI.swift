@@ -1,5 +1,6 @@
 import SwiftUI
 import ValorantAPI
+import ArrayBuilder
 
 extension Color {
 	static let valorantBlue = Color("Valorant Blue")
@@ -83,6 +84,11 @@ extension ValorantClient.APIError: LocalizedError {
 			return "The API returned an error code \(code)."
 		case .badResponseCode(let code, _, let error?):
 			return "The API returned an error code \(code), i.e. \(error.errorCode). \(error.message)"
+		case .rateLimited(retryAfter: let delay):
+			return [String].build {
+				"You are sending too many requests."
+				delay.map { "Please try again in \($0) seconds." }
+			}.joined(separator: " ")
 		}
 	}
 }
