@@ -2,6 +2,7 @@ import SwiftUI
 import SwiftUIMissingPieces
 import Combine
 import UserDefault
+import HandyOperators
 
 class LoadManager: ObservableObject {
 	@Published private var loadTask: AnyCancellable?
@@ -10,6 +11,15 @@ class LoadManager: ObservableObject {
 	var isLoading: Bool {
 		loadTask != nil
 	}
+	
+	init() {}
+	
+	#if DEBUG
+	static let mockLoading = LoadManager() <- {
+		$0.loadTask = Future { _ in } // never completes
+			.sink {}
+	}
+	#endif
 	
 	func runTask<P: Publisher>(
 		_ task: P,

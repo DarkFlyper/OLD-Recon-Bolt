@@ -26,11 +26,19 @@ final class AssetManager: ObservableObject {
 				always: { self.progress = nil }
 	}
 	
+	#if DEBUG
 	static let forPreviews = AssetManager(assets: stored)
 	
 	private init(assets: AssetCollection?) {
 		self.assets = assets
 	}
+	
+	static let mockDownloading = AssetManager(mockProgress: .init(completed: 42, total: 69))
+	
+	private init(mockProgress: AssetDownloadProgress?) {
+		self.progress = mockProgress
+	}
+	#endif
 	
 	static func loadAssets(
 		forceUpdate: Bool = false,
