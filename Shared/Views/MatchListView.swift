@@ -38,7 +38,7 @@ struct MatchListView: View {
 			}
 		}
 		.loadErrorTitle("Could not load matches!")
-		.navigationTitle(matchList.user.account.name)
+		.navigationTitle(matchList.user.name)
 	}
 	
 	func loadMatches() {

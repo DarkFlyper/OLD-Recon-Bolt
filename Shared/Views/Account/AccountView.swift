@@ -9,7 +9,7 @@ struct AccountView: View {
 			VStack {
 				if let user = dataStore.data?.user {
 					VStack(spacing: 20) {
-						(Text("Signed in as ") + Text(verbatim: user.account.name).fontWeight(.semibold))
+						(Text("Signed in as ") + Text(verbatim: user.name).fontWeight(.semibold))
 							.font(.title2)
 							.multilineTextAlignment(.center)
 						

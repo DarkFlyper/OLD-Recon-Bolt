@@ -4,13 +4,14 @@ import ValorantAPI
 
 enum PreviewData {
 	static let playerID = Player.ID(.init(uuidString: "3FA8598D-066E-5BDB-998C-74C015C5DBA5")!)
-	static let user = UserInfo(
+	static let userInfo = UserInfo(
 		account: .init(
 			gameName: "Julian", tagLine: "665",
 			createdAt: Date().addingTimeInterval(-4000)
 		),
 		id: playerID
 	)
+	static let user = User(userInfo)
 	
 	static let singleMatch = try! loadJSON(named: "example_match", as: MatchDetails.self)
 	/// A match with only a few rounds and very unbalanced kills, to push layouts to their limits.
@@ -53,7 +54,7 @@ struct MockClientData: ClientData {
 }
 
 struct EmptyClientData: ClientData {
-	let user: UserInfo
+	let user: User
 	var matchList: MatchList
 	let client: ValorantClient
 	

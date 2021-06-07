@@ -5,7 +5,7 @@ import Combine
 import HandyOperators
 
 protocol ClientData {
-	var user: UserInfo { get }
+	var user: User { get }
 	var client: ValorantClient { get }
 	var matchList: MatchList { get set }
 	
@@ -33,7 +33,7 @@ final class ClientDataStore: ObservableObject {
 }
 
 struct StandardClientData: ClientData {
-	var user: UserInfo { codableData.user }
+	var user: User { codableData.user }
 	
 	var client: ValorantClient { codableData.client }
 	
@@ -62,7 +62,7 @@ struct StandardClientData: ClientData {
 		)
 		.flatMap { client in
 			client.getUserInfo()
-				.map { Self(client: client, user: $0, credentials: credentials) }
+				.map { Self(client: client, userInfo: $0, credentials: credentials) }
 		}
 		.eraseToAnyPublisher()
 	}
@@ -77,8 +77,8 @@ struct StandardClientData: ClientData {
 		self.credentials = credentials
 	}
 	
-	fileprivate init(client: ValorantClient, user: UserInfo, credentials: Credentials) {
-		self.codableData = .init(client: client, user: user, matchList: .init(user: user))
+	fileprivate init(client: ValorantClient, userInfo: UserInfo, credentials: Credentials) {
+		self.codableData = .init(client: client, userInfo: userInfo, matchList: .init(user: .init(userInfo)))
 		self.credentials = credentials
 	}
 	
@@ -96,7 +96,8 @@ struct StandardClientData: ClientData {
 	
 	private struct CodableData: Codable, DefaultsValueConvertible {
 		var client: ValorantClient
-		let user: UserInfo
+		let userInfo: UserInfo
+		var user: User { .init(userInfo) }
 		var matchList: MatchList
 	}
 }

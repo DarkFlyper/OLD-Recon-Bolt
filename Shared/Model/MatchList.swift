@@ -5,7 +5,7 @@ import HandyOperators
 import ValorantAPI
 
 struct MatchList: Codable, DefaultsValueConvertible {
-	let user: UserInfo
+	let user: User
 	
 	var matches: [CompetitiveUpdate] = []
 	
