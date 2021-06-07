@@ -34,6 +34,15 @@ extension ValorantClient {
 					startIndex: startIndex,
 					endIndex: min(Self.maxIndex, startIndex + Self.requestSize)
 				)
+				.tryCatch { error throws -> Just<[CompetitiveUpdate]> in
+					switch error {
+					case ValorantClient.APIError.badResponseCode(400, _, let riotError?)
+							where riotError.errorCode == "BAD_PARAMETER":
+						return Just([]) // probably just no matches in this range yet
+					default:
+						throw error
+					}
+				}
 				.map { (startIndex: startIndex, updates: $0) }
 			}
 			.collect() // TODO: stop once overlapping
