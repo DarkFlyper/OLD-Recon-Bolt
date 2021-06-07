@@ -29,10 +29,7 @@ struct MatchListView: View {
 	
 	var body: some View {
 		List {
-			Button {
-				loadManager.load { $0.loadMatches(for: matchList) }
-					onSuccess: { matchList = $0 }
-			} label: {
+			Button(action: loadMatches) {
 				Label("Load Matches", systemImage: "arrow.clockwise")
 			}
 			.disabled(!loadManager.canLoad)
@@ -58,11 +55,8 @@ struct MatchListView: View {
 	}
 	
 	func loadMatches() {
-		if matchList.matches.isEmpty {
-			loadManager
-				.load { $0.loadMatches(for: matchList) }
-					onSuccess: { matchList = $0 }
-		}
+		loadManager.load { $0.loadMatches(for: matchList) }
+			onSuccess: { new in withAnimation { matchList = new } }
 	}
 }
 

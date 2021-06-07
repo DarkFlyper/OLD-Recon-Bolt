@@ -53,6 +53,7 @@ struct MatchCell: View {
 			}
 		}
 		.padding(.vertical, 4)
+		.id(match.id)
 	}
 	
 	private var mapIcon: some View {
