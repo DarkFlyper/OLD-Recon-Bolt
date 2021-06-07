@@ -11,10 +11,11 @@ struct LoginForm: View {
 	
 	var body: some View {
 		ZStack {
-			ProgressView("logging in…")
+			ProgressView("signing in…")
 				.opacity(loadManager.isLoading ? 1 : 0)
+			
 			VStack(spacing: 12) {
-				Text("Log in with your Riot account")
+				Text("Sign in with your Riot account")
 					.font(.title2)
 					.multilineTextAlignment(.center)
 					.lineLimit(2)
@@ -33,9 +34,9 @@ struct LoginForm: View {
 				}
 				.frame(maxWidth: 180)
 				
-				#if os(iOS)
+				#if !os(macOS)
 				Button(action: logIn) {
-					Text("Log In")
+					Text("Sign In")
 						.bold()
 				}
 				#endif
@@ -43,15 +44,18 @@ struct LoginForm: View {
 			.frame(idealWidth: 180)
 			.textFieldStyle(PrettyTextFieldStyle())
 			.opacity(loadManager.isLoading ? 0.25 : 1)
+			.blur(radius: loadManager.isLoading ? 4 : 0)
 		}
 		.withoutSheetBottomPadding()
 		.padding()
 		.toolbar {
+			#if os(macOS)
 			ToolbarItemGroup(placement: .confirmationAction) {
-				Button("Log In", action: logIn)
+				Button("Sign In", action: logIn)
 			}
+			#endif
 		}
-		.loadErrorTitle("Could not log in!")
+		.loadErrorTitle("Could not sign in!")
 	}
 	
 	func logIn() {
@@ -62,10 +66,15 @@ struct LoginForm: View {
 #if DEBUG
 struct LoginSheet_Previews: PreviewProvider {
 	static var previews: some View {
-		LoginForm(data: .constant(nil), credentials: .init())
-			.withLoadManager()
-			.inEachColorScheme()
-			.previewLayout(.sizeThatFits)
+		Group {
+			LoginForm(data: .constant(nil), credentials: .init())
+				.withLoadManager()
+			
+			LoginForm(data: .constant(nil), credentials: .init())
+				.withLoadManager(LoadManager.mockLoading)
+		}
+		.inEachColorScheme()
+		.previewLayout(.sizeThatFits)
 	}
 }
 #endif

@@ -121,6 +121,8 @@
 		B9F65C4C2651DFB100C9C34A /* AgentImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F65C4A2651DFB100C9C34A /* AgentImage.swift */; };
 		B9F65C4E2651EDA500C9C34A /* DynamicallyStroked.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F65C4D2651EDA500C9C34A /* DynamicallyStroked.swift */; };
 		B9F65C4F2651EDA500C9C34A /* DynamicallyStroked.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F65C4D2651EDA500C9C34A /* DynamicallyStroked.swift */; };
+		B9F66ACE266DC31E008560FD /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F66ACD266DC31E008560FD /* AccountView.swift */; };
+		B9F66ACF266DC31E008560FD /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F66ACD266DC31E008560FD /* AccountView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -194,6 +196,7 @@
 		B9F65C462651D20200C9C34A /* MapImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapImage.swift; sourceTree = "<group>"; };
 		B9F65C4A2651DFB100C9C34A /* AgentImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentImage.swift; sourceTree = "<group>"; };
 		B9F65C4D2651EDA500C9C34A /* DynamicallyStroked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicallyStroked.swift; sourceTree = "<group>"; };
+		B9F66ACD266DC31E008560FD /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,11 +252,11 @@
 		B94091C925D0ACAC00EE5DF2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B941B6E425A7C48300F675C1 /* LoginForm.swift */,
 				B941B64425A5BC8800F675C1 /* ContentView.swift */,
 				B94091B725D09F0200EE5DF2 /* MatchListView.swift */,
 				B9CF2E7825A89976004A1458 /* MatchCell.swift */,
 				B9131D67266AFA3B00E85F46 /* Reference */,
+				B9F66ACC266DC2F5008560FD /* Account */,
 				B9EE6E5D26589E8F007E28B5 /* Match Details */,
 				B9D9E592266D358300827470 /* Lightbox.swift */,
 				B9F65C4D2651EDA500C9C34A /* DynamicallyStroked.swift */,
@@ -420,6 +423,15 @@
 				B9F65C4A2651DFB100C9C34A /* AgentImage.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		B9F66ACC266DC2F5008560FD /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				B941B6E425A7C48300F675C1 /* LoginForm.swift */,
+				B9F66ACD266DC31E008560FD /* AccountView.swift */,
+			);
+			path = Account;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -613,6 +625,7 @@
 				B9EF0F27263D9D860067176A /* ValorantAPI+SwiftUI.swift in Sources */,
 				B9485F84264B1DD300AC3456 /* AgentAssets.swift in Sources */,
 				B941B65825A5BC8A00F675C1 /* ContentView.swift in Sources */,
+				B9F66ACE266DC31E008560FD /* AccountView.swift in Sources */,
 				B9DCF9A72642E0EC00C39EC4 /* ScoreboardView.swift in Sources */,
 				B96A0CA3265ABBC700844674 /* SwiftUI+Helpers.swift in Sources */,
 				B941B65625A5BC8A00F675C1 /* ValorantViewerApp.swift in Sources */,
@@ -664,6 +677,7 @@
 				B9EF0F28263D9D860067176A /* ValorantAPI+SwiftUI.swift in Sources */,
 				B9485F85264B1DD300AC3456 /* AgentAssets.swift in Sources */,
 				B941B65925A5BC8A00F675C1 /* ContentView.swift in Sources */,
+				B9F66ACF266DC31E008560FD /* AccountView.swift in Sources */,
 				B9DCF9A82642E0EC00C39EC4 /* ScoreboardView.swift in Sources */,
 				B96A0CA4265ABBC700844674 /* SwiftUI+Helpers.swift in Sources */,
 				B941B65725A5BC8A00F675C1 /* ValorantViewerApp.swift in Sources */,

@@ -22,7 +22,7 @@ struct ContentView: View {
 				.tabItem { Label("Reference", systemImage: "books.vertical") }
 				.tag(Tab.reference)
 			
-			accountView
+			AccountView()
 				.tabItem { Label("Account", systemImage: "person.crop.circle") }
 				.tag(Tab.account)
 		}
@@ -43,22 +43,6 @@ struct ContentView: View {
 			Text("Not signed in!")
 				.frame(maxWidth: .infinity, maxHeight: .infinity)
 				.navigationTitle("Matches")
-		}
-	}
-	
-	@ViewBuilder
-	private var accountView: some View {
-		if let user = dataStore.data?.user {
-			VStack(spacing: 20) {
-				Text("Signed in as \(user.account.name)")
-				
-				Button("Sign Out") {
-					dataStore.data = nil
-				}
-			}
-		} else {
-			LoginForm(data: $dataStore.data, credentials: .init(from: dataStore.keychain) ?? .init())
-				.withLoadManager()
 		}
 	}
 	
