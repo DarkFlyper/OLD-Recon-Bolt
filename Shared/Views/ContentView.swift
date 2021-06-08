@@ -7,6 +7,7 @@ import KeychainSwift
 struct ContentView: View {
 	@StateObject var dataStore: ClientDataStore
 	@SceneStorage("ContentView.state") var tab = Tab.career
+	@EnvironmentObject var assetManager: AssetManager
 	
 	var body: some View {
 		TabView(selection: $tab) {
@@ -28,7 +29,7 @@ struct ContentView: View {
 		}
 		.listStyle(PrettyListStyle())
 		.onAppear {
-			if dataStore.data == nil {
+			if dataStore.data == nil || assetManager.assets == nil {
 				tab = .account
 			}
 		}

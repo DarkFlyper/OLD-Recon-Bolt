@@ -13,6 +13,10 @@ final class AssetManager: ObservableObject {
 	private var loadTask: AnyCancellable?
 	
 	init() {
+		loadAssets()
+	}
+	
+	func loadAssets() {
 		loadTask = Self
 			.loadAssets() { progress in
 				DispatchQueue.main.async {
@@ -28,6 +32,7 @@ final class AssetManager: ObservableObject {
 	
 	#if DEBUG
 	static let forPreviews = AssetManager(assets: stored)
+	static let mockEmpty = AssetManager(assets: nil)
 	
 	private init(assets: AssetCollection?) {
 		self.assets = assets
