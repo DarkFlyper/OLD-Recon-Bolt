@@ -18,6 +18,9 @@ final class ValorantLoadManager: LoadManager {
 		onSuccess: @escaping (P.Output) -> Void
 	) {
 		guard let data = dataStore.data else { return }
+		#if DEBUG
+		guard !(data is MockClientData) else { return }
+		#endif
 		runTask(
 			task(data.client).tryCatch { error -> AnyPublisher<P.Output, Error> in
 				switch error {

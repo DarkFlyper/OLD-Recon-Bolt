@@ -13,11 +13,11 @@ enum PreviewData {
 	)
 	static let user = User(userInfo)
 	
-	static let singleMatch = try! loadJSON(named: "example_match", as: MatchDetails.self)
+	static let singleMatch = loadJSON(named: "example_match", as: MatchDetails.self)
 	/// A match with only a few rounds and very unbalanced kills, to push layouts to their limits.
-	static let strangeMatch = try! loadJSON(named: "strange_match", as: MatchDetails.self)
+	static let strangeMatch = loadJSON(named: "strange_match", as: MatchDetails.self)
 	
-	static let compUpdates = try! loadJSON(named: "example_updates", as: [CompetitiveUpdate].self)
+	static let compUpdates = loadJSON(named: "example_updates", as: [CompetitiveUpdate].self)
 	
 	static let singleMatchData = MatchViewData(details: singleMatch, userID: userID)
 	
@@ -33,14 +33,27 @@ enum PreviewData {
 		named name: String,
 		as type: T.Type = T.self,
 		using decoder: JSONDecoder = ValorantClient.responseDecoder
-	) throws -> T where T: Decodable {
+	) -> T where T: Decodable {
 		let url = Bundle.main.url(forResource: name, withExtension: "json")!
-		let raw = try Data(contentsOf: url)
-		return try decoder.decode(T.self, from: raw)
+		
+		let raw: Data
+		do {
+			raw = try Data(contentsOf: url)
+		} catch {
+			dump(error)
+			fatalError("could not read json file at \(url)")
+		}
+		
+		do {
+			return try decoder.decode(T.self, from: raw)
+		} catch {
+			dump(error)
+			fatalError("could not decode json from file at \(url)")
+		}
 	}
 }
 
-private struct MockClientData: ClientData {
+struct MockClientData: ClientData {
 	let user = PreviewData.user
 	var matchList: MatchList = PreviewData.matchList
 	
