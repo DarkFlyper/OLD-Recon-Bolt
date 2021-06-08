@@ -106,7 +106,7 @@ struct LiveView: View {
 			HStack(alignment: .lastTextBaseline) {
 				Text(
 					verbatim: objective.directive?
-						.riotFormat(number: mission.progressToComplete)
+						.valorantLocalized(number: mission.progressToComplete)
 						?? mission.displayName
 						?? mission.title
 						?? "<Unnamed Mission>"
@@ -159,58 +159,3 @@ struct LiveView_Previews: PreviewProvider {
 	}
 }
 #endif
-
-private extension String {
-	func riotFormat(number: Int) -> String {
-		let args = ["Num": number]
-		
-		var toParse = self[...]
-		var output = ""
-		while let first = toParse.first {
-			toParse.removeFirst()
-			
-			guard first == "{" else {
-				output.append(first)
-				continue
-			}
-			
-			// entering placeholder!
-			let placeholderEnd = toParse.firstIndex(of: "}")!
-			let placeholderName = String(toParse[..<placeholderEnd])
-			toParse = toParse[placeholderEnd...].dropFirst()
-			guard let arg = args[placeholderName] else {
-				fatalError("No format argument found for placeholder '\(placeholderName)'!")
-			}
-			
-			if toParse.first == "|" {
-				toParse.removeFirst()
-				
-				do {
-					let prefix = "plural(one="
-					assert(toParse.hasPrefix(prefix))
-					toParse.removeFirst(prefix.count)
-				}
-				
-				let commaIndex = toParse.firstIndex(of: ",")!
-				let singular = String(toParse[..<commaIndex])
-				toParse = toParse[commaIndex...].dropFirst()
-				
-				do {
-					let prefix = "other="
-					assert(toParse.hasPrefix(prefix))
-					toParse.removeFirst(prefix.count)
-				}
-				
-				let closingIndex = toParse.firstIndex(of: ")")!
-				let plural = String(toParse[..<closingIndex])
-				toParse = toParse[closingIndex...].dropFirst()
-				
-				output.append(arg == 1 ? singular : plural)
-			} else {
-				output.append(String(arg))
-			}
-		}
-		
-		return output
-	}
-}
