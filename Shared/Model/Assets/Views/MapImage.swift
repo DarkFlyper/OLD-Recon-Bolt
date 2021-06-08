@@ -47,6 +47,7 @@ struct MapImage: View {
 	}
 }
 
+#if DEBUG
 struct MapImage_Previews: PreviewProvider {
 	static var previews: some View {
 		let mapID = MapID(path: "/Game/Maps/Foxtrot/Foxtrot")
@@ -59,3 +60,4 @@ struct MapImage_Previews: PreviewProvider {
 		.withPreviewAssets()
 	}
 }
+#endif

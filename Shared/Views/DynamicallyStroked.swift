@@ -46,6 +46,7 @@ private struct DynamicallyStroked<Content: View>: View {
 	}
 }
 
+#if DEBUG
 struct DynamicallyStroked_Previews: PreviewProvider {
 	static var previews: some View {
 		Group {
@@ -71,3 +72,4 @@ struct DynamicallyStroked_Previews: PreviewProvider {
 		.previewLayout(.sizeThatFits)
 	}
 }
+#endif

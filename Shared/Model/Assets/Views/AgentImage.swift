@@ -26,6 +26,7 @@ struct AgentImage: View {
 	}
 }
 
+#if DEBUG
 struct AgentImage_Previews: PreviewProvider {
 	static let agentID = Agent.ID(UUID(uuidString: "8e253930-4c05-31dd-1b6c-968525494517")!)
 	
@@ -40,3 +41,4 @@ struct AgentImage_Previews: PreviewProvider {
 		.withPreviewAssets()
 	}
 }
+#endif
