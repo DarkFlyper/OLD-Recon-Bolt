@@ -18,6 +18,13 @@ struct ContentView: View {
 			.tabItem { Label("Career", systemImage: "square.fill.text.grid.1x2") }
 			.tag(Tab.career)
 			
+			onlineView {
+				LiveView(user: $0.wrappedValue.user)
+					.withToolbar()
+			}
+			.tabItem { Label("Live", systemImage: "play.circle") }
+			.tag(Tab.live)
+			
 			ReferenceView()
 				.withToolbar()
 				.tabItem { Label("Reference", systemImage: "books.vertical") }
@@ -33,7 +40,10 @@ struct ContentView: View {
 				tab = .account
 			}
 		}
-		.withLoadManager(ValorantLoadManager(dataStore: dataStore))
+		.withLoadManager(ValorantLoadManager(
+			dataStore: dataStore,
+			clientVersion: assetManager.assets?.version.riotClientVersion
+		))
 	}
 	
 	@ViewBuilder
@@ -50,6 +60,7 @@ struct ContentView: View {
 	
 	enum Tab: String {
 		case career
+		case live
 		case reference
 		case account
 	}

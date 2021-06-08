@@ -1,0 +1,6323 @@
+{
+	"Version": 3027,
+	"Subject": "3fa8598d-066e-5bdb-998c-74c015c5dba5",
+	"Contracts": [
+		{
+			"ContractDefinitionID": "e13d0f6f-5727-43bc-af9e-56c10cdb7176",
+			"ContractProgression": {
+				"TotalProgressionEarned": 191500,
+				"HighestRewardedLevel": {
+					"d95831b3-ae9e-499b-989e-746020cd3b97": 4
+				}
+			},
+			"ProgressionLevelReached": 4,
+			"ProgressionTowardsNextLevel": 51500
+		},
+		{
+			"ContractDefinitionID": "2195e89f-20ad-4e37-b46c-cf46a6715dfd",
+			"ContractProgression": {
+				"TotalProgressionEarned": 975000,
+				"HighestRewardedLevel": {
+					"4c8c5d9b-e7f2-4c8b-afed-b3ba9051f1b3": 10
+				}
+			},
+			"ProgressionLevelReached": 10,
+			"ProgressionTowardsNextLevel": 0
+		},
+		{
+			"ContractDefinitionID": "4c9b0fcf-57cd-4e84-ae5a-ce89e396242f",
+			"ContractProgression": {
+				"TotalProgressionEarned": 204600,
+				"HighestRewardedLevel": {
+					"7c7710c2-0f1c-48b8-83d8-ea0789cc9b1c": 5
+				}
+			},
+			"ProgressionLevelReached": 5,
+			"ProgressionTowardsNextLevel": 4600
+		},
+		{
+			"ContractDefinitionID": "a3dd5293-4b3d-46de-a6d7-4493f0530d9b",
+			"ContractProgression": {
+				"TotalProgressionEarned": 72000,
+				"HighestRewardedLevel": {
+					"b2bacba8-d304-4e44-9df5-20a3f25a7db8": 10
+				}
+			},
+			"ProgressionLevelReached": 10,
+			"ProgressionTowardsNextLevel": 0
+		},
+		{
+			"ContractDefinitionID": "ace2bb52-de25-45b5-8e11-3dd2088f914d",
+			"ContractProgression": {
+				"TotalProgressionEarned": 0,
+				"HighestRewardedLevel": {
+					"feb822e2-0b7e-4c8a-a03f-a846e01edef8": 0
+				}
+			},
+			"ProgressionLevelReached": 0,
+			"ProgressionTowardsNextLevel": 0
+		},
+		{
+			"ContractDefinitionID": "62b5521c-93f6-4178-aadd-043ed25ed21a",
+			"ContractProgression": {
+				"TotalProgressionEarned": 0,
+				"HighestRewardedLevel": {
+					"9fbc5192-26a5-425d-acee-7447ae8dc39a": 0
+				}
+			},
+			"ProgressionLevelReached": 0,
+			"ProgressionTowardsNextLevel": 0
+		},
+		{
+			"ContractDefinitionID": "c9d1c451-12fc-4601-a97c-8258765fb90d",
+			"ContractProgression": {
+				"TotalProgressionEarned": 0,
+				"HighestRewardedLevel": {
+					"f6396202-aae8-433a-8610-2fdc20d14564": 0
+				}
+			},
+			"ProgressionLevelReached": 0,
+			"ProgressionTowardsNextLevel": 0
+		},
+		{
+			"ContractDefinitionID": "f94fc320-a71f-47e3-b062-6798d14f17d6",
+			"ContractProgression": {
+				"TotalProgressionEarned": 200000,
+				"HighestRewardedLevel": {
+					"41a1e1db-34f2-4290-a86e-073e449a9bf2": 5
+				}
+			},
+			"ProgressionLevelReached": 5,
+			"ProgressionTowardsNextLevel": 0
+		},
+		{
+			"ContractDefinitionID": "eb35d061-4eed-4d22-81a3-1491ec892429",
+			"ContractProgression": {
+				"TotalProgressionEarned": 201200,
+				"HighestRewardedLevel": {
+					"28b08fca-d0b9-4635-952c-98a74287ebf8": 5
+				}
+			},
+			"ProgressionLevelReached": 5,
+			"ProgressionTowardsNextLevel": 1200
+		},
+		{
+			"ContractDefinitionID": "60f9f1f0-2bb7-47f9-85b7-b873a5a1123b",
+			"ContractProgression": {
+				"TotalProgressionEarned": 205300,
+				"HighestRewardedLevel": {
+					"ad947b1a-4df0-4862-a635-c5358f298698": 5
+				}
+			},
+			"ProgressionLevelReached": 5,
+			"ProgressionTowardsNextLevel": 5300
+		},
+		{
+			"ContractDefinitionID": "7b06d4ce-e09a-48d5-8215-df9901376fa7",
+			"ContractProgression": {
+				"TotalProgressionEarned": 197550,
+				"HighestRewardedLevel": {
+					"226043e7-9ad7-403f-85af-039fb4c28c62": 0,
+					"959d0160-7554-4c6b-9c40-a127b3e13d22": 17
+				}
+			},
+			"ProgressionLevelReached": 17,
+			"ProgressionTowardsNextLevel": 13550
+		},
+		{
+			"ContractDefinitionID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+			"ContractProgression": {
+				"TotalProgressionEarned": 625980,
+				"HighestRewardedLevel": {
+					"9d653f26-8056-46ad-9f66-f346626ad494": 8
+				}
+			},
+			"ProgressionLevelReached": 8,
+			"ProgressionTowardsNextLevel": 100980
+		},
+		{
+			"ContractDefinitionID": "3051fb18-9240-4bf3-a9f5-eb9ae954cd9d",
+			"ContractProgression": {
+				"TotalProgressionEarned": 0,
+				"HighestRewardedLevel": {
+					"1f44ba0b-6ca7-44f8-9195-64c393793936": 0
+				}
+			},
+			"ProgressionLevelReached": 0,
+			"ProgressionTowardsNextLevel": 0
+		},
+		{
+			"ContractDefinitionID": "9443cbd4-da4d-4395-8152-26a5b269f339",
+			"ContractProgression": {
+				"TotalProgressionEarned": 200600,
+				"HighestRewardedLevel": {
+					"0a09fd3d-5668-4427-bec0-1d84afb42fe6": 5
+				}
+			},
+			"ProgressionLevelReached": 5,
+			"ProgressionTowardsNextLevel": 600
+		},
+		{
+			"ContractDefinitionID": "e5c5ee7c-ac93-4f3b-8b76-cc7a2c66bf24",
+			"ContractProgression": {
+				"TotalProgressionEarned": 512100,
+				"HighestRewardedLevel": {
+					"964f74d3-ac27-4f3d-b0ac-59cc156752f9": 29,
+					"feee85e4-1bbb-44f8-b5af-7228b2d0fe4c": 0
+				}
+			},
+			"ProgressionLevelReached": 29,
+			"ProgressionTowardsNextLevel": 22100
+		},
+		{
+			"ContractDefinitionID": "4ef7ddda-4b73-c349-ee84-e8a9794613b5",
+			"ContractProgression": {
+				"TotalProgressionEarned": 0,
+				"HighestRewardedLevel": {
+					"58992fa3-4643-5625-e57a-64a4d839ad05": 0,
+					"c9b67ad4-9233-459a-8258-5518a568e2b5": 0
+				}
+			},
+			"ProgressionLevelReached": 0,
+			"ProgressionTowardsNextLevel": 0
+		},
+		{
+			"ContractDefinitionID": "ed0b331b-45f2-115c-c958-3c9683ff5b5e",
+			"ContractProgression": {
+				"TotalProgressionEarned": 1552300,
+				"HighestRewardedLevel": {
+					"2e6f8602-442b-7cb5-576b-22bfbea1e618": 53,
+					"7552d32c-4d35-43c3-1451-f18eb4fbf82f": 53
+				}
+			},
+			"ProgressionLevelReached": 53,
+			"ProgressionTowardsNextLevel": 30300
+		},
+		{
+			"ContractDefinitionID": "e7e7c5e1-4e76-22f8-f423-078b33758464",
+			"ContractProgression": {
+				"TotalProgressionEarned": 227500,
+				"HighestRewardedLevel": {
+					"6c24826c-4585-4dbb-db5e-3c92ba2690fd": 5
+				}
+			},
+			"ProgressionLevelReached": 5,
+			"ProgressionTowardsNextLevel": 27500
+		},
+		{
+			"ContractDefinitionID": "358b6e88-4cbe-0cfb-c313-c290eba0c8bc",
+			"ContractProgression": {
+				"TotalProgressionEarned": 975000,
+				"HighestRewardedLevel": {
+					"5a0c363d-4d8d-8a29-bf72-a2b8652a5c2f": 10
+				}
+			},
+			"ProgressionLevelReached": 10,
+			"ProgressionTowardsNextLevel": 0
+		},
+		{
+			"ContractDefinitionID": "4cff28f8-47e9-62e5-2625-49a517f981d2",
+			"ContractProgression": {
+				"TotalProgressionEarned": 1024800,
+				"HighestRewardedLevel": {
+					"7eb05d79-4350-e185-a64e-96a0760c4182": 51,
+					"f8397c8f-4120-3b80-2b46-178cd9ca983e": 51
+				}
+			},
+			"ProgressionLevelReached": 51,
+			"ProgressionTowardsNextLevel": 8300
+		},
+		{
+			"ContractDefinitionID": "1d40b4b9-4d86-50b7-9f79-3d939e09c661",
+			"ContractProgression": {
+				"TotalProgressionEarned": 975000,
+				"HighestRewardedLevel": {
+					"336d6760-4d4e-7458-c273-60b9bd45f57e": 10
+				}
+			},
+			"ProgressionLevelReached": 10,
+			"ProgressionTowardsNextLevel": 0
+		},
+		{
+			"ContractDefinitionID": "d1dfd006-4efa-7ef2-a46f-3eb497fc26df",
+			"ContractProgression": {
+				"TotalProgressionEarned": 1045100,
+				"HighestRewardedLevel": {
+					"8b6655f5-4931-d496-3f24-95a0f780a573": 51,
+					"99f8a2ab-4558-4669-f404-24ba815b63e6": 51
+				}
+			},
+			"ProgressionLevelReached": 51,
+			"ProgressionTowardsNextLevel": 28600
+		},
+		{
+			"ContractDefinitionID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+			"ContractProgression": {
+				"TotalProgressionEarned": 354980,
+				"HighestRewardedLevel": {
+					"a3d8fcd2-4192-4567-0dfe-64ac1d3adaf5": 29,
+					"d2370414-4277-ab53-c021-589deb6647f2": 29
+				}
+			},
+			"ProgressionLevelReached": 29,
+			"ProgressionTowardsNextLevel": 15480
+		}
+	],
+	"ProcessedMatches": [
+		{
+			"ID": "3a97002f-6f5c-4196-a02b-dc67d15a1844",
+			"StartTime": 1619483993071,
+			"XPGrants": {
+				"GamePlayed": 0,
+				"GameWon": 0,
+				"RoundPlayed": 400,
+				"RoundWon": 800,
+				"Missions": {
+					"2ec38f99-46c2-b1ba-69aa-74b86c1289a9": 2000,
+					"54e391ce-44c9-02ba-52bb-af8515101f8a": 16000
+				},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {
+				"2982a572-4c8b-01f2-f36f-93b7be90e3de": {
+					"ID": "2982a572-4c8b-01f2-f36f-93b7be90e3de",
+					"Objectives": {
+						"4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b": 2
+					},
+					"ObjectiveDeltas": {
+						"4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b": {
+							"ID": "4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b",
+							"ProgressBefore": 97,
+							"ProgressAfter": 99
+						}
+					}
+				},
+				"2ec38f99-46c2-b1ba-69aa-74b86c1289a9": {
+					"ID": "2ec38f99-46c2-b1ba-69aa-74b86c1289a9",
+					"Objectives": {
+						"38fd944b-4d80-33c8-0054-6db0f656dc5c": 2
+					},
+					"ObjectiveDeltas": {
+						"38fd944b-4d80-33c8-0054-6db0f656dc5c": {
+							"ID": "38fd944b-4d80-33c8-0054-6db0f656dc5c",
+							"ProgressBefore": 18,
+							"ProgressAfter": 20
+						}
+					}
+				},
+				"54e391ce-44c9-02ba-52bb-af8515101f8a": {
+					"ID": "54e391ce-44c9-02ba-52bb-af8515101f8a",
+					"Objectives": {
+						"16af3bdf-c353-4c8c-a47c-b4eeac154eaf": 1
+					},
+					"ObjectiveDeltas": {
+						"16af3bdf-c353-4c8c-a47c-b4eeac154eaf": {
+							"ID": "16af3bdf-c353-4c8c-a47c-b4eeac154eaf",
+							"ProgressBefore": 9,
+							"ProgressAfter": 10
+						}
+					}
+				}
+			},
+			"ContractDeltas": {
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 207900,
+					"TotalXPAfter": 227100
+				},
+				"d1dfd006-4efa-7ef2-a46f-3eb497fc26df": {
+					"ID": "d1dfd006-4efa-7ef2-a46f-3eb497fc26df",
+					"TotalXPBefore": 982000,
+					"TotalXPAfter": 1001200
+				}
+			},
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "ed9139aa-e598-4d23-8f28-465724fdeab3",
+			"StartTime": 1619484536674,
+			"XPGrants": {
+				"GamePlayed": 0,
+				"GameWon": 0,
+				"RoundPlayed": 2200,
+				"RoundWon": 1800,
+				"Missions": {
+					"2982a572-4c8b-01f2-f36f-93b7be90e3de": 16000
+				},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {
+				"d1dfd006-4efa-7ef2-a46f-3eb497fc26df": {
+					"EntitlementRewards": [
+						{
+							"ItemTypeID": "d5f120f8-ff8c-4aac-92ea-f2b5acbe9475",
+							"ItemID": "cf86b6e6-498d-196c-6a1f-d4b162aa649b",
+							"Amount": 1
+						}
+					],
+					"WalletRewards": [],
+					"CounterRewards": null
+				}
+			},
+			"MissionDeltas": {
+				"2982a572-4c8b-01f2-f36f-93b7be90e3de": {
+					"ID": "2982a572-4c8b-01f2-f36f-93b7be90e3de",
+					"Objectives": {
+						"4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b": 1
+					},
+					"ObjectiveDeltas": {
+						"4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b": {
+							"ID": "4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b",
+							"ProgressBefore": 99,
+							"ProgressAfter": 100
+						}
+					}
+				}
+			},
+			"ContractDeltas": {
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 227100,
+					"TotalXPAfter": 247100
+				},
+				"d1dfd006-4efa-7ef2-a46f-3eb497fc26df": {
+					"ID": "d1dfd006-4efa-7ef2-a46f-3eb497fc26df",
+					"TotalXPBefore": 1001200,
+					"TotalXPAfter": 1021200
+				}
+			},
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "24f308c0-1fc8-40c2-b89a-664d66b65075",
+			"StartTime": 1619539368505,
+			"XPGrants": {
+				"GamePlayed": 900,
+				"GameWon": 0,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {},
+			"ContractDeltas": {
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 247100,
+					"TotalXPAfter": 248000
+				},
+				"d1dfd006-4efa-7ef2-a46f-3eb497fc26df": {
+					"ID": "d1dfd006-4efa-7ef2-a46f-3eb497fc26df",
+					"TotalXPBefore": 1021200,
+					"TotalXPAfter": 1022100
+				}
+			},
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "41318edc-dc00-4c52-8a70-4a617b30ff17",
+			"StartTime": 1619539980483,
+			"XPGrants": {
+				"GamePlayed": 800,
+				"GameWon": 200,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {},
+			"ContractDeltas": {
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 248000,
+					"TotalXPAfter": 249000
+				},
+				"d1dfd006-4efa-7ef2-a46f-3eb497fc26df": {
+					"ID": "d1dfd006-4efa-7ef2-a46f-3eb497fc26df",
+					"TotalXPBefore": 1022100,
+					"TotalXPAfter": 1023100
+				}
+			},
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "41977de0-2451-4796-8494-7f815d70610f",
+			"StartTime": 1619540690548,
+			"XPGrants": {
+				"GamePlayed": 0,
+				"GameWon": 0,
+				"RoundPlayed": 1000,
+				"RoundWon": 400,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {
+				"2ec38f99-46c2-b1ba-69aa-74b86c1289a9": {
+					"ID": "2ec38f99-46c2-b1ba-69aa-74b86c1289a9",
+					"Objectives": {
+						"38fd944b-4d80-33c8-0054-6db0f656dc5c": 7
+					},
+					"ObjectiveDeltas": {
+						"38fd944b-4d80-33c8-0054-6db0f656dc5c": {
+							"ID": "38fd944b-4d80-33c8-0054-6db0f656dc5c",
+							"ProgressBefore": 0,
+							"ProgressAfter": 7
+						}
+					}
+				},
+				"c3603d86-4ac3-2999-d500-e19ec8bc0998": {
+					"ID": "c3603d86-4ac3-2999-d500-e19ec8bc0998",
+					"Objectives": {
+						"5c22a5ad-4d44-3451-5a09-589c35ff77cd": 1
+					},
+					"ObjectiveDeltas": {
+						"5c22a5ad-4d44-3451-5a09-589c35ff77cd": {
+							"ID": "5c22a5ad-4d44-3451-5a09-589c35ff77cd",
+							"ProgressBefore": 0,
+							"ProgressAfter": 1
+						}
+					}
+				}
+			},
+			"ContractDeltas": {
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 249000,
+					"TotalXPAfter": 250400
+				},
+				"d1dfd006-4efa-7ef2-a46f-3eb497fc26df": {
+					"ID": "d1dfd006-4efa-7ef2-a46f-3eb497fc26df",
+					"TotalXPBefore": 1023100,
+					"TotalXPAfter": 1024500
+				}
+			},
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "425a2fb2-c5f8-4878-8dce-02b55b864b45",
+			"StartTime": 1619541882672,
+			"XPGrants": {
+				"GamePlayed": 0,
+				"GameWon": 0,
+				"RoundPlayed": 2000,
+				"RoundWon": 2600,
+				"Missions": {
+					"c3603d86-4ac3-2999-d500-e19ec8bc0998": 2000
+				},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {
+				"2ec38f99-46c2-b1ba-69aa-74b86c1289a9": {
+					"ID": "2ec38f99-46c2-b1ba-69aa-74b86c1289a9",
+					"Objectives": {
+						"38fd944b-4d80-33c8-0054-6db0f656dc5c": 12
+					},
+					"ObjectiveDeltas": {
+						"38fd944b-4d80-33c8-0054-6db0f656dc5c": {
+							"ID": "38fd944b-4d80-33c8-0054-6db0f656dc5c",
+							"ProgressBefore": 7,
+							"ProgressAfter": 19
+						}
+					}
+				},
+				"c3603d86-4ac3-2999-d500-e19ec8bc0998": {
+					"ID": "c3603d86-4ac3-2999-d500-e19ec8bc0998",
+					"Objectives": {
+						"5c22a5ad-4d44-3451-5a09-589c35ff77cd": 4
+					},
+					"ObjectiveDeltas": {
+						"5c22a5ad-4d44-3451-5a09-589c35ff77cd": {
+							"ID": "5c22a5ad-4d44-3451-5a09-589c35ff77cd",
+							"ProgressBefore": 1,
+							"ProgressAfter": 5
+						}
+					}
+				}
+			},
+			"ContractDeltas": {
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 250400,
+					"TotalXPAfter": 257000
+				},
+				"d1dfd006-4efa-7ef2-a46f-3eb497fc26df": {
+					"ID": "d1dfd006-4efa-7ef2-a46f-3eb497fc26df",
+					"TotalXPBefore": 1024500,
+					"TotalXPAfter": 1031100
+				}
+			},
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "138a0f7b-8d1c-4c3f-bd0a-e874d24b82e0",
+			"StartTime": 1619544530399,
+			"XPGrants": {
+				"GamePlayed": 0,
+				"GameWon": 0,
+				"RoundPlayed": 1700,
+				"RoundWon": 800,
+				"Missions": {
+					"2ec38f99-46c2-b1ba-69aa-74b86c1289a9": 2000
+				},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {
+				"2ec38f99-46c2-b1ba-69aa-74b86c1289a9": {
+					"ID": "2ec38f99-46c2-b1ba-69aa-74b86c1289a9",
+					"Objectives": {
+						"38fd944b-4d80-33c8-0054-6db0f656dc5c": 1
+					},
+					"ObjectiveDeltas": {
+						"38fd944b-4d80-33c8-0054-6db0f656dc5c": {
+							"ID": "38fd944b-4d80-33c8-0054-6db0f656dc5c",
+							"ProgressBefore": 19,
+							"ProgressAfter": 20
+						}
+					}
+				}
+			},
+			"ContractDeltas": {
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 257000,
+					"TotalXPAfter": 261500
+				},
+				"d1dfd006-4efa-7ef2-a46f-3eb497fc26df": {
+					"ID": "d1dfd006-4efa-7ef2-a46f-3eb497fc26df",
+					"TotalXPBefore": 1031100,
+					"TotalXPAfter": 1035600
+				}
+			},
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "6105afd4-8aba-47a9-9c56-87f200b21366",
+			"StartTime": 1619551746106,
+			"XPGrants": {
+				"GamePlayed": 800,
+				"GameWon": 0,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {},
+			"ContractDeltas": {
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 261500,
+					"TotalXPAfter": 262300
+				},
+				"d1dfd006-4efa-7ef2-a46f-3eb497fc26df": {
+					"ID": "d1dfd006-4efa-7ef2-a46f-3eb497fc26df",
+					"TotalXPBefore": 1035600,
+					"TotalXPAfter": 1036400
+				}
+			},
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "51a5c057-7414-43cc-8e0a-69fd066f4055",
+			"StartTime": 1619552814919,
+			"XPGrants": {
+				"GamePlayed": 800,
+				"GameWon": 200,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {},
+			"ContractDeltas": {
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 262300,
+					"TotalXPAfter": 263300
+				},
+				"d1dfd006-4efa-7ef2-a46f-3eb497fc26df": {
+					"ID": "d1dfd006-4efa-7ef2-a46f-3eb497fc26df",
+					"TotalXPBefore": 1036400,
+					"TotalXPAfter": 1037400
+				}
+			},
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "d7a09068-f6f0-4f79-80ef-af7de44e1dc3",
+			"StartTime": 1619553366066,
+			"XPGrants": {
+				"GamePlayed": 800,
+				"GameWon": 200,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {},
+			"ContractDeltas": {
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 263300,
+					"TotalXPAfter": 264300
+				},
+				"d1dfd006-4efa-7ef2-a46f-3eb497fc26df": {
+					"ID": "d1dfd006-4efa-7ef2-a46f-3eb497fc26df",
+					"TotalXPBefore": 1037400,
+					"TotalXPAfter": 1038400
+				}
+			},
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "9c262df2-8271-4f0d-9e1a-22e1ee2d67ca",
+			"StartTime": 1619554713811,
+			"XPGrants": {
+				"GamePlayed": 900,
+				"GameWon": 0,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {},
+			"ContractDeltas": {
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 264300,
+					"TotalXPAfter": 265200
+				},
+				"d1dfd006-4efa-7ef2-a46f-3eb497fc26df": {
+					"ID": "d1dfd006-4efa-7ef2-a46f-3eb497fc26df",
+					"TotalXPBefore": 1038400,
+					"TotalXPAfter": 1039300
+				}
+			},
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "1d895c0e-1863-42c7-bb7a-2c2d86e5399a",
+			"StartTime": 1619555280016,
+			"XPGrants": {
+				"GamePlayed": 900,
+				"GameWon": 0,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {},
+			"ContractDeltas": {
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 265200,
+					"TotalXPAfter": 266100
+				},
+				"d1dfd006-4efa-7ef2-a46f-3eb497fc26df": {
+					"ID": "d1dfd006-4efa-7ef2-a46f-3eb497fc26df",
+					"TotalXPBefore": 1039300,
+					"TotalXPAfter": 1040200
+				}
+			},
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "37dbc718-95b1-47ce-8e29-df194dd64e11",
+			"StartTime": 1619556004558,
+			"XPGrants": {
+				"GamePlayed": 0,
+				"GameWon": 0,
+				"RoundPlayed": 2300,
+				"RoundWon": 2600,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {},
+			"ContractDeltas": {
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 266100,
+					"TotalXPAfter": 271000
+				},
+				"d1dfd006-4efa-7ef2-a46f-3eb497fc26df": {
+					"ID": "d1dfd006-4efa-7ef2-a46f-3eb497fc26df",
+					"TotalXPBefore": 1040200,
+					"TotalXPAfter": 1045100
+				}
+			},
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "559ad841-2232-4c16-b512-8d0ec8ebcf59",
+			"StartTime": 1619614724378,
+			"XPGrants": {
+				"GamePlayed": 900,
+				"GameWon": 0,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 0,
+					"TotalXPAfter": 900
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 271000,
+					"TotalXPAfter": 271900
+				}
+			},
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "fdb0eb33-1db4-430d-ab27-e4386e20dee1",
+			"StartTime": 1619615651052,
+			"XPGrants": {
+				"GamePlayed": 900,
+				"GameWon": 0,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 900,
+					"TotalXPAfter": 1800
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 271900,
+					"TotalXPAfter": 272800
+				}
+			},
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "6eb11fd6-78c2-4372-9609-66d9dc17966b",
+			"StartTime": 1619616340461,
+			"XPGrants": {
+				"GamePlayed": 0,
+				"GameWon": 0,
+				"RoundPlayed": 1300,
+				"RoundWon": 2000,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"EntitlementRewards": [
+						{
+							"ItemTypeID": "dd3bf334-87f3-40bd-b043-682a57a8dc3a",
+							"ItemID": "05b6bc52-4bc1-6568-1c1b-53830b2cf57e",
+							"Amount": 2
+						}
+					],
+					"WalletRewards": [
+						{
+							"CurrencyID": "e59aa87c-4cbf-517a-5983-6e81511be9b7",
+							"Amount": 10
+						}
+					],
+					"CounterRewards": null
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"EntitlementRewards": [
+						{
+							"ItemTypeID": "dd3bf334-87f3-40bd-b043-682a57a8dc3a",
+							"ItemID": "98a2fa9e-4e66-eec9-8b13-298498862f28",
+							"Amount": 2
+						}
+					],
+					"WalletRewards": [],
+					"CounterRewards": null
+				}
+			},
+			"MissionDeltas": {
+				"353f6548-404b-16e1-fb71-12a96c9356d2": {
+					"ID": "353f6548-404b-16e1-fb71-12a96c9356d2",
+					"Objectives": {
+						"91952692-4345-8bc1-6f1c-2dad7e14109f": 17
+					},
+					"ObjectiveDeltas": {
+						"91952692-4345-8bc1-6f1c-2dad7e14109f": {
+							"ID": "91952692-4345-8bc1-6f1c-2dad7e14109f",
+							"ProgressBefore": 0,
+							"ProgressAfter": 17
+						}
+					}
+				},
+				"95016be3-4426-0fb9-2847-bb8d51965db9": {
+					"ID": "95016be3-4426-0fb9-2847-bb8d51965db9",
+					"Objectives": {
+						"974cb6ff-4aef-0217-1813-73a28ddfcdc6": 1483
+					},
+					"ObjectiveDeltas": {
+						"974cb6ff-4aef-0217-1813-73a28ddfcdc6": {
+							"ID": "974cb6ff-4aef-0217-1813-73a28ddfcdc6",
+							"ProgressBefore": 0,
+							"ProgressAfter": 1483
+						}
+					}
+				},
+				"abe3773f-48f7-7474-38ba-61b400d649a5": {
+					"ID": "abe3773f-48f7-7474-38ba-61b400d649a5",
+					"Objectives": {
+						"16af3bdf-c353-4c8c-a47c-b4eeac154eaf": 1
+					},
+					"ObjectiveDeltas": {
+						"16af3bdf-c353-4c8c-a47c-b4eeac154eaf": {
+							"ID": "16af3bdf-c353-4c8c-a47c-b4eeac154eaf",
+							"ProgressBefore": 0,
+							"ProgressAfter": 1
+						}
+					}
+				},
+				"f30bd3b0-45d3-d72a-8d1d-bab6deac61d6": {
+					"ID": "f30bd3b0-45d3-d72a-8d1d-bab6deac61d6",
+					"Objectives": {
+						"91952692-4345-8bc1-6f1c-2dad7e14109f": 17
+					},
+					"ObjectiveDeltas": {
+						"91952692-4345-8bc1-6f1c-2dad7e14109f": {
+							"ID": "91952692-4345-8bc1-6f1c-2dad7e14109f",
+							"ProgressBefore": 0,
+							"ProgressAfter": 17
+						}
+					}
+				}
+			},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 1800,
+					"TotalXPAfter": 5100
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 272800,
+					"TotalXPAfter": 276100
+				}
+			},
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "b62f2e51-f69d-4055-9ac4-8b2b154c5e5b",
+			"StartTime": 1619621071803,
+			"XPGrants": {
+				"GamePlayed": 0,
+				"GameWon": 0,
+				"RoundPlayed": 1500,
+				"RoundWon": 2600,
+				"Missions": {
+					"12197b90-42de-0587-dfdb-e28664ebe04b": 2000,
+					"f30bd3b0-45d3-d72a-8d1d-bab6deac61d6": 2000
+				},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"EntitlementRewards": [
+						{
+							"ItemTypeID": "3f296c07-64c3-494c-923b-fe692a4fa1bd",
+							"ItemID": "55b3141c-4ab5-c350-5f9e-bb83dd1f4e9a",
+							"Amount": 1
+						},
+						{
+							"ItemTypeID": "de7caa6b-adf7-4588-bbd1-143831e786c6",
+							"ItemID": "42e2f97d-4e69-274c-589c-0fbdeb397df9",
+							"Amount": 1
+						},
+						{
+							"ItemTypeID": "3f296c07-64c3-494c-923b-fe692a4fa1bd",
+							"ItemID": "140c35f0-4136-5a9f-4ce5-fd8c65fe0b04",
+							"Amount": 1
+						},
+						{
+							"ItemTypeID": "e7c63390-eda7-46e0-bb7a-a6abdacd2433",
+							"ItemID": "6f86d77a-43c6-17b5-312f-87bf159076d9",
+							"Amount": 1
+						}
+					],
+					"WalletRewards": [],
+					"CounterRewards": null
+				}
+			},
+			"MissionDeltas": {
+				"12197b90-42de-0587-dfdb-e28664ebe04b": {
+					"ID": "12197b90-42de-0587-dfdb-e28664ebe04b",
+					"Objectives": {
+						"2ae3fca1-4695-2464-7aba-76ab739f573a": 1
+					},
+					"ObjectiveDeltas": {
+						"2ae3fca1-4695-2464-7aba-76ab739f573a": {
+							"ID": "2ae3fca1-4695-2464-7aba-76ab739f573a",
+							"ProgressBefore": 0,
+							"ProgressAfter": 1
+						}
+					}
+				},
+				"353f6548-404b-16e1-fb71-12a96c9356d2": {
+					"ID": "353f6548-404b-16e1-fb71-12a96c9356d2",
+					"Objectives": {
+						"91952692-4345-8bc1-6f1c-2dad7e14109f": 38
+					},
+					"ObjectiveDeltas": {
+						"91952692-4345-8bc1-6f1c-2dad7e14109f": {
+							"ID": "91952692-4345-8bc1-6f1c-2dad7e14109f",
+							"ProgressBefore": 17,
+							"ProgressAfter": 55
+						}
+					}
+				},
+				"95016be3-4426-0fb9-2847-bb8d51965db9": {
+					"ID": "95016be3-4426-0fb9-2847-bb8d51965db9",
+					"Objectives": {
+						"974cb6ff-4aef-0217-1813-73a28ddfcdc6": 2158
+					},
+					"ObjectiveDeltas": {
+						"974cb6ff-4aef-0217-1813-73a28ddfcdc6": {
+							"ID": "974cb6ff-4aef-0217-1813-73a28ddfcdc6",
+							"ProgressBefore": 1483,
+							"ProgressAfter": 3641
+						}
+					}
+				},
+				"abe3773f-48f7-7474-38ba-61b400d649a5": {
+					"ID": "abe3773f-48f7-7474-38ba-61b400d649a5",
+					"Objectives": {
+						"16af3bdf-c353-4c8c-a47c-b4eeac154eaf": 1
+					},
+					"ObjectiveDeltas": {
+						"16af3bdf-c353-4c8c-a47c-b4eeac154eaf": {
+							"ID": "16af3bdf-c353-4c8c-a47c-b4eeac154eaf",
+							"ProgressBefore": 1,
+							"ProgressAfter": 2
+						}
+					}
+				},
+				"f30bd3b0-45d3-d72a-8d1d-bab6deac61d6": {
+					"ID": "f30bd3b0-45d3-d72a-8d1d-bab6deac61d6",
+					"Objectives": {
+						"91952692-4345-8bc1-6f1c-2dad7e14109f": 3
+					},
+					"ObjectiveDeltas": {
+						"91952692-4345-8bc1-6f1c-2dad7e14109f": {
+							"ID": "91952692-4345-8bc1-6f1c-2dad7e14109f",
+							"ProgressBefore": 17,
+							"ProgressAfter": 20
+						}
+					}
+				}
+			},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 5100,
+					"TotalXPAfter": 13200
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 276100,
+					"TotalXPAfter": 284200
+				}
+			},
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "81bb8d8a-f6c7-464c-ac0c-e5d1a46a124f",
+			"StartTime": 1619626442107,
+			"XPGrants": {
+				"GamePlayed": 800,
+				"GameWon": 200,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 13200,
+					"TotalXPAfter": 14200
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 284200,
+					"TotalXPAfter": 285200
+				}
+			},
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "aed5c553-f486-418d-969a-7a203abdda03",
+			"StartTime": 1619724903874,
+			"XPGrants": {
+				"GamePlayed": 0,
+				"GameWon": 0,
+				"RoundPlayed": 2400,
+				"RoundWon": 2600,
+				"Missions": {
+					"86f9a9af-452e-44ec-9f33-6c94f1c4fac6": 2000
+				},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"EntitlementRewards": [
+						{
+							"ItemTypeID": "d5f120f8-ff8c-4aac-92ea-f2b5acbe9475",
+							"ItemID": "6961433a-41ca-dc53-06b1-7294c28dece0",
+							"Amount": 1
+						}
+					],
+					"WalletRewards": [],
+					"CounterRewards": null
+				}
+			},
+			"MissionDeltas": {
+				"2ec38f99-46c2-b1ba-69aa-74b86c1289a9": {
+					"ID": "2ec38f99-46c2-b1ba-69aa-74b86c1289a9",
+					"Objectives": {
+						"38fd944b-4d80-33c8-0054-6db0f656dc5c": 17
+					},
+					"ObjectiveDeltas": {
+						"38fd944b-4d80-33c8-0054-6db0f656dc5c": {
+							"ID": "38fd944b-4d80-33c8-0054-6db0f656dc5c",
+							"ProgressBefore": 0,
+							"ProgressAfter": 17
+						}
+					}
+				},
+				"353f6548-404b-16e1-fb71-12a96c9356d2": {
+					"ID": "353f6548-404b-16e1-fb71-12a96c9356d2",
+					"Objectives": {
+						"91952692-4345-8bc1-6f1c-2dad7e14109f": 67
+					},
+					"ObjectiveDeltas": {
+						"91952692-4345-8bc1-6f1c-2dad7e14109f": {
+							"ID": "91952692-4345-8bc1-6f1c-2dad7e14109f",
+							"ProgressBefore": 55,
+							"ProgressAfter": 122
+						}
+					}
+				},
+				"86f9a9af-452e-44ec-9f33-6c94f1c4fac6": {
+					"ID": "86f9a9af-452e-44ec-9f33-6c94f1c4fac6",
+					"Objectives": {
+						"7f9c2b4b-4c91-c73a-9a45-b98b1a4ef1c9": 15
+					},
+					"ObjectiveDeltas": {
+						"7f9c2b4b-4c91-c73a-9a45-b98b1a4ef1c9": {
+							"ID": "7f9c2b4b-4c91-c73a-9a45-b98b1a4ef1c9",
+							"ProgressBefore": 0,
+							"ProgressAfter": 15
+						}
+					}
+				},
+				"95016be3-4426-0fb9-2847-bb8d51965db9": {
+					"ID": "95016be3-4426-0fb9-2847-bb8d51965db9",
+					"Objectives": {
+						"974cb6ff-4aef-0217-1813-73a28ddfcdc6": 1569
+					},
+					"ObjectiveDeltas": {
+						"974cb6ff-4aef-0217-1813-73a28ddfcdc6": {
+							"ID": "974cb6ff-4aef-0217-1813-73a28ddfcdc6",
+							"ProgressBefore": 3641,
+							"ProgressAfter": 5210
+						}
+					}
+				},
+				"abe3773f-48f7-7474-38ba-61b400d649a5": {
+					"ID": "abe3773f-48f7-7474-38ba-61b400d649a5",
+					"Objectives": {
+						"16af3bdf-c353-4c8c-a47c-b4eeac154eaf": 1
+					},
+					"ObjectiveDeltas": {
+						"16af3bdf-c353-4c8c-a47c-b4eeac154eaf": {
+							"ID": "16af3bdf-c353-4c8c-a47c-b4eeac154eaf",
+							"ProgressBefore": 2,
+							"ProgressAfter": 3
+						}
+					}
+				}
+			},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 14200,
+					"TotalXPAfter": 21200
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 285200,
+					"TotalXPAfter": 292200
+				}
+			},
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "e8a53220-ba22-4d40-9783-02bd9b63f322",
+			"StartTime": 1619727465053,
+			"XPGrants": {
+				"GamePlayed": 0,
+				"GameWon": 0,
+				"RoundPlayed": 2300,
+				"RoundWon": 2600,
+				"Missions": {
+					"2ec38f99-46c2-b1ba-69aa-74b86c1289a9": 2000,
+					"353f6548-404b-16e1-fb71-12a96c9356d2": 12800
+				},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"EntitlementRewards": [
+						{
+							"ItemTypeID": "d5f120f8-ff8c-4aac-92ea-f2b5acbe9475",
+							"ItemID": "94dc31dc-48b1-8279-ff69-f8828bbc7382",
+							"Amount": 1
+						},
+						{
+							"ItemTypeID": "3f296c07-64c3-494c-923b-fe692a4fa1bd",
+							"ItemID": "92c8a5c7-4ec3-5ce6-73c2-21937056cd77",
+							"Amount": 1
+						}
+					],
+					"WalletRewards": [
+						{
+							"CurrencyID": "e59aa87c-4cbf-517a-5983-6e81511be9b7",
+							"Amount": 10
+						}
+					],
+					"CounterRewards": null
+				}
+			},
+			"MissionDeltas": {
+				"2ec38f99-46c2-b1ba-69aa-74b86c1289a9": {
+					"ID": "2ec38f99-46c2-b1ba-69aa-74b86c1289a9",
+					"Objectives": {
+						"38fd944b-4d80-33c8-0054-6db0f656dc5c": 3
+					},
+					"ObjectiveDeltas": {
+						"38fd944b-4d80-33c8-0054-6db0f656dc5c": {
+							"ID": "38fd944b-4d80-33c8-0054-6db0f656dc5c",
+							"ProgressBefore": 17,
+							"ProgressAfter": 20
+						}
+					}
+				},
+				"353f6548-404b-16e1-fb71-12a96c9356d2": {
+					"ID": "353f6548-404b-16e1-fb71-12a96c9356d2",
+					"Objectives": {
+						"91952692-4345-8bc1-6f1c-2dad7e14109f": 78
+					},
+					"ObjectiveDeltas": {
+						"91952692-4345-8bc1-6f1c-2dad7e14109f": {
+							"ID": "91952692-4345-8bc1-6f1c-2dad7e14109f",
+							"ProgressBefore": 122,
+							"ProgressAfter": 200
+						}
+					}
+				},
+				"95016be3-4426-0fb9-2847-bb8d51965db9": {
+					"ID": "95016be3-4426-0fb9-2847-bb8d51965db9",
+					"Objectives": {
+						"974cb6ff-4aef-0217-1813-73a28ddfcdc6": 3072
+					},
+					"ObjectiveDeltas": {
+						"974cb6ff-4aef-0217-1813-73a28ddfcdc6": {
+							"ID": "974cb6ff-4aef-0217-1813-73a28ddfcdc6",
+							"ProgressBefore": 5210,
+							"ProgressAfter": 8282
+						}
+					}
+				},
+				"abe3773f-48f7-7474-38ba-61b400d649a5": {
+					"ID": "abe3773f-48f7-7474-38ba-61b400d649a5",
+					"Objectives": {
+						"16af3bdf-c353-4c8c-a47c-b4eeac154eaf": 1
+					},
+					"ObjectiveDeltas": {
+						"16af3bdf-c353-4c8c-a47c-b4eeac154eaf": {
+							"ID": "16af3bdf-c353-4c8c-a47c-b4eeac154eaf",
+							"ProgressBefore": 3,
+							"ProgressAfter": 4
+						}
+					}
+				}
+			},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 21200,
+					"TotalXPAfter": 40900
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 292200,
+					"TotalXPAfter": 311900
+				}
+			},
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "3b766893-8af3-4528-bd51-30a8b320a315",
+			"StartTime": 1619833999680,
+			"XPGrants": {
+				"GamePlayed": 0,
+				"GameWon": 0,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 1
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {},
+			"ContractDeltas": {},
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "b202cba5-4582-43a5-bbab-be16174f9f13",
+			"StartTime": 1619834190599,
+			"XPGrants": {
+				"GamePlayed": 0,
+				"GameWon": 0,
+				"RoundPlayed": 1900,
+				"RoundWon": 1200,
+				"Missions": {
+					"c235e459-4917-8013-6737-deac9ae34386": 2000,
+					"f30bd3b0-45d3-d72a-8d1d-bab6deac61d6": 2000
+				},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"EntitlementRewards": [
+						{
+							"ItemTypeID": "dd3bf334-87f3-40bd-b043-682a57a8dc3a",
+							"ItemID": "2030984a-4b8d-7cca-4eee-51aaa46b7712",
+							"Amount": 2
+						},
+						{
+							"ItemTypeID": "e7c63390-eda7-46e0-bb7a-a6abdacd2433",
+							"ItemID": "dd024421-4c2a-7126-b58e-fea865a45aa9",
+							"Amount": 1
+						}
+					],
+					"WalletRewards": [],
+					"CounterRewards": null
+				}
+			},
+			"MissionDeltas": {
+				"95016be3-4426-0fb9-2847-bb8d51965db9": {
+					"ID": "95016be3-4426-0fb9-2847-bb8d51965db9",
+					"Objectives": {
+						"974cb6ff-4aef-0217-1813-73a28ddfcdc6": 2979
+					},
+					"ObjectiveDeltas": {
+						"974cb6ff-4aef-0217-1813-73a28ddfcdc6": {
+							"ID": "974cb6ff-4aef-0217-1813-73a28ddfcdc6",
+							"ProgressBefore": 8282,
+							"ProgressAfter": 11261
+						}
+					}
+				},
+				"abe3773f-48f7-7474-38ba-61b400d649a5": {
+					"ID": "abe3773f-48f7-7474-38ba-61b400d649a5",
+					"Objectives": {
+						"16af3bdf-c353-4c8c-a47c-b4eeac154eaf": 1
+					},
+					"ObjectiveDeltas": {
+						"16af3bdf-c353-4c8c-a47c-b4eeac154eaf": {
+							"ID": "16af3bdf-c353-4c8c-a47c-b4eeac154eaf",
+							"ProgressBefore": 4,
+							"ProgressAfter": 5
+						}
+					}
+				},
+				"c235e459-4917-8013-6737-deac9ae34386": {
+					"ID": "c235e459-4917-8013-6737-deac9ae34386",
+					"Objectives": {
+						"4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b": 10
+					},
+					"ObjectiveDeltas": {
+						"4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b": {
+							"ID": "4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b",
+							"ProgressBefore": 0,
+							"ProgressAfter": 10
+						}
+					}
+				},
+				"f30bd3b0-45d3-d72a-8d1d-bab6deac61d6": {
+					"ID": "f30bd3b0-45d3-d72a-8d1d-bab6deac61d6",
+					"Objectives": {
+						"91952692-4345-8bc1-6f1c-2dad7e14109f": 20
+					},
+					"ObjectiveDeltas": {
+						"91952692-4345-8bc1-6f1c-2dad7e14109f": {
+							"ID": "91952692-4345-8bc1-6f1c-2dad7e14109f",
+							"ProgressBefore": 0,
+							"ProgressAfter": 20
+						}
+					}
+				}
+			},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 40900,
+					"TotalXPAfter": 48000
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 311900,
+					"TotalXPAfter": 319000
+				}
+			},
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "c5dc7e51-69d7-4243-9e3d-d7bc0506beb6",
+			"StartTime": 1619836291760,
+			"XPGrants": {
+				"GamePlayed": 800,
+				"GameWon": 0,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 48000,
+					"TotalXPAfter": 48800
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 319000,
+					"TotalXPAfter": 319800
+				}
+			},
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "17c0c9b4-5fd5-4473-a933-489dcd0239e5",
+			"StartTime": 1619836764005,
+			"XPGrants": {
+				"GamePlayed": 800,
+				"GameWon": 200,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 48800,
+					"TotalXPAfter": 49800
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 319800,
+					"TotalXPAfter": 320800
+				}
+			},
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "e1a41726-6d8b-4a48-ab39-42a4e474c4b3",
+			"StartTime": 1619917949430,
+			"XPGrants": {
+				"GamePlayed": 900,
+				"GameWon": 0,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 49800,
+					"TotalXPAfter": 50700
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 320800,
+					"TotalXPAfter": 321700
+				}
+			},
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "bd72f8cf-0a70-40f8-9683-157dc2a3da9c",
+			"StartTime": 1619918469546,
+			"XPGrants": {
+				"GamePlayed": 0,
+				"GameWon": 0,
+				"RoundPlayed": 1800,
+				"RoundWon": 1000,
+				"Missions": {
+					"86f9a9af-452e-44ec-9f33-6c94f1c4fac6": 2000,
+					"f81129ee-4bb9-27dc-8011-0e8c1e7f6d26": 2000
+				},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"EntitlementRewards": [
+						{
+							"ItemTypeID": "3f296c07-64c3-494c-923b-fe692a4fa1bd",
+							"ItemID": "fd4d518f-4760-33b8-7265-9794ceadba16",
+							"Amount": 1
+						}
+					],
+					"WalletRewards": [],
+					"CounterRewards": null
+				}
+			},
+			"MissionDeltas": {
+				"86f9a9af-452e-44ec-9f33-6c94f1c4fac6": {
+					"ID": "86f9a9af-452e-44ec-9f33-6c94f1c4fac6",
+					"Objectives": {
+						"7f9c2b4b-4c91-c73a-9a45-b98b1a4ef1c9": 15
+					},
+					"ObjectiveDeltas": {
+						"7f9c2b4b-4c91-c73a-9a45-b98b1a4ef1c9": {
+							"ID": "7f9c2b4b-4c91-c73a-9a45-b98b1a4ef1c9",
+							"ProgressBefore": 0,
+							"ProgressAfter": 15
+						}
+					}
+				},
+				"95016be3-4426-0fb9-2847-bb8d51965db9": {
+					"ID": "95016be3-4426-0fb9-2847-bb8d51965db9",
+					"Objectives": {
+						"974cb6ff-4aef-0217-1813-73a28ddfcdc6": 3209
+					},
+					"ObjectiveDeltas": {
+						"974cb6ff-4aef-0217-1813-73a28ddfcdc6": {
+							"ID": "974cb6ff-4aef-0217-1813-73a28ddfcdc6",
+							"ProgressBefore": 11261,
+							"ProgressAfter": 14470
+						}
+					}
+				},
+				"abe3773f-48f7-7474-38ba-61b400d649a5": {
+					"ID": "abe3773f-48f7-7474-38ba-61b400d649a5",
+					"Objectives": {
+						"16af3bdf-c353-4c8c-a47c-b4eeac154eaf": 1
+					},
+					"ObjectiveDeltas": {
+						"16af3bdf-c353-4c8c-a47c-b4eeac154eaf": {
+							"ID": "16af3bdf-c353-4c8c-a47c-b4eeac154eaf",
+							"ProgressBefore": 5,
+							"ProgressAfter": 6
+						}
+					}
+				},
+				"f81129ee-4bb9-27dc-8011-0e8c1e7f6d26": {
+					"ID": "f81129ee-4bb9-27dc-8011-0e8c1e7f6d26",
+					"Objectives": {
+						"c0afc6aa-4a89-a97b-e580-d29d213996f0": 25
+					},
+					"ObjectiveDeltas": {
+						"c0afc6aa-4a89-a97b-e580-d29d213996f0": {
+							"ID": "c0afc6aa-4a89-a97b-e580-d29d213996f0",
+							"ProgressBefore": 0,
+							"ProgressAfter": 25
+						}
+					}
+				}
+			},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 50700,
+					"TotalXPAfter": 57500
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 321700,
+					"TotalXPAfter": 328500
+				}
+			},
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "bd7ee5ba-af19-4203-a517-3cbc957ec196",
+			"StartTime": 1619920575368,
+			"XPGrants": {
+				"GamePlayed": 1000,
+				"GameWon": 0,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {
+				"95016be3-4426-0fb9-2847-bb8d51965db9": {
+					"ID": "95016be3-4426-0fb9-2847-bb8d51965db9",
+					"Objectives": {
+						"974cb6ff-4aef-0217-1813-73a28ddfcdc6": 421
+					},
+					"ObjectiveDeltas": {
+						"974cb6ff-4aef-0217-1813-73a28ddfcdc6": {
+							"ID": "974cb6ff-4aef-0217-1813-73a28ddfcdc6",
+							"ProgressBefore": 14470,
+							"ProgressAfter": 14891
+						}
+					}
+				},
+				"abe3773f-48f7-7474-38ba-61b400d649a5": {
+					"ID": "abe3773f-48f7-7474-38ba-61b400d649a5",
+					"Objectives": {
+						"16af3bdf-c353-4c8c-a47c-b4eeac154eaf": 1
+					},
+					"ObjectiveDeltas": {
+						"16af3bdf-c353-4c8c-a47c-b4eeac154eaf": {
+							"ID": "16af3bdf-c353-4c8c-a47c-b4eeac154eaf",
+							"ProgressBefore": 6,
+							"ProgressAfter": 7
+						}
+					}
+				}
+			},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 57500,
+					"TotalXPAfter": 58500
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 328500,
+					"TotalXPAfter": 329500
+				}
+			},
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "1cd1a70d-5770-42b1-b6f8-180d8bdee004",
+			"StartTime": 1619921067413,
+			"XPGrants": {
+				"GamePlayed": 1000,
+				"GameWon": 0,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {
+				"95016be3-4426-0fb9-2847-bb8d51965db9": {
+					"ID": "95016be3-4426-0fb9-2847-bb8d51965db9",
+					"Objectives": {
+						"974cb6ff-4aef-0217-1813-73a28ddfcdc6": 156
+					},
+					"ObjectiveDeltas": {
+						"974cb6ff-4aef-0217-1813-73a28ddfcdc6": {
+							"ID": "974cb6ff-4aef-0217-1813-73a28ddfcdc6",
+							"ProgressBefore": 14891,
+							"ProgressAfter": 15047
+						}
+					}
+				},
+				"abe3773f-48f7-7474-38ba-61b400d649a5": {
+					"ID": "abe3773f-48f7-7474-38ba-61b400d649a5",
+					"Objectives": {
+						"16af3bdf-c353-4c8c-a47c-b4eeac154eaf": 1
+					},
+					"ObjectiveDeltas": {
+						"16af3bdf-c353-4c8c-a47c-b4eeac154eaf": {
+							"ID": "16af3bdf-c353-4c8c-a47c-b4eeac154eaf",
+							"ProgressBefore": 7,
+							"ProgressAfter": 8
+						}
+					}
+				}
+			},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 58500,
+					"TotalXPAfter": 59500
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 329500,
+					"TotalXPAfter": 330500
+				}
+			},
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "0519faad-8b3b-4bf3-a17f-179909705507",
+			"StartTime": 1619921438649,
+			"XPGrants": {
+				"GamePlayed": 800,
+				"GameWon": 200,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 59500,
+					"TotalXPAfter": 60500
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 330500,
+					"TotalXPAfter": 331500
+				}
+			},
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "571e0c6a-f1e0-45a5-bf93-b40627fd115c",
+			"StartTime": 1619959995900,
+			"XPGrants": {
+				"GamePlayed": 800,
+				"GameWon": 0,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 60500,
+					"TotalXPAfter": 61300
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 331500,
+					"TotalXPAfter": 332300
+				}
+			},
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "6151b023-ae2f-40f5-8ce0-5854f5567b53",
+			"StartTime": 1619960656480,
+			"XPGrants": {
+				"GamePlayed": 1000,
+				"GameWon": 0,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {
+				"8944e8b4-4fc5-b05c-08df-58bf76b56b9f": {
+					"ID": "8944e8b4-4fc5-b05c-08df-58bf76b56b9f",
+					"Objectives": {
+						"04ff6167-4976-eeb3-3e66-a78c57164351": 1
+					},
+					"ObjectiveDeltas": {
+						"04ff6167-4976-eeb3-3e66-a78c57164351": {
+							"ID": "04ff6167-4976-eeb3-3e66-a78c57164351",
+							"ProgressBefore": 0,
+							"ProgressAfter": 1
+						}
+					}
+				},
+				"95016be3-4426-0fb9-2847-bb8d51965db9": {
+					"ID": "95016be3-4426-0fb9-2847-bb8d51965db9",
+					"Objectives": {
+						"974cb6ff-4aef-0217-1813-73a28ddfcdc6": 137
+					},
+					"ObjectiveDeltas": {
+						"974cb6ff-4aef-0217-1813-73a28ddfcdc6": {
+							"ID": "974cb6ff-4aef-0217-1813-73a28ddfcdc6",
+							"ProgressBefore": 15047,
+							"ProgressAfter": 15184
+						}
+					}
+				},
+				"abe3773f-48f7-7474-38ba-61b400d649a5": {
+					"ID": "abe3773f-48f7-7474-38ba-61b400d649a5",
+					"Objectives": {
+						"16af3bdf-c353-4c8c-a47c-b4eeac154eaf": 1
+					},
+					"ObjectiveDeltas": {
+						"16af3bdf-c353-4c8c-a47c-b4eeac154eaf": {
+							"ID": "16af3bdf-c353-4c8c-a47c-b4eeac154eaf",
+							"ProgressBefore": 8,
+							"ProgressAfter": 9
+						}
+					}
+				}
+			},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 61300,
+					"TotalXPAfter": 62300
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 332300,
+					"TotalXPAfter": 333300
+				}
+			},
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "16c0c0ec-d65f-499c-acca-7291e1f9f612",
+			"StartTime": 1619961196337,
+			"XPGrants": {
+				"GamePlayed": 1000,
+				"GameWon": 0,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {
+					"abe3773f-48f7-7474-38ba-61b400d649a5": 12800
+				},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"EntitlementRewards": [
+						{
+							"ItemTypeID": "d5f120f8-ff8c-4aac-92ea-f2b5acbe9475",
+							"ItemID": "4352547a-41de-277c-6083-0ea12bf04ff6",
+							"Amount": 1
+						}
+					],
+					"WalletRewards": [
+						{
+							"CurrencyID": "e59aa87c-4cbf-517a-5983-6e81511be9b7",
+							"Amount": 10
+						}
+					],
+					"CounterRewards": null
+				}
+			},
+			"MissionDeltas": {
+				"95016be3-4426-0fb9-2847-bb8d51965db9": {
+					"ID": "95016be3-4426-0fb9-2847-bb8d51965db9",
+					"Objectives": {
+						"974cb6ff-4aef-0217-1813-73a28ddfcdc6": 104
+					},
+					"ObjectiveDeltas": {
+						"974cb6ff-4aef-0217-1813-73a28ddfcdc6": {
+							"ID": "974cb6ff-4aef-0217-1813-73a28ddfcdc6",
+							"ProgressBefore": 15184,
+							"ProgressAfter": 15288
+						}
+					}
+				},
+				"abe3773f-48f7-7474-38ba-61b400d649a5": {
+					"ID": "abe3773f-48f7-7474-38ba-61b400d649a5",
+					"Objectives": {
+						"16af3bdf-c353-4c8c-a47c-b4eeac154eaf": 1
+					},
+					"ObjectiveDeltas": {
+						"16af3bdf-c353-4c8c-a47c-b4eeac154eaf": {
+							"ID": "16af3bdf-c353-4c8c-a47c-b4eeac154eaf",
+							"ProgressBefore": 9,
+							"ProgressAfter": 10
+						}
+					}
+				}
+			},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 62300,
+					"TotalXPAfter": 76100
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 333300,
+					"TotalXPAfter": 347100
+				}
+			},
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "30a069c7-a9c5-41fa-a47b-63a206d0695f",
+			"StartTime": 1619961704292,
+			"XPGrants": {
+				"GamePlayed": 900,
+				"GameWon": 0,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 76100,
+					"TotalXPAfter": 77000
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 347100,
+					"TotalXPAfter": 348000
+				}
+			},
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "8cd495f4-7303-4686-8fc7-6174d0334fbc",
+			"StartTime": 1619963216992,
+			"XPGrants": {
+				"GamePlayed": 900,
+				"GameWon": 0,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 77000,
+					"TotalXPAfter": 77900
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 348000,
+					"TotalXPAfter": 348900
+				}
+			},
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "902bc07f-5514-4bed-ac17-14495090ba50",
+			"StartTime": 1619963841256,
+			"XPGrants": {
+				"GamePlayed": 0,
+				"GameWon": 0,
+				"RoundPlayed": 2100,
+				"RoundWon": 2600,
+				"Missions": {
+					"8944e8b4-4fc5-b05c-08df-58bf76b56b9f": 2000,
+					"95016be3-4426-0fb9-2847-bb8d51965db9": 12800
+				},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"EntitlementRewards": [
+						{
+							"ItemTypeID": "de7caa6b-adf7-4588-bbd1-143831e786c6",
+							"ItemID": "21dda67e-46d9-081d-0436-fc93fbb1331d",
+							"Amount": 1
+						},
+						{
+							"ItemTypeID": "dd3bf334-87f3-40bd-b043-682a57a8dc3a",
+							"ItemID": "f7005d97-4328-d473-dbb5-068a192f4f3a",
+							"Amount": 2
+						},
+						{
+							"ItemTypeID": "e7c63390-eda7-46e0-bb7a-a6abdacd2433",
+							"ItemID": "3e20522c-42ba-797e-b469-da88b5de7505",
+							"Amount": 1
+						}
+					],
+					"WalletRewards": [
+						{
+							"CurrencyID": "e59aa87c-4cbf-517a-5983-6e81511be9b7",
+							"Amount": 10
+						}
+					],
+					"CounterRewards": null
+				}
+			},
+			"MissionDeltas": {
+				"2ec38f99-46c2-b1ba-69aa-74b86c1289a9": {
+					"ID": "2ec38f99-46c2-b1ba-69aa-74b86c1289a9",
+					"Objectives": {
+						"38fd944b-4d80-33c8-0054-6db0f656dc5c": 15
+					},
+					"ObjectiveDeltas": {
+						"38fd944b-4d80-33c8-0054-6db0f656dc5c": {
+							"ID": "38fd944b-4d80-33c8-0054-6db0f656dc5c",
+							"ProgressBefore": 0,
+							"ProgressAfter": 15
+						}
+					}
+				},
+				"8944e8b4-4fc5-b05c-08df-58bf76b56b9f": {
+					"ID": "8944e8b4-4fc5-b05c-08df-58bf76b56b9f",
+					"Objectives": {
+						"04ff6167-4976-eeb3-3e66-a78c57164351": 4
+					},
+					"ObjectiveDeltas": {
+						"04ff6167-4976-eeb3-3e66-a78c57164351": {
+							"ID": "04ff6167-4976-eeb3-3e66-a78c57164351",
+							"ProgressBefore": 1,
+							"ProgressAfter": 5
+						}
+					}
+				},
+				"95016be3-4426-0fb9-2847-bb8d51965db9": {
+					"ID": "95016be3-4426-0fb9-2847-bb8d51965db9",
+					"Objectives": {
+						"974cb6ff-4aef-0217-1813-73a28ddfcdc6": 2712
+					},
+					"ObjectiveDeltas": {
+						"974cb6ff-4aef-0217-1813-73a28ddfcdc6": {
+							"ID": "974cb6ff-4aef-0217-1813-73a28ddfcdc6",
+							"ProgressBefore": 15288,
+							"ProgressAfter": 18000
+						}
+					}
+				}
+			},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 77900,
+					"TotalXPAfter": 97400
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 348900,
+					"TotalXPAfter": 368400
+				}
+			},
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "f47e8feb-5d19-4bc0-ba4d-b2b5c5eb388a",
+			"StartTime": 1619994766547,
+			"XPGrants": {
+				"GamePlayed": 900,
+				"GameWon": 0,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 97400,
+					"TotalXPAfter": 98300
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 368400,
+					"TotalXPAfter": 369300
+				}
+			},
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "f4769e69-37a1-4116-89b5-c50e8966b77a",
+			"StartTime": 1619995564957,
+			"XPGrants": {
+				"GamePlayed": 900,
+				"GameWon": 0,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 98300,
+					"TotalXPAfter": 99200
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 369300,
+					"TotalXPAfter": 370200
+				}
+			},
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "1a0ca1fa-5f7a-4059-80a4-bb0569847019",
+			"StartTime": 1619996178461,
+			"XPGrants": {
+				"GamePlayed": 0,
+				"GameWon": 0,
+				"RoundPlayed": 2300,
+				"RoundWon": 2000,
+				"Missions": {
+					"2ec38f99-46c2-b1ba-69aa-74b86c1289a9": 2000
+				},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"EntitlementRewards": [
+						{
+							"ItemTypeID": "d5f120f8-ff8c-4aac-92ea-f2b5acbe9475",
+							"ItemID": "a05c50b7-4a1d-c2de-e1e7-ac8a7730daa4",
+							"Amount": 1
+						}
+					],
+					"WalletRewards": [],
+					"CounterRewards": null
+				}
+			},
+			"MissionDeltas": {
+				"2ec38f99-46c2-b1ba-69aa-74b86c1289a9": {
+					"ID": "2ec38f99-46c2-b1ba-69aa-74b86c1289a9",
+					"Objectives": {
+						"38fd944b-4d80-33c8-0054-6db0f656dc5c": 5
+					},
+					"ObjectiveDeltas": {
+						"38fd944b-4d80-33c8-0054-6db0f656dc5c": {
+							"ID": "38fd944b-4d80-33c8-0054-6db0f656dc5c",
+							"ProgressBefore": 15,
+							"ProgressAfter": 20
+						}
+					}
+				}
+			},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 99200,
+					"TotalXPAfter": 105500
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 370200,
+					"TotalXPAfter": 376500
+				}
+			},
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "c1c844fd-a5dc-4caa-b24f-665c4116a9f5",
+			"StartTime": 1619998319864,
+			"XPGrants": {
+				"GamePlayed": 800,
+				"GameWon": 200,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 105500,
+					"TotalXPAfter": 106500
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 376500,
+					"TotalXPAfter": 377500
+				}
+			},
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "6415bec5-5a58-4e9f-8875-fe3387c3c95c",
+			"StartTime": 1620083235597,
+			"XPGrants": {
+				"GamePlayed": 900,
+				"GameWon": 0,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 106500,
+					"TotalXPAfter": 107400
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 377500,
+					"TotalXPAfter": 378400
+				}
+			},
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "3bb1d4c6-721f-4bc1-a9ed-6945d7946696",
+			"StartTime": 1620084069568,
+			"XPGrants": {
+				"GamePlayed": 0,
+				"GameWon": 0,
+				"RoundPlayed": 2100,
+				"RoundWon": 1600,
+				"Missions": {
+					"c235e459-4917-8013-6737-deac9ae34386": 2000
+				},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"EntitlementRewards": [
+						{
+							"ItemTypeID": "e7c63390-eda7-46e0-bb7a-a6abdacd2433",
+							"ItemID": "23885a08-4a77-82a7-5dbc-ec812f252ca0",
+							"Amount": 1
+						}
+					],
+					"WalletRewards": [],
+					"CounterRewards": null
+				}
+			},
+			"MissionDeltas": {
+				"c235e459-4917-8013-6737-deac9ae34386": {
+					"ID": "c235e459-4917-8013-6737-deac9ae34386",
+					"Objectives": {
+						"4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b": 10
+					},
+					"ObjectiveDeltas": {
+						"4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b": {
+							"ID": "4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b",
+							"ProgressBefore": 0,
+							"ProgressAfter": 10
+						}
+					}
+				}
+			},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 107400,
+					"TotalXPAfter": 113100
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 378400,
+					"TotalXPAfter": 384100
+				}
+			},
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "92d332c8-3292-4ac6-978b-fe015f5fd939",
+			"StartTime": 1620086811986,
+			"XPGrants": {
+				"GamePlayed": 800,
+				"GameWon": 200,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 113100,
+					"TotalXPAfter": 114100
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 384100,
+					"TotalXPAfter": 385100
+				}
+			},
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "8785633e-2279-4412-b339-34fbb50ac772",
+			"StartTime": 1620087361522,
+			"XPGrants": {
+				"GamePlayed": 0,
+				"GameWon": 0,
+				"RoundPlayed": 1700,
+				"RoundWon": 2600,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 114100,
+					"TotalXPAfter": 118400
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 385100,
+					"TotalXPAfter": 389400
+				}
+			},
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "7ecaae3e-e69f-4f04-b3c7-825ed4ce66d7",
+			"StartTime": 1620089385131,
+			"XPGrants": {
+				"GamePlayed": 800,
+				"GameWon": 200,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 118400,
+					"TotalXPAfter": 119400
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 389400,
+					"TotalXPAfter": 390400
+				}
+			},
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "2bd27af0-a5ad-4007-90a3-151f9d5ccc0d",
+			"StartTime": 1620167541091,
+			"XPGrants": {
+				"GamePlayed": 900,
+				"GameWon": 0,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 119400,
+					"TotalXPAfter": 120300
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 390400,
+					"TotalXPAfter": 391300
+				}
+			},
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "031e4218-545e-44e4-83df-643ff7b71d21",
+			"StartTime": 1620168315825,
+			"XPGrants": {
+				"GamePlayed": 0,
+				"GameWon": 0,
+				"RoundPlayed": 1900,
+				"RoundWon": 1200,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"EntitlementRewards": [
+						{
+							"ItemTypeID": "3f296c07-64c3-494c-923b-fe692a4fa1bd",
+							"ItemID": "b5d420c1-44d8-350c-3f7a-5abb885b2f93",
+							"Amount": 1
+						}
+					],
+					"WalletRewards": [],
+					"CounterRewards": null
+				}
+			},
+			"MissionDeltas": {
+				"c3603d86-4ac3-2999-d500-e19ec8bc0998": {
+					"ID": "c3603d86-4ac3-2999-d500-e19ec8bc0998",
+					"Objectives": {
+						"5c22a5ad-4d44-3451-5a09-589c35ff77cd": 3
+					},
+					"ObjectiveDeltas": {
+						"5c22a5ad-4d44-3451-5a09-589c35ff77cd": {
+							"ID": "5c22a5ad-4d44-3451-5a09-589c35ff77cd",
+							"ProgressBefore": 0,
+							"ProgressAfter": 3
+						}
+					}
+				}
+			},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 120300,
+					"TotalXPAfter": 123400
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 391300,
+					"TotalXPAfter": 394400
+				}
+			},
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "98490f89-3488-4c45-96a4-c67bd3ed094b",
+			"StartTime": 1620171183713,
+			"XPGrants": {
+				"GamePlayed": 1000,
+				"GameWon": 0,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {
+					"8f183032-4ba1-b6a2-0574-e0ab6098a08f": 2000,
+					"c3603d86-4ac3-2999-d500-e19ec8bc0998": 2000
+				},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {
+				"8f183032-4ba1-b6a2-0574-e0ab6098a08f": {
+					"ID": "8f183032-4ba1-b6a2-0574-e0ab6098a08f",
+					"Objectives": {
+						"c807ef27-420a-69f2-3c0f-31bf8922ba6f": 1
+					},
+					"ObjectiveDeltas": {
+						"c807ef27-420a-69f2-3c0f-31bf8922ba6f": {
+							"ID": "c807ef27-420a-69f2-3c0f-31bf8922ba6f",
+							"ProgressBefore": 0,
+							"ProgressAfter": 1
+						}
+					}
+				},
+				"c3603d86-4ac3-2999-d500-e19ec8bc0998": {
+					"ID": "c3603d86-4ac3-2999-d500-e19ec8bc0998",
+					"Objectives": {
+						"5c22a5ad-4d44-3451-5a09-589c35ff77cd": 2
+					},
+					"ObjectiveDeltas": {
+						"5c22a5ad-4d44-3451-5a09-589c35ff77cd": {
+							"ID": "5c22a5ad-4d44-3451-5a09-589c35ff77cd",
+							"ProgressBefore": 3,
+							"ProgressAfter": 5
+						}
+					}
+				}
+			},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 123400,
+					"TotalXPAfter": 128400
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 394400,
+					"TotalXPAfter": 399400
+				}
+			},
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "7a91e2db-48c6-4e06-8d8a-ee426a07aa09",
+			"StartTime": 1620251513333,
+			"XPGrants": {
+				"GamePlayed": 900,
+				"GameWon": 0,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 128400,
+					"TotalXPAfter": 129300
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 399400,
+					"TotalXPAfter": 400300
+				}
+			},
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "7aa58313-5ded-44fe-a16c-da0a8a797681",
+			"StartTime": 1620251989839,
+			"XPGrants": {
+				"GamePlayed": 900,
+				"GameWon": 0,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 129300,
+					"TotalXPAfter": 130200
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 400300,
+					"TotalXPAfter": 401200
+				}
+			},
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "c9c7269a-7b54-47fd-afae-5e7087bf2a7b",
+			"StartTime": 1620252560385,
+			"XPGrants": {
+				"GamePlayed": 0,
+				"GameWon": 0,
+				"RoundPlayed": 900,
+				"RoundWon": 200,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {
+				"119e257a-43ca-62ce-e3df-c1b557b5a161": {
+					"ID": "119e257a-43ca-62ce-e3df-c1b557b5a161",
+					"Objectives": {
+						"04ff6167-4976-eeb3-3e66-a78c57164351": 4
+					},
+					"ObjectiveDeltas": {
+						"04ff6167-4976-eeb3-3e66-a78c57164351": {
+							"ID": "04ff6167-4976-eeb3-3e66-a78c57164351",
+							"ProgressBefore": 0,
+							"ProgressAfter": 4
+						}
+					}
+				},
+				"34dea042-4fac-37ca-0732-38852d5f05c4": {
+					"ID": "34dea042-4fac-37ca-0732-38852d5f05c4",
+					"Objectives": {
+						"5c22a5ad-4d44-3451-5a09-589c35ff77cd": 2
+					},
+					"ObjectiveDeltas": {
+						"5c22a5ad-4d44-3451-5a09-589c35ff77cd": {
+							"ID": "5c22a5ad-4d44-3451-5a09-589c35ff77cd",
+							"ProgressBefore": 0,
+							"ProgressAfter": 2
+						}
+					}
+				},
+				"8944e8b4-4fc5-b05c-08df-58bf76b56b9f": {
+					"ID": "8944e8b4-4fc5-b05c-08df-58bf76b56b9f",
+					"Objectives": {
+						"04ff6167-4976-eeb3-3e66-a78c57164351": 4
+					},
+					"ObjectiveDeltas": {
+						"04ff6167-4976-eeb3-3e66-a78c57164351": {
+							"ID": "04ff6167-4976-eeb3-3e66-a78c57164351",
+							"ProgressBefore": 0,
+							"ProgressAfter": 4
+						}
+					}
+				}
+			},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 130200,
+					"TotalXPAfter": 131300
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 401200,
+					"TotalXPAfter": 402300
+				}
+			},
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "9c548bd5-ed5b-44cc-ace0-96d63972cfd9",
+			"StartTime": 1620255227187,
+			"XPGrants": {
+				"GamePlayed": 900,
+				"GameWon": 0,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 131300,
+					"TotalXPAfter": 132200
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 402300,
+					"TotalXPAfter": 403200
+				}
+			},
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "754dc7a1-c687-4f9b-b401-a2dacef60382",
+			"StartTime": 1620255814610,
+			"XPGrants": {
+				"GamePlayed": 0,
+				"GameWon": 0,
+				"RoundPlayed": 2200,
+				"RoundWon": 2600,
+				"Missions": {
+					"12197b90-42de-0587-dfdb-e28664ebe04b": 2000,
+					"8944e8b4-4fc5-b05c-08df-58bf76b56b9f": 2000
+				},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"EntitlementRewards": [
+						{
+							"ItemTypeID": "d5f120f8-ff8c-4aac-92ea-f2b5acbe9475",
+							"ItemID": "9edcb43d-4102-0dfc-3784-19a927a76968",
+							"Amount": 1
+						}
+					],
+					"WalletRewards": [],
+					"CounterRewards": null
+				}
+			},
+			"MissionDeltas": {
+				"119e257a-43ca-62ce-e3df-c1b557b5a161": {
+					"ID": "119e257a-43ca-62ce-e3df-c1b557b5a161",
+					"Objectives": {
+						"04ff6167-4976-eeb3-3e66-a78c57164351": 10
+					},
+					"ObjectiveDeltas": {
+						"04ff6167-4976-eeb3-3e66-a78c57164351": {
+							"ID": "04ff6167-4976-eeb3-3e66-a78c57164351",
+							"ProgressBefore": 4,
+							"ProgressAfter": 14
+						}
+					}
+				},
+				"12197b90-42de-0587-dfdb-e28664ebe04b": {
+					"ID": "12197b90-42de-0587-dfdb-e28664ebe04b",
+					"Objectives": {
+						"2ae3fca1-4695-2464-7aba-76ab739f573a": 1
+					},
+					"ObjectiveDeltas": {
+						"2ae3fca1-4695-2464-7aba-76ab739f573a": {
+							"ID": "2ae3fca1-4695-2464-7aba-76ab739f573a",
+							"ProgressBefore": 0,
+							"ProgressAfter": 1
+						}
+					}
+				},
+				"34dea042-4fac-37ca-0732-38852d5f05c4": {
+					"ID": "34dea042-4fac-37ca-0732-38852d5f05c4",
+					"Objectives": {
+						"5c22a5ad-4d44-3451-5a09-589c35ff77cd": 3
+					},
+					"ObjectiveDeltas": {
+						"5c22a5ad-4d44-3451-5a09-589c35ff77cd": {
+							"ID": "5c22a5ad-4d44-3451-5a09-589c35ff77cd",
+							"ProgressBefore": 2,
+							"ProgressAfter": 5
+						}
+					}
+				},
+				"8944e8b4-4fc5-b05c-08df-58bf76b56b9f": {
+					"ID": "8944e8b4-4fc5-b05c-08df-58bf76b56b9f",
+					"Objectives": {
+						"04ff6167-4976-eeb3-3e66-a78c57164351": 1
+					},
+					"ObjectiveDeltas": {
+						"04ff6167-4976-eeb3-3e66-a78c57164351": {
+							"ID": "04ff6167-4976-eeb3-3e66-a78c57164351",
+							"ProgressBefore": 4,
+							"ProgressAfter": 5
+						}
+					}
+				},
+				"b72e4ef5-45ae-be4d-9904-919feb5385ce": {
+					"ID": "b72e4ef5-45ae-be4d-9904-919feb5385ce",
+					"Objectives": {
+						"a617b28c-4ad2-04f6-736e-2eb01a903417": 9
+					},
+					"ObjectiveDeltas": {
+						"a617b28c-4ad2-04f6-736e-2eb01a903417": {
+							"ID": "a617b28c-4ad2-04f6-736e-2eb01a903417",
+							"ProgressBefore": 0,
+							"ProgressAfter": 9
+						}
+					}
+				}
+			},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 132200,
+					"TotalXPAfter": 141000
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 403200,
+					"TotalXPAfter": 412000
+				}
+			},
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "cb1c5695-907e-408a-9c6c-86555afcad96",
+			"StartTime": 1620258267086,
+			"XPGrants": {
+				"GamePlayed": 1000,
+				"GameWon": 0,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {
+				"119e257a-43ca-62ce-e3df-c1b557b5a161": {
+					"ID": "119e257a-43ca-62ce-e3df-c1b557b5a161",
+					"Objectives": {
+						"04ff6167-4976-eeb3-3e66-a78c57164351": 1
+					},
+					"ObjectiveDeltas": {
+						"04ff6167-4976-eeb3-3e66-a78c57164351": {
+							"ID": "04ff6167-4976-eeb3-3e66-a78c57164351",
+							"ProgressBefore": 14,
+							"ProgressAfter": 15
+						}
+					}
+				},
+				"34dea042-4fac-37ca-0732-38852d5f05c4": {
+					"ID": "34dea042-4fac-37ca-0732-38852d5f05c4",
+					"Objectives": {
+						"5c22a5ad-4d44-3451-5a09-589c35ff77cd": 3
+					},
+					"ObjectiveDeltas": {
+						"5c22a5ad-4d44-3451-5a09-589c35ff77cd": {
+							"ID": "5c22a5ad-4d44-3451-5a09-589c35ff77cd",
+							"ProgressBefore": 5,
+							"ProgressAfter": 8
+						}
+					}
+				},
+				"b72e4ef5-45ae-be4d-9904-919feb5385ce": {
+					"ID": "b72e4ef5-45ae-be4d-9904-919feb5385ce",
+					"Objectives": {
+						"a617b28c-4ad2-04f6-736e-2eb01a903417": 2
+					},
+					"ObjectiveDeltas": {
+						"a617b28c-4ad2-04f6-736e-2eb01a903417": {
+							"ID": "a617b28c-4ad2-04f6-736e-2eb01a903417",
+							"ProgressBefore": 9,
+							"ProgressAfter": 11
+						}
+					}
+				}
+			},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 141000,
+					"TotalXPAfter": 142000
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 412000,
+					"TotalXPAfter": 413000
+				}
+			},
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "610c03b3-717c-4df0-a7de-0d275fecb3a0",
+			"StartTime": 1620344038881,
+			"XPGrants": {
+				"GamePlayed": 900,
+				"GameWon": 0,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 142000,
+					"TotalXPAfter": 142900
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 413000,
+					"TotalXPAfter": 413900
+				}
+			},
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "452c33ee-f605-43a1-bf1f-ee45b1757c58",
+			"StartTime": 1620344694943,
+			"XPGrants": {
+				"GamePlayed": 0,
+				"GameWon": 0,
+				"RoundPlayed": 2300,
+				"RoundWon": 2600,
+				"Missions": {
+					"b72e4ef5-45ae-be4d-9904-919feb5385ce": 12800,
+					"bbff3898-4cd3-dd04-1509-179cf9003e9e": 2000
+				},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"EntitlementRewards": [],
+					"WalletRewards": [
+						{
+							"CurrencyID": "e59aa87c-4cbf-517a-5983-6e81511be9b7",
+							"Amount": 10
+						}
+					],
+					"CounterRewards": null
+				}
+			},
+			"MissionDeltas": {
+				"119e257a-43ca-62ce-e3df-c1b557b5a161": {
+					"ID": "119e257a-43ca-62ce-e3df-c1b557b5a161",
+					"Objectives": {
+						"04ff6167-4976-eeb3-3e66-a78c57164351": 9
+					},
+					"ObjectiveDeltas": {
+						"04ff6167-4976-eeb3-3e66-a78c57164351": {
+							"ID": "04ff6167-4976-eeb3-3e66-a78c57164351",
+							"ProgressBefore": 15,
+							"ProgressAfter": 24
+						}
+					}
+				},
+				"2ec38f99-46c2-b1ba-69aa-74b86c1289a9": {
+					"ID": "2ec38f99-46c2-b1ba-69aa-74b86c1289a9",
+					"Objectives": {
+						"38fd944b-4d80-33c8-0054-6db0f656dc5c": 12
+					},
+					"ObjectiveDeltas": {
+						"38fd944b-4d80-33c8-0054-6db0f656dc5c": {
+							"ID": "38fd944b-4d80-33c8-0054-6db0f656dc5c",
+							"ProgressBefore": 0,
+							"ProgressAfter": 12
+						}
+					}
+				},
+				"34dea042-4fac-37ca-0732-38852d5f05c4": {
+					"ID": "34dea042-4fac-37ca-0732-38852d5f05c4",
+					"Objectives": {
+						"5c22a5ad-4d44-3451-5a09-589c35ff77cd": 4
+					},
+					"ObjectiveDeltas": {
+						"5c22a5ad-4d44-3451-5a09-589c35ff77cd": {
+							"ID": "5c22a5ad-4d44-3451-5a09-589c35ff77cd",
+							"ProgressBefore": 8,
+							"ProgressAfter": 12
+						}
+					}
+				},
+				"b72e4ef5-45ae-be4d-9904-919feb5385ce": {
+					"ID": "b72e4ef5-45ae-be4d-9904-919feb5385ce",
+					"Objectives": {
+						"a617b28c-4ad2-04f6-736e-2eb01a903417": 9
+					},
+					"ObjectiveDeltas": {
+						"a617b28c-4ad2-04f6-736e-2eb01a903417": {
+							"ID": "a617b28c-4ad2-04f6-736e-2eb01a903417",
+							"ProgressBefore": 11,
+							"ProgressAfter": 20
+						}
+					}
+				},
+				"bbff3898-4cd3-dd04-1509-179cf9003e9e": {
+					"ID": "bbff3898-4cd3-dd04-1509-179cf9003e9e",
+					"Objectives": {
+						"2de44730-437a-bbe5-74c6-57b581b72bd2": 30
+					},
+					"ObjectiveDeltas": {
+						"2de44730-437a-bbe5-74c6-57b581b72bd2": {
+							"ID": "2de44730-437a-bbe5-74c6-57b581b72bd2",
+							"ProgressBefore": 0,
+							"ProgressAfter": 30
+						}
+					}
+				}
+			},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 142900,
+					"TotalXPAfter": 162600
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 413900,
+					"TotalXPAfter": 433600
+				}
+			},
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "be59acfb-b54a-4566-89b9-09c340a03d56",
+			"StartTime": 1620348052593,
+			"XPGrants": {
+				"GamePlayed": 0,
+				"GameWon": 0,
+				"RoundPlayed": 2300,
+				"RoundWon": 2000,
+				"Missions": {
+					"2ec38f99-46c2-b1ba-69aa-74b86c1289a9": 2000
+				},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"EntitlementRewards": [
+						{
+							"ItemTypeID": "d5f120f8-ff8c-4aac-92ea-f2b5acbe9475",
+							"ItemID": "fd92bdcd-4ae8-861e-843a-05a8113a4d11",
+							"Amount": 1
+						},
+						{
+							"ItemTypeID": "e7c63390-eda7-46e0-bb7a-a6abdacd2433",
+							"ItemID": "6a1cd98a-4248-4b67-8ced-ac9c56fb4630",
+							"Amount": 1
+						}
+					],
+					"WalletRewards": [],
+					"CounterRewards": null
+				}
+			},
+			"MissionDeltas": {
+				"119e257a-43ca-62ce-e3df-c1b557b5a161": {
+					"ID": "119e257a-43ca-62ce-e3df-c1b557b5a161",
+					"Objectives": {
+						"04ff6167-4976-eeb3-3e66-a78c57164351": 15
+					},
+					"ObjectiveDeltas": {
+						"04ff6167-4976-eeb3-3e66-a78c57164351": {
+							"ID": "04ff6167-4976-eeb3-3e66-a78c57164351",
+							"ProgressBefore": 24,
+							"ProgressAfter": 39
+						}
+					}
+				},
+				"2ec38f99-46c2-b1ba-69aa-74b86c1289a9": {
+					"ID": "2ec38f99-46c2-b1ba-69aa-74b86c1289a9",
+					"Objectives": {
+						"38fd944b-4d80-33c8-0054-6db0f656dc5c": 8
+					},
+					"ObjectiveDeltas": {
+						"38fd944b-4d80-33c8-0054-6db0f656dc5c": {
+							"ID": "38fd944b-4d80-33c8-0054-6db0f656dc5c",
+							"ProgressBefore": 12,
+							"ProgressAfter": 20
+						}
+					}
+				},
+				"34dea042-4fac-37ca-0732-38852d5f05c4": {
+					"ID": "34dea042-4fac-37ca-0732-38852d5f05c4",
+					"Objectives": {
+						"5c22a5ad-4d44-3451-5a09-589c35ff77cd": 2
+					},
+					"ObjectiveDeltas": {
+						"5c22a5ad-4d44-3451-5a09-589c35ff77cd": {
+							"ID": "5c22a5ad-4d44-3451-5a09-589c35ff77cd",
+							"ProgressBefore": 12,
+							"ProgressAfter": 14
+						}
+					}
+				}
+			},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 162600,
+					"TotalXPAfter": 168900
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 433600,
+					"TotalXPAfter": 439900
+				}
+			},
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "876d2124-25e2-4524-a28b-123396659f94",
+			"StartTime": 1620350628690,
+			"XPGrants": {
+				"GamePlayed": 1000,
+				"GameWon": 0,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {
+				"119e257a-43ca-62ce-e3df-c1b557b5a161": {
+					"ID": "119e257a-43ca-62ce-e3df-c1b557b5a161",
+					"Objectives": {
+						"04ff6167-4976-eeb3-3e66-a78c57164351": 4
+					},
+					"ObjectiveDeltas": {
+						"04ff6167-4976-eeb3-3e66-a78c57164351": {
+							"ID": "04ff6167-4976-eeb3-3e66-a78c57164351",
+							"ProgressBefore": 39,
+							"ProgressAfter": 43
+						}
+					}
+				},
+				"34dea042-4fac-37ca-0732-38852d5f05c4": {
+					"ID": "34dea042-4fac-37ca-0732-38852d5f05c4",
+					"Objectives": {
+						"5c22a5ad-4d44-3451-5a09-589c35ff77cd": 4
+					},
+					"ObjectiveDeltas": {
+						"5c22a5ad-4d44-3451-5a09-589c35ff77cd": {
+							"ID": "5c22a5ad-4d44-3451-5a09-589c35ff77cd",
+							"ProgressBefore": 14,
+							"ProgressAfter": 18
+						}
+					}
+				}
+			},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 168900,
+					"TotalXPAfter": 169900
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 439900,
+					"TotalXPAfter": 440900
+				}
+			},
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "5903d175-925a-4d38-9e13-b7dd137e7dda",
+			"StartTime": 1620351347581,
+			"XPGrants": {
+				"GamePlayed": 800,
+				"GameWon": 200,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 169900,
+					"TotalXPAfter": 170900
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 440900,
+					"TotalXPAfter": 441900
+				}
+			},
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "4213ead6-06a2-4e3b-8e64-00f40eeabd81",
+			"StartTime": 1620420110803,
+			"XPGrants": {
+				"GamePlayed": 900,
+				"GameWon": 0,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 170900,
+					"TotalXPAfter": 171800
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 441900,
+					"TotalXPAfter": 442800
+				}
+			},
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "774a7fe7-f5b1-4a1b-8367-0446f7d51f3e",
+			"StartTime": 1620420682104,
+			"XPGrants": {
+				"GamePlayed": 900,
+				"GameWon": 0,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 171800,
+					"TotalXPAfter": 172700
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 442800,
+					"TotalXPAfter": 443700
+				}
+			},
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "79c7b2e2-0993-446b-b6c6-61fc6d325adc",
+			"StartTime": 1620422902040,
+			"XPGrants": {
+				"GamePlayed": 800,
+				"GameWon": 200,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 172700,
+					"TotalXPAfter": 173700
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 443700,
+					"TotalXPAfter": 444700
+				}
+			},
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "187e831e-df34-4be7-8e06-e5f082017d99",
+			"StartTime": 1620423421791,
+			"XPGrants": {
+				"GamePlayed": 800,
+				"GameWon": 200,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 173700,
+					"TotalXPAfter": 174700
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 444700,
+					"TotalXPAfter": 445700
+				}
+			},
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "89b68d5c-1799-4af9-9d8c-5d3e30e67ecb",
+			"StartTime": 1620424214466,
+			"XPGrants": {
+				"GamePlayed": 0,
+				"GameWon": 0,
+				"RoundPlayed": 2300,
+				"RoundWon": 2000,
+				"Missions": {
+					"0f33dad7-4e68-398d-35cc-b5a5b1503050": 2000,
+					"119e257a-43ca-62ce-e3df-c1b557b5a161": 12800,
+					"908397e4-4a78-3272-d3b2-9988c2efa200": 2000
+				},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"EntitlementRewards": [
+						{
+							"ItemTypeID": "d5f120f8-ff8c-4aac-92ea-f2b5acbe9475",
+							"ItemID": "e3b99844-449a-d21b-0612-8c95e74d7d9f",
+							"Amount": 1
+						}
+					],
+					"WalletRewards": [],
+					"CounterRewards": null
+				}
+			},
+			"MissionDeltas": {
+				"0f33dad7-4e68-398d-35cc-b5a5b1503050": {
+					"ID": "0f33dad7-4e68-398d-35cc-b5a5b1503050",
+					"Objectives": {
+						"f5d56aa6-4337-2c1c-3cb9-47b7ce9e6304": 1
+					},
+					"ObjectiveDeltas": {
+						"f5d56aa6-4337-2c1c-3cb9-47b7ce9e6304": {
+							"ID": "f5d56aa6-4337-2c1c-3cb9-47b7ce9e6304",
+							"ProgressBefore": 0,
+							"ProgressAfter": 1
+						}
+					}
+				},
+				"119e257a-43ca-62ce-e3df-c1b557b5a161": {
+					"ID": "119e257a-43ca-62ce-e3df-c1b557b5a161",
+					"Objectives": {
+						"04ff6167-4976-eeb3-3e66-a78c57164351": 2
+					},
+					"ObjectiveDeltas": {
+						"04ff6167-4976-eeb3-3e66-a78c57164351": {
+							"ID": "04ff6167-4976-eeb3-3e66-a78c57164351",
+							"ProgressBefore": 43,
+							"ProgressAfter": 45
+						}
+					}
+				},
+				"34dea042-4fac-37ca-0732-38852d5f05c4": {
+					"ID": "34dea042-4fac-37ca-0732-38852d5f05c4",
+					"Objectives": {
+						"5c22a5ad-4d44-3451-5a09-589c35ff77cd": 3
+					},
+					"ObjectiveDeltas": {
+						"5c22a5ad-4d44-3451-5a09-589c35ff77cd": {
+							"ID": "5c22a5ad-4d44-3451-5a09-589c35ff77cd",
+							"ProgressBefore": 18,
+							"ProgressAfter": 21
+						}
+					}
+				},
+				"908397e4-4a78-3272-d3b2-9988c2efa200": {
+					"ID": "908397e4-4a78-3272-d3b2-9988c2efa200",
+					"Objectives": {
+						"a617b28c-4ad2-04f6-736e-2eb01a903417": 5
+					},
+					"ObjectiveDeltas": {
+						"a617b28c-4ad2-04f6-736e-2eb01a903417": {
+							"ID": "a617b28c-4ad2-04f6-736e-2eb01a903417",
+							"ProgressBefore": 0,
+							"ProgressAfter": 5
+						}
+					}
+				}
+			},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 174700,
+					"TotalXPAfter": 195800
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 445700,
+					"TotalXPAfter": 466800
+				}
+			},
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "75307862-351f-425e-a2e3-3859fac0a4d4",
+			"StartTime": 1620426537253,
+			"XPGrants": {
+				"GamePlayed": 1000,
+				"GameWon": 0,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {
+				"34dea042-4fac-37ca-0732-38852d5f05c4": {
+					"ID": "34dea042-4fac-37ca-0732-38852d5f05c4",
+					"Objectives": {
+						"5c22a5ad-4d44-3451-5a09-589c35ff77cd": 2
+					},
+					"ObjectiveDeltas": {
+						"5c22a5ad-4d44-3451-5a09-589c35ff77cd": {
+							"ID": "5c22a5ad-4d44-3451-5a09-589c35ff77cd",
+							"ProgressBefore": 21,
+							"ProgressAfter": 23
+						}
+					}
+				}
+			},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 195800,
+					"TotalXPAfter": 196800
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 466800,
+					"TotalXPAfter": 467800
+				}
+			},
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "924073af-6f77-47ad-90ef-acf24f3098f2",
+			"StartTime": 1620519691144,
+			"XPGrants": {
+				"GamePlayed": 900,
+				"GameWon": 0,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 196800,
+					"TotalXPAfter": 197700
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 467800,
+					"TotalXPAfter": 468700
+				}
+			},
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "ac6e0a11-3f22-4398-86cd-3bcf8e6173d2",
+			"StartTime": 1620520219609,
+			"XPGrants": {
+				"GamePlayed": 0,
+				"GameWon": 0,
+				"RoundPlayed": 1800,
+				"RoundWon": 2600,
+				"Missions": {
+					"34dea042-4fac-37ca-0732-38852d5f05c4": 12800,
+					"c235e459-4917-8013-6737-deac9ae34386": 2000
+				},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"EntitlementRewards": [],
+					"WalletRewards": [
+						{
+							"CurrencyID": "e59aa87c-4cbf-517a-5983-6e81511be9b7",
+							"Amount": 10
+						}
+					],
+					"CounterRewards": null
+				}
+			},
+			"MissionDeltas": {
+				"34dea042-4fac-37ca-0732-38852d5f05c4": {
+					"ID": "34dea042-4fac-37ca-0732-38852d5f05c4",
+					"Objectives": {
+						"5c22a5ad-4d44-3451-5a09-589c35ff77cd": 2
+					},
+					"ObjectiveDeltas": {
+						"5c22a5ad-4d44-3451-5a09-589c35ff77cd": {
+							"ID": "5c22a5ad-4d44-3451-5a09-589c35ff77cd",
+							"ProgressBefore": 23,
+							"ProgressAfter": 25
+						}
+					}
+				},
+				"c235e459-4917-8013-6737-deac9ae34386": {
+					"ID": "c235e459-4917-8013-6737-deac9ae34386",
+					"Objectives": {
+						"4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b": 10
+					},
+					"ObjectiveDeltas": {
+						"4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b": {
+							"ID": "4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b",
+							"ProgressBefore": 0,
+							"ProgressAfter": 10
+						}
+					}
+				}
+			},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 197700,
+					"TotalXPAfter": 216900
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 468700,
+					"TotalXPAfter": 487900
+				}
+			},
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "3c5a9d69-36d0-46e0-a3f5-79d4994561e3",
+			"StartTime": 1620522512517,
+			"XPGrants": {
+				"GamePlayed": 1000,
+				"GameWon": 0,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {
+					"0f33dad7-4e68-398d-35cc-b5a5b1503050": 2000
+				},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"EntitlementRewards": [
+						{
+							"ItemTypeID": "dd3bf334-87f3-40bd-b043-682a57a8dc3a",
+							"ItemID": "58584a97-4839-3cb0-6f21-02809648df92",
+							"Amount": 2
+						}
+					],
+					"WalletRewards": [],
+					"CounterRewards": null
+				}
+			},
+			"MissionDeltas": {
+				"0f33dad7-4e68-398d-35cc-b5a5b1503050": {
+					"ID": "0f33dad7-4e68-398d-35cc-b5a5b1503050",
+					"Objectives": {
+						"f5d56aa6-4337-2c1c-3cb9-47b7ce9e6304": 1
+					},
+					"ObjectiveDeltas": {
+						"f5d56aa6-4337-2c1c-3cb9-47b7ce9e6304": {
+							"ID": "f5d56aa6-4337-2c1c-3cb9-47b7ce9e6304",
+							"ProgressBefore": 0,
+							"ProgressAfter": 1
+						}
+					}
+				}
+			},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 216900,
+					"TotalXPAfter": 219900
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 487900,
+					"TotalXPAfter": 490900
+				}
+			},
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "0f91d628-b5c6-453d-b532-23e6efe80306",
+			"StartTime": 1620523291812,
+			"XPGrants": {
+				"GamePlayed": 800,
+				"GameWon": 200,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 219900,
+					"TotalXPAfter": 220900
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 490900,
+					"TotalXPAfter": 491900
+				}
+			},
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "5c006ef6-5736-4b46-beef-9061c87e5bf2",
+			"StartTime": 1620601912508,
+			"XPGrants": {
+				"GamePlayed": 900,
+				"GameWon": 0,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 220900,
+					"TotalXPAfter": 221800
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 491900,
+					"TotalXPAfter": 492800
+				}
+			},
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "a446174c-4eb8-459e-bc6f-f88f5a4f1ccb",
+			"StartTime": 1620603209152,
+			"XPGrants": {
+				"GamePlayed": 0,
+				"GameWon": 0,
+				"RoundPlayed": 1800,
+				"RoundWon": 1000,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {
+				"c3603d86-4ac3-2999-d500-e19ec8bc0998": {
+					"ID": "c3603d86-4ac3-2999-d500-e19ec8bc0998",
+					"Objectives": {
+						"5c22a5ad-4d44-3451-5a09-589c35ff77cd": 2
+					},
+					"ObjectiveDeltas": {
+						"5c22a5ad-4d44-3451-5a09-589c35ff77cd": {
+							"ID": "5c22a5ad-4d44-3451-5a09-589c35ff77cd",
+							"ProgressBefore": 0,
+							"ProgressAfter": 2
+						}
+					}
+				}
+			},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 221800,
+					"TotalXPAfter": 224600
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 492800,
+					"TotalXPAfter": 495600
+				}
+			},
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "42b1097c-27be-4b95-b876-c8d5841527d3",
+			"StartTime": 1620605000360,
+			"XPGrants": {
+				"GamePlayed": 0,
+				"GameWon": 0,
+				"RoundPlayed": 1300,
+				"RoundWon": 2600,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {
+				"c3603d86-4ac3-2999-d500-e19ec8bc0998": {
+					"ID": "c3603d86-4ac3-2999-d500-e19ec8bc0998",
+					"Objectives": {
+						"5c22a5ad-4d44-3451-5a09-589c35ff77cd": 1
+					},
+					"ObjectiveDeltas": {
+						"5c22a5ad-4d44-3451-5a09-589c35ff77cd": {
+							"ID": "5c22a5ad-4d44-3451-5a09-589c35ff77cd",
+							"ProgressBefore": 2,
+							"ProgressAfter": 3
+						}
+					}
+				}
+			},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 224600,
+					"TotalXPAfter": 228500
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 495600,
+					"TotalXPAfter": 499500
+				}
+			},
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "611baebb-2d7a-4277-96d3-353334f49554",
+			"StartTime": 1620606450887,
+			"XPGrants": {
+				"GamePlayed": 0,
+				"GameWon": 0,
+				"RoundPlayed": 600,
+				"RoundWon": 200,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 228500,
+					"TotalXPAfter": 229300
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 499500,
+					"TotalXPAfter": 500300
+				}
+			},
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "0ee8e3b3-2295-4de6-b829-5bc9176f4e57",
+			"StartTime": 1620607202573,
+			"XPGrants": {
+				"GamePlayed": 0,
+				"GameWon": 0,
+				"RoundPlayed": 400,
+				"RoundWon": 800,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 229300,
+					"TotalXPAfter": 230500
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 500300,
+					"TotalXPAfter": 501500
+				}
+			},
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "b54afcc7-7741-4bea-b7f8-f0e2b730c91d",
+			"StartTime": 1620607673429,
+			"XPGrants": {
+				"GamePlayed": 1000,
+				"GameWon": 0,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {
+					"c3603d86-4ac3-2999-d500-e19ec8bc0998": 2000
+				},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {
+				"c3603d86-4ac3-2999-d500-e19ec8bc0998": {
+					"ID": "c3603d86-4ac3-2999-d500-e19ec8bc0998",
+					"Objectives": {
+						"5c22a5ad-4d44-3451-5a09-589c35ff77cd": 2
+					},
+					"ObjectiveDeltas": {
+						"5c22a5ad-4d44-3451-5a09-589c35ff77cd": {
+							"ID": "5c22a5ad-4d44-3451-5a09-589c35ff77cd",
+							"ProgressBefore": 3,
+							"ProgressAfter": 5
+						}
+					}
+				}
+			},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 230500,
+					"TotalXPAfter": 233500
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 501500,
+					"TotalXPAfter": 504500
+				}
+			},
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "952c7e9b-7d97-4a39-845b-649e6afbb2db",
+			"StartTime": 1620608174237,
+			"XPGrants": {
+				"GamePlayed": 1000,
+				"GameWon": 0,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 233500,
+					"TotalXPAfter": 234500
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 504500,
+					"TotalXPAfter": 505500
+				}
+			},
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "a8fd0e25-727d-4b5c-919a-d7f6f1b64178",
+			"StartTime": 1620609072541,
+			"XPGrants": {
+				"GamePlayed": 1000,
+				"GameWon": 0,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {
+					"0f33dad7-4e68-398d-35cc-b5a5b1503050": 2000
+				},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"EntitlementRewards": [
+						{
+							"ItemTypeID": "d5f120f8-ff8c-4aac-92ea-f2b5acbe9475",
+							"ItemID": "e4514582-484a-c820-33f2-fc80bcab7a4b",
+							"Amount": 1
+						}
+					],
+					"WalletRewards": [],
+					"CounterRewards": null
+				}
+			},
+			"MissionDeltas": {
+				"0f33dad7-4e68-398d-35cc-b5a5b1503050": {
+					"ID": "0f33dad7-4e68-398d-35cc-b5a5b1503050",
+					"Objectives": {
+						"f5d56aa6-4337-2c1c-3cb9-47b7ce9e6304": 1
+					},
+					"ObjectiveDeltas": {
+						"f5d56aa6-4337-2c1c-3cb9-47b7ce9e6304": {
+							"ID": "f5d56aa6-4337-2c1c-3cb9-47b7ce9e6304",
+							"ProgressBefore": 0,
+							"ProgressAfter": 1
+						}
+					}
+				}
+			},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 234500,
+					"TotalXPAfter": 237500
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 505500,
+					"TotalXPAfter": 508500
+				}
+			},
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "2709dcce-b83f-4472-9ddf-7a636aad777c",
+			"StartTime": 1620687126443,
+			"XPGrants": {
+				"GamePlayed": 900,
+				"GameWon": 0,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 237500,
+					"TotalXPAfter": 238400
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 508500,
+					"TotalXPAfter": 509400
+				}
+			},
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "1316be40-f166-4651-98e5-f199a2c8ef44",
+			"StartTime": 1620687824313,
+			"XPGrants": {
+				"GamePlayed": 0,
+				"GameWon": 0,
+				"RoundPlayed": 2200,
+				"RoundWon": 1800,
+				"Missions": {
+					"0f33dad7-4e68-398d-35cc-b5a5b1503050": 2000
+				},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {
+				"0f33dad7-4e68-398d-35cc-b5a5b1503050": {
+					"ID": "0f33dad7-4e68-398d-35cc-b5a5b1503050",
+					"Objectives": {
+						"f5d56aa6-4337-2c1c-3cb9-47b7ce9e6304": 1
+					},
+					"ObjectiveDeltas": {
+						"f5d56aa6-4337-2c1c-3cb9-47b7ce9e6304": {
+							"ID": "f5d56aa6-4337-2c1c-3cb9-47b7ce9e6304",
+							"ProgressBefore": 0,
+							"ProgressAfter": 1
+						}
+					}
+				},
+				"2ec38f99-46c2-b1ba-69aa-74b86c1289a9": {
+					"ID": "2ec38f99-46c2-b1ba-69aa-74b86c1289a9",
+					"Objectives": {
+						"38fd944b-4d80-33c8-0054-6db0f656dc5c": 15
+					},
+					"ObjectiveDeltas": {
+						"38fd944b-4d80-33c8-0054-6db0f656dc5c": {
+							"ID": "38fd944b-4d80-33c8-0054-6db0f656dc5c",
+							"ProgressBefore": 0,
+							"ProgressAfter": 15
+						}
+					}
+				}
+			},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 238400,
+					"TotalXPAfter": 244400
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 509400,
+					"TotalXPAfter": 515400
+				}
+			},
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "49829a51-c372-4eea-8c1b-8bdf14ca38e9",
+			"StartTime": 1620691065144,
+			"XPGrants": {
+				"GamePlayed": 0,
+				"GameWon": 0,
+				"RoundPlayed": 2500,
+				"RoundWon": 2400,
+				"Missions": {
+					"2ec38f99-46c2-b1ba-69aa-74b86c1289a9": 2000
+				},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {
+				"2ec38f99-46c2-b1ba-69aa-74b86c1289a9": {
+					"ID": "2ec38f99-46c2-b1ba-69aa-74b86c1289a9",
+					"Objectives": {
+						"38fd944b-4d80-33c8-0054-6db0f656dc5c": 5
+					},
+					"ObjectiveDeltas": {
+						"38fd944b-4d80-33c8-0054-6db0f656dc5c": {
+							"ID": "38fd944b-4d80-33c8-0054-6db0f656dc5c",
+							"ProgressBefore": 15,
+							"ProgressAfter": 20
+						}
+					}
+				}
+			},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 244400,
+					"TotalXPAfter": 251300
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 515400,
+					"TotalXPAfter": 522300
+				}
+			},
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "b1c4d3a3-ed1d-4c0e-86b0-439814dda764",
+			"StartTime": 1620856565862,
+			"XPGrants": {
+				"GamePlayed": 900,
+				"GameWon": 0,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 251300,
+					"TotalXPAfter": 252200
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 522300,
+					"TotalXPAfter": 523200
+				}
+			},
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "a67996e5-2a8d-453b-a433-30e1df372981",
+			"StartTime": 1620857160935,
+			"XPGrants": {
+				"GamePlayed": 0,
+				"GameWon": 0,
+				"RoundPlayed": 1700,
+				"RoundWon": 2600,
+				"Missions": {
+					"c235e459-4917-8013-6737-deac9ae34386": 2000
+				},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"EntitlementRewards": [
+						{
+							"ItemTypeID": "3f296c07-64c3-494c-923b-fe692a4fa1bd",
+							"ItemID": "4727101c-405c-e9eb-5cd6-638f0487dc76",
+							"Amount": 1
+						},
+						{
+							"ItemTypeID": "e7c63390-eda7-46e0-bb7a-a6abdacd2433",
+							"ItemID": "1452386a-47ab-bd8a-775d-9194020ca52d",
+							"Amount": 1
+						}
+					],
+					"WalletRewards": [
+						{
+							"CurrencyID": "e59aa87c-4cbf-517a-5983-6e81511be9b7",
+							"Amount": 10
+						}
+					],
+					"CounterRewards": null
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"EntitlementRewards": [
+						{
+							"ItemTypeID": "de7caa6b-adf7-4588-bbd1-143831e786c6",
+							"ItemID": "0ec01b3e-4822-d882-7e6e-e9a0b47cd8bb",
+							"Amount": 1
+						}
+					],
+					"WalletRewards": [],
+					"CounterRewards": null
+				}
+			},
+			"MissionDeltas": {
+				"0a88855e-4493-07ee-0f0c-c9a17e9fddd0": {
+					"ID": "0a88855e-4493-07ee-0f0c-c9a17e9fddd0",
+					"Objectives": {
+						"4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b": 17
+					},
+					"ObjectiveDeltas": {
+						"4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b": {
+							"ID": "4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b",
+							"ProgressBefore": 0,
+							"ProgressAfter": 17
+						}
+					}
+				},
+				"9ef2d13a-4e0f-0f13-075d-09a27dcdb952": {
+					"ID": "9ef2d13a-4e0f-0f13-075d-09a27dcdb952",
+					"Objectives": {
+						"2a35e500-4f64-f61c-341b-87b6e10f5c2f": 17
+					},
+					"ObjectiveDeltas": {
+						"2a35e500-4f64-f61c-341b-87b6e10f5c2f": {
+							"ID": "2a35e500-4f64-f61c-341b-87b6e10f5c2f",
+							"ProgressBefore": 0,
+							"ProgressAfter": 17
+						}
+					}
+				},
+				"c235e459-4917-8013-6737-deac9ae34386": {
+					"ID": "c235e459-4917-8013-6737-deac9ae34386",
+					"Objectives": {
+						"4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b": 10
+					},
+					"ObjectiveDeltas": {
+						"4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b": {
+							"ID": "4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b",
+							"ProgressBefore": 0,
+							"ProgressAfter": 10
+						}
+					}
+				},
+				"e326b562-4c50-c025-4e32-feb04ce7eeef": {
+					"ID": "e326b562-4c50-c025-4e32-feb04ce7eeef",
+					"Objectives": {
+						"2de44730-437a-bbe5-74c6-57b581b72bd2": 42
+					},
+					"ObjectiveDeltas": {
+						"2de44730-437a-bbe5-74c6-57b581b72bd2": {
+							"ID": "2de44730-437a-bbe5-74c6-57b581b72bd2",
+							"ProgressBefore": 0,
+							"ProgressAfter": 42
+						}
+					}
+				}
+			},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 252200,
+					"TotalXPAfter": 258500
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 523200,
+					"TotalXPAfter": 529500
+				}
+			},
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "a134da61-ad3d-483f-ab55-d4d1ed268c1e",
+			"StartTime": 1620859314197,
+			"XPGrants": {
+				"GamePlayed": 0,
+				"GameWon": 0,
+				"RoundPlayed": 900,
+				"RoundWon": 800,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {
+				"0a88855e-4493-07ee-0f0c-c9a17e9fddd0": {
+					"ID": "0a88855e-4493-07ee-0f0c-c9a17e9fddd0",
+					"Objectives": {
+						"4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b": 6
+					},
+					"ObjectiveDeltas": {
+						"4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b": {
+							"ID": "4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b",
+							"ProgressBefore": 17,
+							"ProgressAfter": 23
+						}
+					}
+				},
+				"9ef2d13a-4e0f-0f13-075d-09a27dcdb952": {
+					"ID": "9ef2d13a-4e0f-0f13-075d-09a27dcdb952",
+					"Objectives": {
+						"2a35e500-4f64-f61c-341b-87b6e10f5c2f": 9
+					},
+					"ObjectiveDeltas": {
+						"2a35e500-4f64-f61c-341b-87b6e10f5c2f": {
+							"ID": "2a35e500-4f64-f61c-341b-87b6e10f5c2f",
+							"ProgressBefore": 17,
+							"ProgressAfter": 26
+						}
+					}
+				},
+				"e326b562-4c50-c025-4e32-feb04ce7eeef": {
+					"ID": "e326b562-4c50-c025-4e32-feb04ce7eeef",
+					"Objectives": {
+						"2de44730-437a-bbe5-74c6-57b581b72bd2": 19
+					},
+					"ObjectiveDeltas": {
+						"2de44730-437a-bbe5-74c6-57b581b72bd2": {
+							"ID": "2de44730-437a-bbe5-74c6-57b581b72bd2",
+							"ProgressBefore": 42,
+							"ProgressAfter": 61
+						}
+					}
+				}
+			},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 258500,
+					"TotalXPAfter": 260200
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 529500,
+					"TotalXPAfter": 531200
+				}
+			},
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "eb76021f-ae20-418e-b758-326a679e54ce",
+			"StartTime": 1620860264978,
+			"XPGrants": {
+				"GamePlayed": 0,
+				"GameWon": 0,
+				"RoundPlayed": 700,
+				"RoundWon": 1000,
+				"Missions": {
+					"8f183032-4ba1-b6a2-0574-e0ab6098a08f": 2000
+				},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {
+				"0a88855e-4493-07ee-0f0c-c9a17e9fddd0": {
+					"ID": "0a88855e-4493-07ee-0f0c-c9a17e9fddd0",
+					"Objectives": {
+						"4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b": 8
+					},
+					"ObjectiveDeltas": {
+						"4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b": {
+							"ID": "4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b",
+							"ProgressBefore": 23,
+							"ProgressAfter": 31
+						}
+					}
+				},
+				"8f183032-4ba1-b6a2-0574-e0ab6098a08f": {
+					"ID": "8f183032-4ba1-b6a2-0574-e0ab6098a08f",
+					"Objectives": {
+						"c807ef27-420a-69f2-3c0f-31bf8922ba6f": 1
+					},
+					"ObjectiveDeltas": {
+						"c807ef27-420a-69f2-3c0f-31bf8922ba6f": {
+							"ID": "c807ef27-420a-69f2-3c0f-31bf8922ba6f",
+							"ProgressBefore": 0,
+							"ProgressAfter": 1
+						}
+					}
+				},
+				"9ef2d13a-4e0f-0f13-075d-09a27dcdb952": {
+					"ID": "9ef2d13a-4e0f-0f13-075d-09a27dcdb952",
+					"Objectives": {
+						"2a35e500-4f64-f61c-341b-87b6e10f5c2f": 7
+					},
+					"ObjectiveDeltas": {
+						"2a35e500-4f64-f61c-341b-87b6e10f5c2f": {
+							"ID": "2a35e500-4f64-f61c-341b-87b6e10f5c2f",
+							"ProgressBefore": 26,
+							"ProgressAfter": 33
+						}
+					}
+				},
+				"e326b562-4c50-c025-4e32-feb04ce7eeef": {
+					"ID": "e326b562-4c50-c025-4e32-feb04ce7eeef",
+					"Objectives": {
+						"2de44730-437a-bbe5-74c6-57b581b72bd2": 12
+					},
+					"ObjectiveDeltas": {
+						"2de44730-437a-bbe5-74c6-57b581b72bd2": {
+							"ID": "2de44730-437a-bbe5-74c6-57b581b72bd2",
+							"ProgressBefore": 61,
+							"ProgressAfter": 73
+						}
+					}
+				}
+			},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 260200,
+					"TotalXPAfter": 263900
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 531200,
+					"TotalXPAfter": 534900
+				}
+			},
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "2c0cf061-5d90-4e2f-8d08-d9845a379700",
+			"StartTime": 1621028036935,
+			"XPGrants": {
+				"GamePlayed": 0,
+				"GameWon": 0,
+				"RoundPlayed": 700,
+				"RoundWon": 400,
+				"Missions": {
+					"8f183032-4ba1-b6a2-0574-e0ab6098a08f": 2000
+				},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {
+				"0a88855e-4493-07ee-0f0c-c9a17e9fddd0": {
+					"ID": "0a88855e-4493-07ee-0f0c-c9a17e9fddd0",
+					"Objectives": {
+						"4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b": 4
+					},
+					"ObjectiveDeltas": {
+						"4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b": {
+							"ID": "4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b",
+							"ProgressBefore": 31,
+							"ProgressAfter": 35
+						}
+					}
+				},
+				"8f183032-4ba1-b6a2-0574-e0ab6098a08f": {
+					"ID": "8f183032-4ba1-b6a2-0574-e0ab6098a08f",
+					"Objectives": {
+						"c807ef27-420a-69f2-3c0f-31bf8922ba6f": 1
+					},
+					"ObjectiveDeltas": {
+						"c807ef27-420a-69f2-3c0f-31bf8922ba6f": {
+							"ID": "c807ef27-420a-69f2-3c0f-31bf8922ba6f",
+							"ProgressBefore": 0,
+							"ProgressAfter": 1
+						}
+					}
+				},
+				"9ef2d13a-4e0f-0f13-075d-09a27dcdb952": {
+					"ID": "9ef2d13a-4e0f-0f13-075d-09a27dcdb952",
+					"Objectives": {
+						"2a35e500-4f64-f61c-341b-87b6e10f5c2f": 7
+					},
+					"ObjectiveDeltas": {
+						"2a35e500-4f64-f61c-341b-87b6e10f5c2f": {
+							"ID": "2a35e500-4f64-f61c-341b-87b6e10f5c2f",
+							"ProgressBefore": 33,
+							"ProgressAfter": 40
+						}
+					}
+				},
+				"e326b562-4c50-c025-4e32-feb04ce7eeef": {
+					"ID": "e326b562-4c50-c025-4e32-feb04ce7eeef",
+					"Objectives": {
+						"2de44730-437a-bbe5-74c6-57b581b72bd2": 15
+					},
+					"ObjectiveDeltas": {
+						"2de44730-437a-bbe5-74c6-57b581b72bd2": {
+							"ID": "2de44730-437a-bbe5-74c6-57b581b72bd2",
+							"ProgressBefore": 73,
+							"ProgressAfter": 88
+						}
+					}
+				}
+			},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 263900,
+					"TotalXPAfter": 267000
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 534900,
+					"TotalXPAfter": 538000
+				}
+			},
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "72a529cc-4017-4b56-9d13-8b86d866ecfc",
+			"StartTime": 1621029066038,
+			"XPGrants": {
+				"GamePlayed": 900,
+				"GameWon": 0,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 267000,
+					"TotalXPAfter": 267900
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 538000,
+					"TotalXPAfter": 538900
+				}
+			},
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "cbb9c5a4-ddce-4976-9bfe-0efcb1111b29",
+			"StartTime": 1621029884768,
+			"XPGrants": {
+				"GamePlayed": 900,
+				"GameWon": 0,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 267900,
+					"TotalXPAfter": 268800
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 538900,
+					"TotalXPAfter": 539800
+				}
+			},
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "7d52a617-42ed-41b5-a88e-0a79909c3cf5",
+			"StartTime": 1621030362399,
+			"XPGrants": {
+				"GamePlayed": 0,
+				"GameWon": 0,
+				"RoundPlayed": 2000,
+				"RoundWon": 1400,
+				"Missions": {
+					"e326b562-4c50-c025-4e32-feb04ce7eeef": 15360,
+					"f81129ee-4bb9-27dc-8011-0e8c1e7f6d26": 2000
+				},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"EntitlementRewards": [
+						{
+							"ItemTypeID": "d5f120f8-ff8c-4aac-92ea-f2b5acbe9475",
+							"ItemID": "790f632c-4d0b-deb0-4277-12a8d35e533f",
+							"Amount": 1
+						}
+					],
+					"WalletRewards": [],
+					"CounterRewards": null
+				}
+			},
+			"MissionDeltas": {
+				"0a88855e-4493-07ee-0f0c-c9a17e9fddd0": {
+					"ID": "0a88855e-4493-07ee-0f0c-c9a17e9fddd0",
+					"Objectives": {
+						"4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b": 18
+					},
+					"ObjectiveDeltas": {
+						"4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b": {
+							"ID": "4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b",
+							"ProgressBefore": 35,
+							"ProgressAfter": 53
+						}
+					}
+				},
+				"9ef2d13a-4e0f-0f13-075d-09a27dcdb952": {
+					"ID": "9ef2d13a-4e0f-0f13-075d-09a27dcdb952",
+					"Objectives": {
+						"2a35e500-4f64-f61c-341b-87b6e10f5c2f": 20
+					},
+					"ObjectiveDeltas": {
+						"2a35e500-4f64-f61c-341b-87b6e10f5c2f": {
+							"ID": "2a35e500-4f64-f61c-341b-87b6e10f5c2f",
+							"ProgressBefore": 40,
+							"ProgressAfter": 60
+						}
+					}
+				},
+				"e326b562-4c50-c025-4e32-feb04ce7eeef": {
+					"ID": "e326b562-4c50-c025-4e32-feb04ce7eeef",
+					"Objectives": {
+						"2de44730-437a-bbe5-74c6-57b581b72bd2": 12
+					},
+					"ObjectiveDeltas": {
+						"2de44730-437a-bbe5-74c6-57b581b72bd2": {
+							"ID": "2de44730-437a-bbe5-74c6-57b581b72bd2",
+							"ProgressBefore": 88,
+							"ProgressAfter": 100
+						}
+					}
+				},
+				"f81129ee-4bb9-27dc-8011-0e8c1e7f6d26": {
+					"ID": "f81129ee-4bb9-27dc-8011-0e8c1e7f6d26",
+					"Objectives": {
+						"c0afc6aa-4a89-a97b-e580-d29d213996f0": 25
+					},
+					"ObjectiveDeltas": {
+						"c0afc6aa-4a89-a97b-e580-d29d213996f0": {
+							"ID": "c0afc6aa-4a89-a97b-e580-d29d213996f0",
+							"ProgressBefore": 0,
+							"ProgressAfter": 25
+						}
+					}
+				}
+			},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 268800,
+					"TotalXPAfter": 289560
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 539800,
+					"TotalXPAfter": 560560
+				}
+			},
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "226b2159-2d10-4c1a-8a73-0109c7578d94",
+			"StartTime": 1621033138299,
+			"XPGrants": {
+				"GamePlayed": 900,
+				"GameWon": 0,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 289560,
+					"TotalXPAfter": 290460
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 560560,
+					"TotalXPAfter": 561460
+				}
+			},
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "af0b5e5a-da7a-4537-bab5-6f001aff6403",
+			"StartTime": 1621033709401,
+			"XPGrants": {
+				"GamePlayed": 0,
+				"GameWon": 0,
+				"RoundPlayed": 2000,
+				"RoundWon": 1400,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {
+				"0a88855e-4493-07ee-0f0c-c9a17e9fddd0": {
+					"ID": "0a88855e-4493-07ee-0f0c-c9a17e9fddd0",
+					"Objectives": {
+						"4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b": 15
+					},
+					"ObjectiveDeltas": {
+						"4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b": {
+							"ID": "4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b",
+							"ProgressBefore": 53,
+							"ProgressAfter": 68
+						}
+					}
+				},
+				"9ef2d13a-4e0f-0f13-075d-09a27dcdb952": {
+					"ID": "9ef2d13a-4e0f-0f13-075d-09a27dcdb952",
+					"Objectives": {
+						"2a35e500-4f64-f61c-341b-87b6e10f5c2f": 20
+					},
+					"ObjectiveDeltas": {
+						"2a35e500-4f64-f61c-341b-87b6e10f5c2f": {
+							"ID": "2a35e500-4f64-f61c-341b-87b6e10f5c2f",
+							"ProgressBefore": 60,
+							"ProgressAfter": 80
+						}
+					}
+				}
+			},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 290460,
+					"TotalXPAfter": 293860
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 561460,
+					"TotalXPAfter": 564860
+				}
+			},
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "061825e1-ceb6-4ec4-9e7b-96ab09280ecf",
+			"StartTime": 1621035895444,
+			"XPGrants": {
+				"GamePlayed": 0,
+				"GameWon": 0,
+				"RoundPlayed": 800,
+				"RoundWon": 600,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {
+				"0a88855e-4493-07ee-0f0c-c9a17e9fddd0": {
+					"ID": "0a88855e-4493-07ee-0f0c-c9a17e9fddd0",
+					"Objectives": {
+						"4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b": 3
+					},
+					"ObjectiveDeltas": {
+						"4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b": {
+							"ID": "4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b",
+							"ProgressBefore": 68,
+							"ProgressAfter": 71
+						}
+					}
+				},
+				"9ef2d13a-4e0f-0f13-075d-09a27dcdb952": {
+					"ID": "9ef2d13a-4e0f-0f13-075d-09a27dcdb952",
+					"Objectives": {
+						"2a35e500-4f64-f61c-341b-87b6e10f5c2f": 8
+					},
+					"ObjectiveDeltas": {
+						"2a35e500-4f64-f61c-341b-87b6e10f5c2f": {
+							"ID": "2a35e500-4f64-f61c-341b-87b6e10f5c2f",
+							"ProgressBefore": 80,
+							"ProgressAfter": 88
+						}
+					}
+				}
+			},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 293860,
+					"TotalXPAfter": 295260
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 564860,
+					"TotalXPAfter": 566260
+				}
+			},
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "1c9c5445-128b-47be-a9fd-7a73fb63b1b0",
+			"StartTime": 1621129255024,
+			"XPGrants": {
+				"GamePlayed": 0,
+				"GameWon": 0,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 1
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {},
+			"ContractDeltas": {},
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "66163dde-c649-4b53-b2eb-8f51f2b0e83b",
+			"StartTime": 1621129532211,
+			"XPGrants": {
+				"GamePlayed": 0,
+				"GameWon": 0,
+				"RoundPlayed": 2200,
+				"RoundWon": 1800,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"EntitlementRewards": [],
+					"WalletRewards": [
+						{
+							"CurrencyID": "e59aa87c-4cbf-517a-5983-6e81511be9b7",
+							"Amount": 10
+						}
+					],
+					"CounterRewards": null
+				}
+			},
+			"MissionDeltas": {
+				"0a88855e-4493-07ee-0f0c-c9a17e9fddd0": {
+					"ID": "0a88855e-4493-07ee-0f0c-c9a17e9fddd0",
+					"Objectives": {
+						"4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b": 12
+					},
+					"ObjectiveDeltas": {
+						"4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b": {
+							"ID": "4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b",
+							"ProgressBefore": 71,
+							"ProgressAfter": 83
+						}
+					}
+				},
+				"9ef2d13a-4e0f-0f13-075d-09a27dcdb952": {
+					"ID": "9ef2d13a-4e0f-0f13-075d-09a27dcdb952",
+					"Objectives": {
+						"2a35e500-4f64-f61c-341b-87b6e10f5c2f": 22
+					},
+					"ObjectiveDeltas": {
+						"2a35e500-4f64-f61c-341b-87b6e10f5c2f": {
+							"ID": "2a35e500-4f64-f61c-341b-87b6e10f5c2f",
+							"ProgressBefore": 88,
+							"ProgressAfter": 110
+						}
+					}
+				},
+				"f81129ee-4bb9-27dc-8011-0e8c1e7f6d26": {
+					"ID": "f81129ee-4bb9-27dc-8011-0e8c1e7f6d26",
+					"Objectives": {
+						"c0afc6aa-4a89-a97b-e580-d29d213996f0": 23
+					},
+					"ObjectiveDeltas": {
+						"c0afc6aa-4a89-a97b-e580-d29d213996f0": {
+							"ID": "c0afc6aa-4a89-a97b-e580-d29d213996f0",
+							"ProgressBefore": 0,
+							"ProgressAfter": 23
+						}
+					}
+				}
+			},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 295260,
+					"TotalXPAfter": 299260
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 566260,
+					"TotalXPAfter": 570260
+				}
+			},
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "3d0e0ba6-74b0-4353-8a2b-2e6fe43f639e",
+			"StartTime": 1621132094376,
+			"XPGrants": {
+				"GamePlayed": 0,
+				"GameWon": 0,
+				"RoundPlayed": 800,
+				"RoundWon": 600,
+				"Missions": {
+					"12197b90-42de-0587-dfdb-e28664ebe04b": 2000
+				},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {
+				"0a88855e-4493-07ee-0f0c-c9a17e9fddd0": {
+					"ID": "0a88855e-4493-07ee-0f0c-c9a17e9fddd0",
+					"Objectives": {
+						"4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b": 3
+					},
+					"ObjectiveDeltas": {
+						"4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b": {
+							"ID": "4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b",
+							"ProgressBefore": 83,
+							"ProgressAfter": 86
+						}
+					}
+				},
+				"12197b90-42de-0587-dfdb-e28664ebe04b": {
+					"ID": "12197b90-42de-0587-dfdb-e28664ebe04b",
+					"Objectives": {
+						"2ae3fca1-4695-2464-7aba-76ab739f573a": 1
+					},
+					"ObjectiveDeltas": {
+						"2ae3fca1-4695-2464-7aba-76ab739f573a": {
+							"ID": "2ae3fca1-4695-2464-7aba-76ab739f573a",
+							"ProgressBefore": 0,
+							"ProgressAfter": 1
+						}
+					}
+				},
+				"9ef2d13a-4e0f-0f13-075d-09a27dcdb952": {
+					"ID": "9ef2d13a-4e0f-0f13-075d-09a27dcdb952",
+					"Objectives": {
+						"2a35e500-4f64-f61c-341b-87b6e10f5c2f": 8
+					},
+					"ObjectiveDeltas": {
+						"2a35e500-4f64-f61c-341b-87b6e10f5c2f": {
+							"ID": "2a35e500-4f64-f61c-341b-87b6e10f5c2f",
+							"ProgressBefore": 110,
+							"ProgressAfter": 118
+						}
+					}
+				}
+			},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 299260,
+					"TotalXPAfter": 302660
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 570260,
+					"TotalXPAfter": 573660
+				}
+			},
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "77020be7-c3c1-4fed-b4a8-c0363cd6579e",
+			"StartTime": 1621288538435,
+			"XPGrants": {
+				"GamePlayed": 900,
+				"GameWon": 0,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 302660,
+					"TotalXPAfter": 303560
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 573660,
+					"TotalXPAfter": 574560
+				}
+			},
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "63dee77e-52d2-4717-9c3e-0d273e66d759",
+			"StartTime": 1621289055679,
+			"XPGrants": {
+				"GamePlayed": 0,
+				"GameWon": 0,
+				"RoundPlayed": 1900,
+				"RoundWon": 1200,
+				"Missions": {
+					"f30bd3b0-45d3-d72a-8d1d-bab6deac61d6": 2000
+				},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {
+				"0a88855e-4493-07ee-0f0c-c9a17e9fddd0": {
+					"ID": "0a88855e-4493-07ee-0f0c-c9a17e9fddd0",
+					"Objectives": {
+						"4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b": 5
+					},
+					"ObjectiveDeltas": {
+						"4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b": {
+							"ID": "4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b",
+							"ProgressBefore": 86,
+							"ProgressAfter": 91
+						}
+					}
+				},
+				"9ef2d13a-4e0f-0f13-075d-09a27dcdb952": {
+					"ID": "9ef2d13a-4e0f-0f13-075d-09a27dcdb952",
+					"Objectives": {
+						"2a35e500-4f64-f61c-341b-87b6e10f5c2f": 19
+					},
+					"ObjectiveDeltas": {
+						"2a35e500-4f64-f61c-341b-87b6e10f5c2f": {
+							"ID": "2a35e500-4f64-f61c-341b-87b6e10f5c2f",
+							"ProgressBefore": 118,
+							"ProgressAfter": 137
+						}
+					}
+				},
+				"f30bd3b0-45d3-d72a-8d1d-bab6deac61d6": {
+					"ID": "f30bd3b0-45d3-d72a-8d1d-bab6deac61d6",
+					"Objectives": {
+						"91952692-4345-8bc1-6f1c-2dad7e14109f": 20
+					},
+					"ObjectiveDeltas": {
+						"91952692-4345-8bc1-6f1c-2dad7e14109f": {
+							"ID": "91952692-4345-8bc1-6f1c-2dad7e14109f",
+							"ProgressBefore": 0,
+							"ProgressAfter": 20
+						}
+					}
+				}
+			},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 303560,
+					"TotalXPAfter": 308660
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 574560,
+					"TotalXPAfter": 579660
+				}
+			},
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "edd65f4a-6284-4aca-8867-f1a02b9f5d0d",
+			"StartTime": 1621291737870,
+			"XPGrants": {
+				"GamePlayed": 0,
+				"GameWon": 0,
+				"RoundPlayed": 2200,
+				"RoundWon": 2600,
+				"Missions": {
+					"0a88855e-4493-07ee-0f0c-c9a17e9fddd0": 15360,
+					"8f183032-4ba1-b6a2-0574-e0ab6098a08f": 2000,
+					"9ef2d13a-4e0f-0f13-075d-09a27dcdb952": 15360
+				},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"EntitlementRewards": [
+						{
+							"ItemTypeID": "d5f120f8-ff8c-4aac-92ea-f2b5acbe9475",
+							"ItemID": "043970f9-47ae-c73a-3de1-f291769fda0f",
+							"Amount": 1
+						},
+						{
+							"ItemTypeID": "3f296c07-64c3-494c-923b-fe692a4fa1bd",
+							"ItemID": "05bfbe92-47c0-650c-7f46-2a8b8443dafc",
+							"Amount": 1
+						}
+					],
+					"WalletRewards": [],
+					"CounterRewards": null
+				}
+			},
+			"MissionDeltas": {
+				"0a88855e-4493-07ee-0f0c-c9a17e9fddd0": {
+					"ID": "0a88855e-4493-07ee-0f0c-c9a17e9fddd0",
+					"Objectives": {
+						"4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b": 9
+					},
+					"ObjectiveDeltas": {
+						"4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b": {
+							"ID": "4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b",
+							"ProgressBefore": 91,
+							"ProgressAfter": 100
+						}
+					}
+				},
+				"8f183032-4ba1-b6a2-0574-e0ab6098a08f": {
+					"ID": "8f183032-4ba1-b6a2-0574-e0ab6098a08f",
+					"Objectives": {
+						"c807ef27-420a-69f2-3c0f-31bf8922ba6f": 1
+					},
+					"ObjectiveDeltas": {
+						"c807ef27-420a-69f2-3c0f-31bf8922ba6f": {
+							"ID": "c807ef27-420a-69f2-3c0f-31bf8922ba6f",
+							"ProgressBefore": 0,
+							"ProgressAfter": 1
+						}
+					}
+				},
+				"9ef2d13a-4e0f-0f13-075d-09a27dcdb952": {
+					"ID": "9ef2d13a-4e0f-0f13-075d-09a27dcdb952",
+					"Objectives": {
+						"2a35e500-4f64-f61c-341b-87b6e10f5c2f": 13
+					},
+					"ObjectiveDeltas": {
+						"2a35e500-4f64-f61c-341b-87b6e10f5c2f": {
+							"ID": "2a35e500-4f64-f61c-341b-87b6e10f5c2f",
+							"ProgressBefore": 137,
+							"ProgressAfter": 150
+						}
+					}
+				}
+			},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 308660,
+					"TotalXPAfter": 346180
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 579660,
+					"TotalXPAfter": 617180
+				}
+			},
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "c55d6efb-2bb7-4053-b6a3-5c569ac5f41c",
+			"StartTime": 1621645948852,
+			"XPGrants": {
+				"GamePlayed": 900,
+				"GameWon": 0,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 346180,
+					"TotalXPAfter": 347080
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 617180,
+					"TotalXPAfter": 618080
+				}
+			},
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "95ec4ef7-9b35-426f-8149-e21bf277aec3",
+			"StartTime": 1621646448660,
+			"XPGrants": {
+				"GamePlayed": 0,
+				"GameWon": 0,
+				"RoundPlayed": 800,
+				"RoundWon": 600,
+				"Missions": {
+					"f30bd3b0-45d3-d72a-8d1d-bab6deac61d6": 2000
+				},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {
+				"02d0c027-4bc3-2214-34ae-c3a32bd50cc1": {
+					"ID": "02d0c027-4bc3-2214-34ae-c3a32bd50cc1",
+					"Objectives": {
+						"974cb6ff-4aef-0217-1813-73a28ddfcdc6": 521
+					},
+					"ObjectiveDeltas": {
+						"974cb6ff-4aef-0217-1813-73a28ddfcdc6": {
+							"ID": "974cb6ff-4aef-0217-1813-73a28ddfcdc6",
+							"ProgressBefore": 0,
+							"ProgressAfter": 521
+						}
+					}
+				},
+				"e02d1536-47ed-398b-6c97-51960b28f4f2": {
+					"ID": "e02d1536-47ed-398b-6c97-51960b28f4f2",
+					"Objectives": {
+						"91952692-4345-8bc1-6f1c-2dad7e14109f": 25
+					},
+					"ObjectiveDeltas": {
+						"91952692-4345-8bc1-6f1c-2dad7e14109f": {
+							"ID": "91952692-4345-8bc1-6f1c-2dad7e14109f",
+							"ProgressBefore": 0,
+							"ProgressAfter": 25
+						}
+					}
+				},
+				"f30bd3b0-45d3-d72a-8d1d-bab6deac61d6": {
+					"ID": "f30bd3b0-45d3-d72a-8d1d-bab6deac61d6",
+					"Objectives": {
+						"91952692-4345-8bc1-6f1c-2dad7e14109f": 20
+					},
+					"ObjectiveDeltas": {
+						"91952692-4345-8bc1-6f1c-2dad7e14109f": {
+							"ID": "91952692-4345-8bc1-6f1c-2dad7e14109f",
+							"ProgressBefore": 0,
+							"ProgressAfter": 20
+						}
+					}
+				},
+				"fc7ce719-4b5a-ebfe-ad49-12abeea8d534": {
+					"ID": "fc7ce719-4b5a-ebfe-ad49-12abeea8d534",
+					"Objectives": {
+						"5c22a5ad-4d44-3451-5a09-589c35ff77cd": 1
+					},
+					"ObjectiveDeltas": {
+						"5c22a5ad-4d44-3451-5a09-589c35ff77cd": {
+							"ID": "5c22a5ad-4d44-3451-5a09-589c35ff77cd",
+							"ProgressBefore": 0,
+							"ProgressAfter": 1
+						}
+					}
+				}
+			},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 347080,
+					"TotalXPAfter": 350480
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 618080,
+					"TotalXPAfter": 621480
+				}
+			},
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "48a3e8b9-ab38-4dbb-9269-b1e7b1bd87d5",
+			"StartTime": 1621647361981,
+			"XPGrants": {
+				"GamePlayed": 0,
+				"GameWon": 0,
+				"RoundPlayed": 500,
+				"RoundWon": 1000,
+				"Missions": {
+					"8f183032-4ba1-b6a2-0574-e0ab6098a08f": 2000
+				},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {
+				"02d0c027-4bc3-2214-34ae-c3a32bd50cc1": {
+					"ID": "02d0c027-4bc3-2214-34ae-c3a32bd50cc1",
+					"Objectives": {
+						"974cb6ff-4aef-0217-1813-73a28ddfcdc6": 758
+					},
+					"ObjectiveDeltas": {
+						"974cb6ff-4aef-0217-1813-73a28ddfcdc6": {
+							"ID": "974cb6ff-4aef-0217-1813-73a28ddfcdc6",
+							"ProgressBefore": 521,
+							"ProgressAfter": 1279
+						}
+					}
+				},
+				"8f183032-4ba1-b6a2-0574-e0ab6098a08f": {
+					"ID": "8f183032-4ba1-b6a2-0574-e0ab6098a08f",
+					"Objectives": {
+						"c807ef27-420a-69f2-3c0f-31bf8922ba6f": 1
+					},
+					"ObjectiveDeltas": {
+						"c807ef27-420a-69f2-3c0f-31bf8922ba6f": {
+							"ID": "c807ef27-420a-69f2-3c0f-31bf8922ba6f",
+							"ProgressBefore": 0,
+							"ProgressAfter": 1
+						}
+					}
+				},
+				"e02d1536-47ed-398b-6c97-51960b28f4f2": {
+					"ID": "e02d1536-47ed-398b-6c97-51960b28f4f2",
+					"Objectives": {
+						"91952692-4345-8bc1-6f1c-2dad7e14109f": 12
+					},
+					"ObjectiveDeltas": {
+						"91952692-4345-8bc1-6f1c-2dad7e14109f": {
+							"ID": "91952692-4345-8bc1-6f1c-2dad7e14109f",
+							"ProgressBefore": 25,
+							"ProgressAfter": 37
+						}
+					}
+				},
+				"fc7ce719-4b5a-ebfe-ad49-12abeea8d534": {
+					"ID": "fc7ce719-4b5a-ebfe-ad49-12abeea8d534",
+					"Objectives": {
+						"5c22a5ad-4d44-3451-5a09-589c35ff77cd": 1
+					},
+					"ObjectiveDeltas": {
+						"5c22a5ad-4d44-3451-5a09-589c35ff77cd": {
+							"ID": "5c22a5ad-4d44-3451-5a09-589c35ff77cd",
+							"ProgressBefore": 1,
+							"ProgressAfter": 2
+						}
+					}
+				}
+			},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 350480,
+					"TotalXPAfter": 353980
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 621480,
+					"TotalXPAfter": 624980
+				}
+			},
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "1edfc9fb-fe8e-4fe3-8095-58673bd02cf1",
+			"StartTime": 1621648121573,
+			"XPGrants": {
+				"GamePlayed": 1000,
+				"GameWon": 0,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {
+				"02d0c027-4bc3-2214-34ae-c3a32bd50cc1": {
+					"ID": "02d0c027-4bc3-2214-34ae-c3a32bd50cc1",
+					"Objectives": {
+						"974cb6ff-4aef-0217-1813-73a28ddfcdc6": 336
+					},
+					"ObjectiveDeltas": {
+						"974cb6ff-4aef-0217-1813-73a28ddfcdc6": {
+							"ID": "974cb6ff-4aef-0217-1813-73a28ddfcdc6",
+							"ProgressBefore": 1279,
+							"ProgressAfter": 1615
+						}
+					}
+				},
+				"e02d1536-47ed-398b-6c97-51960b28f4f2": {
+					"ID": "e02d1536-47ed-398b-6c97-51960b28f4f2",
+					"Objectives": {
+						"91952692-4345-8bc1-6f1c-2dad7e14109f": 10
+					},
+					"ObjectiveDeltas": {
+						"91952692-4345-8bc1-6f1c-2dad7e14109f": {
+							"ID": "91952692-4345-8bc1-6f1c-2dad7e14109f",
+							"ProgressBefore": 37,
+							"ProgressAfter": 47
+						}
+					}
+				}
+			},
+			"ContractDeltas": {
+				"5bef6de8-44d4-ac64-3df2-078e618fc0e3": {
+					"ID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
+					"TotalXPBefore": 353980,
+					"TotalXPAfter": 354980
+				},
+				"bfb8160e-eee0-46b1-a069-16f93adc7328": {
+					"ID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+					"TotalXPBefore": 624980,
+					"TotalXPAfter": 625980
+				}
+			},
+			"CouldProgressMissions": true
+		}
+	],
+	"ActiveSpecialContract": "bfb8160e-eee0-46b1-a069-16f93adc7328",
+	"Missions": [
+		{
+			"ID": "fc7ce719-4b5a-ebfe-ad49-12abeea8d534",
+			"Objectives": {
+				"5c22a5ad-4d44-3451-5a09-589c35ff77cd": 2
+			},
+			"Complete": false,
+			"ExpirationTime": "2021-06-22T00:00:00Z"
+		},
+		{
+			"ID": "02d0c027-4bc3-2214-34ae-c3a32bd50cc1",
+			"Objectives": {
+				"974cb6ff-4aef-0217-1813-73a28ddfcdc6": 1615
+			},
+			"Complete": false,
+			"ExpirationTime": "2021-06-22T00:00:00Z"
+		},
+		{
+			"ID": "e02d1536-47ed-398b-6c97-51960b28f4f2",
+			"Objectives": {
+				"91952692-4345-8bc1-6f1c-2dad7e14109f": 47
+			},
+			"Complete": false,
+			"ExpirationTime": "2021-06-22T00:00:00Z"
+		},
+		{
+			"ID": "f30bd3b0-45d3-d72a-8d1d-bab6deac61d6",
+			"Objectives": {
+				"91952692-4345-8bc1-6f1c-2dad7e14109f": 0
+			},
+			"Complete": false,
+			"ExpirationTime": "2021-05-23T02:00:00Z"
+		},
+		{
+			"ID": "bbff3898-4cd3-dd04-1509-179cf9003e9e",
+			"Objectives": {
+				"2de44730-437a-bbe5-74c6-57b581b72bd2": 0
+			},
+			"Complete": false,
+			"ExpirationTime": "2021-05-23T02:00:00Z"
+		}
+	],
+	"MissionMetadata": {
+		"NPECompleted": true,
+		"WeeklyCheckpoint": "2021-05-11T00:00:00Z"
+	}
+}

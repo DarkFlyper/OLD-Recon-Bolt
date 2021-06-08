@@ -13,6 +13,7 @@ final class AssetManager: ObservableObject {
 	private var loadTask: AnyCancellable?
 	
 	init() {
+		assets = Self.stored
 		loadAssets()
 	}
 	

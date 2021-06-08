@@ -9,7 +9,10 @@ final class ValorantLoadManager: LoadManager {
 		!isLoading && dataStore.data != nil
 	}
 	
-	init(dataStore: ClientDataStore) {
+	init(dataStore: ClientDataStore, clientVersion: String? = nil) {
+		if let version = clientVersion {
+			dataStore.data?.client.setClientVersion(version)
+		}
 		self.dataStore = dataStore
 	}
 	

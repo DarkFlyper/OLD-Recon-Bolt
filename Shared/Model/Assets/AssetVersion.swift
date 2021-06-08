@@ -17,4 +17,5 @@ struct AssetVersion: Codable, Hashable {
 	var version: String
 	var buildVersion: String
 	var buildDate: Date
+	var riotClientVersion: String
 }

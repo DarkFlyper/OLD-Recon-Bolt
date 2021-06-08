@@ -115,6 +115,10 @@
 		B9F07CB826474EB7006CD4F5 /* AssetVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F07CB626474EB7006CD4F5 /* AssetVersion.swift */; };
 		B9F07CBA26474F4E006CD4F5 /* MapAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F07CB926474F4E006CD4F5 /* MapAssets.swift */; };
 		B9F07CBB26474F4E006CD4F5 /* MapAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F07CB926474F4E006CD4F5 /* MapAssets.swift */; };
+		B9F5232F266ED96600DFF8DD /* LiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F5232E266ED96600DFF8DD /* LiveView.swift */; };
+		B9F52330266ED96600DFF8DD /* LiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F5232E266ED96600DFF8DD /* LiveView.swift */; };
+		B9F52332266EE57900DFF8DD /* example_contracts.json in Resources */ = {isa = PBXBuildFile; fileRef = B9F52331266EE57900DFF8DD /* example_contracts.json */; };
+		B9F52333266EE57900DFF8DD /* example_contracts.json in Resources */ = {isa = PBXBuildFile; fileRef = B9F52331266EE57900DFF8DD /* example_contracts.json */; };
 		B9F65C472651D20200C9C34A /* MapImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F65C462651D20200C9C34A /* MapImage.swift */; };
 		B9F65C482651D20200C9C34A /* MapImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F65C462651D20200C9C34A /* MapImage.swift */; };
 		B9F65C4B2651DFB100C9C34A /* AgentImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F65C4A2651DFB100C9C34A /* AgentImage.swift */; };
@@ -193,6 +197,8 @@
 		B9F07CB326474E8A006CD4F5 /* AssetClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetClient.swift; sourceTree = "<group>"; };
 		B9F07CB626474EB7006CD4F5 /* AssetVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetVersion.swift; sourceTree = "<group>"; };
 		B9F07CB926474F4E006CD4F5 /* MapAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAssets.swift; sourceTree = "<group>"; };
+		B9F5232E266ED96600DFF8DD /* LiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveView.swift; sourceTree = "<group>"; };
+		B9F52331266EE57900DFF8DD /* example_contracts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_contracts.json; sourceTree = "<group>"; };
 		B9F65C462651D20200C9C34A /* MapImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapImage.swift; sourceTree = "<group>"; };
 		B9F65C4A2651DFB100C9C34A /* AgentImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentImage.swift; sourceTree = "<group>"; };
 		B9F65C4D2651EDA500C9C34A /* DynamicallyStroked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicallyStroked.swift; sourceTree = "<group>"; };
@@ -255,6 +261,7 @@
 				B941B64425A5BC8800F675C1 /* ContentView.swift */,
 				B94091B725D09F0200EE5DF2 /* MatchListView.swift */,
 				B9CF2E7825A89976004A1458 /* MatchCell.swift */,
+				B9F5232E266ED96600DFF8DD /* LiveView.swift */,
 				B9131D67266AFA3B00E85F46 /* Reference */,
 				B9F66ACC266DC2F5008560FD /* Account */,
 				B9EE6E5D26589E8F007E28B5 /* Match Details */,
@@ -383,6 +390,7 @@
 				B9EF0F23263D09120067176A /* example_match.json */,
 				B941B6EB25A7C83700F675C1 /* example_updates.json */,
 				B96A0C9F265A8B4600844674 /* strange_match.json */,
+				B9F52331266EE57900DFF8DD /* example_contracts.json */,
 				B9DCF9AA2642F7A100C39EC4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -570,6 +578,7 @@
 				B9DCF9AB2642F7A100C39EC4 /* Preview Assets.xcassets in Resources */,
 				B9EF0F25263D09AD0067176A /* example_match.json in Resources */,
 				B941B6EC25A7C83700F675C1 /* example_updates.json in Resources */,
+				B9F52332266EE57900DFF8DD /* example_contracts.json in Resources */,
 				B941B65A25A5BC8A00F675C1 /* Assets.xcassets in Resources */,
 				B96A0CA0265A8B4600844674 /* strange_match.json in Resources */,
 			);
@@ -582,6 +591,7 @@
 				B9DCF9AC2642F7A100C39EC4 /* Preview Assets.xcassets in Resources */,
 				B941B6ED25A7C83700F675C1 /* example_updates.json in Resources */,
 				B9EF0F24263D091F0067176A /* example_match.json in Resources */,
+				B9F52333266EE57900DFF8DD /* example_contracts.json in Resources */,
 				B941B65B25A5BC8A00F675C1 /* Assets.xcassets in Resources */,
 				B96A0CA1265A8B4600844674 /* strange_match.json in Resources */,
 			);
@@ -607,6 +617,7 @@
 				B941B6DE25A7BC3800F675C1 /* View+Styling.swift in Sources */,
 				B94091AE25D09D5A00EE5DF2 /* LoadManager.swift in Sources */,
 				B9131D69266AFA4C00E85F46 /* MapListView.swift in Sources */,
+				B9F5232F266ED96600DFF8DD /* LiveView.swift in Sources */,
 				B96845B32665C7B900DC59D2 /* ClientData.swift in Sources */,
 				B9F65C4E2651EDA500C9C34A /* DynamicallyStroked.swift in Sources */,
 				B9DCF9AE2642F8FD00C39EC4 /* AssetManager.swift in Sources */,
@@ -659,6 +670,7 @@
 				B941B6DF25A7BC3800F675C1 /* View+Styling.swift in Sources */,
 				B94091AF25D09D5A00EE5DF2 /* LoadManager.swift in Sources */,
 				B9131D6A266AFA4C00E85F46 /* MapListView.swift in Sources */,
+				B9F52330266ED96600DFF8DD /* LiveView.swift in Sources */,
 				B96845B42665C7B900DC59D2 /* ClientData.swift in Sources */,
 				B9F65C4F2651EDA500C9C34A /* DynamicallyStroked.swift in Sources */,
 				B9DCF9AF2642F8FD00C39EC4 /* AssetManager.swift in Sources */,
