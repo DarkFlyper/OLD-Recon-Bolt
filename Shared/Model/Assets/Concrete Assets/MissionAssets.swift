@@ -2,8 +2,8 @@ import Foundation
 import ValorantAPI
 
 extension AssetClient {
-	func getMissionInfo() -> BasicPublisher<[MissionInfo]> {
-		send(MissionInfoRequest())
+	func getMissionInfo() async throws -> [MissionInfo] {
+		try await send(MissionInfoRequest())
 	}
 }
 

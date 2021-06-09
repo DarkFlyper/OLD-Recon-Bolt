@@ -1,18 +1,18 @@
 import SwiftUI
 import SwiftUIMissingPieces
-import Combine
 import ValorantAPI
 
 struct LoginForm: View {
 	@Binding var data: ClientData?
 	@State private(set) var credentials: Credentials
+	@State var isSigningIn = false
 	
 	@EnvironmentObject private var loadManager: LoadManager
 	
 	var body: some View {
 		ZStack {
 			ProgressView("signing in…")
-				.opacity(loadManager.isLoading ? 1 : 0)
+				.opacity(isSigningIn ? 1 : 0)
 			
 			VStack(spacing: 12) {
 				Text("Sign in with your Riot account")
@@ -30,12 +30,14 @@ struct LoginForm: View {
 				
 				VStack {
 					TextField("Username", text: $credentials.username)
-					SecureField("Password", text: $credentials.password) { logIn() }
+					SecureField("Password", text: $credentials.password) {
+						async { await logIn() }
+					}
 				}
 				.frame(maxWidth: 180)
 				
 				#if !os(macOS)
-				Button(action: logIn) {
+				Button(role: nil, action: logIn) {
 					Text("Sign In")
 						.bold()
 				}
@@ -43,8 +45,8 @@ struct LoginForm: View {
 			}
 			.frame(idealWidth: 180)
 			.textFieldStyle(PrettyTextFieldStyle())
-			.opacity(loadManager.isLoading ? 0.25 : 1)
-			.blur(radius: loadManager.isLoading ? 4 : 0)
+			.opacity(isSigningIn ? 0.25 : 1)
+			.blur(radius: isSigningIn ? 4 : 0)
 		}
 		.withoutSheetBottomPadding()
 		.padding()
@@ -58,8 +60,14 @@ struct LoginForm: View {
 		.loadErrorTitle("Could not sign in!")
 	}
 	
-	func logIn() {
-		loadManager.runTask(StandardClientData.authenticated(using: credentials)) { data = $0 }
+	func logIn() async {
+		isSigningIn = true
+		
+		await loadManager.runTask {
+			data = try await StandardClientData.authenticated(using: credentials)
+		}
+		
+		isSigningIn = false
 	}
 }
 
@@ -68,11 +76,10 @@ struct LoginSheet_Previews: PreviewProvider {
 	static var previews: some View {
 		Group {
 			LoginForm(data: .constant(nil), credentials: .init())
-				.withLoadManager()
 			
-			LoginForm(data: .constant(nil), credentials: .init())
-				.withLoadManager(LoadManager.mockLoading)
+			LoginForm(data: .constant(nil), credentials: .init(), isSigningIn: true)
 		}
+		.withLoadManager()
 		.inEachColorScheme()
 		.previewLayout(.sizeThatFits)
 	}

@@ -50,7 +50,7 @@ struct AccountView: View {
 				Text("Anything with images will not display correctly.")
 					.multilineTextAlignment(.center)
 				
-				Button("Download Assets Now") { assetManager.loadAssets() }
+				Button("Download Assets Now", role: nil) { await assetManager.loadAssets() }
 			}
 		} else {
 			Text("Assets up to date!")

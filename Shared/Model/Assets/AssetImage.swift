@@ -1,6 +1,5 @@
 import Foundation
 import SwiftUI
-import Combine
 import Protoquest
 import HandyOperators
 
@@ -52,16 +51,13 @@ final class Cache<Key: Hashable, Value> {
 }
 
 extension AssetClient {
-	func download(_ image: AssetImage) -> BasicPublisher<Void> {
-		send(ImageDownloadRequest(imageURL: image.url))
-			.tryMap {
-				try FileManager.default.createDirectory(
-					at: image.localURL.deletingLastPathComponent(),
-					withIntermediateDirectories: true
-				)
-				try $0.write(to: image.localURL)
-			}
-			.eraseToAnyPublisher()
+	func download(_ image: AssetImage) async throws {
+		let imageData = try await send(ImageDownloadRequest(imageURL: image.url))
+		try FileManager.default.createDirectory(
+			at: image.localURL.deletingLastPathComponent(),
+			withIntermediateDirectories: true
+		)
+		try imageData.write(to: image.localURL)
 	}
 }
 

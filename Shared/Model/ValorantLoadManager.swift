@@ -1,12 +1,12 @@
 import SwiftUI
-import Combine
 import ValorantAPI
 
 final class ValorantLoadManager: LoadManager {
+	private typealias APIError = ValorantClient.APIError
 	private let dataStore: ClientDataStore
 	
 	var canLoad: Bool {
-		!isLoading && dataStore.data != nil
+		dataStore.data != nil
 	}
 	
 	init(dataStore: ClientDataStore, clientVersion: String? = nil) {
@@ -16,40 +16,27 @@ final class ValorantLoadManager: LoadManager {
 		self.dataStore = dataStore
 	}
 	
-	func load<P: Publisher>(
-		_ task: @escaping (ValorantClient) -> P,
-		onSuccess: @escaping (P.Output) -> Void
+	func loadAsync(
+		_ task: @escaping (ValorantClient) async throws -> Void
 	) {
+		async { await load(task) }
+	}
+	
+	func load(
+		_ task: @escaping (ValorantClient) async throws -> Void
+	) async {
 		guard let data = dataStore.data else { return }
 		#if DEBUG
 		guard !(data is MockClientData) else { return }
 		#endif
-		runTask(
-			task(data.client).tryCatch { error -> AnyPublisher<P.Output, Error> in
-				switch error {
-				case ValorantClient.APIError.tokenFailure as Error,
-					 ValorantClient.APIError.unauthorized as Error:
-					return data.reauthenticated()
-						.receive(on: DispatchQueue.main)
-						.also { self.dataStore.data = $0 }
-						.flatMap { task($0.client).mapError { $0 } }
-						.eraseToAnyPublisher()
-				default:
-					throw error
-				}
-			},
-			onSuccess: onSuccess
-		)
-	}
-	
-	func loadButton(
-		_ title: String,
-		dispatchTask: @escaping (ValorantLoadManager) -> Void
-	) -> some View {
-		Button(title) {
-			dispatchTask(self)
+		
+		await runTask {
+			do {
+				try await task(data.client)
+			} catch APIError.tokenFailure, APIError.unauthorized {
+				dataStore.data = try await data.reauthenticated()
+				try await task(data.client)
+			}
 		}
-		.disabled(!canLoad)
-		.buttonStyle(UnifiedLinkButtonStyle())
 	}
 }

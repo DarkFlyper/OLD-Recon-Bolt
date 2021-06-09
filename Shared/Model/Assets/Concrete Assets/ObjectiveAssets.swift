@@ -2,8 +2,8 @@ import Foundation
 import ValorantAPI
 
 extension AssetClient {
-	func getObjectiveInfo() -> BasicPublisher<[ObjectiveInfo]> {
-		send(ObjectiveInfoRequest())
+	func getObjectiveInfo() async throws -> [ObjectiveInfo] {
+		try await send(ObjectiveInfoRequest())
 	}
 }
 

@@ -1,49 +1,46 @@
 import Foundation
-import Combine
 
 extension AssetClient {
 	func collectAssets(
 		for version: AssetVersion,
 		onProgress: AssetProgressCallback?
-	) -> BasicPublisher<AssetCollection> {
-		// can't wait for async/await
-		getMapInfo()
-			.zip(
-				getAgentInfo(),
-				getMissionInfo(),
-				getObjectiveInfo()
-			) { (maps, agents, missions, objectives) in
-				AssetCollection(
-					version: version,
-					maps: .init(values: maps),
-					agents: .init(values: agents),
-					missions: .init(values: missions),
-					objectives: .init(values: objectives)
-				)
-			}
-			.flatMap { downloadAllImages(for: $0, onProgress: onProgress) }
-			.eraseToAnyPublisher()
+	) async throws -> AssetCollection {
+		async let maps = getMapInfo()
+		async let agents = getAgentInfo()
+		async let missions = getMissionInfo()
+		async let objectives = getObjectiveInfo()
+		let collection = try await AssetCollection(
+			version: version,
+			maps: .init(values: maps),
+			agents: .init(values: agents),
+			missions: .init(values: missions),
+			objectives: .init(values: objectives)
+		)
+		return try await downloadAllImages(for: collection, onProgress: onProgress)
 	}
 	
 	private func downloadAllImages(
 		for collection: AssetCollection,
 		onProgress: AssetProgressCallback?
-	) -> BasicPublisher<AssetCollection> {
+	) async throws -> AssetCollection {
 		let images = collection.images
-		var completed: Int32 = 0
-		onProgress?(.init(completed: 0, total: images.count))
 		
-		let concurrencyLimiter = DispatchSemaphore(value: 4) // this doesn't seem to slow it down and makes it more consistent
-		let scheduler = DispatchQueue(label: "image downloads", qos: .userInitiated)
-		return images.publisher
-			.receive(on: scheduler)
-			.also { _ in concurrencyLimiter.wait() }
-			.flatMap(download(_:))
-			.also { _ in concurrencyLimiter.signal() }
-			.also { onProgress?(.init(completed: Int(OSAtomicIncrement32(&completed)), total: images.count)) }
-			.collect()
-			.map { _ in collection }
-			.eraseToAnyPublisher()
+		// TODO: limit concurrency with semaphore or something?
+		try await withThrowingTaskGroup(of: Void.self) { group in
+			for image in images {
+				group.async {
+					try await download(image)
+				}
+			}
+			onProgress?(.init(completed: 0, total: images.count))
+			var completed = 0
+			for try await _ in group {
+				completed += 1 // no async zip yet
+				onProgress?(.init(completed: completed, total: images.count))
+			}
+		}
+		
+		return collection
 	}
 }
 

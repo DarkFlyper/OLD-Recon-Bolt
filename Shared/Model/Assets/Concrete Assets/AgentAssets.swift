@@ -3,13 +3,10 @@ import ValorantAPI
 import ArrayBuilder
 
 extension AssetClient {
-	func getAgentInfo() -> BasicPublisher<[AgentInfo]> {
-		send(AgentInfoRequest())
-			.map { wrapped in
-				assert(wrapped.errors.count == 1)
-				return wrapped.decoded
-			}
-			.eraseToAnyPublisher()
+	func getAgentInfo() async throws -> [AgentInfo] {
+		let wrapped = try await send(AgentInfoRequest())
+		assert(wrapped.errors.count == 1)
+		return wrapped.decoded
 	}
 }
 

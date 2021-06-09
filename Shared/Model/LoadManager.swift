@@ -1,37 +1,19 @@
 import SwiftUI
 import SwiftUIMissingPieces
-import Combine
 import UserDefault
 import HandyOperators
 
 class LoadManager: ObservableObject {
-	@Published private var loadTask: AnyCancellable?
 	@Published fileprivate var loadError: PresentedError?
-	
-	var isLoading: Bool {
-		loadTask != nil
-	}
 	
 	init() {}
 	
-	#if DEBUG
-	static let mockLoading = LoadManager() <- {
-		$0.loadTask = Future { _ in } // never completes
-			.sink {}
-	}
-	#endif
-	
-	func runTask<P: Publisher>(
-		_ task: P,
-		onSuccess: @escaping (P.Output) -> Void
-	) {
-		loadTask = task
-			.receive(on: DispatchQueue.main)
-			.sinkResult(
-				onSuccess: onSuccess,
-				onFailure: { self.loadError = .init($0) },
-				always: { self.loadTask = nil }
-			)
+	func runTask(_ task: () async throws -> Void) async {
+		do {
+			try await task()
+		} catch {
+			loadError = .init(error)
+		}
 	}
 }
 

@@ -1,6 +1,6 @@
 import SwiftUI
-import Combine
 import ValorantAPI
+import HandyOperators
 
 struct UserView: View {
 	@State private var matchList: MatchList
@@ -18,7 +18,8 @@ struct UserView: View {
 
 struct MatchListView: View {
 	@Binding var matchList: MatchList
-	@AppStorage("MatchListView.shouldShowUnranked") private var shouldShowUnranked = true
+	@AppStorage("MatchListView.shouldShowUnranked")
+	private var shouldShowUnranked = true
 	@EnvironmentObject private var loadManager: ValorantLoadManager
 	
 	private var shownMatches: [CompetitiveUpdate] {
@@ -29,14 +30,6 @@ struct MatchListView: View {
 	
 	var body: some View {
 		List {
-			Button(action: loadMatches) {
-				Label("Load Matches", systemImage: "arrow.clockwise")
-			}
-			.disabled(!loadManager.canLoad)
-			.buttonStyle(UnifiedLinkButtonStyle())
-			.padding(10)
-			.frame(maxWidth: .infinity, alignment: .center)
-			
 			ForEach(shownMatches, id: \.id) {
 				MatchCell(match: $0, userID: matchList.user.id)
 			}
@@ -47,16 +40,21 @@ struct MatchListView: View {
 		}
 		.onAppear {
 			if matchList.matches.isEmpty {
-				loadMatches()
+				async { await loadMatches() }
 			}
 		}
+		.refreshable(action: loadMatches)
 		.loadErrorTitle("Could not load matches!")
 		.navigationTitle(matchList.user.name)
 	}
 	
-	func loadMatches() {
-		loadManager.load { $0.loadMatches(for: matchList) }
-			onSuccess: { new in withAnimation { matchList = new } }
+	func loadMatches() async {
+		await loadManager.load { client in
+			let updated = try await matchList <- {
+				try await client.loadMatches(for: &$0)
+			}
+			withAnimation { matchList = updated }
+		}
 	}
 }
 

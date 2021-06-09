@@ -1,8 +1,8 @@
 import Foundation
 
 extension AssetClient {
-	func getCurrentVersion() -> BasicPublisher<AssetVersion> {
-		send(VersionRequest())
+	func getCurrentVersion() async throws -> AssetVersion {
+		try await send(VersionRequest())
 	}
 }
 

@@ -1,7 +1,6 @@
 import Foundation
 import ValorantAPI
 import UserDefault
-import Combine
 import HandyOperators
 
 protocol ClientData {
@@ -9,8 +8,8 @@ protocol ClientData {
 	var client: ValorantClient { get }
 	var matchList: MatchList { get set }
 	
-	static func authenticated(using credentials: Credentials) -> AnyPublisher<ClientData, Error>
-	func reauthenticated() -> AnyPublisher<ClientData, Error>
+	static func authenticated(using credentials: Credentials) async throws -> ClientData
+	func reauthenticated() async throws -> ClientData
 	
 	init?(using keychain: Keychain)
 	func save(using keychain: Keychain)
@@ -48,23 +47,18 @@ struct StandardClientData: ClientData {
 	@UserDefault("ClientData.stored")
 	private static var stored: CodableData?
 	
-	static func authenticated(using credentials: Credentials) -> AnyPublisher<ClientData, Error> {
-		_authenticated(using: credentials)
-			.map { $0 }
-			.eraseToAnyPublisher()
+	static func authenticated(using credentials: Credentials) async throws -> ClientData {
+		try await _authenticated(using: credentials)
 	}
 	
-	private static func _authenticated(using credentials: Credentials) -> AnyPublisher<Self, Error> {
-		ValorantClient.authenticated(
+	private static func _authenticated(using credentials: Credentials) async throws -> Self {
+		let client = try await ValorantClient.authenticated(
 			username: credentials.username,
 			password: credentials.password,
 			region: credentials.region
 		)
-		.flatMap { client in
-			client.getUserInfo()
-				.map { Self(client: client, userInfo: $0, credentials: credentials) }
-		}
-		.eraseToAnyPublisher()
+		let userInfo = try await client.getUserInfo()
+		return Self(client: client, userInfo: userInfo, credentials: credentials)
 	}
 	
 	init?(using keychain: Keychain) {
@@ -87,11 +81,10 @@ struct StandardClientData: ClientData {
 		Self.stored = codableData
 	}
 	
-	func reauthenticated() -> AnyPublisher<ClientData, Error> {
-		Self._authenticated(using: credentials)
+	func reauthenticated() async throws -> ClientData {
+		try await Self._authenticated(using: credentials)
 			// TODO: switching to GRDB will make this unnecessary
-			.map { $0 <- { $0.codableData.matchList = codableData.matchList } }
-			.eraseToAnyPublisher()
+			<- { $0.codableData.matchList = codableData.matchList }
 	}
 	
 	private struct CodableData: Codable, DefaultsValueConvertible {

@@ -1,5 +1,4 @@
 import Foundation
-import Combine
 import ValorantAPI
 
 enum PreviewData {
@@ -63,8 +62,8 @@ struct MockClientData: ClientData {
 		fatalError("no client in previews!")
 	}
 	
-	static func authenticated(using credentials: Credentials) -> AnyPublisher<ClientData, Error> { fatalError() }
-	func reauthenticated() -> AnyPublisher<ClientData, Error> { fatalError() }
+	static func authenticated(using credentials: Credentials) -> ClientData { fatalError() }
+	func reauthenticated() -> ClientData { fatalError() }
 	
 	init?(using keychain: Keychain) {}
 	func save(using keychain: Keychain) {}
@@ -75,8 +74,8 @@ private struct EmptyClientData: ClientData {
 	var matchList: MatchList
 	let client: ValorantClient
 	
-	static func authenticated(using credentials: Credentials) -> AnyPublisher<ClientData, Error> { fatalError() }
-	func reauthenticated() -> AnyPublisher<ClientData, Error> { fatalError() }
+	static func authenticated(using credentials: Credentials) -> ClientData { fatalError() }
+	func reauthenticated() -> ClientData { fatalError() }
 	
 	init?(using keychain: Keychain) { return nil }
 	func save(using keychain: Keychain) {}

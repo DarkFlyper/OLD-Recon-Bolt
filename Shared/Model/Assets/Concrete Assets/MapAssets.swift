@@ -3,8 +3,8 @@ import ValorantAPI
 import ArrayBuilder
 
 extension AssetClient {
-	func getMapInfo() -> BasicPublisher<[MapInfo]> {
-		send(MapInfoRequest())
+	func getMapInfo() async throws -> [MapInfo] {
+		try await send(MapInfoRequest())
 	}
 }
 

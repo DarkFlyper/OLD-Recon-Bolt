@@ -1,34 +1,39 @@
 import Foundation
 import ValorantAPI
 import UserDefault
-import Combine
 import SwiftUI
+import HandyOperators
 
 final class AssetManager: ObservableObject {
-	typealias BasicPublisher = AssetClient.BasicPublisher
-	
+	// TODO: shouldn't this be implicit on @Published properties?
+	@MainActor
 	@Published private(set) var assets: AssetCollection?
+	@MainActor
 	@Published private(set) var progress: AssetDownloadProgress?
+	@MainActor
 	@Published private(set) var error: Error?
-	private var loadTask: AnyCancellable?
 	
 	init() {
-		assets = Self.stored
-		loadAssets()
+		_assets = .init(wrappedValue: Self.stored)
+		async { await loadAssets() }
 	}
 	
-	func loadAssets() {
-		loadTask = Self
-			.loadAssets() { progress in
+	@MainActor
+	func loadAssets() async {
+		guard progress == nil else { return }
+		
+		do {
+			assets = try await Self.loadAssets() { progress in
 				DispatchQueue.main.async {
 					print(progress)
 					self.progress = progress
 				}
 			}
-			.receive(on: DispatchQueue.main)
-			.sinkResult { self.assets = $0 }
-				onFailure: { self.error = $0 }
-				always: { self.progress = nil }
+		} catch {
+			self.error = error
+		}
+		
+		self.progress = nil
 	}
 	
 	#if DEBUG
@@ -36,34 +41,28 @@ final class AssetManager: ObservableObject {
 	static let mockEmpty = AssetManager(assets: nil)
 	
 	private init(assets: AssetCollection?) {
-		self.assets = assets
+		_assets = .init(wrappedValue: assets)
 	}
 	
 	static let mockDownloading = AssetManager(mockProgress: .init(completed: 42, total: 69))
 	
 	private init(mockProgress: AssetDownloadProgress?) {
-		self.progress = mockProgress
+		_progress = .init(wrappedValue: mockProgress)
 	}
 	#endif
 	
 	static func loadAssets(
 		forceUpdate: Bool = false,
 		onProgress: AssetProgressCallback? = nil
-	) -> BasicPublisher<AssetCollection> {
-		client.getCurrentVersion()
-			.flatMap { [client] version -> BasicPublisher<AssetCollection> in
-				if !forceUpdate, let stored = stored, stored.version == version {
-					return Just(stored)
-						.setFailureType(to: Error.self)
-						.eraseToAnyPublisher()
-				} else {
-					return client
-						.collectAssets(for: version, onProgress: onProgress)
-						.also { Self.stored = $0 }
-						.eraseToAnyPublisher()
-				}
-			}
-			.eraseToAnyPublisher()
+	) async throws -> AssetCollection {
+		let version = try await client.getCurrentVersion()
+		if !forceUpdate, let stored = stored, stored.version == version {
+			return stored
+		} else {
+			return try await client
+				.collectAssets(for: version, onProgress: onProgress)
+			<- { Self.stored = $0 }
+		}
 	}
 	
 	@UserDefault("AssetManager.stored")

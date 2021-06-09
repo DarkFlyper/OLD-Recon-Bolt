@@ -20,9 +20,11 @@ struct MatchDetailsContainer: View {
 		.loadErrorTitle("Could not load match details!")
 		.onAppear {
 			if matchDetails == nil {
-				loadManager.load {
-					$0.getMatchDetails(matchID: matchID)
-				} onSuccess: { matchDetails = $0 }
+				async {
+					await loadManager.load {
+						matchDetails = try await $0.getMatchDetails(matchID: matchID)
+					}
+				}
 			}
 		}
 		.navigationTitle("Match Details")

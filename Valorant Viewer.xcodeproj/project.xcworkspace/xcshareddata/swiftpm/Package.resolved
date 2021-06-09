@@ -38,12 +38,21 @@
         }
       },
       {
-        "package": "KeychainSwift",
+        "package": "keychain-swift",
         "repositoryURL": "https://github.com/evgenyneu/keychain-swift.git",
         "state": {
           "branch": null,
           "revision": "96fb84f45a96630e7583903bd7e08cf095c7a7ef",
           "version": "19.0.0"
+        }
+      },
+      {
+        "package": "Protoquest",
+        "repositoryURL": "https://github.com/juliand665/Protoquest",
+        "state": {
+          "branch": "main",
+          "revision": "061a18dfb3878fbd6c376e8ef534f4a846c7ddbc",
+          "version": null
         }
       },
       {
@@ -65,7 +74,7 @@
         }
       },
       {
-        "package": "SwiftUIMissingPieces",
+        "package": "SwifUI-Missing-Pieces",
         "repositoryURL": "git@github.com:juliand665/SwifUI-Missing-Pieces.git",
         "state": {
           "branch": "main",
@@ -80,6 +89,15 @@
           "branch": null,
           "revision": "01f3380fb7ba86b4ac0c81d96c8992bed9f2b8f5",
           "version": "1.0.2"
+        }
+      },
+      {
+        "package": "ValorantAPI",
+        "repositoryURL": "git@github.com:juliand665/ValorantAPI.git",
+        "state": {
+          "branch": "main",
+          "revision": "18bff079b89f99d910801fbf1312a17ea4b4fcbb",
+          "version": null
         }
       },
       {

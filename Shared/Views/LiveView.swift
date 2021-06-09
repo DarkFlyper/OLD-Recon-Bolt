@@ -25,9 +25,9 @@ struct LiveView: View {
 		.background(Color(.systemGroupedBackground).edgesIgnoringSafeArea(.all))
 		.onAppear {
 			if contractDetails == nil {
-				loadContractDetails(then: loadLiveGameDetails)
+				async { await loadContractDetails() }
 			} else {
-				// TODO: load live game details if missing
+				async { await loadLiveGameDetails() }
 			}
 		}
 		.navigationTitle("Live")
@@ -42,7 +42,7 @@ struct LiveView: View {
 				
 				Spacer()
 				
-				Button { loadContractDetails() } label: {
+				Button(role: nil) { await loadContractDetails() } label: {
 					Image(systemName: "arrow.clockwise")
 				}
 			}
@@ -69,7 +69,7 @@ struct LiveView: View {
 				
 				Spacer()
 				
-				Button(action: loadLiveGameDetails) {
+				Button(role: nil, action: loadLiveGameDetails) {
 					Image(systemName: "arrow.clockwise")
 				}
 				.disabled(true)
@@ -130,15 +130,13 @@ struct LiveView: View {
 		.padding()
 	}
 	
-	func loadContractDetails(then completion: (() -> Void)? = nil) {
-		loadManager.load { $0.getContractDetails(playerID: user.id) }
-			onSuccess: {
-				contractDetails = $0
-				completion?()
-			}
+	func loadContractDetails() async {
+		await loadManager.load {
+			contractDetails = try await $0.getContractDetails(playerID: user.id)
+		}
 	}
 	
-	func loadLiveGameDetails() {
+	func loadLiveGameDetails() async {
 		// TODO: implement!
 	}
 }
