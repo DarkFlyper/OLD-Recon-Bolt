@@ -1,5 +1,4 @@
 import XCTest
-import CombineExpectations
 import HandyOperators
 @testable import Valorant_Viewer
 
@@ -8,13 +7,11 @@ final class Tests: XCTestCase {
 		$0.protocolClasses!.insert(ImageIgnoringProtocol.self, at: 0)
 	})
 	
-	func testDownloadingAssets() throws {
+	func testDownloadingAssets() async throws {
 		let client = AssetClient(session: Self.session)
-		let recorder = client.getCurrentVersion()
-			.flatMap { client.collectAssets(for: $0) { print($0) } }
-			.record()
+		let version = try await client.getCurrentVersion()
+		let assetCollection = try await client.collectAssets(for: version) { print($0) }
 		
-		let assetCollection = try wait(for: recorder.single, timeout: 100, description: "load assets")
 		XCTAssertFalse(assetCollection.agents.isEmpty)
 		XCTAssertFalse(assetCollection.maps.isEmpty)
 	}

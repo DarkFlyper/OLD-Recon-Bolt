@@ -48,7 +48,6 @@
 		B9485F87264B5BD700AC3456 /* AssetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9485F86264B5BD700AC3456 /* AssetImage.swift */; };
 		B9485F88264B5BD700AC3456 /* AssetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9485F86264B5BD700AC3456 /* AssetImage.swift */; };
 		B9485F90264B639F00AC3456 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9485F8F264B639F00AC3456 /* Tests.swift */; };
-		B9485F99264B67EC00AC3456 /* CombineExpectations in Frameworks */ = {isa = PBXBuildFile; productRef = B9485F98264B67EC00AC3456 /* CombineExpectations */; };
 		B96845B32665C7B900DC59D2 /* ClientData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96845B22665C7B900DC59D2 /* ClientData.swift */; };
 		B96845B42665C7B900DC59D2 /* ClientData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96845B22665C7B900DC59D2 /* ClientData.swift */; };
 		B96A0CA0265A8B4600844674 /* strange_match.json in Resources */ = {isa = PBXBuildFile; fileRef = B96A0C9F265A8B4600844674 /* strange_match.json */; };
@@ -107,8 +106,6 @@
 		B9EF0F25263D09AD0067176A /* example_match.json in Resources */ = {isa = PBXBuildFile; fileRef = B9EF0F23263D09120067176A /* example_match.json */; };
 		B9EF0F27263D9D860067176A /* ValorantAPI+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EF0F26263D9D860067176A /* ValorantAPI+SwiftUI.swift */; };
 		B9EF0F28263D9D860067176A /* ValorantAPI+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EF0F26263D9D860067176A /* ValorantAPI+SwiftUI.swift */; };
-		B9EF0F2B263DEEA30067176A /* VisualEffects in Frameworks */ = {isa = PBXBuildFile; productRef = B9EF0F2A263DEEA30067176A /* VisualEffects */; };
-		B9EF0F2D263DEEAA0067176A /* VisualEffects in Frameworks */ = {isa = PBXBuildFile; productRef = B9EF0F2C263DEEAA0067176A /* VisualEffects */; };
 		B9F07CB426474E8A006CD4F5 /* AssetClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F07CB326474E8A006CD4F5 /* AssetClient.swift */; };
 		B9F07CB526474E8A006CD4F5 /* AssetClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F07CB326474E8A006CD4F5 /* AssetClient.swift */; };
 		B9F07CB726474EB7006CD4F5 /* AssetVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F07CB626474EB7006CD4F5 /* AssetVersion.swift */; };
@@ -130,12 +127,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		B9485F92264B639F00AC3456 /* PBXContainerItemProxy */ = {
+		B9F39F222671AA0F00D75E7F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B941B63E25A5BC8800F675C1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = B941B65125A5BC8A00F675C1;
-			remoteInfo = "Valorant Viewer (macOS)";
+			remoteGlobalIDString = B941B64925A5BC8A00F675C1;
+			remoteInfo = "Valorant Viewer (iOS)";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -218,7 +215,6 @@
 				B941B6D025A79A6400F675C1 /* KeychainSwift in Frameworks */,
 				B9CF2E6C25A81F57004A1458 /* SwiftUIMissingPieces in Frameworks */,
 				B941B69B25A62FFB00F675C1 /* UserDefault in Frameworks */,
-				B9EF0F2B263DEEA30067176A /* VisualEffects in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,7 +227,6 @@
 				B941B6D425A79A6A00F675C1 /* KeychainSwift in Frameworks */,
 				B9CF2E7025A81F5D004A1458 /* SwiftUIMissingPieces in Frameworks */,
 				B941B69F25A6300100F675C1 /* UserDefault in Frameworks */,
-				B9EF0F2D263DEEAA0067176A /* VisualEffects in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,7 +234,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9485F99264B67EC00AC3456 /* CombineExpectations in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,7 +459,6 @@
 				B941B6CF25A79A6400F675C1 /* KeychainSwift */,
 				B9CF2E6B25A81F57004A1458 /* SwiftUIMissingPieces */,
 				B9C97DCB263CB0D6001E4D1B /* ValorantAPI */,
-				B9EF0F2A263DEEA30067176A /* VisualEffects */,
 				B9EE6E742659D6DF007E28B5 /* Algorithms */,
 				B90BC2ED266D224F00C905D4 /* CGeometry */,
 				B90BC2F0266D240000C905D4 /* HandyOperators */,
@@ -492,7 +485,6 @@
 				B941B6D325A79A6A00F675C1 /* KeychainSwift */,
 				B9CF2E6F25A81F5D004A1458 /* SwiftUIMissingPieces */,
 				B9C97DCD263CB0F8001E4D1B /* ValorantAPI */,
-				B9EF0F2C263DEEAA0067176A /* VisualEffects */,
 				B9EE6E762659D6ED007E28B5 /* Algorithms */,
 			);
 			productName = "Valorant Viewer (macOS)";
@@ -510,11 +502,10 @@
 			buildRules = (
 			);
 			dependencies = (
-				B9485F93264B639F00AC3456 /* PBXTargetDependency */,
+				B9F39F232671AA0F00D75E7F /* PBXTargetDependency */,
 			);
 			name = "Valorant Viewer Tests";
 			packageProductDependencies = (
-				B9485F98264B67EC00AC3456 /* CombineExpectations */,
 			);
 			productName = "Valorant Viewer Tests";
 			productReference = B9485F8D264B639F00AC3456 /* Valorant Viewer Tests.xctest */;
@@ -537,7 +528,7 @@
 					};
 					B9485F8C264B639F00AC3456 = {
 						CreatedOnToolsVersion = 12.5;
-						TestTargetID = B941B65125A5BC8A00F675C1;
+						TestTargetID = B941B64925A5BC8A00F675C1;
 					};
 				};
 			};
@@ -555,8 +546,6 @@
 				B941B6CE25A79A6400F675C1 /* XCRemoteSwiftPackageReference "keychain-swift" */,
 				B9CF2E6A25A81F57004A1458 /* XCRemoteSwiftPackageReference "SwifUI-Missing-Pieces" */,
 				B9C97DCA263CB0D6001E4D1B /* XCRemoteSwiftPackageReference "ValorantAPI" */,
-				B9EF0F29263DEEA30067176A /* XCRemoteSwiftPackageReference "VisualEffects" */,
-				B9485F97264B67EC00AC3456 /* XCRemoteSwiftPackageReference "CombineExpectations" */,
 				B9EE6E732659D6DF007E28B5 /* XCRemoteSwiftPackageReference "swift-algorithms" */,
 				B90BC2EC266D224F00C905D4 /* XCRemoteSwiftPackageReference "CGeometry" */,
 				B90BC2EF266D240000C905D4 /* XCRemoteSwiftPackageReference "HandyOperators" */,
@@ -726,10 +715,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		B9485F93264B639F00AC3456 /* PBXTargetDependency */ = {
+		B9F39F232671AA0F00D75E7F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B941B65125A5BC8A00F675C1 /* Valorant Viewer (macOS) */;
-			targetProxy = B9485F92264B639F00AC3456 /* PBXContainerItemProxy */;
+			target = B941B64925A5BC8A00F675C1 /* Valorant Viewer (iOS) */;
+			targetProxy = B9F39F222671AA0F00D75E7F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -969,9 +958,9 @@
 				MACOSX_DEPLOYMENT_TARGET = 11.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "juliand665.Valorant-Viewer-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
+				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Valorant Viewer.app/Contents/MacOS/Valorant Viewer";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Valorant Viewer.app/Valorant Viewer";
 			};
 			name = Debug;
 		};
@@ -991,9 +980,9 @@
 				MACOSX_DEPLOYMENT_TARGET = 11.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "juliand665.Valorant-Viewer-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
+				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Valorant Viewer.app/Contents/MacOS/Valorant Viewer";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Valorant Viewer.app/Valorant Viewer";
 			};
 			name = Release;
 		};
@@ -1071,14 +1060,6 @@
 				minimumVersion = 19.0.0;
 			};
 		};
-		B9485F97264B67EC00AC3456 /* XCRemoteSwiftPackageReference "CombineExpectations" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/groue/CombineExpectations";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.7.0;
-			};
-		};
 		B9C97DCA263CB0D6001E4D1B /* XCRemoteSwiftPackageReference "ValorantAPI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:juliand665/ValorantAPI.git";
@@ -1101,14 +1082,6 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 0.2.0;
-			};
-		};
-		B9EF0F29263DEEA30067176A /* XCRemoteSwiftPackageReference "VisualEffects" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/twostraws/VisualEffects";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.3;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -1144,11 +1117,6 @@
 			package = B941B6CE25A79A6400F675C1 /* XCRemoteSwiftPackageReference "keychain-swift" */;
 			productName = KeychainSwift;
 		};
-		B9485F98264B67EC00AC3456 /* CombineExpectations */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B9485F97264B67EC00AC3456 /* XCRemoteSwiftPackageReference "CombineExpectations" */;
-			productName = CombineExpectations;
-		};
 		B9C97DCB263CB0D6001E4D1B /* ValorantAPI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B9C97DCA263CB0D6001E4D1B /* XCRemoteSwiftPackageReference "ValorantAPI" */;
@@ -1178,16 +1146,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B9EE6E732659D6DF007E28B5 /* XCRemoteSwiftPackageReference "swift-algorithms" */;
 			productName = Algorithms;
-		};
-		B9EF0F2A263DEEA30067176A /* VisualEffects */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B9EF0F29263DEEA30067176A /* XCRemoteSwiftPackageReference "VisualEffects" */;
-			productName = VisualEffects;
-		};
-		B9EF0F2C263DEEAA0067176A /* VisualEffects */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B9EF0F29263DEEA30067176A /* XCRemoteSwiftPackageReference "VisualEffects" */;
-			productName = VisualEffects;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

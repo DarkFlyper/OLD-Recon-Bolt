@@ -20,39 +20,12 @@
         }
       },
       {
-        "package": "CombineExpectations",
-        "repositoryURL": "https://github.com/groue/CombineExpectations",
-        "state": {
-          "branch": null,
-          "revision": "fd64e7111ad1c8ffa225c56d33a519fcdab2bd9a",
-          "version": "0.8.0"
-        }
-      },
-      {
-        "package": "HandyOperators",
-        "repositoryURL": "git@github.com:juliand665/HandyOperators.git",
-        "state": {
-          "branch": null,
-          "revision": "27f60a00d9ad310afdf66cc7a25adc4bdb387d58",
-          "version": "2.0.1"
-        }
-      },
-      {
         "package": "keychain-swift",
         "repositoryURL": "https://github.com/evgenyneu/keychain-swift.git",
         "state": {
           "branch": null,
           "revision": "96fb84f45a96630e7583903bd7e08cf095c7a7ef",
           "version": "19.0.0"
-        }
-      },
-      {
-        "package": "Protoquest",
-        "repositoryURL": "https://github.com/juliand665/Protoquest",
-        "state": {
-          "branch": "main",
-          "revision": "061a18dfb3878fbd6c376e8ef534f4a846c7ddbc",
-          "version": null
         }
       },
       {
@@ -89,24 +62,6 @@
           "branch": null,
           "revision": "01f3380fb7ba86b4ac0c81d96c8992bed9f2b8f5",
           "version": "1.0.2"
-        }
-      },
-      {
-        "package": "ValorantAPI",
-        "repositoryURL": "git@github.com:juliand665/ValorantAPI.git",
-        "state": {
-          "branch": "main",
-          "revision": "18bff079b89f99d910801fbf1312a17ea4b4fcbb",
-          "version": null
-        }
-      },
-      {
-        "package": "VisualEffects",
-        "repositoryURL": "https://github.com/twostraws/VisualEffects",
-        "state": {
-          "branch": null,
-          "revision": "8ff7f90f9650d9db5774275d0b1f07ef642ecf4d",
-          "version": "1.0.3"
         }
       }
     ]
