@@ -30,6 +30,7 @@ struct AccountView: View {
 			}
 			.padding(.vertical)
 		}
+		.buttonStyle(.bordered)
 		.navigationTitle("Account")
 		.withToolbar()
 	}
@@ -54,7 +55,7 @@ struct AccountView: View {
 			}
 		} else {
 			Text("Assets up to date!")
-				.opacity(0.5)
+				.foregroundStyle(.secondary)
 		}
 	}
 }

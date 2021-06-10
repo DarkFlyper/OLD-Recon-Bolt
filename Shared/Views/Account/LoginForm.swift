@@ -6,6 +6,7 @@ struct LoginForm: View {
 	@Binding var data: ClientData?
 	@State private(set) var credentials: Credentials
 	@State var isSigningIn = false
+	@FocusState private var isPasswordFieldFocused
 	
 	@EnvironmentObject private var loadManager: LoadManager
 	
@@ -26,21 +27,29 @@ struct LoginForm: View {
 						Text(verbatim: region.name).tag(region)
 					}
 				}
-				.pickerStyle(MenuPickerStyle())
+				.pickerStyle(.menu)
 				
 				VStack {
 					TextField("Username", text: $credentials.username)
-					SecureField("Password", text: $credentials.password) {
-						async { await logIn() }
-					}
+						.submitLabel(.next)
+						.onSubmit { isPasswordFieldFocused = true }
+					
+					SecureField("Password", text: $credentials.password)
+						.submitLabel(.go)
+						.onSubmit {
+							isPasswordFieldFocused = false
+							async { await logIn() }
+						}
+						.focused($isPasswordFieldFocused)
 				}
-				.frame(maxWidth: 180)
+				.frame(maxWidth: 240)
 				
 				#if !os(macOS)
 				Button(role: nil, action: logIn) {
 					Text("Sign In")
 						.bold()
 				}
+				.controlProminence(.increased)
 				#endif
 			}
 			.frame(idealWidth: 180)

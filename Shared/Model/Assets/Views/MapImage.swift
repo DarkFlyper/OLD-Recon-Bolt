@@ -38,11 +38,11 @@ struct MapImage: View {
 			Text(mapID.mapName ?? "unknown")
 				.font(Font.callout.smallCaps())
 				.bold()
-				.foregroundColor(.white)
+				.foregroundStyle(Material.regular)
 				.shadow(radius: 1)
 				.padding(.leading, 4) // visual alignment
 				.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-				.blendMode(.overlay)
+				.colorScheme(.light)
 		}
 	}
 }

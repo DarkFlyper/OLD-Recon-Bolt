@@ -19,7 +19,7 @@ extension View {
 				$0.navigationBarTitleDisplayMode(.inline)
 			}
 		}
-		.navigationViewStyle(StackNavigationViewStyle())
+		.navigationViewStyle(.stack)
 		#endif
 	}
 }

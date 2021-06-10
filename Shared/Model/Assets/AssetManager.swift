@@ -4,7 +4,7 @@ import UserDefault
 import SwiftUI
 import HandyOperators
 
-final class AssetManager: ObservableObject {
+final actor AssetManager: ObservableObject {
 	// TODO: shouldn't this be implicit on @Published properties?
 	@MainActor
 	@Published private(set) var assets: AssetCollection?
@@ -13,9 +13,13 @@ final class AssetManager: ObservableObject {
 	@MainActor
 	@Published private(set) var error: Error?
 	
-	init() {
-		_assets = .init(wrappedValue: Self.stored)
+	convenience init() {
+		self.init(assets: Self.stored)
 		async { await loadAssets() }
+	}
+	
+	private init(assets: AssetCollection?) {
+		_assets = .init(wrappedValue: assets)
 	}
 	
 	@MainActor
@@ -24,10 +28,8 @@ final class AssetManager: ObservableObject {
 		
 		do {
 			assets = try await Self.loadAssets() { progress in
-				DispatchQueue.main.async {
-					print(progress)
-					self.progress = progress
-				}
+				print(progress)
+				self.progress = progress
 			}
 		} catch {
 			self.error = error
@@ -39,10 +41,6 @@ final class AssetManager: ObservableObject {
 	#if DEBUG
 	static let forPreviews = AssetManager(assets: stored)
 	static let mockEmpty = AssetManager(assets: nil)
-	
-	private init(assets: AssetCollection?) {
-		_assets = .init(wrappedValue: assets)
-	}
 	
 	static let mockDownloading = AssetManager(mockProgress: .init(completed: 42, total: 69))
 	
