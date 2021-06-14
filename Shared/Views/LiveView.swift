@@ -24,13 +24,18 @@ struct LiveView: View {
 		}
 		.background(Color(.systemGroupedBackground).edgesIgnoringSafeArea(.all))
 		.onAppear {
-			if contractDetails == nil {
-				async { await loadContractDetails() }
-			} else {
-				async { await loadLiveGameDetails() }
-			}
+			async { await refresh() }
 		}
 		.navigationTitle("Live")
+	}
+	
+	func refresh() async {
+		// load both independently
+		// TODO: feels like there should be a better approach lol
+		async let refresh1: Void = loadContractDetails()
+		async let refresh2: Void = loadLiveGameDetails()
+		await refresh1
+		await refresh2
 	}
 	
 	var missionsBox: some View {

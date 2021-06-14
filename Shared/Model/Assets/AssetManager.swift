@@ -4,25 +4,23 @@ import UserDefault
 import SwiftUI
 import HandyOperators
 
-final actor AssetManager: ObservableObject {
-	// TODO: shouldn't this be implicit on @Published properties?
-	@MainActor
+@MainActor
+final class AssetManager: ObservableObject {
 	@Published private(set) var assets: AssetCollection?
-	@MainActor
 	@Published private(set) var progress: AssetDownloadProgress?
-	@MainActor
 	@Published private(set) var error: Error?
 	
 	convenience init() {
 		self.init(assets: Self.stored)
-		async { await loadAssets() }
+		asyncDetached(priority: .background) {
+			await loadAssets()
+		}
 	}
 	
 	private init(assets: AssetCollection?) {
 		_assets = .init(wrappedValue: assets)
 	}
 	
-	@MainActor
 	func loadAssets() async {
 		guard progress == nil else { return }
 		

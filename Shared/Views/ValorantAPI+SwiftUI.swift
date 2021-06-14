@@ -21,20 +21,6 @@ extension Team.ID {
 	}
 }
 
-extension MapID {
-	@ViewBuilder
-	var mapImage: some View {
-		if let name = mapName {
-			Image("maps/\(name)")
-				.resizable()
-		} else {
-			Rectangle()
-				.size(width: 400, height: 225)
-				.fill(Color.gray)
-		}
-	}
-}
-
 extension QueueID {
 	var name: String {
 		switch rawValue {
@@ -80,6 +66,8 @@ extension ValorantClient.APIError: LocalizedError {
 			return "Your token has expired. \(message)"
 		case .scheduledDowntime(message: let message):
 			return "The API is down for scheduled maintenance. \(message)"
+		case .resourceNotFound:
+			return "The resource could not be found."
 		case .badResponseCode(let code, _, nil):
 			return "The API returned an error code \(code)."
 		case .badResponseCode(let code, _, let error?):

@@ -10,7 +10,7 @@ struct MapInfoView: View {
 		ScrollView {
 			VStack {
 				MapImage.splash(map.id).overlay(
-					Text("\(map.id.path)")
+					Text("\(map.id.rawValue)")
 						.foregroundColor(.white)
 						.shadow(radius: 8)
 						.frame(maxHeight: .infinity, alignment: .bottom)
@@ -38,8 +38,7 @@ struct MapInfoView: View {
 struct MapInfoView_Previews: PreviewProvider {
 	static var previews: some View {
 		MapInfoView(
-			map: AssetManager.forPreviews.assets!
-				.maps[MapID(path: "/Game/Maps/Foxtrot/Foxtrot")]!
+			map: AssetManager.forPreviews.assets!.maps[.breeze]!
 		)
 		.withToolbar()
 		.inEachColorScheme()

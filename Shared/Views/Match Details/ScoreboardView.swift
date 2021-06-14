@@ -36,7 +36,7 @@ struct ScoreboardView: View {
 		
 		HStack(spacing: 0) {
 			AgentImage.displayIcon(player.agentID)
-				.frame(height: 40)
+				.frame(width: 40, height: 40)
 				.dynamicallyStroked(radius: 1, color: .white)
 				.background(relativeColor.opacity(0.5))
 				.compositingGroup()
@@ -111,6 +111,7 @@ struct ScoreboardView: View {
 		}
 		.background(relativeColor.opacity(0.25))
 		.cornerRadius(scoreboardPadding)
+		.compositingGroup() // for the destination-out blending
 		.onTapGesture {
 			highlight.switchHighlight(to: player)
 		}

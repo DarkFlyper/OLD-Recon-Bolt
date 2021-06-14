@@ -32,10 +32,13 @@ struct MapImage: View {
 	}
 	
 	struct Label: View {
+		@EnvironmentObject
+		private var assetManager: AssetManager
+		
 		let mapID: MapID
 		
 		var body: some View {
-			Text(mapID.mapName ?? "unknown")
+			Text(assetManager.assets?.maps[mapID]?.displayName ?? "unknown")
 				.font(Font.callout.smallCaps())
 				.bold()
 				.foregroundStyle(Material.regular)
@@ -50,7 +53,7 @@ struct MapImage: View {
 #if DEBUG
 struct MapImage_Previews: PreviewProvider {
 	static var previews: some View {
-		let mapID = MapID(path: "/Game/Maps/Foxtrot/Foxtrot")
+		let mapID = MapID.breeze
 		Group {
 			MapImage.splash(mapID)
 				.overlay(MapImage.Label(mapID: mapID))

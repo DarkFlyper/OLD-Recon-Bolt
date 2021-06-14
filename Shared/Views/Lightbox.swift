@@ -80,7 +80,7 @@ import ValorantAPI
 struct Lightbox_Previews: PreviewProvider {
 	static var previews: some View {
 		Lightbox {
-			MapImage.displayIcon(MapID(path: "/Game/Maps/Foxtrot/Foxtrot"))
+			MapImage.displayIcon(.breeze)
 		}
 		.withPreviewAssets()
 	}

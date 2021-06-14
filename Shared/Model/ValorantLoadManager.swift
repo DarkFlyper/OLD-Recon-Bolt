@@ -16,15 +16,11 @@ final class ValorantLoadManager: LoadManager {
 		self.dataStore = dataStore
 	}
 	
-	func loadAsync(
-		_ task: @escaping (ValorantClient) async throws -> Void
-	) {
+	func loadAsync(_ task: @escaping (ValorantClient) async throws -> Void) {
 		async { await load(task) }
 	}
 	
-	func load(
-		_ task: @escaping (ValorantClient) async throws -> Void
-	) async {
+	func load(_ task: @escaping (ValorantClient) async throws -> Void) async {
 		guard let data = dataStore.data else { return }
 		#if DEBUG
 		guard !(data is MockClientData) else { return }
@@ -34,8 +30,10 @@ final class ValorantLoadManager: LoadManager {
 			do {
 				try await task(data.client)
 			} catch APIError.tokenFailure, APIError.unauthorized {
-				dataStore.data = try await data.reauthenticated()
-				try await task(data.client)
+				print("reauthenticating!")
+				let reauthenticated = try await data.reauthenticated()
+				dataStore.data = reauthenticated
+				try await task(reauthenticated.client)
 			}
 		}
 	}

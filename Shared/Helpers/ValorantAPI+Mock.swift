@@ -3,9 +3,8 @@ import ValorantAPI
 
 extension MapID {
 	static func example(index: Int? = nil) -> Self {
-		let index = index ?? Self.mapPaths.indices.randomElement()!
-		let mapPath = Self.mapPaths[index % Self.mapPaths.count]
-		return Self(path: mapPath.path)
+		let index = index ?? knownMaps.indices.randomElement()!
+		return knownMaps[index % knownMaps.count]
 	}
 }
 
