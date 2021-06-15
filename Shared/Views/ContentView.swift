@@ -8,10 +8,13 @@ struct ContentView: View {
 	@SceneStorage("ContentView.state") var tab = Tab.career
 	@EnvironmentObject var assetManager: AssetManager
 	
+	@SceneStorage("ContentView.shouldShowUnranked")
+	private var shouldShowUnranked = true
+	
 	var body: some View {
 		TabView(selection: $tab) {
 			onlineView {
-				MatchListView(matchList: $0.matchList)
+				MatchListView(matchList: $0.matchList, shouldShowUnranked: $shouldShowUnranked)
 					.withToolbar()
 			}
 			.tabItem { Label("Career", systemImage: "square.fill.text.grid.1x2") }

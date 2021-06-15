@@ -4,6 +4,7 @@ import HandyOperators
 
 struct UserView: View {
 	@State private var matchList: MatchList
+	@State private var shouldShowUnranked = true
 	@EnvironmentObject private var loadManager: ValorantLoadManager
 	
 	init(for user: User) {
@@ -11,15 +12,14 @@ struct UserView: View {
 	}
 	
 	var body: some View {
-		MatchListView(matchList: $matchList)
+		MatchListView(matchList: $matchList, shouldShowUnranked: $shouldShowUnranked)
 			.navigationBarTitleDisplayMode(.large)
 	}
 }
 
 struct MatchListView: View {
 	@Binding var matchList: MatchList
-	@AppStorage("MatchListView.shouldShowUnranked")
-	private var shouldShowUnranked = true
+	@Binding var shouldShowUnranked: Bool
 	@EnvironmentObject private var loadManager: ValorantLoadManager
 	
 	private var shownMatches: [CompetitiveUpdate] {
@@ -35,8 +35,9 @@ struct MatchListView: View {
 			}
 		}
 		.toolbar {
-			Button(shouldShowUnranked ? "Hide Unranked" : "Show Unranked")
-				{ shouldShowUnranked.toggle() }
+			Button(shouldShowUnranked ? "Hide Unranked" : "Show Unranked") {
+				withAnimation { shouldShowUnranked.toggle() }
+			}
 		}
 		.onAppear {
 			if matchList.matches.isEmpty {
@@ -61,7 +62,7 @@ struct MatchListView: View {
 #if DEBUG
 struct MatchListView_Previews: PreviewProvider {
 	static var previews: some View {
-		MatchListView(matchList: .constant(PreviewData.matchList))
+		MatchListView(matchList: .constant(PreviewData.matchList), shouldShowUnranked: .constant(true))
 			.withToolbar()
 			.inEachColorScheme()
 			.withMockValorantLoadManager()
