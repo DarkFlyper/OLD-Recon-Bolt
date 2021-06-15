@@ -40,7 +40,6 @@ struct KillBreakdownView: View {
 				HStack(spacing: 1) {
 					ForEach(rounds) { roundBreakdown(for: $0) }
 				}
-				.fixedSize()
 				.padding(.horizontal)
 			}
 			.onPreferenceChange(TopHeight.self) { topHeight = $0 }
@@ -83,9 +82,14 @@ struct KillBreakdownView: View {
 		}
 	}
 	
-	private var spacing: CGFloat { isCompact ? 4 : 8 }
+	private var spacing: CGFloat { isCompact ? 3 : 8 }
 	
+	@ScaledMetric private var roundNumberSize = 20
+	
+	@ViewBuilder
 	private func roundBreakdown(for round: Round) -> some View {
+		let width: CGFloat = isCompact ? 30 : 50
+		
 		VStack(spacing: 1) {
 			let backgroundOpacity = 0.25
 			let relativeColor = data.relativeColor(of: round.result.winningTeam)
@@ -102,9 +106,9 @@ struct KillBreakdownView: View {
 				)
 			
 			Text("\(round.result.number + 1)")
+				.font(.system(size: roundNumberSize * (isCompact ? 0.6 : 1)))
 				.bold()
 				.foregroundColor(relativeColor)
-				.scaleEffect(isCompact ? 0.75 : 1)
 				.padding(.vertical, spacing)
 				.frame(maxWidth: .infinity)
 				.background(relativeColor?.opacity(backgroundOpacity))
@@ -120,7 +124,8 @@ struct KillBreakdownView: View {
 					.opacity(backgroundOpacity)
 				)
 		}
-		.fixedSize()
+		.frame(width: width)
+		.opacity(round.result.outcome == .surrendered ? 0.5 : 1)
 	}
 	
 	@ViewBuilder
@@ -131,7 +136,6 @@ struct KillBreakdownView: View {
 			}
 		}
 		.padding(spacing)
-		.fixedSize()
 		.frame(maxWidth: .infinity)
 	}
 	
@@ -140,10 +144,8 @@ struct KillBreakdownView: View {
 		let player = data.players[playerID]!
 		let relativeColor = data.relativeColor(of: player) ?? .valorantRed
 		
-		let size: CGFloat = isCompact ? 24 : 32
-		
 		AgentImage.displayIcon(player.agentID)
-			.frame(width: size, height: size)
+			.fixedSize(horizontal: false, vertical: true)
 			.dynamicallyStroked(radius: 1, color: .white)
 			.background(Circle().fill(relativeColor).opacity(0.5).padding(1))
 			.mask(Circle())
@@ -171,7 +173,7 @@ private typealias BottomHeight = MaxHeightPreference<BottomMarker>
 private enum BottomMarker {}
 
 private struct MaxHeightPreference<Marker>: PreferenceKey {
-	static var defaultValue: CGFloat { -.infinity }
+	static var defaultValue: CGFloat { 0 }
 	static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {
 		value = max(value, nextValue())
 	}
