@@ -18,13 +18,12 @@ struct MatchDetailsContainer: View {
 			}
 		}
 		.loadErrorTitle("Could not load match details!")
-		.onAppear {
-			if matchDetails == nil {
-				async {
-					await loadManager.load {
-						matchDetails = try await $0.getMatchDetails(matchID: matchID)
-					}
-				}
+		// TODO: is this being applied to a group making it be called multiple times?
+		.task {
+			guard matchDetails == nil else { return }
+			
+			await loadManager.load {
+				matchDetails = try await $0.getMatchDetails(matchID: matchID)
 			}
 		}
 		.navigationTitle("Match Details")

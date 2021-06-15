@@ -4,6 +4,7 @@ import ValorantAPI
 struct LiveView: View {
 	let user: User
 	@State var contractDetails: ContractDetails?
+	@State var activeMatch: ActiveMatch?
 	
 	@EnvironmentObject private var loadManager: ValorantLoadManager
 	@EnvironmentObject private var assetManager: AssetManager
@@ -26,6 +27,7 @@ struct LiveView: View {
 		.onAppear {
 			async { await refresh() }
 		}
+		.refreshable(action: refresh)
 		.navigationTitle("Live")
 	}
 	
@@ -83,9 +85,20 @@ struct LiveView: View {
 			
 			Divider()
 			
-			Text("Coming soon!")
-				.opacity(0.8)
+			if let activeMatch = activeMatch {
+				VStack(spacing: 20) {
+					Text("Currently \(activeMatch.inPregame ? "in agent select" : "in-game")!")
+					
+					NavigationLink("\(activeMatch.inPregame ? "Agent Select" : "Details") \(Image(systemName: "chevron.right"))") {
+						Text("heyyy")
+					}
+				}
 				.padding()
+			} else {
+				Text("Not currently in a match!")
+					.opacity(0.8)
+					.padding()
+			}
 		}
 	}
 	
@@ -142,7 +155,23 @@ struct LiveView: View {
 	}
 	
 	func loadLiveGameDetails() async {
-		// TODO: implement!
+		await loadManager.load { client in
+			async let liveGameMatch = client.getLiveMatch(for: user.id, inPregame: false)
+			async let livePregameMatch = client.getLiveMatch(for: user.id, inPregame: true)
+			
+			if let match = try await liveGameMatch {
+				activeMatch = .init(id: match, inPregame: false)
+			} else if let match = try await livePregameMatch {
+				activeMatch = .init(id: match, inPregame: true)
+			} else {
+				activeMatch = nil
+			}
+		}
+	}
+	
+	struct ActiveMatch {
+		var id: Match.ID
+		var inPregame: Bool
 	}
 }
 
@@ -154,7 +183,10 @@ struct LiveView_Previews: PreviewProvider {
 				.withToolbar()
 				.inEachColorScheme()
 			
-			LiveView(user: PreviewData.user)
+			LiveView(user: PreviewData.user, activeMatch: .init(id: Match.ID(), inPregame: true))
+				.withToolbar()
+			
+			LiveView(user: PreviewData.user, activeMatch: .init(id: Match.ID(), inPregame: false))
 				.withToolbar()
 		}
 		.withMockValorantLoadManager()

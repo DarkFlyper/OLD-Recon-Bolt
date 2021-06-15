@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B90BC2EE266D224F00C905D4 /* CGeometry in Frameworks */ = {isa = PBXBuildFile; productRef = B90BC2ED266D224F00C905D4 /* CGeometry */; };
-		B90BC2F1266D240000C905D4 /* HandyOperators in Frameworks */ = {isa = PBXBuildFile; productRef = B90BC2F0266D240000C905D4 /* HandyOperators */; };
 		B9131D61266A707600E85F46 /* ValorantLoadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9131D60266A707600E85F46 /* ValorantLoadManager.swift */; };
 		B9131D62266A707600E85F46 /* ValorantLoadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9131D60266A707600E85F46 /* ValorantLoadManager.swift */; };
 		B9131D65266AF6C600E85F46 /* ReferenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9131D64266AF6C600E85F46 /* ReferenceView.swift */; };
@@ -19,6 +18,10 @@
 		B9131D6D266AFA7900E85F46 /* MapInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9131D6B266AFA7900E85F46 /* MapInfoView.swift */; };
 		B927614B266284B700CF2100 /* PlayerHighlightInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B927614A266284B700CF2100 /* PlayerHighlightInfo.swift */; };
 		B927614C266284B700CF2100 /* PlayerHighlightInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B927614A266284B700CF2100 /* PlayerHighlightInfo.swift */; };
+		B9318366267810CE0099B13C /* AgentSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9318365267810CE0099B13C /* AgentSelectView.swift */; };
+		B9318367267810CE0099B13C /* AgentSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9318365267810CE0099B13C /* AgentSelectView.swift */; };
+		B9318369267813F00099B13C /* example_pregame.json in Resources */ = {isa = PBXBuildFile; fileRef = B9318368267813EF0099B13C /* example_pregame.json */; };
+		B931836A267813F00099B13C /* example_pregame.json in Resources */ = {isa = PBXBuildFile; fileRef = B9318368267813EF0099B13C /* example_pregame.json */; };
 		B94091AE25D09D5A00EE5DF2 /* LoadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94091AD25D09D5A00EE5DF2 /* LoadManager.swift */; };
 		B94091AF25D09D5A00EE5DF2 /* LoadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94091AD25D09D5A00EE5DF2 /* LoadManager.swift */; };
 		B94091B325D09DF900EE5DF2 /* SwiftUI+CrossPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94091B225D09DF900EE5DF2 /* SwiftUI+CrossPlatform.swift */; };
@@ -48,6 +51,8 @@
 		B9485F87264B5BD700AC3456 /* AssetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9485F86264B5BD700AC3456 /* AssetImage.swift */; };
 		B9485F88264B5BD700AC3456 /* AssetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9485F86264B5BD700AC3456 /* AssetImage.swift */; };
 		B9485F90264B639F00AC3456 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9485F8F264B639F00AC3456 /* Tests.swift */; };
+		B9677F8326782A3200C0FF46 /* example_pregame_users.json in Resources */ = {isa = PBXBuildFile; fileRef = B9677F8226782A3200C0FF46 /* example_pregame_users.json */; };
+		B9677F8426782A3200C0FF46 /* example_pregame_users.json in Resources */ = {isa = PBXBuildFile; fileRef = B9677F8226782A3200C0FF46 /* example_pregame_users.json */; };
 		B96845B32665C7B900DC59D2 /* ClientData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96845B22665C7B900DC59D2 /* ClientData.swift */; };
 		B96845B42665C7B900DC59D2 /* ClientData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96845B22665C7B900DC59D2 /* ClientData.swift */; };
 		B96A0CA0265A8B4600844674 /* strange_match.json in Resources */ = {isa = PBXBuildFile; fileRef = B96A0C9F265A8B4600844674 /* strange_match.json */; };
@@ -142,6 +147,8 @@
 		B9131D68266AFA4C00E85F46 /* MapListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapListView.swift; sourceTree = "<group>"; };
 		B9131D6B266AFA7900E85F46 /* MapInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInfoView.swift; sourceTree = "<group>"; };
 		B927614A266284B700CF2100 /* PlayerHighlightInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerHighlightInfo.swift; sourceTree = "<group>"; };
+		B9318365267810CE0099B13C /* AgentSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentSelectView.swift; sourceTree = "<group>"; };
+		B9318368267813EF0099B13C /* example_pregame.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_pregame.json; sourceTree = "<group>"; };
 		B9399C3C2671158400411127 /* Protoquest */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Protoquest; path = "../ Packages/Protoquest"; sourceTree = "<group>"; };
 		B9399C3D2671158A00411127 /* ValorantAPI */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ValorantAPI; path = "../ Packages/ValorantAPI"; sourceTree = "<group>"; };
 		B94091AD25D09D5A00EE5DF2 /* LoadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadManager.swift; sourceTree = "<group>"; };
@@ -165,6 +172,7 @@
 		B9485F8F264B639F00AC3456 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		B9485F91264B639F00AC3456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B964BECE2671515C00022A7C /* HandyOperators */ = {isa = PBXFileReference; lastKnownFileType = folder; name = HandyOperators; path = "../ Packages/HandyOperators"; sourceTree = "<group>"; };
+		B9677F8226782A3200C0FF46 /* example_pregame_users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_pregame_users.json; sourceTree = "<group>"; };
 		B96845B22665C7B900DC59D2 /* ClientData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientData.swift; sourceTree = "<group>"; };
 		B96A0C9F265A8B4600844674 /* strange_match.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = strange_match.json; sourceTree = "<group>"; };
 		B96A0CA2265ABBC700844674 /* SwiftUI+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUI+Helpers.swift"; sourceTree = "<group>"; };
@@ -209,7 +217,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B90BC2EE266D224F00C905D4 /* CGeometry in Frameworks */,
-				B90BC2F1266D240000C905D4 /* HandyOperators in Frameworks */,
 				B9C97DCC263CB0D6001E4D1B /* ValorantAPI in Frameworks */,
 				B9EE6E752659D6DF007E28B5 /* Algorithms in Frameworks */,
 				B941B6D025A79A6400F675C1 /* KeychainSwift in Frameworks */,
@@ -250,13 +257,22 @@
 			path = Reference;
 			sourceTree = "<group>";
 		};
+		B9318364267810BE0099B13C /* Live */ = {
+			isa = PBXGroup;
+			children = (
+				B9F5232E266ED96600DFF8DD /* LiveView.swift */,
+				B9318365267810CE0099B13C /* AgentSelectView.swift */,
+			);
+			path = Live;
+			sourceTree = "<group>";
+		};
 		B94091C925D0ACAC00EE5DF2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				B941B64425A5BC8800F675C1 /* ContentView.swift */,
 				B94091B725D09F0200EE5DF2 /* MatchListView.swift */,
 				B9CF2E7825A89976004A1458 /* MatchCell.swift */,
-				B9F5232E266ED96600DFF8DD /* LiveView.swift */,
+				B9318364267810BE0099B13C /* Live */,
 				B9131D67266AFA3B00E85F46 /* Reference */,
 				B9F66ACC266DC2F5008560FD /* Account */,
 				B9EE6E5D26589E8F007E28B5 /* Match Details */,
@@ -387,6 +403,8 @@
 				B941B6EB25A7C83700F675C1 /* example_updates.json */,
 				B96A0C9F265A8B4600844674 /* strange_match.json */,
 				B9F52331266EE57900DFF8DD /* example_contracts.json */,
+				B9318368267813EF0099B13C /* example_pregame.json */,
+				B9677F8226782A3200C0FF46 /* example_pregame_users.json */,
 				B9DCF9AA2642F7A100C39EC4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -461,7 +479,6 @@
 				B9C97DCB263CB0D6001E4D1B /* ValorantAPI */,
 				B9EE6E742659D6DF007E28B5 /* Algorithms */,
 				B90BC2ED266D224F00C905D4 /* CGeometry */,
-				B90BC2F0266D240000C905D4 /* HandyOperators */,
 			);
 			productName = "Valorant Viewer (iOS)";
 			productReference = B941B64A25A5BC8A00F675C1 /* Valorant Viewer.app */;
@@ -548,7 +565,6 @@
 				B9C97DCA263CB0D6001E4D1B /* XCRemoteSwiftPackageReference "ValorantAPI" */,
 				B9EE6E732659D6DF007E28B5 /* XCRemoteSwiftPackageReference "swift-algorithms" */,
 				B90BC2EC266D224F00C905D4 /* XCRemoteSwiftPackageReference "CGeometry" */,
-				B90BC2EF266D240000C905D4 /* XCRemoteSwiftPackageReference "HandyOperators" */,
 			);
 			productRefGroup = B941B64B25A5BC8A00F675C1 /* Products */;
 			projectDirPath = "";
@@ -568,10 +584,12 @@
 			files = (
 				B9DCF9AB2642F7A100C39EC4 /* Preview Assets.xcassets in Resources */,
 				B9EF0F25263D09AD0067176A /* example_match.json in Resources */,
+				B9318369267813F00099B13C /* example_pregame.json in Resources */,
 				B941B6EC25A7C83700F675C1 /* example_updates.json in Resources */,
 				B9F52332266EE57900DFF8DD /* example_contracts.json in Resources */,
 				B941B65A25A5BC8A00F675C1 /* Assets.xcassets in Resources */,
 				B96A0CA0265A8B4600844674 /* strange_match.json in Resources */,
+				B9677F8326782A3200C0FF46 /* example_pregame_users.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,10 +599,12 @@
 			files = (
 				B9DCF9AC2642F7A100C39EC4 /* Preview Assets.xcassets in Resources */,
 				B941B6ED25A7C83700F675C1 /* example_updates.json in Resources */,
+				B931836A267813F00099B13C /* example_pregame.json in Resources */,
 				B9EF0F24263D091F0067176A /* example_match.json in Resources */,
 				B9F52333266EE57900DFF8DD /* example_contracts.json in Resources */,
 				B941B65B25A5BC8A00F675C1 /* Assets.xcassets in Resources */,
 				B96A0CA1265A8B4600844674 /* strange_match.json in Resources */,
+				B9677F8426782A3200C0FF46 /* example_pregame_users.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -637,6 +657,7 @@
 				B9EE6E5B26589DE1007E28B5 /* MatchDetailsHero.swift in Sources */,
 				B9EE6E6226589FAA007E28B5 /* PreviewData.swift in Sources */,
 				B9E43DA2265DB94C00F59E35 /* MatchViewData.swift in Sources */,
+				B9318366267810CE0099B13C /* AgentSelectView.swift in Sources */,
 				B9CF2E6225A81B48004A1458 /* UnifiedStyles.swift in Sources */,
 				B9F07CB726474EB7006CD4F5 /* AssetVersion.swift in Sources */,
 				B9F07CB426474E8A006CD4F5 /* AssetClient.swift in Sources */,
@@ -690,6 +711,7 @@
 				B9EE6E5C26589DE1007E28B5 /* MatchDetailsHero.swift in Sources */,
 				B9EE6E6326589FAA007E28B5 /* PreviewData.swift in Sources */,
 				B9E43DA3265DB94C00F59E35 /* MatchViewData.swift in Sources */,
+				B9318367267810CE0099B13C /* AgentSelectView.swift in Sources */,
 				B9CF2E6325A81B48004A1458 /* UnifiedStyles.swift in Sources */,
 				B9F07CB826474EB7006CD4F5 /* AssetVersion.swift in Sources */,
 				B9F07CB526474E8A006CD4F5 /* AssetClient.swift in Sources */,
@@ -1036,14 +1058,6 @@
 				minimumVersion = 0.3.0;
 			};
 		};
-		B90BC2EF266D240000C905D4 /* XCRemoteSwiftPackageReference "HandyOperators" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:juliand665/HandyOperators.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
-			};
-		};
 		B941B69925A62FFB00F675C1 /* XCRemoteSwiftPackageReference "UserDefault" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:juliand665/UserDefault.git";
@@ -1091,11 +1105,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B90BC2EC266D224F00C905D4 /* XCRemoteSwiftPackageReference "CGeometry" */;
 			productName = CGeometry;
-		};
-		B90BC2F0266D240000C905D4 /* HandyOperators */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B90BC2EF266D240000C905D4 /* XCRemoteSwiftPackageReference "HandyOperators" */;
-			productName = HandyOperators;
 		};
 		B941B69A25A62FFB00F675C1 /* UserDefault */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -22,10 +22,10 @@ struct MatchDetailsHero: View {
 					.foregroundStyle(.secondary)
 			}
 			.padding(.horizontal, 6)
-			.background(Material.thin)
+			.padding(4)
+			.background(Material.ultraThin)
 			.cornerRadius(8)
 			.shadow(radius: 10)
-			.colorScheme(.dark)
 		}
 	}
 	
@@ -64,6 +64,7 @@ struct MatchDetailsHero_Previews: PreviewProvider {
 		MatchDetailsHero(data: PreviewData.singleMatchData)
 			.previewLayout(.sizeThatFits)
 			.withPreviewAssets()
+			.inEachColorScheme()
 	}
 }
 #endif
