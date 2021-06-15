@@ -1,4 +1,5 @@
 import Algorithms
+import Foundation
 import HandyOperators
 
 extension Sequence {
@@ -41,5 +42,21 @@ extension Dictionary {
 	
 	init(values: [Value]) where Value: Identifiable, Key == Value.ID {
 		self.init(values: values, keyedBy: \.id)
+	}
+}
+
+extension Task {
+	/// The built-in ``sleep(_:)`` didn't work for me, so I made this instead.
+	static func sleep(seconds: TimeInterval, tolerance: TimeInterval) async {
+		//await sleep(UInt64(seconds * 1e9))
+		await withCheckedContinuation { continuation in
+			DispatchQueue.main.schedule(
+				after: .init(.now() + seconds),
+				tolerance: .init(floatLiteral: tolerance),
+				options: nil,
+				continuation.resume
+			)
+			//DispatchQueue.main.asyncAfter(deadline: .now() + seconds, execute: continuation.resume)
+		}
 	}
 }

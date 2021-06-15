@@ -13,9 +13,9 @@ struct LiveView: View {
 		ScrollView {
 			VStack(spacing: 20) {
 				Group {
-					missionsBox
-					
 					liveGameBox
+					
+					missionsBox
 				}
 				.background(Color(.tertiarySystemBackground))
 				.cornerRadius(20)
@@ -23,38 +23,20 @@ struct LiveView: View {
 			}
 			.padding()
 		}
-		.background(Color(.systemGroupedBackground).edgesIgnoringSafeArea(.all))
-		.onAppear {
-			async { await refresh() }
-		}
 		.refreshable(action: refresh)
+		.task(refresh)
+		.background(Color(.systemGroupedBackground).edgesIgnoringSafeArea(.all))
 		.navigationTitle("Live")
 	}
 	
 	func refresh() async {
 		// load both independently
-		// TODO: feels like there should be a better approach lol
-		async let refresh1: Void = loadContractDetails()
-		async let refresh2: Void = loadLiveGameDetails()
-		await refresh1
-		await refresh2
+		async let refreshes = (loadContractDetails(), loadLiveGameDetails())
+		_ = await refreshes
 	}
 	
 	var missionsBox: some View {
-		VStack(spacing: 0) {
-			HStack {
-				Text("Missions")
-					.font(.title2)
-					.fontWeight(.semibold)
-				
-				Spacer()
-				
-				Button(role: nil) { await loadContractDetails() } label: {
-					Image(systemName: "arrow.clockwise")
-				}
-			}
-			.padding()
-			
+		box(title: "Missions", refreshAction: loadContractDetails) {
 			if let details = contractDetails {
 				contractInfo(details: details)
 			} else {
@@ -67,21 +49,31 @@ struct LiveView: View {
 		}
 	}
 	
-	var liveGameBox: some View {
+	func box<Content: View>(
+		title: String,
+		refreshAction: @escaping () async -> Void,
+		@ViewBuilder content: () -> Content
+	) -> some View {
 		VStack(spacing: 0) {
 			HStack {
-				Text("Live Game")
+				Text(title)
 					.font(.title2)
 					.fontWeight(.semibold)
 				
 				Spacer()
 				
-				Button(role: nil, action: loadLiveGameDetails) {
+				Button(role: nil, action: refreshAction) {
 					Image(systemName: "arrow.clockwise")
 				}
 			}
 			.padding()
 			
+			content()
+		}
+	}
+	
+	var liveGameBox: some View {
+		box(title: "Live Game", refreshAction: loadLiveGameDetails) {
 			Divider()
 			
 			if let activeMatch = activeMatch {
@@ -102,10 +94,57 @@ struct LiveView: View {
 				.padding()
 			} else {
 				Text("Not currently in a match!")
-					.opacity(0.8)
+					.foregroundColor(.secondary)
 					.padding()
+				
+				Divider()
+					.padding(.horizontal)
+				
+				HStack(spacing: 10) {
+					if isAutoRefreshing {
+						autoRefreshView
+					}
+					
+					Toggle("Auto-Refresh", isOn: $isAutoRefreshing)
+				}
+				.padding()
 			}
 		}
+	}
+	
+	@State var isAutoRefreshing = false
+	@State var isAutoRefreshRunning = false
+	
+	@ViewBuilder
+	var autoRefreshView: some View {
+		let strokeStyle = StrokeStyle(lineWidth: 4, lineCap: .round)
+		
+		Circle()
+			.trim(from: 0, to: isAutoRefreshRunning ? 1 : 1e-3)
+			.scale(x: -1)
+			.rotation(.degrees(90))
+			.stroke(Color.accentColor, style: strokeStyle)
+			.background(Circle().stroke(.quaternary, style: strokeStyle))
+			.frame(width: 20, height: 20)
+			.task {
+				while !Task.isCancelled {
+					withAnimation(.easeIn(duration: 0.1)) {
+						isAutoRefreshRunning = true
+					}
+					
+					await loadLiveGameDetails()
+					if activeMatch != nil {
+						isAutoRefreshing = false
+					}
+					
+					let refreshInterval: TimeInterval = 5
+					let tolerance: TimeInterval = 1
+					withAnimation(.easeOut(duration: refreshInterval + tolerance)) {
+						isAutoRefreshRunning = false
+					}
+					await Task.sleep(seconds: refreshInterval, tolerance: tolerance)
+				}
+			}
 	}
 	
 	func contractInfo(details: ContractDetails) -> some View {
@@ -185,9 +224,13 @@ struct LiveView: View {
 struct LiveView_Previews: PreviewProvider {
 	static var previews: some View {
 		Group {
-			LiveView(user: PreviewData.user, contractDetails: PreviewData.contractDetails)
-				.withToolbar()
-				.inEachColorScheme()
+			LiveView(
+				user: PreviewData.user,
+				contractDetails: PreviewData.contractDetails,
+				isAutoRefreshing: true, isAutoRefreshRunning: true
+			)
+			.withToolbar()
+			.inEachColorScheme()
 			
 			LiveView(user: PreviewData.user, activeMatch: .init(id: Match.ID(), inPregame: true))
 				.withToolbar()

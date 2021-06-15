@@ -20,7 +20,7 @@ struct AgentSelectContainer: View {
 		.task {
 			while !Task.isCancelled {
 				await update()
-				await Task.sleep(1)
+				await Task.sleep(seconds: 1, tolerance: 0.1)
 			}
 		}
 		.navigationTitle("Agent Select")
