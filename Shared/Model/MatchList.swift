@@ -7,6 +7,11 @@ struct MatchList: Codable, DefaultsValueConvertible {
 	let user: User
 	
 	var matches: [CompetitiveUpdate] = []
+	var highestLoadedIndex = 0
+	
+	var canLoadOlderMatches: Bool {
+		highestLoadedIndex < requestMaxIndex
+	}
 	
 	func prepending(new: [CompetitiveUpdate]) -> Self {
 		if let oldestNew = new.last, let newestExisting = matches.first {
@@ -16,36 +21,58 @@ struct MatchList: Codable, DefaultsValueConvertible {
 	}
 }
 
+private let requestSize = 20
+private let requestMaxIndex = 100
+
 extension ValorantClient {
-	private static let requestSize = 20
-	private static let maxIndex = 100
-	
 	func loadMatches(for list: inout MatchList) async throws {
-		// TODO: figure out how to cleanly start out loading just one page but still allow loading more if desired, to avoid hitting rate limits so fast.
-		
-		let newestKnownMatch = list.matches.first?.id
+		let newestKnownMatchID = list.matches.first?.id
+		// conserve requests on first load
+		let maxIndex = list.matches.isEmpty ? requestSize : requestMaxIndex
 		
 		var foundUpdates: [CompetitiveUpdate] = []
-		for startIndex in stride(from: 0, to: Self.maxIndex, by: Self.requestSize) {
-			do {
-				let updates = try await getCompetitiveUpdates(
-					userID: list.user.id,
-					startIndex: startIndex,
-					endIndex: min(Self.maxIndex, startIndex + Self.requestSize)
-				)
-				
-				if let overlapStart = updates.firstIndex(where: { $0.id == newestKnownMatch }) {
-					foundUpdates += updates[..<overlapStart]
-					break // no need to proceed past already-known matches
-				} else {
-					foundUpdates += updates
-				}
-			} catch ValorantClient.APIError.badResponseCode(400, _, let riotError?)
-						where riotError.errorCode == "BAD_PARAMETER" {
-				break // probably just no matches this far back yet
+		for startIndex in stride(from: 0, to: maxIndex, by: requestSize) {
+			let updates = try await getUpdates(for: list, startIndex: startIndex)
+			guard !updates.isEmpty else { break }
+			
+			let overlapStart = updates.firstIndex { $0.id == newestKnownMatchID }
+			foundUpdates += updates.prefix(upTo: overlapStart ?? updates.endIndex)
+			
+			if overlapStart != nil {
+				break // no need to proceed past already-known matches
 			}
 		}
 		
+		list.highestLoadedIndex += foundUpdates.count
+		
 		list.matches = foundUpdates + list.matches
+	}
+	
+	func loadOlderMatches(for list: inout MatchList) async throws {
+		guard let oldestKnownMatch = list.matches.last else { return }
+		
+		for startIndex in stride(from: list.matches.count, to: requestMaxIndex, by: requestSize) {
+			let updates = try await getUpdates(for: list, startIndex: startIndex)
+			guard let oldestNew = updates.last else { break }
+			
+			// It's technically possible that these matches are all newer than our existing matches.
+			guard oldestNew.startTime <= oldestKnownMatch.startTime else { continue }
+			
+			let overlapEnd = updates.lastIndex(where: { $0.id == oldestKnownMatch.id })
+			list.matches += updates.suffix(
+				from: overlapEnd.map(updates.index(after:))
+					?? updates.startIndex
+			)
+		}
+		
+		list.highestLoadedIndex = requestMaxIndex
+	}
+	
+	func getUpdates(for list: MatchList, startIndex: Int) async throws -> [CompetitiveUpdate] {
+		try await getCompetitiveUpdates(
+			userID: list.user.id,
+			startIndex: startIndex,
+			endIndex: min(requestMaxIndex, startIndex + requestSize)
+		)
 	}
 }

@@ -33,6 +33,14 @@ struct MatchListView: View {
 			ForEach(shownMatches, id: \.id) {
 				MatchCell(match: $0, userID: matchList.user.id)
 			}
+			
+			if matchList.canLoadOlderMatches {
+				Button(role: nil) {
+					await updateMatchList(update: ValorantClient.loadOlderMatches)
+				} label: {
+					Label("Load Older Matches", systemImage: "ellipsis")
+				}
+			}
 		}
 		.toolbar {
 			Button(shouldShowUnranked ? "Hide Unranked" : "Show Unranked") {
@@ -50,10 +58,13 @@ struct MatchListView: View {
 	}
 	
 	func loadMatches() async {
+		await updateMatchList(update: ValorantClient.loadMatches)
+	}
+	
+	func updateMatchList(update: @escaping (ValorantClient) -> (inout MatchList) async throws -> Void) async {
 		await loadManager.load { client in
-			let updated = try await matchList <- {
-				try await client.loadMatches(for: &$0)
-			}
+			let updater = update(client)
+			let updated = try await matchList <- { try await updater(&$0) }
 			withAnimation { matchList = updated }
 		}
 	}
