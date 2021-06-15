@@ -129,6 +129,8 @@
 		B9F65C4F2651EDA500C9C34A /* DynamicallyStroked.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F65C4D2651EDA500C9C34A /* DynamicallyStroked.swift */; };
 		B9F66ACE266DC31E008560FD /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F66ACD266DC31E008560FD /* AccountView.swift */; };
 		B9F66ACF266DC31E008560FD /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F66ACD266DC31E008560FD /* AccountView.swift */; };
+		B9F9B4DA26793F3100397AAB /* surrendered_match.json in Resources */ = {isa = PBXBuildFile; fileRef = B9F9B4D926793F3000397AAB /* surrendered_match.json */; };
+		B9F9B4DB26793F3100397AAB /* surrendered_match.json in Resources */ = {isa = PBXBuildFile; fileRef = B9F9B4D926793F3000397AAB /* surrendered_match.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -209,6 +211,7 @@
 		B9F65C4A2651DFB100C9C34A /* AgentImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentImage.swift; sourceTree = "<group>"; };
 		B9F65C4D2651EDA500C9C34A /* DynamicallyStroked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicallyStroked.swift; sourceTree = "<group>"; };
 		B9F66ACD266DC31E008560FD /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		B9F9B4D926793F3000397AAB /* surrendered_match.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = surrendered_match.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -402,6 +405,7 @@
 				B9EF0F23263D09120067176A /* example_match.json */,
 				B941B6EB25A7C83700F675C1 /* example_updates.json */,
 				B96A0C9F265A8B4600844674 /* strange_match.json */,
+				B9F9B4D926793F3000397AAB /* surrendered_match.json */,
 				B9F52331266EE57900DFF8DD /* example_contracts.json */,
 				B9318368267813EF0099B13C /* example_pregame.json */,
 				B9677F8226782A3200C0FF46 /* example_pregame_users.json */,
@@ -583,6 +587,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9DCF9AB2642F7A100C39EC4 /* Preview Assets.xcassets in Resources */,
+				B9F9B4DA26793F3100397AAB /* surrendered_match.json in Resources */,
 				B9EF0F25263D09AD0067176A /* example_match.json in Resources */,
 				B9318369267813F00099B13C /* example_pregame.json in Resources */,
 				B941B6EC25A7C83700F675C1 /* example_updates.json in Resources */,
@@ -598,6 +603,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9DCF9AC2642F7A100C39EC4 /* Preview Assets.xcassets in Resources */,
+				B9F9B4DB26793F3100397AAB /* surrendered_match.json in Resources */,
 				B941B6ED25A7C83700F675C1 /* example_updates.json in Resources */,
 				B931836A267813F00099B13C /* example_pregame.json in Resources */,
 				B9EF0F24263D091F0067176A /* example_match.json in Resources */,

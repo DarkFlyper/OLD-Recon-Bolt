@@ -15,6 +15,8 @@ enum PreviewData {
 	static let singleMatch = loadJSON(named: "example_match", as: MatchDetails.self)
 	/// A match with only a few rounds and very unbalanced kills, to push layouts to their limits.
 	static let strangeMatch = loadJSON(named: "strange_match", as: MatchDetails.self)
+	/// A match that ended in a surrender, possibly yielding unexpected data.
+	static let surrenderedMatch = loadJSON(named: "surrendered_match", as: MatchDetails.self)
 	
 	static let compUpdates = loadJSON(named: "example_updates", as: [CompetitiveUpdate].self)
 	
@@ -24,6 +26,8 @@ enum PreviewData {
 	static let pregameUsers = Dictionary(values: loadJSON(named: "example_pregame_users", as: [User].self))
 	
 	static let singleMatchData = MatchViewData(details: singleMatch, userID: userID)
+	static let strangeMatchData = MatchViewData(details: strangeMatch, userID: userID)
+	static let surrenderedMatchData = MatchViewData(details: surrenderedMatch, userID: userID)
 	
 	static let matchList = MatchList(
 		user: user,
