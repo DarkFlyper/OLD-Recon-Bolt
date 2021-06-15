@@ -79,7 +79,6 @@ struct LiveView: View {
 				Button(role: nil, action: loadLiveGameDetails) {
 					Image(systemName: "arrow.clockwise")
 				}
-				.disabled(true)
 			}
 			.padding()
 			
@@ -89,8 +88,15 @@ struct LiveView: View {
 				VStack(spacing: 20) {
 					Text("Currently \(activeMatch.inPregame ? "in agent select" : "in-game")!")
 					
-					NavigationLink("\(activeMatch.inPregame ? "Agent Select" : "Details") \(Image(systemName: "chevron.right"))") {
-						Text("heyyy")
+					if activeMatch.inPregame {
+						NavigationLink("Agent Select \(Image(systemName: "chevron.right"))") {
+							AgentSelectContainer(matchID: activeMatch.id, user: user)
+						}
+					} else {
+						NavigationLink("Details \(Image(systemName: "chevron.right"))") {
+							Text("Not implemented yet!")
+						}
+						.disabled(true)
 					}
 				}
 				.padding()
