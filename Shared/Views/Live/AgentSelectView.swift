@@ -24,21 +24,26 @@ struct AgentSelectContainer: View {
 				await Task.sleep(seconds: 1, tolerance: 0.1)
 			}
 		}
+		.task(id: pregameInfo == nil) {
+			guard let pregameInfo = pregameInfo, users == nil else { return }
+			let userIDs = pregameInfo.team.players.map(\.id)
+			await loadManager.load {
+				users = .init(values: try await $0.getUsers(for: userIDs))
+			}
+		}
+		.task {
+			guard inventory == nil else { return }
+			await loadManager.load {
+				inventory = try await $0.getInventory(for: user.id)
+			}
+		}
 		.navigationTitle("Agent Select")
+		.navigationBarTitleDisplayMode(.inline)
 	}
 	
 	private func update() async {
 		await loadManager.load {
-			async let inventory = try await $0.getInventory(for: user.id)
-			let info = try await $0.getLivePregameInfo(matchID)
-			pregameInfo = info
-			
-			if users == nil {
-				let userIDs = info.team.players.map(\.id)
-				users = .init(values: try await $0.getUsers(for: userIDs))
-			}
-			
-			self.inventory = try await inventory
+			pregameInfo = try await $0.getLivePregameInfo(matchID)
 		}
 	}
 }
@@ -77,7 +82,6 @@ struct AgentSelectView: View {
 			infoBox
 				.padding()
 		}
-		.navigationBarTitleDisplayMode(.inline)
 	}
 	
 	@ViewBuilder
@@ -227,6 +231,7 @@ struct AgentSelectView: View {
 			}
 		}
 		.disabled(ownPlayer.isLockedIn)
+		.disabled(pregameInfo.state != .agentSelectActive)
 		.padding()
 	}
 	
