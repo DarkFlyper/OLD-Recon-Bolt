@@ -25,6 +25,9 @@ enum PreviewData {
 	static let pregameInfo = loadJSON(named: "example_pregame", as: LivePregameInfo.self)
 	static let pregameUsers = Dictionary(values: loadJSON(named: "example_pregame_users", as: [User].self))
 	
+	static let liveGameInfo = loadJSON(named: "example_live_game", as: LiveGameInfo.self)
+	static let liveGameUsers = Dictionary(values: loadJSON(named: "example_live_game_users", as: [User].self))
+	
 	static let singleMatchData = MatchViewData(details: singleMatch, userID: userID)
 	static let strangeMatchData = MatchViewData(details: strangeMatch, userID: userID)
 	static let surrenderedMatchData = MatchViewData(details: surrenderedMatch, userID: userID)

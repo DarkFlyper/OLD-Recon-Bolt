@@ -65,6 +65,10 @@
 		B96A0CAE265B0FB500844674 /* ObjectiveAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96A0CAC265B0FB500844674 /* ObjectiveAssets.swift */; };
 		B9741478266F18A800892B5F /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9741477266F18A800892B5F /* String+Localization.swift */; };
 		B9741479266F18A800892B5F /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9741477266F18A800892B5F /* String+Localization.swift */; };
+		B9C349A0267AA9E800BE39B1 /* example_live_game.json in Resources */ = {isa = PBXBuildFile; fileRef = B9C3499F267AA9E800BE39B1 /* example_live_game.json */; };
+		B9C349A1267AA9E800BE39B1 /* example_live_game.json in Resources */ = {isa = PBXBuildFile; fileRef = B9C3499F267AA9E800BE39B1 /* example_live_game.json */; };
+		B9C349A3267AAB9500BE39B1 /* example_live_game_users.json in Resources */ = {isa = PBXBuildFile; fileRef = B9C349A2267AAB9500BE39B1 /* example_live_game_users.json */; };
+		B9C349A4267AAB9500BE39B1 /* example_live_game_users.json in Resources */ = {isa = PBXBuildFile; fileRef = B9C349A2267AAB9500BE39B1 /* example_live_game_users.json */; };
 		B9C97DC7263CADFC001E4D1B /* ValorantAPI+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C97DC6263CADFC001E4D1B /* ValorantAPI+Mock.swift */; };
 		B9C97DC8263CADFC001E4D1B /* ValorantAPI+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C97DC6263CADFC001E4D1B /* ValorantAPI+Mock.swift */; };
 		B9C97DCC263CB0D6001E4D1B /* ValorantAPI in Frameworks */ = {isa = PBXBuildFile; productRef = B9C97DCB263CB0D6001E4D1B /* ValorantAPI */; };
@@ -184,6 +188,8 @@
 		B96A0CAC265B0FB500844674 /* ObjectiveAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectiveAssets.swift; sourceTree = "<group>"; };
 		B9741477266F18A800892B5F /* String+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
 		B99B75942655859C00FBEB60 /* Valorant Viewer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Valorant Viewer.entitlements"; sourceTree = "<group>"; };
+		B9C3499F267AA9E800BE39B1 /* example_live_game.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_live_game.json; sourceTree = "<group>"; };
+		B9C349A2267AAB9500BE39B1 /* example_live_game_users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_live_game_users.json; sourceTree = "<group>"; };
 		B9C97DC6263CADFC001E4D1B /* ValorantAPI+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ValorantAPI+Mock.swift"; sourceTree = "<group>"; };
 		B9C97DD0263CB744001E4D1B /* MatchList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchList.swift; sourceTree = "<group>"; };
 		B9CF2E6125A81B48004A1458 /* UnifiedStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnifiedStyles.swift; sourceTree = "<group>"; };
@@ -413,6 +419,8 @@
 				B9F52331266EE57900DFF8DD /* example_contracts.json */,
 				B9318368267813EF0099B13C /* example_pregame.json */,
 				B9677F8226782A3200C0FF46 /* example_pregame_users.json */,
+				B9C3499F267AA9E800BE39B1 /* example_live_game.json */,
+				B9C349A2267AAB9500BE39B1 /* example_live_game_users.json */,
 				B9DCF9AA2642F7A100C39EC4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -597,7 +605,9 @@
 				B9318369267813F00099B13C /* example_pregame.json in Resources */,
 				B941B6EC25A7C83700F675C1 /* example_updates.json in Resources */,
 				B9F52332266EE57900DFF8DD /* example_contracts.json in Resources */,
+				B9C349A0267AA9E800BE39B1 /* example_live_game.json in Resources */,
 				B941B65A25A5BC8A00F675C1 /* Assets.xcassets in Resources */,
+				B9C349A3267AAB9500BE39B1 /* example_live_game_users.json in Resources */,
 				B96A0CA0265A8B4600844674 /* strange_match.json in Resources */,
 				B9677F8326782A3200C0FF46 /* example_pregame_users.json in Resources */,
 			);
@@ -614,7 +624,9 @@
 				B931836A267813F00099B13C /* example_pregame.json in Resources */,
 				B9EF0F24263D091F0067176A /* example_match.json in Resources */,
 				B9F52333266EE57900DFF8DD /* example_contracts.json in Resources */,
+				B9C349A1267AA9E800BE39B1 /* example_live_game.json in Resources */,
 				B941B65B25A5BC8A00F675C1 /* Assets.xcassets in Resources */,
+				B9C349A4267AAB9500BE39B1 /* example_live_game_users.json in Resources */,
 				B96A0CA1265A8B4600844674 /* strange_match.json in Resources */,
 				B9677F8426782A3200C0FF46 /* example_pregame_users.json in Resources */,
 			);
