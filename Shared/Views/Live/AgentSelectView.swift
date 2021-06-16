@@ -180,6 +180,10 @@ struct AgentSelectView: View {
 		}
 	}
 	
+	/// We can actually change our locked-in agent to a different one, but we want that functionality reasonably hidden.
+	/// This achieves that by making it so you can only re-lock while holding down the lock in button
+	@GestureState private var canRelock = false
+	
 	@ViewBuilder
 	private var agentSelectionView: some View {
 		let ownPlayer = pregameInfo.team.players.first { $0.id == user.id }!
@@ -189,6 +193,8 @@ struct AgentSelectView: View {
 				.filter { $0.id != user.id }
 				.map { $0.agentID! }
 		)
+		
+		let hasSelectedAgent = ownPlayer.isLockedIn && !canRelock
 		
 		VStack(spacing: 24) {
 			let selectedAgentID = ownPlayer.agentID
@@ -205,9 +211,11 @@ struct AgentSelectView: View {
 				Text(agentName.map { "Lock In \($0)" } ?? "Lock In")
 					.bold()
 			}
-			.disabled(selectedAgentID == nil || alreadyLocked.contains(selectedAgentID!))
 			.controlProminence(.increased)
 			.buttonStyle(.bordered)
+			.disabled(selectedAgentID == nil || alreadyLocked.contains(selectedAgentID!))
+			.disabled(hasSelectedAgent) // can't move this out because then it'd affect the relock gesture too
+			.simultaneousGesture(holdGesture(isHolding: $canRelock))
 			
 			if let agents = assetManager.assets?.agents.values {
 				let sortedAgents = agents.sorted(on: \.displayName)
@@ -228,9 +236,9 @@ struct AgentSelectView: View {
 					}
 				}
 				.padding(4)
+				.disabled(hasSelectedAgent)
 			}
 		}
-		.disabled(ownPlayer.isLockedIn)
 		.disabled(pregameInfo.state != .agentSelectActive)
 		.padding()
 	}
@@ -240,7 +248,10 @@ struct AgentSelectView: View {
 		let ownsAgent = inventory.agentsIncludingStarters.contains(agent.id)
 		Button(role: nil) {
 			await loadManager.load {
-				pregameInfo = try await $0.selectAgent(agent.id, in: pregameInfo.id)
+				pregameInfo = try await $0.pickAgent(
+					agent.id, in: pregameInfo.id,
+					shouldLock: canRelock // we can re-lock a different agent by simply sending the appropriate lock-in request
+				)
 			}
 		} label: {
 			let isSelected = agent.id == selectedAgentID
@@ -293,3 +304,10 @@ struct AgentSelectView_Previews: PreviewProvider {
 	}
 }
 #endif
+
+private func holdGesture(isHolding: GestureState<Bool>) -> some Gesture {
+	DragGesture(minimumDistance: 0)
+		.updating(isHolding) { _, isHolding, _ in
+			isHolding = true
+		}
+}
