@@ -184,11 +184,12 @@ struct KillBreakdownView_Previews: PreviewProvider {
 	static var previews: some View {
 		// computing these previews takes a long time, so we'll limit ourselves to one match
 		KillBreakdownView(data: PreviewData.singleMatchData, highlight: .constant(.init()))
-			.padding(.vertical)
-			.inEachColorScheme()
+			.previewInterfaceOrientation(.landscapeRight)
+			//.padding(.vertical)
+			//.inEachColorScheme()
 			.withPreviewAssets()
-			.frame(maxWidth: 800, minHeight: 600)
-			.previewLayout(.sizeThatFits)
+			//.frame(maxWidth: 800, minHeight: 600)
+			//.previewLayout(.sizeThatFits)
 	}
 }
 #endif

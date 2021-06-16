@@ -66,11 +66,13 @@ struct AccountView_Previews: PreviewProvider {
 		AccountView(dataStore: PreviewData.mockDataStore)
 			.withPreviewAssets()
 		
+		/*
 		AccountView(dataStore: PreviewData.emptyDataStore)
 			.environmentObject(AssetManager.mockDownloading)
 		
 		AccountView(dataStore: PreviewData.emptyDataStore)
 			.environmentObject(AssetManager.mockEmpty)
+		 */
 	}
 }
 #endif
