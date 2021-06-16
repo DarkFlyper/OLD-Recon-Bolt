@@ -12,6 +12,7 @@ class LoadManager: ObservableObject {
 		do {
 			try await task()
 		} catch {
+			guard !Task.isCancelled else { return }
 			loadError = .init(error)
 		}
 	}
