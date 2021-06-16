@@ -3,12 +3,16 @@ import ValorantAPI
 
 struct AgentSelectContainer: View {
 	@EnvironmentObject private var loadManager: ValorantLoadManager
+	@Environment(\.presentationMode) @Binding private var presentationMode
 	
 	let matchID: Match.ID
 	let user: User
 	@State var pregameInfo: LivePregameInfo?
 	@State var users: [User.ID: User]?
 	@State var inventory: Inventory?
+	
+	@State private var hasEnded = false
+	@State private var isShowingEndedAlert = false
 	
 	var body: some View {
 		VStack {
@@ -19,7 +23,7 @@ struct AgentSelectContainer: View {
 			}
 		}
 		.task {
-			while !Task.isCancelled {
+			while !Task.isCancelled, !hasEnded {
 				await update()
 				await Task.sleep(seconds: 1, tolerance: 0.1)
 			}
@@ -37,13 +41,24 @@ struct AgentSelectContainer: View {
 				inventory = try await $0.getInventory(for: user.id)
 			}
 		}
+		.alert(
+			"Game Has Ended!",
+			isPresented: $isShowingEndedAlert,
+			actions: { Button("Exit") { presentationMode.dismiss() } },
+			message: { Text("This game is no longer running.") }
+		)
 		.navigationTitle("Agent Select")
 		.navigationBarTitleDisplayMode(.inline)
 	}
 	
 	private func update() async {
 		await loadManager.load {
-			pregameInfo = try await $0.getLivePregameInfo(matchID)
+			do {
+				pregameInfo = try await $0.getLivePregameInfo(matchID)
+			} catch ValorantClient.APIError.badResponseCode(404, _, _) {
+				hasEnded = true
+				isShowingEndedAlert = true
+			}
 		}
 	}
 }
@@ -104,13 +119,17 @@ struct AgentSelectView: View {
 					.foregroundStyle(.secondary)
 			}
 			
-			let remainingSeconds = Int(pregameInfo.timeRemainingInPhase.rounded())
-			Text("\(Image(systemName: "timer")) \(remainingSeconds)")
-				.fontWeight(.bold)
-				.font(.title2)
-				.monospacedDigit()
-				.foregroundStyle(.primary)
-				.drawingGroup()
+			Group {
+				if pregameInfo.state == .provisioned {
+					Text("Game Started")
+				} else {
+					let remainingSeconds = Int(pregameInfo.timeRemainingInPhase.rounded())
+					Label("\(remainingSeconds)", systemImage: "timer")
+						.monospacedDigit()
+				}
+			}
+			.font(.title2.weight(.bold))
+			.foregroundStyle(.primary)
 			
 			Text("\(pregameInfo.team.id.rawValue) Team")
 				.foregroundColor(pregameInfo.team.id.color)
