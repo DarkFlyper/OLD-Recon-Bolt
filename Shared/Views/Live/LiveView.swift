@@ -86,9 +86,8 @@ struct LiveView: View {
 						}
 					} else {
 						NavigationLink("Details \(Image(systemName: "chevron.right"))") {
-							Text("Not implemented yet!")
+							LiveMatchContainer(matchID: activeMatch.id, user: user)
 						}
-						.disabled(true)
 					}
 				}
 				.padding()
