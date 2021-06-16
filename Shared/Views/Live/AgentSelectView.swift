@@ -142,9 +142,15 @@ struct AgentSelectView: View {
 				}
 			}
 			.frame(width: iconSize, height: iconSize)
-			.background(relativeColor.opacity(isLockedIn ? 0.5 : 0.25))
 			.mask(Circle())
-			.padding(4)
+			.padding(isLockedIn ? 1 : 0)
+			.background(
+				Circle()
+					.fill(relativeColor)
+					.opacity(isLockedIn ? 0.5 : 0.25)
+					.padding(2)
+			)
+			.padding(2)
 			.overlay(
 				Circle()
 					.strokeBorder(relativeColor, lineWidth: isLockedIn ? 2 : 1)
