@@ -29,6 +29,8 @@ enum PreviewData {
 	static let strangeMatchData = MatchViewData(details: strangeMatch, userID: userID)
 	static let surrenderedMatchData = MatchViewData(details: surrenderedMatch, userID: userID)
 	
+	static let inventory = Inventory(loadJSON(named: "example_inventory", as: APIInventory.self))
+	
 	static let matchList = MatchList(
 		user: user,
 		matches: compUpdates
