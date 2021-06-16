@@ -15,14 +15,13 @@ struct MatchDetailsHero: View {
 			
 			VStack {
 				scoreSummary(for: data.details.teams)
-					.font(.largeTitle.weight(.heavy))
+					.font(.largeTitle.weight(.bold))
 				
 				Text(data.details.matchInfo.queueID.name)
-					.font(.largeTitle.weight(.medium).smallCaps())
+					.fontWeight(.medium)
 					.foregroundStyle(.secondary)
 			}
-			.padding(.horizontal, 6)
-			.padding(4)
+			.padding()
 			.background(Material.ultraThin)
 			.cornerRadius(8)
 			.shadow(radius: 10)
