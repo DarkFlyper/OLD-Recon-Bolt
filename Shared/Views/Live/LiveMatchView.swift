@@ -150,6 +150,7 @@ struct LiveMatchView: View {
 	}
 }
 
+#if DEBUG
 struct LiveMatchView_Previews: PreviewProvider {
 	static var previews: some View {
 		LiveMatchContainer(
@@ -163,3 +164,4 @@ struct LiveMatchView_Previews: PreviewProvider {
 		.withPreviewAssets()
 	}
 }
+#endif
