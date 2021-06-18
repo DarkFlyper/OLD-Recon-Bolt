@@ -8,6 +8,7 @@ extension AssetClient {
 		async let maps = getMapInfo()
 		async let agents = getAgentInfo()
 		async let missions = getMissionInfo()
+		async let gameModes = getGameModeInfo()
 		async let objectives = getObjectiveInfo()
 		async let playerCards = getPlayerCardInfo()
 		async let playerTitles = getPlayerTitleInfo()
@@ -18,6 +19,7 @@ extension AssetClient {
 			maps: .init(values: maps),
 			agents: .init(values: agents),
 			missions: .init(values: missions),
+			gameModes: .init(values: gameModes),
 			objectives: .init(values: objectives),
 			playerCards: .init(values: playerCards),
 			playerTitles: .init(values: playerTitles),
