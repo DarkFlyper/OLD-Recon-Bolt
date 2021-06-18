@@ -25,8 +25,11 @@ final class AssetManager: ObservableObject {
 		
 		do {
 			assets = try await Self.loadAssets() { progress in
-				print(progress)
-				self.progress = progress
+				DispatchQueue.main.async { // TODO: switch to AsyncStream once it's out
+					dispatchPrecondition(condition: .onQueue(.main))
+					print(progress)
+					self.progress = progress
+				}
 			}
 		} catch {
 			self.error = error
@@ -68,22 +71,14 @@ final class AssetManager: ObservableObject {
 
 extension AssetCollection: DefaultsValueConvertible {}
 
-struct AssetManager_Previews: PreviewProvider {
-	static var previews: some View {
-		PreviewView()
+extension EnvironmentValues {
+	var assets: AssetCollection? {
+		get { self[Key.self] }
+		set { self[Key.self] = newValue }
 	}
 	
-	private struct PreviewView: View {
-		@StateObject var manager = AssetManager()
-		
-		var body: some View {
-			VStack(spacing: 10) {
-				Text(verbatim: "stored: \(AssetManager.stored as Any)")
-					.lineLimit(10)
-				Text(verbatim: "\(manager.progress?.description ?? "nothing in progress")")
-			}
-			.padding()
-			.previewLayout(.sizeThatFits)
-		}
+	private struct Key: EnvironmentKey {
+		@MainActor
+		static let defaultValue: AssetCollection? = isInSwiftUIPreview ? AssetManager.stored : nil
 	}
 }

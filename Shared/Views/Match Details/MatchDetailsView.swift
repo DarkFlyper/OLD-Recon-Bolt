@@ -41,7 +41,6 @@ struct MatchDetailsView_Previews: PreviewProvider {
 		.navigationTitle("Match Details")
 		.withToolbar(allowLargeTitles: false)
 		.inEachColorScheme()
-		.withPreviewAssets()
 	}
 }
 #endif

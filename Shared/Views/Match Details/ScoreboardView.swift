@@ -123,8 +123,7 @@ struct ScoreboardView_Previews: PreviewProvider {
 	static var previews: some View {
 		ScoreboardView(data: PreviewData.singleMatchData, highlight: .constant(.init()))
 			.padding(.vertical)
-			.inEachColorScheme()
-			.withPreviewAssets()
+			//.inEachColorScheme()
 			.fixedSize(horizontal: true, vertical: true)
 			.previewLayout(.sizeThatFits)
 	}

@@ -3,7 +3,7 @@ import SwiftUIMissingPieces
 import UserDefault
 import HandyOperators
 
-class LoadManager: ObservableObject {
+final class LoadManager: ObservableObject {
 	@Published fileprivate var loadError: PresentedError?
 	
 	init() {}
@@ -20,11 +20,7 @@ class LoadManager: ObservableObject {
 
 extension View {
 	func withLoadManager() -> some View {
-		withLoadManager(LoadManager())
-	}
-	
-	func withLoadManager<Manager: LoadManager>(_ manager: Manager) -> some View {
-		LoadWrapper(loadManager: manager) { self }
+		LoadWrapper(loadManager: .init()) { self }
 	}
 }
 

@@ -12,7 +12,6 @@ struct ReferenceView_Previews: PreviewProvider {
 		ReferenceView()
 			.withToolbar()
 			.inEachColorScheme()
-			.withPreviewAssets()
 	}
 }
 #endif

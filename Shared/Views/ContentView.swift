@@ -5,11 +5,12 @@ import KeychainSwift
 
 struct ContentView: View {
 	@StateObject var dataStore: ClientDataStore
-	@SceneStorage("ContentView.state") var tab = Tab.career
-	@EnvironmentObject var assetManager: AssetManager
+	@StateObject var assetManager = isInSwiftUIPreview ? .forPreviews : AssetManager()
 	
+	@SceneStorage("ContentView.tab")
+	var tab = Tab.career
 	@SceneStorage("ContentView.shouldShowUnranked")
-	private var shouldShowUnranked = true
+	var shouldShowUnranked = true
 	
 	var body: some View {
 		TabView(selection: $tab) {
@@ -32,7 +33,7 @@ struct ContentView: View {
 				.tabItem { Label("Reference", systemImage: "books.vertical") }
 				.tag(Tab.reference)
 			
-			AccountView(dataStore: dataStore)
+			AccountView(dataStore: dataStore, assetManager: assetManager)
 				.tabItem { Label("Account", systemImage: "person.crop.circle") }
 				.tag(Tab.account)
 		}
@@ -42,10 +43,9 @@ struct ContentView: View {
 				tab = .account
 			}
 		}
-		.withLoadManager(ValorantLoadManager(
-			dataStore: dataStore,
-			clientVersion: assetManager.assets?.version.riotClientVersion
-		))
+		.withValorantLoadFunction(dataStore: dataStore)
+		.withLoadManager()
+		.environment(\.assets, assetManager.assets)
 	}
 	
 	@ViewBuilder
@@ -71,15 +71,12 @@ struct ContentView: View {
 #if DEBUG
 struct ContentView_Previews: PreviewProvider {
 	static var previews: some View {
-		Group {
-			ContentView(dataStore: PreviewData.mockDataStore)
-				.inEachColorScheme()
-			
-			ContentView(dataStore: PreviewData.mockDataStore, tab: .account)
-			
-			ContentView(dataStore: PreviewData.emptyDataStore)
-		}
-		.withPreviewAssets()
+		ContentView(dataStore: PreviewData.mockDataStore)
+			//.inEachColorScheme()
+		
+		//ContentView(dataStore: PreviewData.mockDataStore, tab: .account)
+		
+		//ContentView(dataStore: PreviewData.emptyDataStore)
 	}
 }
 #endif

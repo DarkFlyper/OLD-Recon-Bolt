@@ -16,7 +16,6 @@ struct AgentImage_Previews: PreviewProvider {
 			AgentImage.bustPortrait(.omen)
 		}
 		.previewLayout(.sizeThatFits)
-		.withPreviewAssets()
 	}
 }
 #endif

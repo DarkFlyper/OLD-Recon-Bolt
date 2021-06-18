@@ -6,8 +6,8 @@ struct LiveView: View {
 	@State var contractDetails: ContractDetails?
 	@State var activeMatch: ActiveMatch?
 	
-	@EnvironmentObject private var loadManager: ValorantLoadManager
-	@EnvironmentObject private var assetManager: AssetManager
+	@Environment(\.valorantLoad) private var load
+	@Environment(\.assets) private var assets
 	
 	var body: some View {
 		ScrollView {
@@ -151,8 +151,8 @@ struct LiveView: View {
 			let _ = assert(mission.objectiveProgress.count == 1)
 			let (objectiveID, progress) = mission.objectiveProgress.first!
 			if
-				let mission = assetManager.assets?.missions[mission.id],
-				let objective = assetManager.assets?.objectives[objectiveID]
+				let mission = assets?.missions[mission.id],
+				let objective = assets?.objectives[objectiveID]
 			{
 				Divider()
 				
@@ -193,13 +193,13 @@ struct LiveView: View {
 	}
 	
 	func loadContractDetails() async {
-		await loadManager.load {
+		await load {
 			contractDetails = try await $0.getContractDetails(playerID: user.id)
 		}
 	}
 	
 	func loadLiveGameDetails() async {
-		await loadManager.load { client in
+		await load { client in
 			async let liveGameMatch = client.getLiveMatch(for: user.id, inPregame: false)
 			async let livePregameMatch = client.getLiveMatch(for: user.id, inPregame: true)
 			
@@ -222,25 +222,21 @@ struct LiveView: View {
 #if DEBUG
 struct LiveView_Previews: PreviewProvider {
 	static var previews: some View {
-		Group {
-			LiveView(
-				user: PreviewData.user,
-				contractDetails: PreviewData.contractDetails,
-				isAutoRefreshing: true, isAutoRefreshRunning: true
-			)
+		LiveView(
+			user: PreviewData.user,
+			contractDetails: PreviewData.contractDetails,
+			isAutoRefreshing: true, isAutoRefreshRunning: true
+		)
+		.withToolbar()
+		//.inEachColorScheme()
+		
+		/*
+		LiveView(user: PreviewData.user, activeMatch: .init(id: Match.ID(), inPregame: true))
 			.withToolbar()
-			//.inEachColorScheme()
-			
-			/*
-			LiveView(user: PreviewData.user, activeMatch: .init(id: Match.ID(), inPregame: true))
-				.withToolbar()
-			
-			LiveView(user: PreviewData.user, activeMatch: .init(id: Match.ID(), inPregame: false))
-				.withToolbar()
-			 */
-		}
-		.withMockValorantLoadManager()
-		.withPreviewAssets()
+		
+		LiveView(user: PreviewData.user, activeMatch: .init(id: Match.ID(), inPregame: false))
+			.withToolbar()
+		 */
 	}
 }
 #endif

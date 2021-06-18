@@ -13,7 +13,6 @@ struct ValorantViewerApp: App {
 				ContentView(
 					dataStore: ClientDataStore(keychain: KeychainSwift(), for: StandardClientData.self)
 				)
-				.environmentObject(AssetManager())
 			}
 		}
 	}

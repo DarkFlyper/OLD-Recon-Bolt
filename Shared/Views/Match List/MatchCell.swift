@@ -58,8 +58,9 @@ struct MatchCell: View {
 	
 	private var mapIcon: some View {
 		MapImage.splash(match.mapID)
-			.scaledToFill()
-			.frame(width: visualsHeight * 16/9, height: visualsHeight)
+			.aspectRatio(16/9, contentMode: .fill)
+			.frame(height: visualsHeight)
+			.fixedSize()
 			.overlay(MapImage.Label(mapID: match.mapID))
 			.mask(RoundedRectangle(cornerRadius: 6, style: .continuous))
 	}
@@ -156,7 +157,6 @@ struct MatchCell_Previews: PreviewProvider {
 		}
 		//.inEachColorScheme()
 		.previewLayout(.sizeThatFits)
-		.withPreviewAssets()
 	}
 }
 #endif

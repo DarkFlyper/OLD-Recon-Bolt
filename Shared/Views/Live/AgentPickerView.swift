@@ -2,9 +2,6 @@ import SwiftUI
 import ValorantAPI
 
 struct AgentPickerView: View {
-	@EnvironmentObject private var loadManager: ValorantLoadManager
-	@EnvironmentObject private var assetManager: AssetManager
-	
 	@Binding
 	var pregameInfo: LivePregameInfo
 	let user: User
@@ -14,9 +11,12 @@ struct AgentPickerView: View {
 	/// This achieves that by making it so you can only re-lock while holding down the lock in button
 	@GestureState private var canRelock = false
 	
+	@Environment(\.valorantLoad) private var load
+	@Environment(\.assets) private var assets
+	
 	var body: some View {
 		let ownPlayer = pregameInfo.team.players.first { $0.id == user.id }!
-		let gameModeInfo = assetManager.assets?.gameModes[pregameInfo.modeID]
+		let gameModeInfo = assets?.gameModes[pregameInfo.modeID]
 		let isVotingBased = gameModeInfo?.gameRuleOverride(for: .majorityVoteAgents) == true
 		let takenAgents = isVotingBased ? [] : Set(
 			pregameInfo.team.players
@@ -31,12 +31,12 @@ struct AgentPickerView: View {
 			let selectedAgentID = ownPlayer.agentID
 			
 			Button(role: nil) {
-				await loadManager.load {
+				await load {
 					pregameInfo = try await $0.lockInAgent(selectedAgentID!, in: pregameInfo.id)
 				}
 			} label: {
 				let agentName = selectedAgentID
-					.flatMap { assetManager.assets?.agents[$0] }?
+					.flatMap { assets?.agents[$0] }?
 					.displayName
 				
 				Text(agentName.map { "Lock In \($0)" } ?? "Lock In")
@@ -48,7 +48,7 @@ struct AgentPickerView: View {
 			.disabled(hasSelectedAgent) // can't move this out because then it'd affect the relock gesture too
 			.simultaneousGesture(holdGesture(isHolding: $canRelock))
 			
-			if let agents = assetManager.assets?.agents.values {
+			if let agents = assets?.agents.values {
 				let sortedAgents = agents.sorted(on: \.displayName)
 					.movingToFront { inventory.agentsIncludingStarters.contains($0.id) }
 				
@@ -78,7 +78,7 @@ struct AgentPickerView: View {
 	func agentButton(for agent: AgentInfo, selectedAgentID: Agent.ID?, isTaken: Bool) -> some View {
 		let ownsAgent = inventory.agentsIncludingStarters.contains(agent.id)
 		Button(role: nil) {
-			await loadManager.load {
+			await load {
 				pregameInfo = try await $0.pickAgent(
 					agent.id, in: pregameInfo.id,
 					shouldLock: canRelock // we can re-lock a different agent by simply sending the appropriate lock-in request

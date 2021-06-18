@@ -19,7 +19,6 @@ struct PlayerCardImage_Previews: PreviewProvider {
 		.padding()
 		.background(Color(.darkGray))
 		.previewLayout(.sizeThatFits)
-		.withPreviewAssets()
 	}
 }
 #endif

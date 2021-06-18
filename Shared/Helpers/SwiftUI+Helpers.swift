@@ -1,5 +1,13 @@
 import SwiftUI
 
+#if DEBUG
+var isInSwiftUIPreview: Bool {
+	ProcessInfo.processInfo.environment["XCODE_RUNNING_FOR_PREVIEWS"] == "1"
+}
+#else
+let isInSwiftUIPreview = false
+#endif
+
 extension Gradient {
 	init(_ color: Color, opacities: [Double] = [1, 0]) {
 		self.init(colors: opacities.map(color.opacity))

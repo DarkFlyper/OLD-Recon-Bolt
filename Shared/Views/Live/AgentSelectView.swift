@@ -2,9 +2,6 @@ import SwiftUI
 import ValorantAPI
 
 struct AgentSelectContainer: View {
-	@EnvironmentObject private var loadManager: ValorantLoadManager
-	@Environment(\.presentationMode) @Binding private var presentationMode
-	
 	let matchID: Match.ID
 	let user: User
 	@State var pregameInfo: LivePregameInfo?
@@ -13,6 +10,9 @@ struct AgentSelectContainer: View {
 	
 	@State private var hasEnded = false
 	@State private var isShowingEndedAlert = false
+	
+	@Environment(\.valorantLoad) private var load
+	@Environment(\.presentationMode) @Binding private var presentationMode
 	
 	var body: some View {
 		VStack {
@@ -31,13 +31,13 @@ struct AgentSelectContainer: View {
 		.task(id: pregameInfo == nil) {
 			guard let pregameInfo = pregameInfo, users == nil else { return }
 			let userIDs = pregameInfo.team.players.map(\.id)
-			await loadManager.load {
+			await load {
 				users = .init(values: try await $0.getUsers(for: userIDs))
 			}
 		}
 		.task {
 			guard inventory == nil else { return }
-			await loadManager.load {
+			await load {
 				inventory = try await $0.getInventory(for: user.id)
 			}
 		}
@@ -52,7 +52,7 @@ struct AgentSelectContainer: View {
 	}
 	
 	private func update() async {
-		await loadManager.load {
+		await load {
 			do {
 				pregameInfo = try await $0.getLivePregameInfo(matchID)
 			} catch ValorantClient.APIError.badResponseCode(404, _, _) {
@@ -64,8 +64,7 @@ struct AgentSelectContainer: View {
 }
 
 struct AgentSelectView: View {
-	@EnvironmentObject private var loadManager: ValorantLoadManager
-	@EnvironmentObject private var assetManager: AssetManager
+	@Environment(\.assets) private var assets
 	
 	@Binding
 	var pregameInfo: LivePregameInfo
@@ -186,7 +185,7 @@ struct AgentSelectView: View {
 				}
 				
 				if isLockedIn {
-					let agentName = assetManager.assets?.agents[player.agentID!]?.displayName
+					let agentName = assets?.agents[player.agentID!]?.displayName
 					Text(agentName ?? "Unknown Agent!")
 						.fontWeight(.semibold)
 				} else {
@@ -210,7 +209,7 @@ struct AgentSelectView: View {
 struct AgentSelectView_Previews: PreviewProvider {
 	static var previews: some View {
 		//AgentSelectContainer(matchID: Match.ID(), user: PreviewData.user)
-		//	.withMockValorantLoadManager()
+		//	.withMockValorantLoadFunction()
 		
 		AgentSelectContainer(
 			matchID: PreviewData.pregameInfo.id,
@@ -221,8 +220,6 @@ struct AgentSelectView_Previews: PreviewProvider {
 		)
 		.withToolbar()
 		//.inEachColorScheme()
-		.withMockValorantLoadManager()
-		.withPreviewAssets()
 		//.previewInterfaceOrientation(.landscapeRight)
 	}
 }

@@ -2,12 +2,12 @@ import SwiftUI
 import ValorantAPI
 
 struct LiveMatchContainer: View {
-	@EnvironmentObject private var loadManager: ValorantLoadManager
-	
 	let matchID: Match.ID
 	let user: User
 	@State var gameInfo: LiveGameInfo?
 	@State var users: [User.ID: User]?
+	
+	@Environment(\.valorantLoad) private var load
 	
 	var body: some View {
 		VStack {
@@ -18,7 +18,7 @@ struct LiveMatchContainer: View {
 			}
 		}
 		.task {
-			await loadManager.load {
+			await load {
 				let info = try await $0.getLiveGameInfo(matchID)
 				gameInfo = info
 				let userIDs = info.players.map(\.id)
@@ -33,7 +33,7 @@ struct LiveMatchContainer: View {
 struct LiveMatchView: View {
 	private typealias PlayerInfo = LiveGameInfo.PlayerInfo
 	
-	@EnvironmentObject private var assetManager: AssetManager
+	@Environment(\.assets) private var assets
 	
 	let gameInfo: LiveGameInfo
 	let user: User
@@ -133,7 +133,7 @@ struct LiveMatchView: View {
 					}
 				}
 				
-				let agentName = assetManager.assets?.agents[player.agentID]?.displayName
+				let agentName = assets?.agents[player.agentID]?.displayName
 				Text(agentName ?? "Unknown Agent!")
 					.fontWeight(.semibold)
 			}
@@ -160,8 +160,6 @@ struct LiveMatchView_Previews: PreviewProvider {
 			users: PreviewData.liveGameUsers
 		)
 		.withToolbar()
-		.withMockValorantLoadManager()
-		.withPreviewAssets()
 	}
 }
 #endif

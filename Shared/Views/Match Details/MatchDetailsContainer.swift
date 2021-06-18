@@ -2,12 +2,12 @@ import SwiftUI
 import ValorantAPI
 
 struct MatchDetailsContainer: View {
-	@EnvironmentObject private var loadManager: ValorantLoadManager
-	
 	let matchID: Match.ID
 	let userID: User.ID
 	
 	@State var matchDetails: MatchDetails?
+	
+	@Environment(\.valorantLoad) private var load
 	
 	var body: some View {
 		Group {
@@ -22,7 +22,7 @@ struct MatchDetailsContainer: View {
 		.task {
 			guard matchDetails == nil else { return }
 			
-			await loadManager.load {
+			await load {
 				matchDetails = try await $0.getMatchDetails(matchID: matchID)
 			}
 		}

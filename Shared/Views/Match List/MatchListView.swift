@@ -5,7 +5,8 @@ import HandyOperators
 struct UserView: View {
 	@State private var matchList: MatchList
 	@State private var shouldShowUnranked = true
-	@EnvironmentObject private var loadManager: ValorantLoadManager
+	
+	@Environment(\.valorantLoad) private var load
 	
 	init(for user: User) {
 		_matchList = .init(wrappedValue: .init(user: user))
@@ -20,7 +21,8 @@ struct UserView: View {
 struct MatchListView: View {
 	@Binding var matchList: MatchList
 	@Binding var shouldShowUnranked: Bool
-	@EnvironmentObject private var loadManager: ValorantLoadManager
+	
+	@Environment(\.valorantLoad) private var load
 	
 	private var shownMatches: [CompetitiveUpdate] {
 		shouldShowUnranked
@@ -47,9 +49,9 @@ struct MatchListView: View {
 				withAnimation { shouldShowUnranked.toggle() }
 			}
 		}
-		.onAppear {
+		.task {
 			if matchList.matches.isEmpty {
-				async { await loadMatches() }
+				await loadMatches()
 			}
 		}
 		.refreshable(action: loadMatches)
@@ -62,7 +64,7 @@ struct MatchListView: View {
 	}
 	
 	func updateMatchList(update: @escaping (ValorantClient) -> (inout MatchList) async throws -> Void) async {
-		await loadManager.load { client in
+		await load { client in
 			let updater = update(client)
 			let updated = try await matchList <- { try await updater(&$0) }
 			withAnimation { matchList = updated }
@@ -77,8 +79,6 @@ struct MatchListView_Previews: PreviewProvider {
 			.withToolbar()
 			//.inEachColorScheme()
 			.listStyle(.grouped)
-			.withMockValorantLoadManager()
-			.withPreviewAssets()
 	}
 }
 #endif

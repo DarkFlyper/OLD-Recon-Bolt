@@ -1,12 +1,11 @@
 import SwiftUI
 
 struct MapListView: View {
-	@EnvironmentObject
-	private var assetManager: AssetManager
+	@Environment(\.assets) private var assets
 	
 	var body: some View {
 		List {
-			if let assets = assetManager.assets {
+			if let assets = assets {
 				let maps = assets.maps.values.sorted(on: \.displayName)
 				ForEach(maps) { map in
 					NavigationLink(destination: MapInfoView(map: map)) {
@@ -39,9 +38,9 @@ struct MapListView: View {
 		private var mapIcon: some View {
 			MapImage.splash(map.id)
 				.scaledToFill()
-				.frame(width: visualsHeight * 16/9, height: visualsHeight)
-				.frame(minHeight: 0, alignment: .top) // text looks better on the top part
-				.mask(RoundedRectangle(cornerRadius: 4, style: .continuous))
+				.frame(height: visualsHeight)
+				.fixedSize()
+				.mask(RoundedRectangle(cornerRadius: 6, style: .continuous))
 		}
 	}
 }
@@ -52,7 +51,6 @@ struct MapListView_Previews: PreviewProvider {
 		MapListView()
 			.withToolbar()
 			.inEachColorScheme()
-			.withPreviewAssets()
 	}
 }
 #endif

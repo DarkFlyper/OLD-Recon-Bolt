@@ -12,8 +12,7 @@ struct _AssetImageView<Provider: _AssetImageProvider>: View {
 	typealias ID = Provider.ID
 	typealias Asset = Provider.Asset
 	
-	@EnvironmentObject
-	private var assetManager: AssetManager
+	@Environment(\.assets) private var assets
 	
 	let id: ID
 	let imageGetter: (Provider.Asset) -> AssetImage?
@@ -32,8 +31,7 @@ struct _AssetImageView<Provider: _AssetImageProvider>: View {
 	
 	var body: some View {
 		if
-			let image = assetManager
-				.assets?[keyPath: Provider.assetPath][id]
+			let image = assets?[keyPath: Provider.assetPath][id]
 				.flatMap(imageGetter)?
 				.imageIfLoaded
 		{

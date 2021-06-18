@@ -42,7 +42,6 @@ struct MapInfoView_Previews: PreviewProvider {
 		)
 		.withToolbar()
 		.inEachColorScheme()
-		.withPreviewAssets()
 	}
 }
 #endif

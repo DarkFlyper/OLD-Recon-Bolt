@@ -62,7 +62,6 @@ struct MatchDetailsHero_Previews: PreviewProvider {
 	static var previews: some View {
 		MatchDetailsHero(data: PreviewData.singleMatchData)
 			.previewLayout(.sizeThatFits)
-			.withPreviewAssets()
 			.inEachColorScheme()
 	}
 }

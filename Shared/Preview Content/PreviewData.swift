@@ -69,14 +69,12 @@ enum PreviewData {
 struct MockClientData: ClientData {
 	let user = PreviewData.user
 	var matchList: MatchList = PreviewData.matchList
+	let client = ValorantClient.mocked
 	
-	var client: ValorantClient {
-		fatalError("no client in previews!")
-	}
+	static func authenticated(using credentials: Credentials) -> ClientData { MockClientData() }
+	func reauthenticated() -> ClientData { self }
 	
-	static func authenticated(using credentials: Credentials) -> ClientData { fatalError() }
-	func reauthenticated() -> ClientData { fatalError() }
-	
+	init() {}
 	init?(using keychain: Keychain) {}
 	func save(using keychain: Keychain) {}
 }

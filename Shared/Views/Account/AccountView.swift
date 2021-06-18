@@ -2,26 +2,12 @@ import SwiftUI
 
 struct AccountView: View {
 	@ObservedObject var dataStore: ClientDataStore
-	@EnvironmentObject private var assetManager: AssetManager
+	@ObservedObject var assetManager: AssetManager
 	
 	var body: some View {
 		ScrollView {
 			VStack {
-				if let user = dataStore.data?.user {
-					VStack(spacing: 20) {
-						(Text("Signed in as ") + Text(verbatim: user.name).fontWeight(.semibold))
-							.font(.title3)
-							.multilineTextAlignment(.center)
-						
-						Button("Sign Out") {
-							dataStore.data = nil
-						}
-					}
-					.padding()
-				} else {
-					LoginForm(data: $dataStore.data, credentials: .init(from: dataStore.keychain) ?? .init())
-						.withLoadManager()
-				}
+				accountInfo
 				
 				Divider()
 				
@@ -33,6 +19,25 @@ struct AccountView: View {
 		.buttonStyle(.bordered)
 		.navigationTitle("Account")
 		.withToolbar()
+	}
+	
+	@ViewBuilder
+	var accountInfo: some View {
+		if let user = dataStore.data?.user {
+			VStack(spacing: 20) {
+				Text("Signed in as \(Text(user.name).fontWeight(.semibold))")
+					.font(.title3)
+					.multilineTextAlignment(.center)
+				
+				Button("Sign Out") {
+					dataStore.data = nil
+				}
+			}
+			.padding()
+		} else {
+			LoginForm(data: $dataStore.data, credentials: .init(from: dataStore.keychain) ?? .init())
+				.withLoadManager()
+		}
 	}
 	
 	@ViewBuilder
@@ -73,16 +78,9 @@ struct AccountView: View {
 #if DEBUG
 struct AccountView_Previews: PreviewProvider {
 	static var previews: some View {
-		AccountView(dataStore: PreviewData.mockDataStore)
-			.withPreviewAssets()
-		
-		/*
-		AccountView(dataStore: PreviewData.emptyDataStore)
-			.environmentObject(AssetManager.mockDownloading)
-		
-		AccountView(dataStore: PreviewData.emptyDataStore)
-			.environmentObject(AssetManager.mockEmpty)
-		 */
+		AccountView(dataStore: PreviewData.mockDataStore, assetManager: .forPreviews)
+		//AccountView(dataStore: PreviewData.emptyDataStore, assetManager: .mockDownloading)
+		//AccountView(dataStore: PreviewData.emptyDataStore, assetManager: .mockEmpty)
 	}
 }
 #endif

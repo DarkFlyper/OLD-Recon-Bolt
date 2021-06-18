@@ -8,13 +8,12 @@ struct _MapImageProvider: _AssetImageProvider {
 
 extension MapImage {
 	struct Label: View {
-		@EnvironmentObject
-		private var assetManager: AssetManager
+		@Environment(\.assets) private var assets
 		
 		let mapID: MapID
 		
 		var body: some View {
-			Text(assetManager.assets?.maps[mapID]?.displayName ?? "unknown")
+			Text(assets?.maps[mapID]?.displayName ?? "unknown")
 				.font(Font.callout.smallCaps())
 				.bold()
 				.foregroundStyle(Material.regular)
@@ -35,7 +34,6 @@ struct MapImage_Previews: PreviewProvider {
 				.frame(height: 200)
 		}
 		.previewLayout(.sizeThatFits)
-		.withPreviewAssets()
 	}
 }
 #endif

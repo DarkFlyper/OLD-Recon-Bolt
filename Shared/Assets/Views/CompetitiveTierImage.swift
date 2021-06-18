@@ -1,15 +1,14 @@
 import SwiftUI
 
 struct CompetitiveTierImage: View {
-	@EnvironmentObject
-	private var assetManager: AssetManager
+	@Environment(\.assets) private var assets
 	
 	var tier: Int
 	var episodeNumber: Int? = nil
 	
 	var body: some View {
 		if
-			let episodes = assetManager.assets?.competitiveTierEpisodes,
+			let episodes = assets?.competitiveTierEpisodes,
 			let episode = episodeNumber.flatMap(episodes.elementIfValid(at:)) ?? episodes.last,
 			let image = episode.tiers.elementIfValid(at: tier)?.icon?.imageIfLoaded
 		{
@@ -36,7 +35,6 @@ struct CompetitiveTierImage_Previews: PreviewProvider {
 		.padding()
 		.background(Color(.darkGray))
 		.previewLayout(.sizeThatFits)
-		.withPreviewAssets()
 	}
 }
 #endif

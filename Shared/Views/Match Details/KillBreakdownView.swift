@@ -187,7 +187,6 @@ struct KillBreakdownView_Previews: PreviewProvider {
 			.previewInterfaceOrientation(.landscapeRight)
 			//.padding(.vertical)
 			//.inEachColorScheme()
-			.withPreviewAssets()
 			//.frame(maxWidth: 800, minHeight: 600)
 			//.previewLayout(.sizeThatFits)
 	}

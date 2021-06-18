@@ -82,7 +82,6 @@ struct Lightbox_Previews: PreviewProvider {
 		Lightbox {
 			MapImage.displayIcon(.breeze)
 		}
-		.withPreviewAssets()
 	}
 }
 #endif

@@ -1,32 +1,35 @@
 import SwiftUI
 import ValorantAPI
 
-final class ValorantLoadManager: LoadManager {
-	private typealias APIError = ValorantClient.APIError
-	private let dataStore: ClientDataStore
+extension View {
+	func withValorantLoadFunction(dataStore: ClientDataStore) -> some View {
+		modifier(ValorantLoadModifier(dataStore: dataStore))
+	}
+}
+
+private struct ValorantLoadModifier: ViewModifier {
+	@ObservedObject var dataStore: ClientDataStore
 	
-	var canLoad: Bool {
-		dataStore.data != nil
+	@EnvironmentObject private var loadManager: LoadManager
+	@Environment(\.assets) private var assets
+	
+	func body(content: Content) -> some View {
+		content.environment(\.valorantLoad, load)
+			.task(id: assets?.version.riotClientVersion, updateClientVersion)
+			.task(id: dataStore.data?.client.id, updateClientVersion)
 	}
 	
-	init(dataStore: ClientDataStore, clientVersion: String? = nil) {
-		if let version = clientVersion {
-			dataStore.data?.client.setClientVersion(version)
-		}
-		self.dataStore = dataStore
-	}
-	
-	func loadAsync(_ task: @escaping (ValorantClient) async throws -> Void) {
-		async { await load(task) }
+	func updateClientVersion() {
+		guard let version = assets?.version.riotClientVersion else { return }
+		dataStore.data?.client.setClientVersion(version)
 	}
 	
 	func load(_ task: @escaping (ValorantClient) async throws -> Void) async {
 		guard let data = dataStore.data else { return }
-		#if DEBUG
-		guard !(data is MockClientData) else { return }
-		#endif
 		
-		await runTask {
+		await loadManager.runTask {
+			typealias APIError = ValorantClient.APIError
+			
 			do {
 				try await task(data.client)
 			} catch APIError.tokenFailure, APIError.unauthorized {
@@ -35,6 +38,22 @@ final class ValorantLoadManager: LoadManager {
 				dataStore.data = reauthenticated
 				try await task(reauthenticated.client)
 			}
+		}
+	}
+}
+
+extension EnvironmentValues {
+	typealias ValorantLoadTask = (ValorantClient) async throws -> Void
+	
+	var valorantLoad: (@escaping ValorantLoadTask) async -> Void {
+		get { self[Key.self] }
+		set { self[Key.self] = newValue }
+	}
+	
+	private struct Key: EnvironmentKey {
+		static let defaultValue: (@escaping ValorantLoadTask) async -> Void = { _ in
+			guard !isInSwiftUIPreview else { return }
+			fatalError("no load function provided in environment!")
 		}
 	}
 }
