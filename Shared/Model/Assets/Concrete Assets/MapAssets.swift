@@ -1,6 +1,5 @@
 import Foundation
 import ValorantAPI
-import ArrayBuilder
 
 extension AssetClient {
 	func getMapInfo() async throws -> [MapInfo] {
@@ -14,7 +13,7 @@ private struct MapInfoRequest: AssetRequest {
 	typealias Response = [MapInfo]
 }
 
-struct MapInfo: Codable, Identifiable {
+struct MapInfo: AssetItem, Codable, Identifiable {
 	private var mapUrl: MapID
 	var id: MapID { mapUrl } // lazy rename
 	var displayName: String
@@ -28,7 +27,6 @@ struct MapInfo: Codable, Identifiable {
 	var xMultiplier, yMultiplier: Double
 	var xScalarToAdd, yScalarToAdd: Double
 	
-	@ArrayBuilder<AssetImage>
 	var images: [AssetImage] {
 		displayIcon
 		listViewIcon

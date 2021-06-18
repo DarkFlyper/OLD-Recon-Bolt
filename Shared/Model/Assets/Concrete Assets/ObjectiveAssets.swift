@@ -13,7 +13,7 @@ private struct ObjectiveInfoRequest: AssetRequest {
 	typealias Response = [ObjectiveInfo]
 }
 
-struct ObjectiveInfo: Codable, Identifiable {
+struct ObjectiveInfo: AssetItem, Codable, Identifiable {
 	typealias ID = Objective.ID
 	
 	private var uuid: ID

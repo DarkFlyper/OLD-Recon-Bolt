@@ -39,9 +39,19 @@ struct AccountView: View {
 	var assetsInfo: some View {
 		if let progress = assetManager.progress {
 			VStack {
-				Text("\(progress.completed)/\(progress.total) Assets Downloaded…")
+				Text("\(progress.completed)/\(progress.total) Images Downloaded…")
 				
 				ProgressView(value: progress.fractionComplete)
+			}
+		} else if let error = assetManager.error {
+			VStack(spacing: 8) {
+				Text("Error downloading assets!")
+					.font(.headline)
+					.fontWeight(.semibold)
+				
+				Button("Retry", role: nil) { await assetManager.loadAssets() }
+				
+				Text(error.localizedDescription)
 			}
 		} else if assetManager.assets == nil {
 			VStack(spacing: 8) {

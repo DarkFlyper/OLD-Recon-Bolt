@@ -13,7 +13,7 @@ private struct MissionInfoRequest: AssetRequest {
 	typealias Response = [MissionInfo]
 }
 
-struct MissionInfo: Codable, Identifiable {
+struct MissionInfo: AssetItem, Codable, Identifiable {
 	typealias ID = Mission.ID
 	
 	private var uuid: ID

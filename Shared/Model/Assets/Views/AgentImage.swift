@@ -1,41 +1,19 @@
 import SwiftUI
 import ValorantAPI
 
-@dynamicMemberLookup
-struct AgentImage: View {
-	@EnvironmentObject var assetManager: AssetManager
-	
-	let agentID: Agent.ID
-	let imageKeyPath: KeyPath<AgentInfo, AssetImage>
-	
-	static subscript(
-		dynamicMember keyPath: KeyPath<AgentInfo, AssetImage>
-	) -> (Agent.ID) -> Self {
-		{ Self(agentID: $0, imageKeyPath: keyPath) }
-	}
-	
-	var body: some View {
-		let agentInfo = assetManager.assets?.agents[agentID]
-		if let image = agentInfo?[keyPath: imageKeyPath].imageIfLoaded {
-			image
-				.resizable()
-				.scaledToFit()
-		} else {
-			Color.gray
-		}
-	}
+typealias AgentImage = _AssetImageView<_AgentImageProvider>
+struct _AgentImageProvider: _AssetImageProvider {
+	static let assetPath = \AssetCollection.agents
 }
 
 #if DEBUG
 struct AgentImage_Previews: PreviewProvider {
-	static let agentID = Agent.ID(UUID(uuidString: "8e253930-4c05-31dd-1b6c-968525494517")!)
-	
 	static var previews: some View {
 		Group {
-			AgentImage.displayIcon(agentID)
+			AgentImage.displayIcon(.omen)
 				.frame(height: 80)
-			AgentImage.fullPortrait(agentID)
-			AgentImage.bustPortrait(agentID)
+			AgentImage.fullPortrait(.omen)
+			AgentImage.bustPortrait(.omen)
 		}
 		.previewLayout(.sizeThatFits)
 		.withPreviewAssets()

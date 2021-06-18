@@ -1,36 +1,12 @@
 import SwiftUI
 import ValorantAPI
 
-@dynamicMemberLookup
-struct MapImage: View {
-	@EnvironmentObject
-	private var assetManager: AssetManager
-	
-	let mapID: MapID
-	private let imageGetter: (MapInfo) -> AssetImage?
-	
-	static subscript(
-		dynamicMember keyPath: KeyPath<MapInfo, AssetImage?>
-	) -> (MapID) -> Self {
-		{ Self(mapID: $0) { $0[keyPath: keyPath] } }
-	}
-	
-	static subscript(
-		dynamicMember keyPath: KeyPath<MapInfo, AssetImage>
-	) -> (MapID) -> Self {
-		{ Self(mapID: $0) { $0[keyPath: keyPath] } }
-	}
-	
-	var body: some View {
-		if let image = assetManager.assets?.maps[mapID].flatMap(imageGetter)?.imageIfLoaded {
-			image
-				.resizable()
-				.scaledToFit()
-		} else {
-			Color.gray
-		}
-	}
-	
+typealias MapImage = _AssetImageView<_MapImageProvider>
+struct _MapImageProvider: _AssetImageProvider {
+	static let assetPath = \AssetCollection.maps
+}
+
+extension MapImage {
 	struct Label: View {
 		@EnvironmentObject
 		private var assetManager: AssetManager
@@ -53,10 +29,9 @@ struct MapImage: View {
 #if DEBUG
 struct MapImage_Previews: PreviewProvider {
 	static var previews: some View {
-		let mapID = MapID.breeze
 		Group {
-			MapImage.splash(mapID)
-				.overlay(MapImage.Label(mapID: mapID))
+			MapImage.splash(.breeze)
+				.overlay(MapImage.Label(mapID: .breeze))
 				.frame(height: 200)
 		}
 		.previewLayout(.sizeThatFits)

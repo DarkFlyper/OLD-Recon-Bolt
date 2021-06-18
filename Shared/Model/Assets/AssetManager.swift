@@ -1,7 +1,6 @@
-import Foundation
+import SwiftUI
 import ValorantAPI
 import UserDefault
-import SwiftUI
 import HandyOperators
 
 @MainActor
@@ -65,19 +64,6 @@ final class AssetManager: ObservableObject {
 	fileprivate static var stored: AssetCollection?
 	
 	private static let client = AssetClient()
-}
-
-struct AssetCollection: Codable {
-	let version: AssetVersion
-	
-	let maps: [MapID: MapInfo]
-	let agents: [Agent.ID: AgentInfo]
-	let missions: [MissionInfo.ID: MissionInfo]
-	let objectives: [ObjectiveInfo.ID: ObjectiveInfo]
-	
-	var images: Set<AssetImage> {
-		Set(maps.values.flatMap(\.images) + agents.values.flatMap(\.images))
-	}
 }
 
 extension AssetCollection: DefaultsValueConvertible {}

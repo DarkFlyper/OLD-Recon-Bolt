@@ -60,9 +60,8 @@ struct MatchCell: View {
 		MapImage.splash(match.mapID)
 			.scaledToFill()
 			.frame(width: visualsHeight * 16/9, height: visualsHeight)
-			.frame(minHeight: 0, alignment: .top) // text looks better on the top part
 			.overlay(MapImage.Label(mapID: match.mapID))
-			.mask(RoundedRectangle(cornerRadius: 4, style: .continuous))
+			.mask(RoundedRectangle(cornerRadius: 6, style: .continuous))
 	}
 	
 	private var changeColor: Color {
@@ -99,8 +98,7 @@ struct MatchCell: View {
 				changeRing
 					.stroke(changeColor, style: stroke)
 				
-				Image("tier_\(match.tierAfterUpdate)")
-					.resizable()
+				CompetitiveTierImage(tier: match.tierAfterUpdate)
 					.padding(10)
 			}
 			.compositingGroup()
@@ -156,14 +154,9 @@ struct MatchCell_Previews: PreviewProvider {
 				Divider()
 			}
 		}
-		.inEachColorScheme()
+		//.inEachColorScheme()
 		.previewLayout(.sizeThatFits)
 		.withPreviewAssets()
 	}
 }
 #endif
-
-// FIXME: immortal is just one now
-private let tiers: [String] = ["INVALID", "iron", "silver", "gold", "platinum", "diamond", "immortal"]
-	.flatMap { rank in (1...3).map { "\(rank) \($0)" } }
-	+ ["radiant"]

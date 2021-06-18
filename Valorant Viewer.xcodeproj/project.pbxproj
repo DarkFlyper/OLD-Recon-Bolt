@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B90B4B52267C112F00CACB95 /* CompetitiveTierAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90B4B51267C112F00CACB95 /* CompetitiveTierAssets.swift */; };
+		B90B4B53267C112F00CACB95 /* CompetitiveTierAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90B4B51267C112F00CACB95 /* CompetitiveTierAssets.swift */; };
+		B90B4B55267C139300CACB95 /* AssetCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90B4B54267C139300CACB95 /* AssetCollection.swift */; };
+		B90B4B56267C139300CACB95 /* AssetCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90B4B54267C139300CACB95 /* AssetCollection.swift */; };
+		B90B4B58267C167B00CACB95 /* PlayerCardAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90B4B57267C167B00CACB95 /* PlayerCardAssets.swift */; };
+		B90B4B59267C167B00CACB95 /* PlayerCardAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90B4B57267C167B00CACB95 /* PlayerCardAssets.swift */; };
+		B90B4B5B267C177D00CACB95 /* PlayerTitleAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90B4B5A267C177D00CACB95 /* PlayerTitleAssets.swift */; };
+		B90B4B5C267C177D00CACB95 /* PlayerTitleAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90B4B5A267C177D00CACB95 /* PlayerTitleAssets.swift */; };
+		B90B4B5E267C223D00CACB95 /* MapImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90B4B5D267C223D00CACB95 /* MapImage.swift */; };
+		B90B4B5F267C223D00CACB95 /* MapImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90B4B5D267C223D00CACB95 /* MapImage.swift */; };
+		B90B4B61267C22E700CACB95 /* PlayerCardImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90B4B60267C22E700CACB95 /* PlayerCardImage.swift */; };
+		B90B4B62267C22E700CACB95 /* PlayerCardImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90B4B60267C22E700CACB95 /* PlayerCardImage.swift */; };
+		B90B4B64267C270500CACB95 /* CompetitiveTierImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90B4B63267C270500CACB95 /* CompetitiveTierImage.swift */; };
+		B90B4B65267C270500CACB95 /* CompetitiveTierImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90B4B63267C270500CACB95 /* CompetitiveTierImage.swift */; };
 		B90BC2EE266D224F00C905D4 /* CGeometry in Frameworks */ = {isa = PBXBuildFile; productRef = B90BC2ED266D224F00C905D4 /* CGeometry */; };
 		B9131D61266A707600E85F46 /* ValorantLoadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9131D60266A707600E85F46 /* ValorantLoadManager.swift */; };
 		B9131D62266A707600E85F46 /* ValorantLoadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9131D60266A707600E85F46 /* ValorantLoadManager.swift */; };
@@ -127,8 +141,8 @@
 		B9F52330266ED96600DFF8DD /* LiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F5232E266ED96600DFF8DD /* LiveView.swift */; };
 		B9F52332266EE57900DFF8DD /* example_contracts.json in Resources */ = {isa = PBXBuildFile; fileRef = B9F52331266EE57900DFF8DD /* example_contracts.json */; };
 		B9F52333266EE57900DFF8DD /* example_contracts.json in Resources */ = {isa = PBXBuildFile; fileRef = B9F52331266EE57900DFF8DD /* example_contracts.json */; };
-		B9F65C472651D20200C9C34A /* MapImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F65C462651D20200C9C34A /* MapImage.swift */; };
-		B9F65C482651D20200C9C34A /* MapImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F65C462651D20200C9C34A /* MapImage.swift */; };
+		B9F65C472651D20200C9C34A /* AssetImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F65C462651D20200C9C34A /* AssetImageView.swift */; };
+		B9F65C482651D20200C9C34A /* AssetImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F65C462651D20200C9C34A /* AssetImageView.swift */; };
 		B9F65C4B2651DFB100C9C34A /* AgentImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F65C4A2651DFB100C9C34A /* AgentImage.swift */; };
 		B9F65C4C2651DFB100C9C34A /* AgentImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F65C4A2651DFB100C9C34A /* AgentImage.swift */; };
 		B9F65C4E2651EDA500C9C34A /* DynamicallyStroked.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F65C4D2651EDA500C9C34A /* DynamicallyStroked.swift */; };
@@ -152,6 +166,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B90B4B51267C112F00CACB95 /* CompetitiveTierAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitiveTierAssets.swift; sourceTree = "<group>"; };
+		B90B4B54267C139300CACB95 /* AssetCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetCollection.swift; sourceTree = "<group>"; };
+		B90B4B57267C167B00CACB95 /* PlayerCardAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCardAssets.swift; sourceTree = "<group>"; };
+		B90B4B5A267C177D00CACB95 /* PlayerTitleAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTitleAssets.swift; sourceTree = "<group>"; };
+		B90B4B5D267C223D00CACB95 /* MapImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapImage.swift; sourceTree = "<group>"; };
+		B90B4B60267C22E700CACB95 /* PlayerCardImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCardImage.swift; sourceTree = "<group>"; };
+		B90B4B63267C270500CACB95 /* CompetitiveTierImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitiveTierImage.swift; sourceTree = "<group>"; };
 		B9131D60266A707600E85F46 /* ValorantLoadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValorantLoadManager.swift; sourceTree = "<group>"; };
 		B9131D64266AF6C600E85F46 /* ReferenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferenceView.swift; sourceTree = "<group>"; };
 		B9131D68266AFA4C00E85F46 /* MapListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapListView.swift; sourceTree = "<group>"; };
@@ -218,7 +239,7 @@
 		B9F07CB926474F4E006CD4F5 /* MapAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAssets.swift; sourceTree = "<group>"; };
 		B9F5232E266ED96600DFF8DD /* LiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveView.swift; sourceTree = "<group>"; };
 		B9F52331266EE57900DFF8DD /* example_contracts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_contracts.json; sourceTree = "<group>"; };
-		B9F65C462651D20200C9C34A /* MapImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapImage.swift; sourceTree = "<group>"; };
+		B9F65C462651D20200C9C34A /* AssetImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetImageView.swift; sourceTree = "<group>"; };
 		B9F65C4A2651DFB100C9C34A /* AgentImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentImage.swift; sourceTree = "<group>"; };
 		B9F65C4D2651EDA500C9C34A /* DynamicallyStroked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicallyStroked.swift; sourceTree = "<group>"; };
 		B9F66ACD266DC31E008560FD /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
@@ -406,6 +427,9 @@
 				B9485F83264B1DD300AC3456 /* AgentAssets.swift */,
 				B96A0CA9265AE32200844674 /* MissionAssets.swift */,
 				B96A0CAC265B0FB500844674 /* ObjectiveAssets.swift */,
+				B90B4B51267C112F00CACB95 /* CompetitiveTierAssets.swift */,
+				B90B4B57267C167B00CACB95 /* PlayerCardAssets.swift */,
+				B90B4B5A267C177D00CACB95 /* PlayerTitleAssets.swift */,
 			);
 			path = "Concrete Assets";
 			sourceTree = "<group>";
@@ -454,6 +478,7 @@
 				B9F07CB326474E8A006CD4F5 /* AssetClient.swift */,
 				B9F07CB626474EB7006CD4F5 /* AssetVersion.swift */,
 				B9485F86264B5BD700AC3456 /* AssetImage.swift */,
+				B90B4B54267C139300CACB95 /* AssetCollection.swift */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -461,8 +486,11 @@
 		B9F65C492651DFA000C9C34A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B9F65C462651D20200C9C34A /* MapImage.swift */,
+				B9F65C462651D20200C9C34A /* AssetImageView.swift */,
 				B9F65C4A2651DFB100C9C34A /* AgentImage.swift */,
+				B90B4B5D267C223D00CACB95 /* MapImage.swift */,
+				B90B4B60267C22E700CACB95 /* PlayerCardImage.swift */,
+				B90B4B63267C270500CACB95 /* CompetitiveTierImage.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -654,6 +682,7 @@
 				B9131D61266A707600E85F46 /* ValorantLoadManager.swift in Sources */,
 				B9EE6E5F26589EB8007E28B5 /* MatchDetailsContainer.swift in Sources */,
 				B941B6DE25A7BC3800F675C1 /* View+Styling.swift in Sources */,
+				B90B4B55267C139300CACB95 /* AssetCollection.swift in Sources */,
 				B94091AE25D09D5A00EE5DF2 /* LoadManager.swift in Sources */,
 				B9131D69266AFA4C00E85F46 /* MapListView.swift in Sources */,
 				B9C3499D267AA6DE00BE39B1 /* LiveMatchView.swift in Sources */,
@@ -666,7 +695,7 @@
 				B9131D65266AF6C600E85F46 /* ReferenceView.swift in Sources */,
 				B94091B825D09F0200EE5DF2 /* MatchListView.swift in Sources */,
 				B96A0CAD265B0FB500844674 /* ObjectiveAssets.swift in Sources */,
-				B9F65C472651D20200C9C34A /* MapImage.swift in Sources */,
+				B9F65C472651D20200C9C34A /* AssetImageView.swift in Sources */,
 				B9131D6C266AFA7900E85F46 /* MapInfoView.swift in Sources */,
 				B9741478266F18A800892B5F /* String+Localization.swift in Sources */,
 				B94091B325D09DF900EE5DF2 /* SwiftUI+CrossPlatform.swift in Sources */,
@@ -687,17 +716,23 @@
 				B9EE6E6226589FAA007E28B5 /* PreviewData.swift in Sources */,
 				B9E43DA2265DB94C00F59E35 /* MatchViewData.swift in Sources */,
 				B9318366267810CE0099B13C /* AgentSelectView.swift in Sources */,
+				B90B4B61267C22E700CACB95 /* PlayerCardImage.swift in Sources */,
 				B9CF2E6225A81B48004A1458 /* UnifiedStyles.swift in Sources */,
 				B9F07CB726474EB7006CD4F5 /* AssetVersion.swift in Sources */,
+				B90B4B5B267C177D00CACB95 /* PlayerTitleAssets.swift in Sources */,
 				B9F07CB426474E8A006CD4F5 /* AssetClient.swift in Sources */,
 				B9F07CBA26474F4E006CD4F5 /* MapAssets.swift in Sources */,
 				B9C97DC7263CADFC001E4D1B /* ValorantAPI+Mock.swift in Sources */,
+				B90B4B5E267C223D00CACB95 /* MapImage.swift in Sources */,
 				B9E12B0C25BBD57D008E1E77 /* Optional+Functional.swift in Sources */,
 				B9485F87264B5BD700AC3456 /* AssetImage.swift in Sources */,
 				B9EE6E712659D30A007E28B5 /* Swift+Helpers.swift in Sources */,
+				B90B4B52267C112F00CACB95 /* CompetitiveTierAssets.swift in Sources */,
 				B9EF0F21263CFC870067176A /* MatchDetailsView.swift in Sources */,
 				B9D9E593266D358300827470 /* Lightbox.swift in Sources */,
+				B90B4B58267C167B00CACB95 /* PlayerCardAssets.swift in Sources */,
 				B96A0CAA265AE32200844674 /* MissionAssets.swift in Sources */,
+				B90B4B64267C270500CACB95 /* CompetitiveTierImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -709,6 +744,7 @@
 				B9131D62266A707600E85F46 /* ValorantLoadManager.swift in Sources */,
 				B9EE6E6026589EB8007E28B5 /* MatchDetailsContainer.swift in Sources */,
 				B941B6DF25A7BC3800F675C1 /* View+Styling.swift in Sources */,
+				B90B4B56267C139300CACB95 /* AssetCollection.swift in Sources */,
 				B94091AF25D09D5A00EE5DF2 /* LoadManager.swift in Sources */,
 				B9131D6A266AFA4C00E85F46 /* MapListView.swift in Sources */,
 				B9C3499E267AA6DE00BE39B1 /* LiveMatchView.swift in Sources */,
@@ -721,7 +757,7 @@
 				B9131D66266AF6C600E85F46 /* ReferenceView.swift in Sources */,
 				B94091B925D09F0200EE5DF2 /* MatchListView.swift in Sources */,
 				B96A0CAE265B0FB500844674 /* ObjectiveAssets.swift in Sources */,
-				B9F65C482651D20200C9C34A /* MapImage.swift in Sources */,
+				B9F65C482651D20200C9C34A /* AssetImageView.swift in Sources */,
 				B9131D6D266AFA7900E85F46 /* MapInfoView.swift in Sources */,
 				B9741479266F18A800892B5F /* String+Localization.swift in Sources */,
 				B94091B425D09DF900EE5DF2 /* SwiftUI+CrossPlatform.swift in Sources */,
@@ -742,17 +778,23 @@
 				B9EE6E6326589FAA007E28B5 /* PreviewData.swift in Sources */,
 				B9E43DA3265DB94C00F59E35 /* MatchViewData.swift in Sources */,
 				B9318367267810CE0099B13C /* AgentSelectView.swift in Sources */,
+				B90B4B62267C22E700CACB95 /* PlayerCardImage.swift in Sources */,
 				B9CF2E6325A81B48004A1458 /* UnifiedStyles.swift in Sources */,
 				B9F07CB826474EB7006CD4F5 /* AssetVersion.swift in Sources */,
+				B90B4B5C267C177D00CACB95 /* PlayerTitleAssets.swift in Sources */,
 				B9F07CB526474E8A006CD4F5 /* AssetClient.swift in Sources */,
 				B9F07CBB26474F4E006CD4F5 /* MapAssets.swift in Sources */,
 				B9C97DC8263CADFC001E4D1B /* ValorantAPI+Mock.swift in Sources */,
+				B90B4B5F267C223D00CACB95 /* MapImage.swift in Sources */,
 				B9E12B0D25BBD57D008E1E77 /* Optional+Functional.swift in Sources */,
 				B9485F88264B5BD700AC3456 /* AssetImage.swift in Sources */,
 				B9EE6E722659D30A007E28B5 /* Swift+Helpers.swift in Sources */,
+				B90B4B53267C112F00CACB95 /* CompetitiveTierAssets.swift in Sources */,
 				B9EF0F22263CFC870067176A /* MatchDetailsView.swift in Sources */,
 				B9D9E594266D358300827470 /* Lightbox.swift in Sources */,
+				B90B4B59267C167B00CACB95 /* PlayerCardAssets.swift in Sources */,
 				B96A0CAB265AE32200844674 /* MissionAssets.swift in Sources */,
+				B90B4B65267C270500CACB95 /* CompetitiveTierImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

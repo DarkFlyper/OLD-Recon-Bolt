@@ -26,6 +26,12 @@ extension Sequence {
 	}
 }
 
+extension Collection {
+	func elementIfValid(at index: Index) -> Element? {
+		indices.contains(index) ? self[index] : nil
+	}
+}
+
 extension Collection where Element: RandomAccessCollection {
 	func transposed() -> [[Element.Element]] {
 		guard let firstRow = first else { return [] }

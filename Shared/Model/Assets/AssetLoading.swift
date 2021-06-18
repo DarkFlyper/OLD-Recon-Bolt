@@ -9,13 +9,21 @@ extension AssetClient {
 		async let agents = getAgentInfo()
 		async let missions = getMissionInfo()
 		async let objectives = getObjectiveInfo()
+		async let playerCards = getPlayerCardInfo()
+		async let playerTitles = getPlayerTitleInfo()
+		async let competitiveTiers = getCompetitiveTiers()
+		
 		let collection = try await AssetCollection(
 			version: version,
 			maps: .init(values: maps),
 			agents: .init(values: agents),
 			missions: .init(values: missions),
-			objectives: .init(values: objectives)
+			objectives: .init(values: objectives),
+			playerCards: .init(values: playerCards),
+			playerTitles: .init(values: playerTitles),
+			competitiveTierEpisodes: competitiveTiers
 		)
+		
 		return try await downloadAllImages(for: collection, onProgress: onProgress)
 	}
 	

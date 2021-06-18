@@ -1,6 +1,5 @@
 import Foundation
 import ValorantAPI
-import ArrayBuilder
 
 extension AssetClient {
 	func getAgentInfo() async throws -> [AgentInfo] {
@@ -13,31 +12,11 @@ extension AssetClient {
 private struct AgentInfoRequest: AssetRequest {
 	let path = "/v1/agents"
 	
-	typealias Response = BadDataWorkaround<AgentInfo>
+	// For some reason riot decided to include a borked version of Sova (Hunter_NPE) that's missing some parts.
+	typealias Response = FaultTolerantDecodableArray<AgentInfo>
 }
 
-// For some reason riot decided to include a borked version of Sova (Hunter_NPE) that's missing some parts.
-private struct BadDataWorkaround<Element>: Decodable where Element: Decodable {
-	var decoded: [Element] = []
-	var errors: [Error] = []
-	
-	init(from decoder: Decoder) throws {
-		var container = try decoder.unkeyedContainer()
-		while !container.isAtEnd {
-			do {
-				decoded.append(try container.decode(Element.self))
-			} catch {
-				errors.append(error)
-				// skip
-				_ = try! container.decode(Dummy.self)
-			}
-		}
-	}
-	
-	private struct Dummy: Decodable {}
-}
-
-struct AgentInfo: Codable, Identifiable {
+struct AgentInfo: AssetItem, Codable, Identifiable {
 	typealias ID = Agent.ID
 	
 	private var uuid: ID
@@ -56,7 +35,6 @@ struct AgentInfo: Codable, Identifiable {
 	var isFullPortraitRightFacing: Bool
 	var assetPath: String
 	
-	@ArrayBuilder<AssetImage>
 	var images: [AssetImage] {
 		displayIcon
 		bustPortrait

@@ -42,3 +42,23 @@ extension AssetRequest {
 			.data
 	}
 }
+
+struct FaultTolerantDecodableArray<Element>: Decodable where Element: Decodable {
+	var decoded: [Element] = []
+	var errors: [Error] = []
+	
+	init(from decoder: Decoder) throws {
+		var container = try decoder.unkeyedContainer()
+		while !container.isAtEnd {
+			do {
+				decoded.append(try container.decode(Element.self))
+			} catch {
+				errors.append(error)
+				// skip
+				_ = try! container.decode(Dummy.self)
+			}
+		}
+	}
+	
+	private struct Dummy: Decodable {}
+}

@@ -1,0 +1,42 @@
+import SwiftUI
+
+struct CompetitiveTierImage: View {
+	@EnvironmentObject
+	private var assetManager: AssetManager
+	
+	var tier: Int
+	var episodeNumber: Int? = nil
+	
+	var body: some View {
+		if
+			let episodes = assetManager.assets?.competitiveTierEpisodes,
+			let episode = episodeNumber.flatMap(episodes.elementIfValid(at:)) ?? episodes.last,
+			let image = episode.tiers.elementIfValid(at: tier)?.icon?.imageIfLoaded
+		{
+			image
+				.resizable()
+				.scaledToFit()
+		} else {
+			Color.gray
+		}
+	}
+}
+
+#if DEBUG
+struct CompetitiveTierImage_Previews: PreviewProvider {
+	static var previews: some View {
+		VStack {
+			CompetitiveTierImage(tier: 0)
+			CompetitiveTierImage(tier: 14)
+			CompetitiveTierImage(tier: 22)
+			CompetitiveTierImage(tier: 24)
+			CompetitiveTierImage(tier: 42)
+		}
+		.fixedSize()
+		.padding()
+		.background(Color(.darkGray))
+		.previewLayout(.sizeThatFits)
+		.withPreviewAssets()
+	}
+}
+#endif

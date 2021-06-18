@@ -61,7 +61,7 @@ struct DynamicallyStroked_Previews: PreviewProvider {
 				.font(.system(size: 80))
 				.dynamicallyStroked(radius: 4, color: .white)
 			
-			AgentImage.displayIcon(AgentImage_Previews.agentID)
+			AgentImage.displayIcon(.omen)
 				.frame(width: 80)
 				.dynamicallyStroked(radius: 4, color: .white)
 				.withPreviewAssets()
