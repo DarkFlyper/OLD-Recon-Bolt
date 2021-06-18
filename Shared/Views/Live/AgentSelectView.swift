@@ -212,7 +212,9 @@ struct AgentSelectView: View {
 	@ViewBuilder
 	private var agentSelectionView: some View {
 		let ownPlayer = pregameInfo.team.players.first { $0.id == user.id }!
-		let alreadyLocked = Set(
+		let gameModeInfo = assetManager.assets?.gameModes[pregameInfo.modeID]
+		let isVotingBased = gameModeInfo?.gameRuleOverride(for: .majorityVoteAgents) == true
+		let takenAgents = isVotingBased ? [] : Set(
 			pregameInfo.team.players
 				.filter(\.isLockedIn)
 				.filter { $0.id != user.id }
@@ -238,7 +240,7 @@ struct AgentSelectView: View {
 			}
 			.controlProminence(.increased)
 			.buttonStyle(.bordered)
-			.disabled(selectedAgentID == nil || alreadyLocked.contains(selectedAgentID!))
+			.disabled(selectedAgentID == nil || takenAgents.contains(selectedAgentID!))
 			.disabled(hasSelectedAgent) // can't move this out because then it'd affect the relock gesture too
 			.simultaneousGesture(holdGesture(isHolding: $canRelock))
 			
@@ -256,7 +258,7 @@ struct AgentSelectView: View {
 						agentButton(
 							for: agent,
 							selectedAgentID: selectedAgentID,
-							isTaken: alreadyLocked.contains(agent.id)
+							isTaken: takenAgents.contains(agent.id)
 						)
 					}
 				}

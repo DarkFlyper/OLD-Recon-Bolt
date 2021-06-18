@@ -29,6 +29,14 @@ struct GameModeInfo: AssetItem, Codable, Identifiable {
 	var displayIcon: AssetImage?
 	var assetPath: String
 	
+	func gameFeatureOverride(for name: GameFeatureToggle.Name) -> Bool? {
+		gameFeatureOverrides?.first { $0.featureName == name }?.state
+	}
+	
+	func gameRuleOverride(for name: GameRuleBool.Name) -> Bool? {
+		gameRuleBoolOverrides?.first { $0.ruleName == name }?.state
+	}
+	
 	var images: [AssetImage] {
 		displayIcon
 	}
