@@ -313,8 +313,7 @@
 			isa = PBXGroup;
 			children = (
 				B941B64425A5BC8800F675C1 /* ContentView.swift */,
-				B94091B725D09F0200EE5DF2 /* MatchListView.swift */,
-				B9CF2E7825A89976004A1458 /* MatchCell.swift */,
+				B9F5CEE4267D3362009CF906 /* Match List */,
 				B9318364267810BE0099B13C /* Live */,
 				B9131D67266AFA3B00E85F46 /* Reference */,
 				B9F66ACC266DC2F5008560FD /* Account */,
@@ -334,7 +333,6 @@
 				B96845B22665C7B900DC59D2 /* ClientData.swift */,
 				B94091AD25D09D5A00EE5DF2 /* LoadManager.swift */,
 				B9131D60266A707600E85F46 /* ValorantLoadManager.swift */,
-				B9F07CB226474E77006CD4F5 /* Assets */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -361,6 +359,7 @@
 				B941B64325A5BC8800F675C1 /* ValorantViewerApp.swift */,
 				B94091C925D0ACAC00EE5DF2 /* Views */,
 				B94091CC25D0ACB100EE5DF2 /* Model */,
+				B9F07CB226474E77006CD4F5 /* Assets */,
 				B941B6DC25A7BC3200F675C1 /* Helpers */,
 				B9DCF9A92642F78900C39EC4 /* Preview Content */,
 				B941B64525A5BC8A00F675C1 /* Assets.xcassets */,
@@ -444,18 +443,9 @@
 		B9DCF9A92642F78900C39EC4 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				B9EE6E642658A363007E28B5 /* SwiftUI+Previews.swift */,
 				B9EE6E6126589FAA007E28B5 /* PreviewData.swift */,
-				B9EF0F23263D09120067176A /* example_match.json */,
-				B941B6EB25A7C83700F675C1 /* example_updates.json */,
-				B9F9B4FE26796C2200397AAB /* example_inventory.json */,
-				B96A0C9F265A8B4600844674 /* strange_match.json */,
-				B9F9B4D926793F3000397AAB /* surrendered_match.json */,
-				B9F52331266EE57900DFF8DD /* example_contracts.json */,
-				B9318368267813EF0099B13C /* example_pregame.json */,
-				B9677F8226782A3200C0FF46 /* example_pregame_users.json */,
-				B9C3499F267AA9E800BE39B1 /* example_live_game.json */,
-				B9C349A2267AAB9500BE39B1 /* example_live_game_users.json */,
+				B9EE6E642658A363007E28B5 /* SwiftUI+Previews.swift */,
+				B9F5CEE3267D3337009CF906 /* Data */,
 				B9DCF9AA2642F7A100C39EC4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -489,6 +479,32 @@
 				B9F5CEE0267CD548009CF906 /* NamespacedID.swift */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		B9F5CEE3267D3337009CF906 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B9EF0F23263D09120067176A /* example_match.json */,
+				B941B6EB25A7C83700F675C1 /* example_updates.json */,
+				B9F9B4FE26796C2200397AAB /* example_inventory.json */,
+				B96A0C9F265A8B4600844674 /* strange_match.json */,
+				B9F9B4D926793F3000397AAB /* surrendered_match.json */,
+				B9F52331266EE57900DFF8DD /* example_contracts.json */,
+				B9318368267813EF0099B13C /* example_pregame.json */,
+				B9677F8226782A3200C0FF46 /* example_pregame_users.json */,
+				B9C3499F267AA9E800BE39B1 /* example_live_game.json */,
+				B9C349A2267AAB9500BE39B1 /* example_live_game_users.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B9F5CEE4267D3362009CF906 /* Match List */ = {
+			isa = PBXGroup;
+			children = (
+				B94091B725D09F0200EE5DF2 /* MatchListView.swift */,
+				B9CF2E7825A89976004A1458 /* MatchCell.swift */,
+			);
+			path = "Match List";
 			sourceTree = "<group>";
 		};
 		B9F65C492651DFA000C9C34A /* Views */ = {
