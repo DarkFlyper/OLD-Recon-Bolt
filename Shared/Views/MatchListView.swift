@@ -75,7 +75,8 @@ struct MatchListView_Previews: PreviewProvider {
 	static var previews: some View {
 		MatchListView(matchList: .constant(PreviewData.matchList), shouldShowUnranked: .constant(true))
 			.withToolbar()
-			.inEachColorScheme()
+			//.inEachColorScheme()
+			.listStyle(.grouped)
 			.withMockValorantLoadManager()
 			.withPreviewAssets()
 	}
