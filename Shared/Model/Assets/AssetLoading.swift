@@ -33,7 +33,6 @@ extension AssetClient {
 	) async throws -> AssetCollection {
 		let images = collection.images
 		
-		// TODO: limit concurrency with semaphore or something?
 		try await withThrowingTaskGroup(of: Void.self) { group in
 			for image in images {
 				group.async {

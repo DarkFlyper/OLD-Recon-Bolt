@@ -7,8 +7,8 @@ struct AssetCollection: Codable {
 	
 	let maps: [MapID: MapInfo]
 	let agents: [Agent.ID: AgentInfo]
-	let missions: [MissionInfo.ID: MissionInfo]
-	let objectives: [ObjectiveInfo.ID: ObjectiveInfo]
+	let missions: [Mission.ID: MissionInfo]
+	let objectives: [Objective.ID: ObjectiveInfo]
 	let playerCards: [PlayerCard.ID: PlayerCardInfo]
 	let playerTitles: [PlayerTitle.ID: PlayerTitleInfo]
 	let competitiveTierEpisodes: [CompetitiveTier.Episode]

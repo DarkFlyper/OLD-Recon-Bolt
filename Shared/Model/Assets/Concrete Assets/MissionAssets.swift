@@ -38,58 +38,22 @@ struct MissionInfo: AssetItem, Codable, Identifiable {
 		expirationDate > Self.dateValidityCutoff ? expirationDate : nil
 	}
 	
-	struct MissionType: Codable {
+	struct MissionType: NamespacedID {
 		static let weekly = Self("Weekly")
 		static let daily = Self("Daily")
 		static let tutorial = Self("Tutorial")
 		static let newPlayerExperience = Self("NPE")
 		
+		static let namespace = "EAresMissionType"
 		var rawValue: String
-		
-		init(_ rawValue: String) {
-			self.rawValue = rawValue
-		}
-		
-		private static let prefix = "EAresMissionType::"
-		
-		init(from decoder: Decoder) throws {
-			let container = try decoder.singleValueContainer()
-			let raw = try container.decode(String.self)
-			rawValue = raw.hasPrefix(Self.prefix)
-				? String(raw.dropFirst(Self.prefix.count))
-				: raw
-		}
-		
-		func encode(to encoder: Encoder) throws {
-			var container = encoder.singleValueContainer()
-			try container.encode(rawValue)
-		}
 	}
 	
-	struct Tag: Codable {
+	struct Tag: NamespacedID {
 		static let combat = Self("Combat")
 		static let economy = Self("Econ")
 		
+		static let namespace = "EAresMissionTag"
 		var rawValue: String
-		
-		init(_ rawValue: String) {
-			self.rawValue = rawValue
-		}
-		
-		private static let prefix = "EAresMissionTag::"
-		
-		init(from decoder: Decoder) throws {
-			let container = try decoder.singleValueContainer()
-			let raw = try container.decode(String.self)
-			rawValue = raw.hasPrefix(Self.prefix)
-				? String(raw.dropFirst(Self.prefix.count))
-				: raw
-		}
-		
-		func encode(to encoder: Encoder) throws {
-			var container = encoder.singleValueContainer()
-			try container.encode(rawValue)
-		}
 	}
 	
 	struct ObjectiveValue: Codable {
