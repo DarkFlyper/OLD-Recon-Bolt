@@ -145,6 +145,8 @@
 		B9F5CEDF267CD199009CF906 /* GameModeAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F5CEDD267CD199009CF906 /* GameModeAssets.swift */; };
 		B9F5CEE1267CD548009CF906 /* NamespacedID.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F5CEE0267CD548009CF906 /* NamespacedID.swift */; };
 		B9F5CEE2267CD548009CF906 /* NamespacedID.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F5CEE0267CD548009CF906 /* NamespacedID.swift */; };
+		B9F5CEE6267D33E3009CF906 /* AgentPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F5CEE5267D33E3009CF906 /* AgentPickerView.swift */; };
+		B9F5CEE7267D33E3009CF906 /* AgentPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F5CEE5267D33E3009CF906 /* AgentPickerView.swift */; };
 		B9F65C472651D20200C9C34A /* AssetImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F65C462651D20200C9C34A /* AssetImageView.swift */; };
 		B9F65C482651D20200C9C34A /* AssetImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F65C462651D20200C9C34A /* AssetImageView.swift */; };
 		B9F65C4B2651DFB100C9C34A /* AgentImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F65C4A2651DFB100C9C34A /* AgentImage.swift */; };
@@ -245,6 +247,7 @@
 		B9F52331266EE57900DFF8DD /* example_contracts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_contracts.json; sourceTree = "<group>"; };
 		B9F5CEDD267CD199009CF906 /* GameModeAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModeAssets.swift; sourceTree = "<group>"; };
 		B9F5CEE0267CD548009CF906 /* NamespacedID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamespacedID.swift; sourceTree = "<group>"; };
+		B9F5CEE5267D33E3009CF906 /* AgentPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentPickerView.swift; sourceTree = "<group>"; };
 		B9F65C462651D20200C9C34A /* AssetImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetImageView.swift; sourceTree = "<group>"; };
 		B9F65C4A2651DFB100C9C34A /* AgentImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentImage.swift; sourceTree = "<group>"; };
 		B9F65C4D2651EDA500C9C34A /* DynamicallyStroked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicallyStroked.swift; sourceTree = "<group>"; };
@@ -304,6 +307,7 @@
 			children = (
 				B9F5232E266ED96600DFF8DD /* LiveView.swift */,
 				B9318365267810CE0099B13C /* AgentSelectView.swift */,
+				B9F5CEE5267D33E3009CF906 /* AgentPickerView.swift */,
 				B9C3499C267AA6DE00BE39B1 /* LiveMatchView.swift */,
 			);
 			path = Live;
@@ -702,6 +706,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9F5CEE6267D33E3009CF906 /* AgentPickerView.swift in Sources */,
 				B927614B266284B700CF2100 /* PlayerHighlightInfo.swift in Sources */,
 				B9131D61266A707600E85F46 /* ValorantLoadManager.swift in Sources */,
 				B9EE6E5F26589EB8007E28B5 /* MatchDetailsContainer.swift in Sources */,
@@ -766,6 +771,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9F5CEE7267D33E3009CF906 /* AgentPickerView.swift in Sources */,
 				B927614C266284B700CF2100 /* PlayerHighlightInfo.swift in Sources */,
 				B9131D62266A707600E85F46 /* ValorantLoadManager.swift in Sources */,
 				B9EE6E6026589EB8007E28B5 /* MatchDetailsContainer.swift in Sources */,
