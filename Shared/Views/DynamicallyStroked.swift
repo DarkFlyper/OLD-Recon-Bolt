@@ -25,14 +25,15 @@ private struct DynamicallyStroked<Content: View>: View {
 	let avoidClipping: Bool
 	
 	var body: some View {
+		let clippingAvoidancePadding = avoidClipping ? radius + 1 : 0
+		
 		content.background(
 			content
 				.compositingGroup()
 				.brightness(1)
 				.shadow(color: .white, radius: radius)
 				.brightness(Double(pow(radius, 0.4))) // this exponent seems to make it grow appropriately
-				// FIXME: this breaks images but is necessary to avoid clipping
-				.padding(avoidClipping ? radius + 1 : 0)
+				.padding(clippingAvoidancePadding)
 				.background(Color.black)
 				.compositingGroup()
 				.contrast(100)
@@ -42,6 +43,7 @@ private struct DynamicallyStroked<Content: View>: View {
 				.colorMultiply(color)
 				.drawingGroup()
 				.blendMode(blendMode)
+				.padding(-clippingAvoidancePadding) // return to the same size as the original content
 		)
 	}
 }
@@ -50,6 +52,7 @@ private struct DynamicallyStroked<Content: View>: View {
 struct DynamicallyStroked_Previews: PreviewProvider {
 	static var previews: some View {
 		Group {
+			/*
 			ForEach([1, 2, 8, 40] as [CGFloat], id: \.self) { radius in
 				Circle()
 					.fill(Color.green)
@@ -60,11 +63,12 @@ struct DynamicallyStroked_Previews: PreviewProvider {
 			Image(systemName: "applelogo")
 				.font(.system(size: 80))
 				.dynamicallyStroked(radius: 4, color: .white)
-			
+			 */
+			 
 			AgentImage.displayIcon(.omen)
 				.frame(width: 80)
-				.dynamicallyStroked(radius: 4, color: .white)
 				.withPreviewAssets()
+				.dynamicallyStroked(radius: 4, color: .white, avoidClipping: false)
 		}
 		.padding(50)
 		.background(Color.gray)
