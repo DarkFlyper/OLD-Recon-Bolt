@@ -17,7 +17,7 @@ struct MatchDetailsContainer: View {
 				ProgressView()
 			}
 		}
-		.loadErrorTitle("Could not load match details!")
+		.loadErrorAlertTitle("Could not load match details!")
 		// TODO: is this being applied to a group making it be called multiple times?
 		.task {
 			guard matchDetails == nil else { return }

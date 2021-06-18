@@ -10,7 +10,7 @@ extension View {
 private struct ValorantLoadModifier: ViewModifier {
 	@ObservedObject var dataStore: ClientDataStore
 	
-	@EnvironmentObject private var loadManager: LoadManager
+	@Environment(\.loadWithErrorAlerts) private var load
 	@Environment(\.assets) private var assets
 	
 	func body(content: Content) -> some View {
@@ -27,7 +27,7 @@ private struct ValorantLoadModifier: ViewModifier {
 	func load(_ task: @escaping (ValorantClient) async throws -> Void) async {
 		guard let data = dataStore.data else { return }
 		
-		await loadManager.runTask {
+		await load {
 			typealias APIError = ValorantClient.APIError
 			
 			do {
@@ -45,6 +45,7 @@ private struct ValorantLoadModifier: ViewModifier {
 extension EnvironmentValues {
 	typealias ValorantLoadTask = (ValorantClient) async throws -> Void
 	
+	/// Executes some remote loading operation using the given ``ValorantClient``.
 	var valorantLoad: (@escaping ValorantLoadTask) async -> Void {
 		get { self[Key.self] }
 		set { self[Key.self] = newValue }
@@ -53,7 +54,7 @@ extension EnvironmentValues {
 	private struct Key: EnvironmentKey {
 		static let defaultValue: (@escaping ValorantLoadTask) async -> Void = { _ in
 			guard !isInSwiftUIPreview else { return }
-			fatalError("no load function provided in environment!")
+			fatalError("no valorant load function provided in environment!")
 		}
 	}
 }

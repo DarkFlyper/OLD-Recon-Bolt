@@ -36,7 +36,7 @@ struct AccountView: View {
 			.padding()
 		} else {
 			LoginForm(data: $dataStore.data, credentials: .init(from: dataStore.keychain) ?? .init())
-				.withLoadManager()
+				.withLoadErrorAlerts()
 		}
 	}
 	

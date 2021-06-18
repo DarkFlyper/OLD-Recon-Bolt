@@ -8,7 +8,7 @@ struct LoginForm: View {
 	@State var isSigningIn = false
 	@FocusState private var isPasswordFieldFocused
 	
-	@EnvironmentObject private var loadManager: LoadManager
+	@Environment(\.loadWithErrorAlerts) private var load
 	
 	var body: some View {
 		ZStack {
@@ -66,13 +66,15 @@ struct LoginForm: View {
 			}
 			#endif
 		}
-		.loadErrorTitle("Could not sign in!")
+		.loadErrorAlertTitle("Could not sign in!")
 	}
 	
+	// TODO: add once this works (pretty sure it should…)
+	//@MainActor
 	func logIn() async {
 		isSigningIn = true
 		
-		await loadManager.runTask {
+		await load {
 			data = try await StandardClientData.authenticated(using: credentials)
 		}
 		
@@ -88,7 +90,7 @@ struct LoginSheet_Previews: PreviewProvider {
 			
 			LoginForm(data: .constant(nil), credentials: .init(), isSigningIn: true)
 		}
-		.withLoadManager()
+		.withLoadErrorAlerts()
 		.inEachColorScheme()
 		.previewLayout(.sizeThatFits)
 	}

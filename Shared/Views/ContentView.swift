@@ -44,7 +44,7 @@ struct ContentView: View {
 			}
 		}
 		.withValorantLoadFunction(dataStore: dataStore)
-		.withLoadManager()
+		.withLoadErrorAlerts()
 		.environment(\.assets, assetManager.assets)
 	}
 	

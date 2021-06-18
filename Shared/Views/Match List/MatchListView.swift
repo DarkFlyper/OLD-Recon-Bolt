@@ -55,7 +55,7 @@ struct MatchListView: View {
 			}
 		}
 		.refreshable(action: loadMatches)
-		.loadErrorTitle("Could not load matches!")
+		.loadErrorAlertTitle("Could not load matches!")
 		.navigationTitle(matchList.user.name)
 	}
 	

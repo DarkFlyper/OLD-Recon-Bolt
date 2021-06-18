@@ -3,10 +3,37 @@ import SwiftUIMissingPieces
 import UserDefault
 import HandyOperators
 
-final class LoadManager: ObservableObject {
-	@Published fileprivate var loadError: PresentedError?
+extension View {
+	func withLoadErrorAlerts() -> some View {
+		LoadWrapper { self }
+	}
+}
+
+extension View {
+	func loadErrorAlertTitle(_ title: String) -> some View {
+		preference(key: LoadErrorTitleKey.self, value: title)
+	}
+}
+
+private struct LoadWrapper<Content: View>: View {
+	@ViewBuilder let content: () -> Content
+	@State private var loadError: PresentedError?
+	@State private var errorTitle = ""
 	
-	init() {}
+	var body: some View {
+		content()
+			.onPreferenceChange(LoadErrorTitleKey.self) {
+				errorTitle = $0
+			}
+			.environment(\.loadWithErrorAlerts, runTask)
+			.alert(item: $loadError) { error in
+				Alert(
+					title: Text(errorTitle),
+					message: Text(verbatim: error.error.localizedDescription),
+					dismissButton: .default(Text("OK"))
+				)
+			}
+	}
 	
 	func runTask(_ task: () async throws -> Void) async {
 		do {
@@ -18,39 +45,28 @@ final class LoadManager: ObservableObject {
 	}
 }
 
-extension View {
-	func withLoadManager() -> some View {
-		LoadWrapper(loadManager: .init()) { self }
-	}
-}
-
-private struct LoadWrapper<Content: View, Manager: LoadManager>: View {
-	@StateObject var loadManager: Manager
-	@ViewBuilder let content: () -> Content
-	@State private var errorTitle = "Error loading data!"
+private struct LoadErrorTitleKey: PreferenceKey {
+	static let defaultValue = "Error loading data!"
 	
-	var body: some View {
-		content()
-			.onPreferenceChange(LoadErrorTitleKey.self) {
-				errorTitle = $0 ?? errorTitle
-			}
-			.environmentObject(loadManager)
-			.alert(item: $loadManager.loadError) { error in
-				Alert(
-					title: Text(errorTitle),
-					message: Text(verbatim: error.error.localizedDescription),
-					dismissButton: .default(Text("OK"))
-				)
-			}
+	static func reduce(value: inout String, nextValue: () -> String) {
+		value = nextValue()
 	}
 }
 
-private enum LoadErrorTitleMarker {}
-private typealias LoadErrorTitleKey = SimplePreferenceKey<LoadErrorTitleMarker, String>
-
-extension View {
-	func loadErrorTitle(_ title: String) -> some View {
-		preference(key: LoadErrorTitleKey.self, value: title)
+extension EnvironmentValues {
+	typealias LoadTask = () async throws -> Void
+	
+	/// Executes some remote loading operation, handling any errors by displaying a dismissable alert.
+	var loadWithErrorAlerts: (@escaping LoadTask) async -> Void {
+		get { self[Key.self] }
+		set { self[Key.self] = newValue }
+	}
+	
+	private struct Key: EnvironmentKey {
+		static let defaultValue: (@escaping LoadTask) async -> Void = { _ in
+			guard !isInSwiftUIPreview else { return }
+			fatalError("no load function provided in environment!")
+		}
 	}
 }
 
