@@ -15,7 +15,7 @@ private struct GameModeInfoRequest: AssetRequest {
 
 struct GameModeInfo: AssetItem, Codable, Identifiable {
 	private var uuid: ID
-	var id: GameMode.ID { uuid }
+	var id: ObjectID<Self, UUID> { uuid }
 	var displayName: String
 	var duration: String?
 	var allowsMatchTimeouts: Bool
@@ -28,6 +28,21 @@ struct GameModeInfo: AssetItem, Codable, Identifiable {
 	var gameRuleBoolOverrides: [GameRuleBool.Override]?
 	var displayIcon: AssetImage?
 	var assetPath: String
+	
+	/// Of course they don't do what would make sense and use the UUID; instead we need to figure out the commonalities between the asset path and the client API game mode ID (which is also trimmed down)
+	func gameID() -> GameMode.ID {
+		// e.g. "ShooterGame/Content/GameModes/Bomb/BombGameMode_PrimaryAsset"
+		
+		let pathPrefix = "ShooterGame/Content/"
+		assert(assetPath.hasPrefix(pathPrefix))
+		let trimmed = assetPath.dropFirst(pathPrefix.count)
+		// e.g. "GameModes/Bomb/BombGameMode_PrimaryAsset"
+		
+		let pathSuffix = "_PrimaryAsset"
+		assert(trimmed.hasSuffix(pathSuffix))
+		return .init(String(trimmed.dropLast(pathSuffix.count)))
+		// e.g. "GameModes/Bomb/BombGameMode"
+	}
 	
 	func gameFeatureOverride(for name: GameFeatureToggle.Name) -> Bool? {
 		gameFeatureOverrides?.first { $0.featureName == name }?.state

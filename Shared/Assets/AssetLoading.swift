@@ -19,7 +19,7 @@ extension AssetClient {
 			maps: .init(values: maps),
 			agents: .init(values: agents),
 			missions: .init(values: missions),
-			gameModes: .init(values: gameModes),
+			gameModes: .init(values: gameModes, keyedBy: { $0.gameID() }), // riot doesn't exactly seem to know the word "consistency"
 			objectives: .init(values: objectives),
 			playerCards: .init(values: playerCards),
 			playerTitles: .init(values: playerTitles),
