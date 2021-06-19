@@ -32,7 +32,7 @@ final class ClientDataStore: ObservableObject {
 }
 
 struct StandardClientData: ClientData {
-	var user: User { codableData.user }
+	var user: User { client.user }
 	
 	var client: ValorantClient { codableData.client }
 	
@@ -57,8 +57,7 @@ struct StandardClientData: ClientData {
 			password: credentials.password,
 			region: credentials.region
 		)
-		let userInfo = try await client.getUserInfo()
-		return Self(client: client, userInfo: userInfo, credentials: credentials)
+		return Self(client: client, credentials: credentials)
 	}
 	
 	init?(using keychain: Keychain) {
@@ -71,8 +70,8 @@ struct StandardClientData: ClientData {
 		self.credentials = credentials
 	}
 	
-	fileprivate init(client: ValorantClient, userInfo: UserInfo, credentials: Credentials) {
-		self.codableData = .init(client: client, userInfo: userInfo, matchList: .init(user: .init(userInfo)))
+	fileprivate init(client: ValorantClient, credentials: Credentials) {
+		self.codableData = .init(client: client, matchList: .init(user: client.user))
 		self.credentials = credentials
 	}
 	
@@ -89,8 +88,6 @@ struct StandardClientData: ClientData {
 	
 	private struct CodableData: Codable, DefaultsValueConvertible {
 		var client: ValorantClient
-		let userInfo: UserInfo
-		var user: User { .init(userInfo) }
 		var matchList: MatchList
 	}
 }

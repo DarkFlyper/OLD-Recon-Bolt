@@ -194,14 +194,14 @@ struct LiveView: View {
 	
 	func loadContractDetails() async {
 		await load {
-			contractDetails = try await $0.getContractDetails(playerID: user.id)
+			contractDetails = try await $0.getContractDetails()
 		}
 	}
 	
 	func loadLiveGameDetails() async {
 		await load { client in
-			async let liveGameMatch = client.getLiveMatch(for: user.id, inPregame: false)
-			async let livePregameMatch = client.getLiveMatch(for: user.id, inPregame: true)
+			async let liveGameMatch = client.getLiveMatch(inPregame: false)
+			async let livePregameMatch = client.getLiveMatch(inPregame: true)
 			
 			if let match = try await liveGameMatch {
 				activeMatch = .init(id: match, inPregame: false)
