@@ -11,22 +11,18 @@ final class AssetManager: ObservableObject {
 	
 	convenience init() {
 		self.init(assets: Self.stored)
-		asyncDetached(priority: .background) {
-			await loadAssets()
-		}
 	}
 	
 	private init(assets: AssetCollection?) {
 		_assets = .init(wrappedValue: assets)
 	}
 	
-	func loadAssets() async {
+	func loadAssets(forceUpdate: Bool = false) async {
 		guard progress == nil else { return }
 		
 		do {
-			assets = try await Self.loadAssets() { progress in
+			assets = try await Self.loadAssets(forceUpdate: forceUpdate) { progress in
 				DispatchQueue.main.async { // TODO: switch to AsyncStream once it's out
-					dispatchPrecondition(condition: .onQueue(.main))
 					print(progress)
 					self.progress = progress
 				}

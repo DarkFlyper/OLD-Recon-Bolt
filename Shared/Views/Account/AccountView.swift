@@ -42,14 +42,16 @@ struct AccountView: View {
 	
 	@ViewBuilder
 	var assetsInfo: some View {
-		if let progress = assetManager.progress {
-			VStack {
-				Text("\(progress.completed)/\(progress.total) Images Downloaded…")
+		VStack(spacing: 12) {
+			if let progress = assetManager.progress {
+				if let total = progress.total {
+					Text("\(progress.completed)/\(total) Images Downloaded…")
+				} else {
+					Text("Preparing…")
+				}
 				
 				ProgressView(value: progress.fractionComplete)
-			}
-		} else if let error = assetManager.error {
-			VStack(spacing: 8) {
+			} else if let error = assetManager.error {
 				Text("Error downloading assets!")
 					.font(.headline)
 					.fontWeight(.semibold)
@@ -57,9 +59,7 @@ struct AccountView: View {
 				Button("Retry", role: nil) { await assetManager.loadAssets() }
 				
 				Text(error.localizedDescription)
-			}
-		} else if assetManager.assets == nil {
-			VStack(spacing: 8) {
+			} else if assetManager.assets == nil {
 				Text("Missing assets!")
 					.font(.headline)
 					.fontWeight(.medium)
@@ -67,10 +67,12 @@ struct AccountView: View {
 					.multilineTextAlignment(.center)
 				
 				Button("Download Assets Now", role: nil) { await assetManager.loadAssets() }
+			} else {
+				Text("Assets up to date!")
+					.foregroundStyle(.secondary)
+				
+				Button("Redownload", role: nil) { await assetManager.loadAssets(forceUpdate: true) }
 			}
-		} else {
-			Text("Assets up to date!")
-				.foregroundStyle(.secondary)
 		}
 	}
 }

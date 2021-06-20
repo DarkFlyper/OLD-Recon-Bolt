@@ -5,6 +5,8 @@ extension AssetClient {
 		for version: AssetVersion,
 		onProgress: AssetProgressCallback?
 	) async throws -> AssetCollection {
+		onProgress?(.init(completed: 0))
+		
 		async let maps = getMapInfo()
 		async let agents = getAgentInfo()
 		async let missions = getMissionInfo()
@@ -55,13 +57,16 @@ extension AssetClient {
 
 typealias AssetProgressCallback = (AssetDownloadProgress) -> Void
 struct AssetDownloadProgress: CustomStringConvertible {
-	var completed, total: Int
+	var completed: Int
+	var total: Int?
 	
 	var fractionComplete: Double {
-		Double(completed) / Double(total)
+		guard let total = total else { return 0 }
+		return Double(completed) / Double(total)
 	}
 	
 	var description: String {
-		"\(completed)/\(total) assets downloaded"
+		guard let total = total else { return "preparing to download assets…" }
+		return "\(completed)/\(total) assets downloaded"
 	}
 }
