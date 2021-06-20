@@ -38,9 +38,9 @@ struct GameModeInfo: AssetItem, Codable, Identifiable {
 		let trimmed = assetPath.dropFirst(pathPrefix.count)
 		// e.g. "GameModes/Bomb/BombGameMode_PrimaryAsset"
 		
-		let pathSuffix = "_PrimaryAsset"
-		assert(trimmed.hasSuffix(pathSuffix))
-		return .init(String(trimmed.dropLast(pathSuffix.count)))
+		// It doesn't always end in "PrimaryAsset", so let's rely on something else instead…
+		let endRange = trimmed.range(of: "GameMode_")!
+		return .init(String(trimmed[..<endRange.upperBound]))
 		// e.g. "GameModes/Bomb/BombGameMode"
 	}
 	
