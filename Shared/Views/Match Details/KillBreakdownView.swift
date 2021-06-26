@@ -57,7 +57,7 @@ struct KillBreakdownView: View {
 		)
 		let order = killsByPlayer
 			.sorted { data.players[$0.key]!.stats.score }
-				then: { $0.key.rawValue.uuidString }
+				then: { $0.key.description }
 			.map(\.key)
 			.reversed()
 			.movingToFront { $0 == data.myself?.id }

@@ -52,7 +52,7 @@ struct CompetitiveTier: AssetItem, Codable {
 	}
 	
 	struct Episode: AssetItem, Codable, Identifiable {
-		var id: ObjectID<Self, UUID>
+		var id: ObjectID<Self, LowercaseUUID>
 		var internalName: String
 		var tiers: [CompetitiveTier]
 		

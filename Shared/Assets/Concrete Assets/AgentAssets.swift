@@ -44,7 +44,7 @@ struct AgentInfo: AssetItem, Codable, Identifiable {
 	}
 	
 	struct Role: Codable {
-		typealias ID = ObjectID<Self, UUID>
+		typealias ID = ObjectID<Self, LowercaseUUID>
 		
 		private var uuid: ID
 		var id: ID { uuid } // lazy rename

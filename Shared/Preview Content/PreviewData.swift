@@ -2,7 +2,7 @@ import Foundation
 import ValorantAPI
 
 enum PreviewData {
-	static let userID = Player.ID(.init(uuidString: "3FA8598D-066E-5BDB-998C-74C015C5DBA5")!)
+	static let userID = Player.ID("3fa8598d-066e-5bdb-998c-74c015c5dba5")!
 	static let userInfo = UserInfo(
 		account: .init(
 			gameName: "Julian", tagLine: "665",

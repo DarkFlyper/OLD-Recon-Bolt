@@ -10,7 +10,7 @@ extension Color {
 
 extension Team.ID {
 	var color: Color? {
-		switch rawValue {
+		switch rawID {
 		case "Blue":
 			return .valorantBlue
 		case "Red":

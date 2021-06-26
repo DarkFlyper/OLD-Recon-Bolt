@@ -130,7 +130,7 @@ struct AgentSelectView: View {
 			.font(.title2.weight(.bold))
 			.foregroundStyle(.primary)
 			
-			Text("\(pregameInfo.team.id.rawValue) Team")
+			Text("\(pregameInfo.team.id.rawID) Team")
 				.foregroundColor(pregameInfo.team.id.color)
 		}
 		.padding()

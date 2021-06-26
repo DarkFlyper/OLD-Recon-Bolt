@@ -7,7 +7,7 @@ struct _PlayerCardImageProvider: _AssetImageProvider {
 
 #if DEBUG
 struct PlayerCardImage_Previews: PreviewProvider {
-	private static let id = PlayerCardInfo.ID(.init(uuidString: "893deca1-4123-9c1f-2985-aa9de74cb512")!)
+	private static let id = PlayerCardInfo.ID("893deca1-4123-9c1f-2985-aa9de74cb512")!
 	
 	static var previews: some View {
 		VStack {

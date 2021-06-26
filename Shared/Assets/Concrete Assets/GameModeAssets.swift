@@ -15,7 +15,7 @@ private struct GameModeInfoRequest: AssetRequest {
 
 struct GameModeInfo: AssetItem, Codable, Identifiable {
 	private var uuid: ID
-	var id: ObjectID<Self, UUID> { uuid }
+	var id: ObjectID<Self, LowercaseUUID> { uuid }
 	var displayName: String
 	var duration: String?
 	var allowsMatchTimeouts: Bool

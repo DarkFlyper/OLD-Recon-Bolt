@@ -88,7 +88,7 @@ struct LiveMatchView: View {
 		let allyTeam = teams[ownPlayer.teamID]!
 		let enemyTeams = teams
 			.filter { $0.key != ownPlayer.teamID }
-			.sorted(on: \.key.rawValue)
+			.sorted(on: \.key.description)
 		
 		VStack(spacing: 10) {
 			ForEach(allyTeam, content: playerView(for:))
