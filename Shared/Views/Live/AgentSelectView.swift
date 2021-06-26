@@ -20,6 +20,7 @@ struct AgentSelectContainer: View {
 				AgentSelectView(pregameInfo: pregameInfo, user: user, users: users, inventory: inventory)
 			} else {
 				ProgressView()
+				Text("Loading Match Info…")
 			}
 		}
 		.task {
@@ -42,10 +43,10 @@ struct AgentSelectContainer: View {
 			}
 		}
 		.alert(
-			"Game Has Ended!",
+			"Agent Select Ended!",
 			isPresented: $isShowingEndedAlert,
 			actions: { Button("Exit") { presentationMode.dismiss() } },
-			message: { Text("This game is no longer running.") }
+			message: { Text("This game is no longer in agent select.") }
 		)
 		.navigationTitle("Agent Select")
 		.navigationBarTitleDisplayMode(.inline)
