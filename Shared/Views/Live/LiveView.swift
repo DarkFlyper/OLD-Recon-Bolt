@@ -228,15 +228,13 @@ struct LiveView_Previews: PreviewProvider {
 			isAutoRefreshing: true, isAutoRefreshRunning: true
 		)
 		.withToolbar()
-		//.inEachColorScheme()
+		.inEachColorScheme()
 		
-		/*
 		LiveView(user: PreviewData.user, activeMatch: .init(id: Match.ID(), inPregame: true))
 			.withToolbar()
 		
 		LiveView(user: PreviewData.user, activeMatch: .init(id: Match.ID(), inPregame: false))
 			.withToolbar()
-		 */
 	}
 }
 #endif

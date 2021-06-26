@@ -155,7 +155,7 @@ struct MatchCell_Previews: PreviewProvider {
 				Divider()
 			}
 		}
-		//.inEachColorScheme()
+		.inEachColorScheme()
 		.previewLayout(.sizeThatFits)
 	}
 }

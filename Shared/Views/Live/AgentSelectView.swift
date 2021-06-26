@@ -208,9 +208,6 @@ struct AgentSelectView: View {
 #if DEBUG
 struct AgentSelectView_Previews: PreviewProvider {
 	static var previews: some View {
-		//AgentSelectContainer(matchID: Match.ID(), user: PreviewData.user)
-		//	.withMockValorantLoadFunction()
-		
 		AgentSelectContainer(
 			matchID: PreviewData.pregameInfo.id,
 			user: PreviewData.user,
@@ -219,8 +216,10 @@ struct AgentSelectView_Previews: PreviewProvider {
 			inventory: PreviewData.inventory
 		)
 		.withToolbar()
-		//.inEachColorScheme()
-		//.previewInterfaceOrientation(.landscapeRight)
+		.inEachColorScheme()
+		.inEachOrientation()
+		
+		AgentSelectContainer(matchID: Match.ID(), user: PreviewData.user)
 	}
 }
 #endif

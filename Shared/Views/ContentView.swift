@@ -72,11 +72,13 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
 	static var previews: some View {
 		ContentView(dataStore: PreviewData.mockDataStore)
-			//.inEachColorScheme()
+			.inEachColorScheme()
 		
-		//ContentView(dataStore: PreviewData.mockDataStore, tab: .account)
+		ContentView(dataStore: PreviewData.mockDataStore, tab: .live)
 		
-		//ContentView(dataStore: PreviewData.emptyDataStore)
+		ContentView(dataStore: PreviewData.mockDataStore, tab: .reference)
+		
+		ContentView(dataStore: PreviewData.emptyDataStore)
 	}
 }
 #endif

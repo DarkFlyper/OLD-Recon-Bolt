@@ -81,8 +81,8 @@ struct AccountView: View {
 struct AccountView_Previews: PreviewProvider {
 	static var previews: some View {
 		AccountView(dataStore: PreviewData.mockDataStore, assetManager: .forPreviews)
-		//AccountView(dataStore: PreviewData.emptyDataStore, assetManager: .mockDownloading)
-		//AccountView(dataStore: PreviewData.emptyDataStore, assetManager: .mockEmpty)
+		AccountView(dataStore: PreviewData.emptyDataStore, assetManager: .mockDownloading)
+		AccountView(dataStore: PreviewData.emptyDataStore, assetManager: .mockEmpty)
 	}
 }
 #endif

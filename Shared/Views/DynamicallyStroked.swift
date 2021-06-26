@@ -52,22 +52,24 @@ private struct DynamicallyStroked<Content: View>: View {
 struct DynamicallyStroked_Previews: PreviewProvider {
 	static var previews: some View {
 		Group {
-			/*
 			ForEach([1, 2, 8, 40] as [CGFloat], id: \.self) { radius in
 				Circle()
 					.fill(Color.green)
 					.frame(width: 100, height: 100)
-					.dynamicallyStroked(radius: radius, color: .blue)
+					.dynamicallyStroked(radius: radius, color: .blue, avoidClipping: true)
 			}
 			
 			Image(systemName: "applelogo")
 				.font(.system(size: 80))
-				.dynamicallyStroked(radius: 4, color: .white)
-			 */
+				.dynamicallyStroked(radius: 4, color: .white, avoidClipping: true)
 			 
 			AgentImage.displayIcon(.omen)
 				.frame(width: 80)
-				.dynamicallyStroked(radius: 4, color: .white, avoidClipping: false)
+				.dynamicallyStroked(radius: 4, color: .white)
+			
+			AgentImage.displayIcon(.kayO)
+				.frame(width: 80)
+				.dynamicallyStroked(radius: 4, color: .mint, avoidClipping: true)
 		}
 		.padding(50)
 		.background(Color.gray)
