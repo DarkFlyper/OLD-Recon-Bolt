@@ -62,7 +62,7 @@ struct LiveView: View {
 				
 				Spacer()
 				
-				Button(role: nil, action: refreshAction) {
+				AsyncButton(action: refreshAction) {
 					Image(systemName: "arrow.clockwise")
 				}
 			}

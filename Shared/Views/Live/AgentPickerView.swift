@@ -30,7 +30,7 @@ struct AgentPickerView: View {
 		VStack(spacing: 24) {
 			let selectedAgentID = ownPlayer.agentID
 			
-			Button(role: nil) {
+			AsyncButton {
 				await load {
 					pregameInfo = try await $0.lockInAgent(selectedAgentID!, in: pregameInfo.id)
 				}
@@ -77,7 +77,7 @@ struct AgentPickerView: View {
 	@ViewBuilder
 	func agentButton(for agent: AgentInfo, selectedAgentID: Agent.ID?, isTaken: Bool) -> some View {
 		let ownsAgent = inventory.agentsIncludingStarters.contains(agent.id)
-		Button(role: nil) {
+		AsyncButton {
 			await load {
 				pregameInfo = try await $0.pickAgent(
 					agent.id, in: pregameInfo.id,

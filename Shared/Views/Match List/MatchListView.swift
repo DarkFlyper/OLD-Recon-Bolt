@@ -37,7 +37,7 @@ struct MatchListView: View {
 			}
 			
 			if matchList.canLoadOlderMatches {
-				Button(role: nil) {
+				AsyncButton {
 					await updateMatchList(update: ValorantClient.loadOlderMatches)
 				} label: {
 					Label("Load Older Matches", systemImage: "ellipsis")

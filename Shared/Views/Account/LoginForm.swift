@@ -45,7 +45,7 @@ struct LoginForm: View {
 				.frame(maxWidth: 240)
 				
 				#if !os(macOS)
-				Button(role: nil, action: logIn) {
+				AsyncButton(action: logIn) {
 					Text("Sign In")
 						.bold()
 				}

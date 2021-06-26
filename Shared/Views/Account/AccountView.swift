@@ -56,22 +56,24 @@ struct AccountView: View {
 					.font(.headline)
 					.fontWeight(.semibold)
 				
-				Button("Retry", role: nil) { await assetManager.loadAssets() }
+				AsyncButton("Retry") { await assetManager.loadAssets() }
 				
 				Text(error.localizedDescription)
-			} else if assetManager.assets == nil {
+			} else if let assets = assetManager.assets {
+				Text("Assets complete!")
+				
+				Text("Version \(assets.version.version)")
+					.foregroundStyle(.secondary)
+				
+				AsyncButton("Redownload") { await assetManager.loadAssets(forceUpdate: true) }
+			} else {
 				Text("Missing assets!")
 					.font(.headline)
 					.fontWeight(.medium)
 				Text("Anything with images will not display correctly.")
 					.multilineTextAlignment(.center)
 				
-				Button("Download Assets Now", role: nil) { await assetManager.loadAssets() }
-			} else {
-				Text("Assets up to date!")
-					.foregroundStyle(.secondary)
-				
-				Button("Redownload", role: nil) { await assetManager.loadAssets(forceUpdate: true) }
+				AsyncButton("Download Assets Now") { await assetManager.loadAssets() }
 			}
 		}
 	}
