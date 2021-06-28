@@ -165,10 +165,15 @@ struct LiveView: View {
 	
 	func missionInfo(mission: MissionInfo, objective: ObjectiveInfo, progress: Int) -> some View {
 		VStack {
+			let toComplete = mission.objectives?
+				.first { $0.objectiveID == objective.id }?
+				.value
+				?? mission.progressToComplete // this is incorrect for e.g. the "you or your allies plant or defuse spikes" one, where it's 1 while the objectives correctly list it as 5
+			
 			HStack(alignment: .lastTextBaseline) {
 				Text(
 					verbatim: objective.directive?
-						.valorantLocalized(number: mission.progressToComplete)
+						.valorantLocalized(number: toComplete)
 						?? mission.displayName
 						?? mission.title
 						?? "<Unnamed Mission>"
@@ -181,7 +186,6 @@ struct LiveView: View {
 					.opacity(0.8)
 			}
 			
-			let toComplete = mission.progressToComplete
 			ProgressView(
 				value: Double(progress),
 				total: Double(toComplete),
