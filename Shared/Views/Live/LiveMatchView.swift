@@ -17,13 +17,11 @@ struct LiveMatchContainer: View {
 				ProgressView()
 			}
 		}
-		.task {
-			await load {
-				let info = try await $0.getLiveGameInfo(matchID)
-				gameInfo = info
-				let userIDs = info.players.map(\.id)
-				users = .init(values: try await $0.getUsers(for: userIDs))
-			}
+		.valorantLoadTask {
+			let info = try await $0.getLiveGameInfo(matchID)
+			gameInfo = info
+			let userIDs = info.players.map(\.id)
+			users = .init(values: try await $0.getUsers(for: userIDs))
 		}
 		.navigationTitle("Live Match")
 		.navigationBarTitleDisplayMode(.inline)

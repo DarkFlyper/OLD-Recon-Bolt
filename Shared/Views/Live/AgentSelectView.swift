@@ -36,11 +36,9 @@ struct AgentSelectContainer: View {
 				users = .init(values: try await $0.getUsers(for: userIDs))
 			}
 		}
-		.task {
+		.valorantLoadTask {
 			guard inventory == nil else { return }
-			await load {
-				inventory = try await $0.getInventory(for: user.id)
-			}
+			inventory = try await $0.getInventory(for: user.id)
 		}
 		.alert(
 			"Agent Select Ended!",
