@@ -8,8 +8,8 @@ protocol ClientData {
 	var client: ValorantClient { get }
 	var matchList: MatchList { get set }
 	
-	static func authenticated(using credentials: Credentials) async throws -> ClientData
-	func reauthenticated() async throws -> ClientData
+	static func authenticated(using credentials: Credentials) async throws -> Self
+	func reauthenticated() async throws -> Self
 	
 	init?(using keychain: Keychain)
 	func save(using keychain: Keychain)
@@ -47,11 +47,7 @@ struct StandardClientData: ClientData {
 	@UserDefault("ClientData.stored")
 	private static var stored: CodableData?
 	
-	static func authenticated(using credentials: Credentials) async throws -> ClientData {
-		try await _authenticated(using: credentials)
-	}
-	
-	private static func _authenticated(using credentials: Credentials) async throws -> Self {
+	static func authenticated(using credentials: Credentials) async throws -> Self {
 		let client = try await ValorantClient.authenticated(
 			username: credentials.username,
 			password: credentials.password,
@@ -80,8 +76,8 @@ struct StandardClientData: ClientData {
 		Self.stored = codableData
 	}
 	
-	func reauthenticated() async throws -> ClientData {
-		try await Self._authenticated(using: credentials)
+	func reauthenticated() async throws -> Self {
+		try await Self.authenticated(using: credentials)
 			// TODO: switching to GRDB will make this unnecessary
 			<- { $0.codableData.matchList = codableData.matchList }
 	}

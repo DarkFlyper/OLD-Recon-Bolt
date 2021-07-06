@@ -71,8 +71,8 @@ struct MockClientData: ClientData {
 	var matchList: MatchList = PreviewData.matchList
 	let client = ValorantClient.mocked
 	
-	static func authenticated(using credentials: Credentials) -> ClientData { MockClientData() }
-	func reauthenticated() -> ClientData { self }
+	static func authenticated(using credentials: Credentials) -> Self { .init() }
+	func reauthenticated() -> Self { self }
 	
 	init() {}
 	init?(using keychain: Keychain) {}
@@ -84,8 +84,8 @@ private struct EmptyClientData: ClientData {
 	var matchList: MatchList
 	let client: ValorantClient
 	
-	static func authenticated(using credentials: Credentials) -> ClientData { fatalError() }
-	func reauthenticated() -> ClientData { fatalError() }
+	static func authenticated(using credentials: Credentials) -> Self { fatalError() }
+	func reauthenticated() -> Self { fatalError() }
 	
 	init?(using keychain: Keychain) { return nil }
 	func save(using keychain: Keychain) {}
