@@ -67,6 +67,10 @@
 		B9485F87264B5BD700AC3456 /* AssetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9485F86264B5BD700AC3456 /* AssetImage.swift */; };
 		B9485F88264B5BD700AC3456 /* AssetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9485F86264B5BD700AC3456 /* AssetImage.swift */; };
 		B9485F90264B639F00AC3456 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9485F8F264B639F00AC3456 /* Tests.swift */; };
+		B954072E2694C0A4009FB17B /* AgentSelectContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B954072D2694C0A4009FB17B /* AgentSelectContainer.swift */; };
+		B954072F2694C0A4009FB17B /* AgentSelectContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B954072D2694C0A4009FB17B /* AgentSelectContainer.swift */; };
+		B95407312694C157009FB17B /* LiveMatchContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95407302694C157009FB17B /* LiveMatchContainer.swift */; };
+		B95407322694C157009FB17B /* LiveMatchContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95407302694C157009FB17B /* LiveMatchContainer.swift */; };
 		B9677F8326782A3200C0FF46 /* example_pregame_users.json in Resources */ = {isa = PBXBuildFile; fileRef = B9677F8226782A3200C0FF46 /* example_pregame_users.json */; };
 		B9677F8426782A3200C0FF46 /* example_pregame_users.json in Resources */ = {isa = PBXBuildFile; fileRef = B9677F8226782A3200C0FF46 /* example_pregame_users.json */; };
 		B96845B32665C7B900DC59D2 /* ClientData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96845B22665C7B900DC59D2 /* ClientData.swift */; };
@@ -215,6 +219,8 @@
 		B9485F8D264B639F00AC3456 /* Valorant Viewer Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Valorant Viewer Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9485F8F264B639F00AC3456 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		B9485F91264B639F00AC3456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B954072D2694C0A4009FB17B /* AgentSelectContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentSelectContainer.swift; sourceTree = "<group>"; };
+		B95407302694C157009FB17B /* LiveMatchContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveMatchContainer.swift; sourceTree = "<group>"; };
 		B964BECE2671515C00022A7C /* HandyOperators */ = {isa = PBXFileReference; lastKnownFileType = folder; name = HandyOperators; path = "../ Packages/HandyOperators"; sourceTree = "<group>"; };
 		B9677F8226782A3200C0FF46 /* example_pregame_users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_pregame_users.json; sourceTree = "<group>"; };
 		B96845B22665C7B900DC59D2 /* ClientData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientData.swift; sourceTree = "<group>"; };
@@ -315,8 +321,10 @@
 			isa = PBXGroup;
 			children = (
 				B9F5232E266ED96600DFF8DD /* LiveView.swift */,
+				B954072D2694C0A4009FB17B /* AgentSelectContainer.swift */,
 				B9318365267810CE0099B13C /* AgentSelectView.swift */,
 				B9F5CEE5267D33E3009CF906 /* AgentPickerView.swift */,
+				B95407302694C157009FB17B /* LiveMatchContainer.swift */,
 				B9C3499C267AA6DE00BE39B1 /* LiveMatchView.swift */,
 			);
 			path = Live;
@@ -729,6 +737,8 @@
 				B9C3499D267AA6DE00BE39B1 /* LiveMatchView.swift in Sources */,
 				B9F5232F266ED96600DFF8DD /* LiveView.swift in Sources */,
 				B9F5CEDE267CD199009CF906 /* GameModeAssets.swift in Sources */,
+				B95407312694C157009FB17B /* LiveMatchContainer.swift in Sources */,
+				B954072E2694C0A4009FB17B /* AgentSelectContainer.swift in Sources */,
 				B9F5CEE1267CD548009CF906 /* NamespacedID.swift in Sources */,
 				B9168AE62689440B00866F6A /* LocalDataProvider.swift in Sources */,
 				B96845B32665C7B900DC59D2 /* ClientData.swift in Sources */,
@@ -797,6 +807,8 @@
 				B9C3499E267AA6DE00BE39B1 /* LiveMatchView.swift in Sources */,
 				B9F52330266ED96600DFF8DD /* LiveView.swift in Sources */,
 				B9F5CEDF267CD199009CF906 /* GameModeAssets.swift in Sources */,
+				B95407322694C157009FB17B /* LiveMatchContainer.swift in Sources */,
+				B954072F2694C0A4009FB17B /* AgentSelectContainer.swift in Sources */,
 				B9F5CEE2267CD548009CF906 /* NamespacedID.swift in Sources */,
 				B9168AE72689440B00866F6A /* LocalDataProvider.swift in Sources */,
 				B96845B42665C7B900DC59D2 /* ClientData.swift in Sources */,
