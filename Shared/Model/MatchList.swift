@@ -3,8 +3,8 @@ import UserDefault
 import HandyOperators
 import ValorantAPI
 
-struct MatchList: Codable, DefaultsValueConvertible {
-	let user: User
+struct MatchList: Codable, DefaultsValueConvertible, Identifiable {
+	let userID: User.ID
 	
 	var matches: [CompetitiveUpdate] = []
 	var highestLoadedIndex = 0
@@ -13,11 +13,19 @@ struct MatchList: Codable, DefaultsValueConvertible {
 		highestLoadedIndex < requestMaxIndex
 	}
 	
+	var id: User.ID { userID }
+	
 	func prepending(new: [CompetitiveUpdate]) -> Self {
 		if let oldestNew = new.last, let newestExisting = matches.first {
 			assert(oldestNew.startTime > newestExisting.startTime)
 		}
 		return self <- { $0.matches = new + $0.matches }
+	}
+}
+
+extension MatchList: CustomStringConvertible {
+	var description: String {
+		"MatchList(user: \(userID), matches: \(matches.map(\.id))"
 	}
 }
 
@@ -70,7 +78,7 @@ extension ValorantClient {
 	
 	func getUpdates(for list: MatchList, startIndex: Int) async throws -> [CompetitiveUpdate] {
 		try await getCompetitiveUpdates(
-			userID: list.user.id,
+			userID: list.userID,
 			startIndex: startIndex,
 			endIndex: min(requestMaxIndex, startIndex + requestSize)
 		)

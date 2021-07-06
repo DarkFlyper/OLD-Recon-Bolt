@@ -7,22 +7,22 @@ struct ContentView: View {
 	@StateObject var dataStore: ClientDataStore
 	@StateObject var assetManager = isInSwiftUIPreview ? .forPreviews : AssetManager()
 	
-	@SceneStorage("ContentView.tab")
+	@SceneStorage("tab")
 	var tab = Tab.career
-	@SceneStorage("ContentView.shouldShowUnranked")
+	@SceneStorage("shouldShowUnranked")
 	var shouldShowUnranked = true
 	
 	var body: some View {
 		TabView(selection: $tab) {
-			onlineView {
-				MatchListView(matchList: $0.matchList, shouldShowUnranked: $shouldShowUnranked)
+			onlineView { client in
+				MatchListView(user: client.user, shouldShowUnranked: $shouldShowUnranked)
 					.withToolbar()
 			}
 			.tabItem { Label("Career", systemImage: "square.fill.text.grid.1x2") }
 			.tag(Tab.career)
 			
-			onlineView {
-				LiveView(user: $0.wrappedValue.user)
+			onlineView { client in
+				LiveView(user: client.user)
 					.withToolbar()
 			}
 			.tabItem { Label("Live", systemImage: "play.circle") }
@@ -50,9 +50,9 @@ struct ContentView: View {
 	
 	@ViewBuilder
 	private func onlineView<Content: View>(
-		@ViewBuilder content: (Binding<ClientData>) -> Content
+		@ViewBuilder content: (ClientData) -> Content
 	) -> some View {
-		if let data = Binding(optionalWorkaround: $dataStore.data) {
+		if let data = dataStore.data {
 			content(data)
 		} else {
 			Text("Not signed in!")

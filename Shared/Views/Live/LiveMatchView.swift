@@ -5,23 +5,23 @@ struct LiveMatchContainer: View {
 	let matchID: Match.ID
 	let user: User
 	@State var gameInfo: LiveGameInfo?
-	@State var users: [User.ID: User]?
 	
 	@Environment(\.valorantLoad) private var load
 	
 	var body: some View {
 		VStack {
-			if let gameInfo = gameInfo, let users = users {
-				LiveMatchView(gameInfo: gameInfo, user: user, users: users)
+			if let gameInfo = gameInfo {
+				LiveMatchView(gameInfo: gameInfo, user: user)
 			} else {
 				ProgressView()
 			}
 		}
 		.valorantLoadTask {
 			let info = try await $0.getLiveGameInfo(matchID)
+			LocalDataProvider.shared.store(info.players.map(\.identity))
 			gameInfo = info
 			let userIDs = info.players.map(\.id)
-			users = .init(values: try await $0.getUsers(for: userIDs))
+			try await LocalDataProvider.shared.fetchUsers(for: userIDs, using: $0)
 		}
 		.navigationTitle("Live Match")
 		.navigationBarTitleDisplayMode(.inline)
@@ -29,20 +29,16 @@ struct LiveMatchContainer: View {
 }
 
 struct LiveMatchView: View {
-	private typealias PlayerInfo = LiveGameInfo.PlayerInfo
-	
 	@Environment(\.assets) private var assets
 	
 	let gameInfo: LiveGameInfo
 	let user: User
-	let users: [User.ID: User]
 	
 	let ownPlayer: LiveGameInfo.PlayerInfo
 	
-	init(gameInfo: LiveGameInfo, user: User, users: [User.ID: User]) {
+	init(gameInfo: LiveGameInfo, user: User) {
 		self.gameInfo = gameInfo
 		self.user = user
-		self.users = users
 		
 		ownPlayer = gameInfo.players.first { $0.id == user.id }!
 	}
@@ -89,62 +85,70 @@ struct LiveMatchView: View {
 			.sorted(on: \.key.description)
 		
 		VStack(spacing: 10) {
-			ForEach(allyTeam, content: playerView(for:))
+			ForEach(allyTeam) {
+				PlayerView(player: $0, ownPlayer: ownPlayer)
+			}
 			
 			ForEach(enemyTeams, id: \.key) { teamID, team in
 				Divider()
 					.padding(.vertical, 5)
 				
-				ForEach(team, content: playerView(for:))
+				ForEach(team) {
+					PlayerView(player: $0, ownPlayer: ownPlayer)
+				}
 			}
 		}
 		.padding()
 	}
 	
-	@ViewBuilder
-	private func playerView(for player: PlayerInfo) -> some View {
-		let isAlly = player.teamID == ownPlayer.teamID
-		let relativeColor = player.id == user.id
-			? Color.valorantSelf
-			: isAlly ? .valorantBlue : .valorantRed
-		let playerUser = users[player.id]!
-		let iconSize: CGFloat = 48
+	struct PlayerView: View {
+		let player: LiveGameInfo.PlayerInfo
+		let ownPlayer: LiveGameInfo.PlayerInfo
 		
-		HStack {
-			AgentImage.displayIcon(player.agentID)
-				.dynamicallyStroked(radius: 1.5, color: .white)
-				.frame(width: iconSize, height: iconSize)
-				.mask(Circle())
-				.background(Circle().fill(relativeColor).opacity(0.5).padding(2))
-				.padding(2)
-				.overlay(
-					Circle()
-						.strokeBorder(relativeColor, lineWidth: 2)
-				)
+		@State var playerUser: User? = nil
+		@Environment(\.assets) private var assets
+		
+		var body: some View {
+			let isAlly = player.teamID == ownPlayer.teamID
+			let isSelf = player.id == ownPlayer.id
+			let teamColor: Color = isAlly ? .valorantBlue : .valorantRed
+			let relativeColor = isSelf ? .valorantSelf : teamColor
+			let iconSize: CGFloat = 48
 			
-			VStack(alignment: .leading, spacing: 4) {
-				if !player.identity.isIncognito {
-					HStack {
-						Text(playerUser.gameName)
-						Text("#\(playerUser.tagLine)")
-							.foregroundColor(.secondary)
+			HStack {
+				AgentImage.displayIcon(player.agentID)
+					.dynamicallyStroked(radius: 1.5, color: .white)
+					.frame(width: iconSize, height: iconSize)
+					.mask(Circle())
+					.background(Circle().fill(relativeColor).opacity(0.5).padding(2))
+					.padding(2)
+					.overlay(Circle().strokeBorder(relativeColor, lineWidth: 2))
+				
+				VStack(alignment: .leading, spacing: 4) {
+					if !player.identity.isIncognito, let playerUser = playerUser {
+						HStack {
+							Text(playerUser.gameName)
+							Text("#\(playerUser.tagLine)")
+								.foregroundColor(.secondary)
+						}
+					}
+					
+					let agentName = assets?.agents[player.agentID]?.displayName
+					Text(agentName ?? "Unknown Agent!")
+						.fontWeight(.semibold)
+				}
+				.frame(maxWidth: .infinity, alignment: .leading)
+				
+				if !isSelf, let playerUser = playerUser {
+					NavigationLink(destination: UserView(for: playerUser)) {
+						Image(systemName: "person.crop.circle.fill")
+							.padding(.horizontal, 4)
 					}
 				}
-				
-				let agentName = assets?.agents[player.agentID]?.displayName
-				Text(agentName ?? "Unknown Agent!")
-					.fontWeight(.semibold)
 			}
-			.frame(maxWidth: .infinity, alignment: .leading)
-			
-			if player.id != user.id {
-				NavigationLink(destination: UserView(for: playerUser)) {
-					Image(systemName: "person.crop.circle.fill")
-						.padding(.horizontal, 4)
-				}
-			}
+			.accentColor(relativeColor)
+			.withLocalData($playerUser) { $0.user(for: player.id) }
 		}
-		.accentColor(relativeColor)
 	}
 }
 
@@ -154,8 +158,7 @@ struct LiveMatchView_Previews: PreviewProvider {
 		LiveMatchContainer(
 			matchID: PreviewData.liveGameInfo.id,
 			user: PreviewData.user,
-			gameInfo: PreviewData.liveGameInfo,
-			users: PreviewData.liveGameUsers
+			gameInfo: PreviewData.liveGameInfo
 		)
 		.withToolbar()
 	}

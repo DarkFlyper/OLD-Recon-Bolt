@@ -2,41 +2,48 @@ import SwiftUI
 import ValorantAPI
 import HandyOperators
 
+// TODO: this seems overkill at this point
 struct UserView: View {
-	@State private var matchList: MatchList
+	let user: User
+	
 	@State private var shouldShowUnranked = true
 	
-	@Environment(\.valorantLoad) private var load
-	
 	init(for user: User) {
-		_matchList = .init(wrappedValue: .init(user: user))
+		self.user = user
 	}
 	
 	var body: some View {
-		MatchListView(matchList: $matchList, shouldShowUnranked: $shouldShowUnranked)
+		MatchListView(user: user, shouldShowUnranked: $shouldShowUnranked)
 			.navigationBarTitleDisplayMode(.large)
 	}
 }
 
+extension MatchList: Equatable {
+	static func == (lhs: Self, rhs: Self) -> Bool {
+		lhs.matches.map(\.id) == rhs.matches.map(\.id)
+	}
+}
+
 struct MatchListView: View {
-	@Binding var matchList: MatchList
+	let user: User
+	
+	@State var matchList: MatchList?
 	@Binding var shouldShowUnranked: Bool
 	
 	@Environment(\.valorantLoad) private var load
 	
 	private var shownMatches: [CompetitiveUpdate] {
-		shouldShowUnranked
-			? matchList.matches
-			: matchList.matches.filter(\.isRanked)
+		let matches = matchList?.matches ?? []
+		return shouldShowUnranked ? matches : matches.filter(\.isRanked)
 	}
 	
 	var body: some View {
 		List {
-			ForEach(shownMatches, id: \.id) {
-				MatchCell(match: $0, userID: matchList.user.id)
+			ForEach(shownMatches) {
+				MatchCell(match: $0, userID: user.id)
 			}
 			
-			if matchList.canLoadOlderMatches {
+			if matchList?.canLoadOlderMatches == true {
 				AsyncButton {
 					await updateMatchList(update: ValorantClient.loadOlderMatches)
 				} label: {
@@ -45,29 +52,43 @@ struct MatchListView: View {
 			}
 		}
 		.toolbar {
-			Button(shouldShowUnranked ? "Hide Unranked" : "Show Unranked") {
-				withAnimation { shouldShowUnranked.toggle() }
+			ToolbarItemGroup(placement: .navigationBarTrailing) {
+				Button {
+					withAnimation { shouldShowUnranked.toggle() }
+				} label: {
+					Image(
+						systemName: shouldShowUnranked
+							? "line.horizontal.3.decrease.circle"
+							: "line.horizontal.3.decrease.circle.fill"
+					)
+				}
+				
+				#if DEBUG
+				Button {
+					LocalDataProvider.shared.store(matchList! <- { $0.matches.removeFirst() })
+				} label: {
+					Image(systemName: "minus.circle")
+				}
+				#endif
 			}
 		}
-		.task {
-			if matchList.matches.isEmpty {
-				await loadMatches()
-			}
+		.withLocalData($matchList) { $0.matchList(for: user.id) }
+		.valorantLoadTask {
+			try await LocalDataProvider.shared
+				.autoUpdateMatchList(for: user.id, using: $0)
 		}
-		.refreshable(action: loadMatches)
+		.refreshable {
+			await updateMatchList(update: ValorantClient.loadMatches)
+		}
 		.loadErrorAlertTitle("Could not load matches!")
-		.navigationTitle(matchList.user.name)
-	}
-	
-	func loadMatches() async {
-		await updateMatchList(update: ValorantClient.loadMatches)
+		.navigationTitle(user.name)
 	}
 	
 	func updateMatchList(update: @escaping (ValorantClient) -> (inout MatchList) async throws -> Void) async {
+		guard let matchList = matchList else { return }
 		await load { client in
-			let updater = update(client)
-			let updated = try await matchList <- { try await updater(&$0) }
-			withAnimation { matchList = updated }
+			LocalDataProvider.shared
+				.store(try await matchList <- update(client))
 		}
 	}
 }
@@ -75,7 +96,7 @@ struct MatchListView: View {
 #if DEBUG
 struct MatchListView_Previews: PreviewProvider {
 	static var previews: some View {
-		MatchListView(matchList: .constant(PreviewData.matchList), shouldShowUnranked: .constant(true))
+		MatchListView(user: PreviewData.user, matchList: PreviewData.matchList, shouldShowUnranked: .constant(true))
 			.withToolbar()
 			.inEachColorScheme()
 			.listStyle(.grouped)

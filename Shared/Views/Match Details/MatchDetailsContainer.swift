@@ -5,32 +5,25 @@ struct MatchDetailsContainer: View {
 	let matchID: Match.ID
 	let userID: User.ID
 	
-	@State var matchDetails: MatchDetails?
-	
-	@Environment(\.valorantLoad) private var load
+	@State private var details: MatchDetails?
 	
 	var body: some View {
 		Group {
-			if let details = matchDetails {
+			if let details = details {
 				MatchDetailsView(matchDetails: details, userID: userID)
 			} else {
 				ProgressView()
 			}
 		}
+		.withLocalData($details) { $0.matchDetails(for: matchID) }
 		.loadErrorAlertTitle("Could not load match details!")
-		// TODO: is this being applied to a group making it be called multiple times?
-		.task {
-			guard matchDetails == nil else { return }
-			
-			await load {
-				matchDetails = try await $0.getMatchDetails(matchID: matchID)
-			}
+		.valorantLoadTask {
+			try await LocalDataProvider.shared
+				.fetchMatchDetails(for: matchID, using: $0)
 		}
 		.navigationTitle("Match Details")
-		.in {
-			#if os(iOS)
-			$0.navigationBarTitleDisplayMode(.inline)
-			#endif
-		}
+		#if os(iOS)
+		.navigationBarTitleDisplayMode(.inline)
+		#endif
 	}
 }

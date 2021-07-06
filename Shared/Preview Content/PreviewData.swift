@@ -35,7 +35,7 @@ enum PreviewData {
 	static let inventory = Inventory(loadJSON(named: "example_inventory", as: APIInventory.self))
 	
 	static let matchList = MatchList(
-		user: user,
+		userID: user.id,
 		matches: compUpdates
 	)
 	
@@ -68,7 +68,6 @@ enum PreviewData {
 
 struct MockClientData: ClientData {
 	let user = PreviewData.user
-	var matchList: MatchList = PreviewData.matchList
 	let client = ValorantClient.mocked
 	
 	static func authenticated(using credentials: Credentials) -> Self { .init() }
@@ -81,7 +80,6 @@ struct MockClientData: ClientData {
 
 private struct EmptyClientData: ClientData {
 	let user: User
-	var matchList: MatchList
 	let client: ValorantClient
 	
 	static func authenticated(using credentials: Credentials) -> Self { fatalError() }

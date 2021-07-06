@@ -1,11 +1,12 @@
 import SwiftUI
 import ValorantAPI
+import HandyOperators
 
+// TODO: extract to own file
 struct AgentSelectContainer: View {
 	let matchID: Match.ID
 	let user: User
 	@State var pregameInfo: LivePregameInfo?
-	@State var users: [User.ID: User]?
 	@State var inventory: Inventory?
 	
 	@State private var hasEnded = false
@@ -16,8 +17,12 @@ struct AgentSelectContainer: View {
 	
 	var body: some View {
 		VStack {
-			if let pregameInfo = Binding($pregameInfo), let users = users, let inventory = inventory {
-				AgentSelectView(pregameInfo: pregameInfo, user: user, users: users, inventory: inventory)
+			if let pregameInfo = Binding($pregameInfo), let inventory = inventory {
+				AgentSelectView(
+					pregameInfo: pregameInfo,
+					user: user,
+					inventory: inventory
+				)
 			} else {
 				ProgressView()
 				Text("Loading Match Info…")
@@ -29,12 +34,10 @@ struct AgentSelectContainer: View {
 				await Task.sleep(seconds: 1, tolerance: 0.1)
 			}
 		}
-		.task(id: pregameInfo == nil) {
-			guard let pregameInfo = pregameInfo, users == nil else { return }
+		.valorantLoadTask(id: pregameInfo == nil) {
+			guard let pregameInfo = pregameInfo else { return }
 			let userIDs = pregameInfo.team.players.map(\.id)
-			await load {
-				users = .init(values: try await $0.getUsers(for: userIDs))
-			}
+			try await LocalDataProvider.shared.fetchUsers(for: userIDs, using: $0)
 		}
 		.valorantLoadTask {
 			guard inventory == nil else { return }
@@ -53,7 +56,10 @@ struct AgentSelectContainer: View {
 	private func update() async {
 		await load {
 			do {
-				pregameInfo = try await $0.getLivePregameInfo(matchID)
+				pregameInfo = try await $0.getLivePregameInfo(matchID) <- {
+					LocalDataProvider.shared
+						.store($0.team.players.map(\.identity))
+				}
 			} catch ValorantClient.APIError.badResponseCode(404, _, _) {
 				hasEnded = true
 				isShowingEndedAlert = true
@@ -63,12 +69,8 @@ struct AgentSelectContainer: View {
 }
 
 struct AgentSelectView: View {
-	@Environment(\.assets) private var assets
-	
-	@Binding
-	var pregameInfo: LivePregameInfo
+	@Binding var pregameInfo: LivePregameInfo
 	let user: User
-	let users: [User.ID: User]
 	let inventory: Inventory
 	
 	var body: some View {
@@ -80,7 +82,7 @@ struct AgentSelectView: View {
 					VStack {
 						VStack {
 							ForEach(pregameInfo.team.players) { player in
-								playerView(for: player)
+								PlayerView(player: player, user: user)
 							}
 						}
 						.padding()
@@ -138,68 +140,76 @@ struct AgentSelectView: View {
 		.shadow(radius: 10)
 	}
 	
-	@ViewBuilder
-	private func playerView(for player: LivePregameInfo.PlayerInfo) -> some View {
-		let relativeColor = player.id == user.id ? Color.valorantSelf : .valorantBlue
-		let isLockedIn = player.isLockedIn
-		let playerUser = users[player.id]!
-		let iconSize: CGFloat = 48
+	struct PlayerView: View {
+		let player: LivePregameInfo.PlayerInfo
+		let user: User
 		
-		HStack {
-			Group {
-				if let agentID = player.agentID {
-					AgentImage.displayIcon(agentID)
-						.dynamicallyStroked(radius: 1.5, color: .white)
-				} else {
-					Image(systemName: "questionmark")
-						.font(.system(size: iconSize / 2, weight: .bold))
-						.foregroundColor(.white)
-						.opacity(0.25)
-						.blendMode(.plusLighter)
-				}
-			}
-			.frame(width: iconSize, height: iconSize)
-			.mask(Circle())
-			.padding(isLockedIn ? 1 : 0)
-			.background(
-				Circle()
-					.fill(relativeColor)
-					.opacity(isLockedIn ? 0.5 : 0.25)
-					.padding(2)
-			)
-			.padding(2)
-			.overlay(
-				Circle()
-					.strokeBorder(relativeColor, lineWidth: isLockedIn ? 2 : 1)
-					.opacity(isLockedIn ? 1 : 0.75)
-			)
+		@State var playerUser: User? = nil
+		@Environment(\.assets) private var assets
+		
+		var body: some View {
+			let relativeColor = player.id == user.id ? Color.valorantSelf : .valorantBlue
+			let isLockedIn = player.isLockedIn
+			let iconSize = 48.0
 			
-			VStack(alignment: .leading, spacing: 4) {
-				if !player.identity.isIncognito {
-					HStack {
-						Text(playerUser.gameName)
-						Text("#\(playerUser.tagLine)")
+			HStack {
+				Group {
+					if let agentID = player.agentID {
+						AgentImage.displayIcon(agentID)
+							.dynamicallyStroked(radius: 1.5, color: .white)
+					} else {
+						Image(systemName: "questionmark")
+							.font(.system(size: iconSize / 2, weight: .bold))
+							.foregroundColor(.white)
+							.opacity(0.25)
+							.blendMode(.plusLighter)
+					}
+				}
+				.frame(width: iconSize, height: iconSize)
+				.mask(Circle())
+				.padding(isLockedIn ? 1 : 0)
+				.background(
+					Circle()
+						.fill(relativeColor)
+						.opacity(isLockedIn ? 0.5 : 0.25)
+						.padding(2)
+				)
+				.padding(2)
+				.overlay(
+					Circle()
+						.strokeBorder(relativeColor, lineWidth: isLockedIn ? 2 : 1)
+						.opacity(isLockedIn ? 1 : 0.75)
+				)
+				.padding(isLockedIn ? 0 : 1) // constant size
+				
+				VStack(alignment: .leading, spacing: 4) {
+					if !player.identity.isIncognito, let playerUser = playerUser {
+						HStack {
+							Text(playerUser.gameName)
+							Text("#\(playerUser.tagLine)")
+								.foregroundColor(.secondary)
+						}
+					}
+					
+					if isLockedIn {
+						let agentName = assets?.agents[player.agentID!]?.displayName
+						Text(agentName ?? "Unknown Agent!")
+							.fontWeight(.semibold)
+					} else {
+						Text("Picking…")
 							.foregroundColor(.secondary)
 					}
 				}
+				.frame(maxWidth: .infinity, alignment: .leading)
 				
-				if isLockedIn {
-					let agentName = assets?.agents[player.agentID!]?.displayName
-					Text(agentName ?? "Unknown Agent!")
-						.fontWeight(.semibold)
-				} else {
-					Text("Picking…")
-						.foregroundColor(.secondary)
+				if player.id != user.id, let playerUser = playerUser {
+					NavigationLink(destination: UserView(for: playerUser)) {
+						Image(systemName: "person.crop.circle.fill")
+							.padding(.horizontal, 4)
+					}
 				}
 			}
-			.frame(maxWidth: .infinity, alignment: .leading)
-			
-			if player.id != user.id {
-				NavigationLink(destination: UserView(for: playerUser)) {
-					Image(systemName: "person.crop.circle.fill")
-						.padding(.horizontal, 4)
-				}
-			}
+			.withLocalData($playerUser) { $0.user(for: player.id) }
 		}
 	}
 }
@@ -211,7 +221,6 @@ struct AgentSelectView_Previews: PreviewProvider {
 			matchID: PreviewData.pregameInfo.id,
 			user: PreviewData.user,
 			pregameInfo: PreviewData.pregameInfo,
-			users: PreviewData.pregameUsers,
 			inventory: PreviewData.inventory
 		)
 		.withToolbar()

@@ -6,7 +6,6 @@ import HandyOperators
 protocol ClientData {
 	var user: User { get }
 	var client: ValorantClient { get }
-	var matchList: MatchList { get set }
 	
 	static func authenticated(using credentials: Credentials) async throws -> Self
 	func reauthenticated() async throws -> Self
@@ -34,18 +33,12 @@ final class ClientDataStore: ObservableObject {
 struct StandardClientData: ClientData {
 	var user: User { client.user }
 	
-	var client: ValorantClient { codableData.client }
+	var client: ValorantClient
 	
-	var matchList: MatchList {
-		get { codableData.matchList }
-		set { codableData.matchList = newValue }
-	}
-	
-	private var codableData: CodableData
 	private var credentials: Credentials
 	
 	@UserDefault("ClientData.stored")
-	private static var stored: CodableData?
+	private static var stored: ValorantClient?
 	
 	static func authenticated(using credentials: Credentials) async throws -> Self {
 		let client = try await ValorantClient.authenticated(
@@ -62,28 +55,23 @@ struct StandardClientData: ClientData {
 			let stored = Self.stored
 		else { return nil }
 		
-		self.codableData = stored
+		self.client = stored
 		self.credentials = credentials
 	}
 	
 	fileprivate init(client: ValorantClient, credentials: Credentials) {
-		self.codableData = .init(client: client, matchList: .init(user: client.user))
+		self.client = client
 		self.credentials = credentials
 	}
 	
 	func save(using keychain: Keychain) {
 		credentials.save(to: keychain)
-		Self.stored = codableData
+		Self.stored = client
 	}
 	
 	func reauthenticated() async throws -> Self {
 		try await Self.authenticated(using: credentials)
-			// TODO: switching to GRDB will make this unnecessary
-			<- { $0.codableData.matchList = codableData.matchList }
-	}
-	
-	private struct CodableData: Codable, DefaultsValueConvertible {
-		var client: ValorantClient
-		var matchList: MatchList
 	}
 }
+
+extension ValorantClient: DefaultsValueConvertible {}
