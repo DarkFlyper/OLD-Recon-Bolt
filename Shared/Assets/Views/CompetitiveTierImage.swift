@@ -14,6 +14,8 @@ struct CompetitiveTierImage: View {
 		{
 			image
 				.resizable()
+				// the unranked icon is horribly off-center; let's fix that
+				.scaleEffect(tier == 0 ? 1.31 : 1, anchor: .top)
 				.scaledToFit()
 		} else {
 			Color.gray
