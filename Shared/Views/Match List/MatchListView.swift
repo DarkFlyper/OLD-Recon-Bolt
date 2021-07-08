@@ -29,6 +29,7 @@ struct MatchListView: View {
 	
 	@State var matchList: MatchList?
 	@State var summary: CompetitiveSummary?
+	@State var identity: Player.Identity?
 	@Binding var shouldShowUnranked: Bool
 	
 	@Environment(\.valorantLoad) private var load
@@ -41,24 +42,28 @@ struct MatchListView: View {
 	var body: some View {
 		List {
 			Section(header: Text("Player")) {
+				if let identity = identity {
+					PlayerIdentityCell(user: user, identity: identity)
+				}
+				
 				if let summary = summary {
 					CompetitiveSummaryCell(summary: summary)
 				}
 			}
 			
 			Section(header: Text("Matches")) {
-			ForEach(shownMatches) {
-				MatchCell(match: $0, userID: user.id)
-			}
-			
-			if matchList?.canLoadOlderMatches == true {
-				AsyncButton {
-					await updateMatchList(update: ValorantClient.loadOlderMatches)
-				} label: {
-					Label("Load Older Matches", systemImage: "ellipsis")
+				ForEach(shownMatches) {
+					MatchCell(match: $0, userID: user.id)
+				}
+				
+				if matchList?.canLoadOlderMatches == true {
+					AsyncButton {
+						await updateMatchList(update: ValorantClient.loadOlderMatches)
+					} label: {
+						Label("Load Older Matches", systemImage: "ellipsis")
+					}
 				}
 			}
-		}
 		}
 		.toolbar {
 			ToolbarItemGroup(placement: .navigationBarTrailing) {
@@ -86,6 +91,7 @@ struct MatchListView: View {
 		}
 		.withLocalData($matchList) { $0.matchList(for: user.id) }
 		.withLocalData($summary) { $0.competitiveSummary(for: user.id) }
+		.withLocalData($identity) { $0.identity(for: user.id) }
 		.valorantLoadTask {
 			try await LocalDataProvider.shared
 				.autoUpdateMatchList(for: user.id, using: $0)
@@ -122,10 +128,11 @@ struct MatchListView_Previews: PreviewProvider {
 			user: PreviewData.user,
 			matchList: PreviewData.matchList,
 			summary: PreviewData.summary,
+			identity: PreviewData.userIdentity,
 			shouldShowUnranked: .constant(true)
 		)
-			.withToolbar()
-			.inEachColorScheme()
+		.withToolbar()
+		.inEachColorScheme()
 	}
 }
 #endif

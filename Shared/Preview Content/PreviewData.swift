@@ -11,6 +11,9 @@ enum PreviewData {
 		id: userID
 	)
 	static let user = User(userInfo)
+	static let userIdentity = pregameInfo.team.players
+		.first { $0.id == userID }!
+		.identity
 	
 	static let singleMatch = loadJSON(named: "example_match", as: MatchDetails.self)
 	/// A match with only a few rounds and very unbalanced kills, to push layouts to their limits.
