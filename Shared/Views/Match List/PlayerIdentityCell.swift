@@ -32,8 +32,11 @@ struct PlayerIdentityCell: View {
 			.padding()
 			
 			PlayerCardImage.wideArt(identity.cardID)
+			
+			Divider()
 		}
 		.listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
+		.listRowSeparator(.hidden, edges: .bottom) // the separator is inset, which doesn't look great
 	}
 }
 

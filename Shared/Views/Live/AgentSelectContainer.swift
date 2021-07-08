@@ -24,7 +24,7 @@ struct AgentSelectContainer: View {
 				)
 			} else {
 				ProgressView()
-				Text("Loading Match Info…")
+				Text("Loading Agent Select…")
 			}
 		}
 		.task {
@@ -66,3 +66,12 @@ struct AgentSelectContainer: View {
 		}
 	}
 }
+
+#if DEBUG
+struct AgentSelectContainer_Previews: PreviewProvider {
+	static var previews: some View {
+		AgentSelectContainer(matchID: Match.ID(), user: PreviewData.user)
+			.inEachColorScheme()
+	}
+}
+#endif

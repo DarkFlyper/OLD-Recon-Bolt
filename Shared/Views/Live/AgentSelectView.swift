@@ -142,6 +142,7 @@ struct AgentSelectView: View {
 					}
 				}
 			}
+			.accentColor(relativeColor)
 			.withLocalData($playerUser) { $0.user(for: player.id) }
 		}
 	}
@@ -150,17 +151,15 @@ struct AgentSelectView: View {
 #if DEBUG
 struct AgentSelectView_Previews: PreviewProvider {
 	static var previews: some View {
-		AgentSelectContainer(
-			matchID: PreviewData.pregameInfo.id,
+		AgentSelectView(
+			pregameInfo: .constant(PreviewData.pregameInfo),
 			user: PreviewData.user,
-			pregameInfo: PreviewData.pregameInfo,
 			inventory: PreviewData.inventory
 		)
-		.withToolbar()
+		.navigationTitle("Agent Select")
+		.withToolbar(allowLargeTitles: false)
 		.inEachColorScheme()
 		.inEachOrientation()
-		
-		AgentSelectContainer(matchID: Match.ID(), user: PreviewData.user)
 	}
 }
 #endif
