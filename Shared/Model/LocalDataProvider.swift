@@ -42,6 +42,16 @@ final class LocalDataProvider {
 			async { // actually instant because the actors aren't in use
 				// TODO: use some other mechanism to express this stuff now that it's unified
 				await userManager.store([] + PreviewData.pregameUsers.values + PreviewData.liveGameUsers.values)
+				await competitiveSummaryManager.store([
+					PreviewData.summary,
+					PreviewData.summary <- {
+						$0.userID = .init("b59a64d7-d396-540b-a448-d0192fe9c785")!
+						$0.latestUpdate = $0.latestUpdate! <- {
+							$0.tierAfterUpdate = 17
+							$0.tierProgressAfterUpdate = 69
+						}
+					},
+				])
 			}
 		}
 		#endif
@@ -64,6 +74,29 @@ final class LocalDataProvider {
 	
 	func store(_ matchList: MatchList) {
 		async { await matchListManager.store(matchList) }
+	}
+	
+	// MARK: -
+	
+	private var competitiveSummaryManager = LocalDataManager<CompetitiveSummary>(ageCausingAutoUpdate: .minutes(5))
+	
+	func competitiveSummary(for userID: User.ID) -> LocalDataPublisher<CompetitiveSummary> {
+		competitiveSummaryManager.objectPublisher(for: userID)
+	}
+	
+	func fetchCompetitiveSummary(
+		for userID: User.ID,
+		using client: ValorantClient,
+		forceFetch: Bool = false
+	) async throws {
+		if forceFetch {
+			try await competitiveSummaryManager.store(client.getCompetitiveSummary(userID: userID))
+		} else {
+			try await competitiveSummaryManager.fetchIfNecessary(
+				for: userID,
+				fetch: client.getCompetitiveSummary
+			)
+		}
 	}
 	
 	// MARK: -

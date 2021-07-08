@@ -71,6 +71,8 @@
 		B954072F2694C0A4009FB17B /* AgentSelectContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B954072D2694C0A4009FB17B /* AgentSelectContainer.swift */; };
 		B95407312694C157009FB17B /* LiveMatchContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95407302694C157009FB17B /* LiveMatchContainer.swift */; };
 		B95407322694C157009FB17B /* LiveMatchContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95407302694C157009FB17B /* LiveMatchContainer.swift */; };
+		B963C4732694FE920071E14A /* example_summary.json in Resources */ = {isa = PBXBuildFile; fileRef = B963C4722694FE920071E14A /* example_summary.json */; };
+		B963C4742694FE920071E14A /* example_summary.json in Resources */ = {isa = PBXBuildFile; fileRef = B963C4722694FE920071E14A /* example_summary.json */; };
 		B9677F8326782A3200C0FF46 /* example_pregame_users.json in Resources */ = {isa = PBXBuildFile; fileRef = B9677F8226782A3200C0FF46 /* example_pregame_users.json */; };
 		B9677F8426782A3200C0FF46 /* example_pregame_users.json in Resources */ = {isa = PBXBuildFile; fileRef = B9677F8226782A3200C0FF46 /* example_pregame_users.json */; };
 		B96845B32665C7B900DC59D2 /* ClientData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96845B22665C7B900DC59D2 /* ClientData.swift */; };
@@ -221,6 +223,7 @@
 		B9485F91264B639F00AC3456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B954072D2694C0A4009FB17B /* AgentSelectContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentSelectContainer.swift; sourceTree = "<group>"; };
 		B95407302694C157009FB17B /* LiveMatchContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveMatchContainer.swift; sourceTree = "<group>"; };
+		B963C4722694FE920071E14A /* example_summary.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_summary.json; sourceTree = "<group>"; };
 		B964BECE2671515C00022A7C /* HandyOperators */ = {isa = PBXFileReference; lastKnownFileType = folder; name = HandyOperators; path = "../ Packages/HandyOperators"; sourceTree = "<group>"; };
 		B9677F8226782A3200C0FF46 /* example_pregame_users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_pregame_users.json; sourceTree = "<group>"; };
 		B96845B22665C7B900DC59D2 /* ClientData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientData.swift; sourceTree = "<group>"; };
@@ -510,6 +513,7 @@
 			children = (
 				B9EF0F23263D09120067176A /* example_match.json */,
 				B941B6EB25A7C83700F675C1 /* example_updates.json */,
+				B963C4722694FE920071E14A /* example_summary.json */,
 				B9F9B4FE26796C2200397AAB /* example_inventory.json */,
 				B96A0C9F265A8B4600844674 /* strange_match.json */,
 				B9F9B4D926793F3000397AAB /* surrendered_match.json */,
@@ -678,6 +682,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B963C4732694FE920071E14A /* example_summary.json in Resources */,
 				B9DCF9AB2642F7A100C39EC4 /* Preview Assets.xcassets in Resources */,
 				B9F9B4DA26793F3100397AAB /* surrendered_match.json in Resources */,
 				B9F9B4FF26796C2200397AAB /* example_inventory.json in Resources */,
@@ -697,6 +702,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B963C4742694FE920071E14A /* example_summary.json in Resources */,
 				B9DCF9AC2642F7A100C39EC4 /* Preview Assets.xcassets in Resources */,
 				B9F9B4DB26793F3100397AAB /* surrendered_match.json in Resources */,
 				B9F9B50026796C2300397AAB /* example_inventory.json in Resources */,
