@@ -22,6 +22,10 @@ struct AssetCollection: Codable {
 			.union(playerCards.values.flatMap(\.images))
 			.union(competitiveTierEpisodes.flatMap(\.images))
 	}
+	
+	func latestTierInfo(number: Int) -> CompetitiveTier? {
+		competitiveTierEpisodes.last?.tiers.elementIfValid(at: number)
+	}
 }
 
 protocol AssetItem {
