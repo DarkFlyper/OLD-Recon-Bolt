@@ -93,7 +93,7 @@ struct MatchCell: View {
 					.rotation(Angle(degrees: Double(360 * min(before, after))))
 				
 				changeRing
-					.stroke(Color.black, style: stroke <- { $0.lineWidth += 2 })
+					.stroke(Color.black, style: stroke <- { $0.lineWidth *= 1.5 })
 					.blendMode(.destinationOut)
 				
 				changeRing

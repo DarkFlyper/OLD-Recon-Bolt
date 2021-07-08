@@ -37,7 +37,6 @@ struct ContentView: View {
 				.tabItem { Label("Account", systemImage: "person.crop.circle") }
 				.tag(Tab.account)
 		}
-		.listStyle(PrettyListStyle())
 		.onAppear {
 			if dataStore.data == nil || assetManager.assets == nil {
 				tab = .account
