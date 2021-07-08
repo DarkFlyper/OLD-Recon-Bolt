@@ -46,10 +46,13 @@ final class LocalDataProvider {
 					PreviewData.summary,
 					PreviewData.summary <- {
 						$0.userID = .init("b59a64d7-d396-540b-a448-d0192fe9c785")!
-						$0.latestUpdate = $0.latestUpdate! <- {
-							$0.tierAfterUpdate = 17
-							$0.tierProgressAfterUpdate = 69
-						}
+						$0.skillsByQueue[.competitive]!.bySeason![.current]!.competitiveTier = 17
+						$0.skillsByQueue[.competitive]!.bySeason![.current]!.rankedRating = 69
+					},
+					PreviewData.summary <- {
+						$0.userID = .init("0c55f5a0-60c5-5cad-b591-531803b973b9")!
+						$0.skillsByQueue[.competitive]!.bySeason![.current]!.competitiveTier = 17
+						$0.skillsByQueue[.competitive]!.bySeason![.current]!.rankedRating = 69
 					},
 				])
 			}

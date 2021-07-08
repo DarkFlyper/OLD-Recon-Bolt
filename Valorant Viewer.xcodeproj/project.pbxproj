@@ -71,8 +71,12 @@
 		B954072F2694C0A4009FB17B /* AgentSelectContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B954072D2694C0A4009FB17B /* AgentSelectContainer.swift */; };
 		B95407312694C157009FB17B /* LiveMatchContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95407302694C157009FB17B /* LiveMatchContainer.swift */; };
 		B95407322694C157009FB17B /* LiveMatchContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95407302694C157009FB17B /* LiveMatchContainer.swift */; };
+		B963C4702694FDDA0071E14A /* CompetitiveSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B963C46F2694FDDA0071E14A /* CompetitiveSummaryCell.swift */; };
+		B963C4712694FDDA0071E14A /* CompetitiveSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B963C46F2694FDDA0071E14A /* CompetitiveSummaryCell.swift */; };
 		B963C4732694FE920071E14A /* example_summary.json in Resources */ = {isa = PBXBuildFile; fileRef = B963C4722694FE920071E14A /* example_summary.json */; };
 		B963C4742694FE920071E14A /* example_summary.json in Resources */ = {isa = PBXBuildFile; fileRef = B963C4722694FE920071E14A /* example_summary.json */; };
+		B963C47626950FE90071E14A /* RankInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B963C47526950FE90071E14A /* RankInfoView.swift */; };
+		B963C47726950FE90071E14A /* RankInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B963C47526950FE90071E14A /* RankInfoView.swift */; };
 		B9677F8326782A3200C0FF46 /* example_pregame_users.json in Resources */ = {isa = PBXBuildFile; fileRef = B9677F8226782A3200C0FF46 /* example_pregame_users.json */; };
 		B9677F8426782A3200C0FF46 /* example_pregame_users.json in Resources */ = {isa = PBXBuildFile; fileRef = B9677F8226782A3200C0FF46 /* example_pregame_users.json */; };
 		B96845B32665C7B900DC59D2 /* ClientData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96845B22665C7B900DC59D2 /* ClientData.swift */; };
@@ -223,7 +227,9 @@
 		B9485F91264B639F00AC3456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B954072D2694C0A4009FB17B /* AgentSelectContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentSelectContainer.swift; sourceTree = "<group>"; };
 		B95407302694C157009FB17B /* LiveMatchContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveMatchContainer.swift; sourceTree = "<group>"; };
+		B963C46F2694FDDA0071E14A /* CompetitiveSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitiveSummaryCell.swift; sourceTree = "<group>"; };
 		B963C4722694FE920071E14A /* example_summary.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_summary.json; sourceTree = "<group>"; };
+		B963C47526950FE90071E14A /* RankInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankInfoView.swift; sourceTree = "<group>"; };
 		B964BECE2671515C00022A7C /* HandyOperators */ = {isa = PBXFileReference; lastKnownFileType = folder; name = HandyOperators; path = "../ Packages/HandyOperators"; sourceTree = "<group>"; };
 		B9677F8226782A3200C0FF46 /* example_pregame_users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_pregame_users.json; sourceTree = "<group>"; };
 		B96845B22665C7B900DC59D2 /* ClientData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientData.swift; sourceTree = "<group>"; };
@@ -346,6 +352,7 @@
 				B9F65C4D2651EDA500C9C34A /* DynamicallyStroked.swift */,
 				B9EF0F26263D9D860067176A /* ValorantAPI+SwiftUI.swift */,
 				B989466A26860D8A00C8059A /* AsyncButton.swift */,
+				B963C47526950FE90071E14A /* RankInfoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -531,6 +538,7 @@
 			children = (
 				B94091B725D09F0200EE5DF2 /* MatchListView.swift */,
 				B9CF2E7825A89976004A1458 /* MatchCell.swift */,
+				B963C46F2694FDDA0071E14A /* CompetitiveSummaryCell.swift */,
 			);
 			path = "Match List";
 			sourceTree = "<group>";
@@ -778,6 +786,7 @@
 				B9EE6E6226589FAA007E28B5 /* PreviewData.swift in Sources */,
 				B9E43DA2265DB94C00F59E35 /* MatchViewData.swift in Sources */,
 				B9318366267810CE0099B13C /* AgentSelectView.swift in Sources */,
+				B963C4702694FDDA0071E14A /* CompetitiveSummaryCell.swift in Sources */,
 				B90B4B61267C22E700CACB95 /* PlayerCardImage.swift in Sources */,
 				B9CF2E6225A81B48004A1458 /* UnifiedStyles.swift in Sources */,
 				B9F07CB726474EB7006CD4F5 /* AssetVersion.swift in Sources */,
@@ -794,6 +803,7 @@
 				B9D9E593266D358300827470 /* Lightbox.swift in Sources */,
 				B90B4B58267C167B00CACB95 /* PlayerCardAssets.swift in Sources */,
 				B96A0CAA265AE32200844674 /* MissionAssets.swift in Sources */,
+				B963C47626950FE90071E14A /* RankInfoView.swift in Sources */,
 				B90B4B64267C270500CACB95 /* CompetitiveTierImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -848,6 +858,7 @@
 				B9EE6E6326589FAA007E28B5 /* PreviewData.swift in Sources */,
 				B9E43DA3265DB94C00F59E35 /* MatchViewData.swift in Sources */,
 				B9318367267810CE0099B13C /* AgentSelectView.swift in Sources */,
+				B963C4712694FDDA0071E14A /* CompetitiveSummaryCell.swift in Sources */,
 				B90B4B62267C22E700CACB95 /* PlayerCardImage.swift in Sources */,
 				B9CF2E6325A81B48004A1458 /* UnifiedStyles.swift in Sources */,
 				B9F07CB826474EB7006CD4F5 /* AssetVersion.swift in Sources */,
@@ -864,6 +875,7 @@
 				B9D9E594266D358300827470 /* Lightbox.swift in Sources */,
 				B90B4B59267C167B00CACB95 /* PlayerCardAssets.swift in Sources */,
 				B96A0CAB265AE32200844674 /* MissionAssets.swift in Sources */,
+				B963C47726950FE90071E14A /* RankInfoView.swift in Sources */,
 				B90B4B65267C270500CACB95 /* CompetitiveTierImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

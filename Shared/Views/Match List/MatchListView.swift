@@ -28,6 +28,7 @@ struct MatchListView: View {
 	let user: User
 	
 	@State var matchList: MatchList?
+	@State var summary: CompetitiveSummary?
 	@Binding var shouldShowUnranked: Bool
 	
 	@Environment(\.valorantLoad) private var load
@@ -39,6 +40,13 @@ struct MatchListView: View {
 	
 	var body: some View {
 		List {
+			Section(header: Text("Player")) {
+				if let summary = summary {
+					CompetitiveSummaryCell(summary: summary)
+				}
+			}
+			
+			Section(header: Text("Matches")) {
 			ForEach(shownMatches) {
 				MatchCell(match: $0, userID: user.id)
 			}
@@ -50,6 +58,7 @@ struct MatchListView: View {
 					Label("Load Older Matches", systemImage: "ellipsis")
 				}
 			}
+		}
 		}
 		.toolbar {
 			ToolbarItemGroup(placement: .navigationBarTrailing) {
@@ -65,7 +74,10 @@ struct MatchListView: View {
 				
 				#if DEBUG
 				Button {
-					LocalDataProvider.shared.store(matchList! <- { $0.matches.removeFirst() })
+					LocalDataProvider.shared.store(matchList! <- {
+						$0.matches.removeFirst()
+						$0.highestLoadedIndex = 0
+					})
 				} label: {
 					Image(systemName: "minus.circle")
 				}
@@ -73,12 +85,22 @@ struct MatchListView: View {
 			}
 		}
 		.withLocalData($matchList) { $0.matchList(for: user.id) }
+		.withLocalData($summary) { $0.competitiveSummary(for: user.id) }
 		.valorantLoadTask {
 			try await LocalDataProvider.shared
 				.autoUpdateMatchList(for: user.id, using: $0)
 		}
+		.valorantLoadTask {
+			try await LocalDataProvider.shared
+				.fetchCompetitiveSummary(for: user.id, using: $0)
+		}
 		.refreshable {
-			await updateMatchList(update: ValorantClient.loadMatches)
+			async let matchListUpdate: Void = updateMatchList(update: ValorantClient.loadMatches)
+			async let summaryUpdate: Void = load {
+				try await LocalDataProvider.shared
+					.fetchCompetitiveSummary(for: user.id, using: $0)
+			}
+			_ = await (matchListUpdate, summaryUpdate)
 		}
 		.loadErrorAlertTitle("Could not load matches!")
 		.navigationTitle(user.name)
@@ -96,10 +118,14 @@ struct MatchListView: View {
 #if DEBUG
 struct MatchListView_Previews: PreviewProvider {
 	static var previews: some View {
-		MatchListView(user: PreviewData.user, matchList: PreviewData.matchList, shouldShowUnranked: .constant(true))
+		MatchListView(
+			user: PreviewData.user,
+			matchList: PreviewData.matchList,
+			summary: PreviewData.summary,
+			shouldShowUnranked: .constant(true)
+		)
 			.withToolbar()
 			.inEachColorScheme()
-			.listStyle(.grouped)
 	}
 }
 #endif
