@@ -5,7 +5,11 @@ import KeychainSwift
 
 struct ContentView: View {
 	@StateObject var dataStore: ClientDataStore
+	#if DEBUG
 	@StateObject var assetManager = isInSwiftUIPreview ? .forPreviews : AssetManager()
+	#else
+	@StateObject var assetManager = AssetManager()
+	#endif
 	
 	@SceneStorage("tab")
 	var tab = Tab.career

@@ -6,7 +6,7 @@ struct _MapImageProvider: _AssetImageProvider {
 	static let assetPath = \AssetCollection.maps
 }
 
-extension MapImage {
+extension _AssetImageView where Provider == _MapImageProvider { // just using MapImage breaks the preview
 	struct Label: View {
 		@Environment(\.assets) private var assets
 		
