@@ -15,24 +15,22 @@ struct CompetitiveSummaryCell: View {
 	
 	@ViewBuilder
 	private var content: some View {
-		if let info = summary.skillsByQueue[.competitive]?.bySeason?[.current] {
-			VStack {
-				let tierInfo = assets?.latestTierInfo(number: info.competitiveTier)
-				
-				RankInfoView(summary: summary, lineWidth: 6)
-					.frame(width: 96, height: 96)
-				
-				if let tierInfo = tierInfo {
-					Text(tierInfo.name)
-						.font(.callout.weight(.semibold))
-				}
-				
-				Text("\(info.rankedRating) RR")
-					.font(.caption)
+		VStack {
+			let info = summary.skillsByQueue[.competitive]?.bySeason?[.current]
+				?? .init(seasonID: .current, actRank: 0, competitiveTier: 0, rankedRating: 0)
+			
+			let tierInfo = assets?.latestTierInfo(number: info.competitiveTier)
+			
+			RankInfoView(summary: summary, lineWidth: 6)
+				.frame(width: 96, height: 96)
+			
+			if let tierInfo = tierInfo {
+				Text(tierInfo.name)
+					.font(.callout.weight(.semibold))
 			}
-		} else {
-			Text("Not ranked yet!")
-				.padding(20)
+			
+			Text("\(info.rankedRating) RR")
+				.font(.caption)
 		}
 	}
 }
