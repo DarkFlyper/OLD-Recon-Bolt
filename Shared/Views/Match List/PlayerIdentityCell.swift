@@ -1,5 +1,6 @@
 import SwiftUI
 import ValorantAPI
+import HandyOperators
 
 struct PlayerIdentityCell: View {
 	let user: User
@@ -22,14 +23,20 @@ struct PlayerIdentityCell: View {
 				
 				if let title = assets?.playerTitles[identity.titleID]?.titleText {
 					Text(title)
-						.fontWeight(.medium)
 				}
-				
-				Spacer()
-				
-				Text("Level \(identity.accountLevel)")
 			}
 			.padding()
+			
+			Divider().zIndex(1).overlay {
+				Text("\(identity.accountLevel)")
+					.fontWeight(.semibold)
+					.foregroundStyle(.secondary)
+					.frame(minWidth: 24)
+					.padding(8)
+					.overlay(Capsule().stroke(.secondary))
+					.background(Material.ultraThin)
+					.mask(Capsule())
+			}
 			
 			PlayerCardImage.wideArt(identity.cardID)
 			
@@ -43,8 +50,15 @@ struct PlayerIdentityCell: View {
 #if DEBUG
 struct PlayerIdentityCell_Previews: PreviewProvider {
 	static var previews: some View {
-		PlayerIdentityCell(user: PreviewData.user, identity: PreviewData.userIdentity)
-			.previewLayout(.sizeThatFits)
+		Group {
+			PlayerIdentityCell(user: PreviewData.user, identity: PreviewData.userIdentity)
+			PlayerIdentityCell(user: PreviewData.user, identity: PreviewData.userIdentity <- {
+				$0.accountLevel = 6
+				$0.cardID = .init("8d82ec0a-4c3b-8458-d0b6-e1bb900671cf")!
+			})
+		}
+		.inEachColorScheme()
+		.previewLayout(.sizeThatFits)
 	}
 }
 #endif

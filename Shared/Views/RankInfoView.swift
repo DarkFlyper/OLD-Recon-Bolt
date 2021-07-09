@@ -20,9 +20,10 @@ struct RankInfoView: View {
 		let backgroundCircle = Circle().padding(-0.5 * thickerWidth)
 		
 		ZStack {
-			let competitiveInfo = summary?.skillsByQueue[.competitive]
-			let latestSeasonInfo = competitiveInfo?.bySeason?[.current]
-			if let info = latestSeasonInfo {
+			if let summary = summary {
+				let competitiveInfo = summary.skillsByQueue[.competitive]
+				let info = competitiveInfo?.bySeason?[.current]
+					?? .init(seasonID: .current, actRank: 0, competitiveTier: 0, rankedRating: 0)
 				let tierInfo = assets?.latestTierInfo(number: info.competitiveTier)
 				
 				if shouldShowProgress {
