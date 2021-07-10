@@ -22,6 +22,29 @@ struct AgentSelectView: View {
 						
 						Divider()
 						
+						HStack {
+							lockInIndicators(
+								count: pregameInfo.team.players.count,
+								lockCount: pregameInfo.team.players.filter(\.isLockedIn).count,
+								shouldReverse: false
+							)
+							.foregroundColor(.valorantBlue)
+							
+							Spacer()
+							
+							lockInIndicators(
+								count: pregameInfo.enemyTeamSize,
+								lockCount: pregameInfo.enemyTeamLockCount,
+								shouldReverse: false
+							)
+							.foregroundColor(.valorantRed)
+							.environment(\.layoutDirection, .rightToLeft)
+							//.scaleEffect(x: -1, y: 1)
+						}
+						.padding()
+						
+						Divider()
+						
 						AgentPickerView(pregameInfo: $pregameInfo, user: user, inventory: inventory)
 					}
 				}
@@ -30,6 +53,21 @@ struct AgentSelectView: View {
 			infoBox
 				.padding()
 		}
+	}
+	
+	@ViewBuilder
+	private func lockInIndicators(count: Int, lockCount: Int, shouldReverse: Bool) -> some View {
+		HStack {
+			ForEach(0..<count) { index in
+				if index < lockCount {
+					Image(systemName: "lock")
+				} else {
+					Image(systemName: "lock.open")
+						.foregroundStyle(.secondary)
+				}
+			}
+		}
+		.symbolVariant(.fill)
 	}
 	
 	@ViewBuilder
