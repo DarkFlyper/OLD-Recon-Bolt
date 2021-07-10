@@ -77,7 +77,8 @@ struct AgentSelectView: View {
 		let player: LivePregameInfo.PlayerInfo
 		let user: User
 		
-		@State var playerUser: User? = nil
+		@State var playerUser: User?
+		@State var summary: CompetitiveSummary?
 		@Environment(\.assets) private var assets
 		
 		var body: some View {
@@ -141,9 +142,16 @@ struct AgentSelectView: View {
 							.padding(.horizontal, 4)
 					}
 				}
+				
+				RankInfoView(summary: summary)
+					.frame(width: iconSize, height: iconSize)
 			}
 			.accentColor(relativeColor)
 			.withLocalData($playerUser) { $0.user(for: player.id) }
+			.withLocalData($summary) { $0.competitiveSummary(for: player.id) }
+			.valorantLoadTask {
+				try await LocalDataProvider.shared.fetchCompetitiveSummary(for: player.id, using: $0)
+			}
 		}
 	}
 }
