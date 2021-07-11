@@ -32,6 +32,12 @@ extension Collection {
 	}
 }
 
+extension Collection where Element: Identifiable {
+	func firstIndex(withID id: Element.ID) -> Index? {
+		firstIndex { $0.id == id }
+	}
+}
+
 extension Collection where Element: RandomAccessCollection {
 	func transposed() -> [[Element.Element]] {
 		guard let firstRow = first else { return [] }

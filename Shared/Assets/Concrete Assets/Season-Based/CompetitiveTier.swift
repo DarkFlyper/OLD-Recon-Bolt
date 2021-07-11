@@ -1,18 +1,6 @@
 import SwiftUI
 import ValorantAPI
 
-extension AssetClient {
-	func getCompetitiveTiers() async throws -> [CompetitiveTier.Episode] {
-		try await send(CompetitiveTierRequest())
-	}
-}
-
-private struct CompetitiveTierRequest: AssetRequest {
-	let path = "/v1/competitivetiers"
-	
-	typealias Response = [CompetitiveTier.Episode]
-}
-
 struct CompetitiveTier: AssetItem, Codable {
 	var number: Int
 	var name: String
@@ -45,13 +33,17 @@ struct CompetitiveTier: AssetItem, Codable {
 		case rankTriangleUpwards = "rankTriangleUpIcon"
 	}
 	
-	struct Episode: AssetItem, Codable, Identifiable {
+	struct Collection: AssetItem, Codable, Identifiable {
 		var id: ObjectID<Self, LowercaseUUID>
 		var internalName: String
 		var tiers: [CompetitiveTier]
 		
 		var images: [AssetImage] {
 			tiers.flatMap(\.images)
+		}
+		
+		func tier(_ number: Int) -> CompetitiveTier? {
+			tiers.elementIfValid(at: number)
 		}
 		
 		private enum CodingKeys: String, CodingKey {

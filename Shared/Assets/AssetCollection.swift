@@ -12,7 +12,7 @@ struct AssetCollection: Codable {
 	let objectives: [Objective.ID: ObjectiveInfo]
 	let playerCards: [PlayerCard.ID: PlayerCardInfo]
 	let playerTitles: [PlayerTitle.ID: PlayerTitleInfo]
-	let competitiveTierEpisodes: [CompetitiveTier.Episode]
+	let seasons: SeasonCollection
 	
 	var images: Set<AssetImage> {
 		Set()
@@ -20,11 +20,7 @@ struct AssetCollection: Codable {
 			.union(agents.values.flatMap(\.images))
 			.union(gameModes.values.flatMap(\.images))
 			.union(playerCards.values.flatMap(\.images))
-			.union(competitiveTierEpisodes.flatMap(\.images))
-	}
-	
-	func latestTierInfo(number: Int) -> CompetitiveTier? {
-		competitiveTierEpisodes.last?.tiers.elementIfValid(at: number)
+			.union(seasons.images)
 	}
 }
 

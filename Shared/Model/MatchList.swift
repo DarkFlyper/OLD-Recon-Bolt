@@ -43,7 +43,7 @@ extension ValorantClient {
 			let updates = try await getUpdates(for: list, startIndex: startIndex)
 			guard !updates.isEmpty else { break }
 			
-			let overlapStart = updates.firstIndex { $0.id == newestKnownMatchID }
+			let overlapStart = newestKnownMatchID.flatMap(updates.firstIndex(withID:))
 			foundUpdates += updates.prefix(upTo: overlapStart ?? updates.endIndex)
 			
 			if overlapStart != nil {

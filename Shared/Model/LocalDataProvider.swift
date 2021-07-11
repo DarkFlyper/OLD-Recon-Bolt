@@ -40,19 +40,22 @@ final class LocalDataProvider {
 		#if DEBUG
 		if isInSwiftUIPreview {
 			async { // actually instant because the actors aren't in use
+				let currentAct = await AssetManager.forPreviews.assets!.seasons.currentAct()!
+				
 				// TODO: use some other mechanism to express this stuff now that it's unified
 				await userManager.store([] + PreviewData.pregameUsers.values + PreviewData.liveGameUsers.values)
 				await competitiveSummaryManager.store([
 					PreviewData.summary,
+					// oh no
 					PreviewData.summary <- {
 						$0.userID = .init("b59a64d7-d396-540b-a448-d0192fe9c785")!
-						$0.skillsByQueue[.competitive]!.bySeason![.current]!.competitiveTier = 17
-						$0.skillsByQueue[.competitive]!.bySeason![.current]!.rankedRating = 69
+						$0.competitiveInfo!.bySeason![currentAct.id]!.competitiveTier = 17
+						$0.competitiveInfo!.bySeason![currentAct.id]!.rankedRating = 69
 					},
 					PreviewData.summary <- {
 						$0.userID = .init("0c55f5a0-60c5-5cad-b591-531803b973b9")!
-						$0.skillsByQueue[.competitive]!.bySeason![.current]!.competitiveTier = 17
-						$0.skillsByQueue[.competitive]!.bySeason![.current]!.rankedRating = 69
+						$0.competitiveInfo!.bySeason![currentAct.id]!.competitiveTier = 17
+						$0.competitiveInfo!.bySeason![currentAct.id]!.rankedRating = 69
 					},
 				])
 			}

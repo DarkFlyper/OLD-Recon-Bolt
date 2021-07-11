@@ -16,10 +16,9 @@ struct CompetitiveSummaryCell: View {
 	@ViewBuilder
 	private var content: some View {
 		VStack {
-			let info = summary.skillsByQueue[.competitive]?.bySeason?[.current]
-				?? .init(seasonID: .current, actRank: 0, competitiveTier: 0, rankedRating: 0)
-			
-			let tierInfo = assets?.latestTierInfo(number: info.competitiveTier)
+			let act = assets?.seasons.currentAct()
+			let info = act.flatMap { summary.competitiveInfo?.bySeason?[$0.id] }
+			let tierInfo = assets?.seasons.tierInfo(number: info?.competitiveTier ?? 0, in: act)
 			
 			RankInfoView(summary: summary, lineWidth: 6)
 				.frame(width: 96, height: 96)
@@ -29,7 +28,7 @@ struct CompetitiveSummaryCell: View {
 					.font(.callout.weight(.semibold))
 			}
 			
-			Text("\(info.rankedRating) RR")
+			Text("\(info?.rankedRating ?? 0) RR")
 				.font(.caption)
 		}
 	}

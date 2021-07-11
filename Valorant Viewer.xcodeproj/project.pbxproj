@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B90B4B52267C112F00CACB95 /* CompetitiveTierAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90B4B51267C112F00CACB95 /* CompetitiveTierAssets.swift */; };
-		B90B4B53267C112F00CACB95 /* CompetitiveTierAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90B4B51267C112F00CACB95 /* CompetitiveTierAssets.swift */; };
+		B90B4B52267C112F00CACB95 /* CompetitiveTier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90B4B51267C112F00CACB95 /* CompetitiveTier.swift */; };
+		B90B4B53267C112F00CACB95 /* CompetitiveTier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90B4B51267C112F00CACB95 /* CompetitiveTier.swift */; };
 		B90B4B55267C139300CACB95 /* AssetCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90B4B54267C139300CACB95 /* AssetCollection.swift */; };
 		B90B4B56267C139300CACB95 /* AssetCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90B4B54267C139300CACB95 /* AssetCollection.swift */; };
 		B90B4B58267C167B00CACB95 /* PlayerCardAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90B4B57267C167B00CACB95 /* PlayerCardAssets.swift */; };
@@ -125,6 +125,8 @@
 		B9E12B0D25BBD57D008E1E77 /* Optional+Functional.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E12B0B25BBD57D008E1E77 /* Optional+Functional.swift */; };
 		B9E43DA2265DB94C00F59E35 /* MatchViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E43DA1265DB94C00F59E35 /* MatchViewData.swift */; };
 		B9E43DA3265DB94C00F59E35 /* MatchViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E43DA1265DB94C00F59E35 /* MatchViewData.swift */; };
+		B9EB880E26968EE000D38358 /* SeasonDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EB880D26968EE000D38358 /* SeasonDecoding.swift */; };
+		B9EB880F26968EE000D38358 /* SeasonDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EB880D26968EE000D38358 /* SeasonDecoding.swift */; };
 		B9EE0003267EDCB100C08119 /* LocalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EE0002267EDCB100C08119 /* LocalData.swift */; };
 		B9EE0004267EDCB100C08119 /* LocalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EE0002267EDCB100C08119 /* LocalData.swift */; };
 		B9EE6E5B26589DE1007E28B5 /* MatchDetailsHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EE6E5A26589DE1007E28B5 /* MatchDetailsHero.swift */; };
@@ -177,6 +179,8 @@
 		B9F9B4DB26793F3100397AAB /* surrendered_match.json in Resources */ = {isa = PBXBuildFile; fileRef = B9F9B4D926793F3000397AAB /* surrendered_match.json */; };
 		B9F9B4FF26796C2200397AAB /* example_inventory.json in Resources */ = {isa = PBXBuildFile; fileRef = B9F9B4FE26796C2200397AAB /* example_inventory.json */; };
 		B9F9B50026796C2300397AAB /* example_inventory.json in Resources */ = {isa = PBXBuildFile; fileRef = B9F9B4FE26796C2200397AAB /* example_inventory.json */; };
+		B9FB9372269B359900927E03 /* SeasonCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FB9371269B359900927E03 /* SeasonCollection.swift */; };
+		B9FB9373269B359900927E03 /* SeasonCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FB9371269B359900927E03 /* SeasonCollection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -190,7 +194,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B90B4B51267C112F00CACB95 /* CompetitiveTierAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitiveTierAssets.swift; sourceTree = "<group>"; };
+		B90B4B51267C112F00CACB95 /* CompetitiveTier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitiveTier.swift; sourceTree = "<group>"; };
 		B90B4B54267C139300CACB95 /* AssetCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetCollection.swift; sourceTree = "<group>"; };
 		B90B4B57267C167B00CACB95 /* PlayerCardAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCardAssets.swift; sourceTree = "<group>"; };
 		B90B4B5A267C177D00CACB95 /* PlayerTitleAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTitleAssets.swift; sourceTree = "<group>"; };
@@ -256,6 +260,7 @@
 		B9DCF9AD2642F8FD00C39EC4 /* AssetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetManager.swift; sourceTree = "<group>"; };
 		B9E12B0B25BBD57D008E1E77 /* Optional+Functional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Functional.swift"; sourceTree = "<group>"; };
 		B9E43DA1265DB94C00F59E35 /* MatchViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewData.swift; sourceTree = "<group>"; };
+		B9EB880D26968EE000D38358 /* SeasonDecoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonDecoding.swift; sourceTree = "<group>"; };
 		B9EE0002267EDCB100C08119 /* LocalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalData.swift; sourceTree = "<group>"; };
 		B9EE6E5A26589DE1007E28B5 /* MatchDetailsHero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsHero.swift; sourceTree = "<group>"; };
 		B9EE6E5E26589EB8007E28B5 /* MatchDetailsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsContainer.swift; sourceTree = "<group>"; };
@@ -281,6 +286,7 @@
 		B9F66ACD266DC31E008560FD /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		B9F9B4D926793F3000397AAB /* surrendered_match.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = surrendered_match.json; sourceTree = "<group>"; };
 		B9F9B4FE26796C2200397AAB /* example_inventory.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_inventory.json; sourceTree = "<group>"; };
+		B9FB9371269B359900927E03 /* SeasonCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonCollection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -465,11 +471,11 @@
 		B96A0CA5265ADEA000844674 /* Concrete Assets */ = {
 			isa = PBXGroup;
 			children = (
+				B9FB9370269B356800927E03 /* Season-Based */,
 				B9F07CB926474F4E006CD4F5 /* MapAssets.swift */,
 				B9485F83264B1DD300AC3456 /* AgentAssets.swift */,
 				B96A0CA9265AE32200844674 /* MissionAssets.swift */,
 				B96A0CAC265B0FB500844674 /* ObjectiveAssets.swift */,
-				B90B4B51267C112F00CACB95 /* CompetitiveTierAssets.swift */,
 				B90B4B57267C167B00CACB95 /* PlayerCardAssets.swift */,
 				B90B4B5A267C177D00CACB95 /* PlayerTitleAssets.swift */,
 				B9F5CEDD267CD199009CF906 /* GameModeAssets.swift */,
@@ -566,6 +572,16 @@
 				B9F66ACD266DC31E008560FD /* AccountView.swift */,
 			);
 			path = Account;
+			sourceTree = "<group>";
+		};
+		B9FB9370269B356800927E03 /* Season-Based */ = {
+			isa = PBXGroup;
+			children = (
+				B90B4B51267C112F00CACB95 /* CompetitiveTier.swift */,
+				B9EB880D26968EE000D38358 /* SeasonDecoding.swift */,
+				B9FB9371269B359900927E03 /* SeasonCollection.swift */,
+			);
+			path = "Season-Based";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -752,6 +768,7 @@
 				B90B4B55267C139300CACB95 /* AssetCollection.swift in Sources */,
 				B94091AE25D09D5A00EE5DF2 /* LoadManager.swift in Sources */,
 				B9131D69266AFA4C00E85F46 /* MapListView.swift in Sources */,
+				B9EB880E26968EE000D38358 /* SeasonDecoding.swift in Sources */,
 				B9C3499D267AA6DE00BE39B1 /* LiveMatchView.swift in Sources */,
 				B9F5232F266ED96600DFF8DD /* LiveView.swift in Sources */,
 				B9F5CEDE267CD199009CF906 /* GameModeAssets.swift in Sources */,
@@ -789,6 +806,7 @@
 				B9EE6E652658A363007E28B5 /* SwiftUI+Previews.swift in Sources */,
 				B9EE6E5B26589DE1007E28B5 /* MatchDetailsHero.swift in Sources */,
 				B9EE6E6226589FAA007E28B5 /* PreviewData.swift in Sources */,
+				B9FB9372269B359900927E03 /* SeasonCollection.swift in Sources */,
 				B9E43DA2265DB94C00F59E35 /* MatchViewData.swift in Sources */,
 				B9318366267810CE0099B13C /* AgentSelectView.swift in Sources */,
 				B963C4702694FDDA0071E14A /* CompetitiveSummaryCell.swift in Sources */,
@@ -803,7 +821,7 @@
 				B9E12B0C25BBD57D008E1E77 /* Optional+Functional.swift in Sources */,
 				B9485F87264B5BD700AC3456 /* AssetImage.swift in Sources */,
 				B9EE6E712659D30A007E28B5 /* Swift+Helpers.swift in Sources */,
-				B90B4B52267C112F00CACB95 /* CompetitiveTierAssets.swift in Sources */,
+				B90B4B52267C112F00CACB95 /* CompetitiveTier.swift in Sources */,
 				B9EF0F21263CFC870067176A /* MatchDetailsView.swift in Sources */,
 				B9D9E593266D358300827470 /* Lightbox.swift in Sources */,
 				B90B4B58267C167B00CACB95 /* PlayerCardAssets.swift in Sources */,
@@ -825,6 +843,7 @@
 				B90B4B56267C139300CACB95 /* AssetCollection.swift in Sources */,
 				B94091AF25D09D5A00EE5DF2 /* LoadManager.swift in Sources */,
 				B9131D6A266AFA4C00E85F46 /* MapListView.swift in Sources */,
+				B9EB880F26968EE000D38358 /* SeasonDecoding.swift in Sources */,
 				B9C3499E267AA6DE00BE39B1 /* LiveMatchView.swift in Sources */,
 				B9F52330266ED96600DFF8DD /* LiveView.swift in Sources */,
 				B9F5CEDF267CD199009CF906 /* GameModeAssets.swift in Sources */,
@@ -862,6 +881,7 @@
 				B9EE6E662658A363007E28B5 /* SwiftUI+Previews.swift in Sources */,
 				B9EE6E5C26589DE1007E28B5 /* MatchDetailsHero.swift in Sources */,
 				B9EE6E6326589FAA007E28B5 /* PreviewData.swift in Sources */,
+				B9FB9373269B359900927E03 /* SeasonCollection.swift in Sources */,
 				B9E43DA3265DB94C00F59E35 /* MatchViewData.swift in Sources */,
 				B9318367267810CE0099B13C /* AgentSelectView.swift in Sources */,
 				B963C4712694FDDA0071E14A /* CompetitiveSummaryCell.swift in Sources */,
@@ -876,7 +896,7 @@
 				B9E12B0D25BBD57D008E1E77 /* Optional+Functional.swift in Sources */,
 				B9485F88264B5BD700AC3456 /* AssetImage.swift in Sources */,
 				B9EE6E722659D30A007E28B5 /* Swift+Helpers.swift in Sources */,
-				B90B4B53267C112F00CACB95 /* CompetitiveTierAssets.swift in Sources */,
+				B90B4B53267C112F00CACB95 /* CompetitiveTier.swift in Sources */,
 				B9EF0F22263CFC870067176A /* MatchDetailsView.swift in Sources */,
 				B9D9E594266D358300827470 /* Lightbox.swift in Sources */,
 				B90B4B59267C167B00CACB95 /* PlayerCardAssets.swift in Sources */,

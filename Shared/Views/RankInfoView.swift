@@ -2,14 +2,9 @@ import SwiftUI
 import ValorantAPI
 import HandyOperators
 
-// FIXME: remove this. need to handle season assets
-extension Season.ID {
-	static let current = Self("2a27e5d2-4d30-c9e2-b15a-93b8909a442c")!
-}
-
 struct RankInfoView: View {
 	let summary: CompetitiveSummary?
-	var lineWidth: CGFloat = 4.0
+	var lineWidth = 4.0
 	var shouldShowProgress = true
 	var shouldFadeUnranked = false
 	
@@ -21,10 +16,9 @@ struct RankInfoView: View {
 		
 		ZStack {
 			if let summary = summary {
-				let competitiveInfo = summary.skillsByQueue[.competitive]
-				let info = competitiveInfo?.bySeason?[.current]
-					?? .init(seasonID: .current, actRank: 0, competitiveTier: 0, rankedRating: 0)
-				let tierInfo = assets?.latestTierInfo(number: info.competitiveTier)
+				let act = assets?.seasons.currentAct()
+				let info = act.flatMap { summary.competitiveInfo?.bySeason?[$0.id] }
+				let tierInfo = assets?.seasons.tierInfo(number: info?.competitiveTier ?? 0, in: info?.seasonID)
 				
 				if shouldShowProgress {
 					ZStack {
@@ -38,7 +32,7 @@ struct RankInfoView: View {
 					let thickerStroke = StrokeStyle(lineWidth: thickerWidth, lineCap: .round)
 					
 					let ring = Circle().rotation(Angle(degrees: -90))
-					let ratingArc = ring.trim(from: 0, to: CGFloat(info.rankedRating) / 100)
+					let ratingArc = ring.trim(from: 0, to: CGFloat(info?.rankedRating ?? 0) / 100)
 					
 					ZStack {
 						// background ring to fill in with rating arc
@@ -56,13 +50,15 @@ struct RankInfoView: View {
 					ratingArc
 						.stroke(style: stroke)
 						.foregroundColor(.white)
-						.opacity(0.6)
+						.opacity(0.5)
 						.blendMode(.plusLighter)
 				}
 				
-				CompetitiveTierImage(tier: info.competitiveTier)
+				let tier = info?.competitiveTier ?? 0
+				
+				CompetitiveTierImage(tier: tier)
 					.scaleEffect(shouldShowProgress ? 0.75 : 1)
-					.opacity(shouldFadeUnranked && info.competitiveTier == 0 ? 0.5 : 1)
+					.opacity(shouldFadeUnranked && tier == 0 ? 0.5 : 1)
 			} else {
 				backgroundCircle.foregroundColor(.black.opacity(0.1))
 			}
@@ -74,12 +70,13 @@ struct RankInfoView: View {
 
 #if DEBUG
 struct RankInfoView_Previews: PreviewProvider {
-	private static func summaryForTier(_ tier: Int) -> CompetitiveSummary {
+	static let assets = AssetManager.forPreviews.assets!
+	static let act = assets.seasons.currentAct()!
+	static let ranks = assets.seasons.competitiveTiers[act.competitiveTiers]!
+	
+	private static func summary(forTier tier: Int) -> CompetitiveSummary {
 		PreviewData.summary <- {
-			$0
-				.skillsByQueue[.competitive]!
-				.bySeason![.current]!
-				.competitiveTier = tier
+			$0.competitiveInfo!.bySeason![act.id]!.competitiveTier = tier
 		}
 	}
 	
@@ -87,19 +84,18 @@ struct RankInfoView_Previews: PreviewProvider {
 		Group {
 			RankInfoView(summary: PreviewData.summary <- { $0.skillsByQueue = [:] })
 				.frame(height: 64)
-			RankInfoView(summary: summaryForTier(0))
+			RankInfoView(summary: summary(forTier: 0))
 				.frame(height: 64)
-			RankInfoView(summary: summaryForTier(8), shouldShowProgress: false)
+			RankInfoView(summary: PreviewData.summary, shouldShowProgress: false)
 				.frame(width: 64, height: 64)
-				.preferredColorScheme(.dark)
 			RankInfoView(summary: PreviewData.summary, lineWidth: 8)
 				.frame(width: 128, height: 128)
 			
 			LazyHGrid(rows: [.init(), .init(), .init()], spacing: 20) {
-				ForEach(0..<25) { tier in
-					RankInfoView(summary: summaryForTier(tier))
-						.frame(width: 64)
+				ForEach(ranks.tiers.indices) {
+					RankInfoView(summary: summary(forTier: $0))
 				}
+				.frame(width: 64)
 			}
 			.padding()
 			.frame(height: 250)

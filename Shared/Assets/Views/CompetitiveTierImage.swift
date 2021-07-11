@@ -4,13 +4,12 @@ struct CompetitiveTierImage: View {
 	@Environment(\.assets) private var assets
 	
 	var tier: Int
-	var episodeNumber: Int? = nil
+	var actID: Act.ID? = nil
 	
 	var body: some View {
 		if
-			let episodes = assets?.competitiveTierEpisodes,
-			let episode = episodeNumber.flatMap(episodes.elementIfValid(at:)) ?? episodes.last,
-			let image = episode.tiers.elementIfValid(at: tier)?.icon?.imageIfLoaded
+			let tierInfo = assets?.seasons.tierInfo(number: tier, in: actID),
+			let image = tierInfo.icon?.imageIfLoaded
 		{
 			image
 				.resizable()

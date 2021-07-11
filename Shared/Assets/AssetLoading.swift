@@ -14,7 +14,7 @@ extension AssetClient {
 		async let objectives = getObjectiveInfo()
 		async let playerCards = getPlayerCardInfo()
 		async let playerTitles = getPlayerTitleInfo()
-		async let competitiveTiers = getCompetitiveTiers()
+		async let seasons = getSeasons()
 		
 		let collection = try await AssetCollection(
 			version: version,
@@ -25,7 +25,7 @@ extension AssetClient {
 			objectives: .init(values: objectives),
 			playerCards: .init(values: playerCards),
 			playerTitles: .init(values: playerTitles),
-			competitiveTierEpisodes: competitiveTiers
+			seasons: seasons
 		)
 		
 		return try await downloadAllImages(for: collection, onProgress: onProgress)
