@@ -11,7 +11,7 @@ struct MatchCell: View {
 		$0.timeStyle = .short
 	}
 	
-	private let visualsHeight: CGFloat = 64
+	private let visualsHeight = 64.0
 	
 	let match: CompetitiveUpdate
 	let userID: User.ID
@@ -71,7 +71,7 @@ struct MatchCell: View {
 	
 	@ViewBuilder
 	private var changeRing: some View {
-		let lineWidth: CGFloat = 4
+		let lineWidth = 4.0
 		
 		ZStack {
 			let before = CGFloat(match.eloBeforeUpdate) / 100

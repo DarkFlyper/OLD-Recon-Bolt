@@ -14,8 +14,8 @@ struct KillBreakdownView: View {
 	}
 	
 	// I tried to do this with alignment guides but this solution ended up being cleaner
-	@State private var topHeight: CGFloat = 0
-	@State private var bottomHeight: CGFloat = 0
+	@State private var topHeight = 0.0
+	@State private var bottomHeight = 0.0
 	
 	var body: some View {
 		let rounds = collectRoundData()
@@ -88,7 +88,7 @@ struct KillBreakdownView: View {
 	
 	@ViewBuilder
 	private func roundBreakdown(for round: Round) -> some View {
-		let width: CGFloat = isCompact ? 30 : 50
+		let width = isCompact ? 30.0 : 50.0
 		
 		VStack(spacing: 1) {
 			let backgroundOpacity = 0.25

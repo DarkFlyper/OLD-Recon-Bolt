@@ -20,7 +20,7 @@ struct MapListView: View {
 	struct MapCell: View {
 		let map: MapInfo
 		
-		private let visualsHeight: CGFloat = 64
+		private let visualsHeight = 64.0
 		
 		var body: some View {
 			HStack(spacing: 12) {

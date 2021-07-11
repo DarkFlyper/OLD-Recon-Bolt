@@ -25,7 +25,7 @@ extension View {
 struct Measuring<Key: PreferenceKey>: ViewModifier where Key.Value == CGFloat {
 	let measurePath: KeyPath<CGSize, CGFloat>
 	
-	@State private var value: CGFloat = 0
+	@State private var value = 0.0
 	
 	func body(content: Content) -> some View {
 		content

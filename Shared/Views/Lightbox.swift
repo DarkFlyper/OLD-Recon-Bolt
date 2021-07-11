@@ -5,11 +5,11 @@ struct Lightbox<Content: View>: View {
 	@Environment(\.presentationMode) @Binding var presentationMode
 	
 	@ViewBuilder let content: () -> Content
-	let minZoomScale: CGFloat = 1
-	let maxZoomScale: CGFloat = 10
+	let minZoomScale = 1.0
+	let maxZoomScale = 10.0
 	
-	@State private var zoomScaleBase: CGFloat = 1
-	@GestureState private var zoomScaleDelta: CGFloat = 1
+	@State private var zoomScaleBase = 1.0
+	@GestureState private var zoomScaleDelta = 1.0
 	private var zoomScale: CGFloat { zoomScaleBase * zoomScaleDelta }
 	@State private var contentSize = CGSize(width: 1, height: 1)
 	

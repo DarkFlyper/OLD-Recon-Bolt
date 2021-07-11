@@ -76,7 +76,7 @@ struct LiveMatchView: View {
 		let player: LiveGameInfo.PlayerInfo
 		let ownPlayer: LiveGameInfo.PlayerInfo
 		
-		@State var playerUser: User? = nil
+		@State var playerUser: User?
 		@State var summary: CompetitiveSummary?
 		@Environment(\.assets) private var assets
 		
@@ -85,7 +85,7 @@ struct LiveMatchView: View {
 			let isSelf = player.id == ownPlayer.id
 			let teamColor: Color = isAlly ? .valorantBlue : .valorantRed
 			let relativeColor = isSelf ? .valorantSelf : teamColor
-			let iconSize: CGFloat = 48
+			let iconSize = 48.0
 			
 			HStack {
 				AgentImage.displayIcon(player.agentID)

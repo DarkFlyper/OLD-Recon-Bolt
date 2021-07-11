@@ -1,13 +1,13 @@
 import SwiftUI
 import ValorantAPI
 
-private let scoreboardPadding: CGFloat = 6
+private let scoreboardPadding = 6.0
 
 struct ScoreboardView: View {
 	let data: MatchViewData
 	@Binding var highlight: PlayerHighlightInfo
 	
-	@State private var width: CGFloat = 0
+	@State private var width = 0.0
 	@Environment(\.valorantLoad) private var load
 	
 	var body: some View {
