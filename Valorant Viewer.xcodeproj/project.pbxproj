@@ -357,11 +357,7 @@
 				B9131D67266AFA3B00E85F46 /* Reference */,
 				B9F66ACC266DC2F5008560FD /* Account */,
 				B9EE6E5D26589E8F007E28B5 /* Match Details */,
-				B9D9E592266D358300827470 /* Lightbox.swift */,
-				B9F65C4D2651EDA500C9C34A /* DynamicallyStroked.swift */,
-				B9EF0F26263D9D860067176A /* ValorantAPI+SwiftUI.swift */,
-				B989466A26860D8A00C8059A /* AsyncButton.swift */,
-				B963C47526950FE90071E14A /* RankInfoView.swift */,
+				B98E4703269B40A1003C9088 /* General */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -481,6 +477,18 @@
 				B9F5CEDD267CD199009CF906 /* GameModeAssets.swift */,
 			);
 			path = "Concrete Assets";
+			sourceTree = "<group>";
+		};
+		B98E4703269B40A1003C9088 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				B9D9E592266D358300827470 /* Lightbox.swift */,
+				B9F65C4D2651EDA500C9C34A /* DynamicallyStroked.swift */,
+				B9EF0F26263D9D860067176A /* ValorantAPI+SwiftUI.swift */,
+				B989466A26860D8A00C8059A /* AsyncButton.swift */,
+				B963C47526950FE90071E14A /* RankInfoView.swift */,
+			);
+			path = General;
 			sourceTree = "<group>";
 		};
 		B9DCF9A92642F78900C39EC4 /* Preview Content */ = {
