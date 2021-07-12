@@ -75,6 +75,8 @@
 		B95B1A4D269CE1810080EC81 /* ScoreSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95B1A4B269CE1810080EC81 /* ScoreSummaryView.swift */; };
 		B95B1A4F269CE1D10080EC81 /* KDASummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95B1A4E269CE1D10080EC81 /* KDASummaryView.swift */; };
 		B95B1A50269CE1D10080EC81 /* KDASummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95B1A4E269CE1D10080EC81 /* KDASummaryView.swift */; };
+		B95B1A74269CEC7B0080EC81 /* BookmarkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95B1A73269CEC7B0080EC81 /* BookmarkListView.swift */; };
+		B95B1A75269CEC7B0080EC81 /* BookmarkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95B1A73269CEC7B0080EC81 /* BookmarkListView.swift */; };
 		B963C4702694FDDA0071E14A /* CompetitiveSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B963C46F2694FDDA0071E14A /* CompetitiveSummaryCell.swift */; };
 		B963C4712694FDDA0071E14A /* CompetitiveSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B963C46F2694FDDA0071E14A /* CompetitiveSummaryCell.swift */; };
 		B963C4732694FE920071E14A /* example_summary.json in Resources */ = {isa = PBXBuildFile; fileRef = B963C4722694FE920071E14A /* example_summary.json */; };
@@ -243,6 +245,7 @@
 		B95407302694C157009FB17B /* LiveMatchContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveMatchContainer.swift; sourceTree = "<group>"; };
 		B95B1A4B269CE1810080EC81 /* ScoreSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreSummaryView.swift; sourceTree = "<group>"; };
 		B95B1A4E269CE1D10080EC81 /* KDASummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KDASummaryView.swift; sourceTree = "<group>"; };
+		B95B1A73269CEC7B0080EC81 /* BookmarkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkListView.swift; sourceTree = "<group>"; };
 		B963C46F2694FDDA0071E14A /* CompetitiveSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitiveSummaryCell.swift; sourceTree = "<group>"; };
 		B963C4722694FE920071E14A /* example_summary.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_summary.json; sourceTree = "<group>"; };
 		B963C47526950FE90071E14A /* RankInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankInfoView.swift; sourceTree = "<group>"; };
@@ -572,6 +575,7 @@
 				B9CF2E7825A89976004A1458 /* MatchCell.swift */,
 				B963C4782695101C0071E14A /* PlayerIdentityCell.swift */,
 				B963C46F2694FDDA0071E14A /* CompetitiveSummaryCell.swift */,
+				B95B1A73269CEC7B0080EC81 /* BookmarkListView.swift */,
 			);
 			path = "Match List";
 			sourceTree = "<group>";
@@ -817,6 +821,7 @@
 				B9741478266F18A800892B5F /* String+Localization.swift in Sources */,
 				B94091B325D09DF900EE5DF2 /* SwiftUI+CrossPlatform.swift in Sources */,
 				B941B6D825A7A09000F675C1 /* Credentials.swift in Sources */,
+				B95B1A74269CEC7B0080EC81 /* BookmarkListView.swift in Sources */,
 				B989466B26860D8A00C8059A /* AsyncButton.swift in Sources */,
 				B9EE6E682658A6D2007E28B5 /* AssetLoading.swift in Sources */,
 				B9CF2E7925A89976004A1458 /* MatchCell.swift in Sources */,
@@ -896,6 +901,7 @@
 				B9741479266F18A800892B5F /* String+Localization.swift in Sources */,
 				B94091B425D09DF900EE5DF2 /* SwiftUI+CrossPlatform.swift in Sources */,
 				B941B6D925A7A09000F675C1 /* Credentials.swift in Sources */,
+				B95B1A75269CEC7B0080EC81 /* BookmarkListView.swift in Sources */,
 				B989466C26860D8A00C8059A /* AsyncButton.swift in Sources */,
 				B9EE6E692658A6D2007E28B5 /* AssetLoading.swift in Sources */,
 				B9CF2E7A25A89976004A1458 /* MatchCell.swift in Sources */,

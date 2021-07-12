@@ -17,7 +17,7 @@ struct ContentView: View {
 	var body: some View {
 		TabView(selection: $tab) {
 			onlineView { client in
-				MatchListView(user: client.user)
+				BookmarkListView(myself: client.user)
 					.withToolbar()
 			}
 			.tabItem { Label("Career", systemImage: "square.fill.text.grid.1x2") }
@@ -47,6 +47,7 @@ struct ContentView: View {
 		.withValorantLoadFunction(dataStore: dataStore)
 		.withLoadErrorAlerts()
 		.environment(\.assets, assetManager.assets)
+		.environmentObject(BookmarkList())
 	}
 	
 	@ViewBuilder

@@ -11,6 +11,7 @@ struct MatchListView: View {
 	@State var shouldShowUnranked = true
 	
 	@Environment(\.valorantLoad) private var load
+	@EnvironmentObject private var bookmarkList: BookmarkList
 	
 	private var shownMatches: [CompetitiveUpdate] {
 		let matches = matchList?.matches ?? []
@@ -46,13 +47,23 @@ struct MatchListView: View {
 		.toolbar {
 			ToolbarItemGroup(placement: .navigationBarTrailing) {
 				Button {
+					bookmarkList.toggleBookmark(for: user.id)
+				} label: {
+					if bookmarkList.bookmarks.contains(user.id) {
+						Label("Remove Bookmark", systemImage: "bookmark.fill")
+					} else {
+						Label("Add Bookmark", systemImage: "bookmark")
+					}
+				}
+				
+				Button {
 					withAnimation { shouldShowUnranked.toggle() }
 				} label: {
-					Image(
-						systemName: shouldShowUnranked
-							? "line.horizontal.3.decrease.circle"
-							: "line.horizontal.3.decrease.circle.fill"
-					)
+					if shouldShowUnranked {
+						Label("Hide Unranked", systemImage: "line.horizontal.3.decrease.circle")
+					} else {
+						Label("Show Unranked", systemImage: "line.horizontal.3.decrease.circle.fill")
+					}
 				}
 				
 				#if DEBUG
@@ -62,7 +73,7 @@ struct MatchListView: View {
 						$0.highestLoadedIndex = 0
 					})
 				} label: {
-					Image(systemName: "minus.circle")
+					Label("Remove First Match", systemImage: "minus.circle")
 				}
 				#endif
 			}
@@ -111,6 +122,7 @@ struct MatchListView_Previews: PreviewProvider {
 		)
 		.withToolbar()
 		.inEachColorScheme()
+		.environmentObject(BookmarkList())
 	}
 }
 #endif
