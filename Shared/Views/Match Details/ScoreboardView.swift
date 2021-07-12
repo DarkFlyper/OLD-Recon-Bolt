@@ -1,8 +1,6 @@
 import SwiftUI
 import ValorantAPI
 
-private let scoreboardPadding = 6.0
-
 struct ScoreboardView: View {
 	let data: MatchViewData
 	@Binding var highlight: PlayerHighlightInfo
@@ -15,7 +13,7 @@ struct ScoreboardView: View {
 			let sorted = data.details.players.sorted { $0.stats.score > $1.stats.score }
 			
 			ScrollView(.horizontal, showsIndicators: false) {
-				VStack(spacing: scoreboardPadding) {
+				VStack(spacing: ScoreboardRowView.padding) {
 					ForEach(sorted) { player in
 						ScoreboardRowView(player: player, data: data, highlight: $highlight)
 					}
@@ -40,6 +38,7 @@ struct ScoreboardView: View {
 }
 
 struct ScoreboardRowView: View {
+	static let padding = 6.0
 	private static let partyLetters = (UnicodeScalar("A").value...UnicodeScalar("Z").value)
 		.map { String(UnicodeScalar($0)!) }
 	
@@ -48,14 +47,14 @@ struct ScoreboardRowView: View {
 	@Binding var highlight: PlayerHighlightInfo
 	
 	@State private var summary: CompetitiveSummary?
-
+	
 	var body: some View {
 		let divider = Rectangle()
 			.frame(width: 1)
 			.blendMode(.destinationOut)
 		let relativeColor = data.relativeColor(of: player)
 		
-		HStack(spacing: 0) {
+		HStack(spacing: Self.padding) {
 			AgentImage.displayIcon(player.agentID)
 				.aspectRatio(1, contentMode: .fit)
 				.dynamicallyStroked(radius: 1, color: .white)
@@ -63,94 +62,110 @@ struct ScoreboardRowView: View {
 				.compositingGroup()
 				.opacity(highlight.shouldFade(player.id) ? 0.5 : 1)
 			
-			HStack(spacing: scoreboardPadding) {
-				Group {
-					Group {
-						Text(verbatim: player.gameName)
-							.fontWeight(
-								highlight.isHighlighting(player.partyID)
-									.map { $0 ? .semibold : .regular }
-									?? .medium
-							)
-							.foregroundColor(relativeColor)
-							.fixedSize()
-							.frame(maxWidth: .infinity, alignment: .leading)
-							.padding(.trailing, 4)
-						
-						Spacer()
-						
-						if player.id != data.myself?.id {
-							NavigationLink(destination: UserView(for: User(player))) {
-								Image(systemName: "person.crop.circle.fill")
-									.padding(.horizontal, 4)
-							}
-							.foregroundColor(relativeColor)
-						}
-					}
-					
-					RankInfoView(summary: summary, lineWidth: 2, shouldShowProgress: false, shouldFadeUnranked: true)
-					
+			HStack {
+				identitySection
+					.foregroundColor(relativeColor)
+				
+				divider
+				
+				Text(verbatim: "\(player.stats.score)")
+					.frame(width: 60)
+				
+				divider
+				
+				kdaSummary
+					.frame(width: 120)
+				
+				if !data.parties.isEmpty {
 					divider
 					
-					Group {
-						Text(verbatim: "\(player.stats.score)")
-							.frame(width: 60)
-						
-						divider
-						
-						HStack {
-							Text(verbatim: "\(player.stats.kills)")
-							Text("/").foregroundStyle(.secondary)
-							Text(verbatim: "\(player.stats.deaths)")
-							Text("/").opacity(0.5)
-							Text(verbatim: "\(player.stats.assists)")
-						}
-						.frame(width: 120)
-						
-						if !data.parties.isEmpty {
-							divider
-							
-							Group {
-								if let partyIndex = data.parties.firstIndex(of: player.partyID) {
-									let partyLetter = Self.partyLetters[partyIndex]
-									let shouldEmphasize = highlight.isHighlighting(player.partyID) == true
-									Text("Party \(partyLetter)")
-										.fontWeight(shouldEmphasize ? .medium : .regular)
-								} else {
-									Text("–")
-								}
-							}
-							.opacity(highlight.shouldFade(player.partyID) ? 0.5 : 1)
-							.frame(width: 80)
-						}
-					}
+					partyLabel(for: player.partyID)
+						.frame(width: 80)
 				}
-				.frame(maxHeight: .infinity)
 			}
-			.padding(scoreboardPadding)
+			.padding(.vertical, Self.padding)
 			
 			relativeColor
-				.frame(width: scoreboardPadding)
+				.frame(width: Self.padding)
 		}
-		.frame(height: 44)
 		.background(relativeColor.opacity(0.25))
-		.cornerRadius(scoreboardPadding)
+		.frame(height: 44)
+		.cornerRadius(Self.padding)
 		.compositingGroup() // for the destination-out blending
 		.onTapGesture {
 			highlight.switchHighlight(to: player)
 		}
 		.withLocalData($summary) { $0.competitiveSummary(for: player.id) }
 	}
+	
+	@ViewBuilder
+	var identitySection: some View {
+		Text(verbatim: player.gameName)
+			.fontWeight(
+				highlight.isHighlighting(player.partyID)
+					.map { $0 ? .semibold : .regular }
+					?? .medium
+			)
+			.fixedSize()
+			.frame(maxWidth: .infinity, alignment: .leading)
+			.padding(.trailing, 4)
+		
+		Spacer()
+		
+		if player.id != data.myself?.id {
+			NavigationLink(destination: UserView(for: User(player))) {
+				Image(systemName: "person.crop.circle.fill")
+					.frame(maxHeight: .infinity)
+					.padding(.horizontal, 4)
+			}
+		}
+		
+		RankInfoView(summary: summary, lineWidth: 2, shouldShowProgress: false, shouldFadeUnranked: true)
+			.foregroundColor(nil)
+	}
+	
+	var kdaSummary: some View {
+		HStack {
+			Text("\(player.stats.kills)")
+			Text("/").foregroundStyle(.secondary)
+			Text("\(player.stats.deaths)")
+			Text("/").opacity(0.5)
+			Text("\(player.stats.assists)")
+		}
+	}
+	
+	func partyLabel(for party: Party.ID) -> some View {
+		Group {
+			if let partyIndex = data.parties.firstIndex(of: party) {
+				let partyLetter = Self.partyLetters[partyIndex]
+				let shouldEmphasize = highlight.isHighlighting(party) == true
+				Text("Party \(partyLetter)")
+					.fontWeight(shouldEmphasize ? .medium : .regular)
+			} else {
+				Text("–")
+			}
+		}
+		.opacity(highlight.shouldFade(party) ? 0.5 : 1)
+	}
 }
 
 #if DEBUG
 struct ScoreboardView_Previews: PreviewProvider {
 	static var previews: some View {
-		ScoreboardView(data: PreviewData.singleMatchData, highlight: .constant(.init()))
-			.padding(.vertical)
-			.inEachColorScheme()
-			.fixedSize(horizontal: true, vertical: true)
-			.previewLayout(.sizeThatFits)
+		Group {
+			ScoreboardView(data: PreviewData.singleMatchData, highlight: .constant(.init()))
+				.padding(.vertical)
+				.inEachColorScheme()
+			
+			ScoreboardRowView(
+				player: PreviewData.singleMatch.players[0],
+				data: PreviewData.singleMatchData,
+				highlight: .constant(.init())
+			)
+			.padding()
+		}
+		.fixedSize(horizontal: true, vertical: true)
+		.previewLayout(.sizeThatFits)
 	}
 }
 #endif
