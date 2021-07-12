@@ -18,43 +18,30 @@ struct RankInfoView: View {
 			if let summary = summary {
 				let act = assets?.seasons.currentAct()
 				let info = act.flatMap { summary.competitiveInfo?.bySeason?[$0.id] }
-				let tierInfo = assets?.seasons.tierInfo(number: info?.competitiveTier ?? 0, in: info?.seasonID)
+				let tier = info?.competitiveTier ?? 0
+				let tierInfo = assets?.seasons.tierInfo(number: tier, in: info?.seasonID)
 				
 				if shouldShowProgress {
-					ZStack {
-						tierInfo?.backgroundColor
-						Color.black.opacity(0.25).blendMode(.plusDarker)
-					}
-					.mask(Circle())
-					.padding(-0.5 * thickerWidth)
+					let darkening = 0.25
 					
-					let stroke = StrokeStyle(lineWidth: lineWidth, lineCap: .round)
-					let thickerStroke = StrokeStyle(lineWidth: thickerWidth, lineCap: .round)
-					
-					let ring = Circle().rotation(Angle(degrees: -90))
-					let ratingArc = ring.trim(from: 0, to: CGFloat(info?.rankedRating ?? 0) / 100)
-					
-					ZStack {
-						// background ring to fill in with rating arc
-						ring
-							.stroke(style: stroke)
-							.foregroundColor(tierInfo?.backgroundColor)
-						
-						// knock out background ring around rating arc
-						ratingArc
-							.stroke(style: thickerStroke)
-							.blendMode(.destinationOut)
-					}
-					.compositingGroup()
-					
-					ratingArc
-						.stroke(style: stroke)
-						.foregroundColor(.white)
-						.opacity(0.5)
-						.blendMode(.plusLighter)
+					CircularProgressView(
+						lineWidth: lineWidth,
+						background: {
+							ZStack {
+								tierInfo?.backgroundColor
+								Color.black.opacity(darkening).blendMode(.plusDarker)
+							}
+						},
+						base: { Color.white.opacity(darkening).blendMode(.plusLighter) },
+						layers: {
+							CircularProgressLayer(
+								end: CGFloat(info?.rankedRating ?? 0) / 100,
+								shouldKnockOutSurroundings: true,
+								color: .white, opacity: 0.5, blendMode: .plusLighter
+							)
+						}
+					)
 				}
-				
-				let tier = info?.competitiveTier ?? 0
 				
 				CompetitiveTierImage(tier: tier)
 					.scaleEffect(shouldShowProgress ? 0.75 : 1)
@@ -86,6 +73,7 @@ struct RankInfoView_Previews: PreviewProvider {
 				.frame(height: 64)
 			RankInfoView(summary: summary(forTier: 0))
 				.frame(height: 64)
+				.inEachColorScheme()
 			RankInfoView(summary: PreviewData.summary, shouldShowProgress: false)
 				.frame(width: 64, height: 64)
 			RankInfoView(summary: PreviewData.summary, lineWidth: 8)
