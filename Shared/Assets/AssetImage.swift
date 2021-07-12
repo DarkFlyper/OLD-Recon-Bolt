@@ -6,8 +6,15 @@ import HandyOperators
 struct AssetImage: Hashable {
 	var url: URL
 	
-	var image: Image {
-		imageIfLoaded ?? Image(systemName: "x")
+	@ViewBuilder
+	var imageOrPlaceholder: some View {
+		if let image = imageIfLoaded {
+			image
+				.resizable()
+				.scaledToFit()
+		} else {
+			Color.gray
+		}
 	}
 	
 	var imageIfLoaded: Image? {

@@ -30,14 +30,11 @@ struct _AssetImageView<Provider: _AssetImageProvider>: View {
 	}
 	
 	var body: some View {
-		if
-			let image = assets?[keyPath: Provider.assetPath][id]
-				.flatMap(imageGetter)?
-				.imageIfLoaded
-		{
-			image
-				.resizable()
-				.scaledToFit()
+		let assetImage = assets?[keyPath: Provider.assetPath][id]
+			.flatMap(imageGetter)
+		
+		if let assetImage = assetImage {
+			assetImage.imageOrPlaceholder
 		} else {
 			Color.gray
 		}
