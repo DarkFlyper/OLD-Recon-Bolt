@@ -1,6 +1,8 @@
 import Foundation
 import ValorantAPI
 
+// somehow this file is included in builds for profiling. let's avoid that.
+#if DEBUG
 enum PreviewData {
 	static let userID = Player.ID("3fa8598d-066e-5bdb-998c-74c015c5dba5")!
 	static let userInfo = UserInfo(
@@ -93,3 +95,4 @@ private struct EmptyClientData: ClientData {
 	init?(using keychain: Keychain) { return nil }
 	func save(using keychain: Keychain) {}
 }
+#endif
