@@ -71,6 +71,10 @@
 		B954072F2694C0A4009FB17B /* AgentSelectContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B954072D2694C0A4009FB17B /* AgentSelectContainer.swift */; };
 		B95407312694C157009FB17B /* LiveMatchContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95407302694C157009FB17B /* LiveMatchContainer.swift */; };
 		B95407322694C157009FB17B /* LiveMatchContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95407302694C157009FB17B /* LiveMatchContainer.swift */; };
+		B95B1A4C269CE1810080EC81 /* ScoreSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95B1A4B269CE1810080EC81 /* ScoreSummaryView.swift */; };
+		B95B1A4D269CE1810080EC81 /* ScoreSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95B1A4B269CE1810080EC81 /* ScoreSummaryView.swift */; };
+		B95B1A4F269CE1D10080EC81 /* KDASummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95B1A4E269CE1D10080EC81 /* KDASummaryView.swift */; };
+		B95B1A50269CE1D10080EC81 /* KDASummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95B1A4E269CE1D10080EC81 /* KDASummaryView.swift */; };
 		B963C4702694FDDA0071E14A /* CompetitiveSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B963C46F2694FDDA0071E14A /* CompetitiveSummaryCell.swift */; };
 		B963C4712694FDDA0071E14A /* CompetitiveSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B963C46F2694FDDA0071E14A /* CompetitiveSummaryCell.swift */; };
 		B963C4732694FE920071E14A /* example_summary.json in Resources */ = {isa = PBXBuildFile; fileRef = B963C4722694FE920071E14A /* example_summary.json */; };
@@ -237,6 +241,8 @@
 		B9485F91264B639F00AC3456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B954072D2694C0A4009FB17B /* AgentSelectContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentSelectContainer.swift; sourceTree = "<group>"; };
 		B95407302694C157009FB17B /* LiveMatchContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveMatchContainer.swift; sourceTree = "<group>"; };
+		B95B1A4B269CE1810080EC81 /* ScoreSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreSummaryView.swift; sourceTree = "<group>"; };
+		B95B1A4E269CE1D10080EC81 /* KDASummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KDASummaryView.swift; sourceTree = "<group>"; };
 		B963C46F2694FDDA0071E14A /* CompetitiveSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitiveSummaryCell.swift; sourceTree = "<group>"; };
 		B963C4722694FE920071E14A /* example_summary.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_summary.json; sourceTree = "<group>"; };
 		B963C47526950FE90071E14A /* RankInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankInfoView.swift; sourceTree = "<group>"; };
@@ -494,6 +500,8 @@
 				B989466A26860D8A00C8059A /* AsyncButton.swift */,
 				B963C47526950FE90071E14A /* RankInfoView.swift */,
 				B98E4704269B40DB003C9088 /* CircularProgressView.swift */,
+				B95B1A4B269CE1810080EC81 /* ScoreSummaryView.swift */,
+				B95B1A4E269CE1D10080EC81 /* KDASummaryView.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -800,6 +808,7 @@
 				B9EE6E6E26594374007E28B5 /* KillBreakdownView.swift in Sources */,
 				B941B6E525A7C48300F675C1 /* LoginForm.swift in Sources */,
 				B9131D65266AF6C600E85F46 /* ReferenceView.swift in Sources */,
+				B95B1A4C269CE1810080EC81 /* ScoreSummaryView.swift in Sources */,
 				B94091B825D09F0200EE5DF2 /* MatchListView.swift in Sources */,
 				B96A0CAD265B0FB500844674 /* ObjectiveAssets.swift in Sources */,
 				B9F65C472651D20200C9C34A /* AssetImageView.swift in Sources */,
@@ -823,6 +832,7 @@
 				B9F65C4B2651DFB100C9C34A /* AgentImage.swift in Sources */,
 				B9EE6E652658A363007E28B5 /* SwiftUI+Previews.swift in Sources */,
 				B9EE6E5B26589DE1007E28B5 /* MatchDetailsHero.swift in Sources */,
+				B95B1A4F269CE1D10080EC81 /* KDASummaryView.swift in Sources */,
 				B9EE6E6226589FAA007E28B5 /* PreviewData.swift in Sources */,
 				B9FB9372269B359900927E03 /* SeasonCollection.swift in Sources */,
 				B9E43DA2265DB94C00F59E35 /* MatchViewData.swift in Sources */,
@@ -877,6 +887,7 @@
 				B9EE6E6F26594374007E28B5 /* KillBreakdownView.swift in Sources */,
 				B941B6E625A7C48300F675C1 /* LoginForm.swift in Sources */,
 				B9131D66266AF6C600E85F46 /* ReferenceView.swift in Sources */,
+				B95B1A4D269CE1810080EC81 /* ScoreSummaryView.swift in Sources */,
 				B94091B925D09F0200EE5DF2 /* MatchListView.swift in Sources */,
 				B96A0CAE265B0FB500844674 /* ObjectiveAssets.swift in Sources */,
 				B9F65C482651D20200C9C34A /* AssetImageView.swift in Sources */,
@@ -900,6 +911,7 @@
 				B9F65C4C2651DFB100C9C34A /* AgentImage.swift in Sources */,
 				B9EE6E662658A363007E28B5 /* SwiftUI+Previews.swift in Sources */,
 				B9EE6E5C26589DE1007E28B5 /* MatchDetailsHero.swift in Sources */,
+				B95B1A50269CE1D10080EC81 /* KDASummaryView.swift in Sources */,
 				B9EE6E6326589FAA007E28B5 /* PreviewData.swift in Sources */,
 				B9FB9373269B359900927E03 /* SeasonCollection.swift in Sources */,
 				B9E43DA3265DB94C00F59E35 /* MatchViewData.swift in Sources */,

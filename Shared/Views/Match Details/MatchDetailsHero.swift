@@ -14,7 +14,7 @@ struct MatchDetailsHero: View {
 				.overlay(MapImage.Label(mapID: mapID).padding(6))
 			
 			VStack {
-				scoreSummary(for: data.details.teams)
+				ScoreSummaryView(data: data)
 					.font(.largeTitle.weight(.bold))
 				
 				Text(data.details.matchInfo.queueID.name)
@@ -27,33 +27,11 @@ struct MatchDetailsHero: View {
 			.shadow(radius: 10)
 		}
 	}
-	
-	@ViewBuilder
-	private func scoreSummary(for teams: [Team]) -> some View {
-		let _ = assert(!teams.isEmpty)
-		let sorted = teams.sorted(on: \.pointCount)
-			.reversed()
-			.movingToFront { $0.id == data.myself?.teamID }
-		
-		if sorted.count >= 2 {
-			HStack {
-				Text(verbatim: "\(sorted[0].pointCount)")
-					.foregroundColor(.valorantBlue)
-				Text("–")
-					.foregroundStyle(.tertiary)
-				Text(verbatim: "\(sorted[1].pointCount)")
-					.foregroundColor(.valorantRed)
-				
-				if sorted.count > 2 {
-					Text("–")
-						.foregroundStyle(.tertiary)
-					Text(verbatim: "…")
-						.foregroundColor(.valorantRed)
-				}
-			}
-		} else {
-			Text(verbatim: "\(sorted[0].pointCount) points")
-		}
+}
+
+extension ScoreSummaryView {
+	init(data: MatchViewData) {
+		self.init(teams: data.details.teams, ownTeamID: data.myself?.teamID)
 	}
 }
 

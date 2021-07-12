@@ -73,7 +73,7 @@ struct ScoreboardRowView: View {
 				
 				divider
 				
-				kdaSummary
+				KDASummaryView(player: player)
 					.frame(width: 120)
 				
 				if !data.parties.isEmpty {
@@ -122,16 +122,6 @@ struct ScoreboardRowView: View {
 		
 		RankInfoView(summary: summary, lineWidth: 2, shouldShowProgress: false, shouldFadeUnranked: true)
 			.foregroundColor(nil)
-	}
-	
-	var kdaSummary: some View {
-		HStack {
-			Text("\(player.stats.kills)")
-			Text("/").foregroundStyle(.secondary)
-			Text("\(player.stats.deaths)")
-			Text("/").opacity(0.5)
-			Text("\(player.stats.assists)")
-		}
 	}
 	
 	func partyLabel(for party: Party.ID) -> some View {
