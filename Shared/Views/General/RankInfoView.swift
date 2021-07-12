@@ -69,13 +69,15 @@ struct RankInfoView_Previews: PreviewProvider {
 	
 	static var previews: some View {
 		Group {
-			RankInfoView(summary: PreviewData.summary <- { $0.skillsByQueue = [:] })
-				.frame(height: 64)
-			RankInfoView(summary: summary(forTier: 0))
-				.frame(height: 64)
-				.inEachColorScheme()
-			RankInfoView(summary: PreviewData.summary, shouldShowProgress: false)
-				.frame(width: 64, height: 64)
+			Group {
+				RankInfoView(summary: nil)
+				RankInfoView(summary: PreviewData.summary <- { $0.skillsByQueue = [:] })
+				RankInfoView(summary: summary(forTier: 0))
+					.inEachColorScheme()
+				RankInfoView(summary: PreviewData.summary, shouldShowProgress: false)
+			}
+			.frame(height: 64)
+			
 			RankInfoView(summary: PreviewData.summary, lineWidth: 8)
 				.frame(width: 128, height: 128)
 			
