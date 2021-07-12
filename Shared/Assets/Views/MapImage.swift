@@ -8,19 +8,26 @@ struct _MapImageProvider: _AssetImageProvider {
 
 extension _AssetImageView where Provider == _MapImageProvider { // just using MapImage breaks the preview
 	struct Label: View {
-		@Environment(\.assets) private var assets
-		
 		let mapID: MapID
 		
 		var body: some View {
-			Text(assets?.maps[mapID]?.displayName ?? "unknown")
-				.font(Font.callout.smallCaps())
-				.bold()
+			LabelText(mapID: mapID)
+				.font(Font.callout.smallCaps().bold())
 				.foregroundStyle(Material.regular)
 				.shadow(radius: 1)
-				.padding(.leading, 4) // visual alignment
+				.padding(.horizontal, 4) // visual alignment
 				.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
 				.colorScheme(.light)
+		}
+	}
+	
+	struct LabelText: View {
+		let mapID: MapID
+		
+		@Environment(\.assets) private var assets
+		
+		var body: some View {
+			Text(assets?.maps[mapID]?.displayName ?? "unknown")
 		}
 	}
 }
