@@ -40,7 +40,7 @@ struct GameModeInfo: AssetItem, Codable, Identifiable {
 		
 		// It doesn't always end in "PrimaryAsset", so let's rely on something else instead…
 		let endRange = trimmed.range(of: "GameMode_")!
-		return .init(String(trimmed[..<endRange.upperBound]))
+		return .init(String(trimmed[..<endRange.upperBound].dropLast()))
 		// e.g. "GameModes/Bomb/BombGameMode"
 	}
 	
