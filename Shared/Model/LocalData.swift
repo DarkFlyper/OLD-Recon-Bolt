@@ -29,7 +29,7 @@ final actor LocalDataManager<Object: Identifiable & Codable> where Object.ID: Lo
 		)
 	}
 	
-	func store(_ objects: [Object]) {
+	func store<S: Sequence>(_ objects: S) where S.Element == Object {
 		let entries = objects.map { Entry(object: $0) }
 		for entry in entries {
 			cache[entry.id] = entry

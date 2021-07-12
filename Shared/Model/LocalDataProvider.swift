@@ -43,7 +43,10 @@ final class LocalDataProvider {
 				let currentAct = await AssetManager.forPreviews.assets!.seasons.currentAct()!
 				
 				// TODO: use some other mechanism to express this stuff now that it's unified
-				await userManager.store([] + PreviewData.pregameUsers.values + PreviewData.liveGameUsers.values)
+				await userManager.store(PreviewData.pregameUsers.values)
+				await userManager.store(PreviewData.liveGameUsers.values)
+				//await userManager.store(PreviewData.singleMatch.players.map(User.init))
+				
 				await competitiveSummaryManager.store([
 					PreviewData.summary,
 					// oh no
@@ -117,6 +120,10 @@ final class LocalDataProvider {
 		try await userManager.fetchIfNecessary(ids, fetch: client.getUsers)
 	}
 	
+	func store(_ users: [User]) {
+		async { await userManager.store(users) }
+	}
+	
 	// MARK: -
 	
 	private var matchDetailsManager = LocalDataManager<MatchDetails>()
@@ -129,6 +136,7 @@ final class LocalDataProvider {
 		try await matchDetailsManager.fetchIfNecessary(for: matchID) {
 			try await client.getMatchDetails(matchID: $0) <- {
 				store($0.players.map(\.identity))
+				store($0.players.map(User.init))
 			}
 		}
 	}
