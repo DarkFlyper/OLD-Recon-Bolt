@@ -1,6 +1,9 @@
 import SwiftUI
 import KeychainSwift
 
+// TODO: remove this when FB9309847 (using implicit CGFloat–Double conversion breaks preview bounds display) is addressed
+typealias FloatLiteralType = CGFloat
+
 @main
 struct ValorantViewerApp: App {
 	private var isTesting: Bool {
