@@ -103,6 +103,8 @@
 		B9C349A1267AA9E800BE39B1 /* example_live_game.json in Resources */ = {isa = PBXBuildFile; fileRef = B9C3499F267AA9E800BE39B1 /* example_live_game.json */; };
 		B9C349A3267AAB9500BE39B1 /* example_live_game_users.json in Resources */ = {isa = PBXBuildFile; fileRef = B9C349A2267AAB9500BE39B1 /* example_live_game_users.json */; };
 		B9C349A4267AAB9500BE39B1 /* example_live_game_users.json in Resources */ = {isa = PBXBuildFile; fileRef = B9C349A2267AAB9500BE39B1 /* example_live_game_users.json */; };
+		B9C7064E269BC91F00D29226 /* GameModeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C7064D269BC91F00D29226 /* GameModeImage.swift */; };
+		B9C7064F269BC91F00D29226 /* GameModeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C7064D269BC91F00D29226 /* GameModeImage.swift */; };
 		B9C97DC7263CADFC001E4D1B /* ValorantAPI+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C97DC6263CADFC001E4D1B /* ValorantAPI+Mock.swift */; };
 		B9C97DC8263CADFC001E4D1B /* ValorantAPI+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C97DC6263CADFC001E4D1B /* ValorantAPI+Mock.swift */; };
 		B9C97DCC263CB0D6001E4D1B /* ValorantAPI in Frameworks */ = {isa = PBXBuildFile; productRef = B9C97DCB263CB0D6001E4D1B /* ValorantAPI */; };
@@ -253,6 +255,7 @@
 		B9C3499C267AA6DE00BE39B1 /* LiveMatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveMatchView.swift; sourceTree = "<group>"; };
 		B9C3499F267AA9E800BE39B1 /* example_live_game.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_live_game.json; sourceTree = "<group>"; };
 		B9C349A2267AAB9500BE39B1 /* example_live_game_users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_live_game_users.json; sourceTree = "<group>"; };
+		B9C7064D269BC91F00D29226 /* GameModeImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModeImage.swift; sourceTree = "<group>"; };
 		B9C97DC6263CADFC001E4D1B /* ValorantAPI+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ValorantAPI+Mock.swift"; sourceTree = "<group>"; };
 		B9C97DD0263CB744001E4D1B /* MatchList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchList.swift; sourceTree = "<group>"; };
 		B9CF2E6125A81B48004A1458 /* UnifiedStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnifiedStyles.swift; sourceTree = "<group>"; };
@@ -572,6 +575,7 @@
 				B9F65C4A2651DFB100C9C34A /* AgentImage.swift */,
 				B90B4B5D267C223D00CACB95 /* MapImage.swift */,
 				B90B4B60267C22E700CACB95 /* PlayerCardImage.swift */,
+				B9C7064D269BC91F00D29226 /* GameModeImage.swift */,
 				B90B4B63267C270500CACB95 /* CompetitiveTierImage.swift */,
 			);
 			path = Views;
@@ -800,6 +804,7 @@
 				B96A0CAD265B0FB500844674 /* ObjectiveAssets.swift in Sources */,
 				B9F65C472651D20200C9C34A /* AssetImageView.swift in Sources */,
 				B9131D6C266AFA7900E85F46 /* MapInfoView.swift in Sources */,
+				B9C7064E269BC91F00D29226 /* GameModeImage.swift in Sources */,
 				B9741478266F18A800892B5F /* String+Localization.swift in Sources */,
 				B94091B325D09DF900EE5DF2 /* SwiftUI+CrossPlatform.swift in Sources */,
 				B941B6D825A7A09000F675C1 /* Credentials.swift in Sources */,
@@ -876,6 +881,7 @@
 				B96A0CAE265B0FB500844674 /* ObjectiveAssets.swift in Sources */,
 				B9F65C482651D20200C9C34A /* AssetImageView.swift in Sources */,
 				B9131D6D266AFA7900E85F46 /* MapInfoView.swift in Sources */,
+				B9C7064F269BC91F00D29226 /* GameModeImage.swift in Sources */,
 				B9741479266F18A800892B5F /* String+Localization.swift in Sources */,
 				B94091B425D09DF900EE5DF2 /* SwiftUI+CrossPlatform.swift in Sources */,
 				B941B6D925A7A09000F675C1 /* Credentials.swift in Sources */,
