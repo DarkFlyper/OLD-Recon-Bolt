@@ -2,35 +2,13 @@ import SwiftUI
 import ValorantAPI
 import HandyOperators
 
-// TODO: this seems overkill at this point
-struct UserView: View {
-	let user: User
-	
-	@State private var shouldShowUnranked = true
-	
-	init(for user: User) {
-		self.user = user
-	}
-	
-	var body: some View {
-		MatchListView(user: user, shouldShowUnranked: $shouldShowUnranked)
-			.navigationBarTitleDisplayMode(.large)
-	}
-}
-
-extension MatchList: Equatable {
-	static func == (lhs: Self, rhs: Self) -> Bool {
-		lhs.matches.map(\.id) == rhs.matches.map(\.id)
-	}
-}
-
 struct MatchListView: View {
 	let user: User
 	
 	@State var matchList: MatchList?
 	@State var summary: CompetitiveSummary?
 	@State var identity: Player.Identity?
-	@Binding var shouldShowUnranked: Bool
+	@State var shouldShowUnranked = true
 	
 	@Environment(\.valorantLoad) private var load
 	
@@ -129,7 +107,7 @@ struct MatchListView_Previews: PreviewProvider {
 			matchList: PreviewData.matchList,
 			summary: PreviewData.summary,
 			identity: PreviewData.userIdentity,
-			shouldShowUnranked: .constant(true)
+			shouldShowUnranked: true
 		)
 		.withToolbar()
 		.inEachColorScheme()

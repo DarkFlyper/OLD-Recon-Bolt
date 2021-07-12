@@ -175,7 +175,7 @@ struct AgentSelectView: View {
 				.frame(maxWidth: .infinity, alignment: .leading)
 				
 				if player.id != user.id, let playerUser = playerUser {
-					NavigationLink(destination: UserView(for: playerUser)) {
+					NavigationLink(destination: MatchListView(user: playerUser)) {
 						Image(systemName: "person.crop.circle.fill")
 							.padding(.horizontal, 4)
 					}

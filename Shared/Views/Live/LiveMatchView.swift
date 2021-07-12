@@ -112,7 +112,7 @@ struct LiveMatchView: View {
 				.frame(maxWidth: .infinity, alignment: .leading)
 				
 				if !isSelf, let playerUser = playerUser {
-					NavigationLink(destination: UserView(for: playerUser)) {
+					NavigationLink(destination: MatchListView(user: playerUser)) {
 						Image(systemName: "person.crop.circle.fill")
 							.padding(.horizontal, 4)
 					}

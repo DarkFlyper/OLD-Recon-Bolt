@@ -13,13 +13,11 @@ struct ContentView: View {
 	
 	@SceneStorage("tab")
 	var tab = Tab.career
-	@SceneStorage("shouldShowUnranked")
-	var shouldShowUnranked = true
 	
 	var body: some View {
 		TabView(selection: $tab) {
 			onlineView { client in
-				MatchListView(user: client.user, shouldShowUnranked: $shouldShowUnranked)
+				MatchListView(user: client.user)
 					.withToolbar()
 			}
 			.tabItem { Label("Career", systemImage: "square.fill.text.grid.1x2") }
