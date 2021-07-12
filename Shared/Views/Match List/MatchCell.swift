@@ -25,6 +25,7 @@ struct MatchCell: View {
 				
 				VStack(alignment: .leading) {
 					Text(Self.dateFormatter.string(from: match.startTime))
+						.foregroundColor(.primary)
 					Text(Self.timeFormatter.string(from: match.startTime))
 						.foregroundColor(.secondary)
 					if match.performanceBonus != 0 {
@@ -41,14 +42,16 @@ struct MatchCell: View {
 				
 				if match.isRanked {
 					VStack(alignment: .trailing) {
-						let eloChange = match.eloChange
+						let eloChange = match.ratingEarned
 						Text(eloChange > 0 ? "+\(eloChange)" : eloChange < 0 ? "\(eloChange)" : "=")
 							.foregroundColor(changeColor)
 						Text("\(match.tierProgressAfterUpdate)")
 							.foregroundColor(.gray)
 					}
 					
-					changeRing
+					ChangeRing(match: match)
+						.frame(height: visualsHeight)
+						.accentColor(changeColor)
 				}
 			}
 		}
@@ -66,43 +69,39 @@ struct MatchCell: View {
 	}
 	
 	private var changeColor: Color {
-		match.eloChange > 0 ? .green : match.eloChange < 0 ? .red : .gray
+		match.ratingEarned > 0 ? .green : match.ratingEarned < 0 ? .red : .gray
 	}
+}
+
+private struct ChangeRing: View {
+	let match: CompetitiveUpdate
 	
-	@ViewBuilder
-	private var changeRing: some View {
-		let lineWidth = 4.0
-		
+	var body: some View {
 		ZStack {
 			let before = CGFloat(match.eloBeforeUpdate) / 100
 			let after = CGFloat(match.eloAfterUpdate) / 100
+			let lower = min(before, after)
+			let higher = max(before, after)
+			let zeroPoint = lower.rounded(.down)
 			
-			let ring = Circle().rotation(Angle(degrees: -90))
-			let stroke = StrokeStyle(lineWidth: lineWidth, lineCap: .round)
+			CircularProgressView(
+				base: { Color.gray.opacity(0.2) },
+				layers: {
+					CircularProgressLayer(
+						end: after - zeroPoint,
+						color: .gray
+					)
+					CircularProgressLayer(
+						start: lower - zeroPoint,
+						end: higher - zeroPoint,
+						shouldKnockOutSurroundings: true,
+						color: .accentColor
+					)
+				}
+			)
 			
-			ring
-				.stroke(Color.gray.opacity(0.2), style: stroke)
-			
-			ZStack {
-				ring
-					.trim(from: 0, to: after.truncatingRemainder(dividingBy: 1))
-					.stroke(Color.gray, style: stroke)
-				
-				let changeRing = ring
-					.trim(from: 0, to: abs(after - before))
-					.rotation(Angle(degrees: Double(360 * min(before, after))))
-				
-				changeRing
-					.stroke(Color.black, style: stroke <- { $0.lineWidth *= 1.5 })
-					.blendMode(.destinationOut)
-				
-				changeRing
-					.stroke(changeColor, style: stroke)
-				
-				CompetitiveTierImage(tier: match.tierAfterUpdate)
-					.padding(10)
-			}
-			.compositingGroup()
+			CompetitiveTierImage(tier: match.tierAfterUpdate, time: match.startTime)
+				.padding(8)
 			
 			movementIndicator
 				.background(Circle().fill(Color.white).blendMode(.destinationOut))
@@ -110,9 +109,8 @@ struct MatchCell: View {
 				.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
 		}
 		.compositingGroup()
-		.padding(lineWidth / 2)
+		.padding(2)
 		.aspectRatio(contentMode: .fit)
-		.frame(height: visualsHeight)
 	}
 	
 	@ViewBuilder
@@ -134,7 +132,7 @@ struct MatchCell: View {
 
 #if DEBUG
 struct MatchCell_Previews: PreviewProvider {
-	static let promotion = CompetitiveUpdate.example(tierChange: (21, 22), tierProgressChange: (80, 10), index: 0)
+	static let promotion = CompetitiveUpdate.example(tierChange: (20, 21), tierProgressChange: (80, 10), index: 0)
 	static let increase = CompetitiveUpdate.example(tierChange: (8, 8), tierProgressChange: (40, 60), index: 1)
 	static let unchanged = CompetitiveUpdate.example(tierChange: (12, 12), tierProgressChange: (50, 50), index: 2)
 	static let decrease = CompetitiveUpdate.example(tierChange: (8, 8), tierProgressChange: (60, 40), index: 3)
@@ -142,21 +140,19 @@ struct MatchCell_Previews: PreviewProvider {
 	
 	static let jump = CompetitiveUpdate.example(tierChange: (11, 13), tierProgressChange: (90, 30))
 	
+	static let withinImmortal = CompetitiveUpdate.example(tierChange: (21, 21), tierProgressChange: (290, 310))
+	static let promotionToRadiant = CompetitiveUpdate.example(tierChange: (21, 24), tierProgressChange: (379, 400), ratingEarned: 21)
+	
 	static let unranked = CompetitiveUpdate.example(tierChange: (0, 0), tierProgressChange: (0, 0))
 	
-	static let allExamples = [unranked, promotion, increase, unchanged, decrease, demotion, jump]
+	static let allExamples = [unranked, promotion, increase, unchanged, decrease, demotion, jump, withinImmortal, promotionToRadiant]
 	
 	static var previews: some View {
-		VStack(spacing: 0) {
-			Divider()
-			ForEach(allExamples) {
-				MatchCell(match: $0, userID: PreviewData.userID)
-					.padding()
-				Divider()
-			}
+		List(allExamples) {
+			MatchCell(match: $0, userID: PreviewData.userID)
 		}
+		.withToolbar() // otherwise NavigationLink grays out accent colors
 		.inEachColorScheme()
-		.previewLayout(.sizeThatFits)
 	}
 }
 #endif

@@ -4,11 +4,11 @@ struct CompetitiveTierImage: View {
 	@Environment(\.assets) private var assets
 	
 	var tier: Int
-	var actID: Act.ID? = nil
+	var time: Date? = nil
 	
 	var body: some View {
 		if
-			let tierInfo = assets?.seasons.tierInfo(number: tier, in: actID),
+			let tierInfo = assets?.seasons.currentTierInfo(number: tier, at: time),
 			let image = tierInfo.icon?.imageIfLoaded
 		{
 			image

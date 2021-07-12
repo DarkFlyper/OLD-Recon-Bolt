@@ -35,20 +35,30 @@ struct CompetitiveTier: AssetItem, Codable {
 	
 	struct Collection: AssetItem, Codable, Identifiable {
 		var id: ObjectID<Self, LowercaseUUID>
-		var internalName: String
-		var tiers: [CompetitiveTier]
+		var tiers: [Int: CompetitiveTier] // tiers aren't necessarily contiguous! e.g. the second set of tiers skips 22 and 23.
 		
 		var images: [AssetImage] {
-			tiers.flatMap(\.images)
+			tiers.values.flatMap(\.images)
 		}
 		
 		func tier(_ number: Int) -> CompetitiveTier? {
-			tiers.elementIfValid(at: number)
+			tiers[number]
+		}
+		
+		init(from decoder: Decoder) throws {
+			let container = try decoder.container(keyedBy: CodingKeys.self)
+			self.id = try container.decode(ID.self, forKey: .id)
+			
+			if let tiers = try? container.decode([Int: CompetitiveTier].self, forKey: .tiers) {
+				self.tiers = tiers
+			} else {
+				let rawTiers = try container.decode([CompetitiveTier].self, forKey: .tiers)
+				self.tiers = .init(values: rawTiers, keyedBy: \.number)
+			}
 		}
 		
 		private enum CodingKeys: String, CodingKey {
 			case id = "uuid"
-			case internalName = "assetObjectName"
 			case tiers
 		}
 	}

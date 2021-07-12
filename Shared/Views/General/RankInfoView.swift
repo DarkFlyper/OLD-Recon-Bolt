@@ -80,7 +80,7 @@ struct RankInfoView_Previews: PreviewProvider {
 				.frame(width: 128, height: 128)
 			
 			LazyHGrid(rows: [.init(), .init(), .init()], spacing: 20) {
-				ForEach(ranks.tiers.indices) {
+				ForEach(ranks.tiers.values.map(\.number).sorted(), id: \.self) {
 					RankInfoView(summary: summary(forTier: $0))
 				}
 				.frame(width: 64)

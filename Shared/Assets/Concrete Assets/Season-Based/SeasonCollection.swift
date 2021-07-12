@@ -15,8 +15,9 @@ struct SeasonCollection: AssetItem, Codable {
 		competitiveTiers.values.flatMap(\.images)
 	}
 	
-	func currentAct(at time: Date = .init()) -> Act? {
+	func currentAct(at time: Date? = nil) -> Act? {
 		// not requiring the time to be less than the end date avoids possible undefined periods between acts (like the 3 days between closed beta and act 1) and lets us use binary search for quicker searching
+		let time = time ?? Date()
 		let firstExceedingIndex = actsInOrder
 			.partitioningIndex { time < $0.timeSpan.end } // binary search
 		return actsInOrder.elementIfValid(at: firstExceedingIndex)
@@ -27,11 +28,11 @@ struct SeasonCollection: AssetItem, Codable {
 		return actsInOrder.elementIfValid(at: currentIndex - 1)
 	}
 	
-	func currentTiers(at time: Date = .init()) -> CompetitiveTier.Collection? {
+	func currentTiers(at time: Date? = nil) -> CompetitiveTier.Collection? {
 		currentAct(at: time).map { competitiveTiers[$0.competitiveTiers]! }
 	}
 	
-	func currentTierInfo(number: Int, at time: Date = .init()) -> CompetitiveTier? {
+	func currentTierInfo(number: Int, at time: Date? = nil) -> CompetitiveTier? {
 		currentTiers(at: time)?.tier(number)
 	}
 	
