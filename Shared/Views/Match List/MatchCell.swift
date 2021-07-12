@@ -11,61 +11,130 @@ struct MatchCell: View {
 		$0.timeStyle = .short
 	}
 	
-	private let visualsHeight = 64.0
-	
 	let match: CompetitiveUpdate
 	let userID: User.ID
 	
+	@State var matchDetails: MatchDetails?
+	
 	var body: some View {
-		NavigationLink(
-			destination: MatchDetailsContainer(matchID: match.id, userID: userID)
-		) {
+		ZStack {
+			NavigationLink(
+				destination: MatchDetailsContainer(matchID: match.id, userID: userID),
+				label: { EmptyView() }
+			)
+			.opacity(0) // hide disclosure indicator and avoid accent color changes
+			
 			HStack {
-				mapIcon
-				
 				VStack(alignment: .leading) {
-					Text(Self.dateFormatter.string(from: match.startTime))
-						.foregroundColor(.primary)
-					Text(Self.timeFormatter.string(from: match.startTime))
-						.foregroundColor(.secondary)
-					if match.performanceBonus != 0 {
-						Text("Bonus: +\(match.performanceBonus)")
-							.foregroundColor(.green)
-					}
-					if match.afkPenalty != 0 {
-						Text("AFK Penalty: \(match.afkPenalty)")
-							.foregroundColor(.red)
-					}
+					matchInfo
 				}
 				
-				Spacer()
-				
 				if match.isRanked {
-					VStack(alignment: .trailing) {
-						let eloChange = match.ratingEarned
-						Text(eloChange > 0 ? "+\(eloChange)" : eloChange < 0 ? "\(eloChange)" : "=")
-							.foregroundColor(changeColor)
-						Text("\(match.tierProgressAfterUpdate)")
-							.foregroundColor(.gray)
-					}
-					
-					ChangeRing(match: match)
-						.frame(height: visualsHeight)
-						.accentColor(changeColor)
+					changeInfo
 				}
 			}
 		}
-		.padding(.vertical, 4)
+		.padding(.vertical, 8)
 		.id(match.id)
+		.withLocalData($matchDetails) { $0.matchDetails(for: match.id) }
 	}
 	
-	private var mapIcon: some View {
-		MapImage.splash(match.mapID)
-			.aspectRatio(16/9, contentMode: .fill)
-			.frame(height: visualsHeight)
-			.fixedSize()
-			.overlay(MapImage.Label(mapID: match.mapID))
-			.mask(RoundedRectangle(cornerRadius: 6, style: .continuous))
+	private var changeInfo: some View {
+		HStack {
+			VStack(alignment: .trailing) {
+				Group {
+					if match.performanceBonus != 0 {
+						Text("WP: +\(match.performanceBonus)")
+							.foregroundColor(.green)
+					}
+					if match.afkPenalty != 0 {
+						Text("AFK: \(match.afkPenalty)")
+							.foregroundColor(.red)
+					}
+				}
+				.font(.caption)
+				
+				let eloChange = match.ratingEarned
+				Text(eloChange > 0 ? "+\(eloChange)" : eloChange < 0 ? "\(eloChange)" : "=")
+					.foregroundColor(changeColor)
+				
+				Text("\(match.tierProgressAfterUpdate)")
+					.foregroundColor(.gray)
+			}
+			.frame(minWidth: 50, alignment: .trailing)
+			
+			ChangeRing(match: match)
+				.frame(height: 64)
+				.accentColor(changeColor)
+		}
+		.font(.callout.monospacedDigit())
+	}
+	
+	@ViewBuilder
+	private var matchInfo: some View {
+		VStack {
+			HStack {
+				Text(Self.dateFormatter.string(from: match.startTime))
+					.foregroundStyle(.primary)
+					.fixedSize()
+				Text(Self.timeFormatter.string(from: match.startTime))
+					.foregroundStyle(.secondary)
+			}
+			.font(.caption)
+			
+			ZStack {
+				if let matchDetails = matchDetails {
+					HStack {
+						GameModeImage(id: matchDetails.matchInfo.gameMode)
+							.frame(height: 20)
+						
+						Text(matchDetails.matchInfo.queueID.name)
+							.foregroundStyle(.secondary)
+							.padding(.top, -2) // small caps are shorter
+					}
+				} else {
+					MapImage.LabelText(mapID: match.mapID)
+						.fixedSize()
+						.padding(.top, -2) // small caps are shorter
+				}
+			}
+			.font(.callout.bold().smallCaps())
+			.foregroundStyle(.regularMaterial)
+			.colorScheme(.light)
+			.shadow(color: .black, radius: 2, y: 1)
+			.padding(4)
+			.padding(.horizontal, 2)
+			.frame(maxWidth: .infinity, alignment: .leading)
+			.background {
+				MapImage.splash(match.mapID)
+					.scaledToFill()
+					.frame(maxWidth: .infinity)
+					.clipped()
+			}
+			.mask(Capsule())
+			
+			detailsInfo
+				.font(.caption)
+				.frame(maxWidth: .infinity)
+		}
+	}
+	
+	@ViewBuilder
+	private var detailsInfo: some View {
+		if let matchDetails = matchDetails {
+			let myself = matchDetails.players.first { $0.id == userID }!
+			
+			VStack {
+				ScoreSummaryView(
+					teams: matchDetails.teams,
+					ownTeamID: myself.teamID
+				)
+				.font(.body.weight(.semibold))
+				
+				KDASummaryView(player: myself)
+					.foregroundStyle(.secondary, .tertiary)
+			}
+		}
 	}
 	
 	private var changeColor: Color {
@@ -132,26 +201,43 @@ private struct ChangeRing: View {
 
 #if DEBUG
 struct MatchCell_Previews: PreviewProvider {
-	static let promotion = CompetitiveUpdate.example(tierChange: (20, 21), tierProgressChange: (80, 10), index: 0)
-	static let increase = CompetitiveUpdate.example(tierChange: (8, 8), tierProgressChange: (40, 60), index: 1)
+	static let demotion = CompetitiveUpdate.example(tierChange: (6, 5), tierProgressChange: (10, 80), index: 0)
+		<- { $0.afkPenalty = -7 }
+	static let decrease = CompetitiveUpdate.example(tierChange: (8, 8), tierProgressChange: (60, 40), index: 1)
 	static let unchanged = CompetitiveUpdate.example(tierChange: (12, 12), tierProgressChange: (50, 50), index: 2)
-	static let decrease = CompetitiveUpdate.example(tierChange: (8, 8), tierProgressChange: (60, 40), index: 3)
-	static let demotion = CompetitiveUpdate.example(tierChange: (6, 5), tierProgressChange: (10, 80), index: 4)
+	static let increase = CompetitiveUpdate.example(tierChange: (8, 8), tierProgressChange: (40, 60), index: 3)
+	static let promotion = CompetitiveUpdate.example(tierChange: (20, 21), tierProgressChange: (80, 10), index: 4) <- {
+		$0.afkPenalty = -3
+		$0.performanceBonus = 11
+	}
 	
-	static let jump = CompetitiveUpdate.example(tierChange: (11, 13), tierProgressChange: (90, 30))
+	static let unranked = CompetitiveUpdate.example(tierChange: (0, 0), tierProgressChange: (0, 0), index: 5)
+	
+	static let jump = CompetitiveUpdate.example(tierChange: (11, 13), tierProgressChange: (90, 30), index: 6)
+		<- { $0.performanceBonus = 14 }
 	
 	static let withinImmortal = CompetitiveUpdate.example(tierChange: (21, 21), tierProgressChange: (290, 310))
 	static let promotionToRadiant = CompetitiveUpdate.example(tierChange: (21, 24), tierProgressChange: (379, 400), ratingEarned: 21)
 	
-	static let unranked = CompetitiveUpdate.example(tierChange: (0, 0), tierProgressChange: (0, 0))
-	
-	static let allExamples = [unranked, promotion, increase, unchanged, decrease, demotion, jump, withinImmortal, promotionToRadiant]
+	static let allExamples = [
+		demotion, decrease, unchanged, increase, promotion,
+		unranked, jump, withinImmortal, promotionToRadiant,
+	]
 	
 	static var previews: some View {
-		List(allExamples) {
-			MatchCell(match: $0, userID: PreviewData.userID)
+		List {
+			MatchCell(
+				match: allExamples.first! <- { $0.id = PreviewData.singleMatch.id },
+				userID: PreviewData.userID,
+				matchDetails: PreviewData.singleMatch
+			)
+			
+			ForEach(allExamples.dropFirst()) {
+				MatchCell(match: $0, userID: PreviewData.userID)
+			}
 		}
-		.withToolbar() // otherwise NavigationLink grays out accent colors
+		.withToolbar(allowLargeTitles: false) // otherwise NavigationLink grays out accent colors
+		.padding(.top, -120) // use all the space
 		.inEachColorScheme()
 	}
 }
