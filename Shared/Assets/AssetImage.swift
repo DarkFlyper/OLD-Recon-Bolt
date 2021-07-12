@@ -7,9 +7,10 @@ struct AssetImage: Hashable {
 	var url: URL
 	
 	@ViewBuilder
-	var imageOrPlaceholder: some View {
+	func imageOrPlaceholder(renderingMode: Image.TemplateRenderingMode? = nil) -> some View {
 		if let image = imageIfLoaded {
 			image
+				.renderingMode(renderingMode)
 				.resizable()
 				.scaledToFit()
 		} else {

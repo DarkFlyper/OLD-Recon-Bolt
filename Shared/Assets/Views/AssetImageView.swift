@@ -34,7 +34,7 @@ struct _AssetImageView<Provider: _AssetImageProvider>: View {
 			.flatMap(imageGetter)
 		
 		if let assetImage = assetImage {
-			assetImage.imageOrPlaceholder
+			assetImage.imageOrPlaceholder()
 		} else {
 			Color.gray
 		}

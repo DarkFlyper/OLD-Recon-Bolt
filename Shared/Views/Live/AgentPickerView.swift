@@ -89,7 +89,7 @@ struct AgentPickerView: View {
 			let lineWidth = isSelected ? 2.0 : 1.0
 			let cornerRadius = 8.0
 			let backgroundInset = 2.0
-			agent.displayIcon.imageOrPlaceholder
+			agent.displayIcon.imageOrPlaceholder()
 				.dynamicallyStroked(radius: 1.5, color: .white)
 				.compositingGroup()
 				.opacity(ownsAgent ? 1 : 0.5)
