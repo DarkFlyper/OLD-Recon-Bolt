@@ -65,17 +65,6 @@ struct MatchListView: View {
 						Label("Show Unranked", systemImage: "line.horizontal.3.decrease.circle.fill")
 					}
 				}
-				
-				#if DEBUG
-				Button {
-					LocalDataProvider.shared.store(matchList! <- {
-						$0.matches.removeFirst()
-						$0.highestLoadedIndex = 0
-					})
-				} label: {
-					Label("Remove First Match", systemImage: "minus.circle")
-				}
-				#endif
 			}
 		}
 		.withLocalData($matchList) { $0.matchList(for: user.id) }
