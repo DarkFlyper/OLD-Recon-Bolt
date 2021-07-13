@@ -44,8 +44,8 @@
 		B94091B425D09DF900EE5DF2 /* SwiftUI+CrossPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94091B225D09DF900EE5DF2 /* SwiftUI+CrossPlatform.swift */; };
 		B94091B825D09F0200EE5DF2 /* MatchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94091B725D09F0200EE5DF2 /* MatchListView.swift */; };
 		B94091B925D09F0200EE5DF2 /* MatchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94091B725D09F0200EE5DF2 /* MatchListView.swift */; };
-		B941B65625A5BC8A00F675C1 /* ValorantViewerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B64325A5BC8800F675C1 /* ValorantViewerApp.swift */; };
-		B941B65725A5BC8A00F675C1 /* ValorantViewerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B64325A5BC8800F675C1 /* ValorantViewerApp.swift */; };
+		B941B65625A5BC8A00F675C1 /* ReconBoltApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B64325A5BC8800F675C1 /* ReconBoltApp.swift */; };
+		B941B65725A5BC8A00F675C1 /* ReconBoltApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B64325A5BC8800F675C1 /* ReconBoltApp.swift */; };
 		B941B65825A5BC8A00F675C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B64425A5BC8800F675C1 /* ContentView.swift */; };
 		B941B65925A5BC8A00F675C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B64425A5BC8800F675C1 /* ContentView.swift */; };
 		B941B65A25A5BC8A00F675C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B941B64525A5BC8A00F675C1 /* Assets.xcassets */; };
@@ -224,12 +224,12 @@
 		B94091AD25D09D5A00EE5DF2 /* LoadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadManager.swift; sourceTree = "<group>"; };
 		B94091B225D09DF900EE5DF2 /* SwiftUI+CrossPlatform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUI+CrossPlatform.swift"; sourceTree = "<group>"; };
 		B94091B725D09F0200EE5DF2 /* MatchListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListView.swift; sourceTree = "<group>"; };
-		B941B64325A5BC8800F675C1 /* ValorantViewerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValorantViewerApp.swift; sourceTree = "<group>"; };
+		B941B64325A5BC8800F675C1 /* ReconBoltApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReconBoltApp.swift; sourceTree = "<group>"; };
 		B941B64425A5BC8800F675C1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B941B64525A5BC8A00F675C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B941B64A25A5BC8A00F675C1 /* Valorant Viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Valorant Viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B941B64A25A5BC8A00F675C1 /* Recon Bolt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Recon Bolt.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B941B64D25A5BC8A00F675C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B941B65225A5BC8A00F675C1 /* Valorant Viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Valorant Viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B941B65225A5BC8A00F675C1 /* Recon Bolt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Recon Bolt.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B941B65425A5BC8A00F675C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B941B65525A5BC8A00F675C1 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		B941B6D725A7A09000F675C1 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
@@ -238,7 +238,7 @@
 		B941B6EB25A7C83700F675C1 /* example_updates.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_updates.json; sourceTree = "<group>"; };
 		B9485F83264B1DD300AC3456 /* AgentAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentAssets.swift; sourceTree = "<group>"; };
 		B9485F86264B5BD700AC3456 /* AssetImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetImage.swift; sourceTree = "<group>"; };
-		B9485F8D264B639F00AC3456 /* Valorant Viewer Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Valorant Viewer Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9485F8D264B639F00AC3456 /* Recon Bolt Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Recon Bolt Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9485F8F264B639F00AC3456 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		B9485F91264B639F00AC3456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B954072D2694C0A4009FB17B /* AgentSelectContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentSelectContainer.swift; sourceTree = "<group>"; };
@@ -260,7 +260,7 @@
 		B9741477266F18A800892B5F /* String+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
 		B989466A26860D8A00C8059A /* AsyncButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncButton.swift; sourceTree = "<group>"; };
 		B98E4704269B40DB003C9088 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
-		B99B75942655859C00FBEB60 /* Valorant Viewer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Valorant Viewer.entitlements"; sourceTree = "<group>"; };
+		B99B75942655859C00FBEB60 /* Recon Bolt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Recon Bolt.entitlements"; sourceTree = "<group>"; };
 		B9C3499C267AA6DE00BE39B1 /* LiveMatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveMatchView.swift; sourceTree = "<group>"; };
 		B9C3499F267AA9E800BE39B1 /* example_live_game.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_live_game.json; sourceTree = "<group>"; };
 		B9C349A2267AAB9500BE39B1 /* example_live_game_users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_live_game_users.json; sourceTree = "<group>"; };
@@ -394,14 +394,14 @@
 		B941B63D25A5BC8800F675C1 = {
 			isa = PBXGroup;
 			children = (
-				B99B75942655859C00FBEB60 /* Valorant Viewer.entitlements */,
+				B99B75942655859C00FBEB60 /* Recon Bolt.entitlements */,
 				B964BECE2671515C00022A7C /* HandyOperators */,
 				B9399C3C2671158400411127 /* Protoquest */,
 				B9399C3D2671158A00411127 /* ValorantAPI */,
 				B941B64225A5BC8800F675C1 /* Shared */,
 				B941B64C25A5BC8A00F675C1 /* iOS */,
 				B941B65325A5BC8A00F675C1 /* macOS */,
-				B9485F8E264B639F00AC3456 /* Valorant Viewer Tests */,
+				B9485F8E264B639F00AC3456 /* Recon Bolt Tests */,
 				B941B64B25A5BC8A00F675C1 /* Products */,
 				B941B66D25A5C3AD00F675C1 /* Frameworks */,
 			);
@@ -410,7 +410,7 @@
 		B941B64225A5BC8800F675C1 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				B941B64325A5BC8800F675C1 /* ValorantViewerApp.swift */,
+				B941B64325A5BC8800F675C1 /* ReconBoltApp.swift */,
 				B94091C925D0ACAC00EE5DF2 /* Views */,
 				B94091CC25D0ACB100EE5DF2 /* Model */,
 				B9F07CB226474E77006CD4F5 /* Assets */,
@@ -424,9 +424,9 @@
 		B941B64B25A5BC8A00F675C1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B941B64A25A5BC8A00F675C1 /* Valorant Viewer.app */,
-				B941B65225A5BC8A00F675C1 /* Valorant Viewer.app */,
-				B9485F8D264B639F00AC3456 /* Valorant Viewer Tests.xctest */,
+				B941B64A25A5BC8A00F675C1 /* Recon Bolt.app */,
+				B941B65225A5BC8A00F675C1 /* Recon Bolt.app */,
+				B9485F8D264B639F00AC3456 /* Recon Bolt Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -470,13 +470,13 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		B9485F8E264B639F00AC3456 /* Valorant Viewer Tests */ = {
+		B9485F8E264B639F00AC3456 /* Recon Bolt Tests */ = {
 			isa = PBXGroup;
 			children = (
 				B9485F8F264B639F00AC3456 /* Tests.swift */,
 				B9485F91264B639F00AC3456 /* Info.plist */,
 			);
-			path = "Valorant Viewer Tests";
+			path = "Recon Bolt Tests";
 			sourceTree = "<group>";
 		};
 		B96A0CA5265ADEA000844674 /* Concrete Assets */ = {
@@ -615,9 +615,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B941B64925A5BC8A00F675C1 /* Valorant Viewer (iOS) */ = {
+		B941B64925A5BC8A00F675C1 /* Recon Bolt (iOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B941B65E25A5BC8A00F675C1 /* Build configuration list for PBXNativeTarget "Valorant Viewer (iOS)" */;
+			buildConfigurationList = B941B65E25A5BC8A00F675C1 /* Build configuration list for PBXNativeTarget "Recon Bolt (iOS)" */;
 			buildPhases = (
 				B941B64625A5BC8A00F675C1 /* Sources */,
 				B941B64725A5BC8A00F675C1 /* Frameworks */,
@@ -627,7 +627,7 @@
 			);
 			dependencies = (
 			);
-			name = "Valorant Viewer (iOS)";
+			name = "Recon Bolt (iOS)";
 			packageProductDependencies = (
 				B941B69A25A62FFB00F675C1 /* UserDefault */,
 				B941B6CF25A79A6400F675C1 /* KeychainSwift */,
@@ -637,12 +637,12 @@
 				B90BC2ED266D224F00C905D4 /* CGeometry */,
 			);
 			productName = "Valorant Viewer (iOS)";
-			productReference = B941B64A25A5BC8A00F675C1 /* Valorant Viewer.app */;
+			productReference = B941B64A25A5BC8A00F675C1 /* Recon Bolt.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B941B65125A5BC8A00F675C1 /* Valorant Viewer (macOS) */ = {
+		B941B65125A5BC8A00F675C1 /* Recon Bolt (macOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B941B66125A5BC8A00F675C1 /* Build configuration list for PBXNativeTarget "Valorant Viewer (macOS)" */;
+			buildConfigurationList = B941B66125A5BC8A00F675C1 /* Build configuration list for PBXNativeTarget "Recon Bolt (macOS)" */;
 			buildPhases = (
 				B941B64E25A5BC8A00F675C1 /* Sources */,
 				B941B64F25A5BC8A00F675C1 /* Frameworks */,
@@ -652,7 +652,7 @@
 			);
 			dependencies = (
 			);
-			name = "Valorant Viewer (macOS)";
+			name = "Recon Bolt (macOS)";
 			packageProductDependencies = (
 				B941B69E25A6300100F675C1 /* UserDefault */,
 				B941B6D325A79A6A00F675C1 /* KeychainSwift */,
@@ -661,12 +661,12 @@
 				B9EE6E762659D6ED007E28B5 /* Algorithms */,
 			);
 			productName = "Valorant Viewer (macOS)";
-			productReference = B941B65225A5BC8A00F675C1 /* Valorant Viewer.app */;
+			productReference = B941B65225A5BC8A00F675C1 /* Recon Bolt.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B9485F8C264B639F00AC3456 /* Valorant Viewer Tests */ = {
+		B9485F8C264B639F00AC3456 /* Recon Bolt Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B9485F94264B639F00AC3456 /* Build configuration list for PBXNativeTarget "Valorant Viewer Tests" */;
+			buildConfigurationList = B9485F94264B639F00AC3456 /* Build configuration list for PBXNativeTarget "Recon Bolt Tests" */;
 			buildPhases = (
 				B9485F89264B639F00AC3456 /* Sources */,
 				B9485F8A264B639F00AC3456 /* Frameworks */,
@@ -677,11 +677,11 @@
 			dependencies = (
 				B9F39F232671AA0F00D75E7F /* PBXTargetDependency */,
 			);
-			name = "Valorant Viewer Tests";
+			name = "Recon Bolt Tests";
 			packageProductDependencies = (
 			);
 			productName = "Valorant Viewer Tests";
-			productReference = B9485F8D264B639F00AC3456 /* Valorant Viewer Tests.xctest */;
+			productReference = B9485F8D264B639F00AC3456 /* Recon Bolt Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -705,7 +705,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B941B64125A5BC8800F675C1 /* Build configuration list for PBXProject "Valorant Viewer" */;
+			buildConfigurationList = B941B64125A5BC8800F675C1 /* Build configuration list for PBXProject "Recon Bolt" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -726,9 +726,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B941B64925A5BC8A00F675C1 /* Valorant Viewer (iOS) */,
-				B941B65125A5BC8A00F675C1 /* Valorant Viewer (macOS) */,
-				B9485F8C264B639F00AC3456 /* Valorant Viewer Tests */,
+				B941B64925A5BC8A00F675C1 /* Recon Bolt (iOS) */,
+				B941B65125A5BC8A00F675C1 /* Recon Bolt (macOS) */,
+				B9485F8C264B639F00AC3456 /* Recon Bolt Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -832,7 +832,7 @@
 				B963C4792695101C0071E14A /* PlayerIdentityCell.swift in Sources */,
 				B9DCF9A72642E0EC00C39EC4 /* ScoreboardView.swift in Sources */,
 				B96A0CA3265ABBC700844674 /* SwiftUI+Helpers.swift in Sources */,
-				B941B65625A5BC8A00F675C1 /* ValorantViewerApp.swift in Sources */,
+				B941B65625A5BC8A00F675C1 /* ReconBoltApp.swift in Sources */,
 				B9C97DD1263CB744001E4D1B /* MatchList.swift in Sources */,
 				B9F65C4B2651DFB100C9C34A /* AgentImage.swift in Sources */,
 				B9EE6E652658A363007E28B5 /* SwiftUI+Previews.swift in Sources */,
@@ -912,7 +912,7 @@
 				B963C47A2695101C0071E14A /* PlayerIdentityCell.swift in Sources */,
 				B9DCF9A82642E0EC00C39EC4 /* ScoreboardView.swift in Sources */,
 				B96A0CA4265ABBC700844674 /* SwiftUI+Helpers.swift in Sources */,
-				B941B65725A5BC8A00F675C1 /* ValorantViewerApp.swift in Sources */,
+				B941B65725A5BC8A00F675C1 /* ReconBoltApp.swift in Sources */,
 				B9C97DD2263CB744001E4D1B /* MatchList.swift in Sources */,
 				B9F65C4C2651DFB100C9C34A /* AgentImage.swift in Sources */,
 				B9EE6E662658A363007E28B5 /* SwiftUI+Previews.swift in Sources */,
@@ -957,7 +957,7 @@
 /* Begin PBXTargetDependency section */
 		B9F39F232671AA0F00D75E7F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B941B64925A5BC8A00F675C1 /* Valorant Viewer (iOS) */;
+			target = B941B64925A5BC8A00F675C1 /* Recon Bolt (iOS) */;
 			targetProxy = B9F39F222671AA0F00D75E7F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1079,7 +1079,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Valorant Viewer.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Recon Bolt.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_ASSET_PATHS = "Shared/Preview\\ Content";
@@ -1092,8 +1092,8 @@
 					"@executable_path/Frameworks",
 				);
 				OTHER_SWIFT_FLAGS = "-Xfrontend -warn-long-expression-type-checking=500 -Xfrontend -warn-long-function-bodies=1000";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.juliand665.Valorant-Viewer";
-				PRODUCT_NAME = "Valorant Viewer";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.juliand665.Recon-Bolt";
+				PRODUCT_NAME = "Recon Bolt";
 				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
@@ -1106,7 +1106,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Valorant Viewer.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Recon Bolt.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_ASSET_PATHS = "Shared/Preview\\ Content";
@@ -1118,8 +1118,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.juliand665.Valorant-Viewer";
-				PRODUCT_NAME = "Valorant Viewer";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.juliand665.Recon-Bolt";
+				PRODUCT_NAME = "Recon Bolt";
 				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
@@ -1148,8 +1148,8 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				OTHER_SWIFT_FLAGS = "-Xfrontend -warn-long-expression-type-checking=200";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.juliand665.Valorant-Viewer";
-				PRODUCT_NAME = "Valorant Viewer";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.juliand665.Recon-Bolt";
+				PRODUCT_NAME = "Recon Bolt";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
 			};
@@ -1174,8 +1174,8 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.juliand665.Valorant-Viewer";
-				PRODUCT_NAME = "Valorant Viewer";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.juliand665.Recon-Bolt";
+				PRODUCT_NAME = "Recon Bolt";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
 			};
@@ -1199,7 +1199,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Valorant Viewer.app/Valorant Viewer";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Recon Bolt.app/Recon Bolt";
 			};
 			name = Debug;
 		};
@@ -1221,14 +1221,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Valorant Viewer.app/Valorant Viewer";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Recon Bolt.app/Recon Bolt";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B941B64125A5BC8800F675C1 /* Build configuration list for PBXProject "Valorant Viewer" */ = {
+		B941B64125A5BC8800F675C1 /* Build configuration list for PBXProject "Recon Bolt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B941B65C25A5BC8A00F675C1 /* Debug */,
@@ -1237,7 +1237,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B941B65E25A5BC8A00F675C1 /* Build configuration list for PBXNativeTarget "Valorant Viewer (iOS)" */ = {
+		B941B65E25A5BC8A00F675C1 /* Build configuration list for PBXNativeTarget "Recon Bolt (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B941B65F25A5BC8A00F675C1 /* Debug */,
@@ -1246,7 +1246,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B941B66125A5BC8A00F675C1 /* Build configuration list for PBXNativeTarget "Valorant Viewer (macOS)" */ = {
+		B941B66125A5BC8A00F675C1 /* Build configuration list for PBXNativeTarget "Recon Bolt (macOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B941B66225A5BC8A00F675C1 /* Debug */,
@@ -1255,7 +1255,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B9485F94264B639F00AC3456 /* Build configuration list for PBXNativeTarget "Valorant Viewer Tests" */ = {
+		B9485F94264B639F00AC3456 /* Build configuration list for PBXNativeTarget "Recon Bolt Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B9485F95264B639F00AC3456 /* Debug */,

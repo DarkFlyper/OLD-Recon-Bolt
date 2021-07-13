@@ -5,7 +5,7 @@ import KeychainSwift
 typealias FloatLiteralType = CGFloat
 
 @main
-struct ValorantViewerApp: App {
+struct ReconBoltApp: App {
 	private var isTesting: Bool {
 		ProcessInfo.processInfo.environment["XCInjectBundleInto"] != nil
 	}
