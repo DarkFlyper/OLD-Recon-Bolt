@@ -142,14 +142,14 @@ struct AgentSelectView: View {
 				.padding(isLockedIn ? 1 : 0)
 				.background(
 					Circle()
-						.fill(relativeColor)
+						.fill(.accentColor)
 						.opacity(isLockedIn ? 0.5 : 0.25)
 						.padding(2)
 				)
 				.padding(2)
 				.overlay(
 					Circle()
-						.strokeBorder(relativeColor, lineWidth: isLockedIn ? 2 : 1)
+						.strokeBorder(.accentColor, lineWidth: isLockedIn ? 2 : 1)
 						.opacity(isLockedIn ? 1 : 0.75)
 				)
 				.padding(isLockedIn ? 0 : 1) // constant size

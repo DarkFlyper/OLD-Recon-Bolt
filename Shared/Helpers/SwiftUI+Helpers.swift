@@ -8,6 +8,11 @@ var isInSwiftUIPreview: Bool {
 let isInSwiftUIPreview = false
 #endif
 
+extension ShapeStyle where Self == Color {
+	// not sure why apple missed this tbh
+	static var accentColor: Self { Color.accentColor }
+}
+
 extension Gradient {
 	init(_ color: Color, opacities: [Double] = [1, 0]) {
 		self.init(colors: opacities.map(color.opacity))
