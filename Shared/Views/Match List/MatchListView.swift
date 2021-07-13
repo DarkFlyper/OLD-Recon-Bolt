@@ -3,8 +3,9 @@ import ValorantAPI
 import HandyOperators
 
 struct MatchListView: View {
-	let user: User
+	let userID: User.ID
 	
+	@State var user: User?
 	@State var matchList: MatchList?
 	@State var summary: CompetitiveSummary?
 	@State var identity: Player.Identity?
@@ -21,7 +22,7 @@ struct MatchListView: View {
 	var body: some View {
 		List {
 			Section(header: Text("Player")) {
-				if let identity = identity {
+				if let user = user, let identity = identity {
 					PlayerIdentityCell(user: user, identity: identity)
 				}
 				
@@ -32,7 +33,7 @@ struct MatchListView: View {
 			
 			Section(header: Text("Matches")) {
 				ForEach(shownMatches) {
-					MatchCell(match: $0, userID: user.id)
+					MatchCell(match: $0, userID: userID)
 				}
 				
 				if matchList?.canLoadOlderMatches == true {
@@ -47,9 +48,9 @@ struct MatchListView: View {
 		.toolbar {
 			ToolbarItemGroup(placement: .navigationBarTrailing) {
 				Button {
-					bookmarkList.toggleBookmark(for: user.id)
+					bookmarkList.toggleBookmark(for: userID)
 				} label: {
-					if bookmarkList.bookmarks.contains(user.id) {
+					if bookmarkList.bookmarks.contains(userID) {
 						Label("Remove Bookmark", systemImage: "bookmark.fill")
 					} else {
 						Label("Add Bookmark", systemImage: "bookmark")
@@ -67,27 +68,31 @@ struct MatchListView: View {
 				}
 			}
 		}
-		.withLocalData($matchList) { $0.matchList(for: user.id) }
-		.withLocalData($summary) { $0.competitiveSummary(for: user.id) }
-		.withLocalData($identity) { $0.identity(for: user.id) }
+		.withLocalData($user) { $0.user(for: userID) }
+		.withLocalData($matchList) { $0.matchList(for: userID) }
+		.withLocalData($summary) { $0.competitiveSummary(for: userID) }
+		.withLocalData($identity) { $0.identity(for: userID) }
 		.valorantLoadTask {
 			try await LocalDataProvider.shared
-				.autoUpdateMatchList(for: user.id, using: $0)
+				.autoUpdateMatchList(for: userID, using: $0)
 		}
 		.valorantLoadTask {
 			try await LocalDataProvider.shared
-				.fetchCompetitiveSummary(for: user.id, using: $0)
+				.fetchCompetitiveSummary(for: userID, using: $0)
+		}
+		.valorantLoadTask {
+			try await LocalDataProvider.shared.fetchUsers(for: [userID], using: $0)
 		}
 		.refreshable {
 			async let matchListUpdate: Void = updateMatchList(update: ValorantClient.loadMatches)
 			async let summaryUpdate: Void = load {
 				try await LocalDataProvider.shared
-					.fetchCompetitiveSummary(for: user.id, using: $0)
+					.fetchCompetitiveSummary(for: userID, using: $0)
 			}
 			_ = await (matchListUpdate, summaryUpdate)
 		}
 		.loadErrorAlertTitle("Could not load matches!")
-		.navigationTitle(user.name)
+		.navigationTitle(user?.name ?? "Matches")
 	}
 	
 	func updateMatchList(update: @escaping (ValorantClient) -> (inout MatchList) async throws -> Void) async {
@@ -103,6 +108,7 @@ struct MatchListView: View {
 struct MatchListView_Previews: PreviewProvider {
 	static var previews: some View {
 		MatchListView(
+			userID: PreviewData.userID,
 			user: PreviewData.user,
 			matchList: PreviewData.matchList,
 			summary: PreviewData.summary,

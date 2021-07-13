@@ -17,14 +17,14 @@ struct ContentView: View {
 	var body: some View {
 		TabView(selection: $tab) {
 			onlineView { client in
-				BookmarkListView(myself: client.user)
+				BookmarkListView(userID: client.userID)
 					.withToolbar()
 			}
 			.tabItem { Label("Career", systemImage: "square.fill.text.grid.1x2") }
 			.tag(Tab.career)
 			
 			onlineView { client in
-				LiveView(user: client.user)
+				LiveView(userID: client.userID)
 					.withToolbar()
 			}
 			.tabItem { Label("Live", systemImage: "play.circle") }

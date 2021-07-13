@@ -113,7 +113,7 @@ struct ScoreboardRowView: View {
 		Spacer()
 		
 		if player.id != data.myself?.id {
-			NavigationLink(destination: MatchListView(user: User(player))) {
+			NavigationLink(destination: MatchListView(userID: player.id, user: User(player))) {
 				Image(systemName: "person.crop.circle.fill")
 					.frame(maxHeight: .infinity)
 					.padding(.horizontal, 4)

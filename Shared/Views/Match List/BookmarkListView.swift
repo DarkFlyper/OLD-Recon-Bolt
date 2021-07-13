@@ -3,7 +3,8 @@ import ValorantAPI
 import UserDefault
 
 struct BookmarkListView: View {
-	let myself: User
+	let userID: User.ID
+	@State var myself: User?
 	@State var isShowingSelf = true // initially show self
 	
 	@EnvironmentObject private var bookmarkList: BookmarkList
@@ -11,8 +12,9 @@ struct BookmarkListView: View {
 	var body: some View {
 		List {
 			Section {
-				UserCell(user: myself, isSelected: $isShowingSelf)
+				UserCell(userID: userID, isSelected: $isShowingSelf, user: myself)
 			}
+			.withLocalData($myself) { $0.user(for: userID) }
 			
 			Section("Bookmarks") {
 				ForEach(bookmarkList.bookmarks, id: \.self) {
@@ -29,28 +31,21 @@ struct BookmarkListView: View {
 	struct OtherUserCell: View {
 		let userID: User.ID
 		@State var isSelected = false
-		@State var user: User?
 		
 		var body: some View {
-			Group {
-				if let user = user {
-					UserCell(user: user, isSelected: $isSelected)
-				} else {
-					Text("")
-				}
-			}
-			.withLocalData($user) { $0.user(for: userID) }
+			UserCell(userID: userID, isSelected: $isSelected)
 		}
 	}
 	
 	struct UserCell: View {
-		let user: User
+		let userID: User.ID
 		@Binding var isSelected: Bool
+		@State var user: User?
 		@State var identity: Player.Identity?
 		
 		var body: some View {
 			NavigationLink(isActive: $isSelected) {
-				MatchListView(user: user)
+				MatchListView(userID: userID, user: user)
 			} label: {
 				HStack(spacing: 10) {
 					if let identity = identity {
@@ -60,12 +55,16 @@ struct BookmarkListView: View {
 					}
 					
 					VStack(alignment: .leading) {
-						HStack(spacing: 4) {
-							Text(user.gameName)
-								.fontWeight(.semibold)
-							
-							Text("#\(user.tagLine)")
-								.foregroundStyle(.secondary)
+						if let user = user {
+							HStack(spacing: 4) {
+								Text(user.gameName)
+									.fontWeight(.semibold)
+								
+								Text("#\(user.tagLine)")
+									.foregroundStyle(.secondary)
+							}
+						} else {
+							Text("Bookmarked Player")
 						}
 						
 						if let identity = identity {
@@ -77,7 +76,8 @@ struct BookmarkListView: View {
 				}
 			}
 			.padding(.vertical, 8)
-			.withLocalData($identity) { $0.identity(for: user.id) }
+			.withLocalData($user) { $0.user(for: userID) }
+			.withLocalData($identity) { $0.identity(for: userID) }
 		}
 	}
 }
@@ -124,8 +124,9 @@ extension User.ID: DefaultsValueConvertible {
 struct BookmarksList_Previews: PreviewProvider {
 	static var previews: some View {
 		BookmarkListView.UserCell(
-			user: PreviewData.user,
+			userID: PreviewData.userID,
 			isSelected: .constant(false),
+			user: PreviewData.user,
 			identity: PreviewData.userIdentity
 		)
 		.padding()
@@ -133,6 +134,7 @@ struct BookmarksList_Previews: PreviewProvider {
 		.previewLayout(.sizeThatFits)
 		
 		BookmarkListView(
+			userID: PreviewData.userID,
 			myself: PreviewData.user,
 			isShowingSelf: false
 		)

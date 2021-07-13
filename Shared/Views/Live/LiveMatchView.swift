@@ -3,15 +3,15 @@ import ValorantAPI
 
 struct LiveMatchView: View {
 	let gameInfo: LiveGameInfo
-	let user: User
+	let userID: User.ID
 	
 	let ownPlayer: LiveGameInfo.PlayerInfo
 	
-	init(gameInfo: LiveGameInfo, user: User) {
+	init(gameInfo: LiveGameInfo, userID: User.ID) {
 		self.gameInfo = gameInfo
-		self.user = user
+		self.userID = userID
 		
-		ownPlayer = gameInfo.players.first { $0.id == user.id }!
+		ownPlayer = gameInfo.players.first { $0.id == userID }!
 	}
 	
 	var body: some View {
@@ -111,8 +111,8 @@ struct LiveMatchView: View {
 				}
 				.frame(maxWidth: .infinity, alignment: .leading)
 				
-				if !isSelf, let playerUser = playerUser {
-					NavigationLink(destination: MatchListView(user: playerUser)) {
+				if !isSelf {
+					NavigationLink(destination: MatchListView(userID: player.id, user: playerUser)) {
 						Image(systemName: "person.crop.circle.fill")
 							.padding(.horizontal, 4)
 					}
@@ -136,7 +136,7 @@ struct LiveMatchView_Previews: PreviewProvider {
 	static var previews: some View {
 		LiveMatchContainer(
 			matchID: PreviewData.liveGameInfo.id,
-			user: PreviewData.user,
+			userID: PreviewData.userID,
 			gameInfo: PreviewData.liveGameInfo
 		)
 		.withToolbar()

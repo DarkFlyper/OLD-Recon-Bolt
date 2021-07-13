@@ -3,7 +3,7 @@ import ValorantAPI
 
 struct AgentSelectView: View {
 	@Binding var pregameInfo: LivePregameInfo
-	let user: User
+	let userID: User.ID
 	let inventory: Inventory
 	
 	var body: some View {
@@ -15,7 +15,7 @@ struct AgentSelectView: View {
 					VStack {
 						VStack {
 							ForEach(pregameInfo.team.players) { player in
-								PlayerView(player: player, user: user)
+								PlayerView(player: player, userID: userID)
 							}
 						}
 						.padding()
@@ -45,7 +45,7 @@ struct AgentSelectView: View {
 						
 						Divider()
 						
-						AgentPickerView(pregameInfo: $pregameInfo, user: user, inventory: inventory)
+						AgentPickerView(pregameInfo: $pregameInfo, userID: userID, inventory: inventory)
 					}
 				}
 			}
@@ -113,14 +113,14 @@ struct AgentSelectView: View {
 	
 	struct PlayerView: View {
 		let player: LivePregameInfo.PlayerInfo
-		let user: User
+		let userID: User.ID
 		
 		@State var playerUser: User?
 		@State var summary: CompetitiveSummary?
 		@Environment(\.assets) private var assets
 		
 		var body: some View {
-			let relativeColor = player.id == user.id ? Color.valorantSelf : .valorantBlue
+			let relativeColor = player.id == userID ? Color.valorantSelf : .valorantBlue
 			let isLockedIn = player.isLockedIn
 			let iconSize = 48.0
 			
@@ -174,8 +174,8 @@ struct AgentSelectView: View {
 				}
 				.frame(maxWidth: .infinity, alignment: .leading)
 				
-				if player.id != user.id, let playerUser = playerUser {
-					NavigationLink(destination: MatchListView(user: playerUser)) {
+				if player.id != userID {
+					NavigationLink(destination: MatchListView(userID: player.id, user: playerUser)) {
 						Image(systemName: "person.crop.circle.fill")
 							.padding(.horizontal, 4)
 					}
@@ -199,7 +199,7 @@ struct AgentSelectView_Previews: PreviewProvider {
 	static var previews: some View {
 		AgentSelectView(
 			pregameInfo: .constant(PreviewData.pregameInfo),
-			user: PreviewData.user,
+			userID: PreviewData.userID,
 			inventory: PreviewData.inventory
 		)
 		.navigationTitle("Agent Select")

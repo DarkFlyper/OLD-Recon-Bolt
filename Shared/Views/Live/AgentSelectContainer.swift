@@ -4,7 +4,7 @@ import HandyOperators
 
 struct AgentSelectContainer: View {
 	let matchID: Match.ID
-	let user: User
+	let userID: User.ID
 	@State var pregameInfo: LivePregameInfo?
 	@State var inventory: Inventory?
 	
@@ -19,7 +19,7 @@ struct AgentSelectContainer: View {
 			if let pregameInfo = Binding($pregameInfo), let inventory = inventory {
 				AgentSelectView(
 					pregameInfo: pregameInfo,
-					user: user,
+					userID: userID,
 					inventory: inventory
 				)
 			} else {
@@ -40,7 +40,7 @@ struct AgentSelectContainer: View {
 		}
 		.valorantLoadTask {
 			guard inventory == nil else { return }
-			inventory = try await $0.getInventory(for: user.id)
+			inventory = try await $0.getInventory(for: userID)
 		}
 		.alert(
 			"Agent Select Ended!",
@@ -69,7 +69,7 @@ struct AgentSelectContainer: View {
 #if DEBUG
 struct AgentSelectContainer_Previews: PreviewProvider {
 	static var previews: some View {
-		AgentSelectContainer(matchID: Match.ID(), user: PreviewData.user)
+		AgentSelectContainer(matchID: Match.ID(), userID: PreviewData.userID)
 			.inEachColorScheme()
 	}
 }

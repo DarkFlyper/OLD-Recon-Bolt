@@ -4,7 +4,7 @@ import UserDefault
 import HandyOperators
 
 protocol ClientData {
-	var user: User { get }
+	var userID: User.ID { get }
 	var client: ValorantClient { get }
 	
 	static func authenticated(using credentials: Credentials) async throws -> Self
@@ -15,7 +15,7 @@ protocol ClientData {
 }
 
 extension ClientData {
-	var id: Player.ID { user.id }
+	var userID: User.ID { client.userID }
 }
 
 final class ClientDataStore: ObservableObject {
@@ -31,8 +31,6 @@ final class ClientDataStore: ObservableObject {
 }
 
 struct StandardClientData: ClientData {
-	var user: User { client.user }
-	
 	var client: ValorantClient
 	
 	private var credentials: Credentials

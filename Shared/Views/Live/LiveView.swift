@@ -2,7 +2,7 @@ import SwiftUI
 import ValorantAPI
 
 struct LiveView: View {
-	let user: User
+	let userID: User.ID
 	@State var contractDetails: ContractDetails?
 	@State var activeMatch: ActiveMatch?
 	
@@ -84,11 +84,11 @@ struct LiveView: View {
 					
 					if activeMatch.inPregame {
 						NavigationLink("Agent Select \(Image(systemName: "chevron.right"))") {
-							AgentSelectContainer(matchID: activeMatch.id, user: user)
+							AgentSelectContainer(matchID: activeMatch.id, userID: userID)
 						}
 					} else {
 						NavigationLink("Details \(Image(systemName: "chevron.right"))") {
-							LiveMatchContainer(matchID: activeMatch.id, user: user)
+							LiveMatchContainer(matchID: activeMatch.id, userID: userID)
 						}
 					}
 				}
@@ -229,17 +229,17 @@ struct LiveView: View {
 struct LiveView_Previews: PreviewProvider {
 	static var previews: some View {
 		LiveView(
-			user: PreviewData.user,
+			userID: PreviewData.userID,
 			contractDetails: PreviewData.contractDetails,
 			isAutoRefreshing: true, isAutoRefreshRunning: true
 		)
 		.withToolbar()
 		.inEachColorScheme()
 		
-		LiveView(user: PreviewData.user, activeMatch: .init(id: Match.ID(), inPregame: true))
+		LiveView(userID: PreviewData.userID, activeMatch: .init(id: Match.ID(), inPregame: true))
 			.withToolbar()
 		
-		LiveView(user: PreviewData.user, activeMatch: .init(id: Match.ID(), inPregame: false))
+		LiveView(userID: PreviewData.userID, activeMatch: .init(id: Match.ID(), inPregame: false))
 			.withToolbar()
 	}
 }

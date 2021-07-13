@@ -4,7 +4,7 @@ import ValorantAPI
 struct AgentPickerView: View {
 	@Binding
 	var pregameInfo: LivePregameInfo
-	let user: User
+	let userID: User.ID
 	let inventory: Inventory
 	
 	/// We can actually change our locked-in agent to a different one, but we want that functionality reasonably hidden.
@@ -15,13 +15,13 @@ struct AgentPickerView: View {
 	@Environment(\.assets) private var assets
 	
 	var body: some View {
-		let ownPlayer = pregameInfo.team.players.first { $0.id == user.id }!
+		let ownPlayer = pregameInfo.team.players.first { $0.id == userID }!
 		let gameModeInfo = assets?.gameModes[pregameInfo.modeID]
 		let isVotingBased = gameModeInfo?.gameRuleOverride(for: .majorityVoteAgents) == true
 		let takenAgents = isVotingBased ? [] : Set(
 			pregameInfo.team.players
 				.filter(\.isLockedIn)
-				.filter { $0.id != user.id }
+				.filter { $0.id != userID }
 				.map { $0.agentID! }
 		)
 		

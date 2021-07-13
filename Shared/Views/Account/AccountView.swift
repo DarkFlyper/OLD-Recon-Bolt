@@ -1,8 +1,11 @@
 import SwiftUI
+import ValorantAPI
 
 struct AccountView: View {
 	@ObservedObject var dataStore: ClientDataStore
 	@ObservedObject var assetManager: AssetManager
+	
+	@State var user: User?
 	
 	var body: some View {
 		ScrollView {
@@ -23,17 +26,27 @@ struct AccountView: View {
 	
 	@ViewBuilder
 	var accountInfo: some View {
-		if let user = dataStore.data?.user {
+		if let userID = dataStore.data?.userID {
 			VStack(spacing: 20) {
-				Text("Signed in as \(Text(user.name).fontWeight(.semibold))")
-					.font(.title3)
-					.multilineTextAlignment(.center)
+				Group {
+					if let user = user {
+						Text("Signed in as \(Text(user.name).fontWeight(.semibold))")
+					} else {
+						Text("Signed in.")
+					}
+				}
+				.font(.title3)
+				.multilineTextAlignment(.center)
 				
 				Button("Sign Out") {
 					dataStore.data = nil
 				}
 			}
 			.padding()
+			.withLocalData($user) { $0.user(for: userID) } // TODO: does this work when switching users?
+			.valorantLoadTask(id: userID) {
+				try await LocalDataProvider.shared.fetchUsers(for: [userID], using: $0)
+			}
 		} else {
 			LoginForm(data: $dataStore.data, credentials: .init(from: dataStore.keychain) ?? .init())
 				.withLoadErrorAlerts()

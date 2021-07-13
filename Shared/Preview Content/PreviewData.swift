@@ -74,7 +74,6 @@ enum PreviewData {
 }
 
 struct MockClientData: ClientData {
-	let user = PreviewData.user
 	let client = ValorantClient.mocked
 	
 	static func authenticated(using credentials: Credentials) -> Self { .init() }
@@ -86,7 +85,6 @@ struct MockClientData: ClientData {
 }
 
 private struct EmptyClientData: ClientData {
-	let user: User
 	let client: ValorantClient
 	
 	static func authenticated(using credentials: Credentials) -> Self { fatalError() }

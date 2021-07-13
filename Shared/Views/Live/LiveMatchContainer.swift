@@ -3,13 +3,13 @@ import ValorantAPI
 
 struct LiveMatchContainer: View {
 	let matchID: Match.ID
-	let user: User
+	let userID: User.ID
 	@State var gameInfo: LiveGameInfo?
 	
 	var body: some View {
 		VStack {
 			if let gameInfo = gameInfo {
-				LiveMatchView(gameInfo: gameInfo, user: user)
+				LiveMatchView(gameInfo: gameInfo, userID: userID)
 			} else {
 				ProgressView()
 			}
