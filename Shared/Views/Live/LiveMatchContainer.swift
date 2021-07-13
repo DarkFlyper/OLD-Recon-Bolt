@@ -16,7 +16,7 @@ struct LiveMatchContainer: View {
 		}
 		.valorantLoadTask {
 			let info = try await $0.getLiveGameInfo(matchID)
-			LocalDataProvider.shared.store(info.players.map(\.identity))
+			LocalDataProvider.shared.dataFetched(info)
 			gameInfo = info
 			let userIDs = info.players.map(\.id)
 			try await LocalDataProvider.shared.fetchUsers(for: userIDs, using: $0)

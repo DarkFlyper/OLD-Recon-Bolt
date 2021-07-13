@@ -56,8 +56,7 @@ struct AgentSelectContainer: View {
 		await load {
 			do {
 				pregameInfo = try await $0.getLivePregameInfo(matchID) <- {
-					LocalDataProvider.shared
-						.store($0.team.players.map(\.identity))
+					LocalDataProvider.shared.dataFetched($0)
 				}
 			} catch ValorantClient.APIError.badResponseCode(404, _, _) {
 				hasEnded = true

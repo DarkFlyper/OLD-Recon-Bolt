@@ -19,6 +19,9 @@ struct BookmarkListView: View {
 					OtherUserCell(userID: $0)
 				}
 			}
+			.valorantLoadTask(id: bookmarkList.bookmarks) {
+				try await LocalDataProvider.shared.fetchUsers(for: bookmarkList.bookmarks, using: $0)
+			}
 		}
 		.navigationTitle("Players")
 	}

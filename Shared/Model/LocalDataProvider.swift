@@ -43,8 +43,8 @@ final class LocalDataProvider {
 				let currentAct = await AssetManager.forPreviews.assets!.seasons.currentAct()!
 				
 				// TODO: use some other mechanism to express this stuff now that it's unified
-				await userManager.store(PreviewData.pregameUsers.values)
-				await userManager.store(PreviewData.liveGameUsers.values)
+				await userManager.store(PreviewData.pregameUsers.values, asOf: .now)
+				await userManager.store(PreviewData.liveGameUsers.values, asOf: .now)
 				//await userManager.store(PreviewData.singleMatch.players.map(User.init))
 				
 				await competitiveSummaryManager.store([
@@ -60,7 +60,7 @@ final class LocalDataProvider {
 						$0.competitiveInfo!.bySeason![currentAct.id]!.competitiveTier = 17
 						$0.competitiveInfo!.bySeason![currentAct.id]!.rankedRating = 69
 					},
-				])
+				], asOf: .now)
 			}
 		}
 		#endif
@@ -82,7 +82,7 @@ final class LocalDataProvider {
 	}
 	
 	func store(_ matchList: MatchList) {
-		async { await matchListManager.store(matchList) }
+		async { await matchListManager.store(matchList, asOf: .now) }
 	}
 	
 	// MARK: -
@@ -99,7 +99,10 @@ final class LocalDataProvider {
 		forceFetch: Bool = false
 	) async throws {
 		if forceFetch {
-			try await competitiveSummaryManager.store(client.getCompetitiveSummary(userID: userID))
+			try await competitiveSummaryManager.store(
+				client.getCompetitiveSummary(userID: userID),
+				asOf: .now
+			)
 		} else {
 			try await competitiveSummaryManager.fetchIfNecessary(
 				for: userID,
@@ -120,10 +123,6 @@ final class LocalDataProvider {
 		try await userManager.fetchIfNecessary(ids, fetch: client.getUsers)
 	}
 	
-	func store(_ users: [User]) {
-		async { await userManager.store(users) }
-	}
-	
 	// MARK: -
 	
 	private var matchDetailsManager = LocalDataManager<MatchDetails>()
@@ -135,8 +134,7 @@ final class LocalDataProvider {
 	func fetchMatchDetails(for matchID: Match.ID, using client: ValorantClient) async throws {
 		try await matchDetailsManager.fetchIfNecessary(for: matchID) {
 			try await client.getMatchDetails(matchID: $0) <- {
-				store($0.players.map(\.identity))
-				store($0.players.map(User.init))
+				store($0.players.map(\.identity), asOf: $0.matchInfo.gameStart)
 			}
 		}
 	}
@@ -149,7 +147,17 @@ final class LocalDataProvider {
 		playerIdentityManager.objectPublisher(for: id)
 	}
 	
-	func store(_ identities: [Player.Identity]) {
-		async { await playerIdentityManager.store(identities) }
+	private func store(_ identities: [Player.Identity], asOf updateTime: Date) {
+		async { await playerIdentityManager.store(identities, asOf: updateTime) }
+	}
+	
+	// MARK: - updates from other sources
+	
+	func dataFetched(_ info: LivePregameInfo) {
+		store(info.team.players.map(\.identity), asOf: .now)
+	}
+	
+	func dataFetched(_ info: LiveGameInfo) {
+		store(info.players.map(\.identity), asOf: .now)
 	}
 }

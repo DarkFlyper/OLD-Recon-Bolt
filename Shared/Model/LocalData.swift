@@ -29,21 +29,25 @@ final actor LocalDataManager<Object: Identifiable & Codable> where Object.ID: Lo
 		)
 	}
 	
-	func store<S: Sequence>(_ objects: S) where S.Element == Object {
-		let entries = objects.map { Entry(object: $0) }
+	func store<S: Sequence>(_ objects: S, asOf updateTime: Date) where S.Element == Object {
+		let entries = objects.map { Entry(lastUpdate: updateTime, object: $0) }
 		for entry in entries {
+			let existing = cachedEntry(for: entry.id)
+			if let existing = existing, existing.lastUpdate > updateTime { continue }
+			
 			cache[entry.id] = entry
 			print("publishing entry for \(entry.id)")
 			subjects[entry.id]?.send(entry.object)
 		}
 		
 		asyncDetached(priority: .utility) {
+			// TODO: don't save entries that haven't been updated?
 			entries.forEach(trySave)
 		}
 	}
 	
-	func store(_ object: Object) {
-		store([object])
+	func store(_ object: Object, asOf updateTime: Date) {
+		store([object], asOf: updateTime)
 	}
 	
 	private func cachedEntry(for id: Object.ID) -> Entry? {
@@ -83,7 +87,7 @@ final actor LocalDataManager<Object: Identifiable & Codable> where Object.ID: Lo
 		}
 		// auto-update necessary
 		try await tryLoad {
-			try await update(cached?.object) <- { store($0) }
+			try await update(cached?.object) <- { store($0, asOf: .now) }
 		}
 	}
 	
@@ -94,7 +98,7 @@ final actor LocalDataManager<Object: Identifiable & Codable> where Object.ID: Lo
 	func fetchIfNecessary(_ ids: [Object.ID], fetch: ([Object.ID]) async throws -> [Object]) async throws {
 		let cached = ids.compactMap { cachedEntry(for: $0) }
 		guard cached.count < ids.count || cached.contains(where: shouldAutoUpdate) else { return }
-		try await fetch(ids) <- { store($0) }
+		try await fetch(ids) <- { store($0, asOf: .now) }
 	}
 	
 	@discardableResult
