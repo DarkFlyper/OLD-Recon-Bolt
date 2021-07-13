@@ -31,8 +31,10 @@ struct LiveView: View {
 	
 	func refresh() async {
 		// load both independently
-		async let refreshes = (loadContractDetails(), loadLiveGameDetails())
-		_ = await refreshes
+		// TODO: change once `async let _ = ...` is fixed
+		async let contractUpdate: Void = loadContractDetails()
+		async let liveGameUpdate: Void = loadLiveGameDetails()
+		_ = await (contractUpdate, liveGameUpdate)
 	}
 	
 	var missionsBox: some View {
