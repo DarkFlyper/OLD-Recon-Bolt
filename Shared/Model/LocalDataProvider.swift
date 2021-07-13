@@ -45,7 +45,8 @@ final class LocalDataProvider {
 				// TODO: use some other mechanism to express this stuff now that it's unified
 				await userManager.store(PreviewData.pregameUsers.values, asOf: .now)
 				await userManager.store(PreviewData.liveGameUsers.values, asOf: .now)
-				//await userManager.store(PreviewData.singleMatch.players.map(User.init))
+				dataFetched(PreviewData.pregameInfo)
+				dataFetched(PreviewData.liveGameInfo)
 				
 				await competitiveSummaryManager.store([
 					PreviewData.summary,

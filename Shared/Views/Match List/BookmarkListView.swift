@@ -140,7 +140,7 @@ struct BookmarksList_Previews: PreviewProvider {
 		)
 		.withToolbar()
 		.environmentObject(BookmarkList(
-			bookmarks: PreviewData.singleMatch.players.prefix(5).map(\.id) + [User.ID()]
+			bookmarks: PreviewData.pregameInfo.team.players.map(\.id) + [.init()]
 		))
 	}
 }
