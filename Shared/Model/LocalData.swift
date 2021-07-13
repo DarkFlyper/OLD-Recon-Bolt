@@ -30,24 +30,23 @@ final actor LocalDataManager<Object: Identifiable & Codable> where Object.ID: Lo
 	}
 	
 	func store<S: Sequence>(_ objects: S, asOf updateTime: Date) where S.Element == Object {
-		let entries = objects.map { Entry(lastUpdate: updateTime, object: $0) }
-		for entry in entries {
-			let existing = cachedEntry(for: entry.id)
-			if let existing = existing, existing.lastUpdate > updateTime { continue }
-			
-			cache[entry.id] = entry
-			print("publishing entry for \(entry.id)")
-			subjects[entry.id]?.send(entry.object)
-		}
-		
-		asyncDetached(priority: .utility) {
-			// TODO: don't save entries that haven't been updated?
-			entries.forEach(trySave)
+		for object in objects {
+			store(object, asOf: updateTime)
 		}
 	}
 	
 	func store(_ object: Object, asOf updateTime: Date) {
-		store([object], asOf: updateTime)
+		let entry = Entry(lastUpdate: updateTime, object: object)
+		let existing = cachedEntry(for: object.id)
+		if let existing = existing, existing.lastUpdate > updateTime { return }
+		
+		cache[object.id] = entry
+		print("publishing entry for \(object.id)")
+		subjects[object.id]?.send(object)
+		
+		asyncDetached(priority: .utility) {
+			trySave(entry)
+		}
 	}
 	
 	private func cachedEntry(for id: Object.ID) -> Entry? {
