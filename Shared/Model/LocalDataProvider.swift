@@ -40,7 +40,8 @@ final class LocalDataProvider {
 		#if DEBUG
 		if isInSwiftUIPreview {
 			async { // actually instant because the actors aren't in use
-				let currentAct = await AssetManager.forPreviews.assets!.seasons.currentAct()!
+				guard let assets = await AssetManager.forPreviews.assets else { return }
+				let currentAct = assets.seasons.currentAct()!
 				
 				// TODO: use some other mechanism to express this stuff now that it's unified
 				await userManager.store(PreviewData.pregameUsers.values, asOf: .now)
