@@ -68,26 +68,14 @@ struct MatchListView: View {
 				}
 			}
 		}
-		.withLocalData($user) { $0.user(for: userID) }
-		.withLocalData($matchList) { $0.matchList(for: userID) }
-		.withLocalData($summary) { $0.competitiveSummary(for: userID) }
-		.withLocalData($identity) { $0.identity(for: userID) }
-		.valorantLoadTask {
-			try await LocalDataProvider.shared
-				.autoUpdateMatchList(for: userID, using: $0)
-		}
-		.valorantLoadTask {
-			try await LocalDataProvider.shared
-				.fetchCompetitiveSummary(for: userID, using: $0)
-		}
-		.valorantLoadTask {
-			try await LocalDataProvider.shared.fetchUsers(for: [userID], using: $0)
-		}
+		.withLocalData($user, id: userID, shouldAutoUpdate: true)
+		.withLocalData($matchList, id: userID, shouldAutoUpdate: true)
+		.withLocalData($summary, id: userID, shouldAutoUpdate: true)
+		.withLocalData($identity, id: userID)
 		.refreshable {
 			async let matchListUpdate: Void = updateMatchList(update: ValorantClient.loadMatches)
 			async let summaryUpdate: Void = load {
-				try await LocalDataProvider.shared
-					.fetchCompetitiveSummary(for: userID, using: $0)
+				try await $0.fetchCompetitiveSummary(for: userID, forceFetch: true)
 			}
 			_ = await (matchListUpdate, summaryUpdate)
 		}
@@ -96,11 +84,7 @@ struct MatchListView: View {
 	}
 	
 	func updateMatchList(update: @escaping (ValorantClient) -> (inout MatchList) async throws -> Void) async {
-		guard let matchList = matchList else { return }
-		await load { client in
-			LocalDataProvider.shared
-				.store(try await matchList <- update(client))
-		}
+		await load { try await $0.updateMatchList(for: userID, update: update($0)) }
 	}
 }
 

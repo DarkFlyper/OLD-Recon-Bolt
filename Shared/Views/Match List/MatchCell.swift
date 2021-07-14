@@ -36,7 +36,7 @@ struct MatchCell: View {
 		}
 		.padding(.vertical, 8)
 		.id(match.id)
-		.withLocalData($matchDetails) { $0.matchDetails(for: match.id) }
+		.withLocalData($matchDetails, id: match.id)
 	}
 	
 	private var changeInfo: some View {

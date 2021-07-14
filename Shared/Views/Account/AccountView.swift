@@ -43,10 +43,7 @@ struct AccountView: View {
 				}
 			}
 			.padding()
-			.withLocalData($user) { $0.user(for: userID) } // TODO: does this work when switching users?
-			.valorantLoadTask(id: userID) {
-				try await LocalDataProvider.shared.fetchUsers(for: [userID], using: $0)
-			}
+			.withLocalData($user, id: userID, shouldAutoUpdate: true)
 		} else {
 			LoginForm(data: $dataStore.data, credentials: .init(from: dataStore.keychain) ?? .init())
 				.withLoadErrorAlerts()

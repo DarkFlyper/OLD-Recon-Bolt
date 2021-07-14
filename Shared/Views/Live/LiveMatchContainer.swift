@@ -1,5 +1,6 @@
 import SwiftUI
 import ValorantAPI
+import HandyOperators
 
 struct LiveMatchContainer: View {
 	let matchID: Match.ID
@@ -16,10 +17,10 @@ struct LiveMatchContainer: View {
 		}
 		.valorantLoadTask {
 			let info = try await $0.getLiveGameInfo(matchID)
-			LocalDataProvider.shared.dataFetched(info)
+				<- LocalDataProvider.dataFetched
 			gameInfo = info
 			let userIDs = info.players.map(\.id)
-			try await LocalDataProvider.shared.fetchUsers(for: userIDs, using: $0)
+			try await $0.fetchUsers(for: userIDs)
 		}
 		.navigationTitle("Live Match")
 		.navigationBarTitleDisplayMode(.inline)

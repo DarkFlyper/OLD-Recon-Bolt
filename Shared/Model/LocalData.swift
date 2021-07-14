@@ -50,9 +50,7 @@ final actor LocalDataManager<Object: Identifiable & Codable> where Object.ID: Lo
 	}
 	
 	private func cachedEntry(for id: Object.ID) -> Entry? {
-		cache[id] ?? (tryLoadEntry(with: id) <- {
-			cache[id] = $0
-		})
+		cache[id] ?? (tryLoadEntry(with: id) <- { cache[id] = $0 })
 	}
 	
 	func cachedObject(for id: Object.ID) -> Object? {

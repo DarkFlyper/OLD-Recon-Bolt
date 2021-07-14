@@ -159,11 +159,8 @@ struct AgentSelectView: View {
 					.frame(width: iconSize, height: iconSize)
 			}
 			.accentColor(relativeColor)
-			.withLocalData($playerUser) { $0.user(for: player.id) }
-			.withLocalData($summary) { $0.competitiveSummary(for: player.id) }
-			.valorantLoadTask {
-				try await LocalDataProvider.shared.fetchCompetitiveSummary(for: player.id, using: $0)
-			}
+			.withLocalData($playerUser, id: player.id)
+			.withLocalData($summary, id: player.id, shouldAutoUpdate: true)
 		}
 		
 		@ViewBuilder

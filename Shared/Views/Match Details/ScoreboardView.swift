@@ -29,9 +29,9 @@ struct ScoreboardView: View {
 	}
 	
 	private func fetchRanks() async {
-		await load { client in
+		await load {
 			for playerID in data.players.keys {
-				try await LocalDataProvider.shared.fetchCompetitiveSummary(for: playerID, using: client)
+				try await $0.fetchCompetitiveSummary(for: playerID)
 			}
 		}
 	}
@@ -95,7 +95,7 @@ struct ScoreboardRowView: View {
 		.onTapGesture {
 			highlight.switchHighlight(to: player)
 		}
-		.withLocalData($summary) { $0.competitiveSummary(for: player.id) }
+		.withLocalData($summary, id: player.id)
 	}
 	
 	@ViewBuilder

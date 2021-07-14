@@ -36,7 +36,7 @@ struct AgentSelectContainer: View {
 		.valorantLoadTask(id: pregameInfo == nil) {
 			guard let pregameInfo = pregameInfo else { return }
 			let userIDs = pregameInfo.team.players.map(\.id)
-			try await LocalDataProvider.shared.fetchUsers(for: userIDs, using: $0)
+			try await $0.fetchUsers(for: userIDs)
 		}
 		.valorantLoadTask {
 			guard inventory == nil else { return }
@@ -55,9 +55,8 @@ struct AgentSelectContainer: View {
 	private func update() async {
 		await load {
 			do {
-				pregameInfo = try await $0.getLivePregameInfo(matchID) <- {
-					LocalDataProvider.shared.dataFetched($0)
-				}
+				pregameInfo = try await $0.getLivePregameInfo(matchID)
+					<- LocalDataProvider.dataFetched
 			} catch ValorantClient.APIError.badResponseCode(404, _, _) {
 				hasEnded = true
 				isShowingEndedAlert = true

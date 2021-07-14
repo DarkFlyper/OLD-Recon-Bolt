@@ -14,7 +14,7 @@ struct BookmarkListView: View {
 			Section {
 				UserCell(userID: userID, isSelected: $isShowingSelf, user: myself)
 			}
-			.withLocalData($myself) { $0.user(for: userID) }
+			.withLocalData($myself, id: userID, shouldAutoUpdate: true)
 			
 			Section("Bookmarks") {
 				ForEach(bookmarkList.bookmarks, id: \.self) {
@@ -22,7 +22,7 @@ struct BookmarkListView: View {
 				}
 			}
 			.valorantLoadTask(id: bookmarkList.bookmarks) {
-				try await LocalDataProvider.shared.fetchUsers(for: bookmarkList.bookmarks, using: $0)
+				try await $0.fetchUsers(for: bookmarkList.bookmarks)
 			}
 		}
 		.navigationTitle("Players")
@@ -76,8 +76,8 @@ struct BookmarkListView: View {
 				}
 			}
 			.padding(.vertical, 8)
-			.withLocalData($user) { $0.user(for: userID) }
-			.withLocalData($identity) { $0.identity(for: userID) }
+			.withLocalData($user, id: userID)
+			.withLocalData($identity, id: userID)
 		}
 	}
 }

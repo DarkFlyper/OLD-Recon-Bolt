@@ -4,37 +4,104 @@ import ValorantAPI
 import HandyOperators
 
 extension View {
-	func withLocalData<Value>(
+	func withLocalData<Value: LocalDataStored>(
 		_ value: Binding<Value?>,
-		animation: Animation? = .default,
-		getPublisher: @escaping (LocalDataProvider) -> LocalDataPublisher<Value>
+		id: Value.ID,
+		animation: Animation? = .default
 	) -> some View {
-		modifier(LocalDataModifier(value: value, animation: animation, getPublisher: getPublisher))
+		modifier(LocalDataModifier(value: value, id: id, animation: animation))
+	}
+	
+	func withLocalData<Value: LocalDataAutoUpdatable>(
+		_ value: Binding<Value?>,
+		id: Value.ID,
+		shouldAutoUpdate: Bool = false,
+		animation: Animation? = .default
+	) -> some View {
+		modifier(LocalDataModifier(value: value, id: id, animation: animation) { client in
+			{ try await Value.autoUpdate(for: $0, using: client) }
+		})
 	}
 }
 
-private struct LocalDataModifier<Value>: ViewModifier {
+private struct LocalDataModifier<Value: LocalDataStored>: ViewModifier {
 	@Binding var value: Value?
-	let animation: Animation?
-	let getPublisher: (LocalDataProvider) -> LocalDataPublisher<Value>
+	var id: Value.ID
+	var animation: Animation?
+	var autoUpdate: ((ValorantClient) -> (Value.ID) async throws -> Void)? = nil
 	
-	@State private var token: AnyCancellable? = nil
+	@State private var token: (id: Value.ID, AnyCancellable)? = nil
 	
 	func body(content: Content) -> some View {
-		content.task {
-			token = token ?? getPublisher(.shared)
-				.receive(on: DispatchQueue.main)
-				.sink { newValue, wasCached in
-					withAnimation(wasCached ? nil : animation) {
-						value = newValue
+		content
+			.task(id: id) {
+				if let token = token, token.id == id { return }
+				let cancellable = LocalDataProvider.shared[keyPath: Value.managerPath]
+					.objectPublisher(for: id)
+					.receive(on: DispatchQueue.main)
+					.sink { newValue, wasCached in
+						withAnimation(wasCached ? nil : animation) {
+							value = newValue
+						}
 					}
-				}
-		}
+				token = (id, cancellable)
+			}
+			.valorantLoadTask(id: id) { try await autoUpdate?($0)(id) }
 	}
+}
+
+protocol LocalDataStored: Identifiable, Codable where ID: LosslessStringConvertible {
+	static var managerPath: KeyPath<LocalDataProvider, LocalDataManager<Self>> { get }
+}
+
+protocol LocalDataAutoUpdatable: LocalDataStored {
+	static func autoUpdate(for id: ID, using client: ValorantClient) async throws
+}
+
+extension MatchList: LocalDataAutoUpdatable {
+	static let managerPath = \LocalDataProvider.matchListManager as KeyPath
+	
+	static func autoUpdate(for id: ID, using client: ValorantClient) async throws {
+		try await client.autoUpdateMatchList(for: id)
+	}
+}
+
+extension CompetitiveSummary: LocalDataAutoUpdatable {
+	static let managerPath = \LocalDataProvider.competitiveSummaryManager as KeyPath
+	
+	static func autoUpdate(for id: ID, using client: ValorantClient) async throws {
+		try await client.fetchCompetitiveSummary(for: id)
+	}
+}
+
+extension User: LocalDataAutoUpdatable {
+	static let managerPath = \LocalDataProvider.userManager as KeyPath
+	
+	static func autoUpdate(for id: ID, using client: ValorantClient) async throws {
+		try await client.fetchUsers(for: [id])
+	}
+}
+
+extension MatchDetails: LocalDataAutoUpdatable {
+	static let managerPath = \LocalDataProvider.matchDetailsManager as KeyPath
+	
+	static func autoUpdate(for id: ID, using client: ValorantClient) async throws {
+		try await client.fetchMatchDetails(for: id)
+	}
+}
+
+extension Player.Identity: LocalDataStored {
+	static let managerPath = \LocalDataProvider.playerIdentityManager as KeyPath
 }
 
 final class LocalDataProvider {
-	static let shared = LocalDataProvider()
+	fileprivate static let shared = LocalDataProvider()
+	
+	var matchListManager = LocalDataManager<MatchList>(ageCausingAutoUpdate: .minutes(5))
+	var competitiveSummaryManager = LocalDataManager<CompetitiveSummary>(ageCausingAutoUpdate: .minutes(5))
+	var userManager = LocalDataManager<User>(ageCausingAutoUpdate: .hours(1))
+	var matchDetailsManager = LocalDataManager<MatchDetails>()
+	var playerIdentityManager = LocalDataManager<Player.Identity>()
 	
 	private init() {
 		#if DEBUG
@@ -46,8 +113,8 @@ final class LocalDataProvider {
 				// TODO: use some other mechanism to express this stuff now that it's unified
 				await userManager.store(PreviewData.pregameUsers.values, asOf: .now)
 				await userManager.store(PreviewData.liveGameUsers.values, asOf: .now)
-				dataFetched(PreviewData.pregameInfo)
-				dataFetched(PreviewData.liveGameInfo)
+				Self.dataFetched(PreviewData.pregameInfo)
+				Self.dataFetched(PreviewData.liveGameInfo)
 				
 				await competitiveSummaryManager.store([
 					PreviewData.summary,
@@ -70,96 +137,64 @@ final class LocalDataProvider {
 	
 	// MARK: -
 	
-	private var matchListManager = LocalDataManager<MatchList>(ageCausingAutoUpdate: .minutes(5))
-	
-	func matchList(for userID: User.ID) -> LocalDataPublisher<MatchList> {
-		matchListManager.objectPublisher(for: userID)
-	}
-	
-	func autoUpdateMatchList(for userID: User.ID, using client: ValorantClient) async throws {
-		try await matchListManager.autoUpdateObject(for: userID) { existing in
-			let list = existing ?? MatchList(userID: userID)
-			return try await list <- client.loadMatches(for:)
-		}
-	}
-	
 	func store(_ matchList: MatchList) {
 		async { await matchListManager.store(matchList, asOf: .now) }
 	}
 	
-	// MARK: -
-	
-	private var competitiveSummaryManager = LocalDataManager<CompetitiveSummary>(ageCausingAutoUpdate: .minutes(5))
-	
-	func competitiveSummary(for userID: User.ID) -> LocalDataPublisher<CompetitiveSummary> {
-		competitiveSummaryManager.objectPublisher(for: userID)
-	}
-	
-	func fetchCompetitiveSummary(
-		for userID: User.ID,
-		using client: ValorantClient,
-		forceFetch: Bool = false
-	) async throws {
-		if forceFetch {
-			try await competitiveSummaryManager.store(
-				client.getCompetitiveSummary(userID: userID),
-				asOf: .now
-			)
-		} else {
-			try await competitiveSummaryManager.fetchIfNecessary(
-				for: userID,
-				fetch: client.getCompetitiveSummary
-			)
-		}
-	}
-	
-	// MARK: -
-	
-	private var userManager = LocalDataManager<User>(ageCausingAutoUpdate: .hours(1))
-	
-	func user(for id: User.ID) -> LocalDataPublisher<User> {
-		userManager.objectPublisher(for: id)
-	}
-	
-	func fetchUsers(for ids: [User.ID], using client: ValorantClient) async throws {
-		try await userManager.fetchIfNecessary(ids, fetch: client.getUsers)
-	}
-	
-	// MARK: -
-	
-	private var matchDetailsManager = LocalDataManager<MatchDetails>()
-	
-	func matchDetails(for matchID: Match.ID) -> LocalDataPublisher<MatchDetails> {
-		matchDetailsManager.objectPublisher(for: matchID)
-	}
-	
-	func fetchMatchDetails(for matchID: Match.ID, using client: ValorantClient) async throws {
-		try await matchDetailsManager.fetchIfNecessary(for: matchID) {
-			try await client.getMatchDetails(matchID: $0) <- {
-				store($0.players.map(\.identity), asOf: $0.matchInfo.gameStart)
-			}
-		}
-	}
-	
-	// MARK: -
-	
-	private var playerIdentityManager = LocalDataManager<Player.Identity>()
-	
-	func identity(for id: Player.ID) -> LocalDataPublisher<Player.Identity> {
-		playerIdentityManager.objectPublisher(for: id)
-	}
-	
-	private func store(_ identities: [Player.Identity], asOf updateTime: Date) {
+	func store(_ identities: [Player.Identity], asOf updateTime: Date) {
 		async { await playerIdentityManager.store(identities, asOf: updateTime) }
 	}
 	
 	// MARK: - updates from other sources
 	
-	func dataFetched(_ info: LivePregameInfo) {
-		store(info.team.players.map(\.identity), asOf: .now)
+	// TODO: still not super happy with these tbh
+	static func dataFetched(_ details: MatchDetails) {
+		shared.store(details.players.map(\.identity), asOf: details.matchInfo.gameStart)
 	}
 	
-	func dataFetched(_ info: LiveGameInfo) {
-		store(info.players.map(\.identity), asOf: .now)
+	static func dataFetched(_ info: LivePregameInfo) {
+		shared.store(info.team.players.map(\.identity), asOf: .now)
+	}
+	
+	static func dataFetched(_ info: LiveGameInfo) {
+		shared.store(info.players.map(\.identity), asOf: .now)
+	}
+}
+
+extension ValorantClient {
+	func autoUpdateMatchList(for userID: User.ID) async throws {
+		let manager = LocalDataProvider.shared.matchListManager
+		try await manager.autoUpdateObject(for: userID) { existing in
+			let list = existing ?? MatchList(userID: userID)
+			return try await list <- loadMatches(for:)
+		}
+	}
+	
+	func updateMatchList(for userID: User.ID, update: @escaping (inout MatchList) async throws -> Void) async throws {
+		let manager = LocalDataProvider.shared.matchListManager
+		guard let matchList = await manager.cachedObject(for: userID) else { return }
+		LocalDataProvider.shared.store(try await matchList <- update)
+	}
+	
+	func fetchCompetitiveSummary(for userID: User.ID, forceFetch: Bool = false) async throws {
+		let manager = LocalDataProvider.shared.competitiveSummaryManager
+		if forceFetch {
+			try await manager.store(getCompetitiveSummary(userID: userID), asOf: .now)
+		} else {
+			try await manager.fetchIfNecessary(for: userID, fetch: getCompetitiveSummary)
+		}
+	}
+	
+	func fetchUsers(for ids: [User.ID]) async throws {
+		let manager = LocalDataProvider.shared.userManager
+		try await manager.fetchIfNecessary(ids, fetch: getUsers)
+	}
+	
+	func fetchMatchDetails(for matchID: Match.ID) async throws {
+		let manager = LocalDataProvider.shared.matchDetailsManager
+		try await manager.fetchIfNecessary(for: matchID) {
+			try await getMatchDetails(matchID: $0)
+				<- LocalDataProvider.dataFetched
+		}
 	}
 }

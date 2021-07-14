@@ -15,12 +15,8 @@ struct MatchDetailsContainer: View {
 				ProgressView()
 			}
 		}
-		.withLocalData($details) { $0.matchDetails(for: matchID) }
+		.withLocalData($details, id: matchID, shouldAutoUpdate: true)
 		.loadErrorAlertTitle("Could not load match details!")
-		.valorantLoadTask {
-			try await LocalDataProvider.shared
-				.fetchMatchDetails(for: matchID, using: $0)
-		}
 		.navigationTitle("Match Details")
 		#if os(iOS)
 		.navigationBarTitleDisplayMode(.inline)

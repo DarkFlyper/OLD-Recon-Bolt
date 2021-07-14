@@ -76,7 +76,7 @@ extension ValorantClient {
 		list.highestLoadedIndex = requestMaxIndex
 	}
 	
-	func getUpdates(for list: MatchList, startIndex: Int) async throws -> [CompetitiveUpdate] {
+	private func getUpdates(for list: MatchList, startIndex: Int) async throws -> [CompetitiveUpdate] {
 		try await getCompetitiveUpdates(
 			userID: list.userID,
 			startIndex: startIndex,
