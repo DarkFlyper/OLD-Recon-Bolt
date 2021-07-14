@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="Resources/AppIcon.appiconset/mac_512x512@2x.png" alt="Icon" width=512 />
+  <img src="Resources/Icon Transparent.png" alt="Icon" width=512 />
 </p>
 
-# Valorant Viewer
+# Recon Bolt
 
 ###### A tiny SwiftUI app to let you view your underlying competitive rating changes.
 
