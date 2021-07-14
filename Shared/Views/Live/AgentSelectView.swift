@@ -35,11 +35,9 @@ struct AgentSelectView: View {
 							lockInIndicators(
 								count: pregameInfo.enemyTeamSize,
 								lockCount: pregameInfo.enemyTeamLockCount,
-								shouldReverse: false
+								shouldReverse: true
 							)
 							.foregroundColor(.valorantRed)
-							.environment(\.layoutDirection, .rightToLeft)
-							//.scaleEffect(x: -1, y: 1)
 						}
 						.padding()
 						
@@ -58,7 +56,8 @@ struct AgentSelectView: View {
 	@ViewBuilder
 	private func lockInIndicators(count: Int, lockCount: Int, shouldReverse: Bool) -> some View {
 		HStack {
-			ForEach(0..<count) { index in
+			let indices = Array(0..<count)
+			ForEach(shouldReverse ? indices.reversed() : indices, id: \.self) { index in
 				if index < lockCount {
 					Image(systemName: "lock")
 				} else {
@@ -119,46 +118,21 @@ struct AgentSelectView: View {
 		@State var summary: CompetitiveSummary?
 		@Environment(\.assets) private var assets
 		
+		private let iconSize = 48.0
+		
 		var body: some View {
 			let relativeColor = player.id == userID ? Color.valorantSelf : .valorantBlue
 			let isLockedIn = player.isLockedIn
-			let iconSize = 48.0
 			
 			HStack {
-				Group {
-					if let agentID = player.agentID {
-						AgentImage.displayIcon(agentID)
-							.dynamicallyStroked(radius: 1.5, color: .white)
-					} else {
-						Image(systemName: "questionmark")
-							.font(.system(size: iconSize / 2, weight: .bold))
-							.foregroundColor(.white)
-							.opacity(0.25)
-							.blendMode(.plusLighter)
-					}
-				}
-				.frame(width: iconSize, height: iconSize)
-				.mask(Circle())
-				.padding(isLockedIn ? 1 : 0)
-				.background(
-					Circle()
-						.fill(.accentColor)
-						.opacity(isLockedIn ? 0.5 : 0.25)
-						.padding(2)
-				)
-				.padding(2)
-				.overlay(
-					Circle()
-						.strokeBorder(.accentColor, lineWidth: isLockedIn ? 2 : 1)
-						.opacity(isLockedIn ? 1 : 0.75)
-				)
-				.padding(isLockedIn ? 0 : 1) // constant size
+				icon
 				
 				VStack(alignment: .leading, spacing: 4) {
 					if !player.identity.isIncognito, let playerUser = playerUser {
 						HStack {
 							Text(playerUser.gameName)
 							Text("#\(playerUser.tagLine)")
+								.fontWeight(.light)
 								.foregroundColor(.secondary)
 						}
 					}
@@ -189,6 +163,42 @@ struct AgentSelectView: View {
 			.withLocalData($summary) { $0.competitiveSummary(for: player.id) }
 			.valorantLoadTask {
 				try await LocalDataProvider.shared.fetchCompetitiveSummary(for: player.id, using: $0)
+			}
+		}
+		
+		@ViewBuilder
+		var icon: some View {
+			let isLockedIn = player.isLockedIn
+			
+			agentImage
+				.frame(width: iconSize, height: iconSize)
+				.mask(Circle())
+				.background {
+					Circle()
+						.fill(.accentColor)
+						.opacity(isLockedIn ? 0.5 : 0.25)
+						.padding(1)
+				}
+				.padding(3)
+				.background {
+					Circle()
+						.strokeBorder(.accentColor, lineWidth: isLockedIn ? 2 : 1)
+						.opacity(isLockedIn ? 1 : 0.75)
+						.padding(isLockedIn ? 0 : 1)
+				}
+		}
+		
+		@ViewBuilder
+		var agentImage: some View {
+			if let agentID = player.agentID {
+				AgentImage.displayIcon(agentID)
+					.dynamicallyStroked(radius: 1.5, color: .white)
+			} else {
+				Image(systemName: "questionmark")
+					.font(.system(size: iconSize / 2, weight: .bold))
+					.foregroundColor(.white)
+					.opacity(0.25)
+					.blendMode(.plusLighter)
 			}
 		}
 	}
