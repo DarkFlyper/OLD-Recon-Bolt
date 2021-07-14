@@ -1,11 +1,5 @@
 import SwiftUI
 
-#if os(macOS)
-typealias PrettyListStyle = InsetListStyle
-#else
-typealias PrettyListStyle = GroupedListStyle
-#endif
-
 struct PrettyTextFieldStyle: TextFieldStyle {
 	@ViewBuilder
 	func _body(configuration: TextField<_Label>) -> some View {

@@ -59,13 +59,13 @@ struct LoginForm: View {
 		}
 		.withoutSheetBottomPadding()
 		.padding()
+#if os(macOS)
 		.toolbar {
-			#if os(macOS)
 			ToolbarItemGroup(placement: .confirmationAction) {
 				Button("Sign In", action: logIn)
 			}
-			#endif
 		}
+#endif
 		.loadErrorAlertTitle("Could not sign in!")
 	}
 	
