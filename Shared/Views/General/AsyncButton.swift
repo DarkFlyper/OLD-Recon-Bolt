@@ -11,10 +11,10 @@ struct AsyncButton<Label: View>: View {
 	var body: some View {
 		Button(role: role) {
 			isRunning = true
-			async {
+			Task {
 				await action()
 				// TODO: figure out if this is necessary
-				//await MainActor.run {
+				//async { @MainActor in
 					isRunning = false
 				//}
 			}

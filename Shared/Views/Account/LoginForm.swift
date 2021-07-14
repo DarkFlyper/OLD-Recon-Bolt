@@ -38,7 +38,7 @@ struct LoginForm: View {
 						.submitLabel(.go)
 						.onSubmit {
 							isPasswordFieldFocused = false
-							async { await logIn() }
+							Task { await logIn() }
 						}
 						.focused($isPasswordFieldFocused)
 				}

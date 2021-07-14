@@ -57,9 +57,10 @@ extension Dictionary {
 	}
 }
 
-extension Task {
+extension Task where Success == Never, Failure == Never {
 	/// The built-in ``sleep(_:)`` didn't work for me, so I made this instead.
 	static func sleep(seconds: TimeInterval, tolerance: TimeInterval) async {
+		// TODO: this should stop being necessary at some point
 		//await sleep(UInt64(seconds * 1e9))
 		await withCheckedContinuation { continuation in
 			DispatchQueue.main.schedule(

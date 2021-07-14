@@ -106,7 +106,7 @@ final class LocalDataProvider {
 	private init() {
 		#if DEBUG
 		if isInSwiftUIPreview {
-			async { // actually instant because the actors aren't in use
+			Task { // actually instant because the actors aren't in use
 				guard let assets = await AssetManager.forPreviews.assets else { return }
 				let currentAct = assets.seasons.currentAct()!
 				
@@ -138,11 +138,11 @@ final class LocalDataProvider {
 	// MARK: -
 	
 	func store(_ matchList: MatchList) {
-		async { await matchListManager.store(matchList, asOf: .now) }
+		Task { await matchListManager.store(matchList, asOf: .now) }
 	}
 	
 	func store(_ identities: [Player.Identity], asOf updateTime: Date) {
-		async { await playerIdentityManager.store(identities, asOf: updateTime) }
+		Task { await playerIdentityManager.store(identities, asOf: updateTime) }
 	}
 	
 	// MARK: - updates from other sources

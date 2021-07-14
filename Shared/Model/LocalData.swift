@@ -44,8 +44,8 @@ final actor LocalDataManager<Object: Identifiable & Codable> where Object.ID: Lo
 		print("publishing entry for \(object.id)")
 		subjects[object.id]?.send(object)
 		
-		asyncDetached(priority: .utility) {
-			trySave(entry)
+		Task.detached(priority: .utility) {
+			self.trySave(entry)
 		}
 	}
 	
@@ -59,7 +59,7 @@ final actor LocalDataManager<Object: Identifiable & Codable> where Object.ID: Lo
 	
 	nonisolated func objectPublisher(for id: Object.ID) -> LocalDataPublisher<Object> {
 		Future { promise in
-			async {
+			Task {
 				promise(.success(await self._objectPublisher(for: id)))
 			}
 		}
