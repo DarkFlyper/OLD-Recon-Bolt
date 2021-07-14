@@ -5,14 +5,7 @@ import ValorantAPI
 #if DEBUG
 enum PreviewData {
 	static let userID = Player.ID("3fa8598d-066e-5bdb-998c-74c015c5dba5")!
-	static let userInfo = UserInfo(
-		account: .init(
-			gameName: "Julian", tagLine: "665",
-			createdAt: Date().addingTimeInterval(-4000)
-		),
-		id: userID
-	)
-	static let user = User(userInfo)
+	static let user = User(id: userID, gameName: "Julian", tagLine: "665")
 	static let userIdentity = pregameInfo.team.players
 		.first { $0.id == userID }!
 		.identity
