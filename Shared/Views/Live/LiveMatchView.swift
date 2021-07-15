@@ -5,14 +5,6 @@ struct LiveMatchView: View {
 	let gameInfo: LiveGameInfo
 	let userID: User.ID
 	
-	let ownPlayer: LiveGameInfo.PlayerInfo
-	
-	init(gameInfo: LiveGameInfo, userID: User.ID) {
-		self.gameInfo = gameInfo
-		self.userID = userID
-		
-		ownPlayer = gameInfo.players.first { $0.id == userID }!
-	}
 	
 	var body: some View {
 		ScrollView {
@@ -49,6 +41,7 @@ struct LiveMatchView: View {
 	
 	@ViewBuilder
 	private var playerList: some View {
+		let ownPlayer = gameInfo.players.first { $0.id == userID }!
 		let teams = Dictionary(grouping: gameInfo.players, by: \.teamID)
 		let allyTeam = teams[ownPlayer.teamID]!
 		let enemyTeams = teams

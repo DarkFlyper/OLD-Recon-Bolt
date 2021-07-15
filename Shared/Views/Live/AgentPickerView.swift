@@ -2,8 +2,7 @@ import SwiftUI
 import ValorantAPI
 
 struct AgentPickerView: View {
-	@Binding
-	var pregameInfo: LivePregameInfo
+	@Binding var pregameInfo: LivePregameInfo
 	let userID: User.ID
 	let inventory: Inventory
 	

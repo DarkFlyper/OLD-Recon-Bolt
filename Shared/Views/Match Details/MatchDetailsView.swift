@@ -5,10 +5,6 @@ struct MatchDetailsView: View {
 	let data: MatchViewData
 	@State var highlight = PlayerHighlightInfo()
 	
-	init(matchDetails: MatchDetails, userID: Player.ID?) {
-		data = .init(details: matchDetails, userID: userID)
-	}
-	
 	var body: some View {
 		ScrollView {
 			VStack(spacing: 0) {
@@ -35,8 +31,7 @@ struct MatchDetailsView: View {
 struct MatchDetailsView_Previews: PreviewProvider {
 	static var previews: some View {
 		MatchDetailsView(
-			matchDetails: PreviewData.singleMatch,
-			userID: PreviewData.userID
+			data: PreviewData.singleMatchData
 		)
 		.navigationTitle("Match Details")
 		.withToolbar(allowLargeTitles: false)

@@ -16,19 +16,15 @@ struct ContentView: View {
 	
 	var body: some View {
 		TabView(selection: $tab) {
-			onlineView { client in
-				BookmarkListView(userID: client.userID)
-					.withToolbar()
-			}
-			.tabItem { Label("Career", systemImage: "square.fill.text.grid.1x2") }
-			.tag(Tab.career)
+			onlineView { BookmarkListView(userID: $0) }
+				.withToolbar()
+				.tabItem { Label("Career", systemImage: "square.fill.text.grid.1x2") }
+				.tag(Tab.career)
 			
-			onlineView { client in
-				LiveView(userID: client.userID)
-					.withToolbar()
-			}
-			.tabItem { Label("Live", systemImage: "play.circle") }
-			.tag(Tab.live)
+			onlineView { LiveView(userID: $0) }
+				.withToolbar()
+				.tabItem { Label("Live", systemImage: "play.circle") }
+				.tag(Tab.live)
 			
 			ReferenceView()
 				.withToolbar()
@@ -52,10 +48,10 @@ struct ContentView: View {
 	
 	@ViewBuilder
 	private func onlineView<Content: View>(
-		@ViewBuilder content: (ClientData) -> Content
+		@ViewBuilder content: (User.ID) -> Content
 	) -> some View {
 		if let data = dataStore.data {
-			content(data)
+			content(data.userID)
 		} else {
 			Text("Not signed in!")
 				.frame(maxWidth: .infinity, maxHeight: .infinity)
