@@ -18,11 +18,6 @@ struct MatchCell: View {
 	
 	var body: some View {
 		ZStack {
-			NavigationLink(
-				destination: MatchDetailsContainer(matchID: match.id, userID: userID),
-				label: { EmptyView() }
-			)
-			.opacity(0) // hide disclosure indicator and avoid accent color changes
 			
 			HStack {
 				VStack(alignment: .leading) {
@@ -73,14 +68,18 @@ struct MatchCell: View {
 	@ViewBuilder
 	private var matchInfo: some View {
 		VStack {
-			HStack {
-				Text(Self.dateFormatter.string(from: match.startTime))
-					.foregroundStyle(.primary)
-					.fixedSize()
-				Text(Self.timeFormatter.string(from: match.startTime))
-					.foregroundStyle(.secondary)
+			NavigationLink {
+				MatchDetailsContainer(matchID: match.id, userID: userID)
+			} label: {
+				HStack {
+					Text(Self.dateFormatter.string(from: match.startTime))
+						.foregroundStyle(.primary)
+						.fixedSize()
+					Text(Self.timeFormatter.string(from: match.startTime))
+						.foregroundStyle(.secondary)
+				}
+				.font(.caption)
 			}
-			.font(.caption)
 			
 			ZStack {
 				if let matchDetails = matchDetails {
