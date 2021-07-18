@@ -23,7 +23,8 @@ struct SeasonCollection: AssetItem, Codable {
 		return actsInOrder.elementIfValid(at: firstExceedingIndex)
 	}
 	
-	func actBefore(_ current: Act) -> Act? {
+	func actBefore(_ current: Act?) -> Act? {
+		guard let current = current else { return nil }
 		guard let currentIndex = actsInOrder.firstIndex(withID: current.id) else { return nil }
 		return actsInOrder.elementIfValid(at: currentIndex - 1)
 	}
@@ -55,6 +56,14 @@ struct Act: AssetItem, Identifiable, Codable {
 	
 	var borders: [ActRankBorder]
 	var competitiveTiers: CompetitiveTier.Collection.ID
+	
+	var nameWithEpisode: String {
+		if let episode = episode {
+			return "\(episode.name) – \(name)"
+		} else {
+			return name
+		}
+	}
 	
 	var images: [AssetImage] {
 		borders.flatMap(\.images)

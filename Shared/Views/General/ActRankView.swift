@@ -120,14 +120,8 @@ struct ActRankView_Previews: PreviewProvider {
 				ActRankView(seasonInfo: seasonInfo, isIcon: false)
 			}
 			
-			HStack {
-				if let episode = act.episode {
-					Text(episode.name)
-					Text("–")
-				}
-				Text(act.name)
-			}
-			.font(.caption.smallCaps())
+			Text(act.nameWithEpisode)
+				.font(.caption.smallCaps())
 		}
 	}
 }
