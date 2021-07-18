@@ -122,7 +122,6 @@ struct AgentSelectView: View {
 		
 		var body: some View {
 			let relativeColor = player.id == userID ? Color.valorantSelf : .valorantBlue
-			let isLockedIn = player.isLockedIn
 			
 			HStack {
 				icon
@@ -137,7 +136,7 @@ struct AgentSelectView: View {
 						}
 					}
 					
-					if isLockedIn {
+					if player.isLockedIn {
 						let agentName = assets?.agents[player.agentID!]?.displayName
 						Text(agentName ?? "Unknown Agent!")
 							.fontWeight(.semibold)
