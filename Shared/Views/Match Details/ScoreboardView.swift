@@ -23,7 +23,7 @@ struct ScoreboardView: View {
 			}
 			.measured { width = $0.width }
 			
-			AsyncButton("Fetch Missing Ranks", action: fetchRanks)
+			AsyncButton("Update Ranks", action: fetchRanks)
 				.buttonStyle(.bordered)
 		}
 	}
