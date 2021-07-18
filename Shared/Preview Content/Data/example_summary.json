@@ -31,9 +31,9 @@
 				},
 				"2a27e5d2-4d30-c9e2-b15a-93b8909a442c": {
 					"SeasonID": "2a27e5d2-4d30-c9e2-b15a-93b8909a442c",
-					"NumberOfWins": 25,
-					"NumberOfWinsWithPlacements": 28,
-					"NumberOfGames": 48,
+					"NumberOfWins": 4,
+					"NumberOfWinsWithPlacements": 7,
+					"NumberOfGames": 12,
 					"Rank": 13,
 					"CapstoneWins": 0,
 					"LeaderboardRank": 0,
@@ -41,18 +41,17 @@
 					"RankedRating": 59,
 					"WinsByTier": {
 						"0": 3,
-						"11": 6,
-						"12": 7,
-						"13": 10,
-						"9": 2
+						"10": 1,
+						"12": 1,
+						"13": 2
 					},
 					"GamesNeededForRating": 0,
 					"TotalWinsNeededForRank": 0
 				},
 				"3f61c772-4560-cd3f-5d3f-a7ab5abda6b3": {
 					"SeasonID": "3f61c772-4560-cd3f-5d3f-a7ab5abda6b3",
-					"NumberOfWins": 90,
-					"NumberOfWinsWithPlacements": 93,
+					"NumberOfWins": 100,
+					"NumberOfWinsWithPlacements": 103,
 					"NumberOfGames": 184,
 					"Rank": 14,
 					"CapstoneWins": 0,
@@ -66,6 +65,11 @@
 						"12": 16,
 						"13": 41,
 						"14": 11,
+						"20": 2,
+						"21": 2,
+						"22": 2,
+						"23": 2,
+						"24": 2,
 						"9": 2
 					},
 					"GamesNeededForRating": 0,
@@ -73,8 +77,8 @@
 				},
 				"46ea6166-4573-1128-9cea-60a15640059b": {
 					"SeasonID": "46ea6166-4573-1128-9cea-60a15640059b",
-					"NumberOfWins": 32,
-					"NumberOfWinsWithPlacements": 33,
+					"NumberOfWins": 22,
+					"NumberOfWinsWithPlacements": 23,
 					"NumberOfGames": 77,
 					"Rank": 13,
 					"CapstoneWins": 0,
@@ -84,7 +88,7 @@
 					"WinsByTier": {
 						"0": 1,
 						"11": 8,
-						"12": 21,
+						"12": 11,
 						"13": 3
 					},
 					"GamesNeededForRating": 0,

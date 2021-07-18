@@ -34,6 +34,8 @@
 		B9168AE72689440B00866F6A /* LocalDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9168AE52689440B00866F6A /* LocalDataProvider.swift */; };
 		B927614B266284B700CF2100 /* PlayerHighlightInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B927614A266284B700CF2100 /* PlayerHighlightInfo.swift */; };
 		B927614C266284B700CF2100 /* PlayerHighlightInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B927614A266284B700CF2100 /* PlayerHighlightInfo.swift */; };
+		B92DC20126A33C3600200A01 /* ActRankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92DC20026A33C3600200A01 /* ActRankView.swift */; };
+		B92DC20226A33C3600200A01 /* ActRankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92DC20026A33C3600200A01 /* ActRankView.swift */; };
 		B9318366267810CE0099B13C /* AgentSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9318365267810CE0099B13C /* AgentSelectView.swift */; };
 		B9318367267810CE0099B13C /* AgentSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9318365267810CE0099B13C /* AgentSelectView.swift */; };
 		B9318369267813F00099B13C /* example_pregame.json in Resources */ = {isa = PBXBuildFile; fileRef = B9318368267813EF0099B13C /* example_pregame.json */; };
@@ -217,6 +219,7 @@
 		B9131D6B266AFA7900E85F46 /* MapInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInfoView.swift; sourceTree = "<group>"; };
 		B9168AE52689440B00866F6A /* LocalDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataProvider.swift; sourceTree = "<group>"; };
 		B927614A266284B700CF2100 /* PlayerHighlightInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerHighlightInfo.swift; sourceTree = "<group>"; };
+		B92DC20026A33C3600200A01 /* ActRankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActRankView.swift; sourceTree = "<group>"; };
 		B9318365267810CE0099B13C /* AgentSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentSelectView.swift; sourceTree = "<group>"; };
 		B9318368267813EF0099B13C /* example_pregame.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_pregame.json; sourceTree = "<group>"; };
 		B9399C3C2671158400411127 /* Protoquest */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Protoquest; path = "../ Packages/Protoquest"; sourceTree = "<group>"; };
@@ -505,6 +508,7 @@
 				B98E4704269B40DB003C9088 /* CircularProgressView.swift */,
 				B95B1A4B269CE1810080EC81 /* ScoreSummaryView.swift */,
 				B95B1A4E269CE1D10080EC81 /* KDASummaryView.swift */,
+				B92DC20026A33C3600200A01 /* ActRankView.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -831,6 +835,7 @@
 				B9F66ACE266DC31E008560FD /* AccountView.swift in Sources */,
 				B963C4792695101C0071E14A /* PlayerIdentityCell.swift in Sources */,
 				B9DCF9A72642E0EC00C39EC4 /* ScoreboardView.swift in Sources */,
+				B92DC20126A33C3600200A01 /* ActRankView.swift in Sources */,
 				B96A0CA3265ABBC700844674 /* SwiftUI+Helpers.swift in Sources */,
 				B941B65625A5BC8A00F675C1 /* ReconBoltApp.swift in Sources */,
 				B9C97DD1263CB744001E4D1B /* MatchList.swift in Sources */,
@@ -911,6 +916,7 @@
 				B9F66ACF266DC31E008560FD /* AccountView.swift in Sources */,
 				B963C47A2695101C0071E14A /* PlayerIdentityCell.swift in Sources */,
 				B9DCF9A82642E0EC00C39EC4 /* ScoreboardView.swift in Sources */,
+				B92DC20226A33C3600200A01 /* ActRankView.swift in Sources */,
 				B96A0CA4265ABBC700844674 /* SwiftUI+Helpers.swift in Sources */,
 				B941B65725A5BC8A00F675C1 /* ReconBoltApp.swift in Sources */,
 				B9C97DD2263CB744001E4D1B /* MatchList.swift in Sources */,
