@@ -59,7 +59,7 @@ struct CompetitiveSummaryCell: View {
 			ActRankView(seasonInfo: info)
 				.frame(height: artworkSize)
 				.overlay(
-					tierInfo?.icon?.imageOrPlaceholder()
+					CompetitiveTierImage(tierInfo: tierInfo)
 						.frame(width: 32, height: 32)
 						.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
 				)

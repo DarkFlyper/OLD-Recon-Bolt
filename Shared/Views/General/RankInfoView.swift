@@ -4,6 +4,8 @@ import HandyOperators
 
 struct RankInfoView: View {
 	let summary: CareerSummary?
+	var dataOverride: CareerSummary.SeasonInfo?
+	
 	var lineWidth = 4.0
 	var shouldShowProgress = true
 	var shouldFadeUnranked = false
@@ -20,25 +22,34 @@ struct RankInfoView: View {
 				let act = assets?.seasons.currentAct()
 				let info = summary.competitiveInfo?.inSeason(act?.id)
 				let tier = info?.competitiveTier ?? 0
+				let tierInfo = assets?.seasons.tierInfo(number: tier, in: act)
 				
 				let previousAct = assets?.seasons.actBefore(act)
 				let previousInfo = summary.competitiveInfo?.inSeason(previousAct?.id)
 				
 				if shouldShowProgress {
-					let tierInfo = assets?.seasons.tierInfo(number: tier, in: act)
 					progressView(for: tierInfo, rankedRating: info?.rankedRating ?? 0)
 				}
 				
 				Group {
 					if shouldFallBackOnPrevious, tier == 0, let info = previousInfo {
-						let tierInfo = assets?.seasons.tierInfo(number: info.competitiveTier, in: act)
-						previousActIcon(for: tierInfo)
+						previousActIcon(using: CompetitiveTierImage(tier: info.competitiveTier, act: previousAct))
 					} else {
-						CompetitiveTierImage(tier: tier)
+						CompetitiveTierImage(tierInfo: tierInfo)
 							.opacity(shouldFadeUnranked && tier == 0 ? 0.5 : 1)
 					}
 				}
 				.scaleEffect(shouldShowProgress ? 0.75 : 1)
+			} else if let info = dataOverride {
+				let tierInfo = assets?.seasons.tierInfo(number: info.competitiveTier, in: info.seasonID)
+				
+				if shouldShowProgress {
+					progressView(for: tierInfo, rankedRating: info.rankedRating)
+				}
+				
+				CompetitiveTierImage(tierInfo: tierInfo)
+					.opacity(shouldFadeUnranked && info.competitiveTier == 0 ? 0.5 : 1)
+					.scaleEffect(shouldShowProgress ? 0.75 : 1)
 			} else {
 				backgroundCircle.foregroundColor(.black.opacity(0.1))
 			}
@@ -71,9 +82,9 @@ struct RankInfoView: View {
 	}
 	
 	@ViewBuilder
-	func previousActIcon(for tierInfo: CompetitiveTier?) -> some View {
+	func previousActIcon(using image: CompetitiveTierImage) -> some View {
 		ZStack {
-			tierInfo?.icon?.imageOrPlaceholder()
+			image
 			
 			GeometryReader { geometry in
 				Image(systemName: "clock")
@@ -121,7 +132,14 @@ struct RankInfoView_Previews: PreviewProvider {
 			
 			LazyHGrid(rows: [.init(), .init(), .init()], spacing: 20) {
 				ForEach(ranks.tiers.values.map(\.number).sorted(), id: \.self) {
-					RankInfoView(summary: summary(forTier: $0))
+					// this would be equivalent, but i want to test this overload too
+					//RankInfoView(summary: summary(forTier: $0), shouldFallBackOnPrevious: false)
+					RankInfoView(summary: nil, dataOverride: .init(
+						seasonID: act.id,
+						actRank: $0,
+						competitiveTier: $0,
+						rankedRating: 69
+					))
 				}
 				.frame(width: 64)
 			}
