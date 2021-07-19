@@ -38,7 +38,11 @@ extension QueueID {
 	}
 }
 
-extension Region {
+extension Location: Identifiable {
+	public var id: String { "\(shard):\(region)" }
+}
+
+extension Location {
 	var name: String {
 		switch self {
 		case .europe:
@@ -53,6 +57,10 @@ extension Region {
 			return "Brazil"
 		case .latinAmerica:
 			return "Latin America"
+		case .pbe:
+			return "PBE"
+		default:
+			return "<Unknown Location>"
 		}
 	}
 }

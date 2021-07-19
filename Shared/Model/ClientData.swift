@@ -42,7 +42,7 @@ struct StandardClientData: ClientData {
 		let client = try await ValorantClient.authenticated(
 			username: credentials.username,
 			password: credentials.password,
-			region: credentials.region
+			location: credentials.location
 		)
 		return Self(client: client, credentials: credentials)
 	}

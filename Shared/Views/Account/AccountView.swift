@@ -84,6 +84,7 @@ struct AccountView: View {
 					.multilineTextAlignment(.center)
 				
 				AsyncButton("Download Assets Now") { await assetManager.loadAssets() }
+					.tint(.accentColor)
 			}
 		}
 	}
