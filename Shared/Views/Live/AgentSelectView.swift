@@ -115,7 +115,7 @@ struct AgentSelectView: View {
 		let userID: User.ID
 		
 		@State var playerUser: User?
-		@State var summary: CompetitiveSummary?
+		@State var summary: CareerSummary?
 		@Environment(\.assets) private var assets
 		
 		private let iconSize = 48.0

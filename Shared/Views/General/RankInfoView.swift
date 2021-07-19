@@ -3,7 +3,7 @@ import ValorantAPI
 import HandyOperators
 
 struct RankInfoView: View {
-	let summary: CompetitiveSummary?
+	let summary: CareerSummary?
 	var lineWidth = 4.0
 	var shouldShowProgress = true
 	var shouldFadeUnranked = false
@@ -94,7 +94,7 @@ struct RankInfoView_Previews: PreviewProvider {
 	static let act = assets.seasons.currentAct()!
 	static let ranks = assets.seasons.competitiveTiers[act.competitiveTiers]!
 	
-	private static func summary(forTier tier: Int) -> CompetitiveSummary {
+	private static func summary(forTier tier: Int) -> CareerSummary {
 		PreviewData.summary <- {
 			$0.competitiveInfo!.bySeason![act.id]!.competitiveTier = tier
 		}
@@ -104,7 +104,7 @@ struct RankInfoView_Previews: PreviewProvider {
 		Group {
 			HStack {
 				RankInfoView(summary: PreviewData.summary, shouldShowProgress: false)
-				RankInfoView(summary: PreviewData.summary <- { $0.skillsByQueue = [:] })
+				RankInfoView(summary: PreviewData.summary <- { $0.infoByQueue = [:] })
 				RankInfoView(summary: summary(forTier: 0), shouldFallBackOnPrevious: false)
 				RankInfoView(summary: summary(forTier: 0), shouldFallBackOnPrevious: true)
 				RankInfoView(summary: nil)

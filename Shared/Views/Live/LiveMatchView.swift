@@ -70,7 +70,7 @@ struct LiveMatchView: View {
 		let ownPlayer: LiveGameInfo.PlayerInfo
 		
 		@State var playerUser: User?
-		@State var summary: CompetitiveSummary?
+		@State var summary: CareerSummary?
 		@Environment(\.assets) private var assets
 		
 		var body: some View {

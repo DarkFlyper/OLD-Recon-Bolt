@@ -66,11 +66,11 @@ extension MatchList: LocalDataAutoUpdatable {
 	}
 }
 
-extension CompetitiveSummary: LocalDataAutoUpdatable {
-	static let managerPath = \LocalDataProvider.competitiveSummaryManager as KeyPath
+extension CareerSummary: LocalDataAutoUpdatable {
+	static let managerPath = \LocalDataProvider.careerSummaryManager as KeyPath
 	
 	static func autoUpdate(for id: ID, using client: ValorantClient) async throws {
-		try await client.fetchCompetitiveSummary(for: id)
+		try await client.fetchCareerSummary(for: id)
 	}
 }
 
@@ -98,7 +98,7 @@ final class LocalDataProvider {
 	fileprivate static let shared = LocalDataProvider()
 	
 	var matchListManager = LocalDataManager<MatchList>(ageCausingAutoUpdate: .minutes(5))
-	var competitiveSummaryManager = LocalDataManager<CompetitiveSummary>(ageCausingAutoUpdate: .minutes(5))
+	var careerSummaryManager = LocalDataManager<CareerSummary>(ageCausingAutoUpdate: .minutes(5))
 	var userManager = LocalDataManager<User>(ageCausingAutoUpdate: .hours(1))
 	var matchDetailsManager = LocalDataManager<MatchDetails>()
 	var playerIdentityManager = LocalDataManager<Player.Identity>()
@@ -116,7 +116,7 @@ final class LocalDataProvider {
 				Self.dataFetched(PreviewData.pregameInfo)
 				Self.dataFetched(PreviewData.liveGameInfo)
 				
-				await competitiveSummaryManager.store([
+				await careerSummaryManager.store([
 					PreviewData.summary,
 					// oh no
 					PreviewData.summary <- {
@@ -176,12 +176,12 @@ extension ValorantClient {
 		LocalDataProvider.shared.store(try await matchList <- update)
 	}
 	
-	func fetchCompetitiveSummary(for userID: User.ID, forceFetch: Bool = false) async throws {
-		let manager = LocalDataProvider.shared.competitiveSummaryManager
+	func fetchCareerSummary(for userID: User.ID, forceFetch: Bool = false) async throws {
+		let manager = LocalDataProvider.shared.careerSummaryManager
 		if forceFetch {
-			try await manager.store(getCompetitiveSummary(userID: userID), asOf: .now)
+			try await manager.store(getCareerSummary(userID: userID), asOf: .now)
 		} else {
-			try await manager.fetchIfNecessary(for: userID, fetch: getCompetitiveSummary)
+			try await manager.fetchIfNecessary(for: userID, fetch: getCareerSummary)
 		}
 	}
 	

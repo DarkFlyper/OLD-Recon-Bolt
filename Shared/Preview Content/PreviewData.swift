@@ -18,7 +18,7 @@ enum PreviewData {
 	
 	static let compUpdates = loadJSON(named: "example_updates", as: [CompetitiveUpdate].self)
 	
-	static let summary = loadJSON(named: "example_summary", as: CompetitiveSummary.self)
+	static let summary = loadJSON(named: "example_summary", as: CareerSummary.self)
 	
 	static let contractDetails = loadJSON(named: "example_contracts", as: ContractDetails.self)
 	

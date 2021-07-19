@@ -7,7 +7,7 @@ struct MatchListView: View {
 	
 	@State var user: User?
 	@State var matchList: MatchList?
-	@State var summary: CompetitiveSummary?
+	@State var summary: CareerSummary?
 	@State var identity: Player.Identity?
 	@State var shouldShowUnranked = true
 	
@@ -75,7 +75,7 @@ struct MatchListView: View {
 		.refreshable {
 			async let matchListUpdate: Void = updateMatchList(update: ValorantClient.loadMatches)
 			async let summaryUpdate: Void = load {
-				try await $0.fetchCompetitiveSummary(for: userID, forceFetch: true)
+				try await $0.fetchCareerSummary(for: userID, forceFetch: true)
 			}
 			_ = await (matchListUpdate, summaryUpdate)
 		}

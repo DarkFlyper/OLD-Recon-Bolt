@@ -4,7 +4,7 @@ import HandyOperators
 import CGeometry
 
 struct ActRankView: View {
-	let seasonInfo: CompetitiveSummary.SeasonInfo
+	let seasonInfo: CareerSummary.SeasonInfo
 	var isIcon = true
 	
 	@Environment(\.assets) private var assets

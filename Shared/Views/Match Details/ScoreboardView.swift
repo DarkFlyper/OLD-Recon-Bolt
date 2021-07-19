@@ -31,7 +31,7 @@ struct ScoreboardView: View {
 	private func fetchRanks() async {
 		await load {
 			for playerID in data.players.keys {
-				try await $0.fetchCompetitiveSummary(for: playerID)
+				try await $0.fetchCareerSummary(for: playerID)
 			}
 		}
 	}
@@ -46,7 +46,7 @@ struct ScoreboardRowView: View {
 	let data: MatchViewData
 	@Binding var highlight: PlayerHighlightInfo
 	
-	@State private var summary: CompetitiveSummary?
+	@State private var summary: CareerSummary?
 	
 	var body: some View {
 		let divider = Rectangle()

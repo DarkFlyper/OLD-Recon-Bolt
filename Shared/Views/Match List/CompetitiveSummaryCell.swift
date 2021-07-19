@@ -3,7 +3,7 @@ import ValorantAPI
 import HandyOperators
 
 struct CompetitiveSummaryCell: View {
-	let summary: CompetitiveSummary
+	let summary: CareerSummary
 	
 	@Environment(\.assets) private var assets
 	
@@ -52,7 +52,7 @@ struct CompetitiveSummaryCell: View {
 	}
 	
 	@ViewBuilder
-	private func actRankInfo(for info: CompetitiveSummary.SeasonInfo, in act: Act) -> some View {
+	private func actRankInfo(for info: CareerSummary.SeasonInfo, in act: Act) -> some View {
 		VStack {
 			let tierInfo = assets?.seasons.tierInfo(number: info.competitiveTier, in: act)
 			
