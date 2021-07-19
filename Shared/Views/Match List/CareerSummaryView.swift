@@ -86,7 +86,7 @@ struct CareerSummaryView: View {
 						.rotationEffect(.degrees(isExpanded ? 0 : -90))
 					
 					// I tried using the new inflect API here, but it just slowed stuff down and threw errors
-					Text("\(hiddenCount) Earlier \(hiddenCount > 1 ? "Acts" : "Act")")
+					Text("\(hiddenCount) previous \(hiddenCount > 1 ? "acts" : "act")")
 				}
 				.padding()
 				.frame(maxWidth: .infinity, alignment: .leading)
@@ -107,15 +107,22 @@ struct CareerSummaryView: View {
 				if info.competitiveTier > 0 {
 					HStack {
 						VStack {
+							let tierInfo = assets?.seasons.tierInfo(number: info.competitiveTier, in: act)
+							
 							RankInfoView(summary: nil, dataOverride: info)
 								.frame(height: 80)
 							
-							if let tierInfo = assets?.seasons.tierInfo(number: info.competitiveTier, in: act) {
+							if let tierInfo = tierInfo {
 								Text(tierInfo.name)
 									.font(.callout.weight(.semibold))
 							}
+							
 							Text("\(info.rankedRating) RR")
 								.font(.caption)
+							
+							if info.leaderboardRank > 0 {
+								leaderboardRankView(rank: info.leaderboardRank, tierInfo: tierInfo)
+							}
 						}
 						.padding()
 						
@@ -137,6 +144,43 @@ struct CareerSummaryView: View {
 				.font(.body.monospacedDigit())
 			}
 			.padding()
+		}
+		
+		func leaderboardRankView(rank: Int, tierInfo: CompetitiveTier?) -> some View {
+			ZStack {
+				Capsule()
+					.fill(tierInfo?.backgroundColor ?? .gray)
+				
+				let darkeningOpacity = 0.25
+				
+				Capsule()
+					.fill(.black.opacity(darkeningOpacity))
+					.blendMode(.plusDarker)
+				
+				Capsule()
+					.fill(.white.opacity(darkeningOpacity))
+					.blendMode(.plusLighter)
+					.padding(1)
+				
+				Capsule()
+					.fill(.black.opacity(darkeningOpacity))
+					.blendMode(.plusDarker)
+					.padding(3)
+				
+				let rankText = Text("Rank \(rank)")
+					.font(.callout.weight(.semibold))
+					.padding(.horizontal, 4)
+					.padding(10)
+				
+				rankText
+					.foregroundColor(.white.opacity(darkeningOpacity))
+					.blendMode(.plusLighter)
+				
+				rankText
+					.blendMode(.plusLighter)
+			}
+			.foregroundColor(.white)
+			.fixedSize()
 		}
 	}
 }

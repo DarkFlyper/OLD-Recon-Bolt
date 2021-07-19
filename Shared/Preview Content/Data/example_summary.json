@@ -29,8 +29,8 @@
 					"GamesNeededForRating": 0,
 					"TotalWinsNeededForRank": 0
 				},
-				"2a27e5d2-4d30-c9e2-b15a-93b8909a442c": {
-					"SeasonID": "2a27e5d2-4d30-c9e2-b15a-93b8909a442c",
+				"3f61c772-4560-cd3f-5d3f-a7ab5abda6b3": {
+					"SeasonID": "3f61c772-4560-cd3f-5d3f-a7ab5abda6b3",
 					"NumberOfWins": 4,
 					"NumberOfWinsWithPlacements": 7,
 					"NumberOfGames": 12,
@@ -48,27 +48,30 @@
 					"GamesNeededForRating": 0,
 					"TotalWinsNeededForRank": 0
 				},
-				"3f61c772-4560-cd3f-5d3f-a7ab5abda6b3": {
-					"SeasonID": "3f61c772-4560-cd3f-5d3f-a7ab5abda6b3",
+				"2a27e5d2-4d30-c9e2-b15a-93b8909a442c": {
+					"SeasonID": "2a27e5d2-4d30-c9e2-b15a-93b8909a442c",
 					"NumberOfWins": 100,
 					"NumberOfWinsWithPlacements": 103,
 					"NumberOfGames": 184,
 					"Rank": 20,
 					"CapstoneWins": 0,
-					"LeaderboardRank": 0,
+					"LeaderboardRank": 621,
 					"CompetitiveTier": 24,
-					"RankedRating": 69,
+					"RankedRating": 469,
 					"WinsByTier": {
 						"0": 3,
 						"10": 9,
 						"11": 11,
 						"12": 16,
 						"13": 41,
-						"14": 11,
+						"14": 7,
+						"15": 2,
+						"16": 2,
+						"17": 2,
+						"18": 2,
+						"19": 2,
 						"20": 2,
 						"21": 2,
-						"22": 2,
-						"23": 2,
 						"24": 2,
 						"9": 2
 					},
@@ -77,19 +80,22 @@
 				},
 				"46ea6166-4573-1128-9cea-60a15640059b": {
 					"SeasonID": "46ea6166-4573-1128-9cea-60a15640059b",
-					"NumberOfWins": 22,
-					"NumberOfWinsWithPlacements": 23,
+					"NumberOfWins": 27,
+					"NumberOfWinsWithPlacements": 28,
 					"NumberOfGames": 77,
-					"Rank": 13,
+					"Rank": 21,
 					"CapstoneWins": 0,
-					"LeaderboardRank": 0,
-					"CompetitiveTier": 11,
+					"LeaderboardRank": 935,
+					"CompetitiveTier": 21,
 					"RankedRating": 1112,
 					"WinsByTier": {
 						"0": 1,
 						"11": 8,
 						"12": 11,
-						"13": 3
+						"13": 3,
+						"21": 1,
+						"22": 1,
+						"23": 2,
 					},
 					"GamesNeededForRating": 0,
 					"TotalWinsNeededForRank": 0
