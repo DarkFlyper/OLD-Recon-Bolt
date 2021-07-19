@@ -169,6 +169,8 @@
 		B9F07CB826474EB7006CD4F5 /* AssetVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F07CB626474EB7006CD4F5 /* AssetVersion.swift */; };
 		B9F07CBA26474F4E006CD4F5 /* MapAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F07CB926474F4E006CD4F5 /* MapAssets.swift */; };
 		B9F07CBB26474F4E006CD4F5 /* MapAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F07CB926474F4E006CD4F5 /* MapAssets.swift */; };
+		B9F3D94926A4F9C800052F2E /* CareerSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F3D94826A4F9C800052F2E /* CareerSummaryView.swift */; };
+		B9F3D94A26A4F9C800052F2E /* CareerSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F3D94826A4F9C800052F2E /* CareerSummaryView.swift */; };
 		B9F5232F266ED96600DFF8DD /* LiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F5232E266ED96600DFF8DD /* LiveView.swift */; };
 		B9F52330266ED96600DFF8DD /* LiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F5232E266ED96600DFF8DD /* LiveView.swift */; };
 		B9F52332266EE57900DFF8DD /* example_contracts.json in Resources */ = {isa = PBXBuildFile; fileRef = B9F52331266EE57900DFF8DD /* example_contracts.json */; };
@@ -293,6 +295,7 @@
 		B9F07CB326474E8A006CD4F5 /* AssetClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetClient.swift; sourceTree = "<group>"; };
 		B9F07CB626474EB7006CD4F5 /* AssetVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetVersion.swift; sourceTree = "<group>"; };
 		B9F07CB926474F4E006CD4F5 /* MapAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAssets.swift; sourceTree = "<group>"; };
+		B9F3D94826A4F9C800052F2E /* CareerSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerSummaryView.swift; sourceTree = "<group>"; };
 		B9F5232E266ED96600DFF8DD /* LiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveView.swift; sourceTree = "<group>"; };
 		B9F52331266EE57900DFF8DD /* example_contracts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_contracts.json; sourceTree = "<group>"; };
 		B9F5CEDD267CD199009CF906 /* GameModeAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModeAssets.swift; sourceTree = "<group>"; };
@@ -579,6 +582,7 @@
 				B9CF2E7825A89976004A1458 /* MatchCell.swift */,
 				B963C4782695101C0071E14A /* PlayerIdentityCell.swift */,
 				B963C46F2694FDDA0071E14A /* CompetitiveSummaryCell.swift */,
+				B9F3D94826A4F9C800052F2E /* CareerSummaryView.swift */,
 				B95B1A73269CEC7B0080EC81 /* BookmarkListView.swift */,
 			);
 			path = "Match List";
@@ -793,6 +797,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9F5CEE6267D33E3009CF906 /* AgentPickerView.swift in Sources */,
+				B9F3D94926A4F9C800052F2E /* CareerSummaryView.swift in Sources */,
 				B927614B266284B700CF2100 /* PlayerHighlightInfo.swift in Sources */,
 				B9131D61266A707600E85F46 /* ValorantLoadManager.swift in Sources */,
 				B9EE6E5F26589EB8007E28B5 /* MatchDetailsContainer.swift in Sources */,
@@ -874,6 +879,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9F5CEE7267D33E3009CF906 /* AgentPickerView.swift in Sources */,
+				B9F3D94A26A4F9C800052F2E /* CareerSummaryView.swift in Sources */,
 				B927614C266284B700CF2100 /* PlayerHighlightInfo.swift in Sources */,
 				B9131D62266A707600E85F46 /* ValorantLoadManager.swift in Sources */,
 				B9EE6E6026589EB8007E28B5 /* MatchDetailsContainer.swift in Sources */,

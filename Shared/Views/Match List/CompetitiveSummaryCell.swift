@@ -12,23 +12,27 @@ struct CompetitiveSummaryCell: View {
 	private let secondaryFont = Font.caption
 	
 	var body: some View {
-		HStack {
-			currentActInfo
-				.fixedSize() // TODO: remove once text no longer gets cut off without
-			
-			let acts = assets?.seasons.actsInOrder
-			let mostRecentActInfo = acts?
-				.compactMap { act in summary.competitiveInfo?.bySeason?[act.id].map { (act, $0) } }
-				.last { $0.1.winCount > 0 }
-			if let (act, info) = mostRecentActInfo {
-				Spacer()
+		NavigationLink {
+			CareerSummaryView(summary: summary)
+		} label: {
+			HStack {
+				currentActInfo
+					.fixedSize() // TODO: remove once text no longer gets cut off without
 				
-				actRankInfo(for: info, in: act)
+				let acts = assets?.seasons.actsInOrder
+				let mostRecentActInfo = acts?
+					.compactMap { act in summary.competitiveInfo?.bySeason?[act.id].map { (act, $0) } }
+					.last { $0.1.winCount > 0 }
+				if let (act, info) = mostRecentActInfo {
+					Spacer()
+					
+					actRankInfo(for: info, in: act)
+				}
 			}
+			.frame(maxWidth: .infinity)
+			.fixedSize(horizontal: false, vertical: true)
+			.padding()
 		}
-		.frame(maxWidth: .infinity)
-		.fixedSize(horizontal: false, vertical: true)
-		.padding()
 	}
 	
 	@ViewBuilder
