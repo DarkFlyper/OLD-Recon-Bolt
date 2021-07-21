@@ -15,8 +15,11 @@ struct CareerSummaryView: View {
 			
 			LazyVStack(spacing: 20) {
 				ForEach(queues, id: \.self) { queue in
-					let info = summary.infoByQueue[queue]!
-					if let bySeason = info.bySeason, !bySeason.isEmpty {
+					if
+						let info = summary.infoByQueue[queue],
+						let bySeason = info.bySeason,
+						!bySeason.isEmpty
+					{
 						Spacer()
 						
 						QueueSection(queue: queue, info: info)
