@@ -23,13 +23,10 @@ struct UserCell: View {
 				
 				VStack(alignment: .leading) {
 					if let user = user {
-						HStack(spacing: 4) {
-							Text(user.gameName)
-								.fontWeight(.semibold)
-							
-							Text("#\(user.tagLine)")
-								.foregroundStyle(.secondary)
-						}
+						Text(user.gameName)
+							.fontWeight(.semibold)
+						+ Text(" #\(user.tagLine)")
+							.foregroundColor(.secondary)
 					} else {
 						Text("Unknown Player")
 					}
