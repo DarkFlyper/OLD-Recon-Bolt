@@ -152,21 +152,18 @@ private struct ChangeRing: View {
 			let higher = max(before, after)
 			let zeroPoint = lower.rounded(.down)
 			
-			CircularProgressView(
-				base: { Color.gray.opacity(0.2) },
-				layers: {
-					CircularProgressLayer(
-						end: after - zeroPoint,
-						color: .gray
-					)
-					CircularProgressLayer(
-						start: lower - zeroPoint,
-						end: higher - zeroPoint,
-						shouldKnockOutSurroundings: true,
-						color: .accentColor
-					)
-				}
-			)
+			CircularProgressView {
+				CircularProgressLayer(
+					end: after - zeroPoint,
+					color: .gray
+				)
+				CircularProgressLayer(
+					start: lower - zeroPoint,
+					end: higher - zeroPoint,
+					shouldKnockOutSurroundings: true,
+					color: .accentColor
+				)
+			} base: { Color.gray.opacity(0.2) }
 			
 			CompetitiveTierImage(tier: match.tierAfterUpdate, time: match.startTime)
 				.padding(8)

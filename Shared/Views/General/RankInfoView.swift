@@ -14,9 +14,6 @@ struct RankInfoView: View {
 	@Environment(\.assets) private var assets
 	
 	var body: some View {
-		let thickerWidth = lineWidth * 1.5
-		let backgroundCircle = Circle().padding(-0.5 * thickerWidth)
-		
 		ZStack {
 			if let summary = summary {
 				let act = assets?.seasons.currentAct()
@@ -51,7 +48,14 @@ struct RankInfoView: View {
 					.opacity(shouldFadeUnranked && info.competitiveTier == 0 ? 0.5 : 1)
 					.scaleEffect(shouldShowProgress ? 0.75 : 1)
 			} else {
-				backgroundCircle.foregroundColor(.black.opacity(0.1))
+				let thickerWidth = lineWidth * 1.5
+				
+				ZStack {
+					Circle().foregroundColor(.black)
+					Circle().strokeBorder(.white)
+				}
+				.opacity(0.1)
+				.padding(-0.5 * thickerWidth)
 			}
 		}
 		.aspectRatio(1, contentMode: .fit)
@@ -62,23 +66,20 @@ struct RankInfoView: View {
 	func progressView(for tierInfo: CompetitiveTier?, rankedRating: Int) -> some View {
 		let darkening = 0.25
 		
-		CircularProgressView(
-			lineWidth: lineWidth,
-			background: {
-				ZStack {
-					tierInfo?.backgroundColor
-					Color.black.opacity(darkening).blendMode(.plusDarker)
-				}
-			},
-			base: { Color.white.opacity(darkening).blendMode(.plusLighter) },
-			layers: {
-				CircularProgressLayer(
-					end: CGFloat(rankedRating) / 100,
-					shouldKnockOutSurroundings: true,
-					color: .white, opacity: 0.5, blendMode: .plusLighter
-				)
+		CircularProgressView(lineWidth: lineWidth) {
+			CircularProgressLayer(
+				end: CGFloat(rankedRating) / 100,
+				shouldKnockOutSurroundings: true,
+				color: .white, opacity: 0.5, blendMode: .plusLighter
+			)
+		} base: {
+			Color.white.opacity(darkening).blendMode(.plusLighter)
+		} background: {
+			ZStack {
+				tierInfo?.backgroundColor
+				Color.black.opacity(darkening).blendMode(.plusDarker)
 			}
-		)
+		}
 	}
 	
 	@ViewBuilder
@@ -118,10 +119,12 @@ struct RankInfoView_Previews: PreviewProvider {
 				RankInfoView(summary: PreviewData.summary <- { $0.infoByQueue = [:] })
 				RankInfoView(summary: summary(forTier: 0), shouldFallBackOnPrevious: false)
 				RankInfoView(summary: summary(forTier: 0), shouldFallBackOnPrevious: true)
+				RankInfoView(summary: PreviewData.summary)
 				RankInfoView(summary: nil)
 			}
 			.fixedSize(horizontal: true, vertical: false)
 			.frame(height: 64)
+			.inEachColorScheme()
 			
 			RankInfoView(summary: summary(forTier: 0))
 				.inEachColorScheme()
