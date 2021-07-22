@@ -159,6 +159,10 @@ final class LocalDataProvider {
 	static func dataFetched(_ info: LiveGameInfo) {
 		shared.store(info.players.map(\.identity), asOf: .now)
 	}
+	
+	static func dataFetched(_ user: User) {
+		Task { await shared.userManager.store(user, asOf: .now) }
+	}
 }
 
 extension ValorantClient {
