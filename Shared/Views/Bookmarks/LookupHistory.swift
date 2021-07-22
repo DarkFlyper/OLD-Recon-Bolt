@@ -22,6 +22,8 @@ final class LookupHistory: ObservableObject {
 #endif
 	
 	func lookedUp(_ user: User.ID) {
-		entries = [user] + entries.filter { $0 != user }
+		entries = [user] + entries
+			.filter { $0 != user }
+			.prefix(Self.maxCount - 1)
 	}
 }
