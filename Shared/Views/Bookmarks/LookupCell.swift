@@ -1,0 +1,118 @@
+import SwiftUI
+import ValorantAPI
+
+struct LookupCell: View {
+	@State var gameName = ""
+	@State var tagLine = ""
+	@State var isLoading = false
+	@ObservedObject var history: LookupHistory
+	
+	@FocusState private var focusedField: Field?
+	
+	@Environment(\.loadWithErrorAlerts) private var load
+	
+	@ScaledMetric(relativeTo: .body) private var maxNameFieldWidth = 150
+	@ScaledMetric(relativeTo: .body) private var tagFieldWidth = 50
+	
+	var body: some View {
+		ZStack {
+			// this button is not visible but triggers when the cell is tapped—.onTapGesture breaks actual buttons in the cell
+			Button("cell tap trigger") {
+				// FIXME: @FocusState seems to be broken in Lists :<
+				print("cell tapped!")
+				focusedField = .gameName
+			}
+			.opacity(0)
+			
+			content
+		}
+	}
+	
+	private var content: some View {
+		ScrollViewReader { scrollView in
+			HStack {
+				HStack {
+					TextField("Name", text: $gameName)
+						.frame(maxWidth: maxNameFieldWidth)
+						.focused($focusedField, equals: .gameName)
+						.submitLabel(.next)
+						.onSubmit {
+							focusedField = .tagLine
+						}
+					
+					HStack {
+						Text("#")
+							.foregroundStyle(.secondary)
+						
+						TextField("Tag", text: $tagLine)
+							.frame(width: tagFieldWidth)
+							.focused($focusedField, equals: .tagLine)
+							.submitLabel(.search)
+							.onSubmit { lookUpPlayer(scrollView: scrollView) }
+					}
+					.onTapGesture {
+						focusedField = .tagLine
+					}
+				}
+				.opacity(isLoading ? 0.5 : 1)
+				
+				Spacer()
+				
+				Button {
+					lookUpPlayer(scrollView: scrollView)
+				} label: {
+					Label("Look Up", systemImage: "magnifyingglass")
+				}
+				.disabled(gameName.isEmpty || tagLine.isEmpty)
+				.fixedSize()
+				.overlay(alignment: .leading) {
+					if isLoading {
+						ProgressView()
+					}
+				}
+			}
+			.disabled(isLoading)
+			.padding(.vertical, 8)
+		}
+	}
+	
+	private func lookUpPlayer(scrollView: ScrollViewProxy) {
+		Task {
+			isLoading = true
+			await load {
+				let user = try await HenrikClient.shared.lookUpPlayer(name: gameName, tag: tagLine)
+				LocalDataProvider.dataFetched(user)
+				dispatchPrecondition(condition: .onQueue(.main))
+				history.lookedUp(user.id)
+				scrollView.scrollTo(user.id, anchor: nil) // TODO: this doesn't seem to do anything
+			}
+			isLoading = false
+		}
+	}
+	
+	enum Field: Hashable {
+		case gameName
+		case tagLine
+	}
+}
+
+#if DEBUG
+@MainActor
+struct LookupCell_Previews: PreviewProvider {
+	static var previews: some View {
+		VStack(spacing: 0) {
+			LookupCell(history: LookupHistory())
+				.padding()
+			Divider()
+			LookupCell(gameName: "Example", tagLine: "EX123", history: LookupHistory())
+				.padding()
+			Divider()
+			LookupCell(gameName: "Example", tagLine: "EX123", isLoading: true, history: LookupHistory())
+				.padding()
+		}
+		.inEachColorScheme()
+		.frame(width: 400)
+		.previewLayout(.sizeThatFits)
+	}
+}
+#endif
