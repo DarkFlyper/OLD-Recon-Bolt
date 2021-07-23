@@ -55,11 +55,13 @@ private struct ValorantLoadModifier: ViewModifier {
 	
 	func load(_ task: @escaping (ValorantClient) async throws -> Void) async {
 		guard let data = dataStore.data else { return }
+		guard !Task.isCancelled else { return }
 		
 		await load {
 			typealias APIError = ValorantClient.APIError
 			
 			do {
+				guard !Task.isCancelled else { return }
 				try await task(data.client)
 			} catch APIError.tokenFailure, APIError.unauthorized {
 				print("reauthenticating!")
