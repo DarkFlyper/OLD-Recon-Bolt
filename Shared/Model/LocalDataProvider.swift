@@ -18,9 +18,12 @@ extension View {
 		shouldAutoUpdate: Bool = false,
 		animation: Animation? = .default
 	) -> some View {
-		modifier(LocalDataModifier(value: value, id: id, animation: animation) { client in
-			{ try await Value.autoUpdate(for: $0, using: client) }
-		})
+		modifier(LocalDataModifier(
+			value: value,
+			id: id,
+			animation: animation,
+			autoUpdate: shouldAutoUpdate ? Value.autoUpdate(for:using:) : nil
+		))
 	}
 }
 
@@ -28,7 +31,7 @@ private struct LocalDataModifier<Value: LocalDataStored>: ViewModifier {
 	@Binding var value: Value?
 	var id: Value.ID
 	var animation: Animation?
-	var autoUpdate: ((ValorantClient) -> (Value.ID) async throws -> Void)? = nil
+	var autoUpdate: ((Value.ID, ValorantClient) async throws -> Void)? = nil
 	
 	@State private var token: (id: Value.ID, AnyCancellable)? = nil
 	
@@ -46,7 +49,7 @@ private struct LocalDataModifier<Value: LocalDataStored>: ViewModifier {
 					}
 				token = (id, cancellable)
 			}
-			.valorantLoadTask(id: id) { try await autoUpdate?($0)(id) }
+			.valorantLoadTask(id: id) { try await autoUpdate?(id, $0) }
 	}
 }
 
