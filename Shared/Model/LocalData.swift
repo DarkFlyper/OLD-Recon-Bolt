@@ -41,7 +41,6 @@ final actor LocalDataManager<Object: Identifiable & Codable> where Object.ID: Lo
 		if let existing = existing, existing.lastUpdate > updateTime { return }
 		
 		cache[object.id] = entry
-		print("publishing entry for \(object.id)")
 		subjects[object.id]?.send(object)
 		
 		Task.detached(priority: .utility) {
@@ -139,18 +138,11 @@ final actor LocalDataManager<Object: Identifiable & Codable> where Object.ID: Lo
 	private nonisolated func save(_ entry: Entry) throws {
 		let raw = try encoder.encode(entry)
 		let url = fileURL(for: entry.id)
-		print("saving entry at \(url.path)")
 		try raw.write(to: url)
 	}
 	
 	private func loadEntry(with id: Object.ID) throws -> Entry? {
-		let start = Date()
-		defer {
-			// TODO: yeah this is probably too long when loading many things at once…
-			print("took \(-start.timeIntervalSinceNow * 1000) ms")
-		}
 		let url = fileURL(for: id)
-		print("loading entry at \(url.path)")
 		guard fileManager.fileExists(atPath: url.path) else { return nil }
 		let data = try Data(contentsOf: url)
 		return try decoder.decode(Entry.self, from: data)
