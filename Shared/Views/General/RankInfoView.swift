@@ -21,16 +21,19 @@ struct RankInfoView: View {
 				let tier = info?.competitiveTier ?? 0
 				let tierInfo = assets?.seasons.tierInfo(number: tier, in: act)
 				
-				let previousAct = assets?.seasons.actBefore(act)
-				let previousInfo = summary.competitiveInfo?.inSeason(previousAct?.id)
+				let lastRankedInfo = assets?.seasons.actsInOrder.lazy
+					.compactMap { act in
+						summary.competitiveInfo?.inSeason(act.id).map { (act: act, info: $0) }
+					}
+					.last { $0.info.competitiveTier > 0 }
 				
 				if shouldShowProgress {
 					progressView(for: tierInfo, rankedRating: info?.rankedRating ?? 0)
 				}
 				
 				Group {
-					if shouldFallBackOnPrevious, tier == 0, let info = previousInfo {
-						previousActIcon(using: CompetitiveTierImage(tier: info.competitiveTier, act: previousAct))
+					if shouldFallBackOnPrevious, tier == 0, let (act, info) = lastRankedInfo {
+						previousActIcon(using: CompetitiveTierImage(tier: info.competitiveTier, act: act))
 					} else {
 						CompetitiveTierImage(tierInfo: tierInfo)
 							.opacity(shouldFadeUnranked && tier == 0 ? 0.5 : 1)
