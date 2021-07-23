@@ -34,7 +34,8 @@ private let requestMaxIndex = 100
 
 extension ValorantClient {
 	func loadMatches(for list: inout MatchList) async throws {
-		let newestKnownMatchID = list.matches.first?.id
+		// have to use a set here because the API likes to deliver very old matches discontiguously
+		let knownMatchIDs = Set(list.matches.map(\.id))
 		// conserve requests on first load
 		let maxIndex = list.matches.isEmpty ? requestSize : requestMaxIndex
 		
@@ -43,7 +44,7 @@ extension ValorantClient {
 			let updates = try await getUpdates(for: list, startIndex: startIndex)
 			guard !updates.isEmpty else { break }
 			
-			let overlapStart = newestKnownMatchID.flatMap(updates.firstIndex(withID:))
+			let overlapStart = updates.firstIndex { knownMatchIDs.contains($0.id) }
 			foundUpdates += updates.prefix(upTo: overlapStart ?? updates.endIndex)
 			
 			if overlapStart != nil {
