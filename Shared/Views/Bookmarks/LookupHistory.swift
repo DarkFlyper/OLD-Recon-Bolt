@@ -6,7 +6,7 @@ import UserDefault
 final class LookupHistory: ObservableObject {
 	@UserDefault("LookupHistory.stored")
 	private static var stored: [User.ID] = []
-	private static let maxCount = 5
+	private static let maxCount = 3
 	
 	@Published var entries: [User.ID] = LookupHistory.stored {
 		didSet { Self.stored = entries }
