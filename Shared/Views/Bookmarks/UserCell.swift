@@ -45,10 +45,7 @@ struct UserCell: View {
 		.padding(.vertical, 8)
 		.withLocalData($user, id: userID)
 		.withLocalData($identity, id: userID)
-		.withLocalData($summary, id: userID)
-		.valorantLoadTask {
-			try await $0.fetchCareerSummary(for: userID)
-		}
+		.withLocalData($summary, id: userID, shouldAutoUpdate: true)
 	}
 }
 
