@@ -168,19 +168,48 @@ final class LocalDataProvider {
 	}
 }
 
+extension LocalDataManager where Object == MatchDetails {
+	func unloadedMatches(in matchList: MatchList, maxCount: Int) -> [Match.ID] {
+		matchList.matches
+			.map(\.id)
+			.prefix(maxCount)
+			.prefix { cachedObject(for: $0) == nil }
+	}
+}
+
 extension ValorantClient {
 	func autoUpdateMatchList(for userID: User.ID) async throws {
 		let manager = LocalDataProvider.shared.matchListManager
 		try await manager.autoUpdateObject(for: userID) { existing in
 			let list = existing ?? MatchList(userID: userID)
-			return try await list <- loadMatches(for:)
+			return try await list <- loadMatches <- autoFetchMatchListDetails
+		}
+	}
+	
+	func autoFetchMatchListDetails(for matchList: MatchList) {
+		Task {
+			let manager = LocalDataProvider.shared.matchDetailsManager
+			let maxAutoFetchedMatches = 5
+			let unloadedMatches = await manager.unloadedMatches(
+				in: matchList,
+				maxCount: maxAutoFetchedMatches + 1 // we don't need more than our maximum except to know that it's been exceeded
+			)
+			guard let newestMatch = unloadedMatches.first else { return }
+			
+			if unloadedMatches.count > maxAutoFetchedMatches {
+				// too many unloaded matches—just fetch the most recent one
+				try? await fetchMatchDetails(for: newestMatch)
+			} else {
+				// the last loaded match is close enough to catch up with reasonably few requests—let's do it!
+				try? await fetchMatchDetails(for: unloadedMatches)
+			}
 		}
 	}
 	
 	func updateMatchList(for userID: User.ID, update: @escaping (inout MatchList) async throws -> Void) async throws {
 		let manager = LocalDataProvider.shared.matchListManager
 		guard let matchList = await manager.cachedObject(for: userID) else { return }
-		LocalDataProvider.shared.store(try await matchList <- update)
+		LocalDataProvider.shared.store(try await matchList <- update <- autoFetchMatchListDetails)
 	}
 	
 	func fetchCareerSummary(for userID: User.ID, forceFetch: Bool = false) async throws {
@@ -202,6 +231,17 @@ extension ValorantClient {
 		try await manager.fetchIfNecessary(for: matchID) {
 			try await getMatchDetails(matchID: $0)
 				<- LocalDataProvider.dataFetched
+		}
+	}
+	
+	func fetchMatchDetails(for matchIDs: [Match.ID]) async throws {
+		try await withThrowingTaskGroup(of: Void.self) { group in
+			for matchID in matchIDs {
+				group.async {
+					try await self.fetchMatchDetails(for: matchID)
+				}
+			}
+			for try await _ in group {} // TODO: might be able to remove this once the function stops being rethrows
 		}
 	}
 }
