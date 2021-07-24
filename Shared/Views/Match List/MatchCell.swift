@@ -22,20 +22,33 @@ struct MatchCell: View {
 	
 	@State var matchDetails: MatchDetails?
 	
+	@Environment(\.valorantLoad) private var load
+	
 	var body: some View {
-		ZStack {
+		HStack {
+			VStack(alignment: .leading) {
+				matchInfo
+			}
 			
-			HStack {
-				VStack(alignment: .leading) {
-					matchInfo
-				}
-				
-				if match.isRanked {
-					changeInfo
-				}
+			if match.isRanked {
+				changeInfo
 			}
 		}
 		.padding(.vertical, 8)
+		.swipeActions(edge: .leading) {
+			if matchDetails == nil {
+				AsyncButton {
+					await Task.sleep(seconds: 0.85, tolerance: 0.1) // TODO: workaround for swipe actions "locking" cell height until disappeared
+					await load {
+						try await $0.fetchMatchDetails(for: match.id)
+					}
+				} label: {
+					Label("Fetch Details", systemImage: "info.circle.fill")
+						.labelStyle(.iconOnly)
+				}
+				.tint(.blue)
+			}
+		}
 		.id(match.id)
 		.withLocalData($matchDetails, id: match.id)
 	}
@@ -144,6 +157,7 @@ struct MatchCell: View {
 				KDASummaryView(player: myself)
 					.foregroundStyle(.secondary, .tertiary)
 			}
+			.transition(.slide)
 		}
 	}
 	
