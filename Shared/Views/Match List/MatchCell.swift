@@ -4,13 +4,13 @@ import HandyOperators
 import ValorantAPI
 
 struct MatchCell: View {
-	private static let dateFormatter = DateFormatter() <- {
+	private static let startDateFormatter = DateFormatter() <- {
 		$0.dateStyle = .short
 	}
-	private static let timeFormatter = DateFormatter() <- {
+	private static let startTimeFormatter = DateFormatter() <- {
 		$0.timeStyle = .short
 	}
-	private static let relativeTimeFormatter = DateComponentsFormatter() <- {
+	private static let relativeStartTimeFormatter = DateComponentsFormatter() <- {
 		// DateComponentsFormatter gives us more control than RelativeDateTimeFormatter
 		$0.unitsStyle = .abbreviated
 		$0.maximumUnitCount = 2
@@ -94,11 +94,12 @@ struct MatchCell: View {
 					// use relative formatting for times less than a day ago
 					let relativeCutoff = Calendar.current.date(byAdding: .day, value: -1, to: .now)!
 					if match.startTime > relativeCutoff {
-						Text("\(Self.relativeTimeFormatter.string(from: match.startTime, to: .now)!) ago")
+						let formatter = Self.relativeStartTimeFormatter
+						Text("\(formatter.string(from: match.startTime, to: .now)!) ago")
 							.foregroundStyle(.secondary)
 					} else {
-						Text(match.startTime, formatter: Self.dateFormatter)
-						Text(match.startTime, formatter: Self.timeFormatter)
+						Text(match.startTime, formatter: Self.startDateFormatter)
+						Text(match.startTime, formatter: Self.startTimeFormatter)
 							.foregroundStyle(.secondary)
 					}
 				}
