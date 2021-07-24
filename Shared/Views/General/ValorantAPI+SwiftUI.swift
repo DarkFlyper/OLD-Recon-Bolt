@@ -21,6 +21,16 @@ extension Team.ID {
 	}
 }
 
+extension BasicMatchInfo {
+	var queueName: String {
+		if provisioningFlowID == .customGame {
+			return "Custom"
+		} else {
+			return queueID?.name ?? "Unknown Queue"
+		}
+	}
+}
+
 extension QueueID {
 	var name: String {
 		switch rawValue {

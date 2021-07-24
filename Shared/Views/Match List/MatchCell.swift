@@ -95,10 +95,10 @@ struct MatchCell: View {
 			ZStack {
 				if let matchDetails = matchDetails {
 					HStack {
-						GameModeImage(id: matchDetails.matchInfo.gameMode)
+						GameModeImage(id: matchDetails.matchInfo.modeID)
 							.frame(height: 20)
 						
-						Text(matchDetails.matchInfo.queueID.name)
+						Text(matchDetails.matchInfo.queueName)
 							.foregroundStyle(.secondary)
 							.padding(.top, -2) // small caps are shorter
 					}
