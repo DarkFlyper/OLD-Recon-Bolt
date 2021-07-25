@@ -42,6 +42,8 @@ extension QueueID {
 			return "New Map"
 		case "onefa":
 			return "Replication"
+		case "snowball":
+			return "Snowball Fight"
 		case let other:
 			return other.capitalized
 		}

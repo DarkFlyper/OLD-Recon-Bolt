@@ -28,7 +28,7 @@ struct CareerSummaryView: View {
 			}
 			.padding()
 		}
-		.background(Color(.systemGroupedBackground).edgesIgnoringSafeArea(.all))
+		.background(Color(.systemGroupedBackground))
 		.navigationTitle("Career Summary")
 		.navigationBarTitleDisplayMode(.inline)
 	}

@@ -25,7 +25,7 @@ struct LiveView: View {
 		}
 		.refreshable(action: refresh)
 		.task(refresh)
-		.background(Color(.systemGroupedBackground).edgesIgnoringSafeArea(.all))
+		.background(Color(.systemGroupedBackground))
 		.navigationTitle("Live")
 	}
 	
