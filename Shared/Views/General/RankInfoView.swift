@@ -28,7 +28,7 @@ struct RankInfoView: View {
 					.last { $0.info.competitiveTier > 0 }
 				
 				if shouldShowProgress {
-					progressView(for: tierInfo, rankedRating: info?.rankedRating ?? 0)
+					progressView(for: tierInfo, rankedRating: info?.adjustedRankedRating ?? 0)
 				}
 				
 				Group {
@@ -44,7 +44,7 @@ struct RankInfoView: View {
 				let tierInfo = assets?.seasons.tierInfo(number: info.competitiveTier, in: info.seasonID)
 				
 				if shouldShowProgress {
-					progressView(for: tierInfo, rankedRating: info.rankedRating)
+					progressView(for: tierInfo, rankedRating: info.adjustedRankedRating)
 				}
 				
 				CompetitiveTierImage(tierInfo: tierInfo)

@@ -120,7 +120,7 @@ struct CareerSummaryView: View {
 									.font(.callout.weight(.semibold))
 							}
 							
-							Text("\(info.rankedRating) RR")
+							Text("\(info.adjustedRankedRating) RR")
 								.font(.caption)
 							
 							if info.leaderboardRank > 0 {

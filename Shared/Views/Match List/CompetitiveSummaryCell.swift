@@ -50,7 +50,7 @@ struct CompetitiveSummaryCell: View {
 					.font(primaryFont)
 			}
 			
-			Text("\(info?.rankedRating ?? 0) RR")
+			Text("\(info?.adjustedRankedRating ?? 0) RR")
 				.font(secondaryFont)
 		}
 	}
