@@ -165,13 +165,18 @@ private let decoder = JSONDecoder()
 private let encoder = JSONEncoder()
 
 private let fileManager = FileManager.default
-private let baseFolderURL = try! fileManager.url(
+
+private let _baseFolderURL = try! fileManager.url(
 	for: .cachesDirectory,
 	in: .userDomainMask,
 	appropriateFor: nil,
 	create: true
 )
 .appendingPathComponent("local")
+
+private let baseFolderURL = isInSwiftUIPreview
+	? Bundle.main.resourceURL!.appendingPathComponent("Local", isDirectory: true)
+	: _baseFolderURL
 
 extension TimeInterval {
 	static func minutes(_ minutes: Double) -> Self {

@@ -24,6 +24,7 @@
 		B90B4B64267C270500CACB95 /* CompetitiveTierImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90B4B63267C270500CACB95 /* CompetitiveTierImage.swift */; };
 		B90B4B65267C270500CACB95 /* CompetitiveTierImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90B4B63267C270500CACB95 /* CompetitiveTierImage.swift */; };
 		B90BC2EE266D224F00C905D4 /* CGeometry in Frameworks */ = {isa = PBXBuildFile; productRef = B90BC2ED266D224F00C905D4 /* CGeometry */; };
+		B90CB17926ACD76500804C27 /* Local in Resources */ = {isa = PBXBuildFile; fileRef = B90CB17826ACD76500804C27 /* Local */; };
 		B9131D61266A707600E85F46 /* ValorantLoadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9131D60266A707600E85F46 /* ValorantLoadManager.swift */; };
 		B9131D62266A707600E85F46 /* ValorantLoadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9131D60266A707600E85F46 /* ValorantLoadManager.swift */; };
 		B9131D65266AF6C600E85F46 /* ReferenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9131D64266AF6C600E85F46 /* ReferenceView.swift */; };
@@ -89,8 +90,6 @@
 		B963C47726950FE90071E14A /* RankInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B963C47526950FE90071E14A /* RankInfoView.swift */; };
 		B963C4792695101C0071E14A /* PlayerIdentityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B963C4782695101C0071E14A /* PlayerIdentityCell.swift */; };
 		B963C47A2695101C0071E14A /* PlayerIdentityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B963C4782695101C0071E14A /* PlayerIdentityCell.swift */; };
-		B9677F8326782A3200C0FF46 /* example_pregame_users.json in Resources */ = {isa = PBXBuildFile; fileRef = B9677F8226782A3200C0FF46 /* example_pregame_users.json */; };
-		B9677F8426782A3200C0FF46 /* example_pregame_users.json in Resources */ = {isa = PBXBuildFile; fileRef = B9677F8226782A3200C0FF46 /* example_pregame_users.json */; };
 		B96845B32665C7B900DC59D2 /* ClientData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96845B22665C7B900DC59D2 /* ClientData.swift */; };
 		B96845B42665C7B900DC59D2 /* ClientData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96845B22665C7B900DC59D2 /* ClientData.swift */; };
 		B96A0CA0265A8B4600844674 /* strange_match.json in Resources */ = {isa = PBXBuildFile; fileRef = B96A0C9F265A8B4600844674 /* strange_match.json */; };
@@ -111,8 +110,6 @@
 		B9C3499E267AA6DE00BE39B1 /* LiveMatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3499C267AA6DE00BE39B1 /* LiveMatchView.swift */; };
 		B9C349A0267AA9E800BE39B1 /* example_live_game.json in Resources */ = {isa = PBXBuildFile; fileRef = B9C3499F267AA9E800BE39B1 /* example_live_game.json */; };
 		B9C349A1267AA9E800BE39B1 /* example_live_game.json in Resources */ = {isa = PBXBuildFile; fileRef = B9C3499F267AA9E800BE39B1 /* example_live_game.json */; };
-		B9C349A3267AAB9500BE39B1 /* example_live_game_users.json in Resources */ = {isa = PBXBuildFile; fileRef = B9C349A2267AAB9500BE39B1 /* example_live_game_users.json */; };
-		B9C349A4267AAB9500BE39B1 /* example_live_game_users.json in Resources */ = {isa = PBXBuildFile; fileRef = B9C349A2267AAB9500BE39B1 /* example_live_game_users.json */; };
 		B9C7064E269BC91F00D29226 /* GameModeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C7064D269BC91F00D29226 /* GameModeImage.swift */; };
 		B9C7064F269BC91F00D29226 /* GameModeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C7064D269BC91F00D29226 /* GameModeImage.swift */; };
 		B9C97DC7263CADFC001E4D1B /* ValorantAPI+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C97DC6263CADFC001E4D1B /* ValorantAPI+Mock.swift */; };
@@ -226,6 +223,7 @@
 		B90B4B5D267C223D00CACB95 /* MapImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapImage.swift; sourceTree = "<group>"; };
 		B90B4B60267C22E700CACB95 /* PlayerCardImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCardImage.swift; sourceTree = "<group>"; };
 		B90B4B63267C270500CACB95 /* CompetitiveTierImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitiveTierImage.swift; sourceTree = "<group>"; };
+		B90CB17826ACD76500804C27 /* Local */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Local; sourceTree = "<group>"; };
 		B9131D60266A707600E85F46 /* ValorantLoadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValorantLoadManager.swift; sourceTree = "<group>"; };
 		B9131D64266AF6C600E85F46 /* ReferenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferenceView.swift; sourceTree = "<group>"; };
 		B9131D68266AFA4C00E85F46 /* MapListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapListView.swift; sourceTree = "<group>"; };
@@ -267,7 +265,6 @@
 		B963C47526950FE90071E14A /* RankInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankInfoView.swift; sourceTree = "<group>"; };
 		B963C4782695101C0071E14A /* PlayerIdentityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerIdentityCell.swift; sourceTree = "<group>"; };
 		B964BECE2671515C00022A7C /* HandyOperators */ = {isa = PBXFileReference; lastKnownFileType = folder; name = HandyOperators; path = "../ Packages/HandyOperators"; sourceTree = "<group>"; };
-		B9677F8226782A3200C0FF46 /* example_pregame_users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_pregame_users.json; sourceTree = "<group>"; };
 		B96845B22665C7B900DC59D2 /* ClientData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientData.swift; sourceTree = "<group>"; };
 		B96A0C9F265A8B4600844674 /* strange_match.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = strange_match.json; sourceTree = "<group>"; };
 		B96A0CA2265ABBC700844674 /* SwiftUI+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUI+Helpers.swift"; sourceTree = "<group>"; };
@@ -279,7 +276,6 @@
 		B99B75942655859C00FBEB60 /* Recon Bolt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Recon Bolt.entitlements"; sourceTree = "<group>"; };
 		B9C3499C267AA6DE00BE39B1 /* LiveMatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveMatchView.swift; sourceTree = "<group>"; };
 		B9C3499F267AA9E800BE39B1 /* example_live_game.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_live_game.json; sourceTree = "<group>"; };
-		B9C349A2267AAB9500BE39B1 /* example_live_game_users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_live_game_users.json; sourceTree = "<group>"; };
 		B9C7064D269BC91F00D29226 /* GameModeImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModeImage.swift; sourceTree = "<group>"; };
 		B9C97DC6263CADFC001E4D1B /* ValorantAPI+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ValorantAPI+Mock.swift"; sourceTree = "<group>"; };
 		B9C97DD0263CB744001E4D1B /* MatchList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchList.swift; sourceTree = "<group>"; };
@@ -577,6 +573,7 @@
 		B9F5CEE3267D3337009CF906 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				B90CB17826ACD76500804C27 /* Local */,
 				B9EF0F23263D09120067176A /* example_match.json */,
 				B941B6EB25A7C83700F675C1 /* example_updates.json */,
 				B963C4722694FE920071E14A /* example_summary.json */,
@@ -585,9 +582,7 @@
 				B9F9B4D926793F3000397AAB /* surrendered_match.json */,
 				B9F52331266EE57900DFF8DD /* example_contracts.json */,
 				B9318368267813EF0099B13C /* example_pregame.json */,
-				B9677F8226782A3200C0FF46 /* example_pregame_users.json */,
 				B9C3499F267AA9E800BE39B1 /* example_live_game.json */,
-				B9C349A2267AAB9500BE39B1 /* example_live_game_users.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -774,6 +769,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B90CB17926ACD76500804C27 /* Local in Resources */,
 				B963C4732694FE920071E14A /* example_summary.json in Resources */,
 				B9DCF9AB2642F7A100C39EC4 /* Preview Assets.xcassets in Resources */,
 				B9F9B4DA26793F3100397AAB /* surrendered_match.json in Resources */,
@@ -784,9 +780,7 @@
 				B9F52332266EE57900DFF8DD /* example_contracts.json in Resources */,
 				B9C349A0267AA9E800BE39B1 /* example_live_game.json in Resources */,
 				B941B65A25A5BC8A00F675C1 /* Assets.xcassets in Resources */,
-				B9C349A3267AAB9500BE39B1 /* example_live_game_users.json in Resources */,
 				B96A0CA0265A8B4600844674 /* strange_match.json in Resources */,
-				B9677F8326782A3200C0FF46 /* example_pregame_users.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -804,9 +798,7 @@
 				B9F52333266EE57900DFF8DD /* example_contracts.json in Resources */,
 				B9C349A1267AA9E800BE39B1 /* example_live_game.json in Resources */,
 				B941B65B25A5BC8A00F675C1 /* Assets.xcassets in Resources */,
-				B9C349A4267AAB9500BE39B1 /* example_live_game_users.json in Resources */,
 				B96A0CA1265A8B4600844674 /* strange_match.json in Resources */,
-				B9677F8426782A3200C0FF46 /* example_pregame_users.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

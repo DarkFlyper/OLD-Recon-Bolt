@@ -1,0 +1,38 @@
+{
+	"lastUpdate": 648619967.77309799,
+	"object": {
+		"IsActRankBadgeHidden": false,
+		"NewPlayerExperienceFinished": true,
+		"QueueSkills": {
+			"competitive": {
+				"TotalGamesNeededForRating": 0,
+				"CurrentSeasonGamesNeededForRating": 0,
+				"TotalGamesNeededForLeaderboard": 0,
+				"SeasonalInfoBySeasonID": [
+					"52e9749a-429b-7060-99fe-4595426a0cf7",
+					{
+						"SeasonID": "52e9749a-429b-7060-99fe-4595426a0cf7",
+						"NumberOfWins": 18,
+						"NumberOfWinsWithPlacements": 21,
+						"NumberOfGames": 37,
+						"Rank": 3,
+						"CapstoneWins": 0,
+						"LeaderboardRank": 0,
+						"CompetitiveTier": 3,
+						"RankedRating": 10,
+						"WinsByTier": {
+							"0": 3,
+							"5": 1,
+							"6": 14,
+							"7": 3
+						},
+						"GamesNeededForRating": 0,
+						"TotalWinsNeededForRank": 0
+					}
+				]
+			}
+		},
+		"Subject": "84af93c3-9069-5603-a886-f063ac96a994",
+		"IsLeaderboardAnonymized": false
+	}
+}

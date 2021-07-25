@@ -22,11 +22,11 @@
 	"PostGameDetails": null,
 	"Players": [
 		{
-			"Subject": "e0c1d58e-47e0-58c6-be41-e494db6d7df3",
+			"Subject": "d31583b9-98f0-5986-8d1d-dbf1f77f6305",
 			"TeamID": "Blue",
 			"CharacterID": "5f8d3a7f-467b-97f3-062c-13acf203c006",
 			"PlayerIdentity": {
-				"Subject": "e0c1d58e-47e0-58c6-be41-e494db6d7df3",
+				"Subject": "d31583b9-98f0-5986-8d1d-dbf1f77f6305",
 				"PlayerCardID": "bb5cedcd-4ed9-ee2e-f129-48bf60a8e540",
 				"PlayerTitleID": "c3b8609d-46cf-e290-868a-e4852a85704f",
 				"AccountLevel": 1,
@@ -47,11 +47,11 @@
 			"IsCoach": false
 		},
 		{
-			"Subject": "b59a64d7-d396-540b-a448-d0192fe9c785",
+			"Subject": "3fa8598d-066e-5bdb-998c-74c015c5dba5",
 			"TeamID": "Blue",
 			"CharacterID": "569fdd95-4d10-43ab-ca70-79becc718b46",
 			"PlayerIdentity": {
-				"Subject": "b59a64d7-d396-540b-a448-d0192fe9c785",
+				"Subject": "3fa8598d-066e-5bdb-998c-74c015c5dba5",
 				"PlayerCardID": "bb5cedcd-4ed9-ee2e-f129-48bf60a8e540",
 				"PlayerTitleID": "d13e579c-435e-44d4-cec2-6eae5a3c5ed4",
 				"AccountLevel": 1,
@@ -67,11 +67,11 @@
 			"IsCoach": false
 		},
 		{
-			"Subject": "8e009f15-847f-53e3-b87b-46af183a4a67",
+			"Subject": "9504e704-7322-57e4-8e30-df3c5dc39124",
 			"TeamID": "Blue",
 			"CharacterID": "a3bfb853-43b2-7238-a4f1-ad90e9e46bcc",
 			"PlayerIdentity": {
-				"Subject": "8e009f15-847f-53e3-b87b-46af183a4a67",
+				"Subject": "9504e704-7322-57e4-8e30-df3c5dc39124",
 				"PlayerCardID": "4727101c-405c-e9eb-5cd6-638f0487dc76",
 				"PlayerTitleID": "b293212f-4574-1ffa-4593-4fad2b97b5ec",
 				"AccountLevel": 1,
@@ -91,11 +91,11 @@
 			"IsCoach": false
 		},
 		{
-			"Subject": "a6f73021-b856-57cb-b52b-d72d0e0bbf9b",
+			"Subject": "f3d0866c-a52d-5385-add2-895458785df8",
 			"TeamID": "Blue",
 			"CharacterID": "add6443a-41bd-e414-f6ad-e58d267f4e95",
 			"PlayerIdentity": {
-				"Subject": "a6f73021-b856-57cb-b52b-d72d0e0bbf9b",
+				"Subject": "f3d0866c-a52d-5385-add2-895458785df8",
 				"PlayerCardID": "bb5cedcd-4ed9-ee2e-f129-48bf60a8e540",
 				"PlayerTitleID": "951af77f-4683-ba12-2557-1da1950c390b",
 				"AccountLevel": 1,
@@ -111,11 +111,11 @@
 			"IsCoach": false
 		},
 		{
-			"Subject": "1d5c6003-4497-55d8-8eb6-25b2296bda61",
+			"Subject": "29fdca9d-11cb-5a52-b287-7d912ace1683",
 			"TeamID": "Blue",
 			"CharacterID": "707eab51-4836-f488-046a-cda6bf494859",
 			"PlayerIdentity": {
-				"Subject": "1d5c6003-4497-55d8-8eb6-25b2296bda61",
+				"Subject": "29fdca9d-11cb-5a52-b287-7d912ace1683",
 				"PlayerCardID": "55b3141c-4ab5-c350-5f9e-bb83dd1f4e9a",
 				"PlayerTitleID": "21dda67e-46d9-081d-0436-fc93fbb1331d",
 				"AccountLevel": 1,
@@ -173,11 +173,11 @@
 			"IsCoach": false
 		},
 		{
-			"Subject": "3fa8598d-066e-5bdb-998c-74c015c5dba5",
+			"Subject": "b59a64d7-d396-540b-a448-d0192fe9c785",
 			"TeamID": "Red",
 			"CharacterID": "a3bfb853-43b2-7238-a4f1-ad90e9e46bcc",
 			"PlayerIdentity": {
-				"Subject": "3fa8598d-066e-5bdb-998c-74c015c5dba5",
+				"Subject": "b59a64d7-d396-540b-a448-d0192fe9c785",
 				"PlayerCardID": "bb5cedcd-4ed9-ee2e-f129-48bf60a8e540",
 				"PlayerTitleID": "86375046-4f22-9dc8-f8d8-b3b4d029cd4b",
 				"AccountLevel": 1,

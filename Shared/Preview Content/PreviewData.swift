@@ -23,10 +23,8 @@ enum PreviewData {
 	static let contractDetails = loadJSON(named: "example_contracts", as: ContractDetails.self)
 	
 	static let pregameInfo = loadJSON(named: "example_pregame", as: LivePregameInfo.self)
-	static let pregameUsers = Dictionary(values: loadJSON(named: "example_pregame_users", as: [User].self))
 	
 	static let liveGameInfo = loadJSON(named: "example_live_game", as: LiveGameInfo.self)
-	static let liveGameUsers = Dictionary(values: loadJSON(named: "example_live_game_users", as: [User].self))
 	
 	static let singleMatchData = MatchViewData(details: singleMatch, userID: userID)
 	static let strangeMatchData = MatchViewData(details: strangeMatch, userID: userID)

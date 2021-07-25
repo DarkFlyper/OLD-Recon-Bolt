@@ -6278,7 +6278,7 @@
 		{
 			"ID": "fc7ce719-4b5a-ebfe-ad49-12abeea8d534",
 			"Objectives": {
-				"5c22a5ad-4d44-3451-5a09-589c35ff77cd": 2
+				"5c22a5ad-4d44-3451-5a09-589c35ff77cd": 7
 			},
 			"Complete": false,
 			"ExpirationTime": "2021-06-22T00:00:00Z"
@@ -6286,7 +6286,7 @@
 		{
 			"ID": "02d0c027-4bc3-2214-34ae-c3a32bd50cc1",
 			"Objectives": {
-				"974cb6ff-4aef-0217-1813-73a28ddfcdc6": 1615
+				"974cb6ff-4aef-0217-1813-73a28ddfcdc6": 12615
 			},
 			"Complete": false,
 			"ExpirationTime": "2021-06-22T00:00:00Z"
@@ -6294,15 +6294,15 @@
 		{
 			"ID": "e02d1536-47ed-398b-6c97-51960b28f4f2",
 			"Objectives": {
-				"91952692-4345-8bc1-6f1c-2dad7e14109f": 47
+				"91952692-4345-8bc1-6f1c-2dad7e14109f": 200
 			},
-			"Complete": false,
+			"Complete": true,
 			"ExpirationTime": "2021-06-22T00:00:00Z"
 		},
 		{
 			"ID": "f30bd3b0-45d3-d72a-8d1d-bab6deac61d6",
 			"Objectives": {
-				"91952692-4345-8bc1-6f1c-2dad7e14109f": 0
+				"91952692-4345-8bc1-6f1c-2dad7e14109f": 3
 			},
 			"Complete": false,
 			"ExpirationTime": "2021-05-23T02:00:00Z"
