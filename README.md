@@ -16,30 +16,30 @@ I've uploaded a build of the app to Apple and they approved it for beta testing!
 
 (Some of this data is mocked, some is real—*can you tell which is which?*)
 
-<center>
+<p align=center>
   <img width="49%" src="Resources/GitHub/Screenshots/Light/profile.png" />
   <img width="49%" src="Resources/GitHub/Screenshots/Dark/profile.png" />
-</center>
+</p>
 
-<center>
+<p align=center>
   <img width="49%" src="Resources/GitHub/Screenshots/Light/matches.png" />
   <img width="49%" src="Resources/GitHub/Screenshots/Dark/matches.png" />
-</center>
+</p>
 
-<center>
+<p align=center>
   <img width="49%" src="Resources/GitHub/Screenshots/Light/summary.png" />
   <img width="49%" src="Resources/GitHub/Screenshots/Dark/summary.png" />
-</center>
+</p>
 
-<center>
+<p align=center>
   <img width="49%" src="Resources/GitHub/Screenshots/Light/live.png" />
   <img width="49%" src="Resources/GitHub/Screenshots/Dark/live.png" />
-</center>
+</p>
 
-<center>
+<p align=center>
   <img width="49%" src="Resources/GitHub/Screenshots/Light/agent select.png" />
   <img width="49%" src="Resources/GitHub/Screenshots/Dark/agent select.png" />
-</center>
+</p>
 
 
 ## Thanks
