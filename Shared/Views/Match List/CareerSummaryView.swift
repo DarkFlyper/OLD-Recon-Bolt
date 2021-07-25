@@ -68,14 +68,35 @@ struct CareerSummaryView: View {
 			
 			if !withoutFirst.isEmpty {
 				expandButton(hiddenCount: withoutFirst.count)
-			}
-			
-			if isExpanded {
-				ForEach(withoutFirst, id: \.act.id) { act, info in
-					summaryCell(for: info, in: act)
+				
+				if isExpanded {
+					ForEach(withoutFirst, id: \.act.id) { act, info in
+						summaryCell(for: info, in: act)
+					}
+					.transition(.wipe)
 				}
-				.transition(.wipe)
+				
+				allTimeStatsSegment // only relevant if we have data for more than 1 act
 			}
+		}
+		
+		@ViewBuilder
+		var allTimeStatsSegment: some View {
+			let stats = (info.bySeason ?? [:]).values
+				.map { ($0.winCountIncludingPlacements, $0.gameCount) }
+			let (winCount, gameCount) = stats
+				.reduce((0, 0)) { ($0.0 + $1.0, $0.1 + $1.1) }
+			
+			VStack {
+				Text("ALL TIME")
+					.font(.subheadline.weight(.semibold))
+					.foregroundStyle(.secondary)
+				
+				Divider()
+				
+				winRatioInfo(winCount: winCount, gameCount: gameCount)
+			}
+			.padding()
 		}
 		
 		func expandButton(hiddenCount: Int) -> some View {
@@ -134,19 +155,23 @@ struct CareerSummaryView: View {
 					}
 				}
 				
-				let fractionWon = Double(info.winCountIncludingPlacements) / Double(info.gameCount)
-				let winPercentage = (fractionWon * 100)
-					.formatted(FloatingPointFormatStyle().precision(.fractionLength(1)))
-				
-				HStack {
-					Text("\(info.winCountIncludingPlacements)/\(info.gameCount)").fontWeight(.medium)
-					+ Text(" games won").foregroundColor(.secondary)
-					Spacer()
-					Text("\(winPercentage)%")
-				}
-				.font(.body.monospacedDigit())
+				winRatioInfo(winCount: info.winCountIncludingPlacements, gameCount: info.gameCount)
 			}
 			.padding()
+		}
+		
+		func winRatioInfo(winCount: Int, gameCount: Int) -> some View {
+			let fractionWon = Double(winCount) / Double(gameCount)
+			let winPercentage = (fractionWon * 100)
+				.formatted(FloatingPointFormatStyle().precision(.fractionLength(1)))
+			
+			return HStack {
+				Text("\(winCount)/\(gameCount)").fontWeight(.medium)
+				+ Text(" games won").foregroundColor(.secondary)
+				Spacer()
+				Text("\(winPercentage)%")
+			}
+			.font(.body.monospacedDigit())
 		}
 		
 		func leaderboardRankView(rank: Int, tierInfo: CompetitiveTier?) -> some View {
