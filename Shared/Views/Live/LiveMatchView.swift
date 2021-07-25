@@ -130,6 +130,7 @@ struct LiveMatchView_Previews: PreviewProvider {
 			gameInfo: PreviewData.liveGameInfo
 		)
 		.withToolbar()
+		.inEachColorScheme()
 	}
 }
 #endif

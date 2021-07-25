@@ -26,7 +26,7 @@ extension String {
 					let plural = parser.consume(through: ")")!
 					output += arg == 1 ? singular : plural
 				} else {
-					output += String(arg)
+					output += arg.formatted()
 				}
 			}
 			
