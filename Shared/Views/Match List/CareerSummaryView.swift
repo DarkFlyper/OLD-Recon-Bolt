@@ -111,9 +111,10 @@ struct CareerSummaryView: View {
 					
 					// I tried using the new inflect API here, but it just slowed stuff down and threw errors
 					Text("\(hiddenCount) previous \(hiddenCount > 1 ? "acts" : "act")")
+					
+					Spacer()
 				}
 				.padding()
-				.frame(maxWidth: .infinity, alignment: .leading)
 			}
 			.background(.accentColor.opacity(0.2))
 			.tint(.accentColor)
