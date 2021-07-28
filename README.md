@@ -4,7 +4,7 @@
 
 # Recon Bolt
 
-This app started as a way to view your competitive rank changes (back before the numbers were visible) and has now evolved into so much more, even allowing you to participate in agent select from your phone. Check out the screenshots for a clearer overview than I could ever give in words!
+This is a companion app for Valorant. It started as a way to view your competitive rank changes (back before the numbers were visible) and has now evolved into so much more, even allowing you to participate in agent select from anywhere. Check out the screenshots for a clearer overview than I could ever give in words!
 
 Unfortunately, this app needs your Riot username and password to function, but of course you can view the code yourself to check its safety, and the password is stored in the keychain rather than as plaintext.
 
