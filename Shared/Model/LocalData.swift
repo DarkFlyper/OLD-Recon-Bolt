@@ -14,19 +14,19 @@ final actor LocalDataManager<Object: Identifiable & Codable> where Object.ID: Lo
 	private var cache: [Object.ID: Entry?] = [:] // nil values represent that we've confirmed there's no cache file
 	private var subjects: [Object.ID: Subject] = [:]
 	
-	let localPath: String
+	let folderURL: URL
 	/// When the object was last updated longer ago than this, it is automatically updated on next fetch.
 	let ageCausingAutoUpdate: TimeInterval?
 	
 	init(localPath: String = "\(Object.self)", ageCausingAutoUpdate: TimeInterval? = nil) {
-		self.localPath = localPath
+		self.folderURL = baseFolderURL.appendingPathComponent(localPath) <- {
+			try? fileManager.createDirectory(
+				at: $0,
+				withIntermediateDirectories: true,
+				attributes: nil
+			)
+		}
 		self.ageCausingAutoUpdate = ageCausingAutoUpdate
-		
-		try? fileManager.createDirectory(
-			at: folderURL,
-			withIntermediateDirectories: true,
-			attributes: nil
-		)
 	}
 	
 	func store<S: Sequence>(_ objects: S, asOf updateTime: Date) where S.Element == Object {
@@ -106,10 +106,6 @@ final actor LocalDataManager<Object: Identifiable & Codable> where Object.ID: Lo
 			dump(error)
 			return nil
 		}
-	}
-	
-	private nonisolated var folderURL: URL {
-		baseFolderURL.appendingPathComponent(localPath)
 	}
 	
 	private nonisolated func fileURL(for id: Object.ID) -> URL {

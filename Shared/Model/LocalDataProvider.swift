@@ -207,7 +207,7 @@ extension ValorantClient {
 	func fetchMatchDetails(for matchIDs: [Match.ID]) async throws {
 		try await withThrowingTaskGroup(of: Void.self) { group in
 			for matchID in matchIDs {
-				group.async {
+				group.addTask {
 					try await self.fetchMatchDetails(for: matchID)
 				}
 			}

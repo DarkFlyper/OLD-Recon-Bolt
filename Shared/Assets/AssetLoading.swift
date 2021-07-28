@@ -39,7 +39,7 @@ extension AssetClient {
 		
 		try await withThrowingTaskGroup(of: Void.self) { group in
 			for image in images {
-				group.async {
+				group.addTask {
 					try await download(image)
 				}
 			}

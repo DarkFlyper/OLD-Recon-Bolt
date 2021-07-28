@@ -44,7 +44,7 @@ struct LoginForm: View {
 					Text("Sign In")
 						.bold()
 				}
-				.controlProminence(.increased)
+				.buttonStyle(.borderedProminent)
 #endif
 			}
 			.frame(idealWidth: 180)

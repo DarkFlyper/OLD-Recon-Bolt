@@ -41,8 +41,7 @@ struct AgentPickerView: View {
 				Text(agentName.map { "Lock In \($0)" } ?? "Lock In")
 					.bold()
 			}
-			.controlProminence(.increased)
-			.buttonStyle(.bordered)
+			.buttonStyle(.borderedProminent)
 			.disabled(selectedAgentID == nil || takenAgents.contains(selectedAgentID!))
 			.disabled(hasSelectedAgent) // can't move this out because then it'd affect the relock gesture too
 			.simultaneousGesture(holdGesture(isHolding: $canRelock))
