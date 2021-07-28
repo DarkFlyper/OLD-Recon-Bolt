@@ -24,18 +24,20 @@ struct MissionInfo: AssetItem, Codable, Identifiable {
 	var assetPath: String
 	var type: MissionType?
 	var xpGrant: Int
-	var activationDate: Date
-	var expirationDate: Date
+	@SpecialOptional(.distantPast)
+	var activationDate: Date?
+	@SpecialOptional(.distantPast)
+	var expirationDate: Date?
 	var tags: [Tag]?
 	var progressToComplete: Int
 	var objectives: [ObjectiveValue]?
 	
-	private static let dateValidityCutoff = Date(timeIntervalSince1970: 0)
-	var optionalActivationDate: Date? {
-		activationDate > Self.dateValidityCutoff ? activationDate : nil
-	}
-	var optionalExpirationDate: Date? {
-		expirationDate > Self.dateValidityCutoff ? expirationDate : nil
+	func objective(id: Objective.ID?) -> ObjectiveValue? {
+		if let id = id {
+			return objectives?.first { $0.objectiveID == id }
+		} else {
+			return objectives?.singleElement
+		}
 	}
 	
 	struct MissionType: NamespacedID {
