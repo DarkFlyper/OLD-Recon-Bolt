@@ -1230,14 +1230,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = V2EPDFA9PV;
-				INFOPLIST_FILE = "Valorant Viewer Tests/Info.plist";
+				INFOPLIST_FILE = "Recon Bolt Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.3;
-				PRODUCT_BUNDLE_IDENTIFIER = "juliand665.Valorant-Viewer-Tests";
+				PRODUCT_BUNDLE_IDENTIFIER = "juliand665.Recon-Bolt-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -1252,14 +1252,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = V2EPDFA9PV;
-				INFOPLIST_FILE = "Valorant Viewer Tests/Info.plist";
+				INFOPLIST_FILE = "Recon Bolt Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.3;
-				PRODUCT_BUNDLE_IDENTIFIER = "juliand665.Valorant-Viewer-Tests";
+				PRODUCT_BUNDLE_IDENTIFIER = "juliand665.Recon-Bolt-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;

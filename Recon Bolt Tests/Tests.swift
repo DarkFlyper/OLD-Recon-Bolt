@@ -1,6 +1,6 @@
 import XCTest
 import HandyOperators
-@testable import Valorant_Viewer
+@testable import Recon_Bolt
 
 final class Tests: XCTestCase {
 	private static let session = URLSession(configuration: URLSessionConfiguration.default <- {
