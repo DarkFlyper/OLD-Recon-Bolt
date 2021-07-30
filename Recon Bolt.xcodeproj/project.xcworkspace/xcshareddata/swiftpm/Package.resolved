@@ -20,7 +20,7 @@
         }
       },
       {
-        "package": "keychain-swift",
+        "package": "KeychainSwift",
         "repositoryURL": "https://github.com/evgenyneu/keychain-swift.git",
         "state": {
           "branch": null,
@@ -47,7 +47,7 @@
         }
       },
       {
-        "package": "SwifUI-Missing-Pieces",
+        "package": "SwiftUIMissingPieces",
         "repositoryURL": "git@github.com:juliand665/SwifUI-Missing-Pieces.git",
         "state": {
           "branch": "main",

@@ -40,6 +40,7 @@ struct ContentView: View {
 				tab = .account
 			}
 		}
+		.buttonBorderShape(.capsule)
 		.withValorantLoadFunction(dataStore: dataStore)
 		.withLoadErrorAlerts()
 		.environment(\.assets, assetManager.assets)

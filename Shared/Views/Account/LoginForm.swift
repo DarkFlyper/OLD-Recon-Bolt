@@ -53,6 +53,7 @@ struct LoginForm: View {
 			.blur(radius: isSigningIn ? 4 : 0)
 		}
 		.buttonStyle(.bordered)
+		.buttonBorderShape(.capsule)
 		.withoutSheetBottomPadding()
 		.padding()
 #if os(macOS)
