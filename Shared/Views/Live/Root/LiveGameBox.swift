@@ -3,7 +3,7 @@ import ValorantAPI
 
 struct LiveGameBox: View {
 	var userID: User.ID
-	var activeMatch: ActiveMatch?
+	var activeMatch: LiveView.ActiveMatch?
 	var refreshAction: () async -> Void
 	
 	@State var isAutoRefreshing = false
@@ -49,11 +49,6 @@ struct LiveGameBox: View {
 				}
 			}
 		}
-	}
-	
-	struct ActiveMatch {
-		var id: Match.ID
-		var inPregame: Bool
 	}
 }
 

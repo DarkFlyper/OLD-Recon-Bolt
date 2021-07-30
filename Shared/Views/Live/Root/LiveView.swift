@@ -5,7 +5,7 @@ import HandyOperators
 struct LiveView: View {
 	let userID: User.ID
 	@State var contractDetails: ContractDetails?
-	@State var activeMatch: LiveGameBox.ActiveMatch?
+	@State var activeMatch: ActiveMatch?
 	
 	@Environment(\.valorantLoad) private var load
 	
@@ -27,7 +27,7 @@ struct LiveView: View {
 	}
 	
 	func refresh() async {
-		// load both independentlyj
+		// load both independently
 		// TODO: change once `async let _ = ...` is fixed
 		async let contractUpdate: Void = loadContractDetails()
 		async let liveGameUpdate: Void = loadLiveGameDetails()
@@ -57,17 +57,22 @@ struct LiveView: View {
 	
 	func loadLiveGameDetails() async {
 		await load { client in
-			async let liveGameMatch = client.getLiveMatch(inPregame: false)
-			async let livePregameMatch = client.getLiveMatch(inPregame: true)
+			async let liveGame = client.getLiveMatch(inPregame: false)
+			async let livePregame = client.getLiveMatch(inPregame: true)
 			
-			if let match = try await liveGameMatch {
+			if let match = try await liveGame {
 				activeMatch = .init(id: match, inPregame: false)
-			} else if let match = try await livePregameMatch {
+			} else if let match = try await livePregame {
 				activeMatch = .init(id: match, inPregame: true)
 			} else {
 				activeMatch = nil
 			}
 		}
+	}
+	
+	struct ActiveMatch {
+		var id: Match.ID
+		var inPregame: Bool
 	}
 }
 
