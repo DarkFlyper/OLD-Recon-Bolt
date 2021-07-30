@@ -30,6 +30,11 @@ extension Collection {
 	func elementIfValid(at index: Index) -> Element? {
 		indices.contains(index) ? self[index] : nil
 	}
+	
+	var singleElement: Element {
+		assert(count == 1)
+		return first!
+	}
 }
 
 extension Collection where Element: Identifiable {
