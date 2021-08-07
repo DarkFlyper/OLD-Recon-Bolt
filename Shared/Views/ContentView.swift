@@ -18,17 +18,17 @@ struct ContentView: View {
 		TabView(selection: $tab) {
 			onlineView { BookmarkListView(userID: $0) }
 				.withToolbar()
-				.tabItem { Label("Career", systemImage: "square.fill.text.grid.1x2") }
+				.tabItem { Label("Career", systemImage: "clock") }
 				.tag(Tab.career)
 			
 			onlineView { LiveView(userID: $0) }
 				.withToolbar()
-				.tabItem { Label("Live", systemImage: "play.circle") }
+				.tabItem { Label("Live", systemImage: "play") }
 				.tag(Tab.live)
 			
 			ReferenceView()
 				.withToolbar()
-				.tabItem { Label("Reference", systemImage: "books.vertical") }
+				.tabItem { Label("Reference", systemImage: "book") }
 				.tag(Tab.reference)
 			
 			AccountView(dataStore: dataStore, assetManager: assetManager)

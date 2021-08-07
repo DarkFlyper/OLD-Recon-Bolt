@@ -21,17 +21,31 @@ struct LiveGameBox: View {
 	private var content: some View {
 		if let activeMatch = activeMatch {
 			GroupBox {
-				Text("Currently \(activeMatch.inPregame ? "in agent select" : "in-game")!")
+				Text("Currently \(activeMatch.inPregame ? "in agent select" : "in-game").")
 				
-				if activeMatch.inPregame {
-					NavigationLink("Agent Select \(Image(systemName: "chevron.right"))") {
-						AgentSelectContainer(matchID: activeMatch.id, userID: userID)
-					}
-				} else {
-					NavigationLink("Match Details \(Image(systemName: "chevron.right"))") {
-						LiveMatchContainer(matchID: activeMatch.id, userID: userID)
+				Group {
+					if activeMatch.inPregame {
+						NavigationLink {
+							AgentSelectContainer(matchID: activeMatch.id, userID: userID)
+						} label: {
+							HStack {
+								Image(systemName: "person.fill.viewfinder")
+								Text("Agent Select")
+							}
+						}
+					} else {
+						NavigationLink {
+							LiveMatchContainer(matchID: activeMatch.id, userID: userID)
+						} label: {
+							HStack {
+								Image(systemName: "list.bullet.below.rectangle")
+								Text("Match Details")
+							}
+						}
 					}
 				}
+				.font(.headline)
+				.imageScale(.large)
 			}
 		} else {
 			VStack(spacing: 16) {
@@ -58,10 +72,14 @@ struct LiveGameBox_Previews: PreviewProvider {
 		Group {
 			LiveGameBox(userID: PreviewData.userID, refreshAction: {}, isAutoRefreshing: true)
 				.inEachColorScheme()
-			LiveGameBox(userID: PreviewData.userID, activeMatch: .init(id: Match.ID(), inPregame: true)) {}
-				.preferredColorScheme(.light)
-			LiveGameBox(userID: PreviewData.userID, activeMatch: .init(id: Match.ID(), inPregame: false)) {}
-				.preferredColorScheme(.dark)
+			
+			VStack(spacing: 16) {
+				LiveGameBox(userID: PreviewData.userID, activeMatch: .init(id: Match.ID(), inPregame: true)) {}
+				LiveGameBox(userID: PreviewData.userID, activeMatch: .init(id: Match.ID(), inPregame: false)) {}
+				Spacer()
+			}
+			.withToolbar()
+			.inEachColorScheme()
 		}
 		.padding()
 		.background(Color(.systemGroupedBackground))
