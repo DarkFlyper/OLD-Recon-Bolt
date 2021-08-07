@@ -1,19 +1,23 @@
 import Foundation
 import ValorantAPI
+import Protoquest
 
 extension AssetClient {
 	func getAgentInfo() async throws -> [AgentInfo] {
-		let wrapped = try await send(AgentInfoRequest())
-		assert(wrapped.errors.count == 1)
-		return wrapped.decoded
+		try await send(AgentInfoRequest())
 	}
 }
 
 private struct AgentInfoRequest: AssetRequest {
 	let path = "/v1/agents"
 	
-	// For some reason riot decided to include a borked version of Sova (Hunter_NPE) that's missing some parts.
-	typealias Response = FaultTolerantDecodableArray<AgentInfo>
+	var urlParams: [URLParameter] {
+		// For some reason riot decided to include a borked version of Sova (Hunter_NPE) that's missing some parts.
+		// We can filter it out though, thanks to the amazing ValorantAPI.
+		("isPlayableCharacter", true)
+	}
+	
+	typealias Response = [AgentInfo]
 }
 
 struct AgentInfo: AssetItem, Codable, Identifiable {
