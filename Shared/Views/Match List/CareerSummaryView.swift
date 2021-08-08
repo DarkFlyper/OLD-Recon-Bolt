@@ -151,7 +151,7 @@ struct CareerSummaryView: View {
 						}
 						.padding()
 						
-						ActRankView(seasonInfo: info, isIcon: false)
+						ExpandableActRankView(seasonInfo: info)
 							.frame(height: 200)
 					}
 				}
@@ -211,6 +211,17 @@ struct CareerSummaryView: View {
 			.foregroundColor(.white)
 			.fixedSize()
 		}
+	}
+}
+
+struct ExpandableActRankView: View {
+	let seasonInfo: CareerSummary.SeasonInfo
+	
+	@State var isExpanded = false
+	
+	var body: some View {
+		ActRankView(seasonInfo: seasonInfo, isIcon: false, isShowingAllWins: isExpanded)
+			.onTapGesture { isExpanded.toggle() }
 	}
 }
 

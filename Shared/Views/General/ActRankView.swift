@@ -6,19 +6,18 @@ import CGeometry
 struct ActRankView: View {
 	let seasonInfo: CareerSummary.SeasonInfo
 	var isIcon = true
+	var isShowingAllWins = false
 	
 	@Environment(\.assets) private var assets
 	
 	var body: some View {
 		let idealSize = isIcon ? 80 : 160.0
-		let rowCount = isIcon ? 3 : 7
+		let standardRowCount = isIcon ? 3 : 7
 		
 		ZStack {
 			let actInfo = assets?.seasons.acts[seasonInfo.seasonID]
 			let border = actInfo?.borders.last { seasonInfo.winCount >= $0.winsRequired }
 			if let border = border, let winsByTier = seasonInfo.winsByTier {
-				//Color.black
-				
 				let container = isIcon
 					? (border.icon ?? actInfo?.borders.lazy.compactMap(\.icon).first) // show icon even when not qualified for border
 					: border.fullImage
@@ -32,6 +31,7 @@ struct ActRankView: View {
 						.sorted(on: \.key)
 						.reversed()
 						.lazy // lazily resolve images—essentially waits until a certain tier's triangles are requested to resolve its images
+						.filter { $0.key > 0 } // only ones we can actually display (important for auto-fitting)
 						.map { [context] tier, count -> (TierTriangles, Int) in
 							let tierInfo = assets?.seasons.tierInfo(number: tier, in: actInfo)
 							let upwards = (tierInfo?.rankTriangleUpwards?.imageIfLoaded).map(context.resolve)
@@ -39,6 +39,9 @@ struct ActRankView: View {
 							return ((upwards, downwards), count)
 						}
 						.flatMap(repeatElement(_:count:))
+					
+					let rowCountToFitAll = Int(Double(triangleTiers.count).squareRoot().rounded(.up))
+					let rowCount = isShowingAllWins ? rowCountToFitAll : standardRowCount
 					
 					// the images don't quite have this aspect ratio, but we're rescaling them anyway, so we may as well make them ideal
 					let triangleRatio: CGFloat = sin(.pi / 3)
@@ -111,6 +114,9 @@ struct ActRankView_Previews: PreviewProvider {
 		.inEachColorScheme()
 		.fixedSize()
 		.previewLayout(.sizeThatFits)
+		
+		ActRankView(seasonInfo: bySeason[currentAct.id]!, isShowingAllWins: true)
+			.preferredColorScheme(.dark)
 	}
 	
 	static func preview(for act: Act) -> some View {
