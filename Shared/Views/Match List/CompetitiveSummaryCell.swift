@@ -86,6 +86,7 @@ struct CompetitiveSummaryCell_Previews: PreviewProvider {
 	
 	static var previews: some View {
 		CompetitiveSummaryCell(summary: PreviewData.summary)
+			.padding()
 			.inEachColorScheme()
 			.previewLayout(.sizeThatFits)
 		
@@ -93,6 +94,7 @@ struct CompetitiveSummaryCell_Previews: PreviewProvider {
 			$0.competitiveInfo!.bySeason = $0.competitiveInfo!.bySeason!
 				.filter { $0.key == act.id }
 		})
+			.padding()
 			.previewLayout(.sizeThatFits)
 	}
 }

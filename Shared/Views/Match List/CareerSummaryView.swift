@@ -73,7 +73,6 @@ struct CareerSummaryView: View {
 					ForEach(withoutFirst, id: \.act.id) { act, info in
 						summaryCell(for: info, in: act)
 					}
-					.transition(.wipe)
 				}
 				
 				allTimeStatsSegment // only relevant if we have data for more than 1 act
@@ -222,21 +221,6 @@ struct ExpandableActRankView: View {
 	var body: some View {
 		ActRankView(seasonInfo: seasonInfo, isIcon: false, isShowingAllWins: isExpanded)
 			.onTapGesture { isExpanded.toggle() }
-	}
-}
-
-private extension AnyTransition {
-	static let wipe = modifier(
-		active: Modifier(dummyData: 0),
-		identity: Modifier(dummyData: 1)
-	)
-	
-	private struct Modifier: ViewModifier {
-		let dummyData: Double
-		
-		func body(content: Content) -> some View {
-			content.opacity(1 + dummyData)
-		}
 	}
 }
 
