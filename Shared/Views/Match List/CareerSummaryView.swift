@@ -27,8 +27,10 @@ struct CareerSummaryView: View {
 				}
 			}
 			.padding()
+			// TODO: move back out when this SwiftUI bug is fixed (FB9399492)
+			.background(Color(.systemGroupedBackground).padding(-1000))
 		}
-		.background(Color(.systemGroupedBackground))
+		//.background(Color(.systemGroupedBackground))
 		.navigationTitle("Career Summary")
 		.navigationBarTitleDisplayMode(.inline)
 	}
