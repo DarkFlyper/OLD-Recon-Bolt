@@ -12,7 +12,7 @@ Unfortunately, this app needs your Riot username and password to function, but o
 
 I've uploaded a build of the app to Apple and they approved it for beta testing! [Here's the link](https://testflight.apple.com/join/M1e2dgxj) to join the beta :)
 
-Please note that the app currently **only supports iOS 15**, which is in beta ([sign up here](https://beta.apple.com/)), due to new concurrency features introduced to the Swift programming language which haven't been backported to earlier versions (…yet? Apple hasn't been very clear about their plans here).
+Please note that the app currently **only supports iOS 15**, which is in beta ([sign up here](https://beta.apple.com/)), due to new concurrency features introduced to the Swift programming language which haven't been backported to earlier versions (…yet? Apple hasn't been very clear about their plans here). If you join the beta on iOS 14, you'll be stuck with an older version of the app (then still called Valorant Viewer).
 
 ## Screenshots
 
