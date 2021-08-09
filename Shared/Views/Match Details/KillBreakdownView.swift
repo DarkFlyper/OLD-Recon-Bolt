@@ -52,7 +52,7 @@ struct KillBreakdownView: View {
 		
 		// order players by number of kills, with self in first place
 		let killsByPlayer = Dictionary(
-			grouping: data.details.nonBombKills(),
+			grouping: data.details.validKills(),
 			by: \.killer
 		)
 		let order = killsByPlayer
@@ -202,8 +202,13 @@ private struct Round: Identifiable {
 }
 
 private extension MatchDetails {
-	func nonBombKills() -> [Kill] {
-		kills.filter { $0.finishingDamage.type != .bomb }
+	func validKills() -> [Kill] {
+		let teams = Dictionary(uniqueKeysWithValues: players.map { ($0.id, $0.teamID) })
+		
+		return kills
+			.lazy
+			.filter { $0.finishingDamage.type != .bomb } // no bomb kills
+			.filter { teams[$0.killer] != teams[$0.victim] } // no team kills
 	}
 	
 	func killsByRound() -> [[Kill]] {
@@ -211,7 +216,7 @@ private extension MatchDetails {
 			repeating: [] as [Kill],
 			count: roundResults.count
 		) <- {
-			for kill in nonBombKills() {
+			for kill in validKills() {
 				$0[kill.round!].append(kill)
 			}
 		}
