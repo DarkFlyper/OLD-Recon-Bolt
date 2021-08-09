@@ -43,6 +43,7 @@ struct LiveView: View {
 				
 				GroupBox {
 					Text("Missions not loaded!")
+						.foregroundColor(.secondary)
 				}
 				.padding(16)
 			}
