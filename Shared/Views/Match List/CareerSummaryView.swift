@@ -13,7 +13,7 @@ struct CareerSummaryView: View {
 				.filter { !Self.orderedQueues.contains($0) }
 				.sorted(on: \.name)
 			
-			LazyVStack(spacing: 20) {
+			VStack(spacing: 20) {
 				ForEach(queues, id: \.self) { queue in
 					if
 						let info = summary.infoByQueue[queue],
