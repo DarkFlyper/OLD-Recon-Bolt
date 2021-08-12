@@ -15,23 +15,27 @@ struct CompetitiveSummaryCell: View {
 		NavigationLink {
 			CareerSummaryView(summary: summary)
 		} label: {
-			HStack {
+			HStack(spacing: 16) {
+				Spacer(minLength: 0)
+				
 				currentActInfo
-					.fixedSize() // TODO: remove once text no longer gets cut off without
+					.fixedSize()
 				
 				let acts = assets?.seasons.actsInOrder
 				let mostRecentActInfo = acts?
 					.compactMap { act in summary.competitiveInfo?.bySeason?[act.id].map { (act, $0) } }
 					.last { $0.1.winCount > 0 }
 				if let (act, info) = mostRecentActInfo {
-					Spacer()
+					Spacer(minLength: 0)
 					
 					actRankInfo(for: info, in: act)
 				}
+				
+				Spacer(minLength: 0)
 			}
 			.frame(maxWidth: .infinity)
 			.fixedSize(horizontal: false, vertical: true)
-			.padding()
+			.padding(.vertical)
 		}
 	}
 	
@@ -42,8 +46,8 @@ struct CompetitiveSummaryCell: View {
 			let info = act.flatMap { summary.competitiveInfo?.bySeason?[$0.id] }
 			let tierInfo = assets?.seasons.tierInfo(number: info?.competitiveTier ?? 0, in: act)
 			
-			RankInfoView(summary: summary, lineWidth: 6, shouldFallBackOnPrevious: false)
-				.frame(height: artworkSize)
+			RankInfoView(summary: summary, lineWidth: 4, shouldFallBackOnPrevious: false)
+				.frame(height: 96)
 			
 			if let tierInfo = tierInfo {
 				Text(tierInfo.name)
@@ -52,6 +56,10 @@ struct CompetitiveSummaryCell: View {
 			
 			Text("\(info?.adjustedRankedRating ?? 0) RR")
 				.font(secondaryFont)
+			
+			if let info = info, info.leaderboardRank > 0 {
+				LeaderboardRankView(rank: info.leaderboardRank, tierInfo: tierInfo)
+			}
 		}
 	}
 	
@@ -61,11 +69,14 @@ struct CompetitiveSummaryCell: View {
 			let tierInfo = assets?.seasons.tierInfo(number: info.competitiveTier, in: act)
 			
 			ActRankView(seasonInfo: info)
-				.frame(height: artworkSize)
+				.frame(width: 120, height: 120)
+				.padding(.top, -10)
+				.fixedSize()
 				.overlay(
 					CompetitiveTierImage(tierInfo: tierInfo)
-						.frame(width: 32, height: 32)
+						.frame(width: 40, height: 40)
 						.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
+						.shadow(color: .black.opacity(0.5), radius: 2, x: 0, y: 1)
 				)
 			
 			Text(act.name)
@@ -86,16 +97,17 @@ struct CompetitiveSummaryCell_Previews: PreviewProvider {
 	
 	static var previews: some View {
 		CompetitiveSummaryCell(summary: PreviewData.summary)
-			.padding()
 			.inEachColorScheme()
 			.previewLayout(.sizeThatFits)
 		
-		CompetitiveSummaryCell(summary: PreviewData.summary <- {
-			$0.competitiveInfo!.bySeason = $0.competitiveInfo!.bySeason!
-				.filter { $0.key == act.id }
-		})
-			.padding()
-			.previewLayout(.sizeThatFits)
+		List {
+			CompetitiveSummaryCell(summary: PreviewData.summary <- {
+				$0.competitiveInfo!.bySeason = $0.competitiveInfo!.bySeason!
+					.filter { $0.key == act.id }
+			})
+		}
+		.withToolbar()
+		.previewLayout(.fixed(width: 350, height: 400))
 	}
 }
 #endif
