@@ -23,6 +23,8 @@
 		B90B4B62267C22E700CACB95 /* PlayerCardImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90B4B60267C22E700CACB95 /* PlayerCardImage.swift */; };
 		B90B4B64267C270500CACB95 /* CompetitiveTierImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90B4B63267C270500CACB95 /* CompetitiveTierImage.swift */; };
 		B90B4B65267C270500CACB95 /* CompetitiveTierImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90B4B63267C270500CACB95 /* CompetitiveTierImage.swift */; };
+		B90B4FB826C5DD8E008A5B5A /* LeaderboardRankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90B4FB726C5DD8E008A5B5A /* LeaderboardRankView.swift */; };
+		B90B4FB926C5DD8E008A5B5A /* LeaderboardRankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90B4FB726C5DD8E008A5B5A /* LeaderboardRankView.swift */; };
 		B90BC2EE266D224F00C905D4 /* CGeometry in Frameworks */ = {isa = PBXBuildFile; productRef = B90BC2ED266D224F00C905D4 /* CGeometry */; };
 		B90CB17926ACD76500804C27 /* Local in Resources */ = {isa = PBXBuildFile; fileRef = B90CB17826ACD76500804C27 /* Local */; };
 		B90FFF3826B47FFD007BE950 /* LiveGameBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90FFF3726B47FFD007BE950 /* LiveGameBox.swift */; };
@@ -232,6 +234,7 @@
 		B90B4B5D267C223D00CACB95 /* MapImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapImage.swift; sourceTree = "<group>"; };
 		B90B4B60267C22E700CACB95 /* PlayerCardImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCardImage.swift; sourceTree = "<group>"; };
 		B90B4B63267C270500CACB95 /* CompetitiveTierImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitiveTierImage.swift; sourceTree = "<group>"; };
+		B90B4FB726C5DD8E008A5B5A /* LeaderboardRankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardRankView.swift; sourceTree = "<group>"; };
 		B90CB17826ACD76500804C27 /* Local */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Local; sourceTree = "<group>"; };
 		B90FFF3726B47FFD007BE950 /* LiveGameBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveGameBox.swift; sourceTree = "<group>"; };
 		B90FFF3A26B48288007BE950 /* MissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionView.swift; sourceTree = "<group>"; };
@@ -568,6 +571,7 @@
 				B95B1A4B269CE1810080EC81 /* ScoreSummaryView.swift */,
 				B95B1A4E269CE1D10080EC81 /* KDASummaryView.swift */,
 				B92DC20026A33C3600200A01 /* ActRankView.swift */,
+				B90B4FB726C5DD8E008A5B5A /* LeaderboardRankView.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -876,6 +880,7 @@
 				B9131D61266A707600E85F46 /* ValorantLoadManager.swift in Sources */,
 				B9EE6E5F26589EB8007E28B5 /* MatchDetailsContainer.swift in Sources */,
 				B9FADF8B26A91E4700A0CA15 /* LookupCell.swift in Sources */,
+				B90B4FB826C5DD8E008A5B5A /* LeaderboardRankView.swift in Sources */,
 				B941B6DE25A7BC3800F675C1 /* View+Styling.swift in Sources */,
 				B9FADF8826A91E1300A0CA15 /* UserCell.swift in Sources */,
 				B90B4B55267C139300CACB95 /* AssetCollection.swift in Sources */,
@@ -1002,6 +1007,7 @@
 				B95B1A75269CEC7B0080EC81 /* BookmarkListView.swift in Sources */,
 				B989466C26860D8A00C8059A /* AsyncButton.swift in Sources */,
 				B9FADF8326A91DBC00A0CA15 /* BookmarkList.swift in Sources */,
+				B90B4FB926C5DD8E008A5B5A /* LeaderboardRankView.swift in Sources */,
 				B9EE6E692658A6D2007E28B5 /* AssetLoading.swift in Sources */,
 				B9CF2E7A25A89976004A1458 /* MatchCell.swift in Sources */,
 				B9EF0F28263D9D860067176A /* ValorantAPI+SwiftUI.swift in Sources */,

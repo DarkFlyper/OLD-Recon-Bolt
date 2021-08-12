@@ -131,7 +131,9 @@ struct CareerSummaryView: View {
 				Divider().opacity(0.5)
 				
 				if info.competitiveTier > 0 {
-					HStack {
+					HStack(spacing: 10) {
+						Spacer(minLength: 0)
+						
 						VStack {
 							let tierInfo = assets?.seasons.tierInfo(number: info.competitiveTier, in: act)
 							
@@ -147,13 +149,18 @@ struct CareerSummaryView: View {
 								.font(.caption)
 							
 							if info.leaderboardRank > 0 {
-								leaderboardRankView(rank: info.leaderboardRank, tierInfo: tierInfo)
+								LeaderboardRankView(rank: info.leaderboardRank, tierInfo: tierInfo)
 							}
 						}
-						.padding()
+						.fixedSize()
+						
+						Spacer(minLength: 0)
 						
 						ExpandableActRankView(seasonInfo: info)
 							.frame(height: 200)
+							.layoutPriority(1)
+						
+						Spacer(minLength: 0)
 					}
 				}
 				
@@ -174,43 +181,6 @@ struct CareerSummaryView: View {
 				Text("\(winPercentage)%")
 			}
 			.font(.body.monospacedDigit())
-		}
-		
-		func leaderboardRankView(rank: Int, tierInfo: CompetitiveTier?) -> some View {
-			ZStack {
-				Capsule()
-					.fill(tierInfo?.backgroundColor ?? .gray)
-				
-				let darkeningOpacity = 0.25
-				
-				Capsule()
-					.fill(.black.opacity(darkeningOpacity))
-					.blendMode(.plusDarker)
-				
-				Capsule()
-					.fill(.white.opacity(darkeningOpacity))
-					.blendMode(.plusLighter)
-					.padding(1)
-				
-				Capsule()
-					.fill(.black.opacity(darkeningOpacity))
-					.blendMode(.plusDarker)
-					.padding(3)
-				
-				let rankText = Text("Rank \(rank)")
-					.font(.callout.weight(.semibold))
-					.padding(.horizontal, 4)
-					.padding(10)
-				
-				rankText
-					.foregroundColor(.white.opacity(darkeningOpacity))
-					.blendMode(.plusLighter)
-				
-				rankText
-					.blendMode(.plusLighter)
-			}
-			.foregroundColor(.white)
-			.fixedSize()
 		}
 	}
 }
