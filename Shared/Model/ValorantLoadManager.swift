@@ -48,6 +48,7 @@ private struct ValorantLoadModifier: ViewModifier {
 			.task(id: dataStore.data?.client.id, updateClientVersion)
 	}
 	
+	@Sendable
 	func updateClientVersion() {
 		guard let version = assets?.version.riotClientVersion else { return }
 		dataStore.data?.client.setClientVersion(version)

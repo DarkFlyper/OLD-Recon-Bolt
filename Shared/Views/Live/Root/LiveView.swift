@@ -28,6 +28,7 @@ struct LiveView: View {
 		.navigationTitle("Live")
 	}
 	
+	@Sendable
 	func refresh() async {
 		// load both independently
 		// TODO: change once `async let _ = ...` is fixed

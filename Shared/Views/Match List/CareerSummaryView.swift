@@ -172,7 +172,7 @@ struct CareerSummaryView: View {
 		func winRatioInfo(winCount: Int, gameCount: Int) -> some View {
 			let fractionWon = Double(winCount) / Double(gameCount)
 			let winPercentage = (fractionWon * 100)
-				.formatted(FloatingPointFormatStyle().precision(.fractionLength(1)))
+				.formatted(FloatFormatStyle().precision(.fractionLength(1)))
 			
 			return HStack {
 				Text("\(winCount)/\(gameCount)").fontWeight(.medium)
