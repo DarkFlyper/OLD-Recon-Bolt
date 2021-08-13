@@ -27,10 +27,14 @@ private struct LoadWrapper<Content: View>: View {
 			}
 			.environment(\.loadWithErrorAlerts, runTask)
 			.alert(item: $loadError) { error in
-				Alert(
+				let description = error.error.localizedDescription
+				return Alert(
 					title: Text(errorTitle),
-					message: Text(verbatim: error.error.localizedDescription),
-					dismissButton: .default(Text("OK"))
+					message: Text(verbatim: description),
+					primaryButton: .default(Text("Copy Error Details")) {
+						UIPasteboard.general.string = description
+					},
+					secondaryButton: .cancel(Text("OK"))
 				)
 			}
 	}
