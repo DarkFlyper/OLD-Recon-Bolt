@@ -26,7 +26,7 @@ struct LiveMatchView: View {
 				.overlay(MapImage.Label(mapID: gameInfo.mapID).padding(6))
 			
 			VStack(spacing: 10) {
-				if let queueID = gameInfo.matchmakingData.queueID {
+				if let queueID = gameInfo.queueID {
 					Text(queueID.name)
 						.fontWeight(.medium)
 						.foregroundStyle(.secondary)
