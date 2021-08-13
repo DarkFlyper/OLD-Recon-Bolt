@@ -4,11 +4,11 @@ import ValorantAPI
 struct MapInfoView: View {
 	let map: MapInfo
 	
-	@State private var isShowingFullscreenMap = false
+	@Environment(\.verticalSizeClass) private var verticalSizeClass
 	
 	var body: some View {
 		ScrollView {
-			VStack {
+			VStack(spacing: 16) {
 				MapImage.splash(map.id).overlay(
 					Text("\(map.id.rawValue)")
 						.foregroundColor(.white)
@@ -17,18 +17,25 @@ struct MapInfoView: View {
 						.padding()
 						.opacity(0.8)
 				)
+				.frame(maxHeight: verticalSizeClass == .compact ? 300 : nil)
 				
 				if map.displayIcon != nil {
-					MapImage.displayIcon(map.id)
-						.onTapGesture { isShowingFullscreenMap = true }
-						.fullScreenCover(isPresented: $isShowingFullscreenMap) {
-							Lightbox { MapImage.displayIcon(map.id) }
-						}
+					MagnifiableView {
+						MapImage.displayIcon(map.id)
+							.background(Material.ultraThin)
+							.cornerRadius(16)
+					}
+					.zIndex(1)
+					.frame(maxHeight: verticalSizeClass == .compact ? 300 : nil)
+					.padding(.horizontal)
 				} else {
 					Text("No minimap available!")
+						.foregroundColor(.secondary)
+						.padding(.horizontal)
 				}
 			}
 		}
+		.clipped()
 		.navigationTitle(map.displayName)
 		.navigationBarTitleDisplayMode(.inline)
 	}
@@ -41,6 +48,7 @@ struct MapInfoView_Previews: PreviewProvider {
 			map: AssetManager.forPreviews.assets!.maps[.breeze]!
 		)
 		.withToolbar()
+		.inEachOrientation()
 		.inEachColorScheme()
 	}
 }
