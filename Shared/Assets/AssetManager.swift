@@ -19,6 +19,7 @@ final class AssetManager: ObservableObject {
 	
 	func loadAssets(forceUpdate: Bool = false) async {
 		guard progress == nil else { return }
+		self.error = nil
 		
 		do {
 			assets = try await Self.loadAssets(forceUpdate: forceUpdate) { progress in
