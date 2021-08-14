@@ -26,6 +26,7 @@ struct LoginForm: View {
 				
 				VStack {
 					TextField("Username", text: $credentials.username)
+						.autocapitalization(.none)
 						.submitLabel(.next)
 						.onSubmit { isPasswordFieldFocused = true }
 					
@@ -105,8 +106,7 @@ struct LoginForm: View {
 		}
 	}
 	
-	// TODO: add once this works (pretty sure it should…)
-	//@MainActor
+	@MainActor
 	func logIn() async {
 		isSigningIn = true
 		

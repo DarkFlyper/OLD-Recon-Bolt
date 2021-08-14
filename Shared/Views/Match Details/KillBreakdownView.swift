@@ -145,6 +145,7 @@ struct KillBreakdownView: View {
 		let relativeColor = data.relativeColor(of: player) ?? .valorantRed
 		
 		AgentImage.displayIcon(player.agentID)
+			.aspectRatio(1, contentMode: .fit)
 			.fixedSize(horizontal: false, vertical: true)
 			.dynamicallyStroked(radius: 1, color: .white)
 			.background(Circle().fill(relativeColor).opacity(0.5).padding(1))
