@@ -1,5 +1,6 @@
 import Foundation
 import ValorantAPI
+import ErgonomicCodable
 
 extension AssetClient {
 	func getMissionInfo() async throws -> [MissionInfo] {
