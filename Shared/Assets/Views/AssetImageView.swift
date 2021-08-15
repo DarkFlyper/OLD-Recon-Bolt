@@ -1,42 +1,41 @@
 import SwiftUI
 
-protocol _AssetImageProvider {
+protocol AssetImageProvider {
 	associatedtype Asset: AssetItem & Identifiable
 	typealias ID = Asset.ID
 	
 	static var assetPath: KeyPath<AssetCollection, [ID: Asset]> { get }
 }
 
-@dynamicMemberLookup
-struct _AssetImageView<Provider: _AssetImageProvider>: View {
+struct AssetImageView<Provider: AssetImageProvider>: View {
 	typealias ID = Provider.ID
 	typealias Asset = Provider.Asset
 	
 	@Environment(\.assets) private var assets
 	
-	let id: ID
-	let imageGetter: (Provider.Asset) -> AssetImage?
-	
-	static subscript(
-		dynamicMember keyPath: KeyPath<Asset, AssetImage?>
-	) -> (ID) -> Self {
-		{ Self(id: $0) { $0[keyPath: keyPath] } }
-	}
-	
-	static subscript(
-		dynamicMember keyPath: KeyPath<Asset, AssetImage>
-	) -> (ID) -> Self {
-		{ Self(id: $0) { $0[keyPath: keyPath] } }
-	}
+	var id: ID
+	var renderingMode: Image.TemplateRenderingMode?
+	var getImage: (Provider.Asset) -> AssetImage?
 	
 	var body: some View {
 		let assetImage = assets?[keyPath: Provider.assetPath][id]
-			.flatMap(imageGetter)
+			.flatMap(getImage)
 		
 		if let assetImage = assetImage {
-			assetImage.imageOrPlaceholder()
+			assetImage.imageOrPlaceholder(renderingMode: renderingMode)
 		} else {
 			Color.gray
 		}
+	}
+}
+
+extension AssetImageView {
+	@_disfavoredOverload
+	init(
+		id: ID,
+		renderingMode: Image.TemplateRenderingMode? = nil,
+		getImage: @escaping (Provider.Asset) -> AssetImage
+	) {
+		self.init(id: id, renderingMode: renderingMode) { getImage($0) } // optional promotion
 	}
 }

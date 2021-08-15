@@ -55,7 +55,7 @@ struct ScoreboardRowView: View {
 		let relativeColor = data.relativeColor(of: player)
 		
 		HStack(spacing: Self.padding) {
-			AgentImage.displayIcon(player.agentID)
+			AgentImage.icon(player.agentID)
 				.aspectRatio(1, contentMode: .fit)
 				.dynamicallyStroked(radius: 1, color: .white)
 				.background(relativeColor.opacity(0.5))

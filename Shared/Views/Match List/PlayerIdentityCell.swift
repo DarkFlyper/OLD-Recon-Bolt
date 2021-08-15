@@ -38,7 +38,7 @@ struct PlayerIdentityCell: View {
 					.mask(Capsule())
 			}
 			
-			PlayerCardImage.wideArt(identity.cardID)
+			PlayerCardImage.wide(identity.cardID)
 			
 			Divider()
 		}

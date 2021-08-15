@@ -16,7 +16,7 @@ struct UserCell: View {
 		} label: {
 			HStack(spacing: 10) {
 				if let identity = identity {
-					PlayerCardImage.smallArt(identity.cardID)
+					PlayerCardImage.small(identity.cardID)
 						.frame(width: artworkSize, height: artworkSize)
 						.mask(RoundedRectangle(cornerRadius: 4, style: .continuous))
 				}

@@ -187,7 +187,7 @@ struct AgentSelectView: View {
 		@ViewBuilder
 		var agentImage: some View {
 			if let agentID = player.agentID {
-				AgentImage.displayIcon(agentID)
+				AgentImage.icon(agentID)
 					.dynamicallyStroked(radius: 1.5, color: .white)
 			} else {
 				Image(systemName: "questionmark")

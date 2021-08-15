@@ -1,8 +1,23 @@
 import SwiftUI
+import ValorantAPI
 
-typealias PlayerCardImage = _AssetImageView<_PlayerCardImageProvider>
-struct _PlayerCardImageProvider: _AssetImageProvider {
+typealias PlayerCardImage = AssetImageView<_PlayerCardImageProvider>
+struct _PlayerCardImageProvider: AssetImageProvider {
 	static let assetPath = \AssetCollection.playerCards
+}
+
+extension PlayerCardImage {
+	static func small(_ id: PlayerCard.ID) -> Self {
+		Self(id: id, getImage: \.smallArt)
+	}
+	
+	static func large(_ id: PlayerCard.ID) -> Self {
+		Self(id: id, getImage: \.largeArt)
+	}
+	
+	static func wide(_ id: PlayerCard.ID) -> Self {
+		Self(id: id, getImage: \.wideArt)
+	}
 }
 
 #if DEBUG
@@ -11,9 +26,9 @@ struct PlayerCardImage_Previews: PreviewProvider {
 	
 	static var previews: some View {
 		VStack {
-			PlayerCardImage.smallArt(id)
-			PlayerCardImage.wideArt(id)
-			PlayerCardImage.largeArt(id)
+			PlayerCardImage.small(id)
+			PlayerCardImage.wide(id)
+			PlayerCardImage.large(id)
 		}
 		.fixedSize()
 		.padding()

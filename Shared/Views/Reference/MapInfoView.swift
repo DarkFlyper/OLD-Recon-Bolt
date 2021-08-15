@@ -21,7 +21,7 @@ struct MapInfoView: View {
 				
 				if map.displayIcon != nil {
 					MagnifiableView {
-						MapImage.displayIcon(map.id)
+						MapImage.minimap(map.id)
 							.background(Material.ultraThin)
 							.cornerRadius(16)
 					}

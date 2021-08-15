@@ -1,16 +1,30 @@
 import SwiftUI
 import ValorantAPI
 
-typealias AgentImage = _AssetImageView<_AgentImageProvider>
-struct _AgentImageProvider: _AssetImageProvider {
+typealias AgentImage = AssetImageView<_AgentImageProvider>
+struct _AgentImageProvider: AssetImageProvider {
 	static let assetPath = \AssetCollection.agents
+}
+
+extension AgentImage {
+	static func icon(_ id: Agent.ID) -> Self {
+		Self(id: id, getImage: \.displayIcon)
+	}
+	
+	static func bustPortrait(_ id: Agent.ID) -> Self {
+		Self(id: id, getImage: \.bustPortrait)
+	}
+	
+	static func fullPortrait(_ id: Agent.ID) -> Self {
+		Self(id: id, getImage: \.fullPortrait)
+	}
 }
 
 #if DEBUG
 struct AgentImage_Previews: PreviewProvider {
 	static var previews: some View {
 		Group {
-			AgentImage.displayIcon(.omen)
+			AgentImage.icon(.omen)
 				.frame(height: 80)
 			AgentImage.fullPortrait(.omen)
 			AgentImage.bustPortrait(.omen)

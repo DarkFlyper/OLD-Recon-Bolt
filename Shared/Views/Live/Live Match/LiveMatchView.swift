@@ -81,7 +81,7 @@ struct LiveMatchView: View {
 			let iconSize = 48.0
 			
 			HStack {
-				AgentImage.displayIcon(player.agentID)
+				AgentImage.icon(player.agentID)
 					.dynamicallyStroked(radius: 1.5, color: .white)
 					.frame(width: iconSize, height: iconSize)
 					.mask(Circle())
