@@ -14,6 +14,12 @@ final class Tests: XCTestCase {
 		
 		XCTAssertFalse(assetCollection.agents.isEmpty)
 		XCTAssertFalse(assetCollection.maps.isEmpty)
+		
+		let encoder = JSONEncoder() <- { $0.outputFormatting = .prettyPrinted }
+		let encoded = try encoder.encode(assetCollection)
+		// for debugging:
+		//print(String(bytes: encoded, encoding: .utf8)!)
+		XCTAssertNoThrow(try JSONDecoder().decode(AssetCollection.self, from: encoded))
 	}
 }
 
