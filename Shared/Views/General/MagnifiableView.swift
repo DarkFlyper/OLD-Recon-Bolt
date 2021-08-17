@@ -18,9 +18,21 @@ struct MagnifiableView<Content: View>: View {
 	
 	var body: some View {
 		let magnificationScale = 3.0
+		let coordSpaceName = "scale-independent"
 		
 		ZStack(alignment: .bottomTrailing) {
 			content()
+				.measured { contentSize = $0 }
+				// there is some tolerance here that i'd rather avoid—not least to avoid interacting with the image when swiping back in the navigation stack
+				.contentShape(Rectangle().inset(by: 32))
+				.gesture(
+					DragGesture(minimumDistance: 0, coordinateSpace: .named(coordSpaceName))
+						.updating($magnificationLocation) { value, location, _ in
+							location = useNaturalDragging
+							? value.startLocation - CGVector(value.translation) / (magnificationScale - 1)
+							: value.location
+						}
+				)
 			
 			Button { useNaturalDragging.toggle() } label: {
 				Image(
@@ -39,16 +51,8 @@ struct MagnifiableView<Content: View>: View {
 				.map { UnitPoint($0, in: contentSize) }
 				?? .center
 		)
+		.coordinateSpace(name: coordSpaceName)
 		.animation(.easeOut(duration: 0.1), value: isMagnifying)
-		.measured { contentSize = $0 }
-		.gesture(
-			DragGesture(minimumDistance: 0, coordinateSpace: .local)
-				.updating($magnificationLocation) { value, location, _ in
-					location = useNaturalDragging
-						? value.startLocation - CGVector(value.translation) / (magnificationScale - 1)
-						: value.location
-				}
-		)
 	}
 }
 
