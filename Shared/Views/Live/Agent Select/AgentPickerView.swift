@@ -42,9 +42,9 @@ struct AgentPickerView: View {
 					.bold()
 			}
 			.buttonStyle(.borderedProminent)
+			.alwaysPressable(isPressing: $canRelock)
 			.disabled(selectedAgentID == nil || takenAgents.contains(selectedAgentID!))
 			.disabled(hasSelectedAgent) // can't move this out because then it'd affect the relock gesture too
-			.simultaneousGesture(holdGesture(isHolding: $canRelock))
 			
 			if let agents = assets?.agents.values {
 				let sortedAgents = agents.sorted(on: \.displayName)
@@ -109,9 +109,16 @@ struct AgentPickerView: View {
 	}
 }
 
-private func holdGesture(isHolding: GestureState<Bool>) -> some Gesture {
-	DragGesture(minimumDistance: 0)
-		.updating(isHolding) { _, isHolding, _ in
-			isHolding = true
-		}
+#if DEBUG
+struct AgentPickerView_Previews: PreviewProvider {
+	static var previews: some View {
+		AgentPickerView(
+			pregameInfo: .constant(PreviewData.pregameInfo),
+			userID: PreviewData.userID,
+			inventory: PreviewData.inventory
+		)
+			.previewLayout(.sizeThatFits)
+			.inEachColorScheme()
+	}
 }
+#endif
