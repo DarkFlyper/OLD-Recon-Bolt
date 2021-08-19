@@ -1,4 +1,5 @@
 import Foundation
+import SwiftUI
 import ValorantAPI
 
 extension AssetClient {
@@ -26,6 +27,14 @@ struct MapInfo: AssetItem, Codable, Identifiable {
 	var assetPath: String
 	var xMultiplier, yMultiplier: Double
 	var xScalarToAdd, yScalarToAdd: Double
+	
+	func convert(position: Position) -> UnitPoint {
+		// TODO: it might be more complicated than this (rotations?)
+		UnitPoint(
+			x: Double(position.x) * xMultiplier + xScalarToAdd,
+			y: Double(position.y) * yMultiplier + yScalarToAdd
+		)
+	}
 	
 	var images: [AssetImage] {
 		displayIcon

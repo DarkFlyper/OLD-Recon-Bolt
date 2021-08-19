@@ -18,6 +18,11 @@ extension AgentImage {
 	static func fullPortrait(_ id: Agent.ID) -> Self {
 		Self(id: id, getImage: \.fullPortrait)
 	}
+	
+	/// Abilities are numbered as follows: ability 1, ability 2, grenade, ultimate.
+	static func ability(_ id: Agent.ID, abilityIndex: Int) -> Self {
+		Self(id: id, renderingMode: .template, getImage: \.abilities[abilityIndex].displayIcon)
+	}
 }
 
 #if DEBUG

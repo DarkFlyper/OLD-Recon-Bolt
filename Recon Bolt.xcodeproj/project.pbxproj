@@ -43,6 +43,10 @@
 		B9131D6D266AFA7900E85F46 /* MapInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9131D6B266AFA7900E85F46 /* MapInfoView.swift */; };
 		B9168AE62689440B00866F6A /* LocalDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9168AE52689440B00866F6A /* LocalDataProvider.swift */; };
 		B9168AE72689440B00866F6A /* LocalDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9168AE52689440B00866F6A /* LocalDataProvider.swift */; };
+		B91D3DA126C810E0007D18B8 /* RoundInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91D3DA026C810E0007D18B8 /* RoundInfoView.swift */; };
+		B91D3DA226C810E0007D18B8 /* RoundInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91D3DA026C810E0007D18B8 /* RoundInfoView.swift */; };
+		B91D3DA426C8492F007D18B8 /* WeaponAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91D3DA326C8492F007D18B8 /* WeaponAssets.swift */; };
+		B91D3DA526C8492F007D18B8 /* WeaponAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91D3DA326C8492F007D18B8 /* WeaponAssets.swift */; };
 		B91FF85426C7072400D0DFAA /* MagnifiableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91FF85326C7072400D0DFAA /* MagnifiableView.swift */; };
 		B91FF85526C7072400D0DFAA /* MagnifiableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91FF85326C7072400D0DFAA /* MagnifiableView.swift */; };
 		B927614B266284B700CF2100 /* PlayerHighlightInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B927614A266284B700CF2100 /* PlayerHighlightInfo.swift */; };
@@ -88,12 +92,20 @@
 		B954072F2694C0A4009FB17B /* AgentSelectContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B954072D2694C0A4009FB17B /* AgentSelectContainer.swift */; };
 		B95407312694C157009FB17B /* LiveMatchContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95407302694C157009FB17B /* LiveMatchContainer.swift */; };
 		B95407322694C157009FB17B /* LiveMatchContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95407302694C157009FB17B /* LiveMatchContainer.swift */; };
+		B954A6DB26C8BED200A86CB9 /* WeaponImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B954A6DA26C8BED200A86CB9 /* WeaponImage.swift */; };
+		B954A6DC26C8BED200A86CB9 /* WeaponImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B954A6DA26C8BED200A86CB9 /* WeaponImage.swift */; };
 		B95B1A4C269CE1810080EC81 /* ScoreSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95B1A4B269CE1810080EC81 /* ScoreSummaryView.swift */; };
 		B95B1A4D269CE1810080EC81 /* ScoreSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95B1A4B269CE1810080EC81 /* ScoreSummaryView.swift */; };
 		B95B1A4F269CE1D10080EC81 /* KDASummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95B1A4E269CE1D10080EC81 /* KDASummaryView.swift */; };
 		B95B1A50269CE1D10080EC81 /* KDASummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95B1A4E269CE1D10080EC81 /* KDASummaryView.swift */; };
 		B95B1A74269CEC7B0080EC81 /* BookmarkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95B1A73269CEC7B0080EC81 /* BookmarkListView.swift */; };
 		B95B1A75269CEC7B0080EC81 /* BookmarkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95B1A73269CEC7B0080EC81 /* BookmarkListView.swift */; };
+		B95D30A726CE888400829BB6 /* RoundData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95D30A626CE888400829BB6 /* RoundData.swift */; };
+		B95D30A826CE888400829BB6 /* RoundData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95D30A626CE888400829BB6 /* RoundData.swift */; };
+		B95D30AA26CE88FF00829BB6 /* EventRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95D30A926CE88FF00829BB6 /* EventRow.swift */; };
+		B95D30AB26CE88FF00829BB6 /* EventRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95D30A926CE88FF00829BB6 /* EventRow.swift */; };
+		B95D30AD26CE898C00829BB6 /* EventTimeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95D30AC26CE898C00829BB6 /* EventTimeline.swift */; };
+		B95D30AE26CE898C00829BB6 /* EventTimeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95D30AC26CE898C00829BB6 /* EventTimeline.swift */; };
 		B963C4702694FDDA0071E14A /* CompetitiveSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B963C46F2694FDDA0071E14A /* CompetitiveSummaryCell.swift */; };
 		B963C4712694FDDA0071E14A /* CompetitiveSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B963C46F2694FDDA0071E14A /* CompetitiveSummaryCell.swift */; };
 		B963C4732694FE920071E14A /* example_summary.json in Resources */ = {isa = PBXBuildFile; fileRef = B963C4722694FE920071E14A /* example_summary.json */; };
@@ -246,6 +258,8 @@
 		B9131D68266AFA4C00E85F46 /* MapListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapListView.swift; sourceTree = "<group>"; };
 		B9131D6B266AFA7900E85F46 /* MapInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInfoView.swift; sourceTree = "<group>"; };
 		B9168AE52689440B00866F6A /* LocalDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataProvider.swift; sourceTree = "<group>"; };
+		B91D3DA026C810E0007D18B8 /* RoundInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundInfoView.swift; sourceTree = "<group>"; };
+		B91D3DA326C8492F007D18B8 /* WeaponAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponAssets.swift; sourceTree = "<group>"; };
 		B91FF85326C7072400D0DFAA /* MagnifiableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagnifiableView.swift; sourceTree = "<group>"; };
 		B927614A266284B700CF2100 /* PlayerHighlightInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerHighlightInfo.swift; sourceTree = "<group>"; };
 		B92DC20026A33C3600200A01 /* ActRankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActRankView.swift; sourceTree = "<group>"; };
@@ -276,9 +290,13 @@
 		B94C57F926CB605700CAF257 /* AlwaysPressable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlwaysPressable.swift; sourceTree = "<group>"; };
 		B954072D2694C0A4009FB17B /* AgentSelectContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentSelectContainer.swift; sourceTree = "<group>"; };
 		B95407302694C157009FB17B /* LiveMatchContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveMatchContainer.swift; sourceTree = "<group>"; };
+		B954A6DA26C8BED200A86CB9 /* WeaponImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponImage.swift; sourceTree = "<group>"; };
 		B95B1A4B269CE1810080EC81 /* ScoreSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreSummaryView.swift; sourceTree = "<group>"; };
 		B95B1A4E269CE1D10080EC81 /* KDASummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KDASummaryView.swift; sourceTree = "<group>"; };
 		B95B1A73269CEC7B0080EC81 /* BookmarkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkListView.swift; sourceTree = "<group>"; };
+		B95D30A626CE888400829BB6 /* RoundData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundData.swift; sourceTree = "<group>"; };
+		B95D30A926CE88FF00829BB6 /* EventRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRow.swift; sourceTree = "<group>"; };
+		B95D30AC26CE898C00829BB6 /* EventTimeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTimeline.swift; sourceTree = "<group>"; };
 		B963C46F2694FDDA0071E14A /* CompetitiveSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitiveSummaryCell.swift; sourceTree = "<group>"; };
 		B963C4722694FE920071E14A /* example_summary.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_summary.json; sourceTree = "<group>"; };
 		B963C47526950FE90071E14A /* RankInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankInfoView.swift; sourceTree = "<group>"; };
@@ -558,6 +576,7 @@
 				B90B4B57267C167B00CACB95 /* PlayerCardAssets.swift */,
 				B90B4B5A267C177D00CACB95 /* PlayerTitleAssets.swift */,
 				B9F5CEDD267CD199009CF906 /* GameModeAssets.swift */,
+				B91D3DA326C8492F007D18B8 /* WeaponAssets.swift */,
 			);
 			path = "Concrete Assets";
 			sourceTree = "<group>";
@@ -599,8 +618,12 @@
 				B9EE6E5A26589DE1007E28B5 /* MatchDetailsHero.swift */,
 				B9DCF9A62642E0EC00C39EC4 /* ScoreboardView.swift */,
 				B9EE6E6D26594374007E28B5 /* KillBreakdownView.swift */,
+				B91D3DA026C810E0007D18B8 /* RoundInfoView.swift */,
 				B9E43DA1265DB94C00F59E35 /* MatchViewData.swift */,
 				B927614A266284B700CF2100 /* PlayerHighlightInfo.swift */,
+				B95D30A626CE888400829BB6 /* RoundData.swift */,
+				B95D30A926CE88FF00829BB6 /* EventRow.swift */,
+				B95D30AC26CE898C00829BB6 /* EventTimeline.swift */,
 			);
 			path = "Match Details";
 			sourceTree = "<group>";
@@ -655,6 +678,7 @@
 			children = (
 				B9F65C462651D20200C9C34A /* AssetImageView.swift */,
 				B9F65C4A2651DFB100C9C34A /* AgentImage.swift */,
+				B954A6DA26C8BED200A86CB9 /* WeaponImage.swift */,
 				B90B4B5D267C223D00CACB95 /* MapImage.swift */,
 				B90B4B60267C22E700CACB95 /* PlayerCardImage.swift */,
 				B9C7064D269BC91F00D29226 /* GameModeImage.swift */,
@@ -882,9 +906,11 @@
 				B9F3D94926A4F9C800052F2E /* CareerSummaryView.swift in Sources */,
 				B927614B266284B700CF2100 /* PlayerHighlightInfo.swift in Sources */,
 				B9131D61266A707600E85F46 /* ValorantLoadManager.swift in Sources */,
+				B91D3DA126C810E0007D18B8 /* RoundInfoView.swift in Sources */,
 				B9EE6E5F26589EB8007E28B5 /* MatchDetailsContainer.swift in Sources */,
 				B9FADF8B26A91E4700A0CA15 /* LookupCell.swift in Sources */,
 				B90B4FB826C5DD8E008A5B5A /* LeaderboardRankView.swift in Sources */,
+				B91D3DA426C8492F007D18B8 /* WeaponAssets.swift in Sources */,
 				B941B6DE25A7BC3800F675C1 /* View+Styling.swift in Sources */,
 				B9FADF8826A91E1300A0CA15 /* UserCell.swift in Sources */,
 				B90B4B55267C139300CACB95 /* AssetCollection.swift in Sources */,
@@ -924,6 +950,7 @@
 				B989466B26860D8A00C8059A /* AsyncButton.swift in Sources */,
 				B9FADF8226A91DBC00A0CA15 /* BookmarkList.swift in Sources */,
 				B9EE6E682658A6D2007E28B5 /* AssetLoading.swift in Sources */,
+				B95D30AA26CE88FF00829BB6 /* EventRow.swift in Sources */,
 				B9CF2E7925A89976004A1458 /* MatchCell.swift in Sources */,
 				B9EF0F27263D9D860067176A /* ValorantAPI+SwiftUI.swift in Sources */,
 				B9485F84264B1DD300AC3456 /* AgentAssets.swift in Sources */,
@@ -931,6 +958,7 @@
 				B9F66ACE266DC31E008560FD /* AccountView.swift in Sources */,
 				B963C4792695101C0071E14A /* PlayerIdentityCell.swift in Sources */,
 				B9DCF9A72642E0EC00C39EC4 /* ScoreboardView.swift in Sources */,
+				B95D30AD26CE898C00829BB6 /* EventTimeline.swift in Sources */,
 				B92DC20126A33C3600200A01 /* ActRankView.swift in Sources */,
 				B96A0CA3265ABBC700844674 /* SwiftUI+Helpers.swift in Sources */,
 				B941B65625A5BC8A00F675C1 /* ReconBoltApp.swift in Sources */,
@@ -955,6 +983,7 @@
 				B9C97DC7263CADFC001E4D1B /* ValorantAPI+Mock.swift in Sources */,
 				B90B4B5E267C223D00CACB95 /* MapImage.swift in Sources */,
 				B9E12B0C25BBD57D008E1E77 /* Optional+Functional.swift in Sources */,
+				B95D30A726CE888400829BB6 /* RoundData.swift in Sources */,
 				B9485F87264B5BD700AC3456 /* AssetImage.swift in Sources */,
 				B9EE6E712659D30A007E28B5 /* Swift+Helpers.swift in Sources */,
 				B90B4B52267C112F00CACB95 /* CompetitiveTier.swift in Sources */,
@@ -963,6 +992,7 @@
 				B90B4B58267C167B00CACB95 /* PlayerCardAssets.swift in Sources */,
 				B96A0CAA265AE32200844674 /* MissionAssets.swift in Sources */,
 				B902823426A7A8A9004B1740 /* HenrikAPI.swift in Sources */,
+				B954A6DB26C8BED200A86CB9 /* WeaponImage.swift in Sources */,
 				B963C47626950FE90071E14A /* RankInfoView.swift in Sources */,
 				B90B4B64267C270500CACB95 /* CompetitiveTierImage.swift in Sources */,
 			);
@@ -987,7 +1017,9 @@
 				B9C3499E267AA6DE00BE39B1 /* LiveMatchView.swift in Sources */,
 				B90FFF3926B47FFD007BE950 /* LiveGameBox.swift in Sources */,
 				B9F52330266ED96600DFF8DD /* LiveView.swift in Sources */,
+				B95D30AE26CE898C00829BB6 /* EventTimeline.swift in Sources */,
 				B9F5CEDF267CD199009CF906 /* GameModeAssets.swift in Sources */,
+				B91D3DA226C810E0007D18B8 /* RoundInfoView.swift in Sources */,
 				B95407322694C157009FB17B /* LiveMatchContainer.swift in Sources */,
 				B98E4706269B40DB003C9088 /* CircularProgressView.swift in Sources */,
 				B954072F2694C0A4009FB17B /* AgentSelectContainer.swift in Sources */,
@@ -1008,6 +1040,7 @@
 				B9C7064F269BC91F00D29226 /* GameModeImage.swift in Sources */,
 				B9741479266F18A800892B5F /* String+Localization.swift in Sources */,
 				B94091B425D09DF900EE5DF2 /* SwiftUI+CrossPlatform.swift in Sources */,
+				B95D30AB26CE88FF00829BB6 /* EventRow.swift in Sources */,
 				B941B6D925A7A09000F675C1 /* Credentials.swift in Sources */,
 				B95B1A75269CEC7B0080EC81 /* BookmarkListView.swift in Sources */,
 				B989466C26860D8A00C8059A /* AsyncButton.swift in Sources */,
@@ -1028,6 +1061,7 @@
 				B9F65C4C2651DFB100C9C34A /* AgentImage.swift in Sources */,
 				B9EE6E662658A363007E28B5 /* SwiftUI+Previews.swift in Sources */,
 				B9EE6E5C26589DE1007E28B5 /* MatchDetailsHero.swift in Sources */,
+				B954A6DC26C8BED200A86CB9 /* WeaponImage.swift in Sources */,
 				B95B1A50269CE1D10080EC81 /* KDASummaryView.swift in Sources */,
 				B9EE6E6326589FAA007E28B5 /* PreviewData.swift in Sources */,
 				B9FB9373269B359900927E03 /* SeasonCollection.swift in Sources */,
@@ -1037,6 +1071,7 @@
 				B91FF85526C7072400D0DFAA /* MagnifiableView.swift in Sources */,
 				B963C4712694FDDA0071E14A /* CompetitiveSummaryCell.swift in Sources */,
 				B90B4B62267C22E700CACB95 /* PlayerCardImage.swift in Sources */,
+				B95D30A826CE888400829BB6 /* RoundData.swift in Sources */,
 				B9CF2E6325A81B48004A1458 /* UnifiedStyles.swift in Sources */,
 				B9F07CB826474EB7006CD4F5 /* AssetVersion.swift in Sources */,
 				B90B4B5C267C177D00CACB95 /* PlayerTitleAssets.swift in Sources */,
@@ -1047,6 +1082,7 @@
 				B9E12B0D25BBD57D008E1E77 /* Optional+Functional.swift in Sources */,
 				B9485F88264B5BD700AC3456 /* AssetImage.swift in Sources */,
 				B9EE6E722659D30A007E28B5 /* Swift+Helpers.swift in Sources */,
+				B91D3DA526C8492F007D18B8 /* WeaponAssets.swift in Sources */,
 				B90B4B53267C112F00CACB95 /* CompetitiveTier.swift in Sources */,
 				B9FADF8626A91DC400A0CA15 /* LookupHistory.swift in Sources */,
 				B9EF0F22263CFC870067176A /* MatchDetailsView.swift in Sources */,

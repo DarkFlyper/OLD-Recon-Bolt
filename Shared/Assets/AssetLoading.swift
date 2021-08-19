@@ -14,6 +14,7 @@ extension AssetClient {
 		async let objectives = getObjectiveInfo()
 		async let playerCards = getPlayerCardInfo()
 		async let playerTitles = getPlayerTitleInfo()
+		async let weapons = getWeaponInfo()
 		async let seasons = getSeasons()
 		
 		let collection = try await AssetCollection(
@@ -25,6 +26,7 @@ extension AssetClient {
 			objectives: .init(values: objectives),
 			playerCards: .init(values: playerCards),
 			playerTitles: .init(values: playerTitles),
+			weapons: .init(values: weapons),
 			seasons: seasons
 		)
 		

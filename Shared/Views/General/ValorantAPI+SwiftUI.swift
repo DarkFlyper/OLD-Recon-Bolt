@@ -100,3 +100,9 @@ extension ValorantClient.APIError: LocalizedError {
 		}
 	}
 }
+
+extension CGPoint {
+	public init(_ position: Position) {
+		self.init(x: position.x, y: position.y)
+	}
+}

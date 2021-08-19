@@ -12,6 +12,7 @@ struct AssetCollection: Codable {
 	let objectives: [Objective.ID: ObjectiveInfo]
 	let playerCards: [PlayerCard.ID: PlayerCardInfo]
 	let playerTitles: [PlayerTitle.ID: PlayerTitleInfo]
+	let weapons: [Weapon.ID: WeaponInfo]
 	let seasons: SeasonCollection
 	
 	var images: Set<AssetImage> {
@@ -20,6 +21,7 @@ struct AssetCollection: Codable {
 			.union(agents.values.flatMap(\.images))
 			.union(gameModes.values.flatMap(\.images))
 			.union(playerCards.values.flatMap(\.images))
+			.union(weapons.values.flatMap(\.images))
 			.union(seasons.images)
 	}
 }
