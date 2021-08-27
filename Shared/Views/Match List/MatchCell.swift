@@ -84,6 +84,8 @@ struct MatchCell: View {
 		.font(.callout.monospacedDigit())
 	}
 	
+	@ScaledMetric private var mapCapsuleHeight = 30
+	
 	@ViewBuilder
 	private var matchInfo: some View {
 		VStack {
@@ -106,29 +108,38 @@ struct MatchCell: View {
 				.font(.caption)
 			}
 			
-			ZStack {
-				if let matchDetails = matchDetails {
-					HStack {
-						GameModeImage(id: matchDetails.matchInfo.modeID)
-							.frame(height: 20)
-						
-						Text(matchDetails.matchInfo.queueName)
-							.foregroundStyle(.secondary)
+			HStack {
+				ZStack {
+					if let matchDetails = matchDetails {
+						HStack {
+							GameModeImage(id: matchDetails.matchInfo.modeID)
+								.foregroundColor(.white)
+							
+							Text(matchDetails.matchInfo.queueName)
+								.padding(.top, -2) // small caps are shorter
+						}
+					} else {
+						MapImage.LabelText(mapID: match.mapID)
+							.fixedSize()
 							.padding(.top, -2) // small caps are shorter
 					}
-				} else {
-					MapImage.LabelText(mapID: match.mapID)
-						.fixedSize()
-						.padding(.top, -2) // small caps are shorter
+				}
+				.font(.callout.bold().smallCaps())
+				.foregroundColor(.white.opacity(0.8))
+				.shadow(color: .black, radius: 2, y: 1)
+				.padding(4)
+				.padding(.horizontal, 2)
+				
+				Spacer()
+				
+				let myself = matchDetails?.players.first { $0.id == userID }!
+				if let myself = myself {
+					AgentImage.killfeedPortrait(myself.agentID)
+						.scaleEffect(x: -1)
+						.shadow(color: .black, radius: 4, x: 0, y: 0)
 				}
 			}
-			.font(.callout.bold().smallCaps())
-			.foregroundStyle(.regularMaterial)
-			.colorScheme(.light)
-			.shadow(color: .black, radius: 2, y: 1)
-			.padding(4)
-			.padding(.horizontal, 2)
-			.frame(maxWidth: .infinity, alignment: .leading)
+			.frame(height: mapCapsuleHeight)
 			.background {
 				MapImage.splash(match.mapID)
 					.scaledToFill()
