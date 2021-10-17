@@ -310,6 +310,7 @@
 		B9741477266F18A800892B5F /* String+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
 		B989466A26860D8A00C8059A /* AsyncButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncButton.swift; sourceTree = "<group>"; };
 		B98E4704269B40DB003C9088 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
+		B998493126CF287F0030E83C /* CGeometry */ = {isa = PBXFileReference; lastKnownFileType = folder; name = CGeometry; path = "../ Packages/CGeometry"; sourceTree = "<group>"; };
 		B99B75942655859C00FBEB60 /* Recon Bolt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Recon Bolt.entitlements"; sourceTree = "<group>"; };
 		B9C3499C267AA6DE00BE39B1 /* LiveMatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveMatchView.swift; sourceTree = "<group>"; };
 		B9C3499F267AA9E800BE39B1 /* example_live_game.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_live_game.json; sourceTree = "<group>"; };
@@ -481,6 +482,7 @@
 			isa = PBXGroup;
 			children = (
 				B99B75942655859C00FBEB60 /* Recon Bolt.entitlements */,
+				B998493126CF287F0030E83C /* CGeometry */,
 				B964BECE2671515C00022A7C /* HandyOperators */,
 				B9399C3C2671158400411127 /* Protoquest */,
 				B9399C3D2671158A00411127 /* ValorantAPI */,

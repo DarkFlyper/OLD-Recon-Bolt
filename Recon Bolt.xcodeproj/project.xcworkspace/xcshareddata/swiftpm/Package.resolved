@@ -11,15 +11,6 @@
         }
       },
       {
-        "package": "CGeometry",
-        "repositoryURL": "git@github.com:juliand665/CGeometry.git",
-        "state": {
-          "branch": null,
-          "revision": "ac52d6473d585836108a51a5f940464795efdc26",
-          "version": "0.3.0"
-        }
-      },
-      {
         "package": "ErgonomicCodable",
         "repositoryURL": "https://github.com/juliand665/ErgonomicCodable",
         "state": {
