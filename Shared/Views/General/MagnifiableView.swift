@@ -3,7 +3,9 @@ import SwiftUIMissingPieces
 import CGeometry
 
 struct MagnifiableView<Content: View>: View {
+	var magnificationScale = 3.0
 	@ViewBuilder var content: () -> Content
+	var onMagnifyToggle: ((Bool) -> Void)?
 	
 	@State private var contentSize = CGSize.zero
 	
@@ -17,7 +19,6 @@ struct MagnifiableView<Content: View>: View {
 	}
 	
 	var body: some View {
-		let magnificationScale = 3.0
 		let coordSpaceName = "scale-independent"
 		
 		ZStack(alignment: .bottomTrailing) {
@@ -33,6 +34,7 @@ struct MagnifiableView<Content: View>: View {
 							: value.location
 						}
 				)
+				.onChange(of: isMagnifying) { onMagnifyToggle?($0) }
 			
 			Button { useNaturalDragging.toggle() } label: {
 				Image(

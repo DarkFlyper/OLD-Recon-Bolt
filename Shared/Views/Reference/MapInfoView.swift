@@ -1,8 +1,12 @@
 import SwiftUI
 import ValorantAPI
+import CGeometry
 
 struct MapInfoView: View {
 	let map: MapInfo
+	let magnificationScale = 3.0
+	
+	@State var isZoomedIn = false
 	
 	@Environment(\.verticalSizeClass) private var verticalSizeClass
 	
@@ -20,11 +24,13 @@ struct MapInfoView: View {
 				.frame(maxHeight: verticalSizeClass == .compact ? 300 : nil)
 				
 				if map.displayIcon != nil {
-					MagnifiableView {
+					MagnifiableView(magnificationScale: magnificationScale) {
 						MapImage.minimap(map.id)
+							.overlay(calloutsOverlay())
+							.compositingGroup()
 							.background(Material.ultraThin)
 							.cornerRadius(16)
-					}
+					} onMagnifyToggle: { isZoomedIn = $0 }
 					.zIndex(1)
 					.frame(maxHeight: verticalSizeClass == .compact ? 300 : nil)
 					.padding(.horizontal)
@@ -38,6 +44,22 @@ struct MapInfoView: View {
 		.clipped()
 		.navigationTitle(map.displayName)
 		.navigationBarTitleDisplayMode(.inline)
+	}
+	
+	@ViewBuilder
+	func calloutsOverlay() -> some View {
+		GeometryReader { geometry in
+			let callouts = map.callouts ?? []
+			ForEach(callouts.indices) { i in
+				let callout = callouts[i]
+				Text(callout.fullName)
+					.font(isZoomedIn ? .callout : .system(size: 8))
+					.padding(isZoomedIn ? 2 : 1)
+					.background(.ultraThinMaterial)
+					.scaleEffect(isZoomedIn ? 1 / magnificationScale : 1)
+					.position(map.convert(callout.point) * geometry.size)
+			}
+		}
 	}
 }
 
