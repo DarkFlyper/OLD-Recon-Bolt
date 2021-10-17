@@ -46,7 +46,7 @@ struct CompetitiveSummaryCell: View {
 			let info = act.flatMap { summary.competitiveInfo?.bySeason?[$0.id] }
 			let tierInfo = assets?.seasons.tierInfo(number: info?.competitiveTier ?? 0, in: act)
 			
-			RankInfoView(summary: summary, lineWidth: 4, shouldFallBackOnPrevious: false)
+			RankInfoView(summary: summary, lineWidth: 5, shouldFallBackOnPrevious: false)
 				.frame(height: 96)
 			
 			if let tierInfo = tierInfo {

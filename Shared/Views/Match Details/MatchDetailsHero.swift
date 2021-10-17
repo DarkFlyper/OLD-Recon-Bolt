@@ -25,6 +25,13 @@ struct MatchDetailsHero: View {
 			.background(Material.ultraThin)
 			.cornerRadius(8)
 			.shadow(radius: 10)
+			.contextMenu {
+				Button {
+					UIPasteboard.general.string = data.details.id.description
+				} label: {
+					Label("Copy Match ID", systemImage: "square.on.square")
+				}
+			}
 		}
 	}
 }

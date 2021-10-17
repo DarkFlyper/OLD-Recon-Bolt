@@ -38,23 +38,3 @@ struct Measuring<Key: PreferenceKey>: ViewModifier where Key.Value == CGFloat {
 			.preference(key: Key.self, value: value)
 	}
 }
-
-extension Binding {
-	/// SwiftUI will sometimes decide to recompute view bodies for optional bindings that are no longer valid.
-	/// This works around that by simply returning the last non-nil value instead.
-	init?(optionalWorkaround base: Binding<Value?>) {
-		guard var lastValue = base.wrappedValue else { return nil }
-		self.init(
-			get: {
-				if let value = base.wrappedValue {
-					lastValue = value
-					return value
-				} else {
-					print("accessing nil binding; providing last non-nil value")
-					return lastValue
-				}
-			},
-			set: { base.wrappedValue = $0 }
-		)
-	}
-}

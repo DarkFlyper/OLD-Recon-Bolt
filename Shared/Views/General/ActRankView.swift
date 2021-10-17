@@ -36,7 +36,8 @@ struct ActRankView: View {
 							let tierInfo = assets?.seasons.tierInfo(number: tier, in: actInfo)
 							let upwards = (tierInfo?.rankTriangleUpwards?.imageIfLoaded).map(context.resolve)
 							let downwards = (tierInfo?.rankTriangleDownwards?.imageIfLoaded).map(context.resolve)
-							return ((upwards, downwards), count)
+							// i have no idea why in the world this ever happens but i've encountered a person with a negative count. i can't make sense of it so let's just pretend it's zero.
+							return ((upwards, downwards), max(0, count))
 						}
 						.flatMap(repeatElement(_:count:))
 					

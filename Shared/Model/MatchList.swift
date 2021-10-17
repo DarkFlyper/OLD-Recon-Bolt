@@ -1,9 +1,8 @@
 import Foundation
-import UserDefault
 import HandyOperators
 import ValorantAPI
 
-struct MatchList: Codable, DefaultsValueConvertible, Identifiable {
+struct MatchList: Codable, Identifiable {
 	let userID: User.ID
 	
 	var matches: [CompetitiveUpdate] = []

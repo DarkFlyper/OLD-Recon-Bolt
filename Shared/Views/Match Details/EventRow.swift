@@ -65,6 +65,10 @@ struct EventRow: View, Animatable {
 				WeaponImage.killStreamIcon(weaponID)
 					.scaleEffect(x: -1, y: 1, anchor: .center)
 					.padding(4)
+			} else if damageType == .melee {
+				WeaponImage.killStreamIcon(.melee)
+					.scaleEffect(x: -1, y: 1, anchor: .center)
+					.padding(4)
 			} else if damageType == .ability {
 				if let abilityIndex = abilityIndices[damageSource] {
 					let agent = killer.agentID

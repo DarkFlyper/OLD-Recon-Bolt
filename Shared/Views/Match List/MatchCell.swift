@@ -4,19 +4,6 @@ import HandyOperators
 import ValorantAPI
 
 struct MatchCell: View {
-	private static let startDateFormatter = DateFormatter() <- {
-		$0.dateStyle = .short
-	}
-	private static let startTimeFormatter = DateFormatter() <- {
-		$0.timeStyle = .short
-	}
-	private static let relativeStartTimeFormatter = DateComponentsFormatter() <- {
-		// DateComponentsFormatter gives us more control than RelativeDateTimeFormatter
-		$0.unitsStyle = .abbreviated
-		$0.maximumUnitCount = 2
-		$0.allowedUnits = [.day, .hour, .minute]
-	}
-	
 	let match: CompetitiveUpdate
 	let userID: User.ID
 	
@@ -92,20 +79,8 @@ struct MatchCell: View {
 			NavigationLink {
 				MatchDetailsContainer(matchID: match.id, userID: userID)
 			} label: {
-				HStack {
-					// use relative formatting for times less than a day ago
-					let relativeCutoff = Calendar.current.date(byAdding: .day, value: -1, to: .now)!
-					if match.startTime > relativeCutoff {
-						let formatter = Self.relativeStartTimeFormatter
-						Text("\(formatter.string(from: match.startTime, to: .now)!) ago")
-							.foregroundStyle(.secondary)
-					} else {
-						Text(match.startTime, formatter: Self.startDateFormatter)
-						Text(match.startTime, formatter: Self.startTimeFormatter)
-							.foregroundStyle(.secondary)
-					}
-				}
-				.font(.caption)
+				match.startTime.relativeText()
+					.font(.caption)
 			}
 			
 			HStack {
@@ -229,6 +204,37 @@ private struct ChangeRing: View {
 			}
 		}
 		.font(.system(size: 12))
+	}
+}
+
+extension Date {
+	private static let startDateFormatter = DateFormatter() <- {
+		$0.dateStyle = .short
+	}
+	private static let startTimeFormatter = DateFormatter() <- {
+		$0.timeStyle = .short
+	}
+	private static let relativeStartTimeFormatter = DateComponentsFormatter() <- {
+		// DateComponentsFormatter gives us more control than RelativeDateTimeFormatter
+		$0.unitsStyle = .abbreviated
+		$0.maximumUnitCount = 2
+		$0.allowedUnits = [.day, .hour, .minute]
+	}
+	
+	/// uses relative formatting for times less than a day ago
+	func relativeText() -> some View {
+		HStack {
+			let relativeCutoff = Calendar.current.date(byAdding: .day, value: -1, to: .now)!
+			if self > relativeCutoff {
+				let formatter = Self.relativeStartTimeFormatter
+				Text("\(formatter.string(from: self, to: .now)!) ago")
+					.foregroundStyle(.secondary)
+			} else {
+				Text(self, formatter: Self.startDateFormatter)
+				Text(self, formatter: Self.startTimeFormatter)
+					.foregroundStyle(.secondary)
+			}
+		}
 	}
 }
 

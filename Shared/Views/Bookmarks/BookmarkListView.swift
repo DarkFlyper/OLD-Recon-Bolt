@@ -1,6 +1,5 @@
 import SwiftUI
 import ValorantAPI
-import UserDefault
 
 struct BookmarkListView: View {
 	let userID: User.ID
@@ -48,10 +47,6 @@ struct BookmarkListView: View {
 		}
 	}
 	
-}
-
-extension User.ID: DefaultsValueConvertible {
-	public typealias DefaultsRepresentation = Data // use codable
 }
 
 #if DEBUG

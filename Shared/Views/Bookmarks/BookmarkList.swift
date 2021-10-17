@@ -1,3 +1,4 @@
+import Foundation
 import Combine
 import ValorantAPI
 import UserDefault
@@ -37,4 +38,8 @@ final class BookmarkList: ObservableObject {
 			addBookmark(for: user)
 		}
 	}
+}
+
+extension User.ID: DefaultsValueConvertible {
+	public typealias DefaultsRepresentation = Data // use codable
 }
