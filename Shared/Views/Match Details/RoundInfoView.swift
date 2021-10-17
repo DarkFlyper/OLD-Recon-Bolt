@@ -5,31 +5,36 @@ import HandyOperators
 
 struct RoundInfoView: View {
 	let matchData: MatchViewData
-	let roundNum = 6
 	
 	@State var roundData: RoundData
 	
-	init(data: MatchViewData) {
+	init(data: MatchViewData, roundNum: Int) {
 		self.matchData = data
-		let round = data.details.roundResults[roundNum]
-		self._roundData = .init(initialValue: RoundData(round, matchData: data))
+		self._roundData = .init(initialValue: RoundData(round: roundNum, in: data))
 	}
 	
 	var body: some View {
-		VStack {
-			Text("Round \(roundData.result.number + 1)")
-			
-			Text(roundData.id.uuidString)
-			
-			EventTimeline(matchData: matchData, roundData: $roundData)
-			
-			VStack(spacing: 4) {
-				ForEach(roundData.events) { event in
-					EventRow(event: event, matchData: matchData, roundData: $roundData)
+		ScrollView {
+			VStack {
+				Text(roundData.id.uuidString)
+				
+				EventMap(matchData: matchData, roundData: roundData)
+				
+				formattedTime(millis: Int(roundData.currentTime * 1000), includeMillis: true)
+				
+				EventTimeline(matchData: matchData, roundData: $roundData)
+				
+				VStack(spacing: 4) {
+					ForEach(roundData.events) { event in
+						EventRow(event: event, matchData: matchData, roundData: $roundData)
+					}
 				}
 			}
+			.padding()
 		}
-		.padding()
+		.clipped()
+		.navigationTitle("Round \(roundData.result.number + 1)")
+		.navigationBarTitleDisplayMode(.inline)
 	}
 }
 
@@ -37,7 +42,8 @@ struct RoundInfoView: View {
 // • you can't pad to minutes with just one zero (.dropTrailing appears to work but drops the seconds if they're zero)
 // • you can't have it show milliseconds (only… nanoseconds)
 // this solution isn't very localization-friendly unfortunately
-private func formattedTime(millis: Int, includeMillis: Bool = false) -> Text {
+@ViewBuilder
+private func formattedTime(millis: Int, includeMillis: Bool = false) -> some View {
 	let inSeconds = millis / 1000
 	let seconds = inSeconds % 60
 	let secondsPadding = seconds < 10 ? "0" : ""
@@ -46,20 +52,27 @@ private func formattedTime(millis: Int, includeMillis: Bool = false) -> Text {
 	let minutes = inSeconds / 60
 	let roughPart = "\(minutes):\(secondsPart)"
 	
-	let string = includeMillis ? "\(roughPart).\(millis % 1000)" : roughPart
-	return Text(string).monospacedDigit()
+	//let string = includeMillis ? "\(roughPart).\(Text(millisPart).foregroundStyle(.secondary))" : roughPart
+	HStack(spacing: 0) {
+		Text(roughPart)
+		if includeMillis {
+			let millisPart = "\(millis % 1000)".padding(toLength: 3, withPad: "0", startingAt: 0)
+			Text(".\(millisPart)").foregroundStyle(.secondary)
+		}
+	}
+	.monospacedDigit()
 }
 
 extension RoundEvent {
-	func formattedTime() -> Text {
-		Recon_Bolt.formattedTime(millis: roundTimeMillis)
+	func formattedTime() -> AnyView {
+		AnyView(Recon_Bolt.formattedTime(millis: roundTimeMillis))
 	}
 }
 
 #if DEBUG
 struct RoundInfoView_Previews: PreviewProvider {
 	static var previews: some View {
-		RoundInfoView(data: PreviewData.singleMatchData)
+		RoundInfoView(data: PreviewData.singleMatchData, roundNum: 6)
 			.inEachColorScheme()
 	}
 }

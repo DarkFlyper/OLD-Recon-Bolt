@@ -1,5 +1,6 @@
 import SwiftUI
 import ValorantAPI
+import HandyOperators
 
 struct EventTimeline: View {
 	let matchData: MatchViewData
@@ -7,8 +8,9 @@ struct EventTimeline: View {
 	
 	private let markerHeight = 10.0
 	private let iconDistance = 16.0
-	private let iconSize = 18.0
-	private let knobSize = 16.0
+	private let iconExtraDistance = 8.0
+	private let iconSize = 20.0
+	private let knobSize = 24.0
 	
 	var body: some View {
 		let events = roundData.events
@@ -51,7 +53,14 @@ struct EventTimeline: View {
 					.position(x: scaleFactor * roundData.currentPosition, y: barY)
 					.gesture(
 						DragGesture(minimumDistance: 0, coordinateSpace: .named(CoordSpace.slider))
-							.onChanged { roundData.currentPosition = $0.location.x / scaleFactor }
+							.onChanged { updateCurrentPosition(to: $0.location.x, scaleFactor: scaleFactor) }
+							.onEnded { _ in
+								guard !isSnapping else { return }
+								// snap to nearest event
+								withAnimation(.default.speed(2)) {
+									roundData.currentPosition = roundData.currentEvent?.position ?? 0
+								}
+							}
 					)
 			}
 			.coordinateSpace(name: CoordSpace.slider)
@@ -62,8 +71,35 @@ struct EventTimeline: View {
 		}
 	}
 	
+	private static let feedbackGenerator = UISelectionFeedbackGenerator()
+	@State private var isSnapping = false
+	
+	private func updateCurrentPosition(to sliderPosition: Double, scaleFactor: Double) {
+		Self.feedbackGenerator.prepare()
+		
+		let position = sliderPosition / scaleFactor
+		let snapThreshold = 5.0
+		let snapCandidate = roundData.events
+			.map { (distance: abs($0.position - position), event: $0) }
+			.sorted(on: \.distance)
+			.prefix(1)
+			.filter { $0.distance * scaleFactor < snapThreshold }
+			.first
+		
+		let wasSnapping = isSnapping
+		isSnapping = snapCandidate != nil
+		roundData.currentPosition = snapCandidate?.event.position ?? position
+		
+		if isSnapping, !wasSnapping {
+			Self.feedbackGenerator.selectionChanged()
+		}
+	}
+	
 	private func eventCapsule(for event: PositionedEvent) -> some View {
-		Capsule()
+		let proximity = roundData.proximity(of: event)
+		let extraDistance = proximity * iconExtraDistance
+		
+		return Capsule()
 			.frame(width: 4, height: markerHeight)
 			.fixedSize()
 			.background {
@@ -73,8 +109,7 @@ struct EventTimeline: View {
 			.overlay {
 				icon(for: event.event)
 					.frame(width: iconSize, height: iconSize)
-					//.background(.thinMaterial)
-					.position(x: 2, y: -iconDistance)
+					.position(x: 2, y: -iconDistance - extraDistance)
 			}
 			.foregroundColor(event.relativeColor)
 			.onTapGesture {
@@ -100,3 +135,26 @@ struct EventTimeline: View {
 		case slider
 	}
 }
+
+#if DEBUG
+struct EventTimeline_Previews: PreviewProvider {
+	static var previews: some View {
+		Group {
+			PreviewView(matchData: PreviewData.singleMatchData, roundData: PreviewData.roundData)
+			PreviewView(matchData: PreviewData.singleMatchData, roundData: PreviewData.midRoundData)
+		}
+		.padding()
+		.previewLayout(.sizeThatFits)
+		.inEachColorScheme()
+	}
+	
+	struct PreviewView: View {
+		var matchData: MatchViewData
+		@State var roundData: RoundData
+		
+		var body: some View {
+			EventTimeline(matchData: matchData, roundData: $roundData)
+		}
+	}
+}
+#endif

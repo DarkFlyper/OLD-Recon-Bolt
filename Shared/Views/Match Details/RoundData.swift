@@ -15,6 +15,7 @@ struct RoundData: Animatable {
 			updateNeighbors()
 		}
 	}
+	var currentTime: TimeInterval = 0
 	
 	// TODO: get this working correctly (it currently has no effect)
 	var animatableData: Double {
@@ -25,12 +26,12 @@ struct RoundData: Animatable {
 		}
 	}
 	
-	private var currentEvent: PositionedEvent?
+	private(set) var currentEvent: PositionedEvent?
 	private var nextEvent: PositionedEvent?
 	private var progress: Double = 0 // progress between events
 	
-	init(_ result: RoundResult, matchData: MatchViewData) {
-		self.result = result
+	init(round: Int, in matchData: MatchViewData) {
+		self.result = matchData.details.roundResults[round]
 		
 		let events = result.eventsInOrder()
 		
@@ -49,23 +50,24 @@ struct RoundData: Animatable {
 			PositionedEvent(event: event, matchData: matchData, position: position)
 		}
 		
-		//self.currentPosition = positions.first ?? 0
-		self.currentPosition = (positions[3] + positions[4]) / 2 // FIXME: revert—only for previews
+		self.currentPosition = positions.first ?? 0
 		updateNeighbors()
 	}
 	
 	private mutating func updateNeighbors() {
 		guard !events.isEmpty else { return }
-		let currentEvent = events.last { $0.position <= currentPosition }!
-		self.currentEvent = currentEvent
+		let current = events.last { $0.position <= currentPosition }!
+		self.currentEvent = current
 		nextEvent = events.first { $0.position > currentPosition }
 		
 		if let next = nextEvent {
-			let distance = next.position - currentEvent.position
-			let offset = currentPosition - currentEvent.position
+			let distance = next.position - current.position
+			let offset = currentPosition - current.position
 			progress = offset / distance
+			currentTime = (1 - progress) * current.event.time + progress * next.event.time
 		} else {
 			progress = 0
+			currentTime = current.event.time
 		}
 	}
 	
@@ -105,14 +107,17 @@ struct PositionedEvent: Identifiable, Equatable {
 		self.position = position
 		
 		self.playerLocations = .build {
-			event.playerLocations.map(DisplayedPlayerLocation.init)
+			event.playerLocations.map { DisplayedPlayerLocation($0, matchData: matchData) }
 			
 			// killed players aren't listed in the locations anymore, but we still want to show them and animate to them
 			if let kill = event as? Kill {
+				let victim = matchData.players[kill.victim]!
 				DisplayedPlayerLocation(
-					id: kill.victim,
+					id: victim.id,
 					isDead: true,
-					position: .init(kill.victimPosition)
+					position: .init(kill.victimPosition),
+					relativeColor: matchData.relativeColor(of: victim),
+					agentID: victim.agentID
 				)
 			}
 		}
@@ -134,6 +139,8 @@ struct DisplayedPlayerLocation: Identifiable {
 	var isDead = false
 	var position: CGPoint
 	var angle: Double?
+	var relativeColor: Color?
+	var agentID: Agent.ID
 	
 	func interpolated(towards end: Self, progress: Double) -> Self {
 		self <- { $0.interpolate(towards: end, progress: progress) }
@@ -143,11 +150,14 @@ struct DisplayedPlayerLocation: Identifiable {
 		assert(end.id == id)
 		
 		if let angle0 = angle, let angle1 = end.angle {
-			let angleAverage = ((angle0 + angle1) / 2).truncatingAngle()
-			// there are two correct averages—pick the one with less change.
-			angle = abs(angleAverage - angle0).truncatingAngle() < .pi / 2
-				? angleAverage
-				: (angleAverage + .pi).truncatingAngle()
+			let distance = (angle1 - angle0).truncatingAngle()
+			// there are two ways around the circle—pick the one with less change.
+			if distance < .pi {
+				angle = (angle0 + progress * distance).truncatingAngle()
+			} else {
+				let delta = 2 * .pi - distance
+				angle = (angle0 - progress * delta).truncatingAngle()
+			}
 		} else {
 			angle = angle ?? end.angle
 		}
@@ -158,15 +168,18 @@ struct DisplayedPlayerLocation: Identifiable {
 
 private extension FloatingPoint {
 	func truncatingAngle() -> Self {
-		truncatingRemainder(dividingBy: 2 * .pi)
+		(2 * .pi + self).truncatingRemainder(dividingBy: 2 * .pi)
 	}
 }
 
 extension DisplayedPlayerLocation {
-	init(_ location: PlayerLocation) {
+	init(_ location: PlayerLocation, matchData: MatchViewData) {
 		self.id = location.subject
 		self.position = .init(location.position)
 		self.angle = location.angle
+		let player = matchData.players[id]!
+		self.relativeColor = matchData.relativeColor(of: player)
+		self.agentID = player.agentID
 	}
 }
 

@@ -1,5 +1,6 @@
 import Foundation
 import ValorantAPI
+import HandyOperators
 
 // somehow this file is included in builds for profiling. let's avoid that.
 #if DEBUG
@@ -29,6 +30,11 @@ enum PreviewData {
 	static let singleMatchData = MatchViewData(details: singleMatch, userID: userID)
 	static let strangeMatchData = MatchViewData(details: strangeMatch, userID: userID)
 	static let surrenderedMatchData = MatchViewData(details: surrenderedMatch, userID: userID)
+	
+	static let roundData = RoundData(round: 0, in: singleMatchData)
+	static let midRoundData = roundData <- {
+		$0.currentPosition = ($0.events[4].position + $0.events[5].position) / 2
+	}
 	
 	static let inventory = Inventory(loadJSON(named: "example_inventory", as: APIInventory.self))
 	
