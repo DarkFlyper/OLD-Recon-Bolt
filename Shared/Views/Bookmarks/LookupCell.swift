@@ -18,7 +18,6 @@ struct LookupCell: View {
 		ZStack {
 			// this button is not visible but triggers when the cell is tapped—.onTapGesture breaks actual buttons in the cell
 			Button("cell tap trigger") {
-				// FIXME: @FocusState seems to be broken in Lists :<
 				print("cell tapped!")
 				focusedField = .gameName
 			}
@@ -77,6 +76,7 @@ struct LookupCell: View {
 	}
 	
 	private func lookUpPlayer(scrollView: ScrollViewProxy) {
+		guard !gameName.isEmpty, !tagLine.isEmpty else { return }
 		Task {
 			isLoading = true
 			await load {
