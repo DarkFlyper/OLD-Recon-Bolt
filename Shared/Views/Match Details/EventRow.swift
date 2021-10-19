@@ -4,13 +4,15 @@ import ValorantAPI
 struct EventRow: View, Animatable {
 	let event: PositionedEvent
 	let matchData: MatchViewData
-	@Binding var roundData: RoundData
+	var opacity: Double = 1
 	
-	@ScaledMetric private var rowHeight = 40
+	@Binding var roundData: RoundData
 	
 	private var roundEvent: RoundEvent { event.event }
 	
 	var body: some View {
+		let proximity = roundData.proximity(of: event)
+		
 		HStack(spacing: 0) {
 			roundEvent.formattedTime()
 				.padding(8)
@@ -26,10 +28,14 @@ struct EventRow: View, Animatable {
 				}
 			}
 		}
-		.frame(height: rowHeight)
 		.background {
-			let proximity = roundData.proximity(of: event)
-			event.relativeColor?.opacity(0.25 + pow(proximity, 1.3) * 0.4)
+			event.relativeColor?.opacity(0.25 + pow(proximity, 1.3) * 0.25)
+		}
+		.opacity(opacity)
+		.background {
+			Rectangle()
+				.blendMode(.destinationOut)
+				.opacity(event.position > roundData.currentPosition ? proximity : 1)
 		}
 		.cornerRadius(6)
 		.onTapGesture {

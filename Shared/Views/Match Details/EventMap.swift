@@ -20,7 +20,7 @@ struct EventMap: View {
 					.cornerRadius(16)
 			} onMagnifyToggle: { isZoomedIn = $0 }
 			.zIndex(1)
-			.frame(maxHeight: verticalSizeClass == .compact ? 300 : nil)
+			.frame(maxWidth: 800, maxHeight: verticalSizeClass == .compact ? 300 : nil)
 		}
 	}
 	

@@ -45,11 +45,9 @@ struct EventTimeline: View {
 				}
 				
 				Circle()
-					//.fill(.accentColor)
 					.fill(Color.white)
 					.frame(width: knobSize, height: knobSize)
 					.shadow(color: .black.opacity(0.5), radius: 1, x: 0, y: 1)
-					//.background(Circle().padding(-2).blendMode(.destinationOut))
 					.position(x: scaleFactor * roundData.currentPosition, y: barY)
 					.gesture(
 						DragGesture(minimumDistance: 0, coordinateSpace: .named(CoordSpace.slider))
@@ -67,7 +65,6 @@ struct EventTimeline: View {
 			.compositingGroup()
 			.frame(height: heightFromBar + heightFromIcons)
 			.fixedSize(horizontal: false, vertical: true)
-			//.background(.red.opacity(0.1))
 		}
 	}
 	

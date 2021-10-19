@@ -16,6 +16,7 @@ struct RoundData: Animatable {
 		}
 	}
 	var currentTime: TimeInterval = 0
+	var currentIndex = 0
 	
 	// TODO: get this working correctly (it currently has no effect)
 	var animatableData: Double {
@@ -27,8 +28,8 @@ struct RoundData: Animatable {
 	}
 	
 	private(set) var currentEvent: PositionedEvent?
-	private var nextEvent: PositionedEvent?
-	private var progress: Double = 0 // progress between events
+	private(set) var nextEvent: PositionedEvent?
+	private(set) var progress: Double = 0 // progress between events
 	
 	init(round: Int, in matchData: MatchViewData) {
 		self.result = matchData.details.roundResults[round]
@@ -56,8 +57,9 @@ struct RoundData: Animatable {
 	
 	private mutating func updateNeighbors() {
 		guard !events.isEmpty else { return }
-		let current = events.last { $0.position <= currentPosition }!
+		let (currentIndex, current) = events.indexed().last { $0.element.position <= currentPosition }!
 		self.currentEvent = current
+		self.currentIndex = currentIndex
 		nextEvent = events.first { $0.position > currentPosition }
 		
 		if let next = nextEvent {
