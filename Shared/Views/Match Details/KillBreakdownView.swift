@@ -105,13 +105,18 @@ struct KillBreakdownView: View {
 					.opacity(backgroundOpacity)
 				)
 			
-			Text("\(round.result.number + 1)")
-				.font(.system(size: roundNumberSize * (isCompact ? 0.6 : 1)))
-				.bold()
-				.foregroundColor(relativeColor)
-				.padding(.vertical, spacing)
-				.frame(maxWidth: .infinity)
-				.background(relativeColor?.opacity(backgroundOpacity))
+			let roundNumber = round.result.number
+			NavigationLink {
+				RoundInfoContainer(matchData: data, roundNumber: roundNumber)
+			} label: {
+				Text("\(roundNumber + 1)")
+					.font(.system(size: roundNumberSize * (isCompact ? 0.6 : 1)))
+					.bold()
+					.foregroundColor(relativeColor)
+					.padding(.vertical, spacing)
+					.frame(maxWidth: .infinity)
+					.background(relativeColor?.opacity(backgroundOpacity))
+			}
 			
 			killIcons(for: round.killsByTeam[1])
 				.measuring(\.height, as: BottomHeight.self)
