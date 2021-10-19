@@ -132,6 +132,8 @@
 		B98E4706269B40DB003C9088 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98E4704269B40DB003C9088 /* CircularProgressView.swift */; };
 		B998492F26CEC8B00030E83C /* EventMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = B998492E26CEC8B00030E83C /* EventMap.swift */; };
 		B998493026CEC8B00030E83C /* EventMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = B998492E26CEC8B00030E83C /* EventMap.swift */; };
+		B99E3DE5271F2AD300F62453 /* example matches in Resources */ = {isa = PBXBuildFile; fileRef = B99E3DE4271F2AD300F62453 /* example matches */; };
+		B99E3DE6271F2AD300F62453 /* example matches in Resources */ = {isa = PBXBuildFile; fileRef = B99E3DE4271F2AD300F62453 /* example matches */; };
 		B9C3499D267AA6DE00BE39B1 /* LiveMatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3499C267AA6DE00BE39B1 /* LiveMatchView.swift */; };
 		B9C3499E267AA6DE00BE39B1 /* LiveMatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3499C267AA6DE00BE39B1 /* LiveMatchView.swift */; };
 		B9C349A0267AA9E800BE39B1 /* example_live_game.json in Resources */ = {isa = PBXBuildFile; fileRef = B9C3499F267AA9E800BE39B1 /* example_live_game.json */; };
@@ -315,6 +317,7 @@
 		B998492E26CEC8B00030E83C /* EventMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMap.swift; sourceTree = "<group>"; };
 		B998493126CF287F0030E83C /* CGeometry */ = {isa = PBXFileReference; lastKnownFileType = folder; name = CGeometry; path = "../ Packages/CGeometry"; sourceTree = "<group>"; };
 		B99B75942655859C00FBEB60 /* Recon Bolt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Recon Bolt.entitlements"; sourceTree = "<group>"; };
+		B99E3DE4271F2AD300F62453 /* example matches */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "example matches"; sourceTree = "<group>"; };
 		B9C3499C267AA6DE00BE39B1 /* LiveMatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveMatchView.swift; sourceTree = "<group>"; };
 		B9C3499F267AA9E800BE39B1 /* example_live_game.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_live_game.json; sourceTree = "<group>"; };
 		B9C7064D269BC91F00D29226 /* GameModeImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModeImage.swift; sourceTree = "<group>"; };
@@ -654,6 +657,7 @@
 			isa = PBXGroup;
 			children = (
 				B90CB17826ACD76500804C27 /* Local */,
+				B99E3DE4271F2AD300F62453 /* example matches */,
 				B9EF0F23263D09120067176A /* example_match.json */,
 				B941B6EB25A7C83700F675C1 /* example_updates.json */,
 				B963C4722694FE920071E14A /* example_summary.json */,
@@ -864,6 +868,7 @@
 				B963C4732694FE920071E14A /* example_summary.json in Resources */,
 				B9DCF9AB2642F7A100C39EC4 /* Preview Assets.xcassets in Resources */,
 				B9F9B4DA26793F3100397AAB /* surrendered_match.json in Resources */,
+				B99E3DE5271F2AD300F62453 /* example matches in Resources */,
 				B9F9B4FF26796C2200397AAB /* example_inventory.json in Resources */,
 				B9EF0F25263D09AD0067176A /* example_match.json in Resources */,
 				B9318369267813F00099B13C /* example_pregame.json in Resources */,
@@ -887,6 +892,7 @@
 				B931836A267813F00099B13C /* example_pregame.json in Resources */,
 				B9EF0F24263D091F0067176A /* example_match.json in Resources */,
 				B9F52333266EE57900DFF8DD /* example_contracts.json in Resources */,
+				B99E3DE6271F2AD300F62453 /* example matches in Resources */,
 				B9C349A1267AA9E800BE39B1 /* example_live_game.json in Resources */,
 				B941B65B25A5BC8A00F675C1 /* Assets.xcassets in Resources */,
 				B96A0CA1265A8B4600844674 /* strange_match.json in Resources */,

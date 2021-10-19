@@ -17,6 +17,16 @@ enum PreviewData {
 	/// A match that ended in a surrender, possibly yielding unexpected data.
 	static let surrenderedMatch = loadJSON(named: "surrendered_match", as: MatchDetails.self)
 	
+	static let exampleMatches: [MapID: MatchDetails] = [
+		.ascent: "ascent",
+		.bind: "bind",
+		.breeze: "breeze",
+		.fracture: "fracture",
+		.haven: "haven",
+		.icebox: "icebox",
+		.split: "split",
+	].mapValues { loadJSON(named: $0, in: "example matches") }
+	
 	static let compUpdates = loadJSON(named: "example_updates", as: [CompetitiveUpdate].self)
 	
 	static let summary = loadJSON(named: "example_summary", as: CareerSummary.self)
@@ -48,10 +58,11 @@ enum PreviewData {
 	
 	private static func loadJSON<T>(
 		named name: String,
+		in subdirectory: String? = nil,
 		as type: T.Type = T.self,
 		using decoder: JSONDecoder = ValorantClient.responseDecoder
 	) -> T where T: Decodable {
-		let url = Bundle.main.url(forResource: name, withExtension: "json")!
+		let url = Bundle.main.url(forResource: name, withExtension: "json", subdirectory: subdirectory)!
 		
 		let raw: Data
 		do {
