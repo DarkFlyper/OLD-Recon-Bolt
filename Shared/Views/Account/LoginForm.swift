@@ -77,10 +77,11 @@ struct LoginForm: View {
 						credentials.location = location
 					} label: {
 						HStack {
-							Label(
-								location.name,
-								systemImage: credentials.location == location ? "checkmark" : ""
-							)
+							Text(location.name)
+							
+							if credentials.location == location {
+								Image(systemName: "checkmark")
+							}
 						}
 					}
 				}
