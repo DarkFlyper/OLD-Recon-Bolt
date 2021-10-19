@@ -159,7 +159,7 @@ extension ValorantClient {
 	func autoFetchMatchListDetails(for matchList: MatchList) {
 		Task.detached { [self] in
 			let manager = LocalDataProvider.shared.matchDetailsManager
-			let maxAutoFetchedMatches = 5
+			let maxAutoFetchedMatches = 10
 			let unloadedMatches = await manager.unloadedMatches(
 				in: matchList,
 				maxCount: maxAutoFetchedMatches + 1 // we don't need more than our maximum except to know that it's been exceeded
