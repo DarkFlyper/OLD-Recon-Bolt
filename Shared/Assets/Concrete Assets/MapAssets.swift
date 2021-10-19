@@ -35,23 +35,12 @@ struct MapInfo: AssetItem, Codable, Identifiable {
 	}
 	
 	var offset: CGVector {
-		.init(dx: xScalarToAdd, dy: yScalarToAdd) + (Self.offsetAdjustments[id] ?? .zero)
+		.init(dx: xScalarToAdd, dy: yScalarToAdd)
 	}
-	
-	// riot back at it again…
-	private static let offsetAdjustments: [MapID: CGVector] = [
-		.ascent: .init(dx: -0.390, dy: -0.390),
-		.bind: .init(dx: -0.553, dy: -0.610),
-		.breeze: .init(dx: -0.300, dy: -0.300),
-		.haven: .init(dx: -0.734, dy: -0.736),
-		.icebox: .init(dx: 0.240, dy: 0.235),
-		.split: .init(dx: -0.540, dy: -0.490),
-	]
 	
 	func convert(_ position: CGPoint) -> CGPoint {
 		// these are literally just flipped lmfao
-		let base = position * multiplier + offset
-		return -base.withFlippedAxes + CGVector(.one) // remap to top-left origin
+		position.withFlippedAxes * multiplier + offset
 	}
 	
 	var images: [AssetImage] {

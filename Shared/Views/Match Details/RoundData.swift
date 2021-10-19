@@ -32,9 +32,22 @@ struct RoundData: Animatable {
 	private(set) var progress: Double = 0 // progress between events
 	
 	init(round: Int, in matchData: MatchViewData) {
-		self.result = matchData.details.roundResults[round]
+		let result = matchData.details.roundResults[round]
+		self.init(result: result, events: result.eventsInOrder(), in: matchData)
+	}
+	
+	init(combiningAllRoundsOf matchData: MatchViewData) {
+		let result = matchData.details.roundResults.first!
 		
-		let events = result.eventsInOrder()
+		let events = matchData.details.roundResults
+			.flatMap { $0.eventsInOrder() }
+			.sorted(on: \.roundTimeMillis)
+		
+		self.init(result: result, events: events, in: matchData)
+	}
+	
+	private init(result: RoundResult, events: [RoundEvent], in matchData: MatchViewData) {
+		self.result = result
 		
 		let eventTimes = events.map(\.time)
 		let intervals = ([0] + eventTimes).adjacentPairs().map { $1 - $0 }
@@ -45,7 +58,7 @@ struct RoundData: Animatable {
 		let adjustedLengths = intervals.map { dynamicFraction * $0 + baseLength }
 		let positions = adjustedLengths.reductions(+)
 		
-		bounds = (positions.first ?? 0)...(positions.last ?? 0)
+		self.bounds = (positions.first ?? 0)...(positions.last ?? 0)
 		
 		self.events = zip(events, positions).map { event, position in
 			PositionedEvent(event: event, matchData: matchData, position: position)
