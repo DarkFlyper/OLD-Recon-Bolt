@@ -8,6 +8,7 @@ struct LiveView: View {
 	@State var activeMatch: ActiveMatch?
 	
 	@Environment(\.valorantLoad) private var load
+	@Environment(\.scenePhase) private var scenePhase
 	
 	var body: some View {
 		ScrollView {
@@ -24,6 +25,10 @@ struct LiveView: View {
 		}
 		.refreshable(action: refresh)
 		.task(refresh)
+		.onChange(of: scenePhase) {
+			guard $0 == .active else { return }
+			Task { await refresh() }
+		}
 		//.background(Color(.systemGroupedBackground))
 		.navigationTitle("Live")
 	}
