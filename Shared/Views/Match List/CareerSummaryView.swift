@@ -50,7 +50,7 @@ struct CareerSummaryView: View {
 			VStack(spacing: 1) {
 				contentSegments()
 					.frame(maxWidth: .infinity)
-					.background(Color(.tertiarySystemBackground))
+					.background(Color(.secondarySystemGroupedBackground))
 			}
 			.cornerRadius(20)
 		}

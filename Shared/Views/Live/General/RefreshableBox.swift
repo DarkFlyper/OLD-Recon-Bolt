@@ -23,7 +23,7 @@ struct RefreshableBox<Content: View>: View {
 			content()
 				.groupBoxStyle(NestedGroupBoxStyle())
 		}
-		.background(Color(.tertiarySystemBackground))
+		.background(Color(.secondarySystemGroupedBackground))
 		.cornerRadius(20)
 	}
 	
@@ -43,7 +43,7 @@ struct RefreshableBox<Content: View>: View {
 			}
 			.frame(maxWidth: .infinity)
 			.padding()
-			.background(Color(.secondarySystemBackground))
+			.background(Color(.tertiarySystemGroupedBackground))
 			.cornerRadius(8)
 		}
 	}
