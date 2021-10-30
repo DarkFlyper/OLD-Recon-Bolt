@@ -7,50 +7,51 @@ struct AgentSelectView: View {
 	let inventory: Inventory
 	
 	var body: some View {
-		ZStack(alignment: .top) {
-			ScrollView {
-				VStack(spacing: 0) {
-					hero
-					
+		ScrollView {
+			VStack(spacing: 0) {
+				hero
+				
+				VStack {
 					VStack {
-						VStack {
-							ForEach(pregameInfo.team.players) { player in
-								PlayerView(player: player, userID: userID)
-							}
+						ForEach(pregameInfo.team.players) { player in
+							PlayerView(player: player, userID: userID)
 						}
-						.padding()
-						
-						Divider()
-						
-						HStack {
-							lockInIndicators(
-								count: pregameInfo.team.players.count,
-								lockCount: pregameInfo.team.players.filter(\.isLockedIn).count,
-								shouldReverse: false
-							)
-							.foregroundColor(.valorantBlue)
-							
-							Spacer()
-							
-							lockInIndicators(
-								count: pregameInfo.enemyTeamSize,
-								lockCount: pregameInfo.enemyTeamLockCount,
-								shouldReverse: true
-							)
-							.foregroundColor(.valorantRed)
-						}
-						.padding()
-						
-						Divider()
-						
-						AgentPickerView(pregameInfo: $pregameInfo, userID: userID, inventory: inventory)
 					}
+					.padding()
+					
+					Divider()
+					
+					HStack {
+						lockInIndicators(
+							count: pregameInfo.team.players.count,
+							lockCount: pregameInfo.team.players.filter(\.isLockedIn).count,
+							shouldReverse: false
+						)
+						.foregroundColor(.valorantBlue)
+						
+						Spacer()
+						
+						lockInIndicators(
+							count: pregameInfo.enemyTeamSize,
+							lockCount: pregameInfo.enemyTeamLockCount,
+							shouldReverse: true
+						)
+						.foregroundColor(.valorantRed)
+					}
+					.padding()
+					
+					Divider()
+					
+					AgentPickerView(pregameInfo: $pregameInfo, userID: userID, inventory: inventory)
 				}
 			}
-			
+		}
+		.overlay(alignment: .top) {
 			infoBox
 				.padding()
 		}
+		.navigationTitle("Agent Select")
+		.navigationBarTitleDisplayMode(.inline)
 	}
 	
 	@ViewBuilder

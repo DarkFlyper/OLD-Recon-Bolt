@@ -27,7 +27,7 @@ extension View {
 	}
 }
 
-struct Measuring<Key: PreferenceKey>: ViewModifier where Key.Value == CGFloat {
+private struct Measuring<Key: PreferenceKey>: ViewModifier where Key.Value == CGFloat {
 	let measurePath: KeyPath<CGSize, CGFloat>
 	
 	@State private var value = 0.0
@@ -36,5 +36,25 @@ struct Measuring<Key: PreferenceKey>: ViewModifier where Key.Value == CGFloat {
 		content
 			.measured { value = $0[keyPath: measurePath] }
 			.preference(key: Key.self, value: value)
+	}
+}
+
+extension View {
+	func onSceneActivation(perform task: @escaping () async -> Void) -> some View {
+		modifier(OnSceneActivationModifier(task: task))
+	}
+}
+
+private struct OnSceneActivationModifier: ViewModifier {
+	var task: () async -> Void
+	
+	@Environment(\.scenePhase) private var scenePhase
+	
+	func body(content: Content) -> some View {
+		content
+			.task(id: scenePhase) {
+				guard scenePhase == .active else { return }
+				await task()
+			}
 	}
 }

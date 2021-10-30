@@ -25,10 +25,7 @@ struct LiveView: View {
 		}
 		.refreshable(action: refresh)
 		.task(refresh)
-		.onChange(of: scenePhase) {
-			guard $0 == .active else { return }
-			Task { await refresh() }
-		}
+		.onSceneActivation(perform: refresh)
 		//.background(Color(.systemGroupedBackground))
 		.navigationTitle("Live")
 	}
@@ -65,23 +62,29 @@ struct LiveView: View {
 	}
 	
 	func loadLiveGameDetails() async {
-		await load { client in
-			async let liveGame = client.getLiveMatch(inPregame: false)
-			async let livePregame = client.getLiveMatch(inPregame: true)
-			
-			if let match = try await liveGame {
-				activeMatch = .init(id: match, inPregame: false)
-			} else if let match = try await livePregame {
-				activeMatch = .init(id: match, inPregame: true)
-			} else {
-				activeMatch = nil
-			}
+		await load {
+			activeMatch = try await $0.getActiveMatch()
 		}
 	}
-	
-	struct ActiveMatch {
-		var id: Match.ID
-		var inPregame: Bool
+}
+
+struct ActiveMatch {
+	var id: Match.ID
+	var inPregame: Bool
+}
+
+extension ValorantClient {
+	func getActiveMatch() async throws -> ActiveMatch? {
+		async let liveGame = getLiveMatch(inPregame: false)
+		async let livePregame = getLiveMatch(inPregame: true)
+		
+		if let match = try await liveGame {
+			return .init(id: match, inPregame: false)
+		} else if let match = try await livePregame {
+			return .init(id: match, inPregame: true)
+		} else {
+			return nil
+		}
 	}
 }
 

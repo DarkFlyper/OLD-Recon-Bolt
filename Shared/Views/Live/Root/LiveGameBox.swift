@@ -1,9 +1,10 @@
 import SwiftUI
 import ValorantAPI
+import HandyOperators
 
 struct LiveGameBox: View {
 	var userID: User.ID
-	var activeMatch: LiveView.ActiveMatch?
+	var activeMatch: ActiveMatch?
 	var refreshAction: () async -> Void
 	
 	@State var isAutoRefreshing = false
@@ -26,7 +27,7 @@ struct LiveGameBox: View {
 				Group {
 					if activeMatch.inPregame {
 						NavigationLink {
-							AgentSelectContainer(matchID: activeMatch.id, userID: userID)
+							LiveGameContainer(userID: userID, activeMatch: activeMatch)
 						} label: {
 							HStack {
 								Image(systemName: "person.fill.viewfinder")
@@ -35,7 +36,7 @@ struct LiveGameBox: View {
 						}
 					} else {
 						NavigationLink {
-							LiveMatchContainer(matchID: activeMatch.id, userID: userID)
+							LiveGameContainer(userID: userID, activeMatch: activeMatch)
 						} label: {
 							HStack {
 								Image(systemName: "list.bullet.below.rectangle")

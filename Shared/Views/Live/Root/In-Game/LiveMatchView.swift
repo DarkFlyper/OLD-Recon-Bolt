@@ -14,6 +14,8 @@ struct LiveMatchView: View {
 				playerList
 			}
 		}
+		.navigationTitle("Live Match")
+		.navigationBarTitleDisplayMode(.inline)
 	}
 	
 	@ViewBuilder
@@ -124,10 +126,9 @@ struct LiveMatchView: View {
 #if DEBUG
 struct LiveMatchView_Previews: PreviewProvider {
 	static var previews: some View {
-		LiveMatchContainer(
-			matchID: PreviewData.liveGameInfo.id,
-			userID: PreviewData.userID,
-			gameInfo: PreviewData.liveGameInfo
+		LiveMatchView(
+			gameInfo: PreviewData.liveGameInfo,
+			userID: PreviewData.userID
 		)
 		.withToolbar()
 		.inEachColorScheme()

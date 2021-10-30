@@ -72,15 +72,18 @@ struct MatchListView: View {
 		.withLocalData($matchList, id: userID, shouldAutoUpdate: true)
 		.withLocalData($summary, id: userID, shouldAutoUpdate: true)
 		.withLocalData($identity, id: userID)
-		.refreshable {
-			async let matchListUpdate: Void = updateMatchList(update: ValorantClient.loadMatches)
-			async let summaryUpdate: Void = load {
-				try await $0.fetchCareerSummary(for: userID, forceFetch: true)
-			}
-			_ = await (matchListUpdate, summaryUpdate)
-		}
+		.refreshable { await refresh() }
+		.onSceneActivation(perform: refresh)
 		.loadErrorAlertTitle("Could not load matches!")
 		.navigationTitle(user?.name ?? "Matches")
+	}
+	
+	func refresh() async {
+		async let matchListUpdate: Void = updateMatchList(update: ValorantClient.loadMatches)
+		async let summaryUpdate: Void = load {
+			try await $0.fetchCareerSummary(for: userID, forceFetch: true)
+		}
+		_ = await (matchListUpdate, summaryUpdate)
 	}
 	
 	func updateMatchList(update: @escaping (ValorantClient) -> (inout MatchList) async throws -> Void) async {
