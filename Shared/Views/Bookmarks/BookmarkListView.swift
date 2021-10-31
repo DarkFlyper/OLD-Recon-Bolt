@@ -3,7 +3,7 @@ import ValorantAPI
 
 struct BookmarkListView: View {
 	let userID: User.ID
-	@State var myself: User?
+	@LocalData var myself: User?
 	@State var isShowingSelf = true // initially show self
 	
 	@EnvironmentObject private var bookmarkList: BookmarkList

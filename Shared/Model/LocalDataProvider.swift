@@ -5,25 +5,36 @@ import HandyOperators
 
 extension View {
 	func withLocalData<Value: LocalDataStored>(
-		_ value: Binding<Value?>,
+		_ value: LocalData<Value>,
 		id: Value.ID,
 		animation: Animation? = .default
 	) -> some View {
-		modifier(LocalDataModifier(value: value, id: id, animation: animation))
+		modifier(LocalDataModifier(value: value.$wrappedValue, id: id, animation: animation))
 	}
 	
 	func withLocalData<Value: LocalDataAutoUpdatable>(
-		_ value: Binding<Value?>,
+		_ value: LocalData<Value>,
 		id: Value.ID,
 		shouldAutoUpdate: Bool = false,
 		animation: Animation? = .default
 	) -> some View {
 		modifier(LocalDataModifier(
-			value: value,
+			value: value.$wrappedValue,
 			id: id,
 			animation: animation,
 			autoUpdate: shouldAutoUpdate ? Value.autoUpdate(for:using:) : nil
 		))
+	}
+}
+
+@propertyWrapper
+struct LocalData<Value: LocalDataStored>: DynamicProperty {
+	@State fileprivate(set) var wrappedValue: Value?
+	
+	var projectedValue: Self { self }
+	
+	init(wrappedValue: Value?) {
+		self._wrappedValue = .init(initialValue: wrappedValue)
 	}
 }
 

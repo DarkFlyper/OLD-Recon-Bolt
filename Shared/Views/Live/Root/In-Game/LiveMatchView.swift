@@ -5,7 +5,6 @@ struct LiveMatchView: View {
 	let gameInfo: LiveGameInfo
 	let userID: User.ID
 	
-	
 	var body: some View {
 		ScrollView {
 			VStack(spacing: 0) {
@@ -71,8 +70,8 @@ struct LiveMatchView: View {
 		let player: LiveGameInfo.PlayerInfo
 		let ownPlayer: LiveGameInfo.PlayerInfo
 		
-		@State var playerUser: User?
-		@State var summary: CareerSummary?
+		@LocalData var playerUser: User?
+		@LocalData var summary: CareerSummary?
 		@Environment(\.assets) private var assets
 		
 		var body: some View {

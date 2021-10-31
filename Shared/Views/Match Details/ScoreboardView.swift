@@ -46,7 +46,7 @@ struct ScoreboardRowView: View {
 	let data: MatchViewData
 	@Binding var highlight: PlayerHighlightInfo
 	
-	@State private var summary: CareerSummary?
+	@LocalData private var summary: CareerSummary?
 	
 	var body: some View {
 		let divider = Rectangle()

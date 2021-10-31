@@ -5,10 +5,10 @@ import HandyOperators
 struct MatchListView: View {
 	let userID: User.ID
 	
-	@State var user: User?
-	@State var matchList: MatchList?
-	@State var summary: CareerSummary?
-	@State var identity: Player.Identity?
+	@LocalData var user: User?
+	@LocalData var matchList: MatchList?
+	@LocalData var summary: CareerSummary?
+	@LocalData var identity: Player.Identity?
 	@State var shouldShowUnranked = true
 	
 	@Environment(\.valorantLoad) private var load

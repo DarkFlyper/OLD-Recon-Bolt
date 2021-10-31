@@ -7,7 +7,7 @@ struct MatchCell: View {
 	let match: CompetitiveUpdate
 	let userID: User.ID
 	
-	@State var matchDetails: MatchDetails?
+	@LocalData var matchDetails: MatchDetails?
 	
 	@Environment(\.valorantLoad) private var load
 	

@@ -97,6 +97,7 @@ struct CompetitiveSummaryCell_Previews: PreviewProvider {
 	
 	static var previews: some View {
 		CompetitiveSummaryCell(summary: PreviewData.summary)
+			.buttonStyle(.navigationLinkPreview)
 			.inEachColorScheme()
 			.previewLayout(.sizeThatFits)
 		

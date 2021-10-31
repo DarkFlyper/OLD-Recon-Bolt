@@ -115,8 +115,8 @@ struct AgentSelectView: View {
 		let player: LivePregameInfo.PlayerInfo
 		let userID: User.ID
 		
-		@State var playerUser: User?
-		@State var summary: CareerSummary?
+		@LocalData var playerUser: User?
+		@LocalData var summary: CareerSummary?
 		@Environment(\.assets) private var assets
 		
 		private let iconSize = 48.0

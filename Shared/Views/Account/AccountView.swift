@@ -5,7 +5,7 @@ struct AccountView: View {
 	@ObservedObject var dataStore: ClientDataStore
 	@ObservedObject var assetManager: AssetManager
 	
-	@State var user: User?
+	@LocalData var user: User?
 	
 	var body: some View {
 		ScrollView {

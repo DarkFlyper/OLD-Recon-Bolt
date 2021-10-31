@@ -4,9 +4,9 @@ import ValorantAPI
 struct UserCell: View {
 	let userID: User.ID
 	@Binding var isSelected: Bool
-	@State var user: User?
-	@State var identity: Player.Identity?
-	@State var summary: CareerSummary?
+	@LocalData var user: User?
+	@LocalData var identity: Player.Identity?
+	@LocalData var summary: CareerSummary?
 	
 	var body: some View {
 		let artworkSize = 64.0
@@ -68,6 +68,7 @@ struct UserCell_Previews: PreviewProvider {
 				summary: PreviewData.summary
 			)
 		}
+		.buttonStyle(.navigationLinkPreview)
 		.padding()
 		.inEachColorScheme()
 		.frame(width: 400)

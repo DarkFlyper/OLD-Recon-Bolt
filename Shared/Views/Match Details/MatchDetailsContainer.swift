@@ -5,7 +5,7 @@ struct MatchDetailsContainer: View {
 	let matchID: Match.ID
 	let userID: User.ID
 	
-	@State private var details: MatchDetails?
+	@LocalData private var details: MatchDetails?
 	
 	var body: some View {
 		Group {
