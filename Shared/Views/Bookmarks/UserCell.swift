@@ -55,9 +55,7 @@ struct UserCell_Previews: PreviewProvider {
 		Group {
 			UserCell(
 				userID: PreviewData.userID,
-				isSelected: .constant(false),
-				user: PreviewData.user,
-				identity: PreviewData.userIdentity
+				isSelected: .constant(false)
 			)
 			
 			UserCell(
@@ -67,6 +65,7 @@ struct UserCell_Previews: PreviewProvider {
 				identity: PreviewData.userIdentity,
 				summary: PreviewData.summary
 			)
+			.lockingLocalData()
 		}
 		.buttonStyle(.navigationLinkPreview)
 		.padding()

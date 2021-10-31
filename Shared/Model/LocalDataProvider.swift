@@ -25,6 +25,21 @@ extension View {
 			autoUpdate: shouldAutoUpdate ? Value.autoUpdate(for:using:) : nil
 		))
 	}
+	
+	func lockingLocalData() -> some View {
+		self.environment(\.isLocalDataLocked, true)
+	}
+}
+
+extension EnvironmentValues {
+	var isLocalDataLocked: Bool {
+		get { self[Key.self] }
+		set { self[Key.self] = newValue }
+	}
+	
+	private enum Key: EnvironmentKey {
+		static let defaultValue = false
+	}
 }
 
 @propertyWrapper
@@ -45,10 +60,12 @@ private struct LocalDataModifier<Value: LocalDataStored>: ViewModifier {
 	var autoUpdate: ((Value.ID, ValorantClient) async throws -> Void)? = nil
 	
 	@State private var token: (id: Value.ID, AnyCancellable)? = nil
+	@Environment(\.isLocalDataLocked) var isLocalDataLocked
 	
 	func body(content: Content) -> some View {
 		content
 			.task(id: id) {
+				guard !isLocalDataLocked else { return }
 				if let token = token, token.id == id { return }
 				let cancellable = LocalDataProvider.shared[keyPath: Value.managerPath]
 					.objectPublisher(for: id)
@@ -60,7 +77,10 @@ private struct LocalDataModifier<Value: LocalDataStored>: ViewModifier {
 					}
 				token = (id, cancellable)
 			}
-			.valorantLoadTask(id: id) { try await autoUpdate?(id, $0) }
+			.valorantLoadTask(id: id) {
+				guard !isLocalDataLocked else { return }
+				try await autoUpdate?(id, $0)
+			}
 	}
 }
 
