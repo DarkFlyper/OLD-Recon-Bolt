@@ -21,6 +21,7 @@ struct LiveGameContainer: View {
 				guard let playerIDs = details?.playerIDs else { return }
 				try await $0.fetchUsers(for: playerIDs)
 			}
+			.task { await refresh() }
 			.alert(
 				"Game Ended!",
 				isPresented: $isShowingEndedAlert
@@ -50,7 +51,7 @@ struct LiveGameContainer: View {
 		case .liveGame(let liveGameInfo)?:
 			LiveMatchView(gameInfo: liveGameInfo, userID: userID)
 		case nil:
-			EmptyView()
+			ProgressView()
 		}
 	}
 	
