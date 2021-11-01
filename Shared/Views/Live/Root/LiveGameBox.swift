@@ -25,20 +25,14 @@ struct LiveGameBox: View {
 				Text("Currently \(activeMatch.inPregame ? "in agent select" : "in-game").")
 				
 				Group {
-					if activeMatch.inPregame {
-						NavigationLink {
-							LiveGameContainer(userID: userID, activeMatch: activeMatch)
-						} label: {
-							HStack {
+					NavigationLink {
+						LiveGameContainer(userID: userID, activeMatch: activeMatch)
+					} label: {
+						HStack {
+							if activeMatch.inPregame {
 								Image(systemName: "person.fill.viewfinder")
 								Text("Agent Select")
-							}
-						}
-					} else {
-						NavigationLink {
-							LiveGameContainer(userID: userID, activeMatch: activeMatch)
-						} label: {
-							HStack {
+							} else {
 								Image(systemName: "list.bullet.below.rectangle")
 								Text("Match Details")
 							}

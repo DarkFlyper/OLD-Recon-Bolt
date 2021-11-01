@@ -7,8 +7,8 @@ struct LiveGameContainer: View {
 	@State var activeMatch: ActiveMatch
 	@State var details: Details?
 	
-	@State private var hasEnded = false
 	@State private var isShowingEndedAlert = false
+	@State private var refreshInterval: TimeInterval = 1
 	
 	@Environment(\.valorantLoad) private var load
 	@Environment(\.scenePhase) private var scenePhase
@@ -21,7 +21,12 @@ struct LiveGameContainer: View {
 				guard let playerIDs = details?.playerIDs else { return }
 				try await $0.fetchUsers(for: playerIDs)
 			}
-			.task { await refresh() }
+			.task {
+				while !Task.isCancelled {
+					await refresh()
+					await Task.sleep(seconds: refreshInterval, tolerance: 0.1 * refreshInterval)
+				}
+			}
 			.alert(
 				"Game Ended!",
 				isPresented: $isShowingEndedAlert
@@ -42,14 +47,13 @@ struct LiveGameContainer: View {
 				userID: userID,
 				inventory: inventory
 			)
-			.task {
-				while !Task.isCancelled, !hasEnded {
-					await refresh()
-					await Task.sleep(seconds: 1, tolerance: 0.1)
-				}
-			}
 		case .liveGame(let liveGameInfo)?:
 			LiveMatchView(gameInfo: liveGameInfo, userID: userID)
+				.toolbar {
+					AsyncButton(action: refresh) {
+						Label("Refresh", systemImage: "arrow.clockwise")
+					}
+				}
 		case nil:
 			ProgressView()
 		}
@@ -65,13 +69,16 @@ struct LiveGameContainer: View {
 						<- LocalDataProvider.dataFetched,
 						try await inventory
 					)
+					refreshInterval = 1
 				} else {
 					details = .liveGame(
 						try await $0.getLiveGameInfo(activeMatch.id)
 						<- LocalDataProvider.dataFetched
 					)
+					refreshInterval = 5
 				}
 			} catch ValorantClient.APIError.badResponseCode(404, _, _) {
+				refreshInterval = 5
 				if let newMatch = try await $0.getActiveMatch() {
 					activeMatch = newMatch
 					await refresh()
@@ -94,3 +101,16 @@ struct LiveGameContainer: View {
 		}
 	}
 }
+
+#if DEBUG
+struct LiveGameContainer_Previews: PreviewProvider {
+	static var previews: some View {
+		LiveGameContainer(
+			userID: PreviewData.userID,
+			activeMatch: .init(id: PreviewData.liveGameInfo.id, inPregame: false),
+			details: .liveGame(PreviewData.liveGameInfo)
+		)
+		.withToolbar()
+	}
+}
+#endif
