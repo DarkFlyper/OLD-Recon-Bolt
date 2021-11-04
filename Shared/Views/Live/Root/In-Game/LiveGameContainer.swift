@@ -71,17 +71,26 @@ struct LiveGameContainer: View {
 					)
 					refreshInterval = 1
 				} else {
-					details = .liveGame(
-						try await $0.getLiveGameInfo(activeMatch.id)
-						<- LocalDataProvider.dataFetched
-					)
-					refreshInterval = 5
+					if case .liveGame(let info) = details, info.id == activeMatch.id {
+						// already fetched—we wouldn't get anything out of fetching again (except progress towards the rate limit lol)
+					} else {
+						details = .liveGame(
+							try await $0.getLiveGameInfo(activeMatch.id)
+							<- LocalDataProvider.dataFetched
+						)
+						refreshInterval = 5
+					}
 				}
-			} catch ValorantClient.APIError.badResponseCode(404, _, _) {
+			} catch
+				ValorantClient.APIError.badResponseCode(404, _, _),
+				ValorantClient.APIError.resourceNotFound
+			{
 				refreshInterval = 5
 				if let newMatch = try await $0.getActiveMatch() {
 					activeMatch = newMatch
 					await refresh()
+				} else {
+					isShowingEndedAlert = true
 				}
 			}
 		}
