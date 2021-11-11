@@ -4,11 +4,10 @@ import HandyOperators
 
 struct LiveGameContainer: View {
 	var userID: User.ID
-	@State var activeMatch: ActiveMatch
+	@State var activeMatch: ActiveMatch?
 	@State var details: Details?
 	
 	@State private var isShowingEndedAlert = false
-	@State private var refreshInterval: TimeInterval = 1
 	
 	@Environment(\.valorantLoad) private var load
 	@Environment(\.scenePhase) private var scenePhase
@@ -16,16 +15,19 @@ struct LiveGameContainer: View {
 	
 	var body: some View {
 		content
-			.onSceneActivation(perform: refresh)
+			.onSceneActivation(perform: refreshActiveMatch)
 			.valorantLoadTask(id: details?.playerIDs) {
 				guard let playerIDs = details?.playerIDs else { return }
 				try await $0.fetchUsers(for: playerIDs)
 			}
 			.task {
 				while !Task.isCancelled {
-					await refresh()
-					await Task.sleep(seconds: refreshInterval, tolerance: 0.1 * refreshInterval)
+					await refreshActiveMatch()
+					await Task.sleep(seconds: 5, tolerance: 1)
 				}
+			}
+			.task(id: activeMatch) {
+				await fetchDetails()
 			}
 			.alert(
 				"Game Ended!",
@@ -40,58 +42,45 @@ struct LiveGameContainer: View {
 		switch details {
 		case .pregame(let pregameInfo, let inventory)?:
 			AgentSelectView(
-				pregameInfo: Binding(
-					get: { pregameInfo },
-					set: { details = .pregame($0, inventory) }
-				),
 				userID: userID,
-				inventory: inventory
+				inventory: inventory,
+				pregameInfo: pregameInfo
 			)
+			.id(pregameInfo.id)
 		case .liveGame(let liveGameInfo)?:
 			LiveMatchView(gameInfo: liveGameInfo, userID: userID)
-				.toolbar {
-					AsyncButton(action: refresh) {
-						Label("Refresh", systemImage: "arrow.clockwise")
-					}
-				}
 		case nil:
 			ProgressView()
 		}
 	}
 	
-	func refresh() async {
+	func fetchDetails() async {
 		await load {
-			do {
-				if activeMatch.inPregame {
-					async let inventory = $0.getInventory(for: userID)
-					details = .pregame(
-						try await $0.getLivePregameInfo(activeMatch.id)
-						<- LocalDataProvider.dataFetched,
-						try await inventory
-					)
-					refreshInterval = 1
-				} else {
-					if case .liveGame(let info) = details, info.id == activeMatch.id {
-						// already fetched—we wouldn't get anything out of fetching again (except progress towards the rate limit lol)
-					} else {
-						details = .liveGame(
-							try await $0.getLiveGameInfo(activeMatch.id)
-							<- LocalDataProvider.dataFetched
-						)
-						refreshInterval = 5
-					}
-				}
-			} catch
-				ValorantClient.APIError.badResponseCode(404, _, _),
-				ValorantClient.APIError.resourceNotFound
-			{
-				refreshInterval = 5
-				if let newMatch = try await $0.getActiveMatch() {
-					activeMatch = newMatch
-					await refresh()
-				} else {
-					isShowingEndedAlert = true
-				}
+			guard let activeMatch = activeMatch else { return }
+			if activeMatch.inPregame {
+				async let inventory = $0.getInventory(for: userID)
+				details = .pregame(
+					try await $0.getLivePregameInfo(activeMatch.id)
+					<- LocalDataProvider.dataFetched,
+					try await inventory
+				)
+			} else {
+				details = .liveGame(
+					try await $0.getLiveGameInfo(activeMatch.id)
+					<- LocalDataProvider.dataFetched
+				)
+			}
+		}
+	}
+	
+	func refreshActiveMatch() async {
+		await load {
+			if let newMatch = try await $0.getActiveMatch() {
+				isShowingEndedAlert = false
+				activeMatch = newMatch
+			} else {
+				isShowingEndedAlert = true
+				activeMatch = nil
 			}
 		}
 	}
@@ -120,6 +109,7 @@ struct LiveGameContainer_Previews: PreviewProvider {
 			details: .liveGame(PreviewData.liveGameInfo)
 		)
 		.withToolbar()
+		.inEachColorScheme()
 	}
 }
 #endif

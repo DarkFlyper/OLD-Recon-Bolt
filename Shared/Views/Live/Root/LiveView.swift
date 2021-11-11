@@ -68,7 +68,7 @@ struct LiveView: View {
 	}
 }
 
-struct ActiveMatch {
+struct ActiveMatch: Hashable {
 	var id: Match.ID
 	var inPregame: Bool
 }

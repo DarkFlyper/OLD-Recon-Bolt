@@ -2,9 +2,12 @@ import SwiftUI
 import ValorantAPI
 
 struct AgentSelectView: View {
-	@Binding var pregameInfo: LivePregameInfo
 	let userID: User.ID
 	let inventory: Inventory
+	@State var pregameInfo: LivePregameInfo
+	@State var hasEnded = false
+	
+	@Environment(\.valorantLoad) private var load
 	
 	var body: some View {
 		ScrollView {
@@ -46,12 +49,32 @@ struct AgentSelectView: View {
 				}
 			}
 		}
+		.disabled(hasEnded)
 		.overlay(alignment: .top) {
 			infoBox
 				.padding()
 		}
 		.navigationTitle("Agent Select")
 		.navigationBarTitleDisplayMode(.inline)
+		.task {
+			while !Task.isCancelled, !hasEnded {
+				await refresh()
+				await Task.sleep(seconds: 1, tolerance: 0.1)
+			}
+		}
+	}
+	
+	func refresh() async {
+		await load {
+			do {
+				pregameInfo = try await $0.getLivePregameInfo(pregameInfo.id)
+			} catch
+				ValorantClient.APIError.badResponseCode(404, _, _),
+				ValorantClient.APIError.resourceNotFound
+			{
+				hasEnded = true
+			}
+		}
 	}
 	
 	@ViewBuilder
@@ -205,9 +228,9 @@ struct AgentSelectView: View {
 struct AgentSelectView_Previews: PreviewProvider {
 	static var previews: some View {
 		AgentSelectView(
-			pregameInfo: .constant(PreviewData.pregameInfo),
 			userID: PreviewData.userID,
-			inventory: PreviewData.inventory
+			inventory: PreviewData.inventory,
+			pregameInfo: PreviewData.pregameInfo
 		)
 		.navigationTitle("Agent Select")
 		.withToolbar(allowLargeTitles: false)
