@@ -156,8 +156,6 @@
 		B9DCF9AC2642F7A100C39EC4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9DCF9AA2642F7A100C39EC4 /* Preview Assets.xcassets */; };
 		B9DCF9AE2642F8FD00C39EC4 /* AssetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DCF9AD2642F8FD00C39EC4 /* AssetManager.swift */; };
 		B9DCF9AF2642F8FD00C39EC4 /* AssetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DCF9AD2642F8FD00C39EC4 /* AssetManager.swift */; };
-		B9E12B0C25BBD57D008E1E77 /* Optional+Functional.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E12B0B25BBD57D008E1E77 /* Optional+Functional.swift */; };
-		B9E12B0D25BBD57D008E1E77 /* Optional+Functional.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E12B0B25BBD57D008E1E77 /* Optional+Functional.swift */; };
 		B9E43DA2265DB94C00F59E35 /* MatchViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E43DA1265DB94C00F59E35 /* MatchViewData.swift */; };
 		B9E43DA3265DB94C00F59E35 /* MatchViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E43DA1265DB94C00F59E35 /* MatchViewData.swift */; };
 		B9EB880E26968EE000D38358 /* SeasonDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EB880D26968EE000D38358 /* SeasonDecoding.swift */; };
@@ -325,7 +323,6 @@
 		B9DCF9A62642E0EC00C39EC4 /* ScoreboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreboardView.swift; sourceTree = "<group>"; };
 		B9DCF9AA2642F7A100C39EC4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B9DCF9AD2642F8FD00C39EC4 /* AssetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetManager.swift; sourceTree = "<group>"; };
-		B9E12B0B25BBD57D008E1E77 /* Optional+Functional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Functional.swift"; sourceTree = "<group>"; };
 		B9E43DA1265DB94C00F59E35 /* MatchViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewData.swift; sourceTree = "<group>"; };
 		B9EB880D26968EE000D38358 /* SeasonDecoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonDecoding.swift; sourceTree = "<group>"; };
 		B9EE0002267EDCB100C08119 /* LocalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalData.swift; sourceTree = "<group>"; };
@@ -542,7 +539,6 @@
 			children = (
 				B941B6DD25A7BC3800F675C1 /* View+Styling.swift */,
 				B9CF2E6125A81B48004A1458 /* UnifiedStyles.swift */,
-				B9E12B0B25BBD57D008E1E77 /* Optional+Functional.swift */,
 				B94091B225D09DF900EE5DF2 /* SwiftUI+CrossPlatform.swift */,
 				B9C97DC6263CADFC001E4D1B /* ValorantAPI+Mock.swift */,
 				B9EE6E702659D30A007E28B5 /* Swift+Helpers.swift */,
@@ -982,7 +978,6 @@
 				B9F07CBA26474F4E006CD4F5 /* MapAssets.swift in Sources */,
 				B9C97DC7263CADFC001E4D1B /* ValorantAPI+Mock.swift in Sources */,
 				B90B4B5E267C223D00CACB95 /* MapImage.swift in Sources */,
-				B9E12B0C25BBD57D008E1E77 /* Optional+Functional.swift in Sources */,
 				B95D30A726CE888400829BB6 /* RoundData.swift in Sources */,
 				B9485F87264B5BD700AC3456 /* AssetImage.swift in Sources */,
 				B9EE6E712659D30A007E28B5 /* Swift+Helpers.swift in Sources */,
@@ -1079,7 +1074,6 @@
 				B9F07CBB26474F4E006CD4F5 /* MapAssets.swift in Sources */,
 				B9C97DC8263CADFC001E4D1B /* ValorantAPI+Mock.swift in Sources */,
 				B90B4B5F267C223D00CACB95 /* MapImage.swift in Sources */,
-				B9E12B0D25BBD57D008E1E77 /* Optional+Functional.swift in Sources */,
 				B9485F88264B5BD700AC3456 /* AssetImage.swift in Sources */,
 				B9EE6E722659D30A007E28B5 /* Swift+Helpers.swift in Sources */,
 				B91D3DA526C8492F007D18B8 /* WeaponAssets.swift in Sources */,
