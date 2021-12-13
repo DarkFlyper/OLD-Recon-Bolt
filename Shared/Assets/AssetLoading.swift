@@ -10,6 +10,7 @@ extension AssetClient {
 		async let maps = getMapInfo()
 		async let agents = getAgentInfo()
 		async let missions = getMissionInfo()
+		async let contracts = getContractInfo()
 		async let gameModes = getGameModeInfo()
 		async let objectives = getObjectiveInfo()
 		async let playerCards = getPlayerCardInfo()
@@ -22,6 +23,7 @@ extension AssetClient {
 			maps: .init(values: maps),
 			agents: .init(values: agents),
 			missions: .init(values: missions),
+			contracts: .init(values: contracts),
 			gameModes: .init(values: gameModes, keyedBy: { $0.gameID() }), // riot doesn't exactly seem to know the word "consistency"
 			objectives: .init(values: objectives),
 			playerCards: .init(values: playerCards),

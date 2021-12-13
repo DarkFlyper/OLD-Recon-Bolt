@@ -122,6 +122,8 @@
 		B96A0CAE265B0FB500844674 /* ObjectiveAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96A0CAC265B0FB500844674 /* ObjectiveAssets.swift */; };
 		B9741478266F18A800892B5F /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9741477266F18A800892B5F /* String+Localization.swift */; };
 		B9741479266F18A800892B5F /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9741477266F18A800892B5F /* String+Localization.swift */; };
+		B9766BB72750339700127FF2 /* ContractAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9766BB62750339700127FF2 /* ContractAssets.swift */; };
+		B9766BB82750339700127FF2 /* ContractAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9766BB62750339700127FF2 /* ContractAssets.swift */; };
 		B989466B26860D8A00C8059A /* AsyncButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B989466A26860D8A00C8059A /* AsyncButton.swift */; };
 		B989466C26860D8A00C8059A /* AsyncButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B989466A26860D8A00C8059A /* AsyncButton.swift */; };
 		B98E4705269B40DB003C9088 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98E4704269B40DB003C9088 /* CircularProgressView.swift */; };
@@ -306,6 +308,7 @@
 		B96A0CA9265AE32200844674 /* MissionAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionAssets.swift; sourceTree = "<group>"; };
 		B96A0CAC265B0FB500844674 /* ObjectiveAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectiveAssets.swift; sourceTree = "<group>"; };
 		B9741477266F18A800892B5F /* String+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
+		B9766BB62750339700127FF2 /* ContractAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractAssets.swift; sourceTree = "<group>"; };
 		B989466A26860D8A00C8059A /* AsyncButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncButton.swift; sourceTree = "<group>"; };
 		B98E4704269B40DB003C9088 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		B99263E6272CFE230032C8BE /* LiveGameContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveGameContainer.swift; sourceTree = "<group>"; };
@@ -564,6 +567,7 @@
 				B9F07CB926474F4E006CD4F5 /* MapAssets.swift */,
 				B9485F83264B1DD300AC3456 /* AgentAssets.swift */,
 				B96A0CA9265AE32200844674 /* MissionAssets.swift */,
+				B9766BB62750339700127FF2 /* ContractAssets.swift */,
 				B96A0CAC265B0FB500844674 /* ObjectiveAssets.swift */,
 				B90B4B57267C167B00CACB95 /* PlayerCardAssets.swift */,
 				B90B4B5A267C177D00CACB95 /* PlayerTitleAssets.swift */,
@@ -953,6 +957,7 @@
 				B941B65825A5BC8A00F675C1 /* ContentView.swift in Sources */,
 				B9F66ACE266DC31E008560FD /* AccountView.swift in Sources */,
 				B963C4792695101C0071E14A /* PlayerIdentityCell.swift in Sources */,
+				B9766BB72750339700127FF2 /* ContractAssets.swift in Sources */,
 				B9DCF9A72642E0EC00C39EC4 /* ScoreboardView.swift in Sources */,
 				B95D30AD26CE898C00829BB6 /* EventTimeline.swift in Sources */,
 				B92DC20126A33C3600200A01 /* ActRankView.swift in Sources */,
@@ -1022,6 +1027,7 @@
 				B9F65C4F2651EDA500C9C34A /* DynamicallyStroked.swift in Sources */,
 				B9EE0004267EDCB100C08119 /* LocalData.swift in Sources */,
 				B9DCF9AF2642F8FD00C39EC4 /* AssetManager.swift in Sources */,
+				B9766BB82750339700127FF2 /* ContractAssets.swift in Sources */,
 				B9EE6E6F26594374007E28B5 /* KillBreakdownView.swift in Sources */,
 				B941B6E625A7C48300F675C1 /* LoginForm.swift in Sources */,
 				B9131D66266AF6C600E85F46 /* ReferenceView.swift in Sources */,
