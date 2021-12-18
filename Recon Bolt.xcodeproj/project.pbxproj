@@ -81,6 +81,7 @@
 		B941B6E625A7C48300F675C1 /* LoginForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B6E425A7C48300F675C1 /* LoginForm.swift */; };
 		B941B6EC25A7C83700F675C1 /* example_updates.json in Resources */ = {isa = PBXBuildFile; fileRef = B941B6EB25A7C83700F675C1 /* example_updates.json */; };
 		B941B6ED25A7C83700F675C1 /* example_updates.json in Resources */ = {isa = PBXBuildFile; fileRef = B941B6EB25A7C83700F675C1 /* example_updates.json */; };
+		B942C978276E2056006E2FED /* CGeometry in Frameworks */ = {isa = PBXBuildFile; productRef = B942C977276E2056006E2FED /* CGeometry */; };
 		B9485F84264B1DD300AC3456 /* AgentAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9485F83264B1DD300AC3456 /* AgentAssets.swift */; };
 		B9485F85264B1DD300AC3456 /* AgentAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9485F83264B1DD300AC3456 /* AgentAssets.swift */; };
 		B9485F87264B5BD700AC3456 /* AssetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9485F86264B5BD700AC3456 /* AssetImage.swift */; };
@@ -384,6 +385,7 @@
 			files = (
 				B9C97DCE263CB0F8001E4D1B /* ValorantAPI in Frameworks */,
 				B9EE6E772659D6ED007E28B5 /* Algorithms in Frameworks */,
+				B942C978276E2056006E2FED /* CGeometry in Frameworks */,
 				B941B6D425A79A6A00F675C1 /* KeychainSwift in Frameworks */,
 				B9CF2E7025A81F5D004A1458 /* SwiftUIMissingPieces in Frameworks */,
 				B941B69F25A6300100F675C1 /* UserDefault in Frameworks */,
@@ -773,6 +775,7 @@
 				B9CF2E6F25A81F5D004A1458 /* SwiftUIMissingPieces */,
 				B9C97DCD263CB0F8001E4D1B /* ValorantAPI */,
 				B9EE6E762659D6ED007E28B5 /* Algorithms */,
+				B942C977276E2056006E2FED /* CGeometry */,
 			);
 			productName = "Valorant Viewer (macOS)";
 			productReference = B941B65225A5BC8A00F675C1 /* Recon Bolt.app */;
@@ -1298,7 +1301,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				OTHER_SWIFT_FLAGS = "-Xfrontend -warn-long-expression-type-checking=200";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.juliand665.Valorant-Viewer";
 				PRODUCT_NAME = "Recon Bolt";
@@ -1325,7 +1328,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.juliand665.Valorant-Viewer";
 				PRODUCT_NAME = "Recon Bolt";
 				SDKROOT = macosx;
@@ -1494,6 +1497,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B941B6CE25A79A6400F675C1 /* XCRemoteSwiftPackageReference "keychain-swift" */;
 			productName = KeychainSwift;
+		};
+		B942C977276E2056006E2FED /* CGeometry */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CGeometry;
 		};
 		B9C97DCB263CB0D6001E4D1B /* ValorantAPI */ = {
 			isa = XCSwiftPackageProductDependency;
