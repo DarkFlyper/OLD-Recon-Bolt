@@ -7,7 +7,7 @@ struct LiveGameContainer: View {
 	@State var activeMatch: ActiveMatch?
 	@State var details: Details?
 	
-	@State private var isShowingEndedAlert = false
+	@State private var hasEnded = false
 	
 	@Environment(\.valorantLoad) private var load
 	@Environment(\.scenePhase) private var scenePhase
@@ -29,11 +29,8 @@ struct LiveGameContainer: View {
 			.task(id: activeMatch) {
 				await fetchDetails()
 			}
-			.alert(
-				"Game Ended!",
-				isPresented: $isShowingEndedAlert
-			) {
-				Button("Exit") { dismiss() }
+			.task(id: hasEnded) {
+				if hasEnded { dismiss() }
 			}
 	}
 	
@@ -76,10 +73,10 @@ struct LiveGameContainer: View {
 	func refreshActiveMatch() async {
 		await load {
 			if let newMatch = try await $0.getActiveMatch() {
-				isShowingEndedAlert = false
+				hasEnded = false
 				activeMatch = newMatch
 			} else {
-				isShowingEndedAlert = true
+				hasEnded = true
 				activeMatch = nil
 			}
 		}
