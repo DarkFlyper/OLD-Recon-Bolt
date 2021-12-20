@@ -8,6 +8,7 @@ struct LiveGameBox: View {
 	var refreshAction: () async -> Void
 	
 	@State var isAutoRefreshing = false
+	@State var shownMatch: ActiveMatch?
 	
 	var body: some View {
 		RefreshableBox(title: "Live Game", refreshAction: refreshAction) {
@@ -15,6 +16,10 @@ struct LiveGameBox: View {
 			
 			content
 				.padding(16)
+		}
+		.onChange(of: activeMatch) { newMatch in
+			guard isAutoRefreshing, activeMatch?.id != newMatch?.id else { return }
+			shownMatch = newMatch
 		}
 	}
 	
@@ -25,7 +30,7 @@ struct LiveGameBox: View {
 				Text("Currently \(activeMatch.inPregame ? "in agent select" : "in-game").")
 				
 				Group {
-					NavigationLink {
+					NavigationLink(tag: activeMatch, selection: $shownMatch) {
 						LiveGameContainer(userID: userID, activeMatch: activeMatch)
 					} label: {
 						HStack {
@@ -51,10 +56,12 @@ struct LiveGameBox: View {
 				
 				HStack(spacing: 10) {
 					if isAutoRefreshing {
-						AutoRefresher(refreshAction: refreshAction)
+						AutoRefresher {
+							await refreshAction()
+						}
 					}
 					
-					Toggle("Auto-Refresh", isOn: $isAutoRefreshing)
+					Toggle("Auto-Refresh & Show", isOn: $isAutoRefreshing)
 				}
 			}
 		}
