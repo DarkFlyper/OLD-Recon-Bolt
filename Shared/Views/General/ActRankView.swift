@@ -17,7 +17,8 @@ struct ActRankView: View {
 		ZStack {
 			let actInfo = assets?.seasons.acts[seasonInfo.seasonID]
 			let border = actInfo?.borders.last { seasonInfo.winCount >= $0.winsRequired }
-			if let border = border, let winsByTier = seasonInfo.winsByTier {
+			if let border = border {
+				let winsByTier = seasonInfo.winsByTier ?? [:]
 				let container = isIcon
 					? (border.icon ?? actInfo?.borders.lazy.compactMap(\.icon).first) // show icon even when not qualified for border
 					: border.fullImage

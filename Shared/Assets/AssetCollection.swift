@@ -17,7 +17,7 @@ struct AssetCollection: Codable {
 	let seasons: SeasonCollection
 	
 	var images: Set<AssetImage> {
-		Set()
+		Set<AssetImage>()
 			.union(maps.values.flatMap(\.images))
 			.union(agents.values.flatMap(\.images))
 			.union(contracts.values.flatMap(\.images))

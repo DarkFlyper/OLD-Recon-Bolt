@@ -20,13 +20,11 @@ struct LiveView: View {
 			.padding()
 			.compositingGroup() // avoid shadows overlapping other boxes
 			.shadow(color: .black.opacity(0.1), radius: 20, x: 0, y: 10)
-			// TODO: move back out when this SwiftUI bug is fixed (FB9399492)
-			.background(Color(.systemGroupedBackground).padding(-1000))
 		}
 		.refreshable(action: refresh)
 		.task(refresh)
 		.onSceneActivation(perform: refresh)
-		//.background(Color(.systemGroupedBackground))
+		.background(Color(.systemGroupedBackground))
 		.navigationTitle("Live")
 	}
 	
