@@ -8,7 +8,7 @@ enum PreviewData {
 	static let userID = Player.ID("3fa8598d-066e-5bdb-998c-74c015c5dba5")!
 	static let user = User(id: userID, gameName: "Julian", tagLine: "665")
 	static let userIdentity = pregameInfo.team.players
-		.first { $0.id == userID }!
+		.firstElement(withID: userID)!
 		.identity
 	
 	static let singleMatch = loadJSON(named: "example_match", as: MatchDetails.self)

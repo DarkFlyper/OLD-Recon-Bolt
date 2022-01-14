@@ -107,7 +107,7 @@ struct MatchCell: View {
 				
 				Spacer()
 				
-				let myself = matchDetails?.players.first { $0.id == userID }!
+				let myself = matchDetails?.players.firstElement(withID: userID)!
 				if let myself = myself {
 					AgentImage.killfeedPortrait(myself.agentID)
 						.scaleEffect(x: -1)
@@ -132,7 +132,7 @@ struct MatchCell: View {
 	@ViewBuilder
 	private var detailsInfo: some View {
 		if let matchDetails = matchDetails {
-			let myself = matchDetails.players.first { $0.id == userID }!
+			let myself = matchDetails.players.firstElement(withID: userID)!
 			
 			VStack {
 				ScoreSummaryView(

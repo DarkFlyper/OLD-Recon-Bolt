@@ -43,6 +43,12 @@ extension Collection where Element: Identifiable {
 	}
 }
 
+extension Sequence where Element: Identifiable {
+	func firstElement(withID id: Element.ID) -> Element? {
+		first { $0.id == id }
+	}
+}
+
 extension Collection where Element: RandomAccessCollection {
 	func transposed() -> [[Element.Element]] {
 		guard let firstRow = first else { return [] }

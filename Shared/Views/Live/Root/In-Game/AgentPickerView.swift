@@ -14,7 +14,7 @@ struct AgentPickerView: View {
 	@Environment(\.assets) private var assets
 	
 	var body: some View {
-		let ownPlayer = pregameInfo.team.players.first { $0.id == userID }!
+		let ownPlayer = pregameInfo.team.players.firstElement(withID: userID)!
 		let gameModeInfo = assets?.gameModes[pregameInfo.modeID]
 		let isVotingBased = gameModeInfo?.gameRuleOverride(for: .majorityVoteAgents) == true
 		let takenAgents = isVotingBased ? [] : Set(

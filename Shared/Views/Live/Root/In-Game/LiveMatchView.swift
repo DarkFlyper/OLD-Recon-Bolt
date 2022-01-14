@@ -42,7 +42,7 @@ struct LiveMatchView: View {
 	
 	@ViewBuilder
 	private var playerList: some View {
-		let ownPlayer = gameInfo.players.first { $0.id == userID }!
+		let ownPlayer = gameInfo.players.firstElement(withID: userID)!
 		let teams = Dictionary(grouping: gameInfo.players, by: \.teamID)
 		let allyTeam = teams[ownPlayer.teamID]!
 		let enemyTeams = teams
