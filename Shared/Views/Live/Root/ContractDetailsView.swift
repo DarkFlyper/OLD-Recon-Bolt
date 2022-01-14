@@ -24,30 +24,13 @@ struct ContractDetailsView: View {
 				.frame(maxWidth: .infinity, alignment: .leading)
 			
 			GroupBox {
+				// wish we could use guard statements…
 				if let activeContract = details.activeSpecialContract {
 					if let info = assets?.contracts[activeContract] {
-						VStack(spacing: 8) {
-							if
-								info.content.relationType == .agent,
-								let rawID = info.content.relationID,
-								let id = Agent.ID(rawID)
-							{
-								let shape = RoundedRectangle(cornerRadius: 8, style: .continuous)
-								AgentImage.icon(id)
-									.background(Color(.lightGray).opacity(0.5))
-									.clipShape(shape)
-									.overlay { shape.stroke(Color(.lightGray)) }
-									.frame(height: 64)
-							}
-							
-							Text(info.displayName)
-								.fontWeight(.semibold)
-						}
-						
-						if let contract = details.contracts.first { $0.id == activeContract } {
-							Divider()
-							
-							details(for: contract, using: info)
+						if let contract = details.contracts.firstElement(withID: activeContract) {
+							overview(for: ContractData(contract: contract, info: info))
+						} else {
+							Text("Missing progress for contract!")
 						}
 					} else {
 						Text("Unknown contract!")
@@ -56,70 +39,56 @@ struct ContractDetailsView: View {
 					Text("No contract active!")
 						.foregroundColor(.secondary)
 				}
+				
+				Divider()
+				
+				NavigationLink(destination: ContractChooser(details: details)) {
+					HStack {
+						Text("Switch Contract")
+						Spacer()
+						Image(systemName: "chevron.right")
+					}
+				}
 			}
 		}
 		.padding()
 	}
 	
 	@ViewBuilder
-	func details(for contract: Contract, using info: ContractInfo) -> some View {
-		let levels = info.content.chapters.flatMap(\.levels)
-		let levelNumber = contract.levelReached
-		
-		VStack(spacing: 8) {
-			Text("Current Level (out of \(levels.count))")
-				.font(.subheadline.weight(.medium))
-			
+	func overview(for data: ContractData) -> some View {
+		VStack(alignment: .leading) {
 			HStack {
-				if levelNumber < levels.count {
-					let nextLevel = levels[levelNumber]
-					ZStack {
-						levelProgressView(
-							fractionComplete: Double(contract.progressionTowardsNextLevel) / Double(nextLevel.xp)
-						)
-						
-						Text("\(levelNumber)")
-							.font(.footnote)
-					}
-					
-					Text("\(contract.progressionTowardsNextLevel) / \(nextLevel.xp) XP")
-						.font(.footnote)
-				} else {
-					Text("Max level reached!")
-						.foregroundColor(.secondary)
+				if let id = data.info.content.agentID {
+					SquareAgentIcon(agentID: id)
+						.frame(height: 64)
 				}
+				
+				ContractLevelProgressView(data: data)
+				
+				VStack(alignment: .leading) {
+					Text(data.info.displayName)
+						.fontWeight(.semibold)
+					
+					HStack {
+						if let nextLevel = data.nextLevel {
+							let xpProgress = data.contract.progressionTowardsNextLevel
+							let xpGoal = nextLevel.info.xp
+							
+							Text("\(xpProgress) / \(xpGoal) XP")
+								.font(.footnote)
+								.foregroundColor(.secondary)
+						} else {
+							Text("Max level reached!")
+								.foregroundColor(.secondary)
+						}
+					}
+				}
+				
+				Spacer()
 			}
-		}
-		
-		Divider()
-		
-		VStack(spacing: 8) {
-			let currentXP = contract.progression.totalEarned
-			let totalXP = levels.map(\.xp).reduce(0, +)
-			Text("Overall Progress")
-				.font(.subheadline.weight(.medium))
 			
-			ProgressView(
-				value: Double(currentXP),
-				total: Double(totalXP),
-				label: { EmptyView() },
-				currentValueLabel: { Text("\(currentXP)/\(totalXP) XP") }
-			)
+			ContractProgressBar(data: data)
 		}
-	}
-	
-	@ViewBuilder
-	func levelProgressView(fractionComplete: Double) -> some View {
-		CircularProgressView(lineWidth: 4) {
-			CircularProgressLayer(
-				end: fractionComplete,
-				shouldKnockOutSurroundings: true,
-				color: .accentColor
-			)
-		} base: {
-			Color.gray.opacity(0.25)
-		}
-		.frame(width: 24, height: 24)
 	}
 	
 	@ViewBuilder

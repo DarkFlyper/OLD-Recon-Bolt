@@ -57,6 +57,16 @@
 		B9318367267810CE0099B13C /* AgentSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9318365267810CE0099B13C /* AgentSelectView.swift */; };
 		B9318369267813F00099B13C /* example_pregame.json in Resources */ = {isa = PBXBuildFile; fileRef = B9318368267813EF0099B13C /* example_pregame.json */; };
 		B931836A267813F00099B13C /* example_pregame.json in Resources */ = {isa = PBXBuildFile; fileRef = B9318368267813EF0099B13C /* example_pregame.json */; };
+		B932A0F927911064009FAEE5 /* ContractChooser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B932A0F827911064009FAEE5 /* ContractChooser.swift */; };
+		B932A0FA27911064009FAEE5 /* ContractChooser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B932A0F827911064009FAEE5 /* ContractChooser.swift */; };
+		B932A0FC27912170009FAEE5 /* ContractLevelProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B932A0FB27912170009FAEE5 /* ContractLevelProgressView.swift */; };
+		B932A0FD27912170009FAEE5 /* ContractLevelProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B932A0FB27912170009FAEE5 /* ContractLevelProgressView.swift */; };
+		B932A0FF279121B1009FAEE5 /* SquareAgentIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B932A0FE279121B1009FAEE5 /* SquareAgentIcon.swift */; };
+		B932A100279121B1009FAEE5 /* SquareAgentIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B932A0FE279121B1009FAEE5 /* SquareAgentIcon.swift */; };
+		B932A102279121E2009FAEE5 /* ContractProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B932A101279121E2009FAEE5 /* ContractProgressBar.swift */; };
+		B932A103279121E2009FAEE5 /* ContractProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B932A101279121E2009FAEE5 /* ContractProgressBar.swift */; };
+		B932A10527912208009FAEE5 /* ContractData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B932A10427912208009FAEE5 /* ContractData.swift */; };
+		B932A10627912208009FAEE5 /* ContractData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B932A10427912208009FAEE5 /* ContractData.swift */; };
 		B94091AE25D09D5A00EE5DF2 /* LoadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94091AD25D09D5A00EE5DF2 /* LoadManager.swift */; };
 		B94091AF25D09D5A00EE5DF2 /* LoadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94091AD25D09D5A00EE5DF2 /* LoadManager.swift */; };
 		B94091B325D09DF900EE5DF2 /* SwiftUI+CrossPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94091B225D09DF900EE5DF2 /* SwiftUI+CrossPlatform.swift */; };
@@ -268,6 +278,11 @@
 		B92DC20026A33C3600200A01 /* ActRankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActRankView.swift; sourceTree = "<group>"; };
 		B9318365267810CE0099B13C /* AgentSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentSelectView.swift; sourceTree = "<group>"; };
 		B9318368267813EF0099B13C /* example_pregame.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_pregame.json; sourceTree = "<group>"; };
+		B932A0F827911064009FAEE5 /* ContractChooser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractChooser.swift; sourceTree = "<group>"; };
+		B932A0FB27912170009FAEE5 /* ContractLevelProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractLevelProgressView.swift; sourceTree = "<group>"; };
+		B932A0FE279121B1009FAEE5 /* SquareAgentIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareAgentIcon.swift; sourceTree = "<group>"; };
+		B932A101279121E2009FAEE5 /* ContractProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractProgressBar.swift; sourceTree = "<group>"; };
+		B932A10427912208009FAEE5 /* ContractData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractData.swift; sourceTree = "<group>"; };
 		B9399C3C2671158400411127 /* Protoquest */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Protoquest; path = "../ Packages/Protoquest"; sourceTree = "<group>"; };
 		B9399C3D2671158A00411127 /* ValorantAPI */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ValorantAPI; path = "../ Packages/ValorantAPI"; sourceTree = "<group>"; };
 		B94091AD25D09D5A00EE5DF2 /* LoadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadManager.swift; sourceTree = "<group>"; };
@@ -419,6 +434,11 @@
 				B9F5232E266ED96600DFF8DD /* LiveView.swift */,
 				B90FFF3726B47FFD007BE950 /* LiveGameBox.swift */,
 				B90FFF3D26B4BC57007BE950 /* ContractDetailsView.swift */,
+				B932A10427912208009FAEE5 /* ContractData.swift */,
+				B932A101279121E2009FAEE5 /* ContractProgressBar.swift */,
+				B932A0FB27912170009FAEE5 /* ContractLevelProgressView.swift */,
+				B932A0FE279121B1009FAEE5 /* SquareAgentIcon.swift */,
+				B932A0F827911064009FAEE5 /* ContractChooser.swift */,
 				B90FFF3A26B48288007BE950 /* MissionView.swift */,
 				B90FFF3426B454DC007BE950 /* In-Game */,
 			);
@@ -936,14 +956,17 @@
 				B96845B32665C7B900DC59D2 /* ClientData.swift in Sources */,
 				B9F65C4E2651EDA500C9C34A /* DynamicallyStroked.swift in Sources */,
 				B9EE0003267EDCB100C08119 /* LocalData.swift in Sources */,
+				B932A0FC27912170009FAEE5 /* ContractLevelProgressView.swift in Sources */,
 				B9DCF9AE2642F8FD00C39EC4 /* AssetManager.swift in Sources */,
 				B9EE6E6E26594374007E28B5 /* KillBreakdownView.swift in Sources */,
 				B941B6E525A7C48300F675C1 /* LoginForm.swift in Sources */,
 				B9131D65266AF6C600E85F46 /* ReferenceView.swift in Sources */,
 				B95B1A4C269CE1810080EC81 /* ScoreSummaryView.swift in Sources */,
 				B94091B825D09F0200EE5DF2 /* MatchListView.swift in Sources */,
+				B932A10527912208009FAEE5 /* ContractData.swift in Sources */,
 				B96A0CAD265B0FB500844674 /* ObjectiveAssets.swift in Sources */,
 				B9F65C472651D20200C9C34A /* AssetImageView.swift in Sources */,
+				B932A0FF279121B1009FAEE5 /* SquareAgentIcon.swift in Sources */,
 				B9131D6C266AFA7900E85F46 /* MapInfoView.swift in Sources */,
 				B9C7064E269BC91F00D29226 /* GameModeImage.swift in Sources */,
 				B9741478266F18A800892B5F /* String+Localization.swift in Sources */,
@@ -984,6 +1007,7 @@
 				B90B4B5B267C177D00CACB95 /* PlayerTitleAssets.swift in Sources */,
 				B9F07CB426474E8A006CD4F5 /* AssetClient.swift in Sources */,
 				B9F07CBA26474F4E006CD4F5 /* MapAssets.swift in Sources */,
+				B932A102279121E2009FAEE5 /* ContractProgressBar.swift in Sources */,
 				B9C97DC7263CADFC001E4D1B /* ValorantAPI+Mock.swift in Sources */,
 				B90B4B5E267C223D00CACB95 /* MapImage.swift in Sources */,
 				B95D30A726CE888400829BB6 /* RoundData.swift in Sources */,
@@ -998,6 +1022,7 @@
 				B954A6DB26C8BED200A86CB9 /* WeaponImage.swift in Sources */,
 				B963C47626950FE90071E14A /* RankInfoView.swift in Sources */,
 				B90B4B64267C270500CACB95 /* CompetitiveTierImage.swift in Sources */,
+				B932A0F927911064009FAEE5 /* ContractChooser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1018,6 +1043,7 @@
 				B9131D6A266AFA4C00E85F46 /* MapListView.swift in Sources */,
 				B9EB880F26968EE000D38358 /* SeasonDecoding.swift in Sources */,
 				B9C3499E267AA6DE00BE39B1 /* LiveMatchView.swift in Sources */,
+				B932A100279121B1009FAEE5 /* SquareAgentIcon.swift in Sources */,
 				B90FFF3926B47FFD007BE950 /* LiveGameBox.swift in Sources */,
 				B9F52330266ED96600DFF8DD /* LiveView.swift in Sources */,
 				B95D30AE26CE898C00829BB6 /* EventTimeline.swift in Sources */,
@@ -1037,6 +1063,7 @@
 				B95B1A4D269CE1810080EC81 /* ScoreSummaryView.swift in Sources */,
 				B94091B925D09F0200EE5DF2 /* MatchListView.swift in Sources */,
 				B96A0CAE265B0FB500844674 /* ObjectiveAssets.swift in Sources */,
+				B932A0FD27912170009FAEE5 /* ContractLevelProgressView.swift in Sources */,
 				B9F65C482651D20200C9C34A /* AssetImageView.swift in Sources */,
 				B9131D6D266AFA7900E85F46 /* MapInfoView.swift in Sources */,
 				B9C7064F269BC91F00D29226 /* GameModeImage.swift in Sources */,
@@ -1072,6 +1099,7 @@
 				B9318367267810CE0099B13C /* AgentSelectView.swift in Sources */,
 				B998493026CEC8B00030E83C /* EventMap.swift in Sources */,
 				B90FFF3F26B4BC57007BE950 /* ContractDetailsView.swift in Sources */,
+				B932A10627912208009FAEE5 /* ContractData.swift in Sources */,
 				B91FF85526C7072400D0DFAA /* MagnifiableView.swift in Sources */,
 				B963C4712694FDDA0071E14A /* CompetitiveSummaryCell.swift in Sources */,
 				B90B4B62267C22E700CACB95 /* PlayerCardImage.swift in Sources */,
@@ -1083,6 +1111,7 @@
 				B9F07CBB26474F4E006CD4F5 /* MapAssets.swift in Sources */,
 				B9C97DC8263CADFC001E4D1B /* ValorantAPI+Mock.swift in Sources */,
 				B90B4B5F267C223D00CACB95 /* MapImage.swift in Sources */,
+				B932A103279121E2009FAEE5 /* ContractProgressBar.swift in Sources */,
 				B9485F88264B5BD700AC3456 /* AssetImage.swift in Sources */,
 				B9EE6E722659D30A007E28B5 /* Swift+Helpers.swift in Sources */,
 				B91D3DA526C8492F007D18B8 /* WeaponAssets.swift in Sources */,
@@ -1090,6 +1119,7 @@
 				B9FADF8626A91DC400A0CA15 /* LookupHistory.swift in Sources */,
 				B9EF0F22263CFC870067176A /* MatchDetailsView.swift in Sources */,
 				B90B4B59267C167B00CACB95 /* PlayerCardAssets.swift in Sources */,
+				B932A0FA27911064009FAEE5 /* ContractChooser.swift in Sources */,
 				B96A0CAB265AE32200844674 /* MissionAssets.swift in Sources */,
 				B94C57FB26CB605700CAF257 /* AlwaysPressable.swift in Sources */,
 				B902823526A7A8A9004B1740 /* HenrikAPI.swift in Sources */,

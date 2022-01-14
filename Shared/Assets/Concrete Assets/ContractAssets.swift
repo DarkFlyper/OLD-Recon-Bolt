@@ -36,6 +36,16 @@ struct ContractInfo: AssetItem, Codable, Identifiable {
 		var premiumVPCost: Int?
 		// TODO: premiumRewardScheduleUuid
 		
+		var agentID: Agent.ID? {
+			guard relationType == .agent else { return nil }
+			return relationID.flatMap(Agent.ID.init)
+		}
+		
+		var seasonID: Season.ID? {
+			guard relationType == .season else { return nil }
+			return relationID.flatMap(Season.ID.init)
+		}
+		
 		private enum CodingKeys: String, CodingKey {
 			case relationType
 			case relationID = "relationUuid"
