@@ -1,7 +1,7 @@
 import SwiftUI
 import ValorantAPI
 
-private typealias MissionWithInfo = (mission: Mission, info: MissionInfo?)
+typealias MissionWithInfo = (mission: Mission, info: MissionInfo?)
 
 struct ContractDetailsView: View {
 	var details: ContractDetails
@@ -154,104 +154,6 @@ struct ContractDetailsView: View {
 			// all weeklies have activation dates
 			.filter { $0.activationDate! >= checkpoint }
 			.sorted(on: \.activationDate!)
-	}
-}
-
-private struct CurrentMissionsList: View {
-	var title: String
-	var missions: [MissionWithInfo]
-	var countdownTarget: Date? = nil
-	
-	var body: some View {
-		if !missions.isEmpty {
-			Divider()
-			
-			VStack(spacing: 16) {
-				HStack(alignment: .lastTextBaseline) {
-					Text(title)
-						.font(.headline)
-						.multilineTextAlignment(.leading)
-					
-					Spacer()
-					
-					Group {
-						if let countdownTarget = countdownTarget {
-							CountdownText(target: countdownTarget)
-							Image(systemName: "clock")
-						}
-					}
-					.font(.caption.weight(.medium))
-					.foregroundStyle(.secondary)
-				}
-				
-				GroupBox {
-					ForEach(missions, id: \.mission.id) { mission, missionInfo in
-						if let missionInfo = missionInfo {
-							MissionView(missionInfo: missionInfo, mission: mission)
-						} else {
-							Text("Unknown mission!")
-						}
-					}
-				}
-			}
-			.padding(16)
-		}
-	}
-}
-
-private struct UpcomingMissionsList: View {
-	var title: String
-	var missions: ArraySlice<MissionInfo>
-	@State var isExpanded = false
-	
-	private static let dateFormatter = RelativeDateTimeFormatter()
-	
-	var body: some View {
-		if !missions.isEmpty {
-			Divider()
-			
-			VStack(spacing: 16) {
-				let totalXP = missions.map(\.xpGrant).reduce(0, +)
-				
-				Button {
-					withAnimation { isExpanded.toggle() }
-				} label: {
-					HStack {
-						Image(systemName: "chevron.down")
-							.rotationEffect(.degrees(isExpanded ? 0 : -90))
-						
-						Text("\(missions.count) \(title)")
-							.multilineTextAlignment(.leading)
-						
-						Spacer()
-						
-						Text("+\(totalXP) XP")
-							.font(.caption.weight(.medium))
-							.foregroundStyle(.secondary)
-					}
-					.font(.headline)
-				}
-				
-				if isExpanded {
-					let byActivation = missions.chunked(on: \.activationDate!)
-					ForEach(byActivation, id: \.0) { (date, missions) in
-						GroupBox {
-							Text(date, formatter: Self.dateFormatter)
-								.font(.subheadline.weight(.semibold))
-							
-							Divider()
-							
-							VStack(spacing: 8) {
-								ForEach(missions) {
-									MissionView(missionInfo: $0)
-								}
-							}
-						}
-					}
-				}
-			}
-			.padding(16)
-		}
 	}
 }
 

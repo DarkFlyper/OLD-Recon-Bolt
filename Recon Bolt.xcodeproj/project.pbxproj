@@ -67,6 +67,10 @@
 		B932A103279121E2009FAEE5 /* ContractProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B932A101279121E2009FAEE5 /* ContractProgressBar.swift */; };
 		B932A10527912208009FAEE5 /* ContractData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B932A10427912208009FAEE5 /* ContractData.swift */; };
 		B932A10627912208009FAEE5 /* ContractData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B932A10427912208009FAEE5 /* ContractData.swift */; };
+		B932A109279122B9009FAEE5 /* CurrentMissionsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B932A108279122B9009FAEE5 /* CurrentMissionsList.swift */; };
+		B932A10A279122B9009FAEE5 /* CurrentMissionsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B932A108279122B9009FAEE5 /* CurrentMissionsList.swift */; };
+		B932A10C279122FF009FAEE5 /* UpcomingMissionsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B932A10B279122FF009FAEE5 /* UpcomingMissionsList.swift */; };
+		B932A10D279122FF009FAEE5 /* UpcomingMissionsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B932A10B279122FF009FAEE5 /* UpcomingMissionsList.swift */; };
 		B94091AE25D09D5A00EE5DF2 /* LoadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94091AD25D09D5A00EE5DF2 /* LoadManager.swift */; };
 		B94091AF25D09D5A00EE5DF2 /* LoadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94091AD25D09D5A00EE5DF2 /* LoadManager.swift */; };
 		B94091B325D09DF900EE5DF2 /* SwiftUI+CrossPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94091B225D09DF900EE5DF2 /* SwiftUI+CrossPlatform.swift */; };
@@ -283,6 +287,8 @@
 		B932A0FE279121B1009FAEE5 /* SquareAgentIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareAgentIcon.swift; sourceTree = "<group>"; };
 		B932A101279121E2009FAEE5 /* ContractProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractProgressBar.swift; sourceTree = "<group>"; };
 		B932A10427912208009FAEE5 /* ContractData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractData.swift; sourceTree = "<group>"; };
+		B932A108279122B9009FAEE5 /* CurrentMissionsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentMissionsList.swift; sourceTree = "<group>"; };
+		B932A10B279122FF009FAEE5 /* UpcomingMissionsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMissionsList.swift; sourceTree = "<group>"; };
 		B9399C3C2671158400411127 /* Protoquest */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Protoquest; path = "../ Packages/Protoquest"; sourceTree = "<group>"; };
 		B9399C3D2671158A00411127 /* ValorantAPI */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ValorantAPI; path = "../ Packages/ValorantAPI"; sourceTree = "<group>"; };
 		B94091AD25D09D5A00EE5DF2 /* LoadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadManager.swift; sourceTree = "<group>"; };
@@ -434,12 +440,8 @@
 				B9F5232E266ED96600DFF8DD /* LiveView.swift */,
 				B90FFF3726B47FFD007BE950 /* LiveGameBox.swift */,
 				B90FFF3D26B4BC57007BE950 /* ContractDetailsView.swift */,
-				B932A10427912208009FAEE5 /* ContractData.swift */,
-				B932A101279121E2009FAEE5 /* ContractProgressBar.swift */,
-				B932A0FB27912170009FAEE5 /* ContractLevelProgressView.swift */,
-				B932A0FE279121B1009FAEE5 /* SquareAgentIcon.swift */,
-				B932A0F827911064009FAEE5 /* ContractChooser.swift */,
-				B90FFF3A26B48288007BE950 /* MissionView.swift */,
+				B932A10727912297009FAEE5 /* Contracts */,
+				B932A10E27912322009FAEE5 /* Missions */,
 				B90FFF3426B454DC007BE950 /* In-Game */,
 			);
 			path = Root;
@@ -462,6 +464,28 @@
 				B90FFF3626B47FD9007BE950 /* Root */,
 			);
 			path = Live;
+			sourceTree = "<group>";
+		};
+		B932A10727912297009FAEE5 /* Contracts */ = {
+			isa = PBXGroup;
+			children = (
+				B932A10427912208009FAEE5 /* ContractData.swift */,
+				B932A101279121E2009FAEE5 /* ContractProgressBar.swift */,
+				B932A0FB27912170009FAEE5 /* ContractLevelProgressView.swift */,
+				B932A0F827911064009FAEE5 /* ContractChooser.swift */,
+				B932A0FE279121B1009FAEE5 /* SquareAgentIcon.swift */,
+			);
+			path = Contracts;
+			sourceTree = "<group>";
+		};
+		B932A10E27912322009FAEE5 /* Missions */ = {
+			isa = PBXGroup;
+			children = (
+				B932A10B279122FF009FAEE5 /* UpcomingMissionsList.swift */,
+				B932A108279122B9009FAEE5 /* CurrentMissionsList.swift */,
+				B90FFF3A26B48288007BE950 /* MissionView.swift */,
+			);
+			path = Missions;
 			sourceTree = "<group>";
 		};
 		B94091C925D0ACAC00EE5DF2 /* Views */ = {
@@ -932,6 +956,7 @@
 				B91D3DA126C810E0007D18B8 /* RoundInfoView.swift in Sources */,
 				B9EE6E5F26589EB8007E28B5 /* MatchDetailsContainer.swift in Sources */,
 				B9FADF8B26A91E4700A0CA15 /* LookupCell.swift in Sources */,
+				B932A109279122B9009FAEE5 /* CurrentMissionsList.swift in Sources */,
 				B90B4FB826C5DD8E008A5B5A /* LeaderboardRankView.swift in Sources */,
 				B91D3DA426C8492F007D18B8 /* WeaponAssets.swift in Sources */,
 				B941B6DE25A7BC3800F675C1 /* View+Styling.swift in Sources */,
@@ -995,6 +1020,7 @@
 				B9EE6E5B26589DE1007E28B5 /* MatchDetailsHero.swift in Sources */,
 				B95B1A4F269CE1D10080EC81 /* KDASummaryView.swift in Sources */,
 				B90FFF3E26B4BC57007BE950 /* ContractDetailsView.swift in Sources */,
+				B932A10C279122FF009FAEE5 /* UpcomingMissionsList.swift in Sources */,
 				B9EE6E6226589FAA007E28B5 /* PreviewData.swift in Sources */,
 				B9FB9372269B359900927E03 /* SeasonCollection.swift in Sources */,
 				B9E43DA2265DB94C00F59E35 /* MatchViewData.swift in Sources */,
@@ -1054,6 +1080,7 @@
 				B9168AE72689440B00866F6A /* LocalDataProvider.swift in Sources */,
 				B96845B42665C7B900DC59D2 /* ClientData.swift in Sources */,
 				B9F65C4F2651EDA500C9C34A /* DynamicallyStroked.swift in Sources */,
+				B932A10D279122FF009FAEE5 /* UpcomingMissionsList.swift in Sources */,
 				B9EE0004267EDCB100C08119 /* LocalData.swift in Sources */,
 				B9DCF9AF2642F8FD00C39EC4 /* AssetManager.swift in Sources */,
 				B9766BB82750339700127FF2 /* ContractAssets.swift in Sources */,
@@ -1101,6 +1128,7 @@
 				B90FFF3F26B4BC57007BE950 /* ContractDetailsView.swift in Sources */,
 				B932A10627912208009FAEE5 /* ContractData.swift in Sources */,
 				B91FF85526C7072400D0DFAA /* MagnifiableView.swift in Sources */,
+				B932A10A279122B9009FAEE5 /* CurrentMissionsList.swift in Sources */,
 				B963C4712694FDDA0071E14A /* CompetitiveSummaryCell.swift in Sources */,
 				B90B4B62267C22E700CACB95 /* PlayerCardImage.swift in Sources */,
 				B95D30A826CE888400829BB6 /* RoundData.swift in Sources */,
