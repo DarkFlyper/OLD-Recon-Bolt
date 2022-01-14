@@ -11,6 +11,15 @@
         }
       },
       {
+        "package": "CGeometry",
+        "repositoryURL": "git@github.com:juliand665/CGeometry.git",
+        "state": {
+          "branch": null,
+          "revision": "b4c52b1e0ab545af08acc54e0252ce21dbc4bcad",
+          "version": "0.4.0"
+        }
+      },
+      {
         "package": "ErgonomicCodable",
         "repositoryURL": "https://github.com/juliand665/ErgonomicCodable",
         "state": {
@@ -20,12 +29,30 @@
         }
       },
       {
+        "package": "HandyOperators",
+        "repositoryURL": "https://github.com/juliand665/HandyOperators",
+        "state": {
+          "branch": null,
+          "revision": "39f39ae74471112d54152227bb70053b59ea796f",
+          "version": "2.1.0"
+        }
+      },
+      {
         "package": "KeychainSwift",
         "repositoryURL": "https://github.com/evgenyneu/keychain-swift.git",
         "state": {
           "branch": null,
           "revision": "96fb84f45a96630e7583903bd7e08cf095c7a7ef",
           "version": "19.0.0"
+        }
+      },
+      {
+        "package": "Protoquest",
+        "repositoryURL": "https://github.com/juliand665/Protoquest",
+        "state": {
+          "branch": "swift-5.5",
+          "revision": "b1766bb89882c58b81420ce51cd2023e9b095d9e",
+          "version": null
         }
       },
       {

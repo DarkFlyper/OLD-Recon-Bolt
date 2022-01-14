@@ -71,6 +71,7 @@
 		B932A10A279122B9009FAEE5 /* CurrentMissionsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B932A108279122B9009FAEE5 /* CurrentMissionsList.swift */; };
 		B932A10C279122FF009FAEE5 /* UpcomingMissionsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B932A10B279122FF009FAEE5 /* UpcomingMissionsList.swift */; };
 		B932A10D279122FF009FAEE5 /* UpcomingMissionsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B932A10B279122FF009FAEE5 /* UpcomingMissionsList.swift */; };
+		B932A11227912882009FAEE5 /* HandyOperators in Frameworks */ = {isa = PBXBuildFile; productRef = B932A11127912882009FAEE5 /* HandyOperators */; };
 		B94091AE25D09D5A00EE5DF2 /* LoadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94091AD25D09D5A00EE5DF2 /* LoadManager.swift */; };
 		B94091AF25D09D5A00EE5DF2 /* LoadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94091AD25D09D5A00EE5DF2 /* LoadManager.swift */; };
 		B94091B325D09DF900EE5DF2 /* SwiftUI+CrossPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94091B225D09DF900EE5DF2 /* SwiftUI+CrossPlatform.swift */; };
@@ -95,7 +96,6 @@
 		B941B6E625A7C48300F675C1 /* LoginForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B6E425A7C48300F675C1 /* LoginForm.swift */; };
 		B941B6EC25A7C83700F675C1 /* example_updates.json in Resources */ = {isa = PBXBuildFile; fileRef = B941B6EB25A7C83700F675C1 /* example_updates.json */; };
 		B941B6ED25A7C83700F675C1 /* example_updates.json in Resources */ = {isa = PBXBuildFile; fileRef = B941B6EB25A7C83700F675C1 /* example_updates.json */; };
-		B942C978276E2056006E2FED /* CGeometry in Frameworks */ = {isa = PBXBuildFile; productRef = B942C977276E2056006E2FED /* CGeometry */; };
 		B9485F84264B1DD300AC3456 /* AgentAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9485F83264B1DD300AC3456 /* AgentAssets.swift */; };
 		B9485F85264B1DD300AC3456 /* AgentAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9485F83264B1DD300AC3456 /* AgentAssets.swift */; };
 		B9485F87264B5BD700AC3456 /* AssetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9485F86264B5BD700AC3456 /* AssetImage.swift */; };
@@ -289,8 +289,7 @@
 		B932A10427912208009FAEE5 /* ContractData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractData.swift; sourceTree = "<group>"; };
 		B932A108279122B9009FAEE5 /* CurrentMissionsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentMissionsList.swift; sourceTree = "<group>"; };
 		B932A10B279122FF009FAEE5 /* UpcomingMissionsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMissionsList.swift; sourceTree = "<group>"; };
-		B9399C3C2671158400411127 /* Protoquest */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Protoquest; path = "../ Packages/Protoquest"; sourceTree = "<group>"; };
-		B9399C3D2671158A00411127 /* ValorantAPI */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ValorantAPI; path = "../ Packages/ValorantAPI"; sourceTree = "<group>"; };
+		B932A10F2791272C009FAEE5 /* ValorantAPI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ValorantAPI; sourceTree = "<group>"; };
 		B94091AD25D09D5A00EE5DF2 /* LoadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadManager.swift; sourceTree = "<group>"; };
 		B94091B225D09DF900EE5DF2 /* SwiftUI+CrossPlatform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUI+CrossPlatform.swift"; sourceTree = "<group>"; };
 		B94091B725D09F0200EE5DF2 /* MatchListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListView.swift; sourceTree = "<group>"; };
@@ -323,7 +322,6 @@
 		B963C4722694FE920071E14A /* example_summary.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_summary.json; sourceTree = "<group>"; };
 		B963C47526950FE90071E14A /* RankInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankInfoView.swift; sourceTree = "<group>"; };
 		B963C4782695101C0071E14A /* PlayerIdentityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerIdentityCell.swift; sourceTree = "<group>"; };
-		B964BECE2671515C00022A7C /* HandyOperators */ = {isa = PBXFileReference; lastKnownFileType = folder; name = HandyOperators; path = "../ Packages/HandyOperators"; sourceTree = "<group>"; };
 		B96845B22665C7B900DC59D2 /* ClientData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientData.swift; sourceTree = "<group>"; };
 		B96A0C9F265A8B4600844674 /* strange_match.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = strange_match.json; sourceTree = "<group>"; };
 		B96A0CA2265ABBC700844674 /* SwiftUI+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUI+Helpers.swift"; sourceTree = "<group>"; };
@@ -335,7 +333,6 @@
 		B98E4704269B40DB003C9088 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		B99263E6272CFE230032C8BE /* LiveGameContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveGameContainer.swift; sourceTree = "<group>"; };
 		B998492E26CEC8B00030E83C /* EventMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMap.swift; sourceTree = "<group>"; };
-		B998493126CF287F0030E83C /* CGeometry */ = {isa = PBXFileReference; lastKnownFileType = folder; name = CGeometry; path = "../ Packages/CGeometry"; sourceTree = "<group>"; };
 		B99B75942655859C00FBEB60 /* Recon Bolt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Recon Bolt.entitlements"; sourceTree = "<group>"; };
 		B99E3DE4271F2AD300F62453 /* example matches */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "example matches"; sourceTree = "<group>"; };
 		B9C3499C267AA6DE00BE39B1 /* LiveMatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveMatchView.swift; sourceTree = "<group>"; };
@@ -397,6 +394,7 @@
 				B941B6D025A79A6400F675C1 /* KeychainSwift in Frameworks */,
 				B9CF2E6C25A81F57004A1458 /* SwiftUIMissingPieces in Frameworks */,
 				B941B69B25A62FFB00F675C1 /* UserDefault in Frameworks */,
+				B932A11227912882009FAEE5 /* HandyOperators in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,7 +404,6 @@
 			files = (
 				B9C97DCE263CB0F8001E4D1B /* ValorantAPI in Frameworks */,
 				B9EE6E772659D6ED007E28B5 /* Algorithms in Frameworks */,
-				B942C978276E2056006E2FED /* CGeometry in Frameworks */,
 				B941B6D425A79A6A00F675C1 /* KeychainSwift in Frameworks */,
 				B9CF2E7025A81F5D004A1458 /* SwiftUIMissingPieces in Frameworks */,
 				B941B69F25A6300100F675C1 /* UserDefault in Frameworks */,
@@ -521,11 +518,8 @@
 		B941B63D25A5BC8800F675C1 = {
 			isa = PBXGroup;
 			children = (
+				B932A10F2791272C009FAEE5 /* ValorantAPI */,
 				B99B75942655859C00FBEB60 /* Recon Bolt.entitlements */,
-				B998493126CF287F0030E83C /* CGeometry */,
-				B964BECE2671515C00022A7C /* HandyOperators */,
-				B9399C3C2671158400411127 /* Protoquest */,
-				B9399C3D2671158A00411127 /* ValorantAPI */,
 				B941B64225A5BC8800F675C1 /* Shared */,
 				B941B64C25A5BC8A00F675C1 /* iOS */,
 				B941B65325A5BC8A00F675C1 /* macOS */,
@@ -795,6 +789,7 @@
 				B9C97DCB263CB0D6001E4D1B /* ValorantAPI */,
 				B9EE6E742659D6DF007E28B5 /* Algorithms */,
 				B90BC2ED266D224F00C905D4 /* CGeometry */,
+				B932A11127912882009FAEE5 /* HandyOperators */,
 			);
 			productName = "Valorant Viewer (iOS)";
 			productReference = B941B64A25A5BC8A00F675C1 /* Recon Bolt.app */;
@@ -819,7 +814,6 @@
 				B9CF2E6F25A81F5D004A1458 /* SwiftUIMissingPieces */,
 				B9C97DCD263CB0F8001E4D1B /* ValorantAPI */,
 				B9EE6E762659D6ED007E28B5 /* Algorithms */,
-				B942C977276E2056006E2FED /* CGeometry */,
 			);
 			productName = "Valorant Viewer (macOS)";
 			productReference = B941B65225A5BC8A00F675C1 /* Recon Bolt.app */;
@@ -882,6 +876,7 @@
 				B9C97DCA263CB0D6001E4D1B /* XCRemoteSwiftPackageReference "ValorantAPI" */,
 				B9EE6E732659D6DF007E28B5 /* XCRemoteSwiftPackageReference "swift-algorithms" */,
 				B90BC2EC266D224F00C905D4 /* XCRemoteSwiftPackageReference "CGeometry" */,
+				B932A11027912882009FAEE5 /* XCRemoteSwiftPackageReference "HandyOperators" */,
 			);
 			productRefGroup = B941B64B25A5BC8A00F675C1 /* Products */;
 			projectDirPath = "";
@@ -1485,7 +1480,15 @@
 			repositoryURL = "git@github.com:juliand665/CGeometry.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.3.0;
+				minimumVersion = 0.4.0;
+			};
+		};
+		B932A11027912882009FAEE5 /* XCRemoteSwiftPackageReference "HandyOperators" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/juliand665/HandyOperators";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.0;
 			};
 		};
 		B941B69925A62FFB00F675C1 /* XCRemoteSwiftPackageReference "UserDefault" */ = {
@@ -1536,6 +1539,11 @@
 			package = B90BC2EC266D224F00C905D4 /* XCRemoteSwiftPackageReference "CGeometry" */;
 			productName = CGeometry;
 		};
+		B932A11127912882009FAEE5 /* HandyOperators */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B932A11027912882009FAEE5 /* XCRemoteSwiftPackageReference "HandyOperators" */;
+			productName = HandyOperators;
+		};
 		B941B69A25A62FFB00F675C1 /* UserDefault */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B941B69925A62FFB00F675C1 /* XCRemoteSwiftPackageReference "UserDefault" */;
@@ -1555,10 +1563,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B941B6CE25A79A6400F675C1 /* XCRemoteSwiftPackageReference "keychain-swift" */;
 			productName = KeychainSwift;
-		};
-		B942C977276E2056006E2FED /* CGeometry */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = CGeometry;
 		};
 		B9C97DCB263CB0D6001E4D1B /* ValorantAPI */ = {
 			isa = XCSwiftPackageProductDependency;

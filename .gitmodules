@@ -1,0 +1,3 @@
+[submodule "ValorantAPI"]
+	path = ValorantAPI
+	url = git@github.com:juliand665/ValorantAPI.git
