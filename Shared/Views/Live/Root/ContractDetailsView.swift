@@ -138,15 +138,20 @@ struct ContractDetailsView: View {
 	}
 	
 	private func upcomingMissions() -> [MissionInfo]? {
-		guard let assets = assets else { return nil }
+		guard
+			let assets = assets,
+			let checkpointDate = [
+				// weekly checkpoint may still be in the last act—let's take the later of that and the current act's start
+				details.missionMetadata.weeklyCheckpoint,
+				assets.seasons.currentAct()?.timeSpan.start,
+			].compacted().max()
+		else { return nil }
 		
 		let checkpoint = Calendar.current.date(
 			byAdding: .day,
 			value: 10, // overshoot by a bit—7 days might cause weird issues with DST and stuff
 			// the weekly checkpoint is one week too early for us—we want the missions after the ones we're currently on
-			to: details.missionMetadata.weeklyCheckpoint
-				?? assets.seasons.currentAct()?.timeSpan.start
-				?? .distantFuture
+			to: checkpointDate
 		)!
 		
 		return assets.missions.values
