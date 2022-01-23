@@ -11,7 +11,7 @@ protocol ClientData {
 	func reauthenticated() async throws -> Self
 	
 	init?(using keychain: Keychain)
-	func save(using keychain: Keychain)
+	func save(using keychain: Keychain) async
 }
 
 extension ClientData {
@@ -21,7 +21,10 @@ extension ClientData {
 final class ClientDataStore: ObservableObject {
 	let keychain: Keychain
 	@Published var data: ClientData? {
-		didSet { data?.save(using: keychain) }
+		didSet {
+			// this won't catch when the client reestablishes its session from cookies, but the token only lasts an hour anyway, during which time recon bolt will likely keep running, so it's not worth storing to defaults.
+			Task { await data?.save(using: keychain) }
+		}
 	}
 	
 	init<StoredData: ClientData>(keychain: Keychain, for _: StoredData.Type) {
@@ -36,7 +39,7 @@ struct StandardClientData: ClientData {
 	private var credentials: Credentials
 	
 	@UserDefault("ClientData.stored")
-	private static var stored: ValorantClient?
+	private static var stored: ValorantClient.SavedData?
 	
 	static func authenticated(using credentials: Credentials) async throws -> Self {
 		let client = try await ValorantClient.authenticated(
@@ -53,7 +56,7 @@ struct StandardClientData: ClientData {
 			let stored = Self.stored
 		else { return nil }
 		
-		self.client = stored
+		self.client = .init(from: stored)
 		self.credentials = credentials
 	}
 	
@@ -62,9 +65,9 @@ struct StandardClientData: ClientData {
 		self.credentials = credentials
 	}
 	
-	func save(using keychain: Keychain) {
+	func save(using keychain: Keychain) async {
 		credentials.save(to: keychain)
-		Self.stored = client
+		Self.stored = await client.store()
 	}
 	
 	func reauthenticated() async throws -> Self {
@@ -72,4 +75,4 @@ struct StandardClientData: ClientData {
 	}
 }
 
-extension ValorantClient: DefaultsValueConvertible {}
+extension ValorantClient.SavedData: DefaultsValueConvertible {}

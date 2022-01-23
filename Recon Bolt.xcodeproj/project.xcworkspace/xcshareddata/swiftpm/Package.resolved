@@ -50,8 +50,8 @@
         "package": "Protoquest",
         "repositoryURL": "https://github.com/juliand665/Protoquest",
         "state": {
-          "branch": "swift-5.5",
-          "revision": "b1766bb89882c58b81420ce51cd2023e9b095d9e",
+          "branch": "main",
+          "revision": "c9e7c2fa35b7ab96e6ee1d3fe818333112a9663b",
           "version": null
         }
       },

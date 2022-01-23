@@ -49,9 +49,9 @@ private struct ValorantLoadModifier: ViewModifier {
 	}
 	
 	@Sendable
-	func updateClientVersion() {
+	func updateClientVersion() async {
 		guard let version = assets?.version.riotClientVersion else { return }
-		dataStore.data?.client.setClientVersion(version)
+		await dataStore.data?.client.setClientVersion(version)
 	}
 	
 	func load(_ task: @escaping (ValorantClient) async throws -> Void) async {
@@ -64,12 +64,12 @@ private struct ValorantLoadModifier: ViewModifier {
 			do {
 				guard !Task.isCancelled else { return }
 				try await task(data.client)
-			} catch APIError.tokenFailure, APIError.unauthorized {
+			} catch let error as APIError where error.recommendsReauthentication {
 				print("reauthenticating!")
 				let reauthenticated = try await data.reauthenticated()
 				dataStore.data = reauthenticated
-				updateClientVersion()
-				try await task(reauthenticated.client)
+				await updateClientVersion()
+				try await task(reauthenticated.client) // don't recurse infinitely
 			}
 		}
 	}
