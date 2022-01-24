@@ -3,7 +3,7 @@
     "pins": [
       {
         "package": "ArrayBuilder",
-        "repositoryURL": "https://github.com/juliand665/ArrayBuilder",
+        "repositoryURL": "https://github.com/juliand665/ArrayBuilder.git",
         "state": {
           "branch": null,
           "revision": "f713ffd1432c5fb7cbf47a84bd634b18256957b6",
@@ -21,7 +21,7 @@
       },
       {
         "package": "ErgonomicCodable",
-        "repositoryURL": "https://github.com/juliand665/ErgonomicCodable",
+        "repositoryURL": "https://github.com/juliand665/ErgonomicCodable.git",
         "state": {
           "branch": "main",
           "revision": "d377cb1bffdd928ae957cc693641edef6d627c41",
@@ -48,7 +48,7 @@
       },
       {
         "package": "Protoquest",
-        "repositoryURL": "https://github.com/juliand665/Protoquest",
+        "repositoryURL": "https://github.com/juliand665/Protoquest.git",
         "state": {
           "branch": "main",
           "revision": "c9e7c2fa35b7ab96e6ee1d3fe818333112a9663b",
