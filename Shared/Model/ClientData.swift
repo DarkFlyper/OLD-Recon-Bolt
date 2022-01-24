@@ -7,15 +7,24 @@ protocol ClientData {
 	var userID: User.ID { get }
 	var client: ValorantClient { get }
 	
-	static func authenticated(using credentials: Credentials) async throws -> Self
-	func reauthenticated() async throws -> Self
+	static func authenticated(
+		using credentials: Credentials,
+		multifactorHandler: MultifactorHandler
+	) async throws -> Self
 	
-	init?(using keychain: Keychain)
-	func save(using keychain: Keychain) async
+	func setClientVersion(_ version: String) async
+	
+	init?()
+	func save() async
 }
 
 extension ClientData {
 	var userID: User.ID { client.userID }
+	
+	func setClientVersion(_ version: String) async {
+		await client.setClientVersion(version)
+		await save()
+	}
 }
 
 final class ClientDataStore: ObservableObject {
@@ -23,55 +32,50 @@ final class ClientDataStore: ObservableObject {
 	@Published var data: ClientData? {
 		didSet {
 			// this won't catch when the client reestablishes its session from cookies, but the token only lasts an hour anyway, during which time recon bolt will likely keep running, so it's not worth storing to defaults.
-			Task { await data?.save(using: keychain) }
+			Task { await data?.save() }
 		}
 	}
 	
 	init<StoredData: ClientData>(keychain: Keychain, for _: StoredData.Type) {
 		self.keychain = keychain
-		self.data = StoredData(using: keychain)
+		self.data = StoredData()
 	}
 }
 
+// TODO: this feels like unnecessary abstraction now that it no longer stores credentials
 struct StandardClientData: ClientData {
 	var client: ValorantClient
-	
-	private var credentials: Credentials
 	
 	@UserDefault("ClientData.stored")
 	private static var stored: ValorantClient.SavedData?
 	
-	static func authenticated(using credentials: Credentials) async throws -> Self {
-		let client = try await ValorantClient.authenticated(
+	static func authenticated(
+		using credentials: Credentials,
+		multifactorHandler: MultifactorHandler
+	) async throws -> Self {
+		let session = try await APISession(
 			username: credentials.username,
 			password: credentials.password,
-			location: credentials.location
+			multifactorHandler: multifactorHandler
 		)
-		return Self(client: client, credentials: credentials)
+		let client = try ValorantClient(location: credentials.location, session: session)
+		return Self(client: client)
 	}
 	
-	init?(using keychain: Keychain) {
+	init?() {
 		guard
-			let credentials = Credentials(from: keychain),
 			let stored = Self.stored
 		else { return nil }
 		
 		self.client = .init(from: stored)
-		self.credentials = credentials
 	}
 	
-	fileprivate init(client: ValorantClient, credentials: Credentials) {
+	private init(client: ValorantClient) {
 		self.client = client
-		self.credentials = credentials
 	}
 	
-	func save(using keychain: Keychain) async {
-		credentials.save(to: keychain)
+	func save() async {
 		Self.stored = await client.store()
-	}
-	
-	func reauthenticated() async throws -> Self {
-		try await Self.authenticated(using: credentials)
 	}
 }
 

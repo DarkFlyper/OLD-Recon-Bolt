@@ -84,21 +84,24 @@ enum PreviewData {
 struct MockClientData: ClientData {
 	let client = ValorantClient.mocked
 	
-	static func authenticated(using credentials: Credentials) -> Self { .init() }
-	func reauthenticated() -> Self { self }
+	static func authenticated(
+		using credentials: Credentials,
+		multifactorHandler: MultifactorHandler
+	) -> Self { .init() }
 	
 	init() {}
-	init?(using keychain: Keychain) {}
-	func save(using keychain: Keychain) {}
+	func save() {}
 }
 
 private struct EmptyClientData: ClientData {
 	let client: ValorantClient
 	
-	static func authenticated(using credentials: Credentials) -> Self { fatalError() }
-	func reauthenticated() -> Self { fatalError() }
+	static func authenticated(
+		using credentials: Credentials,
+		multifactorHandler: MultifactorHandler
+	) -> Self { fatalError() }
 	
-	init?(using keychain: Keychain) { return nil }
-	func save(using keychain: Keychain) {}
+	init?() { return nil }
+	func save() {}
 }
 #endif

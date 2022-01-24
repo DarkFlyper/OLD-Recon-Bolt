@@ -8,6 +8,11 @@ struct LoginForm: View {
 	@State var isSigningIn = false
 	@FocusState private var isPasswordFieldFocused
 	
+	@State var multifactorPrompt: MultifactorPrompt? {
+		didSet { isPromptingMultifactor = multifactorPrompt != nil }
+	}
+	@State var isPromptingMultifactor = false
+	
 	@Environment(\.loadWithErrorAlerts) private var load
 	
 	var body: some View {
@@ -65,6 +70,17 @@ struct LoginForm: View {
 		}
 #endif
 		.loadErrorAlertTitle("Could not sign in!")
+		.sheet(
+			isPresented: $isPromptingMultifactor,
+			onDismiss: {
+				multifactorPrompt?.completion(
+					.failure(MultifactorPrompt.PromptError.cancelled)
+				)
+			},
+			content: {
+				MultifactorPromptView(prompt: multifactorPrompt!)
+			}
+		)
 	}
 	
 	@ScaledMetric(relativeTo: .body) private var pickerHeight = 34
@@ -112,10 +128,24 @@ struct LoginForm: View {
 		isSigningIn = true
 		
 		await load {
-			data = try await StandardClientData.authenticated(using: credentials)
+			do {
+				data = try await StandardClientData.authenticated(
+					using: credentials,
+					multifactorHandler: handleMultifactor
+				)
+			} catch MultifactorPrompt.PromptError.cancelled {}
 		}
 		
 		isSigningIn = false
+	}
+	
+	@MainActor
+	func handleMultifactor(info: MultifactorInfo) async throws -> String {
+		let code = try await withCheckedThrowingContinuation {
+			multifactorPrompt = .init(info: info, completion: $0.resume(with:))
+		}
+		multifactorPrompt = nil
+		return code
 	}
 }
 

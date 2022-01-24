@@ -61,16 +61,8 @@ private struct ValorantLoadModifier: ViewModifier {
 		await load {
 			typealias APIError = ValorantClient.APIError
 			
-			do {
-				guard !Task.isCancelled else { return }
-				try await task(data.client)
-			} catch let error as APIError where error.recommendsReauthentication {
-				print("reauthenticating!")
-				let reauthenticated = try await data.reauthenticated()
-				dataStore.data = reauthenticated
-				await updateClientVersion()
-				try await task(reauthenticated.client) // don't recurse infinitely
-			}
+			guard !Task.isCancelled else { return }
+			try await task(data.client)
 		}
 	}
 }

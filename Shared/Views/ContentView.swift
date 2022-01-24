@@ -44,6 +44,10 @@ struct ContentView: View {
 		.withValorantLoadFunction(dataStore: dataStore)
 		.withLoadErrorAlerts()
 		.environment(\.assets, assetManager.assets)
+		.onChange(of: assetManager.assets?.version, perform: { version in
+			guard let clientVersion = version?.riotClientVersion else { return }
+			Task { await dataStore.data?.setClientVersion(clientVersion) }
+		})
 		.environmentObject(BookmarkList())
 	}
 	
