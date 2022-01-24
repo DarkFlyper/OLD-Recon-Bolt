@@ -11,7 +11,7 @@ struct PrettyTextFieldStyle: TextFieldStyle {
 			.background(Color(.textBackgroundColor))
 #else
 			.padding(8)
-			.background(Color(.tertiarySystemBackground))
+			.background(Color(.secondarySystemGroupedBackground))
 #endif
 			.roundedAndStroked(cornerRadius: 4)
 	}
