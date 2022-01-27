@@ -61,8 +61,15 @@ private struct ValorantLoadModifier: ViewModifier {
 		await load {
 			typealias APIError = ValorantClient.APIError
 			
-			guard !Task.isCancelled else { return }
-			try await task(data.client)
+			do {
+				try await task(data.client)
+			} catch APIError.sessionExpired {
+				dataStore.data = nil
+				throw APIError.sessionExpired
+			} catch {
+				guard !Task.isCancelled else { return }
+				throw error
+			}
 		}
 	}
 }

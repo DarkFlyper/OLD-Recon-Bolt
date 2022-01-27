@@ -84,6 +84,8 @@ extension ValorantClient.APIError: LocalizedError {
 			return "The API rejected your authorization."
 		case .tokenFailure(message: let message):
 			return "Your token has expired. \(message)"
+		case .sessionExpired:
+			return "Your session has expired! Please sign in again."
 		case .sessionResumptionFailure(let error):
 			return "Your session could not be resumed. \(error)"
 		case .scheduledDowntime(message: let message):

@@ -40,6 +40,9 @@ struct ContentView: View {
 				tab = .account
 			}
 		}
+		.onChange(of: dataStore.data == nil) {
+			if $0 { tab = .account }
+		}
 		.buttonBorderShape(.capsule)
 		.withValorantLoadFunction(dataStore: dataStore)
 		.withLoadErrorAlerts()

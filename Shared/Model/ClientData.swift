@@ -63,10 +63,7 @@ struct StandardClientData: ClientData {
 	}
 	
 	init?() {
-		guard
-			let stored = Self.stored
-		else { return nil }
-		
+		guard let stored = Self.stored else { return nil }
 		self.client = .init(from: stored)
 	}
 	
