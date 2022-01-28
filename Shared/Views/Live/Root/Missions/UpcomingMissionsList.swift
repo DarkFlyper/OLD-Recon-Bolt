@@ -43,7 +43,7 @@ struct UpcomingMissionsList: View {
 							
 							Divider()
 							
-							VStack(spacing: 8) {
+							VStack(spacing: 16) {
 								ForEach(missions) {
 									MissionView(missionInfo: $0)
 								}

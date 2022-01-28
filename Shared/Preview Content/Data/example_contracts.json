@@ -309,19 +309,19 @@
 			"ExpirationTime": "2021-08-24T13:00:00Z"
 		},
 		{
-			"ID": "ba37fa29-4512-5e03-b8d3-9cbeeb6be9d3",
-			"Objectives": {
-				"16af3bdf-c353-4c8c-a47c-b4eeac154eaf": 6
-			},
-			"Complete": true,
-			"ExpirationTime": "2021-08-24T13:00:00Z"
-		},
-		{
 			"ID": "10b21a75-42f9-cdea-7d6b-4e9b38a4587e",
 			"Objectives": {
 				"4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b": 84
 			},
 			"Complete": false,
+			"ExpirationTime": "2021-08-24T13:00:00Z"
+		},
+		{
+			"ID": "ba37fa29-4512-5e03-b8d3-9cbeeb6be9d3",
+			"Objectives": {
+				"16af3bdf-c353-4c8c-a47c-b4eeac154eaf": 10
+			},
+			"Complete": true,
 			"ExpirationTime": "2021-08-24T13:00:00Z"
 		},
 		{
