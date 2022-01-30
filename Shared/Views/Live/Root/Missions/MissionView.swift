@@ -21,7 +21,7 @@ struct MissionView: View {
 				
 				if isComplete {
 					Image(systemName: "checkmark.circle")
-						.foregroundColor(.green)
+						.foregroundColor(.accentColor)
 				} else {
 					Text("+\(missionInfo.xpGrant) XP")
 						.font(.caption.weight(.medium))
@@ -39,7 +39,7 @@ struct MissionView: View {
 			} else {
 				Capsule()
 					.frame(height: 2)
-					.foregroundColor(isComplete ? .green : .gray.opacity(0.25))
+					.foregroundColor(isComplete ? .accentColor : .gray.opacity(0.25))
 			}
 		}
 	}
