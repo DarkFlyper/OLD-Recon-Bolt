@@ -197,6 +197,9 @@ struct ExpandableActRankView: View {
 #if DEBUG
 struct CareerSummaryView_Previews: PreviewProvider {
 	static var previews: some View {
+		CareerSummaryView(summary: PreviewData.strangeSummary)
+			.withToolbar()
+		
 		CareerSummaryView(summary: PreviewData.summary)
 			.withToolbar()
 			.inEachColorScheme()

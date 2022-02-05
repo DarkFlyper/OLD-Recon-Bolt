@@ -72,6 +72,8 @@
 		B932A10C279122FF009FAEE5 /* UpcomingMissionsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B932A10B279122FF009FAEE5 /* UpcomingMissionsList.swift */; };
 		B932A10D279122FF009FAEE5 /* UpcomingMissionsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B932A10B279122FF009FAEE5 /* UpcomingMissionsList.swift */; };
 		B932A11227912882009FAEE5 /* HandyOperators in Frameworks */ = {isa = PBXBuildFile; productRef = B932A11127912882009FAEE5 /* HandyOperators */; };
+		B9342C3E27A6D10300F232CB /* strange_summary.json in Resources */ = {isa = PBXBuildFile; fileRef = B9342C3D27A6D10300F232CB /* strange_summary.json */; };
+		B9342C3F27A6D10300F232CB /* strange_summary.json in Resources */ = {isa = PBXBuildFile; fileRef = B9342C3D27A6D10300F232CB /* strange_summary.json */; };
 		B94091AE25D09D5A00EE5DF2 /* LoadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94091AD25D09D5A00EE5DF2 /* LoadManager.swift */; };
 		B94091AF25D09D5A00EE5DF2 /* LoadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94091AD25D09D5A00EE5DF2 /* LoadManager.swift */; };
 		B94091B325D09DF900EE5DF2 /* SwiftUI+CrossPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94091B225D09DF900EE5DF2 /* SwiftUI+CrossPlatform.swift */; };
@@ -292,6 +294,7 @@
 		B932A108279122B9009FAEE5 /* CurrentMissionsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentMissionsList.swift; sourceTree = "<group>"; };
 		B932A10B279122FF009FAEE5 /* UpcomingMissionsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMissionsList.swift; sourceTree = "<group>"; };
 		B932A10F2791272C009FAEE5 /* ValorantAPI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ValorantAPI; sourceTree = "<group>"; };
+		B9342C3D27A6D10300F232CB /* strange_summary.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = strange_summary.json; sourceTree = "<group>"; };
 		B94091AD25D09D5A00EE5DF2 /* LoadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadManager.swift; sourceTree = "<group>"; };
 		B94091B225D09DF900EE5DF2 /* SwiftUI+CrossPlatform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUI+CrossPlatform.swift"; sourceTree = "<group>"; };
 		B94091B725D09F0200EE5DF2 /* MatchListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListView.swift; sourceTree = "<group>"; };
@@ -694,6 +697,7 @@
 				B963C4722694FE920071E14A /* example_summary.json */,
 				B9F9B4FE26796C2200397AAB /* example_inventory.json */,
 				B96A0C9F265A8B4600844674 /* strange_match.json */,
+				B9342C3D27A6D10300F232CB /* strange_summary.json */,
 				B9F9B4D926793F3000397AAB /* surrendered_match.json */,
 				B9F52331266EE57900DFF8DD /* example_contracts.json */,
 				B9318368267813EF0099B13C /* example_pregame.json */,
@@ -905,6 +909,7 @@
 				B99E3DE5271F2AD300F62453 /* example matches in Resources */,
 				B9F9B4FF26796C2200397AAB /* example_inventory.json in Resources */,
 				B9EF0F25263D09AD0067176A /* example_match.json in Resources */,
+				B9342C3E27A6D10300F232CB /* strange_summary.json in Resources */,
 				B9318369267813F00099B13C /* example_pregame.json in Resources */,
 				B941B6EC25A7C83700F675C1 /* example_updates.json in Resources */,
 				B9F52332266EE57900DFF8DD /* example_contracts.json in Resources */,
@@ -929,6 +934,7 @@
 				B99E3DE6271F2AD300F62453 /* example matches in Resources */,
 				B9C349A1267AA9E800BE39B1 /* example_live_game.json in Resources */,
 				B941B65B25A5BC8A00F675C1 /* Assets.xcassets in Resources */,
+				B9342C3F27A6D10300F232CB /* strange_summary.json in Resources */,
 				B96A0CA1265A8B4600844674 /* strange_match.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
