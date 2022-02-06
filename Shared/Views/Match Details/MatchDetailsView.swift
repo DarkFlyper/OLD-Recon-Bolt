@@ -45,6 +45,23 @@ struct MatchDetailsView: View {
 					Divider().padding(.horizontal)
 					
 					KillBreakdownView(data: data, highlight: $highlight)
+					
+					VStack(alignment: .leading, spacing: 8) {
+						NavigationLink {
+							RoundInfoContainer(matchData: data, roundNumber: 0)
+						} label: {
+							HStack {
+								Text("Details by Round")
+								Image(systemName: "chevron.right")
+							}
+						}
+						
+						Text("You can also tap a round's number in the kill breakdown above to quickly view its details.")
+							.font(.footnote)
+							.foregroundColor(.secondary)
+					}
+					.frame(maxWidth: .infinity, alignment: .leading)
+					.padding(.horizontal)
 				}
 			}
 			.padding(.bottom)
