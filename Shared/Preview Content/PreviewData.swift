@@ -49,6 +49,8 @@ enum PreviewData {
 	
 	static let inventory = Inventory(loadJSON(named: "example_inventory", as: APIInventory.self))
 	
+	static let party = loadJSON(named: "example_party", as: Party.self)
+	
 	static let matchList = MatchList(
 		userID: user.id,
 		matches: compUpdates

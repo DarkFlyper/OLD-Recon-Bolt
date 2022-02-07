@@ -5,6 +5,7 @@ import HandyOperators
 struct LiveView: View {
 	let userID: User.ID
 	@State var contractDetails: ContractDetails?
+	@State var party: Party?
 	@State var activeMatch: ActiveMatch?
 	
 	@Environment(\.valorantLoad) private var load
@@ -13,7 +14,7 @@ struct LiveView: View {
 	var body: some View {
 		ScrollView {
 			VStack(spacing: 20) {
-				LiveGameBox(userID: userID, activeMatch: activeMatch, refreshAction: loadLiveGameDetails)
+				LiveGameBox(userID: userID, activeMatch: activeMatch, refreshAction: loadActiveMatch)
 				
 				missionsBox
 			}
@@ -30,11 +31,12 @@ struct LiveView: View {
 	
 	@Sendable
 	func refresh() async {
-		// load both independently
+		// load independently & concurrently
 		// TODO: change once `async let _ = ...` is fixed
 		async let contractUpdate: Void = loadContractDetails()
-		async let liveGameUpdate: Void = loadLiveGameDetails()
-		_ = await (contractUpdate, liveGameUpdate)
+		async let activeMatchUpdate: Void = loadActiveMatch()
+		async let partyUpdate: Void = loadParty()
+		_ = await (contractUpdate, activeMatchUpdate, partyUpdate)
 	}
 	
 	var missionsBox: some View {
@@ -59,9 +61,19 @@ struct LiveView: View {
 		}
 	}
 	
-	func loadLiveGameDetails() async {
+	func loadActiveMatch() async {
 		await load {
 			activeMatch = try await $0.getActiveMatch()
+		}
+	}
+	
+	func loadParty() async {
+		await load {
+			party = try await $0.getPartyInfo()
+			if let party = party {
+				LocalDataProvider.dataFetched(party)
+				try await $0.fetchUsers(for: party.members.map(\.id))
+			}
 		}
 	}
 }

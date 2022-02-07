@@ -4,21 +4,36 @@ import HandyOperators
 
 struct LiveGameBox: View {
 	var userID: User.ID
+	var party: Party?
 	var activeMatch: ActiveMatch?
 	var refreshAction: () async -> Void
 	
-	@State var isAutoRefreshing = false
+	@AppStorage("LiveGameBox.shouldAutoRefresh")
+	var shouldAutoRefresh = false
+	@AppStorage("LiveGameBox.shouldAutoShow")
+	var shouldAutoShow = false
+	
 	@State var shownMatch: ActiveMatch?
 	
+	var isInMatchmaking: Bool {
+		party?.queueEntryTime != nil
+	}
+	
+	var isAutoRefreshing: Bool {
+		shouldAutoRefresh || isInMatchmaking
+	}
+	
 	var body: some View {
-		RefreshableBox(title: "Live Game", refreshAction: refreshAction) {
+		RefreshableBox(title: "Party", refreshAction: refreshAction) {
 			Divider()
 			
-			content
-				.padding(16)
+			VStack(spacing: 16) {
+				content
+			}
+			.padding(16)
 		}
 		.onChange(of: activeMatch) { newMatch in
-			guard isAutoRefreshing, activeMatch?.id != newMatch?.id else { return }
+			guard shouldAutoRefresh, shouldAutoShow, activeMatch?.id != newMatch?.id else { return }
 			shownMatch = newMatch
 		}
 	}
@@ -47,22 +62,32 @@ struct LiveGameBox: View {
 				.font(.headline)
 				.imageScale(.large)
 			}
+		} else if let party = party {
+			PartyInfoBox(userID: userID, party: party)
 		} else {
-			VStack(spacing: 16) {
-				GroupBox {
-					Text("Not currently in a match!")
-						.foregroundColor(.secondary)
+			GroupBox {
+				Text("Game is not running!")
+					.foregroundColor(.secondary)
+			}
+		}
+		
+		VStack(spacing: 16) {
+			HStack(spacing: 10) {
+				if isAutoRefreshing {
+					AutoRefresher {
+						await refreshAction()
+					}
 				}
 				
-				HStack(spacing: 10) {
-					if isAutoRefreshing {
-						AutoRefresher {
-							await refreshAction()
-						}
-					}
-					
-					Toggle("Auto-Refresh & Show", isOn: $isAutoRefreshing)
-				}
+				Toggle("Refresh automatically", isOn: .init(
+					get: { isAutoRefreshing }, // force auto refresh while in matchmaking
+					set: { shouldAutoRefresh = $0 }
+				))
+				.disabled(isInMatchmaking)
+			}
+			
+			if isAutoRefreshing {
+				Toggle("Show details when found", isOn: $shouldAutoShow)
 			}
 		}
 	}
@@ -72,20 +97,23 @@ struct LiveGameBox: View {
 struct LiveGameBox_Previews: PreviewProvider {
     static var previews: some View {
 		Group {
-			LiveGameBox(userID: PreviewData.userID, refreshAction: {}, isAutoRefreshing: true)
-				.inEachColorScheme()
-			
-			VStack(spacing: 16) {
-				LiveGameBox(userID: PreviewData.userID, activeMatch: .init(id: Match.ID(), inPregame: true)) {}
-				LiveGameBox(userID: PreviewData.userID, activeMatch: .init(id: Match.ID(), inPregame: false)) {}
-				Spacer()
-			}
-			.withToolbar()
-			.inEachColorScheme()
+			LiveGameBox(userID: PreviewData.userID, refreshAction: {}, shouldAutoRefresh: true)
+			LiveGameBox(userID: PreviewData.userID, party: PreviewData.party) {}
 		}
 		.padding()
 		.background(Color(.systemGroupedBackground))
 		.previewLayout(.sizeThatFits)
+		.inEachColorScheme()
+		
+		VStack(spacing: 16) {
+			LiveGameBox(userID: PreviewData.userID, activeMatch: .init(id: Match.ID(), inPregame: true)) {}
+			LiveGameBox(userID: PreviewData.userID, activeMatch: .init(id: Match.ID(), inPregame: false)) {}
+			Spacer()
+		}
+		.padding()
+		.background(Color(.systemGroupedBackground))
+		.withToolbar()
+		.inEachColorScheme()
     }
 }
 #endif

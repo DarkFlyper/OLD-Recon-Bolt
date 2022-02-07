@@ -46,7 +46,6 @@ struct BookmarkListView: View {
 			UserCell(userID: userID, isSelected: $isSelected)
 		}
 	}
-	
 }
 
 #if DEBUG

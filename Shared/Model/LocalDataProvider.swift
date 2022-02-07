@@ -167,6 +167,10 @@ final class LocalDataProvider {
 	static func dataFetched(_ user: User) {
 		Task { await shared.userManager.store(user, asOf: .now) }
 	}
+	
+	static func dataFetched(_ party: Party) {
+		shared.store(party.members.map(\.identity), asOf: .now)
+	}
 }
 
 extension LocalDataManager where Object == MatchDetails {

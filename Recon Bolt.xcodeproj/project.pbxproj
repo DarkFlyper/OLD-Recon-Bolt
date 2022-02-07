@@ -153,6 +153,10 @@
 		B998493026CEC8B00030E83C /* EventMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = B998492E26CEC8B00030E83C /* EventMap.swift */; };
 		B99E3DE5271F2AD300F62453 /* example matches in Resources */ = {isa = PBXBuildFile; fileRef = B99E3DE4271F2AD300F62453 /* example matches */; };
 		B99E3DE6271F2AD300F62453 /* example matches in Resources */ = {isa = PBXBuildFile; fileRef = B99E3DE4271F2AD300F62453 /* example matches */; };
+		B9AEB7D727B0A03F0090A203 /* PartyInfoBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AEB7D627B0A03F0090A203 /* PartyInfoBox.swift */; };
+		B9AEB7D827B0A03F0090A203 /* PartyInfoBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AEB7D627B0A03F0090A203 /* PartyInfoBox.swift */; };
+		B9AED04B27B08699009033C6 /* example_party.json in Resources */ = {isa = PBXBuildFile; fileRef = B9AED04A27B08699009033C6 /* example_party.json */; };
+		B9AED04C27B08699009033C6 /* example_party.json in Resources */ = {isa = PBXBuildFile; fileRef = B9AED04A27B08699009033C6 /* example_party.json */; };
 		B9C3499D267AA6DE00BE39B1 /* LiveMatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3499C267AA6DE00BE39B1 /* LiveMatchView.swift */; };
 		B9C3499E267AA6DE00BE39B1 /* LiveMatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3499C267AA6DE00BE39B1 /* LiveMatchView.swift */; };
 		B9C349A0267AA9E800BE39B1 /* example_live_game.json in Resources */ = {isa = PBXBuildFile; fileRef = B9C3499F267AA9E800BE39B1 /* example_live_game.json */; };
@@ -341,6 +345,8 @@
 		B998492E26CEC8B00030E83C /* EventMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMap.swift; sourceTree = "<group>"; };
 		B99B75942655859C00FBEB60 /* Recon Bolt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Recon Bolt.entitlements"; sourceTree = "<group>"; };
 		B99E3DE4271F2AD300F62453 /* example matches */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "example matches"; sourceTree = "<group>"; };
+		B9AEB7D627B0A03F0090A203 /* PartyInfoBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyInfoBox.swift; sourceTree = "<group>"; };
+		B9AED04A27B08699009033C6 /* example_party.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_party.json; sourceTree = "<group>"; };
 		B9C3499C267AA6DE00BE39B1 /* LiveMatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveMatchView.swift; sourceTree = "<group>"; };
 		B9C3499F267AA9E800BE39B1 /* example_live_game.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_live_game.json; sourceTree = "<group>"; };
 		B9C7064D269BC91F00D29226 /* GameModeImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModeImage.swift; sourceTree = "<group>"; };
@@ -442,6 +448,7 @@
 			children = (
 				B9F5232E266ED96600DFF8DD /* LiveView.swift */,
 				B90FFF3726B47FFD007BE950 /* LiveGameBox.swift */,
+				B9AEB7D627B0A03F0090A203 /* PartyInfoBox.swift */,
 				B90FFF3D26B4BC57007BE950 /* ContractDetailsView.swift */,
 				B932A10727912297009FAEE5 /* Contracts */,
 				B932A10E27912322009FAEE5 /* Missions */,
@@ -702,6 +709,7 @@
 				B9F52331266EE57900DFF8DD /* example_contracts.json */,
 				B9318368267813EF0099B13C /* example_pregame.json */,
 				B9C3499F267AA9E800BE39B1 /* example_live_game.json */,
+				B9AED04A27B08699009033C6 /* example_party.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -907,6 +915,7 @@
 				B9DCF9AB2642F7A100C39EC4 /* Preview Assets.xcassets in Resources */,
 				B9F9B4DA26793F3100397AAB /* surrendered_match.json in Resources */,
 				B99E3DE5271F2AD300F62453 /* example matches in Resources */,
+				B9AED04B27B08699009033C6 /* example_party.json in Resources */,
 				B9F9B4FF26796C2200397AAB /* example_inventory.json in Resources */,
 				B9EF0F25263D09AD0067176A /* example_match.json in Resources */,
 				B9342C3E27A6D10300F232CB /* strange_summary.json in Resources */,
@@ -935,6 +944,7 @@
 				B9C349A1267AA9E800BE39B1 /* example_live_game.json in Resources */,
 				B941B65B25A5BC8A00F675C1 /* Assets.xcassets in Resources */,
 				B9342C3F27A6D10300F232CB /* strange_summary.json in Resources */,
+				B9AED04C27B08699009033C6 /* example_party.json in Resources */,
 				B96A0CA1265A8B4600844674 /* strange_match.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1047,6 +1057,7 @@
 				B9EE6E712659D30A007E28B5 /* Swift+Helpers.swift in Sources */,
 				B90B4B52267C112F00CACB95 /* CompetitiveTier.swift in Sources */,
 				B9FADF8526A91DC400A0CA15 /* LookupHistory.swift in Sources */,
+				B9AEB7D727B0A03F0090A203 /* PartyInfoBox.swift in Sources */,
 				B9EF0F21263CFC870067176A /* MatchDetailsView.swift in Sources */,
 				B90B4B58267C167B00CACB95 /* PlayerCardAssets.swift in Sources */,
 				B96A0CAA265AE32200844674 /* MissionAssets.swift in Sources */,
@@ -1104,6 +1115,7 @@
 				B94091B425D09DF900EE5DF2 /* SwiftUI+CrossPlatform.swift in Sources */,
 				B95D30AB26CE88FF00829BB6 /* EventRow.swift in Sources */,
 				B941B6D925A7A09000F675C1 /* Credentials.swift in Sources */,
+				B9AEB7D827B0A03F0090A203 /* PartyInfoBox.swift in Sources */,
 				B95B1A75269CEC7B0080EC81 /* BookmarkListView.swift in Sources */,
 				B989466C26860D8A00C8059A /* AsyncButton.swift in Sources */,
 				B9FADF8326A91DBC00A0CA15 /* BookmarkList.swift in Sources */,
