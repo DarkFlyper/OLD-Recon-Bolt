@@ -45,7 +45,11 @@ struct AccountView: View {
 			.padding()
 			.withLocalData($user, id: userID, shouldAutoUpdate: true)
 		} else {
-			LoginForm(data: $dataStore.data, credentials: .init(from: dataStore.keychain) ?? .init())
+			LoginForm(
+				data: $dataStore.data,
+				credentials: .init(from: dataStore.keychain) ?? .init(),
+				keychain: dataStore.keychain
+			)
 				.withLoadErrorAlerts()
 		}
 	}

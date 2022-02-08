@@ -7,6 +7,7 @@ struct LoginForm: View {
 	@State private(set) var credentials: Credentials
 	@State var isSigningIn = false
 	@FocusState private var isPasswordFieldFocused
+	var keychain: Keychain
 	
 	@State var multifactorPrompt: MultifactorPrompt? {
 		didSet { isPromptingMultifactor = multifactorPrompt != nil }
@@ -133,6 +134,7 @@ struct LoginForm: View {
 					using: credentials,
 					multifactorHandler: handleMultifactor
 				)
+				credentials.save(to: keychain)
 			} catch MultifactorPrompt.PromptError.cancelled {}
 		}
 		
@@ -153,9 +155,9 @@ struct LoginForm: View {
 struct LoginSheet_Previews: PreviewProvider {
 	static var previews: some View {
 		Group {
-			LoginForm(data: .constant(nil), credentials: .init())
+			LoginForm(data: .constant(nil), credentials: .init(), keychain: MockKeychain())
 			
-			LoginForm(data: .constant(nil), credentials: .init(), isSigningIn: true)
+			LoginForm(data: .constant(nil), credentials: .init(), isSigningIn: true, keychain: MockKeychain())
 		}
 		.withLoadErrorAlerts()
 		.inEachColorScheme()
