@@ -14,7 +14,7 @@ struct LiveView: View {
 	var body: some View {
 		ScrollView {
 			VStack(spacing: 20) {
-				LiveGameBox(userID: userID, activeMatch: activeMatch, refreshAction: loadActiveMatch)
+				LiveGameBox(userID: userID, party: $party, activeMatch: activeMatch, refreshAction: loadActiveMatch)
 				
 				missionsBox
 			}

@@ -4,7 +4,7 @@ import HandyOperators
 
 struct LiveGameBox: View {
 	var userID: User.ID
-	var party: Party?
+	@Binding var party: Party?
 	var activeMatch: ActiveMatch?
 	var refreshAction: () async -> Void
 	
@@ -16,7 +16,7 @@ struct LiveGameBox: View {
 	@State var shownMatch: ActiveMatch?
 	
 	var isInMatchmaking: Bool {
-		party?.queueEntryTime != nil
+		party?.state == .inMatchmaking
 	}
 	
 	var isAutoRefreshing: Bool {
@@ -62,7 +62,7 @@ struct LiveGameBox: View {
 				.font(.headline)
 				.imageScale(.large)
 			}
-		} else if let party = party {
+		} else if let party = Binding($party) {
 			PartyInfoBox(userID: userID, party: party)
 		} else {
 			GroupBox {
@@ -97,8 +97,16 @@ struct LiveGameBox: View {
 struct LiveGameBox_Previews: PreviewProvider {
     static var previews: some View {
 		Group {
-			LiveGameBox(userID: PreviewData.userID, refreshAction: {}, shouldAutoRefresh: true)
-			LiveGameBox(userID: PreviewData.userID, party: PreviewData.party) {}
+			LiveGameBox(
+				userID: PreviewData.userID,
+				party: .constant(nil),
+				refreshAction: {},
+				shouldAutoRefresh: true
+			)
+			LiveGameBox(
+				userID: PreviewData.userID,
+				party: .constant(PreviewData.party)
+			) {}
 		}
 		.padding()
 		.background(Color(.systemGroupedBackground))
@@ -106,8 +114,16 @@ struct LiveGameBox_Previews: PreviewProvider {
 		.inEachColorScheme()
 		
 		VStack(spacing: 16) {
-			LiveGameBox(userID: PreviewData.userID, activeMatch: .init(id: Match.ID(), inPregame: true)) {}
-			LiveGameBox(userID: PreviewData.userID, activeMatch: .init(id: Match.ID(), inPregame: false)) {}
+			LiveGameBox(
+				userID: PreviewData.userID,
+				party: .constant(nil),
+				activeMatch: .init(id: Match.ID(), inPregame: true)
+			) {}
+			LiveGameBox(
+				userID: PreviewData.userID,
+				party: .constant(nil),
+				activeMatch: .init(id: Match.ID(), inPregame: false)
+			) {}
 			Spacer()
 		}
 		.padding()

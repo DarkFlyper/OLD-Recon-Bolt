@@ -4,7 +4,7 @@ import HandyOperators
 
 struct PartyInfoBox: View {
 	var userID: User.ID
-	var party: Party
+	@Binding var party: Party
 	
 	@Environment(\.valorantLoad) private var load
 	@State var isChangingQueue = false
@@ -12,11 +12,12 @@ struct PartyInfoBox: View {
 	var body: some View {
 		GroupBox {
 			ForEach(party.members) { member in
-				PartyMemberRow(party: party, member: member, userID: userID)
+				PartyMemberRow(party: $party, member: member, userID: userID)
 			}
 			
 			Divider()
 			
+			// TODO: only show when not in queue?
 			HStack {
 				Text(party.matchmakingData.queueID.name)
 					.font(.headline)
@@ -48,21 +49,24 @@ struct PartyInfoBox: View {
 	
 	@ViewBuilder
 	private var matchmakingSection: some View {
-		if let entryTime = party.queueEntryTime {
-			queueTimer(entryTime: entryTime)
+		switch party.state {
+		case .inMatchmaking:
+			queueTimer(entryTime: party.queueEntryTime)
 			
 			AsyncButton("Cancel Matchmaking") {
 				await load {
-					try await $0.leaveMatchmaking(in: party.id)
+					party = try await $0.leaveMatchmaking(in: party.id)
 				}
 			}
-		} else {
+		case .default:
 			AsyncButton("Find Match") {
 				await load {
-					try await $0.joinMatchmaking(in: party.id)
+					party = try await $0.joinMatchmaking(in: party.id)
 				}
 			}
 			.disabled(!party.members.allSatisfy(\.isReady))
+		default:
+			EmptyView()
 		}
 	}
 	
@@ -78,18 +82,18 @@ struct PartyInfoBox: View {
 		}
 	}
 	
-	func changeQueue(to queue: QueueID, in party: Party.ID) {
+	func changeQueue(to queue: QueueID, in partyID: Party.ID) {
 		Task {
 			isChangingQueue = true
 			defer { isChangingQueue = false }
 			await load {
-				try await $0.changeQueue(to: queue, in: party)
+				party = try await $0.changeQueue(to: queue, in: partyID)
 			}
 		}
 	}
 	
 	struct PartyMemberRow: View {
-		let party: Party
+		@Binding var party: Party
 		let member: Party.Member
 		let userID: User.ID
 		@State var isSettingReady = false
@@ -152,7 +156,7 @@ struct PartyInfoBox: View {
 				isSettingReady = true
 				defer { isSettingReady = false }
 				await load {
-					try await $0.setReady(to: isReady, in: party.id)
+					party = try await $0.setReady(to: isReady, in: party.id)
 				}
 			}
 		}
@@ -164,16 +168,16 @@ struct PartyInfoBox_Previews: PreviewProvider {
     static var previews: some View {
 		Group {
 			previewBox {
-				PartyInfoBox(userID: PreviewData.userID, party: PreviewData.party)
+				PartyInfoBox(userID: PreviewData.userID, party: .constant(PreviewData.party))
 					.padding()
 			}
 			
 			previewBox {
-				PartyInfoBox(userID: PreviewData.userID, party: PreviewData.party <- {
+				PartyInfoBox(userID: PreviewData.userID, party: .constant(PreviewData.party <- {
 					$0.members[0].isReady = false
 					$0.members[1].isReady = true
 					$0.queueEntryTime = .init(timeIntervalSinceNow: -35)
-				})
+				}))
 				.padding()
 			}
 		}
