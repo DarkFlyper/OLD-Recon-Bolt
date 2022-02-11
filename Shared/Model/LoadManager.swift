@@ -41,8 +41,14 @@ private struct LoadWrapper<Content: View>: View {
 	func runTask(_ task: () async throws -> Void) async {
 		do {
 			try await task()
+		} catch is CancellationError {
+			// ignore cancellation
+		} catch let urlError as URLError where urlError.code == .cancelled {
+			// ignore this type of cancellation too
 		} catch {
 			guard !Task.isCancelled else { return }
+			print("error running load task:")
+			dump(error)
 			loadError = .init(error)
 		}
 	}
