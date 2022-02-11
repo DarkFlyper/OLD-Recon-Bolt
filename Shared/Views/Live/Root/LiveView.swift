@@ -5,8 +5,6 @@ import HandyOperators
 struct LiveView: View {
 	let userID: User.ID
 	@State var contractDetails: ContractDetails?
-	@State var party: Party?
-	@State var activeMatch: ActiveMatch?
 	
 	@Environment(\.valorantLoad) private var load
 	@Environment(\.scenePhase) private var scenePhase
@@ -14,7 +12,7 @@ struct LiveView: View {
 	var body: some View {
 		ScrollView {
 			VStack(spacing: 20) {
-				LiveGameBox(userID: userID, party: $party, activeMatch: activeMatch, refreshAction: loadActiveMatch)
+				LiveGameBox(userID: userID)
 				
 				missionsBox
 			}
@@ -22,21 +20,10 @@ struct LiveView: View {
 			.compositingGroup() // avoid shadows overlapping other boxes
 			.shadow(color: .black.opacity(0.1), radius: 20, x: 0, y: 10)
 		}
-		.refreshable(action: refresh)
-		.task(refresh)
-		.onSceneActivation(perform: refresh)
+		.task(loadContractDetails)
+		.onSceneActivation(perform: loadContractDetails)
 		.background(Color(.systemGroupedBackground))
 		.navigationTitle("Live")
-	}
-	
-	@Sendable
-	func refresh() async {
-		// load independently & concurrently
-		// TODO: change once `async let _ = ...` is fixed
-		async let contractUpdate: Void = loadContractDetails()
-		async let activeMatchUpdate: Void = loadActiveMatch()
-		async let partyUpdate: Void = loadParty()
-		_ = await (contractUpdate, activeMatchUpdate, partyUpdate)
 	}
 	
 	var missionsBox: some View {
@@ -55,25 +42,10 @@ struct LiveView: View {
 		}
 	}
 	
+	@Sendable
 	func loadContractDetails() async {
 		await load {
 			contractDetails = try await $0.getContractDetails()
-		}
-	}
-	
-	func loadActiveMatch() async {
-		await load {
-			activeMatch = try await $0.getActiveMatch()
-		}
-	}
-	
-	func loadParty() async {
-		await load {
-			party = try await $0.getPartyInfo()
-			if let party = party {
-				LocalDataProvider.dataFetched(party)
-				try await $0.fetchUsers(for: party.members.map(\.id))
-			}
 		}
 	}
 }

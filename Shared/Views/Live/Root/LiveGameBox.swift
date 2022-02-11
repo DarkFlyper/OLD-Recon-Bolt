@@ -4,16 +4,16 @@ import HandyOperators
 
 struct LiveGameBox: View {
 	var userID: User.ID
-	@Binding var party: Party?
-	var activeMatch: ActiveMatch?
-	var refreshAction: () async -> Void
+	@State var party: Party?
+	@State var activeMatch: ActiveMatch?
+	@State var shownMatch: ActiveMatch?
 	
 	@AppStorage("LiveGameBox.shouldAutoRefresh")
 	var shouldAutoRefresh = false
 	@AppStorage("LiveGameBox.shouldAutoShow")
 	var shouldAutoShow = false
 	
-	@State var shownMatch: ActiveMatch?
+	@Environment(\.valorantLoad) private var load
 	
 	var isInMatchmaking: Bool {
 		party?.state == .inMatchmaking
@@ -24,7 +24,7 @@ struct LiveGameBox: View {
 	}
 	
 	var body: some View {
-		RefreshableBox(title: "Party", refreshAction: refreshAction) {
+		RefreshableBox(title: "Party", refreshAction: refresh) {
 			Divider()
 			
 			VStack(spacing: 16) {
@@ -32,10 +32,12 @@ struct LiveGameBox: View {
 			}
 			.padding(16)
 		}
-		.onChange(of: activeMatch) { newMatch in
+		.onChange(of: activeMatch) { [activeMatch] newMatch in
 			guard shouldAutoRefresh, shouldAutoShow, activeMatch?.id != newMatch?.id else { return }
 			shownMatch = newMatch
 		}
+		.task(refresh)
+		.onSceneActivation(perform: refresh)
 	}
 	
 	@ViewBuilder
@@ -75,7 +77,7 @@ struct LiveGameBox: View {
 			HStack(spacing: 10) {
 				if isAutoRefreshing {
 					AutoRefresher {
-						await refreshAction()
+						await refresh()
 					}
 				}
 				
@@ -91,6 +93,31 @@ struct LiveGameBox: View {
 			}
 		}
 	}
+	
+	@Sendable
+	func refresh() async {
+		// load independently & concurrently
+		// TODO: change once `async let _ = ...` is fixed
+		async let activeMatchUpdate: Void = loadActiveMatch()
+		async let partyUpdate: Void = loadParty()
+		_ = await (activeMatchUpdate, partyUpdate)
+	}
+	
+	func loadActiveMatch() async {
+		await load {
+			activeMatch = try await $0.getActiveMatch()
+		}
+	}
+	
+	func loadParty() async {
+		await load {
+			party = try await $0.getPartyInfo()
+			if let party = party {
+				LocalDataProvider.dataFetched(party)
+				try await $0.fetchUsers(for: party.members.map(\.id))
+			}
+		}
+	}
 }
 
 #if DEBUG
@@ -99,14 +126,12 @@ struct LiveGameBox_Previews: PreviewProvider {
 		Group {
 			LiveGameBox(
 				userID: PreviewData.userID,
-				party: .constant(nil),
-				refreshAction: {},
 				shouldAutoRefresh: true
 			)
 			LiveGameBox(
 				userID: PreviewData.userID,
-				party: .constant(PreviewData.party)
-			) {}
+				party: PreviewData.party
+			)
 		}
 		.padding()
 		.background(Color(.systemGroupedBackground))
@@ -116,14 +141,12 @@ struct LiveGameBox_Previews: PreviewProvider {
 		VStack(spacing: 16) {
 			LiveGameBox(
 				userID: PreviewData.userID,
-				party: .constant(nil),
 				activeMatch: .init(id: Match.ID(), inPregame: true)
-			) {}
+			)
 			LiveGameBox(
 				userID: PreviewData.userID,
-				party: .constant(nil),
 				activeMatch: .init(id: Match.ID(), inPregame: false)
-			) {}
+			)
 			Spacer()
 		}
 		.padding()
