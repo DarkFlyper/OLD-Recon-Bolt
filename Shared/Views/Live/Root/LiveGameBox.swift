@@ -92,6 +92,7 @@ struct LiveGameBox: View {
 				Toggle("Show details when found", isOn: $shouldAutoShow)
 			}
 		}
+		.animation(.default, value: isAutoRefreshing)
 	}
 	
 	@Sendable
