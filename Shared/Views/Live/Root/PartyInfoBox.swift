@@ -9,6 +9,10 @@ struct PartyInfoBox: View {
 	@Environment(\.valorantLoad) private var load
 	@State var isChangingQueue = false
 	
+	var member: Party.Member {
+		party.members.firstElement(withID: userID)!
+	}
+	
 	var body: some View {
 		GroupBox {
 			ForEach(party.members) { member in
@@ -33,6 +37,7 @@ struct PartyInfoBox: View {
 						}
 					}
 					.disabled(isChangingQueue)
+					.disabled(!member.isOwner)
 					
 					if isChangingQueue {
 						ProgressView()
@@ -65,6 +70,7 @@ struct PartyInfoBox: View {
 				}
 			}
 			.disabled(!party.members.allSatisfy(\.isReady))
+			.disabled(!member.isOwner)
 		default:
 			EmptyView()
 		}
