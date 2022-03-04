@@ -49,6 +49,12 @@ struct AgentInfo: AssetItem, Codable, Identifiable {
 		abilities.compactMap(\.displayIcon)
 	}
 	
+	private static let indexRemappings: [Int: Int] = [0: 2, 1: 0, 2: 1]
+	/// abilities are given in the wrong order; this reorders them appropriately
+	func ability(_ index: Int) -> AgentInfo.Ability {
+		abilities[Self.indexRemappings[index] ?? index]
+	}
+	
 	struct Role: Codable {
 		typealias ID = ObjectID<Self, LowercaseUUID>
 		

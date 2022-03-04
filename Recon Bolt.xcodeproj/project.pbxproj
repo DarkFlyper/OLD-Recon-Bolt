@@ -169,6 +169,10 @@
 		B9C97DCE263CB0F8001E4D1B /* ValorantAPI in Frameworks */ = {isa = PBXBuildFile; productRef = B9C97DCD263CB0F8001E4D1B /* ValorantAPI */; };
 		B9C97DD1263CB744001E4D1B /* MatchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C97DD0263CB744001E4D1B /* MatchList.swift */; };
 		B9C97DD2263CB744001E4D1B /* MatchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C97DD0263CB744001E4D1B /* MatchList.swift */; };
+		B9CD085927D2878000BD485A /* AgentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CD085827D2878000BD485A /* AgentListView.swift */; };
+		B9CD085A27D2878000BD485A /* AgentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CD085827D2878000BD485A /* AgentListView.swift */; };
+		B9CD085C27D28D7500BD485A /* AgentInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CD085B27D28D7500BD485A /* AgentInfoView.swift */; };
+		B9CD085D27D28D7500BD485A /* AgentInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CD085B27D28D7500BD485A /* AgentInfoView.swift */; };
 		B9CF2E6225A81B48004A1458 /* UnifiedStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CF2E6125A81B48004A1458 /* UnifiedStyles.swift */; };
 		B9CF2E6325A81B48004A1458 /* UnifiedStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CF2E6125A81B48004A1458 /* UnifiedStyles.swift */; };
 		B9CF2E6C25A81F57004A1458 /* SwiftUIMissingPieces in Frameworks */ = {isa = PBXBuildFile; productRef = B9CF2E6B25A81F57004A1458 /* SwiftUIMissingPieces */; };
@@ -352,6 +356,8 @@
 		B9C7064D269BC91F00D29226 /* GameModeImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModeImage.swift; sourceTree = "<group>"; };
 		B9C97DC6263CADFC001E4D1B /* ValorantAPI+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ValorantAPI+Mock.swift"; sourceTree = "<group>"; };
 		B9C97DD0263CB744001E4D1B /* MatchList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchList.swift; sourceTree = "<group>"; };
+		B9CD085827D2878000BD485A /* AgentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentListView.swift; sourceTree = "<group>"; };
+		B9CD085B27D28D7500BD485A /* AgentInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentInfoView.swift; sourceTree = "<group>"; };
 		B9CF2E6125A81B48004A1458 /* UnifiedStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnifiedStyles.swift; sourceTree = "<group>"; };
 		B9CF2E7825A89976004A1458 /* MatchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCell.swift; sourceTree = "<group>"; };
 		B9DCF9A62642E0EC00C39EC4 /* ScoreboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreboardView.swift; sourceTree = "<group>"; };
@@ -463,6 +469,8 @@
 				B9131D64266AF6C600E85F46 /* ReferenceView.swift */,
 				B9131D68266AFA4C00E85F46 /* MapListView.swift */,
 				B9131D6B266AFA7900E85F46 /* MapInfoView.swift */,
+				B9CD085827D2878000BD485A /* AgentListView.swift */,
+				B9CD085B27D28D7500BD485A /* AgentInfoView.swift */,
 			);
 			path = Reference;
 			sourceTree = "<group>";
@@ -999,6 +1007,7 @@
 				B9EE0003267EDCB100C08119 /* LocalData.swift in Sources */,
 				B932A0FC27912170009FAEE5 /* ContractLevelProgressView.swift in Sources */,
 				B9DCF9AE2642F8FD00C39EC4 /* AssetManager.swift in Sources */,
+				B9CD085927D2878000BD485A /* AgentListView.swift in Sources */,
 				B9EE6E6E26594374007E28B5 /* KillBreakdownView.swift in Sources */,
 				B941B6E525A7C48300F675C1 /* LoginForm.swift in Sources */,
 				B9131D65266AF6C600E85F46 /* ReferenceView.swift in Sources */,
@@ -1029,6 +1038,7 @@
 				B95D30AD26CE898C00829BB6 /* EventTimeline.swift in Sources */,
 				B92DC20126A33C3600200A01 /* ActRankView.swift in Sources */,
 				B96A0CA3265ABBC700844674 /* SwiftUI+Helpers.swift in Sources */,
+				B9CD085C27D28D7500BD485A /* AgentInfoView.swift in Sources */,
 				B941B65625A5BC8A00F675C1 /* ReconBoltApp.swift in Sources */,
 				B9C97DD1263CB744001E4D1B /* MatchList.swift in Sources */,
 				B9F65C4B2651DFB100C9C34A /* AgentImage.swift in Sources */,
@@ -1131,6 +1141,7 @@
 				B92DC20226A33C3600200A01 /* ActRankView.swift in Sources */,
 				B96A0CA4265ABBC700844674 /* SwiftUI+Helpers.swift in Sources */,
 				B941B65725A5BC8A00F675C1 /* ReconBoltApp.swift in Sources */,
+				B9CD085D27D28D7500BD485A /* AgentInfoView.swift in Sources */,
 				B9C97DD2263CB744001E4D1B /* MatchList.swift in Sources */,
 				B9F65C4C2651DFB100C9C34A /* AgentImage.swift in Sources */,
 				B9EE6E662658A363007E28B5 /* SwiftUI+Previews.swift in Sources */,
@@ -1166,6 +1177,7 @@
 				B9FADF8626A91DC400A0CA15 /* LookupHistory.swift in Sources */,
 				B9EF0F22263CFC870067176A /* MatchDetailsView.swift in Sources */,
 				B90B4B59267C167B00CACB95 /* PlayerCardAssets.swift in Sources */,
+				B9CD085A27D2878000BD485A /* AgentListView.swift in Sources */,
 				B932A0FA27911064009FAEE5 /* ContractChooser.swift in Sources */,
 				B96A0CAB265AE32200844674 /* MissionAssets.swift in Sources */,
 				B94C57FB26CB605700CAF257 /* AlwaysPressable.swift in Sources */,

@@ -73,7 +73,6 @@ struct MatchListView: View {
 		.withLocalData($summary, id: userID, shouldAutoUpdate: true)
 		.withLocalData($identity, id: userID)
 		.refreshable { await refresh() }
-		.onSceneActivation(perform: refresh)
 		.loadErrorAlertTitle("Could not load matches!")
 		.navigationTitle(user?.name ?? "Matches")
 	}

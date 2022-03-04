@@ -62,6 +62,7 @@ struct ContentView: View {
 			content(data.userID)
 		} else {
 			Text("Not signed in!")
+				.foregroundStyle(.secondary)
 				.frame(maxWidth: .infinity, maxHeight: .infinity)
 		}
 	}
