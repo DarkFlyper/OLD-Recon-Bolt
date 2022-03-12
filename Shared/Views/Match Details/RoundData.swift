@@ -182,8 +182,10 @@ struct DisplayedPlayerLocation: Identifiable {
 }
 
 private extension FloatingPoint {
+	static var tau: Self { 2 * .pi }
+	
 	func truncatingAngle() -> Self {
-		(2 * .pi + self).truncatingRemainder(dividingBy: 2 * .pi)
+		(.tau + self).truncatingRemainder(dividingBy: .tau)
 	}
 }
 

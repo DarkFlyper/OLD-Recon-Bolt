@@ -15,7 +15,7 @@ struct MultifactorPromptView: View {
 					.font(.title2.weight(.semibold))
 				
 				HStack {
-					ForEach(0..<prompt.info.codeLength) { i in
+					ForEach(0..<prompt.info.codeLength, id: \.self) { i in
 						let size = 30.0
 						Text(digits.elementIfValid(at: i).map(String.init) ?? "_")
 							.font(.system(size: size))

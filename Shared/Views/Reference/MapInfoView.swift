@@ -50,8 +50,7 @@ struct MapInfoView: View {
 	func calloutsOverlay() -> some View {
 		GeometryReader { geometry in
 			let callouts = map.callouts ?? []
-			ForEach(callouts.indices) { i in
-				let callout = callouts[i]
+			ForEach(callouts.indexed(), id: \.index) { _, callout in
 				Text(callout.fullName)
 					.font(isZoomedIn ? .callout : .system(size: 8))
 					.padding(isZoomedIn ? 2 : 1)
