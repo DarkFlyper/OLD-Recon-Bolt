@@ -17,6 +17,7 @@ extension AssetClient {
 		async let playerTitles = getPlayerTitleInfo()
 		async let weapons = getWeaponInfo()
 		async let seasons = getSeasons()
+		async let currencies = getCurrencyInfo()
 		
 		// this seems to be what skins are actually referred to by…
 		let skinsByLevelID = try await Dictionary(
@@ -42,7 +43,8 @@ extension AssetClient {
 			playerTitles: .init(values: playerTitles),
 			weapons: .init(values: weapons),
 			seasons: seasons,
-			skinsByLevelID: skinsByLevelID
+			skinsByLevelID: skinsByLevelID,
+			currencies: .init(values: currencies)
 		)
 		
 		return try await downloadAllImages(for: collection, onProgress: onProgress)

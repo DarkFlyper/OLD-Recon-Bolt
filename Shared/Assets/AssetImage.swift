@@ -18,6 +18,18 @@ struct AssetImage: Hashable {
 		}
 	}
 	
+	func asyncImage(renderingMode: Image.TemplateRenderingMode? = nil) -> some View {
+		AsyncImage(url: url) { loadedImage in
+			loadedImage
+				.renderingMode(renderingMode)
+				.resizable()
+				.scaledToFit()
+		} placeholder: {
+			Color.primary.opacity(0.2)
+				.overlay { ProgressView() }
+		}
+	}
+	
 	var imageIfLoaded: Image? {
 		struct LoadingError: Error {}
 		

@@ -125,6 +125,10 @@
 		B9F65C4B2651DFB100C9C34A /* AgentImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F65C4A2651DFB100C9C34A /* AgentImage.swift */; };
 		B9F65C4E2651EDA500C9C34A /* DynamicallyStroked.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F65C4D2651EDA500C9C34A /* DynamicallyStroked.swift */; };
 		B9F66ACE266DC31E008560FD /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F66ACD266DC31E008560FD /* AccountView.swift */; };
+		B9F7A53927DC5D3D00636DAF /* StoreDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F7A53827DC5D3D00636DAF /* StoreDetailsView.swift */; };
+		B9F7A53C27DC5DAF00636DAF /* example_store_offers.json in Resources */ = {isa = PBXBuildFile; fileRef = B9F7A53A27DC5DAF00636DAF /* example_store_offers.json */; };
+		B9F7A53D27DC5DAF00636DAF /* example_storefront.json in Resources */ = {isa = PBXBuildFile; fileRef = B9F7A53B27DC5DAF00636DAF /* example_storefront.json */; };
+		B9F7A53F27DD091F00636DAF /* CurrencyAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F7A53E27DD091F00636DAF /* CurrencyAssets.swift */; };
 		B9F8703226B38F2400C1F784 /* AutoRefresher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F8703126B38F2400C1F784 /* AutoRefresher.swift */; };
 		B9F8703426B3A0A000C1F784 /* CountdownText.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F8703326B3A0A000C1F784 /* CountdownText.swift */; };
 		B9F8703626B3B02000C1F784 /* RefreshableBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F8703526B3B01F00C1F784 /* RefreshableBox.swift */; };
@@ -267,6 +271,10 @@
 		B9F65C4A2651DFB100C9C34A /* AgentImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentImage.swift; sourceTree = "<group>"; };
 		B9F65C4D2651EDA500C9C34A /* DynamicallyStroked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicallyStroked.swift; sourceTree = "<group>"; };
 		B9F66ACD266DC31E008560FD /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		B9F7A53827DC5D3D00636DAF /* StoreDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDetailsView.swift; sourceTree = "<group>"; };
+		B9F7A53A27DC5DAF00636DAF /* example_store_offers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_store_offers.json; sourceTree = "<group>"; };
+		B9F7A53B27DC5DAF00636DAF /* example_storefront.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_storefront.json; sourceTree = "<group>"; };
+		B9F7A53E27DD091F00636DAF /* CurrencyAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyAssets.swift; sourceTree = "<group>"; };
 		B9F8703126B38F2400C1F784 /* AutoRefresher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoRefresher.swift; sourceTree = "<group>"; };
 		B9F8703326B3A0A000C1F784 /* CountdownText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownText.swift; sourceTree = "<group>"; };
 		B9F8703526B3B01F00C1F784 /* RefreshableBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshableBox.swift; sourceTree = "<group>"; };
@@ -325,6 +333,7 @@
 				B932A10727912297009FAEE5 /* Contracts */,
 				B932A10E27912322009FAEE5 /* Missions */,
 				B90FFF3426B454DC007BE950 /* In-Game */,
+				B9F7A53827DC5D3D00636DAF /* StoreDetailsView.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -499,6 +508,7 @@
 				B90B4B5A267C177D00CACB95 /* PlayerTitleAssets.swift */,
 				B9F5CEDD267CD199009CF906 /* GameModeAssets.swift */,
 				B91D3DA326C8492F007D18B8 /* WeaponAssets.swift */,
+				B9F7A53E27DD091F00636DAF /* CurrencyAssets.swift */,
 			);
 			path = "Concrete Assets";
 			sourceTree = "<group>";
@@ -583,6 +593,8 @@
 				B9318368267813EF0099B13C /* example_pregame.json */,
 				B9C3499F267AA9E800BE39B1 /* example_live_game.json */,
 				B9AED04A27B08699009033C6 /* example_party.json */,
+				B9F7A53A27DC5DAF00636DAF /* example_store_offers.json */,
+				B9F7A53B27DC5DAF00636DAF /* example_storefront.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -755,6 +767,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9F7A53D27DC5DAF00636DAF /* example_storefront.json in Resources */,
 				B90CB17926ACD76500804C27 /* Local in Resources */,
 				B963C4732694FE920071E14A /* example_summary.json in Resources */,
 				B9DCF9AB2642F7A100C39EC4 /* Preview Assets.xcassets in Resources */,
@@ -768,6 +781,7 @@
 				B941B6EC25A7C83700F675C1 /* example_updates.json in Resources */,
 				B9F52332266EE57900DFF8DD /* example_contracts.json in Resources */,
 				B9C349A0267AA9E800BE39B1 /* example_live_game.json in Resources */,
+				B9F7A53C27DC5DAF00636DAF /* example_store_offers.json in Resources */,
 				B941B65A25A5BC8A00F675C1 /* Assets.xcassets in Resources */,
 				B96A0CA0265A8B4600844674 /* strange_match.json in Resources */,
 			);
@@ -818,6 +832,7 @@
 				B9F8703626B3B02000C1F784 /* RefreshableBox.swift in Sources */,
 				B9F5CEE1267CD548009CF906 /* NamespacedID.swift in Sources */,
 				B9168AE62689440B00866F6A /* LocalDataProvider.swift in Sources */,
+				B9F7A53F27DD091F00636DAF /* CurrencyAssets.swift in Sources */,
 				B96845B32665C7B900DC59D2 /* ClientData.swift in Sources */,
 				B9F65C4E2651EDA500C9C34A /* DynamicallyStroked.swift in Sources */,
 				B9EE0003267EDCB100C08119 /* LocalData.swift in Sources */,
@@ -888,6 +903,7 @@
 				B90B4B58267C167B00CACB95 /* PlayerCardAssets.swift in Sources */,
 				B96A0CAA265AE32200844674 /* MissionAssets.swift in Sources */,
 				B902823426A7A8A9004B1740 /* HenrikAPI.swift in Sources */,
+				B9F7A53927DC5D3D00636DAF /* StoreDetailsView.swift in Sources */,
 				B954A6DB26C8BED200A86CB9 /* WeaponImage.swift in Sources */,
 				B963C47626950FE90071E14A /* RankInfoView.swift in Sources */,
 				B90B4B64267C270500CACB95 /* CompetitiveTierImage.swift in Sources */,
@@ -1047,6 +1063,7 @@
 				PRODUCT_NAME = "Recon Bolt";
 				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
@@ -1073,6 +1090,7 @@
 				PRODUCT_NAME = "Recon Bolt";
 				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,6";
 				VALIDATE_PRODUCT = YES;

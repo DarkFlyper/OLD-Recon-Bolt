@@ -47,9 +47,12 @@ enum PreviewData {
 		$0.currentPosition = ($0.events[4].position + $0.events[5].position) / 2
 	}
 	
-	static let inventory = Inventory(loadJSON(named: "example_inventory", as: APIInventory.self))
+	static let inventory = loadJSON(named: "example_inventory", as: Inventory.self)
 	
 	static let party = loadJSON(named: "example_party", as: Party.self)
+	
+	static let storeOffers = loadJSON(named: "example_store_offers", as: [StoreOffer].self)
+	static let storefront = loadJSON(named: "example_storefront", as: Storefront.self)
 	
 	static let matchList = MatchList(
 		userID: user.id,

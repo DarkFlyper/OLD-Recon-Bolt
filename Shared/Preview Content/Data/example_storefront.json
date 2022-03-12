@@ -1,0 +1,226 @@
+{
+	"FeaturedBundle": {
+		"Bundle": {
+			"ID": "d2edd69f-a14e-43be-82c0-992f579dd799",
+			"DataAssetID": "e10e00ae-4dcc-3c4a-16f7-7e885314f0d0",
+			"CurrencyID": "85ad13f7-3d1b-5128-9eb2-7cd8ee0b5741",
+			"Items": [
+				{
+					"Item": {
+						"ItemTypeID": "3f296c07-64c3-494c-923b-fe692a4fa1bd",
+						"ItemID": "8314f8d7-4d2a-4042-f961-47b365ea64f0",
+						"Amount": 1
+					},
+					"BasePrice": 375,
+					"CurrencyID": "85ad13f7-3d1b-5128-9eb2-7cd8ee0b5741",
+					"DiscountPercent": 1,
+					"DiscountedPrice": 0,
+					"IsPromoItem": false
+				},
+				{
+					"Item": {
+						"ItemTypeID": "d5f120f8-ff8c-4aac-92ea-f2b5acbe9475",
+						"ItemID": "8b7154e2-4453-2515-0867-62a1075b03ad",
+						"Amount": 1
+					},
+					"BasePrice": 325,
+					"CurrencyID": "85ad13f7-3d1b-5128-9eb2-7cd8ee0b5741",
+					"DiscountPercent": 1,
+					"DiscountedPrice": 0,
+					"IsPromoItem": false
+				},
+				{
+					"Item": {
+						"ItemTypeID": "e7c63390-eda7-46e0-bb7a-a6abdacd2433",
+						"ItemID": "c4422d16-4cb1-75d5-fd18-dda0bb05f46b",
+						"Amount": 1
+					},
+					"BasePrice": 1775,
+					"CurrencyID": "85ad13f7-3d1b-5128-9eb2-7cd8ee0b5741",
+					"DiscountPercent": 0,
+					"DiscountedPrice": 1775,
+					"IsPromoItem": false
+				},
+				{
+					"Item": {
+						"ItemTypeID": "e7c63390-eda7-46e0-bb7a-a6abdacd2433",
+						"ItemID": "f7862f1f-4340-6e42-b1fa-0ebcdcf43456",
+						"Amount": 1
+					},
+					"BasePrice": 1775,
+					"CurrencyID": "85ad13f7-3d1b-5128-9eb2-7cd8ee0b5741",
+					"DiscountPercent": 0,
+					"DiscountedPrice": 1775,
+					"IsPromoItem": false
+				},
+				{
+					"Item": {
+						"ItemTypeID": "e7c63390-eda7-46e0-bb7a-a6abdacd2433",
+						"ItemID": "e16ea577-4d7f-e686-456a-54b4b1d9cba2",
+						"Amount": 1
+					},
+					"BasePrice": 1775,
+					"CurrencyID": "85ad13f7-3d1b-5128-9eb2-7cd8ee0b5741",
+					"DiscountPercent": 0,
+					"DiscountedPrice": 1775,
+					"IsPromoItem": false
+				},
+				{
+					"Item": {
+						"ItemTypeID": "e7c63390-eda7-46e0-bb7a-a6abdacd2433",
+						"ItemID": "6046ca8f-4100-4b1a-7e8d-5e8c6625342f",
+						"Amount": 1
+					},
+					"BasePrice": 1775,
+					"CurrencyID": "85ad13f7-3d1b-5128-9eb2-7cd8ee0b5741",
+					"DiscountPercent": 0,
+					"DiscountedPrice": 1775,
+					"IsPromoItem": false
+				},
+				{
+					"Item": {
+						"ItemTypeID": "e7c63390-eda7-46e0-bb7a-a6abdacd2433",
+						"ItemID": "f353f65b-4764-cfc5-df01-8db85ab28199",
+						"Amount": 1
+					},
+					"BasePrice": 3550,
+					"CurrencyID": "85ad13f7-3d1b-5128-9eb2-7cd8ee0b5741",
+					"DiscountPercent": 1,
+					"DiscountedPrice": 0,
+					"IsPromoItem": false
+				},
+				{
+					"Item": {
+						"ItemTypeID": "dd3bf334-87f3-40bd-b043-682a57a8dc3a",
+						"ItemID": "7c2881fb-4bd3-3d98-4e5b-72a939eb2cac",
+						"Amount": 2
+					},
+					"BasePrice": 475,
+					"CurrencyID": "85ad13f7-3d1b-5128-9eb2-7cd8ee0b5741",
+					"DiscountPercent": 1,
+					"DiscountedPrice": 0,
+					"IsPromoItem": false
+				}
+			],
+			"DurationRemainingInSeconds": 410135,
+			"WholesaleOnly": false
+		},
+		"Bundles": [
+			{
+				"ID": "d2edd69f-a14e-43be-82c0-992f579dd799",
+				"DataAssetID": "e10e00ae-4dcc-3c4a-16f7-7e885314f0d0",
+				"CurrencyID": "85ad13f7-3d1b-5128-9eb2-7cd8ee0b5741",
+				"Items": [
+					{
+						"Item": {
+							"ItemTypeID": "3f296c07-64c3-494c-923b-fe692a4fa1bd",
+							"ItemID": "8314f8d7-4d2a-4042-f961-47b365ea64f0",
+							"Amount": 1
+						},
+						"BasePrice": 375,
+						"CurrencyID": "85ad13f7-3d1b-5128-9eb2-7cd8ee0b5741",
+						"DiscountPercent": 1,
+						"DiscountedPrice": 0,
+						"IsPromoItem": false
+					},
+					{
+						"Item": {
+							"ItemTypeID": "d5f120f8-ff8c-4aac-92ea-f2b5acbe9475",
+							"ItemID": "8b7154e2-4453-2515-0867-62a1075b03ad",
+							"Amount": 1
+						},
+						"BasePrice": 325,
+						"CurrencyID": "85ad13f7-3d1b-5128-9eb2-7cd8ee0b5741",
+						"DiscountPercent": 1,
+						"DiscountedPrice": 0,
+						"IsPromoItem": false
+					},
+					{
+						"Item": {
+							"ItemTypeID": "e7c63390-eda7-46e0-bb7a-a6abdacd2433",
+							"ItemID": "c4422d16-4cb1-75d5-fd18-dda0bb05f46b",
+							"Amount": 1
+						},
+						"BasePrice": 1775,
+						"CurrencyID": "85ad13f7-3d1b-5128-9eb2-7cd8ee0b5741",
+						"DiscountPercent": 0,
+						"DiscountedPrice": 1775,
+						"IsPromoItem": false
+					},
+					{
+						"Item": {
+							"ItemTypeID": "e7c63390-eda7-46e0-bb7a-a6abdacd2433",
+							"ItemID": "f7862f1f-4340-6e42-b1fa-0ebcdcf43456",
+							"Amount": 1
+						},
+						"BasePrice": 1775,
+						"CurrencyID": "85ad13f7-3d1b-5128-9eb2-7cd8ee0b5741",
+						"DiscountPercent": 0,
+						"DiscountedPrice": 1775,
+						"IsPromoItem": false
+					},
+					{
+						"Item": {
+							"ItemTypeID": "e7c63390-eda7-46e0-bb7a-a6abdacd2433",
+							"ItemID": "e16ea577-4d7f-e686-456a-54b4b1d9cba2",
+							"Amount": 1
+						},
+						"BasePrice": 1775,
+						"CurrencyID": "85ad13f7-3d1b-5128-9eb2-7cd8ee0b5741",
+						"DiscountPercent": 0,
+						"DiscountedPrice": 1775,
+						"IsPromoItem": false
+					},
+					{
+						"Item": {
+							"ItemTypeID": "e7c63390-eda7-46e0-bb7a-a6abdacd2433",
+							"ItemID": "6046ca8f-4100-4b1a-7e8d-5e8c6625342f",
+							"Amount": 1
+						},
+						"BasePrice": 1775,
+						"CurrencyID": "85ad13f7-3d1b-5128-9eb2-7cd8ee0b5741",
+						"DiscountPercent": 0,
+						"DiscountedPrice": 1775,
+						"IsPromoItem": false
+					},
+					{
+						"Item": {
+							"ItemTypeID": "e7c63390-eda7-46e0-bb7a-a6abdacd2433",
+							"ItemID": "f353f65b-4764-cfc5-df01-8db85ab28199",
+							"Amount": 1
+						},
+						"BasePrice": 3550,
+						"CurrencyID": "85ad13f7-3d1b-5128-9eb2-7cd8ee0b5741",
+						"DiscountPercent": 1,
+						"DiscountedPrice": 0,
+						"IsPromoItem": false
+					},
+					{
+						"Item": {
+							"ItemTypeID": "dd3bf334-87f3-40bd-b043-682a57a8dc3a",
+							"ItemID": "7c2881fb-4bd3-3d98-4e5b-72a939eb2cac",
+							"Amount": 2
+						},
+						"BasePrice": 475,
+						"CurrencyID": "85ad13f7-3d1b-5128-9eb2-7cd8ee0b5741",
+						"DiscountPercent": 1,
+						"DiscountedPrice": 0,
+						"IsPromoItem": false
+					}
+				],
+				"DurationRemainingInSeconds": 410135,
+				"WholesaleOnly": false
+			}
+		],
+		"BundleRemainingDurationInSeconds": 410135
+	},
+	"SkinsPanelLayout": {
+		"SingleItemOffers": [
+			"2b555f97-46bb-5949-3531-979f5bc817f0",
+			"7cf3af0b-4556-a0db-2e04-eea4368b354b",
+			"4a3b4aaf-4cdd-d5cf-b776-0593c3d2bf9a",
+			"73e91435-4a2a-2552-d541-eb961e168f2c"
+		],
+		"SingleItemOffersRemainingDurationInSeconds": 75335
+	}
+}

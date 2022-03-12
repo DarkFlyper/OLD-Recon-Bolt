@@ -16,6 +16,7 @@ struct AssetCollection: Codable {
 	let weapons: [Weapon.ID: WeaponInfo]
 	let seasons: SeasonCollection
 	let skinsByLevelID: [WeaponSkin.Level.ID: WeaponSkin.Level.Path]
+	let currencies: [Currency.ID: CurrencyInfo]
 	
 	var images: Set<AssetImage> {
 		Set<AssetImage>()
@@ -26,6 +27,7 @@ struct AssetCollection: Codable {
 			.union(playerCards.values.flatMap(\.images))
 			.union(weapons.values.flatMap(\.images))
 			.union(seasons.images)
+			.union(currencies.values.flatMap(\.images))
 	}
 }
 
