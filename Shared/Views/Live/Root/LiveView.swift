@@ -5,8 +5,7 @@ import HandyOperators
 struct LiveView: View {
 	let userID: User.ID
 	@State var contractDetails: ContractDetails?
-	@State var offers: [StoreOffer.ID: StoreOffer]?
-	@State var storefront: Storefront?
+	@State fileprivate var storeInfo: StoreInfo?
 	
 	@Environment(\.valorantLoad) private var load
 	@Environment(\.scenePhase) private var scenePhase
@@ -52,8 +51,8 @@ struct LiveView: View {
 	
 	var storeBox: some View {
 		RefreshableBox(title: "Store", refreshAction: loadStoreDetails) {
-			if let offers = offers, let storefront = storefront {
-				StoreDetailsView(offers: offers, storefront: storefront)
+			if let info = storeInfo {
+				StoreDetailsView(updateTime: info.updateTime, offers: info.offers, storefront: info.storefront)
 			} else {
 				Divider()
 				
@@ -75,13 +74,26 @@ struct LiveView: View {
 	
 	@Sendable
 	func loadStoreDetails() async {
-		// load independently & concurrently
 		await load {
-			async let offers = $0.getStoreOffers()
-			async let storefront = $0.getStorefront(for: userID)
-			self.offers = try await .init(values: offers)
-			self.storefront = try await storefront
+			storeInfo = try await .init(for: userID, using: $0)
 		}
+	}
+}
+
+private struct StoreInfo {
+	var updateTime: Date
+	var offers: [StoreOffer.ID: StoreOffer]
+	var storefront: Storefront
+}
+
+extension StoreInfo {
+	init(for user: User.ID, using client: ValorantClient) async throws {
+		async let offers = client.getStoreOffers()
+		async let storefront = client.getStorefront(for: user)
+		
+		self.offers = try await .init(values: offers)
+		self.storefront = try await storefront
+		self.updateTime = .now
 	}
 }
 

@@ -129,6 +129,8 @@
 		B9F7A53C27DC5DAF00636DAF /* example_store_offers.json in Resources */ = {isa = PBXBuildFile; fileRef = B9F7A53A27DC5DAF00636DAF /* example_store_offers.json */; };
 		B9F7A53D27DC5DAF00636DAF /* example_storefront.json in Resources */ = {isa = PBXBuildFile; fileRef = B9F7A53B27DC5DAF00636DAF /* example_storefront.json */; };
 		B9F7A53F27DD091F00636DAF /* CurrencyAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F7A53E27DD091F00636DAF /* CurrencyAssets.swift */; };
+		B9F7A54127DD1E7D00636DAF /* BundleAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F7A54027DD1E7D00636DAF /* BundleAssets.swift */; };
+		B9F7A54327DD30C600636DAF /* BundleDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F7A54227DD30C600636DAF /* BundleDetailsView.swift */; };
 		B9F8703226B38F2400C1F784 /* AutoRefresher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F8703126B38F2400C1F784 /* AutoRefresher.swift */; };
 		B9F8703426B3A0A000C1F784 /* CountdownText.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F8703326B3A0A000C1F784 /* CountdownText.swift */; };
 		B9F8703626B3B02000C1F784 /* RefreshableBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F8703526B3B01F00C1F784 /* RefreshableBox.swift */; };
@@ -275,6 +277,8 @@
 		B9F7A53A27DC5DAF00636DAF /* example_store_offers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_store_offers.json; sourceTree = "<group>"; };
 		B9F7A53B27DC5DAF00636DAF /* example_storefront.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_storefront.json; sourceTree = "<group>"; };
 		B9F7A53E27DD091F00636DAF /* CurrencyAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyAssets.swift; sourceTree = "<group>"; };
+		B9F7A54027DD1E7D00636DAF /* BundleAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleAssets.swift; sourceTree = "<group>"; };
+		B9F7A54227DD30C600636DAF /* BundleDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleDetailsView.swift; sourceTree = "<group>"; };
 		B9F8703126B38F2400C1F784 /* AutoRefresher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoRefresher.swift; sourceTree = "<group>"; };
 		B9F8703326B3A0A000C1F784 /* CountdownText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownText.swift; sourceTree = "<group>"; };
 		B9F8703526B3B01F00C1F784 /* RefreshableBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshableBox.swift; sourceTree = "<group>"; };
@@ -330,10 +334,11 @@
 				B90FFF3726B47FFD007BE950 /* LiveGameBox.swift */,
 				B9AEB7D627B0A03F0090A203 /* PartyInfoBox.swift */,
 				B90FFF3D26B4BC57007BE950 /* ContractDetailsView.swift */,
+				B9F7A53827DC5D3D00636DAF /* StoreDetailsView.swift */,
+				B9F7A54227DD30C600636DAF /* BundleDetailsView.swift */,
 				B932A10727912297009FAEE5 /* Contracts */,
 				B932A10E27912322009FAEE5 /* Missions */,
 				B90FFF3426B454DC007BE950 /* In-Game */,
-				B9F7A53827DC5D3D00636DAF /* StoreDetailsView.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -509,6 +514,7 @@
 				B9F5CEDD267CD199009CF906 /* GameModeAssets.swift */,
 				B91D3DA326C8492F007D18B8 /* WeaponAssets.swift */,
 				B9F7A53E27DD091F00636DAF /* CurrencyAssets.swift */,
+				B9F7A54027DD1E7D00636DAF /* BundleAssets.swift */,
 			);
 			path = "Concrete Assets";
 			sourceTree = "<group>";
@@ -862,6 +868,7 @@
 				B9EF0F27263D9D860067176A /* ValorantAPI+SwiftUI.swift in Sources */,
 				B9485F84264B1DD300AC3456 /* AgentAssets.swift in Sources */,
 				B941B65825A5BC8A00F675C1 /* ContentView.swift in Sources */,
+				B9F7A54327DD30C600636DAF /* BundleDetailsView.swift in Sources */,
 				B9F66ACE266DC31E008560FD /* AccountView.swift in Sources */,
 				B963C4792695101C0071E14A /* PlayerIdentityCell.swift in Sources */,
 				B9766BB72750339700127FF2 /* ContractAssets.swift in Sources */,
@@ -879,6 +886,7 @@
 				B90FFF3E26B4BC57007BE950 /* ContractDetailsView.swift in Sources */,
 				B932A10C279122FF009FAEE5 /* UpcomingMissionsList.swift in Sources */,
 				B9EE6E6226589FAA007E28B5 /* PreviewData.swift in Sources */,
+				B9F7A54127DD1E7D00636DAF /* BundleAssets.swift in Sources */,
 				B9FB9372269B359900927E03 /* SeasonCollection.swift in Sources */,
 				B9E43DA2265DB94C00F59E35 /* MatchViewData.swift in Sources */,
 				B9318366267810CE0099B13C /* AgentSelectView.swift in Sources */,
