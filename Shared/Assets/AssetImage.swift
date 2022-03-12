@@ -49,7 +49,7 @@ struct AssetImage: Hashable {
 	}
 	
 	private static let baseURL = try! FileManager.default.url(
-		for: .cachesDirectory,
+		for: .applicationSupportDirectory,
 		in: .userDomainMask,
 		appropriateFor: nil,
 		create: true
