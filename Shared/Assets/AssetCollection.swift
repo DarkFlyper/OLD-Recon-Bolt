@@ -15,6 +15,7 @@ struct AssetCollection: Codable {
 	let playerTitles: [PlayerTitle.ID: PlayerTitleInfo]
 	let weapons: [Weapon.ID: WeaponInfo]
 	let seasons: SeasonCollection
+	let skinsByLevelID: [WeaponSkin.Level.ID: WeaponSkin.Level.Path]
 	
 	var images: Set<AssetImage> {
 		Set<AssetImage>()

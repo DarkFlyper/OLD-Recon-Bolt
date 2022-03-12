@@ -18,12 +18,13 @@ struct WeaponInfo: AssetItem, Codable, Identifiable {
 	var id: Weapon.ID
 	var displayName: String
 	var category: Category
-	var defaultSkinID: LowercaseUUID // TODO: type
+	var defaultSkinID: WeaponSkin.ID
 	var displayIcon: AssetImage
 	var killStreamIcon: AssetImage
 	var stats: WeaponStats?
 	var shopData: ShopData?
 	// this also has info on skins but I don't care about those for now.
+	var skins: [WeaponSkin]
 	
 	var images: [AssetImage] {
 		displayIcon
@@ -40,6 +41,7 @@ struct WeaponInfo: AssetItem, Codable, Identifiable {
 		case killStreamIcon
 		case stats = "weaponStats"
 		case shopData
+		case skins
 	}
 	
 	struct Category: NamespacedID {
@@ -66,6 +68,91 @@ struct WeaponInfo: AssetItem, Codable, Identifiable {
 			case category = "categoryText"
 			case canBeTrashed
 			case image = "newImage"
+		}
+	}
+}
+
+struct WeaponSkin: AssetItem, Codable, Identifiable {
+	var id: ObjectID<Self, LowercaseUUID>
+	var displayName: String
+	var themeID: Theme.ID
+	var contentTierID: ContentTier.ID?
+	var displayIcon: AssetImage?
+	var wallpaper: AssetImage?
+	var chromas: [Chroma]
+	var levels: [Level]
+	
+	private enum CodingKeys: String, CodingKey {
+		case id = "uuid"
+		case displayName
+		case themeID = "themeUuid"
+		case contentTierID = "contentTierUuid"
+		case displayIcon
+		case wallpaper
+		case chromas
+		case levels
+	}
+	
+	enum Theme {
+		typealias ID = ObjectID<Self, LowercaseUUID>
+	}
+	
+	enum ContentTier {
+		typealias ID = ObjectID<Self, LowercaseUUID>
+	}
+	
+	struct Chroma: AssetItem, Codable, Identifiable {
+		var id: ObjectID<Self, LowercaseUUID>
+		var displayName: String
+		var displayIcon: AssetImage?
+		var fullRender: AssetImage
+		var swatch: AssetImage?
+		var streamedVideo: URL?
+		
+		private enum CodingKeys: String, CodingKey {
+			case id = "uuid"
+			case displayName
+			case displayIcon
+			case fullRender
+			case swatch
+			case streamedVideo
+		}
+	}
+	
+	struct Level: AssetItem, Codable, Identifiable {
+		var id: ObjectID<Self, LowercaseUUID>
+		var displayName: String?
+		var levelItem: Item?
+		var displayIcon: AssetImage?
+		var streamedVideo: URL?
+		
+		private enum CodingKeys: String, CodingKey {
+			case id = "uuid"
+			case displayName
+			case levelItem
+			case displayIcon
+			case streamedVideo
+		}
+		
+		struct Item: NamespacedID {
+			static let animation = Self("Animation")
+			static let finisher = Self("Finisher")
+			static let inspectAndKill = Self("InspectAndKill")
+			static let killCounter = Self("KillCounter")
+			static let killBanner = Self("KillBanner")
+			static let randomizer = Self("Randomizer")
+			static let topFrag = Self("TopFrag")
+			static let vfx = Self("VFX")
+			static let voiceover = Self("Voiceover")
+			
+			static let namespace = "EEquippableSkinLevelItem"
+			var rawValue: String
+		}
+		
+		struct Path: Hashable, Codable {
+			var weapon: Weapon.ID
+			var skinIndex: Int
+			var levelIndex: Int
 		}
 	}
 }

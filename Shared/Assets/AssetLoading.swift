@@ -18,18 +18,31 @@ extension AssetClient {
 		async let weapons = getWeaponInfo()
 		async let seasons = getSeasons()
 		
+		// this seems to be what skins are actually referred to by…
+		let skinsByLevelID = try await Dictionary(
+			uniqueKeysWithValues: weapons.lazy.flatMap { weapon in
+				weapon.skins.enumerated().lazy.flatMap { skinIndex, skin in
+					skin.levels.enumerated().map { levelIndex, level in
+						(level.id, WeaponSkin.Level.Path(weapon: weapon.id, skinIndex: skinIndex, levelIndex: levelIndex))
+					}
+				}
+			}
+		)
+		
 		let collection = try await AssetCollection(
 			version: version,
 			maps: .init(values: maps),
 			agents: .init(values: agents),
 			missions: .init(values: missions),
 			contracts: .init(values: contracts),
-			gameModes: .init(values: gameModes, keyedBy: { $0.gameID() }), // riot doesn't exactly seem to know the word "consistency"
+			// riot doesn't exactly seem to know the word "consistency":
+			gameModes: .init(values: gameModes, keyedBy: { $0.gameID() }),
 			objectives: .init(values: objectives),
 			playerCards: .init(values: playerCards),
 			playerTitles: .init(values: playerTitles),
 			weapons: .init(values: weapons),
-			seasons: seasons
+			seasons: seasons,
+			skinsByLevelID: skinsByLevelID
 		)
 		
 		return try await downloadAllImages(for: collection, onProgress: onProgress)

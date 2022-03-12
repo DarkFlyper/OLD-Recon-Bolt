@@ -14,6 +14,8 @@ final class Tests: XCTestCase {
 		
 		XCTAssertFalse(assetCollection.agents.isEmpty)
 		XCTAssertFalse(assetCollection.maps.isEmpty)
+		let skinCount = assetCollection.weapons.values.lazy.flatMap(\.skins).count
+		print(skinCount, "skins")
 		
 		let encoder = JSONEncoder() <- { $0.outputFormatting = .prettyPrinted }
 		let encoded = try encoder.encode(assetCollection)
