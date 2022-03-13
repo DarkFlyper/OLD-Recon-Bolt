@@ -34,10 +34,10 @@ struct AgentListView: View {
 
 #if DEBUG
 struct AgentListView_Previews: PreviewProvider {
-    static var previews: some View {
-        AgentListView()
+	static var previews: some View {
+		AgentListView()
 			.withToolbar()
 			.inEachColorScheme()
-    }
+	}
 }
 #endif

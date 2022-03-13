@@ -50,7 +50,7 @@ struct AccountView: View {
 				credentials: .init(from: dataStore.keychain) ?? .init(),
 				keychain: dataStore.keychain
 			)
-				.withLoadErrorAlerts()
+			.withLoadErrorAlerts()
 		}
 	}
 	

@@ -119,7 +119,7 @@ struct MultifactorPrompt: Identifiable {
 
 #if DEBUG
 struct MultifactorPromptView_Previews: PreviewProvider {
-    static var previews: some View {
+	static var previews: some View {
 		MultifactorPromptView(
 			prompt: .init(
 				info: .mocked(codeLength: 6, email: "jul***@***.com"),
@@ -127,8 +127,8 @@ struct MultifactorPromptView_Previews: PreviewProvider {
 			),
 			digits: [4, 2, 0]
 		)
-			.inEachColorScheme()
-			.inEachOrientation()
-    }
+		.inEachColorScheme()
+		.inEachOrientation()
+	}
 }
 #endif

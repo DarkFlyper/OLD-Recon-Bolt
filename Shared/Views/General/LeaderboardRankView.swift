@@ -51,7 +51,7 @@ struct LeaderboardRankView_Previews: PreviewProvider {
 		.filter { $0.number % 3 == 0 }
 		.sorted(on: \.number)
 	
-    static var previews: some View {
+	static var previews: some View {
 		VStack {
 			LeaderboardRankView(rank: 69420)
 			ForEach(distinctlyColoredTiers, id: \.number) { tier in
@@ -61,6 +61,6 @@ struct LeaderboardRankView_Previews: PreviewProvider {
 		.inEachColorScheme()
 		.padding()
 		.previewLayout(.sizeThatFits)
-    }
+	}
 }
 #endif

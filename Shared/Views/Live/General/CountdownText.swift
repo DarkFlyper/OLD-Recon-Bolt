@@ -27,10 +27,10 @@ struct CountdownText: View {
 
 #if DEBUG
 struct CountdownText_Previews: PreviewProvider {
-    static var previews: some View {
+	static var previews: some View {
 		CountdownText(target: .init(timeIntervalSinceNow: 1000))
 			.padding()
 			.previewLayout(.sizeThatFits)
-    }
+	}
 }
 #endif

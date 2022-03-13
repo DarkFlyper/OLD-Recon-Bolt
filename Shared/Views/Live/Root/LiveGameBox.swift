@@ -123,7 +123,7 @@ struct LiveGameBox: View {
 
 #if DEBUG
 struct LiveGameBox_Previews: PreviewProvider {
-    static var previews: some View {
+	static var previews: some View {
 		Group {
 			LiveGameBox(
 				userID: PreviewData.userID,
@@ -154,6 +154,6 @@ struct LiveGameBox_Previews: PreviewProvider {
 		.background(Color(.systemGroupedBackground))
 		.withToolbar()
 		.inEachColorScheme()
-    }
+	}
 }
 #endif

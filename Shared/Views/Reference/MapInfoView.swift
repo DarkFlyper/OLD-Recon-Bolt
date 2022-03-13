@@ -31,9 +31,9 @@ struct MapInfoView: View {
 							.background(Material.ultraThin)
 							.cornerRadius(16)
 					} onMagnifyToggle: { isZoomedIn = $0 }
-					.zIndex(1)
-					.frame(maxHeight: verticalSizeClass == .compact ? 300 : nil)
-					.padding(.horizontal)
+						.zIndex(1)
+						.frame(maxHeight: verticalSizeClass == .compact ? 300 : nil)
+						.padding(.horizontal)
 				} else {
 					Text("No minimap available!")
 						.foregroundColor(.secondary)

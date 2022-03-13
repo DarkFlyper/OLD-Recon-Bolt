@@ -62,7 +62,7 @@ struct DynamicallyStroked_Previews: PreviewProvider {
 			Image(systemName: "applelogo")
 				.font(.system(size: 80))
 				.dynamicallyStroked(radius: 4, color: .white, avoidClipping: true)
-			 
+			
 			AgentImage.icon(.omen)
 				.frame(width: 80)
 				.dynamicallyStroked(radius: 4, color: .white)

@@ -25,7 +25,7 @@ struct ContractChooser: View {
 						isActive: details.activeSpecialContract == info.id,
 						activate: activateContract
 					)
-						.background(Color(.secondarySystemGroupedBackground))
+					.background(Color(.secondarySystemGroupedBackground))
 				}
 			}
 			.cornerRadius(20)

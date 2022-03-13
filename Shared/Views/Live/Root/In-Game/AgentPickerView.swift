@@ -117,8 +117,8 @@ struct AgentPickerView_Previews: PreviewProvider {
 			userID: PreviewData.userID,
 			inventory: PreviewData.inventory
 		)
-			.previewLayout(.sizeThatFits)
-			.inEachColorScheme()
+		.previewLayout(.sizeThatFits)
+		.inEachColorScheme()
 	}
 }
 #endif

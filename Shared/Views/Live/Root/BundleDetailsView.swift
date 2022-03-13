@@ -26,9 +26,9 @@ struct BundleDetailsView: View {
 
 #if DEBUG
 struct BundleDetailsView_Previews: PreviewProvider {
-    static var previews: some View {
+	static var previews: some View {
 		BundleDetailsView(bundle: PreviewData.storefront.featuredBundle.bundles.first!)
 			.withToolbar()
-    }
+	}
 }
 #endif

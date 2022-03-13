@@ -171,7 +171,7 @@ struct PartyInfoBox: View {
 
 #if DEBUG
 struct PartyInfoBox_Previews: PreviewProvider {
-    static var previews: some View {
+	static var previews: some View {
 		Group {
 			previewBox {
 				PartyInfoBox(userID: PreviewData.userID, party: .constant(PreviewData.party))
@@ -188,7 +188,7 @@ struct PartyInfoBox_Previews: PreviewProvider {
 			}
 		}
 		.inEachColorScheme()
-    }
+	}
 	
 	static func previewBox<Content: View>(@ViewBuilder content: @escaping () -> Content) -> some View {
 		RefreshableBox(title: "Party Info", refreshAction: {}) {

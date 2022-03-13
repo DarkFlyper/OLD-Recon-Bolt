@@ -143,10 +143,10 @@ struct AgentInfoView: View {
 
 #if DEBUG
 struct AgentInfoView_Previews: PreviewProvider {
-    static var previews: some View {
+	static var previews: some View {
 		AgentInfoView(agent: AssetManager.forPreviews.assets!.agents[.sova]!)
 			.withToolbar()
 			.inEachColorScheme()
-    }
+	}
 }
 #endif

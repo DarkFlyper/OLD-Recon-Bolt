@@ -60,7 +60,7 @@ struct MagnifiableView<Content: View>: View {
 
 #if DEBUG
 struct MagnifiableView_Previews: PreviewProvider {
-    static var previews: some View {
+	static var previews: some View {
 		MagnifiableView {
 			Image(systemName: "doc.richtext")
 				.background(.quaternary)
