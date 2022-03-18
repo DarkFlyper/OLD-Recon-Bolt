@@ -10,6 +10,12 @@ let isInSwiftUIPreview = false
 
 extension Color {
 	static let separator = Color(.separator)
+	static let groupedBackground = Self(.systemGroupedBackground)
+	static let secondaryGroupedBackground = Self(.secondarySystemGroupedBackground)
+	static let tertiaryGroupedBackground = Self(.tertiarySystemGroupedBackground)
+	static let valorantBlue = Color("Valorant Blue")
+	static let valorantRed = Color("Valorant Red")
+	static let valorantSelf = Color("Valorant Self")
 }
 
 extension View {
@@ -79,20 +85,5 @@ private struct OnSceneActivationModifier: ViewModifier {
 				guard scenePhase == .active else { return }
 				await task()
 			}
-	}
-}
-
-/// Navigation Links turn gray when used outside a navigation view, which often happens in SwiftUI previews. This works around that, making them look enabled anyway.
-extension PrimitiveButtonStyle where Self == _NavigationLinkPreviewButtonStyle {
-	static var navigationLinkPreview: _NavigationLinkPreviewButtonStyle { .init() }
-}
-
-struct _NavigationLinkPreviewButtonStyle: PrimitiveButtonStyle {
-	func makeBody(configuration: PrimitiveButtonStyleConfiguration) -> some View {
-		Button(role: configuration.role, action: configuration.trigger) {
-			configuration.label
-		}
-		.buttonStyle(.plain)
-		.environment(\.isEnabled, true)
 	}
 }

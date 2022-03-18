@@ -23,7 +23,7 @@ struct RefreshableBox<Content: View>: View {
 					.groupBoxStyle(NestedGroupBoxStyle())
 			}
 		}
-		.background(Color(.secondarySystemGroupedBackground))
+		.background(Color.secondaryGroupedBackground)
 		.cornerRadius(20)
 	}
 	
@@ -49,7 +49,7 @@ struct RefreshableBox<Content: View>: View {
 	#if DEBUG
 	func forPreviews() -> some View {
 		self.padding()
-			.background(Color(.systemGroupedBackground))
+			.background(Color.groupedBackground)
 			.shadow(color: .black.opacity(0.1), radius: 20, x: 0, y: 10)
 			.previewLayout(.sizeThatFits)
 	}
@@ -62,8 +62,7 @@ struct RefreshableBox<Content: View>: View {
 			}
 			.frame(maxWidth: .infinity)
 			.padding()
-			.background(Color(.tertiarySystemGroupedBackground))
-			//.cornerRadius(8) // TODO: why
+			.background(Color.tertiaryGroupedBackground)
 		}
 	}
 }

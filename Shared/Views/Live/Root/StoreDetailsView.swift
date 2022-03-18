@@ -15,7 +15,7 @@ struct StoreDetailsView: View {
 		VStack(spacing: 16) {
 			ForEach(storefront.featuredBundle.bundles) { bundle in
 				bundleCell(for: bundle)
-					.background(Color(.tertiarySystemGroupedBackground))
+					.background(Color.tertiaryGroupedBackground)
 					.cornerRadius(8)
 			}
 			
@@ -33,7 +33,7 @@ struct StoreDetailsView: View {
 			ForEach(storefront.skinsPanelLayout.singleItemOffers, id: \.self) { offerID in
 				let offer = offers[offerID]!
 				offerCell(for: offer)
-					.background(Color(.tertiarySystemGroupedBackground))
+					.background(Color.tertiaryGroupedBackground)
 					.cornerRadius(8)
 			}
 		}

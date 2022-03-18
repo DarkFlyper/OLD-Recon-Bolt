@@ -28,7 +28,7 @@ struct CareerSummaryView: View {
 			}
 			.padding()
 		}
-		.background(Color(.systemGroupedBackground))
+		.background(Color.groupedBackground)
 		.navigationTitle("Career Summary")
 		.navigationBarTitleDisplayMode(.inline)
 	}
@@ -48,7 +48,7 @@ struct CareerSummaryView: View {
 			VStack(spacing: 1) {
 				contentSegments()
 					.frame(maxWidth: .infinity)
-					.background(Color(.secondarySystemGroupedBackground))
+					.background(Color.secondaryGroupedBackground)
 			}
 			.cornerRadius(20)
 		}

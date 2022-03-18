@@ -22,7 +22,7 @@ struct MultifactorPromptView: View {
 							.frame(width: size, height: size)
 							.padding(8)
 							.opacity(digits.indices.contains(i) ? 1 : 0.5)
-							.background(Color(.secondarySystemGroupedBackground))
+							.background(Color.secondaryGroupedBackground)
 							.cornerRadius(8)
 					}
 				}
@@ -41,7 +41,7 @@ struct MultifactorPromptView: View {
 		}
 		.padding()
 		.frame(maxWidth: .infinity, maxHeight: .infinity)
-		.background(Color(.systemGroupedBackground))
+		.background(Color.groupedBackground)
 		.navigationTitle("Enter 2FA Code")
 		.navigationBarTitleDisplayMode(.inline)
 		.toolbar {

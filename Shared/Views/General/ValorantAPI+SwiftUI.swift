@@ -2,12 +2,6 @@ import SwiftUI
 import ValorantAPI
 import ArrayBuilder
 
-extension Color {
-	static let valorantBlue = Color("Valorant Blue")
-	static let valorantRed = Color("Valorant Red")
-	static let valorantSelf = Color("Valorant Self")
-}
-
 extension Team.ID {
 	var color: Color? {
 		switch rawID {

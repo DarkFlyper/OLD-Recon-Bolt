@@ -25,13 +25,13 @@ struct ContractChooser: View {
 						isActive: details.activeSpecialContract == info.id,
 						activate: activateContract
 					)
-					.background(Color(.secondarySystemGroupedBackground))
+					.background(Color.secondaryGroupedBackground)
 				}
 			}
 			.cornerRadius(20)
 			.padding()
 		}
-		.background(Color(.systemGroupedBackground))
+		.background(Color.groupedBackground)
 		.navigationTitle("Choose a Contract")
 	}
 	

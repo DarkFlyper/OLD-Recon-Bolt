@@ -53,7 +53,7 @@ struct LoginForm: View {
 				.buttonStyle(.borderedProminent)
 			}
 			.frame(idealWidth: 180)
-			.textFieldStyle(PrettyTextFieldStyle())
+			.textFieldStyle(.pretty)
 			.opacity(isSigningIn ? 0.25 : 1)
 			.blur(radius: isSigningIn ? 4 : 0)
 		}

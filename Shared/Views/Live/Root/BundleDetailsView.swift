@@ -11,7 +11,7 @@ struct BundleDetailsView: View {
 			ScrollView {
 				info.displayIcon.asyncImage()
 			}
-			.background(Color(.systemGroupedBackground))
+			.background(Color.groupedBackground)
 			.navigationTitle(info.displayName)
 		} else {
 			VStack(spacing: 8) {

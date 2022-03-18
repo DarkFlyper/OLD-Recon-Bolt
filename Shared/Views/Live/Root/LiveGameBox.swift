@@ -135,7 +135,7 @@ struct LiveGameBox_Previews: PreviewProvider {
 			)
 		}
 		.padding()
-		.background(Color(.systemGroupedBackground))
+		.background(Color.groupedBackground)
 		.previewLayout(.sizeThatFits)
 		.inEachColorScheme()
 		
@@ -151,7 +151,7 @@ struct LiveGameBox_Previews: PreviewProvider {
 			Spacer()
 		}
 		.padding()
-		.background(Color(.systemGroupedBackground))
+		.background(Color.groupedBackground)
 		.withToolbar()
 		.inEachColorScheme()
 	}

@@ -11,7 +11,7 @@ struct AgentInfoView: View {
 		ScrollViewReader { scrollView in
 			ScrollView {
 				VStack(spacing: 16) {
-					let backgroundColor = Color(.secondarySystemGroupedBackground)
+					let backgroundColor = Color.secondaryGroupedBackground
 					AgentImage.bustPortrait(agent.id)
 						.frame(maxHeight: 300)
 						.padding(.top, 100)
@@ -28,11 +28,11 @@ struct AgentInfoView: View {
 						abilitiesBox(scrollView: scrollView)
 					}
 					.padding()
-					.background(Color(.secondarySystemGroupedBackground))
+					.background(Color.secondaryGroupedBackground)
 				}
 				.animation(.default, value: activeAbilityIndex)
 			}
-			.background(Color(.systemGroupedBackground))
+			.background(Color.groupedBackground)
 			.ignoresSafeArea(.container, edges: .top)
 		}
 		//.navigationTitle(agent.displayName)

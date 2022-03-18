@@ -27,7 +27,7 @@ struct LiveView: View {
 		.task(loadStoreDetails)
 		.onSceneActivation(perform: loadContractDetails)
 		.onSceneActivation(perform: loadStoreDetails)
-		.background(Color(.systemGroupedBackground))
+		.background(Color.groupedBackground)
 		.navigationTitle("Live")
 	}
 	
