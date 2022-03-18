@@ -8,6 +8,7 @@ struct PartyInfoBox: View {
 	
 	@Environment(\.valorantLoad) private var load
 	@State var isChangingQueue = false
+	@State var isConfirmingMatchakingStart = false
 	
 	var member: Party.Member {
 		party.members.firstElement(withID: userID)!
@@ -64,13 +65,24 @@ struct PartyInfoBox: View {
 				}
 			}
 		case .default:
-			AsyncButton("Find Match") {
-				await load {
-					party = try await $0.joinMatchmaking(in: party.id)
-				}
+			Button("Find Match") {
+				isConfirmingMatchakingStart = true
 			}
 			.disabled(!party.members.allSatisfy(\.isReady))
 			.disabled(!member.isOwner)
+			.confirmationDialog(
+				"Start Matchmaking?",
+				isPresented: $isConfirmingMatchakingStart,
+				titleVisibility: .visible
+			) {
+				AsyncButton("Find Match") {
+					await load {
+						party = try await $0.joinMatchmaking(in: party.id)
+					}
+				}
+			} message: {
+				Text("Please make sure you are ready to play by the time the game starts!")
+			}
 		default:
 			EmptyView()
 		}
