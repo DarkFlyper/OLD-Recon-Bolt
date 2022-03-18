@@ -12,7 +12,7 @@ struct LiveView: View {
 	
 	var body: some View {
 		ScrollView {
-			VStack(spacing: 20) {
+			VStack(spacing: 16) {
 				LiveGameBox(userID: userID)
 				
 				missionsBox

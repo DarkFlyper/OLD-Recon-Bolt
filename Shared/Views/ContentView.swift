@@ -5,11 +5,8 @@ import KeychainSwift
 
 struct ContentView: View {
 	@StateObject var dataStore: ClientDataStore
-	#if DEBUG
 	@StateObject var assetManager = isInSwiftUIPreview ? .forPreviews : AssetManager()
-	#else
-	@StateObject var assetManager = AssetManager()
-	#endif
+	@StateObject var bookmarkList = BookmarkList()
 	
 	@SceneStorage("tab")
 	var tab = Tab.career
@@ -51,7 +48,7 @@ struct ContentView: View {
 			guard let clientVersion = version?.riotClientVersion else { return }
 			Task { await dataStore.data?.setClientVersion(clientVersion) }
 		})
-		.environmentObject(BookmarkList())
+		.environmentObject(bookmarkList)
 	}
 	
 	@ViewBuilder
