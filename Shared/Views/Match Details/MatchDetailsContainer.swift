@@ -18,8 +18,6 @@ struct MatchDetailsContainer: View {
 		.withLocalData($details, id: matchID, shouldAutoUpdate: true)
 		.loadErrorAlertTitle("Could not load match details!")
 		.navigationTitle("Match Details")
-		#if os(iOS)
 		.navigationBarTitleDisplayMode(.inline)
-		#endif
 	}
 }

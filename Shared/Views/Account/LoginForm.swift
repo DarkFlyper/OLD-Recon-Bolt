@@ -46,13 +46,11 @@ struct LoginForm: View {
 				}
 				.frame(maxWidth: 240)
 				
-#if !os(macOS)
 				AsyncButton(action: logIn) {
 					Text("Sign In")
 						.bold()
 				}
 				.buttonStyle(.borderedProminent)
-#endif
 			}
 			.frame(idealWidth: 180)
 			.textFieldStyle(PrettyTextFieldStyle())
@@ -61,15 +59,7 @@ struct LoginForm: View {
 		}
 		.buttonStyle(.bordered)
 		.buttonBorderShape(.capsule)
-		.withoutSheetBottomPadding()
 		.padding()
-#if os(macOS)
-		.toolbar {
-			ToolbarItemGroup(placement: .confirmationAction) {
-				Button("Sign In", action: logIn)
-			}
-		}
-#endif
 		.loadErrorAlertTitle("Could not sign in!")
 		.sheet(
 			isPresented: $isPromptingMultifactor,

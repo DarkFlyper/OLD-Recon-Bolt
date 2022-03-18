@@ -22,13 +22,4 @@ extension View {
 					.strokeBorder(style, lineWidth: lineWidth)
 			)
 	}
-	
-	/// cancels out the bottom padding automatically added to sheets in macOS
-	func withoutSheetBottomPadding() -> some View {
-		#if os(macOS)
-		return padding(.bottom, -11)
-		#else
-		return self
-		#endif
-	}
 }
