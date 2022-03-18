@@ -43,7 +43,6 @@
 		B932A11227912882009FAEE5 /* HandyOperators in Frameworks */ = {isa = PBXBuildFile; productRef = B932A11127912882009FAEE5 /* HandyOperators */; };
 		B9342C3E27A6D10300F232CB /* strange_summary.json in Resources */ = {isa = PBXBuildFile; fileRef = B9342C3D27A6D10300F232CB /* strange_summary.json */; };
 		B94091AE25D09D5A00EE5DF2 /* LoadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94091AD25D09D5A00EE5DF2 /* LoadManager.swift */; };
-		B94091B325D09DF900EE5DF2 /* SwiftUI+CrossPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94091B225D09DF900EE5DF2 /* SwiftUI+CrossPlatform.swift */; };
 		B94091B825D09F0200EE5DF2 /* MatchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94091B725D09F0200EE5DF2 /* MatchListView.swift */; };
 		B941B65625A5BC8A00F675C1 /* ReconBoltApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B64325A5BC8800F675C1 /* ReconBoltApp.swift */; };
 		B941B65825A5BC8A00F675C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B64425A5BC8800F675C1 /* ContentView.swift */; };
@@ -189,7 +188,6 @@
 		B932A10F2791272C009FAEE5 /* ValorantAPI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ValorantAPI; sourceTree = "<group>"; };
 		B9342C3D27A6D10300F232CB /* strange_summary.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = strange_summary.json; sourceTree = "<group>"; };
 		B94091AD25D09D5A00EE5DF2 /* LoadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadManager.swift; sourceTree = "<group>"; };
-		B94091B225D09DF900EE5DF2 /* SwiftUI+CrossPlatform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUI+CrossPlatform.swift"; sourceTree = "<group>"; };
 		B94091B725D09F0200EE5DF2 /* MatchListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListView.swift; sourceTree = "<group>"; };
 		B941B64325A5BC8800F675C1 /* ReconBoltApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReconBoltApp.swift; sourceTree = "<group>"; };
 		B941B64425A5BC8800F675C1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -482,7 +480,6 @@
 			children = (
 				B941B6DD25A7BC3800F675C1 /* View+Styling.swift */,
 				B9CF2E6125A81B48004A1458 /* UnifiedStyles.swift */,
-				B94091B225D09DF900EE5DF2 /* SwiftUI+CrossPlatform.swift */,
 				B9C97DC6263CADFC001E4D1B /* ValorantAPI+Mock.swift */,
 				B9EE6E702659D30A007E28B5 /* Swift+Helpers.swift */,
 				B96A0CA2265ABBC700844674 /* SwiftUI+Helpers.swift */,
@@ -857,7 +854,6 @@
 				B9131D6C266AFA7900E85F46 /* MapInfoView.swift in Sources */,
 				B9C7064E269BC91F00D29226 /* GameModeImage.swift in Sources */,
 				B9741478266F18A800892B5F /* String+Localization.swift in Sources */,
-				B94091B325D09DF900EE5DF2 /* SwiftUI+CrossPlatform.swift in Sources */,
 				B941B6D825A7A09000F675C1 /* Credentials.swift in Sources */,
 				B95B1A74269CEC7B0080EC81 /* BookmarkListView.swift in Sources */,
 				B989466B26860D8A00C8059A /* AsyncButton.swift in Sources */,
