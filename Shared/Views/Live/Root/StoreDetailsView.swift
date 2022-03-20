@@ -69,18 +69,25 @@ struct StoreDetailsView: View {
 		let path = assets?.skinsByLevelID[.init(rawID: reward.itemID)]
 		let skin = path.map { assets!.weapons[$0.weapon]!.skins[$0.skinIndex] }
 		VStack {
-			skin?.displayIcon?.asyncImage()
+			let icon = skin?.displayIcon ?? path.flatMap { skin?.levels[$0.levelIndex] }?.displayIcon
+			icon?.asyncImage()
 				.frame(height: 60)
 			
-			HStack {
-				Text(skin?.displayName ?? "<Unknown Skin>")
+			HStack(alignment: .lastTextBaseline) {
+				Text((skin?.displayName ?? "<Unknown Skin>"))
 					.fontWeight(.medium)
+					.fixedSize(horizontal: false, vertical: true)
+				
 				Spacer()
+				
 				ForEach(offer.cost.sorted(on: \.key.description), id: \.key) { currencyID, amount in
-					Text("\(amount)")
-					let currency = assets?.currencies[currencyID]
-					currency?.displayIcon.imageOrPlaceholder(renderingMode: .template)
-						.frame(width: currencyIconSize, height: currencyIconSize)
+					HStack {
+						Text("\(amount)")
+						let currency = assets?.currencies[currencyID]
+						currency?.displayIcon.imageOrPlaceholder(renderingMode: .template)
+							.frame(width: currencyIconSize, height: currencyIconSize)
+					}
+					.layoutPriority(1)
 				}
 			}
 		}
