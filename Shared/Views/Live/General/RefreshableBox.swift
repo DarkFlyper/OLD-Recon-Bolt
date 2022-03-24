@@ -63,6 +63,7 @@ struct RefreshableBox<Content: View>: View {
 			.frame(maxWidth: .infinity)
 			.padding()
 			.background(Color.tertiaryGroupedBackground)
+			.cornerRadius(8)
 		}
 	}
 }
