@@ -83,7 +83,7 @@ struct AgentInfoView: View {
 		let boxID = "ability box"
 		VStack(spacing: 20) {
 			HStack(spacing: 0) {
-				ForEach(agent.abilities.indexed(), id: \.index) { index, ability in
+				ForEach(agent.reorderedAbilities.indexed(), id: \.index) { index, ability in
 					let isActive = activeAbilityIndex == index
 					icon(for: ability)
 						.frame(height: 24)
