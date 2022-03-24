@@ -69,7 +69,8 @@ struct StoreDetailsView: View {
 		let path = assets?.skinsByLevelID[.init(rawID: reward.itemID)]
 		let skin = path.map { assets!.weapons[$0.weapon]!.skins[$0.skinIndex] }
 		VStack {
-			let icon = skin?.displayIcon ?? path.flatMap { skin?.levels[$0.levelIndex] }?.displayIcon
+			let level = path.flatMap { skin?.levels[$0.levelIndex] }
+			let icon = level?.displayIcon ?? skin?.displayIcon
 			icon?.asyncImage()
 				.frame(height: 60)
 			
