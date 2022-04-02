@@ -10,18 +10,11 @@ struct CountdownText: View {
 		$0.allowedUnits = [.day, .hour, .minute, .second]
 	}
 	
-	@State private var refresher = 0
-	
 	var body: some View {
-		Text(Self.formatter.string(from: .now, to: target)!)
-			.id(refresher)
-			.monospacedDigit()
-			.task {
-				while !Task.isCancelled {
-					await Task.sleep(seconds: 1, tolerance: 0.05)
-					refresher += 1
-				}
-			}
+		TimelineView(.periodic(from: .now, by: 1)) { context in
+			Text(Self.formatter.string(from: context.date, to: target)!)
+				.monospacedDigit()
+		}
 	}
 }
 
