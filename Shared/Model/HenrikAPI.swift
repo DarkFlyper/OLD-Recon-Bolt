@@ -15,7 +15,7 @@ final class HenrikClient: Protoclient {
 	private init() {}
 	
 	struct APIError: Error, LocalizedError {
-		let status: String
+		let status: Int
 		let message: String?
 		
 		var errorDescription: String? {
@@ -25,7 +25,7 @@ final class HenrikClient: Protoclient {
 }
 
 private struct HenrikResponse<Body>: Decodable where Body: Decodable {
-	var status: String
+	var status: Int
 	var data: Body?
 	var message: String?
 }
