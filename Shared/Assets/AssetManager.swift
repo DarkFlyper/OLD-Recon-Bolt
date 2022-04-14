@@ -17,7 +17,7 @@ final class AssetManager: ObservableObject {
 		_assets = .init(wrappedValue: assets)
 	}
 	
-	func loadAssets(forceUpdate: Bool = false) async {
+	func loadAssets(forceUpdate: Bool = false, skipExistingImages: Bool = false) async {
 		guard progress == nil else { return }
 		self.error = nil
 		
@@ -48,6 +48,7 @@ final class AssetManager: ObservableObject {
 	
 	static func loadAssets(
 		forceUpdate: Bool = false,
+		skipExistingImages: Bool = false,
 		onProgress: AssetProgressCallback? = nil
 	) async throws -> AssetCollection {
 		let version = try await client.getCurrentVersion()
@@ -55,7 +56,7 @@ final class AssetManager: ObservableObject {
 			return stored
 		} else {
 			return try await client
-				.collectAssets(for: version, onProgress: onProgress)
+				.collectAssets(for: version, skipExistingImages: skipExistingImages, onProgress: onProgress)
 			<- { Self.stored = $0 }
 		}
 	}

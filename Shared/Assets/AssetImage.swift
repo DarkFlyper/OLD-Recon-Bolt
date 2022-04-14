@@ -71,7 +71,10 @@ final class Cache<Key: Hashable, Value> {
 }
 
 extension AssetClient {
-	func download(_ image: AssetImage) async throws {
+	func download(_ image: AssetImage, skipIfExists: Bool) async throws {
+		if skipIfExists {
+			guard !FileManager.default.fileExists(atPath: image.localURL.path) else { return }
+		}
 		let imageData = try await send(ImageDownloadRequest(imageURL: image.url))
 		try FileManager.default.createDirectory(
 			at: image.localURL.deletingLastPathComponent(),

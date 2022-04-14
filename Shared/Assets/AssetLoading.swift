@@ -3,6 +3,7 @@ import Foundation
 extension AssetClient {
 	func collectAssets(
 		for version: AssetVersion,
+		skipExistingImages: Bool,
 		onProgress: AssetProgressCallback?
 	) async throws -> AssetCollection {
 		onProgress?(.init(completed: 0))
@@ -49,11 +50,12 @@ extension AssetClient {
 			bundles: .init(values: bundles)
 		)
 		
-		return try await downloadAllImages(for: collection, onProgress: onProgress)
+		return try await downloadAllImages(for: collection, skipExistingImages: skipExistingImages, onProgress: onProgress)
 	}
 	
 	private func downloadAllImages(
 		for collection: AssetCollection,
+		skipExistingImages: Bool,
 		onProgress: AssetProgressCallback?
 	) async throws -> AssetCollection {
 		let images = collection.images
@@ -61,7 +63,7 @@ extension AssetClient {
 		try await withThrowingTaskGroup(of: Void.self) { group in
 			for image in images {
 				group.addTask {
-					try await download(image)
+					try await download(image, skipIfExists: skipExistingImages)
 				}
 			}
 			onProgress?(.init(completed: 0, total: images.count))

@@ -6,6 +6,7 @@ struct AccountView: View {
 	@ObservedObject var assetManager: AssetManager
 	
 	@LocalData var user: User?
+	@State var newestVersion: AssetVersion?
 	
 	var body: some View {
 		ScrollView {
@@ -68,27 +69,67 @@ struct AccountView: View {
 			} else if let error = assetManager.error {
 				Text("Error downloading assets!")
 					.font(.headline)
-					.fontWeight(.semibold)
 				
 				AsyncButton("Retry") { await assetManager.loadAssets() }
 				
 				Text(error.localizedDescription)
 			} else if let assets = assetManager.assets {
-				Text("Assets complete!")
-				
-				Text("Version \(assets.version.version)")
+				if let newestVersion = newestVersion, assets.version != newestVersion {
+					Text("Assets out of date!")
+						.font(.headline)
+					
+					VStack(alignment: .trailing) {
+						Text("Current version: \(assets.version.version)")
+						Text("Newest available: \(newestVersion.version)")
+					}
 					.foregroundStyle(.secondary)
-				
-				AsyncButton("Redownload") { await assetManager.loadAssets(forceUpdate: true) }
+					.font(.callout.monospacedDigit())
+					
+					HStack {
+						AsyncButton("Full Update") {
+							await assetManager.loadAssets()
+						}
+						.buttonStyle(.borderedProminent)
+						
+						AsyncButton("Quick Update") {
+							await assetManager.loadAssets(skipExistingImages: true)
+						}
+					}
+					
+					Text("Quick Update is a faster but less reliable way to update: only downloads missing images; does not update existing images that have changed.")
+						.font(.footnote)
+						.foregroundColor(.secondary)
+						.frame(maxWidth: .infinity, alignment: .leading)
+				} else {
+					if newestVersion != nil {
+						Text("Assets up to date!")
+					} else {
+						Text("Assets complete!")
+					}
+					
+					Text("Version \(assets.version.version)")
+						.foregroundStyle(.secondary)
+						.font(.callout)
+					
+					AsyncButton("Redownload") {
+						await assetManager.loadAssets(forceUpdate: true)
+					}
+				}
 			} else {
 				Text("Missing assets!")
 					.font(.headline)
-					.fontWeight(.medium)
 				Text("Anything with images will not display correctly.")
 					.multilineTextAlignment(.center)
 				
 				AsyncButton("Download Assets Now") { await assetManager.loadAssets() }
 					.tint(.accentColor)
+			}
+		}
+		.task {
+			do {
+				newestVersion = try await AssetClient().getCurrentVersion()
+			} catch {
+				print("could not fetch newest assets version:", error)
 			}
 		}
 	}
