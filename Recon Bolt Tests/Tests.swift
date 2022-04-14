@@ -10,7 +10,7 @@ final class Tests: XCTestCase {
 	func testDownloadingAssets() async throws {
 		let client = AssetClient(session: Self.session)
 		let version = try await client.getCurrentVersion()
-		let assetCollection = try await client.collectAssets(for: version) { print($0) }
+		let assetCollection = try await client.collectAssets(for: version, skipExistingImages: false) { print($0) }
 		
 		XCTAssertFalse(assetCollection.agents.isEmpty)
 		XCTAssertFalse(assetCollection.maps.isEmpty)
