@@ -11,17 +11,7 @@ struct AgentInfoView: View {
 		ScrollViewReader { scrollView in
 			ScrollView {
 				VStack(spacing: 16) {
-					let backgroundColor = Color.secondaryGroupedBackground
-					AgentImage.bustPortrait(agent.id)
-						.frame(maxHeight: 300)
-						.padding(.top, 100)
-						.background {
-							LinearGradient(
-								colors: [backgroundColor.opacity(0), backgroundColor],
-								startPoint: .top,
-								endPoint: .bottom
-							)
-						}
+					portrait
 					
 					Group {
 						descriptionBox
@@ -36,6 +26,20 @@ struct AgentInfoView: View {
 			.ignoresSafeArea(.container, edges: .top)
 		}
 		//.navigationTitle(agent.displayName)
+	}
+	
+	var portrait: some View {
+		let backgroundColor = Color.secondaryGroupedBackground
+		return AgentImage.bustPortrait(agent.id)
+			.frame(maxHeight: 300)
+			.padding(.top, 100)
+			.background {
+				LinearGradient(
+					colors: [backgroundColor.opacity(0), backgroundColor],
+					startPoint: .top,
+					endPoint: .bottom
+				)
+			}
 	}
 	
 	var descriptionBox: some View {
