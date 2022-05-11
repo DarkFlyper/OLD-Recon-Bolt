@@ -22,7 +22,10 @@ final class AssetManager: ObservableObject {
 		self.error = nil
 		
 		do {
-			assets = try await Self.loadAssets(forceUpdate: forceUpdate) { progress in
+			assets = try await Self.loadAssets(
+				forceUpdate: forceUpdate,
+				skipExistingImages: skipExistingImages
+			) { progress in
 				DispatchQueue.main.async { // TODO: switch to AsyncStream once it's out
 					print(progress)
 					self.progress = progress
