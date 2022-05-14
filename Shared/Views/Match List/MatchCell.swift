@@ -6,19 +6,34 @@ import ValorantAPI
 struct MatchCell: View {
 	let match: CompetitiveUpdate
 	let userID: User.ID
+	let filter: MatchListFilter
 	
 	@LocalData var matchDetails: MatchDetails?
 	
 	@Environment(\.valorantLoad) private var load
 	
 	var body: some View {
+		let matchesFilter = filter.accepts(match, details: matchDetails)
 		HStack {
-			VStack(alignment: .leading) {
-				matchInfo
-			}
-			
-			if match.isRanked {
-				changeInfo
+			if matchesFilter {
+				VStack(alignment: .leading) {
+					matchInfo
+				}
+				
+				if match.isRanked {
+					changeInfo
+				}
+			} else {
+				NavigationLink {
+					MatchDetailsContainer(matchID: match.id, userID: userID)
+				} label: {
+					HStack {
+						match.startTime.relativeText()
+						Spacer()
+						Text(matchDetails?.matchInfo.queueName ?? "Unfetched")
+					}
+				}
+				.font(.caption)
 			}
 		}
 		.padding(.vertical, 8)
@@ -268,11 +283,12 @@ struct MatchCell_Previews: PreviewProvider {
 			MatchCell(
 				match: allExamples.first! <- { $0.id = PreviewData.singleMatch.id },
 				userID: PreviewData.userID,
+				filter: .init(),
 				matchDetails: PreviewData.singleMatch
 			)
 			
 			ForEach(allExamples.dropFirst()) {
-				MatchCell(match: $0, userID: PreviewData.userID)
+				MatchCell(match: $0, userID: PreviewData.userID, filter: .init())
 			}
 		}
 		.withToolbar(allowLargeTitles: false) // otherwise NavigationLink grays out accent colors

@@ -1,6 +1,7 @@
 import SwiftUI
 import ValorantAPI
 import HandyOperators
+import UserDefault
 
 struct MatchListView: View {
 	let userID: User.ID
@@ -9,14 +10,14 @@ struct MatchListView: View {
 	@LocalData var matchList: MatchList?
 	@LocalData var summary: CareerSummary?
 	@LocalData var identity: Player.Identity?
-	@State var shouldShowUnranked = true
+	@State var isEditingFilter = false
+	@UserDefault.State("MatchListView.filter") var filter = MatchListFilter()
 	
 	@Environment(\.valorantLoad) private var load
 	@EnvironmentObject private var bookmarkList: BookmarkList
 	
 	private var shownMatches: [CompetitiveUpdate] {
-		let matches = matchList?.matches ?? []
-		return shouldShowUnranked ? matches : matches.filter(\.isRanked)
+		matchList?.matches ?? []
 	}
 	
 	var body: some View {
@@ -32,8 +33,8 @@ struct MatchListView: View {
 			}
 			
 			Section(header: Text("Matches")) {
-				ForEach(shownMatches) {
-					MatchCell(match: $0, userID: userID)
+				ForEach(shownMatches) { match in
+					MatchCell(match: match, userID: userID, filter: filter)
 				}
 				
 				if matchList?.canLoadOlderMatches == true {
@@ -58,15 +59,15 @@ struct MatchListView: View {
 				}
 				
 				Button {
-					withAnimation { shouldShowUnranked.toggle() }
+					isEditingFilter = true
 				} label: {
-					if shouldShowUnranked {
-						Label("Hide Unranked", systemImage: "line.horizontal.3.decrease.circle")
-					} else {
-						Label("Show Unranked", systemImage: "line.horizontal.3.decrease.circle.fill")
-					}
+					Label("Edit Filter", systemImage: "line.horizontal.3.decrease.circle")
+						.symbolVariant(filter.isActive ? .fill : .none)
 				}
 			}
+		}
+		.sheet(isPresented: $isEditingFilter) {
+			MatchListFilterEditor(filter: $filter)
 		}
 		.withLocalData($user, id: userID, shouldAutoUpdate: true)
 		.withLocalData($matchList, id: userID, shouldAutoUpdate: true)
@@ -90,6 +91,8 @@ struct MatchListView: View {
 	}
 }
 
+extension MatchListFilter: DefaultsValueConvertible {}
+
 #if DEBUG
 struct MatchListView_Previews: PreviewProvider {
 	static var previews: some View {
@@ -98,8 +101,7 @@ struct MatchListView_Previews: PreviewProvider {
 			user: PreviewData.user,
 			matchList: PreviewData.matchList,
 			summary: PreviewData.summary,
-			identity: PreviewData.userIdentity,
-			shouldShowUnranked: true
+			identity: PreviewData.userIdentity
 		)
 		.withToolbar()
 		.inEachColorScheme()
