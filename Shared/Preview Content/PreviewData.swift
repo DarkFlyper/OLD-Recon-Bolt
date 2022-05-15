@@ -16,6 +16,8 @@ enum PreviewData {
 	static let strangeMatch = loadJSON(named: "strange_match", as: MatchDetails.self)
 	/// A match that ended in a surrender, possibly yielding unexpected data.
 	static let surrenderedMatch = loadJSON(named: "surrendered_match", as: MatchDetails.self)
+	/// A spike rush involving chamber Q/X and neon X.
+	static let funkySpikeRush = loadJSON(named: "funky_spike_rush", in: "example matches", as: MatchDetails.self)
 	
 	static let exampleMatches: [MapID: MatchDetails] = [
 		.ascent: "ascent",
@@ -41,6 +43,7 @@ enum PreviewData {
 	static let singleMatchData = MatchViewData(details: singleMatch, userID: userID)
 	static let strangeMatchData = MatchViewData(details: strangeMatch, userID: userID)
 	static let surrenderedMatchData = MatchViewData(details: surrenderedMatch, userID: userID)
+	static let funkySpikeRushData = MatchViewData(details: funkySpikeRush, userID: userID)
 	
 	static let roundData = RoundData(round: 0, in: singleMatchData)
 	static let midRoundData = roundData <- {

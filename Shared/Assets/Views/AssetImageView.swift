@@ -23,6 +23,10 @@ struct AssetImageView<Provider: AssetImageProvider>: View {
 		
 		if let assetImage = assetImage {
 			assetImage.imageOrPlaceholder(renderingMode: renderingMode)
+		} else if let fallback = UIImage(named: "\(id)".uppercased()) {
+			Image(uiImage: fallback)
+				.resizable()
+				.scaledToFit()
 		} else {
 			Color.gray
 		}
