@@ -53,7 +53,6 @@ struct EventRow: View, Animatable {
 		icon {
 			if damageType == .bomb {
 				iconImage(name: "Spike")
-					.foregroundColor(.white)
 			} else {
 				let player = matchData.players[event.event.actor]!
 				AgentImage.icon(player.agentID)
@@ -76,9 +75,9 @@ struct EventRow: View, Animatable {
 					.scaleEffect(x: -1, y: 1, anchor: .center)
 					.padding(4)
 			} else if damageType == .ability {
-				if let abilityIndex = abilityIndices[damageSource] {
-					let agent = killer.agentID
-					AgentImage.ability(agent, abilityIndex: abilityIndex)
+				let slotName = damageSource == "GrenadeAbility" ? "Grenade" : damageSource
+				if let slot = AgentInfo.Ability.Slot(rawValue: slotName) {
+					AgentImage.ability(killer.agentID, slot: slot)
 				} else {
 					Text("<Unknown Ability>")
 						.foregroundStyle(.secondary)
@@ -112,7 +111,6 @@ struct EventRow: View, Animatable {
 		
 		icon {
 			iconImage(name: bombEvent.isDefusal ? "Defuse" : "Spike")
-				.foregroundColor(.white)
 		}
 		.aspectRatio(1, contentMode: .fit)
 	}
@@ -131,12 +129,3 @@ struct EventRow: View, Animatable {
 			.background(event.relativeColor)
 	}
 }
-
-// TODO: this is not a pretty solution. Should probably better type decoded JSON?
-private let abilityIndices = [
-	"Ability1": 0,
-	"Ability2": 1,
-	"GrenadeAbility": 2,
-	"Ultimate": 3,
-	"Passive": 4,
-]

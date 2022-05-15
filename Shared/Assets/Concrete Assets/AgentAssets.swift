@@ -49,14 +49,13 @@ struct AgentInfo: AssetItem, Codable, Identifiable {
 		abilities.compactMap(\.displayIcon)
 	}
 	
-	private static let indexRemappings: [Int: Int] = [0: 2, 1: 0, 2: 1]
 	/// abilities are given in the wrong order; this reorders them appropriately
-	func ability(_ index: Int) -> AgentInfo.Ability {
-		abilities[Self.indexRemappings[index] ?? index]
+	func ability(_ slot: Ability.Slot) -> Ability? {
+		abilities.first { $0.slot == slot }
 	}
 	/// abilities are given in the wrong order; this reorders them appropriately
-	var reorderedAbilities: [Ability] {
-		abilities.indices.map(ability(_:))
+	var abilitiesInOrder: [Ability] {
+		Ability.Slot.allCases.compactMap(ability)
 	}
 	
 	struct Role: Codable {
@@ -73,7 +72,15 @@ struct AgentInfo: AssetItem, Codable, Identifiable {
 	struct Ability: Codable {
 		var displayName: String
 		var description: String
-		var slot: String
+		var slot: Slot
 		var displayIcon: AssetImage?
+		
+		enum Slot: String, Codable, CaseIterable {
+			case passive = "Passive"
+			case grenade = "Grenade"
+			case ability1 = "Ability1"
+			case ability2 = "Ability2"
+			case ultimate = "Ultimate"
+		}
 	}
 }

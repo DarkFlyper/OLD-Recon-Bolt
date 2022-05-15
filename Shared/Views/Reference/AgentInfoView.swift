@@ -4,7 +4,7 @@ import Algorithms
 struct AgentInfoView: View {
 	let agent: AgentInfo
 	
-	@State var activeAbilityIndex = 0
+	@State var activeAbilitySlot = AgentInfo.Ability.Slot.grenade // first ability
 	@Namespace private var segmentNamespace
 	
 	var body: some View {
@@ -20,7 +20,7 @@ struct AgentInfoView: View {
 					.padding()
 					.background(Color.secondaryGroupedBackground)
 				}
-				.animation(.default, value: activeAbilityIndex)
+				.animation(.default, value: activeAbilitySlot)
 			}
 			.background(Color.groupedBackground)
 			.ignoresSafeArea(.container, edges: .top)
@@ -87,8 +87,8 @@ struct AgentInfoView: View {
 		let boxID = "ability box"
 		VStack(spacing: 20) {
 			HStack(spacing: 0) {
-				ForEach(agent.reorderedAbilities.indexed(), id: \.index) { index, ability in
-					let isActive = activeAbilityIndex == index
+				ForEach(agent.abilitiesInOrder, id: \.slot) { ability in
+					let isActive = activeAbilitySlot == ability.slot
 					icon(for: ability)
 						.frame(height: 24)
 						.padding(8)
@@ -104,7 +104,7 @@ struct AgentInfoView: View {
 						.padding(2)
 						.foregroundColor(isActive ? .accentColor : .primary)
 						.onTapGesture {
-							activeAbilityIndex = index
+							activeAbilitySlot = ability.slot
 							withAnimation {
 								scrollView.scrollTo(boxID, anchor: .bottom)
 							}
@@ -115,11 +115,11 @@ struct AgentInfoView: View {
 			.compositingGroup()
 			
 			VStack(spacing: 8) {
-				let ability = agent.ability(activeAbilityIndex)
+				let ability = agent.ability(activeAbilitySlot)!
 				
 				Text(ability.displayName)
 					.font(.headline)
-					.animation(nil, value: activeAbilityIndex)
+					.animation(nil, value: activeAbilitySlot)
 				
 				alignedMultilineText(ability.description)
 			}
@@ -137,7 +137,7 @@ struct AgentInfoView: View {
 		if let icon = ability.displayIcon {
 			icon.imageOrPlaceholder(renderingMode: .template)
 		} else {
-			Text(ability.slot)
+			Text(ability.slot.rawValue)
 				.font(.caption)
 				.fontWeight(.semibold)
 				.padding(.horizontal, 4)

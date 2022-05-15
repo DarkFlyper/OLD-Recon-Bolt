@@ -23,9 +23,8 @@ extension AgentImage {
 		Self(id: id, getImage: \.killfeedPortrait)
 	}
 	
-	/// Abilities are numbered as follows: ability 1, ability 2, grenade, ultimate.
-	static func ability(_ id: Agent.ID, abilityIndex: Int) -> Self {
-		Self(id: id, renderingMode: .template, getImage: \.abilities[abilityIndex].displayIcon)
+	static func ability(_ id: Agent.ID, slot: AgentInfo.Ability.Slot) -> Self {
+		Self(id: id, renderingMode: .template) { $0.ability(slot)?.displayIcon }
 	}
 }
 
