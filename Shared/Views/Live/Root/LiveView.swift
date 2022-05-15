@@ -52,7 +52,9 @@ struct LiveView: View {
 	var storeBox: some View {
 		RefreshableBox(title: "Store", refreshAction: loadStoreDetails) {
 			if let info = storeInfo {
-				StoreDetailsView(updateTime: info.updateTime, offers: info.offers, storefront: info.storefront)
+				StoreDetailsView(
+					updateTime: info.updateTime,
+					offers: info.offers, storefront: info.storefront, wallet: info.wallet)
 			} else {
 				Divider()
 				
@@ -84,15 +86,18 @@ private struct StoreInfo {
 	var updateTime: Date
 	var offers: [StoreOffer.ID: StoreOffer]
 	var storefront: Storefront
+	var wallet: StoreWallet
 }
 
 extension StoreInfo {
 	init(for user: User.ID, using client: ValorantClient) async throws {
 		async let offers = client.getStoreOffers()
 		async let storefront = client.getStorefront(for: user)
+		async let wallet = client.getStoreWallet(for: user)
 		
 		self.offers = try await .init(values: offers)
 		self.storefront = try await storefront
+		self.wallet = try await wallet
 		self.updateTime = .now
 	}
 }

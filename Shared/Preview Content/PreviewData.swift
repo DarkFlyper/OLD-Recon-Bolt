@@ -56,6 +56,7 @@ enum PreviewData {
 	
 	static let storeOffers = loadJSON(named: "example_store_offers", as: [StoreOffer].self)
 	static let storefront = loadJSON(named: "example_storefront", as: Storefront.self)
+	static let storeWallet = loadJSON(named: "example_store_wallet", as: StoreWallet.self)
 	
 	static let matchList = MatchList(
 		userID: user.id,

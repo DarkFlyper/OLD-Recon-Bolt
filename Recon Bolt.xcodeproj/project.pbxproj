@@ -82,6 +82,7 @@
 		B98FC071279DD758002DDF93 /* MultifactorPromptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98FC070279DD758002DDF93 /* MultifactorPromptView.swift */; };
 		B99263E7272CFE230032C8BE /* LiveGameContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99263E6272CFE230032C8BE /* LiveGameContainer.swift */; };
 		B998492F26CEC8B00030E83C /* EventMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = B998492E26CEC8B00030E83C /* EventMap.swift */; };
+		B99BF18328313743009515C1 /* example_store_wallet.json in Resources */ = {isa = PBXBuildFile; fileRef = B99BF18228313743009515C1 /* example_store_wallet.json */; };
 		B99E3DE5271F2AD300F62453 /* example matches in Resources */ = {isa = PBXBuildFile; fileRef = B99E3DE4271F2AD300F62453 /* example matches */; };
 		B9AEB7D727B0A03F0090A203 /* PartyInfoBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AEB7D627B0A03F0090A203 /* PartyInfoBox.swift */; };
 		B9AED04B27B08699009033C6 /* example_party.json in Resources */ = {isa = PBXBuildFile; fileRef = B9AED04A27B08699009033C6 /* example_party.json */; };
@@ -234,6 +235,7 @@
 		B99263E6272CFE230032C8BE /* LiveGameContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveGameContainer.swift; sourceTree = "<group>"; };
 		B998492E26CEC8B00030E83C /* EventMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMap.swift; sourceTree = "<group>"; };
 		B99B75942655859C00FBEB60 /* Recon Bolt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Recon Bolt.entitlements"; sourceTree = "<group>"; };
+		B99BF18228313743009515C1 /* example_store_wallet.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_store_wallet.json; sourceTree = "<group>"; };
 		B99E3DE4271F2AD300F62453 /* example matches */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "example matches"; sourceTree = "<group>"; };
 		B9AEB7D627B0A03F0090A203 /* PartyInfoBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyInfoBox.swift; sourceTree = "<group>"; };
 		B9AED04A27B08699009033C6 /* example_party.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_party.json; sourceTree = "<group>"; };
@@ -602,6 +604,7 @@
 				B9AED04A27B08699009033C6 /* example_party.json */,
 				B9F7A53A27DC5DAF00636DAF /* example_store_offers.json */,
 				B9F7A53B27DC5DAF00636DAF /* example_storefront.json */,
+				B99BF18228313743009515C1 /* example_store_wallet.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -785,6 +788,7 @@
 				B9AED04B27B08699009033C6 /* example_party.json in Resources */,
 				B9F9B4FF26796C2200397AAB /* example_inventory.json in Resources */,
 				B9EF0F25263D09AD0067176A /* example_match.json in Resources */,
+				B99BF18328313743009515C1 /* example_store_wallet.json in Resources */,
 				B9342C3E27A6D10300F232CB /* strange_summary.json in Resources */,
 				B9318369267813F00099B13C /* example_pregame.json in Resources */,
 				B941B6EC25A7C83700F675C1 /* example_updates.json in Resources */,

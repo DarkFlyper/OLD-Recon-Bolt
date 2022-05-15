@@ -5,9 +5,12 @@ struct StoreDetailsView: View {
 	var updateTime: Date
 	var offers: [StoreOffer.ID: StoreOffer]
 	var storefront: Storefront
+	var wallet: StoreWallet
 	
 	@Environment(\.assets) private var assets
 	@ScaledMetric(relativeTo: .body) private var currencyIconSize = 20.0
+	
+	private static let currencies: [Currency.ID] = [.valorantPoints, .radianitePoints]
 	
 	var body: some View {
 		Divider()
@@ -35,6 +38,19 @@ struct StoreDetailsView: View {
 				offerCell(for: offer)
 					.background(Color.tertiaryGroupedBackground)
 					.cornerRadius(8)
+			}
+		}
+		.padding()
+		
+		Divider()
+		
+		HStack(spacing: 20) {
+			Text("Available:")
+			
+			Spacer()
+			
+			ForEach(Self.currencies, id: \.self) { currency in
+				currencyLabel(wallet[currency], of: currency)
 			}
 		}
 		.padding()
@@ -82,17 +98,21 @@ struct StoreDetailsView: View {
 				Spacer()
 				
 				ForEach(offer.cost.sorted(on: \.key.description), id: \.key) { currencyID, amount in
-					HStack {
-						Text("\(amount)")
-						let currency = assets?.currencies[currencyID]
-						currency?.displayIcon.imageOrPlaceholder(renderingMode: .template)
-							.frame(width: currencyIconSize, height: currencyIconSize)
-					}
-					.layoutPriority(1)
+					currencyLabel(amount, of: currencyID)
+						.layoutPriority(1)
 				}
 			}
 		}
 		.padding(12)
+	}
+	
+	func currencyLabel(_ count: Int, of currencyID: Currency.ID) -> some View {
+		HStack {
+			Text("\(count)")
+			let currency = assets?.currencies[currencyID]
+			currency?.displayIcon.imageOrPlaceholder(renderingMode: .template)
+				.frame(width: currencyIconSize, height: currencyIconSize)
+		}
 	}
 	
 	func remainingTimeLabel(_ seconds: TimeInterval) -> some View {
@@ -113,11 +133,11 @@ struct StoreDetailsView_Previews: PreviewProvider {
 			StoreDetailsView(
 				updateTime: .now,
 				offers: .init(values: PreviewData.storeOffers),
-				storefront: PreviewData.storefront
+				storefront: PreviewData.storefront,
+				wallet: PreviewData.storeWallet
 			)
 		}
 		.forPreviews()
-		.withToolbar()
 		.inEachColorScheme()
 	}
 }
