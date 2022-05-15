@@ -77,6 +77,7 @@ struct MatchListFilterEditor: View {
 	}
 }
 
+#if DEBUG
 struct MatchListFilterEditor_Previews: PreviewProvider {
     static var previews: some View {
 		HelperView()
@@ -94,3 +95,4 @@ struct MatchListFilterEditor_Previews: PreviewProvider {
 		}
 	}
 }
+#endif
