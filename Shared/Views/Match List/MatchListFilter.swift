@@ -50,7 +50,7 @@ extension QueueID: FilterableID {
 }
 
 extension MapID: FilterableID {
-	static var knownIDs: [Self] { knownMaps }
+	static var knownIDs: [Self] { knownStandardMaps }
 	
 	var label: some View {
 		MapImage.LabelText(mapID: self)
