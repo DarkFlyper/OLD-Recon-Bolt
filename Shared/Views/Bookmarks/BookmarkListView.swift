@@ -49,7 +49,6 @@ struct BookmarkListView: View {
 }
 
 #if DEBUG
-@MainActor
 struct BookmarksList_Previews: PreviewProvider {
 	static var previews: some View {
 		BookmarkListView(
