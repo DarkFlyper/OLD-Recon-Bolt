@@ -24,20 +24,18 @@ struct LiveGameBox: View {
 	}
 	
 	var body: some View {
-		RefreshableBox(title: "Party", refreshAction: refresh) {
+		RefreshableBox(title: "Party") {
 			Divider()
 			
 			VStack(spacing: 16) {
 				content
 			}
 			.padding(16)
-		}
+		} refresh: { try await refresh(using: $0) }
 		.onChange(of: activeMatch) { [activeMatch] newMatch in
 			guard shouldAutoRefresh, shouldAutoShow, activeMatch?.id != newMatch?.id else { return }
 			shownMatch = newMatch
 		}
-		.task(refresh)
-		.onSceneActivation(perform: refresh)
 	}
 	
 	@ViewBuilder
@@ -77,7 +75,7 @@ struct LiveGameBox: View {
 			HStack(spacing: 10) {
 				if isAutoRefreshing {
 					AutoRefresher {
-						await refresh()
+						await load(refresh)
 					}
 				}
 				
@@ -96,27 +94,23 @@ struct LiveGameBox: View {
 	}
 	
 	@Sendable
-	func refresh() async {
+	func refresh(using client: ValorantClient) async throws {
 		// load independently & concurrently
 		// TODO: change once `async let _ = ...` is fixed
-		async let activeMatchUpdate: Void = loadActiveMatch()
-		async let partyUpdate: Void = loadParty()
-		_ = await (activeMatchUpdate, partyUpdate)
+		async let activeMatchUpdate: Void = loadActiveMatch(using: client)
+		async let partyUpdate: Void = loadParty(using: client)
+		_ = try await (activeMatchUpdate, partyUpdate)
 	}
 	
-	func loadActiveMatch() async {
-		await load {
-			activeMatch = try await $0.getActiveMatch()
-		}
+	func loadActiveMatch(using client: ValorantClient) async throws {
+		activeMatch = try await client.getActiveMatch()
 	}
 	
-	func loadParty() async {
-		await load {
-			party = try await $0.getPartyInfo()
-			if let party = party {
-				LocalDataProvider.dataFetched(party)
-				try await $0.fetchUsers(for: party.members.map(\.id))
-			}
+	func loadParty(using client: ValorantClient) async throws {
+		party = try await client.getPartyInfo()
+		if let party = party {
+			LocalDataProvider.dataFetched(party)
+			try await client.fetchUsers(for: party.members.map(\.id))
 		}
 	}
 }

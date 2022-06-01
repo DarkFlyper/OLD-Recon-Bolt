@@ -129,14 +129,14 @@ struct StoreDetailsView: View {
 #if DEBUG
 struct StoreDetailsView_Previews: PreviewProvider {
 	static var previews: some View {
-		RefreshableBox(title: "Store", refreshAction: {}) {
+		RefreshableBox(title: "Store") {
 			StoreDetailsView(
 				updateTime: .now,
 				offers: .init(values: PreviewData.storeOffers),
 				storefront: PreviewData.storefront,
 				wallet: PreviewData.storeWallet
 			)
-		}
+		} refresh: { _ in }
 		.forPreviews()
 		.inEachColorScheme()
 	}

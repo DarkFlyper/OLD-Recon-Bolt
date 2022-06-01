@@ -1,18 +1,21 @@
 import SwiftUI
+import ValorantAPI
 
 struct RefreshableBox<Content: View>: View {
 	var title: String
-	var refreshAction: () async -> Void
 	@ViewBuilder var content: () -> Content
+	var refresh: (ValorantClient) async throws -> Void
 	// cheeky way of differentiating between these boxes without needing a custom initializer
 	@AppStorage("\(Self.self).isExpanded") var isExpanded = true
+	
+	@Environment(\.valorantLoad) private var load
 	
 	var body: some View {
 		VStack(spacing: 0) {
 			HStack {
 				expandButton
 				
-				AsyncButton(action: refreshAction) {
+				AsyncButton(action: doRefresh) {
 					Image(systemName: "arrow.clockwise")
 				}
 			}
@@ -25,6 +28,8 @@ struct RefreshableBox<Content: View>: View {
 		}
 		.background(Color.secondaryGroupedBackground)
 		.cornerRadius(20)
+		.task(doRefresh)
+		.onSceneActivation(perform: doRefresh)
 	}
 	
 	var expandButton: some View {
@@ -44,6 +49,11 @@ struct RefreshableBox<Content: View>: View {
 			}
 			.font(.title2.weight(.semibold))
 		}
+	}
+	
+	@Sendable
+	private func doRefresh() async {
+		await load(refresh)
 	}
 	
 	#if DEBUG

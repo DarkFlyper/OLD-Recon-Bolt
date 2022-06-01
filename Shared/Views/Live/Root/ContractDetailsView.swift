@@ -165,9 +165,9 @@ struct ContractDetailsView: View {
 #if DEBUG
 struct ContractDetailsView_Previews: PreviewProvider {
 	static var previews: some View {
-		RefreshableBox(title: "Missions", refreshAction: {}) {
+		RefreshableBox(title: "Missions") {
 			ContractDetailsView(details: PreviewData.contractDetails)
-		}
+		} refresh: { _ in }
 		.forPreviews()
 		.inEachColorScheme()
 	}

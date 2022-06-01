@@ -8,7 +8,6 @@ struct LiveView: View {
 	@State fileprivate var storeInfo: StoreInfo?
 	
 	@Environment(\.valorantLoad) private var load
-	@Environment(\.scenePhase) private var scenePhase
 	
 	var body: some View {
 		ScrollView {
@@ -23,10 +22,6 @@ struct LiveView: View {
 			.compositingGroup() // avoid shadows overlapping other boxes
 			.shadow(color: .black.opacity(0.1), radius: 20, x: 0, y: 10)
 		}
-		.task(loadContractDetails)
-		.task(loadStoreDetails)
-		.onSceneActivation(perform: loadContractDetails)
-		.onSceneActivation(perform: loadStoreDetails)
 		.background(Color.groupedBackground)
 		.navigationTitle("Live")
 	}
@@ -34,7 +29,7 @@ struct LiveView: View {
 	// TODO: eliminate repetition between these two boxes
 	
 	var missionsBox: some View {
-		RefreshableBox(title: "Missions", refreshAction: loadContractDetails) {
+		RefreshableBox(title: "Missions") {
 			if let details = contractDetails {
 				ContractDetailsView(details: details)
 			} else {
@@ -46,11 +41,13 @@ struct LiveView: View {
 				}
 				.padding(16)
 			}
+		} refresh: {
+			contractDetails = try await $0.getContractDetails()
 		}
 	}
 	
 	var storeBox: some View {
-		RefreshableBox(title: "Store", refreshAction: loadStoreDetails) {
+		RefreshableBox(title: "Store") {
 			if let info = storeInfo {
 				StoreDetailsView(
 					updateTime: info.updateTime,
@@ -64,19 +61,7 @@ struct LiveView: View {
 				}
 				.padding(16)
 			}
-		}
-	}
-	
-	@Sendable
-	func loadContractDetails() async {
-		await load {
-			contractDetails = try await $0.getContractDetails()
-		}
-	}
-	
-	@Sendable
-	func loadStoreDetails() async {
-		await load {
+		} refresh: {
 			storeInfo = try await .init(for: userID, using: $0)
 		}
 	}

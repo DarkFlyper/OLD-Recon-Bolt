@@ -203,10 +203,10 @@ struct PartyInfoBox_Previews: PreviewProvider {
 	}
 	
 	static func previewBox<Content: View>(@ViewBuilder content: @escaping () -> Content) -> some View {
-		RefreshableBox(title: "Party Info", refreshAction: {}) {
+		RefreshableBox(title: "Party Info") {
 			Divider()
 			content()
-		}
+		} refresh: { _ in }
 		.forPreviews()
 	}
 }
