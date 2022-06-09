@@ -82,16 +82,13 @@ struct StoreDetailsView: View {
 	@ViewBuilder
 	func offerCell(for offer: StoreOffer) -> some View {
 		let reward = offer.rewards.first!
-		let path = assets?.skinsByLevelID[.init(rawID: reward.itemID)]
-		let skin = path.map { assets!.weapons[$0.weapon]!.skins[$0.skinIndex] }
+		let resolved = assets?.resolveSkin(.init(rawID: reward.itemID))
 		VStack {
-			let level = path.flatMap { skin?.levels[$0.levelIndex] }
-			let icon = level?.displayIcon ?? skin?.displayIcon
-			icon?.asyncImage()
+			resolved?.displayIcon?.asyncImage()
 				.frame(height: 60)
 			
 			HStack(alignment: .lastTextBaseline) {
-				Text((skin?.displayName ?? "<Unknown Skin>"))
+				Text((resolved?.skin.displayName ?? "<Unknown Skin>"))
 					.fontWeight(.medium)
 					.fixedSize(horizontal: false, vertical: true)
 				

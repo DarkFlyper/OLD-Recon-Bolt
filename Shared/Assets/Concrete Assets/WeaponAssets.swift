@@ -73,7 +73,7 @@ struct WeaponInfo: AssetItem, Codable, Identifiable {
 }
 
 struct WeaponSkin: AssetItem, Codable, Identifiable {
-	var id: ObjectID<Self, LowercaseUUID>
+	var id: Weapon.Skin.ID
 	var displayName: String
 	var themeID: Theme.ID
 	var contentTierID: ContentTier.ID?
@@ -102,7 +102,7 @@ struct WeaponSkin: AssetItem, Codable, Identifiable {
 	}
 	
 	struct Chroma: AssetItem, Codable, Identifiable {
-		var id: ObjectID<Self, LowercaseUUID>
+		var id: Weapon.Skin.Chroma.ID
 		var displayName: String
 		var displayIcon: AssetImage?
 		var fullRender: AssetImage
@@ -120,7 +120,7 @@ struct WeaponSkin: AssetItem, Codable, Identifiable {
 	}
 	
 	struct Level: AssetItem, Codable, Identifiable {
-		var id: ObjectID<Self, LowercaseUUID>
+		var id: Weapon.Skin.Level.ID
 		var displayName: String?
 		var levelItem: Item?
 		var displayIcon: AssetImage?
@@ -147,6 +147,17 @@ struct WeaponSkin: AssetItem, Codable, Identifiable {
 			
 			static let namespace = "EEquippableSkinLevelItem"
 			var rawValue: String
+			
+			private static let descriptionOverrides: [Self: String] = [
+				.killCounter: "Kill Counter",
+				.killBanner: "Kill Banner",
+				.topFrag: "Champion's Aura",
+				.inspectAndKill: "Inspect & Kill Effects",
+			]
+			
+			var description: String {
+				Self.descriptionOverrides[self] ?? rawValue
+			}
 		}
 		
 		struct Path: Hashable, Codable {
@@ -154,6 +165,43 @@ struct WeaponSkin: AssetItem, Codable, Identifiable {
 			var skinIndex: Int
 			var levelIndex: Int
 		}
+	}
+}
+
+extension AssetCollection {
+	func resolveSkin(_ level: WeaponSkin.Level.ID) -> ResolvedLevel? {
+		self[skinsByLevelID[level]]
+	}
+	
+	subscript(path: WeaponSkin.Level.Path?) -> ResolvedLevel? {
+		guard
+			let path = path,
+			let weapon = weapons[path.weapon]
+		else { return nil }
+		let skin = weapon.skins[path.skinIndex]
+		let level = skin.levels[path.levelIndex]
+		return .init(weapon: weapon, skin: skin, level: level, levelIndex: path.levelIndex)
+	}
+}
+
+struct ResolvedLevel: Identifiable {
+	var weapon: WeaponInfo
+	var skin: WeaponSkin
+	var level: WeaponSkin.Level
+	var levelIndex: Int
+	
+	var id: WeaponSkin.Level.ID { level.id }
+	
+	var displayIcon: AssetImage? {
+		level.displayIcon ?? skin.displayIcon
+	}
+	
+	var displayName: String {
+		level.displayName ?? skin.displayName
+	}
+	
+	func chroma(_ id: WeaponSkin.Chroma.ID) -> WeaponSkin.Chroma? {
+		skin.chromas.firstElement(withID: id)
 	}
 }
 

@@ -51,6 +51,7 @@ enum PreviewData {
 	}
 	
 	static let inventory = loadJSON(named: "example_inventory", as: Inventory.self)
+	static let loadout = loadJSON(named: "example_loadout", as: Loadout.self)
 	
 	static let party = loadJSON(named: "example_party", as: Party.self)
 	

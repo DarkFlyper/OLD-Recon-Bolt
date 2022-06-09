@@ -55,7 +55,7 @@ struct LiveGameContainer: View {
 		await load {
 			guard let activeMatch = activeMatch else { return }
 			if activeMatch.inPregame {
-				async let inventory = $0.getInventory(for: userID)
+				async let inventory = $0.getInventory()
 				details = .pregame(
 					try await $0.getLivePregameInfo(activeMatch.id)
 					<- LocalDataProvider.dataFetched,

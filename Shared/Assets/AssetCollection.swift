@@ -16,6 +16,8 @@ struct AssetCollection: Codable {
 	let weapons: [Weapon.ID: WeaponInfo]
 	let seasons: SeasonCollection
 	let skinsByLevelID: [WeaponSkin.Level.ID: WeaponSkin.Level.Path]
+	let sprays: [Spray.ID: SprayInfo]
+	let buddies: [Weapon.Buddy.ID: BuddyInfo]
 	let currencies: [Currency.ID: CurrencyInfo]
 	let bundles: [StoreBundle.Asset.ID: StoreBundleInfo]
 	

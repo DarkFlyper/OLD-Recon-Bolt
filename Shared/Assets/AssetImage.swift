@@ -56,6 +56,17 @@ struct AssetImage: Hashable {
 	)
 }
 
+extension Optional where Wrapped == AssetImage {
+	@ViewBuilder
+	func asyncImageOrPlaceholder() -> some View {
+		if let self = self {
+			self.asyncImage()
+		} else {
+			Color.gray
+		}
+	}
+}
+
 private let imageCache = Cache<URL, Image>()
 
 final class Cache<Key: Hashable, Value> {

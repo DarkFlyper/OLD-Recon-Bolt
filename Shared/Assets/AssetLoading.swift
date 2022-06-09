@@ -18,6 +18,8 @@ extension AssetClient {
 		async let playerTitles = getPlayerTitleInfo()
 		async let weapons = getWeaponInfo()
 		async let seasons = getSeasons()
+		async let sprays = getSprayInfo()
+		async let buddies = getBuddyInfo()
 		async let currencies = getCurrencyInfo()
 		async let bundles = getBundleInfo()
 		
@@ -46,6 +48,8 @@ extension AssetClient {
 			weapons: .init(values: weapons),
 			seasons: seasons,
 			skinsByLevelID: skinsByLevelID,
+			sprays: .init(values: sprays),
+			buddies: .init(values: buddies),
 			currencies: .init(values: currencies),
 			bundles: .init(values: bundles)
 		)
