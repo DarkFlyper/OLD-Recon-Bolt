@@ -40,7 +40,6 @@ struct MatchCell: View {
 		.swipeActions(edge: .leading) {
 			if matchDetails == nil {
 				AsyncButton {
-					await Task.sleep(seconds: 0.85, tolerance: 0.1) // TODO: workaround for swipe actions "locking" cell height until disappeared
 					await load {
 						try await $0.fetchMatchDetails(for: match.id)
 					}

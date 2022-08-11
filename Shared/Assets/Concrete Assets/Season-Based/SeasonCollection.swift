@@ -16,7 +16,7 @@ struct SeasonCollection: AssetItem, Codable {
 	}
 	
 	func currentAct(at time: Date? = nil) -> Act? {
-		// not requiring the time to be less than the end date avoids possible undefined periods between acts (like the 3 days between closed beta and act 1) and lets us use binary search for quicker searching
+		// not requiring the time to be greater than the start date avoids possible undefined periods between acts (like the 3 days between closed beta and act 1) and lets us use binary search for quicker searching
 		let time = time ?? Date()
 		let firstExceedingIndex = actsInOrder
 			.partitioningIndex { time < $0.timeSpan.end } // binary search

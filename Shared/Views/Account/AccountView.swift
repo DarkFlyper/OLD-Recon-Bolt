@@ -72,7 +72,8 @@ struct AccountView: View {
 				
 				AsyncButton("Retry") { await assetManager.loadAssets() }
 				
-				Text(error.localizedDescription)
+				Text(String(describing: error))
+					.font(.caption)
 			} else if let assets = assetManager.assets {
 				if let newestVersion = newestVersion, assets.version != newestVersion {
 					Text("Assets out of date!")

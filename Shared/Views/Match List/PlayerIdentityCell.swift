@@ -32,13 +32,15 @@ struct PlayerIdentityCell: View {
 					.fontWeight(.semibold)
 					.foregroundStyle(.secondary)
 					.frame(minWidth: 24)
-					.padding(8)
+					.padding(6)
+					.padding(.horizontal, 4)
 					.overlay(Capsule().stroke(.secondary))
 					.background(Material.ultraThin)
 					.mask(Capsule())
 			}
 			
 			PlayerCardImage.wide(identity.cardID)
+				.fixedSize(horizontal: false, vertical: true) // idk why i suddenly need this but i do
 			
 			Divider()
 		}
