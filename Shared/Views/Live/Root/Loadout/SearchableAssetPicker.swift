@@ -8,8 +8,6 @@ struct SearchableAssetPicker<Item: SearchableAsset, RowContent: View>: View {
 	
 	@State private var search = ""
 	
-	@Environment(\.assets) private var assets
-	
 	var body: some View {
 		let lowerSearch = search.lowercased()
 		let results = ownedItems
@@ -37,35 +35,53 @@ struct SearchableAssetPicker<Item: SearchableAsset, RowContent: View>: View {
 	}
 }
 
+struct SelectableRow<Content: View>: View {
+	var isSelected: Bool
+	var select: () -> Void
+	@ViewBuilder var content: () -> Content
+	
+	var body: some View {
+		Button(action: select) {
+			HStack {
+				content()
+					.foregroundColor(.primary)
+				Spacer()
+				Image(systemName: "checkmark")
+					.opacity(isSelected ? 1 : 0)
+			}
+		}
+	}
+}
+
+extension SelectableRow {
+	init<Item: Equatable>(
+		selection: Binding<Item>,
+		item: Item,
+		@ViewBuilder content: @escaping () -> Content
+	) {
+		self.init(
+			isSelected: selection.wrappedValue == item,
+			select: { selection.wrappedValue = item },
+			content: content
+		)
+	}
+}
+
 struct SimpleSearchableAssetPicker<Item: SimpleSearchableAsset, RowContent: View>: View {
 	var inventory: Inventory
 	@Binding var selected: Item.ID
 	@ViewBuilder var rowContent: (Item) -> RowContent
 	
-	@Environment(\.assets) private var assets
-	
 	var body: some View {
-		if let assets = assets {
+		AssetsUnwrappingView { assets in
 			SearchableAssetPicker(
 				allItems: assets[keyPath: Item.assetPath],
 				ownedItems: inventory[keyPath: Item.inventoryPath]
 			) { item in
-				Button {
-					selected = item.id
-				} label: {
-					HStack {
-						rowContent(item)
-							.foregroundColor(.primary)
-						Spacer()
-						Image(systemName: "checkmark")
-							.opacity(selected == item.id ? 1 : 0)
-					}
+				SelectableRow(selection: $selected, item: item.id) {
+					rowContent(item)
 				}
 			}
-		} else {
-			Text("Assets not loaded!")
-				.foregroundColor(.secondary)
-				.frame(maxWidth: .infinity, maxHeight: .infinity)
 		}
 	}
 }

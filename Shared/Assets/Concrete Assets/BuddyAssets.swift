@@ -18,11 +18,24 @@ struct BuddyInfo: AssetItem, Codable, Identifiable {
 	var displayName: String
 	var displayIcon: AssetImage
 	var isHiddenIfNotOwned: Bool
+	var levels: [Level]
 	
 	private enum CodingKeys: String, CodingKey {
 		case id = "uuid"
 		case displayName
 		case displayIcon
 		case isHiddenIfNotOwned
+		case levels
+	}
+	
+	struct Level: Codable, Identifiable {
+		var id: Weapon.Buddy.Level.ID
+		var displayName: String
+		// ignoring the rest because they don't seem to be used yet
+		
+		enum CodingKeys: String, CodingKey {
+			case id = "uuid"
+			case displayName
+		}
 	}
 }

@@ -57,14 +57,10 @@ struct ContentView: View {
 	
 	@ViewBuilder
 	private func onlineView<Content: View>(
-		@ViewBuilder content: (User.ID) -> Content
+		@ViewBuilder content: @escaping (User.ID) -> Content
 	) -> some View {
-		if let data = dataStore.data {
+		UnwrappingView(value: dataStore.data, placeholder: "Not signed in!") { data in
 			content(data.userID)
-		} else {
-			Text("Not signed in!")
-				.foregroundStyle(.secondary)
-				.frame(maxWidth: .infinity, maxHeight: .infinity)
 		}
 	}
 	

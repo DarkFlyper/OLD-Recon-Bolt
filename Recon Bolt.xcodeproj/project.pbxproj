@@ -33,7 +33,7 @@
 		B91FF85426C7072400D0DFAA /* MagnifiableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91FF85326C7072400D0DFAA /* MagnifiableView.swift */; };
 		B927614B266284B700CF2100 /* PlayerHighlightInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B927614A266284B700CF2100 /* PlayerHighlightInfo.swift */; };
 		B927719C284DBA1D00F25FC3 /* SprayAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B927719B284DBA1D00F25FC3 /* SprayAssets.swift */; };
-		B927719E284DBAF600F25FC3 /* BuddyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B927719D284DBAF600F25FC3 /* BuddyInfo.swift */; };
+		B927719E284DBAF600F25FC3 /* BuddyAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B927719D284DBAF600F25FC3 /* BuddyAssets.swift */; };
 		B92DC20126A33C3600200A01 /* ActRankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92DC20026A33C3600200A01 /* ActRankView.swift */; };
 		B9318366267810CE0099B13C /* AgentSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9318365267810CE0099B13C /* AgentSelectView.swift */; };
 		B9318369267813F00099B13C /* example_pregame.json in Resources */ = {isa = PBXBuildFile; fileRef = B9318368267813EF0099B13C /* example_pregame.json */; };
@@ -90,6 +90,7 @@
 		B99BF18328313743009515C1 /* example_store_wallet.json in Resources */ = {isa = PBXBuildFile; fileRef = B99BF18228313743009515C1 /* example_store_wallet.json */; };
 		B99E3DE5271F2AD300F62453 /* example matches in Resources */ = {isa = PBXBuildFile; fileRef = B99E3DE4271F2AD300F62453 /* example matches */; };
 		B9A11F4D28518B1C00599719 /* GunCustomizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A11F4C28518B1C00599719 /* GunCustomizer.swift */; };
+		B9A11F51285296C400599719 /* UnwrappingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A11F50285296C400599719 /* UnwrappingView.swift */; };
 		B9AEB7D727B0A03F0090A203 /* PartyInfoBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AEB7D627B0A03F0090A203 /* PartyInfoBox.swift */; };
 		B9AED04B27B08699009033C6 /* example_party.json in Resources */ = {isa = PBXBuildFile; fileRef = B9AED04A27B08699009033C6 /* example_party.json */; };
 		B9C2E913284E3B9F0007FC55 /* SearchableAssetPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C2E912284E3B9F0007FC55 /* SearchableAssetPicker.swift */; };
@@ -189,7 +190,7 @@
 		B91FF85326C7072400D0DFAA /* MagnifiableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagnifiableView.swift; sourceTree = "<group>"; };
 		B927614A266284B700CF2100 /* PlayerHighlightInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerHighlightInfo.swift; sourceTree = "<group>"; };
 		B927719B284DBA1D00F25FC3 /* SprayAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprayAssets.swift; sourceTree = "<group>"; };
-		B927719D284DBAF600F25FC3 /* BuddyInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuddyInfo.swift; sourceTree = "<group>"; };
+		B927719D284DBAF600F25FC3 /* BuddyAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuddyAssets.swift; sourceTree = "<group>"; };
 		B92DC20026A33C3600200A01 /* ActRankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActRankView.swift; sourceTree = "<group>"; };
 		B9318365267810CE0099B13C /* AgentSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentSelectView.swift; sourceTree = "<group>"; };
 		B9318368267813EF0099B13C /* example_pregame.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_pregame.json; sourceTree = "<group>"; };
@@ -251,6 +252,7 @@
 		B99BF18228313743009515C1 /* example_store_wallet.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_store_wallet.json; sourceTree = "<group>"; };
 		B99E3DE4271F2AD300F62453 /* example matches */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "example matches"; sourceTree = "<group>"; };
 		B9A11F4C28518B1C00599719 /* GunCustomizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GunCustomizer.swift; sourceTree = "<group>"; };
+		B9A11F50285296C400599719 /* UnwrappingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnwrappingView.swift; sourceTree = "<group>"; };
 		B9AEB7D627B0A03F0090A203 /* PartyInfoBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyInfoBox.swift; sourceTree = "<group>"; };
 		B9AED04A27B08699009033C6 /* example_party.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_party.json; sourceTree = "<group>"; };
 		B9C2E912284E3B9F0007FC55 /* SearchableAssetPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchableAssetPicker.swift; sourceTree = "<group>"; };
@@ -535,7 +537,7 @@
 				B9F7A53E27DD091F00636DAF /* CurrencyAssets.swift */,
 				B9F7A54027DD1E7D00636DAF /* BundleAssets.swift */,
 				B927719B284DBA1D00F25FC3 /* SprayAssets.swift */,
-				B927719D284DBAF600F25FC3 /* BuddyInfo.swift */,
+				B927719D284DBAF600F25FC3 /* BuddyAssets.swift */,
 			);
 			path = "Concrete Assets";
 			sourceTree = "<group>";
@@ -554,6 +556,7 @@
 				B90B4FB726C5DD8E008A5B5A /* LeaderboardRankView.swift */,
 				B91FF85326C7072400D0DFAA /* MagnifiableView.swift */,
 				B94C57F926CB605700CAF257 /* AlwaysPressable.swift */,
+				B9A11F50285296C400599719 /* UnwrappingView.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -928,7 +931,7 @@
 				B96A0CA3265ABBC700844674 /* SwiftUI+Helpers.swift in Sources */,
 				B9CD085C27D28D7500BD485A /* AgentInfoView.swift in Sources */,
 				B941B65625A5BC8A00F675C1 /* ReconBoltApp.swift in Sources */,
-				B927719E284DBAF600F25FC3 /* BuddyInfo.swift in Sources */,
+				B927719E284DBAF600F25FC3 /* BuddyAssets.swift in Sources */,
 				B9C97DD1263CB744001E4D1B /* MatchList.swift in Sources */,
 				B9F65C4B2651DFB100C9C34A /* AgentImage.swift in Sources */,
 				B9EE6E652658A363007E28B5 /* SwiftUI+Previews.swift in Sources */,
@@ -972,6 +975,7 @@
 				B963C47626950FE90071E14A /* RankInfoView.swift in Sources */,
 				B90B4B64267C270500CACB95 /* CompetitiveTierImage.swift in Sources */,
 				B932A0F927911064009FAEE5 /* ContractChooser.swift in Sources */,
+				B9A11F51285296C400599719 /* UnwrappingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

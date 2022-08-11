@@ -2,26 +2,17 @@ import SwiftUI
 import ValorantAPI
 
 struct WeaponLoadoutView: View {
-	static let weaponOrder: [Weapon.ID: Int] = .init(
-		uniqueKeysWithValues: Weapon.ID.orderInCollection
-			.enumerated()
-			.lazy
-			.map { ($1, $0) }
-	)
-	
-	@Binding var loadout: Loadout
+	@Binding var loadout: UpdatableLoadout
 	var inventory: Inventory
 	
 	@Environment(\.assets) private var assets
 	
 	var body: some View {
 		List {
-			let sorted = loadout.guns.sorted(on: { Self.weaponOrder[$0.id] ?? 100 })
-			ForEach(sorted, id: \.id) { gun in
-				let index = loadout.guns.firstIndex { $0.id == gun.id }!
-				let gun = $loadout.guns[index]
+			ForEach(Weapon.ID.orderInCollection, id: \.self) { gunID in
+				let gun = $loadout[dynamicMember: \.guns[gunID]!]
 				Section {
-					GunCell(gun: gun, inventory: inventory)
+					GunCell(gun: gun, loadout: $loadout, inventory: inventory)
 				} header: {
 					Text(assets?.weapons[gun.wrappedValue.id]?.displayName ?? "")
 				}
@@ -32,6 +23,7 @@ struct WeaponLoadoutView: View {
 	
 	struct GunCell: View {
 		@Binding var gun: Loadout.Gun
+		@Binding var loadout: UpdatableLoadout
 		var inventory: Inventory
 		
 		@Environment(\.assets) private var assets
@@ -39,7 +31,7 @@ struct WeaponLoadoutView: View {
 		var body: some View {
 			if let resolved = assets?.resolveSkin(gun.skin.level) {
 				NavigationLink {
-					GunCustomizer(gun: $gun, resolved: resolved, inventory: inventory)
+					GunCustomizer(gun: $gun, loadout: $loadout, resolved: resolved, inventory: inventory)
 				} label: {
 					let chroma = resolved.chroma(gun.skin.chroma)
 					HStack {
@@ -64,7 +56,7 @@ struct WeaponLoadoutView: View {
 struct WeaponLoadoutView_Previews: PreviewProvider {
 	static var previews: some View {
 		WeaponLoadoutView(
-			loadout: .constant(PreviewData.loadout),
+			loadout: .constant(.init(PreviewData.loadout)),
 			inventory: PreviewData.inventory
 		)
 		.withToolbar()

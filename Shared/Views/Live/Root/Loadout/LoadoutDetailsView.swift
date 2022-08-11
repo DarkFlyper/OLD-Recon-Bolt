@@ -3,7 +3,7 @@ import ValorantAPI
 
 struct LoadoutDetailsView: View {
 	var fetchedLoadout: Loadout
-	@State private var loadout: Loadout
+	@State private var loadout: UpdatableLoadout
 	var inventory: Inventory
 	
 	@Environment(\.valorantLoad) private var load
@@ -15,7 +15,7 @@ struct LoadoutDetailsView: View {
 			loadout = newLoadout
 			Task {
 				await load {
-					loadout = try await $0.updateLoadout(to: newLoadout)
+					loadout = .init(try await $0.updateLoadout(to: .init(newLoadout)))
 				}
 			}
 		}
@@ -24,14 +24,14 @@ struct LoadoutDetailsView: View {
 			.buttonBorderShape(.capsule)
 			.padding(.bottom)
 			.task(id: fetchedLoadout.version) {
-				loadout = fetchedLoadout
+				loadout = .init(fetchedLoadout)
 			}
 	}
 }
 
 private struct LoadoutCustomizer: View {
 	var inventory: Inventory
-	@Binding var loadout: Loadout
+	@Binding var loadout: UpdatableLoadout
 	
 	@Environment(\.assets) private var assets
 	
@@ -107,8 +107,7 @@ private struct LoadoutCustomizer: View {
 	var sprayPicker: some View {
 		HStack {
 			ForEach(Spray.Slot.ID.inOrder, id: \.self) { slot in
-				let index = loadout.sprays.firstIndex { $0.slot == slot }!
-				SprayCell(inventory: inventory, spray: $loadout.sprays[index])
+				SprayCell(inventory: inventory, slot: slot, spray: $loadout.sprays[slot])
 			}
 			.frame(maxWidth: 128)
 		}
@@ -117,28 +116,26 @@ private struct LoadoutCustomizer: View {
 	
 	struct SprayCell: View {
 		var inventory: Inventory
-		@Binding var spray: Loadout.EquippedSpray
+		var slot: Spray.Slot.ID
+		@Binding var spray: Spray.ID?
 		
 		@Environment(\.assets) private var assets
 		
 		var body: some View {
+			EmptyView()
 			NavigationLink {
-				SimpleSearchableAssetPicker(
-					inventory: inventory,
-					selected: _spray.spray
-				) { (spray: SprayInfo) in
-					spray.bestIcon.asyncImage()
-						.frame(width: 48, height: 48)
-					Text(spray.displayName)
-				}
-				.navigationTitle("Sprays")
+				SprayPicker(inventory: inventory, selection: $spray)
 			} label: {
 				VStack {
-					let info = assets?.sprays[spray.spray]
-					(info?.bestIcon).asyncImageOrPlaceholder()
-						.aspectRatio(1, contentMode: .fit)
+					if let spray = spray {
+						let info = assets?.sprays[spray]
+						(info?.bestIcon).asyncImageOrPlaceholder()
+							.aspectRatio(1, contentMode: .fit)
+					} else {
+						Color.clear
+					}
 					
-					Text(spray.slot.name)
+					Text(slot.name)
 						.font(.caption)
 						.foregroundColor(.secondary)
 				}
@@ -151,7 +148,49 @@ private struct LoadoutCustomizer: View {
 
 extension LoadoutDetailsView {
 	init(loadout: Loadout, inventory: Inventory) {
-		self.init(fetchedLoadout: loadout, loadout: loadout, inventory: inventory)
+		self.init(fetchedLoadout: loadout, loadout: .init(loadout), inventory: inventory)
+	}
+}
+
+struct SprayPicker: View {
+	var inventory: Inventory
+	@Binding var selection: Spray.ID?
+	@State private var search = ""
+	
+	var body: some View {
+		AssetsUnwrappingView { assets in
+			List {
+				let ownedItems = inventory.sprays
+				let allItems = assets.sprays
+				
+				let lowerSearch = search.lowercased()
+				let results = ownedItems
+					.lazy
+					.compactMap { assets.sprays[$0] }
+					.filter { $0.searchableText.lowercased().hasPrefix(lowerSearch) }
+					.sorted(on: \.searchableText)
+				
+				Section {
+					ForEach(results) { spray in
+						SelectableRow(selection: $selection, item: spray.id) {
+							spray.bestIcon.asyncImage()
+								.frame(width: 48, height: 48)
+							Text(spray.displayName)
+						}
+					}
+				} footer: {
+					VStack(alignment: .leading) {
+						Text("\(ownedItems.count)/\(allItems.count) owned")
+						let missing = ownedItems.lazy.filter { allItems[$0] == nil }.count
+						if missing > 0 {
+							Text("\(missing) hidden due to outdated assets")
+						}
+					}
+				}
+			}
+			.searchable(text: $search)
+		}
+		.navigationTitle("Choose Spray")
 	}
 }
 
