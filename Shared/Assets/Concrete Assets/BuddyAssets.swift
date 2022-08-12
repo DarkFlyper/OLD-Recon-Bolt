@@ -30,12 +30,25 @@ struct BuddyInfo: AssetItem, Codable, Identifiable {
 	
 	struct Level: Codable, Identifiable {
 		var id: Weapon.Buddy.Level.ID
-		var displayName: String
-		// ignoring the rest because they don't seem to be used yet
+		// ignoring the rest because they don't seem to be used yet or useful lol
 		
 		enum CodingKeys: String, CodingKey {
 			case id = "uuid"
-			case displayName
 		}
+	}
+}
+
+struct BuddyLevel: Identifiable {
+	var id: BuddyInfo.Level.ID
+	var buddy: BuddyInfo
+	
+	init(_ buddy: BuddyInfo) {
+		self.buddy = buddy
+		// buddies currently only have one level, and we only care about the id (the image is the same and the name is wrong)
+		self.id = buddy.levels.first!.id
+	}
+	
+	func instance(_ instance: Weapon.Buddy.Instance.ID) -> Loadout.Gun.Buddy {
+		.init(buddy: buddy.id, level: id, instance: instance)
 	}
 }

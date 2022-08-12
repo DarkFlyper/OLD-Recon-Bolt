@@ -48,7 +48,7 @@ struct AgentPickerView: View {
 			
 			if let agents = assets?.agents.values {
 				let sortedAgents = agents.sorted(on: \.displayName)
-					.movingToFront { inventory.agentsIncludingStarters.contains($0.id) }
+					.movingToFront { inventory.owns($0.id) }
 				
 				let agentSize = 50.0
 				let gridSpacing = 12.0
@@ -74,7 +74,7 @@ struct AgentPickerView: View {
 	
 	@ViewBuilder
 	func agentButton(for agent: AgentInfo, selectedAgentID: Agent.ID?, isTaken: Bool) -> some View {
-		let ownsAgent = inventory.agentsIncludingStarters.contains(agent.id)
+		let ownsAgent = inventory.owns(agent.id)
 		AsyncButton {
 			await load {
 				pregameInfo = try await $0.pickAgent(

@@ -13,7 +13,12 @@ struct SearchableAssetPicker<Item: SearchableAsset, RowContent: View>: View {
 		let results = ownedItems
 			.lazy
 			.compactMap { allItems[$0] }
-			.filter { $0.searchableText.lowercased().hasPrefix(lowerSearch) }
+			.filter {
+				$0.searchableText
+					.lowercased()
+					.split(separator: " ")
+					.contains { $0.hasPrefix(lowerSearch) }
+			}
 			.sorted(on: \.searchableText)
 		
 		List {
@@ -69,7 +74,6 @@ extension SelectableRow {
 
 struct SimpleSearchableAssetPicker<Item: SimpleSearchableAsset, RowContent: View>: View {
 	var inventory: Inventory
-	@Binding var selected: Item.ID
 	@ViewBuilder var rowContent: (Item) -> RowContent
 	
 	var body: some View {
@@ -78,9 +82,7 @@ struct SimpleSearchableAssetPicker<Item: SimpleSearchableAsset, RowContent: View
 				allItems: assets[keyPath: Item.assetPath],
 				ownedItems: inventory[keyPath: Item.inventoryPath]
 			) { item in
-				SelectableRow(selection: $selected, item: item.id) {
-					rowContent(item)
-				}
+				rowContent(item)
 			}
 		}
 	}

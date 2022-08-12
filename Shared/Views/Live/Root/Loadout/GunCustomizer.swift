@@ -28,7 +28,7 @@ struct GunCustomizer: View {
 					}
 					
 					NavigationLink("Change Skin") {
-						skinPicker
+						SkinPicker(gun: $gun, inventory: inventory)
 					}
 				}
 				.frame(maxWidth: .infinity)
@@ -53,7 +53,7 @@ struct GunCustomizer: View {
 				.frame(maxWidth: .infinity)
 				
 				NavigationLink("Change Buddy") {
-					BuddyPicker(loadout: $loadout, weapon: gun.id, inventory: inventory)
+					BuddyPicker(weapon: gun.id, loadout: $loadout, inventory: inventory)
 				}
 			}
 		}
@@ -67,7 +67,7 @@ struct GunCustomizer: View {
 		
 		return HStack(spacing: spacing) {
 			ForEach(resolved.skin.chromas.indexed(), id: \.element.id) { index, chroma in
-				let isOwned = index == 0 || inventory.skinChromas.contains(chroma.id)
+				let isOwned = index == 0 || inventory.owns(chroma.id)
 				Button {
 					gun.skin.chroma = chroma.id
 				} label: {
@@ -99,7 +99,7 @@ struct GunCustomizer: View {
 		ZStack {
 			HStack(alignment: .top, spacing: 2) {
 				ForEach(resolved.skin.levels.indexed(), id: \.element.id) { index, level in
-					let isOwned = index == 0 || inventory.skinLevels.contains(level.id)
+					let isOwned = index == 0 || inventory.owns(level.id)
 					let isActive = resolved.levelIndex >= index
 					
 					if index > 0 {
@@ -158,159 +158,6 @@ struct GunCustomizer: View {
 			}
 		}
 	}
-	
-	@ViewBuilder
-	var skinPicker: some View {
-		if let weapon = assets?.weapons[gun.id] {
-			let skins: [ResolvedLevel] = weapon.skins.map {
-				let index = $0.levels.lastIndex { inventory.skinLevels.contains($0.id) } ?? 0
-				return ResolvedLevel(weapon: weapon, skin: $0, level: $0.levels[index], levelIndex: index)
-			}
-			SearchableAssetPicker(
-				allItems: .init(values: skins),
-				ownedItems: .init(skins.lazy.map(\.id).filter(inventory.skinLevels.contains)),
-				rowContent: skinPickerRow(for:)
-			)
-			.navigationTitle("Choose Skin")
-		}
-	}
-	
-	@ViewBuilder
-	func skinPickerRow(for skin: ResolvedLevel) -> some View {
-		let isSelected = gun.skin.skin == skin.skin.id
-		VStack {
-			skin.displayIcon?.asyncImage()
-				.frame(height: 60)
-				.frame(maxWidth: .infinity)
-			
-			SelectableRow(isSelected: isSelected) {
-				gun.skin = .init(
-					skin: skin.skin.id,
-					level: skin.level.id,
-					chroma: skin.skin.chromas.first!.id
-				)
-			} content: {
-				Text(skin.displayName)
-					.frame(maxWidth: .infinity, alignment: .leading)
-					.foregroundColor(.primary)
-			}
-		}
-		.padding(.vertical, 8)
-		.listRowBackground(ZStack {
-			Color.secondaryGroupedBackground
-			Color.accentColor.opacity(isSelected ? 0.1 : 0)
-		})
-	}
-}
-
-struct BuddyPicker: View {
-	@Binding var loadout: UpdatableLoadout
-	var weapon: Weapon.ID
-	var inventory: Inventory
-	@State private var search = ""
-	@State private var isAssigningBuddy = false
-	@State private var buddyToAssign: BuddyInfo?
-	
-	@Environment(\.assets) private var assets
-	
-	var body: some View {
-		buddyList
-			.confirmationDialog(
-				"Out of instances!",
-				isPresented: $isAssigningBuddy,
-				titleVisibility: .visible,
-				presenting: buddyToAssign
-			) { buddy in
-				let level = buddy.levels.first!
-				ForEach((inventory.buddies[level.id] ?? []).indexed(), id: \.element) { index, instance in
-					let currentOwner = loadout.guns.values.first { $0.buddy?.instance == instance }!.id
-					Button {
-						loadout.guns[currentOwner]!.buddy = nil
-						loadout.guns[weapon]!.buddy = .init(
-							buddy: buddy.id,
-							level: level.id,
-							instance: instance
-						)
-					} label: {
-						let name = assets?.weapons[currentOwner]?.displayName ?? "unknown gun"
-						Text("\(name)")
-					}
-				}
-			} message: { buddy in
-				Text("Choose a weapon to take \(buddy.displayName) from.")
-			}
-			.navigationTitle("Choose Buddy")
-	}
-	
-	var buddyList: some View {
-		AssetsUnwrappingView { assets in
-			List {
-				let ownedItems = inventory.buddies.keys
-				let allItems = Dictionary(uniqueKeysWithValues: assets.buddies.values.map { ($0.levels.first!.id, $0) })
-				
-				let lowerSearch = search.lowercased()
-				let results = ownedItems
-					.lazy
-					.compactMap { allItems[$0] }
-					.filter { $0.searchableText.lowercased().hasPrefix(lowerSearch) }
-					.sorted(on: \.searchableText)
-				
-				let selection = loadout.guns[weapon]?.buddy?.instance
-				
-				Section {
-					ForEach(results) { buddy in
-						let instances = inventory.buddies[buddy.levels.first!.id] ?? []
-						SelectableRow(isSelected: instances.contains { $0 == selection }) {
-							assign(buddy)
-						} content: {
-							buddy.displayIcon.asyncImage()
-								.frame(width: 48, height: 48)
-							Text(buddy.displayName)
-						}
-					}
-				} footer: {
-					VStack(alignment: .leading) {
-						Text("\(ownedItems.count)/\(allItems.count) owned")
-						let missing = ownedItems.lazy.filter { allItems[$0] == nil }.count
-						if missing > 0 {
-							Text("\(missing) hidden due to outdated assets")
-						}
-					}
-				}
-			}
-			.searchable(text: $search)
-		}
-	}
-	
-	func assign(_ buddy: BuddyInfo) {
-		let level = buddy.levels.first!
-		let instances = inventory.buddies[buddy.levels.first!.id] ?? []
-		let unowned = instances.first { instance in
-			let currentOwner = loadout.guns.values.first { $0.buddy?.instance == instance }?.id
-			return currentOwner == nil
-		}
-		
-		if let instance = unowned {
-			loadout.guns[weapon]!.buddy = .init(
-				buddy: buddy.id,
-				level: level.id,
-				instance: instance
-			)
-		} else {
-			buddyToAssign = buddy
-			isAssigningBuddy = true
-		}
-	}
-}
-
-extension ResolvedLevel: SearchableAsset {
-	var searchableText: String {
-		level.displayName ?? skin.displayName
-	}
-}
-
-extension BuddyInfo: SearchableAsset {
-	var searchableText: String { displayName }
 }
 
 #if DEBUG
