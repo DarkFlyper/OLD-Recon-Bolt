@@ -49,7 +49,7 @@ struct CompetitiveSummaryCell: View {
 			RankInfoView(summary: summary, lineWidth: 5, shouldFallBackOnPrevious: false)
 				.frame(height: 96)
 			
-			if let tierInfo = tierInfo {
+			if let tierInfo {
 				Text(tierInfo.name)
 					.font(primaryFont)
 			}
@@ -57,7 +57,7 @@ struct CompetitiveSummaryCell: View {
 			Text("\(info?.adjustedRankedRating ?? 0) RR")
 				.font(secondaryFont)
 			
-			if let info = info, info.leaderboardRank > 0 {
+			if let info, info.leaderboardRank > 0 {
 				LeaderboardRankView(rank: info.leaderboardRank, tierInfo: tierInfo)
 			}
 		}

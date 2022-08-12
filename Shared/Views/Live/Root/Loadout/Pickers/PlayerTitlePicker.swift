@@ -25,7 +25,7 @@ extension PlayerTitleInfo: SimpleSearchableAsset {
 extension PlayerTitleInfo {
 	@ViewBuilder
 	var textOrBlankDescription: some View {
-		if let titleText = titleText {
+		if let titleText {
 			Text(titleText)
 		} else {
 			Text("No Title")

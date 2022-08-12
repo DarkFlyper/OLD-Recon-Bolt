@@ -139,7 +139,7 @@ struct ContractDetailsView: View {
 	
 	private func upcomingMissions() -> [MissionInfo]? {
 		guard
-			let assets = assets,
+			let assets,
 			let checkpointDate = [
 				// weekly checkpoint may still be in the last act—let's take the later of that and the current act's start
 				details.missionMetadata.weeklyCheckpoint,

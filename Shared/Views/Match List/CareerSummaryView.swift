@@ -138,7 +138,7 @@ struct CareerSummaryView: View {
 							RankInfoView(summary: nil, dataOverride: info)
 								.frame(height: 80)
 							
-							if let tierInfo = tierInfo {
+							if let tierInfo {
 								Text(tierInfo.name)
 									.font(.callout.weight(.semibold))
 							}

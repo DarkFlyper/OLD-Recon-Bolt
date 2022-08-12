@@ -35,7 +35,7 @@ struct AccountView: View {
 		if let userID = dataStore.data?.userID {
 			VStack(spacing: 20) {
 				Group {
-					if let user = user {
+					if let user {
 						Text("Signed in as \(Text(user.name).fontWeight(.semibold))")
 					} else {
 						Text("Signed in.")
@@ -87,7 +87,7 @@ struct AccountView: View {
 				Text(String(describing: error))
 					.font(.caption)
 			} else if let assets = assetManager.assets {
-				if let newestVersion = newestVersion, assets.version != newestVersion {
+				if let newestVersion, assets.version != newestVersion {
 					Text("Assets out of date!")
 						.font(.headline)
 					

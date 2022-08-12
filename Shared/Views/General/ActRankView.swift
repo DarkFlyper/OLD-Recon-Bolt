@@ -17,7 +17,7 @@ struct ActRankView: View {
 		ZStack {
 			let actInfo = assets?.seasons.acts[seasonInfo.seasonID]
 			let border = actInfo?.borders.last { seasonInfo.winCount >= $0.winsRequired }
-			if let border = border {
+			if let border {
 				let winsByTier = seasonInfo.winsByTier ?? [:]
 				let container = isIcon
 					? (border.icon ?? actInfo?.borders.lazy.compactMap(\.icon).first) // show icon even when not qualified for border
@@ -82,7 +82,7 @@ struct ActRankView: View {
 						for (index, tier) in tiers.enumerated() {
 							let shouldPointUpwards = index % 2 == 0
 							let triangle = shouldPointUpwards ? tier.upwards : tier.downwards
-							guard let triangle = triangle else { continue }
+							guard let triangle else { continue }
 							
 							var context = context
 							context.translateBy(x: CGFloat(index - rowNumber - 1) * 0.5, y: 0)

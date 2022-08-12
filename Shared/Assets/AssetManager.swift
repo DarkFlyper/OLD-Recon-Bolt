@@ -55,7 +55,7 @@ final class AssetManager: ObservableObject {
 		onProgress: AssetProgressCallback? = nil
 	) async throws -> AssetCollection {
 		let version = try await client.getCurrentVersion()
-		if !forceUpdate, let stored = stored, stored.version == version {
+		if !forceUpdate, let stored, stored.version == version {
 			return stored
 		} else {
 			return try await client

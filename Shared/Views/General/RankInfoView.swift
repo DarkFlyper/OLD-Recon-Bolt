@@ -15,7 +15,7 @@ struct RankInfoView: View {
 	
 	var body: some View {
 		ZStack {
-			if let summary = summary {
+			if let summary {
 				let act = assets?.seasons.currentAct()
 				let info = summary.competitiveInfo?.inSeason(act?.id)
 				let tier = info?.competitiveTier ?? 0

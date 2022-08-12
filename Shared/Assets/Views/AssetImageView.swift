@@ -21,7 +21,7 @@ struct AssetImageView<Provider: AssetImageProvider>: View {
 		let assetImage = assets?[keyPath: Provider.assetPath][id]
 			.flatMap(getImage)
 		
-		if let assetImage = assetImage {
+		if let assetImage {
 			assetImage.imageOrPlaceholder(renderingMode: renderingMode)
 		} else if let fallback = UIImage(named: "\(id)".uppercased()) {
 			Image(uiImage: fallback)

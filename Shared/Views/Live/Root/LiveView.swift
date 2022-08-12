@@ -67,7 +67,7 @@ struct LiveView: View {
 		_ data: Data?,
 		@ViewBuilder content: (Data) -> Content
 	) -> some View {
-		if let data = data {
+		if let data {
 			content(data)
 		} else {
 			Divider()

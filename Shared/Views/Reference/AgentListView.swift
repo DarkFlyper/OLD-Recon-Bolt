@@ -5,7 +5,7 @@ struct AgentListView: View {
 	
 	var body: some View {
 		List {
-			if let assets = assets {
+			if let assets {
 				let agents = assets.agents.values.sorted(on: \.displayName)
 				ForEach(agents) { agent in
 					NavigationLink(destination: AgentInfoView(agent: agent)) {

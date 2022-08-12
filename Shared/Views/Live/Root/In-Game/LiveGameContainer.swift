@@ -53,7 +53,7 @@ struct LiveGameContainer: View {
 	
 	func fetchDetails() async {
 		await load {
-			guard let activeMatch = activeMatch else { return }
+			guard let activeMatch else { return }
 			if activeMatch.inPregame {
 				async let inventory = $0.getInventory()
 				details = .pregame(

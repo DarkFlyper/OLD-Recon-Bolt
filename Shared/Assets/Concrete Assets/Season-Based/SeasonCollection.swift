@@ -24,7 +24,7 @@ struct SeasonCollection: AssetItem, Codable {
 	}
 	
 	func actBefore(_ current: Act?) -> Act? {
-		guard let current = current else { return nil }
+		guard let current else { return nil }
 		guard let currentIndex = actsInOrder.firstIndex(withID: current.id) else { return nil }
 		return actsInOrder.elementIfValid(at: currentIndex - 1)
 	}
@@ -58,7 +58,7 @@ struct Act: AssetItem, Identifiable, Codable {
 	var competitiveTiers: CompetitiveTier.Collection.ID
 	
 	var nameWithEpisode: String {
-		if let episode = episode {
+		if let episode {
 			return "\(episode.name) – \(name)"
 		} else {
 			return name

@@ -8,8 +8,8 @@ struct AssetImage: Hashable {
 	
 	@ViewBuilder
 	func imageOrPlaceholder(renderingMode: Image.TemplateRenderingMode? = nil) -> some View {
-		if let image = imageIfLoaded {
-			image
+		if let imageIfLoaded {
+			imageIfLoaded
 				.renderingMode(renderingMode)
 				.resizable()
 				.scaledToFit()
@@ -59,7 +59,7 @@ struct AssetImage: Hashable {
 extension Optional where Wrapped == AssetImage {
 	@ViewBuilder
 	func asyncImageOrPlaceholder() -> some View {
-		if let self = self {
+		if let self {
 			self.asyncImage()
 		} else {
 			Color.gray

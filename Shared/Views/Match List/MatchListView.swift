@@ -23,11 +23,11 @@ struct MatchListView: View {
 	var body: some View {
 		List {
 			Section(header: Text("Player")) {
-				if let user = user, let identity = identity {
+				if let user, let identity {
 					PlayerIdentityCell(user: user, identity: identity)
 				}
 				
-				if let summary = summary {
+				if let summary {
 					CompetitiveSummaryCell(summary: summary)
 				}
 			}

@@ -6,7 +6,7 @@ struct UnwrappingView<Value, Content: View>: View {
 	@ViewBuilder var content: (Value) -> Content
 	
 	var body: some View {
-		if let value = value {
+		if let value {
 			content(value)
 		} else {
 			Text(placeholder)

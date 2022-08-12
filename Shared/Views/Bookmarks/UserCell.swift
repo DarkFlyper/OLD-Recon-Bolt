@@ -15,14 +15,14 @@ struct UserCell: View {
 			MatchListView(userID: userID, user: user)
 		} label: {
 			HStack(spacing: 10) {
-				if let identity = identity {
+				if let identity {
 					PlayerCardImage.small(identity.cardID)
 						.frame(width: artworkSize, height: artworkSize)
 						.mask(RoundedRectangle(cornerRadius: 4, style: .continuous))
 				}
 				
 				VStack(alignment: .leading) {
-					if let user = user {
+					if let user {
 						Text(user.gameName)
 							.fontWeight(.semibold)
 						+ Text(" #\(user.tagLine)")
@@ -31,7 +31,7 @@ struct UserCell: View {
 						Text("Unknown Player")
 					}
 					
-					if let identity = identity {
+					if let identity {
 						Text("Level \(identity.accountLevel)")
 					}
 				}

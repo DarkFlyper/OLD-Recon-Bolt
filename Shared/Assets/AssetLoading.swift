@@ -88,12 +88,12 @@ struct AssetDownloadProgress: CustomStringConvertible {
 	var total: Int?
 	
 	var fractionComplete: Double {
-		guard let total = total else { return 0 }
+		guard let total else { return 0 }
 		return Double(completed) / Double(total)
 	}
 	
 	var description: String {
-		guard let total = total else { return "preparing to download assets…" }
+		guard let total else { return "preparing to download assets…" }
 		return "\(completed)/\(total) assets downloaded"
 	}
 }

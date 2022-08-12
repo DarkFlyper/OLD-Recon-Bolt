@@ -19,7 +19,7 @@ struct CurrentMissionsList: View {
 					Spacer()
 					
 					Group {
-						if let countdownTarget = countdownTarget {
+						if let countdownTarget {
 							CountdownText(target: countdownTarget)
 							Image(systemName: "clock")
 						}
@@ -30,7 +30,7 @@ struct CurrentMissionsList: View {
 				
 				GroupBox {
 					ForEach(missions, id: \.mission.id) { mission, missionInfo in
-						if let missionInfo = missionInfo {
+						if let missionInfo {
 							MissionView(missionInfo: missionInfo, mission: mission)
 						} else {
 							Text("Unknown mission!")

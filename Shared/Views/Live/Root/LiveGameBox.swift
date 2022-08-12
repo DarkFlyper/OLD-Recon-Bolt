@@ -40,7 +40,7 @@ struct LiveGameBox: View {
 	
 	@ViewBuilder
 	private var content: some View {
-		if let activeMatch = activeMatch {
+		if let activeMatch {
 			GroupBox {
 				Text("Currently \(activeMatch.inPregame ? "in agent select" : "in-game").")
 				
@@ -108,7 +108,7 @@ struct LiveGameBox: View {
 	
 	func loadParty(using client: ValorantClient) async throws {
 		party = try await client.getPartyInfo()
-		if let party = party {
+		if let party {
 			LocalDataProvider.dataFetched(party)
 			try await client.fetchUsers(for: party.members.map(\.id))
 		}

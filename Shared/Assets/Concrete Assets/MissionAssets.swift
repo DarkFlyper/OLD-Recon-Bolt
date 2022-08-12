@@ -34,7 +34,7 @@ struct MissionInfo: AssetItem, Codable, Identifiable {
 	var objectives: [ObjectiveValue]?
 	
 	func objective(id: Objective.ID?) -> ObjectiveValue? {
-		if let id = id {
+		if let id {
 			return objectives?.first { $0.objectiveID == id }
 		} else {
 			return objectives?.singleElement

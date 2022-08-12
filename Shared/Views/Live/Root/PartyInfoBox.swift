@@ -129,7 +129,7 @@ struct PartyInfoBox: View {
 				
 				VStack(alignment: .leading) {
 					HStack {
-						if let memberUser = memberUser {
+						if let memberUser {
 							HStack {
 								Text(memberUser.gameName)
 								Text("#\(memberUser.tagLine)")

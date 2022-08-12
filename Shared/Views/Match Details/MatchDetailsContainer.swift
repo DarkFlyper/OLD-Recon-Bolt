@@ -9,7 +9,7 @@ struct MatchDetailsContainer: View {
 	
 	var body: some View {
 		Group {
-			if let details = details {
+			if let details {
 				MatchDetailsView(data: .init(details: details, userID: userID))
 			} else {
 				ProgressView()

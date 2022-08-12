@@ -38,7 +38,7 @@ final actor LocalDataManager<Object: Identifiable & Codable> where Object.ID: Lo
 	func store(_ object: Object, asOf updateTime: Date) {
 		let entry = Entry(lastUpdate: updateTime, object: object)
 		let existing = cachedEntry(for: object.id)
-		if let existing = existing, existing.lastUpdate > updateTime { return }
+		if let existing, existing.lastUpdate > updateTime { return }
 		
 		cache[object.id] = entry
 		subjects[object.id]?.send(object)

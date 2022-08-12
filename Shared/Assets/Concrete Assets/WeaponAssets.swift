@@ -175,7 +175,7 @@ extension AssetCollection {
 	
 	subscript(path: WeaponSkin.Level.Path?) -> ResolvedLevel? {
 		guard
-			let path = path,
+			let path,
 			let weapon = weapons[path.weapon]
 		else { return nil }
 		let skin = weapon.skins[path.skinIndex]

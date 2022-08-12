@@ -12,12 +12,12 @@ struct PlayerHighlightInfo {
 	}
 	
 	func isHighlighting(_ playerID: Player.ID) -> Bool? {
-		guard let highlightedPlayer = highlightedPlayer else { return nil }
+		guard let highlightedPlayer else { return nil }
 		return playerID == highlightedPlayer.id
 	}
 	
 	func isHighlighting(_ partyID: Party.ID) -> Bool? {
-		guard let highlightedPlayer = highlightedPlayer else { return nil }
+		guard let highlightedPlayer else { return nil }
 		return partyID == highlightedPlayer.partyID
 	}
 	

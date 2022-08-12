@@ -67,7 +67,7 @@ private struct LocalDataModifier<Value: LocalDataStored>: ViewModifier {
 		content
 			.task(id: id) {
 				guard !isLocalDataLocked else { return }
-				if let token = token, token.id == id { return }
+				if let token, token.id == id { return }
 				let cancellable = LocalDataProvider.shared[keyPath: Value.managerPath]
 					.objectPublisher(for: id)
 					.receive(on: DispatchQueue.main)

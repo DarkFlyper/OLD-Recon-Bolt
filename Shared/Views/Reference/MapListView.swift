@@ -5,7 +5,7 @@ struct MapListView: View {
 	
 	var body: some View {
 		List {
-			if let assets = assets {
+			if let assets {
 				let maps = assets.maps.values.sorted(on: \.displayName)
 				ForEach(maps) { map in
 					NavigationLink(destination: MapInfoView(map: map)) {

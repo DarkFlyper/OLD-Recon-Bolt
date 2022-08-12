@@ -151,7 +151,7 @@ struct AgentSelectView: View {
 				icon
 				
 				VStack(alignment: .leading, spacing: 4) {
-					if !player.identity.isIncognito, let playerUser = playerUser {
+					if !player.identity.isIncognito, let playerUser {
 						HStack {
 							Text(playerUser.gameName)
 							Text("#\(playerUser.tagLine)")

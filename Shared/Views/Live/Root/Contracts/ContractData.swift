@@ -15,7 +15,7 @@ struct ContractData {
 	}
 	
 	var currentLevelCompletion: Double {
-		guard let nextLevel = nextLevel else { return 1 }
+		guard let nextLevel else { return 1 }
 		return Double(contract.progressionTowardsNextLevel) / Double(nextLevel.info.xp)
 	}
 	

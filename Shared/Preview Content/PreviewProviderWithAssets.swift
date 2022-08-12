@@ -18,7 +18,7 @@ struct AssetProvider<Content: View>: View {
 	@ViewBuilder var content: (AssetCollection) -> Content
 	
 	var body: some View {
-		if let assets = assets {
+		if let assets {
 			content(assets)
 		} else {
 			AccountView(dataStore: PreviewData.mockDataStore, assetManager: .forPreviews)

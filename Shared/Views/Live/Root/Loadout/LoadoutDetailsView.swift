@@ -117,7 +117,7 @@ private struct LoadoutCustomizer: View {
 				SprayPicker(selection: $spray, inventory: inventory)
 			} label: {
 				VStack {
-					if let spray = spray {
+					if let spray {
 						let info = assets?.sprays[spray]
 						(info?.bestIcon).asyncImageOrPlaceholder()
 							.aspectRatio(1, contentMode: .fit)

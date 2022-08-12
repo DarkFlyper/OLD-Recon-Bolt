@@ -13,7 +13,7 @@ struct MatchListFilter: Codable {
 	func accepts(_ update: CompetitiveUpdate, details: MatchDetails?) -> Bool {
 		guard isActive else { return true }
 		guard maps.allows(update.mapID) else { return false }
-		guard let details = details else {
+		guard let details else {
 			return shouldShowUnfetched || queues.allows(.competitive) && update.isRanked
 		}
 		return details.matchInfo.queueID.map(queues.allows) ?? false

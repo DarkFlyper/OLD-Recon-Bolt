@@ -34,7 +34,7 @@ extension KeychainSwift: Keychain {
 	subscript(key: String) -> Data? {
 		get { getData(key) }
 		set {
-			if let newValue = newValue {
+			if let newValue {
 				if !set(newValue, forKey: key) {
 					print("Could not store value to keychain for key \(key)!")
 				}

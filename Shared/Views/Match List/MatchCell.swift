@@ -99,7 +99,7 @@ struct MatchCell: View {
 			
 			HStack {
 				ZStack {
-					if let matchDetails = matchDetails {
+					if let matchDetails {
 						HStack {
 							GameModeImage(id: matchDetails.matchInfo.modeID)
 								.foregroundColor(.white)
@@ -122,7 +122,7 @@ struct MatchCell: View {
 				Spacer()
 				
 				let myself = matchDetails?.players.firstElement(withID: userID)!
-				if let myself = myself {
+				if let myself {
 					AgentImage.killfeedPortrait(myself.agentID)
 						.scaleEffect(x: -1)
 						.shadow(color: .black, radius: 4, x: 0, y: 0)
@@ -145,7 +145,7 @@ struct MatchCell: View {
 	
 	@ViewBuilder
 	private var detailsInfo: some View {
-		if let matchDetails = matchDetails {
+		if let matchDetails {
 			let myself = matchDetails.players.firstElement(withID: userID)!
 			
 			VStack {
