@@ -15,6 +15,12 @@ struct AssetClient: Protoclient {
 		self.session = session
 	}
 	
+	func addHeaders(to rawRequest: inout URLRequest) async throws {
+		// band-aid fix to work around some people's internet being too slow
+		// TODO: avoid having to download assets entirely (or at least not this many) and/or allow for partial progress
+		rawRequest.timeoutInterval = 300
+	}
+	
 	private let shouldTrace = true
 	
 	func traceOutgoing<R>(_ rawRequest: URLRequest, for request: R) where R : Request {
