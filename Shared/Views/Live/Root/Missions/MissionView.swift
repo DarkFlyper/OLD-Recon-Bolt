@@ -30,16 +30,27 @@ struct MissionView: View {
 			}
 			
 			if !isComplete, let progress = resolved.progress {
-				ProgressView(
-					value: Double(progress),
-					total: Double(resolved.toComplete),
-					label: { EmptyView() },
-					currentValueLabel: { Text("\(progress)/\(resolved.toComplete)") }
-				)
+				VStack(spacing: 4) {
+					GeometryReader { geometry in
+						let fractionComplete = CGFloat(progress) / CGFloat(resolved.toComplete)
+						Capsule()
+							.opacity(0.1)
+						Capsule()
+							.foregroundColor(.accentColor)
+							.frame(width: geometry.size.width * fractionComplete)
+							.frame(maxWidth: .infinity, alignment: .leading)
+					}
+					.frame(height: 4)
+					
+					Text("\(progress)/\(resolved.toComplete)")
+						.font(.caption)
+						.foregroundStyle(.secondary)
+						.frame(maxWidth: .infinity, alignment: .leading)
+				}
 			} else {
 				Capsule()
 					.frame(height: 2)
-					.foregroundColor(isComplete ? .accentColor : .gray.opacity(0.25))
+					.foregroundColor(isComplete ? .accentColor : .gray.opacity(0.1))
 			}
 		}
 	}
