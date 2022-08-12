@@ -28,23 +28,43 @@ Please note that the app currently **only supports iOS 15**, but you should be o
 </p>
 
 <p align=center>
-  <img width="49%" src="Resources/GitHub/Screenshots/Light/matches.png" />
-  <img width="49%" src="Resources/GitHub/Screenshots/Dark/matches.png" />
-</p>
-
-<p align=center>
   <img width="49%" src="Resources/GitHub/Screenshots/Light/summary.png" />
   <img width="49%" src="Resources/GitHub/Screenshots/Dark/summary.png" />
 </p>
 
 <p align=center>
-  <img width="49%" src="Resources/GitHub/Screenshots/Light/live.png" />
-  <img width="49%" src="Resources/GitHub/Screenshots/Dark/live.png" />
+  <img width="49%" src="Resources/GitHub/Screenshots/Light/party.png" />
+  <img width="49%" src="Resources/GitHub/Screenshots/Dark/party.png" />
+</p>
+
+<p align=center>
+  <img width="49%" src="Resources/GitHub/Screenshots/Light/missions.png" />
+  <img width="49%" src="Resources/GitHub/Screenshots/Dark/missions.png" />
+</p>
+
+<p align=center>
+  <img width="49%" src="Resources/GitHub/Screenshots/Light/loadout.png" />
+  <img width="49%" src="Resources/GitHub/Screenshots/Dark/loadout.png" />
+</p>
+
+<p align=center>
+  <img width="49%" src="Resources/GitHub/Screenshots/Light/skin.png" />
+  <img width="49%" src="Resources/GitHub/Screenshots/Dark/skin.png" />
+</p>
+
+<p align=center>
+  <img width="49%" src="Resources/GitHub/Screenshots/Light/store.png" />
+  <img width="49%" src="Resources/GitHub/Screenshots/Dark/store.png" />
 </p>
 
 <p align=center>
   <img width="49%" src="Resources/GitHub/Screenshots/Light/agent select.png" />
   <img width="49%" src="Resources/GitHub/Screenshots/Dark/agent select.png" />
+</p>
+
+<p align=center>
+  <img width="49%" src="Resources/GitHub/Screenshots/Light/agent info.png" />
+  <img width="49%" src="Resources/GitHub/Screenshots/Dark/agent info.png" />
 </p>
 
 
