@@ -127,10 +127,8 @@ struct RankInfoView_Previews: PreviewProvider {
 			}
 			.fixedSize(horizontal: true, vertical: false)
 			.frame(height: 64)
-			.inEachColorScheme()
 			
 			RankInfoView(summary: summary(forTier: 0))
-				.inEachColorScheme()
 				.frame(height: 64)
 			
 			RankInfoView(summary: PreviewData.summary, lineWidth: 8)
@@ -151,7 +149,6 @@ struct RankInfoView_Previews: PreviewProvider {
 			}
 			.padding()
 			.frame(height: 250)
-			.inEachColorScheme()
 		}
 		.previewLayout(.sizeThatFits)
 	}

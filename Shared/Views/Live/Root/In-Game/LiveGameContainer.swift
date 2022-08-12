@@ -106,7 +106,6 @@ struct LiveGameContainer_Previews: PreviewProvider {
 			details: .liveGame(PreviewData.liveGameInfo)
 		)
 		.withToolbar()
-		.inEachColorScheme()
 	}
 }
 #endif

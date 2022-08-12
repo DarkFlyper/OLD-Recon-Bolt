@@ -58,7 +58,6 @@ struct LeaderboardRankView_Previews: PreviewProvider {
 				LeaderboardRankView(rank: tier.number, tierInfo: tier)
 			}
 		}
-		.inEachColorScheme()
 		.padding()
 		.previewLayout(.sizeThatFits)
 	}

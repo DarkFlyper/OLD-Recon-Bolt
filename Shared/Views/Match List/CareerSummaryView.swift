@@ -202,7 +202,6 @@ struct CareerSummaryView_Previews: PreviewProvider {
 		
 		CareerSummaryView(summary: PreviewData.summary)
 			.withToolbar()
-			.inEachColorScheme()
 	}
 }
 #endif

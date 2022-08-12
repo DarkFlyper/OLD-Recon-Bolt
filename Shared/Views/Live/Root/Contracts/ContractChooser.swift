@@ -100,7 +100,6 @@ struct ContractChooser_Previews: PreviewProvider {
 	static var previews: some View {
 		ContractChooser(details: PreviewData.contractDetails)
 			.withToolbar()
-			.inEachColorScheme()
 	}
 }
 #endif

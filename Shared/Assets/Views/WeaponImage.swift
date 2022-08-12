@@ -28,7 +28,6 @@ struct WeaponImage_Previews: PreviewProvider {
 				.padding()
 		}
 		.previewLayout(.sizeThatFits)
-		.inEachColorScheme()
 	}
 }
 #endif

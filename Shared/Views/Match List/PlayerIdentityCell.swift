@@ -59,7 +59,6 @@ struct PlayerIdentityCell_Previews: PreviewProvider {
 				$0.cardID = .init("8d82ec0a-4c3b-8458-d0b6-e1bb900671cf")!
 			})
 		}
-		.inEachColorScheme()
 		.previewLayout(.sizeThatFits)
 	}
 }

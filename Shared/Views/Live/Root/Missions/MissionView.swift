@@ -91,7 +91,6 @@ struct MissionView_Previews: PreviewProvider {
 		.padding()
 		.frame(width: 300)
 		.previewLayout(.sizeThatFits)
-		.inEachColorScheme()
 	}
 }
 #endif

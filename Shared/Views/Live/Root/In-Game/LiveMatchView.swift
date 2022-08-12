@@ -130,7 +130,6 @@ struct LiveMatchView_Previews: PreviewProvider {
 			userID: PreviewData.userID
 		)
 		.withToolbar()
-		.inEachColorScheme()
 	}
 }
 #endif

@@ -61,7 +61,6 @@ struct BookmarksList_Previews: PreviewProvider {
 		.environmentObject(BookmarkList(
 			bookmarks: PreviewData.pregameInfo.team.players.map(\.id) + [.init()]
 		))
-		.inEachColorScheme()
 	}
 }
 #endif

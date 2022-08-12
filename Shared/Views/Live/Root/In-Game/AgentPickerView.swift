@@ -118,7 +118,6 @@ struct AgentPickerView_Previews: PreviewProvider {
 			inventory: PreviewData.inventory
 		)
 		.previewLayout(.sizeThatFits)
-		.inEachColorScheme()
 	}
 }
 #endif

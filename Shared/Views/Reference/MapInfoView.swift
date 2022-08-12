@@ -69,8 +69,6 @@ struct MapInfoView_Previews: PreviewProvider {
 			map: AssetManager.forPreviews.assets!.maps[.breeze]!
 		)
 		.withToolbar()
-		.inEachOrientation()
-		.inEachColorScheme()
 	}
 }
 #endif

@@ -78,7 +78,6 @@ struct EventMap_Previews: PreviewProvider {
 			)
 			.padding()
 		}
-		.inEachColorScheme()
 		
 		// for testing specific maps
 		ScrollView {

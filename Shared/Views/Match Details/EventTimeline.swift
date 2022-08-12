@@ -142,7 +142,6 @@ struct EventTimeline_Previews: PreviewProvider {
 		}
 		.padding()
 		.previewLayout(.sizeThatFits)
-		.inEachColorScheme()
 	}
 	
 	struct PreviewView: View {

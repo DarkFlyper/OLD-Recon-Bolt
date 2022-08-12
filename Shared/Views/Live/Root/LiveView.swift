@@ -141,7 +141,6 @@ struct LiveView_Previews: PreviewProvider {
 			contractDetails: PreviewData.contractDetails
 		)
 		.withToolbar()
-		.inEachColorScheme()
 	}
 }
 #endif

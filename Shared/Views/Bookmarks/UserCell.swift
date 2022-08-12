@@ -69,7 +69,6 @@ struct UserCell_Previews: PreviewProvider {
 		}
 		.buttonStyle(.navigationLinkPreview)
 		.padding()
-		.inEachColorScheme()
 		.frame(width: 400)
 		.previewLayout(.sizeThatFits)
 	}

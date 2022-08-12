@@ -150,7 +150,6 @@ struct LoginSheet_Previews: PreviewProvider {
 			LoginForm(data: .constant(nil), credentials: .init(), isSigningIn: true, keychain: MockKeychain())
 		}
 		.withLoadErrorAlerts()
-		.inEachColorScheme()
 		.previewLayout(.sizeThatFits)
 	}
 }

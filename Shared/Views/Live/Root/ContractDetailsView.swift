@@ -169,7 +169,6 @@ struct ContractDetailsView_Previews: PreviewProvider {
 			ContractDetailsView(details: PreviewData.contractDetails)
 		} refresh: { _ in }
 		.forPreviews()
-		.inEachColorScheme()
 	}
 }
 #endif

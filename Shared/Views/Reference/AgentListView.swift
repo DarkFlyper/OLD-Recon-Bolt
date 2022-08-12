@@ -37,7 +37,6 @@ struct AgentListView_Previews: PreviewProvider {
 	static var previews: some View {
 		AgentListView()
 			.withToolbar()
-			.inEachColorScheme()
 	}
 }
 #endif

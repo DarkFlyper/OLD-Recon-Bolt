@@ -81,7 +81,6 @@ struct MatchListFilterEditor: View {
 struct MatchListFilterEditor_Previews: PreviewProvider {
     static var previews: some View {
 		HelperView()
-			.inEachColorScheme()
     }
 	
 	struct HelperView: View {

@@ -113,7 +113,6 @@ struct ActRankView_Previews: PreviewProvider {
 					.padding()
 			}
 		}
-		.inEachColorScheme()
 		.fixedSize()
 		.previewLayout(.sizeThatFits)
 		

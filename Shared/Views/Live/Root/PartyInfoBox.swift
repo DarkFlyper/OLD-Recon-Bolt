@@ -199,7 +199,6 @@ struct PartyInfoBox_Previews: PreviewProvider {
 				.padding()
 			}
 		}
-		.inEachColorScheme()
 	}
 	
 	static func previewBox<Content: View>(@ViewBuilder content: @escaping () -> Content) -> some View {

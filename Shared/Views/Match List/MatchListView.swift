@@ -104,7 +104,6 @@ struct MatchListView_Previews: PreviewProvider {
 			identity: PreviewData.userIdentity
 		)
 		.withToolbar()
-		.inEachColorScheme()
 		.environmentObject(BookmarkList())
 	}
 }

@@ -234,8 +234,6 @@ struct AgentSelectView_Previews: PreviewProvider {
 		)
 		.navigationTitle("Agent Select")
 		.withToolbar(allowLargeTitles: false)
-		.inEachColorScheme()
-		.inEachOrientation()
 	}
 }
 #endif

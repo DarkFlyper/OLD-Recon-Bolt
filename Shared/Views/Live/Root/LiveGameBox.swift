@@ -131,7 +131,6 @@ struct LiveGameBox_Previews: PreviewProvider {
 		.padding()
 		.background(Color.groupedBackground)
 		.previewLayout(.sizeThatFits)
-		.inEachColorScheme()
 		
 		VStack(spacing: 16) {
 			LiveGameBox(
@@ -147,7 +146,6 @@ struct LiveGameBox_Previews: PreviewProvider {
 		.padding()
 		.background(Color.groupedBackground)
 		.withToolbar()
-		.inEachColorScheme()
 	}
 }
 #endif

@@ -127,8 +127,6 @@ struct MultifactorPromptView_Previews: PreviewProvider {
 			),
 			digits: [4, 2, 0]
 		)
-		.inEachColorScheme()
-		.inEachOrientation()
 	}
 }
 #endif

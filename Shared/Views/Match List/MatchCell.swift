@@ -292,7 +292,6 @@ struct MatchCell_Previews: PreviewProvider {
 		}
 		.withToolbar(allowLargeTitles: false) // otherwise NavigationLink grays out accent colors
 		.padding(.top, -120) // use all the space
-		.inEachColorScheme()
 	}
 }
 #endif

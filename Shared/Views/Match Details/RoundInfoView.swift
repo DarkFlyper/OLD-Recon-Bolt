@@ -160,7 +160,6 @@ struct RoundInfoView_Previews: PreviewProvider {
 		
 		RoundInfoContainer(matchData: matchData, roundNumber: roundData.result.number, roundData: roundData)
 			.withToolbar()
-			.inEachColorScheme()
 	}
 }
 #endif

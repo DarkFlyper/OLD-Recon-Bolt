@@ -135,7 +135,6 @@ struct StoreDetailsView_Previews: PreviewProvider {
 			)
 		} refresh: { _ in }
 		.forPreviews()
-		.inEachColorScheme()
 	}
 }
 #endif

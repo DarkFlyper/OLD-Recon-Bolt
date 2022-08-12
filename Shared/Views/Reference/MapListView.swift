@@ -50,7 +50,6 @@ struct MapListView_Previews: PreviewProvider {
 	static var previews: some View {
 		MapListView()
 			.withToolbar()
-			.inEachColorScheme()
 	}
 }
 #endif

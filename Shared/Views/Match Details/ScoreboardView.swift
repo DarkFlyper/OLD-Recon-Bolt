@@ -145,7 +145,6 @@ struct ScoreboardView_Previews: PreviewProvider {
 		Group {
 			ScoreboardView(data: PreviewData.singleMatchData, highlight: .constant(.init()))
 				.padding(.vertical)
-				.inEachColorScheme()
 			
 			ScoreboardRowView(
 				player: PreviewData.singleMatch.players[0],

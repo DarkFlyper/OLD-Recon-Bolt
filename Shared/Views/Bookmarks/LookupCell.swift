@@ -109,7 +109,6 @@ struct LookupCell_Previews: PreviewProvider {
 			LookupCell(gameName: "Example", tagLine: "EX123", isLoading: true, history: LookupHistory())
 				.padding()
 		}
-		.inEachColorScheme()
 		.frame(width: 400)
 		.previewLayout(.sizeThatFits)
 	}

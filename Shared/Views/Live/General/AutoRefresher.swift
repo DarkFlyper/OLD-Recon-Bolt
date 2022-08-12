@@ -39,7 +39,6 @@ struct AutoRefresher_Previews: PreviewProvider {
 	static var previews: some View {
 		AutoRefresher {}
 			.padding()
-			.inEachColorScheme()
 			.previewLayout(.sizeThatFits)
 	}
 }

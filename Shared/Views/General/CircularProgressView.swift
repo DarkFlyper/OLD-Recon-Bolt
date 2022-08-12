@@ -177,7 +177,6 @@ struct CircularProgressView_Previews: PreviewProvider {
 		}
 		.padding()
 		.previewLayout(.fixed(width: 200, height: 200))
-		.inEachColorScheme()
 	}
 }
 #endif

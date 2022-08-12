@@ -150,7 +150,6 @@ struct AgentInfoView_Previews: PreviewProvider {
 	static var previews: some View {
 		AgentInfoView(agent: AssetManager.forPreviews.assets!.agents[.sova]!)
 			.withToolbar()
-			.inEachColorScheme()
 	}
 }
 #endif
