@@ -76,11 +76,17 @@ final actor LocalDataManager<Object: Identifiable & Codable> where Object.ID: Lo
 		subjects[id] ?? (.init() <- { subjects[id] = $0 })
 	}
 	
+	private var inProgressUpdates: Set<Object.ID> = []
+	
 	func autoUpdateObject(for id: Object.ID, update: (Object?) async throws -> Object) async throws {
 		let cached = cachedEntry(for: id)
-		if let cached = cached, !shouldAutoUpdate(cached) {
+		if let cached, !shouldAutoUpdate(cached) {
 			return // nothing to do
 		}
+		
+		guard inProgressUpdates.insert(id).inserted else { return }
+		defer { inProgressUpdates.remove(id) }
+		
 		// auto-update necessary
 		try await tryLoad {
 			try await update(cached?.object) <- { store($0, asOf: .now) }
