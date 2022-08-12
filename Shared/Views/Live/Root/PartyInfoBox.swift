@@ -39,6 +39,7 @@ struct PartyInfoBox: View {
 					}
 					.disabled(isChangingQueue)
 					.disabled(!member.isOwner)
+					.disabled(party.state == .inMatchmaking)
 					
 					if isChangingQueue {
 						ProgressView()
