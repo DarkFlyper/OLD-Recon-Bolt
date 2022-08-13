@@ -12,11 +12,11 @@ Unfortunately, this app needs your Riot username and password to function, but o
 
 I've created a Discord server for this app! Feel free to [join the server](https://discord.gg/bwENMNRqNa) if you'd like to discuss it :)
 
-## TestFlight
+## Download (TestFlight)
 
-I've uploaded a build of the app to Apple and they approved it for beta testing! [Here's the link](https://testflight.apple.com/join/M1e2dgxj) to join the beta :)
+I've uploaded a build of the app to Apple and they approved it for beta testing! [Here's the link](https://testflight.apple.com/join/M1e2dgxj) to join the beta.
 
-Please note that the app currently **only supports iOS 15**, but you should be on the latest version of iOS anyway—iOS 15 supports all the same devices as iOS 14 and iOS 13 did.
+Please note that the app currently **only supports iOS 15+**, but you should be on the latest version of iOS anyway—iOS 15 supports all the same devices as iOS 14 and iOS 13 did.
 
 ## Screenshots
 
