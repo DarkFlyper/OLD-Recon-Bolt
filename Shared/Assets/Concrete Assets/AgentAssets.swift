@@ -36,6 +36,7 @@ struct AgentInfo: AssetItem, Codable, Identifiable {
 	var displayIcon: AssetImage
 	var bustPortrait: AssetImage
 	var fullPortrait: AssetImage
+	var fullPortraitV2: AssetImage
 	var killfeedPortrait: AssetImage
 	var isFullPortraitRightFacing: Bool
 	var assetPath: String
@@ -44,6 +45,7 @@ struct AgentInfo: AssetItem, Codable, Identifiable {
 		displayIcon
 		bustPortrait
 		fullPortrait
+		fullPortraitV2
 		killfeedPortrait
 		role.displayIcon
 		abilities.compactMap(\.displayIcon)

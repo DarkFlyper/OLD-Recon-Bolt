@@ -19,6 +19,10 @@ extension AgentImage {
 		Self(id: id, getImage: \.fullPortrait)
 	}
 	
+	static func fullPortraitV2(_ id: Agent.ID) -> Self {
+		Self(id: id, getImage: \.fullPortraitV2)
+	}
+	
 	static func killfeedPortrait(_ id: Agent.ID) -> Self {
 		Self(id: id, getImage: \.killfeedPortrait)
 	}

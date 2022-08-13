@@ -30,9 +30,9 @@ struct AgentInfoView: View {
 	
 	var portrait: some View {
 		let backgroundColor = Color.secondaryGroupedBackground
-		return AgentImage.bustPortrait(agent.id)
-			.frame(maxHeight: 300)
-			.padding(.top, 100)
+		return AgentImage.fullPortraitV2(agent.id)
+			.frame(maxHeight: 400)
+			.padding(.top, 50)
 			.background {
 				LinearGradient(
 					colors: [backgroundColor.opacity(0), backgroundColor],
@@ -146,9 +146,9 @@ struct AgentInfoView: View {
 }
 
 #if DEBUG
-struct AgentInfoView_Previews: PreviewProvider {
-	static var previews: some View {
-		AgentInfoView(agent: AssetManager.forPreviews.assets!.agents[.sova]!)
+struct AgentInfoView_Previews: PreviewProvider, PreviewProviderWithAssets {
+	static func previews(assets: AssetCollection) -> some View {
+		AgentInfoView(agent: assets.agents[.sova]!)
 			.withToolbar()
 	}
 }
