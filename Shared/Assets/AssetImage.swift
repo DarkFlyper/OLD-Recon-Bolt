@@ -78,6 +78,7 @@ final class Cache<Key: Hashable, Value> {
 	
 	func getValue(forKey key: Key, compute: (Key) throws -> Value) rethrows -> Value {
 		try cached[key] ?? (compute(key) <- { cached[key] = $0 })
+		//try compute(key)
 	}
 }
 
@@ -100,6 +101,21 @@ private struct ImageDownloadRequest: GetDataRequest {
 	
 	var baseURLOverride: URL? {
 		imageURL
+	}
+}
+
+// TODO: use a hash instead
+private struct ImageSizeRequest: GetRequest {
+	var imageURL: URL
+	
+	var baseURLOverride: URL? {
+		imageURL
+	}
+	
+	var httpMethod: String { "HEAD" }
+	
+	func decodeResponse(from raw: Protoresponse) throws -> Int {
+		.init(raw.httpMetadata!.expectedContentLength)
 	}
 }
 

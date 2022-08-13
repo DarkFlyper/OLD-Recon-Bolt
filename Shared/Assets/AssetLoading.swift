@@ -97,3 +97,15 @@ struct AssetDownloadProgress: CustomStringConvertible {
 		return "\(completed)/\(total) assets downloaded"
 	}
 }
+
+final actor ImageDownloader {
+	static let instance = ImageDownloader()
+	
+	private init() {}
+	
+	private var inProgress: Set<AssetImage> = []
+	
+	func download(_ image: AssetImage) async {
+		
+	}
+}
