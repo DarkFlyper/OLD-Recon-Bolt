@@ -86,6 +86,8 @@ extension ValorantClient.APIError: LocalizedError {
 			return "The API is down for scheduled maintenance. \(message)"
 		case .resourceNotFound:
 			return "The resource could not be found."
+		case .badResponseCode(400, _, let error?) where error.errorCode == "INVALID_HEADERS":
+			return "Invalid Headers: You probably need to download/update the assets in the account tab."
 		case .badResponseCode(let code, _, nil):
 			return "The API returned an error code \(code)."
 		case .badResponseCode(let code, _, let error?):
