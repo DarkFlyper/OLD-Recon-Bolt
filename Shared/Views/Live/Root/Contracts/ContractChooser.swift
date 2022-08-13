@@ -35,6 +35,7 @@ struct ContractChooser: View {
 		.navigationTitle("Choose a Contract")
 	}
 	
+	@MainActor
 	func activateContract(with id: Contract.ID) async {
 		await load {
 			try await $0.activateContract(id)
