@@ -9,7 +9,7 @@ struct BundleDetailsView: View {
 	var body: some View {
 		if let info = assets?.bundles[bundle.assetID] {
 			ScrollView {
-				info.displayIcon.asyncImage()
+				info.displayIcon.view()
 			}
 			.background(Color.groupedBackground)
 			.navigationTitle(info.displayName)

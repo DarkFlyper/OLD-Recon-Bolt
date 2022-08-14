@@ -7,92 +7,115 @@ struct AssetImage: Hashable {
 	var url: URL
 	
 	@ViewBuilder
-	func imageOrPlaceholder(renderingMode: Image.TemplateRenderingMode? = nil) -> some View {
-		if let imageIfLoaded {
-			imageIfLoaded
-				.renderingMode(renderingMode)
-				.resizable()
-				.scaledToFit()
+	func view(renderingMode: Image.TemplateRenderingMode? = nil) -> some View {
+		let view = ImageView(image: self, renderingMode: renderingMode)
+		if isInSwiftUIPreview {
+			view.environmentObject(ImageManager())
 		} else {
-			Color.gray
-		}
-	}
-	
-	func asyncImage(renderingMode: Image.TemplateRenderingMode? = nil) -> some View {
-		AsyncImage(url: url) { loadedImage in
-			loadedImage
-				.renderingMode(renderingMode)
-				.resizable()
-				.scaledToFit()
-		} placeholder: {
-			Color.primary.opacity(0.2)
-				.overlay { ProgressView() }
-		}
-	}
-	
-	var imageIfLoaded: Image? {
-		struct LoadingError: Error {}
-		
-		do {
-			return try imageCache.getValue(forKey: localURL) {
-				try Image(at: $0) ??? LoadingError()
-			}
-		} catch {
-			print("error loading image from \(url) stored at \(localURL):")
-			dump(error)
-			return nil
+			view
 		}
 	}
 	
 	var localURL: URL {
-		Self.baseURL.appendingPathComponent(url.path, isDirectory: false)
+		Self.localFolder.appendingPathComponent(url.path, isDirectory: false)
 	}
 	
-	private static let baseURL = try! FileManager.default.url(
-		for: .applicationSupportDirectory,
-		in: .userDomainMask,
-		appropriateFor: nil,
-		create: true
-	)
+	private static let localFolder = try! FileManager.default
+		.url(
+			for: .applicationSupportDirectory,
+			in: .userDomainMask,
+			appropriateFor: nil,
+			create: true
+		)
+		.appendingPathComponent("AssetImage", isDirectory: true)
+	
+	static func removeCachedFiles() throws {
+		try FileManager.default.removeItem(at: localFolder)
+	}
+	
+	struct ImageView: View {
+		var image: AssetImage
+		var renderingMode: Image.TemplateRenderingMode? = nil
+		@State private var isShowingErrorAlert = false
+		@State private var loadError: Error?
+		
+		@EnvironmentObject private var manager: ImageManager
+		
+		var body: some View {
+			switch manager.state(for: image) {
+			case nil:
+				placeholder
+					.task { await manager.download(image) }
+			case .downloading:
+				placeholder
+					.overlay { ProgressView() }
+			case .errored(let error):
+				placeholder
+					.overlay { Image(systemName: "xmark.octagon.fill") }
+					.onTapGesture {
+						loadError = error
+						isShowingErrorAlert = true
+					}
+					.alert(
+						"Image failed to load!",
+						isPresented: $isShowingErrorAlert,
+						presenting: loadError
+					) { error in
+						Button("Copy Error Details") {
+							UIPasteboard.general.string = error.localizedDescription
+						}
+						Button("OK") {}
+					}
+					.task { await manager.download(image) }
+			case .available(let image):
+				image
+					.renderingMode(renderingMode)
+					.resizable()
+					.scaledToFit()
+			}
+		}
+		
+		var placeholder: some View {
+			Color.primary.opacity(0.2)
+		}
+	}
 }
 
 extension Optional where Wrapped == AssetImage {
 	@ViewBuilder
-	func asyncImageOrPlaceholder() -> some View {
+	func view() -> some View {
 		if let self {
-			self.asyncImage()
+			self.view()
 		} else {
 			Color.gray
 		}
 	}
 }
 
-private let imageCache = Cache<URL, Image>()
-
-final class Cache<Key: Hashable, Value> {
-	private var cached: [Key: Value] = [:]
-	
-	func invalidateValue(forKey key: Key) {
-		cached[key] = nil
-	}
-	
-	func getValue(forKey key: Key, compute: (Key) throws -> Value) rethrows -> Value {
-		try cached[key] ?? (compute(key) <- { cached[key] = $0 })
-		//try compute(key)
-	}
-}
-
 extension AssetClient {
-	func download(_ image: AssetImage, skipIfExists: Bool) async throws {
-		if skipIfExists {
-			guard !FileManager.default.fileExists(atPath: image.localURL.path) else { return }
+	func download(_ image: AssetImage) async throws {
+		// don't download images that we already have (assuming size will always change when the image changes)
+		if let existingSize = FileManager.default.sizeOfItem(atPath: image.localURL.path) {
+			print("\(image.url) found existing size \(existingSize)")
+			let newSize = try await send(ImageSizeRequest(imageURL: image.url))
+			guard newSize != existingSize else { return }
+		} else {
+			assert(!FileManager.default.fileExists(atPath: image.localURL.path))
 		}
+		
 		let imageData = try await send(ImageDownloadRequest(imageURL: image.url))
 		try FileManager.default.createDirectory(
 			at: image.localURL.deletingLastPathComponent(),
 			withIntermediateDirectories: true
 		)
 		try imageData.write(to: image.localURL)
+	}
+}
+
+extension FileManager {
+	func sizeOfItem(atPath path: String) -> Int? {
+		guard let size = try? attributesOfItem(atPath: path)[.size] else { return nil }
+		return (size as! NSNumber).intValue
 	}
 }
 

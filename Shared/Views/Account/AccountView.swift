@@ -4,6 +4,7 @@ import ValorantAPI
 struct AccountView: View {
 	@ObservedObject var dataStore: ClientDataStore
 	@ObservedObject var assetManager: AssetManager
+	@EnvironmentObject var imageManager: ImageManager
 	
 	@LocalData var user: User?
 	@State var newestVersion: AssetVersion?
@@ -70,15 +71,7 @@ struct AccountView: View {
 	@ViewBuilder
 	var assetsInfo: some View {
 		VStack(spacing: 12) {
-			if let progress = assetManager.progress {
-				if let total = progress.total {
-					Text("\(progress.completed)/\(total) Images Downloaded…")
-				} else {
-					Text("Preparing…")
-				}
-				
-				ProgressView(value: progress.fractionComplete)
-			} else if let error = assetManager.error {
+			if let error = assetManager.error {
 				Text("Error downloading assets!")
 					.font(.headline)
 				
@@ -98,18 +91,12 @@ struct AccountView: View {
 					.foregroundStyle(.secondary)
 					.font(.callout.monospacedDigit())
 					
-					HStack {
-						AsyncButton("Full Update") {
-							await assetManager.loadAssets()
-						}
-						.buttonStyle(.borderedProminent)
-						
-						AsyncButton("Quick Update") {
-							await assetManager.loadAssets(skipExistingImages: true)
-						}
+					AsyncButton("Update Now") {
+						await assetManager.loadAssets()
 					}
+					.buttonStyle(.borderedProminent)
 					
-					Text("Quick Update is a faster but less reliable way to update: only downloads missing images; does not update existing images that have changed.")
+					Text("Assets should be fetched automatically, but in case something went wrong, feel free to initiate the process manually.")
 						.font(.footnote)
 						.foregroundColor(.secondary)
 						.frame(maxWidth: .infinity, alignment: .leading)
@@ -124,9 +111,15 @@ struct AccountView: View {
 						.foregroundStyle(.secondary)
 						.font(.callout)
 					
-					AsyncButton("Redownload") {
-						await assetManager.loadAssets(forceUpdate: true)
+					AsyncButton("Reset") {
+						await assetManager.reset()
+						imageManager.clear()
 					}
+					
+					Text("In case something went wrong, use this button to force a full refetch of the assets and images.")
+						.font(.footnote)
+						.foregroundColor(.secondary)
+						.frame(maxWidth: .infinity, alignment: .leading)
 				}
 			} else {
 				Text("Missing assets!")
@@ -152,7 +145,6 @@ struct AccountView: View {
 struct AccountView_Previews: PreviewProvider {
 	static var previews: some View {
 		AccountView(dataStore: PreviewData.mockDataStore, assetManager: .forPreviews)
-		AccountView(dataStore: PreviewData.emptyDataStore, assetManager: .mockDownloading)
 		AccountView(dataStore: PreviewData.emptyDataStore, assetManager: .mockEmpty)
 	}
 }

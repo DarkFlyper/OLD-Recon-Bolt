@@ -2,6 +2,7 @@ import SwiftUI
 
 struct CompetitiveTierImage: View {
 	@Environment(\.assets) private var assets
+	@EnvironmentObject private var imageManager: ImageManager
 	
 	var tier: Int
 	var tierInfo: CompetitiveTier?
@@ -15,7 +16,7 @@ struct CompetitiveTierImage: View {
 				?? assets?.seasons.tierInfo(number: tier, in: act)
 				?? assets?.seasons.tierInfo(number: tier, in: actID)
 				?? assets?.seasons.currentTierInfo(number: tier, at: time),
-			let image = tierInfo.icon?.imageIfLoaded
+			let image = imageManager.image(for: tierInfo.icon)
 		{
 			image
 				.resizable()
@@ -23,7 +24,7 @@ struct CompetitiveTierImage: View {
 				.scaleEffect(tier == 0 ? 1.31 : 1, anchor: .top)
 				.scaledToFit()
 		} else {
-			Color.gray
+			Color.primary.opacity(0.2)
 		}
 	}
 }
@@ -47,6 +48,7 @@ struct CompetitiveTierImage_Previews: PreviewProvider {
 		}
 		.fixedSize()
 		.padding()
+		.environmentObject(ImageManager())
 		.background(Color(.darkGray))
 		.previewLayout(.sizeThatFits)
 	}

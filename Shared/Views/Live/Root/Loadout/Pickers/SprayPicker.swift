@@ -8,7 +8,7 @@ struct SprayPicker: View {
 	var body: some View {
 		SimpleSearchableAssetPicker(inventory: inventory) { (spray: SprayInfo) in
 			SelectableRow(selection: $selection, item: spray.id) {
-				spray.bestIcon.asyncImage()
+				spray.bestIcon.view()
 					.frame(width: 48, height: 48)
 				Text(spray.displayName)
 			}

@@ -60,7 +60,7 @@ struct StoreDetailsView: View {
 	func bundleCell(for bundle: StoreBundle) -> some View {
 		VStack(spacing: 0) {
 			if let info = assets?.bundles[bundle.assetID] {
-				info.displayIcon.asyncImage()
+				info.displayIcon.view()
 					.aspectRatio(1648/804, contentMode: .fill)
 				
 				HStack {
@@ -84,7 +84,7 @@ struct StoreDetailsView: View {
 		let reward = offer.rewards.first!
 		let resolved = assets?.resolveSkin(.init(rawID: reward.itemID))
 		VStack {
-			resolved?.displayIcon?.asyncImage()
+			resolved?.displayIcon?.view()
 				.frame(height: 60)
 			
 			HStack(alignment: .lastTextBaseline) {
@@ -107,7 +107,7 @@ struct StoreDetailsView: View {
 		HStack {
 			Text("\(count)")
 			let currency = assets?.currencies[currencyID]
-			currency?.displayIcon.imageOrPlaceholder(renderingMode: .template)
+			currency?.displayIcon.view(renderingMode: .template)
 				.frame(width: currencyIconSize, height: currencyIconSize)
 		}
 	}

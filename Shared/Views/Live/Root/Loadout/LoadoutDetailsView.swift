@@ -119,7 +119,7 @@ private struct LoadoutCustomizer: View {
 				VStack {
 					if let spray {
 						let info = assets?.sprays[spray]
-						(info?.bestIcon).asyncImageOrPlaceholder()
+						(info?.bestIcon).view()
 							.aspectRatio(1, contentMode: .fit)
 					} else {
 						Color.clear

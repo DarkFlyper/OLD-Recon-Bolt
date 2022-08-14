@@ -22,7 +22,7 @@ struct AssetImageView<Provider: AssetImageProvider>: View {
 			.flatMap(getImage)
 		
 		if let assetImage {
-			assetImage.imageOrPlaceholder(renderingMode: renderingMode)
+			assetImage.view(renderingMode: renderingMode)
 		} else if let fallback = UIImage(named: "\(id)".uppercased()) {
 			Image(uiImage: fallback)
 				.resizable()

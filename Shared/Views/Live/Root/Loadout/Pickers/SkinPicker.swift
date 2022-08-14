@@ -26,7 +26,7 @@ struct SkinPicker: View {
 	func skinPickerRow(for skin: ResolvedLevel) -> some View {
 		let isSelected = gun.skin.skin == skin.skin.id
 		VStack {
-			skin.displayIcon?.asyncImage()
+			skin.displayIcon?.view()
 				.frame(height: 60)
 				.frame(maxWidth: .infinity)
 			

@@ -46,7 +46,7 @@ struct BuddyPicker: View {
 				SelectableRow(isSelected: instances.contains { $0 == selection }) {
 					assign(level)
 				} content: {
-					level.buddy.displayIcon.asyncImage()
+					level.buddy.displayIcon.view()
 						.frame(width: 48, height: 48)
 					Text(level.buddy.displayName)
 				}

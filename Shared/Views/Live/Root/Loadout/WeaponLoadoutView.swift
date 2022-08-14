@@ -37,11 +37,11 @@ struct WeaponLoadoutView: View {
 					HStack {
 						if let buddy = gun.buddy {
 							(assets?.buddies[buddy.buddy]?.displayIcon)
-								.asyncImageOrPlaceholder()
+								.view()
 								.frame(width: 60)
 						}
 						let icon = chroma?.displayIcon ?? chroma?.fullRender ?? resolved.displayIcon
-						icon.asyncImageOrPlaceholder()
+						icon.view()
 							.frame(maxWidth: .infinity)
 					}
 					.frame(height: 80)

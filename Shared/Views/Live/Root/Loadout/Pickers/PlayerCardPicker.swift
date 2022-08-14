@@ -8,7 +8,7 @@ struct PlayerCardPicker: View {
 	var body: some View {
 		SimpleSearchableAssetPicker(inventory: inventory) { (card: PlayerCardInfo) in
 			SelectableRow(selection: $selection, item: card.id) {
-				card.smallArt.imageOrPlaceholder()
+				card.smallArt.view()
 					.frame(width: 48, height: 48)
 				Text(card.displayName)
 					.foregroundColor(.primary)
