@@ -8,6 +8,9 @@ final class ImageManager: ObservableObject {
 	private static var version = ""
 	
 	@Published private var states: [AssetImage: ImageState] = [:]
+	// caching these helps a lot with performance
+	// nil means image loading was attempted but failed
+	private var cached: [AssetImage: Image?] = [:]
 	private var inProgress: Set<AssetImage> = []
 	private let client = AssetClient()
 	
@@ -26,23 +29,29 @@ final class ImageManager: ObservableObject {
 		states[image]
 	}
 	
+	/// gets an image's current state and starts a download task if appropriate
 	func image(for image: AssetImage?) -> Image? {
+		// TODO: does this know to link up to objectWillChange?
 		guard let image else { return nil }
 		switch state(for: image) {
-		case .available(let image):
-			return image
+		case .available, .downloading:
+			break
 		case nil, .errored:
 			Task { await download(image) }
-			fallthrough
-		case .downloading:
-			return nil
+		}
+		return cachedImage(for: image)
+	}
+	
+	/// gets an image from cache or loads it. not guaranteed to be up-to-date, but it doesn't take a web request.
+	func cachedImage(for image: AssetImage) -> Image? {
+		if let cached = cached[image] {
+			return cached
+		} else  {
+			return Image(at: image.localURL) <- { cached[image] = $0 }
 		}
 	}
 	
 	func download(_ image: AssetImage) async {
-		guard inProgress.insert(image).inserted else { return }
-		defer { inProgress.remove(image) }
-		
 		switch states[image] {
 		case nil, .errored:
 			break
@@ -50,12 +59,15 @@ final class ImageManager: ObservableObject {
 			return
 		}
 		
+		guard inProgress.insert(image).inserted else { return }
+		defer { inProgress.remove(image) }
+		
 		if image.hasMetadata {
 			do {
 				let meta = try image.loadMetadata()
 				// already checked against this version
 				if meta.lastVersionCheckedAgainst == Self.version {
-					states[image] = .available(try view(for: image))
+					states[image] = .available
 					return
 				}
 			} catch {
@@ -64,9 +76,13 @@ final class ImageManager: ObservableObject {
 		}
 		
 		do {
-			try await client.download(image)
-			// caching this helps a lot with performance
-			states[image] = .available(try view(for: image))
+			// TODO: maybe only set to downloading if not finished within x time?
+			states[image] = .downloading
+			let wasReplaced = try await client.ensureDownloaded(image)
+			if wasReplaced {
+				cached[image] = nil
+			}
+			states[image] = .available
 		} catch {
 			print("error loading image from \(image.url) stored at \(image.localURL):")
 			dump(error)
@@ -92,14 +108,15 @@ final class ImageManager: ObservableObject {
 	
 	func clear() {
 		states = [:]
+		cached = [:]
 		try? AssetImage.removeCachedFiles()
-		// if any loads are in progress, they might still set the state right after this, but we'll just accept that.
+		// if any loads are in progress, they might still set the state right after this, but i've decided i don't care
 	}
 	
 	enum ImageState {
 		case downloading
 		case errored(Error)
-		case available(Image)
+		case available
 	}
 	
 	enum ImageLoadingError: Error {

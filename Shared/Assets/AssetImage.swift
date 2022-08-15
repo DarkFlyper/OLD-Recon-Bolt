@@ -44,13 +44,16 @@ struct AssetImage: Hashable {
 		var body: some View {
 			switch manager.state(for: image) {
 			case nil:
-				placeholder
-					.task { await manager.download(image) }
+				content.onAppear {
+					Task.detached(priority: .userInitiated) {
+						await manager.download(image)
+					}
+				}
 			case .downloading:
-				placeholder
+				content
 					.overlay { ProgressView() }
 			case .errored(let error):
-				placeholder
+				content
 					.overlay { Image(systemName: "xmark.octagon.fill") }
 					.onTapGesture {
 						loadError = error
@@ -67,16 +70,21 @@ struct AssetImage: Hashable {
 						Button("OK") {}
 					}
 					.task { await manager.download(image) }
-			case .available(let image):
+			case .available:
+				content
+			}
+		}
+		
+		@ViewBuilder
+		var content: some View {
+			if let image = manager.cachedImage(for: image) {
 				image
 					.renderingMode(renderingMode)
 					.resizable()
 					.scaledToFit()
+			} else {
+				Color.primary.opacity(0.1)
 			}
-		}
-		
-		var placeholder: some View {
-			Color.primary.opacity(0.2)
 		}
 	}
 }
@@ -93,12 +101,13 @@ extension Optional where Wrapped == AssetImage {
 }
 
 extension AssetClient {
-	func download(_ image: AssetImage) async throws {
+	/// - returns: whether a new image was downloaded (false means old image is still correct)
+	func ensureDownloaded(_ image: AssetImage) async throws -> Bool {
 		// don't download images that we already have (assuming size will always change when the image changes)
 		if let existingSize = FileManager.default.sizeOfItem(atPath: image.localURL.path) {
 			print("\(image.url) found existing size \(existingSize)")
 			let newSize = try await send(ImageSizeRequest(imageURL: image.url))
-			guard newSize != existingSize else { return }
+			guard newSize != existingSize else { return false }
 		} else {
 			assert(!FileManager.default.fileExists(atPath: image.localURL.path))
 		}
@@ -109,6 +118,7 @@ extension AssetClient {
 			withIntermediateDirectories: true
 		)
 		try imageData.write(to: image.localURL)
+		return true
 	}
 }
 
