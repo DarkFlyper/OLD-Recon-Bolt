@@ -76,9 +76,14 @@ final class ImageManager: ObservableObject {
 		}
 		
 		do {
-			// TODO: maybe only set to downloading if not finished within x time?
-			states[image] = .downloading
+			let stateSetter = Task {
+				// set to downloading if not done within 1 second (avoids excessive state traffic)
+				await Task.sleep(seconds: 1, tolerance: 0.1)
+				try Task.checkCancellation()
+				states[image] = .downloading
+			}
 			let wasReplaced = try await client.ensureDownloaded(image)
+			stateSetter.cancel()
 			if wasReplaced {
 				cached[image] = nil
 			}
