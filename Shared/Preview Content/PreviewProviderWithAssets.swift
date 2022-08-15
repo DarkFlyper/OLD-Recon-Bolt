@@ -1,5 +1,6 @@
 import SwiftUI
 
+#if DEBUG
 protocol PreviewProviderWithAssets: PreviewProvider {
 	associatedtype PreviewsWithAssets: View
 	
@@ -25,3 +26,4 @@ struct AssetProvider<Content: View>: View {
 		}
 	}
 }
+#endif
