@@ -1,21 +1,45 @@
 import SwiftUI
 import HandyOperators
 import UserDefault
+import Combine
 
 @MainActor
 final class ImageManager: ObservableObject {
 	@UserDefault("ImageManager.version")
 	private static var version = ""
 	
-	@Published private var states: [AssetImage: ImageState] = [:]
+	private var states: [AssetImage: ImageState] = [:]
 	// caching these helps a lot with performance
 	// nil means image loading was attempted but failed
 	private var cached: [AssetImage: Image?] = [:]
 	private var inProgress: Set<AssetImage> = []
 	private let client = AssetClient()
 	
+	private var stateUpdates = PassthroughSubject<StateUpdate, Never>()
+	private var stateUpdateToken: AnyCancellable?
+	
+	private struct StateUpdate {
+		var image: AssetImage
+		var state: ImageState
+	}
+	
+	private func enqueueUpdate(of image: AssetImage, to state: ImageState) {
+		stateUpdates.send(.init(image: image, state: state))
+	}
+	
+	private func apply(_ updates: some Sequence<StateUpdate>) {
+		// batch updates to reduce CA commits
+		objectWillChange.send()
+		for update in updates {
+			states[update.image] = update.state
+		}
+	}
+	
 	nonisolated init() {
 		Task { @MainActor in
+			stateUpdateToken = stateUpdates
+				.collect(.byTime(RunLoop.main, .milliseconds(200)))
+				.sink { self.apply($0) }
 			Self.version = try await client.getCurrentVersion().riotClientVersion
 		}
 	}
@@ -52,7 +76,7 @@ final class ImageManager: ObservableObject {
 	}
 	
 	func download(_ image: AssetImage) async {
-		switch states[image] {
+		switch state(for: image) {
 		case nil, .errored:
 			break
 		case .downloading, .available:
@@ -67,7 +91,7 @@ final class ImageManager: ObservableObject {
 				let meta = try image.loadMetadata()
 				// already checked against this version
 				if meta.lastVersionCheckedAgainst == Self.version {
-					states[image] = .available
+					enqueueUpdate(of: image, to: .available)
 					return
 				}
 			} catch {
@@ -76,22 +100,16 @@ final class ImageManager: ObservableObject {
 		}
 		
 		do {
-			let stateSetter = Task {
-				// set to downloading if not done within 1 second (avoids excessive state traffic)
-				await Task.sleep(seconds: 1, tolerance: 0.1)
-				try Task.checkCancellation()
-				states[image] = .downloading
-			}
+			enqueueUpdate(of: image, to: .downloading)
 			let wasReplaced = try await client.ensureDownloaded(image)
-			stateSetter.cancel()
 			if wasReplaced {
 				cached[image] = nil
 			}
-			states[image] = .available
+			enqueueUpdate(of: image, to: .available)
 		} catch {
 			print("error loading image from \(image.url) stored at \(image.localURL):")
 			dump(error)
-			states[image] = .errored(error)
+			enqueueUpdate(of: image, to: .errored(error))
 			return
 		}
 		
