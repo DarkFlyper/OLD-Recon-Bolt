@@ -44,6 +44,21 @@ extension QueueID {
 	}
 }
 
+extension ProvisioningFlow.ID {
+	var name: String {
+		switch self {
+		case .matchmaking:
+			return "Matchmaking"
+		case .customGame:
+			return "Custom Game"
+		case .shootingRange:
+			return "The Range"
+		case let other:
+			return other.description
+		}
+	}
+}
+
 extension Location: Identifiable {
 	public var id: String { "\(shard):\(region)" }
 }

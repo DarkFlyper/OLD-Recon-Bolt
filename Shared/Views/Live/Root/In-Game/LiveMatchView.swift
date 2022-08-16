@@ -27,11 +27,9 @@ struct LiveMatchView: View {
 				.overlay(MapImage.Label(mapID: gameInfo.mapID).padding(6))
 			
 			VStack(spacing: 10) {
-				if let queueID = gameInfo.queueID {
-					Text(queueID.name)
-						.fontWeight(.medium)
-						.foregroundStyle(.secondary)
-				}
+				Text(gameInfo.queueID?.name ?? gameInfo.provisioningFlowID.name)
+					.fontWeight(.medium)
+					.foregroundStyle(.secondary)
 			}
 			.padding()
 			.background(Material.thin)
@@ -82,13 +80,15 @@ struct LiveMatchView: View {
 			let iconSize = 48.0
 			
 			HStack {
-				AgentImage.icon(player.agentID)
-					.dynamicallyStroked(radius: 1.5, color: .white)
-					.frame(width: iconSize, height: iconSize)
-					.mask(Circle())
-					.background(Circle().fill(relativeColor).opacity(0.5).padding(2))
-					.padding(2)
-					.overlay(Circle().strokeBorder(relativeColor, lineWidth: 2))
+				if let agentID = player.agentID {
+					AgentImage.icon(agentID)
+						.dynamicallyStroked(radius: 1.5, color: .white)
+						.frame(width: iconSize, height: iconSize)
+						.mask(Circle())
+						.background(Circle().fill(relativeColor).opacity(0.5).padding(2))
+						.padding(2)
+						.overlay(Circle().strokeBorder(relativeColor, lineWidth: 2))
+				}
 				
 				VStack(alignment: .leading, spacing: 4) {
 					if !player.identity.isIncognito, let playerUser {
@@ -99,11 +99,14 @@ struct LiveMatchView: View {
 						}
 					}
 					
-					let agentName = assets?.agents[player.agentID]?.displayName
-					Text(agentName ?? "Unknown Agent!")
-						.fontWeight(.semibold)
+					if let agentID = player.agentID {
+						let agentName = assets?.agents[agentID]?.displayName
+						Text(agentName ?? "Unknown Agent!")
+							.fontWeight(.semibold)
+					}
 				}
-				.frame(maxWidth: .infinity, alignment: .leading)
+				
+				Spacer()
 				
 				if !isSelf {
 					NavigationLink(destination: MatchListView(userID: player.id, user: playerUser)) {
