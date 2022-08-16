@@ -21,8 +21,9 @@ final class ImageManager: ObservableObject {
 	}
 	
 	func setVersion(_ version: AssetVersion) {
+		guard version.riotClientVersion != Self.version else { return }
 		Self.version = version.riotClientVersion
-		// TODO: invalidate images?
+		states = [:] // make images re-check for the new version
 	}
 	
 	func state(for image: AssetImage) -> ImageState? {
@@ -31,7 +32,6 @@ final class ImageManager: ObservableObject {
 	
 	/// gets an image's current state and starts a download task if appropriate
 	func image(for image: AssetImage?) -> Image? {
-		// TODO: does this know to link up to objectWillChange?
 		guard let image else { return nil }
 		switch state(for: image) {
 		case .available, .downloading:
