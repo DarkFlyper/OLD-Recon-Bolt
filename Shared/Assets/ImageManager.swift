@@ -66,12 +66,20 @@ final class ImageManager: ObservableObject {
 		return cachedImage(for: image)
 	}
 	
+	private static let cacheSizeLimit = 256 * 256 // pixels
+	
 	/// gets an image from cache or loads it. not guaranteed to be up-to-date, but it doesn't take a web request.
 	func cachedImage(for image: AssetImage) -> Image? {
 		if let cached = cached[image] {
 			return cached
 		} else  {
-			return Image(at: image.localURL) <- { cached[image] = $0 }
+			let uiImage = UIImage(contentsOfFile: image.localURL.path)
+			let view = uiImage.map(Image.init(uiImage:))
+			// only cache small images
+			if let raw = uiImage?.cgImage, raw.width * raw.height < Self.cacheSizeLimit {
+				cached[image] = view
+			}
+			return view
 		}
 	}
 	
