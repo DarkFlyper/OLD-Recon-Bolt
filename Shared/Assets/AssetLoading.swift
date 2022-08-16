@@ -2,12 +2,8 @@ import Foundation
 
 extension AssetClient {
 	func collectAssets(
-		for version: AssetVersion,
-		skipExistingImages: Bool,
-		onProgress: AssetProgressCallback?
+		for version: AssetVersion
 	) async throws -> AssetCollection {
-		onProgress?(.init(completed: 0))
-		
 		async let maps = getMapInfo()
 		async let agents = getAgentInfo()
 		async let missions = getMissionInfo()
@@ -34,7 +30,7 @@ extension AssetClient {
 			}
 		)
 		
-		let collection = try await AssetCollection(
+		return try await AssetCollection(
 			version: version,
 			maps: .init(values: maps),
 			agents: .init(values: agents),
@@ -53,47 +49,5 @@ extension AssetClient {
 			currencies: .init(values: currencies),
 			bundles: .init(values: bundles)
 		)
-		
-		return try await downloadAllImages(for: collection, skipExistingImages: skipExistingImages, onProgress: onProgress)
-	}
-	
-	private func downloadAllImages(
-		for collection: AssetCollection,
-		skipExistingImages: Bool,
-		onProgress: AssetProgressCallback?
-	) async throws -> AssetCollection {
-		let images = collection.images
-		
-		try await withThrowingTaskGroup(of: Void.self) { group in
-			for image in images {
-				group.addTask {
-					try await download(image, skipIfExists: skipExistingImages)
-				}
-			}
-			onProgress?(.init(completed: 0, total: images.count))
-			var completed = 0
-			for try await _ in group {
-				completed += 1 // no async zip yet
-				onProgress?(.init(completed: completed, total: images.count))
-			}
-		}
-		
-		return collection
-	}
-}
-
-typealias AssetProgressCallback = (AssetDownloadProgress) -> Void
-struct AssetDownloadProgress: CustomStringConvertible {
-	var completed: Int
-	var total: Int?
-	
-	var fractionComplete: Double {
-		guard let total else { return 0 }
-		return Double(completed) / Double(total)
-	}
-	
-	var description: String {
-		guard let total else { return "preparing to download assets…" }
-		return "\(completed)/\(total) assets downloaded"
 	}
 }

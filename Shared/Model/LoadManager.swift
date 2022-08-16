@@ -9,15 +9,16 @@ extension View {
 }
 
 extension View {
-	func loadErrorAlertTitle(_ title: String) -> some View {
+	func loadErrorAlertTitle(_ title: LocalizedStringKey) -> some View {
 		preference(key: LoadErrorTitleKey.self, value: title)
 	}
 }
 
 private struct LoadWrapper<Content: View>: View {
 	@ViewBuilder let content: () -> Content
-	@State private var loadError: PresentedError?
-	@State private var errorTitle = ""
+	@State private var isShowingErrorAlert = false
+	@State private var loadError: Error?
+	@State private var errorTitle: LocalizedStringKey = ""
 	
 	var body: some View {
 		content()
@@ -25,16 +26,15 @@ private struct LoadWrapper<Content: View>: View {
 				errorTitle = $0
 			}
 			.environment(\.loadWithErrorAlerts, runTask)
-			.alert(item: $loadError) { error in
-				let description = error.error.localizedDescription
-				return Alert(
-					title: Text(errorTitle),
-					message: Text(verbatim: description),
-					primaryButton: .default(Text("Copy Error Details")) {
-						UIPasteboard.general.string = description
-					},
-					secondaryButton: .cancel(Text("OK"))
-				)
+			.alert(
+				errorTitle,
+				isPresented: $isShowingErrorAlert,
+				presenting: loadError
+			) { error in
+				Button("Copy Error Details") {
+					UIPasteboard.general.string = error.localizedDescription
+				}
+				Button("OK", role: .cancel) {}
 			}
 	}
 	
@@ -55,9 +55,9 @@ private struct LoadWrapper<Content: View>: View {
 }
 
 private struct LoadErrorTitleKey: PreferenceKey {
-	static let defaultValue = "Error loading data!"
+	static let defaultValue: LocalizedStringKey = "Error loading data!"
 	
-	static func reduce(value: inout String, nextValue: () -> String) {
+	static func reduce(value: inout LocalizedStringKey, nextValue: () -> LocalizedStringKey) {
 		value = nextValue()
 	}
 }

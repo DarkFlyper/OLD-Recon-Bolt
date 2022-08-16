@@ -9,6 +9,7 @@ struct ActRankView: View {
 	var isShowingAllWins = false
 	
 	@Environment(\.assets) private var assets
+	@EnvironmentObject private var imageManager: ImageManager
 	
 	var body: some View {
 		let idealSize = isIcon ? 80 : 160.0
@@ -22,7 +23,7 @@ struct ActRankView: View {
 				let container = isIcon
 					? (border.icon ?? actInfo?.borders.lazy.compactMap(\.icon).first) // show icon even when not qualified for border
 					: border.fullImage
-				container?.imageOrPlaceholder()
+				container?.view()
 				
 				Canvas { context, size in
 					typealias ResolvedImage = GraphicsContext.ResolvedImage
@@ -35,8 +36,10 @@ struct ActRankView: View {
 						.filter { $0.key > 0 } // only ones we can actually display (important for auto-fitting)
 						.map { [context] tier, count -> (TierTriangles, Int) in
 							let tierInfo = assets?.seasons.tierInfo(number: tier, in: actInfo)
-							let upwards = (tierInfo?.rankTriangleUpwards?.imageIfLoaded).map(context.resolve)
-							let downwards = (tierInfo?.rankTriangleDownwards?.imageIfLoaded).map(context.resolve)
+							let upwards = imageManager.image(for: tierInfo?.rankTriangleUpwards)
+								.map(context.resolve)
+							let downwards = imageManager.image(for: tierInfo?.rankTriangleDownwards)
+								.map(context.resolve)
 							// i have no idea why in the world this ever happens but i've encountered a person with a negative count. i can't make sense of it so let's just pretend it's zero.
 							return ((upwards, downwards), max(0, count))
 						}

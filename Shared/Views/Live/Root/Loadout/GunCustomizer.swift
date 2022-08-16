@@ -15,7 +15,7 @@ struct GunCustomizer: View {
 				Group {
 					let chroma = resolved.chroma(gun.skin.chroma)
 					let icon = chroma?.displayIcon ?? chroma?.fullRender ?? resolved.displayIcon
-					icon.asyncImageOrPlaceholder()
+					icon.view()
 						.frame(height: 80)
 						.padding(.vertical)
 					
@@ -39,7 +39,7 @@ struct GunCustomizer: View {
 					if let buddy = gun.buddy {
 						let info = assets?.buddies[buddy.buddy]
 						VStack {
-							(info?.displayIcon).asyncImageOrPlaceholder()
+							(info?.displayIcon).view()
 								.frame(width: 60)
 							Text(info?.displayName ?? "<unknown buddy>")
 						}
@@ -78,7 +78,7 @@ struct GunCustomizer: View {
 							shape.stroke(Color.accentColor, lineWidth: 2)
 						}
 						
-						chroma.swatch.asyncImageOrPlaceholder()
+						chroma.swatch.view()
 							.padding(spacing)
 					}
 				}

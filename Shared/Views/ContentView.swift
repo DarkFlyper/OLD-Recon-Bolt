@@ -11,6 +11,7 @@ struct ContentView: View {
 	@StateObject var assetManager = AssetManager()
 	#endif
 	@StateObject var bookmarkList = BookmarkList()
+	@StateObject var imageManager = ImageManager()
 	
 	@SceneStorage("tab")
 	var tab = Tab.career
@@ -49,10 +50,12 @@ struct ContentView: View {
 		.withLoadErrorAlerts()
 		.environment(\.assets, assetManager.assets)
 		.onChange(of: assetManager.assets?.version, perform: { version in
-			guard let clientVersion = version?.riotClientVersion else { return }
-			Task { await dataStore.data?.setClientVersion(clientVersion) }
+			guard let version else { return }
+			Task { await dataStore.data?.setClientVersion(version.riotClientVersion) }
+			imageManager.setVersion(version)
 		})
 		.environmentObject(bookmarkList)
+		.environmentObject(imageManager)
 	}
 	
 	@ViewBuilder

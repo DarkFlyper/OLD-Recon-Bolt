@@ -91,6 +91,7 @@
 		B98E4705269B40DB003C9088 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98E4704269B40DB003C9088 /* CircularProgressView.swift */; };
 		B98FC071279DD758002DDF93 /* MultifactorPromptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98FC070279DD758002DDF93 /* MultifactorPromptView.swift */; };
 		B99263E7272CFE230032C8BE /* LiveGameContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99263E6272CFE230032C8BE /* LiveGameContainer.swift */; };
+		B99302E228A9884800F7295D /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99302E128A9884800F7295D /* ImageManager.swift */; };
 		B998492F26CEC8B00030E83C /* EventMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = B998492E26CEC8B00030E83C /* EventMap.swift */; };
 		B99BF18328313743009515C1 /* example_store_wallet.json in Resources */ = {isa = PBXBuildFile; fileRef = B99BF18228313743009515C1 /* example_store_wallet.json */; };
 		B99E3DE5271F2AD300F62453 /* example matches in Resources */ = {isa = PBXBuildFile; fileRef = B99E3DE4271F2AD300F62453 /* example matches */; };
@@ -256,6 +257,7 @@
 		B98E4704269B40DB003C9088 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		B98FC070279DD758002DDF93 /* MultifactorPromptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultifactorPromptView.swift; sourceTree = "<group>"; };
 		B99263E6272CFE230032C8BE /* LiveGameContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveGameContainer.swift; sourceTree = "<group>"; };
+		B99302E128A9884800F7295D /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		B998492E26CEC8B00030E83C /* EventMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMap.swift; sourceTree = "<group>"; };
 		B99B75942655859C00FBEB60 /* Recon Bolt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Recon Bolt.entitlements"; sourceTree = "<group>"; };
 		B99BF18228313743009515C1 /* example_store_wallet.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_store_wallet.json; sourceTree = "<group>"; };
@@ -643,6 +645,7 @@
 				B9F07CB626474EB7006CD4F5 /* AssetVersion.swift */,
 				B9485F86264B5BD700AC3456 /* AssetImage.swift */,
 				B90B4B54267C139300CACB95 /* AssetCollection.swift */,
+				B99302E128A9884800F7295D /* ImageManager.swift */,
 				B9F5CEE0267CD548009CF906 /* NamespacedID.swift */,
 			);
 			path = Assets;
@@ -962,6 +965,7 @@
 				B90FFF3E26B4BC57007BE950 /* ContractDetailsView.swift in Sources */,
 				B932A10C279122FF009FAEE5 /* UpcomingMissionsList.swift in Sources */,
 				B927719C284DBA1D00F25FC3 /* SprayAssets.swift in Sources */,
+				B99302E228A9884800F7295D /* ImageManager.swift in Sources */,
 				B9EE6E6226589FAA007E28B5 /* PreviewData.swift in Sources */,
 				B955C4572851796900BDF197 /* PreviewProviderWithAssets.swift in Sources */,
 				B9F7A54127DD1E7D00636DAF /* BundleAssets.swift in Sources */,

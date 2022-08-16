@@ -69,7 +69,7 @@ struct AgentInfoView: View {
 			
 			HStack {
 				agent.role.displayIcon
-					.imageOrPlaceholder(renderingMode: .template)
+					.view(renderingMode: .template)
 					.frame(height: 16)
 				
 				Text(agent.role.displayName)
@@ -135,7 +135,7 @@ struct AgentInfoView: View {
 	@ViewBuilder
 	func icon(for ability: AgentInfo.Ability) -> some View {
 		if let icon = ability.displayIcon {
-			icon.imageOrPlaceholder(renderingMode: .template)
+			icon.view(renderingMode: .template)
 		} else {
 			Text(ability.slot.rawValue)
 				.font(.caption)
