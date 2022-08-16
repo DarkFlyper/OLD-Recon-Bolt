@@ -130,7 +130,7 @@ struct MatchCell: View {
 			}
 			.frame(height: mapCapsuleHeight)
 			.background {
-				MapImage.splash(match.mapID)
+				MapImage.wideImage(match.mapID)
 					.scaledToFill()
 					.frame(maxWidth: .infinity)
 					.clipped()
