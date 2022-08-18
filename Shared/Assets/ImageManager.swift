@@ -6,42 +6,26 @@ import Combine
 @MainActor
 final class ImageManager: ObservableObject {
 	@UserDefault("ImageManager.version")
-	private static var version = ""
+	nonisolated private static var version = ""
 	
 	private var states: [AssetImage: ImageState] = [:]
-	// caching these helps a lot with performance
-	// nil means image loading was attempted but failed
-	private var cached: [AssetImage: Image?] = [:]
-	private var inProgress: Set<AssetImage> = []
-	private let client = AssetClient()
 	
-	private var stateUpdates = PassthroughSubject<StateUpdate, Never>()
+	private let cache: ImageCache
+	private let updater: Updater
 	private var stateUpdateToken: AnyCancellable?
 	
-	private struct StateUpdate {
-		var image: AssetImage
-		var state: ImageState
-	}
-	
-	private func enqueueUpdate(of image: AssetImage, to state: ImageState) {
-		stateUpdates.send(.init(image: image, state: state))
-	}
-	
-	private func apply(_ updates: some Sequence<StateUpdate>) {
-		// batch updates to reduce CA commits
-		objectWillChange.send()
-		for update in updates {
-			states[update.image] = update.state
-		}
-	}
-	
-	nonisolated init() {
-		Task { @MainActor in
-			stateUpdateToken = stateUpdates
-				.collect(.byTime(RunLoop.main, .milliseconds(200)))
-				.sink { self.apply($0) }
-			Self.version = try await client.getCurrentVersion().riotClientVersion
-		}
+	@MainActor
+	init() {
+		cache = .init()
+		updater = .init(cache: cache)
+		stateUpdateToken = updater.stateUpdates
+			.collect(.byTime(RunLoop.main, .milliseconds(50)))
+			.sink { updates in
+				// TODO: check how much overhead this is adding (wish it wasn't necessary)
+				Task { @MainActor [weak self] in
+					self?.apply(updates)
+				}
+			}
 	}
 	
 	func setVersion(_ version: AssetVersion) {
@@ -55,91 +39,52 @@ final class ImageManager: ObservableObject {
 	}
 	
 	/// gets an image's current state and starts a download task if appropriate
-	func image(for image: AssetImage?) -> Image? {
+	func image(for image: AssetImage?) -> UIImage? {
 		guard let image else { return nil }
-		switch state(for: image) {
-		case .available, .downloading:
-			break
-		case nil, .errored:
-			Task { await download(image) }
+		if shouldDownload(image) {
+			Task { await updater.download(image) }
 		}
-		return cachedImage(for: image)
-	}
-	
-	private static let cacheSizeLimit = 256 * 256 // pixels
-	
-	/// gets an image from cache or loads it. not guaranteed to be up-to-date, but it doesn't take a web request.
-	func cachedImage(for image: AssetImage) -> Image? {
-		if let cached = cached[image] {
-			return cached
-		} else  {
-			let uiImage = UIImage(contentsOfFile: image.localURL.path)
-			let view = uiImage.map(Image.init(uiImage:))
-			// only cache small images
-			if let raw = uiImage?.cgImage, raw.width * raw.height < Self.cacheSizeLimit {
-				cached[image] = view
-			}
-			return view
+		
+		switch cache.state(for: image) {
+		case .cached(let image):
+			return image
+		case .tooLarge:
+			return image.load()
+		case .missing, nil:
+			return nil
 		}
 	}
 	
 	func download(_ image: AssetImage) async {
+		guard shouldDownload(image) else { return }
+		await updater.download(image)
+	}
+	
+	func shouldDownload(_ image: AssetImage) -> Bool {
 		switch state(for: image) {
 		case nil, .errored:
-			break
+			return true
 		case .downloading, .available:
-			return
-		}
-		
-		guard inProgress.insert(image).inserted else { return }
-		defer { inProgress.remove(image) }
-		
-		if image.hasMetadata {
-			do {
-				let meta = try image.loadMetadata()
-				// already checked against this version
-				if meta.lastVersionCheckedAgainst == Self.version {
-					enqueueUpdate(of: image, to: .available)
-					return
-				}
-			} catch {
-				print("could not load metadata for \(image): \(error)")
-			}
-		}
-		
-		do {
-			enqueueUpdate(of: image, to: .downloading)
-			let wasReplaced = try await client.ensureDownloaded(image)
-			if wasReplaced {
-				cached[image] = nil
-			}
-			enqueueUpdate(of: image, to: .available)
-		} catch {
-			print("error loading image from \(image.url) stored at \(image.localURL):")
-			dump(error)
-			enqueueUpdate(of: image, to: .errored(error))
-			return
-		}
-		
-		var meta = (try? image.loadMetadata()) ?? .init(
-			versionDownloaded: Self.version,
-			lastVersionCheckedAgainst: Self.version
-		)
-		meta.lastVersionCheckedAgainst = Self.version
-		do {
-			try image.save(meta)
-		} catch {
-			print("could not save metadata for \(image): \(error)")
+			return false
 		}
 	}
 	
-	private func view(for image: AssetImage) throws -> Image {
-		try Image(at: image.localURL) ??? ImageLoadingError.loadFromFileFailed
+	func cacheState(for image: AssetImage) -> CacheState? {
+		cache.state(for: image)
 	}
 	
+	private func apply(_ updates: some Sequence<StateUpdate>) {
+		// batch updates to reduce CA commits
+		objectWillChange.send()
+		for update in updates {
+			states[update.image] = update.state
+		}
+	}
+	
+	@MainActor
 	func clear() {
 		states = [:]
-		cached = [:]
+		cache.reset()
 		try? AssetImage.removeCachedFiles()
 		// if any loads are in progress, they might still set the state right after this, but i've decided i don't care
 	}
@@ -150,8 +95,113 @@ final class ImageManager: ObservableObject {
 		case available
 	}
 	
-	enum ImageLoadingError: Error {
-		case loadFromFileFailed
+	enum CacheState: Equatable {
+		case missing
+		case cached(UIImage)
+		case tooLarge
+	}
+	
+	private struct StateUpdate {
+		var image: AssetImage
+		var state: ImageState
+	}
+	
+	@MainActor
+	private final class ImageCache {
+		// caching these helps a lot with performance
+		// nil means image loading was attempted but failed
+		private var cached: [AssetImage: CacheState] = [:]
+		
+		private static let cacheSizeLimit = 256 * 256 // pixels
+		
+		private static func shouldCache(_ image: UIImage) -> Bool {
+			guard let raw = image.cgImage else { return false }
+			return raw.width * raw.height < Self.cacheSizeLimit
+		}
+		
+		func state(for image: AssetImage) -> CacheState? {
+			cached[image]
+		}
+		
+		func updateState(for image: AssetImage, forceUpdate: Bool) async {
+			if forceUpdate, cached[image] != nil { return }
+			cached[image] = await newState(for: image)
+		}
+		
+		private func newState(for image: AssetImage) async -> CacheState {
+			guard let loaded = image.load() else { return .missing }
+			guard Self.shouldCache(loaded) else { return .tooLarge }
+			let tryPrepared = await Task(priority: .userInitiated) {
+				loaded.preparingForDisplay()
+			}.value
+			guard let prepared = tryPrepared else {
+				print("could not prepare for display!")
+				return .tooLarge
+			}
+			return .cached(prepared)
+		}
+		
+		func reset() {
+			cached = [:]
+		}
+	}
+	
+	private final actor Updater {
+		private var inProgress: Set<AssetImage> = []
+		private let client = AssetClient()
+		
+		let stateUpdates = PassthroughSubject<StateUpdate, Never>()
+		let cache: ImageCache
+		
+		init(cache: ImageCache) {
+			self.cache = cache
+		}
+		
+		func download(_ image: AssetImage) async {
+			guard inProgress.insert(image).inserted else { return }
+			defer { inProgress.remove(image) }
+			
+			if image.hasMetadata {
+				do {
+					let meta = try image.loadMetadata()
+					// already checked against this version
+					if meta.lastVersionCheckedAgainst == ImageManager.version {
+						await cache.updateState(for: image, forceUpdate: false)
+						enqueueUpdate(of: image, to: .available)
+						return
+					}
+				} catch {
+					print("could not load metadata for \(image): \(error)")
+				}
+			}
+			
+			do {
+				enqueueUpdate(of: image, to: .downloading)
+				let wasReplaced = try await client.ensureDownloaded(image)
+				await cache.updateState(for: image, forceUpdate: wasReplaced)
+				enqueueUpdate(of: image, to: .available)
+			} catch {
+				print("error loading image from \(image.url) stored at \(image.localURL):")
+				dump(error)
+				enqueueUpdate(of: image, to: .errored(error))
+				return
+			}
+			
+			var meta = (try? image.loadMetadata()) ?? .init(
+				versionDownloaded: ImageManager.version,
+				lastVersionCheckedAgainst: ImageManager.version
+			)
+			meta.lastVersionCheckedAgainst = ImageManager.version
+			do {
+				try image.save(meta)
+			} catch {
+				print("could not save metadata for \(image): \(error)")
+			}
+		}
+		
+		private func enqueueUpdate(of image: AssetImage, to state: ImageState) {
+			stateUpdates.send(.init(image: image, state: state))
+		}
 	}
 }
 

@@ -8,16 +8,18 @@ struct AssetImage: Hashable {
 	
 	@ViewBuilder
 	func view(renderingMode: Image.TemplateRenderingMode? = nil) -> some View {
-		let view = ImageView(image: self, renderingMode: renderingMode)
-		if isInSwiftUIPreview {
-			view.environmentObject(ImageManager())
-		} else {
-			view
-		}
+		ImageView(image: self, renderingMode: renderingMode)
+#if DEBUG
+			.modifier(ImageManagerProvider())
+#endif
 	}
 	
 	var localURL: URL {
 		Self.localFolder.appendingPathComponent(url.path, isDirectory: false)
+	}
+	
+	func load() -> UIImage? {
+		.init(contentsOfFile: localURL.path)
 	}
 	
 	private static let localFolder = try! FileManager.default
@@ -33,9 +35,11 @@ struct AssetImage: Hashable {
 		try FileManager.default.removeItem(at: localFolder)
 	}
 	
-	struct ImageView: View {
-		var image: AssetImage
+	private struct ImageView: View {
+		let image: AssetImage
 		var renderingMode: Image.TemplateRenderingMode? = nil
+		@State var loaded: UIImage?
+		
 		@State private var isShowingErrorAlert = false
 		@State private var loadError: Error?
 		
@@ -58,6 +62,7 @@ struct AssetImage: Hashable {
 					.onTapGesture {
 						loadError = error
 						isShowingErrorAlert = true
+						Task.detached { await manager.download(image) }
 					}
 					.alert(
 						"Image failed to load!",
@@ -69,7 +74,6 @@ struct AssetImage: Hashable {
 						}
 						Button("OK") {}
 					}
-					.task { await manager.download(image) }
 			case .available:
 				content
 			}
@@ -77,14 +81,36 @@ struct AssetImage: Hashable {
 		
 		@ViewBuilder
 		var content: some View {
-			if let image = manager.cachedImage(for: image) {
-				image
+			let _ = print("updating image content for \(image.url.path)")
+			if let loaded = loaded ?? cached {
+				Image(uiImage: loaded)
 					.renderingMode(renderingMode)
 					.resizable()
 					.scaledToFit()
+					.onChange(of: manager.cacheState(for: image)) { _ in self.loaded = nil }
 			} else {
+				let _ = load()
 				Color.primary.opacity(0.1)
 			}
+		}
+		
+		private var cached: UIImage? {
+			guard case .cached(let image) = manager.cacheState(for: image) else { return nil }
+			return image
+		}
+		
+		private func load() {
+			guard case .tooLarge = manager.cacheState(for: image) else { return }
+			Task.detached(priority: .userInitiated) {
+				let unprepared = image.load()
+				let loaded = unprepared?.preparingForDisplay() ?? unprepared
+				await setLoaded(loaded)
+			}
+		}
+		
+		@MainActor
+		private func setLoaded(_ loaded: UIImage?) {
+			self.loaded = loaded
 		}
 	}
 }
@@ -99,6 +125,18 @@ extension Optional where Wrapped == AssetImage {
 		}
 	}
 }
+
+#if DEBUG
+private struct ImageManagerProvider: ViewModifier {
+	func body(content: Content) -> some View {
+		if isInSwiftUIPreview {
+			content.environmentObject(ImageManager())
+		} else {
+			content
+		}
+	}
+}
+#endif
 
 extension AssetClient {
 	/// - returns: whether a new image was downloaded (false means old image is still correct)

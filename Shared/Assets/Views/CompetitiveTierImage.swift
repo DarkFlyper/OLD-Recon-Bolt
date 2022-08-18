@@ -18,7 +18,7 @@ struct CompetitiveTierImage: View {
 				?? assets?.seasons.currentTierInfo(number: tier, at: time),
 			let image = imageManager.image(for: tierInfo.icon)
 		{
-			image
+			Image(uiImage: image)
 				.resizable()
 				// the unranked icon is horribly off-center; let's fix that
 				.scaleEffect(tier == 0 ? 1.31 : 1, anchor: .top)

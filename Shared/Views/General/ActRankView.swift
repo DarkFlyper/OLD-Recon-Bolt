@@ -36,10 +36,8 @@ struct ActRankView: View {
 						.filter { $0.key > 0 } // only ones we can actually display (important for auto-fitting)
 						.map { [context] tier, count -> (TierTriangles, Int) in
 							let tierInfo = assets?.seasons.tierInfo(number: tier, in: actInfo)
-							let upwards = imageManager.image(for: tierInfo?.rankTriangleUpwards)
-								.map(context.resolve)
-							let downwards = imageManager.image(for: tierInfo?.rankTriangleDownwards)
-								.map(context.resolve)
+							let upwards = resolve(tierInfo?.rankTriangleUpwards, using: context)
+							let downwards = resolve(tierInfo?.rankTriangleDownwards, using: context)
 							// i have no idea why in the world this ever happens but i've encountered a person with a negative count. i can't make sense of it so let's just pretend it's zero.
 							return ((upwards, downwards), max(0, count))
 						}
@@ -98,6 +96,11 @@ struct ActRankView: View {
 		}
 		.aspectRatio(1, contentMode: .fit)
 		.frame(idealWidth: idealSize, idealHeight: idealSize)
+	}
+	
+	func resolve(_ image: AssetImage?, using context: GraphicsContext) -> GraphicsContext.ResolvedImage? {
+		imageManager.image(for: image)
+			.map { context.resolve(Image(uiImage: $0)) }
 	}
 }
 
