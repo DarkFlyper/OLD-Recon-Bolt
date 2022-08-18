@@ -40,7 +40,7 @@ struct WeaponLoadoutView: View {
 								.view()
 								.frame(width: 60)
 						}
-						let icon = chroma?.displayIcon ?? chroma?.fullRender ?? resolved.displayIcon
+						let icon = chroma?.fullRender ?? chroma?.displayIcon ?? resolved.displayIcon
 						icon.view()
 							.frame(maxWidth: .infinity)
 					}

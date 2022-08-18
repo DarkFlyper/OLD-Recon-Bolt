@@ -14,7 +14,10 @@ struct SkinPicker: View {
 				}
 				SearchableAssetPicker(
 					allItems: .init(values: skins),
-					ownedItems: .init(skins.lazy.map(\.id).filter(inventory.owns)),
+					ownedItems: .init(skins.lazy
+						.filter { inventory.owns($0.id) || $0.skin.id == weapon.defaultSkinID }
+						.map(\.id)
+					),
 					rowContent: skinPickerRow(for:)
 				)
 				.navigationTitle("Choose Skin")
@@ -37,7 +40,7 @@ struct SkinPicker: View {
 					chroma: skin.skin.chromas.first!.id
 				)
 			} content: {
-				Text(skin.displayName)
+				Text(skin.skin.displayName)
 					.frame(maxWidth: .infinity, alignment: .leading)
 					.foregroundColor(.primary)
 			}

@@ -14,7 +14,7 @@ struct GunCustomizer: View {
 			Section(resolved.skin.displayName) {
 				Group {
 					let chroma = resolved.chroma(gun.skin.chroma)
-					let icon = chroma?.displayIcon ?? chroma?.fullRender ?? resolved.displayIcon
+					let icon = chroma?.fullRender ?? chroma?.displayIcon ?? resolved.displayIcon
 					icon.view()
 						.frame(height: 80)
 						.padding(.vertical)

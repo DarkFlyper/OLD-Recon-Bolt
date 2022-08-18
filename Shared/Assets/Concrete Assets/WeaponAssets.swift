@@ -193,7 +193,7 @@ struct ResolvedLevel: Identifiable {
 	var id: WeaponSkin.Level.ID { level.id }
 	
 	var displayIcon: AssetImage? {
-		level.displayIcon ?? skin.displayIcon
+		skin.chromas.first?.fullRender ?? level.displayIcon ?? skin.displayIcon
 	}
 	
 	var displayName: String {
