@@ -16,7 +16,7 @@ struct SearchableAssetPicker<Item: SearchableAsset, RowContent: View>: View {
 			.filter {
 				$0.searchableText
 					.lowercased()
-					.split(separator: " ")
+					.split(separator: " ", omittingEmptySubsequences: false) // important for default title = " "
 					.contains { $0.hasPrefix(lowerSearch) }
 			}
 			.sorted(on: \.searchableText)
@@ -80,7 +80,7 @@ struct SimpleSearchableAssetPicker<Item: SimpleSearchableAsset, RowContent: View
 		AssetsUnwrappingView { assets in
 			SearchableAssetPicker(
 				allItems: assets[keyPath: Item.assetPath],
-				ownedItems: inventory[keyPath: Item.inventoryPath]
+				ownedItems: inventory[keyPath: Item.inventoryPath].union(Item.defaultItems)
 			) { item in
 				rowContent(item)
 			}
@@ -95,4 +95,9 @@ protocol SearchableAsset: Identifiable {
 protocol SimpleSearchableAsset: SearchableAsset {
 	static var assetPath: KeyPath<AssetCollection, [ID: Self]> { get }
 	static var inventoryPath: KeyPath<Inventory, Set<ID>> { get }
+	static var defaultItems: [ID] { get }
+}
+
+extension SimpleSearchableAsset {
+	static var defaultItems: [ID] { [] }
 }

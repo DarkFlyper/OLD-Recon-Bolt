@@ -20,6 +20,7 @@ extension PlayerTitleInfo: SimpleSearchableAsset {
 	static let inventoryPath = \Inventory.titles
 	
 	var searchableText: String { displayName }
+	static var defaultItems: [ID] { [.noTitle] }
 }
 
 struct PlayerTitleLabel: View {
