@@ -9,6 +9,7 @@ struct AssetImage: Hashable {
 	@ViewBuilder
 	func view(renderingMode: Image.TemplateRenderingMode? = nil) -> some View {
 		ImageView(image: self, renderingMode: renderingMode)
+			.id(self)
 #if DEBUG
 			.modifier(ImageManagerProvider())
 #endif
