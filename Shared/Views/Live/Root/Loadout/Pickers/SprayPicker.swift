@@ -12,7 +12,7 @@ struct SprayPicker: View {
 				ownedItems: inventory.sprays
 			) { spray in
 				SelectableRow(selection: $selection, item: spray.id) {
-					spray.bestIcon.view()
+					spray.displayIcon.view()
 						.frame(width: 48, height: 48)
 					Text(spray.displayName)
 				}
