@@ -8,7 +8,7 @@ struct PlayerTitlePicker: View {
 	var body: some View {
 		SimpleSearchableAssetPicker(inventory: inventory) { (title: PlayerTitleInfo) in
 			SelectableRow(selection: $selection, item: title.id) {
-				title.textOrBlankDescription
+				PlayerTitleLabel(titleID: title.id)
 			}
 		}
 		.navigationTitle("Choose Title")
@@ -22,14 +22,26 @@ extension PlayerTitleInfo: SimpleSearchableAsset {
 	var searchableText: String { displayName }
 }
 
-extension PlayerTitleInfo {
-	@ViewBuilder
-	var textOrBlankDescription: some View {
-		if let titleText {
-			Text(titleText)
+struct PlayerTitleLabel: View {
+	var titleID: PlayerTitle.ID
+	
+	@Environment(\.assets) private var assets
+	
+	var body: some View {
+		let blank = Text("No Title")
+			.foregroundStyle(.secondary)
+		
+		if let title = assets?.playerTitles[titleID] {
+			if let text = title.titleText {
+				Text(text)
+			} else {
+				blank
+			}
+		} else if titleID.isPseudoNull {
+			blank
 		} else {
-			Text("No Title")
-				.foregroundColor(.secondary)
+			Text("<unknown title>")
+				.foregroundStyle(.secondary)
 		}
 	}
 }

@@ -80,11 +80,7 @@ private struct LoadoutCustomizer: View {
 			PlayerTitlePicker(selection: $loadout.identity.title, inventory: inventory)
 		} label: {
 			HStack {
-				if let title = assets?.playerTitles[loadout.identity.title] {
-					title.textOrBlankDescription
-				} else {
-					Text("<unknown title>")
-				}
+				PlayerTitleLabel(titleID: loadout.identity.title)
 				
 				Image(systemName: "pencil.circle.fill")
 					.foregroundColor(.secondary)
