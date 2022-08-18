@@ -50,6 +50,10 @@ struct BuddyPicker: View {
 						.frame(width: 48, height: 48)
 					Text(level.buddy.displayName)
 				}
+			} deselector: {
+				SelectableRow(selection: Binding($loadout.guns[weapon])!.buddy, item: nil) {
+					Label("No Buddy", systemImage: "xmark")
+				}
 			}
 		}
 	}

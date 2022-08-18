@@ -6,20 +6,26 @@ struct SprayPicker: View {
 	var inventory: Inventory
 	
 	var body: some View {
-		SimpleSearchableAssetPicker(inventory: inventory) { (spray: SprayInfo) in
-			SelectableRow(selection: $selection, item: spray.id) {
-				spray.bestIcon.view()
-					.frame(width: 48, height: 48)
-				Text(spray.displayName)
+		AssetsUnwrappingView { assets in
+			SearchableAssetPicker(
+				allItems: assets.sprays,
+				ownedItems: inventory.sprays
+			) { spray in
+				SelectableRow(selection: $selection, item: spray.id) {
+					spray.bestIcon.view()
+						.frame(width: 48, height: 48)
+					Text(spray.displayName)
+				}
+			} deselector: {
+				SelectableRow(selection: $selection, item: nil) {
+					Label("No Spray", systemImage: "xmark")
+				}
 			}
 		}
 		.navigationTitle("Choose Spray")
 	}
 }
 
-extension SprayInfo: SimpleSearchableAsset {
-	static let assetPath = \AssetCollection.sprays
-	static let inventoryPath = \Inventory.sprays
-	
+extension SprayInfo: SearchableAsset {
 	var searchableText: String { displayName }
 }

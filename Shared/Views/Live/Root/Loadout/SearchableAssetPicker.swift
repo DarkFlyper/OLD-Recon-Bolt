@@ -1,10 +1,11 @@
 import SwiftUI
 import ValorantAPI
 
-struct SearchableAssetPicker<Item: SearchableAsset, RowContent: View>: View {
+struct SearchableAssetPicker<Item: SearchableAsset, RowContent: View, Deselector: View>: View {
 	var allItems: [Item.ID: Item]
 	var ownedItems: Set<Item.ID>
 	@ViewBuilder var rowContent: (Item) -> RowContent
+	@ViewBuilder var deselector: () -> Deselector
 	
 	@State private var search = ""
 	
@@ -22,6 +23,12 @@ struct SearchableAssetPicker<Item: SearchableAsset, RowContent: View>: View {
 			.sorted(on: \.searchableText)
 		
 		List {
+			if search.isEmpty, Deselector.self != EmptyView.self {
+				Section {
+					deselector()
+				}
+			}
+			
 			Section {
 				ForEach(results) { item in
 					rowContent(item)
@@ -83,7 +90,7 @@ struct SimpleSearchableAssetPicker<Item: SimpleSearchableAsset, RowContent: View
 				ownedItems: inventory[keyPath: Item.inventoryPath].union(Item.defaultItems)
 			) { item in
 				rowContent(item)
-			}
+			} deselector: {}
 		}
 	}
 }

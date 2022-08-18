@@ -18,7 +18,8 @@ struct SkinPicker: View {
 						.filter { inventory.owns($0.id) || $0.skin.id == weapon.defaultSkinID }
 						.map(\.id)
 					),
-					rowContent: skinPickerRow(for:)
+					rowContent: skinPickerRow(for:),
+					deselector: {}
 				)
 				.navigationTitle("Choose Skin")
 			}
