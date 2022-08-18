@@ -81,7 +81,6 @@ struct AssetImage: Hashable {
 		
 		@ViewBuilder
 		var content: some View {
-			let _ = print("updating image content for \(image.url.path)")
 			if let loaded = loaded ?? cached {
 				Image(uiImage: loaded)
 					.renderingMode(renderingMode)

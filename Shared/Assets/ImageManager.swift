@@ -116,7 +116,7 @@ final class ImageManager: ObservableObject {
 		
 		private static func shouldCache(_ image: UIImage) -> Bool {
 			guard let raw = image.cgImage else { return false }
-			return raw.width * raw.height < Self.cacheSizeLimit
+			return raw.width * raw.height <= Self.cacheSizeLimit
 		}
 		
 		func state(for image: AssetImage) -> CacheState? {
