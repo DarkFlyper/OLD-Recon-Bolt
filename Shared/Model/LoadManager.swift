@@ -35,6 +35,8 @@ private struct LoadWrapper<Content: View>: View {
 					UIPasteboard.general.string = error.localizedDescription
 				}
 				Button("OK", role: .cancel) {}
+			} message: { error in
+				Text(error.localizedDescription)
 			}
 	}
 	
@@ -50,6 +52,7 @@ private struct LoadWrapper<Content: View>: View {
 			print("error running load task:")
 			dump(error)
 			loadError = .init(error)
+			isShowingErrorAlert = true
 		}
 	}
 }
