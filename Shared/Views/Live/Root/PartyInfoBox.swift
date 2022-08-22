@@ -118,13 +118,16 @@ struct PartyInfoBox: View {
 		@State var isSettingReady = false
 		
 		@LocalData var memberUser: User?
+		@LocalData var summary: CareerSummary?
 		
 		@Environment(\.valorantLoad) private var load
 		
 		var body: some View {
+			let iconSize = 48.0
+			
 			HStack {
 				PlayerCardImage.small(member.identity.cardID)
-					.frame(width: 48)
+					.frame(width: iconSize, height: iconSize)
 					.mask(RoundedRectangle(cornerRadius: 4, style: .continuous))
 				
 				VStack(alignment: .leading) {
@@ -158,6 +161,9 @@ struct PartyInfoBox: View {
 						Image(systemName: "person.crop.circle.fill")
 							.padding(.horizontal, 4)
 					}
+					
+					RankInfoView(summary: summary)
+						.frame(width: iconSize, height: iconSize)
 				} else {
 					if isSettingReady {
 						ProgressView()
@@ -168,6 +174,7 @@ struct PartyInfoBox: View {
 				}
 			}
 			.withLocalData($memberUser, id: member.id, shouldAutoUpdate: true)
+			.withLocalData($summary, id: member.id, shouldAutoUpdate: true)
 		}
 		
 		func setReady(to isReady: Bool) {
