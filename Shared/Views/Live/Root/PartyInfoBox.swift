@@ -22,7 +22,6 @@ struct PartyInfoBox: View {
 			
 			Divider()
 			
-			// TODO: only show when not in queue?
 			HStack {
 				Text(party.matchmakingData.queueID.name)
 					.font(.headline)
