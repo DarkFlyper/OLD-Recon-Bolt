@@ -31,7 +31,7 @@ struct PartyInfoBox: View {
 				
 				ZStack {
 					Menu("Change Queue") {
-						ForEach(party.eligibleQueues, id: \.self) { queue in
+						ForEach(party.eligibleQueues ?? [], id: \.self) { queue in
 							Button(queue.name) {
 								changeQueue(to: queue, in: party.id)
 							}
@@ -40,6 +40,7 @@ struct PartyInfoBox: View {
 					.disabled(isChangingQueue)
 					.disabled(!member.isOwner)
 					.disabled(party.state == .inMatchmaking)
+					.disabled(party.eligibleQueues == nil)
 					
 					if isChangingQueue {
 						ProgressView()
