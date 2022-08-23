@@ -34,22 +34,10 @@ struct AgentInfo: AssetItem, Codable, Identifiable {
 	var abilities: [Ability]
 	
 	var displayIcon: AssetImage
-	var bustPortrait: AssetImage
 	var fullPortrait: AssetImage
-	var fullPortraitV2: AssetImage
 	var killfeedPortrait: AssetImage
 	var isFullPortraitRightFacing: Bool
 	var assetPath: String
-	
-	var images: [AssetImage] {
-		displayIcon
-		bustPortrait
-		fullPortrait
-		fullPortraitV2
-		killfeedPortrait
-		role.displayIcon
-		abilities.compactMap(\.displayIcon)
-	}
 	
 	/// abilities are given in the wrong order; this reorders them appropriately
 	func ability(_ slot: Ability.Slot) -> Ability? {

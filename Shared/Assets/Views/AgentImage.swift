@@ -11,16 +11,8 @@ extension AgentImage {
 		Self(id: id, getImage: \.displayIcon)
 	}
 	
-	static func bustPortrait(_ id: Agent.ID) -> Self {
-		Self(id: id, getImage: \.bustPortrait)
-	}
-	
 	static func fullPortrait(_ id: Agent.ID) -> Self {
 		Self(id: id, getImage: \.fullPortrait)
-	}
-	
-	static func fullPortraitV2(_ id: Agent.ID) -> Self {
-		Self(id: id, getImage: \.fullPortraitV2)
 	}
 	
 	static func killfeedPortrait(_ id: Agent.ID) -> Self {
@@ -39,7 +31,6 @@ struct AgentImage_Previews: PreviewProvider {
 			AgentImage.icon(.omen)
 				.frame(height: 80)
 			AgentImage.fullPortrait(.omen)
-			AgentImage.bustPortrait(.omen)
 		}
 		.previewLayout(.sizeThatFits)
 	}

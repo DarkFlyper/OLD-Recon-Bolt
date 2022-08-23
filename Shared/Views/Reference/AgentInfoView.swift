@@ -30,7 +30,7 @@ struct AgentInfoView: View {
 	
 	var portrait: some View {
 		let backgroundColor = Color.secondaryGroupedBackground
-		return AgentImage.fullPortraitV2(agent.id)
+		return AgentImage.fullPortrait(agent.id)
 			.frame(maxHeight: 400)
 			.padding(.top, 50)
 			.background {
