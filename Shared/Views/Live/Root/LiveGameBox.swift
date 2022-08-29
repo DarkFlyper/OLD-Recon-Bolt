@@ -62,8 +62,11 @@ struct LiveGameBox: View {
 				.font(.headline)
 				.imageScale(.large)
 			}
-		} else if let party = Binding($party) {
-			PartyInfoBox(userID: userID, party: party)
+		} else if party != nil { // i would like to use if let party = Binding($party), but that causes crashes internal to swiftui
+			PartyInfoBox(userID: userID, party: Binding(
+				get: { party! },
+				set: { party = $0 }
+			))
 		} else {
 			GroupBox {
 				Text("Game is not running!")
