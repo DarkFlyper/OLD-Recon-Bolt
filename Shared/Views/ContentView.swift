@@ -33,17 +33,17 @@ struct ContentView: View {
 				.tabItem { Label("Reference", systemImage: "book") }
 				.tag(Tab.reference)
 			
-			AccountView(dataStore: dataStore, assetManager: assetManager)
-				.tabItem { Label("Account", systemImage: "person.crop.circle") }
-				.tag(Tab.account)
+			SettingsView(dataStore: dataStore, assetManager: assetManager)
+				.tabItem { Label("Settings", systemImage: "gearshape") }
+				.tag(Tab.settings)
 		}
 		.onAppear {
 			if dataStore.data == nil || assetManager.assets == nil {
-				tab = .account
+				tab = .settings
 			}
 		}
 		.onChange(of: dataStore.data == nil) {
-			if $0 { tab = .account }
+			if $0 { tab = .settings }
 		}
 		.buttonBorderShape(.capsule)
 		.withValorantLoadFunction(dataStore: dataStore)
@@ -71,7 +71,7 @@ struct ContentView: View {
 		case career
 		case live
 		case reference
-		case account
+		case settings
 	}
 }
 

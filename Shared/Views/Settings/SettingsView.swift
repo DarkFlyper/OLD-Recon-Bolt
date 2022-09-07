@@ -1,7 +1,7 @@
 import SwiftUI
 import ValorantAPI
 
-struct AccountView: View {
+struct SettingsView: View {
 	@ObservedObject var dataStore: ClientDataStore
 	@ObservedObject var assetManager: AssetManager
 	@EnvironmentObject var imageManager: ImageManager
@@ -142,10 +142,10 @@ struct AccountView: View {
 }
 
 #if DEBUG
-struct AccountView_Previews: PreviewProvider {
+struct SettingsView_Previews: PreviewProvider {
 	static var previews: some View {
-		AccountView(dataStore: PreviewData.mockDataStore, assetManager: .forPreviews)
-		AccountView(dataStore: PreviewData.emptyDataStore, assetManager: .mockEmpty)
+		SettingsView(dataStore: PreviewData.mockDataStore, assetManager: .forPreviews)
+		SettingsView(dataStore: PreviewData.emptyDataStore, assetManager: .mockEmpty)
 	}
 }
 #endif

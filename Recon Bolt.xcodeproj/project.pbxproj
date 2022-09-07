@@ -140,7 +140,7 @@
 		B9F65C472651D20200C9C34A /* AssetImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F65C462651D20200C9C34A /* AssetImageView.swift */; };
 		B9F65C4B2651DFB100C9C34A /* AgentImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F65C4A2651DFB100C9C34A /* AgentImage.swift */; };
 		B9F65C4E2651EDA500C9C34A /* DynamicallyStroked.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F65C4D2651EDA500C9C34A /* DynamicallyStroked.swift */; };
-		B9F66ACE266DC31E008560FD /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F66ACD266DC31E008560FD /* AccountView.swift */; };
+		B9F66ACE266DC31E008560FD /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F66ACD266DC31E008560FD /* SettingsView.swift */; };
 		B9F7A53927DC5D3D00636DAF /* StoreDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F7A53827DC5D3D00636DAF /* StoreDetailsView.swift */; };
 		B9F7A53C27DC5DAF00636DAF /* example_store_offers.json in Resources */ = {isa = PBXBuildFile; fileRef = B9F7A53A27DC5DAF00636DAF /* example_store_offers.json */; };
 		B9F7A53D27DC5DAF00636DAF /* example_storefront.json in Resources */ = {isa = PBXBuildFile; fileRef = B9F7A53B27DC5DAF00636DAF /* example_storefront.json */; };
@@ -304,7 +304,7 @@
 		B9F65C462651D20200C9C34A /* AssetImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetImageView.swift; sourceTree = "<group>"; };
 		B9F65C4A2651DFB100C9C34A /* AgentImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentImage.swift; sourceTree = "<group>"; };
 		B9F65C4D2651EDA500C9C34A /* DynamicallyStroked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicallyStroked.swift; sourceTree = "<group>"; };
-		B9F66ACD266DC31E008560FD /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		B9F66ACD266DC31E008560FD /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		B9F7A53827DC5D3D00636DAF /* StoreDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDetailsView.swift; sourceTree = "<group>"; };
 		B9F7A53A27DC5DAF00636DAF /* example_store_offers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_store_offers.json; sourceTree = "<group>"; };
 		B9F7A53B27DC5DAF00636DAF /* example_storefront.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_storefront.json; sourceTree = "<group>"; };
@@ -438,7 +438,7 @@
 				B9F5CEE4267D3362009CF906 /* Match List */,
 				B9318364267810BE0099B13C /* Live */,
 				B9131D67266AFA3B00E85F46 /* Reference */,
-				B9F66ACC266DC2F5008560FD /* Account */,
+				B9F66ACC266DC2F5008560FD /* Settings */,
 				B9EE6E5D26589E8F007E28B5 /* Match Details */,
 				B98E4703269B40A1003C9088 /* General */,
 			);
@@ -703,14 +703,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		B9F66ACC266DC2F5008560FD /* Account */ = {
+		B9F66ACC266DC2F5008560FD /* Settings */ = {
 			isa = PBXGroup;
 			children = (
 				B941B6E425A7C48300F675C1 /* LoginForm.swift */,
-				B9F66ACD266DC31E008560FD /* AccountView.swift */,
+				B9F66ACD266DC31E008560FD /* SettingsView.swift */,
 				B98FC070279DD758002DDF93 /* MultifactorPromptView.swift */,
 			);
-			path = Account;
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		B9F8703026B38F1000C1F784 /* General */ = {
@@ -947,7 +947,7 @@
 				B9485F84264B1DD300AC3456 /* AgentAssets.swift in Sources */,
 				B941B65825A5BC8A00F675C1 /* ContentView.swift in Sources */,
 				B9F7A54327DD30C600636DAF /* BundleDetailsView.swift in Sources */,
-				B9F66ACE266DC31E008560FD /* AccountView.swift in Sources */,
+				B9F66ACE266DC31E008560FD /* SettingsView.swift in Sources */,
 				B963C4792695101C0071E14A /* PlayerIdentityCell.swift in Sources */,
 				B9766BB72750339700127FF2 /* ContractAssets.swift in Sources */,
 				B9DCF9A72642E0EC00C39EC4 /* ScoreboardView.swift in Sources */,
