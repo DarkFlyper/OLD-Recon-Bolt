@@ -16,10 +16,10 @@ final class HenrikClient: Protoclient {
 	
 	struct APIError: Error, LocalizedError {
 		let status: Int
-		let message: String?
+		let message: String
 		
 		var errorDescription: String? {
-			"[\(status)] \(message ?? "No message provided.")"
+			"[\(status)] \(!message.isEmpty ? message : "No message provided.")"
 		}
 	}
 }
@@ -27,7 +27,13 @@ final class HenrikClient: Protoclient {
 private struct HenrikResponse<Body>: Decodable where Body: Decodable {
 	var status: Int
 	var data: Body?
-	var message: String?
+	var errors: [HenrikError]?
+	
+	struct HenrikError: Codable {
+		var code: Int?
+		var message: String?
+		var details: String?
+	}
 }
 
 protocol HenrikRequest: GetJSONRequest {}
@@ -36,7 +42,11 @@ extension HenrikRequest {
 	func decodeResponse(from raw: Protoresponse) throws -> Response {
 		let response = try raw.decodeJSON(as: HenrikResponse<Response>.self)
 		guard let data = response.data else {
-			throw HenrikClient.APIError(status: response.status, message: response.message)
+			let message = response.errors?.lazy
+				.flatMap { [$0.message, $0.details] }
+				.compacted()
+				.joined(separator: "\n") ?? ""
+			throw HenrikClient.APIError(status: response.status, message: message)
 		}
 		return data
 	}
