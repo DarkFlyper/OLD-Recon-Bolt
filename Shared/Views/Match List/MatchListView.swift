@@ -66,6 +66,7 @@ struct MatchListView: View {
 				}
 			}
 		}
+		.refreshable { await refresh() }
 		.sheet(isPresented: $isEditingFilter) {
 			MatchListFilterEditor(filter: $filter)
 		}
@@ -73,7 +74,6 @@ struct MatchListView: View {
 		.withLocalData($matchList, id: userID, shouldAutoUpdate: true)
 		.withLocalData($summary, id: userID, shouldAutoUpdate: true)
 		.withLocalData($identity, id: userID)
-		.refreshable { await refresh() }
 		.loadErrorAlertTitle("Could not load matches!")
 		.navigationTitle(user?.name ?? "Matches")
 	}
