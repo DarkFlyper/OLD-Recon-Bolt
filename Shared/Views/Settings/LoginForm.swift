@@ -15,54 +15,63 @@ struct LoginForm: View {
 	@State var isPromptingMultifactor = false
 	
 	@Environment(\.loadWithErrorAlerts) private var load
+	@Environment(\.dismiss) private var dismiss
 	
 	var body: some View {
-		ZStack {
-			ProgressView("signing in…")
-				.opacity(isSigningIn ? 1 : 0)
-			
-			VStack(spacing: 12) {
-				Text("Sign in with your Riot account")
-					.font(.title2.weight(.medium))
-					.multilineTextAlignment(.center)
-					.lineLimit(2)
-					.fixedSize(horizontal: false, vertical: true) // without this the line limit doesn't seem to work
+		ScrollView {
+			ZStack {
+				ProgressView("signing in…")
+					.opacity(isSigningIn ? 1 : 0)
 				
-				regionSelection
-				
-				VStack {
-					TextField("Username", text: $credentials.username)
-						.autocapitalization(.none)
-						.submitLabel(.next)
-						.onSubmit { isPasswordFieldFocused = true }
-					
-					SecureField("Password", text: $credentials.password)
-						.submitLabel(.go)
-						.onSubmit {
-							isPasswordFieldFocused = false
-							Task { await logIn() }
+				VStack(spacing: 20) {
+					VStack(spacing: 12) {
+						regionSelection
+						
+						VStack {
+							TextField("Username", text: $credentials.username)
+								.autocapitalization(.none)
+								.submitLabel(.next)
+								.onSubmit { isPasswordFieldFocused = true }
+							
+							SecureField("Password", text: $credentials.password)
+								.submitLabel(.go)
+								.onSubmit {
+									isPasswordFieldFocused = false
+									Task { await logIn() }
+								}
+								.focused($isPasswordFieldFocused)
 						}
-						.focused($isPasswordFieldFocused)
+						.frame(maxWidth: 240)
+						
+						AsyncButton(action: logIn) {
+							Text("Sign In")
+								.bold()
+						}
+						.buttonStyle(.borderedProminent)
+					}
+					
+					trustInfo
 				}
-				.frame(maxWidth: 240)
-				
-				AsyncButton(action: logIn) {
-					Text("Sign In")
-						.bold()
-				}
-				.buttonStyle(.borderedProminent)
-				
-				trustInfo
+				.frame(idealWidth: 180)
+				.textFieldStyle(.pretty)
+				.opacity(isSigningIn ? 0.25 : 1)
+				.blur(radius: isSigningIn ? 4 : 0)
+				.disabled(isSigningIn)
+				.buttonStyle(.bordered)
+				.buttonBorderShape(.capsule)
+				.padding()
 			}
-			.frame(idealWidth: 180)
-			.textFieldStyle(.pretty)
-			.opacity(isSigningIn ? 0.25 : 1)
-			.blur(radius: isSigningIn ? 4 : 0)
 		}
-		.buttonStyle(.bordered)
-		.buttonBorderShape(.capsule)
-		.padding()
 		.loadErrorAlertTitle("Could not sign in!")
+		.navigationTitle("Sign In with your Riot account")
+		.navigationBarTitleDisplayMode(.inline)
+		.toolbar {
+			ToolbarItemGroup(placement: .cancellationAction) {
+				Button { dismiss() } label: {
+					Text("Cancel")
+				}
+			}
+		}
 		.sheet(
 			isPresented: $isPromptingMultifactor,
 			onDismiss: {
@@ -74,6 +83,7 @@ struct LoginForm: View {
 				MultifactorPromptView(prompt: multifactorPrompt!)
 			}
 		)
+		.withToolbar(allowLargeTitles: false)
 	}
 	
 	@State private var isTrustInfoExpanded = false
@@ -98,7 +108,7 @@ struct LoginForm: View {
 				.padding()
 			}
 			.buttonStyle(.borderless)
-			.background(Color(.tertiarySystemGroupedBackground))
+			.background(Color.tertiaryGroupedBackground)
 			
 			if isTrustInfoExpanded {
 				VStack(alignment: .leading, spacing: 8) {
@@ -120,8 +130,8 @@ struct LoginForm: View {
 						.fontWeight(.medium)
 				}
 				.frame(maxWidth: .infinity, alignment: .leading)
-				.padding(12)
-				.background(Color(.tertiarySystemGroupedBackground))
+				.padding()
+				.background(Color.tertiaryGroupedBackground)
 			}
 		}
 		.compositingGroup()
@@ -179,6 +189,7 @@ struct LoginForm: View {
 					multifactorHandler: handleMultifactor
 				)
 				credentials.save(to: keychain)
+				dismiss()
 			} catch MultifactorPrompt.PromptError.cancelled {}
 		}
 		
