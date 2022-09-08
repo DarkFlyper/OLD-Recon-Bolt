@@ -165,7 +165,7 @@ struct ContractDetailsView: View {
 #if DEBUG
 struct ContractDetailsView_Previews: PreviewProvider {
 	static var previews: some View {
-		RefreshableBox(title: "Missions") {
+		RefreshableBox(title: "Missions", isExpanded: .constant(true)) {
 			ContractDetailsView(details: PreviewData.contractDetails)
 		} refresh: { _ in }
 		.forPreviews()

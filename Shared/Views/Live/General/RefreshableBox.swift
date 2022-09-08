@@ -3,10 +3,9 @@ import ValorantAPI
 
 struct RefreshableBox<Content: View>: View {
 	var title: String
+	@Binding var isExpanded: Bool
 	@ViewBuilder var content: () -> Content
 	var refresh: (ValorantClient) async throws -> Void
-	// cheeky way of differentiating between these boxes without needing a custom initializer
-	@AppStorage("\(Self.self).isExpanded") var isExpanded = true
 	
 	@Environment(\.valorantLoad) private var load
 	
@@ -30,6 +29,7 @@ struct RefreshableBox<Content: View>: View {
 		.cornerRadius(20)
 		.task(doRefresh)
 		.onSceneActivation(perform: doRefresh)
+		.animation(.default, value: isExpanded)
 	}
 	
 	var expandButton: some View {

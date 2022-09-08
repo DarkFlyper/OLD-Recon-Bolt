@@ -100,3 +100,18 @@ extension HorizontalAlignment {
 		}
 	}
 }
+
+extension Binding {
+	func contains<T: Hashable>(_ value: T) -> Binding<Bool> where Value == Set<T> {
+		.init(
+			get: { wrappedValue.contains(value) },
+			set: {
+				if $0 {
+					wrappedValue.insert(value)
+				} else {
+					wrappedValue.remove(value)
+				}
+			}
+		)
+	}
+}

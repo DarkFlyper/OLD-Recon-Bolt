@@ -135,7 +135,7 @@ private struct LoadoutCustomizer: View {
 #if DEBUG
 struct LoadoutDetailsView_Previews: PreviewProvider {
 	static var previews: some View {
-		RefreshableBox(title: "Loadout") {
+		RefreshableBox(title: "Loadout", isExpanded: .constant(true)) {
 			LoadoutDetailsView(loadout: PreviewData.loadout, inventory: PreviewData.inventory)
 		} refresh: { _ in }
 			.forPreviews()

@@ -8,6 +8,8 @@ struct LiveGameBox: View {
 	@State var activeMatch: ActiveMatch?
 	@State var shownMatch: ActiveMatch?
 	
+	@Binding var isExpanded: Bool
+	
 	@AppStorage("LiveGameBox.shouldAutoRefresh")
 	var shouldAutoRefresh = false
 	@AppStorage("LiveGameBox.shouldAutoShow")
@@ -24,7 +26,7 @@ struct LiveGameBox: View {
 	}
 	
 	var body: some View {
-		RefreshableBox(title: "Party") {
+		RefreshableBox(title: "Party", isExpanded: $isExpanded) {
 			Divider()
 			
 			VStack(spacing: 16) {
@@ -32,10 +34,10 @@ struct LiveGameBox: View {
 			}
 			.padding(16)
 		} refresh: { try await refresh(using: $0) }
-		.onChange(of: activeMatch) { [activeMatch] newMatch in
-			guard shouldAutoRefresh, shouldAutoShow, activeMatch?.id != newMatch?.id else { return }
-			shownMatch = newMatch
-		}
+			.onChange(of: activeMatch) { [activeMatch] newMatch in
+				guard shouldAutoRefresh, shouldAutoShow, activeMatch?.id != newMatch?.id else { return }
+				shownMatch = newMatch
+			}
 	}
 	
 	@ViewBuilder
@@ -124,11 +126,13 @@ struct LiveGameBox_Previews: PreviewProvider {
 		Group {
 			LiveGameBox(
 				userID: PreviewData.userID,
+				isExpanded: .constant(true),
 				shouldAutoRefresh: true
 			)
 			LiveGameBox(
 				userID: PreviewData.userID,
-				party: PreviewData.party
+				party: PreviewData.party,
+				isExpanded: .constant(true)
 			)
 		}
 		.padding()
@@ -138,11 +142,13 @@ struct LiveGameBox_Previews: PreviewProvider {
 		VStack(spacing: 16) {
 			LiveGameBox(
 				userID: PreviewData.userID,
-				activeMatch: .init(id: Match.ID(), inPregame: true)
+				activeMatch: .init(id: Match.ID(), inPregame: true),
+				isExpanded: .constant(true)
 			)
 			LiveGameBox(
 				userID: PreviewData.userID,
-				activeMatch: .init(id: Match.ID(), inPregame: false)
+				activeMatch: .init(id: Match.ID(), inPregame: false),
+				isExpanded: .constant(true)
 			)
 			Spacer()
 		}

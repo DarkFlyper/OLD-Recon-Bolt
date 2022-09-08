@@ -1,6 +1,7 @@
 import SwiftUI
 import ValorantAPI
 import HandyOperators
+import UserDefault
 
 struct LiveView: View {
 	let userID: User.ID
@@ -8,12 +9,15 @@ struct LiveView: View {
 	@State fileprivate var loadoutInfo: LoadoutInfo?
 	@State fileprivate var storeInfo: StoreInfo?
 	
+	@UserDefault.State("LiveView.expandedBoxes")
+	var expandedBoxes: Set<Box> = [.party]
+	
 	@Environment(\.valorantLoad) private var load
 	
 	var body: some View {
 		ScrollView {
 			VStack(spacing: 16) {
-				LiveGameBox(userID: userID)
+				LiveGameBox(userID: userID, isExpanded: $expandedBoxes.contains(.party))
 				
 				missionsBox
 				
@@ -30,7 +34,7 @@ struct LiveView: View {
 	}
 	
 	var missionsBox: some View {
-		RefreshableBox(title: "Missions") {
+		RefreshableBox(title: "Missions", isExpanded: $expandedBoxes.contains(.missions)) {
 			infoOrPlaceholder(placeholder: "Missions not loaded!", contractDetails) {
 				ContractDetailsView(details: $0)
 			}
@@ -40,7 +44,7 @@ struct LiveView: View {
 	}
 	
 	var loadoutBox: some View {
-		RefreshableBox(title: "Loadout") {
+		RefreshableBox(title: "Loadout", isExpanded: $expandedBoxes.contains(.loadout)) {
 			infoOrPlaceholder(placeholder: "Loadout not loaded!", loadoutInfo) { info in
 				LoadoutDetailsView(loadout: info.loadout, inventory: info.inventory)
 			}
@@ -50,7 +54,7 @@ struct LiveView: View {
 	}
 	
 	var storeBox: some View {
-		RefreshableBox(title: "Store") {
+		RefreshableBox(title: "Store", isExpanded: $expandedBoxes.contains(.store)) {
 			infoOrPlaceholder(placeholder: "Store not loaded!", storeInfo) { info in
 				StoreDetailsView(
 					updateTime: info.updateTime,
@@ -78,6 +82,15 @@ struct LiveView: View {
 			}
 			.padding(16)
 		}
+	}
+	
+	enum Box: String, Hashable, DefaultsValueConvertible {
+		typealias DefaultsRepresentation = String
+		
+		case party
+		case missions
+		case loadout
+		case store
 	}
 }
 

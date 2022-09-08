@@ -126,7 +126,7 @@ struct StoreDetailsView: View {
 #if DEBUG
 struct StoreDetailsView_Previews: PreviewProvider {
 	static var previews: some View {
-		RefreshableBox(title: "Store") {
+		RefreshableBox(title: "Store", isExpanded: .constant(true)) {
 			StoreDetailsView(
 				updateTime: .now,
 				offers: .init(values: PreviewData.storeOffers),
