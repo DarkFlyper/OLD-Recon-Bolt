@@ -17,10 +17,15 @@ struct AboutScreen: View {
 				ListLink("Twitter @juliand665", destination: "https://twitter.com/juliand665")
 			}
 			
-			Section("Third-Party Libraries Used") {
+			Section("Third-Party Libraries & APIs Used") {
 				VStack(alignment: .leading, spacing: 8) {
 					Link("keychain-swift", destination: URL(string: "https://github.com/evgenyneu/keychain-swift")!)
 					Text("This is what keeps your credentials safe on your device.")
+				}
+				
+				VStack(alignment: .leading, spacing: 8) {
+					Link("Valorant-API.com", destination: URL(string: "https://valorant-api,com")!)
+					Text("An invaluable API hosting all the assets (images, data, etc.) used throughout Valorant. This is where almost every image in the app comes from.")
 				}
 			}
 		}
