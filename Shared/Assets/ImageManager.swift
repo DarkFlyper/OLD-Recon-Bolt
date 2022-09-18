@@ -5,14 +5,17 @@ import Combine
 
 @MainActor
 final class ImageManager: ObservableObject {
-	@UserDefault("ImageManager.version")
-	nonisolated private static var version = ""
-	
 	private var states: [AssetImage: ImageState] = [:]
 	
 	private let cache: ImageCache
 	private let updater: Updater
 	private var stateUpdateToken: AnyCancellable?
+	
+	// can't have a nonisolated wrapped property
+	private enum VersionHolder {
+		@UserDefault("ImageManager.version")
+		static var version = ""
+	}
 	
 	@MainActor
 	init() {
@@ -29,8 +32,8 @@ final class ImageManager: ObservableObject {
 	}
 	
 	func setVersion(_ version: AssetVersion) {
-		guard version.riotClientVersion != Self.version else { return }
-		Self.version = version.riotClientVersion
+		guard version.riotClientVersion != VersionHolder.version else { return }
+		VersionHolder.version = version.riotClientVersion
 		states = [:] // make images re-check for the new version
 	}
 	
@@ -165,7 +168,7 @@ final class ImageManager: ObservableObject {
 				do {
 					let meta = try image.loadMetadata()
 					// already checked against this version
-					if meta.lastVersionCheckedAgainst == ImageManager.version {
+					if meta.lastVersionCheckedAgainst == VersionHolder.version {
 						await cache.updateState(for: image, forceUpdate: false)
 						enqueueUpdate(of: image, to: .available)
 						return
@@ -188,10 +191,10 @@ final class ImageManager: ObservableObject {
 			}
 			
 			var meta = (try? image.loadMetadata()) ?? .init(
-				versionDownloaded: ImageManager.version,
-				lastVersionCheckedAgainst: ImageManager.version
+				versionDownloaded: VersionHolder.version,
+				lastVersionCheckedAgainst: VersionHolder.version
 			)
-			meta.lastVersionCheckedAgainst = ImageManager.version
+			meta.lastVersionCheckedAgainst = VersionHolder.version
 			do {
 				try image.save(meta)
 			} catch {
