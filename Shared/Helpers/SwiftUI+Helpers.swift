@@ -115,3 +115,19 @@ extension Binding {
 		)
 	}
 }
+
+extension View {
+	/// ``sheet(item:onDismiss:content:)`` nils out the binding before calling onDismiss, but sometimes you still want to access it.
+	func sheet<Item, Content>(
+		caching item: Binding<Item?>,
+		content: @escaping (Item) -> Content,
+		onDismiss: @escaping (Item) -> Void
+	) -> some View where Item: Identifiable, Content: View {
+		let cached = item.wrappedValue
+		return sheet(
+			item: item,
+			onDismiss: { onDismiss(cached!) },
+			content: content
+		)
+	}
+}

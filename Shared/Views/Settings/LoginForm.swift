@@ -9,10 +9,7 @@ struct LoginForm: View {
 	@FocusState private var isPasswordFieldFocused
 	var keychain: Keychain
 	
-	@State var multifactorPrompt: MultifactorPrompt? {
-		didSet { isPromptingMultifactor = multifactorPrompt != nil }
-	}
-	@State var isPromptingMultifactor = false
+	@State var multifactorPrompt: MultifactorPrompt?
 	
 	@Environment(\.loadWithErrorAlerts) private var load
 	@Environment(\.dismiss) private var dismiss
@@ -72,17 +69,11 @@ struct LoginForm: View {
 				}
 			}
 		}
-		.sheet(
-			isPresented: $isPromptingMultifactor,
-			onDismiss: {
-				multifactorPrompt?.completion(
-					.failure(MultifactorPrompt.PromptError.cancelled)
-				)
-			},
-			content: {
-				MultifactorPromptView(prompt: multifactorPrompt!)
-			}
-		)
+		.sheet(caching: $multifactorPrompt) {
+			MultifactorPromptView(prompt: $0)
+		} onDismiss: {
+			$0.completion(.failure(PromptError.cancelled))
+		}
 		.withToolbar(allowLargeTitles: false)
 	}
 	
@@ -181,6 +172,7 @@ struct LoginForm: View {
 	@MainActor
 	func logIn() async {
 		isSigningIn = true
+		defer { isSigningIn = false }
 		
 		await load {
 			do {
@@ -190,19 +182,21 @@ struct LoginForm: View {
 				)
 				credentials.save(to: keychain)
 				dismiss()
-			} catch MultifactorPrompt.PromptError.cancelled {}
+			} catch PromptError.cancelled {}
 		}
-		
-		isSigningIn = false
 	}
 	
 	@MainActor
 	func handleMultifactor(info: MultifactorInfo) async throws -> String {
-		let code = try await withCheckedThrowingContinuation {
-			multifactorPrompt = .init(info: info, completion: $0.resume(with:))
+		defer { multifactorPrompt = nil }
+		let code = try await withRobustThrowingContinuation {
+			multifactorPrompt = .init(info: info, completion: $0)
 		}
-		multifactorPrompt = nil
 		return code
+	}
+	
+	enum PromptError: Error {
+		case cancelled
 	}
 }
 

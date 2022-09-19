@@ -111,10 +111,6 @@ struct MultifactorPrompt: Identifiable {
 	let id = UUID()
 	let info: MultifactorInfo
 	let completion: (Result<String, Error>) -> Void
-	
-	enum PromptError: Error {
-		case cancelled
-	}
 }
 
 #if DEBUG

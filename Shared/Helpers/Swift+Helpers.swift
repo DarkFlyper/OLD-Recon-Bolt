@@ -84,3 +84,18 @@ extension Task where Success == Never, Failure == Never {
 		}
 	}
 }
+
+/// like ``withCheckedThrowingContinuation``, but provides a completion handler instead that can be called multiple times
+func withRobustThrowingContinuation<T>(
+	function: String = #function,
+	_ body: (@escaping (Result<T, Error>) -> Void) -> Void
+) async throws -> T {
+	try await withCheckedThrowingContinuation(function: function) { continuation in
+		var hasResumed = false
+		body {
+			guard !hasResumed else { return }
+			hasResumed = true
+			continuation.resume(with: $0)
+		}
+	}
+}
