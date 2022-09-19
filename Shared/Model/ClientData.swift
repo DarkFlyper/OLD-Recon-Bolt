@@ -58,7 +58,7 @@ struct StandardClientData: ClientData {
 			password: credentials.password,
 			multifactorHandler: multifactorHandler
 		)
-		let client = try ValorantClient(location: credentials.location, session: session)
+		let client = ValorantClient(session: session)
 		return Self(client: client)
 	}
 	

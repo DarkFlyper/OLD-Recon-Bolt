@@ -22,8 +22,6 @@ struct LoginForm: View {
 				
 				VStack(spacing: 20) {
 					VStack(spacing: 12) {
-						regionSelection
-						
 						VStack {
 							TextField("Username", text: $credentials.username)
 								.autocapitalization(.none)
@@ -127,46 +125,6 @@ struct LoginForm: View {
 		}
 		.compositingGroup()
 		.cornerRadius(20)
-	}
-	
-	@ScaledMetric(relativeTo: .body) private var pickerHeight = 34
-	
-	@ViewBuilder
-	var regionSelection: some View {
-		Menu {
-			ForEach(Location.all) { location in
-				Button {
-					credentials.location = location
-				} label: {
-					HStack {
-						Text(location.name)
-						
-						if credentials.location == location {
-							Image(systemName: "checkmark")
-						}
-					}
-				}
-			}
-		} label: {
-			HStack(spacing: 1) {
-				Text(credentials.location.name)
-					.padding(.leading, 12) // extra leading padding for capsule
-					.padding(.trailing, 8)
-					.frame(maxHeight: .infinity)
-					.background(.accentColor.opacity(0.2))
-				
-				Image(systemName: "chevron.down")
-					.padding(.leading, 6)
-					.padding(.trailing, 8)
-					.foregroundColor(.white)
-					.frame(maxHeight: .infinity)
-					.background(.accentColor)
-			}
-			.frame(height: pickerHeight)
-			.fixedSize()
-			.clipShape(Capsule())
-		}
-		.menuStyle(.borderlessButton)
 	}
 	
 	@MainActor

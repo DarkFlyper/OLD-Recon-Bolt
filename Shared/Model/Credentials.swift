@@ -3,7 +3,6 @@ import KeychainSwift
 import ValorantAPI
 
 struct Credentials: Codable {
-	var location = Location.europe
 	var username = ""
 	var password = ""
 	
