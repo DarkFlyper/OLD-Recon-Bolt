@@ -68,7 +68,8 @@ struct ScoreboardRowView: View {
 				
 				divider
 				
-				Text(verbatim: "\(player.stats.score)")
+				let roundsPlayed = data.details.roundResults.count
+				Text(verbatim: "\(player.stats.score / roundsPlayed)")
 					.frame(width: 60)
 				
 				divider
