@@ -53,6 +53,7 @@ struct LoginForm: View {
 								.bold()
 						}
 						.buttonStyle(.borderedProminent)
+						.disabled(credentials.username.isEmpty || credentials.password.isEmpty)
 					}
 					
 					trustInfo
