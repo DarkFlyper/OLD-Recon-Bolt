@@ -15,6 +15,8 @@ struct AssetImageView<Provider: AssetImageProvider>: View {
 	
 	var id: ID
 	var renderingMode: Image.TemplateRenderingMode?
+	/// aspect ratio for the placeholder shown when the image is not loaded
+	var aspectRatio: CGFloat?
 	var getImage: (Provider.Asset) -> AssetImage?
 	
 	var body: some View {
@@ -22,13 +24,14 @@ struct AssetImageView<Provider: AssetImageProvider>: View {
 			.flatMap(getImage)
 		
 		if let assetImage {
-			assetImage.view(renderingMode: renderingMode)
+			assetImage.view(renderingMode: renderingMode, aspectRatio: aspectRatio)
 		} else if let fallback = UIImage(named: "\(id)".uppercased()) {
 			Image(uiImage: fallback)
 				.resizable()
 				.scaledToFit()
 		} else {
 			Color.gray
+				.aspectRatio(aspectRatio, contentMode: .fit)
 		}
 	}
 }
@@ -38,8 +41,9 @@ extension AssetImageView {
 	init(
 		id: ID,
 		renderingMode: Image.TemplateRenderingMode? = nil,
+		aspectRatio: CGFloat? = nil,
 		getImage: @escaping (Provider.Asset) -> AssetImage
 	) {
-		self.init(id: id, renderingMode: renderingMode) { getImage($0) } // optional promotion
+		self.init(id: id, renderingMode: renderingMode, aspectRatio: aspectRatio) { getImage($0) } // optional promotion
 	}
 }

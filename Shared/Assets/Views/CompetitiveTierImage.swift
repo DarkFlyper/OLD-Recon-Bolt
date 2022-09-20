@@ -24,7 +24,8 @@ struct CompetitiveTierImage: View {
 				.scaleEffect(tier == 0 ? 1.31 : 1, anchor: .top)
 				.scaledToFit()
 		} else {
-			Color.primary.opacity(0.2)
+			Color.primary.opacity(0.1)
+				.aspectRatio(1, contentMode: .fit)
 		}
 	}
 }

@@ -11,15 +11,15 @@ extension MapImage {
 	typealias LabelText = _MapImageLabelText
 	
 	static func splash(_ id: MapID) -> Self {
-		Self(id: id, getImage: \.splash)
+		Self(id: id, aspectRatio: 16/9, getImage: \.splash)
 	}
 	
 	static func wideImage(_ id: MapID) -> Self {
-		Self(id: id, getImage: \.listViewIcon)
+		Self(id: id, aspectRatio: 4.56, getImage: \.listViewIcon)
 	}
 	
 	static func minimap(_ id: MapID) -> Self {
-		Self(id: id, getImage: \.displayIcon)
+		Self(id: id, aspectRatio: 1, getImage: \.displayIcon)
 	}
 }
 

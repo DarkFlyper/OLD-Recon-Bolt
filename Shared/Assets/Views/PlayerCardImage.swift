@@ -8,15 +8,15 @@ struct _PlayerCardImageProvider: AssetImageProvider {
 
 extension PlayerCardImage {
 	static func small(_ id: PlayerCard.ID) -> Self {
-		Self(id: id, getImage: \.smallArt)
+		Self(id: id, aspectRatio: 1, getImage: \.smallArt)
 	}
 	
 	static func large(_ id: PlayerCard.ID) -> Self {
-		Self(id: id, getImage: \.largeArt)
+		Self(id: id, aspectRatio: 268/640, getImage: \.largeArt)
 	}
 	
 	static func wide(_ id: PlayerCard.ID) -> Self {
-		Self(id: id, getImage: \.wideArt)
+		Self(id: id, aspectRatio: 452/128, getImage: \.wideArt)
 	}
 }
 

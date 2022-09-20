@@ -37,7 +37,6 @@ struct MapListView: View {
 		
 		private var mapIcon: some View {
 			MapImage.splash(map.id)
-				.scaledToFill()
 				.frame(height: visualsHeight)
 				.fixedSize()
 				.mask(RoundedRectangle(cornerRadius: 6, style: .continuous))
