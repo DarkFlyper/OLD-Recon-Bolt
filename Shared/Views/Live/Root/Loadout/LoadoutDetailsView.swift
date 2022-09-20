@@ -110,7 +110,7 @@ private struct LoadoutCustomizer: View {
 		
 		var body: some View {
 			NavigationLink {
-				SprayPicker(selection: $spray, inventory: inventory)
+				SprayPicker(selection: $spray, inventory: inventory, isMidRound: slot == .midRound)
 			} label: {
 				VStack {
 					if let spray {
