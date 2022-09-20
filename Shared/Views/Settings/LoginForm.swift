@@ -38,6 +38,16 @@ struct LoginForm: View {
 						}
 						.frame(maxWidth: 240)
 						
+						if credentials.username.contains("#") {
+							VStack(alignment: .leading, spacing: 8) {
+								Text("Looks like you're trying to enter your Riot ID (and tagline) as username! Your username is actually something else: it's what you use to sign into the Valorant launcher.")
+								Text("If you don't know your username or don't have one, you can fix that at [account.riotgames.com](https://account.riotgames.com).")
+							}
+							.font(.callout)
+							.foregroundStyle(.secondary)
+							.frame(maxWidth: .infinity)
+						}
+						
 						AsyncButton(action: logIn) {
 							Text("Sign In")
 								.bold()
@@ -163,6 +173,7 @@ struct LoginSheet_Previews: PreviewProvider {
 	static var previews: some View {
 		Group {
 			LoginForm(session: .constant(nil))
+			LoginForm(session: .constant(nil), credentials: .init(username: "Game Name #Tag"))
 			
 			LoginForm(session: .constant(nil), isSigningIn: true)
 		}
