@@ -6,12 +6,10 @@ struct AgentPickerView: View {
 	let userID: User.ID
 	let inventory: Inventory
 	
-	/// We can actually change our locked-in agent to a different one, but we want that functionality reasonably hidden.
-	/// This achieves that by making it so you can only re-lock while holding down the lock in button
-	@GestureState private var canRelock = false
-	
 	@Environment(\.valorantLoad) private var load
 	@Environment(\.assets) private var assets
+	
+	@ScaledMetric private var agentSize = 50
 	
 	var body: some View {
 		let ownPlayer = pregameInfo.team.players.firstElement(withID: userID)!
@@ -24,7 +22,7 @@ struct AgentPickerView: View {
 				.map { $0.agentID! }
 		)
 		
-		let hasSelectedAgent = ownPlayer.isLockedIn && !canRelock
+		let hasSelectedAgent = ownPlayer.isLockedIn
 		
 		VStack(spacing: 24) {
 			let selectedAgentID = ownPlayer.agentID
@@ -42,7 +40,6 @@ struct AgentPickerView: View {
 					.bold()
 			}
 			.buttonStyle(.borderedProminent)
-			.alwaysPressable(isPressing: $canRelock)
 			.disabled(selectedAgentID == nil || takenAgents.contains(selectedAgentID!))
 			.disabled(hasSelectedAgent) // can't move this out because then it'd affect the relock gesture too
 			
@@ -50,7 +47,6 @@ struct AgentPickerView: View {
 				let sortedAgents = agents.sorted(on: \.displayName)
 					.movingToFront { inventory.owns($0.id) }
 				
-				let agentSize = 50.0
 				let gridSpacing = 12.0
 				LazyVGrid(columns: [.init(
 					.adaptive(minimum: agentSize, maximum: agentSize),
@@ -62,6 +58,21 @@ struct AgentPickerView: View {
 							selectedAgentID: selectedAgentID,
 							isTaken: takenAgents.contains(agent.id)
 						)
+					}
+					
+					// random agent
+					AsyncButton {
+						await load {
+							let agent = inventory.agents.subtracting(takenAgents).randomElement()!
+							pregameInfo = try await $0.pickAgent(agent, in: pregameInfo.id)
+						}
+					} label: {
+						gridButton(isSelected: false) {
+							Image(systemName: "questionmark")
+								.font(.system(size: agentSize * 0.65, weight: .bold))
+								.foregroundColor(.white)
+								.frame(maxWidth: .infinity, maxHeight: .infinity)
+						}
 					}
 				}
 				.padding(4)
@@ -77,41 +88,44 @@ struct AgentPickerView: View {
 		let ownsAgent = inventory.owns(agent.id)
 		AsyncButton {
 			await load {
-				pregameInfo = try await $0.pickAgent(
-					agent.id, in: pregameInfo.id,
-					shouldLock: canRelock // we can re-lock a different agent by simply sending the appropriate lock-in request
-				)
+				pregameInfo = try await $0.pickAgent(agent.id, in: pregameInfo.id)
 			}
 		} label: {
-			let isSelected = agent.id == selectedAgentID
-			let lineWidth = isSelected ? 2.0 : 1.0
-			let cornerRadius = 8.0
-			let backgroundInset = 2.0
-			agent.displayIcon.view()
-				.dynamicallyStroked(radius: 1.5, color: .white)
-				.compositingGroup()
-				.opacity(ownsAgent ? 1 : 0.5)
-				.opacity(isTaken ? 0.8 : 1)
-				.cornerRadius(cornerRadius)
-				.background(
-					RoundedRectangle(cornerRadius: cornerRadius - backgroundInset)
-						.fill(.secondary)
-						.padding(backgroundInset)
-				)
-				.overlay(
-					RoundedRectangle(cornerRadius: cornerRadius + lineWidth)
-						.strokeBorder(lineWidth: lineWidth)
-						.padding(-lineWidth)
-				)
-				.foregroundStyle(isSelected ? Color.valorantSelf : Color.accentColor)
+			gridButton(isSelected: agent.id == selectedAgentID) {
+				agent.displayIcon.view()
+					.dynamicallyStroked(radius: 1.5, color: .white)
+					.compositingGroup()
+					.opacity(ownsAgent ? 1 : 0.5)
+					.opacity(isTaken ? 0.8 : 1)
+			}
 		}
 		.disabled(!ownsAgent || isTaken)
+	}
+	
+	@ViewBuilder
+	func gridButton<Content: View>(isSelected: Bool, @ViewBuilder content: () -> Content) -> some View {
+		let lineWidth = isSelected ? 2.0 : 1.0
+		let cornerRadius = 8.0
+		let backgroundInset = 2.0
+		content()
+			.cornerRadius(cornerRadius)
+			.background(
+				RoundedRectangle(cornerRadius: cornerRadius - backgroundInset)
+					.fill(.secondary)
+					.padding(backgroundInset)
+			)
+			.overlay(
+				RoundedRectangle(cornerRadius: cornerRadius + lineWidth)
+					.strokeBorder(lineWidth: lineWidth)
+					.padding(-lineWidth)
+			)
+			.foregroundStyle(isSelected ? Color.valorantSelf : Color.accentColor)
 	}
 }
 
 #if DEBUG
-struct AgentPickerView_Previews: PreviewProvider {
-	static var previews: some View {
+struct AgentPickerView_Previews: PreviewProvider, PreviewProviderWithAssets {
+	static func previews(assets: AssetCollection) -> some View {
 		AgentPickerView(
 			pregameInfo: .constant(PreviewData.pregameInfo),
 			userID: PreviewData.userID,
