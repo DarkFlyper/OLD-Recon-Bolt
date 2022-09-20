@@ -11,54 +11,64 @@ struct GunCustomizer: View {
 	
 	var body: some View {
 		List {
-			Section(resolved.skin.displayName) {
-				Group {
-					let chroma = resolved.chroma(gun.skin.chroma)
-					let icon = chroma?.fullRender ?? chroma?.displayIcon ?? resolved.displayIcon
-					icon.view()
-						.frame(height: 80)
-						.padding(.vertical)
-					
-					if resolved.skin.chromas.count > 1 {
-						chromaPicker
-					}
-					
-					if resolved.skin.levels.count > 1 {
-						levelPicker
-					}
-					
-					NavigationLink("Change Skin") {
-						SkinPicker(gun: $gun, inventory: inventory)
-					}
-				}
-				.frame(maxWidth: .infinity)
-			}
+			skinSection
 			
-			Section("Buddy") {
-				ZStack {
-					if let buddy = gun.buddy {
-						let info = assets?.buddies[buddy.buddy]
-						VStack {
-							(info?.displayIcon).view()
-								.frame(width: 60)
-							Text(info?.displayName ?? "<unknown buddy>")
-						}
-					} else {
-						Text("No buddy selected!")
-							.foregroundColor(.secondary)
-					}
-					
-					Text("").frame(maxWidth: .infinity, alignment: .leading)
-				}
-				.frame(maxWidth: .infinity)
-				
-				NavigationLink("Change Buddy") {
-					BuddyPicker(weapon: gun.id, loadout: $loadout, inventory: inventory)
-				}
+			if gun.id != .melee {
+				buddySection
 			}
 		}
 		.navigationTitle("Customize \(assets?.weapons[gun.id]?.displayName ?? "Gun")")
 		.navigationBarTitleDisplayMode(.inline)
+	}
+	
+	var skinSection: some View {
+		Section(resolved.skin.displayName) {
+			Group {
+				let chroma = resolved.chroma(gun.skin.chroma)
+				let icon = chroma?.fullRender ?? chroma?.displayIcon ?? resolved.displayIcon
+				icon.view()
+					.frame(height: 80)
+					.padding(.vertical)
+				
+				if resolved.skin.chromas.count > 1 {
+					chromaPicker
+				}
+				
+				if resolved.skin.levels.count > 1 {
+					levelPicker
+				}
+				
+				NavigationLink("Change Skin") {
+					SkinPicker(gun: $gun, inventory: inventory)
+				}
+			}
+			.frame(maxWidth: .infinity)
+		}
+	}
+	
+	var buddySection: some View {
+		Section("Buddy") {
+			ZStack {
+				if let buddy = gun.buddy {
+					let info = assets?.buddies[buddy.buddy]
+					VStack {
+						(info?.displayIcon).view()
+							.frame(width: 60)
+						Text(info?.displayName ?? "<unknown buddy>")
+					}
+				} else {
+					Text("No buddy selected!")
+						.foregroundColor(.secondary)
+				}
+				
+				Text("").frame(maxWidth: .infinity, alignment: .leading)
+			}
+			.frame(maxWidth: .infinity)
+			
+			NavigationLink("Change Buddy") {
+				BuddyPicker(weapon: gun.id, loadout: $loadout, inventory: inventory)
+			}
+		}
 	}
 	
 	var chromaPicker: some View {
