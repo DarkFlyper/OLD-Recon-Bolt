@@ -97,8 +97,8 @@ extension ValorantClient.APIError: LocalizedError {
 			return "Your session has expired! Please sign in again."
 		case .sessionResumptionFailure(let error):
 			return "Your session could not be resumed. \(error)"
-		case .scheduledDowntime(message: let message):
-			return "The API is down for scheduled maintenance. \(message)"
+		case .scheduledDowntime:
+			return "Valorant is currently undergoing scheduled maintenance. Riot is probably updating the game!"
 		case .resourceNotFound:
 			return "The resource could not be found."
 		case .badResponseCode(400, _, let error?) where error.errorCode == "INVALID_HEADERS":
