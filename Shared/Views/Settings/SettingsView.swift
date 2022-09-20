@@ -2,7 +2,7 @@ import SwiftUI
 import ValorantAPI
 
 struct SettingsView: View {
-	@ObservedObject var dataStore: ClientDataStore
+	@ObservedObject var accountManager: AccountManager
 	@ObservedObject var assetManager: AssetManager
 	
 	@State var isSigningIn = false
@@ -20,9 +20,12 @@ struct SettingsView: View {
 			}
 			.sheet(isPresented: $isSigningIn) {
 				LoginForm(
-					data: $dataStore.data,
-					credentials: .init(from: dataStore.keychain) ?? .init(),
-					keychain: dataStore.keychain
+					session: Binding {
+						accountManager.activeAccount?.session
+					} set: { session in
+						guard let session else { return }
+						accountManager.addAccount(using: session)
+					}
 				)
 				.withLoadErrorAlerts()
 			}
@@ -47,7 +50,7 @@ struct SettingsView: View {
 	
 	@ViewBuilder
 	var accountInfo: some View {
-		if let userID = dataStore.data?.userID {
+		if let userID = accountManager.activeAccount?.id {
 			ZStack {
 				if let user {
 					Text("Signed in as \(Text(user.name).fontWeight(.semibold))")
@@ -58,7 +61,7 @@ struct SettingsView: View {
 			.withLocalData($user, id: userID, shouldAutoUpdate: true)
 			
 			Button("Sign Out") {
-				dataStore.data = nil
+				accountManager.activeAccount = nil
 			}
 		} else {
 			Text("Not signed in yet.")
@@ -81,8 +84,8 @@ struct SettingsView: View {
 #if DEBUG
 struct SettingsView_Previews: PreviewProvider {
 	static var previews: some View {
-		SettingsView(dataStore: PreviewData.mockDataStore, assetManager: .forPreviews)
-		SettingsView(dataStore: PreviewData.emptyDataStore, assetManager: .mockEmpty)
+		SettingsView(accountManager: .mocked, assetManager: .forPreviews)
+		SettingsView(accountManager: .init(), assetManager: .mockEmpty)
 	}
 }
 #endif

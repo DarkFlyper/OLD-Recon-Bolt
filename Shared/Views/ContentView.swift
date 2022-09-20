@@ -4,7 +4,7 @@ import ValorantAPI
 import KeychainSwift
 
 struct ContentView: View {
-	@StateObject var dataStore: ClientDataStore
+	@StateObject var accountManager = AccountManager()
 	#if DEBUG
 	@StateObject var assetManager = isInSwiftUIPreview ? .forPreviews : AssetManager()
 	#else
@@ -33,27 +33,24 @@ struct ContentView: View {
 				.tabItem { Label("Reference", systemImage: "book") }
 				.tag(Tab.reference)
 			
-			SettingsView(dataStore: dataStore, assetManager: assetManager)
+			SettingsView(accountManager: accountManager, assetManager: assetManager)
 				.tabItem { Label("Settings", systemImage: "gearshape") }
 				.tag(Tab.settings)
 		}
-		.onAppear {
-			if dataStore.data == nil || assetManager.assets == nil {
+		.task(id: accountManager.requiresAction) {
+			if accountManager.requiresAction {
 				tab = .settings
 			}
 		}
-		.onChange(of: dataStore.data == nil) {
-			if $0 { tab = .settings }
-		}
 		.buttonBorderShape(.capsule)
-		.withValorantLoadFunction(dataStore: dataStore)
+		.withValorantLoadFunction(manager: accountManager)
 		.withLoadErrorAlerts()
 		.environment(\.assets, assetManager.assets)
-		.onChange(of: assetManager.assets?.version, perform: { version in
-			guard let version else { return }
-			Task { await dataStore.data?.setClientVersion(version.riotClientVersion) }
+		.task(id: assetManager.assets?.version) {
+			guard let version = assetManager.assets?.version else { return }
+			accountManager.clientVersion = version.riotClientVersion
 			imageManager.setVersion(version)
-		})
+		}
 		.environmentObject(bookmarkList)
 		.environmentObject(imageManager)
 	}
@@ -62,8 +59,11 @@ struct ContentView: View {
 	private func onlineView<Content: View>(
 		@ViewBuilder content: @escaping (User.ID) -> Content
 	) -> some View {
-		UnwrappingView(value: dataStore.data, placeholder: "Not signed in!") { data in
-			content(data.userID)
+		UnwrappingView(
+			value: accountManager.activeAccount,
+			placeholder: "Not signed in!"
+		) { account in
+			content(account.id)
 		}
 	}
 	
@@ -78,13 +78,10 @@ struct ContentView: View {
 #if DEBUG
 struct ContentView_Previews: PreviewProvider {
 	static var previews: some View {
-		ContentView(dataStore: PreviewData.mockDataStore)
-		
-		ContentView(dataStore: PreviewData.mockDataStore, tab: .live)
-		
-		ContentView(dataStore: PreviewData.mockDataStore, tab: .reference)
-		
-		ContentView(dataStore: PreviewData.emptyDataStore)
+		ContentView(accountManager: .mocked)
+		ContentView(accountManager: .mocked, tab: .live)
+		ContentView(accountManager: .mocked, tab: .reference)
+		ContentView(accountManager: .init())
 	}
 }
 #endif

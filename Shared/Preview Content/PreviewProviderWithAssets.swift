@@ -22,7 +22,7 @@ struct AssetProvider<Content: View>: View {
 		if let assets {
 			content(assets)
 		} else {
-			SettingsView(dataStore: PreviewData.mockDataStore, assetManager: .forPreviews)
+			SettingsView(accountManager: .mocked, assetManager: .forPreviews)
 		}
 	}
 }

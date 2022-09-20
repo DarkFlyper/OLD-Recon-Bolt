@@ -59,7 +59,6 @@
 		B941B65A25A5BC8A00F675C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B941B64525A5BC8A00F675C1 /* Assets.xcassets */; };
 		B941B69B25A62FFB00F675C1 /* UserDefault in Frameworks */ = {isa = PBXBuildFile; productRef = B941B69A25A62FFB00F675C1 /* UserDefault */; };
 		B941B6D025A79A6400F675C1 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B941B6CF25A79A6400F675C1 /* KeychainSwift */; };
-		B941B6D825A7A09000F675C1 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B6D725A7A09000F675C1 /* Credentials.swift */; };
 		B941B6DE25A7BC3800F675C1 /* View+Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B6DD25A7BC3800F675C1 /* View+Styling.swift */; };
 		B941B6E525A7C48300F675C1 /* LoginForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B6E425A7C48300F675C1 /* LoginForm.swift */; };
 		B941B6EC25A7C83700F675C1 /* example_updates.json in Resources */ = {isa = PBXBuildFile; fileRef = B941B6EB25A7C83700F675C1 /* example_updates.json */; };
@@ -99,6 +98,7 @@
 		B9A11F51285296C400599719 /* UnwrappingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A11F50285296C400599719 /* UnwrappingView.swift */; };
 		B9AEB7D727B0A03F0090A203 /* PartyInfoBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AEB7D627B0A03F0090A203 /* PartyInfoBox.swift */; };
 		B9AED04B27B08699009033C6 /* example_party.json in Resources */ = {isa = PBXBuildFile; fileRef = B9AED04A27B08699009033C6 /* example_party.json */; };
+		B9B11A6328D8F847006EC232 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B11A6228D8F846006EC232 /* Keychain.swift */; };
 		B9C2E913284E3B9F0007FC55 /* SearchableAssetPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C2E912284E3B9F0007FC55 /* SearchableAssetPicker.swift */; };
 		B9C2E915284E3BEE0007FC55 /* WeaponLoadoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C2E914284E3BEE0007FC55 /* WeaponLoadoutView.swift */; };
 		B9C3499D267AA6DE00BE39B1 /* LiveMatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3499C267AA6DE00BE39B1 /* LiveMatchView.swift */; };
@@ -225,7 +225,6 @@
 		B941B64D25A5BC8A00F675C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B941B65425A5BC8A00F675C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B941B65525A5BC8A00F675C1 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
-		B941B6D725A7A09000F675C1 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		B941B6DD25A7BC3800F675C1 /* View+Styling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Styling.swift"; sourceTree = "<group>"; };
 		B941B6E425A7C48300F675C1 /* LoginForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginForm.swift; sourceTree = "<group>"; };
 		B941B6EB25A7C83700F675C1 /* example_updates.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_updates.json; sourceTree = "<group>"; };
@@ -268,6 +267,7 @@
 		B9A11F50285296C400599719 /* UnwrappingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnwrappingView.swift; sourceTree = "<group>"; };
 		B9AEB7D627B0A03F0090A203 /* PartyInfoBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyInfoBox.swift; sourceTree = "<group>"; };
 		B9AED04A27B08699009033C6 /* example_party.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_party.json; sourceTree = "<group>"; };
+		B9B11A6228D8F846006EC232 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		B9C2E912284E3B9F0007FC55 /* SearchableAssetPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchableAssetPicker.swift; sourceTree = "<group>"; };
 		B9C2E914284E3BEE0007FC55 /* WeaponLoadoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponLoadoutView.swift; sourceTree = "<group>"; };
 		B9C3499C267AA6DE00BE39B1 /* LiveMatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveMatchView.swift; sourceTree = "<group>"; };
@@ -452,9 +452,9 @@
 		B94091CC25D0ACB100EE5DF2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B941B6D725A7A09000F675C1 /* Credentials.swift */,
 				B9C97DD0263CB744001E4D1B /* MatchList.swift */,
 				B96845B22665C7B900DC59D2 /* ClientData.swift */,
+				B9B11A6228D8F846006EC232 /* Keychain.swift */,
 				B94091AD25D09D5A00EE5DF2 /* LoadManager.swift */,
 				B9131D60266A707600E85F46 /* ValorantLoadManager.swift */,
 				B9EE0002267EDCB100C08119 /* LocalData.swift */,
@@ -928,6 +928,7 @@
 				B932A0FC27912170009FAEE5 /* ContractLevelProgressView.swift in Sources */,
 				B9DCF9AE2642F8FD00C39EC4 /* AssetManager.swift in Sources */,
 				B9CD085927D2878000BD485A /* AgentListView.swift in Sources */,
+				B9B11A6328D8F847006EC232 /* Keychain.swift in Sources */,
 				B9EE6E6E26594374007E28B5 /* KillBreakdownView.swift in Sources */,
 				B941B6E525A7C48300F675C1 /* LoginForm.swift in Sources */,
 				B9131D65266AF6C600E85F46 /* ReferenceView.swift in Sources */,
@@ -941,7 +942,6 @@
 				B914AE87284809D50001781F /* LoadoutDetailsView.swift in Sources */,
 				B9C7064E269BC91F00D29226 /* GameModeImage.swift in Sources */,
 				B9741478266F18A800892B5F /* String+Localization.swift in Sources */,
-				B941B6D825A7A09000F675C1 /* Credentials.swift in Sources */,
 				B95B1A74269CEC7B0080EC81 /* BookmarkListView.swift in Sources */,
 				B989466B26860D8A00C8059A /* AsyncButton.swift in Sources */,
 				B9FADF8226A91DBC00A0CA15 /* BookmarkList.swift in Sources */,

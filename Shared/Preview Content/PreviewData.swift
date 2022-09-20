@@ -64,9 +64,6 @@ enum PreviewData {
 		matches: compUpdates
 	)
 	
-	static let mockDataStore = ClientDataStore(keychain: MockKeychain(), for: MockClientData.self)
-	static let emptyDataStore = ClientDataStore(keychain: MockKeychain(), for: EmptyClientData.self)
-	
 	private static func loadJSON<T>(
 		named name: String,
 		in subdirectory: String? = nil,
@@ -90,29 +87,5 @@ enum PreviewData {
 			fatalError("could not decode json from file at \(url)")
 		}
 	}
-}
-
-struct MockClientData: ClientData {
-	let client = ValorantClient.mocked
-	
-	static func authenticated(
-		using credentials: Credentials,
-		multifactorHandler: MultifactorHandler
-	) -> Self { .init() }
-	
-	init() {}
-	func save() {}
-}
-
-private struct EmptyClientData: ClientData {
-	let client: ValorantClient
-	
-	static func authenticated(
-		using credentials: Credentials,
-		multifactorHandler: MultifactorHandler
-	) -> Self { fatalError() }
-	
-	init?() { return nil }
-	func save() {}
 }
 #endif

@@ -3,77 +3,125 @@ import ValorantAPI
 import UserDefault
 import HandyOperators
 
-protocol ClientData {
-	var userID: User.ID { get }
-	var client: ValorantClient { get }
+final class AccountManager: ObservableObject {
+	let keychain: any Keychain
 	
-	static func authenticated(
-		using credentials: Credentials,
-		multifactorHandler: MultifactorHandler
-	) async throws -> Self
-	
-	func setClientVersion(_ version: String) async
-	
-	init?()
-	func save() async
-}
-
-extension ClientData {
-	var userID: User.ID { client.userID }
-	
-	func setClientVersion(_ version: String) async {
-		await client.setClientVersion(version)
-		await save()
-	}
-}
-
-final class ClientDataStore: ObservableObject {
-	let keychain: Keychain
-	@Published var data: ClientData? {
+	@Published var activeAccount: StoredAccount? = nil {
 		didSet {
-			// this won't catch when the client reestablishes its session from cookies, but the token only lasts an hour anyway, during which time recon bolt will likely keep running, so it's not worth storing to defaults.
-			Task { await data?.save() }
+			Storage.activeAccount = activeAccount?.id
+			Task { await updateClientVersion() }
 		}
 	}
 	
-	init<StoredData: ClientData>(keychain: Keychain, for _: StoredData.Type) {
+	@Published var storedAccounts: [User.ID] = Storage.storedAccounts {
+		didSet {
+			Storage.storedAccounts = storedAccounts
+		}
+	}
+	
+	@Published var clientVersion = Storage.clientVersion {
+		didSet {
+			Storage.clientVersion = clientVersion
+			Task { await updateClientVersion() }
+		}
+	}
+	
+	var requiresAction: Bool {
+		activeAccount?.session.hasExpired != false
+	}
+	
+	init() {
+		self.keychain = .standard
+		
+		do {
+			self.activeAccount = try Storage.activeAccount.map(loadAccount(for:))
+		} catch {
+			print("could not load active account!", error)
+			dump(Storage.activeAccount)
+			dump(error)
+		}
+	}
+	
+#if DEBUG
+	static let mocked = AccountManager(mockAccounts: [.init()], activeAccount: .mocked)
+	
+	@_disfavoredOverload
+	init(mockAccounts: [User.ID] = [], activeAccount: StoredAccount? = nil) {
+		self.keychain = MockKeychain()
+		self.activeAccount = activeAccount
+		self.storedAccounts = mockAccounts
+		if let activeAccount, !self.storedAccounts.contains(activeAccount.id) {
+			self.storedAccounts.append(activeAccount.id)
+		}
+	}
+#endif
+	
+	func loadAccount(for id: User.ID) throws -> StoredAccount {
+		try .init(loadingFor: id, from: keychain)
+	}
+	
+	func addAccount(using session: APISession) {
+		storedAccounts.removeAll { $0 == session.userID }
+		if !storedAccounts.contains(session.userID) {
+			storedAccounts.append(session.userID)
+		}
+		activeAccount = StoredAccount(session: session, keychain: keychain)
+	}
+	
+	func updateClientVersion() async {
+		guard let clientVersion else { return }
+		await activeAccount?.client.setClientVersion(clientVersion)
+	}
+	
+	private enum Storage {
+		@UserDefault("AccountManager.activeAccount")
+		static var activeAccount: User.ID?
+		@UserDefault("AccountManager.storedAccounts")
+		static var storedAccounts: [User.ID] = []
+		@UserDefault("AccountManager.clientVersion")
+		static var clientVersion: String?
+	}
+}
+
+final class StoredAccount: ObservableObject, Identifiable {
+	let keychain: any Keychain
+	
+	@Published private(set) var session: APISession {
+		didSet { save() }
+	}
+	
+	private(set) lazy var client = ValorantClient(session: session) <- {
+		$0.onSessionUpdate { [weak self] session in
+			guard let self else { return }
+			self.session = session
+			self.save()
+		}
+	}
+	
+	var id: User.ID { session.userID }
+	
+	fileprivate init(session: APISession, keychain: any Keychain) {
 		self.keychain = keychain
-		self.data = StoredData()
+		self.session = session
+		save()
 	}
+	
+	fileprivate init(loadingFor id: User.ID, from keychain: any Keychain) throws {
+		self.keychain = keychain
+		let stored = try keychain[id.rawID.description] ??? LoadingError.noStoredSession
+		self.session = try JSONDecoder().decode(APISession.self, from: stored)
+	}
+	
+	func save() {
+		keychain[id.rawID.description] = try! JSONEncoder().encode(session)
+		print("saved account for \(id)")
+	}
+	
+	enum LoadingError: Error {
+		case noStoredSession
+	}
+	
+	#if DEBUG
+	static let mocked = StoredAccount(session: .mocked, keychain: MockKeychain())
+	#endif
 }
-
-// TODO: this feels like unnecessary abstraction now that it no longer stores credentials
-struct StandardClientData: ClientData {
-	var client: ValorantClient
-	
-	@UserDefault("ClientData.stored")
-	private static var stored: ValorantClient.SavedData?
-	
-	static func authenticated(
-		using credentials: Credentials,
-		multifactorHandler: MultifactorHandler
-	) async throws -> Self {
-		let session = try await APISession(
-			username: credentials.username,
-			password: credentials.password,
-			multifactorHandler: multifactorHandler
-		)
-		let client = ValorantClient(session: session)
-		return Self(client: client)
-	}
-	
-	init?() {
-		guard let stored = Self.stored else { return nil }
-		self.client = .init(from: stored)
-	}
-	
-	private init(client: ValorantClient) {
-		self.client = client
-	}
-	
-	func save() async {
-		Self.stored = await client.store()
-	}
-}
-
-extension ValorantClient.SavedData: DefaultsValueConvertible {}

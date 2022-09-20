@@ -3,13 +3,13 @@ import SwiftUIMissingPieces
 import ValorantAPI
 
 struct LoginForm: View {
-	@Binding var data: ClientData?
-	@State private(set) var credentials: Credentials
+	@Binding var session: APISession?
 	@State var isSigningIn = false
-	@FocusState private var isPasswordFieldFocused
-	var keychain: Keychain
 	
+	@State var credentials = Credentials()
 	@State var multifactorPrompt: MultifactorPrompt?
+	
+	@FocusState private var isPasswordFieldFocused
 	
 	@Environment(\.loadWithErrorAlerts) private var load
 	@Environment(\.dismiss) private var dismiss
@@ -134,11 +134,11 @@ struct LoginForm: View {
 		
 		await load {
 			do {
-				data = try await StandardClientData.authenticated(
-					using: credentials,
+				session = try await APISession(
+					credentials: credentials,
+					withCookiesFrom: session,
 					multifactorHandler: handleMultifactor
 				)
-				credentials.save(to: keychain)
 				dismiss()
 			} catch PromptError.cancelled {}
 		}
@@ -162,9 +162,9 @@ struct LoginForm: View {
 struct LoginSheet_Previews: PreviewProvider {
 	static var previews: some View {
 		Group {
-			LoginForm(data: .constant(nil), credentials: .init(), keychain: MockKeychain())
+			LoginForm(session: .constant(nil))
 			
-			LoginForm(data: .constant(nil), credentials: .init(), isSigningIn: true, keychain: MockKeychain())
+			LoginForm(session: .constant(nil), isSigningIn: true)
 		}
 		.withLoadErrorAlerts()
 		.previewLayout(.sizeThatFits)

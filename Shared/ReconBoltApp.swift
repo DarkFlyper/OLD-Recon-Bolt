@@ -1,5 +1,4 @@
 import SwiftUI
-import KeychainSwift
 
 // TODO: remove this when FB9309847 (using implicit CGFloat–Double conversion breaks preview bounds display) is addressed
 typealias FloatLiteralType = CGFloat
@@ -13,9 +12,7 @@ struct ReconBoltApp: App {
 	var body: some Scene {
 		WindowGroup {
 			if !isTesting {
-				ContentView(
-					dataStore: ClientDataStore(keychain: KeychainSwift(), for: StandardClientData.self)
-				)
+				ContentView()
 			}
 		}
 	}

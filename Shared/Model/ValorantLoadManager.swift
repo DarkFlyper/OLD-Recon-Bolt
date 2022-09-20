@@ -2,8 +2,8 @@ import SwiftUI
 import ValorantAPI
 
 extension View {
-	func withValorantLoadFunction(dataStore: ClientDataStore) -> some View {
-		modifier(ValorantLoadModifier(dataStore: dataStore))
+	func withValorantLoadFunction(manager: AccountManager) -> some View {
+		modifier(ValorantLoadModifier(manager: manager))
 	}
 	
 	func valorantLoadTask(_ loadTask: @escaping ValorantLoadTask) -> some View {
@@ -37,35 +37,23 @@ private struct ValorantLoadTaskWithIDModifier<ID: Equatable>: ViewModifier {
 }
 
 private struct ValorantLoadModifier: ViewModifier {
-	@ObservedObject var dataStore: ClientDataStore
+	@ObservedObject var manager: AccountManager
 	
 	@Environment(\.loadWithErrorAlerts) private var load
-	@Environment(\.assets) private var assets
 	
 	func body(content: Content) -> some View {
 		content.environment(\.valorantLoad, load)
-			.task(id: assets?.version.riotClientVersion, updateClientVersion)
-			.task(id: dataStore.data?.client.id, updateClientVersion)
-	}
-	
-	@Sendable
-	func updateClientVersion() async {
-		guard let version = assets?.version.riotClientVersion else { return }
-		await dataStore.data?.client.setClientVersion(version)
 	}
 	
 	func load(_ task: @escaping (ValorantClient) async throws -> Void) async {
-		guard let data = dataStore.data else { return }
+		guard let account = manager.activeAccount else { return }
 		guard !Task.isCancelled else { return }
 		
 		await load {
 			typealias APIError = ValorantClient.APIError
 			
 			do {
-				try await task(data.client)
-			} catch APIError.sessionExpired {
-				dataStore.data = nil
-				throw APIError.sessionExpired
+				try await task(account.client)
 			} catch {
 				guard !Task.isCancelled else { return }
 				throw error
