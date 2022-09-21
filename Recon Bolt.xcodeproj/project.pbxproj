@@ -1282,7 +1282,7 @@
 /* Begin XCRemoteSwiftPackageReference section */
 		B90BC2EC266D224F00C905D4 /* XCRemoteSwiftPackageReference "CGeometry" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:juliand665/CGeometry.git";
+			repositoryURL = "https://github.com/juliand665/CGeometry.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 0.4.0;
@@ -1298,7 +1298,7 @@
 		};
 		B941B69925A62FFB00F675C1 /* XCRemoteSwiftPackageReference "UserDefault" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:juliand665/UserDefault.git";
+			repositoryURL = "https://github.com/juliand665/UserDefault.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.0.2;
@@ -1314,7 +1314,7 @@
 		};
 		B9C97DCA263CB0D6001E4D1B /* XCRemoteSwiftPackageReference "ValorantAPI" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:juliand665/ValorantAPI.git";
+			repositoryURL = "https://github.com/juliand665/ValorantAPI.git";
 			requirement = {
 				branch = main;
 				kind = branch;
@@ -1322,7 +1322,7 @@
 		};
 		B9CF2E6A25A81F57004A1458 /* XCRemoteSwiftPackageReference "SwifUI-Missing-Pieces" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:juliand665/SwifUI-Missing-Pieces.git";
+			repositoryURL = "https://github.com/juliand665/SwifUI-Missing-Pieces.git";
 			requirement = {
 				branch = main;
 				kind = branch;
@@ -1330,7 +1330,7 @@
 		};
 		B9EE6E732659D6DF007E28B5 /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:apple/swift-algorithms.git";
+			repositoryURL = "https://github.com/apple/swift-algorithms.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 0.2.0;

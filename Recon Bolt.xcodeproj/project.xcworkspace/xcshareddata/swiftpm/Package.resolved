@@ -12,7 +12,7 @@
       },
       {
         "package": "CGeometry",
-        "repositoryURL": "git@github.com:juliand665/CGeometry.git",
+        "repositoryURL": "https://github.com/juliand665/CGeometry.git",
         "state": {
           "branch": null,
           "revision": "b4c52b1e0ab545af08acc54e0252ce21dbc4bcad",
@@ -57,7 +57,7 @@
       },
       {
         "package": "swift-algorithms",
-        "repositoryURL": "git@github.com:apple/swift-algorithms.git",
+        "repositoryURL": "https://github.com/apple/swift-algorithms.git",
         "state": {
           "branch": null,
           "revision": "2327673b0e9c7e90e6b1826376526ec3627210e4",
@@ -75,7 +75,7 @@
       },
       {
         "package": "SwiftUIMissingPieces",
-        "repositoryURL": "git@github.com:juliand665/SwifUI-Missing-Pieces.git",
+        "repositoryURL": "https://github.com/juliand665/SwifUI-Missing-Pieces.git",
         "state": {
           "branch": "main",
           "revision": "b61ba8552b0ebc21e82efa7f92b24c533f0a3072",
@@ -84,7 +84,7 @@
       },
       {
         "package": "UserDefault",
-        "repositoryURL": "git@github.com:juliand665/UserDefault.git",
+        "repositoryURL": "https://github.com/juliand665/UserDefault.git",
         "state": {
           "branch": null,
           "revision": "aabe6e72534c85baa5c07e7de7be5345a5506eb2",
