@@ -35,6 +35,12 @@ struct SettingsView: View {
 					AssetsInfoView(assetManager: assetManager)
 				}
 				
+				if let activeAccount = accountManager.activeAccount {
+					NavigationLink("Request Log") {
+						ClientLogView(client: activeAccount.client)
+					}
+				}
+				
 				NavigationLink {
 					AboutScreen()
 				} label: {

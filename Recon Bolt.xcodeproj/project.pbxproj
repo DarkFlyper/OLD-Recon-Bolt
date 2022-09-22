@@ -99,6 +99,7 @@
 		B9AEB7D727B0A03F0090A203 /* PartyInfoBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AEB7D627B0A03F0090A203 /* PartyInfoBox.swift */; };
 		B9AED04B27B08699009033C6 /* example_party.json in Resources */ = {isa = PBXBuildFile; fileRef = B9AED04A27B08699009033C6 /* example_party.json */; };
 		B9B11A6328D8F847006EC232 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B11A6228D8F846006EC232 /* Keychain.swift */; };
+		B9B11A6E28DD1407006EC232 /* ClientLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B11A6D28DD1407006EC232 /* ClientLogView.swift */; };
 		B9C2E913284E3B9F0007FC55 /* SearchableAssetPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C2E912284E3B9F0007FC55 /* SearchableAssetPicker.swift */; };
 		B9C2E915284E3BEE0007FC55 /* WeaponLoadoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C2E914284E3BEE0007FC55 /* WeaponLoadoutView.swift */; };
 		B9C3499D267AA6DE00BE39B1 /* LiveMatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3499C267AA6DE00BE39B1 /* LiveMatchView.swift */; };
@@ -268,6 +269,7 @@
 		B9AEB7D627B0A03F0090A203 /* PartyInfoBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyInfoBox.swift; sourceTree = "<group>"; };
 		B9AED04A27B08699009033C6 /* example_party.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_party.json; sourceTree = "<group>"; };
 		B9B11A6228D8F846006EC232 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		B9B11A6D28DD1407006EC232 /* ClientLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientLogView.swift; sourceTree = "<group>"; };
 		B9C2E912284E3B9F0007FC55 /* SearchableAssetPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchableAssetPicker.swift; sourceTree = "<group>"; };
 		B9C2E914284E3BEE0007FC55 /* WeaponLoadoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponLoadoutView.swift; sourceTree = "<group>"; };
 		B9C3499C267AA6DE00BE39B1 /* LiveMatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveMatchView.swift; sourceTree = "<group>"; };
@@ -715,6 +717,7 @@
 				B9DCC24228C96F5400C03B90 /* AboutScreen.swift */,
 				B9DCC24028C96EF900C03B90 /* AssetsInfoView.swift */,
 				B98FC070279DD758002DDF93 /* MultifactorPromptView.swift */,
+				B9B11A6D28DD1407006EC232 /* ClientLogView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -984,6 +987,7 @@
 				B90FFF3B26B48288007BE950 /* MissionView.swift in Sources */,
 				B9C2E913284E3B9F0007FC55 /* SearchableAssetPicker.swift in Sources */,
 				B90B4B61267C22E700CACB95 /* PlayerCardImage.swift in Sources */,
+				B9B11A6E28DD1407006EC232 /* ClientLogView.swift in Sources */,
 				B9CF2E6225A81B48004A1458 /* Styles.swift in Sources */,
 				B9F07CB726474EB7006CD4F5 /* AssetVersion.swift in Sources */,
 				B90B4B5B267C177D00CACB95 /* PlayerTitleAssets.swift in Sources */,
