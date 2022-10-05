@@ -113,6 +113,7 @@ struct LiveMatchView: View {
 						Image(systemName: "person.crop.circle.fill")
 							.padding(.horizontal, 4)
 					}
+					.disabled(player.identity.isIncognito)
 				}
 				
 				RankInfoView(summary: summary)
