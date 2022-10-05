@@ -24,6 +24,21 @@ struct StoreDetailsView: View {
 			
 			Divider()
 			
+			if let nightMarket = storefront.nightMarket {
+				HStack {
+					Text("Night Market")
+						.font(.headline)
+					
+					Spacer()
+					
+					remainingTimeLabel(nightMarket.remainingDuration)
+				}
+				
+				nightMarketView(for: nightMarket)
+				
+				Divider()
+			}
+			
 			HStack {
 				Text("Daily Offers")
 					.font(.headline)
@@ -79,6 +94,28 @@ struct StoreDetailsView: View {
 		}
 	}
 	
+	func nightMarketView(for market: Storefront.NightMarket) -> some View {
+		ForEach(market.offers) { offer in
+			offerCell(for: offer.offer)
+				.overlay(alignment: .bottomTrailing) {
+					VStack {
+						currencyLabels(for: offer.discountedCosts)
+						Text("-\(offer.discountPercent)%")
+							.font(.footnote.bold())
+							.foregroundColor(.accentColor)
+					}
+					.padding(8)
+					.frame(width: 256)
+					.background(Material.ultraThin)
+					.frame(width: 0)
+					.offset(y: -16)
+					.rotationEffect(.degrees(-45), anchor: .bottom)
+				}
+				.background(Color.tertiaryGroupedBackground)
+				.cornerRadius(8)
+		}
+	}
+	
 	@ViewBuilder
 	func offerCell(for offer: StoreOffer) -> some View {
 		let reward = offer.rewards.first!
@@ -94,13 +131,17 @@ struct StoreDetailsView: View {
 				
 				Spacer()
 				
-				ForEach(offer.cost.sorted(on: \.key.description), id: \.key) { currencyID, amount in
-					currencyLabel(amount, of: currencyID)
-						.layoutPriority(1)
-				}
+				currencyLabels(for: offer.cost)
 			}
 		}
 		.padding(12)
+	}
+	
+	func currencyLabels(for costs: [Currency.ID: Int]) -> some View {
+		ForEach(costs.sorted(on: \.key.description), id: \.key) { currencyID, amount in
+			currencyLabel(amount, of: currencyID)
+				.layoutPriority(1)
+		}
 	}
 	
 	func currencyLabel(_ count: Int, of currencyID: Currency.ID) -> some View {
@@ -126,15 +167,17 @@ struct StoreDetailsView: View {
 #if DEBUG
 struct StoreDetailsView_Previews: PreviewProvider {
 	static var previews: some View {
-		RefreshableBox(title: "Store", isExpanded: .constant(true)) {
-			StoreDetailsView(
-				updateTime: .now,
-				offers: .init(values: PreviewData.storeOffers),
-				storefront: PreviewData.storefront,
-				wallet: PreviewData.storeWallet
-			)
-		} refresh: { _ in }
-		.forPreviews()
+		ScrollView {
+			RefreshableBox(title: "Store", isExpanded: .constant(true)) {
+				StoreDetailsView(
+					updateTime: .now,
+					offers: .init(values: PreviewData.storeOffers),
+					storefront: PreviewData.storefront,
+					wallet: PreviewData.storeWallet
+				)
+			} refresh: { _ in }
+				.forPreviews()
+		}
 	}
 }
 #endif
