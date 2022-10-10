@@ -3,11 +3,10 @@ import SwiftUIMissingPieces
 import ValorantAPI
 
 struct LoginForm: View {
-	@Binding var session: APISession?
+	@ObservedObject var accountManager: AccountManager
 	@State var isSigningIn = false
 	
 	@State var credentials = Credentials()
-	@State var multifactorPrompt: MultifactorPrompt?
 	
 	@FocusState private var isPasswordFieldFocused
 	
@@ -78,11 +77,6 @@ struct LoginForm: View {
 				}
 			}
 		}
-		.sheet(caching: $multifactorPrompt) {
-			MultifactorPromptView(prompt: $0)
-		} onDismiss: {
-			$0.completion(.failure(PromptError.cancelled))
-		}
 		.withToolbar(allowLargeTitles: false)
 	}
 	
@@ -145,27 +139,10 @@ struct LoginForm: View {
 		
 		await load {
 			do {
-				session = try await APISession(
-					credentials: credentials,
-					withCookiesFrom: session,
-					multifactorHandler: handleMultifactor
-				)
+				try await accountManager.addAccount(using: credentials)
 				dismiss()
-			} catch PromptError.cancelled {}
+			} catch AccountManager.MultifactorPromptError.cancelled {}
 		}
-	}
-	
-	@MainActor
-	func handleMultifactor(info: MultifactorInfo) async throws -> String {
-		defer { multifactorPrompt = nil }
-		let code = try await withRobustThrowingContinuation {
-			multifactorPrompt = .init(info: info, completion: $0)
-		}
-		return code
-	}
-	
-	enum PromptError: Error {
-		case cancelled
 	}
 }
 
@@ -173,10 +150,10 @@ struct LoginForm: View {
 struct LoginSheet_Previews: PreviewProvider {
 	static var previews: some View {
 		Group {
-			LoginForm(session: .constant(nil))
-			LoginForm(session: .constant(nil), credentials: .init(username: "Game Name #Tag"))
+			LoginForm(accountManager: .mocked)
+			LoginForm(accountManager: .mocked, credentials: .init(username: "Game Name #Tag"))
 			
-			LoginForm(session: .constant(nil), isSigningIn: true)
+			LoginForm(accountManager: .mocked, isSigningIn: true)
 		}
 		.withLoadErrorAlerts()
 		.previewLayout(.sizeThatFits)

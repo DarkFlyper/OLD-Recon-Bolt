@@ -42,6 +42,11 @@ struct ContentView: View {
 				tab = .settings
 			}
 		}
+		.sheet(caching: $accountManager.multifactorPrompt) {
+			MultifactorPromptView(prompt: $0)
+		} onDismiss: {
+			$0.completion(.failure(AccountManager.MultifactorPromptError.cancelled))
+		}
 		.buttonBorderShape(.capsule)
 		.withValorantLoadFunction(manager: accountManager)
 		.withLoadErrorAlerts()

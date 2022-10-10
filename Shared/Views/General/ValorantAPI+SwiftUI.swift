@@ -96,7 +96,7 @@ extension ValorantClient.APIError: LocalizedError {
 		case .sessionExpired:
 			return "Your session has expired! Please sign in again."
 		case .sessionResumptionFailure(let error):
-			return "Your session could not be resumed. \(error)"
+			return "Your session could not be resumed. \(error.localizedDescription)"
 		case .scheduledDowntime:
 			return "Valorant is currently undergoing scheduled maintenance. Riot is probably updating the game!"
 		case .resourceNotFound:

@@ -5,6 +5,7 @@ import HandyOperators
 
 final class AccountManager: ObservableObject {
 	let keychain: any Keychain
+	@Published var multifactorPrompt: MultifactorPrompt?
 	
 	@Published var activeAccount: StoredAccount? = nil {
 		didSet {
@@ -32,7 +33,6 @@ final class AccountManager: ObservableObject {
 	
 	init() {
 		self.keychain = .standard
-		
 		do {
 			self.activeAccount = try Storage.activeAccount.map(loadAccount(for:))
 		} catch {
@@ -57,15 +57,24 @@ final class AccountManager: ObservableObject {
 #endif
 	
 	func loadAccount(for id: User.ID) throws -> StoredAccount {
-		try .init(loadingFor: id, from: keychain)
+		try .init(loadingFor: id, using: context)
 	}
 	
-	func addAccount(using session: APISession) {
-		storedAccounts.removeAll { $0 == session.userID }
+	func addAccount(using credentials: Credentials) async throws {
+		let activeSession = activeAccount?.session
+		let session = try await APISession(
+			credentials: credentials,
+			withCookiesFrom: activeSession?.credentials.username == credentials.username ? activeSession : nil,
+			multifactorHandler: handleMultifactor(info:)
+		)
 		if !storedAccounts.contains(session.userID) {
 			storedAccounts.append(session.userID)
 		}
-		activeAccount = StoredAccount(session: session, keychain: keychain)
+		activeAccount = StoredAccount(session: session, context: context)
+	}
+	
+	private var context: StoredAccount.Context {
+		.init(keychain: keychain, multifactorHandler: handleMultifactor(info:))
 	}
 	
 	func updateClientVersion() async {
@@ -81,39 +90,62 @@ final class AccountManager: ObservableObject {
 		@UserDefault("AccountManager.clientVersion")
 		static var clientVersion: String?
 	}
+	
+	@MainActor
+	func handleMultifactor(info: MultifactorInfo) async throws -> String {
+		defer { multifactorPrompt = nil }
+		let code = try await withRobustThrowingContinuation { completion in
+			multifactorPrompt = .init(info: info, completion: completion)
+		}
+		return code
+	}
+	
+	enum MultifactorPromptError: Error, LocalizedError {
+		case cancelled
+		
+		var errorDescription: String? {
+			switch self {
+			case .cancelled:
+				return "Multifactor Prompt Cancelled."
+			}
+		}
+	}
 }
 
 final class StoredAccount: ObservableObject, Identifiable {
-	let keychain: any Keychain
+	let context: Context
 	
 	@Published private(set) var session: APISession {
 		didSet { save() }
 	}
 	
-	private(set) lazy var client = ValorantClient(session: session) <- {
+	private(set) lazy var client = ValorantClient(
+		session: session,
+		multifactorHandler: context.multifactorHandler
+	) <- {
 		$0.onSessionUpdate { [weak self] session in
 			guard let self else { return }
+			print("storing updated session")
 			self.session = session
-			self.save()
 		}
 	}
 	
 	var id: User.ID { session.userID }
 	
-	fileprivate init(session: APISession, keychain: any Keychain) {
-		self.keychain = keychain
+	fileprivate init(session: APISession, context: Context) {
+		self.context = context
 		self.session = session
 		save()
 	}
 	
-	fileprivate init(loadingFor id: User.ID, from keychain: any Keychain) throws {
-		self.keychain = keychain
-		let stored = try keychain[id.rawID.description] ??? LoadingError.noStoredSession
+	fileprivate init(loadingFor id: User.ID, using context: Context) throws {
+		self.context = context
+		let stored = try context.keychain[id.rawID.description] ??? LoadingError.noStoredSession
 		self.session = try JSONDecoder().decode(APISession.self, from: stored)
 	}
 	
 	func save() {
-		keychain[id.rawID.description] = try! JSONEncoder().encode(session)
+		context.keychain[id.rawID.description] = try! JSONEncoder().encode(session)
 		print("saved account for \(id)")
 	}
 	
@@ -122,6 +154,14 @@ final class StoredAccount: ObservableObject, Identifiable {
 	}
 	
 	#if DEBUG
-	static let mocked = StoredAccount(session: .mocked, keychain: MockKeychain())
+	static let mocked = StoredAccount(session: .mocked, context: .init(
+		keychain: MockKeychain(),
+		multifactorHandler: { _ in fatalError() }
+	))
 	#endif
+	
+	struct Context {
+		var keychain: any Keychain
+		var multifactorHandler: MultifactorHandler
+	}
 }

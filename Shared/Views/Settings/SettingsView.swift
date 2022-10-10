@@ -20,12 +20,8 @@ struct SettingsView: View {
 			}
 			.sheet(isPresented: $isSigningIn) {
 				LoginForm(
-					session: Binding {
-						accountManager.activeAccount?.session
-					} set: { session in
-						guard let session else { return }
-						accountManager.addAccount(using: session)
-					}
+					accountManager: accountManager,
+					credentials: accountManager.activeAccount?.session.credentials ?? .init()
 				)
 				.withLoadErrorAlerts()
 			}
@@ -56,15 +52,26 @@ struct SettingsView: View {
 	
 	@ViewBuilder
 	var accountInfo: some View {
-		if let userID = accountManager.activeAccount?.id {
+		if let account = accountManager.activeAccount {
 			ZStack {
-				if let user {
-					Text("Signed in as \(Text(user.name).fontWeight(.semibold))")
+				if account.session.hasExpired {
+					HStack {
+						Text("Session expired!")
+						Spacer()
+						Button("Refresh") {
+							isSigningIn = true
+						}
+						.font(.body.bold())
+					}
 				} else {
-					Text("Signed in.")
+					if let user {
+						Text("Signed in as \(Text(user.name).fontWeight(.semibold))")
+					} else {
+						Text("Signed in.")
+					}
 				}
 			}
-			.withLocalData($user, id: userID, shouldAutoUpdate: true)
+			.withLocalData($user, id: account.id, shouldAutoUpdate: true)
 			
 			Button("Sign Out") {
 				accountManager.activeAccount = nil
