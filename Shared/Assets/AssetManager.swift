@@ -11,8 +11,6 @@ final class AssetManager: ObservableObject {
 	
 	convenience init() {
 		self.init(assets: Self.stored)
-		
-		Task { await loadAssets() }
 	}
 	
 	private init(assets: AssetCollection?) {

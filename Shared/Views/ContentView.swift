@@ -46,6 +46,9 @@ struct ContentView: View {
 		.withValorantLoadFunction(manager: accountManager)
 		.withLoadErrorAlerts()
 		.environment(\.assets, assetManager.assets)
+		.onSceneActivation {
+			Task { await assetManager.loadAssets() }
+		}
 		.task(id: assetManager.assets?.version) {
 			guard let version = assetManager.assets?.version else { return }
 			accountManager.clientVersion = version.riotClientVersion
