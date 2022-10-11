@@ -3,6 +3,7 @@ import ValorantAPI
 
 struct MultifactorPromptView: View {
 	let prompt: MultifactorPrompt
+	var didSessionExpire = false
 	
 	@State var digits: [Int] = []
 	
@@ -36,6 +37,11 @@ struct MultifactorPromptView: View {
 				}
 			}
 			.padding(.vertical)
+			
+			if didSessionExpire {
+				Text("Your session has expired! Recon Bolt has tried to refresh it for you, but needs 2FA confirmation.")
+				Color.clear.frame(height: 0)
+			}
 			
 			Text("A 2FA code has been sent to your email address \(prompt.info.email)")
 		}
@@ -121,6 +127,7 @@ struct MultifactorPromptView_Previews: PreviewProvider {
 				info: .mocked(codeLength: 6, email: "jul***@***.com"),
 				completion: { _ in }
 			),
+			didSessionExpire: true,
 			digits: [4, 2, 0]
 		)
 	}

@@ -43,7 +43,7 @@ struct ContentView: View {
 			}
 		}
 		.sheet(caching: $accountManager.multifactorPrompt) {
-			MultifactorPromptView(prompt: $0)
+			MultifactorPromptView(prompt: $0, didSessionExpire: true)
 		} onDismiss: {
 			$0.completion(.failure(AccountManager.MultifactorPromptError.cancelled))
 		}
