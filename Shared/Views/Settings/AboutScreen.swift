@@ -24,7 +24,7 @@ struct AboutScreen: View {
 				}
 				
 				VStack(alignment: .leading, spacing: 8) {
-					Link("Valorant-API.com", destination: URL(string: "https://valorant-api,com")!)
+					Link("Valorant-API.com", destination: URL(string: "https://valorant-api.com")!)
 					Text("An invaluable API hosting all the assets (images, data, etc.) used throughout Valorant. This is where almost every image in the app comes from.")
 				}
 			}
