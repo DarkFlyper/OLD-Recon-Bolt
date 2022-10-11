@@ -67,6 +67,11 @@ struct LoginForm: View {
 				.padding()
 			}
 		}
+		.sheet(caching: $accountManager.multifactorPrompt) {
+			MultifactorPromptView(prompt: $0)
+		} onDismiss: {
+			$0.completion(.failure(AccountManager.MultifactorPromptError.cancelled))
+		}
 		.loadErrorAlertTitle("Could not sign in!")
 		.navigationTitle("Sign In with your Riot account")
 		.navigationBarTitleDisplayMode(.inline)

@@ -3,6 +3,7 @@ import ValorantAPI
 import UserDefault
 import HandyOperators
 
+@MainActor
 final class AccountManager: ObservableObject {
 	let keychain: any Keychain
 	@Published var multifactorPrompt: MultifactorPrompt?
@@ -34,7 +35,7 @@ final class AccountManager: ObservableObject {
 	init() {
 		self.keychain = .standard
 		do {
-			self.activeAccount = try Storage.activeAccount.map(loadAccount(for:))
+			self.activeAccount = try Storage.activeAccount.map { try loadAccount(for: $0) }
 		} catch {
 			print("could not load active account!", error)
 			dump(Storage.activeAccount)
