@@ -10,8 +10,11 @@ struct ContractChooser: View {
 	
 	var body: some View {
 		let sorted = (contracts ?? [:]).values
-			.filter { $0.content.relationType == .agent }
-			.sorted(on: \.displayName)
+			.filter { $0.content.relationType == .agent || $0.id == .freeAgents }
+			.sorted(
+				on: { $0.content.relationType?.rawValue ?? "z" }, // sort free agent contract to end
+				then: \.displayName
+			)
 		
 		ScrollView {
 			VStack(spacing: 1) {
