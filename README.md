@@ -16,7 +16,7 @@ I've created a Discord server for this app! Feel free to [join the server](https
 
 The app is available on the App Store! Get it here:
 
-[![App Store Badge](Resources/App Store.svg)](https://apps.apple.com/app/recon-bolt/id1563649061)
+[![App Store Badge](Resources/App%20Store.svg)](https://apps.apple.com/app/recon-bolt/id1563649061)
 
 Please note that the app **only supports iOS 15+**, but you should be on the latest version of iOS anyway—iOS 15 supports all the same devices as iOS 14 and iOS 13 did. Jailbreaking is no excuse :p
 
