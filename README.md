@@ -12,11 +12,13 @@ Unfortunately, this app needs your Riot username and password to function, but o
 
 I've created a Discord server for this app! Feel free to [join the server](https://discord.gg/bwENMNRqNa) if you'd like to discuss it :)
 
-## Download (TestFlight)
+## Download on the App Store
 
-I've uploaded a build of the app to Apple and they approved it for beta testing! [Here's the link](https://testflight.apple.com/join/M1e2dgxj) to join the beta.
+The app is available on the App Store! Get it here:
 
-Please note that the app currently **only supports iOS 15+**, but you should be on the latest version of iOS anyway—iOS 15 supports all the same devices as iOS 14 and iOS 13 did.
+[![App Store Badge](Resources/App Store.svg)](https://apps.apple.com/app/recon-bolt/id1563649061)
+
+Please note that the app **only supports iOS 15+**, but you should be on the latest version of iOS anyway—iOS 15 supports all the same devices as iOS 14 and iOS 13 did. Jailbreaking is no excuse :p
 
 ## Screenshots
 
