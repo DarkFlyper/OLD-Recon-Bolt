@@ -31,7 +31,9 @@ struct ClientLogView: View {
 									Text(exchange.request.httpMethod!)
 										.fontWeight(.medium)
 									
-									Text("\(exchange.response.httpMetadata!.statusCode)")
+									let code = exchange.response.httpMetadata!.statusCode
+									Text("\(code)")
+										.foregroundColor(statusColor(forCode: code))
 									
 									Spacer()
 									
@@ -52,6 +54,19 @@ struct ClientLogView: View {
 		}
 		.navigationTitle("Request Log")
     }
+	
+	func statusColor(forCode code: Int) -> Color {
+		switch code {
+		case 200..<300:
+			return .green
+		case 300..<400:
+			return .yellow
+		case 400..<600:
+			return .red
+		default:
+			return .primary
+		}
+	}
 	
 	struct ExchangeView: View {
 		var exchange: ClientLog.Exchange
