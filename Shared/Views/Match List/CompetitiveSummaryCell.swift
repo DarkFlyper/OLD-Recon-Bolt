@@ -20,15 +20,30 @@ struct CompetitiveSummaryCell: View {
 				
 				currentActInfo
 					.fixedSize()
+					.frame(maxWidth: .infinity)
 				
-				let acts = assets?.seasons.actsInOrder
-				let mostRecentActInfo = acts?
-					.compactMap { act in summary.competitiveInfo?.bySeason?[act.id].map { (act, $0) } }
-					.last { $0.1.winCount > 0 }
-				if let (act, info) = mostRecentActInfo {
-					Spacer(minLength: 0)
-					
-					actRankInfo(for: info, in: act)
+				if let peakRank = summary.peakRank(), let info = assets?.seasons.tierInfo(peakRank) {
+					VStack(spacing: 8) {
+						info.rankTriangleUpwards?.view().frame(width: 64)
+						VStack {
+							Text("Lifetime Peak:")
+							Text(info.name)
+								.font(primaryFont.weight(.bold))
+						}
+						
+						VStack {
+							let act = assets!.seasons.acts[peakRank.season]!
+							if let episode = act.episode {
+								Text(episode.name)
+									.fontWeight(.medium)
+							}
+							Text(act.name)
+						}
+						.foregroundStyle(.secondary)
+					}
+					.font(secondaryFont)
+					.fixedSize(horizontal: true, vertical: false)
+					.frame(maxWidth: .infinity)
 				}
 				
 				Spacer(minLength: 0)
@@ -99,15 +114,23 @@ struct CompetitiveSummaryCell_Previews: PreviewProvider {
 		CompetitiveSummaryCell(summary: PreviewData.summary)
 			.buttonStyle(.navigationLinkPreview)
 			.previewLayout(.sizeThatFits)
+			.environmentObject(ImageManager())
 		
 		List {
-			CompetitiveSummaryCell(summary: PreviewData.summary <- {
-				$0.competitiveInfo!.bySeason = $0.competitiveInfo!.bySeason!
-					.filter { $0.key == act.id }
-			})
+			Section {
+				CompetitiveSummaryCell(summary: PreviewData.summary <- {
+					$0.competitiveInfo!.bySeason = $0.competitiveInfo!.bySeason!
+						.filter { $0.key == act.id }
+				})
+			}
+			
+			Section {
+				CompetitiveSummaryCell(summary: PreviewData.summary)
+			}
 		}
 		.withToolbar()
 		.previewLayout(.fixed(width: 350, height: 400))
+		.environmentObject(ImageManager())
 	}
 }
 #endif
