@@ -38,6 +38,7 @@ struct AgentInfo: AssetItem, Codable, Identifiable {
 	var killfeedPortrait: AssetImage
 	var isFullPortraitRightFacing: Bool
 	var assetPath: String
+	var backgroundGradientColors: [HexEncodedColor]
 	
 	/// abilities are given in the wrong order; this reorders them appropriately
 	func ability(_ slot: Ability.Slot) -> Ability? {

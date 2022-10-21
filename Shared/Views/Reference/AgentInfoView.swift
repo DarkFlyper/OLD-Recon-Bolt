@@ -23,50 +23,46 @@ struct AgentInfoView: View {
 				.animation(.default, value: activeAbilitySlot)
 			}
 			.background(Color.groupedBackground)
-			.ignoresSafeArea(.container, edges: .top)
 		}
-		//.navigationTitle(agent.displayName)
+		.navigationBarTitleDisplayMode(.inline)
 	}
 	
+	@ViewBuilder
 	var portrait: some View {
-		let backgroundColor = Color.secondaryGroupedBackground
-		return AgentImage.fullPortrait(agent.id)
-			.frame(maxHeight: 400)
-			.padding(.top, 50)
-			.background {
-				LinearGradient(
-					colors: [backgroundColor.opacity(0), backgroundColor],
-					startPoint: .top,
-					endPoint: .bottom
-				)
+		VStack(spacing: 32) {
+			VStack {
+				Text(agent.displayName)
+					.font(.system(.largeTitle, design: .default).smallCaps())
+					.fontWeight(.semibold)
+					.textCase(.uppercase)
+				Text("\"\(agent.developerName)\"")
+					.foregroundStyle(.secondary)
+					.font(.title3)
 			}
+			.foregroundColor(.white)
+			.blendMode(.plusLighter)
+			
+			AgentImage.fullPortrait(agent.id)
+				.frame(maxHeight: 400)
+		}
+		.padding(.vertical)
+		.background {
+			let colors = agent.backgroundGradientColors.reversed().map { $0.wrappedValue ?? .clear }
+			LinearGradient(
+				stops: zip(colors, [0, 0.4, 0.8, 1]).map(Gradient.Stop.init),
+				startPoint: .top,
+				endPoint: .bottom
+			)
+			.overlay(alignment: .top) {
+				let height: CGFloat = 1024
+				colors.first!.frame(height: height).offset(y: -height)
+			}
+			.padding(.top, -160)
+		}
 	}
 	
 	var descriptionBox: some View {
 		VStack(spacing: 16) {
-			HStack {
-				Text(agent.displayName)
-					.fontWeight(.semibold)
-				Text("\"\(agent.developerName)\"")
-					.foregroundStyle(.secondary)
-			}
-			.font(.title3)
-			
-			if let tags = agent.characterTags {
-				HStack {
-					ForEach(tags, id: \.self) { tag in
-						Text(tag)
-							.font(.caption)
-							.padding(.horizontal, 4)
-							.padding(4)
-							.blendMode(.destinationOut)
-							.background(Capsule())
-							.compositingGroup()
-							.opacity(0.75)
-					}
-				}
-			}
-			
 			HStack {
 				agent.role.displayIcon
 					.view(renderingMode: .template)
