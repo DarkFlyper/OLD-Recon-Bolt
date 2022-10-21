@@ -131,7 +131,7 @@ final class ImageManager: ObservableObject {
 		}
 		
 		func updateState(for image: AssetImage, forceUpdate: Bool) {
-			if forceUpdate, cached[image] != nil { return }
+			if !forceUpdate, cached[image] != nil { return }
 			cached[image] = newState(for: image)
 		}
 		
