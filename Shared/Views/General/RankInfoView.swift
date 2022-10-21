@@ -21,22 +21,24 @@ struct RankInfoView: View {
 				let tier = info?.competitiveTier ?? 0
 				let tierInfo = assets?.seasons.tierInfo(number: tier, in: act)
 				
-				let lastRankedInfo = assets?.seasons.actsInOrder.lazy
+				let peakRankInfo: CompetitiveTier? = assets?.seasons.actsInOrder
+					.lazy
 					.compactMap { act in
-						summary.competitiveInfo?.inSeason(act.id).map { (act: act, info: $0) }
+						summary.competitiveInfo?.inSeason(act.id)?.peakRank()
 					}
-					.last { $0.info.competitiveTier > 0 }
+					.reversed() // most recent first
+					.max()
+					.flatMap { assets?.seasons.tierInfo($0) }
 				
 				if shouldShowProgress {
 					progressView(for: tierInfo, rankedRating: info?.adjustedRankedRating ?? 0)
 				}
 				
-				Group {
-					if shouldFallBackOnPrevious, tier == 0, let (act, info) = lastRankedInfo {
-						previousActIcon(using: CompetitiveTierImage(tier: info.competitiveTier, act: act))
+				ZStack {
+					if shouldFallBackOnPrevious, tier == 0, let peakRankInfo {
+						peakRankIcon(using: peakRankInfo)
 					} else {
-						CompetitiveTierImage(tierInfo: tierInfo)
-							.opacity(shouldFadeUnranked && tier == 0 ? 0.5 : 1)
+						tierIcon(info: tierInfo)
 					}
 				}
 				.scaleEffect(shouldShowProgress ? 0.75 : 1)
@@ -47,8 +49,7 @@ struct RankInfoView: View {
 					progressView(for: tierInfo, rankedRating: info.adjustedRankedRating)
 				}
 				
-				CompetitiveTierImage(tierInfo: tierInfo)
-					.opacity(shouldFadeUnranked && info.competitiveTier == 0 ? 0.5 : 1)
+				tierIcon(info: tierInfo)
 					.scaleEffect(shouldShowProgress ? 0.75 : 1)
 			} else {
 				let thickerWidth = lineWidth * 1.5
@@ -63,6 +64,13 @@ struct RankInfoView: View {
 		}
 		.aspectRatio(1, contentMode: .fit)
 		.padding(lineWidth)
+	}
+	
+	func tierIcon(info: CompetitiveTier?) -> some View {
+		CompetitiveTierImage(tierInfo: info)
+			.opacity(shouldFadeUnranked && info?.number == 0 ? 0.5 : 1)
+			.dynamicallyStroked(radius: 1, color: .white.opacity(0.5), blendMode: .plusLighter, avoidClipping: true)
+			.shadow(color: .black.opacity(0.2), radius: 2, x: 0, y: 2)
 	}
 	
 	@ViewBuilder
@@ -86,52 +94,72 @@ struct RankInfoView: View {
 	}
 	
 	@ViewBuilder
-	func previousActIcon(using image: CompetitiveTierImage) -> some View {
-		ZStack {
-			image
-			
-			GeometryReader { geometry in
-				Image(systemName: "clock")
-					.font(.system(size: geometry.size.width * 0.3).weight(.bold))
-					.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomTrailing)
-					.foregroundColor(.white)
-					.shadow(color: .black.opacity(0.5), radius: 2, x: 0, y: 1)
-			}
+	func peakRankIcon(using info: CompetitiveTier) -> some View {
+		// perceptual centering
+		VStack {
+			info.rankTriangleUpwards?.view()
+			Spacer(minLength: 0)
 		}
-		.compositingGroup()
-		.opacity(0.75)
+		.aspectRatio(shouldShowProgress ? 0.85 : 0.95, contentMode: .fit)
+		.shadow(color: .black.opacity(0.2), radius: 2, x: 0, y: 2)
+		.overlay {
+			VStack {
+				Spacer(minLength: 0)
+				Image(systemName: "clock")
+					.resizable()
+					.aspectRatio(contentMode: .fit)
+			}
+			.aspectRatio(0.33, contentMode: .fit) // align with the bottom of the triangle (when there's no progress shown)
+			.font(.body.bold())
+			.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
+			.foregroundColor(.white)
+			.shadow(color: .black.opacity(0.5), radius: 2, x: 0, y: 1)
+		}
 	}
 }
 
 #if DEBUG
-struct RankInfoView_Previews: PreviewProvider {
-	static let assets = AssetManager.forPreviews.assets!
-	static let act = assets.seasons.currentAct()!
-	static let ranks = assets.seasons.competitiveTiers[act.competitiveTiers]!
-	
-	private static func summary(forTier tier: Int) -> CareerSummary {
-		PreviewData.summary <- {
-			$0.competitiveInfo!.bySeason![act.id]!.competitiveTier = tier
+struct RankInfoView_Previews: PreviewProvider, PreviewProviderWithAssets {
+	static func previews(assets: AssetCollection) -> some View {
+		let act = assets.seasons.currentAct()!
+		let def = CareerSummary.SeasonInfo(seasonID: act.id)
+		let ranks = assets.seasons.competitiveTiers[act.competitiveTiers]!
+		
+		func summary(forTier tier: Int) -> CareerSummary {
+			PreviewData.summary <- {
+				$0.competitiveInfo!.bySeason![act.id, default: def]
+					.competitiveTier = tier
+			}
 		}
-	}
-	
-	static var previews: some View {
-		Group {
-			HStack {
-				RankInfoView(summary: PreviewData.summary, shouldShowProgress: false)
-				RankInfoView(summary: PreviewData.summary <- { $0.infoByQueue = [:] })
+		
+		let basicSummary = summary(forTier: 19) <- {
+			$0.competitiveInfo!.bySeason![act.id]!.rankedRating = 69
+		}
+		
+		return Group {
+			VStack {
+				RankInfoView(summary: basicSummary, shouldShowProgress: false)
+				RankInfoView(summary: basicSummary <- { $0.infoByQueue = [:] })
 				RankInfoView(summary: summary(forTier: 0), shouldFallBackOnPrevious: false)
 				RankInfoView(summary: summary(forTier: 0), shouldFallBackOnPrevious: true)
-				RankInfoView(summary: PreviewData.summary)
+				RankInfoView(summary: basicSummary)
 				RankInfoView(summary: nil)
+				
+				Group {
+					RankInfoView(summary: summary(forTier: 19), shouldShowProgress: false, shouldFallBackOnPrevious: true)
+					RankInfoView(summary: summary(forTier: 0), shouldShowProgress: false, shouldFallBackOnPrevious: true)
+				}
+				.padding(.horizontal, 64)
+				.background(Color.primary.opacity(0.2))
+				.padding(.horizontal, -64)
 			}
-			.fixedSize(horizontal: true, vertical: false)
-			.frame(height: 64)
+			.fixedSize(horizontal: false, vertical: true)
+			.frame(width: 64)
 			
 			RankInfoView(summary: summary(forTier: 0))
 				.frame(height: 64)
 			
-			RankInfoView(summary: PreviewData.summary, lineWidth: 8)
+			RankInfoView(summary: basicSummary, lineWidth: 8)
 				.frame(width: 128, height: 128)
 			
 			LazyHGrid(rows: [.init(), .init(), .init()], spacing: 20) {
@@ -151,6 +179,7 @@ struct RankInfoView_Previews: PreviewProvider {
 			.frame(height: 250)
 		}
 		.previewLayout(.sizeThatFits)
+		.environmentObject(ImageManager())
 	}
 }
 #endif
