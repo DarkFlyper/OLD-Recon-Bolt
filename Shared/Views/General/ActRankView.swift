@@ -107,7 +107,7 @@ struct ActRankView: View {
 #if DEBUG
 struct ActRankView_Previews: PreviewProvider {
 	static let assets = AssetManager.forPreviews.assets!
-	static let currentAct = assets.seasons.currentAct()!
+	static let currentAct = assets.seasons.acts[.init("2a27e5d2-4d30-c9e2-b15a-93b8909a442c")!]!
 	static let previousAct = assets.seasons.actBefore(currentAct)!
 	
 	static let bySeason = PreviewData.summary.competitiveInfo!.bySeason!
@@ -121,9 +121,11 @@ struct ActRankView_Previews: PreviewProvider {
 		}
 		.fixedSize()
 		.previewLayout(.sizeThatFits)
+		.environmentObject(ImageManager())
 		
 		ActRankView(seasonInfo: bySeason[currentAct.id]!, isShowingAllWins: true)
 			.preferredColorScheme(.dark)
+			.environmentObject(ImageManager())
 	}
 	
 	static func preview(for act: Act) -> some View {
