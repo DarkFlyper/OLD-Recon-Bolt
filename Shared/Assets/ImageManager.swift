@@ -6,6 +6,7 @@ import Combine
 @MainActor
 final class ImageManager: ObservableObject {
 	private var states: [AssetImage: ImageState] = [:]
+	private var images: [AssetImage: UIImage] = [:]
 	
 	private let cache: ImageCache
 	private let updater: Updater
@@ -72,8 +73,11 @@ final class ImageManager: ObservableObject {
 		}
 	}
 	
-	func cacheState(for image: AssetImage) -> CacheState? {
-		cache.state(for: image)
+	func cacheState(for image: AssetImage, loadImmediately: Bool = false) -> CacheState? {
+		if loadImmediately, cache.state(for: image) == nil {
+			cache.updateState(for: image, forceUpdate: false)
+		}
+		return cache.state(for: image)
 	}
 	
 	private func apply(_ updates: some Sequence<StateUpdate>) {
@@ -126,22 +130,15 @@ final class ImageManager: ObservableObject {
 			cached[image]
 		}
 		
-		func updateState(for image: AssetImage, forceUpdate: Bool) async {
+		func updateState(for image: AssetImage, forceUpdate: Bool) {
 			if forceUpdate, cached[image] != nil { return }
-			cached[image] = await newState(for: image)
+			cached[image] = newState(for: image)
 		}
 		
-		private func newState(for image: AssetImage) async -> CacheState {
+		private func newState(for image: AssetImage) -> CacheState {
 			guard let loaded = image.load() else { return .missing }
 			guard Self.shouldCache(loaded) else { return .tooLarge }
-			let tryPrepared = await Task(priority: .userInitiated) {
-				loaded.preparingForDisplay()
-			}.value
-			guard let prepared = tryPrepared else {
-				print("could not prepare for display!")
-				return .tooLarge
-			}
-			return .cached(prepared)
+			return .cached(loaded)
 		}
 		
 		func reset() {

@@ -16,15 +16,14 @@ struct CompetitiveTierImage: View {
 				?? assets?.seasons.tierInfo(number: tier, in: act)
 				?? assets?.seasons.tierInfo(number: tier, in: actID)
 				?? assets?.seasons.currentTierInfo(number: tier, at: time),
-			let image = imageManager.image(for: tierInfo.icon)
+			let icon = tierInfo.icon
 		{
-			Image(uiImage: image)
-				.resizable()
+			icon.view(shouldLoadImmediately: true)
 				// the unranked icon is horribly off-center; let's fix that
 				.scaleEffect(tier == 0 ? 1.31 : 1, anchor: .top)
 				.scaledToFit()
 		} else {
-			Color.primary.opacity(0.1)
+			Circle().opacity(0.1)
 				.aspectRatio(1, contentMode: .fit)
 		}
 	}

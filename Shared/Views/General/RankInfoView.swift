@@ -97,7 +97,7 @@ struct RankInfoView: View {
 	func peakRankIcon(using info: CompetitiveTier) -> some View {
 		// perceptual centering
 		VStack {
-			info.rankTriangleUpwards?.view()
+			info.rankTriangleUpwards?.view(shouldLoadImmediately: true)
 			Spacer(minLength: 0)
 		}
 		.aspectRatio(shouldShowProgress ? 0.85 : 0.95, contentMode: .fit)

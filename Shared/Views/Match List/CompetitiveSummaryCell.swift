@@ -24,7 +24,8 @@ struct CompetitiveSummaryCell: View {
 				
 				if let peakRank = summary.peakRank(), let info = assets?.seasons.tierInfo(peakRank) {
 					VStack(spacing: 8) {
-						info.rankTriangleUpwards?.view().frame(width: 64)
+						info.rankTriangleUpwards?.view(shouldLoadImmediately: true)
+							.frame(width: 64)
 						VStack {
 							Text("Lifetime Peak:")
 							Text(info.name)

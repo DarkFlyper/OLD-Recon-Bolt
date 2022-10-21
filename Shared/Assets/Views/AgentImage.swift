@@ -8,7 +8,7 @@ struct _AgentImageProvider: AssetImageProvider {
 
 extension AgentImage {
 	static func icon(_ id: Agent.ID) -> Self {
-		Self(id: id, aspectRatio: 1, getImage: \.displayIcon)
+		Self(id: id, aspectRatio: 1, shouldLoadImmediately: true, getImage: \.displayIcon)
 	}
 	
 	static func fullPortrait(_ id: Agent.ID) -> Self {
@@ -16,11 +16,11 @@ extension AgentImage {
 	}
 	
 	static func killfeedPortrait(_ id: Agent.ID) -> Self {
-		Self(id: id, aspectRatio: 2, getImage: \.killfeedPortrait)
+		Self(id: id, aspectRatio: 2, shouldLoadImmediately: true, getImage: \.killfeedPortrait)
 	}
 	
 	static func ability(_ id: Agent.ID, slot: AgentInfo.Ability.Slot) -> Self {
-		Self(id: id, renderingMode: .template, aspectRatio: 1) { $0.ability(slot)?.displayIcon }
+		Self(id: id, renderingMode: .template, aspectRatio: 1, shouldLoadImmediately: true) { $0.ability(slot)?.displayIcon }
 	}
 }
 

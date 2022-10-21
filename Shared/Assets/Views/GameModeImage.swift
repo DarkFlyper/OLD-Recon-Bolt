@@ -9,7 +9,7 @@ struct GameModeImage: View {
 	var body: some View {
 		assets?.gameModes[id]
 			.flatMap(\.displayIcon)?
-			.view(renderingMode: .template)
+			.view(renderingMode: .template, shouldLoadImmediately: true)
 	}
 }
 

@@ -7,11 +7,20 @@ struct AssetImage: Hashable {
 	var url: URL
 	
 	@ViewBuilder
-	func view(renderingMode: Image.TemplateRenderingMode? = nil, aspectRatio: CGFloat? = nil) -> some View {
-		ImageView(image: self, renderingMode: renderingMode, aspectRatio: aspectRatio)
-			.id(self)
+	func view(
+		renderingMode: Image.TemplateRenderingMode? = nil,
+		aspectRatio: CGFloat? = nil,
+		shouldLoadImmediately: Bool = false
+	) -> some View {
+		ImageView(
+			image: self,
+			renderingMode: renderingMode,
+			aspectRatio: aspectRatio,
+			shouldLoadImmediately: shouldLoadImmediately
+		)
+		.id(self)
 #if DEBUG
-			.modifier(ImageManagerProvider())
+		.modifier(ImageManagerProvider())
 #endif
 	}
 	
@@ -41,6 +50,7 @@ struct AssetImage: Hashable {
 		var renderingMode: Image.TemplateRenderingMode?
 		/// aspect ratio for the placeholder shown when the image is not loaded
 		var aspectRatio: CGFloat?
+		var shouldLoadImmediately: Bool = false
 		@State var loaded: UIImage?
 		
 		@State private var isShowingErrorAlert = false
@@ -98,7 +108,8 @@ struct AssetImage: Hashable {
 		}
 		
 		private var cached: UIImage? {
-			guard case .cached(let image) = manager.cacheState(for: image) else { return nil }
+			let state = manager.cacheState(for: image, loadImmediately: shouldLoadImmediately)
+			guard case .cached(let image) = state else { return nil }
 			return image
 		}
 		
