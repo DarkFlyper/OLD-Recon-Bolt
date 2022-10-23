@@ -13,28 +13,8 @@ struct MatchCell: View {
 	@Environment(\.valorantLoad) private var load
 	
 	var body: some View {
-		let matchesFilter = filter.accepts(match, details: matchDetails)
 		HStack {
-			if matchesFilter {
-				VStack(alignment: .leading) {
-					matchInfo
-				}
-				
-				if match.isRanked {
-					changeInfo
-				}
-			} else {
-				NavigationLink {
-					MatchDetailsContainer(matchID: match.id, userID: userID)
-				} label: {
-					HStack {
-						match.startTime.relativeText()
-						Spacer()
-						Text(matchDetails?.matchInfo.queueName ?? "Unfetched")
-					}
-				}
-				.font(.caption)
-			}
+			matchInfo
 		}
 		.padding(.vertical, 8)
 		.swipeActions(edge: .leading) {
@@ -52,6 +32,97 @@ struct MatchCell: View {
 		}
 		.id(match.id)
 		.withLocalData($matchDetails, id: match.id)
+	}
+	
+	@ScaledMetric private var mapCapsuleHeight = 30
+	
+	@ViewBuilder
+	private var matchInfo: some View {
+		let matchesFilter = filter.accepts(match, details: matchDetails)
+		
+		VStack {
+			NavigationLink {
+				MatchDetailsContainer(matchID: match.id, userID: userID)
+			} label: {
+				HStack {
+					match.startTime.relativeText()
+					if !matchesFilter {
+						Spacer()
+						Text(matchDetails?.matchInfo.queueName ?? "Unfetched")
+					}
+				}
+			}
+			.font(.caption)
+			
+			if matchesFilter {
+				HStack {
+					ZStack {
+						if let matchDetails {
+							HStack {
+								GameModeImage(id: matchDetails.matchInfo.modeID)
+									.foregroundColor(.white)
+								
+								Text(matchDetails.matchInfo.queueName)
+									.padding(.top, -2) // small caps are shorter
+							}
+						} else {
+							MapImage.LabelText(mapID: match.mapID)
+								.fixedSize()
+								.padding(.top, -2) // small caps are shorter
+						}
+					}
+					.font(.callout.bold().smallCaps())
+					.foregroundColor(.white.opacity(0.8))
+					.shadow(color: .black, radius: 2, y: 1)
+					.padding(4)
+					.padding(.horizontal, 2)
+					
+					Spacer()
+					
+					let myself = matchDetails?.players.firstElement(withID: userID)!
+					if let myself {
+						AgentImage.killfeedPortrait(myself.agentID)
+							.scaleEffect(x: -1)
+							.shadow(color: .black, radius: 4, x: 0, y: 0)
+					}
+				}
+				.frame(height: mapCapsuleHeight)
+				.background {
+					MapImage.wideImage(match.mapID)
+						.scaledToFill()
+						.frame(maxWidth: .infinity)
+						.clipped()
+				}
+				.mask(Capsule())
+				
+				detailsInfo
+					.font(.caption)
+					.frame(maxWidth: .infinity)
+			}
+		}
+		
+		if match.isRanked, matchesFilter {
+			changeInfo
+		}
+	}
+	
+	@ViewBuilder
+	private var detailsInfo: some View {
+		if let matchDetails {
+			let myself = matchDetails.players.firstElement(withID: userID)!
+			
+			VStack {
+				ScoreSummaryView(
+					teams: matchDetails.teams,
+					ownTeamID: myself.teamID
+				)
+				.font(.body.weight(.semibold))
+				
+				KDASummaryView(player: myself)
+					.foregroundStyle(.secondary, .tertiary)
+			}
+			.transition(.slide)
+		}
 	}
 	
 	private var changeInfo: some View {
@@ -83,83 +154,6 @@ struct MatchCell: View {
 				.accentColor(changeColor)
 		}
 		.font(.callout.monospacedDigit())
-	}
-	
-	@ScaledMetric private var mapCapsuleHeight = 30
-	
-	@ViewBuilder
-	private var matchInfo: some View {
-		VStack {
-			NavigationLink {
-				MatchDetailsContainer(matchID: match.id, userID: userID)
-			} label: {
-				match.startTime.relativeText()
-					.font(.caption)
-			}
-			
-			HStack {
-				ZStack {
-					if let matchDetails {
-						HStack {
-							GameModeImage(id: matchDetails.matchInfo.modeID)
-								.foregroundColor(.white)
-							
-							Text(matchDetails.matchInfo.queueName)
-								.padding(.top, -2) // small caps are shorter
-						}
-					} else {
-						MapImage.LabelText(mapID: match.mapID)
-							.fixedSize()
-							.padding(.top, -2) // small caps are shorter
-					}
-				}
-				.font(.callout.bold().smallCaps())
-				.foregroundColor(.white.opacity(0.8))
-				.shadow(color: .black, radius: 2, y: 1)
-				.padding(4)
-				.padding(.horizontal, 2)
-				
-				Spacer()
-				
-				let myself = matchDetails?.players.firstElement(withID: userID)!
-				if let myself {
-					AgentImage.killfeedPortrait(myself.agentID)
-						.scaleEffect(x: -1)
-						.shadow(color: .black, radius: 4, x: 0, y: 0)
-				}
-			}
-			.frame(height: mapCapsuleHeight)
-			.background {
-				MapImage.wideImage(match.mapID)
-					.scaledToFill()
-					.frame(maxWidth: .infinity)
-					.clipped()
-			}
-			.mask(Capsule())
-			
-			detailsInfo
-				.font(.caption)
-				.frame(maxWidth: .infinity)
-		}
-	}
-	
-	@ViewBuilder
-	private var detailsInfo: some View {
-		if let matchDetails {
-			let myself = matchDetails.players.firstElement(withID: userID)!
-			
-			VStack {
-				ScoreSummaryView(
-					teams: matchDetails.teams,
-					ownTeamID: myself.teamID
-				)
-				.font(.body.weight(.semibold))
-				
-				KDASummaryView(player: myself)
-					.foregroundStyle(.secondary, .tertiary)
-			}
-			.transition(.slide)
-		}
 	}
 	
 	private var changeColor: Color {
