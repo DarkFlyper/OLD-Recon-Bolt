@@ -74,7 +74,7 @@ extension EnvironmentValues {
 		set { self[Key.self] = newValue }
 	}
 	
-	private struct Key: EnvironmentKey {
+	private enum Key: EnvironmentKey {
 		static let defaultValue: (@escaping LoadTask) async -> Void = { _ in
 			guard !isInSwiftUIPreview else { return }
 			fatalError("no load function provided in environment!")

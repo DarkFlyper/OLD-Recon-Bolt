@@ -66,7 +66,7 @@ extension EnvironmentValues {
 		set { self[Key.self] = newValue }
 	}
 	
-	private struct Key: EnvironmentKey {
+	private enum Key: EnvironmentKey {
 		@MainActor
 		static let defaultValue: AssetCollection? = isInSwiftUIPreview ? AssetManager.stored : nil
 	}
