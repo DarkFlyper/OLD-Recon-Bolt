@@ -21,7 +21,7 @@ struct UserCell: View {
 						.mask(RoundedRectangle(cornerRadius: 4, style: .continuous))
 				}
 				
-				VStack(alignment: .leading) {
+				VStack(alignment: .leading, spacing: 4) {
 					if let user {
 						Text(user.gameName)
 							.fontWeight(.semibold)
@@ -52,7 +52,7 @@ struct UserCell: View {
 #if DEBUG
 struct UserCell_Previews: PreviewProvider {
 	static var previews: some View {
-		Group {
+		List {
 			UserCell(
 				userID: PreviewData.userID,
 				isSelected: .constant(false)
@@ -67,10 +67,7 @@ struct UserCell_Previews: PreviewProvider {
 			)
 			.lockingLocalData()
 		}
-		.buttonStyle(.navigationLinkPreview)
-		.padding()
-		.frame(width: 400)
-		.previewLayout(.sizeThatFits)
+		.withToolbar()
 	}
 }
 #endif

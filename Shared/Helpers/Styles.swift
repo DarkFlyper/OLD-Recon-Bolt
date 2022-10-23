@@ -15,6 +15,7 @@ struct _PrettyTextFieldStyle: TextFieldStyle {
 	}
 }
 
+#if DEBUG
 extension PrimitiveButtonStyle where Self == _NavigationLinkPreviewButtonStyle {
 	/// Navigation Links turn gray when used outside a navigation view, which often happens in SwiftUI previews. This works around that, making them look enabled anyway.
 	static var navigationLinkPreview: _NavigationLinkPreviewButtonStyle { .init() }
@@ -29,3 +30,4 @@ struct _NavigationLinkPreviewButtonStyle: PrimitiveButtonStyle {
 		.environment(\.isEnabled, true)
 	}
 }
+#endif
