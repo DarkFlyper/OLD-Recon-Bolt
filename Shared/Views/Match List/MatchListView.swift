@@ -14,6 +14,7 @@ struct MatchListView: View {
 	@UserDefault.State("MatchListView.filter") var filter = MatchListFilter()
 	
 	@Environment(\.valorantLoad) private var load
+	@Environment(\.isIncognito) private var isIncognito
 	@EnvironmentObject private var bookmarkList: BookmarkList
 	
 	private var shownMatches: [CompetitiveUpdate] {
@@ -48,13 +49,15 @@ struct MatchListView: View {
 		}
 		.toolbar {
 			ToolbarItemGroup(placement: .navigationBarTrailing) {
-				Button {
-					bookmarkList.toggleBookmark(for: userID)
-				} label: {
-					if bookmarkList.bookmarks.contains(userID) {
-						Label("Remove Bookmark", systemImage: "bookmark.fill")
-					} else {
-						Label("Add Bookmark", systemImage: "bookmark")
+				if !isIncognito {
+					Button {
+						bookmarkList.toggleBookmark(for: userID)
+					} label: {
+						if bookmarkList.bookmarks.contains(userID) {
+							Label("Remove Bookmark", systemImage: "bookmark.fill")
+						} else {
+							Label("Add Bookmark", systemImage: "bookmark")
+						}
 					}
 				}
 				
@@ -75,7 +78,15 @@ struct MatchListView: View {
 		.withLocalData($summary, id: userID, shouldAutoUpdate: true)
 		.withLocalData($identity, id: userID)
 		.loadErrorAlertTitle("Could not load matches!")
-		.navigationTitle(user?.name ?? "Matches")
+		.navigationTitle(title) // localize
+	}
+	
+	var title: Text {
+		if !isIncognito, let user {
+			return Text(user.gameName)
+		} else {
+			return Text("Matches")
+		}
 	}
 	
 	func refresh() async {

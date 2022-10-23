@@ -7,16 +7,23 @@ struct PlayerIdentityCell: View {
 	let identity: Player.Identity
 	
 	@Environment(\.assets) private var assets
+	@Environment(\.isIncognito) private var isIncognito
 	
 	var body: some View {
 		VStack(spacing: 0) {
 			HStack {
 				HStack(spacing: 4) {
-					Text(user.gameName)
-						.fontWeight(.semibold)
-					
-					Text("#\(user.tagLine)")
-						.foregroundStyle(.secondary)
+					if isIncognito {
+						Text("Player")
+							.fontWeight(.semibold)
+							.foregroundStyle(.secondary)
+					} else {
+						Text(user.gameName)
+							.fontWeight(.semibold)
+						
+						Text("#\(user.tagLine)")
+							.foregroundStyle(.secondary)
+					}
 				}
 				
 				Spacer()

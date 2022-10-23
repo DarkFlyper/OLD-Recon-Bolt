@@ -109,7 +109,10 @@ struct LiveMatchView: View {
 				Spacer()
 				
 				if !isSelf {
-					NavigationLink(destination: MatchListView(userID: player.id, user: playerUser)) {
+					NavigationLink {
+						MatchListView(userID: player.id, user: playerUser)
+							.environment(\.isIncognito, player.identity.isIncognito)
+					} label: {
 						Image(systemName: "person.crop.circle.fill")
 							.padding(.horizontal, 4)
 					}
@@ -123,6 +126,17 @@ struct LiveMatchView: View {
 			.withLocalData($playerUser, id: player.id)
 			.withLocalData($summary, id: player.id, shouldAutoUpdate: true)
 		}
+	}
+}
+
+extension EnvironmentValues {
+	var isIncognito: Bool {
+		get { self[Key.self] }
+		set { self[Key.self] = newValue }
+	}
+	
+	private enum Key: EnvironmentKey {
+		static let defaultValue = false
 	}
 }
 

@@ -48,6 +48,8 @@ struct ScoreboardRowView: View {
 	
 	@LocalData private var summary: CareerSummary?
 	
+	@Environment(\.isIncognito) private var isIncognito
+	
 	var body: some View {
 		let divider = Rectangle()
 			.frame(width: 1)
@@ -101,20 +103,30 @@ struct ScoreboardRowView: View {
 	
 	@ViewBuilder
 	var identitySection: some View {
-		Text(verbatim: player.gameName)
-			.fontWeight(
-				highlight.isHighlighting(player.partyID)
-					.map { $0 ? .semibold : .regular }
-					?? .medium
-			)
-			.fixedSize()
-			.frame(maxWidth: .infinity, alignment: .leading)
-			.padding(.trailing, 4)
+		Group {
+			if isIncognito {
+				Text("Player")
+					.foregroundStyle(.secondary)
+			} else {
+				Text(player.gameName)
+			}
+		}
+		.font(.body.weight(
+			highlight.isHighlighting(player.partyID)
+				.map { $0 ? .semibold : .regular }
+			?? .medium
+		))
+		.fixedSize()
+		.frame(maxWidth: .infinity, alignment: .leading)
+		.padding(.trailing, 4)
 		
 		Spacer()
 		
 		if player.id != data.myself?.id {
-			NavigationLink(destination: MatchListView(userID: player.id, user: User(player))) {
+			NavigationLink {
+				MatchListView(userID: player.id, user: User(player))
+					.environment(\.isIncognito, isIncognito)
+			} label: {
 				Image(systemName: "person.crop.circle.fill")
 					.frame(maxHeight: .infinity)
 					.padding(.horizontal, 4)
