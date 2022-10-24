@@ -38,8 +38,7 @@ struct UserCell: View {
 				
 				Spacer()
 				
-				RankInfoView(summary: summary)
-					.frame(width: artworkSize, height: artworkSize)
+				RankInfoView(summary: summary, size: artworkSize)
 			}
 		}
 		.padding(.vertical, 8)

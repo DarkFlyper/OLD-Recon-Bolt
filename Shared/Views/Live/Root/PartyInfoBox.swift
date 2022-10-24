@@ -162,8 +162,7 @@ struct PartyInfoBox: View {
 							.padding(.horizontal, 4)
 					}
 					
-					RankInfoView(summary: summary)
-						.frame(width: iconSize, height: iconSize)
+					RankInfoView(summary: summary, size: iconSize)
 				} else {
 					if isSettingReady {
 						ProgressView()

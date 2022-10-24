@@ -6,10 +6,13 @@ struct RankInfoView: View {
 	let summary: CareerSummary?
 	var dataOverride: CareerSummary.SeasonInfo?
 	
+	var size = 64.0
 	var lineWidth = 4.0
 	var shouldShowProgress = true
 	var shouldFadeUnranked = false
 	var shouldFallBackOnPrevious = true
+	
+	var unit: CGFloat { size / 32 }
 	
 	@Environment(\.assets) private var assets
 	
@@ -41,7 +44,7 @@ struct RankInfoView: View {
 						tierIcon(info: tierInfo)
 					}
 				}
-				.scaleEffect(shouldShowProgress ? 0.75 : 1)
+				.scaleEffect(shouldShowProgress ? 0.7 : 1)
 			} else if let info = dataOverride {
 				let tierInfo = assets?.seasons.tierInfo(number: info.competitiveTier, in: info.seasonID)
 				
@@ -50,7 +53,7 @@ struct RankInfoView: View {
 				}
 				
 				tierIcon(info: tierInfo)
-					.scaleEffect(shouldShowProgress ? 0.75 : 1)
+					.scaleEffect(shouldShowProgress ? 0.7 : 1)
 			} else {
 				let thickerWidth = lineWidth * 1.5
 				
@@ -62,15 +65,15 @@ struct RankInfoView: View {
 				.padding(-0.5 * thickerWidth)
 			}
 		}
-		.aspectRatio(1, contentMode: .fit)
 		.padding(lineWidth)
+		.frame(width: size, height: size)
 	}
 	
 	func tierIcon(info: CompetitiveTier?) -> some View {
 		CompetitiveTierImage(tierInfo: info)
 			.opacity(shouldFadeUnranked && info?.number == 0 ? 0.5 : 1)
-			.dynamicallyStroked(radius: 1, color: .white.opacity(0.5), blendMode: .plusLighter, avoidClipping: true)
-			.shadow(color: .black.opacity(0.2), radius: 2, x: 0, y: 2)
+			.dynamicallyStroked(radius: unit, color: .white.opacity(0.5), blendMode: .plusLighter, avoidClipping: true)
+			.shadow(color: .black.opacity(0.2), radius: 2 * unit, x: 0, y: 2 * unit)
 	}
 	
 	@ViewBuilder
@@ -100,8 +103,8 @@ struct RankInfoView: View {
 			info.rankTriangleUpwards?.view(shouldLoadImmediately: true)
 			Spacer(minLength: 0)
 		}
-		.aspectRatio(shouldShowProgress ? 0.85 : 0.95, contentMode: .fit)
-		.shadow(color: .black.opacity(0.2), radius: 2, x: 0, y: 2)
+		.aspectRatio(shouldShowProgress ? 0.85 : 1.0, contentMode: .fit)
+		.shadow(color: .black.opacity(0.2), radius: 2 * unit, x: 0, y: 2 * unit)
 		.overlay {
 			VStack {
 				Spacer(minLength: 0)
@@ -113,7 +116,7 @@ struct RankInfoView: View {
 			.font(.body.bold())
 			.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
 			.foregroundColor(.white)
-			.shadow(color: .black.opacity(0.5), radius: 2, x: 0, y: 1)
+			.shadow(color: .black.opacity(0.5), radius: 2 * unit, x: 0, y: 1 * unit)
 		}
 	}
 }
@@ -151,10 +154,20 @@ struct RankInfoView_Previews: PreviewProvider, PreviewProviderWithAssets {
 				}
 				.padding(.horizontal, 64)
 				.background(Color.primary.opacity(0.2))
-				.padding(.horizontal, -64)
 			}
 			.fixedSize(horizontal: false, vertical: true)
-			.frame(width: 64)
+			
+			VStack {
+				ForEach([32.0, 64, 96, 128], id: \.self) { size in
+					HStack {
+						RankInfoView(summary: basicSummary, size: size)
+						RankInfoView(summary: basicSummary, size: size, shouldShowProgress: false)
+						RankInfoView(summary: summary(forTier: 0), size: size, shouldShowProgress: false)
+						RankInfoView(summary: summary(forTier: 0), size: size)
+					}
+					.background(Color.primary.opacity(0.1))
+				}
+			}
 			
 			RankInfoView(summary: summary(forTier: 0))
 				.frame(height: 64)

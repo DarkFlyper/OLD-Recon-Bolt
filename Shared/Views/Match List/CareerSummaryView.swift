@@ -135,8 +135,7 @@ struct CareerSummaryView: View {
 						VStack {
 							let tierInfo = assets?.seasons.tierInfo(number: info.competitiveTier, in: act)
 							
-							RankInfoView(summary: nil, dataOverride: info)
-								.frame(height: 80)
+							RankInfoView(summary: nil, dataOverride: info, size: 80)
 							
 							if let tierInfo {
 								Text(tierInfo.name)

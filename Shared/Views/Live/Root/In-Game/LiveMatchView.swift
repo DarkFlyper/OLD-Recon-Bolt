@@ -116,11 +116,9 @@ struct LiveMatchView: View {
 						Image(systemName: "person.crop.circle.fill")
 							.padding(.horizontal, 4)
 					}
-					.disabled(player.identity.isIncognito)
 				}
 				
-				RankInfoView(summary: summary)
-					.frame(width: iconSize, height: iconSize)
+				RankInfoView(summary: summary, size: iconSize)
 			}
 			.accentColor(relativeColor)
 			.withLocalData($playerUser, id: player.id)

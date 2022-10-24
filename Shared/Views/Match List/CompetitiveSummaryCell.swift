@@ -15,37 +15,16 @@ struct CompetitiveSummaryCell: View {
 		NavigationLink {
 			CareerSummaryView(summary: summary)
 		} label: {
-			HStack(spacing: 16) {
+			HStack(alignment: .rankIcon, spacing: 16) {
 				Spacer(minLength: 0)
 				
 				currentActInfo
 					.fixedSize()
 					.frame(maxWidth: .infinity)
 				
-				if let peakRank = summary.peakRank(), let info = assets?.seasons.tierInfo(peakRank) {
-					VStack(spacing: 8) {
-						info.rankTriangleUpwards?.view(shouldLoadImmediately: true)
-							.frame(width: 64)
-						VStack {
-							Text("Lifetime Peak:")
-							Text(info.name)
-								.font(primaryFont.weight(.bold))
-						}
-						
-						VStack {
-							let act = assets!.seasons.acts[peakRank.season]!
-							if let episode = act.episode {
-								Text(episode.name)
-									.fontWeight(.medium)
-							}
-							Text(act.name)
-						}
-						.foregroundStyle(.secondary)
-					}
-					.font(secondaryFont)
-					.fixedSize(horizontal: true, vertical: false)
+				peakInfo
+					.fixedSize()
 					.frame(maxWidth: .infinity)
-				}
 				
 				Spacer(minLength: 0)
 			}
@@ -62,8 +41,10 @@ struct CompetitiveSummaryCell: View {
 			let info = act.flatMap { summary.competitiveInfo?.bySeason?[$0.id] }
 			let tierInfo = assets?.seasons.tierInfo(number: info?.competitiveTier ?? 0, in: act)
 			
-			RankInfoView(summary: summary, lineWidth: 5, shouldFallBackOnPrevious: false)
-				.frame(height: 96)
+			seasonLabel(for: act?.id)
+			
+			RankInfoView(summary: summary, size: artworkSize, lineWidth: 5, shouldFallBackOnPrevious: false)
+				.alignmentGuide(.rankIcon) { $0[VerticalAlignment.center] }
 			
 			if let tierInfo {
 				Text(tierInfo.name)
@@ -76,6 +57,45 @@ struct CompetitiveSummaryCell: View {
 			if let info, info.leaderboardRank > 0 {
 				LeaderboardRankView(rank: info.leaderboardRank, tierInfo: tierInfo)
 			}
+		}
+	}
+	
+	@ViewBuilder
+	private var peakInfo: some View {
+		if let peakRank = summary.peakRank(), let info = assets?.seasons.tierInfo(peakRank) {
+			VStack {
+				seasonLabel(for: peakRank.season)
+				
+				info.rankTriangleUpwards?.view(shouldLoadImmediately: true)
+					.scaleEffect(0.85) // looks too large otherwise
+					.shadow(color: .black.opacity(0.2), radius: 4, x: 0, y: 4)
+					.alignmentGuide(.rankIcon) { $0[VerticalAlignment.center] }
+					.frame(width: artworkSize, height: artworkSize)
+				
+				VStack {
+					Text(info.name)
+						.font(primaryFont)
+					Text("Lifetime Peak")
+						.font(secondaryFont)
+				}
+			}
+		}
+	}
+	
+	@ViewBuilder
+	func seasonLabel(for season: Act.ID?) -> some View {
+		if let season, let act = assets?.seasons.acts[season] {
+			HStack {
+				if let episode = act.episode {
+					Text(episode.name.replacingOccurrences(of: "EPISODE", with: "EP"))
+						.fontWeight(.medium)
+					Text("//")
+						.foregroundStyle(.tertiary)
+				}
+				Text(act.name)
+			}
+			.foregroundStyle(.secondary)
+			.font(secondaryFont)
 		}
 	}
 	
@@ -106,12 +126,21 @@ struct CompetitiveSummaryCell: View {
 	}
 }
 
-#if DEBUG
-struct CompetitiveSummaryCell_Previews: PreviewProvider {
-	static let assets = AssetManager.forPreviews.assets!
-	static let act = assets.seasons.currentAct()!
+private extension VerticalAlignment {
+	static let rankIcon = Self(NewID.self)
 	
-	static var previews: some View {
+	private enum NewID: AlignmentID {
+		static func defaultValue(in context: ViewDimensions) -> CGFloat {
+			context.height / 2
+		}
+	}
+}
+
+#if DEBUG
+struct CompetitiveSummaryCell_Previews: PreviewProvider, PreviewProviderWithAssets {
+	static func previews(assets: AssetCollection) -> some View {
+		let act = assets.seasons.currentAct()!
+		
 		CompetitiveSummaryCell(summary: PreviewData.summary)
 			.buttonStyle(.navigationLinkPreview)
 			.previewLayout(.sizeThatFits)
@@ -128,9 +157,25 @@ struct CompetitiveSummaryCell_Previews: PreviewProvider {
 			Section {
 				CompetitiveSummaryCell(summary: PreviewData.summary)
 			}
+			
+			Section {
+				CompetitiveSummaryCell(summary: PreviewData.summary <- {
+					$0.competitiveInfo!.bySeason![act.id] = .init(
+						seasonID: act.id,
+						leaderboardRank: 152,
+						competitiveTier: 27,
+						rankedRating: 543
+					)
+				})
+			}
+			
+			Section {
+				CompetitiveSummaryCell(summary: PreviewData.summary <- {
+					$0.competitiveInfo!.bySeason![act.id] = .init(seasonID: act.id, competitiveTier: 20, rankedRating: 32)
+				})
+			}
 		}
 		.withToolbar()
-		.previewLayout(.fixed(width: 350, height: 400))
 		.environmentObject(ImageManager())
 	}
 }

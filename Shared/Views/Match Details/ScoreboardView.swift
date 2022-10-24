@@ -133,8 +133,17 @@ struct ScoreboardRowView: View {
 			}
 		}
 		
-		RankInfoView(summary: summary, lineWidth: 2, shouldShowProgress: false, shouldFadeUnranked: true)
+		GeometryReader { geometry in
+			RankInfoView(
+				summary: summary,
+				size: geometry.size.height,
+				lineWidth: 2,
+				shouldShowProgress: false,
+				shouldFadeUnranked: true
+			)
 			.foregroundColor(nil)
+		}
+		.aspectRatio(1, contentMode: .fit)
 	}
 	
 	func partyLabel(for party: Party.ID) -> some View {

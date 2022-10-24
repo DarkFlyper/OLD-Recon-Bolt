@@ -172,15 +172,16 @@ struct AgentSelectView: View {
 				.frame(maxWidth: .infinity, alignment: .leading)
 				
 				if player.id != userID {
-					NavigationLink(destination: MatchListView(userID: player.id, user: playerUser)) {
+					NavigationLink {
+						MatchListView(userID: player.id, user: playerUser)
+							.environment(\.isIncognito, player.identity.isIncognito)
+					} label: {
 						Image(systemName: "person.crop.circle.fill")
 							.padding(.horizontal, 4)
 					}
-					.disabled(player.identity.isIncognito)
 				}
 				
-				RankInfoView(summary: summary)
-					.frame(width: iconSize, height: iconSize)
+				RankInfoView(summary: summary, size: iconSize)
 			}
 			.accentColor(relativeColor)
 			.withLocalData($playerUser, id: player.id)
