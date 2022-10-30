@@ -14,7 +14,7 @@ struct MatchListFilter: Codable {
 		guard isActive else { return true }
 		guard maps.allows(update.mapID) else { return false }
 		guard let details else {
-			return shouldShowUnfetched || queues.allows(.competitive) && update.isRanked
+			return update.isRanked ? queues.allows(.competitive) : shouldShowUnfetched  
 		}
 		return details.matchInfo.queueID.map(queues.allows) ?? false
 	}
@@ -23,8 +23,10 @@ struct MatchListFilter: Codable {
 		var isEnabled = false
 		var allowed: Set<ID> = []
 		
-		func allows(_ id: ID) -> Bool {
-			!isEnabled || allowed.contains(id)
+		func allows(_ id: ID?) -> Bool {
+			guard isEnabled else { return true }
+			guard let id else { return false }
+			return allowed.contains(id)
 		}
 		
 		mutating func toggle(_ id: ID) {

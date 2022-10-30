@@ -57,49 +57,58 @@ struct MatchCell: View {
 			.font(.caption)
 			
 			if matchesFilter {
-				HStack {
-					ZStack {
-						if let matchDetails {
-							HStack {
-								GameModeImage(id: matchDetails.matchInfo.modeID)
-									.foregroundColor(.white)
-								
-								Text(matchDetails.matchInfo.queueName)
+				if let mapID = match.mapID {
+					HStack {
+						ZStack {
+							if let matchDetails {
+								HStack {
+									GameModeImage(id: matchDetails.matchInfo.modeID)
+										.foregroundColor(.white)
+									
+									Text(matchDetails.matchInfo.queueName)
+										.padding(.top, -2) // small caps are shorter
+								}
+							} else {
+								MapImage.LabelText(mapID: mapID)
+									.fixedSize()
 									.padding(.top, -2) // small caps are shorter
 							}
-						} else {
-							MapImage.LabelText(mapID: match.mapID)
-								.fixedSize()
-								.padding(.top, -2) // small caps are shorter
+						}
+						.font(.callout.bold().smallCaps())
+						.foregroundColor(.white.opacity(0.8))
+						.shadow(color: .black, radius: 2, y: 1)
+						.padding(4)
+						.padding(.horizontal, 2)
+						
+						Spacer()
+						
+						let myself = matchDetails?.players.firstElement(withID: userID)!
+						if let myself {
+							AgentImage.killfeedPortrait(myself.agentID)
+								.scaleEffect(x: -1)
+								.shadow(color: .black, radius: 4, x: 0, y: 0)
 						}
 					}
-					.font(.callout.bold().smallCaps())
-					.foregroundColor(.white.opacity(0.8))
-					.shadow(color: .black, radius: 2, y: 1)
-					.padding(4)
-					.padding(.horizontal, 2)
-					
-					Spacer()
-					
-					let myself = matchDetails?.players.firstElement(withID: userID)!
-					if let myself {
-						AgentImage.killfeedPortrait(myself.agentID)
-							.scaleEffect(x: -1)
-							.shadow(color: .black, radius: 4, x: 0, y: 0)
+					.frame(height: mapCapsuleHeight)
+					.background {
+						MapImage.wideImage(mapID)
+							.scaledToFill()
+							.frame(maxWidth: .infinity)
+							.clipped()
 					}
-				}
-				.frame(height: mapCapsuleHeight)
-				.background {
-					MapImage.wideImage(match.mapID)
-						.scaledToFill()
+					.mask(Capsule())
+					
+					detailsInfo
+						.font(.caption)
 						.frame(maxWidth: .infinity)
-						.clipped()
+				} else {
+					Text("Lobby Dodged")
+						.font(.body.weight(.medium))
+						.foregroundStyle(.secondary)
+						.frame(maxWidth: .infinity)
+						.frame(height: mapCapsuleHeight)
+						.background(Color.tertiaryGroupedBackground, in: Capsule())
 				}
-				.mask(Capsule())
-				
-				detailsInfo
-					.font(.caption)
-					.frame(maxWidth: .infinity)
 			}
 		}
 		
@@ -268,9 +277,20 @@ struct MatchCell_Previews: PreviewProvider {
 	static let withinImmortal = CompetitiveUpdate.example(tierChange: (21, 21), tierProgressChange: (290, 310))
 	static let promotionToRadiant = CompetitiveUpdate.example(tierChange: (21, 24), tierProgressChange: (379, 400), ratingEarned: 21)
 	
+	static let dodge = CompetitiveUpdate(
+		id: .init(),
+		mapID: nil,
+		startTime: .init(timeIntervalSinceNow: -234567),
+		tierBeforeUpdate: 15,
+		tierAfterUpdate: 15,
+		tierProgressBeforeUpdate: 44,
+		tierProgressAfterUpdate: 41,
+		ratingEarned: -3
+	)
+	
 	static let allExamples = [
 		demotion, decrease, unchanged, increase, promotion,
-		unranked, jump, withinImmortal, promotionToRadiant,
+		dodge, unranked, jump, withinImmortal, promotionToRadiant,
 	]
 	
 	static var previews: some View {
@@ -287,7 +307,6 @@ struct MatchCell_Previews: PreviewProvider {
 			}
 		}
 		.withToolbar(allowLargeTitles: false) // otherwise NavigationLink grays out accent colors
-		.padding(.top, -120) // use all the space
 	}
 }
 #endif
