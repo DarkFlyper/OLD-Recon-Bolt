@@ -1,13 +1,17 @@
 {
-	"Version": 3581,
+	"Version": 5900,
 	"Subject": "3fa8598d-066e-5bdb-998c-74c015c5dba5",
 	"Contracts": [
 		{
 			"ContractDefinitionID": "e13d0f6f-5727-43bc-af9e-56c10cdb7176",
 			"ContractProgression": {
 				"TotalProgressionEarned": 197800,
+				"TotalProgressionEarnedVersion": 71,
 				"HighestRewardedLevel": {
-					"d95831b3-ae9e-499b-989e-746020cd3b97": 4
+					"d95831b3-ae9e-499b-989e-746020cd3b97": {
+						"Amount": 4,
+						"Version": 4
+					}
 				}
 			},
 			"ProgressionLevelReached": 4,
@@ -17,8 +21,12 @@
 			"ContractDefinitionID": "2195e89f-20ad-4e37-b46c-cf46a6715dfd",
 			"ContractProgression": {
 				"TotalProgressionEarned": 975000,
+				"TotalProgressionEarnedVersion": 210,
 				"HighestRewardedLevel": {
-					"4c8c5d9b-e7f2-4c8b-afed-b3ba9051f1b3": 10
+					"4c8c5d9b-e7f2-4c8b-afed-b3ba9051f1b3": {
+						"Amount": 10,
+						"Version": 6
+					}
 				}
 			},
 			"ProgressionLevelReached": 10,
@@ -28,8 +36,12 @@
 			"ContractDefinitionID": "4c9b0fcf-57cd-4e84-ae5a-ce89e396242f",
 			"ContractProgression": {
 				"TotalProgressionEarned": 204600,
+				"TotalProgressionEarnedVersion": 71,
 				"HighestRewardedLevel": {
-					"7c7710c2-0f1c-48b8-83d8-ea0789cc9b1c": 5
+					"7c7710c2-0f1c-48b8-83d8-ea0789cc9b1c": {
+						"Amount": 5,
+						"Version": 5
+					}
 				}
 			},
 			"ProgressionLevelReached": 5,
@@ -39,8 +51,12 @@
 			"ContractDefinitionID": "a3dd5293-4b3d-46de-a6d7-4493f0530d9b",
 			"ContractProgression": {
 				"TotalProgressionEarned": 72000,
+				"TotalProgressionEarnedVersion": 24,
 				"HighestRewardedLevel": {
-					"b2bacba8-d304-4e44-9df5-20a3f25a7db8": 10
+					"b2bacba8-d304-4e44-9df5-20a3f25a7db8": {
+						"Amount": 10,
+						"Version": 8
+					}
 				}
 			},
 			"ProgressionLevelReached": 10,
@@ -49,20 +65,28 @@
 		{
 			"ContractDefinitionID": "ace2bb52-de25-45b5-8e11-3dd2088f914d",
 			"ContractProgression": {
-				"TotalProgressionEarned": 0,
+				"TotalProgressionEarned": 701020,
+				"TotalProgressionEarnedVersion": 128,
 				"HighestRewardedLevel": {
-					"feb822e2-0b7e-4c8a-a03f-a846e01edef8": 0
+					"feb822e2-0b7e-4c8a-a03f-a846e01edef8": {
+						"Amount": 8,
+						"Version": 8
+					}
 				}
 			},
-			"ProgressionLevelReached": 0,
-			"ProgressionTowardsNextLevel": 0
+			"ProgressionLevelReached": 8,
+			"ProgressionTowardsNextLevel": 176020
 		},
 		{
 			"ContractDefinitionID": "62b5521c-93f6-4178-aadd-043ed25ed21a",
 			"ContractProgression": {
 				"TotalProgressionEarned": 0,
+				"TotalProgressionEarnedVersion": 0,
 				"HighestRewardedLevel": {
-					"9fbc5192-26a5-425d-acee-7447ae8dc39a": 0
+					"9fbc5192-26a5-425d-acee-7447ae8dc39a": {
+						"Amount": 0,
+						"Version": 0
+					}
 				}
 			},
 			"ProgressionLevelReached": 0,
@@ -72,8 +96,12 @@
 			"ContractDefinitionID": "c9d1c451-12fc-4601-a97c-8258765fb90d",
 			"ContractProgression": {
 				"TotalProgressionEarned": 0,
+				"TotalProgressionEarnedVersion": 0,
 				"HighestRewardedLevel": {
-					"f6396202-aae8-433a-8610-2fdc20d14564": 0
+					"f6396202-aae8-433a-8610-2fdc20d14564": {
+						"Amount": 0,
+						"Version": 0
+					}
 				}
 			},
 			"ProgressionLevelReached": 0,
@@ -83,8 +111,12 @@
 			"ContractDefinitionID": "f94fc320-a71f-47e3-b062-6798d14f17d6",
 			"ContractProgression": {
 				"TotalProgressionEarned": 200000,
+				"TotalProgressionEarnedVersion": 1,
 				"HighestRewardedLevel": {
-					"41a1e1db-34f2-4290-a86e-073e449a9bf2": 5
+					"41a1e1db-34f2-4290-a86e-073e449a9bf2": {
+						"Amount": 5,
+						"Version": 1
+					}
 				}
 			},
 			"ProgressionLevelReached": 5,
@@ -93,20 +125,28 @@
 		{
 			"ContractDefinitionID": "eb35d061-4eed-4d22-81a3-1491ec892429",
 			"ContractProgression": {
-				"TotalProgressionEarned": 201200,
+				"TotalProgressionEarned": 975000,
+				"TotalProgressionEarnedVersion": 176,
 				"HighestRewardedLevel": {
-					"28b08fca-d0b9-4635-952c-98a74287ebf8": 5
+					"28b08fca-d0b9-4635-952c-98a74287ebf8": {
+						"Amount": 10,
+						"Version": 10
+					}
 				}
 			},
-			"ProgressionLevelReached": 5,
-			"ProgressionTowardsNextLevel": 1200
+			"ProgressionLevelReached": 10,
+			"ProgressionTowardsNextLevel": 0
 		},
 		{
 			"ContractDefinitionID": "60f9f1f0-2bb7-47f9-85b7-b873a5a1123b",
 			"ContractProgression": {
 				"TotalProgressionEarned": 205300,
+				"TotalProgressionEarnedVersion": 77,
 				"HighestRewardedLevel": {
-					"ad947b1a-4df0-4862-a635-c5358f298698": 5
+					"ad947b1a-4df0-4862-a635-c5358f298698": {
+						"Amount": 5,
+						"Version": 5
+					}
 				}
 			},
 			"ProgressionLevelReached": 5,
@@ -116,9 +156,16 @@
 			"ContractDefinitionID": "7b06d4ce-e09a-48d5-8215-df9901376fa7",
 			"ContractProgression": {
 				"TotalProgressionEarned": 197550,
+				"TotalProgressionEarnedVersion": 59,
 				"HighestRewardedLevel": {
-					"226043e7-9ad7-403f-85af-039fb4c28c62": 0,
-					"959d0160-7554-4c6b-9c40-a127b3e13d22": 17
+					"226043e7-9ad7-403f-85af-039fb4c28c62": {
+						"Amount": 0,
+						"Version": 0
+					},
+					"959d0160-7554-4c6b-9c40-a127b3e13d22": {
+						"Amount": 17,
+						"Version": 15
+					}
 				}
 			},
 			"ProgressionLevelReached": 17,
@@ -128,8 +175,12 @@
 			"ContractDefinitionID": "bfb8160e-eee0-46b1-a069-16f93adc7328",
 			"ContractProgression": {
 				"TotalProgressionEarned": 975000,
+				"TotalProgressionEarnedVersion": 249,
 				"HighestRewardedLevel": {
-					"9d653f26-8056-46ad-9f66-f346626ad494": 10
+					"9d653f26-8056-46ad-9f66-f346626ad494": {
+						"Amount": 10,
+						"Version": 10
+					}
 				}
 			},
 			"ProgressionLevelReached": 10,
@@ -139,8 +190,12 @@
 			"ContractDefinitionID": "3051fb18-9240-4bf3-a9f5-eb9ae954cd9d",
 			"ContractProgression": {
 				"TotalProgressionEarned": 0,
+				"TotalProgressionEarnedVersion": 0,
 				"HighestRewardedLevel": {
-					"1f44ba0b-6ca7-44f8-9195-64c393793936": 0
+					"1f44ba0b-6ca7-44f8-9195-64c393793936": {
+						"Amount": 0,
+						"Version": 0
+					}
 				}
 			},
 			"ProgressionLevelReached": 0,
@@ -149,21 +204,32 @@
 		{
 			"ContractDefinitionID": "9443cbd4-da4d-4395-8152-26a5b269f339",
 			"ContractProgression": {
-				"TotalProgressionEarned": 432700,
+				"TotalProgressionEarned": 975000,
+				"TotalProgressionEarnedVersion": 235,
 				"HighestRewardedLevel": {
-					"0a09fd3d-5668-4427-bec0-1d84afb42fe6": 7
+					"0a09fd3d-5668-4427-bec0-1d84afb42fe6": {
+						"Amount": 10,
+						"Version": 10
+					}
 				}
 			},
-			"ProgressionLevelReached": 7,
-			"ProgressionTowardsNextLevel": 57700
+			"ProgressionLevelReached": 10,
+			"ProgressionTowardsNextLevel": 0
 		},
 		{
 			"ContractDefinitionID": "e5c5ee7c-ac93-4f3b-8b76-cc7a2c66bf24",
 			"ContractProgression": {
 				"TotalProgressionEarned": 512100,
+				"TotalProgressionEarnedVersion": 202,
 				"HighestRewardedLevel": {
-					"964f74d3-ac27-4f3d-b0ac-59cc156752f9": 29,
-					"feee85e4-1bbb-44f8-b5af-7228b2d0fe4c": 0
+					"964f74d3-ac27-4f3d-b0ac-59cc156752f9": {
+						"Amount": 29,
+						"Version": 29
+					},
+					"feee85e4-1bbb-44f8-b5af-7228b2d0fe4c": {
+						"Amount": 0,
+						"Version": 0
+					}
 				}
 			},
 			"ProgressionLevelReached": 29,
@@ -173,9 +239,16 @@
 			"ContractDefinitionID": "4ef7ddda-4b73-c349-ee84-e8a9794613b5",
 			"ContractProgression": {
 				"TotalProgressionEarned": 0,
+				"TotalProgressionEarnedVersion": 0,
 				"HighestRewardedLevel": {
-					"58992fa3-4643-5625-e57a-64a4d839ad05": 0,
-					"c9b67ad4-9233-459a-8258-5518a568e2b5": 0
+					"58992fa3-4643-5625-e57a-64a4d839ad05": {
+						"Amount": 0,
+						"Version": 0
+					},
+					"c9b67ad4-9233-459a-8258-5518a568e2b5": {
+						"Amount": 0,
+						"Version": 0
+					}
 				}
 			},
 			"ProgressionLevelReached": 0,
@@ -185,9 +258,16 @@
 			"ContractDefinitionID": "ed0b331b-45f2-115c-c958-3c9683ff5b5e",
 			"ContractProgression": {
 				"TotalProgressionEarned": 1552300,
+				"TotalProgressionEarnedVersion": 471,
 				"HighestRewardedLevel": {
-					"2e6f8602-442b-7cb5-576b-22bfbea1e618": 53,
-					"7552d32c-4d35-43c3-1451-f18eb4fbf82f": 53
+					"2e6f8602-442b-7cb5-576b-22bfbea1e618": {
+						"Amount": 53,
+						"Version": 29
+					},
+					"7552d32c-4d35-43c3-1451-f18eb4fbf82f": {
+						"Amount": 53,
+						"Version": 24
+					}
 				}
 			},
 			"ProgressionLevelReached": 53,
@@ -196,20 +276,28 @@
 		{
 			"ContractDefinitionID": "e7e7c5e1-4e76-22f8-f423-078b33758464",
 			"ContractProgression": {
-				"TotalProgressionEarned": 227500,
+				"TotalProgressionEarned": 347120,
+				"TotalProgressionEarnedVersion": 77,
 				"HighestRewardedLevel": {
-					"6c24826c-4585-4dbb-db5e-3c92ba2690fd": 5
+					"6c24826c-4585-4dbb-db5e-3c92ba2690fd": {
+						"Amount": 6,
+						"Version": 6
+					}
 				}
 			},
-			"ProgressionLevelReached": 5,
-			"ProgressionTowardsNextLevel": 27500
+			"ProgressionLevelReached": 6,
+			"ProgressionTowardsNextLevel": 72120
 		},
 		{
 			"ContractDefinitionID": "358b6e88-4cbe-0cfb-c313-c290eba0c8bc",
 			"ContractProgression": {
 				"TotalProgressionEarned": 975000,
+				"TotalProgressionEarnedVersion": 296,
 				"HighestRewardedLevel": {
-					"5a0c363d-4d8d-8a29-bf72-a2b8652a5c2f": 10
+					"5a0c363d-4d8d-8a29-bf72-a2b8652a5c2f": {
+						"Amount": 10,
+						"Version": 10
+					}
 				}
 			},
 			"ProgressionLevelReached": 10,
@@ -219,9 +307,16 @@
 			"ContractDefinitionID": "4cff28f8-47e9-62e5-2625-49a517f981d2",
 			"ContractProgression": {
 				"TotalProgressionEarned": 1024800,
+				"TotalProgressionEarnedVersion": 308,
 				"HighestRewardedLevel": {
-					"7eb05d79-4350-e185-a64e-96a0760c4182": 51,
-					"f8397c8f-4120-3b80-2b46-178cd9ca983e": 51
+					"7eb05d79-4350-e185-a64e-96a0760c4182": {
+						"Amount": 51,
+						"Version": 47
+					},
+					"f8397c8f-4120-3b80-2b46-178cd9ca983e": {
+						"Amount": 51,
+						"Version": 47
+					}
 				}
 			},
 			"ProgressionLevelReached": 51,
@@ -231,8 +326,12 @@
 			"ContractDefinitionID": "1d40b4b9-4d86-50b7-9f79-3d939e09c661",
 			"ContractProgression": {
 				"TotalProgressionEarned": 975000,
+				"TotalProgressionEarnedVersion": 239,
 				"HighestRewardedLevel": {
-					"336d6760-4d4e-7458-c273-60b9bd45f57e": 10
+					"336d6760-4d4e-7458-c273-60b9bd45f57e": {
+						"Amount": 10,
+						"Version": 10
+					}
 				}
 			},
 			"ProgressionLevelReached": 10,
@@ -242,9 +341,16 @@
 			"ContractDefinitionID": "d1dfd006-4efa-7ef2-a46f-3eb497fc26df",
 			"ContractProgression": {
 				"TotalProgressionEarned": 1045100,
+				"TotalProgressionEarnedVersion": 253,
 				"HighestRewardedLevel": {
-					"8b6655f5-4931-d496-3f24-95a0f780a573": 51,
-					"99f8a2ab-4558-4669-f404-24ba815b63e6": 51
+					"8b6655f5-4931-d496-3f24-95a0f780a573": {
+						"Amount": 51,
+						"Version": 4
+					},
+					"99f8a2ab-4558-4669-f404-24ba815b63e6": {
+						"Amount": 51,
+						"Version": 13
+					}
 				}
 			},
 			"ProgressionLevelReached": 51,
@@ -253,97 +359,1337 @@
 		{
 			"ContractDefinitionID": "5bef6de8-44d4-ac64-3df2-078e618fc0e3",
 			"ContractProgression": {
-				"TotalProgressionEarned": 942400,
+				"TotalProgressionEarned": 1000000,
+				"TotalProgressionEarnedVersion": 197,
 				"HighestRewardedLevel": {
-					"a3d8fcd2-4192-4567-0dfe-64ac1d3adaf5": 49,
-					"d2370414-4277-ab53-c021-589deb6647f2": 49
+					"a3d8fcd2-4192-4567-0dfe-64ac1d3adaf5": {
+						"Amount": 50,
+						"Version": 43
+					},
+					"d2370414-4277-ab53-c021-589deb6647f2": {
+						"Amount": 50,
+						"Version": 43
+					}
 				}
 			},
-			"ProgressionLevelReached": 49,
-			"ProgressionTowardsNextLevel": 400
+			"ProgressionLevelReached": 50,
+			"ProgressionTowardsNextLevel": 20000
 		},
 		{
 			"ContractDefinitionID": "9454d42a-471f-27b9-325c-319a355c34ee",
 			"ContractProgression": {
-				"TotalProgressionEarned": 408997,
+				"TotalProgressionEarned": 975000,
+				"TotalProgressionEarnedVersion": 240,
 				"HighestRewardedLevel": {
-					"2a041b50-4132-2a2e-38b8-d899acae6897": 7
+					"2a041b50-4132-2a2e-38b8-d899acae6897": {
+						"Amount": 10,
+						"Version": 10
+					}
 				}
 			},
-			"ProgressionLevelReached": 7,
-			"ProgressionTowardsNextLevel": 33997
+			"ProgressionLevelReached": 10,
+			"ProgressionTowardsNextLevel": 0
 		},
 		{
 			"ContractDefinitionID": "de37c775-4017-177a-8c64-a8bb414dae1f",
 			"ContractProgression": {
-				"TotalProgressionEarned": 419597,
+				"TotalProgressionEarned": 1089637,
+				"TotalProgressionEarnedVersion": 265,
 				"HighestRewardedLevel": {
-					"7cd87662-4019-6fe8-25b5-b98d60a242ec": 32,
-					"e1b52224-4eb9-045c-1d22-c98125c27b6c": 32
+					"7cd87662-4019-6fe8-25b5-b98d60a242ec": {
+						"Amount": 53,
+						"Version": 49
+					},
+					"e1b52224-4eb9-045c-1d22-c98125c27b6c": {
+						"Amount": 53,
+						"Version": 49
+					}
 				}
 			},
-			"ProgressionLevelReached": 32,
-			"ProgressionTowardsNextLevel": 8847
+			"ProgressionLevelReached": 53,
+			"ProgressionTowardsNextLevel": 137
 		},
 		{
 			"ContractDefinitionID": "f3d0a6ce-48a3-8a63-203c-8fae5155db9b",
 			"ContractProgression": {
 				"TotalProgressionEarned": 21000,
+				"TotalProgressionEarnedVersion": 11,
 				"HighestRewardedLevel": {
-					"987c4073-407d-92b9-6b0e-7abb59bb87c4": 7
+					"987c4073-407d-92b9-6b0e-7abb59bb87c4": {
+						"Amount": 7,
+						"Version": 5
+					}
 				}
 			},
 			"ProgressionLevelReached": 7,
 			"ProgressionTowardsNextLevel": 0
+		},
+		{
+			"ContractDefinitionID": "b0bd7062-4d62-1ff1-7920-b39622ee926b",
+			"ContractProgression": {
+				"TotalProgressionEarned": 531300,
+				"TotalProgressionEarnedVersion": 119,
+				"HighestRewardedLevel": {
+					"5e1e7d31-4aba-c5f1-2e5f-c2a6fffdcaad": {
+						"Amount": 0,
+						"Version": 0
+					},
+					"e749e020-4669-e0f7-aa0e-96b2b8625743": {
+						"Amount": 35,
+						"Version": 7
+					}
+				}
+			},
+			"ProgressionLevelReached": 36,
+			"ProgressionTowardsNextLevel": 15050
+		},
+		{
+			"ContractDefinitionID": "be540721-4d60-0675-a586-ecb14adcb5f7",
+			"ContractProgression": {
+				"TotalProgressionEarned": 644919,
+				"TotalProgressionEarnedVersion": 133,
+				"HighestRewardedLevel": {
+					"3863d44c-4cf0-1400-3ada-79b012825d1f": {
+						"Amount": 40,
+						"Version": 8
+					},
+					"d8fa948d-4e69-cba4-f5f8-25858224a284": {
+						"Amount": 0,
+						"Version": 0
+					}
+				}
+			},
+			"ProgressionLevelReached": 40,
+			"ProgressionTowardsNextLevel": 11169
+		},
+		{
+			"ContractDefinitionID": "c3a11ed9-4f42-31d3-7d3c-0587e8d12bf0",
+			"ContractProgression": {
+				"TotalProgressionEarned": 62500,
+				"TotalProgressionEarnedVersion": 10,
+				"HighestRewardedLevel": {
+					"1c8063d9-4ab1-2a77-e7f8-c9b97d90c5c6": {
+						"Amount": 10,
+						"Version": 7
+					}
+				}
+			},
+			"ProgressionLevelReached": 10,
+			"ProgressionTowardsNextLevel": 0
+		},
+		{
+			"ContractDefinitionID": "ebfd35c7-4d47-11f6-63f3-0398f055d8ab",
+			"ContractProgression": {
+				"TotalProgressionEarned": 975000,
+				"TotalProgressionEarnedVersion": 178,
+				"HighestRewardedLevel": {
+					"7b39d493-4de0-f0f7-d715-a99514e6a8a8": {
+						"Amount": 10,
+						"Version": 10
+					}
+				}
+			},
+			"ProgressionLevelReached": 10,
+			"ProgressionTowardsNextLevel": 0
+		},
+		{
+			"ContractDefinitionID": "60f2e13a-4834-0a18-5f7b-02b1a97b7adb",
+			"ContractProgression": {
+				"TotalProgressionEarned": 1053150,
+				"TotalProgressionEarnedVersion": 147,
+				"HighestRewardedLevel": {
+					"0f338036-4424-212d-b383-5d9c10b8da4e": {
+						"Amount": 52,
+						"Version": 29
+					},
+					"c9c800d3-4e00-e802-f7e8-9e90672279df": {
+						"Amount": 52,
+						"Version": 31
+					}
+				}
+			},
+			"ProgressionLevelReached": 52,
+			"ProgressionTowardsNextLevel": 150
+		},
+		{
+			"ContractDefinitionID": "6336272a-4be9-4b0c-68ef-d79c06e11ca2",
+			"ContractProgression": {
+				"TotalProgressionEarned": 200998,
+				"TotalProgressionEarnedVersion": 31,
+				"HighestRewardedLevel": {
+					"c403e3ce-4bb5-270c-cd27-dfb8a0978e4b": {
+						"Amount": 5,
+						"Version": 5
+					}
+				}
+			},
+			"ProgressionLevelReached": 5,
+			"ProgressionTowardsNextLevel": 998
+		},
+		{
+			"ContractDefinitionID": "641ce18d-4360-8e20-2340-339a7422158a",
+			"ContractProgression": {
+				"TotalProgressionEarned": 63000,
+				"TotalProgressionEarnedVersion": 10,
+				"HighestRewardedLevel": {
+					"d74ee7ff-4bde-b5af-4d3b-f0a3784d8542": {
+						"Amount": 7,
+						"Version": 4
+					}
+				}
+			},
+			"ProgressionLevelReached": 7,
+			"ProgressionTowardsNextLevel": 0
+		},
+		{
+			"ContractDefinitionID": "c1cd8895-4bd2-466d-e7ff-b489e3bc3775",
+			"ContractProgression": {
+				"TotalProgressionEarned": 510440,
+				"TotalProgressionEarnedVersion": 74,
+				"HighestRewardedLevel": {
+					"38715fd3-4575-c78e-bc13-d8b3cf1c7546": {
+						"Amount": 35,
+						"Version": 7
+					},
+					"f5cc2e19-43bc-492d-4d89-53a9ff9eaa67": {
+						"Amount": 0,
+						"Version": 0
+					}
+				}
+			},
+			"ProgressionLevelReached": 35,
+			"ProgressionTowardsNextLevel": 21690
+		},
+		{
+			"ContractDefinitionID": "d80f3ef5-44f5-8d70-6935-f2840b2d3882",
+			"ContractProgression": {
+				"TotalProgressionEarned": 428780,
+				"TotalProgressionEarnedVersion": 60,
+				"HighestRewardedLevel": {
+					"01006320-4d8c-3f5d-5044-01bc26202dce": {
+						"Amount": 30,
+						"Version": 6
+					},
+					"366d7f17-4d19-4b31-f95b-36946f846bb6": {
+						"Amount": 0,
+						"Version": 0
+					}
+				}
+			},
+			"ProgressionLevelReached": 32,
+			"ProgressionTowardsNextLevel": 18030
+		},
+		{
+			"ContractDefinitionID": "7ae5ad85-400b-beba-989d-42924ccf39be",
+			"ContractProgression": {
+				"TotalProgressionEarned": 975000,
+				"TotalProgressionEarnedVersion": 142,
+				"HighestRewardedLevel": {
+					"a2e41b14-4fa2-45e2-2099-d29e0c0050fd": {
+						"Amount": 10,
+						"Version": 10
+					}
+				}
+			},
+			"ProgressionLevelReached": 10,
+			"ProgressionTowardsNextLevel": 0
+		},
+		{
+			"ContractDefinitionID": "15002a17-45b7-0336-53d0-ee865e41cfa4",
+			"ContractProgression": {
+				"TotalProgressionEarned": 86725,
+				"TotalProgressionEarnedVersion": 13,
+				"HighestRewardedLevel": {
+					"d418d70d-44dd-b9fb-dac9-13b784fbd120": {
+						"Amount": 6,
+						"Version": 4
+					}
+				}
+			},
+			"ProgressionLevelReached": 6,
+			"ProgressionTowardsNextLevel": 13225
+		},
+		{
+			"ContractDefinitionID": "99ac9283-4dd3-5248-2e01-8baf778affb4",
+			"ContractProgression": {
+				"TotalProgressionEarned": 769450,
+				"TotalProgressionEarnedVersion": 107,
+				"HighestRewardedLevel": {
+					"70f6ae72-432c-c865-b4ad-63bb44185c01": {
+						"Amount": 40,
+						"Version": 8
+					},
+					"f27b21a6-4397-6d7d-b34d-2b957110ea9f": {
+						"Amount": 0,
+						"Version": 0
+					}
+				}
+			},
+			"ProgressionLevelReached": 44,
+			"ProgressionTowardsNextLevel": 6200
+		},
+		{
+			"ContractDefinitionID": "2b3a941d-4b85-a0df-5beb-8897224d290a",
+			"ContractProgression": {
+				"TotalProgressionEarned": 316020,
+				"TotalProgressionEarnedVersion": 67,
+				"HighestRewardedLevel": {
+					"261d351e-4589-d6d4-7f6e-6e9d91a40617": {
+						"Amount": 25,
+						"Version": 5
+					},
+					"cf9749ba-4722-c0b7-a028-37bd6a1b4cb5": {
+						"Amount": 0,
+						"Version": 0
+					}
+				}
+			},
+			"ProgressionLevelReached": 27,
+			"ProgressionTowardsNextLevel": 20270
+		},
+		{
+			"ContractDefinitionID": "7391acae-47d2-809c-0148-14a10c56df50",
+			"ContractProgression": {
+				"TotalProgressionEarned": 131700,
+				"TotalProgressionEarnedVersion": 36,
+				"HighestRewardedLevel": {
+					"a593c779-4cf0-ea1d-0853-2c9475aa66dd": {
+						"Amount": 7,
+						"Version": 6
+					}
+				}
+			},
+			"ProgressionLevelReached": 7,
+			"ProgressionTowardsNextLevel": 0
+		},
+		{
+			"ContractDefinitionID": "43aeb2d6-46df-c1b1-5420-8cbbd67e7e9e",
+			"ContractProgression": {
+				"TotalProgressionEarned": 158300,
+				"TotalProgressionEarnedVersion": 42,
+				"HighestRewardedLevel": {
+					"247c66ba-4b85-2763-369a-eea35cd8e48c": {
+						"Amount": 0,
+						"Version": 0
+					},
+					"f263e9c5-45a4-f13b-1d45-7bb262c03a1d": {
+						"Amount": 15,
+						"Version": 3
+					}
+				}
+			},
+			"ProgressionLevelReached": 19,
+			"ProgressionTowardsNextLevel": 7550
+		},
+		{
+			"ContractDefinitionID": "5d627650-48ac-5710-5e49-78a41dc28b7b",
+			"ContractProgression": {
+				"TotalProgressionEarned": 158300,
+				"TotalProgressionEarnedVersion": 42,
+				"HighestRewardedLevel": {
+					"813e5243-4b85-9623-8a5f-a9b83aea2030": {
+						"Amount": 4,
+						"Version": 4
+					}
+				}
+			},
+			"ProgressionLevelReached": 4,
+			"ProgressionTowardsNextLevel": 18300
 		}
 	],
-	"ProcessedMatches": [],
-	"ActiveSpecialContract": "9454d42a-471f-27b9-325c-319a355c34ee",
+	"ProcessedMatches": [
+		{
+			"ID": "b0a09b1e-a9d7-4699-a7ff-73740679d316",
+			"StartTime": 1661807894402,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "3e86a5ec-8007-4347-ae73-2ac9ae722671",
+			"StartTime": 1661906829901,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "753b2c01-1328-4bd6-b403-c7b31bd280de",
+			"StartTime": 1661907144247,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "2fb1b424-94e6-47da-9889-5a374ebc8068",
+			"StartTime": 1661907654840,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "0e8627ba-4009-4088-91d1-dbee6089dafe",
+			"StartTime": 1661908192178,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "91ec7e28-d015-4415-9edd-1c37eb097583",
+			"StartTime": 1661908910773,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "f1a07056-f9cc-4e81-ae67-75d230f330c0",
+			"StartTime": 1661992071791,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "61b3b191-a397-4092-8ac7-123d45f65c2e",
+			"StartTime": 1661992737624,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "1755d21f-3d1e-4098-ab9a-ea055f37c7da",
+			"StartTime": 1661993258199,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "cdc91cce-d7d2-439e-9576-3cfc4db0d71b",
+			"StartTime": 1661993794397,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "c5ea1d2b-7345-4d7b-84b0-efb0272cff5a",
+			"StartTime": 1661997081113,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "2ee9770b-54e6-45fc-b3c9-6b0bc93173be",
+			"StartTime": 1662156086132,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "47f53f4e-9d02-4003-a84d-1dc4ab2bf245",
+			"StartTime": 1662247461858,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "178579c5-69c2-4408-b2b9-185c54f7c267",
+			"StartTime": 1662247939201,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "ca9681c4-9d65-44bc-82bc-83a3f478c566",
+			"StartTime": 1662248437446,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "6d87d053-629d-4d6b-a007-477666d8d2d9",
+			"StartTime": 1662249283005,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "41b26aae-084b-4229-ae7d-c443a39349da",
+			"StartTime": 1662317953415,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "05149d65-243a-4dc6-ae97-b3a33e332d68",
+			"StartTime": 1662318418129,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "708e261e-5b70-4006-a0db-bc368a41c181",
+			"StartTime": 1662319849298,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "567af34f-9151-4d66-bc1b-644db0a1472f",
+			"StartTime": 1662320395009,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "aa1cb55b-c1cb-446a-b6e8-e4186584f2c0",
+			"StartTime": 1662321099324,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "71e5dea8-f415-4e45-a3be-adccc347d540",
+			"StartTime": 1662322503859,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "b061a800-1d8f-4dfa-b0e2-071d6726395a",
+			"StartTime": 1662404197898,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "8368b4cc-e160-4166-afbe-5523e54fb23d",
+			"StartTime": 1662404846589,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "7ed4541c-300b-46b4-894e-fcce0bfa23bf",
+			"StartTime": 1662405397543,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "ca3904ea-1f3f-4a3e-b043-677031c270b9",
+			"StartTime": 1662407061341,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "74088e8c-bc35-44a5-893b-427e7fb3f284",
+			"StartTime": 1662408965675,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "5c776f7a-b1e6-4752-8376-01b53df0f3bd",
+			"StartTime": 1662411334804,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "126da30a-bf55-489c-a0c8-b05f6b782fb1",
+			"StartTime": 1662414266456,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "2b6c9db4-fce0-4668-8547-c10f64ac1123",
+			"StartTime": 1662680821350,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "18d81c17-2570-4b22-ba36-b12e0579d8bd",
+			"StartTime": 1662681665329,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "0e8e41ba-01ed-4d89-aa78-e83abb776af0",
+			"StartTime": 1662923856906,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "08f24815-0112-4fc7-8336-74f34ffe4d49",
+			"StartTime": 1662924573219,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "f1487fe6-758e-4bfd-8b42-c3b64d5aaab8",
+			"StartTime": 1662928043068,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "9049c67e-7827-4f36-b1c1-85c465dcbfbb",
+			"StartTime": 1663020147867,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "8ec848eb-a7f7-4296-b12c-fe18b4f10de1",
+			"StartTime": 1663020627064,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "95f14a27-6732-4871-a40d-fd3af936744f",
+			"StartTime": 1663021129086,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "c6f27c57-2c3b-44b6-b6c4-975163244b49",
+			"StartTime": 1663100526513,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "6c7952a9-3a6e-44ee-a482-8a9e4d759a6e",
+			"StartTime": 1663445357064,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "41d1936f-5cab-4be3-bb5f-2084732ca4de",
+			"StartTime": 1663446153263,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "022a128e-7169-4d33-9652-adc9aed22b60",
+			"StartTime": 1663447833216,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "5c45f2ad-2e19-4475-a0a8-dafabaf89585",
+			"StartTime": 1663448679552,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "1d32952f-9ea2-4798-a922-fe9e0bfad837",
+			"StartTime": 1663450393689,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "1b9ac937-42a8-4078-93ac-598e6f45acb7",
+			"StartTime": 1663643240056,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "6d70bc1e-7178-4e9f-85e7-0589bc38ee0b",
+			"StartTime": 1663644571032,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "b2ffc880-bc68-4085-9d0f-0cc44b4e6445",
+			"StartTime": 1663645531723,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "e683153f-9d75-42bc-b8c1-9f7c56e6f58d",
+			"StartTime": 1663776780437,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "cac9cb73-0e10-4ab8-aa70-36ba87b95e11",
+			"StartTime": 1663777415664,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "e3761953-2ab9-4ad2-a147-7bf8f713e796",
+			"StartTime": 1663778238225,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "267957e3-bf44-4aa9-bcba-623ca3dd0c04",
+			"StartTime": 1663779023862,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "d04fb577-7f89-4211-bd8d-931788bb4835",
+			"StartTime": 1663779757401,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "4c58ef7a-ad9f-4b46-80bf-e57dcdea6496",
+			"StartTime": 1663780346277,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "04cc16fd-3425-42ce-8956-ad9059c5d3c8",
+			"StartTime": 1663882381373,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "f44f7e44-f696-4161-ad94-fcfa6aa278f4",
+			"StartTime": 1663883251143,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "7821cb58-6092-4ebb-8683-21de9b7782a1",
+			"StartTime": 1665521433929,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "b5f720b3-fd10-4dfd-b687-9b9b393b7650",
+			"StartTime": 1665522226542,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "7b00720c-4a56-4e9d-802a-dcb052003911",
+			"StartTime": 1665522719186,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "eb663c5e-47ab-4464-a2d4-f0305cf28808",
+			"StartTime": 1665525064934,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "26756704-8cb2-4d48-a3de-9da091d4ecc6",
+			"StartTime": 1666213312998,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "c74721f3-391b-4f15-a314-5dc8af58d993",
+			"StartTime": 1666213816329,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "df6d09e7-f91a-4b9d-81d3-330f7df82fc6",
+			"StartTime": 1666215224582,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "1af83e62-6763-407e-8594-f04c595429a0",
+			"StartTime": 1666217316158,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "562c2e6f-4a64-4797-b547-10a17e7c1779",
+			"StartTime": 1666397965367,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "2ad97c93-71cc-4eec-ac8d-02429fb34aaa",
+			"StartTime": 1666398580436,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "47a76cac-2417-4d25-9e8e-89bc2d0057fc",
+			"StartTime": 1666399142481,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "79067213-6fc2-4540-ac32-631b3dfca8c6",
+			"StartTime": 1666400425515,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "e527e6aa-9519-458c-b02d-b09f5a33c8c9",
+			"StartTime": 1666402948998,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "2cecf70c-85fb-452c-8b57-197f48e67f96",
+			"StartTime": 1666636759563,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "5a73ce46-9b07-4d89-a447-842390b74806",
+			"StartTime": 1666638425845,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "add5e5d9-1855-45fb-8bb0-a3d8407740c0",
+			"StartTime": 1666639038041,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "06230e61-711c-4705-99c7-42a21f51fa91",
+			"StartTime": 1666640832418,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "6a204639-9e7c-471a-82fc-6365f159bcb4",
+			"StartTime": 1666643403259,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "547f7ae4-234d-4861-ab60-3e5faa80f830",
+			"StartTime": 1666729033620,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "60e6c812-35cb-4b94-9a45-ba2c38fc3f8d",
+			"StartTime": 1666730254634,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "d6762543-eb92-49e3-a961-7e11e94af7a8",
+			"StartTime": 1666732768870,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "ffd1a8a1-ae89-46c5-9243-23b8dafbc8b2",
+			"StartTime": 1666735103317,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "88f4c583-5e34-40e7-869c-fc43d896640d",
+			"StartTime": 1666735727871,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "49a2bee1-e7c4-4779-b55d-6ce1abf5fcb7",
+			"StartTime": 1666736391855,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "da43ce66-8943-48c5-9075-02b267d72370",
+			"StartTime": 1666737358491,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "bcd19c18-5ed2-469b-84e6-f89cb48a74c6",
+			"StartTime": 1666815038227,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "30b87842-1101-4a7e-a96b-216163caefa2",
+			"StartTime": 1666815947604,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "bfb29d1c-4f2c-46f1-ac19-84d52bd0c118",
+			"StartTime": 1666816670189,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "610a8b95-9833-4bc6-9740-c9a1503064df",
+			"StartTime": 1666818714251,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "297b15fd-aa72-4024-8823-55e772b1c8dc",
+			"StartTime": 1666820881805,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "ba4a7e92-ba70-40cb-a478-636b43e8391b",
+			"StartTime": 1666821978624,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "0ce8f13f-cca3-49b6-a2a4-12f4279d5c9b",
+			"StartTime": 1666822698786,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "de229449-c1b8-4a20-a180-f5a1b971b96b",
+			"StartTime": 1666823600013,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "49eb869a-239e-421e-bb2f-7f12a70e5672",
+			"StartTime": 1666902542133,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "af83d4cf-44b3-4618-b5dc-ab2d973e04fd",
+			"StartTime": 1666903127232,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "40f45676-8ed1-4873-b7b9-426eef267236",
+			"StartTime": 1667087190613,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "704a12b4-697a-48e7-9f15-2b75d40b59eb",
+			"StartTime": 1667089596973,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "200a3b02-be10-41f7-835b-aaec40ffbb5f",
+			"StartTime": 1667247837645,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "10dc733b-eb0d-49ee-ab55-9543c23101fb",
+			"StartTime": 1667250124500,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": false
+		},
+		{
+			"ID": "41081663-bfff-4946-a3d0-976def207861",
+			"StartTime": 1667250694645,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "bd45b45a-7a1d-4b0e-88a2-41f20e179b7c",
+			"StartTime": 1667316865817,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "f43296e6-f05d-409a-9878-d8b7b38b2e55",
+			"StartTime": 1667317288030,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "be15e1f6-102c-4bce-9ca9-2aeb6fb56467",
+			"StartTime": 1667317793027,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "10582665-7de1-4464-8bcd-241609e5af21",
+			"StartTime": 1667318407164,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "80d165e8-bb6e-4e5f-977b-be24a95633ec",
+			"StartTime": 1667319474958,
+			"XPGrants": null,
+			"RewardGrants": null,
+			"MissionDeltas": null,
+			"ContractDeltas": null,
+			"CouldProgressMissions": true
+		},
+		{
+			"ID": "c918b092-5da3-4bb5-9b53-f2c87e70eb43",
+			"StartTime": 1667320614892,
+			"XPGrants": {
+				"GamePlayed": 1000,
+				"GameWon": 0,
+				"RoundPlayed": 0,
+				"RoundWon": 0,
+				"Missions": {
+					"6f4cf17a-4b84-e407-fe63-29bde8d052c6": 7200
+				},
+				"Modifier": {
+					"Value": 1,
+					"BaseMultiplierValue": 1,
+					"Modifiers": [
+						{
+							"Value": 1,
+							"Name": "RESTRICTIONS_XP",
+							"BaseOnly": false
+						}
+					]
+				},
+				"NumAFKRounds": 0
+			},
+			"RewardGrants": {},
+			"MissionDeltas": {
+				"6f4cf17a-4b84-e407-fe63-29bde8d052c6": {
+					"ID": "6f4cf17a-4b84-e407-fe63-29bde8d052c6",
+					"Objectives": {
+						"4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b": 1
+					},
+					"ObjectiveDeltas": {
+						"4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b": {
+							"ID": "4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b",
+							"ProgressBefore": 99,
+							"ProgressAfter": 100
+						}
+					}
+				}
+			},
+			"ContractDeltas": {
+				"43aeb2d6-46df-c1b1-5420-8cbbd67e7e9e": {
+					"ID": "43aeb2d6-46df-c1b1-5420-8cbbd67e7e9e",
+					"TotalXPBefore": 150100,
+					"TotalXPAfter": 158300
+				},
+				"5d627650-48ac-5710-5e49-78a41dc28b7b": {
+					"ID": "5d627650-48ac-5710-5e49-78a41dc28b7b",
+					"TotalXPBefore": 150100,
+					"TotalXPAfter": 158300
+				}
+			},
+			"CouldProgressMissions": true
+		}
+	],
+	"ActiveSpecialContract": "5d627650-48ac-5710-5e49-78a41dc28b7b",
 	"Missions": [
 		{
-			"ID": "7590afa4-446f-162d-ba6f-3b806b2bac84",
+			"ID": "86f9a9af-452e-44ec-9f33-6c94f1c4fac6",
 			"Objectives": {
-				"a617b28c-4ad2-04f6-736e-2eb01a903417": 20
+				"7f9c2b4b-4c91-c73a-9a45-b98b1a4ef1c9": 15
 			},
 			"Complete": true,
-			"ExpirationTime": "2021-08-24T13:00:00Z"
+			"ExpirationTime": "2022-11-02T02:00:00Z"
 		},
 		{
-			"ID": "10b21a75-42f9-cdea-7d6b-4e9b38a4587e",
+			"ID": "6697a060-4402-ca08-298b-9d8cc3ce3b3f",
 			"Objectives": {
-				"4cdfdb97-452e-bafd-cbf9-4abddfcc6f3b": 84
+				"974cb6ff-4aef-0217-1813-73a28ddfcdc6": 829
 			},
 			"Complete": false,
-			"ExpirationTime": "2021-08-24T13:00:00Z"
+			"ExpirationTime": "2022-11-02T02:00:00Z"
 		},
 		{
-			"ID": "ba37fa29-4512-5e03-b8d3-9cbeeb6be9d3",
+			"ID": "33aa6624-4e60-8136-8c9d-d99f77adbe28",
+			"Objectives": {
+				"974cb6ff-4aef-0217-1813-73a28ddfcdc6": 15320
+			},
+			"Complete": false,
+			"ExpirationTime": "2023-01-11T03:00:00Z"
+		},
+		{
+			"ID": "fba42979-4c75-855b-c1cc-c5b526fe9b84",
+			"Objectives": {
+				"a617b28c-4ad2-04f6-736e-2eb01a903417": 0
+			},
+			"Complete": false,
+			"ExpirationTime": "2023-01-11T03:00:00Z"
+		},
+		{
+			"ID": "7513e3da-442c-6e31-e97b-d1ac3b8b31e1",
 			"Objectives": {
 				"16af3bdf-c353-4c8c-a47c-b4eeac154eaf": 10
 			},
 			"Complete": true,
-			"ExpirationTime": "2021-08-24T13:00:00Z"
-		},
-		{
-			"ID": "8944e8b4-4fc5-b05c-08df-58bf76b56b9f",
-			"Objectives": {
-				"04ff6167-4976-eeb3-3e66-a78c57164351": 3
-			},
-			"Complete": false,
-			"ExpirationTime": "2021-07-29T02:00:00Z"
-		},
-		{
-			"ID": "8f183032-4ba1-b6a2-0574-e0ab6098a08f",
-			"Objectives": {
-				"c807ef27-420a-69f2-3c0f-31bf8922ba6f": 0
-			},
-			"Complete": false,
-			"ExpirationTime": "2021-07-29T02:00:00Z"
+			"ExpirationTime": "2023-01-11T03:00:00Z"
 		}
 	],
 	"MissionMetadata": {
 		"NPECompleted": true,
-		"WeeklyCheckpoint": "2021-07-12T14:00:00Z",
-		"WeeklyRefillTime": "2021-08-02T14:00:00Z"
+		"WeeklyCheckpoint": "2022-10-18T13:00:00Z",
+		"WeeklyRefillTime": "2022-11-07T13:00:00Z"
 	}
 }
