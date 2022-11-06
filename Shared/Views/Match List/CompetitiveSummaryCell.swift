@@ -6,6 +6,7 @@ struct CompetitiveSummaryCell: View {
 	let summary: CareerSummary
 	
 	@Environment(\.assets) private var assets
+	@Environment(\.colorScheme) private var colorScheme
 	
 	private let artworkSize = 96.0
 	private let primaryFont = Font.callout.weight(.semibold)
@@ -66,11 +67,18 @@ struct CompetitiveSummaryCell: View {
 			VStack {
 				seasonLabel(for: peakRank.season)
 				
-				info.rankTriangleUpwards?.view(shouldLoadImmediately: true)
-					.scaleEffect(0.85) // looks too large otherwise
-					.shadow(color: .black.opacity(0.2), radius: 4, x: 0, y: 4)
-					.alignmentGuide(.rankIcon) { $0[VerticalAlignment.center] }
-					.frame(width: artworkSize, height: artworkSize)
+				ZStack {
+					// this border helps add some padding to the rank triangle to justify showing it at a smaller size, hiding the low resolution
+					assets?.seasons.acts[peakRank.season]?
+						.borders.last?.fullImage.view()
+						.opacity(colorScheme == .dark ? 0.4 : 1) // it's very light, so this helps maintain the same contrast
+					
+					info.rankTriangleUpwards?.view(shouldLoadImmediately: true)
+						.scaleEffect(0.65, anchor: .init(x: 0.5, y: 0.5)) // visually tweaked to look just right
+						.shadow(color: .black.opacity(0.2), radius: 4, x: 0, y: 4)
+						.alignmentGuide(.rankIcon) { $0[VerticalAlignment.center] }
+				}
+				.frame(width: artworkSize, height: artworkSize)
 				
 				VStack {
 					Text(info.name)
