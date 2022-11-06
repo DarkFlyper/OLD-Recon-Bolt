@@ -63,28 +63,26 @@ struct ContractDetailsView: View {
 						.frame(height: 64)
 				}
 				
-				ContractLevelProgressView(data: data)
-				
 				VStack(alignment: .leading) {
 					Text(data.info.displayName)
 						.fontWeight(.semibold)
 					
 					HStack {
-						if let nextLevel = data.nextLevel {
-							let xpProgress = data.contract.progressionTowardsNextLevel
-							let xpGoal = nextLevel.info.xp
-							
-							Text("\(xpProgress) / \(xpGoal) XP")
+						let currentXP = data.contract.progression.totalEarned
+						
+						if !data.isComplete {
+							Text("\(currentXP) / \(data.totalXP) XP")
 								.font(.footnote)
-								.foregroundColor(.secondary)
 						} else {
-							Text("Max level reached!")
-								.foregroundColor(.secondary)
+							Text("Contract complete!")
 						}
 					}
+					.foregroundColor(.secondary)
 				}
 				
 				Spacer()
+				
+				ContractLevelProgressView(data: data)
 			}
 			
 			ContractProgressBar(data: data)

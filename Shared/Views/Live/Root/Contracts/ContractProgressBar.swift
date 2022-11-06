@@ -4,17 +4,18 @@ struct ContractProgressBar: View {
 	var data: ContractData
 	
 	var body: some View {
-		let currentXP = data.contract.progression.totalEarned
-		
 		VStack(spacing: 4) {
 			GeometryReader { geometry in
 				let spacing = 1.0
 				let xpScale = (geometry.size.width - spacing * CGFloat(data.levels.count - 1)) / CGFloat(data.totalXP)
 				
 				HStack(spacing: spacing) {
+					let currentXP = data.contract.progression.totalEarned
+					
 					ForEach(data.levels) { level in
 						ZStack(alignment: .leading) {
 							let range = level.xpRange
+							
 							Color.gray.opacity(0.25)
 							
 							if range.contains(currentXP) {
@@ -37,8 +38,15 @@ struct ContractProgressBar: View {
 			
 			HStack {
 				Text("Level \(data.contract.levelReached) / \(data.levels.count)")
+				
 				Spacer()
-				Text("\(currentXP) / \(data.totalXP) XP")
+				
+				if let nextLevel = data.nextLevel {
+					let xpProgress = data.contract.progressionTowardsNextLevel
+					let xpGoal = nextLevel.info.xp
+					
+					Text("\(xpProgress) / \(xpGoal) XP")
+				}
 			}
 			.foregroundColor(.secondary)
 			.font(.caption)
