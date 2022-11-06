@@ -144,7 +144,7 @@ struct AgentInfoView: View {
 #if DEBUG
 struct AgentInfoView_Previews: PreviewProvider, PreviewProviderWithAssets {
 	static func previews(assets: AssetCollection) -> some View {
-		AgentInfoView(agent: assets.agents[.sova]!)
+		AgentInfoView(agent: assets.agents[.harbor]!)
 			.withToolbar()
 	}
 }
