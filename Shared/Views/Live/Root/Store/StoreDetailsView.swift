@@ -8,7 +8,6 @@ struct StoreDetailsView: View {
 	var wallet: StoreWallet
 	
 	@Environment(\.assets) private var assets
-	@ScaledMetric(relativeTo: .body) private var currencyIconSize = 20.0
 	
 	private static let currencies: [Currency.ID] = [.valorantPoints, .radianitePoints]
 	
@@ -50,7 +49,7 @@ struct StoreDetailsView: View {
 			
 			ForEach(storefront.skinsPanelLayout.singleItemOffers, id: \.self) { offerID in
 				let offer = offers[offerID]!
-				offerCell(for: offer)
+				OfferCell(offer: offer)
 					.background(Color.tertiaryGroupedBackground)
 					.cornerRadius(8)
 			}
@@ -65,7 +64,7 @@ struct StoreDetailsView: View {
 			Spacer()
 			
 			ForEach(Self.currencies, id: \.self) { currency in
-				currencyLabel(wallet[currency], of: currency)
+				CurrencyLabel(amount: wallet[currency], currencyID: currency)
 			}
 		}
 		.padding()
@@ -96,10 +95,10 @@ struct StoreDetailsView: View {
 	
 	func nightMarketView(for market: Storefront.NightMarket) -> some View {
 		ForEach(market.offers) { offer in
-			offerCell(for: offer.offer)
+			OfferCell(offer: offer.offer)
 				.overlay(alignment: .bottomTrailing) {
 					VStack {
-						currencyLabels(for: offer.discountedCosts)
+						CurrencyLabel.multiple(for: offer.discountedCosts)
 						Text("-\(offer.discountPercent)%")
 							.font(.footnote.bold())
 							.foregroundColor(.accentColor)
@@ -116,12 +115,31 @@ struct StoreDetailsView: View {
 		}
 	}
 	
-	@ViewBuilder
-	func offerCell(for offer: StoreOffer) -> some View {
+	func remainingTimeLabel(_ seconds: TimeInterval) -> some View {
+		HStack(spacing: 4) {
+			CountdownText(target: updateTime + seconds)
+			
+			Image(systemName: "clock")
+		}
+		.font(.caption.weight(.medium))
+		.foregroundStyle(.secondary)
+	}
+}
+
+struct OfferCell: View {
+	var offer: StoreOffer
+	@State var chromaOffset = 0
+	
+	@Environment(\.assets) private var assets
+	
+	var body: some View {
 		let reward = offer.rewards.first!
 		let resolved = assets?.resolveSkin(.init(rawID: reward.itemID))
 		VStack {
-			resolved?.displayIcon?.view()
+			let chroma = (resolved?.skin.chromas).map { chromas in
+				chromas[chromaOffset % chromas.count]
+			}
+			(chroma?.displayIcon ?? resolved?.displayIcon)?.view()
 				.frame(height: 60)
 			
 			HStack(alignment: .lastTextBaseline) {
@@ -131,36 +149,37 @@ struct StoreDetailsView: View {
 				
 				Spacer()
 				
-				currencyLabels(for: offer.cost)
+				CurrencyLabel.multiple(for: offer.cost)
 			}
 		}
 		.padding(12)
-	}
-	
-	func currencyLabels(for costs: [Currency.ID: Int]) -> some View {
-		ForEach(costs.sorted(on: \.key.description), id: \.key) { currencyID, amount in
-			currencyLabel(amount, of: currencyID)
-				.layoutPriority(1)
+		.onTapGesture {
+			chromaOffset += 1 // cycle through chromas if available
 		}
 	}
+}
+
+struct CurrencyLabel: View {
+	var amount: Int
+	var currencyID: Currency.ID
 	
-	func currencyLabel(_ count: Int, of currencyID: Currency.ID) -> some View {
+	@Environment(\.assets) private var assets
+	@ScaledMetric(relativeTo: .body) private var iconSize = 20.0
+	
+	var body: some View {
 		HStack {
-			Text("\(count)")
+			Text("\(amount)")
 			let currency = assets?.currencies[currencyID]
 			currency?.displayIcon.view(renderingMode: .template)
-				.frame(width: currencyIconSize, height: currencyIconSize)
+				.frame(width: iconSize, height: iconSize)
 		}
 	}
 	
-	func remainingTimeLabel(_ seconds: TimeInterval) -> some View {
-		HStack(spacing: 4) {
-			CountdownText(target: updateTime + seconds)
-			
-			Image(systemName: "clock")
+	static func multiple(for costs: [Currency.ID: Int]) -> some View {
+		ForEach(costs.sorted(on: \.key.description), id: \.key) { currencyID, amount in
+			CurrencyLabel(amount: amount, currencyID: currencyID)
+				.layoutPriority(1)
 		}
-		.font(.caption.weight(.medium))
-		.foregroundStyle(.secondary)
 	}
 }
 
