@@ -13,12 +13,13 @@ struct RefreshableBox<Content: View>: View {
 		VStack(spacing: 0) {
 			HStack {
 				expandButton
+					.padding()
 				
 				AsyncButton(action: doRefresh) {
 					Image(systemName: "arrow.clockwise")
+						.padding()
 				}
 			}
-			.padding()
 			
 			if isExpanded {
 				content()
