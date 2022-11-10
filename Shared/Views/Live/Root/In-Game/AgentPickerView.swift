@@ -31,6 +31,8 @@ struct AgentPickerView: View {
 				await load {
 					pregameInfo = try await $0.lockInAgent(selectedAgentID!, in: pregameInfo.id)
 				}
+				ReviewManager.registerUsage(points: 10)
+				ReviewManager.requestReviewIfAppropriate()
 			} label: {
 				let agentName = selectedAgentID
 					.flatMap { assets?.agents[$0] }?

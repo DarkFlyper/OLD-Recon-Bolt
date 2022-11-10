@@ -28,7 +28,10 @@ struct RoundInfoContainer: View {
 			.clipped() // keep the map zoom in bounds
 		}
 		.onAppear(perform: updateRoundData)
-		.onDisappear(perform: ReviewManager.requestReview)
+		.onDisappear {
+			ReviewManager.registerUsage(points: 20)
+			ReviewManager.requestReviewIfAppropriate()
+		}
 		.onChange(of: roundNumber) { _ in updateRoundData() }
 		.navigationTitle("Round Details")
 		.navigationBarTitleDisplayMode(.inline)

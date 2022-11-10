@@ -13,6 +13,7 @@ struct ReconBoltApp: App {
 		WindowGroup {
 			if !isTesting {
 				ContentView()
+					.onAppear { ReviewManager.registerUsage(points: 2) }
 			}
 		}
 	}
