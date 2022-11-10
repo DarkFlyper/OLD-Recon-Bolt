@@ -35,17 +35,19 @@ struct AboutScreen: View {
 
 struct ListLink: View {
 	var label: LocalizedStringKey
+	var icon: String?
 	var destination: URL
 	
-	init(_ label: LocalizedStringKey, destination: String) {
+	init(_ label: LocalizedStringKey, icon: String? = nil, destination: String) {
 		self.label = label
 		self.destination = .init(string: destination)!
+		self.icon = icon
 	}
 	
 	var body: some View {
 		Link(destination: destination) {
 			NavigationLink {} label: {
-				Label(label, systemImage: "link")
+				Label(label, systemImage: icon ?? "link")
 			}
 			.tint(.primary)
 		}

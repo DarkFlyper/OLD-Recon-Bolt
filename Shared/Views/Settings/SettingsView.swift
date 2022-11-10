@@ -43,7 +43,9 @@ struct SettingsView: View {
 					Label("About Recon Bolt", systemImage: "questionmark")
 				}
 				
-				ListLink("Join the Discord Server!", destination: "https://discord.gg/bwENMNRqNa")
+				ListLink("Rate on the App Store", icon: "star", destination: "https://apps.apple.com/app/recon-bolt/id1563649061?action=write-review")
+				
+				ListLink("Join the Discord Server", icon: "bubble.left.and.bubble.right", destination: "https://discord.gg/bwENMNRqNa")
 			}
 		}
 		.navigationTitle("Settings")
