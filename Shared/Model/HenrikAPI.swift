@@ -46,13 +46,9 @@ private let responseDecoder = JSONDecoder() <- {
 	$0.keyDecodingStrategy = .convertFromSnakeCase
 }
 
-extension JSONDecodingRequest where Self: HenrikRequest {
-	var decoderOverride: JSONDecoder? { responseDecoder }
-}
-
 extension HenrikRequest {
 	func decodeResponse(from raw: Protoresponse) throws -> Response {
-		let response = try raw.decodeJSON(as: HenrikResponse<Response>.self)
+		let response = try raw.decodeJSON(as: HenrikResponse<Response>.self, using: responseDecoder)
 		guard let data = response.data else {
 			let message = response.errors?.lazy
 				.flatMap { [$0.message, $0.details] }
