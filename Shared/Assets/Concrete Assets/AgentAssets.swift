@@ -8,7 +8,7 @@ extension AssetClient {
 	}
 }
 
-private struct AgentInfoRequest: AssetRequest {
+private struct AgentInfoRequest: AssetDataRequest {
 	let path = "/v1/agents"
 	
 	var urlParams: [URLParameter] {

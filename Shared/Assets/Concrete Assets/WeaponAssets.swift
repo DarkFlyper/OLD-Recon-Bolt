@@ -8,7 +8,7 @@ extension AssetClient {
 	}
 }
 
-private struct WeaponInfoRequest: AssetRequest {
+private struct WeaponInfoRequest: AssetDataRequest {
 	let path = "/v1/weapons"
 	
 	typealias Response = [WeaponInfo]

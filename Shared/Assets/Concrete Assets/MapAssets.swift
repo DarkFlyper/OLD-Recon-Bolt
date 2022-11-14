@@ -9,7 +9,7 @@ extension AssetClient {
 	}
 }
 
-private struct MapInfoRequest: AssetRequest {
+private struct MapInfoRequest: AssetDataRequest {
 	let path = "/v1/maps"
 	
 	typealias Response = [MapInfo]

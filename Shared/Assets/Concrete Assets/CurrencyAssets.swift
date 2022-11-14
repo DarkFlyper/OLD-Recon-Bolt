@@ -7,7 +7,7 @@ extension AssetClient {
 	}
 }
 
-private struct CurrencyInfoRequest: AssetRequest {
+private struct CurrencyInfoRequest: AssetDataRequest {
 	let path = "/v1/currencies"
 	
 	typealias Response = [CurrencyInfo]

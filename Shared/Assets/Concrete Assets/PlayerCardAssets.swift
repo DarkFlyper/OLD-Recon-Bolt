@@ -7,7 +7,7 @@ extension AssetClient {
 	}
 }
 
-private struct PlayerCardInfoRequest: AssetRequest {
+private struct PlayerCardInfoRequest: AssetDataRequest {
 	let path = "/v1/playercards"
 	
 	typealias Response = [PlayerCardInfo]

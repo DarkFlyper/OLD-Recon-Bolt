@@ -7,7 +7,7 @@ extension AssetClient {
 	}
 }
 
-private struct SprayInfoRequest: AssetRequest {
+private struct SprayInfoRequest: AssetDataRequest {
 	let path = "/v1/sprays"
 	
 	typealias Response = [SprayInfo]

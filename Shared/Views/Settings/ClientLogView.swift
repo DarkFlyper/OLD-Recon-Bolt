@@ -31,9 +31,14 @@ struct ClientLogView: View {
 									Text(exchange.request.httpMethod!)
 										.fontWeight(.medium)
 									
-									let code = exchange.response.httpMetadata!.statusCode
-									Text("\(code)")
-										.foregroundColor(statusColor(forCode: code))
+									if let code = exchange.statusCode {
+										Text("\(code)")
+											.foregroundColor(statusColor(forCode: code))
+									} else {
+										Text("ERROR")
+											.font(.body.smallCaps())
+											.foregroundColor(.red)
+									}
 									
 									Spacer()
 									
@@ -85,9 +90,25 @@ struct ClientLogView: View {
 				}
 				
 				Section("Response") {
-					labeledRow("Response Code", describing: exchange.response.httpMetadata!.statusCode)
-					
-					bodyDetailsView(for: exchange.response.body)
+					switch exchange.result {
+					case .success(let response):
+						labeledRow("Response Code", describing: response.httpMetadata!.statusCode)
+						
+						bodyDetailsView(for: response.body)
+					case .failure(let error):
+						NavigationLink {
+							ScrollView {
+								Text(error.localizedDescription)
+									.font(.body.monospaced())
+									.frame(maxWidth: .infinity, alignment: .leading)
+									.padding()
+							}
+							.navigationTitle("Error Details")
+						} label: {
+							labeledRow("Error", describing: error.localizedDescription.prefix(1000))
+								.lineLimit(1)
+						}
+					}
 				}
 				
 				let info = ExchangeInfo(exchange)
@@ -144,6 +165,7 @@ struct ClientLogView: View {
 					Group {
 						if let string {
 							Text(string)
+								.font(.body.monospaced())
 								.frame(maxWidth: .infinity, alignment: .leading)
 						} else {
 							Text("<Binary Data>")
@@ -175,12 +197,12 @@ struct ClientLogView: View {
 struct ExchangeInfo: Encodable {
 	var time: Date
 	var request: Request
-	var response: Response
+	var result: Result
 	
 	init(_ exchange: ClientLog.Exchange) {
 		time = exchange.time
 		request = .init(exchange.request)
-		response = .init(exchange.response)
+		result = .init(exchange.result)
 	}
 	
 	struct Request: Encodable {
@@ -194,6 +216,20 @@ struct ExchangeInfo: Encodable {
 			url = raw.url!
 			headers = raw.allHTTPHeaderFields ?? [:]
 			body = raw.httpBody ?? .init()
+		}
+	}
+	
+	enum Result: Encodable {
+		case response(Response)
+		case error(ErrorInfo)
+		
+		init(_ raw: Protoresult) {
+			switch raw {
+			case .success(let response):
+				self = .response(.init(response))
+			case .failure(let error):
+				self = .error(.init(error))
+			}
 		}
 	}
 	
@@ -211,6 +247,16 @@ struct ExchangeInfo: Encodable {
 			body = raw.body
 		}
 	}
+	
+	struct ErrorInfo: Encodable {
+		var description: String
+		var dumped: String
+		
+		init(_ error: any Error) {
+			description = error.localizedDescription
+			dumped = "" <- { dump(error, to: &$0) }
+		}
+	}
 }
 
 #if DEBUG
@@ -222,32 +268,48 @@ struct ClientLogView_Previews: PreviewProvider {
 				request: .init(url: url) <- {
 					$0.httpMethod = "GET"
 				},
-				response: .init(
+				result: .success(.init(
 					body: Data(),
 					metadata: HTTPURLResponse(
 						url: url,
 						statusCode: 200,
 						httpVersion: nil,
 						headerFields: nil
-					)!,
-					decoder: .init()
-				)
+					)!
+				))
 			)
 			$0.logExchange(
 				request: .init(url: url) <- {
 					$0.httpMethod = "POST"
 					$0.httpBody = try! JSONEncoder().encode(APISession.mocked)
 				},
-				response: .init(
+				result: .success(.init(
 					body: Data(),
 					metadata: HTTPURLResponse(
 						url: url,
 						statusCode: 404,
 						httpVersion: nil,
 						headerFields: nil
-					)!,
-					decoder: .init()
-				)
+					)!
+				))
+			)
+			$0.logExchange(
+				request: .init(url: url) <- {
+					$0.httpMethod = "GET"
+				},
+				result: .init {
+					let response = Protoresponse(
+						body: Data(),
+						metadata: HTTPURLResponse(
+							url: url,
+							statusCode: 200,
+							httpVersion: nil,
+							headerFields: nil
+						)!
+					)
+					_ = try response.decodeJSON(as: User.self)
+					fatalError("decoding should fail")
+				}
 			)
 		}
 		

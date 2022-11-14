@@ -15,19 +15,19 @@ extension AssetClient {
 	}
 }
 
-private struct SeasonRequest: AssetRequest {
+private struct SeasonRequest: AssetDataRequest {
 	let path = "/v1/seasons"
 	
 	typealias Response = [SeasonInfo]
 }
 
-private struct CompetitiveSeasonRequest: AssetRequest {
+private struct CompetitiveSeasonRequest: AssetDataRequest {
 	let path = "/v1/seasons/competitive"
 	
 	typealias Response = [CompetitiveSeasonInfo]
 }
 
-private struct CompetitiveTierRequest: AssetRequest {
+private struct CompetitiveTierRequest: AssetDataRequest {
 	let path = "/v1/competitivetiers"
 	
 	typealias Response = [CompetitiveTier.Collection]

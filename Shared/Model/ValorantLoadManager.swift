@@ -50,8 +50,6 @@ private struct ValorantLoadModifier: ViewModifier {
 		guard !Task.isCancelled else { return }
 		
 		await load {
-			typealias APIError = ValorantClient.APIError
-			
 			do {
 				try await task(account.client)
 			} catch {

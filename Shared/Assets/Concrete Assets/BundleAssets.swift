@@ -7,7 +7,7 @@ extension AssetClient {
 	}
 }
 
-private struct BundleInfoRequest: AssetRequest {
+private struct BundleInfoRequest: AssetDataRequest {
 	let path = "/v1/bundles"
 	
 	typealias Response = [StoreBundleInfo]

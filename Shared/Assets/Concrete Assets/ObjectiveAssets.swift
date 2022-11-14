@@ -7,7 +7,7 @@ extension AssetClient {
 	}
 }
 
-private struct ObjectiveInfoRequest: AssetRequest {
+private struct ObjectiveInfoRequest: AssetDataRequest {
 	let path = "/v1/objectives"
 	
 	typealias Response = [ObjectiveInfo]

@@ -86,7 +86,7 @@ extension Location {
 	}
 }
 
-extension ValorantClient.APIError: LocalizedError {
+extension APIError: LocalizedError {
 	public var errorDescription: String? {
 		switch self {
 		case .unauthorized:

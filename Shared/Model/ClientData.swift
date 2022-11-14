@@ -1,4 +1,5 @@
 import Foundation
+import Combine
 import ValorantAPI
 import UserDefault
 import HandyOperators
@@ -80,7 +81,7 @@ final class AccountManager: ObservableObject {
 	
 	func updateClientVersion() async {
 		guard let clientVersion else { return }
-		await activeAccount?.client.setClientVersion(clientVersion)
+		activeAccount?.setClientVersion(clientVersion)
 	}
 	
 	private enum Storage {
@@ -124,12 +125,13 @@ final class StoredAccount: ObservableObject, Identifiable {
 		session: session,
 		multifactorHandler: context.multifactorHandler
 	) <- {
-		$0.onSessionUpdate { [weak self] session in
+		sessionUpdateListener = $0.onSessionUpdate { [weak self] session in
 			guard let self else { return }
 			print("storing updated session")
 			self.session = session
 		}
 	}
+	private var sessionUpdateListener: AnyCancellable?
 	
 	var id: User.ID { session.userID }
 	
@@ -148,6 +150,10 @@ final class StoredAccount: ObservableObject, Identifiable {
 	func save() {
 		context.keychain[id.rawID.description] = try! JSONEncoder().encode(session)
 		print("saved account for \(id)")
+	}
+	
+	func setClientVersion(_ version: String) {
+		client.clientVersion = version
 	}
 	
 	enum LoadingError: Error {

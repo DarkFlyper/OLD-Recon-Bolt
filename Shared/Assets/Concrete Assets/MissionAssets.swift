@@ -8,7 +8,7 @@ extension AssetClient {
 	}
 }
 
-private struct MissionInfoRequest: AssetRequest {
+private struct MissionInfoRequest: AssetDataRequest {
 	let path = "/v1/missions"
 	
 	typealias Response = [MissionInfo]

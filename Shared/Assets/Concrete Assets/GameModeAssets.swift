@@ -7,7 +7,7 @@ extension AssetClient {
 	}
 }
 
-private struct GameModeInfoRequest: AssetRequest {
+private struct GameModeInfoRequest: AssetDataRequest {
 	let path = "/v1/gamemodes"
 	
 	typealias Response = [GameModeInfo]

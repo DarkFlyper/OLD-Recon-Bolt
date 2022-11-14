@@ -6,7 +6,7 @@ extension AssetClient {
 	}
 }
 
-private struct VersionRequest: AssetRequest {
+private struct VersionRequest: AssetDataRequest {
 	let path = "/v1/version"
 	
 	typealias Response = AssetVersion

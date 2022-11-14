@@ -69,8 +69,8 @@ struct AgentSelectView: View {
 			do {
 				pregameInfo = try await $0.getLivePregameInfo(pregameInfo.id)
 			} catch
-				ValorantClient.APIError.badResponseCode(404, _, _),
-				ValorantClient.APIError.resourceNotFound
+				APIError.badResponseCode(404, _, _),
+				APIError.resourceNotFound
 			{
 				hasEnded = true
 			}

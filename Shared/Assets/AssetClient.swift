@@ -2,30 +2,34 @@ import Foundation
 import Protoquest
 import HandyOperators
 
-struct AssetClient: Protoclient {
+struct AssetClient {
 	let baseURL = URL(string: "https://valorant-api.com")!
 	
-	let responseDecoder = JSONDecoder() <- {
-		$0.dateDecodingStrategy = .iso8601
-	}
-	
-	let session: URLSession
-	
-	init(session: URLSession = .shared) {
-		self.session = session
-	}
+	let networkLayer: Protolayer
 	
 	private let shouldTrace = true
 	
-	func traceOutgoing<R>(_ rawRequest: URLRequest, for request: R) where R : Request {
-		guard shouldTrace else { return }
-		print(request, "sending request to", rawRequest.url!)
+	init(networkLayer: Protolayer = .urlSession()) {
+		self.networkLayer = networkLayer
 	}
 	
-	func traceIncoming<R>(_ response: Protoresponse, for request: R) where R : Request {
-		guard shouldTrace else { return }
-		print(request, "received response")
+	func send<R: Request>(_ request: R) async throws -> R.Response {
+		let urlRequest = try URLRequest(url: request.url(relativeTo: baseURL))
+		<-  request.configure(_:)
+		
+		if shouldTrace {
+			print(request, "sending request to", urlRequest.url!)
+		}
+		
+		let response = try await networkLayer.send(urlRequest)
+		
+		if shouldTrace {
+			print(request, "received response")
+		}
+		
+		return try request.decodeResponse(from: response)
 	}
+	
 }
 
 private struct AssetResponse<Body>: Decodable where Body: Decodable {
@@ -33,12 +37,16 @@ private struct AssetResponse<Body>: Decodable where Body: Decodable {
 	var data: Body
 }
 
-protocol AssetRequest: GetJSONRequest {}
+protocol AssetDataRequest: GetJSONRequest {}
 
-extension AssetRequest {
+extension AssetDataRequest {
 	func decodeResponse(from raw: Protoresponse) throws -> Response {
 		try raw
-			.decodeJSON(as: AssetResponse<Response>.self)
+			.decodeJSON(as: AssetResponse<Response>.self, using: responseDecoder)
 			.data
 	}
+}
+
+private let responseDecoder = JSONDecoder() <- {
+	$0.dateDecodingStrategy = .iso8601
 }

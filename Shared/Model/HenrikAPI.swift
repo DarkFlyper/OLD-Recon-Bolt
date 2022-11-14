@@ -3,24 +3,28 @@ import Protoquest
 import HandyOperators
 import ValorantAPI
 
-final class HenrikClient: Protoclient {
+final class HenrikClient {
 	static let shared = HenrikClient()
 	
 	let baseURL = URL(string: "https://api.henrikdev.xyz/valorant/v1/account")!
-	
-	let responseDecoder = JSONDecoder() <- {
-		$0.keyDecodingStrategy = .convertFromSnakeCase
-	}
+	let layer = Protolayer.urlSession(.shared)
 	
 	private init() {}
 	
-	struct APIError: Error, LocalizedError {
-		let status: Int
-		let message: String
-		
-		var errorDescription: String? {
-			"[\(status)] \(!message.isEmpty ? message : "No message provided.")"
-		}
+	func send<R: HenrikRequest>(_ request: R) async throws -> R.Response {
+		let urlRequest = try URLRequest(url: request.url(relativeTo: baseURL))
+		<- request.configure(_:)
+		let response = try await layer.send(urlRequest)
+		return try request.decodeResponse(from: response)
+	}
+}
+
+struct HenrikAPIError: Error, LocalizedError {
+	let status: Int
+	let message: String
+	
+	var errorDescription: String? {
+		"[\(status)] \(!message.isEmpty ? message : "No message provided.")"
 	}
 }
 
@@ -38,6 +42,14 @@ private struct HenrikResponse<Body>: Decodable where Body: Decodable {
 
 protocol HenrikRequest: GetJSONRequest {}
 
+private let responseDecoder = JSONDecoder() <- {
+	$0.keyDecodingStrategy = .convertFromSnakeCase
+}
+
+extension JSONDecodingRequest where Self: HenrikRequest {
+	var decoderOverride: JSONDecoder? { responseDecoder }
+}
+
 extension HenrikRequest {
 	func decodeResponse(from raw: Protoresponse) throws -> Response {
 		let response = try raw.decodeJSON(as: HenrikResponse<Response>.self)
@@ -46,7 +58,7 @@ extension HenrikRequest {
 				.flatMap { [$0.message, $0.details] }
 				.compacted()
 				.joined(separator: "\n") ?? ""
-			throw HenrikClient.APIError(status: response.status, message: message)
+			throw HenrikAPIError(status: response.status, message: message)
 		}
 		return data
 	}
