@@ -38,7 +38,7 @@ final class AssetManager: ObservableObject {
 	}
 	
 	#if DEBUG
-	static let forPreviews = AssetManager(assets: stored)
+	static let forPreviews = AssetManager()
 	static let mockEmpty = AssetManager(assets: nil)
 	#endif
 	
@@ -68,6 +68,6 @@ extension EnvironmentValues {
 	
 	private enum Key: EnvironmentKey {
 		@MainActor
-		static let defaultValue: AssetCollection? = isInSwiftUIPreview ? AssetManager.stored : nil
+		static let defaultValue = isInSwiftUIPreview ? AssetManager.forPreviews.assets : nil
 	}
 }

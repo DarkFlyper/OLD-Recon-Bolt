@@ -47,6 +47,12 @@ struct AgentInfoView: View {
 		}
 		.padding(.vertical)
 		.background {
+			agent.background.view(renderingMode: .template)
+				.foregroundColor(.black)
+				.blendMode(.plusDarker)
+				.opacity(0.15)
+		}
+		.background {
 			let colors = agent.backgroundGradientColors.reversed().map { $0.wrappedValue ?? .clear }
 			LinearGradient(
 				stops: zip(colors, [0, 0.4, 0.8, 1]).map(Gradient.Stop.init),

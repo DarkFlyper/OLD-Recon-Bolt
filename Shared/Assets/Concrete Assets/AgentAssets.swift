@@ -36,6 +36,7 @@ struct AgentInfo: AssetItem, Codable, Identifiable {
 	var displayIcon: AssetImage
 	var fullPortrait: AssetImage
 	var killfeedPortrait: AssetImage
+	var background: AssetImage
 	var isFullPortraitRightFacing: Bool
 	var assetPath: String
 	var backgroundGradientColors: [HexEncodedColor]
