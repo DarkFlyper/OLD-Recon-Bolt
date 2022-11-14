@@ -67,7 +67,10 @@ extension EnvironmentValues {
 	}
 	
 	private enum Key: EnvironmentKey {
-		@MainActor
-		static let defaultValue = isInSwiftUIPreview ? AssetManager.forPreviews.assets : nil
+		#if DEBUG
+		@MainActor static let defaultValue = isInSwiftUIPreview ? AssetManager.forPreviews.assets : nil
+		#else
+		@MainActor static let defaultValue: AssetCollection? = nil
+		#endif
 	}
 }
