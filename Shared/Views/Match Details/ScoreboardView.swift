@@ -123,9 +123,8 @@ struct ScoreboardRowView: View {
 		Spacer()
 		
 		if player.id != data.myself?.id {
-			NavigationLink {
+			TransparentNavigationLink {
 				MatchListView(userID: player.id, user: User(player))
-					.environment(\.isIncognito, isIncognito)
 			} label: {
 				Image(systemName: "person.crop.circle.fill")
 					.frame(maxHeight: .infinity)

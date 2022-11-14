@@ -17,20 +17,22 @@ struct BookmarkListView: View {
 			.withLocalData($myself, id: userID, shouldAutoUpdate: true)
 			
 			Section("Bookmarks") {
-				ForEach(bookmarkList.bookmarks, id: \.self) {
-					OtherUserCell(userID: $0)
+				ForEach(bookmarkList.bookmarks, id: \.self) { entry in
+					OtherUserCell(userID: entry.user)
+						.environment(\.location, entry.location)
 				}
 			}
 			.headerProminence(.increased)
 			.valorantLoadTask(id: bookmarkList.bookmarks) {
-				try await $0.fetchUsers(for: bookmarkList.bookmarks)
+				try await $0.fetchUsers(for: bookmarkList.bookmarks.map(\.id))
 			}
 			
 			Section("Search") {
 				LookupCell(history: history)
 				
-				ForEach(history.entries, id: \.self) {
-					OtherUserCell(userID: $0)
+				ForEach(history.entries) { entry in
+					OtherUserCell(userID: entry.user)
+						.environment(\.location, entry.location)
 				}
 			}
 			.headerProminence(.increased)
@@ -55,11 +57,15 @@ struct BookmarksList_Previews: PreviewProvider {
 			userID: PreviewData.userID,
 			myself: PreviewData.user,
 			isShowingSelf: false,
-			history: LookupHistory(entries: PreviewData.liveGameInfo.players.prefix(3).map(\.id))
+			history: LookupHistory(
+				entries: PreviewData.liveGameInfo.players.prefix(3)
+					.map { .init(user: $0.id, location: .europe) }
+			)
 		)
 		.withToolbar(allowLargeTitles: false)
 		.environmentObject(BookmarkList(
-			bookmarks: PreviewData.pregameInfo.team.players.map(\.id) + [.init()]
+			bookmarks: (PreviewData.pregameInfo.team.players.map(\.id) + [.init()])
+				.map { .init(user: $0, location: .europe) }
 		))
 	}
 }

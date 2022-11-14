@@ -81,10 +81,10 @@ struct LookupCell: View {
 		Task {
 			isLoading = true
 			await load {
-				let user = try await HenrikClient.shared.lookUpPlayer(name: gameName, tag: tagLine)
+				let (user, location) = try await HenrikClient.shared.lookUpPlayer(name: gameName, tag: tagLine)
 				LocalDataProvider.dataFetched(user)
 				dispatchPrecondition(condition: .onQueue(.main))
-				history.lookedUp(user.id)
+				history.lookedUp(user.id, location: location)
 				scrollView.scrollTo(user.id, anchor: nil) // TODO: this doesn't seem to do anything
 			}
 			isLoading = false

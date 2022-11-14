@@ -61,12 +61,17 @@ extension HenrikRequest {
 }
 
 extension HenrikClient {
-	func lookUpPlayer(name: String, tag: String) async throws -> User {
+	func lookUpPlayer(name: String, tag: String) async throws -> (User, Location) {
 		let response = try await send(PlayerLookupRequest(name: name, tag: tag))
 		let user = User(id: response.puuid, gameName: response.name, tagLine: response.tag)
-		// TODO: handle different regions!!
-		return user
+		let location = try Location.location(forRegion: response.region)
+		??? PlayerLookupError.invalidRegion(response.region)
+		return (user, location)
 	}
+}
+
+enum PlayerLookupError: Error {
+	case invalidRegion(String)
 }
 
 private struct PlayerLookupRequest: HenrikRequest {

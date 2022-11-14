@@ -11,7 +11,6 @@ struct MatchCell: View {
 	@LocalData var matchDetails: MatchDetails?
 	
 	@Environment(\.valorantLoad) private var load
-	@Environment(\.isIncognito) private var isIncognito
 	
 	var body: some View {
 		HStack {
@@ -42,9 +41,8 @@ struct MatchCell: View {
 		let matchesFilter = filter.accepts(match, details: matchDetails)
 		
 		VStack {
-			NavigationLink {
+			TransparentNavigationLink {
 				MatchDetailsContainer(matchID: match.id, userID: userID)
-					.environment(\.isIncognito, isIncognito) // i hate having to pass this on manually so much
 			} label: {
 				HStack {
 					match.startTime.relativeText()

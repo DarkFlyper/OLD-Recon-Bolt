@@ -15,6 +15,7 @@ struct MatchListView: View {
 	
 	@Environment(\.valorantLoad) private var load
 	@Environment(\.isIncognito) private var isIncognito
+	@Environment(\.location) private var location
 	@EnvironmentObject private var bookmarkList: BookmarkList
 	
 	private var shownMatches: [CompetitiveUpdate] {
@@ -51,9 +52,9 @@ struct MatchListView: View {
 			ToolbarItemGroup(placement: .navigationBarTrailing) {
 				if !isIncognito {
 					Button {
-						bookmarkList.toggleBookmark(for: userID)
+						bookmarkList.toggleBookmark(for: userID, location: location!)
 					} label: {
-						if bookmarkList.bookmarks.contains(userID) {
+						if bookmarkList.hasBookmark(for: userID) {
 							Label("Remove Bookmark", systemImage: "bookmark.fill")
 						} else {
 							Label("Add Bookmark", systemImage: "bookmark")

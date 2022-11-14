@@ -8,10 +8,12 @@ struct UserCell: View {
 	@LocalData var identity: Player.Identity?
 	@LocalData var summary: CareerSummary?
 	
+	@Environment(\.location) var locationOverride
+	
 	var body: some View {
 		let artworkSize = 64.0
 		
-		NavigationLink(isActive: $isSelected) {
+		TransparentNavigationLink(isActive: $isSelected) {
 			MatchListView(userID: userID, user: user)
 		} label: {
 			HStack(spacing: 10) {

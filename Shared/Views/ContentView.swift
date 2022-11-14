@@ -51,6 +51,7 @@ struct ContentView: View {
 		.withValorantLoadFunction(manager: accountManager)
 		.withLoadErrorAlerts()
 		.environment(\.assets, assetManager.assets)
+		.environment(\.location, accountManager.activeAccount?.location)
 		.onSceneActivation {
 			Task { await assetManager.loadAssets() }
 		}

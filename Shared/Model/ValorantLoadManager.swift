@@ -65,7 +65,14 @@ typealias ValorantLoadTask = (ValorantClient) async throws -> Void
 extension EnvironmentValues {
 	/// Executes some remote loading operation using the given ``ValorantClient``.
 	var valorantLoad: (@escaping ValorantLoadTask) async -> Void {
-		get { self[Key.self] }
+		get {
+			let load = self[Key.self]
+			return { [location] task in
+				await load { client in
+					try await task(client.in(location))
+				}
+			}
+		}
 		set { self[Key.self] = newValue }
 	}
 	
@@ -74,5 +81,16 @@ extension EnvironmentValues {
 			guard !isInSwiftUIPreview else { return }
 			fatalError("no valorant load function provided in environment!")
 		}
+	}
+}
+
+extension EnvironmentValues {
+	var location: Location? {
+		get { self[Key2.self] }
+		set { self[Key2.self] = newValue }
+	}
+	
+	private enum Key2: EnvironmentKey {
+		static let defaultValue: Location? = nil
 	}
 }

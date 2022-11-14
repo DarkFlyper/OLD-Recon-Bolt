@@ -135,6 +135,8 @@ final class StoredAccount: ObservableObject, Identifiable {
 	
 	var id: User.ID { session.userID }
 	
+	var location: Location { session.location }
+	
 	fileprivate init(session: APISession, context: Context) {
 		self.context = context
 		self.session = session

@@ -5,37 +5,70 @@ import UserDefault
 
 @MainActor
 final class BookmarkList: ObservableObject {
-	@UserDefault("BookmarkList.stored")
-	private static var stored: [User.ID] = []
+	@UserDefault("BookmarkList.stored.v2")
+	private static var stored: [Entry] = []
 	
-	@Published var bookmarks: [User.ID] = BookmarkList.stored {
+	@Published var bookmarks: [Entry] = BookmarkList.stored {
 		didSet { Self.stored = bookmarks }
 	}
 	
-	init() {}
+	init() {
+		if bookmarks.isEmpty, BackwardsCompatibility.canMigrate {
+			Task {
+				guard let location = AccountManager().activeAccount?.location else { return }
+				bookmarks = BackwardsCompatibility.migrate(location: location)
+			}
+		}
+	}
 	
 #if DEBUG
-	init(bookmarks: [User.ID]) {
+	init(bookmarks: [Entry]) {
 		assert(isInSwiftUIPreview)
 		_bookmarks = .init(wrappedValue: bookmarks)
 	}
 #endif
 	
-	func addBookmark(for user: User.ID) {
-		if !bookmarks.contains(user) {
-			bookmarks.append(user)
+	func addBookmark(for user: User.ID, location: Location) {
+		if !hasBookmark(for: user) {
+			bookmarks.append(.init(user: user, location: location))
 		}
 	}
 	
 	func removeBookmark(for user: User.ID) {
-		bookmarks.removeAll { $0 == user }
+		bookmarks.removeAll { $0.user == user }
 	}
 	
-	func toggleBookmark(for user: User.ID) {
-		if bookmarks.contains(user) {
+	func hasBookmark(for user: User.ID) -> Bool {
+		bookmarks.contains(where: { $0.user == user })
+	}
+	
+	func toggleBookmark(for user: User.ID, location: Location) {
+		if hasBookmark(for: user) {
 			removeBookmark(for: user)
 		} else {
-			addBookmark(for: user)
+			addBookmark(for: user, location: location)
+		}
+	}
+	
+	struct Entry: Hashable, Identifiable, Codable, DefaultsValueConvertible {
+		let user: User.ID
+		let location: Location
+		
+		var id: User.ID { user }
+	}
+	
+	enum BackwardsCompatibility {
+		@UserDefault("BookmarkList.stored")
+		private static var stored: [User.ID] = []
+		
+		static var canMigrate: Bool {
+			!stored.isEmpty
+		}
+		
+		static func migrate(location: Location) -> [Entry] {
+			let migrated = stored.map { Entry(user: $0, location: location) }
+			stored = []
+			return migrated
 		}
 	}
 }
