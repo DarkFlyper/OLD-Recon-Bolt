@@ -10,7 +10,7 @@ struct ScoreboardView: View {
 	
 	var body: some View {
 		VStack {
-			let sorted = data.details.players.sorted { $0.stats.score > $1.stats.score }
+			let sorted = data.details.players.sorted { $0.score > $1.score }
 			
 			ScrollView(.horizontal, showsIndicators: false) {
 				VStack(spacing: ScoreboardRowView.padding) {
@@ -57,12 +57,19 @@ struct ScoreboardRowView: View {
 		let relativeColor = data.relativeColor(of: player)
 		
 		HStack(spacing: Self.padding) {
-			AgentImage.icon(player.agentID)
-				.aspectRatio(1, contentMode: .fit)
-				.dynamicallyStroked(radius: 1, color: .white)
-				.background(relativeColor.opacity(0.5))
-				.compositingGroup()
-				.opacity(highlight.shouldFade(player.id) ? 0.5 : 1)
+			ZStack {
+				if let agentID = player.agentID {
+					AgentImage.icon(agentID)
+						.dynamicallyStroked(radius: 1, color: .white)
+				} else {
+					Image(systemName: "eye")
+						.frame(maxWidth: .infinity, maxHeight: .infinity)
+				}
+			}
+			.aspectRatio(1, contentMode: .fit)
+			.background(relativeColor.opacity(0.5))
+			.compositingGroup()
+			.opacity(highlight.shouldFade(player.id) ? 0.5 : 1)
 			
 			HStack {
 				identitySection
@@ -70,9 +77,15 @@ struct ScoreboardRowView: View {
 				
 				divider
 				
-				let roundsPlayed = data.details.roundResults.count
-				Text(verbatim: "\(player.stats.score / roundsPlayed)")
-					.frame(width: 60)
+				ZStack {
+					if let score = player.stats?.score {
+						let roundsPlayed = data.details.roundResults.count
+						Text(verbatim: "\(score / roundsPlayed)")
+					} else {
+						Text("–").foregroundStyle(.secondary)
+					}
+				}
+				.frame(width: 60)
 				
 				divider
 				

@@ -82,7 +82,7 @@ struct MatchCell: View {
 						
 						let myself = matchDetails?.players.firstElement(withID: userID)!
 						if let myself {
-							AgentImage.killfeedPortrait(myself.agentID)
+							AgentImage.killfeedPortrait(myself.agentID!)
 								.scaleEffect(x: -1)
 								.shadow(color: .black, radius: 4, x: 0, y: 0)
 						}

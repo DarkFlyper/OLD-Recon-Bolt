@@ -35,7 +35,9 @@ struct MatchViewData {
 	}
 	
 	func relativeColor(of teamID: Team.ID) -> Color? {
-		if let own = myself?.teamID {
+		if teamID == .neutral {
+			return .gray
+		} else if let own = myself?.teamID {
 			return teamID == own ? .valorantBlue : .valorantRed
 		} else {
 			return teamID.color

@@ -5,12 +5,17 @@ struct KDASummaryView: View {
 	let player: Player
 	
 	var body: some View {
-		HStack {
-			Text("\(player.stats.kills)")
-			Text("/").foregroundStyle(.secondary)
-			Text("\(player.stats.deaths)")
-			Text("/").foregroundStyle(.secondary)
-			Text("\(player.stats.assists)")
+		if let stats = player.stats {
+			HStack {
+				Text("\(stats.kills)")
+				Text("/").foregroundStyle(.secondary)
+				Text("\(stats.deaths)")
+				Text("/").foregroundStyle(.secondary)
+				Text("\(stats.assists)")
+			}
+		} else {
+			Text("Spectator")
+				.foregroundStyle(.secondary)
 		}
 	}
 }

@@ -55,7 +55,7 @@ struct EventRow: View, Animatable {
 				iconImage(name: "Spike")
 			} else {
 				let player = matchData.players[event.event.actor]!
-				AgentImage.icon(player.agentID)
+				AgentImage.icon(player.agentID!)
 					.dynamicallyStroked(radius: 1, color: .white)
 			}
 		}
@@ -77,7 +77,7 @@ struct EventRow: View, Animatable {
 			} else if damageType == .ability {
 				let slotName = damageSource == "GrenadeAbility" ? "Grenade" : damageSource
 				if let slot = AgentInfo.Ability.Slot(rawValue: slotName) {
-					AgentImage.ability(killer.agentID, slot: slot)
+					AgentImage.ability(killer.agentID!, slot: slot)
 				} else {
 					Text("<Unknown Ability>")
 						.foregroundStyle(.secondary)
@@ -91,7 +91,7 @@ struct EventRow: View, Animatable {
 		
 		let victim = matchData.players[kill.victim]!
 		icon {
-			AgentImage.icon(victim.agentID)
+			AgentImage.icon(victim.agentID!)
 				.dynamicallyStroked(radius: 1, color: .white)
 				.background(matchData.relativeColor(of: victim))
 		}
@@ -101,7 +101,7 @@ struct EventRow: View, Animatable {
 	private func bombEventContent(for bombEvent: BombEvent) -> some View {
 		icon {
 			let player = matchData.players[event.event.actor]!
-			AgentImage.icon(player.agentID)
+			AgentImage.icon(player.agentID!)
 				.dynamicallyStroked(radius: 1, color: .white)
 		}
 		

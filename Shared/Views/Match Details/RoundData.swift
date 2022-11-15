@@ -132,7 +132,7 @@ struct PositionedEvent: Identifiable, Equatable {
 					isDead: true,
 					position: .init(kill.victimPosition),
 					relativeColor: matchData.relativeColor(of: victim),
-					agentID: victim.agentID
+					agentID: victim.agentID!
 				)
 			}
 		}
@@ -196,7 +196,7 @@ extension DisplayedPlayerLocation {
 		self.angle = location.angle
 		let player = matchData.players[id]!
 		self.relativeColor = matchData.relativeColor(of: player)
-		self.agentID = player.agentID
+		self.agentID = player.agentID!
 	}
 }
 

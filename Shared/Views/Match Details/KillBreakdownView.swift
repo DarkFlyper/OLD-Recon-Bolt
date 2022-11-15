@@ -56,7 +56,7 @@ struct KillBreakdownView: View {
 			by: \.killer
 		)
 		let order = killsByPlayer
-			.sorted { data.players[$0.key]!.stats.score }
+			.sorted { data.players[$0.key]!.score }
 				then: { $0.key.description }
 			.map(\.key)
 			.reversed()
@@ -149,7 +149,7 @@ struct KillBreakdownView: View {
 		let player = data.players[playerID]!
 		let relativeColor = data.relativeColor(of: player) ?? .valorantRed
 		
-		AgentImage.icon(player.agentID)
+		AgentImage.icon(player.agentID!)
 			.aspectRatio(1, contentMode: .fit)
 			.fixedSize(horizontal: false, vertical: true)
 			.dynamicallyStroked(radius: 1, color: .white)
