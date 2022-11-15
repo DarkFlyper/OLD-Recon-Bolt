@@ -118,9 +118,11 @@ struct EventTimeline: View {
 	
 	@ViewBuilder
 	private func icon(for event: RoundEvent) -> some View {
-		if event is Kill {
+		if let kill = event as? Kill {
+			let isVictimSelf = kill.victim == matchData.myself?.id
 			Image(systemName: "xmark")
 				.resizable()
+				.symbolVariant(isVictimSelf ? .circle : .none)
 				.padding(2)
 		} else if let bombEvent = event as? BombEvent {
 			Image("\(bombEvent.isDefusal ? "Defuse" : "Spike") Icon")
