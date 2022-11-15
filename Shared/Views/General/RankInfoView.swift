@@ -24,21 +24,16 @@ struct RankInfoView: View {
 				let tier = info?.competitiveTier ?? 0
 				let tierInfo = assets?.seasons.tierInfo(number: tier, in: act)
 				
-				let peakRankInfo: CompetitiveTier? = assets?.seasons.actsInOrder
-					.lazy
-					.compactMap { act in
-						summary.competitiveInfo?.inSeason(act.id)?.peakRank()
-					}
-					.reversed() // most recent first
-					.max()
-					.flatMap { assets?.seasons.tierInfo($0) }
-				
 				if shouldShowProgress {
 					progressView(for: tierInfo, rankedRating: info?.adjustedRankedRating ?? 0)
 				}
 				
 				ZStack {
-					if shouldFallBackOnPrevious, tier == 0, let peakRankInfo {
+					if
+						tier == 0,
+						shouldFallBackOnPrevious,
+						let peakRankInfo = summary.peakRankInfo(seasons: assets?.seasons)
+					{
 						peakRankIcon(using: peakRankInfo)
 					} else {
 						tierIcon(info: tierInfo)

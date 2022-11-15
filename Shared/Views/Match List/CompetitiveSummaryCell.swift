@@ -63,7 +63,10 @@ struct CompetitiveSummaryCell: View {
 	
 	@ViewBuilder
 	private var peakInfo: some View {
-		if let peakRank = summary.peakRank(), let info = assets?.seasons.tierInfo(peakRank) {
+		if
+			let peakRank = summary.peakRank(seasons: assets?.seasons),
+			let info = assets?.seasons.tierInfo(peakRank)
+		{
 			VStack {
 				seasonLabel(for: peakRank.season)
 				

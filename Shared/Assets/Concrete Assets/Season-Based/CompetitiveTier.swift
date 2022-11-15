@@ -92,3 +92,19 @@ private extension Color {
 		).opacity(Double(raw >> 0 & 0xFF) / 255)
 	}
 }
+
+extension CareerSummary {
+	func peakRank(seasons: SeasonCollection?) -> RankSnapshot? {
+		guard let seasons, let bySeason = competitiveInfo?.bySeason else { return nil }
+		return seasons.actsInOrder
+			.reversed() // most recent first
+			.lazy
+			.compactMap { act in bySeason[act.id]?.peakRank() }
+			.max()
+	}
+	
+	func peakRankInfo(seasons: SeasonCollection?) -> CompetitiveTier? {
+		peakRank(seasons: seasons)
+			.flatMap { seasons?.tierInfo($0) }
+	}
+}
