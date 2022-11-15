@@ -21,6 +21,8 @@ struct BookmarkListView: View {
 					OtherUserCell(userID: entry.user)
 						.environment(\.location, entry.location)
 				}
+				.onDelete { bookmarkList.bookmarks.remove(atOffsets: $0) }
+				.onMove { bookmarkList.bookmarks.move(fromOffsets: $0, toOffset: $1) }
 			}
 			.headerProminence(.increased)
 			.valorantLoadTask(id: bookmarkList.bookmarks) {
@@ -34,6 +36,7 @@ struct BookmarkListView: View {
 					OtherUserCell(userID: entry.user)
 						.environment(\.location, entry.location)
 				}
+				.onDelete { history.entries.remove(atOffsets: $0) }
 			}
 			.headerProminence(.increased)
 		}
