@@ -4,6 +4,7 @@ import ValorantAPI
 struct SettingsView: View {
 	@ObservedObject var accountManager: AccountManager
 	@ObservedObject var assetManager: AssetManager
+	@ObservedObject var appSettings: AppSettings
 	
 	@State var isSigningIn = false
 	
@@ -37,6 +38,15 @@ struct SettingsView: View {
 					}
 				}
 				
+				Picker("Theme", selection: $appSettings.theme) {
+					ForEach(AppSettings.Theme.allCases, id: \.self) { theme in
+						Text(theme.name)
+							.tag(theme)
+					}
+				}
+			}
+			
+			Section("About") {
 				NavigationLink {
 					AboutScreen()
 				} label: {
@@ -96,11 +106,24 @@ struct SettingsView: View {
 	}
 }
 
+private extension AppSettings.Theme {
+	var name: LocalizedStringKey {
+		switch self {
+		case .system:
+			return "Match System"
+		case .light:
+			return "Light Mode"
+		case .dark:
+			return "Dark Mode"
+		}
+	}
+}
+
 #if DEBUG
 struct SettingsView_Previews: PreviewProvider {
 	static var previews: some View {
-		SettingsView(accountManager: .mocked, assetManager: .forPreviews)
-		SettingsView(accountManager: .init(), assetManager: .mockEmpty)
+		SettingsView(accountManager: .mocked, assetManager: .forPreviews, appSettings: .init())
+		SettingsView(accountManager: .init(), assetManager: .mockEmpty, appSettings: .init())
 	}
 }
 #endif

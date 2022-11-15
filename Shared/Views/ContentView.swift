@@ -12,6 +12,7 @@ struct ContentView: View {
 	#endif
 	@StateObject var bookmarkList = BookmarkList()
 	@StateObject var imageManager = ImageManager()
+	@StateObject var settings = AppSettings()
 	
 	@SceneStorage("tab")
 	var tab = Tab.career
@@ -33,7 +34,7 @@ struct ContentView: View {
 				.tabItem { Label("Reference", systemImage: "book") }
 				.tag(Tab.reference)
 			
-			SettingsView(accountManager: accountManager, assetManager: assetManager)
+			SettingsView(accountManager: accountManager, assetManager: assetManager, appSettings: settings)
 				.tabItem { Label("Settings", systemImage: "gearshape") }
 				.tag(Tab.settings)
 		}
@@ -62,6 +63,7 @@ struct ContentView: View {
 		}
 		.environmentObject(bookmarkList)
 		.environmentObject(imageManager)
+		.preferredColorScheme(settings.theme.colorScheme)
 	}
 	
 	@ViewBuilder
