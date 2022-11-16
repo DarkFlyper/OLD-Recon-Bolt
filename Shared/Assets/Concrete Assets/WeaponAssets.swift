@@ -168,6 +168,15 @@ struct WeaponSkin: AssetItem, Codable, Identifiable {
 	}
 }
 
+extension WeaponSkin.Theme.ID {
+	static let standard = Self("5a629df4-4765-0214-bd40-fbb96542941f")!
+	static let random = Self("0d7a5bfb-4850-098e-1821-d989bbfd58a8")!
+	
+	var isFree: Bool {
+		self == Self.standard || self == Self.random
+	}
+}
+
 extension AssetCollection {
 	func resolveSkin(_ level: WeaponSkin.Level.ID) -> ResolvedLevel? {
 		self[skinsByLevelID[level]]

@@ -20,7 +20,7 @@ struct SearchableAssetPicker<Item: SearchableAsset, RowContent: View, Deselector
 					.split(separator: " ", omittingEmptySubsequences: false) // important for default title = " "
 					.contains { $0.hasPrefix(lowerSearch) }
 			}
-			.sorted(on: \.searchableText)
+			.sorted(on: \.sortValue)
 		
 		List {
 			if search.isEmpty, Deselector.self != EmptyView.self {
@@ -96,7 +96,14 @@ struct SimpleSearchableAssetPicker<Item: SimpleSearchableAsset, RowContent: View
 }
 
 protocol SearchableAsset: Identifiable {
+	associatedtype SortValue: Comparable
+	
 	var searchableText: String { get }
+	var sortValue: SortValue { get }
+}
+
+extension SearchableAsset where SortValue == String {
+	var sortValue: SortValue { searchableText }
 }
 
 protocol SimpleSearchableAsset: SearchableAsset {

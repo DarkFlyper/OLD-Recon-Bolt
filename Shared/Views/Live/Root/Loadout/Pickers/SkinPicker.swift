@@ -15,7 +15,7 @@ struct SkinPicker: View {
 				SearchableAssetPicker(
 					allItems: .init(values: skins),
 					ownedItems: .init(skins.lazy
-						.filter { inventory.owns($0.id) || $0.skin.id == weapon.defaultSkinID }
+						.filter { inventory.owns($0.id) || $0.skin.themeID.isFree }
 						.map(\.id)
 					),
 					rowContent: skinPickerRow(for:),
@@ -57,5 +57,19 @@ struct SkinPicker: View {
 extension ResolvedLevel: SearchableAsset {
 	var searchableText: String {
 		level.displayName ?? skin.displayName
+	}
+	
+	var sortValue: SortValue {
+		.init(isFree: skin.themeID.isFree, name: searchableText)
+	}
+	
+	struct SortValue: Comparable {
+		var isFree: Bool
+		var name: String
+		
+		static func < (lhs: Self, rhs: Self) -> Bool {
+			(lhs.isFree ? 0 : 1, lhs.name)
+			< (rhs.isFree ? 0 : 1, rhs.name)
+		}
 	}
 }
