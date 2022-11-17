@@ -1,97 +1,104 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "ArrayBuilder",
-        "repositoryURL": "https://github.com/juliand665/ArrayBuilder.git",
-        "state": {
-          "branch": null,
-          "revision": "f713ffd1432c5fb7cbf47a84bd634b18256957b6",
-          "version": "1.1.0"
-        }
-      },
-      {
-        "package": "CGeometry",
-        "repositoryURL": "https://github.com/juliand665/CGeometry.git",
-        "state": {
-          "branch": null,
-          "revision": "b4c52b1e0ab545af08acc54e0252ce21dbc4bcad",
-          "version": "0.4.0"
-        }
-      },
-      {
-        "package": "ErgonomicCodable",
-        "repositoryURL": "https://github.com/juliand665/ErgonomicCodable.git",
-        "state": {
-          "branch": "main",
-          "revision": "d377cb1bffdd928ae957cc693641edef6d627c41",
-          "version": null
-        }
-      },
-      {
-        "package": "HandyOperators",
-        "repositoryURL": "https://github.com/juliand665/HandyOperators",
-        "state": {
-          "branch": null,
-          "revision": "39f39ae74471112d54152227bb70053b59ea796f",
-          "version": "2.1.0"
-        }
-      },
-      {
-        "package": "KeychainSwift",
-        "repositoryURL": "https://github.com/evgenyneu/keychain-swift.git",
-        "state": {
-          "branch": null,
-          "revision": "d108a1fa6189e661f91560548ef48651ed8d93b9",
-          "version": "20.0.0"
-        }
-      },
-      {
-        "package": "swift-algorithms",
-        "repositoryURL": "git@github.com:apple/swift-algorithms.git",
-        "state": {
-          "branch": null,
-          "revision": "2327673b0e9c7e90e6b1826376526ec3627210e4",
-          "version": "0.2.1"
-        }
-      },
-      {
-        "package": "swift-collections",
-        "repositoryURL": "https://github.com/apple/swift-collections.git",
-        "state": {
-          "branch": null,
-          "revision": "f504716c27d2e5d4144fa4794b12129301d17729",
-          "version": "1.0.3"
-        }
-      },
-      {
-        "package": "swift-numerics",
-        "repositoryURL": "https://github.com/apple/swift-numerics",
-        "state": {
-          "branch": null,
-          "revision": "6583ac70c326c3ee080c1d42d9ca3361dca816cd",
-          "version": "0.1.0"
-        }
-      },
-      {
-        "package": "SwiftUIMissingPieces",
-        "repositoryURL": "https://github.com/juliand665/SwifUI-Missing-Pieces.git",
-        "state": {
-          "branch": "main",
-          "revision": "b61ba8552b0ebc21e82efa7f92b24c533f0a3072",
-          "version": null
-        }
-      },
-      {
-        "package": "UserDefault",
-        "repositoryURL": "https://github.com/juliand665/UserDefault.git",
-        "state": {
-          "branch": null,
-          "revision": "aabe6e72534c85baa5c07e7de7be5345a5506eb2",
-          "version": "1.1.2"
-        }
+  "pins" : [
+    {
+      "identity" : "arraybuilder",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/juliand665/ArrayBuilder.git",
+      "state" : {
+        "revision" : "f713ffd1432c5fb7cbf47a84bd634b18256957b6",
+        "version" : "1.1.0"
       }
-    ]
-  },
-  "version": 1
+    },
+    {
+      "identity" : "cgeometry",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/juliand665/CGeometry.git",
+      "state" : {
+        "revision" : "b4c52b1e0ab545af08acc54e0252ce21dbc4bcad",
+        "version" : "0.4.0"
+      }
+    },
+    {
+      "identity" : "ergonomiccodable",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/juliand665/ErgonomicCodable.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "d377cb1bffdd928ae957cc693641edef6d627c41"
+      }
+    },
+    {
+      "identity" : "handyoperators",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/juliand665/HandyOperators",
+      "state" : {
+        "revision" : "39f39ae74471112d54152227bb70053b59ea796f",
+        "version" : "2.1.0"
+      }
+    },
+    {
+      "identity" : "keychain-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/evgenyneu/keychain-swift.git",
+      "state" : {
+        "revision" : "d108a1fa6189e661f91560548ef48651ed8d93b9",
+        "version" : "20.0.0"
+      }
+    },
+    {
+      "identity" : "protoquest",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/juliand665/Protoquest.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "d31c0a17deb6542637b9264842544092f246caa5"
+      }
+    },
+    {
+      "identity" : "swift-algorithms",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:apple/swift-algorithms.git",
+      "state" : {
+        "revision" : "2327673b0e9c7e90e6b1826376526ec3627210e4",
+        "version" : "0.2.1"
+      }
+    },
+    {
+      "identity" : "swift-collections",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-collections.git",
+      "state" : {
+        "revision" : "f504716c27d2e5d4144fa4794b12129301d17729",
+        "version" : "1.0.3"
+      }
+    },
+    {
+      "identity" : "swift-numerics",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-numerics",
+      "state" : {
+        "revision" : "6583ac70c326c3ee080c1d42d9ca3361dca816cd",
+        "version" : "0.1.0"
+      }
+    },
+    {
+      "identity" : "swifui-missing-pieces",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/juliand665/SwifUI-Missing-Pieces.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "b61ba8552b0ebc21e82efa7f92b24c533f0a3072"
+      }
+    },
+    {
+      "identity" : "userdefault",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/juliand665/UserDefault.git",
+      "state" : {
+        "revision" : "aabe6e72534c85baa5c07e7de7be5345a5506eb2",
+        "version" : "1.1.2"
+      }
+    }
+  ],
+  "version" : 2
 }
