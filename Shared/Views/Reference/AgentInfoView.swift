@@ -23,48 +23,85 @@ struct AgentInfoView: View {
 				.animation(.default, value: activeAbilitySlot)
 			}
 			.background(Color.groupedBackground)
+			.coordinateSpace(name: "fixed")
 		}
 		.navigationBarTitleDisplayMode(.inline)
 	}
 	
 	@ViewBuilder
 	var portrait: some View {
-		VStack(spacing: 32) {
-			VStack {
-				Text(agent.displayName)
-					.font(.system(.largeTitle, design: .default).smallCaps())
-					.fontWeight(.semibold)
-					.textCase(.uppercase)
-				Text("\"\(agent.developerName)\"")
-					.foregroundStyle(.secondary)
-					.font(.title3)
+		let height: CGFloat = 500.0
+		GeometryReader { geometry in
+			let absoluteFrame = geometry.frame(in: .named("fixed"))
+			let yOffset: CGFloat = -absoluteFrame.minY
+			let yProgress: CGFloat = yOffset / height
+			
+			portraitImage
+				.scaleEffect(1 - (0.25 * yProgress))
+				.offset(y: 0.75 * yOffset)
+				.background {
+					textBackground
+						.padding(.top, -64)
+					// this looks ridiculous but it feels right ok
+						.blur(radius: 16 * yProgress)
+						.opacity(1.0 - 0.5 * yProgress)
+						.offset(y: 0.4 * yOffset)
+						.scaleEffect(1 + 0.1 * yProgress)
+						.blendMode(.plusDarker)
+				}
+				.overlay(alignment: .top) {
+					codeNameLabel
+						.frame(height: 44)
+						.offset(y: -44 + yOffset)
+				}
+			.padding(.bottom)
+			.mask(alignment: .bottom) {
+				Rectangle().frame(height: 1500)
 			}
+			.background {
+				gradient
+					.padding(.top, yOffset)
+			}
+			.navigationTitle(yOffset > 0 ? agent.displayName : "")
+		}
+		.frame(height: height)
+	}
+	
+	var portraitImage: some View {
+		AgentImage.fullPortrait(agent.id)
+		// roundabout way to ignore the horizontal size of the image, since it's mostly transparent on the sides
+			.frame(width: 2000)
+			.frame(width: 1)
+			.frame(maxWidth: .infinity)
+	}
+	
+	var codeNameLabel: some View {
+		Text("\"\(agent.developerName)\"")
+			.foregroundStyle(.secondary)
+			.font(.title3)
 			.foregroundColor(.white)
 			.blendMode(.plusLighter)
-			
-			AgentImage.fullPortrait(agent.id)
-				.frame(maxHeight: 400)
+	}
+	
+	var textBackground: some View {
+		agent.background.view(renderingMode: .template)
+			.foregroundColor(.black)
+			.opacity(0.15)
+	}
+	
+	@ViewBuilder
+	var gradient: some View {
+		let colors = agent.backgroundGradientColors.reversed().map { $0.wrappedValue ?? .clear }
+		LinearGradient(
+			stops: zip(colors, [0, 0.4, 0.8, 1]).map(Gradient.Stop.init),
+			startPoint: .top,
+			endPoint: .bottom
+		)
+		.overlay(alignment: .top) {
+			let height: CGFloat = 1000
+			colors.first!.frame(height: height).offset(y: -height)
 		}
-		.padding(.vertical)
-		.background {
-			agent.background.view(renderingMode: .template)
-				.foregroundColor(.black)
-				.blendMode(.plusDarker)
-				.opacity(0.15)
-		}
-		.background {
-			let colors = agent.backgroundGradientColors.reversed().map { $0.wrappedValue ?? .clear }
-			LinearGradient(
-				stops: zip(colors, [0, 0.4, 0.8, 1]).map(Gradient.Stop.init),
-				startPoint: .top,
-				endPoint: .bottom
-			)
-			.overlay(alignment: .top) {
-				let height: CGFloat = 1024
-				colors.first!.frame(height: height).offset(y: -height)
-			}
-			.padding(.top, -160)
-		}
+		.padding(.top, -160)
 	}
 	
 	var descriptionBox: some View {
@@ -150,8 +187,11 @@ struct AgentInfoView: View {
 #if DEBUG
 struct AgentInfoView_Previews: PreviewProvider, PreviewProviderWithAssets {
 	static func previews(assets: AssetCollection) -> some View {
-		AgentInfoView(agent: assets.agents[.harbor]!)
-			.withToolbar()
+		NavigationView {
+			NavigationLink("Example", isActive: .constant(true)) {
+				AgentInfoView(agent: assets.agents[.harbor]!)
+			}
+		}
 	}
 }
 #endif
