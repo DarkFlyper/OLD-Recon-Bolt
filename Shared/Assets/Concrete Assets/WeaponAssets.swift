@@ -173,7 +173,7 @@ extension WeaponSkin.Theme.ID {
 	static let random = Self("0d7a5bfb-4850-098e-1821-d989bbfd58a8")!
 	
 	var isFree: Bool {
-		self == Self.standard || self == Self.random
+		self == .standard || self == .random
 	}
 }
 

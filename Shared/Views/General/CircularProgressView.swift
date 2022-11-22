@@ -18,7 +18,7 @@ struct CircularProgressView<Base: View, Background: View>: View {
 			let stroke = StrokeStyle(lineWidth: lineWidth, lineCap: .round)
 			let thickerStroke = StrokeStyle(lineWidth: thickerWidth, lineCap: .round)
 			
-			let ring = Circle().rotation(Angle(degrees: -90))
+			let ring = Circle()
 			
 			let background = self.background()
 				.mask(Circle())
