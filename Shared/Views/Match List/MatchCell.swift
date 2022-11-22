@@ -53,6 +53,7 @@ struct MatchCell: View {
 				}
 			}
 			.font(.caption)
+			.disabled(match.mapID == nil)
 			
 			if matchesFilter {
 				if let mapID = match.mapID {
