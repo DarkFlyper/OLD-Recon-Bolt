@@ -139,7 +139,7 @@ struct OfferCell: View {
 			let chroma = (resolved?.skin.chromas).map { chromas in
 				chromas[chromaOffset % chromas.count]
 			}
-			(chroma?.displayIcon ?? resolved?.displayIcon)?.view()
+			(chroma?.fullRender ?? chroma?.displayIcon ?? resolved?.displayIcon)?.view()
 				.frame(height: 60)
 			
 			HStack(alignment: .lastTextBaseline) {
