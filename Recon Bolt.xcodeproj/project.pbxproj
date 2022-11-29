@@ -152,6 +152,7 @@
 		B9F7A53F27DD091F00636DAF /* CurrencyAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F7A53E27DD091F00636DAF /* CurrencyAssets.swift */; };
 		B9F7A54127DD1E7D00636DAF /* BundleAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F7A54027DD1E7D00636DAF /* BundleAssets.swift */; };
 		B9F7A54327DD30C600636DAF /* BundleDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F7A54227DD30C600636DAF /* BundleDetailsView.swift */; };
+		B9F7FBC32935B6AB0022F5CE /* AccountSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F7FBC22935B6AB0022F5CE /* AccountSettingsView.swift */; };
 		B9F8703226B38F2400C1F784 /* AutoRefresher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F8703126B38F2400C1F784 /* AutoRefresher.swift */; };
 		B9F8703426B3A0A000C1F784 /* CountdownText.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F8703326B3A0A000C1F784 /* CountdownText.swift */; };
 		B9F8703626B3B02000C1F784 /* RefreshableBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F8703526B3B01F00C1F784 /* RefreshableBox.swift */; };
@@ -322,6 +323,7 @@
 		B9F7A53E27DD091F00636DAF /* CurrencyAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyAssets.swift; sourceTree = "<group>"; };
 		B9F7A54027DD1E7D00636DAF /* BundleAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleAssets.swift; sourceTree = "<group>"; };
 		B9F7A54227DD30C600636DAF /* BundleDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleDetailsView.swift; sourceTree = "<group>"; };
+		B9F7FBC22935B6AB0022F5CE /* AccountSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingsView.swift; sourceTree = "<group>"; };
 		B9F8703126B38F2400C1F784 /* AutoRefresher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoRefresher.swift; sourceTree = "<group>"; };
 		B9F8703326B3A0A000C1F784 /* CountdownText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownText.swift; sourceTree = "<group>"; };
 		B9F8703526B3B01F00C1F784 /* RefreshableBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshableBox.swift; sourceTree = "<group>"; };
@@ -727,6 +729,7 @@
 				B9DCC24028C96EF900C03B90 /* AssetsInfoView.swift */,
 				B98FC070279DD758002DDF93 /* MultifactorPromptView.swift */,
 				B9B11A6D28DD1407006EC232 /* ClientLogView.swift */,
+				B9F7FBC22935B6AB0022F5CE /* AccountSettingsView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -1018,6 +1021,7 @@
 				B9DCC24328C96F5400C03B90 /* AboutScreen.swift in Sources */,
 				B90B4B58267C167B00CACB95 /* PlayerCardAssets.swift in Sources */,
 				B96A0CAA265AE32200844674 /* MissionAssets.swift in Sources */,
+				B9F7FBC32935B6AB0022F5CE /* AccountSettingsView.swift in Sources */,
 				B902823426A7A8A9004B1740 /* HenrikAPI.swift in Sources */,
 				B9F7A53927DC5D3D00636DAF /* StoreDetailsView.swift in Sources */,
 				B954A6DB26C8BED200A86CB9 /* WeaponImage.swift in Sources */,

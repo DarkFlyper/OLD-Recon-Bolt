@@ -114,6 +114,14 @@ extension Binding {
 			}
 		)
 	}
+	
+	/// - note: this cannot be set back to true when currently false
+	func isSome<T>() -> Binding<Bool> where Value == T? {
+		.init(
+			get: { wrappedValue != nil },
+			set: { wrappedValue = $0 ? wrappedValue : nil }
+		)
+	}
 }
 
 extension View {

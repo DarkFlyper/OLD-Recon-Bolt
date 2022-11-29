@@ -16,7 +16,6 @@ extension View {
 
 private struct LoadWrapper<Content: View>: View {
 	@ViewBuilder let content: () -> Content
-	@State private var isShowingErrorAlert = false
 	@State private var loadError: Error?
 	@State private var errorTitle: LocalizedStringKey = ""
 	
@@ -26,18 +25,7 @@ private struct LoadWrapper<Content: View>: View {
 				errorTitle = $0
 			}
 			.environment(\.loadWithErrorAlerts, runTask)
-			.alert(
-				errorTitle,
-				isPresented: $isShowingErrorAlert,
-				presenting: loadError
-			) { error in
-				Button("Copy Error Details") {
-					UIPasteboard.general.string = error.localizedDescription
-				}
-				Button("OK", role: .cancel) {}
-			} message: { error in
-				Text(error.localizedDescription)
-			}
+			.alert(errorTitle, $error: $loadError)
 	}
 	
 	func runTask(_ task: () async throws -> Void) async {
@@ -52,7 +40,23 @@ private struct LoadWrapper<Content: View>: View {
 			print("error running load task:")
 			dump(error)
 			loadError = .init(error)
-			isShowingErrorAlert = true
+		}
+	}
+}
+
+extension View {
+	func alert(_ title: LocalizedStringKey, @Binding error: Error?) -> some View {
+		alert(
+			title,
+			isPresented: $error.isSome(),
+			presenting: error
+		) { error in
+			Button("Copy Error Details") {
+				UIPasteboard.general.string = error.localizedDescription
+			}
+			Button("OK", role: .cancel) {}
+		} message: { error in
+			Text(error.localizedDescription)
 		}
 	}
 }

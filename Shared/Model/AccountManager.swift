@@ -46,6 +46,7 @@ final class AccountManager: ObservableObject {
 	
 #if DEBUG
 	static let mocked = AccountManager(mockAccounts: [.init()], activeAccount: .mocked)
+	static let mockEmpty = AccountManager(mockAccounts: [])
 	
 	@_disfavoredOverload
 	init(mockAccounts: [User.ID] = [], activeAccount: StoredAccount? = nil) {
@@ -73,6 +74,14 @@ final class AccountManager: ObservableObject {
 			storedAccounts.append(session.userID)
 		}
 		activeAccount = StoredAccount(session: session, context: context)
+	}
+	
+	func toggleActive(_ id: User.ID) throws {
+		if activeAccount?.id == id {
+			activeAccount = nil
+		} else {
+			activeAccount = try loadAccount(for: id)
+		}
 	}
 	
 	private var context: StoredAccount.Context {
