@@ -4,7 +4,7 @@ import HandyOperators
 
 extension View {
 	func withLoadErrorAlerts() -> some View {
-		LoadWrapper { self }
+		modifier(LoadWrapper())
 	}
 }
 
@@ -14,13 +14,12 @@ extension View {
 	}
 }
 
-private struct LoadWrapper<Content: View>: View {
-	@ViewBuilder let content: () -> Content
+private struct LoadWrapper: ViewModifier {
 	@State private var loadError: Error?
 	@State private var errorTitle: LocalizedStringKey = ""
 	
-	var body: some View {
-		content()
+	func body(content: Content) -> some View {
+		content
 			.onPreferenceChange(LoadErrorTitleKey.self) {
 				errorTitle = $0
 			}
