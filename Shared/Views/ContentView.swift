@@ -4,15 +4,9 @@ import ValorantAPI
 import KeychainSwift
 
 struct ContentView: View {
-	@StateObject var accountManager = AccountManager()
-	#if DEBUG
-	@StateObject var assetManager = isInSwiftUIPreview ? .forPreviews : AssetManager()
-	#else
-	@StateObject var assetManager = AssetManager()
-	#endif
-	@StateObject var bookmarkList = BookmarkList()
-	@StateObject var imageManager = ImageManager()
-	@StateObject var settings = AppSettings()
+	@ObservedObject var accountManager: AccountManager
+	@ObservedObject var assetManager: AssetManager
+	@ObservedObject var settings: AppSettings
 	
 	@SceneStorage("tab")
 	var tab = Tab.career
@@ -51,19 +45,9 @@ struct ContentView: View {
 		.buttonBorderShape(.capsule)
 		.withValorantLoadFunction(manager: accountManager)
 		.withLoadErrorAlerts()
-		.environment(\.assets, assetManager.assets)
-		.environment(\.location, accountManager.activeAccount?.location)
 		.onSceneActivation {
 			Task { await assetManager.loadAssets() }
 		}
-		.task(id: assetManager.assets?.version) {
-			guard let version = assetManager.assets?.version else { return }
-			accountManager.clientVersion = version.riotClientVersion
-			imageManager.setVersion(version)
-		}
-		.environmentObject(bookmarkList)
-		.environmentObject(imageManager)
-		.preferredColorScheme(settings.theme.colorScheme)
 	}
 	
 	@ViewBuilder
@@ -89,10 +73,10 @@ struct ContentView: View {
 #if DEBUG
 struct ContentView_Previews: PreviewProvider {
 	static var previews: some View {
-		ContentView(accountManager: .mocked)
-		ContentView(accountManager: .mocked, tab: .live)
-		ContentView(accountManager: .mocked, tab: .reference)
-		ContentView(accountManager: .init())
+		ContentView(accountManager: .mocked, assetManager: .forPreviews, settings: .init())
+		ContentView(accountManager: .mocked, assetManager: .forPreviews, settings: .init(), tab: .live)
+		ContentView(accountManager: .mocked, assetManager: .forPreviews, settings: .init(), tab: .reference)
+		ContentView(accountManager: .init(), assetManager: .forPreviews, settings: .init())
 	}
 }
 #endif
