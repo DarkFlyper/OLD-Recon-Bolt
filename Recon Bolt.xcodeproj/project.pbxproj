@@ -67,6 +67,7 @@
 		B9485F84264B1DD300AC3456 /* AgentAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9485F83264B1DD300AC3456 /* AgentAssets.swift */; };
 		B9485F87264B5BD700AC3456 /* AssetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9485F86264B5BD700AC3456 /* AssetImage.swift */; };
 		B9485F90264B639F00AC3456 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9485F8F264B639F00AC3456 /* Tests.swift */; };
+		B94931A529386B3400D44A48 /* InAppStorefront.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94931A429386B3400D44A48 /* InAppStorefront.swift */; };
 		B94C57FA26CB605700CAF257 /* AlwaysPressable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94C57F926CB605700CAF257 /* AlwaysPressable.swift */; };
 		B954A6DB26C8BED200A86CB9 /* WeaponImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B954A6DA26C8BED200A86CB9 /* WeaponImage.swift */; };
 		B955C4572851796900BDF197 /* PreviewProviderWithAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B955C4562851796900BDF197 /* PreviewProviderWithAssets.swift */; };
@@ -153,6 +154,8 @@
 		B9F7A54127DD1E7D00636DAF /* BundleAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F7A54027DD1E7D00636DAF /* BundleAssets.swift */; };
 		B9F7A54327DD30C600636DAF /* BundleDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F7A54227DD30C600636DAF /* BundleDetailsView.swift */; };
 		B9F7FBC32935B6AB0022F5CE /* AccountSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F7FBC22935B6AB0022F5CE /* AccountSettingsView.swift */; };
+		B9F7FBC52935C7A30022F5CE /* InAppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F7FBC42935C7A30022F5CE /* InAppStore.swift */; };
+		B9F7FBC72935C8890022F5CE /* Products.storekit in Resources */ = {isa = PBXBuildFile; fileRef = B9F7FBC62935C8890022F5CE /* Products.storekit */; };
 		B9F8703226B38F2400C1F784 /* AutoRefresher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F8703126B38F2400C1F784 /* AutoRefresher.swift */; };
 		B9F8703426B3A0A000C1F784 /* CountdownText.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F8703326B3A0A000C1F784 /* CountdownText.swift */; };
 		B9F8703626B3B02000C1F784 /* RefreshableBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F8703526B3B01F00C1F784 /* RefreshableBox.swift */; };
@@ -240,6 +243,7 @@
 		B9485F8D264B639F00AC3456 /* Recon Bolt Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Recon Bolt Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9485F8F264B639F00AC3456 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		B9485F91264B639F00AC3456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B94931A429386B3400D44A48 /* InAppStorefront.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppStorefront.swift; sourceTree = "<group>"; };
 		B94C57F926CB605700CAF257 /* AlwaysPressable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlwaysPressable.swift; sourceTree = "<group>"; };
 		B954A6DA26C8BED200A86CB9 /* WeaponImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponImage.swift; sourceTree = "<group>"; };
 		B955C4562851796900BDF197 /* PreviewProviderWithAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProviderWithAssets.swift; sourceTree = "<group>"; };
@@ -324,6 +328,8 @@
 		B9F7A54027DD1E7D00636DAF /* BundleAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleAssets.swift; sourceTree = "<group>"; };
 		B9F7A54227DD30C600636DAF /* BundleDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleDetailsView.swift; sourceTree = "<group>"; };
 		B9F7FBC22935B6AB0022F5CE /* AccountSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingsView.swift; sourceTree = "<group>"; };
+		B9F7FBC42935C7A30022F5CE /* InAppStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppStore.swift; sourceTree = "<group>"; };
+		B9F7FBC62935C8890022F5CE /* Products.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Products.storekit; sourceTree = "<group>"; };
 		B9F8703126B38F2400C1F784 /* AutoRefresher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoRefresher.swift; sourceTree = "<group>"; };
 		B9F8703326B3A0A000C1F784 /* CountdownText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownText.swift; sourceTree = "<group>"; };
 		B9F8703526B3B01F00C1F784 /* RefreshableBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshableBox.swift; sourceTree = "<group>"; };
@@ -471,6 +477,7 @@
 				B9168AE52689440B00866F6A /* LocalDataProvider.swift */,
 				B902823326A7A8A9004B1740 /* HenrikAPI.swift */,
 				B909D293292361E0003A53D9 /* AppSettings.swift */,
+				B9F7FBC42935C7A30022F5CE /* InAppStore.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -499,6 +506,7 @@
 				B941B6DC25A7BC3200F675C1 /* Helpers */,
 				B9DCF9A92642F78900C39EC4 /* Preview Content */,
 				B941B64525A5BC8A00F675C1 /* Assets.xcassets */,
+				B9F7FBC62935C8890022F5CE /* Products.storekit */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -730,6 +738,7 @@
 				B98FC070279DD758002DDF93 /* MultifactorPromptView.swift */,
 				B9B11A6D28DD1407006EC232 /* ClientLogView.swift */,
 				B9F7FBC22935B6AB0022F5CE /* AccountSettingsView.swift */,
+				B94931A429386B3400D44A48 /* InAppStorefront.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -874,6 +883,7 @@
 				B99E3DE5271F2AD300F62453 /* example matches in Resources */,
 				B9AED04B27B08699009033C6 /* example_party.json in Resources */,
 				B9F9B4FF26796C2200397AAB /* example_inventory.json in Resources */,
+				B9F7FBC72935C8890022F5CE /* Products.storekit in Resources */,
 				B9EF0F25263D09AD0067176A /* example_match.json in Resources */,
 				B99BF18328313743009515C1 /* example_store_wallet.json in Resources */,
 				B9342C3E27A6D10300F232CB /* strange_summary.json in Resources */,
@@ -937,6 +947,7 @@
 				B9F5CEE1267CD548009CF906 /* NamespacedID.swift in Sources */,
 				B9168AE62689440B00866F6A /* LocalDataProvider.swift in Sources */,
 				B9DCC24128C96EF900C03B90 /* AssetsInfoView.swift in Sources */,
+				B9F7FBC52935C7A30022F5CE /* InAppStore.swift in Sources */,
 				B9F7A53F27DD091F00636DAF /* CurrencyAssets.swift in Sources */,
 				B96845B32665C7B900DC59D2 /* AccountManager.swift in Sources */,
 				B9F65C4E2651EDA500C9C34A /* DynamicallyStroked.swift in Sources */,
@@ -963,6 +974,7 @@
 				B989466B26860D8A00C8059A /* AsyncButton.swift in Sources */,
 				B9FADF8226A91DBC00A0CA15 /* BookmarkList.swift in Sources */,
 				B9EE6E682658A6D2007E28B5 /* AssetLoading.swift in Sources */,
+				B94931A529386B3400D44A48 /* InAppStorefront.swift in Sources */,
 				B933592728A58A2A00C1A0FB /* BuddyPicker.swift in Sources */,
 				B95D30AA26CE88FF00829BB6 /* EventRow.swift in Sources */,
 				B9CF2E7925A89976004A1458 /* MatchCell.swift in Sources */,
@@ -1189,10 +1201,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.juliand665.Valorant-Viewer";
 				PRODUCT_NAME = "Recon Bolt";
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Debug;
 		};
@@ -1217,10 +1231,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.juliand665.Valorant-Viewer";
 				PRODUCT_NAME = "Recon Bolt";
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

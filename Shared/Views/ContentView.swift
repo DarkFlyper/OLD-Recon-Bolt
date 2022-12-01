@@ -7,6 +7,7 @@ struct ContentView: View {
 	@ObservedObject var accountManager: AccountManager
 	@ObservedObject var assetManager: AssetManager
 	@ObservedObject var settings: AppSettings
+	@ObservedObject var store: InAppStore
 	
 	@SceneStorage("tab")
 	var tab = Tab.career
@@ -28,7 +29,7 @@ struct ContentView: View {
 				.tabItem { Label("Reference", systemImage: "book") }
 				.tag(Tab.reference)
 			
-			SettingsView(accountManager: accountManager, assetManager: assetManager, appSettings: settings)
+			SettingsView(accountManager: accountManager, assetManager: assetManager, settings: settings, store: store)
 				.tabItem { Label("Settings", systemImage: "gearshape") }
 				.tag(Tab.settings)
 		}
@@ -73,10 +74,10 @@ struct ContentView: View {
 #if DEBUG
 struct ContentView_Previews: PreviewProvider {
 	static var previews: some View {
-		ContentView(accountManager: .mocked, assetManager: .forPreviews, settings: .init())
-		ContentView(accountManager: .mocked, assetManager: .forPreviews, settings: .init(), tab: .live)
-		ContentView(accountManager: .mocked, assetManager: .forPreviews, settings: .init(), tab: .reference)
-		ContentView(accountManager: .init(), assetManager: .forPreviews, settings: .init())
+		ContentView(accountManager: .mocked, assetManager: .forPreviews, settings: .init(), store: .init())
+		ContentView(accountManager: .mocked, assetManager: .forPreviews, settings: .init(), store: .init(), tab: .live)
+		ContentView(accountManager: .mocked, assetManager: .forPreviews, settings: .init(), store: .init(), tab: .reference)
+		ContentView(accountManager: .init(), assetManager: .forPreviews, settings: .init(), store: .init())
 	}
 }
 #endif

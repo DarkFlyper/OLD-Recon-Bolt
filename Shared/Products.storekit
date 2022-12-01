@@ -1,0 +1,35 @@
+{
+  "identifier" : "67A4A076",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "4.99",
+      "familyShareable" : true,
+      "internalID" : "6444783738",
+      "localizations" : [
+        {
+          "description" : "Unlock advanced features of Recon Bolt!",
+          "displayName" : "Recon Bolt Pro",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "ReconBolt.Pro",
+      "referenceName" : "Recon Bolt Pro",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+    "_applicationInternalID" : "1563649061",
+    "_developerTeamID" : "V2EPDFA9PV",
+    "_lastSynchronizedDate" : 691390893.60548794
+  },
+  "subscriptionGroups" : [
+
+  ],
+  "version" : {
+    "major" : 2,
+    "minor" : 0
+  }
+}

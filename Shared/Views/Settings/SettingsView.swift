@@ -4,11 +4,16 @@ import ValorantAPI
 struct SettingsView: View {
 	@ObservedObject var accountManager: AccountManager
 	@ObservedObject var assetManager: AssetManager
-	@ObservedObject var appSettings: AppSettings
+	@ObservedObject var settings: AppSettings
+	@ObservedObject var store: InAppStore
 	
 	var body: some View {
 		Form {
 			AccountSettingsView(accountManager: accountManager)
+			
+			Section("Store") {
+				InAppStorefront(store: store)
+			}
 			
 			Section("Settings") {
 				NavigationLink("Manage Assets") {
@@ -21,7 +26,7 @@ struct SettingsView: View {
 					}
 				}
 				
-				Picker("Theme", selection: $appSettings.theme) {
+				Picker("Theme", selection: $settings.theme) {
 					ForEach(AppSettings.Theme.allCases, id: \.self) { theme in
 						Text(theme.name)
 							.tag(theme)
@@ -62,8 +67,8 @@ private extension AppSettings.Theme {
 #if DEBUG
 struct SettingsView_Previews: PreviewProvider {
 	static var previews: some View {
-		SettingsView(accountManager: .mocked, assetManager: .forPreviews, appSettings: .init())
-		SettingsView(accountManager: .mockEmpty, assetManager: .mockEmpty, appSettings: .init())
+		SettingsView(accountManager: .mocked, assetManager: .forPreviews, settings: .init(), store: .init())
+		SettingsView(accountManager: .mockEmpty, assetManager: .mockEmpty, settings: .init(), store: .init())
 	}
 }
 #endif

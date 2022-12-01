@@ -5,6 +5,7 @@ struct AccountSettingsView: View {
 	@ObservedObject var accountManager: AccountManager
 	
 	@State var loginTarget: LoginTarget?
+	@Environment(\.ownsProVersion) private var ownsProVersion
 	
 	var body: some View {
 		Section {
@@ -54,8 +55,15 @@ struct AccountSettingsView: View {
 			Button {
 				loginTarget = .extraAccount
 			} label: {
-				Label("Add another Account", systemImage: "plus")
+				Label {
+					Text("Add another Account")
+				} icon: {
+					// the icon doesn't get tinted correctly if i don't do this…
+					Image(systemName: "plus")
+						.foregroundColor(ownsProVersion ? nil : .secondary)
+				}
 			}
+			.disabled(!ownsProVersion)
 		}
 	}
 	
@@ -84,9 +92,11 @@ struct AccountSettingsView: View {
 		@State var loadError: Error?
 		
 		@LocalData var user: User?
+		@Environment(\.ownsProVersion) private var ownsProVersion
 		
 		var body: some View {
 			let isActive = accountManager.activeAccount?.id == accountID
+			let index = accountManager.storedAccounts.firstIndex(of: accountID)
 			HStack {
 				Button {
 					withAnimation {
@@ -113,9 +123,9 @@ struct AccountSettingsView: View {
 							.opacity(isActive ? 1 : 0)
 					}
 				}
+				.disabled((index ?? 0) > 0 && !ownsProVersion)
 				
 				Spacer()
-				
 			}
 			.withLocalData($user, id: accountID, shouldAutoUpdate: true)
 			.alert("Could not Load Account!", $error: $loadError)
