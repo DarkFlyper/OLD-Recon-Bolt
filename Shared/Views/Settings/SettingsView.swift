@@ -7,13 +7,11 @@ struct SettingsView: View {
 	@ObservedObject var settings: AppSettings
 	@ObservedObject var store: InAppStore
 	
+	@StateObject var iconManager = AppIconManager()
+	
 	var body: some View {
 		Form {
 			AccountSettingsView(accountManager: accountManager)
-			
-			Section("Store") {
-				InAppStorefront(store: store)
-			}
 			
 			Section("Settings") {
 				NavigationLink("Manage Assets") {
@@ -32,6 +30,21 @@ struct SettingsView: View {
 							.tag(theme)
 					}
 				}
+				
+				NavigationLink {
+					AppIconPicker(manager: iconManager)
+				} label: {
+					HStack {
+						Text("App Icon")
+						Spacer()
+						Text(iconManager.currentIcon.name)
+							.foregroundStyle(.secondary)
+					}
+				}
+			}
+			
+			Section("Store") {
+				InAppStorefront(store: store)
 			}
 			
 			Section("About") {
@@ -68,7 +81,13 @@ private extension AppSettings.Theme {
 struct SettingsView_Previews: PreviewProvider {
 	static var previews: some View {
 		SettingsView(accountManager: .mocked, assetManager: .forPreviews, settings: .init(), store: .init())
+		
 		SettingsView(accountManager: .mockEmpty, assetManager: .mockEmpty, settings: .init(), store: .init())
+			.previewDisplayName("Empty Managers")
+		
+		AppIconPicker(manager: .init())
+			.withToolbar()
+			.previewDisplayName("App Icon Picker")
 	}
 }
 #endif

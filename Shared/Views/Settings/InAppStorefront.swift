@@ -2,16 +2,20 @@ import SwiftUI
 
 struct InAppStorefront: View {
 	@ObservedObject var store: InAppStore
+	@State var purchaseError: Error?
 	
 	var body: some View {
-		VStack {
-			HStack {
+		HStack {
+			VStack(alignment: .leading, spacing: 12) {
+				Text("Recon Bolt Pro")
+					.font(.title2.bold())
+					.foregroundColor(.blue)
+				
 				VStack(alignment: .leading, spacing: 8) {
-					Text("Recon Bolt Pro")
-						.font(.title2.bold())
-						.foregroundColor(.blue)
-					
-					VStack(alignment: .leading, spacing: 8) {
+					if store.ownsProVersion {
+						Text("Thank you for supporting Recon Bolt!").font(.callout)
+						Text("I hope you enjoy the pro features :)").font(.callout)
+					} else {
 						let bullets: [LocalizedStringKey] = [
 							"Support Further Development!",
 							"Multiple Accounts",
@@ -24,34 +28,53 @@ struct InAppStorefront: View {
 								Text(bullet)
 							}
 						}
+						.font(.footnote)
 					}
-					.font(.footnote)
 				}
-				.padding(.vertical)
-				
-				Image("Pro Icon Transparent")
-					.resizable()
-					.aspectRatio(contentMode: .fit)
-					.frame(minWidth: 120)
-					.layoutPriority(-1)
 			}
+			.padding(.vertical, 8)
+			
+			Spacer()
+			
+			Image("Pro Icon")
+				.resizable()
+				.aspectRatio(contentMode: .fit)
+				.frame(minWidth: 120, maxHeight: 256)
+				.layoutPriority(-1)
 		}
 		
 		NavigationLink("View All Features") {
 			ProFeaturesOverview()
 		}
 		
+		if !store.ownsProVersion {
+			purchaseButton
+		}
+	}
+	
+	@ViewBuilder
+	var purchaseButton: some View {
 		if let product = store.proVersion.resolved {
 			AsyncButton {
 				do {
 					try await store.purchase(product)
 				} catch {
 					print(error)
+					purchaseError = error
 				}
 			} label: {
 				Text("Purchase – \(product.displayPrice)")
 					.frame(maxWidth: .infinity)
 			}
+			.alert("Purchase Failed!", for: $purchaseError)
+		} else {
+			HStack {
+				Text("Loading Store Info…")
+					.foregroundStyle(.secondary)
+				Spacer()
+				ProgressView()
+			}
+			.task { await store.fetchProducts() }
 		}
 	}
 }
@@ -72,7 +95,7 @@ struct ProFeaturesOverview: View {
 				
 				description("Multiple Account Support") {
 					Text("Add multiple accounts and seamlessly switch between them at any time.")
-					// todo talk about use case for accounts in other regions
+					Text("If you have accounts in multiple regions to play with friends around the world, this is the feature for you!")
 				}
 			}
 			
@@ -90,8 +113,17 @@ struct ProFeaturesOverview: View {
 				}
 			}
 			
-			// TODO: implement
 			Section {
+				HStack {
+					Spacer()
+					AppIcon.Thumbnail(icon: .default, size: 120)
+					Spacer()
+					AppIcon.Thumbnail(icon: .proBlue, size: 120)
+					Spacer()
+				}
+				.padding()
+				.frame(maxHeight: 256)
+				
 				description("Exclusive App Icon") {
 					Text("As thanks for your support, you get to show off your status with an exclusive app icon!")
 					Text("(You can switch between available icons at any time.)")
@@ -108,9 +140,10 @@ struct ProFeaturesOverview: View {
 	}
 	
 	func image(_ name: String) -> some View {
-		Image(name)
+		Image("pro features/\(name)")
 			.resizable()
 			.aspectRatio(contentMode: .fit)
+			.frame(maxWidth: .infinity, maxHeight: 256)
 			.listRowInsets(.init())
 			.aligningListRowSeparator()
 	}
@@ -128,14 +161,17 @@ struct ProFeaturesOverview: View {
 	}
 }
 
+#if DEBUG
 struct InAppStorefront_Previews: PreviewProvider {
     static var previews: some View {
 		Form {
 			InAppStorefront(store: .init())
 		}
 		.withToolbar()
+		//.previewDevice("iPad Pro (11-inch) (4th generation)")
 		
 		ProFeaturesOverview()
 			.withToolbar()
     }
 }
+#endif

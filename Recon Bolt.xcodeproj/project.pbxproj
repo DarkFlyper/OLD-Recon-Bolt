@@ -103,6 +103,7 @@
 		B9AED04B27B08699009033C6 /* example_party.json in Resources */ = {isa = PBXBuildFile; fileRef = B9AED04A27B08699009033C6 /* example_party.json */; };
 		B9B11A6328D8F847006EC232 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B11A6228D8F846006EC232 /* Keychain.swift */; };
 		B9B11A6E28DD1407006EC232 /* ClientLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B11A6D28DD1407006EC232 /* ClientLogView.swift */; };
+		B9BC89D92939B6FB00B97626 /* AppIconPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BC89D82939B6FB00B97626 /* AppIconPicker.swift */; };
 		B9C2E913284E3B9F0007FC55 /* SearchableAssetPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C2E912284E3B9F0007FC55 /* SearchableAssetPicker.swift */; };
 		B9C2E915284E3BEE0007FC55 /* WeaponLoadoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C2E914284E3BEE0007FC55 /* WeaponLoadoutView.swift */; };
 		B9C3499D267AA6DE00BE39B1 /* LiveMatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3499C267AA6DE00BE39B1 /* LiveMatchView.swift */; };
@@ -280,6 +281,7 @@
 		B9AED04A27B08699009033C6 /* example_party.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_party.json; sourceTree = "<group>"; };
 		B9B11A6228D8F846006EC232 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		B9B11A6D28DD1407006EC232 /* ClientLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientLogView.swift; sourceTree = "<group>"; };
+		B9BC89D82939B6FB00B97626 /* AppIconPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconPicker.swift; sourceTree = "<group>"; };
 		B9C2E912284E3B9F0007FC55 /* SearchableAssetPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchableAssetPicker.swift; sourceTree = "<group>"; };
 		B9C2E914284E3BEE0007FC55 /* WeaponLoadoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponLoadoutView.swift; sourceTree = "<group>"; };
 		B9C3499C267AA6DE00BE39B1 /* LiveMatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveMatchView.swift; sourceTree = "<group>"; };
@@ -739,6 +741,7 @@
 				B9B11A6D28DD1407006EC232 /* ClientLogView.swift */,
 				B9F7FBC22935B6AB0022F5CE /* AccountSettingsView.swift */,
 				B94931A429386B3400D44A48 /* InAppStorefront.swift */,
+				B9BC89D82939B6FB00B97626 /* AppIconPicker.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -952,6 +955,7 @@
 				B96845B32665C7B900DC59D2 /* AccountManager.swift in Sources */,
 				B9F65C4E2651EDA500C9C34A /* DynamicallyStroked.swift in Sources */,
 				B9EE0003267EDCB100C08119 /* LocalData.swift in Sources */,
+				B9BC89D92939B6FB00B97626 /* AppIconPicker.swift in Sources */,
 				B932A0FC27912170009FAEE5 /* ContractLevelProgressView.swift in Sources */,
 				B9DCF9AE2642F8FD00C39EC4 /* AssetManager.swift in Sources */,
 				B9CD085927D2878000BD485A /* AgentListView.swift in Sources */,
@@ -1182,8 +1186,10 @@
 		B941B65F25A5BC8A00F675C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = AppIconProBlue;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = "Recon Bolt.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1213,8 +1219,10 @@
 		B941B66025A5BC8A00F675C1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = AppIconProBlue;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = "Recon Bolt.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
