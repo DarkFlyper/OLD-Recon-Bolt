@@ -24,7 +24,7 @@ private struct LoadWrapper: ViewModifier {
 				errorTitle = $0
 			}
 			.environment(\.loadWithErrorAlerts, runTask)
-			.alert(errorTitle, $error: $loadError)
+			.alert(errorTitle, for: $loadError)
 	}
 	
 	func runTask(_ task: () async throws -> Void) async {
@@ -44,11 +44,11 @@ private struct LoadWrapper: ViewModifier {
 }
 
 extension View {
-	func alert(_ title: LocalizedStringKey, @Binding error: Error?) -> some View {
+	func alert(_ title: LocalizedStringKey, for error: Binding<Error?>) -> some View {
 		alert(
 			title,
-			isPresented: $error.isSome(),
-			presenting: error
+			isPresented: error.isSome(),
+			presenting: error.wrappedValue
 		) { error in
 			Button("Copy Error Details") {
 				UIPasteboard.general.string = error.localizedDescription

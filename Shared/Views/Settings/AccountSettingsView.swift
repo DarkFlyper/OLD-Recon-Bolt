@@ -128,7 +128,7 @@ struct AccountSettingsView: View {
 				Spacer()
 			}
 			.withLocalData($user, id: accountID, shouldAutoUpdate: true)
-			.alert("Could not Load Account!", $error: $loadError)
+			.alert("Could not Load Account!", for: $loadError)
 			.deleteDisabled(isActive)
 		}
 	}

@@ -111,8 +111,8 @@ struct ProFeaturesOverview: View {
 		Image(name)
 			.resizable()
 			.aspectRatio(contentMode: .fit)
-			.listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
-			.alignmentGuide(.compatibleListRowSeparatorLeading) { $0[.leading] }
+			.listRowInsets(.init())
+			.aligningListRowSeparator()
 	}
 	
 	func description(_ headline: LocalizedStringKey, @ViewBuilder _ content: () -> some View) -> some View {

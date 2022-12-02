@@ -70,7 +70,7 @@ struct LookupCell: View {
 					}
 				}
 			}
-			.alignmentGuide(.compatibleListRowSeparatorLeading) { $0[.leading] }
+			.aligningListRowSeparator()
 			.disabled(isLoading)
 			.padding(.vertical, 8)
 		}

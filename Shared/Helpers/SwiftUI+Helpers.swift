@@ -88,15 +88,13 @@ private struct OnSceneActivationModifier: ViewModifier {
 	}
 }
 
-extension HorizontalAlignment {
-	static var compatibleListRowSeparatorLeading: Self {
+extension View {
+	@ViewBuilder
+	func aligningListRowSeparator() -> some View {
 		if #available(iOS 16.0, *) {
-			return .listRowSeparatorLeading
+			alignmentGuide(.listRowSeparatorLeading) { $0[.leading] }
 		} else {
-			struct Dummy: AlignmentID {
-				static func defaultValue(in context: ViewDimensions) -> CGFloat { context[.leading] }
-			}
-			return .init(Dummy.self)
+			self
 		}
 	}
 }
