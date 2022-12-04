@@ -123,6 +123,12 @@ final class AccountManager: ObservableObject {
 	}
 }
 
+struct MultifactorPrompt: Identifiable {
+	let id = UUID()
+	let info: MultifactorInfo
+	let completion: (Result<String, Error>) -> Void
+}
+
 final class StoredAccount: ObservableObject, Identifiable {
 	let context: Context
 	
@@ -182,4 +188,8 @@ final class StoredAccount: ObservableObject, Identifiable {
 		var keychain: any Keychain
 		var multifactorHandler: MultifactorHandler
 	}
+}
+
+extension User.ID: DefaultsValueConvertible {
+	public typealias DefaultsRepresentation = Data // use codable
 }

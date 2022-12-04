@@ -113,12 +113,6 @@ struct CodeEntry: UIViewRepresentable {
 	}
 }
 
-struct MultifactorPrompt: Identifiable {
-	let id = UUID()
-	let info: MultifactorInfo
-	let completion: (Result<String, Error>) -> Void
-}
-
 #if DEBUG
 struct MultifactorPromptView_Previews: PreviewProvider {
 	static var previews: some View {

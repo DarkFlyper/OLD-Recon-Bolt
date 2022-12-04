@@ -72,7 +72,3 @@ final class BookmarkList: ObservableObject {
 		}
 	}
 }
-
-extension User.ID: DefaultsValueConvertible {
-	public typealias DefaultsRepresentation = Data // use codable
-}
