@@ -11,7 +11,8 @@ struct PartyInfoBox: View {
 	@State var isConfirmingMatchakingStart = false
 	
 	var member: Party.Member {
-		party.members.firstElement(withID: userID)!
+		party.members.firstElement(withID: userID)
+		?? party.members.first! // can be nil while switching accounts
 	}
 	
 	var body: some View {

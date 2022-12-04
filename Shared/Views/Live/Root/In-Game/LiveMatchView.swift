@@ -40,28 +40,29 @@ struct LiveMatchView: View {
 	
 	@ViewBuilder
 	private var playerList: some View {
-		let ownPlayer = gameInfo.players.firstElement(withID: userID)!
-		let teams = Dictionary(grouping: gameInfo.players, by: \.teamID)
-		let allyTeam = teams[ownPlayer.teamID]!
-		let enemyTeams = teams
-			.filter { $0.key != ownPlayer.teamID }
-			.sorted(on: \.key.description)
-		
-		VStack(spacing: 10) {
-			ForEach(allyTeam) {
-				PlayerView(player: $0, ownPlayer: ownPlayer)
-			}
+		if let ownPlayer = gameInfo.players.firstElement(withID: userID) {
+			let teams = Dictionary(grouping: gameInfo.players, by: \.teamID)
+			let allyTeam = teams[ownPlayer.teamID]!
+			let enemyTeams = teams
+				.filter { $0.key != ownPlayer.teamID }
+				.sorted(on: \.key.description)
 			
-			ForEach(enemyTeams, id: \.key) { teamID, team in
-				Divider()
-					.padding(.vertical, 5)
-				
-				ForEach(team) {
+			VStack(spacing: 10) {
+				ForEach(allyTeam) {
 					PlayerView(player: $0, ownPlayer: ownPlayer)
 				}
+				
+				ForEach(enemyTeams, id: \.key) { teamID, team in
+					Divider()
+						.padding(.vertical, 5)
+					
+					ForEach(team) {
+						PlayerView(player: $0, ownPlayer: ownPlayer)
+					}
+				}
 			}
+			.padding()
 		}
-		.padding()
 	}
 	
 	struct PlayerView: View {
