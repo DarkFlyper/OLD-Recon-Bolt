@@ -75,7 +75,7 @@ struct EventRow: View, Animatable {
 					.scaleEffect(x: -1, y: 1, anchor: .center)
 					.padding(4)
 			} else if damageType == .ability {
-				let slotName = damageSource == "GrenadeAbility" ? "Grenade" : damageSource
+				let slotName = kill.finishingDamage.remappedAbilitySlot
 				if let slot = AgentInfo.Ability.Slot(rawValue: slotName) {
 					AgentImage.ability(killer.agentID!, slot: slot)
 				} else {
