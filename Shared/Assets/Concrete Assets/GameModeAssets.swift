@@ -32,16 +32,17 @@ struct GameModeInfo: AssetItem, Codable, Identifiable {
 	/// Of course they don't do what would make sense and use the UUID; instead we need to figure out the commonalities between the asset path and the client API game mode ID (which is also trimmed down)
 	func gameID() -> GameMode.ID {
 		// e.g. "ShooterGame/Content/GameModes/Bomb/BombGameMode_PrimaryAsset"
+		// e.g. "ShooterGame/Content/GameModes/_Development/Swiftplay_EndOfRoundCredits/SwiftPlay_GameMode_PrimaryAsset"
 		
-		let pathPrefix = "ShooterGame/Content/"
+		let pathPrefix = "ShooterGame/Content/GameModes/"
 		assert(assetPath.hasPrefix(pathPrefix))
 		let trimmed = assetPath.dropFirst(pathPrefix.count)
-		// e.g. "GameModes/Bomb/BombGameMode_PrimaryAsset"
+		// e.g. "Bomb/BombGameMode_PrimaryAsset"
 		
 		// It doesn't always end in "PrimaryAsset", so let's rely on something else instead…
-		let endRange = trimmed.range(of: "GameMode_")!
-		return .init(String(trimmed[..<endRange.upperBound].dropLast()))
-		// e.g. "GameModes/Bomb/BombGameMode"
+		let lastSeparator = trimmed.lastIndex(of: "/")!
+		return .init(String(trimmed.prefix(upTo: lastSeparator)))
+		// e.g. "Bomb", "_Development/Swiftplay_EndOfRoundCredits"
 	}
 	
 	func gameFeatureOverride(for name: GameFeatureToggle.Name) -> Bool? {
