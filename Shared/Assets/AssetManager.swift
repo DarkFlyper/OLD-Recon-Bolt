@@ -35,6 +35,7 @@ final class AssetManager: ObservableObject {
 	func reset() async {
 		error = nil
 		assets = nil
+		Self.stored = nil
 	}
 	
 	#if DEBUG
