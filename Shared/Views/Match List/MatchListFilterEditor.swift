@@ -33,7 +33,7 @@ struct MatchListFilterEditor: View {
 						""")
 				}
 			}
-			.navigationTitle("Filter")
+			.navigationTitle("Filter Match List")
 			.navigationBarTitleDisplayMode(.inline)
 			.toolbar {
 				Button { dismiss() } label: {
