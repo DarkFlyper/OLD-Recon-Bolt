@@ -173,8 +173,15 @@ final class StoredAccount: ObservableObject, Identifiable {
 		client.clientVersion = version
 	}
 	
-	enum LoadingError: Error {
+	enum LoadingError: Error, LocalizedError {
 		case noStoredSession
+		
+		var errorDescription: String? {
+			switch self {
+			case .noStoredSession:
+				return "Missing session for account."
+			}
+		}
 	}
 	
 	#if DEBUG

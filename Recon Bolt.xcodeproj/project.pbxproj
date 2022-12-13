@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -89,6 +89,48 @@
 		B9741478266F18A800892B5F /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9741477266F18A800892B5F /* String+Localization.swift */; };
 		B9766BB72750339700127FF2 /* ContractAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9766BB62750339700127FF2 /* ContractAssets.swift */; };
 		B97B5330283002700082CE1C /* MatchListFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97B532F283002700082CE1C /* MatchListFilter.swift */; };
+		B97C8F2E293BBE31002F6A07 /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96845B22665C7B900DC59D2 /* AccountManager.swift */; };
+		B97C8F30293BBE7D002F6A07 /* HandyOperators in Frameworks */ = {isa = PBXBuildFile; productRef = B97C8F2F293BBE7D002F6A07 /* HandyOperators */; };
+		B97C8F31293BBEA7002F6A07 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B11A6228D8F846006EC232 /* Keychain.swift */; };
+		B97C8F32293BBED9002F6A07 /* Swift+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EE6E702659D30A007E28B5 /* Swift+Helpers.swift */; };
+		B97C8F34293BBF65002F6A07 /* UserDefault in Frameworks */ = {isa = PBXBuildFile; productRef = B97C8F33293BBF65002F6A07 /* UserDefault */; };
+		B97C8F36293BBF69002F6A07 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B97C8F35293BBF69002F6A07 /* KeychainSwift */; };
+		B97C8F38293BBF87002F6A07 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = B97C8F37293BBF87002F6A07 /* Algorithms */; };
+		B97C8F39293C4086002F6A07 /* ValorantAPI+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EF0F26263D9D860067176A /* ValorantAPI+SwiftUI.swift */; };
+		B97C8F3A293C40A7002F6A07 /* SwiftUI+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96A0CA2265ABBC700844674 /* SwiftUI+Helpers.swift */; };
+		B97C8F3C293C40C6002F6A07 /* SwiftUIMissingPieces in Frameworks */ = {isa = PBXBuildFile; productRef = B97C8F3B293C40C6002F6A07 /* SwiftUIMissingPieces */; };
+		B97C8F3D293C4212002F6A07 /* AssetClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F07CB326474E8A006CD4F5 /* AssetClient.swift */; };
+		B97C8F3E293C4212002F6A07 /* AssetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DCF9AD2642F8FD00C39EC4 /* AssetManager.swift */; };
+		B97C8F3F293C4212002F6A07 /* AssetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9485F86264B5BD700AC3456 /* AssetImage.swift */; };
+		B97C8F40293C4212002F6A07 /* AssetCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90B4B54267C139300CACB95 /* AssetCollection.swift */; };
+		B97C8F41293C4212002F6A07 /* AssetLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EE6E672658A6D2007E28B5 /* AssetLoading.swift */; };
+		B97C8F42293C4212002F6A07 /* AssetVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F07CB626474EB7006CD4F5 /* AssetVersion.swift */; };
+		B97C8F43293C4212002F6A07 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99302E128A9884800F7295D /* ImageManager.swift */; };
+		B97C8F44293C4212002F6A07 /* NamespacedID.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F5CEE0267CD548009CF906 /* NamespacedID.swift */; };
+		B97C8F45293C421C002F6A07 /* CompetitiveTier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90B4B51267C112F00CACB95 /* CompetitiveTier.swift */; };
+		B97C8F46293C421C002F6A07 /* SeasonDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EB880D26968EE000D38358 /* SeasonDecoding.swift */; };
+		B97C8F47293C421C002F6A07 /* SeasonCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FB9371269B359900927E03 /* SeasonCollection.swift */; };
+		B97C8F48293C421F002F6A07 /* GameModeAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F5CEDD267CD199009CF906 /* GameModeAssets.swift */; };
+		B97C8F49293C421F002F6A07 /* WeaponAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91D3DA326C8492F007D18B8 /* WeaponAssets.swift */; };
+		B97C8F4A293C421F002F6A07 /* ContractAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9766BB62750339700127FF2 /* ContractAssets.swift */; };
+		B97C8F4B293C421F002F6A07 /* MissionAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96A0CA9265AE32200844674 /* MissionAssets.swift */; };
+		B97C8F4C293C421F002F6A07 /* PlayerCardAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90B4B57267C167B00CACB95 /* PlayerCardAssets.swift */; };
+		B97C8F4D293C421F002F6A07 /* BuddyAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B927719D284DBAF600F25FC3 /* BuddyAssets.swift */; };
+		B97C8F4E293C421F002F6A07 /* BundleAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F7A54027DD1E7D00636DAF /* BundleAssets.swift */; };
+		B97C8F4F293C421F002F6A07 /* CurrencyAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F7A53E27DD091F00636DAF /* CurrencyAssets.swift */; };
+		B97C8F50293C421F002F6A07 /* AgentAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9485F83264B1DD300AC3456 /* AgentAssets.swift */; };
+		B97C8F51293C421F002F6A07 /* SprayAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B927719B284DBA1D00F25FC3 /* SprayAssets.swift */; };
+		B97C8F52293C421F002F6A07 /* MapAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F07CB926474F4E006CD4F5 /* MapAssets.swift */; };
+		B97C8F53293C421F002F6A07 /* PlayerTitleAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90B4B5A267C177D00CACB95 /* PlayerTitleAssets.swift */; };
+		B97C8F54293C421F002F6A07 /* ObjectiveAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96A0CAC265B0FB500844674 /* ObjectiveAssets.swift */; };
+		B97C8F55293C4225002F6A07 /* WeaponImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B954A6DA26C8BED200A86CB9 /* WeaponImage.swift */; };
+		B97C8F56293C4225002F6A07 /* CompetitiveTierImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90B4B63267C270500CACB95 /* CompetitiveTierImage.swift */; };
+		B97C8F57293C4225002F6A07 /* PlayerCardImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90B4B60267C22E700CACB95 /* PlayerCardImage.swift */; };
+		B97C8F58293C4225002F6A07 /* MapImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90B4B5D267C223D00CACB95 /* MapImage.swift */; };
+		B97C8F59293C4225002F6A07 /* GameModeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C7064D269BC91F00D29226 /* GameModeImage.swift */; };
+		B97C8F5A293C4225002F6A07 /* AssetImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F65C462651D20200C9C34A /* AssetImageView.swift */; };
+		B97C8F5B293C4225002F6A07 /* AgentImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F65C4A2651DFB100C9C34A /* AgentImage.swift */; };
+		B97C8F5D293C425A002F6A07 /* CGeometry in Frameworks */ = {isa = PBXBuildFile; productRef = B97C8F5C293C425A002F6A07 /* CGeometry */; };
 		B989466B26860D8A00C8059A /* AsyncButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B989466A26860D8A00C8059A /* AsyncButton.swift */; };
 		B98E4705269B40DB003C9088 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98E4704269B40DB003C9088 /* CircularProgressView.swift */; };
 		B98FC071279DD758002DDF93 /* MultifactorPromptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98FC070279DD758002DDF93 /* MultifactorPromptView.swift */; };
@@ -104,6 +146,15 @@
 		B9B11A6328D8F847006EC232 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B11A6228D8F846006EC232 /* Keychain.swift */; };
 		B9B11A6E28DD1407006EC232 /* ClientLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B11A6D28DD1407006EC232 /* ClientLogView.swift */; };
 		B9BC89D92939B6FB00B97626 /* AppIconPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BC89D82939B6FB00B97626 /* AppIconPicker.swift */; };
+		B9BC89F3293A7D6F00B97626 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9BC89F2293A7D6F00B97626 /* WidgetKit.framework */; };
+		B9BC89F5293A7D6F00B97626 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9BC89F4293A7D6F00B97626 /* SwiftUI.framework */; };
+		B9BC89F8293A7D6F00B97626 /* WidgetsBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BC89F7293A7D6F00B97626 /* WidgetsBundle.swift */; };
+		B9BC89FC293A7D6F00B97626 /* Widgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BC89FB293A7D6F00B97626 /* Widgets.swift */; };
+		B9BC89FF293A7D7400B97626 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9BC89FE293A7D7400B97626 /* Assets.xcassets */; };
+		B9BC8A01293A7D7400B97626 /* Widgets.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B9BC89FD293A7D6F00B97626 /* Widgets.intentdefinition */; };
+		B9BC8A02293A7D7400B97626 /* Widgets.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B9BC89FD293A7D6F00B97626 /* Widgets.intentdefinition */; };
+		B9BC8A05293A7D7400B97626 /* WidgetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B9BC89F1293A7D6F00B97626 /* WidgetsExtension.appex */; platformFilters = (ios, maccatalyst, ); settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B9BC8A0C293B082800B97626 /* ValorantAPI in Frameworks */ = {isa = PBXBuildFile; productRef = B9BC8A0B293B082800B97626 /* ValorantAPI */; };
 		B9C2E913284E3B9F0007FC55 /* SearchableAssetPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C2E912284E3B9F0007FC55 /* SearchableAssetPicker.swift */; };
 		B9C2E915284E3BEE0007FC55 /* WeaponLoadoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C2E914284E3BEE0007FC55 /* WeaponLoadoutView.swift */; };
 		B9C3499D267AA6DE00BE39B1 /* LiveMatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3499C267AA6DE00BE39B1 /* LiveMatchView.swift */; };
@@ -171,6 +222,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		B9BC8A03293A7D7400B97626 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B941B63E25A5BC8800F675C1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B9BC89F0293A7D6F00B97626;
+			remoteInfo = WidgetsExtension;
+		};
 		B9F39F222671AA0F00D75E7F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B941B63E25A5BC8800F675C1 /* Project object */;
@@ -179,6 +237,20 @@
 			remoteInfo = "Valorant Viewer (iOS)";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B9BC8A0A293A7D7400B97626 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B9BC8A05293A7D7400B97626 /* WidgetsExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B902823326A7A8A9004B1740 /* HenrikAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HenrikAPI.swift; sourceTree = "<group>"; };
@@ -226,6 +298,7 @@
 		B933592428A58A1800C1A0FB /* SkinPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinPicker.swift; sourceTree = "<group>"; };
 		B933592628A58A2A00C1A0FB /* BuddyPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuddyPicker.swift; sourceTree = "<group>"; };
 		B9342C3D27A6D10300F232CB /* strange_summary.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = strange_summary.json; sourceTree = "<group>"; };
+		B939C7CB2948563700ABD0C6 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 		B93CD3C12811AC1500628D0E /* MatchListFilterEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListFilterEditor.swift; sourceTree = "<group>"; };
 		B94091AD25D09D5A00EE5DF2 /* LoadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadManager.swift; sourceTree = "<group>"; };
 		B94091B725D09F0200EE5DF2 /* MatchListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListView.swift; sourceTree = "<group>"; };
@@ -282,6 +355,15 @@
 		B9B11A6228D8F846006EC232 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		B9B11A6D28DD1407006EC232 /* ClientLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientLogView.swift; sourceTree = "<group>"; };
 		B9BC89D82939B6FB00B97626 /* AppIconPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconPicker.swift; sourceTree = "<group>"; };
+		B9BC89F1293A7D6F00B97626 /* WidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WidgetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9BC89F2293A7D6F00B97626 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		B9BC89F4293A7D6F00B97626 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		B9BC89F7293A7D6F00B97626 /* WidgetsBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetsBundle.swift; sourceTree = "<group>"; };
+		B9BC89FB293A7D6F00B97626 /* Widgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Widgets.swift; sourceTree = "<group>"; };
+		B9BC89FD293A7D6F00B97626 /* Widgets.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Widgets.intentdefinition; sourceTree = "<group>"; };
+		B9BC89FE293A7D7400B97626 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B9BC8A00293A7D7400B97626 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9BC8A06293A7D7400B97626 /* WidgetsExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WidgetsExtension.entitlements; sourceTree = "<group>"; };
 		B9C2E912284E3B9F0007FC55 /* SearchableAssetPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchableAssetPicker.swift; sourceTree = "<group>"; };
 		B9C2E914284E3BEE0007FC55 /* WeaponLoadoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponLoadoutView.swift; sourceTree = "<group>"; };
 		B9C3499C267AA6DE00BE39B1 /* LiveMatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveMatchView.swift; sourceTree = "<group>"; };
@@ -364,6 +446,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9BC89EE293A7D6F00B97626 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B97C8F36293BBF69002F6A07 /* KeychainSwift in Frameworks */,
+				B97C8F38293BBF87002F6A07 /* Algorithms in Frameworks */,
+				B97C8F3C293C40C6002F6A07 /* SwiftUIMissingPieces in Frameworks */,
+				B97C8F34293BBF65002F6A07 /* UserDefault in Frameworks */,
+				B9BC8A0C293B082800B97626 /* ValorantAPI in Frameworks */,
+				B97C8F5D293C425A002F6A07 /* CGeometry in Frameworks */,
+				B97C8F30293BBE7D002F6A07 /* HandyOperators in Frameworks */,
+				B9BC89F5293A7D6F00B97626 /* SwiftUI.framework in Frameworks */,
+				B9BC89F3293A7D6F00B97626 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,10 +587,12 @@
 			children = (
 				B932A10F2791272C009FAEE5 /* ValorantAPI */,
 				B99B75942655859C00FBEB60 /* Recon Bolt.entitlements */,
+				B9BC8A06293A7D7400B97626 /* WidgetsExtension.entitlements */,
 				B941B64225A5BC8800F675C1 /* Shared */,
 				B941B64C25A5BC8A00F675C1 /* iOS */,
 				B941B65325A5BC8A00F675C1 /* macOS */,
 				B9485F8E264B639F00AC3456 /* Recon Bolt Tests */,
+				B9BC89F6293A7D6F00B97626 /* Widgets */,
 				B941B64B25A5BC8A00F675C1 /* Products */,
 				B941B66D25A5C3AD00F675C1 /* Frameworks */,
 			);
@@ -518,6 +618,7 @@
 			children = (
 				B941B64A25A5BC8A00F675C1 /* Recon Bolt.app */,
 				B9485F8D264B639F00AC3456 /* Recon Bolt Tests.xctest */,
+				B9BC89F1293A7D6F00B97626 /* WidgetsExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -542,6 +643,9 @@
 		B941B66D25A5C3AD00F675C1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B9BC89F2293A7D6F00B97626 /* WidgetKit.framework */,
+				B9BC89F4293A7D6F00B97626 /* SwiftUI.framework */,
+				B939C7CB2948563700ABD0C6 /* Intents.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -608,6 +712,18 @@
 				B9224D842921E8700056224F /* TransparentNavigationLink.swift */,
 			);
 			path = General;
+			sourceTree = "<group>";
+		};
+		B9BC89F6293A7D6F00B97626 /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				B9BC89F7293A7D6F00B97626 /* WidgetsBundle.swift */,
+				B9BC89FB293A7D6F00B97626 /* Widgets.swift */,
+				B9BC89FD293A7D6F00B97626 /* Widgets.intentdefinition */,
+				B9BC89FE293A7D7400B97626 /* Assets.xcassets */,
+				B9BC8A00293A7D7400B97626 /* Info.plist */,
+			);
+			path = Widgets;
 			sourceTree = "<group>";
 		};
 		B9C2E910284E3B4A0007FC55 /* Loadout */ = {
@@ -788,10 +904,12 @@
 				B941B64625A5BC8A00F675C1 /* Sources */,
 				B941B64725A5BC8A00F675C1 /* Frameworks */,
 				B941B64825A5BC8A00F675C1 /* Resources */,
+				B9BC8A0A293A7D7400B97626 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B9BC8A04293A7D7400B97626 /* PBXTargetDependency */,
 			);
 			name = "Recon Bolt (iOS)";
 			packageProductDependencies = (
@@ -827,13 +945,39 @@
 			productReference = B9485F8D264B639F00AC3456 /* Recon Bolt Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		B9BC89F0293A7D6F00B97626 /* WidgetsExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9BC8A07293A7D7400B97626 /* Build configuration list for PBXNativeTarget "WidgetsExtension" */;
+			buildPhases = (
+				B9BC89ED293A7D6F00B97626 /* Sources */,
+				B9BC89EE293A7D6F00B97626 /* Frameworks */,
+				B9BC89EF293A7D6F00B97626 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WidgetsExtension;
+			packageProductDependencies = (
+				B9BC8A0B293B082800B97626 /* ValorantAPI */,
+				B97C8F2F293BBE7D002F6A07 /* HandyOperators */,
+				B97C8F33293BBF65002F6A07 /* UserDefault */,
+				B97C8F35293BBF69002F6A07 /* KeychainSwift */,
+				B97C8F37293BBF87002F6A07 /* Algorithms */,
+				B97C8F3B293C40C6002F6A07 /* SwiftUIMissingPieces */,
+				B97C8F5C293C425A002F6A07 /* CGeometry */,
+			);
+			productName = WidgetsExtension;
+			productReference = B9BC89F1293A7D6F00B97626 /* WidgetsExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		B941B63E25A5BC8800F675C1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1250;
+				LastSwiftUpdateCheck = 1410;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
 					B941B64925A5BC8A00F675C1 = {
@@ -842,6 +986,9 @@
 					B9485F8C264B639F00AC3456 = {
 						CreatedOnToolsVersion = 12.5;
 						TestTargetID = B941B64925A5BC8A00F675C1;
+					};
+					B9BC89F0293A7D6F00B97626 = {
+						CreatedOnToolsVersion = 14.1;
 					};
 				};
 			};
@@ -869,6 +1016,7 @@
 			targets = (
 				B941B64925A5BC8A00F675C1 /* Recon Bolt (iOS) */,
 				B9485F8C264B639F00AC3456 /* Recon Bolt Tests */,
+				B9BC89F0293A7D6F00B97626 /* WidgetsExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -905,6 +1053,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9BC89EF293A7D6F00B97626 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9BC89FF293A7D7400B97626 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1015,6 +1171,7 @@
 				B93CD3C22811AC1500628D0E /* MatchListFilterEditor.swift in Sources */,
 				B963C4702694FDDA0071E14A /* CompetitiveSummaryCell.swift in Sources */,
 				B90FFF3B26B48288007BE950 /* MissionView.swift in Sources */,
+				B9BC8A02293A7D7400B97626 /* Widgets.intentdefinition in Sources */,
 				B9C2E913284E3B9F0007FC55 /* SearchableAssetPicker.swift in Sources */,
 				B90B4B61267C22E700CACB95 /* PlayerCardImage.swift in Sources */,
 				B9B11A6E28DD1407006EC232 /* ClientLogView.swift in Sources */,
@@ -1059,9 +1216,64 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B9BC89ED293A7D6F00B97626 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B97C8F39293C4086002F6A07 /* ValorantAPI+SwiftUI.swift in Sources */,
+				B97C8F51293C421F002F6A07 /* SprayAssets.swift in Sources */,
+				B97C8F4B293C421F002F6A07 /* MissionAssets.swift in Sources */,
+				B97C8F4E293C421F002F6A07 /* BundleAssets.swift in Sources */,
+				B97C8F48293C421F002F6A07 /* GameModeAssets.swift in Sources */,
+				B97C8F42293C4212002F6A07 /* AssetVersion.swift in Sources */,
+				B97C8F3A293C40A7002F6A07 /* SwiftUI+Helpers.swift in Sources */,
+				B97C8F53293C421F002F6A07 /* PlayerTitleAssets.swift in Sources */,
+				B97C8F4D293C421F002F6A07 /* BuddyAssets.swift in Sources */,
+				B9BC8A01293A7D7400B97626 /* Widgets.intentdefinition in Sources */,
+				B97C8F32293BBED9002F6A07 /* Swift+Helpers.swift in Sources */,
+				B97C8F40293C4212002F6A07 /* AssetCollection.swift in Sources */,
+				B97C8F43293C4212002F6A07 /* ImageManager.swift in Sources */,
+				B97C8F5A293C4225002F6A07 /* AssetImageView.swift in Sources */,
+				B97C8F49293C421F002F6A07 /* WeaponAssets.swift in Sources */,
+				B97C8F52293C421F002F6A07 /* MapAssets.swift in Sources */,
+				B97C8F46293C421C002F6A07 /* SeasonDecoding.swift in Sources */,
+				B9BC89FC293A7D6F00B97626 /* Widgets.swift in Sources */,
+				B97C8F50293C421F002F6A07 /* AgentAssets.swift in Sources */,
+				B97C8F55293C4225002F6A07 /* WeaponImage.swift in Sources */,
+				B97C8F59293C4225002F6A07 /* GameModeImage.swift in Sources */,
+				B97C8F56293C4225002F6A07 /* CompetitiveTierImage.swift in Sources */,
+				B97C8F3F293C4212002F6A07 /* AssetImage.swift in Sources */,
+				B9BC89F8293A7D6F00B97626 /* WidgetsBundle.swift in Sources */,
+				B97C8F4F293C421F002F6A07 /* CurrencyAssets.swift in Sources */,
+				B97C8F41293C4212002F6A07 /* AssetLoading.swift in Sources */,
+				B97C8F5B293C4225002F6A07 /* AgentImage.swift in Sources */,
+				B97C8F44293C4212002F6A07 /* NamespacedID.swift in Sources */,
+				B97C8F57293C4225002F6A07 /* PlayerCardImage.swift in Sources */,
+				B97C8F2E293BBE31002F6A07 /* AccountManager.swift in Sources */,
+				B97C8F4A293C421F002F6A07 /* ContractAssets.swift in Sources */,
+				B97C8F31293BBEA7002F6A07 /* Keychain.swift in Sources */,
+				B97C8F4C293C421F002F6A07 /* PlayerCardAssets.swift in Sources */,
+				B97C8F47293C421C002F6A07 /* SeasonCollection.swift in Sources */,
+				B97C8F3E293C4212002F6A07 /* AssetManager.swift in Sources */,
+				B97C8F3D293C4212002F6A07 /* AssetClient.swift in Sources */,
+				B97C8F54293C421F002F6A07 /* ObjectiveAssets.swift in Sources */,
+				B97C8F58293C4225002F6A07 /* MapImage.swift in Sources */,
+				B97C8F45293C421C002F6A07 /* CompetitiveTier.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		B9BC8A04293A7D7400B97626 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilters = (
+				ios,
+				maccatalyst,
+			);
+			target = B9BC89F0293A7D6F00B97626 /* WidgetsExtension */;
+			targetProxy = B9BC8A03293A7D7400B97626 /* PBXContainerItemProxy */;
+		};
 		B9F39F232671AA0F00D75E7F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B941B64925A5BC8A00F675C1 /* Recon Bolt (iOS) */;
@@ -1125,6 +1337,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-Xfrontend -warn-long-expression-type-checking=500 -Xfrontend -warn-long-function-bodies=1000";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -1186,6 +1399,7 @@
 		B941B65F25A5BC8A00F675C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = AppIconProBlue;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1202,8 +1416,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
-				OTHER_SWIFT_FLAGS = "-Xfrontend -warn-long-expression-type-checking=500 -Xfrontend -warn-long-function-bodies=1000";
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.juliand665.Valorant-Viewer";
 				PRODUCT_NAME = "Recon Bolt";
 				SDKROOT = iphoneos;
@@ -1219,6 +1432,7 @@
 		B941B66025A5BC8A00F675C1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = AppIconProBlue;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1235,7 +1449,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.juliand665.Valorant-Viewer";
 				PRODUCT_NAME = "Recon Bolt";
 				SDKROOT = iphoneos;
@@ -1293,6 +1507,71 @@
 			};
 			name = Release;
 		};
+		B9BC8A08293A7D7400B97626 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = WidgetsExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V2EPDFA9PV;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Widgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Widgets;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.juliand665.Valorant-Viewer.Widgets";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B9BC8A09293A7D7400B97626 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = WidgetsExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V2EPDFA9PV;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Widgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Widgets;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.juliand665.Valorant-Viewer.Widgets";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1319,6 +1598,15 @@
 			buildConfigurations = (
 				B9485F95264B639F00AC3456 /* Debug */,
 				B9485F96264B639F00AC3456 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9BC8A07293A7D7400B97626 /* Build configuration list for PBXNativeTarget "WidgetsExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9BC8A08293A7D7400B97626 /* Debug */,
+				B9BC8A09293A7D7400B97626 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1404,6 +1692,41 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B941B6CE25A79A6400F675C1 /* XCRemoteSwiftPackageReference "keychain-swift" */;
 			productName = KeychainSwift;
+		};
+		B97C8F2F293BBE7D002F6A07 /* HandyOperators */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B932A11027912882009FAEE5 /* XCRemoteSwiftPackageReference "HandyOperators" */;
+			productName = HandyOperators;
+		};
+		B97C8F33293BBF65002F6A07 /* UserDefault */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B941B69925A62FFB00F675C1 /* XCRemoteSwiftPackageReference "UserDefault" */;
+			productName = UserDefault;
+		};
+		B97C8F35293BBF69002F6A07 /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B941B6CE25A79A6400F675C1 /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
+		B97C8F37293BBF87002F6A07 /* Algorithms */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B9EE6E732659D6DF007E28B5 /* XCRemoteSwiftPackageReference "swift-algorithms" */;
+			productName = Algorithms;
+		};
+		B97C8F3B293C40C6002F6A07 /* SwiftUIMissingPieces */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B9CF2E6A25A81F57004A1458 /* XCRemoteSwiftPackageReference "SwifUI-Missing-Pieces" */;
+			productName = SwiftUIMissingPieces;
+		};
+		B97C8F5C293C425A002F6A07 /* CGeometry */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B90BC2EC266D224F00C905D4 /* XCRemoteSwiftPackageReference "CGeometry" */;
+			productName = CGeometry;
+		};
+		B9BC8A0B293B082800B97626 /* ValorantAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B9C97DCA263CB0D6001E4D1B /* XCRemoteSwiftPackageReference "ValorantAPI" */;
+			productName = ValorantAPI;
 		};
 		B9C97DCB263CB0D6001E4D1B /* ValorantAPI */ = {
 			isa = XCSwiftPackageProductDependency;

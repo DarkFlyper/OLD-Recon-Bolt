@@ -103,6 +103,7 @@ struct ProFeaturesOverview: View {
 			Section {
 				description("Home Screen Widgets") {
 					Text("TODO")
+					// TODO: note iOS 16+ restriction!
 				}
 			}
 			
@@ -110,6 +111,7 @@ struct ProFeaturesOverview: View {
 			Section {
 				description("Advanced Stats") {
 					Text("TODO")
+					// TODO: note iOS 16+ restriction (if applicable)!
 				}
 			}
 			
