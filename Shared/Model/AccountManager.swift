@@ -94,11 +94,11 @@ final class AccountManager: ObservableObject {
 	}
 	
 	private enum Storage {
-		@UserDefault("AccountManager.activeAccount")
+		@UserDefault("AccountManager.activeAccount", migratingTo: .shared)
 		static var activeAccount: User.ID?
-		@UserDefault("AccountManager.storedAccounts")
+		@UserDefault("AccountManager.storedAccounts", migratingTo: .shared)
 		static var storedAccounts: [User.ID] = []
-		@UserDefault("AccountManager.clientVersion")
+		@UserDefault("AccountManager.clientVersion", migratingTo: .shared)
 		static var clientVersion: String?
 	}
 	

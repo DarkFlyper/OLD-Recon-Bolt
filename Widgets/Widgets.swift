@@ -13,7 +13,7 @@ struct Provider: IntentTimelineProvider {
 	@MainActor private static let imageManager = ImageManager()
 	
 	func placeholder(in context: Context) -> StoreEntry {
-		fatalError() // TODO
+		.init(date: .now, info: .failure(FakeError.blankPreview), configuration: .init())
 	}
 	
 	func getSnapshot(for configuration: ViewStoreIntent, in context: Context, completion: @escaping (StoreEntry) -> ()) {
@@ -33,9 +33,14 @@ struct Provider: IntentTimelineProvider {
 	private func getCurrentEntry(for configuration: ViewStoreIntent) async -> StoreEntry {
 		let result: Result<StorefrontInfo, Error>
 		do {
-			let rawAccount = try configuration.account ??? UpdateError.noAccountFound
-			let accountID = try rawAccount.identifier.flatMap(User.ID.init(_:)) ??? UpdateError.malformedAccount
-			let account = try await Self.accountManager.loadAccount(for: accountID)
+			let account: StoredAccount
+			do {
+				let rawAccount = try configuration.account ??? UpdateError.noAccountFound
+				let accountID = try rawAccount.identifier.flatMap(User.ID.init(_:)) ??? UpdateError.malformedAccount
+				account = try await Self.accountManager.loadAccount(for: accountID)
+			} catch {
+				account = try await Self.accountManager.activeAccount ??? error
+			}
 			let info = try await getCurrentInfo(using: account.client)
 			result = .success(info)
 		} catch {
@@ -112,10 +117,10 @@ struct Provider: IntentTimelineProvider {
 	}
 }
 
-final class ViewStoreHandler: NSObject, ViewStoreIntentHandling {
-	func provideAccountOptionsCollection(for intent: ViewStoreIntent) async throws -> INObjectCollection<Account> {
-		return INObjectCollection(items: [Account(identifier: "asdf", display: "Failed!")])
-	}
+enum FakeError: Error {
+	case blankPreview
+	
+	var errorDescription: String? { "" }
 }
 
 struct StoreEntry: TimelineEntry {
@@ -157,7 +162,7 @@ struct Widgets: Widget {
 			StoreEntryView(entry: entry)
 			// TODO: somehow deep link to store on tap — including switching to active account!
 		}
-		.supportedFamilies([.systemMedium, .systemLarge])
+		.supportedFamilies([.systemSmall, .systemMedium, .systemLarge])
 		.configurationDisplayName("Store")
 		.description("Check your current Valorant storefront.")
 	}
@@ -181,7 +186,7 @@ extension AccentColor {
 struct StoreEntryView: View {
 	var entry: StoreEntry
 	
-	let opacities = [0.2, 0.3]
+	let opacities = [0.25, 0.3]
 	
 	@Environment(\.widgetFamily) private var widgetFamily
 	
@@ -193,6 +198,7 @@ struct StoreEntryView: View {
 		case .failure(let error):
 			Text(error.localizedDescription)
 				.foregroundColor(.secondary)
+				.multilineTextAlignment(.center)
 				.padding()
 		}
 	}
@@ -213,17 +219,26 @@ struct StoreEntryView: View {
 				storeGrid(for: info)
 			}
 		} else {
+			let isLarge = widgetFamily == .systemLarge
 			storeGrid(for: info)
-				.overlay(alignment: .top) {
-					if entry.configuration.showRefreshTime == 1 {
+				.overlay(alignment: isLarge ? .leading : .top) {
+					if entry.configuration.showRefreshTime != 0 { // eww NSNumber
 						ZStack {
 							ForEach(0..<3) { _ in // harder soft light lmao, this just looks best
 								nextRefreshLabel(target: info.nextRefresh)
 									.blendMode(.softLight)
 							}
 						}
-						.background(Capsule().fill(.regularMaterial).padding(-2))
-						.padding(6)
+						.padding(3)
+						.background{
+							Capsule().fill(.regularMaterial)
+							Capsule().strokeBorder(Color.white).opacity(0.1)
+						}
+						// rotate around the top, where it's attached to the edge (even when rotated)
+						.fixedSize()
+						.frame(width: 0, height: 0, alignment: .top)
+						.rotationEffect(isLarge ? .degrees(-90) : .zero)
+						.padding(4)
 						.foregroundColor(.primary)
 					}
 				}
@@ -247,6 +262,7 @@ struct StoreEntryView: View {
 						.font(.caption2)
 						.opacity(0.8)
 						.fixedSize(horizontal: false, vertical: true)
+						.frame(height: isSmall ? 10 : nil) // fake smaller height to ensure all cells stay the same size
 						.lineLimit(isSmall ? 2 : 1)
 						.multilineTextAlignment(.center)
 				}
