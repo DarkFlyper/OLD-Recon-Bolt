@@ -37,8 +37,33 @@ struct ReconBoltApp: App {
 					accountManager.clientVersion = version.riotClientVersion
 					imageManager.setVersion(version)
 				}
+				.onOpenURL(perform: handle(_:))
 			}
 		}
+	}
+	
+	func handle(_ url: URL) {
+		print("handling", url)
+		do {
+			if let widgetLink = try WidgetLink(from: url) {
+				handle(widgetLink)
+			}
+		} catch {
+			print("could not decode opened url: \(url)")
+		}
+	}
+	
+	func handle(_ widgetLink: WidgetLink) {
+		print("handling", widgetLink)
+		if let account = widgetLink.account {
+			do {
+				try accountManager.setActive(account)
+				print(accountManager.activeAccount!.session.userID)
+			} catch {
+				print("error setting account to \(account) for widget link")
+			}
+		}
+		// TODO: handle destination (deep link to e.g. store)
 	}
 }
 

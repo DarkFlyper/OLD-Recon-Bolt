@@ -80,8 +80,13 @@ final class AccountManager: ObservableObject {
 		if activeAccount?.id == id {
 			activeAccount = nil
 		} else {
-			activeAccount = try loadAccount(for: id)
+			try setActive(id)
 		}
+	}
+	
+	func setActive(_ id: User.ID) throws {
+		guard activeAccount?.id != id else { return }
+		activeAccount = try loadAccount(for: id)
 	}
 	
 	private var context: StoredAccount.Context {

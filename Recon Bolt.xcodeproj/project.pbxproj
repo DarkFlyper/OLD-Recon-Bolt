@@ -72,6 +72,10 @@
 		B939C8052948E80900ABD0C6 /* UserDefault+AppGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = B939C8042948E80900ABD0C6 /* UserDefault+AppGroups.swift */; };
 		B939C8062948E80900ABD0C6 /* UserDefault+AppGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = B939C8042948E80900ABD0C6 /* UserDefault+AppGroups.swift */; };
 		B939C8072948E80900ABD0C6 /* UserDefault+AppGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = B939C8042948E80900ABD0C6 /* UserDefault+AppGroups.swift */; };
+		B939C81E294A5A4900ABD0C6 /* WidgetLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = B939C81D294A5A4900ABD0C6 /* WidgetLink.swift */; };
+		B939C81F294A5A4900ABD0C6 /* WidgetLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = B939C81D294A5A4900ABD0C6 /* WidgetLink.swift */; };
+		B939C823294A5CD000ABD0C6 /* ViewStoreWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B939C821294A5CD000ABD0C6 /* ViewStoreWidget.swift */; };
+		B939C827294A601C00ABD0C6 /* StoreEntryProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B939C825294A601C00ABD0C6 /* StoreEntryProvider.swift */; };
 		B93CD3C22811AC1500628D0E /* MatchListFilterEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93CD3C12811AC1500628D0E /* MatchListFilterEditor.swift */; };
 		B94091AE25D09D5A00EE5DF2 /* LoadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94091AD25D09D5A00EE5DF2 /* LoadManager.swift */; };
 		B94091B825D09F0200EE5DF2 /* MatchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94091B725D09F0200EE5DF2 /* MatchListView.swift */; };
@@ -168,7 +172,7 @@
 		B9BC89F3293A7D6F00B97626 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9BC89F2293A7D6F00B97626 /* WidgetKit.framework */; };
 		B9BC89F5293A7D6F00B97626 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9BC89F4293A7D6F00B97626 /* SwiftUI.framework */; };
 		B9BC89F8293A7D6F00B97626 /* WidgetsBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BC89F7293A7D6F00B97626 /* WidgetsBundle.swift */; };
-		B9BC89FC293A7D6F00B97626 /* Widgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BC89FB293A7D6F00B97626 /* Widgets.swift */; };
+		B9BC89FC293A7D6F00B97626 /* General.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BC89FB293A7D6F00B97626 /* General.swift */; };
 		B9BC89FF293A7D7400B97626 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9BC89FE293A7D7400B97626 /* Assets.xcassets */; };
 		B9BC8A01293A7D7400B97626 /* Widgets.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B9BC89FD293A7D6F00B97626 /* Widgets.intentdefinition */; };
 		B9BC8A02293A7D7400B97626 /* Widgets.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B9BC89FD293A7D6F00B97626 /* Widgets.intentdefinition */; };
@@ -332,6 +336,9 @@
 		B939C7E52948577100ABD0C6 /* IntentsExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IntentsExtension.entitlements; sourceTree = "<group>"; };
 		B939C7F7294858FB00ABD0C6 /* LocalData+SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocalData+SwiftUI.swift"; sourceTree = "<group>"; };
 		B939C8042948E80900ABD0C6 /* UserDefault+AppGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserDefault+AppGroups.swift"; path = "Shared/Helpers/UserDefault+AppGroups.swift"; sourceTree = SOURCE_ROOT; };
+		B939C81D294A5A4900ABD0C6 /* WidgetLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetLink.swift; sourceTree = "<group>"; };
+		B939C821294A5CD000ABD0C6 /* ViewStoreWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStoreWidget.swift; sourceTree = "<group>"; };
+		B939C825294A601C00ABD0C6 /* StoreEntryProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreEntryProvider.swift; sourceTree = "<group>"; };
 		B93CD3C12811AC1500628D0E /* MatchListFilterEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListFilterEditor.swift; sourceTree = "<group>"; };
 		B94091AD25D09D5A00EE5DF2 /* LoadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadManager.swift; sourceTree = "<group>"; };
 		B94091B725D09F0200EE5DF2 /* MatchListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListView.swift; sourceTree = "<group>"; };
@@ -392,7 +399,7 @@
 		B9BC89F2293A7D6F00B97626 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		B9BC89F4293A7D6F00B97626 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		B9BC89F7293A7D6F00B97626 /* WidgetsBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetsBundle.swift; sourceTree = "<group>"; };
-		B9BC89FB293A7D6F00B97626 /* Widgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Widgets.swift; sourceTree = "<group>"; };
+		B9BC89FB293A7D6F00B97626 /* General.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = General.swift; sourceTree = "<group>"; };
 		B9BC89FD293A7D6F00B97626 /* Widgets.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Widgets.intentdefinition; sourceTree = "<group>"; };
 		B9BC89FE293A7D7400B97626 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B9BC8A00293A7D7400B97626 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -634,6 +641,7 @@
 				B902823326A7A8A9004B1740 /* HenrikAPI.swift */,
 				B909D293292361E0003A53D9 /* AppSettings.swift */,
 				B9F7FBC42935C7A30022F5CE /* InAppStore.swift */,
+				B939C81D294A5A4900ABD0C6 /* WidgetLink.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -778,7 +786,9 @@
 			isa = PBXGroup;
 			children = (
 				B9BC89F7293A7D6F00B97626 /* WidgetsBundle.swift */,
-				B9BC89FB293A7D6F00B97626 /* Widgets.swift */,
+				B9BC89FB293A7D6F00B97626 /* General.swift */,
+				B939C825294A601C00ABD0C6 /* StoreEntryProvider.swift */,
+				B939C821294A5CD000ABD0C6 /* ViewStoreWidget.swift */,
 				B9BC89FD293A7D6F00B97626 /* Widgets.intentdefinition */,
 				B9BC89FE293A7D7400B97626 /* Assets.xcassets */,
 				B9BC8A00293A7D7400B97626 /* Info.plist */,
@@ -1293,6 +1303,7 @@
 				B90B4B5B267C177D00CACB95 /* PlayerTitleAssets.swift in Sources */,
 				B9F07CB426474E8A006CD4F5 /* AssetClient.swift in Sources */,
 				B9F07CBA26474F4E006CD4F5 /* MapAssets.swift in Sources */,
+				B939C81E294A5A4900ABD0C6 /* WidgetLink.swift in Sources */,
 				B939C8052948E80900ABD0C6 /* UserDefault+AppGroups.swift in Sources */,
 				B932A102279121E2009FAEE5 /* ContractProgressBar.swift in Sources */,
 				B9C97DC7263CADFC001E4D1B /* ValorantAPI+Mock.swift in Sources */,
@@ -1343,6 +1354,7 @@
 				B97C8F3A293C40A7002F6A07 /* SwiftUI+Helpers.swift in Sources */,
 				B97C8F53293C421F002F6A07 /* PlayerTitleAssets.swift in Sources */,
 				B97C8F4D293C421F002F6A07 /* BuddyAssets.swift in Sources */,
+				B939C81F294A5A4900ABD0C6 /* WidgetLink.swift in Sources */,
 				B9BC8A01293A7D7400B97626 /* Widgets.intentdefinition in Sources */,
 				B97C8F32293BBED9002F6A07 /* Swift+Helpers.swift in Sources */,
 				B97C8F40293C4212002F6A07 /* AssetCollection.swift in Sources */,
@@ -1351,9 +1363,10 @@
 				B97C8F49293C421F002F6A07 /* WeaponAssets.swift in Sources */,
 				B97C8F52293C421F002F6A07 /* MapAssets.swift in Sources */,
 				B97C8F46293C421C002F6A07 /* SeasonDecoding.swift in Sources */,
-				B9BC89FC293A7D6F00B97626 /* Widgets.swift in Sources */,
+				B9BC89FC293A7D6F00B97626 /* General.swift in Sources */,
 				B97C8F50293C421F002F6A07 /* AgentAssets.swift in Sources */,
 				B97C8F55293C4225002F6A07 /* WeaponImage.swift in Sources */,
+				B939C827294A601C00ABD0C6 /* StoreEntryProvider.swift in Sources */,
 				B97C8F59293C4225002F6A07 /* GameModeImage.swift in Sources */,
 				B97C8F56293C4225002F6A07 /* CompetitiveTierImage.swift in Sources */,
 				B97C8F3F293C4212002F6A07 /* AssetImage.swift in Sources */,
@@ -1363,6 +1376,7 @@
 				B97C8F5B293C4225002F6A07 /* AgentImage.swift in Sources */,
 				B97C8F44293C4212002F6A07 /* NamespacedID.swift in Sources */,
 				B97C8F57293C4225002F6A07 /* PlayerCardImage.swift in Sources */,
+				B939C823294A5CD000ABD0C6 /* ViewStoreWidget.swift in Sources */,
 				B97C8F2E293BBE31002F6A07 /* AccountManager.swift in Sources */,
 				B97C8F4A293C421F002F6A07 /* ContractAssets.swift in Sources */,
 				B97C8F31293BBEA7002F6A07 /* Keychain.swift in Sources */,
