@@ -89,18 +89,21 @@ struct StoreEntryView: View {
 		FixedColumnGrid(columns: columnCount) {
 			ForEach(info.skins.indexed(), id: \.index) { index, skin in
 				VStack(spacing: 4) {
-					if !isSmall {
+					let shouldShowIcon = entry.shouldShowIcon && !isSmall
+					if shouldShowIcon {
 						skin.icon?.resizable().aspectRatio(contentMode: .fit)
 							.frame(maxWidth: .infinity, maxHeight: .infinity)
 					}
 					
-					Text(skin.name)
-						.font(.caption2)
-						.opacity(0.8)
-						.fixedSize(horizontal: false, vertical: true)
-						.frame(height: isSmall ? 10 : nil) // fake smaller height to ensure all cells stay the same size
-						.lineLimit(isSmall ? 2 : 1)
-						.multilineTextAlignment(.center)
+					if entry.shouldShowLabel {
+						Text(skin.name)
+							.font(.caption2)
+							.opacity(0.8)
+							.fixedSize(horizontal: false, vertical: true)
+							.frame(height: isSmall ? 10 : nil) // fake smaller height to ensure all cells stay the same size
+							.lineLimit(shouldShowIcon ? 2 : 1)
+							.multilineTextAlignment(.center)
+					}
 				}
 				.frame(maxWidth: .infinity, maxHeight: .infinity)
 				.padding(.vertical, isSmall ? 4 : 8)
@@ -128,6 +131,16 @@ struct StoreEntryView: View {
 		}
 		.padding(.trailing, 2)
 		.font(.caption.weight(.medium))
+	}
+}
+
+extension StoreEntry {
+	var shouldShowIcon: Bool {
+		configuration.displayMode != .textOnly
+	}
+	
+	var shouldShowLabel: Bool {
+		configuration.displayMode != .iconOnly
 	}
 }
 

@@ -57,6 +57,59 @@
 				</dict>
 			</array>
 		</dict>
+		<dict>
+			<key>INEnumDisplayName</key>
+			<string>Store Display Mode</string>
+			<key>INEnumDisplayNameID</key>
+			<string>Knw5Ua</string>
+			<key>INEnumGeneratesHeader</key>
+			<true/>
+			<key>INEnumName</key>
+			<string>StoreDisplayMode</string>
+			<key>INEnumType</key>
+			<string>Regular</string>
+			<key>INEnumValues</key>
+			<array>
+				<dict>
+					<key>INEnumValueDisplayName</key>
+					<string>Unknown</string>
+					<key>INEnumValueDisplayNameID</key>
+					<string>lgroW3</string>
+					<key>INEnumValueName</key>
+					<string>unknown</string>
+				</dict>
+				<dict>
+					<key>INEnumValueDisplayName</key>
+					<string>Icon &amp; Text</string>
+					<key>INEnumValueDisplayNameID</key>
+					<string>oTWtFZ</string>
+					<key>INEnumValueIndex</key>
+					<integer>1</integer>
+					<key>INEnumValueName</key>
+					<string>iconAndText</string>
+				</dict>
+				<dict>
+					<key>INEnumValueDisplayName</key>
+					<string>Icon Only</string>
+					<key>INEnumValueDisplayNameID</key>
+					<string>dxyWk1</string>
+					<key>INEnumValueIndex</key>
+					<integer>2</integer>
+					<key>INEnumValueName</key>
+					<string>iconOnly</string>
+				</dict>
+				<dict>
+					<key>INEnumValueDisplayName</key>
+					<string>Text Only</string>
+					<key>INEnumValueDisplayNameID</key>
+					<string>bnwtq2</string>
+					<key>INEnumValueIndex</key>
+					<integer>3</integer>
+					<key>INEnumValueName</key>
+					<string>textOnly</string>
+				</dict>
+			</array>
+		</dict>
 	</array>
 	<key>INIntentDefinitionModelVersion</key>
 	<string>1.2</string>
@@ -65,9 +118,9 @@
 	<key>INIntentDefinitionSystemVersion</key>
 	<string>22A400</string>
 	<key>INIntentDefinitionToolsBuildVersion</key>
-	<string>14B47b</string>
+	<string>14C18</string>
 	<key>INIntentDefinitionToolsVersion</key>
-	<string>14.1</string>
+	<string>14.2</string>
 	<key>INIntents</key>
 	<array>
 		<dict>
@@ -80,7 +133,7 @@
 			<key>INIntentIneligibleForSuggestions</key>
 			<true/>
 			<key>INIntentLastParameterTag</key>
-			<integer>10</integer>
+			<integer>13</integer>
 			<key>INIntentName</key>
 			<string>ViewStore</string>
 			<key>INIntentParameters</key>
@@ -149,11 +202,71 @@
 					<key>INIntentParameterConfigurable</key>
 					<true/>
 					<key>INIntentParameterDisplayName</key>
+					<string>Display Mode</string>
+					<key>INIntentParameterDisplayNameID</key>
+					<string>biLdDr</string>
+					<key>INIntentParameterDisplayPriority</key>
+					<integer>2</integer>
+					<key>INIntentParameterEnumType</key>
+					<string>StoreDisplayMode</string>
+					<key>INIntentParameterEnumTypeNamespace</key>
+					<string>88xZPY</string>
+					<key>INIntentParameterMetadata</key>
+					<dict>
+						<key>INIntentParameterMetadataDefaultValue</key>
+						<string>iconAndText</string>
+					</dict>
+					<key>INIntentParameterName</key>
+					<string>displayMode</string>
+					<key>INIntentParameterPromptDialogs</key>
+					<array>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Configuration</string>
+						</dict>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Primary</string>
+						</dict>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogFormatString</key>
+							<string>There are ${count} options matching ‘${displayMode}’.</string>
+							<key>INIntentParameterPromptDialogFormatStringID</key>
+							<string>LjLkHK</string>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>DisambiguationIntroduction</string>
+						</dict>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogFormatString</key>
+							<string>Just to confirm, you wanted ‘${displayMode}’?</string>
+							<key>INIntentParameterPromptDialogFormatStringID</key>
+							<string>IknZ9D</string>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Confirmation</string>
+						</dict>
+					</array>
+					<key>INIntentParameterTag</key>
+					<integer>12</integer>
+					<key>INIntentParameterType</key>
+					<string>Integer</string>
+				</dict>
+				<dict>
+					<key>INIntentParameterConfigurable</key>
+					<true/>
+					<key>INIntentParameterDisplayName</key>
 					<string>Show Refresh Time</string>
 					<key>INIntentParameterDisplayNameID</key>
 					<string>BWVoH6</string>
 					<key>INIntentParameterDisplayPriority</key>
-					<integer>2</integer>
+					<integer>3</integer>
 					<key>INIntentParameterMetadata</key>
 					<dict>
 						<key>INIntentParameterMetadataDefaultValue</key>
@@ -197,7 +310,7 @@
 					<key>INIntentParameterDisplayNameID</key>
 					<string>rA2NkU</string>
 					<key>INIntentParameterDisplayPriority</key>
-					<integer>3</integer>
+					<integer>4</integer>
 					<key>INIntentParameterMetadata</key>
 					<dict>
 						<key>INIntentParameterMetadataDefaultValue</key>
@@ -241,7 +354,7 @@
 					<key>INIntentParameterDisplayNameID</key>
 					<string>ZqiAs4</string>
 					<key>INIntentParameterDisplayPriority</key>
-					<integer>4</integer>
+					<integer>5</integer>
 					<key>INIntentParameterName</key>
 					<string>account</string>
 					<key>INIntentParameterObjectType</key>
@@ -261,26 +374,6 @@
 							<true/>
 							<key>INIntentParameterPromptDialogType</key>
 							<string>Primary</string>
-						</dict>
-						<dict>
-							<key>INIntentParameterPromptDialogCustom</key>
-							<true/>
-							<key>INIntentParameterPromptDialogFormatString</key>
-							<string>There are ${count} options matching ‘${account}’.</string>
-							<key>INIntentParameterPromptDialogFormatStringID</key>
-							<string>p9UeJn</string>
-							<key>INIntentParameterPromptDialogType</key>
-							<string>DisambiguationIntroduction</string>
-						</dict>
-						<dict>
-							<key>INIntentParameterPromptDialogCustom</key>
-							<true/>
-							<key>INIntentParameterPromptDialogFormatString</key>
-							<string>Just to confirm, you wanted ‘${account}’?</string>
-							<key>INIntentParameterPromptDialogFormatStringID</key>
-							<string>1maTTW</string>
-							<key>INIntentParameterPromptDialogType</key>
-							<string>Confirmation</string>
 						</dict>
 					</array>
 					<key>INIntentParameterRelationship</key>
