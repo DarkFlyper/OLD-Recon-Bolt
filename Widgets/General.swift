@@ -18,6 +18,8 @@ extension AccentColor {
 			return .valorantBlue
 		case .highlight:
 			return .valorantSelf
+		case .primary:
+			return .primary
 		}
 	}
 }
