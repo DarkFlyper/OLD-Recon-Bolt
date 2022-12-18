@@ -73,6 +73,12 @@ final class ImageManager: ObservableObject {
 		}
 	}
 	
+	func awaitImage(for image: AssetImage?) async -> UIImage? {
+		guard let image else { return nil }
+		await download(image)
+		return self.image(for: image)
+	}
+	
 	func cacheState(for image: AssetImage, loadImmediately: Bool = false) -> CacheState? {
 		if loadImmediately, cache.state(for: image) == nil {
 			cache.updateState(for: image, forceUpdate: false)

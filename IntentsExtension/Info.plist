@@ -12,6 +12,7 @@
 			<array/>
 			<key>IntentsSupported</key>
 			<array>
+				<string>ViewMissionsIntent</string>
 				<string>ViewStoreIntent</string>
 			</array>
 		</dict>

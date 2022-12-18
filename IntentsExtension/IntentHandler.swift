@@ -2,20 +2,15 @@ import Intents
 
 let isInSwiftUIPreview = false // lol
 
-class IntentHandler: INExtension {
-    override func handler(for intent: INIntent) -> Any {
-        // This is the default implementation.  If you want different objects to handle different intents,
-        // you can override this and return the handler you want for that particular intent.
-        
-        return ViewStoreHandler()
-    }
-}
-
-final class ViewStoreHandler: NSObject, ViewStoreIntentHandling {
+final class IntentHandler: INExtension {
 	@MainActor
 	private static let accountManager = AccountManager()
 	
-	func provideAccountOptionsCollection(for intent: ViewStoreIntent) async throws -> INObjectCollection<Account> {
+    override func handler(for intent: INIntent) -> Any { self }
+	
+	typealias Accounts = INObjectCollection<Account>
+	
+	func provideAccountOptionsCollection() async throws -> Accounts {
 		let accountIDs = await Self.accountManager.storedAccounts
 		let manager = LocalDataProvider.shared.userManager
 		if let activeAccount = await Self.accountManager.activeAccount {
@@ -33,5 +28,17 @@ final class ViewStoreHandler: NSObject, ViewStoreIntentHandling {
 			))
 		}
 		return INObjectCollection(items: accounts)
+	}
+}
+
+extension IntentHandler: ViewStoreIntentHandling {
+	func provideAccountOptionsCollection(for intent: ViewStoreIntent) async throws -> Accounts {
+		try await provideAccountOptionsCollection()
+	}
+}
+
+extension IntentHandler: ViewMissionsIntentHandling {
+	func provideAccountOptionsCollection(for intent: ViewMissionsIntent) async throws -> Accounts {
+		try await provideAccountOptionsCollection()
 	}
 }

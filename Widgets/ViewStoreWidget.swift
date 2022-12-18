@@ -6,12 +6,13 @@ import HandyOperators
 import CGeometry
 
 struct ViewStoreWidget: Widget {
-	let kind: String = "Widgets"
-	
 	var body: some WidgetConfiguration {
-		IntentConfiguration(kind: kind, intent: ViewStoreIntent.self, provider: StoreEntryProvider()) { entry in
+		IntentConfiguration(
+			kind: "view store",
+			intent: ViewStoreIntent.self,
+			provider: StoreEntryProvider()
+		) { entry in
 			StoreEntryView(entry: entry)
-				.widgetURL(entry.link.makeURL())
 		}
 		.supportedFamilies([.systemSmall, .systemMedium, .systemLarge])
 		.configurationDisplayName("Store")
@@ -19,66 +20,55 @@ struct ViewStoreWidget: Widget {
 	}
 }
 
-struct StoreEntryView: View {
+struct StoreEntryView: TimelineEntryView {
 	var entry: StoreEntry
 	
 	let opacities = [0.25, 0.3]
 	
 	@Environment(\.widgetFamily) private var widgetFamily
 	
-	var body: some View {
-		switch entry.info {
-		case .success(let info):
-			storefrontContents(for: info)
-				.foregroundColor(entry.configuration.accentColor.color)
-		case .failure(let error):
-			Text(error.localizedDescription)
-				.foregroundColor(.secondary)
-				.multilineTextAlignment(.center)
-				.padding()
-		}
-	}
-	
-	@ViewBuilder
-	func storefrontContents(for info: StorefrontInfo) -> some View {
-		if widgetFamily == .systemSmall {
-			VStack(spacing: 0) {
-				if entry.configuration.showRefreshTime == 1 {
-					nextRefreshLabel(target: info.nextRefresh)
-						.padding(4)
-						.frame(maxWidth: .infinity)
-						.background {
-							Rectangle().opacity(opacities.last!)
-						}
-				}
-				
-				storeGrid(for: info)
-			}
-		} else {
-			let isLarge = widgetFamily == .systemLarge
-			storeGrid(for: info)
-				.overlay(alignment: isLarge ? .leading : .top) {
-					if entry.configuration.showRefreshTime != 0 { // eww NSNumber
-						ZStack {
-							ForEach(0..<3) { _ in // harder soft light lmao, this just looks best
-								nextRefreshLabel(target: info.nextRefresh)
-									.blendMode(.softLight)
+	func contents(for info: StorefrontInfo) -> some View {
+		Group {
+			if widgetFamily == .systemSmall {
+				VStack(spacing: 0) {
+					if entry.configuration.showRefreshTime == 1 {
+						nextRefreshLabel(target: info.nextRefresh)
+							.padding(4)
+							.frame(maxWidth: .infinity)
+							.background {
+								Rectangle().opacity(opacities.last!)
 							}
-						}
-						.padding(3)
-						.background{
-							Capsule().fill(.regularMaterial)
-							Capsule().strokeBorder(Color.white).opacity(0.1)
-						}
-						// rotate around the top, where it's attached to the edge (even when rotated)
-						.fixedSize()
-						.frame(width: 0, height: 0, alignment: .top)
-						.rotationEffect(isLarge ? .degrees(-90) : .zero)
-						.padding(4)
-						.foregroundColor(.primary)
 					}
+					
+					storeGrid(for: info)
 				}
+			} else {
+				let isLarge = widgetFamily == .systemLarge
+				storeGrid(for: info)
+					.overlay(alignment: isLarge ? .leading : .top) {
+						if entry.configuration.showRefreshTime != 0 { // eww NSNumber
+							ZStack {
+								ForEach(0..<3) { _ in // harder soft light lmao, this just looks best
+									nextRefreshLabel(target: info.nextRefresh)
+										.blendMode(.softLight)
+								}
+							}
+							.padding(3)
+							.background{
+								Capsule().fill(.regularMaterial)
+								Capsule().strokeBorder(Color.white).opacity(0.1)
+							}
+							// rotate around the top, where it's attached to the edge (even when rotated)
+							.fixedSize()
+							.frame(width: 0, height: 0, alignment: .top)
+							.rotationEffect(isLarge ? .degrees(-90) : .zero)
+							.padding(4)
+							.foregroundColor(.primary)
+						}
+					}
+			}
 		}
+		.foregroundColor(entry.configuration.accentColor.color)
 	}
 	
 	@ViewBuilder
@@ -169,7 +159,7 @@ struct FixedColumnGrid: Layout {
 struct ViewStoreWidget_Previews: PreviewProvider {
     static var previews: some View {
 		Group {
-			let view = StoreEntryView(entry: .mocked(
+			let view = StoreEntryView(entry: .init(
 				info: .success(.init(
 					nextRefresh: .init(timeIntervalSinceNow: 12345),
 					skins: [
@@ -191,12 +181,12 @@ struct ViewStoreWidget_Previews: PreviewProvider {
 			view.previewContext(WidgetPreviewContext(family: .systemLarge))
 				.previewDisplayName("Large")
 			
-			StoreEntryView(entry: .mocked(
-				info: .failure(StoreEntryProvider.UpdateError.missingAccount)
+			StoreEntryView(entry: .init(
+				info: .failure(StoreEntryProvider.UpdateError.unknownOffer)
 			))
 			.previewDisplayName("No Account")
 			
-			StoreEntryView(entry: .mocked(
+			StoreEntryView(entry: .init(
 				info: .failure(APIError.rateLimited(retryAfter: 5))
 			))
 			.previewDisplayName("Other Error")
