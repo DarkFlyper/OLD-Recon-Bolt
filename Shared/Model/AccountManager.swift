@@ -12,7 +12,7 @@ final class AccountManager: ObservableObject {
 	@Published var activeAccount: StoredAccount? = nil {
 		didSet {
 			Storage.activeAccount = activeAccount?.id
-			Task { await updateClientVersion() }
+			updateClientVersion()
 		}
 	}
 	
@@ -25,7 +25,7 @@ final class AccountManager: ObservableObject {
 	@Published var clientVersion = Storage.clientVersion {
 		didSet {
 			Storage.clientVersion = clientVersion
-			Task { await updateClientVersion() }
+			updateClientVersion()
 		}
 	}
 	
@@ -93,7 +93,7 @@ final class AccountManager: ObservableObject {
 		.init(keychain: keychain, multifactorHandler: handleMultifactor(info:))
 	}
 	
-	func updateClientVersion() async {
+	func updateClientVersion() {
 		guard let clientVersion else { return }
 		activeAccount?.setClientVersion(clientVersion)
 	}
@@ -176,6 +176,7 @@ final class StoredAccount: ObservableObject, Identifiable {
 	
 	func setClientVersion(_ version: String) {
 		client.clientVersion = version
+		save()
 	}
 	
 	enum LoadingError: Error, LocalizedError {
