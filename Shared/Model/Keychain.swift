@@ -14,8 +14,13 @@ extension KeychainSwift: Keychain {
 		get { getData(key) }
 		set {
 			if let newValue {
+				let oldValue = getData(key)
 				if !set(newValue, forKey: key) {
 					print("Could not store value to keychain for key \(key)!")
+					// attempt to restore…
+					if let oldValue {
+						set(oldValue, forKey: key)
+					}
 				}
 			} else {
 				delete(key)

@@ -44,7 +44,6 @@ struct CircularProgressView<Base: View, Background: View>: View {
 								.blendMode(.destinationOut)
 						}
 						.compositingGroup()
-						.foregroundColor(.black) // in unavailable NavigationLinks, the default foreground color is not opaque
 						.blendMode(.destinationOut)
 					}
 					

@@ -185,7 +185,7 @@ final class StoredAccount: ObservableObject, Identifiable {
 		var errorDescription: String? {
 			switch self {
 			case .noStoredSession:
-				return "Missing session for account."
+				return "Missing session for account.\nIf you have Pro, add an account using the same credentials to replace the account with a working version."
 			}
 		}
 	}

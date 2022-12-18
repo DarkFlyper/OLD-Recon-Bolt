@@ -40,10 +40,12 @@ struct MultifactorPromptView: View {
 			
 			if didSessionExpire {
 				Text("Your session has expired! Recon Bolt has tried to refresh it for you, but needs 2FA confirmation.")
+					.frame(maxWidth: .infinity, alignment: .leading)
 				Color.clear.frame(height: 0)
 			}
 			
 			Text("A 2FA code has been sent to your email address \(prompt.info.email)")
+				.frame(maxWidth: .infinity, alignment: .leading)
 		}
 		.padding()
 		.frame(maxWidth: .infinity, maxHeight: .infinity)
