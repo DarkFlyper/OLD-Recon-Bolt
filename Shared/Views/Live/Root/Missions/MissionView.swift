@@ -54,30 +54,6 @@ struct MissionView: View {
 			}
 		}
 	}
-	
-	// had to extract this because compile times exploded with this logic in a function builder
-	struct ResolvedMission {
-		var name: String
-		var progress: Int?
-		var toComplete: Int
-		
-		init(info: MissionInfo, mission: Mission?, assets: AssetCollection?) {
-			let (objectiveID, progress) = mission?.objectiveProgress.singleElement ?? (nil, nil)
-			self.progress = progress
-			let objectiveValue = info.objective(id: objectiveID)
-			self.toComplete = objectiveValue?.value
-				?? info.progressToComplete // this is incorrect for e.g. the "you or your allies plant or defuse spikes" one, where it's 1 while the objectives correctly list it as 5
-			
-			let objective = (objectiveID ?? objectiveValue?.objectiveID)
-				.flatMap { assets?.objectives[$0] }
-			
-			self.name = objective?.directive?
-				.valorantLocalized(number: toComplete)
-				?? info.displayName
-				?? info.title
-				?? "<Unnamed Mission>"
-		}
-	}
 }
 
 #if DEBUG

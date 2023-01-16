@@ -13,6 +13,7 @@ struct LiveView: View {
 	var expandedBoxes: Set<Box> = [.party]
 	
 	@Environment(\.valorantLoad) private var load
+	@Environment(\.assets) private var assets
 	
 	var body: some View {
 		ScrollView {
@@ -36,7 +37,7 @@ struct LiveView: View {
 	var missionsBox: some View {
 		RefreshableBox(title: "Missions", isExpanded: $expandedBoxes.contains(.missions)) {
 			infoOrPlaceholder(placeholder: "Missions not loaded!", contractDetails) {
-				ContractDetailsView(details: $0)
+				ContractDetailsView(contracts: .init(details: $0, assets: assets))
 			}
 		} refresh: {
 			contractDetails = try await $0.getContractDetails()

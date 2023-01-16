@@ -26,24 +26,22 @@ struct MissionListView: TimelineEntryView {
 	@Environment(\.widgetFamily) private var widgetFamily
 	
 	func contents(for value: ContractDetailsInfo) -> some View {
-		let dailies = value.missions.filter { $0.info?.type == .daily }
-		let weeklies = value.missions.filter { $0.info?.type == .weekly }
-		
+		let contracts = value.contracts
 		HStack(spacing: 0) {
 			Spacer()
 			
 			CurrentMissionsList(
 				title: "Dailies",
-				missions: dailies,
-				countdownTarget: dailies.firstNonNil(\.mission.expirationTime)
+				missions: contracts.dailies,
+				countdownTarget: contracts.dailyRefresh
 			)
 			
 			Spacer()
 			
 			CurrentMissionsList(
 				title: "Weeklies",
-				missions: weeklies,
-				countdownTarget: value.contractDetails.missionMetadata.weeklyRefillTime
+				missions: contracts.weeklies,
+				countdownTarget: contracts.weeklyRefresh
 			)
 			
 			Spacer()
@@ -155,30 +153,6 @@ struct MissionView: View {
 			}
 		}
 	}
-	
-	// had to extract this because compile times exploded with this logic in a function builder
-	struct ResolvedMission {
-		var name: String
-		var progress: Int?
-		var toComplete: Int
-		
-		init(info: MissionInfo, mission: Mission?, assets: AssetCollection?) {
-			let (objectiveID, progress) = mission?.objectiveProgress.singleElement ?? (nil, nil)
-			self.progress = progress
-			let objectiveValue = info.objective(id: objectiveID)
-			self.toComplete = objectiveValue?.value
-			?? info.progressToComplete // this is incorrect for e.g. the "you or your allies plant or defuse spikes" one, where it's 1 while the objectives correctly list it as 5
-			
-			let objective = (objectiveID ?? objectiveValue?.objectiveID)
-				.flatMap { assets?.objectives[$0] }
-			
-			self.name = objective?.directive?
-				.valorantLocalized(number: toComplete)
-			?? info.displayName
-			?? info.title
-			?? "<Unnamed Mission>"
-		}
-	}
 }
 
 struct HourlyCountdownText: View {
@@ -213,9 +187,7 @@ struct ViewMissionsWidget_Previews: PreviewProvider {
 		if let assets = AssetManager().assets {
 			MissionListView(entry: .init(
 				info: .success(.init(
-					contractDetails: PreviewData.contractDetails,
-					missions: PreviewData.contractDetails.missions.map { ($0, assets.missions[$0.id]) },
-					assets: assets
+					contracts: .init(details: PreviewData.contractDetails, assets: assets)
 				)),
 				configuration: .init() <- { _ in
 					//$0.accentColor = .unknown

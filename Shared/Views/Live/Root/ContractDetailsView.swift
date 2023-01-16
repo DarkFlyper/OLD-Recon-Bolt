@@ -1,10 +1,8 @@
 import SwiftUI
 import ValorantAPI
 
-typealias MissionWithInfo = (mission: Mission, info: MissionInfo?)
-
 struct ContractDetailsView: View {
-	var details: ContractDetails
+	var contracts: ResolvedContracts
 	
 	@Environment(\.assets) private var assets
 	
@@ -25,9 +23,9 @@ struct ContractDetailsView: View {
 			
 			GroupBox {
 				// wish we could use guard statements…
-				if let activeContract = details.activeSpecialContract {
+				if let activeContract = contracts.details.activeSpecialContract {
 					if let info = assets?.contracts[activeContract] {
-						if let contract = details.contracts.firstElement(withID: activeContract) {
+						if let contract = contracts.details.contracts.firstElement(withID: activeContract) {
 							overview(for: ContractData(contract: contract, info: info))
 						} else {
 							Text("Missing progress for contract!")
@@ -42,7 +40,7 @@ struct ContractDetailsView: View {
 				
 				Divider()
 				
-				NavigationLink(destination: ContractChooser(details: details)) {
+				NavigationLink(destination: ContractChooser(details: contracts.details)) {
 					HStack {
 						Text("Switch Contract")
 						Spacer()
@@ -91,35 +89,27 @@ struct ContractDetailsView: View {
 	
 	@ViewBuilder
 	var currentMissionsInfo: some View {
-		let missions: [MissionWithInfo] = details.missions
-			.map { ($0, assets?.missions[$0.id]) }
-		
-		let dailies = missions.filter { $0.info?.type == .daily }
-		let weeklies = missions.filter { $0.info?.type == .weekly }
-		let covered = Set((dailies + weeklies).map(\.mission.id))
-		let unknown = missions.filter { !covered.contains($0.mission.id) }
-		
 		CurrentMissionsList(
 			title: "Uncategorized Missions",
-			missions: unknown
+			missions: contracts.unknown
 		)
 		
 		CurrentMissionsList(
 			title: "Daily Missions",
-			missions: dailies,
-			countdownTarget: dailies.first?.mission.expirationTime
+			missions: contracts.dailies,
+			countdownTarget: contracts.dailyRefresh
 		)
 		
 		CurrentMissionsList(
 			title: "Weekly Missions",
-			missions: weeklies,
-			countdownTarget: details.missionMetadata.weeklyRefillTime
+			missions: contracts.weeklies,
+			countdownTarget: contracts.weeklyRefresh
 		)
 	}
 	
 	@ViewBuilder
 	var upcomingMissionsInfo: some View {
-		if let upcomingMissions = upcomingMissions() {
+		if let upcomingMissions = contracts.upcomingMissions {
 			let now = Date.now
 			let futureStart = upcomingMissions.firstIndex { $0.activationDate! > now }
 				?? upcomingMissions.endIndex
@@ -134,44 +124,13 @@ struct ContractDetailsView: View {
 			)
 		}
 	}
-	
-	private func upcomingMissions() -> [MissionInfo]? {
-		// the weekly checkpoint is equal to the activation date of the last completed group of weeklies
-		// so we'll figure that out and find all missions starting after that date
-		
-		guard
-			let assets,
-			// weekly checkpoint may still be in the last act—let's take the later of that and the current act's start
-			let checkpointDate = [
-				details.missionMetadata.weeklyCheckpoint?
-					.adding(days: 7), // add one week to skip the completed group
-				assets.seasons.currentAct()?.timeSpan.start
-			].compacted().max()
-		else { return nil }
-		
-		// shift forward by 3 days to skip the currently-active group and into the middle of the week
-		// this also avoids issues with acts launching at different times in different regions, as well as DST
-		let checkpoint = checkpointDate.adding(days: 3)
-		
-		return assets.missions.values
-			.filter { $0.type == .weekly }
-			// all weeklies have activation dates
-			.filter { $0.activationDate! > checkpoint }
-			.sorted(on: \.activationDate!)
-	}
-}
-
-private extension Date {
-	func adding(days: Double) -> Self {
-		addingTimeInterval(days * 24 * 3600) // don't need to consider leap seconds or DST for this because it's pretty rough anyway
-	}
 }
 
 #if DEBUG
-struct ContractDetailsView_Previews: PreviewProvider {
-	static var previews: some View {
+struct ContractDetailsView_Previews: PreviewProviderWithAssets {
+	static func previews(assets: AssetCollection) -> some View {
 		RefreshableBox(title: "Missions", isExpanded: .constant(true)) {
-			ContractDetailsView(details: PreviewData.contractDetails)
+			ContractDetailsView(contracts: .init(details: PreviewData.contractDetails, assets: assets))
 		} refresh: { _ in }
 		.forPreviews()
 	}
