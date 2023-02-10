@@ -1,15 +1,20 @@
 import Foundation
 import KeychainSwift
+import HandyOperators
 
 protocol Keychain {
 	subscript(key: String) -> Data? { get nonmutating set }
 }
 
 extension Keychain where Self == KeychainSwift {
-	static var standard: Self { .init() }
+	static var standard: Self { .instance }
 }
 
 extension KeychainSwift: Keychain {
+	static let instance = KeychainSwift() <- {
+		$0.accessGroup = "V2EPDFA9PV.com.juliand665.Valorant-Viewer"
+	}
+	
 	subscript(key: String) -> Data? {
 		get { getData(key) }
 		set {
