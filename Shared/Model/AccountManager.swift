@@ -3,6 +3,7 @@ import Combine
 import ValorantAPI
 import UserDefault
 import HandyOperators
+import WidgetKit
 
 @MainActor
 final class AccountManager: ObservableObject {
@@ -87,6 +88,7 @@ final class AccountManager: ObservableObject {
 	func setActive(_ id: User.ID) throws {
 		guard activeAccount?.id != id else { return }
 		activeAccount = try loadAccount(for: id)
+		WidgetCenter.shared.reloadAllTimelines() // some widgets might be based on the active user
 	}
 	
 	private var context: StoredAccount.Context {
