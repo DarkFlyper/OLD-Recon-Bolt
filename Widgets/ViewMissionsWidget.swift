@@ -14,7 +14,7 @@ struct ViewMissionsWidget: Widget {
 		) { entry in
 			MissionListView(entry: entry)
 		}
-		.supportedFamilies([.systemMedium, .systemLarge])
+		.supportedFamilies([.systemSmall, .systemMedium])
 		.configurationDisplayName("Missions")
 		.description("Check your progress on daily & weekly missions.")
 	}
@@ -27,24 +27,27 @@ struct MissionListView: TimelineEntryView {
 	
 	func contents(for value: ContractDetailsInfo) -> some View {
 		let contracts = value.contracts
-		HStack(spacing: 0) {
+		HStack(alignment: .top, spacing: 0) {
 			Spacer()
 			
 			CurrentMissionsList(
-				title: "Dailies",
+				title: "Daily",
 				missions: contracts.dailies,
 				countdownTarget: contracts.dailyRefresh
 			)
 			
 			Spacer()
 			
-			CurrentMissionsList(
-				title: "Weeklies",
-				missions: contracts.weeklies,
-				countdownTarget: contracts.weeklyRefresh
-			)
-			
-			Spacer()
+			if widgetFamily != .systemSmall {
+				CurrentMissionsList(
+					title: "Weekly",
+					missions: contracts.weeklies,
+					countdownTarget: contracts.weeklyRefresh,
+					supplement: contracts.queuedUpWeeklies.map { "+\($0.count) queued" }
+				)
+				
+				Spacer()
+			}
 		}
 		.frame(maxHeight: .infinity)
 		.background(Color.groupedBackground)
@@ -52,10 +55,11 @@ struct MissionListView: TimelineEntryView {
 }
 
 struct CurrentMissionsList: View {
-	var title: String
+	var title: LocalizedStringKey
 	var missions: [MissionWithInfo]
 	var assets: AssetCollection?
 	var countdownTarget: Date? = nil
+	var supplement: LocalizedStringKey? = nil
 	
 	var body: some View {
 		if !missions.isEmpty {
@@ -70,26 +74,43 @@ struct CurrentMissionsList: View {
 					Group {
 						if let countdownTarget {
 							HourlyCountdownText(target: countdownTarget)
-							//Image(systemName: "clock")
 						}
 					}
 					.font(.caption.weight(.medium))
 					.foregroundStyle(.secondary)
 				}
+				.padding(.horizontal, 4)
 				
-				HStack(alignment: .top, spacing: 16) {
-					ForEach(missions, id: \.mission.id) { mission, missionInfo in
-						if let missionInfo {
-							MissionView(missionInfo: missionInfo, mission: mission, assets: assets)
-						} else {
-							Image(systemName: "questionmark")
-								.foregroundStyle(.secondary)
+				VStack(spacing: 1) {
+					HStack(alignment: .top, spacing: 16) {
+						ForEach(missions, id: \.mission.id) { mission, missionInfo in
+							if let missionInfo {
+								MissionView(missionInfo: missionInfo, mission: mission, assets: assets)
+							} else {
+								Image(systemName: "questionmark")
+									.foregroundStyle(.secondary)
+							}
 						}
 					}
+					.padding()
+					.background(Color.secondaryGroupedBackground)
+					.cornerRadius(8)
+					
+					if let supplement {
+						Text(supplement)
+							.font(.footnote)
+							.foregroundStyle(.secondary)
+							.padding(.horizontal, 8)
+							.padding(.vertical, 6)
+							.padding(.top, -2)
+							.background {
+								RoundedRectangle(cornerRadius: 8)
+									.fill(Color.secondaryGroupedBackground)
+									.padding(.top, -8)
+									.clipped()
+							}
+					}
 				}
-				.padding()
-				.background(Color.secondaryGroupedBackground)
-				.cornerRadius(8)
 			}
 			.fixedSize()
 		}
@@ -101,23 +122,11 @@ struct MissionView: View {
 	var mission: Mission?
 	var assets: AssetCollection?
 	
-	@Environment(\.widgetFamily) private var widgetFamily
-	
 	var body: some View {
 		let resolved = ResolvedMission(info: missionInfo, mission: mission, assets: assets)
 		let isComplete = mission?.isComplete == true
 		
 		VStack(spacing: 8) {
-			if false, widgetFamily != .systemSmall {
-				Text(resolved.name)
-					.font(.system(size: 8))
-					.opacity(isComplete ? 0.5 : 1)
-					.lineLimit(2)
-					.multilineTextAlignment(.center)
-					.frame(width: 48)
-					.frame(width: 0)
-			}
-			
 			ZStack {
 				if !isComplete, let progress = resolved.progress {
 					VStack(spacing: 4) {
@@ -140,17 +149,6 @@ struct MissionView: View {
 			}
 			.frame(width: 32, height: 32)
 			.foregroundColor(.accentColor)
-			
-			if false, !isComplete, let progress = resolved.progress {
-				VStack {
-					Text("\(progress)")
-					Text("\(resolved.toComplete)")
-				}
-				.font(.caption)
-				.foregroundStyle(.secondary)
-				.fixedSize()
-				.frame(width: 0) // fake narrower width
-			}
 		}
 	}
 }
@@ -182,6 +180,7 @@ extension EnvironmentValues {
 	}
 }
 
+#if DEBUG
 struct ViewMissionsWidget_Previews: PreviewProvider {
 	static var previews: some View {
 		if let assets = AssetManager().assets {
@@ -203,3 +202,4 @@ struct ViewMissionsWidget_Previews: PreviewProvider {
 		}
 	}
 }
+#endif
