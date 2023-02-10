@@ -107,11 +107,15 @@ final class AccountManager: ObservableObject {
 		static var clientVersion: String?
 	}
 	
-	@MainActor
 	func handleMultifactor(info: MultifactorInfo) async throws -> String {
 		defer { multifactorPrompt = nil }
 		let code = try await withRobustThrowingContinuation { completion in
-			multifactorPrompt = .init(info: info, completion: completion)
+			// really shouldn't need this but here we are…
+			Task {
+				await MainActor.run {
+					multifactorPrompt = .init(info: info, completion: completion)
+				}
+			}
 		}
 		return code
 	}
