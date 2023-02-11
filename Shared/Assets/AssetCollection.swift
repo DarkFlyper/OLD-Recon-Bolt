@@ -20,6 +20,7 @@ struct AssetCollection: Codable {
 	let buddies: [Weapon.Buddy.ID: BuddyInfo]
 	let currencies: [Currency.ID: CurrencyInfo]
 	let bundles: [StoreBundle.Asset.ID: StoreBundleInfo]
+	let contentTiers: [ContentTier.ID: ContentTier]
 }
 
 /// just a marker at this point, but still handy for expressivity

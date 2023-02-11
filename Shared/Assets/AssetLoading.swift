@@ -18,6 +18,7 @@ extension AssetClient {
 		async let buddies = getBuddyInfo()
 		async let currencies = getCurrencyInfo()
 		async let bundles = getBundleInfo()
+		async let contentTiers = getContentTiers()
 		
 		// this seems to be what skins are actually referred to by…
 		let skinsByLevelID = try await Dictionary(
@@ -47,7 +48,8 @@ extension AssetClient {
 			sprays: .init(values: sprays),
 			buddies: .init(values: buddies),
 			currencies: .init(values: currencies),
-			bundles: .init(values: bundles)
+			bundles: .init(values: bundles),
+			contentTiers: .init(values: contentTiers)
 		)
 	}
 }

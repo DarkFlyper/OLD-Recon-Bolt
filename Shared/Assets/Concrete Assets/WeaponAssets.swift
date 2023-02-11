@@ -91,10 +91,6 @@ struct WeaponSkin: AssetItem, Codable, Identifiable {
 		typealias ID = ObjectID<Self, LowercaseUUID>
 	}
 	
-	enum ContentTier {
-		typealias ID = ObjectID<Self, LowercaseUUID>
-	}
-	
 	struct Chroma: AssetItem, Codable, Identifiable {
 		var id: Weapon.Skin.Chroma.ID
 		var displayName: String
