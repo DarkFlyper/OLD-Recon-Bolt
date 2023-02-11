@@ -40,8 +40,9 @@ private extension SeasonCollection {
 		compTiers: [CompetitiveTier.Collection]
 	) {
 		let seasonsByID = Dictionary(values: seasons)
+		let seasonsInOrder = compSeasons.sorted(on: \.startTime)
 		
-		episodesInOrder = compSeasons.filter { $0.borders == nil }.map { compSeason in
+		episodesInOrder = seasonsInOrder.filter { $0.borders == nil }.map { compSeason in
 			let season = seasonsByID[compSeason.seasonID]!
 			
 			return Episode(
@@ -52,7 +53,7 @@ private extension SeasonCollection {
 		}
 		episodes = .init(values: episodesInOrder)
 		
-		actsInOrder = compSeasons.compactMap { [episodes] compSeason in
+		actsInOrder = seasonsInOrder.compactMap { [episodes] compSeason in
 			guard let borders = compSeason.borders else { return nil } // skip episode definitions
 			
 			let season = seasonsByID[compSeason.seasonID]!
