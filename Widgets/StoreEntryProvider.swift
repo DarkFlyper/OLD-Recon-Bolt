@@ -17,30 +17,22 @@ struct StoreEntryProvider: FetchingIntentTimelineProvider {
 			return try context.assets.resolveSkin(.init(rawID: reward.itemID)) ??? UpdateError.unknownSkin
 		}
 		
-		let images = try await withThrowingTaskGroup(of: (WeaponSkin.Level.ID, Image?).self, returning: [WeaponSkin.Level.ID: Image].self) { group in
-			for resolved in resolvedOffers {
-				group.addTask {
-					if let icon = resolved.displayIcon {
-						// TODO: why does this sometimes fail initially, but only for some images?
-						let image = await Managers.images.awaitImage(for: icon)
-						return (resolved.id, image.map(Image.init))
-					} else {
-						return (resolved.id, nil)
-					}
-				}
-			}
-			var images: [WeaponSkin.Level.ID: Image] = [:]
-			for try await (offer, image) in group {
-				images[offer] = image
-			}
-			return images
+		// TODO: make async, use concurrentMap. only possible if it preserves order.
+		func fetchStuff(for resolved: ResolvedLevel) async -> StorefrontInfo.Skin {
+			async let icon = resolved.displayIcon?.resolved()
+			let tier: ContentTier? = resolved.skin.contentTierID.flatMap { x -> ContentTier? in context.assets.contentTiers[x] }
+			async let tierIcon = tier?.displayIcon.resolved()
+			return await StorefrontInfo.Skin(
+				name: resolved.displayName,
+				icon: icon,
+				tierColor: tier?.color.wrappedValue,
+				tierIcon: tierIcon
+			)
 		}
 		
-		return .init(
+		return StorefrontInfo(
 			nextRefresh: Date(timeIntervalSinceNow: store.skinsPanelLayout.remainingDuration + 1),
-			skins: resolvedOffers.map { resolved in
-				return .init(name: resolved.displayName, icon: images[resolved.id])
-			}
+			skins: try await resolvedOffers.concurrentMap(fetchStuff(for:))
 		)
 	}
 	
@@ -65,6 +57,35 @@ struct StoreEntryProvider: FetchingIntentTimelineProvider {
 	}
 }
 
+extension AssetImage {
+	func resolved() async -> Image? {
+		await Managers.images.awaitImage(for: self).map(Image.init)
+	}
+}
+
+extension Sequence {
+	func concurrentMap<T>(_ transform: (Element) async throws -> T) async throws -> [T] {
+		try await withoutActuallyEscaping(transform) { transform in
+			try await withThrowingTaskGroup(of: (Int, T).self) { group in
+				var count = 0
+				for (i, element) in self.enumerated() {
+					count += 1
+					group.addTask {
+						(i, try await transform(element))
+					}
+				}
+				
+				// maintain order
+				var transformed: [T?] = .init(repeating: nil, count: count)
+				for try await (i, newElement) in group {
+					transformed[i] = newElement
+				}
+				return transformed.map { $0! }
+			}
+		}
+	}
+}
+
 typealias StoreEntry = FetchedTimelineEntry<StorefrontInfo, ViewStoreIntent>
 
 extension ViewStoreIntent: SelfFetchingIntent {}
@@ -76,5 +97,7 @@ struct StorefrontInfo: FetchedTimelineValue {
 	struct Skin {
 		var name: String
 		var icon: Image?
+		var tierColor: Color?
+		var tierIcon: Image?
 	}
 }

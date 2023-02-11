@@ -23,86 +23,53 @@ struct ViewStoreWidget: Widget {
 struct StoreEntryView: TimelineEntryView {
 	var entry: StoreEntry
 	
-	let opacities = [0.25, 0.3]
-	
 	@Environment(\.widgetFamily) private var widgetFamily
 	
 	func contents(for info: StorefrontInfo) -> some View {
 		Group {
 			if widgetFamily == .systemSmall {
 				VStack(spacing: 0) {
-					if entry.configuration.showRefreshTime == 1 {
+					if entry.configuration.showRefreshTime != 0 {
 						nextRefreshLabel(target: info.nextRefresh)
-							.padding(4)
+							.font(.caption)
 							.frame(maxWidth: .infinity)
-							.background {
-								Rectangle().opacity(opacities.last!)
-							}
+							.padding(.vertical, 3)
 					}
 					
-					storeGrid(for: info)
+					StoreGrid(
+						configuration: entry.configuration, info: info,
+						spacing: 3, columnCount: 1, isCompact: true
+					)
 				}
+				.padding(3)
 			} else {
 				let isLarge = widgetFamily == .systemLarge
-				storeGrid(for: info)
-					.overlay(alignment: isLarge ? .leading : .top) {
-						if entry.configuration.showRefreshTime != 0 { // eww NSNumber
-							ZStack {
-								ForEach(0..<3) { _ in // harder soft light lmao, this just looks best
-									nextRefreshLabel(target: info.nextRefresh)
-										.blendMode(.softLight)
-								}
+				StoreGrid(
+					configuration: entry.configuration, info: info,
+					spacing: 6, columnCount: isLarge ? 1 : 2, isCompact: false
+				)
+				.padding(6)
+				.overlay(alignment: isLarge ? .leading : .top) {
+					if entry.configuration.showRefreshTime != 0 { // eww NSNumber
+						ZStack {
+							ForEach(0..<3) { _ in // harder soft light lmao, this just looks best
+								nextRefreshLabel(target: info.nextRefresh)
+									.blendMode(.softLight)
 							}
-							.padding(3)
-							.background{
-								Capsule().fill(.regularMaterial)
-								Capsule().strokeBorder(Color.white).opacity(0.1)
-							}
-							// rotate around the top, where it's attached to the edge (even when rotated)
-							.fixedSize()
-							.frame(width: 0, height: 0, alignment: .top)
-							.rotationEffect(isLarge ? .degrees(-90) : .zero)
-							.padding(4)
-							.foregroundColor(.primary)
 						}
+						.font(.caption.weight(.medium))
+						.padding(3)
+						.background {
+							Capsule().fill(.regularMaterial)
+							Capsule().strokeBorder(Color.white).opacity(0.1)
+						}
+						// rotate around the top, where it's attached to the edge (even when rotated)
+						.fixedSize()
+						.frame(width: 0, height: 0, alignment: .top)
+						.rotationEffect(isLarge ? .degrees(-90) : .zero)
+						.padding(4)
+						.foregroundColor(.primary)
 					}
-			}
-		}
-		.foregroundColor(entry.configuration.accentColor.color)
-	}
-	
-	@ViewBuilder
-	func storeGrid(for info: StorefrontInfo) -> some View {
-		let columnCount = widgetFamily == .systemMedium ? 2 : 1
-		let isSmall = widgetFamily == .systemSmall
-		
-		FixedColumnGrid(columns: columnCount) {
-			ForEach(info.skins.indexed(), id: \.index) { index, skin in
-				VStack(spacing: 4) {
-					let shouldShowIcon = entry.shouldShowIcon && !isSmall
-					if shouldShowIcon {
-						skin.icon?.resizable().aspectRatio(contentMode: .fit)
-							.frame(maxWidth: .infinity, maxHeight: .infinity)
-					}
-					
-					if entry.shouldShowLabel {
-						Text(skin.name)
-							.font(.caption2)
-							.opacity(0.8)
-							.fixedSize(horizontal: false, vertical: true)
-							.frame(height: isSmall ? 10 : nil) // fake smaller height to ensure all cells stay the same size
-							.lineLimit(shouldShowIcon ? 2 : 1)
-							.multilineTextAlignment(.center)
-					}
-				}
-				.frame(maxWidth: .infinity, maxHeight: .infinity)
-				.padding(.vertical, isSmall ? 4 : 8)
-				.padding(.horizontal, 8)
-				.background {
-					let row = index / columnCount
-					let col = index % columnCount
-					Rectangle()
-						.opacity(opacities[(row + col) % opacities.count])
 				}
 			}
 		}
@@ -120,17 +87,67 @@ struct StoreEntryView: TimelineEntryView {
 			}
 		}
 		.padding(.trailing, 2)
-		.font(.caption.weight(.medium))
 	}
 }
 
-extension StoreEntry {
+struct StoreGrid: View {
+	let configuration: ViewStoreIntent
+	let info: StorefrontInfo
+	
+	var spacing: CGFloat
+	var columnCount: Int
+	var isCompact: Bool
+	
+	var body: some View {
+		FixedColumnGrid(columns: columnCount) {
+			ForEach(info.skins.indexed(), id: \.index) { index, skin in
+				VStack(spacing: 0) {
+					let shouldShowIcon = configuration.shouldShowIcon && !isCompact
+					if shouldShowIcon {
+						skin.icon?.resizable().aspectRatio(contentMode: .fit)
+							.frame(maxWidth: .infinity, maxHeight: .infinity)
+							.padding(.vertical, 4)
+					}
+					
+					if configuration.shouldShowLabel {
+						HStack {
+							Text(skin.name)
+								.font(.caption2)
+								.foregroundColor(skin.tierColor?.opacity(10))
+								.fixedSize(horizontal: false, vertical: true)
+								.frame(height: isCompact ? 10 : nil) // fake smaller height to ensure all cells stay the same size
+								.lineLimit(1)
+								.multilineTextAlignment(.center)
+						}
+					}
+				}
+				.background(alignment: .topTrailing) {
+					if !isCompact {
+						skin.tierIcon?
+							.resizable()
+							.aspectRatio(contentMode: .fit)
+							.frame(height: 16)
+							.padding(-4)
+					}
+				}
+				.frame(maxWidth: .infinity, maxHeight: .infinity)
+				.padding(.vertical, 4)
+				.padding(.horizontal, 8)
+				.background(skin.tierColor?.opacity(1.5))
+				.mask(ContainerRelativeShape())
+				.padding(spacing)
+			}
+		}
+	}
+}
+
+extension ViewStoreIntent {
 	var shouldShowIcon: Bool {
-		configuration.displayMode != .textOnly
+		displayMode != .textOnly
 	}
 	
 	var shouldShowLabel: Bool {
-		configuration.displayMode != .iconOnly
+		displayMode != .iconOnly
 	}
 }
 
@@ -157,21 +174,39 @@ struct FixedColumnGrid: Layout {
 }
 
 struct ViewStoreWidget_Previews: PreviewProvider {
-    static var previews: some View {
+	static let tiers = Managers.assets.assets?.contentTiers.values.sorted(on: \.name)
+	static let skins: [StorefrontInfo.Skin] = [
+		.init(
+			name: "a long-ass testing name (yes)",
+			icon: Image("Example Skin"),
+			tierColor: tiers?[0].color.wrappedValue,
+			tierIcon: Managers.images.image(for: tiers?[0].displayIcon).map(Image.init(uiImage:))
+		),
+		.init(
+			name: "much longer skin name",
+			icon: Image("Example Skin"),
+			tierColor: tiers?[1].color.wrappedValue
+		),
+		.init(
+			name: "test",
+			icon: Image("Example Skin"),
+			tierColor: tiers?[2].color.wrappedValue
+		),
+		.init(
+			name: "BlastX Polymer KnifeTech Coated Knife",
+			icon: Image("Example Skin"),
+			tierColor: tiers?[3].color.wrappedValue
+		),
+	]
+	
+	static var previews: some View {
 		Group {
 			let view = StoreEntryView(entry: .init(
 				info: .success(.init(
 					nextRefresh: .init(timeIntervalSinceNow: 12345),
-					skins: [
-						.init(name: "a long-ass testing name (yes)", icon: Image("Example Skin")),
-						.init(name: "much longer skin name", icon: Image("Example Skin")),
-						.init(name: "test", icon: Image("Example Skin")),
-						.init(name: "BlastX Polymer KnifeTech Coated Knife", icon: Image("Example Skin")),
-					]
+					skins: Self.skins
 				)),
-				configuration: .init() <- {
-					$0.accentColor = .unknown
-				}
+				configuration: .init()
 			))
 			
 			view.previewContext(WidgetPreviewContext(family: .systemSmall))

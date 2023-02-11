@@ -273,6 +273,8 @@
 		B9FADF8826A91E1300A0CA15 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FADF8726A91E1300A0CA15 /* UserCell.swift */; };
 		B9FADF8B26A91E4700A0CA15 /* LookupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FADF8A26A91E4700A0CA15 /* LookupCell.swift */; };
 		B9FB9372269B359900927E03 /* SeasonCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FB9371269B359900927E03 /* SeasonCollection.swift */; };
+		B9FF792D2995FED300DFE90E /* ContentTierAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FF792C2995FED300DFE90E /* ContentTierAssets.swift */; };
+		B9FF792E2995FED300DFE90E /* ContentTierAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FF792C2995FED300DFE90E /* ContentTierAssets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -502,6 +504,7 @@
 		B9FADF8726A91E1300A0CA15 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		B9FADF8A26A91E4700A0CA15 /* LookupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookupCell.swift; sourceTree = "<group>"; };
 		B9FB9371269B359900927E03 /* SeasonCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonCollection.swift; sourceTree = "<group>"; };
+		B9FF792C2995FED300DFE90E /* ContentTierAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentTierAssets.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -795,6 +798,7 @@
 				B9F7A54027DD1E7D00636DAF /* BundleAssets.swift */,
 				B927719B284DBA1D00F25FC3 /* SprayAssets.swift */,
 				B927719D284DBAF600F25FC3 /* BuddyAssets.swift */,
+				B9FF792C2995FED300DFE90E /* ContentTierAssets.swift */,
 			);
 			path = "Concrete Assets";
 			sourceTree = "<group>";
@@ -1330,6 +1334,7 @@
 				B963C4792695101C0071E14A /* PlayerIdentityCell.swift in Sources */,
 				B9766BB72750339700127FF2 /* ContractAssets.swift in Sources */,
 				B9DCF9A72642E0EC00C39EC4 /* ScoreboardView.swift in Sources */,
+				B9FF792D2995FED300DFE90E /* ContentTierAssets.swift in Sources */,
 				B95D30AD26CE898C00829BB6 /* EventTimeline.swift in Sources */,
 				B92DC20126A33C3600200A01 /* ActRankView.swift in Sources */,
 				B96A0CA3265ABBC700844674 /* SwiftUI+Helpers.swift in Sources */,
@@ -1439,6 +1444,7 @@
 				B97C8F59293C4225002F6A07 /* GameModeImage.swift in Sources */,
 				B97C8F56293C4225002F6A07 /* CompetitiveTierImage.swift in Sources */,
 				B97C8F3F293C4212002F6A07 /* AssetImage.swift in Sources */,
+				B9FF792E2995FED300DFE90E /* ContentTierAssets.swift in Sources */,
 				B9BC89F8293A7D6F00B97626 /* WidgetsBundle.swift in Sources */,
 				B97C8F4F293C421F002F6A07 /* CurrencyAssets.swift in Sources */,
 				B97C8F41293C4212002F6A07 /* AssetLoading.swift in Sources */,
