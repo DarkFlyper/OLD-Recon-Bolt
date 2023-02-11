@@ -26,12 +26,6 @@ struct WeaponInfo: AssetItem, Codable, Identifiable {
 	// this also has info on skins but I don't care about those for now.
 	var skins: [WeaponSkin]
 	
-	var images: [AssetImage] {
-		displayIcon
-		killStreamIcon
-		shopData?.image
-	}
-	
 	private enum CodingKeys: String, CodingKey {
 		case id = "uuid"
 		case displayName

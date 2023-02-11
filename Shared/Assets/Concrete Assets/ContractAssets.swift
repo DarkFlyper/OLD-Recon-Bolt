@@ -24,10 +24,6 @@ struct ContractInfo: AssetItem, Codable, Identifiable {
 	var displayIcon: AssetImage?
 	var content: Content
 	
-	var images: [AssetImage] {
-		displayIcon
-	}
-	
 	struct Content: Codable {
 		var relationType: RelationType?
 		var relationID: String?

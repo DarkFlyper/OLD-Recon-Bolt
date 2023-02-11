@@ -53,10 +53,6 @@ struct GameModeInfo: AssetItem, Codable, Identifiable {
 		gameRuleBoolOverrides?.first { $0.ruleName == name }?.state
 	}
 	
-	var images: [AssetImage] {
-		displayIcon
-	}
-	
 	struct TeamRole: NamespacedID {
 		static let freeForAll = Self("FreeForAll")
 		

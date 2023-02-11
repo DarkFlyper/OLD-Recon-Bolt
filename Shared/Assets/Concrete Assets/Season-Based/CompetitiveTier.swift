@@ -15,12 +15,6 @@ struct CompetitiveTier: AssetItem, Codable {
 	var rankTriangleDownwards: AssetImage?
 	var rankTriangleUpwards: AssetImage?
 	
-	var images: [AssetImage] {
-		icon
-		rankTriangleDownwards
-		rankTriangleUpwards
-	}
-	
 	private enum CodingKeys: String, CodingKey {
 		case number = "tier"
 		case name = "tierName"
@@ -36,10 +30,6 @@ struct CompetitiveTier: AssetItem, Codable {
 	struct Collection: AssetItem, Codable, Identifiable {
 		var id: ObjectID<Self, LowercaseUUID>
 		var tiers: [Int: CompetitiveTier] // tiers aren't necessarily contiguous! e.g. the second set of tiers skips 22 and 23.
-		
-		var images: [AssetImage] {
-			tiers.values.flatMap(\.images)
-		}
 		
 		func tier(_ number: Int) -> CompetitiveTier? {
 			tiers[number]

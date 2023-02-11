@@ -20,10 +20,6 @@ struct CurrencyInfo: AssetItem, Codable, Identifiable {
 	var displayIcon: AssetImage
 	//var largeIcon: AssetImage
 	
-	var images: [AssetImage] {
-		displayIcon
-	}
-	
 	private enum CodingKeys: String, CodingKey {
 		case id = "uuid"
 		case displayNamePlural = "displayName"

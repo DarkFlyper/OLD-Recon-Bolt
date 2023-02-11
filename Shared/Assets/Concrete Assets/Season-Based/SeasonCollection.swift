@@ -10,11 +10,6 @@ struct SeasonCollection: AssetItem, Codable {
 	
 	var competitiveTiers: [CompetitiveTier.Collection.ID: CompetitiveTier.Collection]
 	
-	var images: [AssetImage] {
-		actsInOrder.flatMap(\.images)
-		competitiveTiers.values.flatMap(\.images)
-	}
-	
 	func currentAct(at time: Date? = nil) -> Act? {
 		// not requiring the time to be greater than the start date avoids possible undefined periods between acts (like the 3 days between closed beta and act 1) and lets us use binary search for quicker searching
 		let time = time ?? Date()
@@ -68,10 +63,6 @@ struct Act: AssetItem, Identifiable, Codable {
 			return name
 		}
 	}
-	
-	var images: [AssetImage] {
-		borders.flatMap(\.images)
-	}
 }
 
 struct Episode: Identifiable, Codable {
@@ -98,11 +89,6 @@ struct ActRankBorder: AssetItem, Codable {
 	var fullImage: AssetImage
 	/// The icon used to show the top 9 wins in player lists.
 	var icon: AssetImage?
-	
-	var images: [AssetImage] {
-		fullImage
-		icon
-	}
 	
 	private enum CodingKeys: String, CodingKey {
 		case id = "uuid"

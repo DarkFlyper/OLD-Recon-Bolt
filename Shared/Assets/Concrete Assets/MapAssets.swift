@@ -43,12 +43,6 @@ struct MapInfo: AssetItem, Codable, Identifiable {
 		position.withFlippedAxes * multiplier + offset
 	}
 	
-	var images: [AssetImage] {
-		displayIcon
-		listViewIcon
-		splash
-	}
-	
 	struct Callout: Codable {
 		var regionName: String
 		var superRegionName: String
