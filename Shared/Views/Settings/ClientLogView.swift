@@ -18,7 +18,7 @@ struct ClientLogView: View {
 					.frame(maxWidth: .infinity, alignment: .leading)
 				
 				Section("Requests") {
-					ForEach(log.exchanges) { exchange in
+					ForEach(log.exchanges.reversed()) { exchange in
 						NavigationLink {
 							ExchangeView(exchange: exchange)
 						} label: {

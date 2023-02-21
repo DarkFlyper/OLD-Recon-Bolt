@@ -205,8 +205,7 @@ struct ViewStoreWidget_Previews: PreviewProvider {
 				info: .success(.init(
 					nextRefresh: .init(timeIntervalSinceNow: 12345),
 					skins: Self.skins
-				)),
-				configuration: .init()
+				))
 			))
 			
 			view.previewContext(WidgetPreviewContext(family: .systemSmall))
