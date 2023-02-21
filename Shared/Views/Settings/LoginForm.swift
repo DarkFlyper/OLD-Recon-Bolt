@@ -55,7 +55,12 @@ struct LoginForm: View {
 						.disabled(credentials.username.isEmpty || credentials.password.isEmpty)
 					}
 					
-					trustInfo
+					VStack(spacing: 1) {
+						trustInfo
+						linkedAccountInfo
+					}
+					.compositingGroup()
+					.cornerRadius(20)
 				}
 				.frame(idealWidth: 180)
 				.textFieldStyle(.pretty)
@@ -85,56 +90,43 @@ struct LoginForm: View {
 		.withToolbar(allowLargeTitles: false)
 	}
 	
-	@State private var isTrustInfoExpanded = false
-	
 	var trustInfo: some View {
-		VStack(spacing: 1) {
-			Button {
-				withAnimation {
-					isTrustInfoExpanded.toggle()
-				}
-			} label: {
-				HStack {
-					Image(systemName: "lock")
-						.foregroundColor(.primary)
-					Text("Is this safe?")
-						.foregroundColor(.primary)
-					Spacer()
-					Image(systemName: "chevron.down")
-						.rotationEffect(.degrees(isTrustInfoExpanded ? 0 : -90))
-				}
-				.font(.headline.weight(.semibold))
-				.padding()
-			}
-			.buttonStyle(.borderless)
-			.background(Color.tertiaryGroupedBackground)
+		FreeStandingDisclosureGroup {
+			Text("I won't sugarcoat things. Due to the way this app uses the API, I believe there's no other way to sign in than to have people enter their credentials directly. Under those circumstances, there's really no good way for anyone to be sure their credentials remain safe. For what it's worth:")
 			
-			if isTrustInfoExpanded {
-				VStack(alignment: .leading, spacing: 8) {
-					Text("I won't sugarcoat things. Due to the way this app uses the API, I believe there's no other way to sign in than to have people enter their credentials directly. Under those circumstances, there's really no good way for anyone to be sure their credentials remain safe. For what it's worth:")
-					
-					let lines: [LocalizedStringKey] = [
-						"Your credentials only ever leave your device in the form of a login request directly to Riot. They are never stored or sent anywhere else.",
-						"You can enable 2-factor authentication, so you'd at least have another layer of security if it went bad.",
-						"The code is open-source and visible on GitHub; you can build it yourself if you want to be sure of what's running.",
-					]
-					ForEach(lines.indices, id: \.self) { index in
-						HStack(alignment: .firstTextBaseline) {
-							Text("•")
-							Text(lines[index])
-						}
-					}
-					
-					Text("TL;DR: you'll have to take my word for it.")
-						.fontWeight(.medium)
+			let lines: [LocalizedStringKey] = [
+				"Your credentials only ever leave your device in the form of a login request directly to Riot. They are never stored or sent anywhere else.",
+				"You can enable 2-factor authentication, so you'd at least have another layer of security if it went bad.",
+				"The code is open-source and visible on GitHub; you can build it yourself if you want to be sure of what's running.",
+			]
+			ForEach(lines.indices, id: \.self) { index in
+				HStack(alignment: .firstTextBaseline) {
+					Text("•")
+					Text(lines[index])
 				}
-				.frame(maxWidth: .infinity, alignment: .leading)
-				.padding()
-				.background(Color.tertiaryGroupedBackground)
 			}
+			
+			Text("TL;DR: you'll have to take my word for it, but Riot doesn't seem to mind.")
+				.fontWeight(.medium)
+		} label: {
+			Image(systemName: "lock")
+				.frame(width: 24)
+			Text("Is this safe?")
 		}
-		.compositingGroup()
-		.cornerRadius(20)
+	}
+	
+	var linkedAccountInfo: some View {
+		FreeStandingDisclosureGroup {
+			Text("Unfortunately, due to technical limitations, you cannot sign into Recon Bolt via your Google account, Apple ID, or anything but a Riot account.")
+			
+			Text("Assuming you signed up for Valorant using Google/Apple/etc., you can set up your account to add a username & password on Riot's site at [account.riotgames.com](https://account.riotgames.com).")
+			
+			Text("On that site, navigate to ") + Text("Riot Account Sign-in").fontWeight(.medium) + Text(" and set yourself a username and password. When you're done, you can use those same credentials to sign in above! Your social account will stay linked and you'll remain able to sign in with that on PC :)")
+		} label: {
+			Image(systemName: "link")
+				.frame(width: 24)
+			Text("Sign in with Google/Apple/etc.")
+		}
 	}
 	
 	@MainActor
@@ -147,6 +139,45 @@ struct LoginForm: View {
 				try await accountManager.addAccount(using: credentials)
 				dismiss()
 			} catch AccountManager.MultifactorPromptError.cancelled {}
+		}
+	}
+}
+
+// can't make this a DisclosureGroupStyle because that was only introduced in iOS 16…
+private struct FreeStandingDisclosureGroup<Content: View, Label: View>: View {
+	@ViewBuilder var content: Content
+	@ViewBuilder var label: Label
+	
+	@State var isExpanded = false
+	
+	var body: some View {
+		VStack(spacing: 1) {
+			Button {
+				withAnimation {
+					isExpanded.toggle()
+				}
+			} label: {
+				HStack {
+					label
+						.foregroundColor(.primary)
+					Spacer()
+					Image(systemName: "chevron.down")
+						.rotationEffect(.degrees(isExpanded ? 0 : -90))
+				}
+				.font(.headline.weight(.semibold))
+				.padding()
+			}
+			.buttonStyle(.borderless)
+			.background(Color.tertiaryGroupedBackground)
+			
+			if isExpanded {
+				VStack(alignment: .leading, spacing: 8) {
+					content
+				}
+				.frame(maxWidth: .infinity, alignment: .leading)
+				.padding()
+				.background(Color.tertiaryGroupedBackground)
+			}
 		}
 	}
 }
