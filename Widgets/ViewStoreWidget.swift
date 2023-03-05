@@ -110,29 +110,27 @@ struct StoreGrid: View {
 					}
 					
 					if configuration.shouldShowLabel {
-						HStack {
-							Text(skin.name)
-								.font(.caption2)
-								.foregroundColor(skin.tierColor?.opacity(10))
-								.fixedSize(horizontal: false, vertical: true)
-								.frame(height: isCompact ? 10 : nil) // fake smaller height to ensure all cells stay the same size
-								.lineLimit(1)
-								.multilineTextAlignment(.center)
-						}
+						Text(skin.name)
+							.font(.caption2)
+							.foregroundColor(skin.tierColor?.opacity(10))
+							.fixedSize(horizontal: false, vertical: true)
+							.frame(height: isCompact ? 10 : nil) // fake smaller height to ensure all cells stay the same size
+							.lineLimit(isCompact ? 1 : 2)
+							.multilineTextAlignment(.center)
 					}
 				}
+				.frame(maxWidth: .infinity, maxHeight: .infinity)
+				.padding(.vertical, 4)
+				.padding(.horizontal, 8)
 				.background(alignment: .topTrailing) {
 					if !isCompact {
 						skin.tierIcon?
 							.resizable()
 							.aspectRatio(contentMode: .fit)
 							.frame(height: 16)
-							.padding(-4)
+							.padding(4)
 					}
 				}
-				.frame(maxWidth: .infinity, maxHeight: .infinity)
-				.padding(.vertical, 4)
-				.padding(.horizontal, 8)
 				.background(skin.tierColor?.opacity(1.5))
 				.mask(ContainerRelativeShape())
 				.padding(spacing)
