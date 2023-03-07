@@ -34,14 +34,19 @@ final class AccountManager: ObservableObject {
 		activeAccount?.session.hasExpired != false
 	}
 	
+	var accountLoadError: String?
+	
 	init() {
 		self.keychain = .standard
-		do {
-			self.activeAccount = try Storage.activeAccount.map { try loadAccount(for: $0) }
-		} catch {
-			print("could not load active account!", error)
-			dump(Storage.activeAccount)
-			dump(error)
+		if let accountID = Storage.activeAccount {
+			do {
+				self.activeAccount = try loadAccount(for: accountID)
+			} catch {
+				print("Could not load active account!")
+				print(error.localizedDescription)
+				dump(error)
+				accountLoadError = error.localizedDescription
+			}
 		}
 	}
 	
@@ -188,7 +193,7 @@ final class StoredAccount: ObservableObject, Identifiable {
 		var errorDescription: String? {
 			switch self {
 			case .noStoredSession:
-				return "Missing session for account.\nIf you have Pro, add an account using the same credentials to replace the account with a working version."
+				return "Missing session for account!\nIf you have Pro, add an account using the same credentials to replace the account with a working version."
 			}
 		}
 	}
