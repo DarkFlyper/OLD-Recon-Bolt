@@ -39,7 +39,10 @@ final class OSKeychain: Keychain {
 		}
 		
 		func store(_ data: Data) throws {
-			let attributes = [kSecValueData: data]
+			let attributes: [CFString: Any] = [
+				kSecValueData: data,
+				kSecAttrAccessible: kSecAttrAccessibleAfterFirstUnlock,
+			]
 			if let _ = try? loadData() {
 				try SecItemUpdate(makeQuery(), attributes as CFDictionary) <- checkStatus
 			} else {
