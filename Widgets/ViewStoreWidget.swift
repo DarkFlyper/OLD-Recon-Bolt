@@ -25,54 +25,57 @@ struct StoreEntryView: TimelineEntryView {
 	
 	@Environment(\.widgetFamily) private var widgetFamily
 	
+	var isLarge: Bool { widgetFamily == .systemLarge }
+	
 	func contents(for info: StorefrontInfo) -> some View {
-		Group {
-			if widgetFamily == .systemSmall {
-				VStack(spacing: 0) {
-					if entry.configuration.showRefreshTime != 0 {
-						nextRefreshLabel(target: info.nextRefresh)
-							.font(.caption)
-							.frame(maxWidth: .infinity)
-							.padding(.vertical, 3)
-					}
-					
-					StoreGrid(
-						configuration: entry.configuration, info: info,
-						spacing: 3, columnCount: 1, isCompact: true
-					)
+		if widgetFamily == .systemSmall {
+			VStack(spacing: 0) {
+				if entry.configuration.showRefreshTime != 0 {
+					nextRefreshLabel(target: info.nextRefresh)
+						.font(.caption)
+						.frame(maxWidth: .infinity)
+						.padding(.vertical, 3)
 				}
-				.padding(3)
-			} else {
-				let isLarge = widgetFamily == .systemLarge
+				
 				StoreGrid(
 					configuration: entry.configuration, info: info,
-					spacing: 6, columnCount: isLarge ? 1 : 2, isCompact: false
+					spacing: 3, columnCount: 1, isCompact: true
 				)
-				.padding(6)
-				.overlay(alignment: isLarge ? .leading : .top) {
-					if entry.configuration.showRefreshTime != 0 { // eww NSNumber
-						ZStack {
-							ForEach(0..<3) { _ in // harder soft light lmao, this just looks best
-								nextRefreshLabel(target: info.nextRefresh)
-									.blendMode(.softLight)
-							}
-						}
-						.font(.caption.weight(.medium))
-						.padding(3)
-						.background {
-							Capsule().fill(.regularMaterial)
-							Capsule().strokeBorder(Color.white).opacity(0.1)
-						}
-						// rotate around the top, where it's attached to the edge (even when rotated)
-						.fixedSize()
-						.frame(width: 0, height: 0, alignment: .top)
-						.rotationEffect(isLarge ? .degrees(-90) : .zero)
-						.padding(4)
-						.foregroundColor(.primary)
-					}
+			}
+			.padding(3)
+		} else {
+			StoreGrid(
+				configuration: entry.configuration, info: info,
+				spacing: 6, columnCount: isLarge ? 1 : 2, isCompact: false
+			)
+			.padding(6)
+			.overlay(alignment: isLarge ? .leading : .top) {
+				if entry.configuration.showRefreshTime != 0 { // eww NSNumber
+					refreshLabelOverlay(for: info)
 				}
 			}
 		}
+	}
+	
+	func refreshLabelOverlay(for info: StorefrontInfo) -> some View {
+		ZStack {
+			ForEach(0..<3) { _ in // harder soft light lmao, this just looks best
+				nextRefreshLabel(target: info.nextRefresh)
+					.blendMode(.softLight)
+			}
+		}
+		.font(.caption.weight(.medium))
+		.padding(3)
+		.background {
+			Capsule().fill(.regularMaterial)
+			Capsule().strokeBorder(Color.white).opacity(0.1)
+		}
+		// rotate around the top, where it's attached to the edge (even when rotated)
+		.fixedSize()
+		.frame(width: 0, height: 0, alignment: .top)
+		.rotationEffect(isLarge ? .degrees(-90) : .zero)
+		.padding(4)
+		.foregroundColor(.primary)
 	}
 	
 	func nextRefreshLabel(target: Date) -> some View {
