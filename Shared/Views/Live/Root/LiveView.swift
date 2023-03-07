@@ -15,6 +15,8 @@ struct LiveView: View {
 	@Environment(\.valorantLoad) private var load
 	@Environment(\.assets) private var assets
 	
+	@LocalData private var user: User?
+	
 	var body: some View {
 		ScrollView {
 			VStack(spacing: 16) {
@@ -32,6 +34,7 @@ struct LiveView: View {
 		}
 		.background(Color.groupedBackground)
 		.navigationTitle("Live")
+		.withLocalData($user, id: userID)
 	}
 	
 	var missionsBox: some View {
@@ -50,7 +53,11 @@ struct LiveView: View {
 				LoadoutDetailsView(loadout: info.loadout, inventory: info.inventory)
 			}
 		} refresh: {
-			loadoutInfo = try await .init(using: $0)
+			do {
+				loadoutInfo = try await .init(using: $0)
+			} catch Loadout.FetchError.uninitialized {
+				throw WrongAccountError(user: user)
+			}
 		}
 	}
 	
@@ -92,6 +99,23 @@ struct LiveView: View {
 		case missions
 		case loadout
 		case store
+	}
+}
+
+private struct WrongAccountError: Error, LocalizedError {
+	var user: User?
+	
+	var errorDescription: String? {
+		"" <- {
+			print("It looks like this account has never played Valorant!", to: &$0)
+			print(to: &$0)
+			print("You've probably signed into the wrong account;", terminator: " ", to: &$0)
+			if let user {
+				print("this one is:\n\n\(user.name)", to: &$0)
+			} else {
+				print("this one has no name & tag.", to: &$0)
+			}
+		}
 	}
 }
 
