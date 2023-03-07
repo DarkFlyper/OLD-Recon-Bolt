@@ -64,7 +64,6 @@
 		B939C7F02948585C00ABD0C6 /* LocalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EE0002267EDCB100C08119 /* LocalData.swift */; };
 		B939C7F8294858FB00ABD0C6 /* LocalData+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B939C7F7294858FB00ABD0C6 /* LocalData+SwiftUI.swift */; };
 		B939C7FA2948597E00ABD0C6 /* UserDefault in Frameworks */ = {isa = PBXBuildFile; productRef = B939C7F92948597E00ABD0C6 /* UserDefault */; };
-		B939C7FC2948597E00ABD0C6 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B939C7FB2948597E00ABD0C6 /* KeychainSwift */; };
 		B939C7FE2948597E00ABD0C6 /* ValorantAPI in Frameworks */ = {isa = PBXBuildFile; productRef = B939C7FD2948597E00ABD0C6 /* ValorantAPI */; };
 		B939C8002948597E00ABD0C6 /* HandyOperators in Frameworks */ = {isa = PBXBuildFile; productRef = B939C7FF2948597E00ABD0C6 /* HandyOperators */; };
 		B939C801294859EC00ABD0C6 /* MatchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C97DD0263CB744001E4D1B /* MatchList.swift */; };
@@ -83,7 +82,6 @@
 		B941B65825A5BC8A00F675C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B64425A5BC8800F675C1 /* ContentView.swift */; };
 		B941B65A25A5BC8A00F675C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B941B64525A5BC8A00F675C1 /* Assets.xcassets */; };
 		B941B69B25A62FFB00F675C1 /* UserDefault in Frameworks */ = {isa = PBXBuildFile; productRef = B941B69A25A62FFB00F675C1 /* UserDefault */; };
-		B941B6D025A79A6400F675C1 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B941B6CF25A79A6400F675C1 /* KeychainSwift */; };
 		B941B6DE25A7BC3800F675C1 /* View+Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B6DD25A7BC3800F675C1 /* View+Styling.swift */; };
 		B941B6E525A7C48300F675C1 /* LoginForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B6E425A7C48300F675C1 /* LoginForm.swift */; };
 		B941B6EC25A7C83700F675C1 /* example_updates.json in Resources */ = {isa = PBXBuildFile; fileRef = B941B6EB25A7C83700F675C1 /* example_updates.json */; };
@@ -119,7 +117,6 @@
 		B97C8F31293BBEA7002F6A07 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B11A6228D8F846006EC232 /* Keychain.swift */; };
 		B97C8F32293BBED9002F6A07 /* Swift+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EE6E702659D30A007E28B5 /* Swift+Helpers.swift */; };
 		B97C8F34293BBF65002F6A07 /* UserDefault in Frameworks */ = {isa = PBXBuildFile; productRef = B97C8F33293BBF65002F6A07 /* UserDefault */; };
-		B97C8F36293BBF69002F6A07 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B97C8F35293BBF69002F6A07 /* KeychainSwift */; };
 		B97C8F38293BBF87002F6A07 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = B97C8F37293BBF87002F6A07 /* Algorithms */; };
 		B97C8F39293C4086002F6A07 /* ValorantAPI+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EF0F26263D9D860067176A /* ValorantAPI+SwiftUI.swift */; };
 		B97C8F3A293C40A7002F6A07 /* SwiftUI+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96A0CA2265ABBC700844674 /* SwiftUI+Helpers.swift */; };
@@ -514,7 +511,6 @@
 			files = (
 				B939C803294859FB00ABD0C6 /* Algorithms in Frameworks */,
 				B939C7FE2948597E00ABD0C6 /* ValorantAPI in Frameworks */,
-				B939C7FC2948597E00ABD0C6 /* KeychainSwift in Frameworks */,
 				B939C8002948597E00ABD0C6 /* HandyOperators in Frameworks */,
 				B939C7DD2948577000ABD0C6 /* Intents.framework in Frameworks */,
 				B939C7FA2948597E00ABD0C6 /* UserDefault in Frameworks */,
@@ -528,7 +524,6 @@
 				B90BC2EE266D224F00C905D4 /* CGeometry in Frameworks */,
 				B9C97DCC263CB0D6001E4D1B /* ValorantAPI in Frameworks */,
 				B9EE6E752659D6DF007E28B5 /* Algorithms in Frameworks */,
-				B941B6D025A79A6400F675C1 /* KeychainSwift in Frameworks */,
 				B9CF2E6C25A81F57004A1458 /* SwiftUIMissingPieces in Frameworks */,
 				B941B69B25A62FFB00F675C1 /* UserDefault in Frameworks */,
 				B932A11227912882009FAEE5 /* HandyOperators in Frameworks */,
@@ -546,7 +541,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B97C8F36293BBF69002F6A07 /* KeychainSwift in Frameworks */,
 				B97C8F38293BBF87002F6A07 /* Algorithms in Frameworks */,
 				B97C8F3C293C40C6002F6A07 /* SwiftUIMissingPieces in Frameworks */,
 				B97C8F34293BBF65002F6A07 /* UserDefault in Frameworks */,
@@ -1029,7 +1023,6 @@
 			name = IntentsExtension;
 			packageProductDependencies = (
 				B939C7F92948597E00ABD0C6 /* UserDefault */,
-				B939C7FB2948597E00ABD0C6 /* KeychainSwift */,
 				B939C7FD2948597E00ABD0C6 /* ValorantAPI */,
 				B939C7FF2948597E00ABD0C6 /* HandyOperators */,
 				B939C802294859FB00ABD0C6 /* Algorithms */,
@@ -1056,7 +1049,6 @@
 			name = "Recon Bolt (iOS)";
 			packageProductDependencies = (
 				B941B69A25A62FFB00F675C1 /* UserDefault */,
-				B941B6CF25A79A6400F675C1 /* KeychainSwift */,
 				B9CF2E6B25A81F57004A1458 /* SwiftUIMissingPieces */,
 				B9C97DCB263CB0D6001E4D1B /* ValorantAPI */,
 				B9EE6E742659D6DF007E28B5 /* Algorithms */,
@@ -1104,7 +1096,6 @@
 				B9BC8A0B293B082800B97626 /* ValorantAPI */,
 				B97C8F2F293BBE7D002F6A07 /* HandyOperators */,
 				B97C8F33293BBF65002F6A07 /* UserDefault */,
-				B97C8F35293BBF69002F6A07 /* KeychainSwift */,
 				B97C8F37293BBF87002F6A07 /* Algorithms */,
 				B97C8F3B293C40C6002F6A07 /* SwiftUIMissingPieces */,
 				B97C8F5C293C425A002F6A07 /* CGeometry */,
@@ -1148,7 +1139,6 @@
 			mainGroup = B941B63D25A5BC8800F675C1;
 			packageReferences = (
 				B941B69925A62FFB00F675C1 /* XCRemoteSwiftPackageReference "UserDefault" */,
-				B941B6CE25A79A6400F675C1 /* XCRemoteSwiftPackageReference "keychain-swift" */,
 				B9CF2E6A25A81F57004A1458 /* XCRemoteSwiftPackageReference "SwifUI-Missing-Pieces" */,
 				B9C97DCA263CB0D6001E4D1B /* XCRemoteSwiftPackageReference "ValorantAPI" */,
 				B9EE6E732659D6DF007E28B5 /* XCRemoteSwiftPackageReference "swift-algorithms" */,
@@ -1924,14 +1914,6 @@
 				minimumVersion = 1.0.2;
 			};
 		};
-		B941B6CE25A79A6400F675C1 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/evgenyneu/keychain-swift.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 20.0.0;
-			};
-		};
 		B9C97DCA263CB0D6001E4D1B /* XCRemoteSwiftPackageReference "ValorantAPI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/juliand665/ValorantAPI.git";
@@ -1974,11 +1956,6 @@
 			package = B941B69925A62FFB00F675C1 /* XCRemoteSwiftPackageReference "UserDefault" */;
 			productName = UserDefault;
 		};
-		B939C7FB2948597E00ABD0C6 /* KeychainSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B941B6CE25A79A6400F675C1 /* XCRemoteSwiftPackageReference "keychain-swift" */;
-			productName = KeychainSwift;
-		};
 		B939C7FD2948597E00ABD0C6 /* ValorantAPI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B9C97DCA263CB0D6001E4D1B /* XCRemoteSwiftPackageReference "ValorantAPI" */;
@@ -1999,11 +1976,6 @@
 			package = B941B69925A62FFB00F675C1 /* XCRemoteSwiftPackageReference "UserDefault" */;
 			productName = UserDefault;
 		};
-		B941B6CF25A79A6400F675C1 /* KeychainSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B941B6CE25A79A6400F675C1 /* XCRemoteSwiftPackageReference "keychain-swift" */;
-			productName = KeychainSwift;
-		};
 		B97C8F2F293BBE7D002F6A07 /* HandyOperators */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B932A11027912882009FAEE5 /* XCRemoteSwiftPackageReference "HandyOperators" */;
@@ -2013,11 +1985,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B941B69925A62FFB00F675C1 /* XCRemoteSwiftPackageReference "UserDefault" */;
 			productName = UserDefault;
-		};
-		B97C8F35293BBF69002F6A07 /* KeychainSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B941B6CE25A79A6400F675C1 /* XCRemoteSwiftPackageReference "keychain-swift" */;
-			productName = KeychainSwift;
 		};
 		B97C8F37293BBF87002F6A07 /* Algorithms */ = {
 			isa = XCSwiftPackageProductDependency;

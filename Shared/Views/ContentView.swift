@@ -1,7 +1,6 @@
 import SwiftUI
 import HandyOperators
 import ValorantAPI
-import KeychainSwift
 
 struct ContentView: View {
 	@ObservedObject var accountManager: AccountManager

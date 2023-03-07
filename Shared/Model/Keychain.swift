@@ -1,44 +1,111 @@
 import Foundation
-import KeychainSwift
 import HandyOperators
 
 protocol Keychain {
-	subscript(key: String) -> Data? { get nonmutating set }
+	func store(_ data: Data, forKey key: String) throws
+	func loadData(forKey key: String) throws -> Data
+	func deleteEntry(forKey key: String) throws
 }
 
-extension Keychain where Self == KeychainSwift {
+extension Keychain where Self == OSKeychain {
 	static var standard: Self { .instance }
 }
 
-extension KeychainSwift: Keychain {
-	static let instance = KeychainSwift() <- {
-		$0.accessGroup = "V2EPDFA9PV.com.juliand665.Valorant-Viewer"
+final class OSKeychain: Keychain {
+	static let instance = OSKeychain()
+	
+	private init() {}
+	
+	func store(_ data: Data, forKey key: String) throws {
+		try Context(key: key).store(data)
 	}
 	
-	subscript(key: String) -> Data? {
-		get { getData(key) }
-		set {
-			if let newValue {
-				let oldValue = getData(key)
-				if !set(newValue, forKey: key) {
-					print("Could not store value to keychain for key \(key)!")
-					// attempt to restore…
-					if let oldValue {
-						set(oldValue, forKey: key)
-					}
-				}
+	func loadData(forKey key: String) throws -> Data {
+		try Context(key: key).loadData()
+	}
+	
+	func deleteEntry(forKey key: String) throws {
+		try Context(key: key).deleteEntry()
+	}
+	
+	private struct Context {
+		var key: String
+		
+		func makeQuery(setting attributes: [CFString: Any] = [:]) -> CFDictionary {
+			attributes.merging([
+				kSecClass: kSecClassGenericPassword,
+				kSecAttrAccount: key,
+			]) { (arg, def) in arg } as CFDictionary
+		}
+		
+		func store(_ data: Data) throws {
+			let attributes = [kSecValueData: data]
+			if let _ = try? loadData() {
+				try SecItemUpdate(makeQuery(), attributes as CFDictionary) <- checkStatus
 			} else {
-				delete(key)
+				let query = makeQuery(setting: attributes)
+				try SecItemAdd(query, nil) <- checkStatus
+			}
+		}
+		
+		func loadData() throws -> Data {
+			let query = makeQuery(setting: [
+				kSecReturnData: true,
+			])
+			
+			var item: CFTypeRef?
+			try SecItemCopyMatching(query, &item) <- checkStatus
+			return try item! as? Data ??? error(reason: .wrongType(type(of: item)))
+		}
+		
+		func deleteEntry() throws {
+			let query = makeQuery()
+			try SecItemDelete(query) <- checkStatus
+		}
+		
+		private func checkStatus(_ status: OSStatus) throws {
+			guard status == noErr else {
+				print(status)
+				throw error(reason: .osError(status))
+			}
+		}
+		
+		func error(reason: KeychainError.Reason) -> KeychainError {
+			.init(key: key, reason: reason)
+		}
+	}
+	
+	struct KeychainError: Error, LocalizedError {
+		var key: String
+		var reason: Reason
+		
+		var errorDescription: String? {
+			"Keychain error for key '\(key)': \(reason)"
+		}
+		
+		enum Reason: CustomStringConvertible {
+			case osError(OSStatus)
+			case wrongType(Any.Type)
+			
+			var description: String {
+				switch self {
+				case .osError(let status):
+					return "Unknown keychain error: \(status)"
+				case .wrongType(let type):
+					return "Unexpected type found: \(type)"
+				}
 			}
 		}
 	}
 }
 
+
 #if DEBUG
 struct MockKeychain: Keychain {
-	subscript(key: String) -> Data? {
-		get { nil }
-		nonmutating set {}
-	}
+	func store(_ data: Data, forKey key: String) throws { throw MockError() }
+	func loadData(forKey key: String) throws -> Data { throw MockError() }
+	func deleteEntry(forKey key: String) throws { throw MockError() }
+	
+	struct MockError: Error {}
 }
 #endif

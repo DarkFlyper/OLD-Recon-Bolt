@@ -173,13 +173,21 @@ final class StoredAccount: ObservableObject, Identifiable {
 	
 	fileprivate init(loadingFor id: User.ID, using context: Context) throws {
 		self.context = context
-		let stored = try context.keychain[id.rawID.description] ??? LoadingError.noStoredSession
+		let stored = try context.keychain.loadData(forKey: id.rawID.description)
+		??? LoadingError.noStoredSession
 		self.session = try JSONDecoder().decode(APISession.self, from: stored)
 	}
 	
 	func save() {
-		context.keychain[id.rawID.description] = try! JSONEncoder().encode(session)
-		print("saved account for \(id)")
+		do {
+			try context.keychain.store(
+				try! JSONEncoder().encode(session),
+				forKey: id.rawID.description
+			)
+			print("saved account for \(id)")
+		} catch {
+			print("error saving account for \(id):", error.localizedDescription)
+		}
 	}
 	
 	func setClientVersion(_ version: String) {
