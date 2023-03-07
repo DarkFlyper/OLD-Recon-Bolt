@@ -92,7 +92,7 @@ final class AccountManager: ObservableObject {
 	}
 	
 	private var context: StoredAccount.Context {
-		.init(keychain: keychain, multifactorHandler: handleMultifactor(info:))
+		.init(keychain: keychain)
 	}
 	
 	func updateClientVersion() {
@@ -147,10 +147,7 @@ final class StoredAccount: ObservableObject, Identifiable {
 		didSet { save() }
 	}
 	
-	private(set) lazy var client = ValorantClient(
-		session: session,
-		multifactorHandler: context.multifactorHandler
-	) <- {
+	private(set) lazy var client = ValorantClient(session: session) <- {
 		sessionUpdateListener = $0.onSessionUpdate { [weak self] session in
 			guard let self else { return }
 			print("storing updated session")
@@ -197,15 +194,11 @@ final class StoredAccount: ObservableObject, Identifiable {
 	}
 	
 	#if DEBUG
-	static let mocked = StoredAccount(session: .mocked, context: .init(
-		keychain: MockKeychain(),
-		multifactorHandler: { _ in fatalError() }
-	))
+	static let mocked = StoredAccount(session: .mocked, context: .init(keychain: MockKeychain()))
 	#endif
 	
 	struct Context {
 		var keychain: any Keychain
-		var multifactorHandler: MultifactorHandler
 	}
 }
 
