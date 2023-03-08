@@ -27,7 +27,15 @@ struct RankEntryView: TimelineEntryView {
 	
 	func contents(for info: RankInfo) -> some View {
 		VStack {
-			RankInfoView(summary: info.summary, size: 96, lineWidth: 6, shouldFallBackOnPrevious: true)
+			GeometryReader { geometry in
+				RankInfoView(
+					summary: info.summary,
+					size: geometry.size.height,
+					lineWidth: geometry.size.height / 16,
+					shouldFallBackOnPrevious: true
+				)
+				.frame(maxWidth: .infinity)
+			}
 			
 			if entry.configuration.showRankName != 0, let tierInfo = info.tierInfo {
 				Text(tierInfo.name)
