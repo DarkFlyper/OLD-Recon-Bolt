@@ -42,6 +42,7 @@ struct RankEntryView: TimelineEntryView {
 	}
 }
 
+#if DEBUG
 struct ViewRankWidget_Previews: PreviewProvider {
 	static let seasons = Managers.assets.assets?.seasons
 	
@@ -58,3 +59,4 @@ struct ViewRankWidget_Previews: PreviewProvider {
 			.previewDisplayName("Small")
 	}
 }
+#endif
