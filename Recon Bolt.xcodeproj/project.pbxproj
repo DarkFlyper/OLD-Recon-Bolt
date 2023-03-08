@@ -219,6 +219,10 @@
 		B9DCF9AB2642F7A100C39EC4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9DCF9AA2642F7A100C39EC4 /* Preview Assets.xcassets */; };
 		B9DCF9AE2642F8FD00C39EC4 /* AssetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DCF9AD2642F8FD00C39EC4 /* AssetManager.swift */; };
 		B9E43DA2265DB94C00F59E35 /* MatchViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E43DA1265DB94C00F59E35 /* MatchViewData.swift */; };
+		B9E4B8AE29B8364100E999D0 /* RankEntryProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E4B8AD29B8364100E999D0 /* RankEntryProvider.swift */; };
+		B9E4B8B029B8390200E999D0 /* ViewRankWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E4B8AF29B8390200E999D0 /* ViewRankWidget.swift */; };
+		B9E4B8B129B83B9D00E999D0 /* DynamicallyStroked.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F65C4D2651EDA500C9C34A /* DynamicallyStroked.swift */; };
+		B9E4B8B229B83F1400E999D0 /* RankInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B963C47526950FE90071E14A /* RankInfoView.swift */; };
 		B9E861C0294FAD24004F8ADF /* TimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E861BE294FACED004F8ADF /* TimelineProvider.swift */; };
 		B9E861C3294FADFC004F8ADF /* IntentHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E861C1294FADDC004F8ADF /* IntentHelpers.swift */; };
 		B9E861C6294FAF0D004F8ADF /* TimelineEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E861C4294FAEF9004F8ADF /* TimelineEntry.swift */; };
@@ -452,6 +456,8 @@
 		B9DCF9AA2642F7A100C39EC4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B9DCF9AD2642F8FD00C39EC4 /* AssetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetManager.swift; sourceTree = "<group>"; };
 		B9E43DA1265DB94C00F59E35 /* MatchViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewData.swift; sourceTree = "<group>"; };
+		B9E4B8AD29B8364100E999D0 /* RankEntryProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankEntryProvider.swift; sourceTree = "<group>"; };
+		B9E4B8AF29B8390200E999D0 /* ViewRankWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRankWidget.swift; sourceTree = "<group>"; };
 		B9E861BE294FACED004F8ADF /* TimelineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineProvider.swift; sourceTree = "<group>"; };
 		B9E861C1294FADDC004F8ADF /* IntentHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHelpers.swift; sourceTree = "<group>"; };
 		B9E861C4294FAEF9004F8ADF /* TimelineEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineEntry.swift; sourceTree = "<group>"; };
@@ -826,13 +832,15 @@
 				B9E861BE294FACED004F8ADF /* TimelineProvider.swift */,
 				B9E861C4294FAEF9004F8ADF /* TimelineEntry.swift */,
 				B939C825294A601C00ABD0C6 /* StoreEntryProvider.swift */,
+				B9E861C7294FB006004F8ADF /* ContractsEntryProvider.swift */,
+				B9E4B8AD29B8364100E999D0 /* RankEntryProvider.swift */,
 				B939C821294A5CD000ABD0C6 /* ViewStoreWidget.swift */,
 				B94A8D59294AB1F700AC5BCD /* ViewMissionsWidget.swift */,
+				B9E4B8AF29B8390200E999D0 /* ViewRankWidget.swift */,
 				B9E861C1294FADDC004F8ADF /* IntentHelpers.swift */,
 				B9BC89FD293A7D6F00B97626 /* Widgets.intentdefinition */,
 				B9BC89FE293A7D7400B97626 /* Assets.xcassets */,
 				B9BC8A00293A7D7400B97626 /* Info.plist */,
-				B9E861C7294FB006004F8ADF /* ContractsEntryProvider.swift */,
 			);
 			path = Widgets;
 			sourceTree = "<group>";
@@ -1415,9 +1423,11 @@
 				B97C8F4D293C421F002F6A07 /* BuddyAssets.swift in Sources */,
 				B939C81F294A5A4900ABD0C6 /* WidgetLink.swift in Sources */,
 				B9BC8A01293A7D7400B97626 /* Widgets.intentdefinition in Sources */,
+				B9E4B8B129B83B9D00E999D0 /* DynamicallyStroked.swift in Sources */,
 				B9E861C3294FADFC004F8ADF /* IntentHelpers.swift in Sources */,
 				B99AA190294B8BC800115120 /* RoundData.swift in Sources */,
 				B97C8F32293BBED9002F6A07 /* Swift+Helpers.swift in Sources */,
+				B9E4B8B229B83F1400E999D0 /* RankInfoView.swift in Sources */,
 				B94A8D5A294AB1F700AC5BCD /* ViewMissionsWidget.swift in Sources */,
 				B97C8F40293C4212002F6A07 /* AssetCollection.swift in Sources */,
 				B97C8F43293C4212002F6A07 /* ImageManager.swift in Sources */,
@@ -1434,6 +1444,7 @@
 				B97C8F59293C4225002F6A07 /* GameModeImage.swift in Sources */,
 				B97C8F56293C4225002F6A07 /* CompetitiveTierImage.swift in Sources */,
 				B97C8F3F293C4212002F6A07 /* AssetImage.swift in Sources */,
+				B9E4B8B029B8390200E999D0 /* ViewRankWidget.swift in Sources */,
 				B9FF792E2995FED300DFE90E /* ContentTierAssets.swift in Sources */,
 				B9BC89F8293A7D6F00B97626 /* WidgetsBundle.swift in Sources */,
 				B97C8F4F293C421F002F6A07 /* CurrencyAssets.swift in Sources */,
@@ -1452,6 +1463,7 @@
 				B97C8F47293C421C002F6A07 /* SeasonCollection.swift in Sources */,
 				B97C8F3E293C4212002F6A07 /* AssetManager.swift in Sources */,
 				B97C8F3D293C4212002F6A07 /* AssetClient.swift in Sources */,
+				B9E4B8AE29B8364100E999D0 /* RankEntryProvider.swift in Sources */,
 				B9E861CC294FB30E004F8ADF /* ResolvedMissions.swift in Sources */,
 				B97C8F54293C421F002F6A07 /* ObjectiveAssets.swift in Sources */,
 				B97C8F58293C4225002F6A07 /* MapImage.swift in Sources */,
@@ -1799,6 +1811,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG WIDGETS";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1832,6 +1845,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = WIDGETS;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -21,7 +21,7 @@ struct ViewStoreWidget: Widget {
 }
 
 struct StoreEntryView: TimelineEntryView {
-	var entry: StoreEntry
+	var entry: StoreEntryProvider.Entry
 	
 	@Environment(\.widgetFamily) private var widgetFamily
 	

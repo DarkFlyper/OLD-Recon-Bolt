@@ -17,7 +17,6 @@ struct StoreEntryProvider: FetchingIntentTimelineProvider {
 			return try context.assets.resolveSkin(.init(rawID: reward.itemID)) ??? UpdateError.unknownSkin
 		}
 		
-		// TODO: make async, use concurrentMap. only possible if it preserves order.
 		func fetchStuff(for resolved: ResolvedLevel) async -> StorefrontInfo.Skin {
 			async let icon = resolved.displayIcon?.resolved()
 			let tier: ContentTier? = resolved.skin.contentTierID.flatMap { x -> ContentTier? in context.assets.contentTiers[x] }
@@ -56,37 +55,6 @@ struct StoreEntryProvider: FetchingIntentTimelineProvider {
 		}
 	}
 }
-
-extension AssetImage {
-	func resolved() async -> Image? {
-		await Managers.images.awaitImage(for: self).map(Image.init)
-	}
-}
-
-extension Sequence {
-	func concurrentMap<T>(_ transform: (Element) async throws -> T) async throws -> [T] {
-		try await withoutActuallyEscaping(transform) { transform in
-			try await withThrowingTaskGroup(of: (Int, T).self) { group in
-				var count = 0
-				for (i, element) in self.enumerated() {
-					count += 1
-					group.addTask {
-						(i, try await transform(element))
-					}
-				}
-				
-				// maintain order
-				var transformed: [T?] = .init(repeating: nil, count: count)
-				for try await (i, newElement) in group {
-					transformed[i] = newElement
-				}
-				return transformed.map { $0! }
-			}
-		}
-	}
-}
-
-typealias StoreEntry = FetchedTimelineEntry<StorefrontInfo, ViewStoreIntent>
 
 extension ViewStoreIntent: SelfFetchingIntent {}
 

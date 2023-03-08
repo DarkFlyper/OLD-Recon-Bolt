@@ -24,6 +24,10 @@ struct AssetImage: Hashable {
 #endif
 	}
 	
+#if WIDGETS
+	static var preloaded: [Self: Image] = [:]
+#endif
+	
 	var localURL: URL {
 		Self.localFolder.appendingPathComponent(url.path, isDirectory: false)
 	}
@@ -59,6 +63,17 @@ struct AssetImage: Hashable {
 		@EnvironmentObject private var manager: ImageManager
 		
 		var body: some View {
+			#if WIDGETS
+			if let loaded = preloaded[image] {
+				loaded
+					.renderingMode(renderingMode)
+					.resizable()
+					.scaledToFit()
+			} else {
+				Color.primary.opacity(0.1)
+					.aspectRatio(aspectRatio, contentMode: .fit)
+			}
+			#else
 			switch manager.state(for: image) {
 			case nil:
 				content.onAppear {
@@ -90,6 +105,7 @@ struct AssetImage: Hashable {
 			case .available:
 				content
 			}
+			#endif
 		}
 		
 		@ViewBuilder

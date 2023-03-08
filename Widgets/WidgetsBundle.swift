@@ -6,5 +6,6 @@ struct WidgetsBundle: WidgetBundle {
 	var body: some Widget {
 		ViewStoreWidget()
 		ViewMissionsWidget()
+		ViewRankWidget()
 	}
 }

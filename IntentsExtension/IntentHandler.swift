@@ -42,3 +42,10 @@ extension IntentHandler: ViewMissionsIntentHandling {
 		try await provideAccountOptionsCollection()
 	}
 }
+
+extension IntentHandler: ViewRankIntentHandling {
+	func provideAccountOptionsCollection(for intent: ViewRankIntent) async throws -> Accounts {
+		// TODO: offer bookmarks as well
+		try await provideAccountOptionsCollection()
+	}
+}
