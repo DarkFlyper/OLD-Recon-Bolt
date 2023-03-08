@@ -31,7 +31,7 @@ struct StoreEntryProvider: FetchingIntentTimelineProvider {
 		
 		return StorefrontInfo(
 			nextRefresh: Date(timeIntervalSinceNow: store.skinsPanelLayout.remainingDuration + 1),
-			skins: try await resolvedOffers.concurrentMap(fetchStuff(for:))
+			skins: await resolvedOffers.concurrentMap(fetchStuff(for:))
 		)
 	}
 	

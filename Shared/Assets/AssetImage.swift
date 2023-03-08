@@ -25,6 +25,7 @@ struct AssetImage: Hashable {
 	}
 	
 #if WIDGETS
+	static var used: Set<Self> = []
 	static var preloaded: [Self: Image] = [:]
 #endif
 	
@@ -64,6 +65,7 @@ struct AssetImage: Hashable {
 		
 		var body: some View {
 			#if WIDGETS
+			let _ = used.insert(image)
 			if let loaded = preloaded[image] {
 				loaded
 					.renderingMode(renderingMode)

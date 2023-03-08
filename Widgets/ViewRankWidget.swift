@@ -6,6 +6,7 @@ import HandyOperators
 
 struct ViewRankWidget: Widget {
 	var body: some WidgetConfiguration {
+		// TODO: maybe wrap provider or something here with preloading functionality?
 		IntentConfiguration(
 			kind: "view rank",
 			intent: ViewRankIntent.self,
@@ -26,7 +27,7 @@ struct RankEntryView: TimelineEntryView {
 	
 	func contents(for info: RankInfo) -> some View {
 		VStack {
-			RankInfoView(summary: info.summary)
+			RankInfoView(summary: info.summary, size: 96, lineWidth: 6, shouldFallBackOnPrevious: true)
 			
 			if entry.configuration.showRankName != 0, let tierInfo = info.tierInfo {
 				Text(tierInfo.name)

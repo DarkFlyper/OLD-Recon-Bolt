@@ -9,18 +9,30 @@ struct RankEntryProvider: FetchingIntentTimelineProvider {
 		let summary = try await context.client.getCareerSummary(userID: context.client.userID)
 		
 		let act = context.assets.seasons.currentAct()
-		let info = summary.competitiveInfo?.inSeason(act?.id)
-		let tier = info?.competitiveTier ?? 0
+		let seasonInfo = summary.competitiveInfo?.inSeason(act?.id)
+		let tier = seasonInfo?.competitiveTier ?? 0
 		let tierInfo = context.assets.seasons.tierInfo(number: tier, in: act)
 		
-		await tierInfo?.icon?.preload()
-		
-		return .init(
+		let rankInfo = RankInfo(
 			summary: summary,
 			tierInfo: tierInfo,
-			//tierIcon: await tierInfo?.icon?.resolved(),
-			rankedRating: info?.adjustedRankedRating ?? 0
+			rankedRating: seasonInfo?.adjustedRankedRating ?? 0
 		)
+		
+		await preloadImages {
+			RankEntryView(entry: .init(info: .success(rankInfo)))
+		}
+		
+		return rankInfo
+	}
+}
+
+@MainActor
+func preloadImages<Content: View>(@ViewBuilder usedIn views: () -> Content) async {
+	ImageRenderer(content: ZStack(content: views)).render { _, _ in }
+	
+	_ = await AssetImage.used.concurrentMap { image in
+		await image.preload()
 	}
 }
 
