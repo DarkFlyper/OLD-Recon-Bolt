@@ -215,16 +215,6 @@ struct ViewStoreWidget_Previews: PreviewProvider {
 				.previewDisplayName("Medium")
 			view.previewContext(WidgetPreviewContext(family: .systemLarge))
 				.previewDisplayName("Large")
-			
-			StoreEntryView(entry: .init(
-				info: .failure(StoreEntryProvider.UpdateError.unknownOffer)
-			))
-			.previewDisplayName("No Account")
-			
-			StoreEntryView(entry: .init(
-				info: .failure(APIError.rateLimited(retryAfter: 5))
-			))
-			.previewDisplayName("Other Error")
 		}
 		.previewContext(WidgetPreviewContext(family: .systemMedium))
     }
