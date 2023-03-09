@@ -6,15 +6,14 @@ import HandyOperators
 
 struct ViewRankWidget: Widget {
 	var body: some WidgetConfiguration {
-		// TODO: maybe wrap provider or something here with preloading functionality?
-		IntentConfiguration(
+		IntentConfiguration.preloading(
 			kind: "view rank",
 			intent: ViewRankIntent.self,
-			provider: RankEntryProvider()
+			provider: RankEntryProvider(),
+			supportedFamilies: .systemSmall
 		) { entry in
 			RankEntryView(entry: entry)
 		}
-		.supportedFamilies([.systemSmall])
 		.configurationDisplayName("Rank")
 		.description("View your current rank.")
 	}
@@ -23,7 +22,7 @@ struct ViewRankWidget: Widget {
 struct RankEntryView: TimelineEntryView {
 	var entry: RankEntryProvider.Entry
 	
-	@Environment(\.widgetFamily) private var widgetFamily
+	@Environment(\.adjustedWidgetFamily) private var widgetFamily
 	
 	func contents(for info: RankInfo) -> some View {
 		VStack {

@@ -1,4 +1,5 @@
 import SwiftUI
+import WidgetKit
 
 enum Managers {
 	@MainActor static let accounts = AccountManager()
@@ -18,6 +19,70 @@ extension AssetImage {
 	
 	func preload() async {
 		AssetImage.preloaded[self] = await resolved()
+	}
+}
+
+extension IntentConfiguration {
+	static func preloading<Provider: FetchingIntentTimelineProvider>(
+		kind: String,
+		intent: Intent.Type = Intent.self,
+		provider: Provider,
+		supportedFamilies: WidgetFamily...,
+		content: @escaping (Provider.Entry) -> Content
+	) -> some WidgetConfiguration where Intent == Provider.Intent {
+		Self(
+			kind: kind,
+			intent: Intent.self,
+			provider: PreloadingIntentTimelineProvider(
+				wrapped: provider,
+				supportedFamilies: supportedFamilies,
+				content: content
+			),
+			content: content
+		)
+		.supportedFamilies(supportedFamilies)
+	}
+}
+
+struct PreloadingIntentTimelineProvider<
+	Wrapped: FetchingIntentTimelineProvider,
+	Content: View
+>: FetchingIntentTimelineProvider {
+	typealias Intent = Wrapped.Intent
+	
+	let wrapped: Wrapped
+	let supportedFamilies: [WidgetFamily]
+	let content: (Wrapped.Entry) -> Content
+	
+	func fetchValue(in context: inout Wrapped.FetchingContext) async throws -> Wrapped.Value {
+		let value = try await wrapped.fetchValue(in: &context)
+		await preloadImages {
+			ForEach(supportedFamilies, id: \.self) {
+				content(.init(info: .success(value)))
+					.environment(\.adjustedWidgetFamily, $0)
+			}
+		}
+		return value
+	}
+}
+
+extension EnvironmentValues {
+	var adjustedWidgetFamily: WidgetFamily {
+		get { self[FamilyKey.self] ?? widgetFamily }
+		set { self[FamilyKey.self] = newValue }
+	}
+	
+	enum FamilyKey: EnvironmentKey {
+		static let defaultValue: WidgetFamily? = nil
+	}
+}
+
+@MainActor
+func preloadImages<Content: View>(@ViewBuilder usedIn views: () -> Content) async {
+	ImageRenderer(content: ZStack(content: views)).render { _, _ in }
+	
+	_ = await AssetImage.used.concurrentMap { image in
+		await image.preload()
 	}
 }
 

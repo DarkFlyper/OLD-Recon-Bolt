@@ -23,7 +23,7 @@ struct ViewStoreWidget: Widget {
 struct StoreEntryView: TimelineEntryView {
 	var entry: StoreEntryProvider.Entry
 	
-	@Environment(\.widgetFamily) private var widgetFamily
+	@Environment(\.adjustedWidgetFamily) private var widgetFamily
 	
 	var isLarge: Bool { widgetFamily == .systemLarge }
 	

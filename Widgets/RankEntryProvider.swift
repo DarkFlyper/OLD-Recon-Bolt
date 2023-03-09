@@ -13,26 +13,11 @@ struct RankEntryProvider: FetchingIntentTimelineProvider {
 		let tier = seasonInfo?.competitiveTier ?? 0
 		let tierInfo = context.assets.seasons.tierInfo(number: tier, in: act)
 		
-		let rankInfo = RankInfo(
+		return .init(
 			summary: summary,
 			tierInfo: tierInfo,
 			rankedRating: seasonInfo?.adjustedRankedRating ?? 0
 		)
-		
-		await preloadImages {
-			RankEntryView(entry: .init(info: .success(rankInfo)))
-		}
-		
-		return rankInfo
-	}
-}
-
-@MainActor
-func preloadImages<Content: View>(@ViewBuilder usedIn views: () -> Content) async {
-	ImageRenderer(content: ZStack(content: views)).render { _, _ in }
-	
-	_ = await AssetImage.used.concurrentMap { image in
-		await image.preload()
 	}
 }
 
@@ -42,7 +27,6 @@ extension ViewRankIntent: SelfFetchingIntent {}
 struct RankInfo: FetchedTimelineValue {
 	let summary: CareerSummary
 	let tierInfo: CompetitiveTier?
-	//let tierIcon: Image?
 	let rankedRating: Int
 	
 	var nextRefresh: Date {

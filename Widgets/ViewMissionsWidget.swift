@@ -23,7 +23,7 @@ struct ViewMissionsWidget: Widget {
 struct MissionListView: TimelineEntryView {
 	var entry: ContractsEntryProvider.Entry
 	
-	@Environment(\.widgetFamily) private var widgetFamily
+	@Environment(\.adjustedWidgetFamily) private var widgetFamily
 	
 	func contents(for value: ContractDetailsInfo) -> some View {
 		let contracts = value.contracts
