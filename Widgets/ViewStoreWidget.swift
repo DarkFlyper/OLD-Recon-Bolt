@@ -105,8 +105,8 @@ struct StoreGrid: View {
 		FixedColumnGrid(columns: columnCount) {
 			ForEach(info.skins.indexed(), id: \.index) { index, skin in
 				VStack(spacing: 0) {
-					let shouldShowIcon = configuration.shouldShowIcon && !isCompact
-					if shouldShowIcon {
+					let isShowingIcon = configuration.shouldShowIcon && !isCompact
+					if isShowingIcon {
 						skin.icon?.resizable().aspectRatio(contentMode: .fit)
 							.frame(maxWidth: .infinity, maxHeight: .infinity)
 							.padding(.vertical, 4)
@@ -118,7 +118,7 @@ struct StoreGrid: View {
 							.foregroundColor(skin.tierColor?.opacity(10))
 							.fixedSize(horizontal: false, vertical: true)
 							.frame(height: isCompact ? 10 : nil) // fake smaller height to ensure all cells stay the same size
-							.lineLimit(isCompact ? 1 : 2)
+							.lineLimit(isShowingIcon ? 1 : 2)
 							.multilineTextAlignment(.center)
 					}
 				}
