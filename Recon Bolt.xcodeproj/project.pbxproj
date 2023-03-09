@@ -29,6 +29,8 @@
 		B914AE87284809D50001781F /* LoadoutDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B914AE86284809D50001781F /* LoadoutDetailsView.swift */; };
 		B914AE8928480A270001781F /* example_loadout.json in Resources */ = {isa = PBXBuildFile; fileRef = B914AE8828480A270001781F /* example_loadout.json */; };
 		B9168AE62689440B00866F6A /* LocalDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9168AE52689440B00866F6A /* LocalDataProvider.swift */; };
+		B917FD1729B90B2A0082187F /* SeasonalViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B917FD1629B90B2A0082187F /* SeasonalViews.swift */; };
+		B917FD1829B90B430082187F /* SeasonalViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B917FD1629B90B2A0082187F /* SeasonalViews.swift */; };
 		B91D3DA126C810E0007D18B8 /* RoundInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91D3DA026C810E0007D18B8 /* RoundInfoView.swift */; };
 		B91D3DA426C8492F007D18B8 /* WeaponAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91D3DA326C8492F007D18B8 /* WeaponAssets.swift */; };
 		B91FF85426C7072400D0DFAA /* MagnifiableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91FF85326C7072400D0DFAA /* MagnifiableView.swift */; };
@@ -339,6 +341,7 @@
 		B914AE86284809D50001781F /* LoadoutDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadoutDetailsView.swift; sourceTree = "<group>"; };
 		B914AE8828480A270001781F /* example_loadout.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_loadout.json; sourceTree = "<group>"; };
 		B9168AE52689440B00866F6A /* LocalDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataProvider.swift; sourceTree = "<group>"; };
+		B917FD1629B90B2A0082187F /* SeasonalViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonalViews.swift; sourceTree = "<group>"; };
 		B91D3DA026C810E0007D18B8 /* RoundInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundInfoView.swift; sourceTree = "<group>"; };
 		B91D3DA326C8492F007D18B8 /* WeaponAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponAssets.swift; sourceTree = "<group>"; };
 		B91FF85326C7072400D0DFAA /* MagnifiableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagnifiableView.swift; sourceTree = "<group>"; };
@@ -810,6 +813,7 @@
 				B9EF0F26263D9D860067176A /* ValorantAPI+SwiftUI.swift */,
 				B989466A26860D8A00C8059A /* AsyncButton.swift */,
 				B963C47526950FE90071E14A /* RankInfoView.swift */,
+				B917FD1629B90B2A0082187F /* SeasonalViews.swift */,
 				B98E4704269B40DB003C9088 /* CircularProgressView.swift */,
 				B95B1A4B269CE1810080EC81 /* ScoreSummaryView.swift */,
 				B95B1A4E269CE1D10080EC81 /* KDASummaryView.swift */,
@@ -1289,6 +1293,7 @@
 				B9A11F4D28518B1C00599719 /* GunCustomizer.swift in Sources */,
 				B9F8703626B3B02000C1F784 /* RefreshableBox.swift in Sources */,
 				B9F5CEE1267CD548009CF906 /* NamespacedID.swift in Sources */,
+				B917FD1729B90B2A0082187F /* SeasonalViews.swift in Sources */,
 				B9168AE62689440B00866F6A /* LocalDataProvider.swift in Sources */,
 				B9DCC24128C96EF900C03B90 /* AssetsInfoView.swift in Sources */,
 				B9F7FBC52935C7A30022F5CE /* InAppStore.swift in Sources */,
@@ -1465,6 +1470,7 @@
 				B97C8F3D293C4212002F6A07 /* AssetClient.swift in Sources */,
 				B9E4B8AE29B8364100E999D0 /* RankEntryProvider.swift in Sources */,
 				B9E861CC294FB30E004F8ADF /* ResolvedMissions.swift in Sources */,
+				B917FD1829B90B430082187F /* SeasonalViews.swift in Sources */,
 				B97C8F54293C421F002F6A07 /* ObjectiveAssets.swift in Sources */,
 				B97C8F58293C4225002F6A07 /* MapImage.swift in Sources */,
 				B9E861C6294FAF0D004F8ADF /* TimelineEntry.swift in Sources */,

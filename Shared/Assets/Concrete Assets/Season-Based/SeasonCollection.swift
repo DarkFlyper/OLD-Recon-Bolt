@@ -40,7 +40,7 @@ struct SeasonCollection: AssetItem, Codable {
 		tierInfo(number: snapshot.rank, in: snapshot.season)
 	}
 	
-	func tierInfo(number: Int, in act: Act? = nil) -> CompetitiveTier? {
+	func tierInfo(number: Int?, in act: Act? = nil) -> CompetitiveTier? {
 		let tiers = act.map { competitiveTiers[$0.competitiveTiers]! }
 		return (tiers ?? currentTiers())?.tier(number)
 	}

@@ -31,8 +31,8 @@ struct CompetitiveTier: AssetItem, Codable {
 		var id: ObjectID<Self, LowercaseUUID>
 		var tiers: [Int: CompetitiveTier] // tiers aren't necessarily contiguous! e.g. the second set of tiers skips 22 and 23.
 		
-		func tier(_ number: Int) -> CompetitiveTier? {
-			tiers[number]
+		func tier(_ number: Int?) -> CompetitiveTier? {
+			tiers[number ?? 0]
 		}
 		
 		init(from decoder: Decoder) throws {

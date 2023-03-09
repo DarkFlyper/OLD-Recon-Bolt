@@ -6,11 +6,11 @@ struct RankEntryProvider: FetchingIntentTimelineProvider {
 	typealias Intent = ViewRankIntent
 	
 	func fetchValue(in context: inout FetchingContext) async throws -> Value {
-		let summary = try await context.client.getCareerSummary(userID: context.client.userID)
+		let summary = try await context.client.getCareerSummary()
 		
 		let act = context.assets.seasons.currentAct()
 		let seasonInfo = summary.competitiveInfo?.inSeason(act?.id)
-		let tier = seasonInfo?.competitiveTier ?? 0
+		let tier = seasonInfo?.competitiveTier
 		let tierInfo = context.assets.seasons.tierInfo(number: tier, in: act)
 		
 		return .init(

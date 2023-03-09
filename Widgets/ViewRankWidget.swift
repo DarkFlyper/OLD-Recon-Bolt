@@ -10,7 +10,7 @@ struct ViewRankWidget: Widget {
 			kind: "view rank",
 			intent: ViewRankIntent.self,
 			provider: RankEntryProvider(),
-			supportedFamilies: .systemSmall
+			supportedFamilies: .systemSmall, .systemMedium
 		) { entry in
 			RankEntryView(entry: entry)
 		}
@@ -23,30 +23,106 @@ struct RankEntryView: TimelineEntryView {
 	var entry: RankEntryProvider.Entry
 	
 	@Environment(\.adjustedWidgetFamily) private var widgetFamily
+	@Environment(\.assets) private var assets
+	
+	var isSmall: Bool {
+		widgetFamily == .systemSmall
+	}
 	
 	func contents(for info: RankInfo) -> some View {
-		VStack {
-			GeometryReader { geometry in
-				RankInfoView(
-					summary: info.summary,
-					size: geometry.size.height,
-					lineWidth: geometry.size.height / 16,
-					shouldFallBackOnPrevious: true
-				)
-				.frame(maxWidth: .infinity)
-			}
+		HStack {
+			currentRank(info: info)
 			
-			if entry.configuration.showRankName != 0, let tierInfo = info.tierInfo {
-				Text(tierInfo.name)
-					.font(.callout.weight(.semibold))
-			}
-			
-			if entry.configuration.showRankRating != 0 {
-				Text("\(info.rankedRating) RR")
-					.font(.caption)
+			if !isSmall {
+				peakRank(summary: info.summary)
 			}
 		}
 		.padding()
+	}
+	
+	func currentRank(info: RankInfo) -> some View {
+		VStack {
+			let act = assets?.seasons.currentAct()
+			
+			column(
+				season: act?.id,
+				content: { size in
+					RankInfoView(
+						summary: info.summary,
+						size: size,
+						lineWidth: size / 16,
+						shouldFallBackOnPrevious: isSmall
+					)
+				},
+				rank: info.tierInfo,
+				footer: {
+					let current = info.summary.competitiveInfo?.inSeason(act?.id)
+					if let current, current.leaderboardRank > 0 {
+						Text("Rank \(current.leaderboardRank)")
+					} else {
+						Text("\(info.rankedRating) RR")
+					}
+				}
+			)
+		}
+	}
+	
+	@ViewBuilder
+	func peakRank(summary: CareerSummary) -> some View {
+		if
+			let peakRank = summary.peakRank(seasons: assets?.seasons),
+			let info = assets?.seasons.tierInfo(peakRank)
+		{
+			column(
+				season: peakRank.season,
+				content: { size in
+					PeakRankIcon(peakRank: peakRank, tierInfo: info, size: size)
+				},
+				rank: info,
+				footer: {
+					Text("Lifetime Peak")
+				}
+			)
+		}
+	}
+	
+	func column<Content: View, Footer: View>(
+		season: Season.ID?,
+		@ViewBuilder content: @escaping (CGFloat) -> Content,
+		rank: CompetitiveTier?,
+		@ViewBuilder footer: () -> Footer
+	) -> some View {
+		VStack {
+			let shouldShowActName = configuration.showActName != 0
+			let shouldShowRankName = configuration.showRankName != 0
+			let shouldShowRankRating = configuration.showRankRating != 0
+			let hasTextBelow = shouldShowRankName || shouldShowRankRating
+			
+			if shouldShowActName, hasTextBelow { // looks stupid above with nothing below
+				SeasonLabel(season: season)
+					.font(.caption)
+			}
+			
+			GeometryReader { geometry in
+				content(min(geometry.size.width, geometry.size.height))
+					.frame(maxWidth: .infinity)
+			}
+			
+			if shouldShowActName, !hasTextBelow {
+				SeasonLabel(season: season)
+					.font(.caption)
+			}
+			
+			if shouldShowRankName, let rank {
+				Text(rank.name)
+					.font(.callout.weight(.semibold))
+			}
+			
+			if shouldShowRankRating {
+				footer()
+					.font(.caption)
+			}
+		}
 	}
 }
 
@@ -65,6 +141,9 @@ struct ViewRankWidget_Previews: PreviewProvider {
 		
 		view.previewContext(WidgetPreviewContext(family: .systemSmall))
 			.previewDisplayName("Small")
+		
+		view.previewContext(WidgetPreviewContext(family: .systemMedium))
+			.previewDisplayName("Medium")
 	}
 }
 #endif

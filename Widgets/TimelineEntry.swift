@@ -16,6 +16,8 @@ protocol TimelineEntryView: View {
 }
 
 extension TimelineEntryView {
+	var configuration: Intent { entry.configuration }
+	
 	var body: some View {
 		Group {
 			switch entry.info {
