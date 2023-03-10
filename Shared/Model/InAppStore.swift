@@ -1,11 +1,18 @@
 import StoreKit
 import HandyOperators
 import UserDefault
+import WidgetKit
 
 @MainActor
 final class InAppStore: ObservableObject {
-	@UserDefault("ownedProducts")
-	private static var ownedProducts: Set<Product.ID> = []
+	@UserDefault("ownedProducts", migratingTo: .shared)
+	private static var ownedProducts: Set<Product.ID> = [] {
+		didSet {
+			if ownedProducts != oldValue {
+				WidgetCenter.shared.reloadAllTimelines()
+			}
+		}
+	}
 	
 	@Published
 	private(set) var proVersion = ResolvableProduct(id: "ReconBolt.Pro")
@@ -19,23 +26,31 @@ final class InAppStore: ObservableObject {
 		didSet { Self.ownedProducts = ownedProducts }
 	}
 	
-	init() {
-		updateListenerTask = listenForTransactions()
-		
-		Task {
-			var owned: Set<Product.ID> = []
-			for await existing in Transaction.currentEntitlements {
-				guard let transaction = try? existing.payloadValue else { continue }
-				print("found existing transaction for \(transaction.productID)")
-				update(&owned, from: transaction)
+	init(isReadOnly: Bool = false) {
+		if !isReadOnly {
+			updateListenerTask = listenForTransactions()
+			
+			Task {
+				var owned: Set<Product.ID> = []
+				for await existing in Transaction.currentEntitlements {
+					guard let transaction = try? existing.payloadValue else { continue }
+					print("found existing transaction for \(transaction.productID)")
+					update(&owned, from: transaction)
+				}
+				ownedProducts = owned
 			}
-			ownedProducts = owned
+			
+			Task { await fetchProducts() }
 		}
-		Task { await fetchProducts() }
 	}
 	
 	deinit {
 		updateListenerTask?.cancel()
+	}
+	
+	func refreshFromDefaults() {
+		Self._ownedProducts.loadValue()
+		ownedProducts = Self.ownedProducts
 	}
 	
 	func fetchProducts() async {

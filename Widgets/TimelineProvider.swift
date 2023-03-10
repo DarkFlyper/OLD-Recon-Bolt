@@ -57,6 +57,11 @@ extension FetchingIntentTimelineProvider {
 		var link = WidgetLink()
 		let result: Result<Value, Error>
 		do {
+			await Managers.store.refreshFromDefaults()
+			guard await Managers.store.ownsProVersion else {
+				throw WidgetError.needProVersion
+			}
+			
 			await Managers.assets.loadAssets()
 			
 			let account = try await configuration.loadAccount()
@@ -84,10 +89,21 @@ extension FetchingIntentTimelineProvider {
 	}
 }
 
-enum FakeError: Error {
+enum FakeError: Error, LocalizedError {
 	case blankPreview
 	
 	var errorDescription: String? { "" }
+}
+
+enum WidgetError: Error, LocalizedError {
+	case needProVersion
+	
+	var errorDescription: String? {
+		switch self {
+		case .needProVersion:
+			return "Widgets require Recon Bolt Pro!"
+		}
+	}
 }
 
 enum FetchError: Error, LocalizedError {
