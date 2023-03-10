@@ -99,11 +99,15 @@ struct ProFeaturesOverview: View {
 				}
 			}
 			
-			// TODO: implement
 			Section {
+				image("widgets")
+				
 				description("Home Screen Widgets") {
-					Text("TODO")
-					// TODO: note iOS 16+ restriction!
+					Text("View your storefront, daily/weekly missions, or current rank without even having to open the app!")
+					Text("If you have multiple accounts, you can configure separate widgets for each and have them on your Home Screen at the same time.")
+					Text("Note: Widgets are only available on iOS 16 and newer.")
+						.fontWeight(.medium)
+						.font(.footnote)
 				}
 			}
 			
