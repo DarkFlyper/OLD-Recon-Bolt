@@ -3,6 +3,8 @@ import SwiftUI
 import Protoquest
 import HandyOperators
 
+private let fileManager = FileManager.default
+
 struct AssetImage: Hashable {
 	var url: URL
 	
@@ -37,7 +39,7 @@ struct AssetImage: Hashable {
 		.init(contentsOfFile: localURL.path)
 	}
 	
-	private static let localFolder = try! FileManager.default
+	private static let oldLocalFolder = try! fileManager
 		.url(
 			for: .applicationSupportDirectory,
 			in: .userDomainMask,
@@ -46,8 +48,26 @@ struct AssetImage: Hashable {
 		)
 		.appendingPathComponent("AssetImage", isDirectory: true)
 	
+	private static let localFolder = fileManager
+		.containerURL(forSecurityApplicationGroupIdentifier: "group.juliand665.Recon-Bolt.shared")!
+		.appendingPathComponent("Library", isDirectory: true)
+		.appendingPathComponent("Caches", isDirectory: true)
+		.appendingPathComponent("AssetImage", isDirectory: true)
+	<- migrate(to:)
+	
+	private static func migrate(to localFolder: URL) {
+		guard fileManager.fileExists(atPath: oldLocalFolder.path) else { return }
+		do {
+			try fileManager.moveItem(at: oldLocalFolder, to: localFolder)
+			print("migration succeeded!")
+		} catch {
+			print("migration failed!", error)
+			try? fileManager.removeItem(at: oldLocalFolder) // oh well
+		}
+	}
+	
 	static func removeCachedFiles() throws {
-		try FileManager.default.removeItem(at: localFolder)
+		try fileManager.removeItem(at: localFolder)
 	}
 	
 	private struct ImageView: View {
@@ -174,16 +194,16 @@ extension AssetClient {
 	/// - returns: whether a new image was downloaded (false means old image is still correct)
 	func ensureDownloaded(_ image: AssetImage) async throws -> Bool {
 		// don't download images that we already have (assuming size will always change when the image changes)
-		if let existingSize = FileManager.default.sizeOfItem(atPath: image.localURL.path) {
+		if let existingSize = fileManager.sizeOfItem(atPath: image.localURL.path) {
 			print("\(image.url) found existing size \(existingSize)")
 			let newSize = try await send(ImageSizeRequest(imageURL: image.url))
 			guard newSize != existingSize else { return false }
 		} else {
-			assert(!FileManager.default.fileExists(atPath: image.localURL.path))
+			assert(!fileManager.fileExists(atPath: image.localURL.path))
 		}
 		
 		let imageData = try await send(ImageDownloadRequest(imageURL: image.url))
-		try FileManager.default.createDirectory(
+		try fileManager.createDirectory(
 			at: image.localURL.deletingLastPathComponent(),
 			withIntermediateDirectories: true
 		)
