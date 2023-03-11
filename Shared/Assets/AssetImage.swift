@@ -80,11 +80,12 @@ struct AssetImage: Hashable {
 		
 		@State private var isShowingErrorAlert = false
 		@State private var loadError: Error?
+		@State private var updater = false
 		
 		@EnvironmentObject private var manager: ImageManager
 		
 		var body: some View {
-			#if WIDGETS
+#if WIDGETS
 			let _ = used.insert(image)
 			if let loaded = preloaded[image] {
 				loaded
@@ -95,14 +96,18 @@ struct AssetImage: Hashable {
 				Color.primary.opacity(0.1)
 					.aspectRatio(aspectRatio, contentMode: .fit)
 			}
-			#else
+#else
+			let _ = updater // force SwiftUI to recognize state updates while scrolling
 			switch manager.state(for: image) {
 			case nil:
-				content.onAppear {
-					Task.detached(priority: .userInitiated) {
-						await manager.download(image)
+				// onAppear/task is not called while scrolling, so we'll do it the illegal way
+				let _ = Task.detached(priority: .userInitiated) {
+					await manager.download(image)
+					await MainActor.run {
+						updater.toggle()
 					}
 				}
+				content
 			case .downloading:
 				content
 					.overlay { ProgressView() }
@@ -127,7 +132,7 @@ struct AssetImage: Hashable {
 			case .available:
 				content
 			}
-			#endif
+#endif
 		}
 		
 		@ViewBuilder

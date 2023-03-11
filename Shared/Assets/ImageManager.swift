@@ -24,11 +24,8 @@ final class ImageManager: ObservableObject {
 		updater = .init(cache: cache)
 		stateUpdateToken = updater.stateUpdates
 			.collect(.byTime(RunLoop.main, .milliseconds(50)))
-			.sink { updates in
-				// TODO: check how much overhead this is adding (wish it wasn't necessary)
-				Task { @MainActor [weak self] in
-					self?.apply(updates)
-				}
+			.sink { [weak self] updates in
+				self?.apply(updates)
 			}
 	}
 	
@@ -154,6 +151,7 @@ final class ImageManager: ObservableObject {
 	
 	private final actor Updater {
 		private var inProgress: Set<AssetImage> = []
+		private var completed: Set<AssetImage> = []
 		private let client = AssetClient()
 		
 		let stateUpdates = PassthroughSubject<StateUpdate, Never>()
@@ -164,6 +162,7 @@ final class ImageManager: ObservableObject {
 		}
 		
 		func download(_ image: AssetImage) async {
+			guard !completed.contains(image) else { return }
 			guard inProgress.insert(image).inserted else { return }
 			defer { inProgress.remove(image) }
 			
@@ -174,6 +173,7 @@ final class ImageManager: ObservableObject {
 					if meta.lastVersionCheckedAgainst == VersionHolder.version {
 						await cache.updateState(for: image, forceUpdate: false)
 						enqueueUpdate(of: image, to: .available)
+						completed.insert(image)
 						return
 					}
 				} catch {
@@ -192,6 +192,8 @@ final class ImageManager: ObservableObject {
 				enqueueUpdate(of: image, to: .errored(error))
 				return
 			}
+			
+			completed.insert(image)
 			
 			var meta = (try? image.loadMetadata()) ?? .init(
 				versionDownloaded: VersionHolder.version,
