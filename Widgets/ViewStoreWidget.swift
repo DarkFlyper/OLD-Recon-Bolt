@@ -113,12 +113,13 @@ struct StoreGrid: View {
 					}
 					
 					if configuration.shouldShowLabel {
+						let isUltraCompact = isCompact && configuration.showRefreshTime != 0
 						Text(skin.name)
 							.font(.caption2)
 							.foregroundColor(skin.tierColor?.opacity(10))
 							.fixedSize(horizontal: false, vertical: true)
 							.frame(height: isCompact ? 10 : nil) // fake smaller height to ensure all cells stay the same size
-							.lineLimit(isShowingIcon ? 1 : 2)
+							.lineLimit(isShowingIcon || isUltraCompact ? 1 : 2)
 							.multilineTextAlignment(.center)
 					}
 				}
