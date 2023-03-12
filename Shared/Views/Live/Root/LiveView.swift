@@ -1,11 +1,18 @@
 import SwiftUI
+import WidgetKit
 import ValorantAPI
 import HandyOperators
 import UserDefault
 
 struct LiveView: View {
 	let userID: User.ID
-	@State var contractDetails: ContractDetails?
+	@State var contractDetails: ContractDetails? {
+		didSet {
+			if let oldValue, let contractDetails, contractDetails != oldValue {
+				WidgetCenter.shared.reloadTimelines(ofKind: "view missions")
+			}
+		}
+	}
 	@State fileprivate var loadoutInfo: LoadoutInfo?
 	@State fileprivate var storeInfo: StoreInfo?
 	
