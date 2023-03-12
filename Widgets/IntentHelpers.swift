@@ -24,9 +24,15 @@ extension SelfFetchingIntent {
 			return try await Managers.accounts.getActiveAccount()
 		} else {
 			let rawAccount = try account ??? GetAccountError.noAccountSpecified
-			let accountID = try rawAccount.identifier.flatMap(User.ID.init(_:)) ??? GetAccountError.malformedAccount
+			let accountID = try rawAccount.userID()
 			return try await Managers.accounts.loadAccount(for: accountID)
 		}
+	}
+}
+
+extension Account {
+	func userID() throws -> User.ID {
+		try identifier.flatMap(User.ID.init(_:)) ??? GetAccountError.malformedAccount
 	}
 }
 
@@ -40,7 +46,6 @@ private enum GetAccountError: Error, LocalizedError {
 	case noAccountActive(String?)
 	case noAccountSpecified
 	case malformedAccount
-	case unknownAccountID(User.ID)
 	
 	var errorDescription: String? {
 		switch self {
@@ -50,8 +55,6 @@ private enum GetAccountError: Error, LocalizedError {
 			return "No account specified."
 		case .malformedAccount:
 			return "Malformed account."
-		case .unknownAccountID(let id):
-			return "Missing account for ID \(id)"
 		}
 	}
 }

@@ -5,7 +5,7 @@ import UserDefault
 
 @MainActor
 final class BookmarkList: ObservableObject {
-	@UserDefault("BookmarkList.stored.v2")
+	@UserDefault("BookmarkList.stored.v2", migratingTo: .shared)
 	private static var stored: [Entry] = []
 	
 	@Published var bookmarks: [Entry] = BookmarkList.stored {

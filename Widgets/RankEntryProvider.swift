@@ -6,7 +6,8 @@ struct RankEntryProvider: FetchingIntentTimelineProvider {
 	typealias Intent = ViewRankIntent
 	
 	func fetchValue(in context: inout FetchingContext) async throws -> Value {
-		let summary = try await context.client.getCareerSummary()
+		let target = try context.configuration.account?.userID()
+		let summary = try await context.client.getCareerSummary(userID: target)
 		
 		let act = context.assets.seasons.currentAct()
 		let seasonInfo = summary.competitiveInfo?.inSeason(act?.id)
@@ -21,8 +22,7 @@ struct RankEntryProvider: FetchingIntentTimelineProvider {
 	}
 }
 
-// TODO: should be FetchingIntent, allowing bookmarks as well
-extension ViewRankIntent: SelfFetchingIntent {}
+extension ViewRankIntent: FetchingIntent {}
 
 struct RankInfo: FetchedTimelineValue {
 	let summary: CareerSummary

@@ -20,7 +20,7 @@
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.intents-service</string>
 		<key>NSExtensionPrincipalClass</key>
-		<string>$(PRODUCT_MODULE_NAME).IntentHandler</string>
+		<string>$(PRODUCT_MODULE_NAME).IntentsExtension</string>
 	</dict>
 </dict>
 </plist>

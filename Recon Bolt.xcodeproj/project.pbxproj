@@ -32,6 +32,7 @@
 		B917FD1729B90B2A0082187F /* SeasonalViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B917FD1629B90B2A0082187F /* SeasonalViews.swift */; };
 		B917FD1829B90B430082187F /* SeasonalViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B917FD1629B90B2A0082187F /* SeasonalViews.swift */; };
 		B917FD1929BB7C830082187F /* InAppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F7FBC42935C7A30022F5CE /* InAppStore.swift */; };
+		B917FD1B29BD5F010082187F /* BookmarkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FADF8126A91DBC00A0CA15 /* BookmarkList.swift */; };
 		B91D3DA126C810E0007D18B8 /* RoundInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91D3DA026C810E0007D18B8 /* RoundInfoView.swift */; };
 		B91D3DA426C8492F007D18B8 /* WeaponAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91D3DA326C8492F007D18B8 /* WeaponAssets.swift */; };
 		B91FF85426C7072400D0DFAA /* MagnifiableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91FF85326C7072400D0DFAA /* MagnifiableView.swift */; };
@@ -1253,6 +1254,7 @@
 				B939C7EA2948581400ABD0C6 /* AccountManager.swift in Sources */,
 				B939C8072948E80900ABD0C6 /* UserDefault+AppGroups.swift in Sources */,
 				B939C7EE2948584600ABD0C6 /* Keychain.swift in Sources */,
+				B917FD1B29BD5F010082187F /* BookmarkList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

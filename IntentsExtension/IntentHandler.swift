@@ -1,29 +1,51 @@
 import Intents
+import ValorantAPI
 
 let isInSwiftUIPreview = false // lol
 
-final class IntentHandler: INExtension {
+final class IntentsExtension: INExtension {
+	override func handler(for intent: INIntent) -> Any {
+		// making a new instance causes it to refresh accounts & bookmarks
+		IntentHandler()
+	}
+}
+
+final class IntentHandler: NSObject {
 	@MainActor
-	private static let accountManager = AccountManager()
-	
-    override func handler(for intent: INIntent) -> Any { self }
+	private let accountManager = AccountManager()
+	@MainActor
+	private let bookmarkList = BookmarkList()
 	
 	typealias Accounts = INObjectCollection<Account>
 	
 	func provideAccountOptionsCollection() async throws -> Accounts {
-		let accountIDs = await Self.accountManager.storedAccounts
-		let manager = LocalDataProvider.shared.userManager
-		if let activeAccount = await Self.accountManager.activeAccount {
-			try await activeAccount.client.fetchUsers(for: accountIDs)
-		} else {
-			print("no active account!")
+		try await makeCollection(resolving: await accountManager.storedAccounts)
+	}
+	
+	/// includes bookmarks
+	func provideUserOptionsCollection() async throws -> Accounts {
+		let accounts = await accountManager.storedAccounts
+		let accountSet = Set(accounts)
+		return try await makeCollection(
+			resolving: accounts + bookmarkList
+				.bookmarks
+				.lazy
+				.map(\.id)
+				.filter { !accountSet.contains($0) }
+		)
+	}
+	
+	private func makeCollection(resolving userIDs: [User.ID]) async throws -> Accounts {
+		if let activeAccount = await accountManager.activeAccount {
+			try await activeAccount.client.fetchUsers(for: userIDs)
 		}
 		
+		let manager = LocalDataProvider.shared.userManager
 		var accounts: [Account] = []
-		for accountID in accountIDs {
-			let user = await manager.cachedObject(for: accountID)
+		for userID in userIDs {
+			let user = await manager.cachedObject(for: userID)
 			accounts.append(.init(
-				identifier: accountID.rawID.description,
+				identifier: userID.rawID.description,
 				display: user?.name ?? "<Unknown Account>"
 			))
 		}
@@ -45,7 +67,6 @@ extension IntentHandler: ViewMissionsIntentHandling {
 
 extension IntentHandler: ViewRankIntentHandling {
 	func provideAccountOptionsCollection(for intent: ViewRankIntent) async throws -> Accounts {
-		// TODO: offer bookmarks as well
-		try await provideAccountOptionsCollection()
+		try await provideUserOptionsCollection()
 	}
 }
