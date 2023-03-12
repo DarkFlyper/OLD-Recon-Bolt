@@ -12,7 +12,7 @@ struct MatchListFilterEditor: View {
 					FilterSection(
 						allowList: $filter.queues,
 						toggleLabel: "Filter Queues",
-						disclosureLabel: { "^[\($0) queues](inflect: true) selected" }
+						disclosureLabel: { #"^[\#($0) queues](inflect: true, morphology: { "partOfSpeech": "noun" }) selected"# }
 					)
 				}
 				
@@ -20,7 +20,7 @@ struct MatchListFilterEditor: View {
 					FilterSection(
 						allowList: $filter.maps,
 						toggleLabel: "Filter Maps",
-						disclosureLabel: { "^[\($0) maps](inflect: true) selected" }
+						disclosureLabel: { #"^[\#($0) maps](inflect: true, morphology: { "partOfSpeech": "noun" }) selected"# }
 					)
 				}
 				
