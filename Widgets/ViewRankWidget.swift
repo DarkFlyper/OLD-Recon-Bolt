@@ -38,6 +38,10 @@ struct RankEntryView: TimelineEntryView {
 			}
 		}
 		.padding()
+		.foregroundColor(.white)
+		.background {
+			RankInfoView.darkenedBackground(for: info.tierInfo)
+		}
 	}
 	
 	func currentRank(info: RankInfo) -> some View {

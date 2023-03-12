@@ -71,10 +71,10 @@ struct RankInfoView: View {
 			.shadow(color: .black.opacity(0.2), radius: 2 * unit, x: 0, y: 2 * unit)
 	}
 	
+	private static let darkening: CGFloat = 0.25
+	
 	@ViewBuilder
 	func progressView(for tierInfo: CompetitiveTier?, rankedRating: Int) -> some View {
-		let darkening = 0.25
-		
 		CircularProgressView(lineWidth: lineWidth) {
 			CircularProgressLayer(
 				end: CGFloat(rankedRating) / 100,
@@ -82,12 +82,16 @@ struct RankInfoView: View {
 				color: .white, opacity: 0.5, blendMode: .plusLighter
 			)
 		} base: {
-			Color.white.opacity(darkening).blendMode(.plusLighter)
+			Color.white.opacity(Self.darkening).blendMode(.plusLighter)
 		} background: {
-			ZStack {
-				tierInfo?.backgroundColor
-				Color.black.opacity(darkening).blendMode(.plusDarker)
-			}
+			Self.darkenedBackground(for: tierInfo)
+		}
+	}
+	
+	static func darkenedBackground(for tierInfo: CompetitiveTier?) -> some View {
+		ZStack {
+			tierInfo?.backgroundColor
+			Color.black.opacity(darkening).blendMode(.plusDarker)
 		}
 	}
 	
