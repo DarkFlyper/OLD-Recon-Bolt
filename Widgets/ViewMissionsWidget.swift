@@ -31,7 +31,7 @@ struct MissionListView: TimelineEntryView {
 			Spacer()
 			
 			CurrentMissionsList(
-				title: "Daily",
+				title: "Daily", expectedCount: 2,
 				missions: contracts.dailies,
 				countdownTarget: contracts.dailyRefresh
 			)
@@ -40,7 +40,7 @@ struct MissionListView: TimelineEntryView {
 			
 			if widgetFamily != .systemSmall {
 				CurrentMissionsList(
-					title: "Weekly",
+					title: "Weekly", expectedCount: 3,
 					missions: contracts.weeklies,
 					countdownTarget: contracts.weeklyRefresh,
 					supplement: contracts.queuedUpWeeklies.map { "+\($0.count) queued" }
@@ -56,81 +56,95 @@ struct MissionListView: TimelineEntryView {
 
 struct CurrentMissionsList: View {
 	var title: LocalizedStringKey
+	var expectedCount: Int
 	var missions: [MissionWithInfo]
-	var assets: AssetCollection?
 	var countdownTarget: Date? = nil
 	var supplement: LocalizedStringKey? = nil
 	
 	var body: some View {
-		if !missions.isEmpty {
-			VStack(spacing: 8) {
-				HStack(alignment: .lastTextBaseline) {
-					Text(title)
-						.font(.headline)
-						.multilineTextAlignment(.leading)
-					
-					Spacer()
-					
-					Group {
-						if let countdownTarget {
-							HourlyCountdownText(target: countdownTarget)
-						}
-					}
-					.font(.caption.weight(.medium))
-					.foregroundStyle(.secondary)
-				}
-				.padding(.horizontal, 4)
+		VStack(spacing: 8) {
+			HStack(alignment: .lastTextBaseline) {
+				Text(title)
+					.font(.headline)
+					.multilineTextAlignment(.leading)
 				
-				VStack(spacing: 1) {
-					HStack(alignment: .top, spacing: 16) {
+				Spacer()
+				
+				Group {
+					if let countdownTarget {
+						HourlyCountdownText(target: countdownTarget)
+					}
+				}
+				.font(.caption.weight(.medium))
+				.foregroundStyle(.secondary)
+			}
+			.padding(.horizontal, 4)
+			
+			VStack(spacing: 1) {
+				HStack(alignment: .top, spacing: 16) {
+					if !missions.isEmpty {
 						ForEach(missions, id: \.mission.id) { mission, missionInfo in
 							if let missionInfo {
-								MissionView(missionInfo: missionInfo, mission: mission, assets: assets)
+								MissionView(missionInfo: missionInfo, mission: mission)
 							} else {
 								Image(systemName: "questionmark")
 									.foregroundStyle(.secondary)
 							}
 						}
-					}
-					.padding()
-					.background(Color.secondaryGroupedBackground)
-					.cornerRadius(8)
-					
-					if let supplement {
-						Text(supplement)
-							.font(.footnote)
-							.foregroundStyle(.secondary)
-							.padding(.horizontal, 8)
-							.padding(.vertical, 6)
-							.padding(.top, -2)
-							.background {
-								RoundedRectangle(cornerRadius: 8)
-									.fill(Color.secondaryGroupedBackground)
-									.padding(.top, -8)
-									.clipped()
-							}
+					} else {
+						ForEach(0..<expectedCount, id: \.self) { _ in
+							MissionView.ProgressView(isComplete: true)
+						}
 					}
 				}
+				.padding()
+				.background(Color.secondaryGroupedBackground)
+				.cornerRadius(8)
+				
+				if let supplement {
+					Text(supplement)
+						.font(.footnote)
+						.foregroundStyle(.secondary)
+						.padding(.horizontal, 8)
+						.padding(.vertical, 6)
+						.padding(.top, -2)
+						.background {
+							RoundedRectangle(cornerRadius: 8)
+								.fill(Color.secondaryGroupedBackground)
+								.padding(.top, -8)
+								.clipped()
+						}
+				}
 			}
-			.fixedSize()
 		}
+		.fixedSize()
 	}
 }
 
 struct MissionView: View {
 	var missionInfo: MissionInfo
 	var mission: Mission?
-	var assets: AssetCollection?
+	
+	@Environment(\.assets) private var assets
 	
 	var body: some View {
 		let resolved = ResolvedMission(info: missionInfo, mission: mission, assets: assets)
-		let isComplete = mission?.isComplete == true
 		
-		VStack(spacing: 8) {
+		ProgressView(
+			isComplete: mission?.isComplete == true,
+			progress: resolved.progress.map { ($0, resolved.toComplete) }
+		)
+	}
+	
+	struct ProgressView: View {
+		var isComplete: Bool
+		var progress: (Int, Int)?
+		
+		var body: some View {
 			ZStack {
-				if !isComplete, let progress = resolved.progress {
+				if !isComplete, let (progress, toComplete) = progress {
 					VStack(spacing: 4) {
-						let fractionComplete = CGFloat(progress) / CGFloat(resolved.toComplete)
+						let fractionComplete = CGFloat(progress) / CGFloat(toComplete)
 						CircularProgressView {
 							CircularProgressLayer(end: fractionComplete, color: .accentColor)
 						} base: {
