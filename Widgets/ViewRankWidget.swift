@@ -80,7 +80,7 @@ struct RankEntryView: TimelineEntryView {
 			column(
 				season: peakRank.season,
 				content: { size in
-					PeakRankIcon(peakRank: peakRank, tierInfo: info, size: size)
+					PeakRankIcon(peakRank: peakRank, tierInfo: info, size: size, borderBlendMode: .plusLighter)
 				},
 				rank: info,
 				footer: {
@@ -105,6 +105,7 @@ struct RankEntryView: TimelineEntryView {
 			if shouldShowActName, hasTextBelow { // looks stupid above with nothing below
 				SeasonLabel(season: season)
 					.font(.caption)
+					.blendMode(.plusLighter)
 			}
 			
 			GeometryReader { geometry in
@@ -115,16 +116,21 @@ struct RankEntryView: TimelineEntryView {
 			if shouldShowActName, !hasTextBelow {
 				SeasonLabel(season: season)
 					.font(.caption)
+					.blendMode(.plusLighter)
 			}
 			
 			if shouldShowRankName, let rank {
 				Text(rank.name)
 					.font(.callout.weight(.semibold))
+					.opacity(0.8)
+					.blendMode(.plusLighter)
 			}
 			
 			if shouldShowRankRating {
 				footer()
 					.font(.caption)
+					.foregroundStyle(.secondary)
+					.blendMode(.plusLighter)
 			}
 		}
 	}

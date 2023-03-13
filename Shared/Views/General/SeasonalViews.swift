@@ -26,6 +26,7 @@ struct PeakRankIcon: View {
 	var peakRank: RankSnapshot
 	var tierInfo: CompetitiveTier
 	var size: CGFloat
+	var borderBlendMode: BlendMode = .normal
 	
 	@Environment(\.assets) private var assets
 	@Environment(\.colorScheme) private var colorScheme
@@ -36,6 +37,7 @@ struct PeakRankIcon: View {
 			assets?.seasons.acts[peakRank.season]?
 				.borders.last?.fullImage.view()
 				.opacity(colorScheme == .dark ? 0.4 : 1) // it's very light, so this helps maintain the same contrast
+				.blendMode(borderBlendMode)
 			
 			tierInfo.rankTriangleUpwards?.view(shouldLoadImmediately: true)
 				.scaleEffect(0.65, anchor: .init(x: 0.5, y: 0.5)) // visually tweaked to look just right
