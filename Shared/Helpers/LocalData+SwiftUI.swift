@@ -15,12 +15,14 @@ extension View {
 		_ value: LocalData<Value>,
 		id: Value.ID,
 		shouldAutoUpdate: Bool = false,
+		shouldReportErrors: Bool = false,
 		animation: Animation? = .default
 	) -> some View {
 		modifier(LocalDataModifier(
 			value: value.$wrappedValue,
 			id: id,
 			animation: animation,
+			shouldReportErrors: shouldReportErrors,
 			autoUpdate: shouldAutoUpdate ? Value.autoUpdate(for:using:) : nil
 		))
 	}
@@ -56,6 +58,7 @@ private struct LocalDataModifier<Value: LocalDataStored>: ViewModifier {
 	@Binding var value: Value?
 	var id: Value.ID
 	var animation: Animation?
+	var shouldReportErrors = false
 	var autoUpdate: ((Value.ID, ValorantClient) async throws -> Void)? = nil
 	
 	@State private var token: (id: Value.ID, AnyCancellable)? = nil
@@ -77,20 +80,23 @@ private struct LocalDataModifier<Value: LocalDataStored>: ViewModifier {
 					}
 				token = (id, cancellable)
 			}
-			.valorantLoadTask(id: id) { await attemptAutoUpdate(client: $0) }
+			.valorantLoadTask(id: id) { try await attemptAutoUpdate(client: $0) }
 			.onSceneActivation {
 				await load {
-					await attemptAutoUpdate(client: $0)
+					try await attemptAutoUpdate(client: $0)
 				}
 			}
 	}
 	
-	func attemptAutoUpdate(client: ValorantClient) async {
+	func attemptAutoUpdate(client: ValorantClient) async throws {
 		guard !isLocalDataLocked else { return }
 		do {
 			try await autoUpdate?(id, client)
 		} catch {
 			print("error auto-updating \(Value.self) \(id)!", error)
+			if shouldReportErrors {
+				throw error
+			}
 		}
 	}
 }

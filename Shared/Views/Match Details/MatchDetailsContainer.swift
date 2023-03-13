@@ -15,7 +15,7 @@ struct MatchDetailsContainer: View {
 				ProgressView()
 			}
 		}
-		.withLocalData($details, id: matchID, shouldAutoUpdate: true)
+		.withLocalData($details, id: matchID, shouldAutoUpdate: true, shouldReportErrors: true)
 		.loadErrorAlertTitle("Could not load match details!")
 		.navigationTitle("Match Details")
 		.navigationBarTitleDisplayMode(.inline)
