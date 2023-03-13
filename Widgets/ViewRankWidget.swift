@@ -80,7 +80,12 @@ struct RankEntryView: TimelineEntryView {
 			column(
 				season: peakRank.season,
 				content: { size in
-					PeakRankIcon(peakRank: peakRank, tierInfo: info, size: size, borderBlendMode: .plusLighter)
+					PeakRankIcon(
+						peakRank: peakRank, tierInfo: info,
+						size: size,
+						borderOpacity: 0.7,
+						borderBlendMode: .plusLighter
+					)
 				},
 				rank: info,
 				footer: {

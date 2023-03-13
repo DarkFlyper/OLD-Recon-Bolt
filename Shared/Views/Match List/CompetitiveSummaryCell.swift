@@ -72,7 +72,11 @@ struct CompetitiveSummaryCell: View {
 				SeasonLabel(season: peakRank.season)
 					.font(secondaryFont)
 				
-				PeakRankIcon(peakRank: peakRank, tierInfo: info, size: artworkSize)
+				PeakRankIcon(
+					peakRank: peakRank, tierInfo: info,
+					size: artworkSize,
+					borderOpacity: colorScheme == .dark ? 0.4 : 1 // it's very light, so this helps maintain the same contrast
+				)
 				
 				VStack {
 					Text(info.name)
