@@ -119,7 +119,6 @@ final class ImageManager: ObservableObject {
 	@MainActor
 	private final class ImageCache {
 		// caching these helps a lot with performance
-		// nil means image loading was attempted but failed
 		private var cached: [AssetImage: CacheState] = [:]
 		
 		private static let cacheSizeLimit = 256 * 256 // pixels
@@ -150,7 +149,7 @@ final class ImageManager: ObservableObject {
 	}
 	
 	private final actor Updater {
-		private var inProgress: Set<AssetImage> = []
+		private var inProgress: [AssetImage: [CheckedContinuation<Void, Never>]] = [:]
 		private var completed: Set<AssetImage> = []
 		private let client = AssetClient()
 		
@@ -163,8 +162,20 @@ final class ImageManager: ObservableObject {
 		
 		func download(_ image: AssetImage) async {
 			guard !completed.contains(image) else { return }
-			guard inProgress.insert(image).inserted else { return }
-			defer { inProgress.remove(image) }
+			if inProgress[image] != nil {
+				await withCheckedContinuation {
+					inProgress[image]!.append($0)
+				}
+				return
+			}
+			inProgress[image] = []
+			defer {
+				let toMark = inProgress[image]!
+				inProgress[image] = nil
+				for continuation in toMark {
+					continuation.resume()
+				}
+			}
 			
 			if image.hasMetadata {
 				do {
@@ -233,5 +244,18 @@ private extension AssetImage {
 	
 	func save(_ metadata: ImageMetadata) throws {
 		try JSONEncoder().encode(metadata).write(to: metadataURL)
+	}
+}
+
+extension ImageManager.CacheState: CustomStringConvertible {
+	var description: String {
+		switch self {
+		case .missing:
+			return "CacheState.missing"
+		case .tooLarge:
+			return "CacheState.tooLarge"
+		case .cached:
+			return "CacheState.cached"
+		}
 	}
 }
