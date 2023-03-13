@@ -150,7 +150,7 @@ struct MatchCell: View {
 							.foregroundColor(.red)
 					}
 				}
-				.font(.caption)
+				.font(.caption.monospacedDigit())
 				
 				let eloChange = match.ratingEarned
 				Text(eloChange > 0 ? "+\(eloChange)" : eloChange < 0 ? "\(eloChange)" : "=")
