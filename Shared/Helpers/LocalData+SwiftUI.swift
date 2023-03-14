@@ -61,7 +61,7 @@ private struct LocalDataModifier<Value: LocalDataStored>: ViewModifier {
 	var shouldReportErrors = false
 	var autoUpdate: ((Value.ID, ValorantClient) async throws -> Void)? = nil
 	
-	@State private var token: (id: Value.ID, AnyCancellable)? = nil
+	@StateObject private var tokenStorage = TokenStorage()
 	@Environment(\.isLocalDataLocked) var isLocalDataLocked
 	@Environment(\.valorantLoad) var load
 	
@@ -69,16 +69,16 @@ private struct LocalDataModifier<Value: LocalDataStored>: ViewModifier {
 		content
 			.task(id: id) {
 				guard !isLocalDataLocked else { return }
-				if let token, token.id == id { return }
-				let cancellable = LocalDataProvider.shared[keyPath: Value.managerPath]
-					.objectPublisher(for: id)
-					.receive(on: DispatchQueue.main)
-					.sink { newValue, wasCached in
-						withAnimation(wasCached ? nil : animation) {
-							value = newValue
+				tokenStorage.ensureSubscribed(for: id) {
+					LocalDataProvider.shared[keyPath: Value.managerPath]
+						.objectPublisher(for: id)
+						.receive(on: DispatchQueue.main)
+						.sink { newValue, wasCached in
+							withAnimation(wasCached ? nil : animation) {
+								value = newValue
+							}
 						}
-					}
-				token = (id, cancellable)
+				}
 			}
 			.valorantLoadTask(id: id) { try await attemptAutoUpdate(client: $0) }
 			.onSceneActivation {
@@ -97,6 +97,16 @@ private struct LocalDataModifier<Value: LocalDataStored>: ViewModifier {
 			if shouldReportErrors {
 				throw error
 			}
+		}
+	}
+	
+	private final class TokenStorage: ObservableObject {
+		// not published—this shouldn't cause view updates
+		var token: (id: Value.ID, AnyCancellable)? = nil
+		
+		func ensureSubscribed(for id: Value.ID, subscribe: () -> AnyCancellable) {
+			if let token, token.id == id { return }
+			token = (id, subscribe())
 		}
 	}
 }
