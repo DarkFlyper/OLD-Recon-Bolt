@@ -61,10 +61,11 @@ private struct ValorantLoadModifier: ViewModifier {
 }
 
 typealias ValorantLoadTask = (ValorantClient) async throws -> Void
+typealias ValorantLoadFunction = (@escaping ValorantLoadTask) async -> Void
 
 extension EnvironmentValues {
 	/// Executes some remote loading operation using the given ``ValorantClient``.
-	var valorantLoad: (@escaping ValorantLoadTask) async -> Void {
+	var valorantLoad: ValorantLoadFunction {
 		get {
 			let load = self[Key.self]
 			return { [location] task in

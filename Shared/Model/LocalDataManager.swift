@@ -2,7 +2,7 @@ import Foundation
 import Combine
 import HandyOperators
 
-typealias LocalDataPublisher<Value> = AnyPublisher<(Value, wasCached: Bool), Never>
+typealias LocalDataPublisher<Value> = AnyPublisher<(value: Value, wasCached: Bool), Never>
 
 /// - "mom can we have a database?"
 /// - "no honey we have a database at home"
@@ -67,8 +67,8 @@ final actor LocalDataManager<Object: Identifiable & Codable> where Object.ID: Lo
 	}
 	
 	private func _objectPublisher(for id: Object.ID) -> LocalDataPublisher<Object> {
-		cachedObject(for: id).publisher.map { ($0, wasCached: true) }
-			.merge(with: subject(for: id).map { ($0, wasCached: false) })
+		cachedObject(for: id).publisher.map { (value: $0, wasCached: true) }
+			.merge(with: subject(for: id).map { (value: $0, wasCached: false) })
 			.eraseToAnyPublisher()
 	}
 	

@@ -10,6 +10,7 @@ struct AssetCollection: Codable {
 	let missions: [Mission.ID: MissionInfo]
 	let contracts: [Contract.ID: ContractInfo]
 	let gameModes: [GameMode.ID: GameModeInfo]
+	let queues: [QueueID: QueueInfo]
 	let objectives: [Objective.ID: ObjectiveInfo]
 	let playerCards: [PlayerCard.ID: PlayerCardInfo]
 	let playerTitles: [PlayerTitle.ID: PlayerTitleInfo]

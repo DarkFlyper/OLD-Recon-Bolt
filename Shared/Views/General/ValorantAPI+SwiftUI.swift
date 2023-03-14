@@ -2,6 +2,8 @@ import SwiftUI
 import ValorantAPI
 import ArrayBuilder
 
+// TODO: make all these localizable!
+
 extension Team.ID {
 	var color: Color? {
 		switch rawID {
@@ -25,6 +27,7 @@ extension BasicMatchInfo {
 	}
 }
 
+// FIXME: switch over to queues in assets
 extension QueueID {
 	var name: String {
 		switch rawValue {

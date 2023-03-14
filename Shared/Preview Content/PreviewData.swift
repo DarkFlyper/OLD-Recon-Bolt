@@ -29,6 +29,8 @@ enum PreviewData {
 		.split: "split",
 	].mapValues { loadJSON(named: $0, in: "example matches") }
 	
+	static let allMatches: [MatchDetails] = Array(exampleMatches.values) + [singleMatch, strangeMatch, surrenderedMatch, funkySpikeRush]
+	
 	static let compUpdates = loadJSON(named: "example_updates", as: [CompetitiveUpdate].self)
 	
 	static let summary = loadJSON(named: "example_summary", as: CareerSummary.self)

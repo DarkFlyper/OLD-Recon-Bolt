@@ -13,7 +13,7 @@ struct CompetitiveSummaryCell: View {
 	private let secondaryFont = Font.caption
 	
 	var body: some View {
-		NavigationLink {
+		TransparentNavigationLink {
 			CareerSummaryView(summary: summary)
 		} label: {
 			HStack(alignment: .rankIcon, spacing: 16) {

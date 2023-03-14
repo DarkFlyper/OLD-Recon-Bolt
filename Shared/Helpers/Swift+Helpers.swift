@@ -24,6 +24,13 @@ extension Sequence {
 	func movingToFront(where predicate: (Element) -> Bool) -> [Element] {
 		Array(self) <- { _ = $0.stablePartition { !predicate($0) } }
 	}
+	
+	func count(where isCounted: (Element) throws -> Bool) rethrows -> Int {
+		try self
+			.lazy
+			.filter(isCounted)
+			.reduce(0) { count, _ in count + 1 }
+	}
 }
 
 extension Collection {

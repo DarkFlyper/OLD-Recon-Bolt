@@ -32,6 +32,15 @@ struct MatchListView: View {
 				if let summary {
 					CompetitiveSummaryCell(summary: summary)
 				}
+				
+				TransparentNavigationLink {
+					if let user, let matchList {
+						StatisticsViewWrapper(user: user, matchList: matchList)
+					}
+				} label: {
+					Label("View Stats", systemImage: "chart.line.uptrend.xyaxis")
+				}
+				.disabled(user == nil || matchList == nil || isIncognito)
 			}
 			
 			Section(header: Text("Matches")) {
