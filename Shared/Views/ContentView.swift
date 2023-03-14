@@ -48,6 +48,8 @@ struct ContentView: View {
 		.onSceneActivation {
 			Task { await assetManager.loadAssets() }
 		}
+		.environment(\.deepLink, handle(_:))
+		.onOpenURL(perform: handle(_:))
 	}
 	
 	@ViewBuilder
@@ -62,11 +64,60 @@ struct ContentView: View {
 		}
 	}
 	
+	func handle(_ url: URL) {
+		print("handling", url)
+		do {
+			if let widgetLink = try WidgetLink(from: url) {
+				handle(widgetLink)
+			}
+		} catch {
+			print("could not decode opened url: \(url)")
+		}
+	}
+	
+	func handle(_ widgetLink: WidgetLink) {
+		print("handling", widgetLink)
+		if let account = widgetLink.account {
+			do {
+				try accountManager.setActive(account)
+				print(accountManager.activeAccount!.session.userID)
+			} catch {
+				print("error setting account to \(account) for widget link")
+			}
+		}
+		// TODO: handle destination (deep link to e.g. store)
+	}
+	
+	func handle(_ link: InAppLink) {
+		switch link {
+		case .storefront:
+			tab = .settings
+			// TODO: maybe even reset settings nav path & scroll it to be visible? would require a lot of conditionalizing
+		}
+	}
+	
 	enum Tab: String {
 		case career
 		case live
 		case reference
 		case settings
+	}
+}
+
+enum InAppLink {
+	case storefront
+}
+
+extension EnvironmentValues {
+	var deepLink: (InAppLink) -> Void {
+		get { self[DeepLinkKey.self] }
+		set { self[DeepLinkKey.self] = newValue }
+	}
+	
+	struct DeepLinkKey: EnvironmentKey {
+		static var defaultValue: (InAppLink) -> Void = {
+			print("no deep link handler installed; ignoring", $0)
+		}
 	}
 }
 

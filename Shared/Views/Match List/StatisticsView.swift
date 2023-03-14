@@ -8,6 +8,7 @@ struct StatisticsViewWrapper: View {
 	var matchList: MatchList
 	
 	@Environment(\.ownsProVersion) private var ownsProVersion
+	@Environment(\.deepLink) private var deepLink
 	
 	var body: some View {
 		if #available(iOS 16.0, *) {
@@ -27,7 +28,7 @@ struct StatisticsViewWrapper: View {
 						// TODO: sales pitch incl. screenshots? blurred view?
 						
 						Button {
-							// TODO: implement
+							deepLink(.storefront)
 						} label: {
 							HStack {
 								Text("View Store in Settings")
@@ -40,12 +41,19 @@ struct StatisticsViewWrapper: View {
 					.padding(8)
 				}
 				.padding()
+				.navigationTitle("Statistics")
 			}
 		} else {
-			VStack {
-				Text("Statistics not available!")
-				Text("This feature requires iOS 16 or newer.")
+			GroupBox {
+				VStack {
+					Text("Statistics not available!")
+						.font(.title.weight(.bold))
+						.padding(.bottom, 4)
+					Text("This feature requires iOS 16 or newer.")
+				}
 			}
+			.padding()
+			.navigationTitle("Statistics")
 		}
 	}
 }
@@ -85,7 +93,7 @@ struct StatisticsView: View {
 	func loadingSection() -> some View {
 		Section {
 			VStack(alignment: .leading, spacing: 12) {
-				Text("To gather statistics, we first need to load matches to process. Note that large amounts can take a long time when downloading for the first time!")
+				Text("To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!")
 				
 				HStack {
 					Stepper("\(fetchCount) matches", value: $fetchCount, in: 1...matchList.matches.count)
