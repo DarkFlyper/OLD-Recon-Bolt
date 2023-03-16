@@ -47,7 +47,6 @@ struct EventRow: View, Animatable {
 	
 	@ViewBuilder
 	private func killContent(for kill: Kill) -> some View {
-		let damageSource = kill.finishingDamage.source
 		let damageType = kill.finishingDamage.type
 		
 		icon {
@@ -66,7 +65,7 @@ struct EventRow: View, Animatable {
 			if damageType == .bomb {
 				Text("Exploded")
 					.fontWeight(.medium)
-			} else if damageType == .weapon, let weaponID = Weapon.ID(damageSource.lowercased()) {
+			} else if let weaponID = kill.finishingDamage.weapon {
 				WeaponImage.killStreamIcon(weaponID)
 					.scaleEffect(x: -1, y: 1, anchor: .center)
 					.padding(4)
@@ -79,11 +78,11 @@ struct EventRow: View, Animatable {
 				if let slot = AgentInfo.Ability.Slot(rawValue: slotName) {
 					AgentImage.ability(killer.agentID!, slot: slot)
 				} else {
-					Text("<Unknown Ability>")
+					Text("Unknown Ability")
 						.foregroundStyle(.secondary)
 				}
 			} else {
-				Text("<Unknown Type>")
+				Text("Unknown Type")
 					.foregroundStyle(.secondary)
 			}
 		}
@@ -127,5 +126,11 @@ struct EventRow: View, Animatable {
 			.aspectRatio(1, contentMode: .fit)
 			.fixedSize(horizontal: true, vertical: false)
 			.background(event.relativeColor)
+	}
+}
+
+extension Kill.Damage {
+	var weapon: Weapon.ID? {
+		type == .weapon ? Weapon.ID(source.lowercased()) : nil
 	}
 }

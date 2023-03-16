@@ -7,7 +7,7 @@ struct LoadingSection: View {
 	var matchList: MatchList
 	@Binding var statistics: Statistics?
 	
-	@State var fetchCount = 100
+	@State var fetchCount = 20
 	@StateObject private var fetcher = MatchFetcher()
 	
 	@Environment(\.valorantLoad) private var load

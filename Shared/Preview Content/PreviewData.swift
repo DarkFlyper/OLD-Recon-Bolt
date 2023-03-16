@@ -20,6 +20,7 @@ enum PreviewData {
 	static let funkySpikeRush = loadJSON(named: "funky_spike_rush", in: "example matches", as: MatchDetails.self)
 	static let deathmatch = loadJSON(named: "deathmatch", in: "example matches", as: MatchDetails.self)
 	static let escalation = loadJSON(named: "escalation", in: "example matches", as: MatchDetails.self)
+	static let doubleDamage = loadJSON(named: "double_damage", in: "example matches", as: MatchDetails.self)
 	
 	static let exampleMatches: [MapID: MatchDetails] = [
 		.ascent: "ascent",

@@ -47,18 +47,48 @@ final class Statistics {
 			let rounds = matches
 				.lazy
 				.flatMap(\.roundResults)
-				.map { $0.stats(for: userID)! }
 			for round in rounds {
-				guard let weapon = round.economy.weapon else { continue }
-				// TODO: improve on this horrible naive heuristic lol
-				for damage in round.damageDealt {
-					overall += damage
-					byWeapon[weapon, default: .zero] += damage
+				let stats = round.stats(for: userID)!
+				guard let startingWeapon = stats.economy.weapon else { continue }
+				
+				stats.damageDealt.forEach { overall += $0 }
+				
+				// we don't get nearly enough information from the data to say anything with confidence here, so we'll use a heuristic to approximate reality:
+				// we know what weapon the user had at the start of the round, and when they get a kill, we know the weapon or ability used
+				// so we'll track the last known weapon for the user as the round plays out, and assume all damage dealt to an enemy was done with the last known weapon at their time of death or the end of the round
+				var damages: [Player.ID: Tally] = stats.damageDealt.reduce(into: [:]) {
+					$0[$1.receiver, default: .zero] += $1
+				}
+				
+				var lastKnownWeapon = startingWeapon
+				let allKillsInOrder = round.playerStats
+					.lazy
+					.flatMap(\.kills)
+					.sorted(on: \.roundTimeMillis)
+				for kill in allKillsInOrder {
+					// update weapon
+					if kill.killer == userID {
+						lastKnownWeapon = kill.finishingDamage.weapon ?? lastKnownWeapon
+					}
+					// if we've damaged the victim, assume we used the last weapon we're known to have had at the time they died to do all damage to them
+					if let damage = damages.removeValue(forKey: kill.victim) {
+						byWeapon[lastKnownWeapon, default: .zero] += damage
+					}
+				}
+				
+				// assume last known weapon for all damage without a known kill
+				for damage in damages.values {
+					byWeapon[lastKnownWeapon, default: .zero] += damage
 				}
 			}
+			
+			// this can happen for ability-only damage
+			byWeapon = byWeapon.filter { $0.value != .zero }
 		}
 		
-		struct Tally {
+		struct Tally: Equatable {
+			typealias Raw = RoundResult.PlayerStats.Damage
+			
 			public var headshots = 0
 			public var bodyshots = 0
 			public var legshots = 0
@@ -67,12 +97,26 @@ final class Statistics {
 			
 			static let zero = Self()
 			
-			static func += (lhs: inout Self, rhs: RoundResult.PlayerStats.Damage) {
+			static func += (lhs: inout Self, rhs: Raw) {
+				lhs += .init(rhs)
+			}
+			
+			static func += (lhs: inout Self, rhs: Self) {
 				lhs.headshots += rhs.headshots
 				lhs.bodyshots += rhs.bodyshots
 				lhs.legshots += rhs.legshots
 			}
 		}
+	}
+}
+
+extension Statistics.HitDistribution.Tally {
+	init(_ damage: Raw) {
+		self.init(
+			headshots: damage.headshots,
+			bodyshots: damage.bodyshots,
+			legshots: damage.legshots
+		)
 	}
 }
 
@@ -87,6 +131,6 @@ extension PreviewData {
 	static let statistics = Statistics(userID: userID, matches: allMatches)
 	
 	static let allMatches: [MatchDetails] = Array(exampleMatches.values)
-	+ [singleMatch, strangeMatch, surrenderedMatch, funkySpikeRush, deathmatch, escalation]
+	+ [singleMatch, strangeMatch, surrenderedMatch, funkySpikeRush, deathmatch, escalation, doubleDamage]
 }
 #endif
