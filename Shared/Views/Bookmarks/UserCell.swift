@@ -8,8 +8,6 @@ struct UserCell: View {
 	@LocalData var identity: Player.Identity?
 	@LocalData var summary: CareerSummary?
 	
-	@Environment(\.location) var locationOverride
-	
 	var body: some View {
 		let artworkSize = 64.0
 		
@@ -24,14 +22,7 @@ struct UserCell: View {
 				}
 				
 				VStack(alignment: .leading, spacing: 4) {
-					if let user {
-						Text(user.gameName)
-							.fontWeight(.semibold)
-						+ Text(" #\(user.tagLine)")
-							.foregroundColor(.secondary)
-					} else {
-						Text("Unknown Player")
-					}
+					UserLabel(userID: userID, shouldAutoUpdate: false, user: user)
 					
 					if let identity {
 						Text("Level \(identity.accountLevel)")

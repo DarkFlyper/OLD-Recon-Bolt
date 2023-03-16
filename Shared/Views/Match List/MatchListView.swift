@@ -35,7 +35,7 @@ struct MatchListView: View {
 				
 				TransparentNavigationLink {
 					if let user, let matchList {
-						StatisticsViewWrapper(user: user, matchList: matchList)
+						StatisticsContainer(user: user, matchList: matchList)
 					}
 				} label: {
 					Label("View Stats", systemImage: "chart.line.uptrend.xyaxis")

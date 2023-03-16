@@ -77,7 +77,7 @@ struct ResolvedMission {
 	var toComplete: Int
 	
 	init(info: MissionInfo, mission: Mission?, assets: AssetCollection?) {
-		let (objectiveID, progress) = mission?.objectiveProgress.singleElement ?? (nil, nil)
+		let (objectiveID, progress) = mission?.objectiveProgress.onlyElement() ?? (nil, nil)
 		self.progress = progress
 		let objectiveValue = info.objective(id: objectiveID)
 		self.toComplete = objectiveValue?.value

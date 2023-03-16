@@ -18,6 +18,8 @@ enum PreviewData {
 	static let surrenderedMatch = loadJSON(named: "surrendered_match", as: MatchDetails.self)
 	/// A spike rush involving chamber Q/X and neon X.
 	static let funkySpikeRush = loadJSON(named: "funky_spike_rush", in: "example matches", as: MatchDetails.self)
+	static let deathmatch = loadJSON(named: "deathmatch", in: "example matches", as: MatchDetails.self)
+	static let escalation = loadJSON(named: "escalation", in: "example matches", as: MatchDetails.self)
 	
 	static let exampleMatches: [MapID: MatchDetails] = [
 		.ascent: "ascent",
@@ -28,8 +30,6 @@ enum PreviewData {
 		.icebox: "icebox",
 		.split: "split",
 	].mapValues { loadJSON(named: $0, in: "example matches") }
-	
-	static let allMatches: [MatchDetails] = Array(exampleMatches.values) + [singleMatch, strangeMatch, surrenderedMatch, funkySpikeRush]
 	
 	static let compUpdates = loadJSON(named: "example_updates", as: [CompetitiveUpdate].self)
 	

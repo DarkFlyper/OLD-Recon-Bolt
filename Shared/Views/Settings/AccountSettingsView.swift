@@ -51,6 +51,7 @@ struct AccountSettingsView: View {
 			}
 			.onDelete { accountManager.storedAccounts.remove(atOffsets: $0) }
 			.onMove { accountManager.storedAccounts.move(fromOffsets: $0, toOffset: $1) }
+			.moveDisabled(!ownsProVersion)
 			
 			Button {
 				loginTarget = .extraAccount
@@ -91,7 +92,6 @@ struct AccountSettingsView: View {
 		@ObservedObject var accountManager: AccountManager
 		@State var loadError: Error?
 		
-		@LocalData var user: User?
 		@Environment(\.ownsProVersion) private var ownsProVersion
 		
 		var body: some View {
@@ -109,15 +109,8 @@ struct AccountSettingsView: View {
 					}
 				} label: {
 					Label {
-						HStack(spacing: 4) {
-							if let user {
-								Text(user.gameName).fontWeight(.semibold)
-								Text("#\(user.tagLine)")
-							} else {
-								Text("Unknown Account")
-							}
-						}
-						.tint(.primary)
+						UserLabel(userID: accountID)
+							.tint(.primary)
 					} icon: {
 						Image(systemName: "checkmark")
 							.opacity(isActive ? 1 : 0)
@@ -127,7 +120,6 @@ struct AccountSettingsView: View {
 				
 				Spacer()
 			}
-			.withLocalData($user, id: accountID, shouldAutoUpdate: true)
 			.alert("Could not Load Account!", for: $loadError)
 			.deleteDisabled(isActive)
 		}

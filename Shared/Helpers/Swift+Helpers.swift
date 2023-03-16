@@ -38,9 +38,18 @@ extension Collection {
 		indices.contains(index) ? self[index] : nil
 	}
 	
-	var singleElement: Element {
-		assert(count == 1)
-		return first!
+	func onlyElement() -> Element? {
+		count == 1 ? first! : nil
+	}
+}
+
+extension Sequence {
+	func onlyElement(where isIncluded: (Element) throws -> Bool) rethrows -> Element? {
+		try lazy.filter(isIncluded).onlyElement()
+	}
+	
+	func onlyElement() -> Element? {
+		Array(prefix(2)).onlyElement()
 	}
 }
 

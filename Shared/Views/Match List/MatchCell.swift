@@ -24,7 +24,7 @@ struct MatchCell: View {
 						try await $0.fetchMatchDetails(for: match.id)
 					}
 				} label: {
-					Label("Fetch Details", systemImage: "info.circle.fill")
+					Label("Fetch Details", systemImage: "arrow.down")
 						.labelStyle(.iconOnly)
 				}
 				.tint(.blue)

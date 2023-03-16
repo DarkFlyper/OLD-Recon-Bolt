@@ -60,7 +60,6 @@ struct SettingsView: View {
 			}
 		}
 		.navigationTitle("Settings")
-		.withToolbar()
 	}
 }
 
@@ -81,8 +80,10 @@ private extension AppSettings.Theme {
 struct SettingsView_Previews: PreviewProvider {
 	static var previews: some View {
 		SettingsView(accountManager: .mocked, assetManager: .forPreviews, settings: .init(), store: .init())
+			.withToolbar()
 		
 		SettingsView(accountManager: .mockEmpty, assetManager: .mockEmpty, settings: .init(), store: .init())
+			.withToolbar()
 			.previewDisplayName("Empty Managers")
 		
 		AppIconPicker(manager: .init())
