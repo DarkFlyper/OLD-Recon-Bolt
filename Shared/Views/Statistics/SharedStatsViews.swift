@@ -19,15 +19,15 @@ enum Stats {
 	}
 	
 	struct WeaponLabel: View {
-		var weapon: Weapon.ID?
+		var weapon: Weapon.ID
 		
 		@Environment(\.assets) private var assets
 		
 		var body: some View {
-			if let weapon, let weapon = assets?.weapons[weapon] {
+			if let weapon = assets?.weapons[weapon] {
 				Text(weapon.displayName)
 			} else {
-				Text(weapon == nil ? "No Weapon" : "Unknown Weapon")
+				Text("Unknown Weapon")
 					.foregroundStyle(.secondary)
 			}
 		}
