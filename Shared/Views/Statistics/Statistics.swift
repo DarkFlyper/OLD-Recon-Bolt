@@ -5,6 +5,7 @@ final class Statistics {
 	// for icons
 	let modeByQueue: [QueueID?: GameMode.ID]
 	
+	let matches: [MatchDetails]
 	let playtime: Playtime
 	let hitDistribution: HitDistribution
 	
@@ -13,6 +14,8 @@ final class Statistics {
 			matches.map { ($0.matchInfo.queueID, $0.matchInfo.modeID) },
 			uniquingKeysWith: { old, new in old }
 		)
+		
+		self.matches = matches
 		
 		playtime = .init(userID: userID, matches: matches)
 		hitDistribution = .init(userID: userID, matches: matches)
@@ -42,6 +45,7 @@ final class Statistics {
 	struct HitDistribution {
 		var overall = Tally()
 		var byWeapon: [Weapon.ID: Tally] = [:]
+		var byMatch: [(id: Match.ID, tally: Tally)]
 		
 		init(userID: User.ID, matches: [MatchDetails]) {
 			let rounds = matches
@@ -51,7 +55,9 @@ final class Statistics {
 				let stats = round.stats(for: userID)!
 				guard let startingWeapon = stats.economy.weapon else { continue }
 				
-				stats.damageDealt.forEach { overall += $0 }
+				for damage in stats.damageDealt {
+					overall += damage
+				}
 				
 				// we don't get nearly enough information from the data to say anything with confidence here, so we'll use a heuristic to approximate reality:
 				// we know what weapon the user had at the start of the round, and when they get a kill, we know the weapon or ability used
@@ -84,6 +90,16 @@ final class Statistics {
 			
 			// this can happen for ability-only damage
 			byWeapon = byWeapon.filter { $0.value != .zero }
+			
+			byMatch = matches
+				.lazy
+				.map {
+					($0.id, $0.roundResults.lazy
+						.map { $0.stats(for: userID)! }
+						.flatMap(\.damageDealt)
+						.reduce(into: .zero, +=))
+				}
+				.filter { $0.tally != .zero }
 		}
 		
 		struct Tally: Equatable {

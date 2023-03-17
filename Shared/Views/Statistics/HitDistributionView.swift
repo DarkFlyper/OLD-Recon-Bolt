@@ -1,5 +1,7 @@
 import SwiftUI
 import ValorantAPI
+import Charts
+import Collections
 
 @available(iOS 16.0, *)
 struct HitDistributionView: View {
@@ -10,9 +12,9 @@ struct HitDistributionView: View {
 	var distribution: Statistics.HitDistribution { statistics.hitDistribution }
 	
 	var body: some View {
-		// TODO: breakdown by game as chart (stacked area)
-		
 		List {
+			chartOverTime()
+			
 			Section("Overall") {
 				distributionGrid(for: distribution.overall)
 			}
@@ -20,6 +22,50 @@ struct HitDistributionView: View {
 			byWeapon()
 		}
 		.navigationTitle("Hit Distribution")
+	}
+	
+	func chartOverTime() -> some View {
+		Section {
+			Chart(distribution.byMatch.indexed(), id: \.element.id) { index, match in
+				AreaMark(x: .value("Match", index), y: .value("Legs", match.tally.legshots), stacking: .normalized)
+					.foregroundStyle(by: .value("Part", "Legs"))
+				AreaMark(x: .value("Match", index), y: .value("Body", match.tally.bodyshots), stacking: .normalized)
+					.foregroundStyle(by: .value("Part", "Body"))
+				AreaMark(x: .value("Match", index), y: .value("Head", match.tally.headshots), stacking: .normalized)
+					.foregroundStyle(by: .value("Part", "Head"))
+			}
+			.chartPlotStyle {
+				$0.cornerRadius(4)
+			}
+			.chartXAxis(.hidden)
+			.chartOverlay { chart in
+				GeometryReader { geometry in
+					let frame = geometry[chart.plotAreaFrame]
+					let average = CGFloat(distribution.overall.headshots) / CGFloat(distribution.overall.total)
+					VStack(alignment: .leading, spacing: 0) {
+						Rectangle()
+							.frame(height: 1)
+						
+						let percentage = percentageLabel(
+							count: distribution.overall.headshots,
+							total: distribution.overall.total
+						)
+						Text("Average: \(percentage)")
+							.font(.caption)
+							.padding(2)
+					}
+					.frame(width: chart.plotAreaSize.width)
+					.offset(y: frame.minY + frame.height * average)
+					.blendMode(.destinationOut)
+				}
+			}
+			.padding(.vertical)
+			.compositingGroup()
+		} footer: {
+			let count = distribution.byMatch.count
+			Text("Data from \(count) games (\(statistics.matches.count - count) skipped lacking data)")
+				.font(.footnote)
+		}
 	}
 	
 	func distributionGrid(for tally: Tally) -> some View {
@@ -82,8 +128,19 @@ struct HitDistributionView: View {
 		}
 	}
 	
-	func percentageLabel(count: Int, total: Int) -> Text {
-		Text(Double(count) / Double(total), format: .percent.precision(.fractionLength(1...1)))
+	func percentageLabel(count: Int, total: Int) -> String {
+		(Double(count) / Double(total)).formatted(.percent.precision(.fractionLength(1...1)))
+	}
+}
+
+@available(iOS 16.0, *)
+extension Match.ID: Plottable {
+	public var primitivePlottable: String {
+		description
+	}
+	
+	public init?(primitivePlottable: String) {
+		self.init(primitivePlottable)
 	}
 }
 
