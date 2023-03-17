@@ -97,7 +97,7 @@ final class Statistics {
 					($0.id, $0.roundResults.lazy
 						.map { $0.stats(for: userID)! }
 						.flatMap(\.damageDealt)
-						.reduce(into: .zero, +=))
+						.reduce(into: Tally.zero, +=))
 				}
 				.filter { $0.tally != .zero }
 		}
