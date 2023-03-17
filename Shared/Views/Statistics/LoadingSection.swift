@@ -18,28 +18,40 @@ struct LoadingSection: View {
 	
 	var body: some View {
 		Section {
-			VStack(alignment: .leading, spacing: 12) {
+			VStack(alignment: .leading, spacing: 16) {
 				Text("To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!")
 				
-				HStack {
-					Stepper("\(fetchCount) matches", value: $fetchCount, in: 1...matchList.matches.count)
+				Divider()
+				
+				VStack {
+					Text("Matches to load: ") + Text("\(fetchCount)").bold()
 					
-					Button("All \(matchList.matches.count)") {
-						fetchCount = matchList.matches.count
+					let oldestTime = sublist.last!.startTime
+					Text("Data going back to \(oldestTime, format: .dateTime.year().month().day())")
+						.foregroundStyle(.secondary)
+						.font(.footnote)
+					
+					HStack {
+						changeButtons(magnitude: 1)
+						changeButtons(magnitude: 10)
+						changeButtons(magnitude: 100)
+						
+						Button("All \(matchList.matches.count)") {
+							fetchCount = matchList.matches.count
+						}
+						.disabled(fetchCount == matchList.matches.count)
 					}
 					.buttonStyle(.bordered)
-					.disabled(fetchCount == matchList.matches.count)
+					.onAppear {
+						fetchCount = clamp(fetchCount)
+					}
+					
+					// TODO: use date instead? or at least allow cutting off from the top? button to filter to specific act?
 				}
-				.onAppear {
-					fetchCount = min(fetchCount, matchList.matches.count)
-				}
+				.backgroundStyle(Color(.tertiarySystemGroupedBackground))
+				.frame(maxWidth: .infinity)
 				
-				let oldestTime = sublist.last!.startTime
-				Text("Data going back to \(oldestTime, format: .dateTime.year().month().day())")
-					.foregroundStyle(.secondary)
-					.font(.footnote)
-				
-				// TODO: use date instead? or at least allow cutting off from the top? button to filter to specific act?
+				Divider()
 				
 				Button("Load Latest \(fetchCount) Matches") {
 					fetcher.fetchMatches(withIDs: sublist.lazy.map(\.id), load: load)
@@ -55,10 +67,44 @@ struct LoadingSection: View {
 			let fetchedCount = sublist.count { fetcher.matches.keys.contains($0.id) }
 			Text("\(fetchedCount)/\(fetchCount) loaded (\(fetcher.errors.count) errors)")
 		}
-		.onReceive(fetcher.objectWillChange.debounce(for: 0.2, scheduler: DispatchQueue.main)) { _ in
-			// compute stats
-			statistics = .init(userID: matchList.userID, matches: sublist.compactMap { fetcher.matches[$0.id] })
+		.onReceive(
+			fetcher.objectWillChange
+				.debounce(for: 0.2, scheduler: DispatchQueue.main),
+			perform: { _ in
+				print("received")
+				let userID = matchList.userID
+				let matches = sublist.compactMap { fetcher.matches[$0.id] }
+				Task.detached(priority: .userInitiated) {
+					print("computing!")
+					let stats = Statistics(userID: userID, matches: matches)
+					await MainActor.run {
+						self.statistics = stats
+					}
+				}
+			}
+		)
+	}
+	
+	@ViewBuilder
+	func changeButtons(magnitude: Int) -> some View {
+		if magnitude <= matchList.matches.count {
+			VStack {
+				changeButton(increment: +magnitude)
+				changeButton(increment: -magnitude)
+			}
 		}
+	}
+	
+	func changeButton(increment: Int) -> some View {
+		Button(increment > 0 ? "+\(increment)" : "\(increment)") {
+			fetchCount = clamp(fetchCount + increment)
+		}
+		.disabled(clamp(fetchCount + increment) == fetchCount)
+		.monospacedDigit()
+	}
+	
+	func clamp(_ count: Int) -> Int {
+		max(1, min(matchList.matches.count, count))
 	}
 }
 
@@ -90,3 +136,24 @@ private final class MatchFetcher: ObservableObject {
 		}
 	}
 }
+
+#if DEBUG
+@available(iOS 16.0, *)
+struct LoadingSection_Previews: PreviewProvider {
+	static var previews: some View {
+		Container(matchList: PreviewData.matchList, statistics: PreviewData.statistics)
+			.withToolbar()
+	}
+	
+	struct Container: View {
+		var matchList: MatchList
+		@State var statistics: Statistics?
+		
+		var body: some View {
+			Form {
+				LoadingSection(matchList: matchList, statistics: $statistics)
+			}
+		}
+	}
+}
+#endif

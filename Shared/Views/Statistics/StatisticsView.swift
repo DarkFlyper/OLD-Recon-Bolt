@@ -22,6 +22,7 @@ struct StatisticsView: View {
 			}
 		}
 		.navigationTitle("Statistics")
+		.buttonBorderShape(.automatic)
 	}
 	
 	func breakdowns(for statistics: Statistics) -> some View {
