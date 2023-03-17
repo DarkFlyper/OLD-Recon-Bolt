@@ -9,11 +9,24 @@ struct HitDistributionView: View {
 	
 	var statistics: Statistics
 	
-	var distribution: Statistics.HitDistribution { statistics.hitDistribution }
+	@State var smoothing = 0.0
+	private let smoothingLogBase = 1.5
+	
+	var distribution: Statistics.HitDistribution {
+		statistics.hitDistribution
+	}
 	
 	var body: some View {
 		List {
-			chartOverTime()
+			Section {
+				chartOverTime()
+			} header: {
+				Text("Distribution Over Time")
+			} footer: {
+				let count = distribution.byMatch.count
+				Text("Data from \(count) games (\(statistics.matches.count - count) skipped lacking data)")
+					.font(.footnote)
+			}
 			
 			Section("Overall") {
 				distributionGrid(for: distribution.overall)
@@ -24,47 +37,64 @@ struct HitDistributionView: View {
 		.navigationTitle("Hit Distribution")
 	}
 	
+	@ViewBuilder
 	func chartOverTime() -> some View {
-		Section {
-			Chart(distribution.byMatch.indexed(), id: \.element.id) { index, match in
-				AreaMark(x: .value("Match", index), y: .value("Legs", match.tally.legshots), stacking: .normalized)
+		let average = Double(distribution.overall.headshots) / Double(distribution.overall.total)
+		let percentage = percentageLabel(
+			count: distribution.overall.headshots,
+			total: distribution.overall.total
+		)
+		
+		let windowSize = Int(ceil(pow(smoothingLogBase, smoothing)))
+		let smoothed = distribution.byMatch
+			.windows(ofCount: windowSize)
+			.enumerated()
+			.map { index, window in
+				window.reduce(into: FractionalTally()) { $0 += $1.tally }
+			}
+		
+		Chart {
+			ForEach(smoothed.indices, id: \.self) { index in
+				let tally = smoothed[index]
+				AreaMark(x: .value("Match", index), y: .value("Legs", tally.legshots), stacking: .normalized)
 					.foregroundStyle(by: .value("Part", "Legs"))
-				AreaMark(x: .value("Match", index), y: .value("Body", match.tally.bodyshots), stacking: .normalized)
+				AreaMark(x: .value("Match", index), y: .value("Body", tally.bodyshots), stacking: .normalized)
 					.foregroundStyle(by: .value("Part", "Body"))
-				AreaMark(x: .value("Match", index), y: .value("Head", match.tally.headshots), stacking: .normalized)
+				AreaMark(x: .value("Match", index), y: .value("Head", tally.headshots), stacking: .normalized)
 					.foregroundStyle(by: .value("Part", "Head"))
 			}
-			.chartPlotStyle {
-				$0.cornerRadius(4)
-			}
-			.chartXAxis(.hidden)
-			.chartOverlay { chart in
-				GeometryReader { geometry in
-					let frame = geometry[chart.plotAreaFrame]
-					let average = CGFloat(distribution.overall.headshots) / CGFloat(distribution.overall.total)
-					VStack(alignment: .leading, spacing: 0) {
-						Rectangle()
-							.frame(height: 1)
-						
-						let percentage = percentageLabel(
-							count: distribution.overall.headshots,
-							total: distribution.overall.total
-						)
-						Text("Average: \(percentage)")
-							.font(.caption)
-							.padding(2)
-					}
-					.frame(width: chart.plotAreaSize.width)
-					.offset(y: frame.minY + frame.height * average)
-					.blendMode(.destinationOut)
+			
+			RuleMark(y: .value("Average", 100 * (1 - average)))
+				.lineStyle(.init(lineWidth: 1, dash: [4, 2]))
+				.annotation(position: .bottom) {
+					Text("Average: \(percentage)")
+						.font(.caption)
+						.foregroundColor(.white)
 				}
-			}
-			.padding(.vertical)
-			.compositingGroup()
-		} footer: {
-			let count = distribution.byMatch.count
-			Text("Data from \(count) games (\(statistics.matches.count - count) skipped lacking data)")
-				.font(.footnote)
+				.foregroundStyle(Color.white)
+		}
+		.chartPlotStyle {
+			$0.cornerRadius(6)
+		}
+		.chartXAxis(.hidden)
+		.chartYAxis(.hidden)
+		.chartForegroundStyleScale([
+			"Legs": Color.valorantSelf,
+			"Body": Color.valorantBlue,
+			"Head": Color.valorantRed,
+		])
+		.compositingGroup()
+		.padding(.vertical)
+		.alignmentGuide(.listRowSeparatorLeading) { $0[.leading] }
+		
+		HStack {
+			Text("Smoothing")
+			
+			Slider(
+				value: $smoothing,
+				in: 0...max(0, log(CGFloat(distribution.byMatch.count - 1)) / log(smoothingLogBase)),
+				step: 1
+			)
 		}
 	}
 	
@@ -121,7 +151,6 @@ struct HitDistributionView: View {
 				WeaponImage.killStreamIcon(weapon)
 					.frame(maxHeight: weaponIconHeight)
 			}
-			//.foregroundStyle(.secondary)
 			.foregroundColor(.valorantRed)
 			
 			distributionGrid(for: tally)
@@ -130,6 +159,32 @@ struct HitDistributionView: View {
 	
 	func percentageLabel(count: Int, total: Int) -> String {
 		(Double(count) / Double(total)).formatted(.percent.precision(.fractionLength(1...1)))
+	}
+}
+
+private struct FractionalTally {
+	var headshots: Double = 0.0
+	var bodyshots: Double = 0.0
+	var legshots: Double = 0.0
+	
+	static func += (lhs: inout Self, rhs: Self) {
+		lhs.headshots += rhs.headshots
+		lhs.bodyshots += rhs.bodyshots
+		lhs.legshots += rhs.legshots
+	}
+	
+	static func += (lhs: inout Self, rhs: Statistics.HitDistribution.Tally) {
+		lhs += rhs.normalized()
+	}
+}
+
+private extension Statistics.HitDistribution.Tally {
+	func normalized() -> FractionalTally {
+		.init(
+			headshots: Double(headshots) / .init(total),
+			bodyshots: Double(bodyshots) / .init(total),
+			legshots: Double(legshots) / .init(total)
+		)
 	}
 }
 
