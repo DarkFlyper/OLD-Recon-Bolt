@@ -65,7 +65,7 @@ struct LoadingSection: View {
 			Text("Load Data")
 		} footer: {
 			let fetchedCount = sublist.count { fetcher.matches.keys.contains($0.id) }
-			Text("\(fetchedCount)/\(fetchCount) loaded (^[\(fetcher.errors.count) errors](inflect: true))")
+			Text("\(fetchedCount)/\(fetchCount) loaded (^[\(fetcher.errors.count) ^[errors](inflect: true, morphology: { partOfSpeech: \"noun\" }))")
 		}
 		.onReceive(
 			fetcher.objectWillChange
