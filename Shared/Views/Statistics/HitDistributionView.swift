@@ -17,24 +17,43 @@ struct HitDistributionView: View {
 	}
 	
 	var body: some View {
-		List {
-			Section {
-				chartOverTime()
-			} header: {
-				Text("Distribution Over Time")
-			} footer: {
-				let count = distribution.byMatch.count
-				Text("Data from \(count) games (\(statistics.matches.count - count) skipped lacking data)")
-					.font(.footnote)
+		Group {
+			if distribution.byMatch.isEmpty {
+				GroupBox {
+					VStack(spacing: 8) {
+						Text("Not enough data!")
+							.font(.title2.bold())
+						Text("Select more matches to see data on hit distribution. Deathmatch, Escalation, and other modes don't provide the necessary information.")
+					}
+				}
+				.frame(maxWidth: .infinity)
+				.foregroundStyle(.secondary)
+			} else {
+				List {
+					contents()
+				}
 			}
-			
-			Section("Overall") {
-				distributionGrid(for: distribution.overall)
-			}
-			
-			byWeapon()
 		}
 		.navigationTitle("Hit Distribution")
+	}
+	
+	@ViewBuilder
+	func contents() -> some View {
+		Section {
+			chartOverTime()
+		} header: {
+			Text("Distribution Over Time")
+		} footer: {
+			let count = distribution.byMatch.count
+			Text("Data from \(count) games (\(statistics.matches.count - count) skipped lacking data)")
+				.font(.footnote)
+		}
+		
+		Section("Overall") {
+			distributionGrid(for: distribution.overall)
+		}
+		
+		byWeapon()
 	}
 	
 	@ViewBuilder
@@ -92,7 +111,7 @@ struct HitDistributionView: View {
 			
 			Slider(
 				value: $smoothing,
-				in: 0...max(0, log(CGFloat(distribution.byMatch.count - 1)) / log(smoothingLogBase)),
+				in: 0...max(1, log(CGFloat(distribution.byMatch.count - 1)) / log(smoothingLogBase)),
 				step: 1
 			)
 		}
