@@ -28,6 +28,7 @@ struct ReconBoltApp: App {
 				.onAppear { ReviewManager.registerUsage(points: 2) }
 				.environmentObject(bookmarkList)
 				.environmentObject(imageManager)
+				.environmentObject(settings)
 				.environment(\.assets, assetManager.assets)
 				.environment(\.location, accountManager.activeAccount?.location)
 				.environment(\.ownsProVersion, store.ownsProVersion)

@@ -24,6 +24,8 @@ struct SettingsView: View {
 					}
 				}
 				
+				Toggle("Vibrate when Match Found", isOn: $settings.vibrateOnMatchFound)
+				
 				Picker("Theme", selection: $settings.theme) {
 					ForEach(AppSettings.Theme.allCases, id: \.self) { theme in
 						Text(theme.name)

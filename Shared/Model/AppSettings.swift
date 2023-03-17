@@ -4,6 +4,9 @@ final class AppSettings: ObservableObject {
 	@AppStorage("AppSettings.theme")
 	var theme = Theme.system
 	
+	@AppStorage("vibrateOnMatchFound")
+	var vibrateOnMatchFound = true
+	
 	enum Theme: String, Hashable, Codable, CaseIterable {
 		case system
 		case light

@@ -1,6 +1,7 @@
 import SwiftUI
 import ValorantAPI
 import HandyOperators
+import AudioToolbox
 
 struct LiveGameBox: View {
 	var userID: User.ID
@@ -16,6 +17,7 @@ struct LiveGameBox: View {
 	var shouldAutoShow = false
 	
 	@Environment(\.valorantLoad) private var load
+	@EnvironmentObject private var settings: AppSettings
 	
 	var isInMatchmaking: Bool {
 		party?.state == .inMatchmaking
@@ -35,8 +37,12 @@ struct LiveGameBox: View {
 			.padding(16)
 		} refresh: { try await refresh(using: $0) }
 			.onChange(of: activeMatch) { [activeMatch] newMatch in
-				guard shouldAutoRefresh, shouldAutoShow, activeMatch?.id != newMatch?.id else { return }
-				shownMatch = newMatch
+				if shouldAutoRefresh, shouldAutoShow, activeMatch?.id != newMatch?.id {
+					shownMatch = newMatch
+				}
+				if settings.vibrateOnMatchFound, activeMatch == nil, newMatch != nil {
+					AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+				}
 			}
 	}
 	
