@@ -114,6 +114,13 @@ struct ClientLogView: View {
 				let info = ExchangeInfo(exchange)
 				let encodedInfo = try! JSONEncoder().encode(info)
 				let infoString = String(bytes: encodedInfo, encoding: .utf8)!
+				let mailBody = """
+What went wrong? Tell me about the error you just encountered:
+
+YOUR BUG REPORT HERE
+
+\(infoString)
+"""
 				
 				Button {
 					UIPasteboard.general.setData(
@@ -124,7 +131,7 @@ struct ClientLogView: View {
 					Label("Copy to Clipboard", systemImage: "doc.on.doc")
 				}
 				
-				Link(destination: mailtoLink(body: infoString)) {
+				Link(destination: mailtoLink(body: mailBody)) {
 					Label("Send to Developer", systemImage: "envelope")
 				}
 			}
