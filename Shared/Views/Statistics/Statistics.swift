@@ -45,7 +45,7 @@ final class Statistics {
 	struct HitDistribution {
 		var overall = Tally()
 		var byWeapon: [Weapon.ID: Tally] = [:]
-		var byMatch: [(id: Match.ID, tally: Tally)]
+		var byMatch: [(time: Date, tally: Tally)]
 		
 		init(userID: User.ID, matches: [MatchDetails]) {
 			let rounds = matches
@@ -93,12 +93,13 @@ final class Statistics {
 			
 			byMatch = matches
 				.lazy
-				.map {
-					($0.id, $0.roundResults.lazy
+				.map { (
+					$0.matchInfo.gameStart,
+					$0.roundResults.lazy
 						.map { $0.stats(for: userID)! }
 						.flatMap(\.damageDealt)
-						.reduce(into: Tally.zero, +=))
-				}
+						.reduce(into: Tally.zero, +=)
+				) }
 				.filter { $0.tally != .zero }
 		}
 		

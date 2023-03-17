@@ -66,6 +66,7 @@ struct HitDistributionView: View {
 		
 		let windowSize = Int(ceil(pow(smoothingLogBase, smoothing)))
 		let smoothed = distribution.byMatch
+			.reversed()
 			.windows(ofCount: windowSize)
 			.enumerated()
 			.map { index, window in
