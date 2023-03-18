@@ -32,6 +32,7 @@ struct AssetImageView<Provider: AssetImageProvider>: View {
 			)
 		} else if let fallback = UIImage(named: "\(id)".uppercased()) {
 			Image(uiImage: fallback)
+				.renderingMode(renderingMode)
 				.resizable()
 				.scaledToFit()
 		} else {
