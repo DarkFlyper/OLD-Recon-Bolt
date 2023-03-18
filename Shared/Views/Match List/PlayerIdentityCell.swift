@@ -3,8 +3,8 @@ import ValorantAPI
 import HandyOperators
 
 struct PlayerIdentityCell: View {
-	let user: User
-	let identity: Player.Identity
+	let user: User?
+	let identity: Player.Identity?
 	
 	@Environment(\.assets) private var assets
 	@Environment(\.isIncognito) private var isIncognito
@@ -13,40 +13,42 @@ struct PlayerIdentityCell: View {
 		VStack(spacing: 0) {
 			HStack {
 				HStack(spacing: 4) {
-					if isIncognito {
-						Text("Player")
-							.fontWeight(.semibold)
-							.foregroundStyle(.secondary)
-					} else {
+					if !isIncognito, let user {
 						Text(user.gameName)
 							.fontWeight(.semibold)
 						
 						Text("#\(user.tagLine)")
+							.foregroundStyle(.secondary)
+					} else {
+						Text("Player")
+							.fontWeight(.semibold)
 							.foregroundStyle(.secondary)
 					}
 				}
 				
 				Spacer()
 				
-				if let title = assets?.playerTitles[identity.titleID]?.titleText {
+				if let identity, let title = assets?.playerTitles[identity.titleID]?.titleText {
 					Text(title)
 				}
 			}
 			.padding()
 			
-			Divider().zIndex(1).overlay {
-				Text("\(identity.accountLevel)")
-					.fontWeight(.semibold)
-					.foregroundStyle(.secondary)
-					.frame(minWidth: 24)
-					.padding(6)
-					.padding(.horizontal, 4)
-					.overlay(Capsule().stroke(.secondary))
-					.background(Material.ultraThin)
-					.mask(Capsule())
+			if let identity {
+				Divider().zIndex(1).overlay {
+					Text("\(identity.accountLevel)")
+						.fontWeight(.semibold)
+						.foregroundStyle(.secondary)
+						.frame(minWidth: 24)
+						.padding(6)
+						.padding(.horizontal, 4)
+						.overlay(Capsule().stroke(.secondary))
+						.background(Material.ultraThin)
+						.mask(Capsule())
+				}
 			}
 			
-			PlayerCardImage.wide(identity.cardID)
+			PlayerCardImage.wide(identity?.cardID)
 				.fixedSize(horizontal: false, vertical: true) // idk why i suddenly need this but i do
 			
 			Divider()

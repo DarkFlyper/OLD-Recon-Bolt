@@ -25,13 +25,9 @@ struct MatchListView: View {
 	var body: some View {
 		List {
 			Section(header: Text("Player")) {
-				if let user, let identity {
-					PlayerIdentityCell(user: user, identity: identity)
-				}
+				PlayerIdentityCell(user: user, identity: identity)
 				
-				if let summary {
-					CompetitiveSummaryCell(summary: summary)
-				}
+				CompetitiveSummaryCell(summary: summary)
 				
 				TransparentNavigationLink {
 					if let user, let matchList {

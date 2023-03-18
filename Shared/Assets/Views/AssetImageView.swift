@@ -13,7 +13,7 @@ struct AssetImageView<Provider: AssetImageProvider>: View {
 	
 	@Environment(\.assets) private var assets
 	
-	var id: ID
+	var id: ID?
 	var renderingMode: Image.TemplateRenderingMode?
 	/// aspect ratio for the placeholder shown when the image is not loaded
 	var aspectRatio: CGFloat?
@@ -21,7 +21,8 @@ struct AssetImageView<Provider: AssetImageProvider>: View {
 	var getImage: (Provider.Asset) -> AssetImage?
 	
 	var body: some View {
-		let assetImage = assets?[keyPath: Provider.assetPath][id]
+		let assetImage = id
+			.flatMap { assets?[keyPath: Provider.assetPath][$0] }
 			.flatMap(getImage)
 		
 		if let assetImage {
@@ -30,7 +31,7 @@ struct AssetImageView<Provider: AssetImageProvider>: View {
 				aspectRatio: aspectRatio,
 				shouldLoadImmediately: shouldLoadImmediately
 			)
-		} else if let fallback = UIImage(named: "\(id)".uppercased()) {
+		} else if let id, let fallback = UIImage(named: "\(id)".uppercased()) {
 			Image(uiImage: fallback)
 				.renderingMode(renderingMode)
 				.resizable()
@@ -45,7 +46,7 @@ struct AssetImageView<Provider: AssetImageProvider>: View {
 extension AssetImageView {
 	@_disfavoredOverload
 	init(
-		id: ID,
+		id: ID?,
 		renderingMode: Image.TemplateRenderingMode? = nil,
 		aspectRatio: CGFloat? = nil,
 		shouldLoadImmediately: Bool = false,

@@ -3,7 +3,7 @@ import ValorantAPI
 import HandyOperators
 
 struct CompetitiveSummaryCell: View {
-	let summary: CareerSummary
+	let summary: CareerSummary?
 	
 	@Environment(\.assets) private var assets
 	@Environment(\.colorScheme) private var colorScheme
@@ -14,7 +14,9 @@ struct CompetitiveSummaryCell: View {
 	
 	var body: some View {
 		TransparentNavigationLink {
-			CareerSummaryView(summary: summary)
+			if let summary {
+				CareerSummaryView(summary: summary)
+			}
 		} label: {
 			HStack(alignment: .rankIcon, spacing: 16) {
 				Spacer(minLength: 0)
@@ -33,13 +35,14 @@ struct CompetitiveSummaryCell: View {
 			.fixedSize(horizontal: false, vertical: true)
 			.padding(.vertical)
 		}
+		.disabled(summary == nil)
 	}
 	
 	@ViewBuilder
 	private var currentActInfo: some View {
 		VStack {
 			let act = assets?.seasons.currentAct()
-			let info = summary.competitiveInfo?.inSeason(act?.id)
+			let info = summary?.competitiveInfo?.inSeason(act?.id)
 			let tierInfo = assets?.seasons.tierInfo(number: info?.competitiveTier, in: act)
 			
 			SeasonLabel(season: act?.id)
@@ -48,13 +51,19 @@ struct CompetitiveSummaryCell: View {
 			RankInfoView(summary: summary, size: artworkSize, lineWidth: 5, shouldFallBackOnPrevious: false)
 				.alignmentGuide(.rankIcon) { $0[VerticalAlignment.center] }
 			
-			if let tierInfo {
-				Text(tierInfo.name)
+			if summary != nil {
+				if let tierInfo {
+					Text(tierInfo.name)
+						.font(primaryFont)
+				}
+				
+				Text("\(info?.adjustedRankedRating ?? 0) RR")
+					.font(secondaryFont)
+			} else {
+				Text("Loading")
 					.font(primaryFont)
+					.foregroundStyle(.secondary)
 			}
-			
-			Text("\(info?.adjustedRankedRating ?? 0) RR")
-				.font(secondaryFont)
 			
 			if let info, info.leaderboardRank > 0 {
 				LeaderboardRankView(rank: info.leaderboardRank, tierInfo: tierInfo)
@@ -65,7 +74,7 @@ struct CompetitiveSummaryCell: View {
 	@ViewBuilder
 	private var peakInfo: some View {
 		if
-			let peakRank = summary.peakRank(seasons: assets?.seasons),
+			let peakRank = summary?.peakRank(seasons: assets?.seasons),
 			let info = assets?.seasons.tierInfo(peakRank)
 		{
 			VStack {
