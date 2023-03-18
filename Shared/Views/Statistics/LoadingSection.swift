@@ -61,11 +61,17 @@ struct LoadingSection: View {
 				.frame(maxWidth: .infinity)
 			}
 			.padding(.vertical, 4)
+			
+			if !fetcher.errors.isEmpty {
+				NavigationLink("^[\(fetcher.errors.count) Errors](inflect: true, morphology: { partOfSpeech: \"noun\" })") {
+					errorList()
+				}
+			}
 		} header: {
 			Text("Load Data")
 		} footer: {
 			let fetchedCount = sublist.count { fetcher.matches.keys.contains($0.id) }
-			Text("\(fetchedCount)/\(fetchCount) loaded (^[\(fetcher.errors.count) ^[errors](inflect: true, morphology: { partOfSpeech: \"noun\" }))")
+			Text("\(fetchedCount)/\(fetchCount) loaded")
 		}
 		.onReceive(
 			fetcher.objectWillChange
@@ -83,6 +89,46 @@ struct LoadingSection: View {
 				}
 			}
 		)
+	}
+	
+	func errorList() -> some View {
+		List(matchList.matches) { match in
+			if let error = fetcher.errors[match.id] {
+				NavigationLink {
+					errorDetails(error, for: match)
+				} label: {
+					Text(match.startTime, format: .dateTime.year().month().day().hour().minute())
+				}
+			}
+		}
+		.navigationTitle("Match Loading Errors")
+	}
+	
+	func errorDetails(_ error: Error, for match: CompetitiveUpdate) -> some View {
+		ScrollView {
+			VStack(alignment: .leading, spacing: 8) {
+				Text("Match")
+					.font(.title3.bold())
+				match.mapID.map(MapImage.LabelText.init)
+				Text(match.id.description)
+				
+				Text("Error")
+					.font(.title3.bold())
+					.padding(.top)
+				Text(error.localizedDescription)
+			}
+			.frame(maxWidth: .infinity, alignment: .leading)
+			.padding()
+		}
+		.navigationBarTitleDisplayMode(.inline)
+		.navigationTitle("Error Details")
+		.toolbar {
+			Button {
+				UIPasteboard.general.string = "\(match.id)\n\(error.localizedDescription)"
+			} label: {
+				Label("Copy Error", systemImage: "doc.on.doc")
+			}
+		}
 	}
 	
 	@ViewBuilder
@@ -111,11 +157,11 @@ struct LoadingSection: View {
 @MainActor
 private final class MatchFetcher: ObservableObject {
 	@Published var matches: [Match.ID: MatchDetails] = [:]
-	@Published var errors: [Error] = []
+	@Published var errors: [Match.ID: Error] = [:]
 	private var tokens: [Match.ID: AnyCancellable] = [:]
 	
 	func fetchMatches(withIDs ids: some Sequence<Match.ID>, load: @escaping ValorantLoadFunction) {
-		errors = []
+		errors = [:]
 		
 		for match in ids {
 			guard tokens[match] == nil else { continue }
@@ -129,7 +175,7 @@ private final class MatchFetcher: ObservableObject {
 					do {
 						try await MatchDetails.autoUpdate(for: match, using: $0)
 					} catch {
-						self?.errors.append(error)
+						self?.errors[match] = error
 					}
 				}
 			}
