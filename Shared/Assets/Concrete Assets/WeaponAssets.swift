@@ -199,8 +199,8 @@ struct ResolvedLevel: Identifiable {
 		level.displayName ?? skin.displayName
 	}
 	
-	func chroma(_ id: WeaponSkin.Chroma.ID) -> WeaponSkin.Chroma? {
-		skin.chromas.firstElement(withID: id)
+	func chroma(_ id: WeaponSkin.Chroma.ID?) -> WeaponSkin.Chroma? {
+		id.flatMap(skin.chromas.firstElement(withID:)) ?? skin.chromas.first
 	}
 }
 
