@@ -61,7 +61,7 @@ private struct LocalDataModifier<Value: LocalDataStored>: ViewModifier {
 	var shouldReportErrors = false
 	var autoUpdate: ((Value.ID, ValorantClient) async throws -> Void)? = nil
 	
-	@StateObject private var tokenStorage = TokenStorage()
+	@State private var tokenStorage = TokenStorage()
 	@Environment(\.isLocalDataLocked) var isLocalDataLocked
 	@Environment(\.valorantLoad) var load
 	
@@ -100,7 +100,7 @@ private struct LocalDataModifier<Value: LocalDataStored>: ViewModifier {
 		}
 	}
 	
-	private final class TokenStorage: ObservableObject {
+	private final class TokenStorage {
 		// not published—this shouldn't cause view updates
 		var token: (id: Value.ID, AnyCancellable)? = nil
 		
