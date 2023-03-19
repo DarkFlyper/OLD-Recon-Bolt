@@ -72,6 +72,13 @@ extension Collection where Element: RandomAccessCollection {
 			self.map{ $0[index] }
 		}
 	}
+	
+	func flatTransposed() -> [Element.Element] {
+		guard let firstRow = first else { return [] }
+		return firstRow.indices.flatMap { index in
+			self.lazy.map{ $0[index] }
+		}
+	}
 }
 
 extension Dictionary {

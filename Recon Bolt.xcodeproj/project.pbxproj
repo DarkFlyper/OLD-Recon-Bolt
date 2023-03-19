@@ -114,6 +114,7 @@
 		B95FA88029C2D741001D1998 /* HitDistributionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95FA87F29C2D741001D1998 /* HitDistributionView.swift */; };
 		B95FA88229C2D839001D1998 /* UserLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95FA88129C2D839001D1998 /* UserLabel.swift */; };
 		B95FA88429C2D8AB001D1998 /* SharedStatsViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95FA88329C2D8AB001D1998 /* SharedStatsViews.swift */; };
+		B95FA88629C582A5001D1998 /* WinRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95FA88529C582A5001D1998 /* WinRateView.swift */; };
 		B963C4702694FDDA0071E14A /* CompetitiveSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B963C46F2694FDDA0071E14A /* CompetitiveSummaryCell.swift */; };
 		B963C4732694FE920071E14A /* example_summary.json in Resources */ = {isa = PBXBuildFile; fileRef = B963C4722694FE920071E14A /* example_summary.json */; };
 		B963C47626950FE90071E14A /* RankInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B963C47526950FE90071E14A /* RankInfoView.swift */; };
@@ -426,6 +427,7 @@
 		B95FA87F29C2D741001D1998 /* HitDistributionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitDistributionView.swift; sourceTree = "<group>"; };
 		B95FA88129C2D839001D1998 /* UserLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLabel.swift; sourceTree = "<group>"; };
 		B95FA88329C2D8AB001D1998 /* SharedStatsViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedStatsViews.swift; sourceTree = "<group>"; };
+		B95FA88529C582A5001D1998 /* WinRateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinRateView.swift; sourceTree = "<group>"; };
 		B963C46F2694FDDA0071E14A /* CompetitiveSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitiveSummaryCell.swift; sourceTree = "<group>"; };
 		B963C4722694FE920071E14A /* example_summary.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_summary.json; sourceTree = "<group>"; };
 		B963C47526950FE90071E14A /* RankInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankInfoView.swift; sourceTree = "<group>"; };
@@ -675,6 +677,7 @@
 				B937C39529C227A2008A4FFB /* LoadingSection.swift */,
 				B95FA87D29C2D6B3001D1998 /* PlaytimeView.swift */,
 				B95FA87F29C2D741001D1998 /* HitDistributionView.swift */,
+				B95FA88529C582A5001D1998 /* WinRateView.swift */,
 				B937C39129C22620008A4FFB /* Statistics.swift */,
 				B95FA88329C2D8AB001D1998 /* SharedStatsViews.swift */,
 			);
@@ -1393,6 +1396,7 @@
 				B939C7F8294858FB00ABD0C6 /* LocalData+SwiftUI.swift in Sources */,
 				B9298FA529C0287C00DC7778 /* QueueAssets.swift in Sources */,
 				B933591F28A589F100C1A0FB /* PlayerCardPicker.swift in Sources */,
+				B95FA88629C582A5001D1998 /* WinRateView.swift in Sources */,
 				B95B1A4F269CE1D10080EC81 /* KDASummaryView.swift in Sources */,
 				B90FFF3E26B4BC57007BE950 /* ContractDetailsView.swift in Sources */,
 				B95FA88229C2D839001D1998 /* UserLabel.swift in Sources */,

@@ -8,6 +8,7 @@ final class Statistics {
 	let matches: [MatchDetails]
 	let playtime: Playtime
 	let hitDistribution: HitDistribution
+	let winRate: WinRate
 	
 	init(userID: User.ID, matches: [MatchDetails]) {
 		modeByQueue = .init(
@@ -19,6 +20,7 @@ final class Statistics {
 		
 		playtime = .init(userID: userID, matches: matches)
 		hitDistribution = .init(userID: userID, matches: matches)
+		winRate = .init(userID: userID, matches: matches)
 	}
 	
 	struct Playtime {
@@ -122,6 +124,107 @@ final class Statistics {
 				lhs.headshots += rhs.headshots
 				lhs.bodyshots += rhs.bodyshots
 				lhs.legshots += rhs.legshots
+			}
+		}
+	}
+	
+	struct WinRate {
+		var byDay: [Date: Tally] = [:]
+		var byMap: [MapID: Tally] = [:]
+		var byStartingSide: [MapID: [Side: Tally]] = [:]
+		var roundsBySide: [MapID: [Side: Tally]] = [:]
+		var roundsByLoadoutDelta: [Int: Tally] = [:]
+		
+		init(userID: User.ID, matches: [MatchDetails]) {
+			for match in matches {
+				let teamID = match.players.firstElement(withID: userID)!.teamID
+				let winner = match.teams.first(where: \.won)
+				let outcome: Outcome = winner == nil ? .draw
+				: winner?.id == teamID ? .win : .loss
+				
+				let day = Calendar.current.date(
+					bySettingHour: 0, minute: 0, second: 0,
+					of: match.matchInfo.gameStart
+				)!
+				byDay[day, default: .zero] += outcome
+				
+				let map = match.matchInfo.mapID
+				byMap[map, default: .zero] += outcome
+				if let startingSide = Side(teamID), let structure = match.roundStructure {
+					let playerTeams = Dictionary(uniqueKeysWithValues: match.players.lazy.map { ($0.id, $0.teamID) })
+					
+					byStartingSide[map, default: [:]][startingSide, default: .zero] += outcome
+					for round in match.roundResults {
+						guard round.outcome != .surrendered else { break }
+						let side = startingSide.flipped(if: structure.areRolesSwapped(inRound: round.number))
+						let outcome: Outcome = round.winningTeam == teamID ? .win : .loss
+						roundsBySide[map, default: [:]][side, default: .zero] += outcome
+						
+						let averageLoadoutValues: [Team.ID: Int] = [Team.ID: [RoundResult.PlayerStats]](
+							grouping: round.playerStats,
+							by: { playerTeams[$0.subject]! }
+						)
+						.mapValues { $0.lazy.map(\.economy.loadoutValue).reduce(0, +) / $0.count }
+						let enemyLoadout = averageLoadoutValues.onlyElement { $0.key != teamID }!.value
+						let loadoutDelta = averageLoadoutValues[teamID]! - enemyLoadout
+						roundsByLoadoutDelta[loadoutDelta, default: .zero] += outcome
+					}
+				}
+			}
+		}
+		
+		enum Outcome {
+			case win, draw, loss
+		}
+		
+		struct Tally: Equatable {
+			var wins = 0
+			var draws = 0
+			var losses = 0
+			
+			var total: Int { wins + draws + losses }
+			
+			static let zero = Self()
+			
+			static func += (lhs: inout Self, rhs: Self) {
+				lhs.wins += rhs.wins
+				lhs.draws += rhs.draws
+				lhs.losses += rhs.losses
+			}
+			
+			static func += (tally: inout Self, outcome: Outcome) {
+				switch outcome {
+				case .win:
+					tally.wins += 1
+				case .draw:
+					tally.draws += 1
+				case .loss:
+					tally.losses += 1
+				}
+			}
+		}
+		
+		enum Side {
+			case attacking
+			case defending
+			
+			func flipped(`if` condition: Bool) -> Self {
+				guard condition else { return self }
+				switch self {
+				case .attacking: return .defending
+				case .defending: return .attacking
+				}
+			}
+			
+			init?(_ team: Team.ID) {
+				switch team {
+				case .red:
+					self = .attacking
+				case .blue:
+					self = .defending
+				default:
+					return nil
+				}
 			}
 		}
 	}

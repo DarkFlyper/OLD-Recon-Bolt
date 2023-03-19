@@ -34,6 +34,10 @@ struct StatisticsView: View {
 			detailsLink("Hit Distribution", systemImage: "scope") {
 				HitDistributionView(statistics: statistics)
 			}
+			
+			detailsLink("Win Rate", systemImage: "medal") {
+				WinRateView(statistics: statistics)
+			}
 		}
 	}
 	
