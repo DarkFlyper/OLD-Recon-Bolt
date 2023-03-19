@@ -29,6 +29,7 @@ struct ContentView: View {
 				.tag(Tab.reference)
 			
 			SettingsView(accountManager: accountManager, assetManager: assetManager, settings: settings, store: store)
+				.withToolbar()
 				.tabItem { Label("Settings", systemImage: "gearshape") }
 				.tag(Tab.settings)
 		}
