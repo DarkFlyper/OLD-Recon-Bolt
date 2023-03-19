@@ -51,19 +51,20 @@ struct CompetitiveSummaryCell: View {
 			RankInfoView(summary: summary, size: artworkSize, lineWidth: 5, shouldFallBackOnPrevious: false)
 				.alignmentGuide(.rankIcon) { $0[VerticalAlignment.center] }
 			
-			if summary != nil {
+			Group {
 				if let tierInfo {
 					Text(tierInfo.name)
+						.font(primaryFont)
+				} else {
+					Text("Unknown Tier")
+						.foregroundStyle(.secondary)
 						.font(primaryFont)
 				}
 				
 				Text("\(info?.adjustedRankedRating ?? 0) RR")
 					.font(secondaryFont)
-			} else {
-				Text("Loading")
-					.font(primaryFont)
-					.foregroundStyle(.secondary)
 			}
+			.placeholder(if: summary == nil)
 			
 			if let info, info.leaderboardRank > 0 {
 				LeaderboardRankView(rank: info.leaderboardRank, tierInfo: tierInfo)
@@ -135,6 +136,10 @@ struct CompetitiveSummaryCell_Previews: PreviewProvider, PreviewProviderWithAsse
 			.environmentObject(ImageManager())
 		
 		List {
+			Section {
+				CompetitiveSummaryCell(summary: nil)
+			}
+			
 			Section {
 				CompetitiveSummaryCell(summary: PreviewData.summary <- {
 					$0.competitiveInfo!.bySeason = $0.competitiveInfo!.bySeason!

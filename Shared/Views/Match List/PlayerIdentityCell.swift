@@ -23,6 +23,7 @@ struct PlayerIdentityCell: View {
 						Text("Player")
 							.fontWeight(.semibold)
 							.foregroundStyle(.secondary)
+							.placeholder(if: user == nil)
 					}
 				}
 				

@@ -138,3 +138,9 @@ extension View {
 		)
 	}
 }
+
+extension View {
+	func placeholder(`if` isPlaceholder: Bool) -> some View {
+		redacted(reason: isPlaceholder ? .placeholder : [])
+	}
+}
