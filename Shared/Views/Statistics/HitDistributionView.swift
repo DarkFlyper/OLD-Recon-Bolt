@@ -3,6 +3,8 @@ import ValorantAPI
 import Charts
 import Collections
 
+private typealias Tally = Statistics.WinRate.Tally
+
 @available(iOS 16.0, *)
 struct HitDistributionView: View {
 	typealias Tally = Statistics.HitDistribution.Tally
@@ -75,16 +77,13 @@ struct HitDistributionView: View {
 		
 		Chart {
 			ForEach(smoothed.indices, id: \.self) { index in
-				let tally = smoothed[index]
-				AreaMark(x: .value("Match", index), y: .value("Legs", tally.legshots), stacking: .normalized)
-					.foregroundStyle(by: .value("Part", "Legs"))
-				AreaMark(x: .value("Match", index), y: .value("Body", tally.bodyshots), stacking: .normalized)
-					.foregroundStyle(by: .value("Part", "Body"))
-				AreaMark(x: .value("Match", index), y: .value("Head", tally.headshots), stacking: .normalized)
-					.foregroundStyle(by: .value("Part", "Head"))
+				ForEach(smoothed[index].data(), id: \.name) { name, hits in
+					AreaMark(x: .value("Match", index), y: .value("Hits", hits), stacking: .normalized)
+						.foregroundStyle(by: .value("Part", name))
+				}
 			}
 			
-			RuleMark(y: .value("Average", 100 * (1 - average)))
+			RuleMark(y: .value("Hits", 100 * (1 - average)))
 				.lineStyle(.init(lineWidth: 1, dash: [4, 2]))
 				.annotation(position: .bottom) {
 					Text("Average: \(percentage)")
@@ -103,9 +102,8 @@ struct HitDistributionView: View {
 			"Body": Color.valorantBlue,
 			"Head": Color.valorantRed,
 		])
-		.compositingGroup()
 		.padding(.vertical)
-		.alignmentGuide(.listRowSeparatorLeading) { $0[.leading] }
+		.aligningListRowSeparator()
 		
 		HStack {
 			Text("Smoothing")
@@ -195,6 +193,15 @@ private struct FractionalTally {
 	
 	static func += (lhs: inout Self, rhs: Statistics.HitDistribution.Tally) {
 		lhs += rhs.normalized()
+	}
+	
+	// TODO: use
+	func data() -> [(name: String, hits: Double)] {
+		[
+			("Head", headshots),
+			("Body", bodyshots),
+			("Legs", legshots),
+		]
 	}
 }
 
