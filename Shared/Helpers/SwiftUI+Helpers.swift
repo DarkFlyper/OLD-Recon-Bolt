@@ -144,3 +144,8 @@ extension View {
 		redacted(reason: isPlaceholder ? .placeholder : [])
 	}
 }
+
+extension ShapeStyle where Self == _BlendModeShapeStyle<Color> {
+	/// knocks out destination—for best results, combine with ``compositingGroup()``
+	static var negative: Self { .init(style: .white, blendMode: .destinationOut) }
+}

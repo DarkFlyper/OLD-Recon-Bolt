@@ -88,9 +88,9 @@ struct HitDistributionView: View {
 				.annotation(position: .bottom) {
 					Text("Average: \(percentage)")
 						.font(.caption)
-						.foregroundColor(.white)
+						.foregroundStyle(.negative)
 				}
-				.foregroundStyle(Color.white)
+				.foregroundStyle(.negative)
 		}
 		.chartPlotStyle {
 			$0.cornerRadius(6)
@@ -102,6 +102,7 @@ struct HitDistributionView: View {
 			"Body": Color.valorantBlue,
 			"Head": Color.valorantRed,
 		])
+		.compositingGroup()
 		.padding(.vertical)
 		.aligningListRowSeparator()
 		
