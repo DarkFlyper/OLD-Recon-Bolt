@@ -42,7 +42,6 @@ struct ContentView: View {
 		} onDismiss: {
 			$0.completion(.failure(AccountManager.MultifactorPromptError.cancelled))
 		}
-		.buttonBorderShape(.capsule)
 		.withValorantLoadFunction(manager: accountManager)
 		.withLoadErrorAlerts()
 		.onSceneActivation {

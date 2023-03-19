@@ -88,6 +88,7 @@ struct LoginForm: View {
 			}
 		}
 		.withToolbar(allowLargeTitles: false)
+		.buttonBorderShape(.capsule)
 	}
 	
 	var trustInfo: some View {
