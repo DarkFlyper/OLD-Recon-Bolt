@@ -96,8 +96,14 @@ struct WinRateView: View {
 		}
 		.chartForegroundStyleScale(Tally.foregroundStyleScale)
 		.chartXScale(domain: .automatic(dataType: Int.self) { domain in
-			let max = winRate.byMap.values.lazy.map(\.total).max() ?? 0
-			domain.append(max) // consistent scale across views
+			if !shouldNormalize, startingSideFilter != nil {
+				let max = winRate.byStartingSide.values
+					.lazy
+					.flatMap(\.values)
+					.map(\.total)
+					.max() ?? 0
+				domain.append(max) // consistent scale across views
+			}
 		})
 		.chartYScale(domain: .automatic(dataType: String.self) { domain in
 			domain.sort()
