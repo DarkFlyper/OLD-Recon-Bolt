@@ -73,6 +73,8 @@
 		<dict>
 			<key>INIntentCategory</key>
 			<string>information</string>
+			<key>INIntentDescription</key>
+			<string>Customize how your store is displayed.</string>
 			<key>INIntentDescriptionID</key>
 			<string>tVvJ9c</string>
 			<key>INIntentEligibleForWidgets</key>
@@ -306,6 +308,8 @@
 		<dict>
 			<key>INIntentCategory</key>
 			<string>information</string>
+			<key>INIntentDescription</key>
+			<string>Customize how your missions are displayd.</string>
 			<key>INIntentDescriptionID</key>
 			<string>s2ilh5</string>
 			<key>INIntentEligibleForWidgets</key>
@@ -435,6 +439,8 @@
 		<dict>
 			<key>INIntentCategory</key>
 			<string>information</string>
+			<key>INIntentDescription</key>
+			<string>Customize how your rank is shown off.</string>
 			<key>INIntentDescriptionID</key>
 			<string>QVPlYZ</string>
 			<key>INIntentEligibleForWidgets</key>
