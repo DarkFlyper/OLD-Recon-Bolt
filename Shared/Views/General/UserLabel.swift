@@ -19,6 +19,7 @@ struct UserLabel: View {
 				Text("Unknown Player")
 					.fontWeight(.semibold)
 					.foregroundStyle(.secondary)
+					.placeholder(if: user == nil)
 			}
 		}
 		.withLocalData($user, id: userID, shouldAutoUpdate: shouldAutoUpdate)
