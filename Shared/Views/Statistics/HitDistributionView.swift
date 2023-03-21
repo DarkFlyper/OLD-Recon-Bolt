@@ -12,7 +12,6 @@ struct HitDistributionView: View {
 	var statistics: Statistics
 	
 	@State var smoothing = 0.0
-	private let smoothingLogBase = 1.5
 	
 	var distribution: Statistics.HitDistribution {
 		statistics.hitDistribution
@@ -60,46 +59,10 @@ struct HitDistributionView: View {
 	
 	@ViewBuilder
 	func chartOverTime() -> some View {
-		let average = Double(distribution.overall.headshots) / Double(distribution.overall.total)
-		let percentage = average.formatted(.precisePercent)
-		
-		let windowSize = Int(ceil(pow(smoothingLogBase, smoothing)))
-		let smoothed = distribution.byMatch
-			.reversed()
-			.windows(ofCount: windowSize)
-			.enumerated()
-			.map { index, window in
-				window.reduce(into: FractionalTally()) { $0 += $1.tally }
-			}
-		
-		Chart {
-			ForEach(smoothed.indices, id: \.self) { index in
-				ForEach(smoothed[index].data(), id: \.name) { name, hits in
-					AreaMark(x: .value("Match", index), y: .value("Hits", hits), stacking: .normalized)
-						.foregroundStyle(by: .value("Part", name))
-				}
-			}
-			
-			RuleMark(y: .value("Hits", 100 * (1 - average)))
-				.lineStyle(.init(lineWidth: 1, dash: [4, 2]))
-				.annotation(position: .bottom) {
-					Text("Average: \(percentage)")
-						.font(.caption)
-						.foregroundStyle(.negative)
-				}
-				.foregroundStyle(.negative)
-		}
-		.chartPlotStyle {
-			$0.cornerRadius(6)
-		}
-		.chartXAxis(.hidden)
-		.chartYAxis(.hidden)
-		.chartForegroundStyleScale([
-			"Legs": Color.valorantSelf,
-			"Body": Color.valorantBlue,
-			"Head": Color.valorantRed,
-		])
-		.compositingGroup()
+		ChartOverTime(
+			distribution: distribution,
+			smoothingWindowSize: Int(ceil(pow(smoothingLogBase, smoothing)))
+		)
 		.padding(.vertical)
 		.aligningListRowSeparator()
 		
@@ -172,7 +135,63 @@ struct HitDistributionView: View {
 			distributionGrid(for: tally)
 		}
 	}
+	
+	struct ChartOverTime: View {
+		var distribution: Statistics.HitDistribution
+		var smoothingWindowSize: Int
+		
+		static func overview(statistics: Statistics) -> Self {
+			.init(
+				distribution: statistics.hitDistribution,
+				smoothingWindowSize: max(1, statistics.hitDistribution.byMatch.count / 5)
+			)
+		}
+		
+		var body: some View {
+			let average = Double(distribution.overall.headshots) / Double(distribution.overall.total)
+			let percentage = average.formatted(.precisePercent)
+			
+			let smoothed = distribution.byMatch
+				.reversed()
+				.windows(ofCount: smoothingWindowSize)
+				.enumerated()
+				.map { index, window in
+					window.reduce(into: FractionalTally()) { $0 += $1.tally }
+				}
+			
+			Chart {
+				ForEach(smoothed.indices, id: \.self) { index in
+					ForEach(smoothed[index].data(), id: \.name) { name, hits in
+						AreaMark(x: .value("Match", index), y: .value("Hits", hits), stacking: .normalized)
+							.foregroundStyle(by: .value("Part", name))
+					}
+				}
+				
+				RuleMark(y: .value("Hits", 100 * (1 - average)))
+					.lineStyle(.init(lineWidth: 1, dash: [4, 2]))
+					.annotation(position: .bottom) {
+						Text("Average: \(percentage)")
+							.font(.caption)
+							.foregroundStyle(.negative)
+					}
+					.foregroundStyle(.negative)
+			}
+			.chartPlotStyle {
+				$0.cornerRadius(6)
+			}
+			.chartXAxis(.hidden)
+			.chartYAxis(.hidden)
+			.chartForegroundStyleScale([
+				"Legs": Color.valorantSelf,
+				"Body": Color.valorantBlue,
+				"Head": Color.valorantRed,
+			])
+			.compositingGroup()
+		}
+	}
 }
+
+private let smoothingLogBase = 1.5
 
 private struct FractionalTally {
 	var headshots: Double = 0.0

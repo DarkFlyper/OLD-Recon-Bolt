@@ -28,48 +28,44 @@ struct StatisticsView: View {
 	
 	@ViewBuilder
 	func breakdowns(for statistics: Statistics) -> some View {
-		// TODO: more overview charts!
+		detailsLink("Playtime Breakdown", systemImage: "clock") {
+			PlaytimeView(statistics: statistics)
+		} chart: {} // TODO: nice chart?
 		
-		Section {
-			detailsLink("Playtime Breakdown", systemImage: "clock") {
-				PlaytimeView(statistics: statistics)
-			}
+		detailsLink("Hit Distribution", systemImage: "scope") {
+			HitDistributionView(statistics: statistics)
+		} chart: {
+			HitDistributionView.ChartOverTime.overview(statistics: statistics)
 		}
 		
-		Section {
-			detailsLink("Hit Distribution", systemImage: "scope") {
-				HitDistributionView(statistics: statistics)
-			}
-		}
-		
-		Section {
-			TransparentNavigationLink {
-				WinRateView(statistics: statistics)
-			} label: {
-				VStack(alignment: .leading) {
-					Label("Win Rate", systemImage: "medal")
-						.padding(.vertical, 8)
-					
-					WinRateView.ChartOverTime.overview(statistics: statistics)?
-						.chartLegend(.hidden)
-						.chartXAxis(.hidden)
-						.chartYAxis(.hidden)
-						.overlay(alignment: .bottom) {
-							Color.primary.opacity(0.1).frame(height: 1)
-						}
+		detailsLink("Win Rate", systemImage: "medal") {
+			WinRateView(statistics: statistics)
+		} chart: {
+			WinRateView.ChartOverTime.overview(statistics: statistics)?
+				.overlay(alignment: .bottom) {
+					Color.primary.opacity(0.1).frame(height: 1)
 				}
-			}
 		}
 	}
 	
-	func detailsLink<Destination: View>(
+	func detailsLink<Destination: View, Chart: View>(
 		_ title: LocalizedStringKey, systemImage: String,
-		@ViewBuilder destination: @escaping () -> Destination
+		@ViewBuilder destination: @escaping () -> Destination,
+		@ViewBuilder chart: @escaping () -> Chart
 	) -> some View {
-		TransparentNavigationLink(destination: destination) {
-			Label(title, systemImage: systemImage)
+		Group {
+			TransparentNavigationLink(destination: destination) {
+				VStack(alignment: .leading) {
+					Label(title, systemImage: systemImage)
+					
+					chart()
+						.chartLegend(.hidden)
+						.chartXAxis(.hidden)
+						.chartYAxis(.hidden)
+				}
+				.padding(.vertical, 8)
+			}
 		}
-		.padding(.vertical, 8)
 	}
 }
 
