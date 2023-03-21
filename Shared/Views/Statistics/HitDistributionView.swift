@@ -182,9 +182,9 @@ struct HitDistributionView: View {
 			.chartXAxis(.hidden)
 			.chartYAxis(.hidden)
 			.chartForegroundStyleScale([
-				"Legs": Color.valorantSelf,
+				"Legs": Color.valorantRed,
 				"Body": Color.valorantBlue,
-				"Head": Color.valorantRed,
+				"Head": Color.valorantSelf,
 			])
 			.compositingGroup()
 		}
@@ -208,12 +208,11 @@ private struct FractionalTally {
 		lhs += rhs.normalized()
 	}
 	
-	// TODO: use
 	func data() -> [(name: String, hits: Double)] {
-		[
-			("Head", headshots),
-			("Body", bodyshots),
+		[ // order matters
 			("Legs", legshots),
+			("Body", bodyshots),
+			("Head", headshots),
 		]
 	}
 }
