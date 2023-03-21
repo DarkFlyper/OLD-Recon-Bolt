@@ -2,6 +2,7 @@ import SwiftUI
 import ValorantAPI
 import Charts
 import Collections
+import HandyOperators
 
 private typealias Tally = Statistics.WinRate.Tally
 
@@ -158,6 +159,11 @@ struct HitDistributionView: View {
 				.map { index, window in
 					window.reduce(into: FractionalTally()) { $0 += $1.tally }
 				}
+			<- {
+				if $0.count == 1 {
+					$0.append(contentsOf: $0)
+				}
+			}
 			
 			Chart {
 				ForEach(smoothed.indices, id: \.self) { index in
@@ -243,6 +249,9 @@ extension Match.ID: Plottable {
 struct HitDistributionView_Previews: PreviewProvider {
 	static var previews: some View {
 		HitDistributionView(statistics: PreviewData.statistics)
+			.withToolbar()
+		
+		HitDistributionView(statistics: .init(userID: PreviewData.userID, matches: [PreviewData.singleMatch]))
 			.withToolbar()
 	}
 }
