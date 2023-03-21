@@ -53,34 +53,10 @@ struct WinRateView: View {
 	
 	@ViewBuilder
 	func chartOverTime() -> some View {
-		Chart {
-			// transposing the data like this means we can let Charts group the data automatically, stacking up all outcomes of one type before any of the next type
-			let data: [(day: Date, entry: Tally.Entry)] = winRate.byDay
-				.map { day, tally in tally.data().map { (day, $0) } }
-				.flatTransposed()
-			
-			ForEach(data.indexed(), id: \.index) { index, data in
-				BarMark(
-					x: .value("Day", data.day, unit: timeGrouping.component),
-					y: .value("Count", data.entry.count),
-					stacking: stacking
-				)
-				.foregroundStyle(by: .value("Outcome", data.entry.name))
-			}
-			
-			if shouldNormalize {
-				RuleMark(y: .value("Count", 50))
-					.lineStyle(.init(lineWidth: 1, dash: [4, 2]))
-					.foregroundStyle(Color.secondary)
-			}
-		}
-		.chartForegroundStyleScale(Tally.foregroundStyleScale)
-		.chartXAxis {
-			AxisMarks(position: .bottom)
-		}
-		.chartYAxis { maybePercentageLabels() }
-		.aligningListRowSeparator()
-		.padding(.vertical)
+		ChartOverTime(winRate: winRate, stacking: stacking, timeGrouping: timeGrouping)
+			.chartYAxis { maybePercentageLabels() }
+			.aligningListRowSeparator()
+			.padding(.vertical)
 		
 		Picker("Group by", selection: $timeGrouping) {
 			ForEach(DateBinSize.allCases, id: \.self) { size in
@@ -301,6 +277,45 @@ struct WinRateView: View {
 	
 	func name(for map: MapID) -> String {
 		assets?.maps[map]?.displayName ?? map.rawValue
+	}
+	
+	struct ChartOverTime: View {
+		var winRate: Statistics.WinRate
+		var stacking: MarkStackingMethod
+		var timeGrouping: DateBinSize
+		
+		static func overview(statistics: Statistics) -> Self? {
+			guard let (first, last) = statistics.winRate.byDay.keys.minAndMax() else { return nil }
+			return .init(
+				winRate: statistics.winRate,
+				stacking: .standard,
+				timeGrouping: DateBinSize.allCases.first { binSize in
+					let binCount = Calendar.current
+						.dateComponents([binSize.component], from: first, to: last)
+						.value(for: binSize.component)!
+					return binCount < 40
+				} ?? .year
+			)
+		}
+		
+		var body: some View {
+			Chart {
+				// transposing the data like this means we can let Charts group the data automatically, stacking up all outcomes of one type before any of the next type
+				let data: [(day: Date, entry: Tally.Entry)] = winRate.byDay
+					.map { day, tally in tally.data().map { (day, $0) } }
+					.flatTransposed()
+				
+				ForEach(data.indexed(), id: \.index) { index, data in
+					BarMark(
+						x: .value("Day", data.day, unit: timeGrouping.component),
+						y: .value("Count", data.entry.count),
+						stacking: stacking
+					)
+					.foregroundStyle(by: .value("Outcome", data.entry.name))
+				}
+			}
+			.chartForegroundStyleScale(Tally.foregroundStyleScale)
+		}
 	}
 }
 

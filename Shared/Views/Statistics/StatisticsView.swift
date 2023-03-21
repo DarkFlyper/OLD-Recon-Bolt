@@ -19,24 +19,45 @@ struct StatisticsView: View {
 			
 			if let statistics {
 				breakdowns(for: statistics)
+					.font(.title3.weight(.medium))
 			}
 		}
 		.navigationTitle("Statistics")
 		.buttonBorderShape(.automatic)
 	}
 	
+	@ViewBuilder
 	func breakdowns(for statistics: Statistics) -> some View {
-		Section("Breakdowns") {
+		// TODO: more overview charts!
+		
+		Section {
 			detailsLink("Playtime Breakdown", systemImage: "clock") {
 				PlaytimeView(statistics: statistics)
 			}
-			
+		}
+		
+		Section {
 			detailsLink("Hit Distribution", systemImage: "scope") {
 				HitDistributionView(statistics: statistics)
 			}
-			
-			detailsLink("Win Rate", systemImage: "medal") {
+		}
+		
+		Section {
+			TransparentNavigationLink {
 				WinRateView(statistics: statistics)
+			} label: {
+				VStack(alignment: .leading) {
+					Label("Win Rate", systemImage: "medal")
+						.padding(.vertical, 8)
+					
+					WinRateView.ChartOverTime.overview(statistics: statistics)?
+						.chartLegend(.hidden)
+						.chartXAxis(.hidden)
+						.chartYAxis(.hidden)
+						.overlay(alignment: .bottom) {
+							Color.primary.opacity(0.1).frame(height: 1)
+						}
+				}
 			}
 		}
 	}
@@ -48,7 +69,6 @@ struct StatisticsView: View {
 		TransparentNavigationLink(destination: destination) {
 			Label(title, systemImage: systemImage)
 		}
-		.font(.title3.weight(.medium))
 		.padding(.vertical, 8)
 	}
 }
