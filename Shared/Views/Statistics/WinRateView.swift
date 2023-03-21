@@ -153,6 +153,7 @@ struct WinRateView: View {
 					.frame(height: 0) // to "anchor" offset to center instead of top edge
 					.offset(y: sideRowHeight)
 				roundsBySide(map: nil, bySide: total)
+					.chartXAxis { maybePercentageLabels() }
 			}
 			
 			Divider()
@@ -204,7 +205,8 @@ struct WinRateView: View {
 	
 	private func roundsBySide(map: MapID?, bySide: [Side: Tally]) -> some View {
 		Chart {
-			ForEach(Array(bySide), id: \.key) { side, tally in
+			ForEach(Side.allCases, id: \.self) { side in
+				let tally = bySide[side] ?? .zero // always show both sides (one could be zero if there's only a single surrendered match)
 				BarMark(x: .value("Count", tally.wins), y: .value("Side", side.name), stacking: stacking)
 					.foregroundStyle(by: .value("Outcome", "Wins"))
 				BarMark(x: .value("Count", tally.losses), y: .value("Side", side.name), stacking: stacking)
@@ -214,8 +216,14 @@ struct WinRateView: View {
 		.chartOverlay { chart in
 			ForEach(Side.allCases, id: \.self) { side in
 				chart.rowLabel(y: side.name) {
-					Text(bySide[side]!.winFraction, format: .precisePercent)
-						.padding(.horizontal, 2)
+					Group {
+						if let tally = bySide[side] {
+							Text(tally.winFraction, format: .precisePercent)
+						} else {
+							Text("No data")
+						}
+					}
+					.padding(.horizontal, 0.1 * sideRowHeight)
 				}
 			}
 		}
@@ -406,7 +414,8 @@ private extension ChartProxy {
 				label()
 					.font(.caption2)
 					.monospacedDigit()
-					.foregroundColor(.black.opacity(0.5))
+					.opacity(0.75)
+					.shadow(color: Color(.systemBackground).opacity(0.5), radius: 1, y: 1)
 					.blendMode(.hardLight)
 					.frame(width: plotArea.width, height: yRange.upperBound - yRange.lowerBound, alignment: .leading)
 					.position(x: plotArea.midX, y: (yRange.lowerBound + yRange.upperBound) / 2)
@@ -471,6 +480,8 @@ private extension Tally {
 struct WinRateView_Previews: PreviewProvider {
 	static var previews: some View {
 		WinRateView(statistics: PreviewData.statistics, timeGrouping: .year)
+			.withToolbar()
+		WinRateView(statistics: .init(userID: PreviewData.userID, matches: [PreviewData.surrenderedMatch]))
 			.withToolbar()
 	}
 }
