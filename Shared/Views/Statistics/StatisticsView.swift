@@ -53,7 +53,7 @@ struct StatisticsView: View {
 		@ViewBuilder destination: @escaping () -> Destination,
 		@ViewBuilder chart: @escaping () -> Chart
 	) -> some View {
-		Group {
+		Section {
 			TransparentNavigationLink(destination: destination) {
 				VStack(alignment: .leading) {
 					Label(title, systemImage: systemImage)
