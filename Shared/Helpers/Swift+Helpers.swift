@@ -122,3 +122,9 @@ func withRobustThrowingContinuation<T>(
 		}
 	}
 }
+
+extension FormatStyle where Self == FloatingPointFormatStyle<Double>.Percent {
+	public static var precisePercent: Self {
+		.percent.precision(.fractionLength(1...1))
+	}
+}

@@ -61,10 +61,7 @@ struct HitDistributionView: View {
 	@ViewBuilder
 	func chartOverTime() -> some View {
 		let average = Double(distribution.overall.headshots) / Double(distribution.overall.total)
-		let percentage = percentageLabel(
-			count: distribution.overall.headshots,
-			total: distribution.overall.total
-		)
+		let percentage = average.formatted(.precisePercent)
 		
 		let windowSize = Int(ceil(pow(smoothingLogBase, smoothing)))
 		let smoothed = distribution.byMatch
@@ -139,7 +136,7 @@ struct HitDistributionView: View {
 				.gridColumnAlignment(.trailing)
 				.foregroundStyle(.secondary)
 			
-			Text(Double(count) / Double(tally.total), format: .percent.precision(.fractionLength(1...1)))
+			Text(Double(count) / Double(tally.total), format: .precisePercent)
 				.gridColumnAlignment(.trailing)
 		}
 		.monospacedDigit()
@@ -174,10 +171,6 @@ struct HitDistributionView: View {
 			
 			distributionGrid(for: tally)
 		}
-	}
-	
-	func percentageLabel(count: Int, total: Int) -> String {
-		(Double(count) / Double(total)).formatted(.percent.precision(.fractionLength(1...1)))
 	}
 }
 

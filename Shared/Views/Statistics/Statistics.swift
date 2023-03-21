@@ -1,5 +1,6 @@
 import Foundation
 import ValorantAPI
+import HandyOperators
 
 final class Statistics {
 	// for icons
@@ -131,7 +132,7 @@ final class Statistics {
 	struct WinRate {
 		var byDay: [Date: Tally] = [:]
 		var byMap: [MapID: Tally] = [:]
-		var byStartingSide: [MapID: [Side: Tally]] = [:]
+		var byStartingSide: [Side: [MapID: Tally]] = [:]
 		var roundsBySide: [MapID: [Side: Tally]] = [:]
 		var roundsByLoadoutDelta: [Int: Tally] = [:]
 		
@@ -150,10 +151,11 @@ final class Statistics {
 				
 				let map = match.matchInfo.mapID
 				byMap[map, default: .zero] += outcome
+				
 				if let startingSide = Side(teamID), let structure = match.roundStructure {
 					let playerTeams = Dictionary(uniqueKeysWithValues: match.players.lazy.map { ($0.id, $0.teamID) })
 					
-					byStartingSide[map, default: [:]][startingSide, default: .zero] += outcome
+					byStartingSide[startingSide, default: [:]][map, default: .zero] += outcome
 					for round in match.roundResults {
 						guard round.outcome != .surrendered else { break }
 						let side = startingSide.flipped(if: structure.areRolesSwapped(inRound: round.number))
@@ -186,6 +188,10 @@ final class Statistics {
 			
 			static let zero = Self()
 			
+			static func + (lhs: Self, rhs: Self) -> Self {
+				lhs <- { $0 += rhs }
+			}
+			
 			static func += (lhs: inout Self, rhs: Self) {
 				lhs.wins += rhs.wins
 				lhs.draws += rhs.draws
@@ -204,7 +210,7 @@ final class Statistics {
 			}
 		}
 		
-		enum Side {
+		enum Side: Hashable, CaseIterable {
 			case attacking
 			case defending
 			

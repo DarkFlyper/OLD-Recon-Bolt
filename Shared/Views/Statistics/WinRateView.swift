@@ -30,6 +30,14 @@ struct WinRateView: View {
 			Section("By Map") {
 				byMap()
 			}
+			
+			Section("Rounds by Side") {
+				roundsBySide()
+			}
+			
+			Section("Rounds by Loadout Delta") {
+				roundsByLoadoutDelta()
+			}
 		}
 		.toolbar {
 			ToolbarItemGroup(placement: .bottomBar) {
@@ -40,7 +48,7 @@ struct WinRateView: View {
 		.navigationTitle("Win Rate")
     }
 	
-	@State var timeGrouping = BucketSize.day
+	@State var timeGrouping = DateBinSize.day
 	
 	@ViewBuilder
 	func chartOverTime() -> some View {
@@ -66,12 +74,15 @@ struct WinRateView: View {
 			}
 		}
 		.chartForegroundStyleScale(Tally.foregroundStyleScale)
-		.chartYAxis { maybePercentageLabels(showTicks: false) }
+		.chartXAxis {
+			AxisMarks(position: .bottom)
+		}
+		.chartYAxis { maybePercentageLabels() }
 		.aligningListRowSeparator()
 		.padding(.vertical)
 		
 		Picker("Group by", selection: $timeGrouping) {
-			ForEach(BucketSize.allCases, id: \.self) { size in
+			ForEach(DateBinSize.allCases, id: \.self) { size in
 				Text(size.name).tag(size)
 			}
 		}
@@ -80,19 +91,18 @@ struct WinRateView: View {
 	@State private var startingSideFilter: Side?
 	
 	@ScaledMetric(relativeTo: .callout)
-	private var mapRowHeight = 45
+	private var mapRowHeight = 35
 	
 	@ViewBuilder
 	func byMap() -> some View {
-		Chart {
-			if let startingSideFilter {
-				ForEach(Array(winRate.byStartingSide), id: \.key) { map, bySide in
-					let tally = bySide[startingSideFilter] ?? .zero
-					mapEntry(map: map, tally: tally)
-				}
-			} else {
-				ForEach(Array(winRate.byMap), id: \.key, content: mapEntry)
-			}
+		Group {
+			let data: [MapID: Tally] = startingSideFilter.map { winRate.byStartingSide[$0] ?? [:] } ?? winRate.byMap
+			winRateByMap(entries: [("All Maps", data.values.reduce(into: .zero, +=) )])
+				.chartLegend(.hidden)
+			
+			let maps = winRate.byMap.keys
+			winRateByMap(entries: maps.map { map in (name(for: map), data[map] ?? .zero) })
+				.chartYScale(domain: .automatic(dataType: String.self) { $0.sort() })
 		}
 		.chartForegroundStyleScale(Tally.foregroundStyleScale)
 		.chartXScale(domain: .automatic(dataType: Int.self) { domain in
@@ -105,13 +115,7 @@ struct WinRateView: View {
 				domain.append(max) // consistent scale across views
 			}
 		})
-		.chartYScale(domain: .automatic(dataType: String.self) { domain in
-			domain.sort()
-		})
-		.chartPlotStyle { $0
-			.frame(height: mapRowHeight * .init(winRate.byMap.count))
-		}
-		.chartXAxis { maybePercentageLabels(showTicks: true) }
+		.chartXAxis { maybePercentageLabels() }
 		.chartYAxis { boldLabels() }
 		.aligningListRowSeparator()
 		
@@ -133,8 +137,160 @@ struct WinRateView: View {
 		}
 	}
 	
+	private func winRateByMap(entries: [(map: String, tally: Tally)]) -> some View {
+		Chart(entries, id: \.map) { map, tally in
+			marks(for: tally, y: .value("Map", map))
+		}
+		.chartPlotStyle { $0
+			.frame(height: .init(entries.count) * mapRowHeight)
+		}
+		.chartOverlay { chart in
+			ForEach(entries, id: \.map) { map, tally in
+				chart.rowLabel(y: map) {
+					Group {
+						if tally.total > 0 {
+							Text(tally.winFraction, format: .precisePercent)
+						} else {
+							Text("No data")
+						}
+					}
+					.padding(.horizontal, 0.15 * mapRowHeight)
+				}
+			}
+		}
+	}
+	
+	@ScaledMetric(relativeTo: .caption2)
+	private var sideRowHeight = 25
+	
+	@ViewBuilder
+	func roundsBySide() -> some View {
+		Grid(verticalSpacing: 12) {
+			let total: [Side: Tally] = winRate.roundsBySide.values
+				.reduce(into: [:]) { $0.merge($1, uniquingKeysWith: +) }
+			GridRow(alignment: .top) {
+				// tried to use an alignment guide for this, but it doesn't propagate out of .chartOverlay()
+				Text("All Maps")
+					.font(.callout.weight(.medium))
+					.gridColumnAlignment(.leading)
+					.frame(height: 0) // to "anchor" offset to center instead of top edge
+					.offset(y: sideRowHeight)
+				roundsBySide(map: nil, bySide: total)
+			}
+			
+			Divider()
+			
+			let maps = winRate.roundsBySide.sorted { name(for: $0.key) }
+			ForEach(maps, id: \.key) { map, bySide in
+				GridRow(alignment: .top) {
+					Text(name(for: map))
+						.font(.callout.weight(.medium))
+						.gridColumnAlignment(.leading)
+						.frame(height: 0) // to "anchor" offset to center instead of top edge
+						.offset(y: sideRowHeight)
+					
+					roundsBySide(map: map, bySide: bySide)
+						.chartXScale(domain: .automatic(dataType: Int.self) { domain in
+							if !shouldNormalize {
+								let max = winRate.roundsBySide.values
+									.lazy
+									.flatMap(\.values)
+									.map(\.total)
+									.max() ?? 0
+								domain.append(max) // consistent domain across charts
+							}
+						})
+						.chartXAxis {
+							AxisMarks { value in
+								AxisGridLine()
+								AxisTick()
+								if map == maps.last!.key {
+									AxisValueLabel {
+										let value = value.as(Int.self)!
+										if shouldNormalize {
+											Text("\(value)%")
+										} else {
+											Text("\(value)")
+										}
+									}
+								}
+							}
+						}
+				}
+			}
+		}
+	}
+	
+	private func sortedMaps(_ keys: some Sequence<MapID?>) -> [MapID?] {
+		keys.sorted { $0.map(name(for:)) ?? "" }
+	}
+	
+	private func roundsBySide(map: MapID?, bySide: [Side: Tally]) -> some View {
+		Chart {
+			ForEach(Array(bySide), id: \.key) { side, tally in
+				BarMark(x: .value("Count", tally.wins), y: .value("Side", side.name), stacking: stacking)
+					.foregroundStyle(by: .value("Outcome", "Wins"))
+				BarMark(x: .value("Count", tally.losses), y: .value("Side", side.name), stacking: stacking)
+					.foregroundStyle(by: .value("Outcome", "Losses"))
+			}
+		}
+		.chartOverlay { chart in
+			ForEach(Side.allCases, id: \.self) { side in
+				chart.rowLabel(y: side.name) {
+					Text(bySide[side]!.winFraction, format: .precisePercent)
+						.padding(.horizontal, 2)
+				}
+			}
+		}
+		.chartPlotStyle { $0
+			.frame(height: sideRowHeight * 2)
+		}
+		.chartYScale(domain: .automatic(dataType: String.self) { $0.sort() })
+		.chartYAxis { AxisMarks(preset: .aligned) }
+		.chartLegend(.hidden)
+		.chartForegroundStyleScale(Tally.foregroundStyleScale)
+	}
+	
+	@ViewBuilder
+	func roundsByLoadoutDelta() -> some View {
+		Chart {
+			let data: [(delta: Int, entry: Tally.Entry)] = winRate.roundsByLoadoutDelta
+				.map { delta, tally in tally.data().map { (delta, $0) } }
+				.flatTransposed()
+			
+			ForEach(data, id: \.delta) { delta, entry in
+				BarMark(
+					x: .value("Loadout Delta", binRange(forDelta: delta)),
+					y: .value("Count", Double(entry.count)),
+					stacking: stacking
+				)
+				.foregroundStyle(by: .value("Outcome", entry.name))
+			}
+		}
+		.chartForegroundStyleScale(Tally.foregroundStyleScale)
+		.chartXAxisLabel("Value Difference (credits)", alignment: .center)
+		.chartLegend(.hidden)
+		.chartPlotStyle { $0
+			.frame(height: 200)
+		}
+		.padding(.top)
+		.aligningListRowSeparator()
+		
+		Text("Loadout Delta is computed as the difference between the average loadout value of players on each team. For example, a loadout delta of +1000 means your team's loadouts were an average of 1000 credits more valuable than the enemy team's in that round.")
+			.font(.footnote)
+			.foregroundStyle(.secondary)
+	}
+	
+	private let deltaBinSize = 200
+	private func binRange(forDelta delta: Int) -> Range<Int> {
+		let offset = deltaBinSize / 2
+		let bin = (Double(delta + offset) / Double(deltaBinSize)).rounded(.down)
+		let midpoint = Int(bin) * deltaBinSize
+		return midpoint - offset ..< midpoint + offset
+	}
+	
 	private func boldLabels() -> some AxisContent {
-		AxisMarks { value in
+		AxisMarks(preset: .aligned) { value in
 			AxisValueLabel {
 				Text(value.as(String.self)!)
 					.font(.callout.weight(.medium))
@@ -143,7 +299,7 @@ struct WinRateView: View {
 		}
 	}
 	
-	private func maybePercentageLabels(showTicks: Bool) -> some AxisContent {
+	private func maybePercentageLabels() -> some AxisContent {
 		AxisMarks { value in
 			AxisValueLabel {
 				let value = value.as(Int.self)!
@@ -158,48 +314,39 @@ struct WinRateView: View {
 		}
 	}
 	
-	private func mapEntry(map: MapID, tally: Tally) -> some ChartContent {
+	private func marks<Y: Plottable>(for tally: Tally, y: PlottableValue<Y>) -> some ChartContent {
 		ForEach(tally.data(), id: \.name) { name, count in
-			BarMark(
-				x: .value("Count", count),
-				y: value(for: map),
-				stacking: stacking
-			)
-			.foregroundStyle(by: .value("Outcome", name))
+			BarMark(x: .value("Count", count), y: y, stacking: stacking)
+				.foregroundStyle(by: .value("Outcome", name))
 		}
 	}
 	
 	func value(for map: MapID) -> PlottableValue<String> {
-		.value("Map", assets?.maps[map]?.displayName ?? map.rawValue)
+		.value("Map", name(for: map))
+	}
+	
+	func name(for map: MapID) -> String {
+		assets?.maps[map]?.displayName ?? map.rawValue
 	}
 }
 
-enum BucketSize: Hashable, CaseIterable {
-	case day, week, month, year
-	
-	var component: Calendar.Component {
-		switch self {
-		case .day:
-			return .day
-		case .week:
-			return .weekOfYear
-		case .month:
-			return .month
-		case .year:
-			return .year
-		}
-	}
-	
-	var name: LocalizedStringKey {
-		switch self {
-		case .day:
-			return "Day"
-		case .week:
-			return "Week"
-		case .month:
-			return "Month"
-		case .year:
-			return "Year"
+@available(iOS 16.0, *)
+private extension ChartProxy {
+	func rowLabel<Label: View>(
+		y: some Plottable,
+		@ViewBuilder label: @escaping () -> Label
+	) -> some View {
+		GeometryReader { geometry in
+			if let yRange = positionRange(forY: y) {
+				let plotArea = geometry[plotAreaFrame]
+				label()
+					.font(.caption2)
+					.monospacedDigit()
+					.foregroundColor(.black.opacity(0.5))
+					.blendMode(.hardLight)
+					.frame(width: plotArea.width, height: yRange.upperBound - yRange.lowerBound, alignment: .leading)
+					.position(x: plotArea.midX, y: (yRange.lowerBound + yRange.upperBound) / 2)
+			}
 		}
 	}
 }
@@ -218,6 +365,10 @@ extension Side {
 private extension Tally {
 	typealias Entry = (name: String, count: Int)
 	
+	var winFraction: Double {
+		.init(wins) / .init(total)
+	}
+	
 	func data() -> [Entry] { // TODO: localize!
 		[
 			("Wins", wins),
@@ -226,7 +377,7 @@ private extension Tally {
 		]
 	}
 	
-	static let foregroundStyleScale: KeyValuePairs = [ // TODO: localize!
+	static let foregroundStyleScale: KeyValuePairs = [
 		"Wins": Color.valorantBlue,
 		"Draws": Color.valorantSelf,
 		"Losses": Color.valorantRed,
@@ -236,9 +387,9 @@ private extension Tally {
 #if DEBUG
 @available(iOS 16.0, *)
 struct WinRateView_Previews: PreviewProvider {
-    static var previews: some View {
+	static var previews: some View {
 		WinRateView(statistics: PreviewData.statistics, timeGrouping: .year)
 			.withToolbar()
-    }
+	}
 }
 #endif
