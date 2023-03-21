@@ -5,7 +5,7 @@ import Combine
 @available(iOS 16.0, *)
 struct LoadingSection: View {
 	var matchList: MatchList
-	@Binding var statistics: Statistics?
+	@Binding var fetchedMatches: [MatchDetails]
 	
 	@State var fetchCount = 20
 	@StateObject private var fetcher = MatchFetcher()
@@ -78,15 +78,7 @@ struct LoadingSection: View {
 				.debounce(for: 0.2, scheduler: DispatchQueue.main),
 			perform: { _ in
 				print("received")
-				let userID = matchList.userID
-				let matches = sublist.compactMap { fetcher.matches[$0.id] }
-				Task.detached(priority: .userInitiated) {
-					print("computing!")
-					let stats = Statistics(userID: userID, matches: matches)
-					await MainActor.run {
-						self.statistics = stats
-					}
-				}
+				fetchedMatches = sublist.compactMap { fetcher.matches[$0.id] }
 			}
 		)
 	}
@@ -187,17 +179,17 @@ private final class MatchFetcher: ObservableObject {
 @available(iOS 16.0, *)
 struct LoadingSection_Previews: PreviewProvider {
 	static var previews: some View {
-		Container(matchList: PreviewData.matchList, statistics: PreviewData.statistics)
+		Container(matchList: PreviewData.matchList)
 			.withToolbar()
 	}
 	
 	struct Container: View {
 		var matchList: MatchList
-		@State var statistics: Statistics?
+		@State var fetchedMatches: [MatchDetails] = []
 		
 		var body: some View {
 			Form {
-				LoadingSection(matchList: matchList, statistics: $statistics)
+				LoadingSection(matchList: matchList, fetchedMatches: $fetchedMatches)
 			}
 		}
 	}

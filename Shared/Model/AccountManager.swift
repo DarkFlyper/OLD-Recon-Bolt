@@ -215,6 +215,6 @@ final class StoredAccount: ObservableObject, Identifiable {
 	}
 }
 
-extension User.ID: DefaultsValueConvertible {
+extension ObjectID: DefaultsValueConvertible where RawID: Codable {
 	public typealias DefaultsRepresentation = Data // use codable
 }

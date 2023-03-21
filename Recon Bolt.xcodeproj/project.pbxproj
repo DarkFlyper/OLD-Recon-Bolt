@@ -260,6 +260,7 @@
 		B9F07CB726474EB7006CD4F5 /* AssetVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F07CB626474EB7006CD4F5 /* AssetVersion.swift */; };
 		B9F07CBA26474F4E006CD4F5 /* MapAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F07CB926474F4E006CD4F5 /* MapAssets.swift */; };
 		B9F174F829C93B86008722B1 /* DateBinSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F174F729C93B86008722B1 /* DateBinSize.swift */; };
+		B9F174FA29C97AF7008722B1 /* AssetLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F174F929C97AF7008722B1 /* AssetLabels.swift */; };
 		B9F3D94926A4F9C800052F2E /* CareerSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F3D94826A4F9C800052F2E /* CareerSummaryView.swift */; };
 		B9F5232F266ED96600DFF8DD /* LiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F5232E266ED96600DFF8DD /* LiveView.swift */; };
 		B9F52332266EE57900DFF8DD /* example_contracts.json in Resources */ = {isa = PBXBuildFile; fileRef = B9F52331266EE57900DFF8DD /* example_contracts.json */; };
@@ -505,6 +506,7 @@
 		B9F07CB626474EB7006CD4F5 /* AssetVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetVersion.swift; sourceTree = "<group>"; };
 		B9F07CB926474F4E006CD4F5 /* MapAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAssets.swift; sourceTree = "<group>"; };
 		B9F174F729C93B86008722B1 /* DateBinSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateBinSize.swift; sourceTree = "<group>"; };
+		B9F174F929C97AF7008722B1 /* AssetLabels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetLabels.swift; sourceTree = "<group>"; };
 		B9F3D94826A4F9C800052F2E /* CareerSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerSummaryView.swift; sourceTree = "<group>"; };
 		B9F5232E266ED96600DFF8DD /* LiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveView.swift; sourceTree = "<group>"; };
 		B9F52331266EE57900DFF8DD /* example_contracts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_contracts.json; sourceTree = "<group>"; };
@@ -868,6 +870,7 @@
 				B9FA2AFA291CA687005C828D /* ReviewManager.swift */,
 				B9224D842921E8700056224F /* TransparentNavigationLink.swift */,
 				B95FA88129C2D839001D1998 /* UserLabel.swift */,
+				B9F174F929C97AF7008722B1 /* AssetLabels.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -1408,6 +1411,7 @@
 				B927719C284DBA1D00F25FC3 /* SprayAssets.swift in Sources */,
 				B99302E228A9884800F7295D /* ImageManager.swift in Sources */,
 				B9EE6E6226589FAA007E28B5 /* PreviewData.swift in Sources */,
+				B9F174FA29C97AF7008722B1 /* AssetLabels.swift in Sources */,
 				B955C4572851796900BDF197 /* PreviewProviderWithAssets.swift in Sources */,
 				B937C39629C227A2008A4FFB /* LoadingSection.swift in Sources */,
 				B9F7A54127DD1E7D00636DAF /* BundleAssets.swift in Sources */,

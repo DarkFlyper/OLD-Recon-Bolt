@@ -3,21 +3,6 @@ import ValorantAPI
 
 // avoid polluting the global namespace
 enum Stats {
-	struct QueueLabel: View {
-		var queue: QueueID?
-		
-		@Environment(\.assets) private var assets
-		
-		var body: some View {
-			if let queue = assets?.queues[queue ?? .custom] {
-				Text(queue.name)
-			} else {
-				Text("Unknown Queue")
-					.foregroundStyle(.secondary)
-			}
-		}
-	}
-	
 	struct WeaponLabel: View {
 		static var overrides: [Weapon.ID: LocalizedStringKey] = [
 			.init("3de32920-4a8f-0499-7740-648a5bf95470")!: "Golden Gun",

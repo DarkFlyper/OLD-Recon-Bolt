@@ -37,11 +37,19 @@ struct MatchListFilter: Codable {
 }
 
 protocol FilterableID: Hashable, Codable {
+	associatedtype Icon: View
 	associatedtype Label: View
 	
 	static func knownIDs(assets: AssetCollection?) -> [Self]
 	
+	@ViewBuilder
+	var icon: Icon { get }
+	@ViewBuilder
 	var label: Label { get }
+}
+
+extension FilterableID where Icon == EmptyView {
+	var icon: Icon { EmptyView() }
 }
 
 extension QueueID: FilterableID {
@@ -53,7 +61,7 @@ extension QueueID: FilterableID {
 	}
 	
 	var label: some View {
-		Text(name)
+		QueueLabel(queue: self)
 	}
 }
 

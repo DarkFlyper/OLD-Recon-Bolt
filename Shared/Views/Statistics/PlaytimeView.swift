@@ -21,7 +21,7 @@ struct PlaytimeView: View {
 					durationRow(duration: time) {
 						GameModeImage(id: statistics.modeByQueue[queue]!)
 							.frame(height: 24)
-						Stats.QueueLabel(queue: queue)
+						QueueLabel(queue: queue ?? .custom)
 					}
 				}
 			}
