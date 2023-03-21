@@ -49,13 +49,15 @@ struct MatchListFilterEditor: View {
 		var toggleLabel: LocalizedStringKey
 		var disclosureLabel: (Int) -> LocalizedStringKey
 		
+		@Environment(\.assets) var assets
+		
 		var body: some View {
 			Toggle(toggleLabel, isOn: $allowList.isEnabled)
 				.font(.headline)
 				.padding(.vertical, 8)
 			
 			DisclosureGroup(disclosureLabel(allowList.allowed.count)) {
-				ForEach(ID.knownIDs, id: \.self) { id in
+				ForEach(ID.knownIDs(assets: assets), id: \.self) { id in
 					Button {
 						allowList.toggle(id)
 					} label: {

@@ -1,5 +1,6 @@
 import SwiftUI
 import ValorantAPI
+import ArrayBuilder
 
 struct MatchListFilter: Codable {
 	var queues = AllowList<QueueID>()
@@ -38,13 +39,18 @@ struct MatchListFilter: Codable {
 protocol FilterableID: Hashable, Codable {
 	associatedtype Label: View
 	
-	static var knownIDs: [Self] { get }
+	static func knownIDs(assets: AssetCollection?) -> [Self]
 	
 	var label: Label { get }
 }
 
 extension QueueID: FilterableID {
-	static var knownIDs: [Self] { knownQueues }
+	@ArrayBuilder<Self>
+	static func knownIDs(assets: AssetCollection?) -> [Self] {
+		knownQueues
+		let ordered = Set(knownQueues)
+		assets?.queues.keys.filter { !ordered.contains($0) }.sorted(on: \.rawValue) ?? []
+	}
 	
 	var label: some View {
 		Text(name)
@@ -52,7 +58,10 @@ extension QueueID: FilterableID {
 }
 
 extension MapID: FilterableID {
-	static var knownIDs: [Self] { knownStandardMaps }
+	static func knownIDs(assets: AssetCollection?) -> [Self] {
+		guard let assets else { return knownStandardMaps }
+		return assets.maps.sorted(on: \.value.displayName).map(\.key)
+	}
 	
 	var label: some View {
 		MapImage.LabelText(mapID: self)
