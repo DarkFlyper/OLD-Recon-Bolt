@@ -2,6 +2,7 @@ import SwiftUI
 import ValorantAPI
 import Charts
 import Collections
+import CGeometry
 
 private typealias WinRate = Statistics.WinRate
 private typealias Tally = WinRate.Tally
@@ -253,40 +254,13 @@ struct WinRateView: View {
 	
 	@ViewBuilder
 	func roundsByLoadoutDelta() -> some View {
-		Chart {
-			let data: [(delta: Int, entry: Tally.Entry)] = winRate.roundsByLoadoutDelta
-				.map { delta, tally in tally.data().map { (delta, $0) } }
-				.flatTransposed()
-			
-			ForEach(data, id: \.delta) { delta, entry in
-				BarMark(
-					x: .value("Loadout Delta", binRange(forDelta: delta)),
-					y: .value("Count", Double(entry.count)),
-					stacking: stacking
-				)
-				.foregroundStyle(by: .value("Outcome", entry.name))
-			}
-		}
-		.chartForegroundStyleScale(Tally.foregroundStyleScale)
-		.chartXAxisLabel("Value Difference (credits)", alignment: .center)
-		.chartLegend(.hidden)
-		.chartPlotStyle { $0
-			.frame(height: 200)
-		}
-		.padding(.top)
-		.aligningListRowSeparator()
+		RoundsByLoadoutDeltaChart(winRate: winRate, stacking: stacking)
+			.padding(.top)
+			.aligningListRowSeparator()
 		
 		Text("Loadout Delta is computed as the difference between the average loadout value of players on each team. For example, a loadout delta of +1000 means your team's loadouts were an average of 1000 credits more valuable than the enemy team's in that round.")
 			.font(.footnote)
 			.foregroundStyle(.secondary)
-	}
-	
-	private let deltaBinSize = 200
-	private func binRange(forDelta delta: Int) -> Range<Int> {
-		let offset = deltaBinSize / 2
-		let bin = (Double(delta + offset) / Double(deltaBinSize)).rounded(.down)
-		let midpoint = Int(bin) * deltaBinSize
-		return midpoint - offset ..< midpoint + offset
 	}
 	
 	private func boldLabels() -> some AxisContent {
@@ -331,6 +305,81 @@ struct WinRateView: View {
 }
 
 @available(iOS 16.0, *)
+private struct RoundsByLoadoutDeltaChart: View {
+	var winRate: Statistics.WinRate
+	var stacking: MarkStackingMethod
+	
+	@State private var focusedDelta: Range<Int>?
+	
+	var body: some View {
+		Chart {
+			let data: [(delta: Int, entry: Tally.Entry)] = winRate.roundsByLoadoutDelta
+				.map { delta, tally in tally.data().map { (delta, $0) } }
+				.flatTransposed()
+			
+			ForEach(data, id: \.delta) { delta, entry in
+				BarMark(
+					x: .value("Loadout Delta", binRange(forDelta: delta)),
+					y: .value("Count", entry.count),
+					stacking: stacking
+				)
+				.foregroundStyle(by: .value("Outcome", entry.name))
+				.opacity(focusedDelta.map { $0.contains(delta) } == false ? 0.5 : 1)
+			}
+		}
+		.chartForegroundStyleScale(Tally.foregroundStyleScale)
+		.chartXAxisLabel("Value Difference (credits)", alignment: .center)
+		.chartPlotStyle { $0.frame(height: 200).clipped() }
+		.chartLegend(.hidden)
+		.withChartXGesture { focusedDelta = $0.map(binRange(forDelta:)) }
+		.overlay(alignment: .topLeading) {
+			focusedValueInfo()
+				.padding(-8)
+		}
+	}
+	
+	@ViewBuilder
+	private func focusedValueInfo() -> some View {
+		if let focusedDelta {
+			let tally = winRate.roundsByLoadoutDelta
+				.lazy
+				.filter { focusedDelta.contains($0.key) }
+				.map(\.value)
+				.reduce(into: .zero, +=)
+			
+			VStack(alignment: .leading) {
+				Text("\(focusedDelta.lowerBound) to \(focusedDelta.upperBound) credits")
+					.font(.footnote)
+					.foregroundStyle(.secondary)
+				HStack {
+					if tally != .zero {
+						Text("\(tally.winFraction, format: .precisePercent) won")
+						Text("(\(tally.wins) – \(tally.losses))")
+							.foregroundStyle(.secondary)
+					} else {
+						Text("No data")
+							.foregroundStyle(.secondary)
+					}
+				}
+				.font(.callout.bold())
+			}
+			.monospacedDigit()
+			.padding(8)
+			.background(.regularMaterial)
+			.cornerRadius(8)
+		}
+	}
+	
+	private let deltaBinSize = 200
+	private func binRange(forDelta delta: Int) -> Range<Int> {
+		let offset = deltaBinSize / 2
+		let bin = (Double(delta + offset) / Double(deltaBinSize)).rounded(.down)
+		let midpoint = Int(bin) * deltaBinSize
+		return midpoint - offset ..< midpoint + offset
+	}
+}
+
+@available(iOS 16.0, *)
 private extension ChartProxy {
 	func rowLabel<Label: View>(
 		y: some Plottable,
@@ -346,6 +395,24 @@ private extension ChartProxy {
 					.blendMode(.hardLight)
 					.frame(width: plotArea.width, height: yRange.upperBound - yRange.lowerBound, alignment: .leading)
 					.position(x: plotArea.midX, y: (yRange.lowerBound + yRange.upperBound) / 2)
+			}
+		}
+	}
+}
+
+@available(iOS 16.0, *)
+private extension View {
+	func withChartXGesture<Value: Plottable>(onPan: @escaping (Value?) -> Void) -> some View {
+		chartOverlay { chart in
+			GeometryReader { geometry in
+				Color.clear.contentShape(Rectangle()).gesture(
+					DragGesture()
+						.onChanged { gesture in
+							let plotLocation = gesture.location - geometry[chart.plotAreaFrame].origin
+							onPan(chart.value(atX: plotLocation.dx)!)
+						}
+						.onEnded { _ in onPan(nil) }
+				)
 			}
 		}
 	}
