@@ -287,15 +287,6 @@ struct WinRateView: View {
 		assets?.maps[map]?.displayName ?? map.rawValue
 	}
 	
-	static func overview(statistics: Statistics) -> ChartOverTime? {
-		guard let (first, last) = statistics.winRate.byDay.keys.minAndMax() else { return nil }
-		return .init(
-			winRate: statistics.winRate,
-			stacking: .standard,
-			timeGrouping: .smallestThatFits(first..<last)
-		)
-	}
-	
 	struct ChartOverTime: View {
 		var winRate: Statistics.WinRate
 		var stacking: MarkStackingMethod
@@ -319,6 +310,24 @@ struct WinRateView: View {
 			}
 			.chartForegroundStyleScale(Tally.foregroundStyleScale)
 		}
+	}
+}
+
+@available(iOS 16.0, *)
+extension WinRateView {
+	init(statistics: Statistics) {
+		self.init(
+			statistics: statistics,
+			timeGrouping: .smallestThatFits(statistics.winRate.byDay.keys)
+		)
+	}
+	
+	static func overview(statistics: Statistics) -> ChartOverTime? {
+		.init(
+			winRate: statistics.winRate,
+			stacking: .standard,
+			timeGrouping: .smallestThatFits(statistics.winRate.byDay.keys)
+		)
 	}
 }
 

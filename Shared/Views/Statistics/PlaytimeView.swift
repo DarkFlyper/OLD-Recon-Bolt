@@ -67,15 +67,6 @@ struct PlaytimeView: View {
 		}
 	}
 	
-	static func overview(statistics: Statistics) -> ChartOverTime? {
-		guard let first = statistics.matches.first, let last = statistics.matches.last else { return nil }
-		let range = last.matchInfo.gameStart..<first.matchInfo.gameStart
-		return .init(
-			statistics: statistics,
-			timeGrouping: .smallestThatFits(range)
-		)
-	}
-	
 	struct ChartOverTime: View {
 		var statistics: Statistics
 		var timeGrouping: DateBinSize
@@ -100,6 +91,23 @@ struct PlaytimeView: View {
 				}
 			}
 		}
+	}
+}
+
+@available(iOS 16.0, *)
+extension PlaytimeView {
+	init(statistics: Statistics) {
+		self.init(
+			statistics: statistics,
+			timeGrouping: .smallestThatFits(statistics.matches.lazy.map(\.matchInfo.gameStart))
+		)
+	}
+	
+	static func overview(statistics: Statistics) -> ChartOverTime? {
+		.init(
+			statistics: statistics,
+			timeGrouping: .smallestThatFits(statistics.matches.lazy.map(\.matchInfo.gameStart))
+		)
 	}
 }
 

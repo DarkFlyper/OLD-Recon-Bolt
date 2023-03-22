@@ -137,13 +137,6 @@ struct HitDistributionView: View {
 		}
 	}
 	
-	static func overview(statistics: Statistics) -> some View {
-		ChartOverTime(
-			distribution: statistics.hitDistribution,
-			smoothingWindowSize: max(1, statistics.hitDistribution.byMatch.count / 5)
-		)
-	}
-	
 	struct ChartOverTime: View {
 		var distribution: Statistics.HitDistribution
 		var smoothingWindowSize: Int
@@ -194,6 +187,24 @@ struct HitDistributionView: View {
 			])
 			.compositingGroup()
 		}
+	}
+}
+
+@available(iOS 16.0, *)
+extension HitDistributionView {
+	init(statistics: Statistics) {
+		let smoothingWindowSize = max(1, statistics.hitDistribution.byMatch.count / 5)
+		self.init(
+			statistics: statistics,
+			smoothing: floor(log(CGFloat(smoothingWindowSize)) / log(smoothingLogBase))
+		)
+	}
+	
+	static func overview(statistics: Statistics) -> ChartOverTime? {
+		.init(
+			distribution: statistics.hitDistribution,
+			smoothingWindowSize: max(1, statistics.hitDistribution.byMatch.count / 5)
+		)
 	}
 }
 
