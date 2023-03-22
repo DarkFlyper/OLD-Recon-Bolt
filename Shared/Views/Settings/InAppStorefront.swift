@@ -111,11 +111,13 @@ struct ProFeaturesOverview: View {
 				}
 			}
 			
-			// TODO: implement
 			Section {
+				image("stats")
 				description("Advanced Stats") {
-					Text("TODO")
-					// TODO: note iOS 16+ restriction (if applicable)!
+					Text("Gather statistics from anyone's games to gain insights on things like time played by mode/premade, headshot rate over time/by weapon, win rate over time/by map & side, and more!")
+					Text("Note: Statistics are only available on iOS 16 and newer.")
+						.fontWeight(.medium)
+						.font(.footnote)
 				}
 			}
 			
@@ -149,9 +151,26 @@ struct ProFeaturesOverview: View {
 		Image("pro features/\(name)")
 			.resizable()
 			.aspectRatio(contentMode: .fit)
-			.frame(maxWidth: .infinity, maxHeight: 256)
+			.fixedSize(horizontal: false, vertical: true)
+			.frame(maxWidth: 414)
+			.frame(maxWidth: .infinity)
 			.listRowInsets(.init())
 			.aligningListRowSeparator()
+			.overlay {
+				GeometryReader { geometry in
+					// unfortunately ContainerRelativeShape doesn't recognize list cells
+					let path = UIBezierPath(
+						roundedRect: .init(origin: .zero, size: geometry.size),
+						byRoundingCorners: [.topLeft, .topRight],
+						cornerRadii: .init(width: 10, height: 10)
+					)
+					Path(path.cgPath)
+						.stroke(lineWidth: 2)
+						.opacity(0.1)
+						.blendMode(.hardLight)
+				}
+			}
+			.listRowSeparator(.hidden)
 	}
 	
 	func description(_ headline: LocalizedStringKey, @ViewBuilder _ content: () -> some View) -> some View {
