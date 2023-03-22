@@ -59,7 +59,7 @@ struct WinRateView: View {
 			.padding(.vertical)
 		
 		Picker("Group by", selection: $timeGrouping) {
-			ForEach(DateBinSize.allCases, id: \.self) { size in
+			ForEach(DateBinSize.allCases) { size in
 				Text(size.name).tag(size)
 			}
 		}
@@ -287,24 +287,19 @@ struct WinRateView: View {
 		assets?.maps[map]?.displayName ?? map.rawValue
 	}
 	
+	static func overview(statistics: Statistics) -> ChartOverTime? {
+		guard let (first, last) = statistics.winRate.byDay.keys.minAndMax() else { return nil }
+		return .init(
+			winRate: statistics.winRate,
+			stacking: .standard,
+			timeGrouping: .smallestThatFits(first..<last)
+		)
+	}
+	
 	struct ChartOverTime: View {
 		var winRate: Statistics.WinRate
 		var stacking: MarkStackingMethod
 		var timeGrouping: DateBinSize
-		
-		static func overview(statistics: Statistics) -> Self? {
-			guard let (first, last) = statistics.winRate.byDay.keys.minAndMax() else { return nil }
-			return .init(
-				winRate: statistics.winRate,
-				stacking: .standard,
-				timeGrouping: DateBinSize.allCases.first { binSize in
-					let binCount = Calendar.current
-						.dateComponents([binSize.component], from: first, to: last)
-						.value(for: binSize.component)!
-					return binCount < 40
-				} ?? .year
-			)
-		}
 		
 		var body: some View {
 			Chart {

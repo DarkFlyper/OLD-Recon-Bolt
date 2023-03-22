@@ -137,16 +137,16 @@ struct HitDistributionView: View {
 		}
 	}
 	
+	static func overview(statistics: Statistics) -> some View {
+		ChartOverTime(
+			distribution: statistics.hitDistribution,
+			smoothingWindowSize: max(1, statistics.hitDistribution.byMatch.count / 5)
+		)
+	}
+	
 	struct ChartOverTime: View {
 		var distribution: Statistics.HitDistribution
 		var smoothingWindowSize: Int
-		
-		static func overview(statistics: Statistics) -> Self {
-			.init(
-				distribution: statistics.hitDistribution,
-				smoothingWindowSize: max(1, statistics.hitDistribution.byMatch.count / 5)
-			)
-		}
 		
 		var body: some View {
 			let average = Double(distribution.overall.headshots) / Double(distribution.overall.total)

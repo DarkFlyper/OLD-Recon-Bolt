@@ -143,10 +143,7 @@ final class Statistics {
 				let outcome: Outcome = winner == nil ? .draw
 				: winner?.id == teamID ? .win : .loss
 				
-				let day = Calendar.current.date(
-					bySettingHour: 0, minute: 0, second: 0,
-					of: match.matchInfo.gameStart
-				)!
+				let day = Calendar.current.startOfDay(for: match.matchInfo.gameStart)
 				byDay[day, default: .zero] += outcome
 				
 				let map = match.matchInfo.mapID

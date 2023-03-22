@@ -82,28 +82,28 @@ struct StatisticsView: View {
 	
 	@ViewBuilder
 	func breakdowns(for statistics: Statistics) -> some View {
-		detailsLink("Playtime Breakdown", systemImage: "clock") {
+		detailsLink("Playtime Breakdown", systemImage: "clock", showBaseline: true) {
 			PlaytimeView(statistics: statistics)
-		} chart: {} // TODO: nice chart?
+		} chart: {
+			PlaytimeView.overview(statistics: statistics)
+		}
 		
 		detailsLink("Hit Distribution", systemImage: "scope") {
 			HitDistributionView(statistics: statistics)
 		} chart: {
-			HitDistributionView.ChartOverTime.overview(statistics: statistics)
+			HitDistributionView.overview(statistics: statistics)
 		}
 		
-		detailsLink("Win Rate", systemImage: "medal") {
+		detailsLink("Win Rate", systemImage: "medal", showBaseline: true) {
 			WinRateView(statistics: statistics)
 		} chart: {
-			WinRateView.ChartOverTime.overview(statistics: statistics)?
-				.overlay(alignment: .bottom) {
-					Color.primary.opacity(0.1).frame(height: 1)
-				}
+			WinRateView.overview(statistics: statistics)
 		}
 	}
 	
 	func detailsLink<Destination: View, Chart: View>(
 		_ title: LocalizedStringKey, systemImage: String,
+		showBaseline: Bool = false,
 		@ViewBuilder destination: @escaping () -> Destination,
 		@ViewBuilder chart: @escaping () -> Chart
 	) -> some View {
@@ -116,6 +116,11 @@ struct StatisticsView: View {
 						.chartLegend(.hidden)
 						.chartXAxis(.hidden)
 						.chartYAxis(.hidden)
+						.overlay(alignment: .bottom) {
+							if showBaseline {
+								Color.primary.opacity(0.1).frame(height: 1)
+							}
+						}
 				}
 				.padding(.vertical, 8)
 			}
