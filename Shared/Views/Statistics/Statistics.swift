@@ -6,18 +6,20 @@ final class Statistics {
 	// for icons
 	let modeByQueue: [QueueID?: GameMode.ID]
 	
+	let userID: User.ID
 	let matches: [MatchDetails]
 	let playtime: Playtime
 	let hitDistribution: HitDistribution
 	let winRate: WinRate
 	
 	init(userID: User.ID, matches: [MatchDetails]) {
+		self.userID = userID
+		self.matches = matches
+		
 		modeByQueue = .init(
 			matches.map { ($0.matchInfo.queueID, $0.matchInfo.modeID) },
 			uniquingKeysWith: { old, new in old }
 		)
-		
-		self.matches = matches
 		
 		playtime = .init(userID: userID, matches: matches)
 		hitDistribution = .init(userID: userID, matches: matches)
@@ -34,31 +36,34 @@ final class Statistics {
 		init(userID: User.ID, matches: [MatchDetails]) {
 			for match in matches {
 				let queue = match.matchInfo.queueID
-				let gameLength = match.matchInfo.gameLength
-				total += gameLength
-				byQueue[queue, default: .init()] += gameLength
-				byMap[match.matchInfo.mapID, default: .init()] += gameLength
+				total += match
+				byQueue[queue, default: .init()] += match
+				byMap[match.matchInfo.mapID, default: .init()] += match
 				
 				let user = match.players.firstElement(withID: userID)!
 				for player in match.players {
 					guard player.id != userID else { continue }
 					if player.partyID == user.partyID {
-						byPremade[player.id, default: .init()] += gameLength
+						byPremade[player.id, default: .init()] += match
 					} else {
-						byNonPremade[player.id, default: .init()] += gameLength
+						byNonPremade[player.id, default: .init()] += match
 					}
 				}
 			}
-			byNonPremade = byNonPremade.filter { $0.value.games > 1 }
+			byNonPremade = byNonPremade.filter { $0.value.games.count > 1 }
 		}
 		
 		struct Entry {
 			var time: TimeInterval = 0
-			var games: Int = 0
+			var games: [CompetitiveUpdate] = [] // need these to display as match list
 			
-			static func += (entry: inout Self, time: TimeInterval) {
-				entry.games += 1
-				entry.time += time
+			static func += (entry: inout Self, match: MatchDetails) {
+				entry.games.append(.init(
+					id: match.id,
+					mapID: match.matchInfo.mapID,
+					startTime: match.matchInfo.gameStart
+				))
+				entry.time += match.matchInfo.gameLength
 			}
 			
 			static func + (lhs: Self, rhs: Self) -> Self {

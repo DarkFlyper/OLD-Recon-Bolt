@@ -1,5 +1,6 @@
 import SwiftUI
 import Charts
+import ValorantAPI
 
 private typealias Playtime = Statistics.Playtime
 
@@ -49,7 +50,7 @@ struct PlaytimeView: View {
 				emptyPlaceholder: "No games played with premade teammates."
 			) { teammate, playtime in
 				TransparentNavigationLink {
-					MatchListView(userID: teammate)
+					FilteredMatchListView(userID: statistics.userID, otherID: teammate, matches: playtime.games)
 				} label: {
 					Row(entry: playtime) {
 						UserLabel(userID: teammate)
@@ -61,12 +62,12 @@ struct PlaytimeView: View {
 				title: "By Non-Premade Player",
 				entries: playtime.byNonPremade.sorted(),
 				emptyPlaceholder: "No non-premade players encountered repeatedly. (Un)lucky you!"
-			) { teammate, playtime in
+			) { player, playtime in
 				TransparentNavigationLink {
-					MatchListView(userID: teammate)
+					FilteredMatchListView(userID: statistics.userID, otherID: player, matches: playtime.games)
 				} label: {
 					Row(entry: playtime) {
-						UserLabel(userID: teammate)
+						UserLabel(userID: player)
 					}
 				}
 			}
@@ -139,8 +140,8 @@ struct PlaytimeView: View {
 					Stats.DurationLabel(duration: entry.time)
 						.fontWeight(.medium)
 					// I tried to use automatic inflection here but it caused hangs of like 600ms when entering the view
-					//Text("^[\(entry.games) matches](inflect: true, morphology: { partOfSpeech: \"noun\" })")
-					Text(entry.games == 1 ? "1 match" : "\(entry.games) matches")
+					//Text("^[\(entry.games.count) matches](inflect: true, morphology: { partOfSpeech: \"noun\" })")
+					Text(entry.games.count == 1 ? "1 match" : "\(entry.games.count) matches")
 						.foregroundStyle(.secondary)
 				}
 				.fixedSize()
@@ -175,6 +176,52 @@ struct PlaytimeView: View {
 	}
 }
 
+@available(iOS 16.0, *)
+struct FilteredMatchListView: View {
+	var userID: User.ID
+	var otherID: User.ID
+	var matches: [CompetitiveUpdate]
+	let filter = MatchListFilter()
+	
+	var body: some View {
+		List {
+			Section {
+				ViewThatFits {
+					HStack {
+						UserLabel(userID: otherID)
+						Capsule()
+							.opacity(0.2)
+							.frame(height: 1)
+							.frame(minWidth: 20)
+							.layoutPriority(-1)
+						UserLabel(userID: userID)
+					}
+					
+					VStack(spacing: 4) {
+						UserLabel(userID: otherID)
+							.frame(maxWidth: .infinity, alignment: .leading)
+						UserLabel(userID: userID)
+							.frame(maxWidth: .infinity, alignment: .trailing)
+					}
+				}
+				
+				TransparentNavigationLink {
+					MatchListView(userID: otherID)
+				} label: {
+					Label("View Full Profile", systemImage: "person")
+				}
+			}
+			
+			Section {
+				ForEach(matches) { match in
+					MatchCell(match: match, userID: userID, filter: filter)
+				}
+			}
+		}
+		.navigationTitle("Shared Matches")
+	}
+}
+
 private extension Dictionary where Value == Playtime.Entry {
 	func sorted() -> [(key: Key, value: Value)] {
 		sorted { -$0.value.time } // descending
@@ -204,6 +251,15 @@ struct PlaytimeView_Previews: PreviewProvider {
     static var previews: some View {
 		PlaytimeView(statistics: PreviewData.statistics)
 			.withToolbar()
+		
+		FilteredMatchListView(
+			userID: PreviewData.pregameInfo.team.players[1].id,
+			otherID: PreviewData.pregameInfo.team.players[0].id,
+			matches: PreviewData.matchList.matches
+		)
+		.withToolbar()
+		.previewDisplayName("Filtered Match List")
+		.environmentObject(BookmarkList())
     }
 }
 #endif
