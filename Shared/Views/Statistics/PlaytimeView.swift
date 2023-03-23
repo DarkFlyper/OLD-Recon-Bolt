@@ -46,7 +46,7 @@ struct PlaytimeView: View {
 			
 			ExpandableList(
 				title: "By Premade Teammate",
-				entries: playtime.byPremade.sorted(),
+				entries: playtime.byPremade.sorted(), maxCount: 5,
 				emptyPlaceholder: "No games played with premade teammates."
 			) { teammate, playtime in
 				TransparentNavigationLink {
@@ -60,7 +60,7 @@ struct PlaytimeView: View {
 			
 			ExpandableList(
 				title: "By Non-Premade Player",
-				entries: playtime.byNonPremade.sorted(),
+				entries: playtime.byNonPremade.sorted(), maxCount: 3,
 				emptyPlaceholder: "No non-premade players encountered repeatedly. (Un)lucky you!"
 			) { player, playtime in
 				TransparentNavigationLink {
@@ -93,10 +93,9 @@ struct PlaytimeView: View {
 	private struct ExpandableList<Key: Hashable, RowContent: View>: View {
 		var title: LocalizedStringKey
 		var entries: [(key: Key, value: Playtime.Entry)]
+		var maxCount: Int
 		var emptyPlaceholder: LocalizedStringKey
 		@ViewBuilder var row: (Key, Playtime.Entry) -> RowContent
-		
-		let maxCount = 5
 		
 		var body: some View {
 			Section(title) {
