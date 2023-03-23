@@ -34,6 +34,7 @@ struct CompetitiveSummaryCell: View {
 			.frame(maxWidth: .infinity)
 			.fixedSize(horizontal: false, vertical: true)
 			.padding(.vertical)
+			.aligningListRowSeparator()
 		}
 		.disabled(summary == nil)
 	}
@@ -134,13 +135,12 @@ struct CompetitiveSummaryCell_Previews: PreviewProvider, PreviewProviderWithAsse
 			.buttonStyle(.navigationLinkPreview)
 			.previewLayout(.sizeThatFits)
 			.environmentObject(ImageManager())
+			.previewDisplayName("Single Cell")
 		
 		List {
 			Section {
 				CompetitiveSummaryCell(summary: nil)
-			}
-			
-			Section {
+				
 				CompetitiveSummaryCell(summary: PreviewData.summary <- {
 					$0.competitiveInfo!.bySeason = $0.competitiveInfo!.bySeason!
 						.filter { $0.key == act.id }
@@ -170,6 +170,7 @@ struct CompetitiveSummaryCell_Previews: PreviewProvider, PreviewProviderWithAsse
 		}
 		.withToolbar()
 		.environmentObject(ImageManager())
+		.previewDisplayName("List")
 	}
 }
 #endif
