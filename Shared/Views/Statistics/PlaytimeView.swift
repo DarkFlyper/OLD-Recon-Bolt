@@ -1,11 +1,13 @@
 import SwiftUI
 import Charts
 
+private typealias Playtime = Statistics.Playtime
+
 @available(iOS 16.0, *)
 struct PlaytimeView: View {
 	var statistics: Statistics
 	
-	var playtime: Statistics.Playtime { statistics.playtime }
+	private var playtime: Playtime { statistics.playtime }
 	
 	var body: some View {
 		List {
@@ -14,31 +16,57 @@ struct PlaytimeView: View {
 			}
 			
 			Section("Overall") {
-				durationRow(duration: playtime.total) {
+				Row(entry: playtime.total) {
 					Text("Total Playtime")
 				}
 			}
 			
 			Section("By Queue") {
-				ForEach(playtime.byQueue.sorted(on: \.value).reversed(), id: \.key) { queue, time in
-					durationRow(duration: time) {
-						GameModeImage(id: statistics.modeByQueue[queue]!)
-							.frame(height: 24)
-						QueueLabel(queue: queue ?? .custom)
+				ForEach(playtime.byQueue.sorted(), id: \.key) { queue, time in
+					Row(entry: time) {
+						HStack(spacing: 12) {
+							GameModeImage(id: statistics.modeByQueue[queue]!)
+								.frame(height: 32)
+								.foregroundColor(.valorantRed)
+							QueueLabel(queue: queue ?? .custom)
+						}
 					}
 				}
 			}
 			
-			if !playtime.byPremade.isEmpty {
-				Section("By Premade Teammate") {
-					ForEach(playtime.byPremade.sorted(on: \.value).reversed(), id: \.key) { teammate, time in
-						TransparentNavigationLink {
-							MatchListView(userID: teammate)
-						} label: {
-							durationRow(duration: time) {
-								UserLabel(userID: teammate)
-							}
-						}
+			Section("By Map") {
+				ForEach(playtime.byMap.sorted(), id: \.key) { map, time in
+					Row(entry: time) {
+						// tried adding icons but couldn't get them to look good
+						MapImage.LabelText(mapID: map)
+					}
+				}
+			}
+			
+			ExpandableList(
+				title: "By Premade Teammate",
+				entries: playtime.byPremade.sorted(),
+				emptyPlaceholder: "No games played with premade teammates."
+			) { teammate, playtime in
+				TransparentNavigationLink {
+					MatchListView(userID: teammate)
+				} label: {
+					Row(entry: playtime) {
+						UserLabel(userID: teammate)
+					}
+				}
+			}
+			
+			ExpandableList(
+				title: "By Non-Premade Player",
+				entries: playtime.byNonPremade.sorted(),
+				emptyPlaceholder: "No non-premade players encountered repeatedly. (Un)lucky you!"
+			) { teammate, playtime in
+				TransparentNavigationLink {
+					MatchListView(userID: teammate)
+				} label: {
+					Row(entry: playtime) {
+						UserLabel(userID: teammate)
 					}
 				}
 			}
@@ -61,9 +89,60 @@ struct PlaytimeView: View {
 		}
 	}
 	
-	func durationRow<Label: View>(duration: TimeInterval, @ViewBuilder label: () -> Label) -> some View {
-		Stats.LabeledRow(label: label) {
-			Stats.DurationLabel(duration: duration)
+	private struct ExpandableList<Key: Hashable, RowContent: View>: View {
+		var title: LocalizedStringKey
+		var entries: [(key: Key, value: Playtime.Entry)]
+		var emptyPlaceholder: LocalizedStringKey
+		@ViewBuilder var row: (Key, Playtime.Entry) -> RowContent
+		
+		let maxCount = 5
+		
+		var body: some View {
+			Section(title) {
+				if entries.isEmpty {
+					Text(emptyPlaceholder)
+						.foregroundStyle(.secondary)
+				} else {
+					ForEach(entries.prefix(maxCount), id: \.key, content: row)
+					if entries.count > maxCount {
+						TransparentNavigationLink {
+							List(entries, id: \.key, rowContent: row)
+								.navigationTitle(title)
+						} label: {
+							let missingPlaytime: Playtime.Entry = entries
+								.dropFirst(maxCount)
+								.lazy
+								.map(\.value)
+								.reduce(.init(), +)
+							Row(entry: missingPlaytime) {
+								Text("\(entries.count - maxCount) more")
+									.foregroundStyle(.secondary)
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	private struct Row<Label: View>: View {
+		var entry: Playtime.Entry
+		@ViewBuilder var label: Label
+		
+		var body: some View {
+			HStack {
+				label.fontWeight(.medium)
+				
+				Spacer()
+				
+				VStack(alignment: .trailing, spacing: 4) {
+					Stats.DurationLabel(duration: entry.time)
+						.fontWeight(.medium)
+					Text("^[\(entry.games) matches](inflect: true, morphology: { partOfSpeech: \"noun\" })")
+						.foregroundStyle(.secondary)
+				}
+				.fixedSize()
+			}
 		}
 	}
 	
@@ -91,6 +170,12 @@ struct PlaytimeView: View {
 				}
 			}
 		}
+	}
+}
+
+private extension Dictionary where Value == Playtime.Entry {
+	func sorted() -> [(key: Key, value: Value)] {
+		sorted { -$0.value.time } // descending
 	}
 }
 

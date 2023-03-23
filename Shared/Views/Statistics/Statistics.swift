@@ -25,22 +25,44 @@ final class Statistics {
 	}
 	
 	struct Playtime {
-		var total: TimeInterval = 0
-		var byQueue: [QueueID?: TimeInterval] = [:]
-		var byPremade: [User.ID: TimeInterval] = [:]
+		var total: Entry = .init()
+		var byQueue: [QueueID?: Entry] = [:]
+		var byPremade: [User.ID: Entry] = [:]
+		var byNonPremade: [User.ID: Entry] = [:]
+		var byMap: [MapID: Entry] = [:]
 		
 		init(userID: User.ID, matches: [MatchDetails]) {
 			for match in matches {
 				let queue = match.matchInfo.queueID
 				let gameLength = match.matchInfo.gameLength
 				total += gameLength
-				byQueue[queue, default: 0] += gameLength
+				byQueue[queue, default: .init()] += gameLength
+				byMap[match.matchInfo.mapID, default: .init()] += gameLength
 				
 				let user = match.players.firstElement(withID: userID)!
 				for player in match.players {
-					guard player.partyID == user.partyID, player.id != userID else { continue }
-					byPremade[player.id, default: 0] += gameLength
+					guard player.id != userID else { continue }
+					if player.partyID == user.partyID {
+						byPremade[player.id, default: .init()] += gameLength
+					} else {
+						byNonPremade[player.id, default: .init()] += gameLength
+					}
 				}
+			}
+			byNonPremade = byNonPremade.filter { $0.value.games > 1 }
+		}
+		
+		struct Entry {
+			var time: TimeInterval = 0
+			var games: Int = 0
+			
+			static func += (entry: inout Self, time: TimeInterval) {
+				entry.games += 1
+				entry.time += time
+			}
+			
+			static func + (lhs: Self, rhs: Self) -> Self {
+				.init(time: lhs.time + rhs.time, games: lhs.games + rhs.games)
 			}
 		}
 	}

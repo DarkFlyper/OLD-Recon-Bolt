@@ -27,19 +27,6 @@ enum Stats {
 		}
 	}
 	
-	struct LabeledRow<Label: View, Value: View>: View {
-		@ViewBuilder var label: Label
-		@ViewBuilder var value: Value
-		
-		var body: some View {
-			HStack {
-				label
-				Spacer()
-				value.foregroundStyle(.secondary)
-			}
-		}
-	}
-	
 	@available(iOS 16.0, *)
 	struct DurationLabel: View {
 		var duration: TimeInterval

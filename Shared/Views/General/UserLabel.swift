@@ -14,6 +14,7 @@ struct UserLabel: View {
 					.fontWeight(.semibold)
 				
 				Text("#\(user.tagLine)")
+					.fontWeight(.regular)
 					.foregroundStyle(.secondary)
 			} else {
 				Text("Unknown Player")
