@@ -138,7 +138,9 @@ struct PlaytimeView: View {
 				VStack(alignment: .trailing, spacing: 4) {
 					Stats.DurationLabel(duration: entry.time)
 						.fontWeight(.medium)
-					Text("^[\(entry.games) matches](inflect: true, morphology: { partOfSpeech: \"noun\" })")
+					// I tried to use automatic inflection here but it caused hangs of like 600ms when entering the view
+					//Text("^[\(entry.games) matches](inflect: true, morphology: { partOfSpeech: \"noun\" })")
+					Text(entry.games == 1 ? "1 match" : "\(entry.games) matches")
 						.foregroundStyle(.secondary)
 				}
 				.fixedSize()
