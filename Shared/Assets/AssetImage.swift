@@ -18,7 +18,7 @@ struct AssetImage: Hashable {
 			image: self,
 			renderingMode: renderingMode,
 			aspectRatio: aspectRatio,
-			shouldLoadImmediately: shouldLoadImmediately
+			shouldLoadImmediately: isInSwiftUIPreview || shouldLoadImmediately
 		)
 		.id(self)
 #if DEBUG
@@ -184,10 +184,13 @@ extension Optional where Wrapped == AssetImage {
 }
 
 #if DEBUG
+@MainActor
+let sharedManager: ImageManager? = isInSwiftUIPreview ? .init() : nil
+
 private struct ImageManagerProvider: ViewModifier {
 	func body(content: Content) -> some View {
-		if isInSwiftUIPreview {
-			content.environmentObject(ImageManager())
+		if isInSwiftUIPreview, let sharedManager {
+			content.environmentObject(sharedManager)
 		} else {
 			content
 		}
