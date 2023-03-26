@@ -155,6 +155,7 @@ struct RankInfoView_Previews: PreviewProvider, PreviewProviderWithAssets {
 				.background(Color.primary.opacity(0.2))
 			}
 			.fixedSize(horizontal: false, vertical: true)
+			.previewDisplayName("Edge Cases")
 			
 			VStack {
 				ForEach([32.0, 64, 96, 128], id: \.self) { size in
@@ -167,14 +168,9 @@ struct RankInfoView_Previews: PreviewProvider, PreviewProviderWithAssets {
 					.background(Color.primary.opacity(0.1))
 				}
 			}
+			.previewDisplayName("Sizes")
 			
-			RankInfoView(summary: summary(forTier: 0))
-				.frame(height: 64)
-			
-			RankInfoView(summary: basicSummary, lineWidth: 8)
-				.frame(width: 128, height: 128)
-			
-			LazyHGrid(rows: [.init(), .init(), .init()], spacing: 20) {
+			LazyVGrid(columns: [.init(), .init(), .init()], spacing: 20) {
 				ForEach(ranks.tiers.values.map(\.number).sorted(), id: \.self) {
 					// this would be equivalent, but i want to test this overload too
 					//RankInfoView(summary: summary(forTier: $0), shouldFallBackOnPrevious: false)
@@ -185,10 +181,11 @@ struct RankInfoView_Previews: PreviewProvider, PreviewProviderWithAssets {
 						rankedRating: 69
 					))
 				}
-				.frame(width: 64)
+				.frame(height: 64)
 			}
 			.padding()
-			.frame(height: 250)
+			.frame(width: 250)
+			.previewDisplayName("Grid")
 		}
 		.previewLayout(.sizeThatFits)
 		.environmentObject(ImageManager())

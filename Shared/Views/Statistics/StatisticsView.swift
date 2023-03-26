@@ -28,6 +28,10 @@ struct StatisticsView: View {
 	
 	var body: some View {
 		Form {
+			Section("Ranked Rating Changes") {
+				RankedRatingChart(matches: matchList.matches)
+			}
+			
 			LoadingSection(matchList: matchList, fetchedMatches: $fetchedMatches)
 			
 			filterSection()

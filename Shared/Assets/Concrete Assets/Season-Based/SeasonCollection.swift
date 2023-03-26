@@ -1,5 +1,6 @@
 import Foundation
 import ValorantAPI
+import Algorithms
 
 struct SeasonCollection: AssetItem, Codable {
 	var episodes: [Episode.ID: Episode]
@@ -22,6 +23,15 @@ struct SeasonCollection: AssetItem, Codable {
 		guard let current else { return nil }
 		guard let currentIndex = actsInOrder.firstIndex(withID: current.id) else { return nil }
 		return actsInOrder.elementIfValid(at: currentIndex - 1)
+	}
+	
+	func tierCollections(
+		relevantTo range: ClosedRange<Date>
+	) -> [(act: Act, tiers: CompetitiveTier.Collection)] {
+		actsInOrder
+			.drop { $0.timeSpan.end < range.lowerBound }
+			.prefix { $0.timeSpan.start < range.upperBound }
+			.map { ($0, competitiveTiers[$0.competitiveTiers]!) }
 	}
 	
 	func currentTiers(at time: Date? = nil) -> CompetitiveTier.Collection? {
@@ -77,6 +87,10 @@ struct SeasonTimeSpan: Codable {
 	func contains(_ date: Date) -> Bool {
 		// inclusive-exclusive avoids overlap between consecutive time spans
 		start <= date && date < end
+	}
+	
+	func merging(_ other: Self) -> Self {
+		.init(start: min(start, other.start), end: max(end, other.end))
 	}
 }
 
