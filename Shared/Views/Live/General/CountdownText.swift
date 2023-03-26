@@ -11,9 +11,15 @@ struct CountdownText: View {
 	}
 	
 	var body: some View {
-		TimelineView(.periodic(from: .now, by: 1)) { context in
-			Text(Self.formatter.string(from: context.date, to: target)!)
+		if target.timeIntervalSinceNow < 24 * 3600, #available(iOS 16.0, *) {
+			// this works better for sub-minute times, but shows days as hours, so we'll only use it for targets less than a day away
+			Text(timerInterval: Date.now...target)
 				.monospacedDigit()
+		} else {
+			TimelineView(.periodic(from: .now, by: 1)) { context in
+				Text(Self.formatter.string(from: context.date, to: target)!)
+					.monospacedDigit()
+			}
 		}
 	}
 }
@@ -21,9 +27,13 @@ struct CountdownText: View {
 #if DEBUG
 struct CountdownText_Previews: PreviewProvider {
 	static var previews: some View {
-		CountdownText(target: .init(timeIntervalSinceNow: 1000))
-			.padding()
-			.previewLayout(.sizeThatFits)
+		VStack(spacing: 20) {
+			ForEach([10, 100, 1000, 10_000, 100_000], id: \.self) { (length: TimeInterval) in
+				CountdownText(target: .init(timeIntervalSinceNow: length))
+			}
+		}
+		.padding()
+		.previewLayout(.sizeThatFits)
 	}
 }
 #endif
