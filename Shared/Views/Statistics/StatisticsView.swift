@@ -28,8 +28,9 @@ struct StatisticsView: View {
 	
 	var body: some View {
 		Form {
-			Section("Ranked Rating Changes") {
-				RankedRatingChart(matches: matchList.matches)
+			Section("Rank Rating Changes") {
+				RankRatingChart(matches: matchList.matches)
+					.listRowInsets(.init())
 			}
 			
 			LoadingSection(matchList: matchList, fetchedMatches: $fetchedMatches)

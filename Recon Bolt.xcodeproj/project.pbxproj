@@ -173,7 +173,7 @@
 		B98FC071279DD758002DDF93 /* MultifactorPromptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98FC070279DD758002DDF93 /* MultifactorPromptView.swift */; };
 		B99263E7272CFE230032C8BE /* LiveGameContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99263E6272CFE230032C8BE /* LiveGameContainer.swift */; };
 		B99302E228A9884800F7295D /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99302E128A9884800F7295D /* ImageManager.swift */; };
-		B997FF2329CFCB0A00BB09FF /* RankedRatingChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = B997FF2229CFCB0A00BB09FF /* RankedRatingChart.swift */; };
+		B997FF2329CFCB0A00BB09FF /* RankRatingChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = B997FF2229CFCB0A00BB09FF /* RankRatingChart.swift */; };
 		B998492F26CEC8B00030E83C /* EventMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = B998492E26CEC8B00030E83C /* EventMap.swift */; };
 		B99AA17D294B8AF400115120 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EE6E6126589FAA007E28B5 /* PreviewData.swift */; };
 		B99AA17E294B8B5400115120 /* example_loadout.json in Resources */ = {isa = PBXBuildFile; fileRef = B914AE8828480A270001781F /* example_loadout.json */; };
@@ -448,7 +448,7 @@
 		B98FC070279DD758002DDF93 /* MultifactorPromptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultifactorPromptView.swift; sourceTree = "<group>"; };
 		B99263E6272CFE230032C8BE /* LiveGameContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveGameContainer.swift; sourceTree = "<group>"; };
 		B99302E128A9884800F7295D /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
-		B997FF2229CFCB0A00BB09FF /* RankedRatingChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankedRatingChart.swift; sourceTree = "<group>"; };
+		B997FF2229CFCB0A00BB09FF /* RankRatingChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankRatingChart.swift; sourceTree = "<group>"; };
 		B998492E26CEC8B00030E83C /* EventMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMap.swift; sourceTree = "<group>"; };
 		B99B75942655859C00FBEB60 /* Recon Bolt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Recon Bolt.entitlements"; sourceTree = "<group>"; };
 		B99BF18228313743009515C1 /* example_store_wallet.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_store_wallet.json; sourceTree = "<group>"; };
@@ -687,7 +687,7 @@
 				B937C39129C22620008A4FFB /* Statistics.swift */,
 				B95FA88329C2D8AB001D1998 /* SharedStatsViews.swift */,
 				B9F174F729C93B86008722B1 /* DateBinSize.swift */,
-				B997FF2229CFCB0A00BB09FF /* RankedRatingChart.swift */,
+				B997FF2229CFCB0A00BB09FF /* RankRatingChart.swift */,
 			);
 			path = Statistics;
 			sourceTree = "<group>";
@@ -1373,7 +1373,7 @@
 				B932A0FF279121B1009FAEE5 /* SquareAgentIcon.swift in Sources */,
 				B9131D6C266AFA7900E85F46 /* MapInfoView.swift in Sources */,
 				B914AE87284809D50001781F /* LoadoutDetailsView.swift in Sources */,
-				B997FF2329CFCB0A00BB09FF /* RankedRatingChart.swift in Sources */,
+				B997FF2329CFCB0A00BB09FF /* RankRatingChart.swift in Sources */,
 				B9C7064E269BC91F00D29226 /* GameModeImage.swift in Sources */,
 				B9741478266F18A800892B5F /* String+Localization.swift in Sources */,
 				B95B1A74269CEC7B0080EC81 /* BookmarkListView.swift in Sources */,
