@@ -2,13 +2,14 @@ import SwiftUI
 import ValorantAPI
 import Collections
 import Charts
+import HandyOperators
 
 @available(iOS 16.0, *)
 struct RankRatingChart: View {
 	var matches: [CompetitiveUpdate]
 	
 	@State var scaling: Double = 1.0
-	@State var maxCount = 10
+	@State var maxCount = 20
 	
 	@ScaledMetric(relativeTo: .caption2)
 	private var verticalPadding = 11
@@ -27,7 +28,7 @@ struct RankRatingChart: View {
 			}
 			.scaleEffect(x: -1, y: 1, anchor: .center) // flip to start at trailing edge
 		}
-		.frame(height: max(150, min(300, 1.5 * CGFloat(span))))
+		.frame(height: (CGFloat(span) * 1.5).clamped(to: 150...300))
     }
 	
 	@ViewBuilder
@@ -73,12 +74,12 @@ struct RankRatingChart: View {
 			.foregroundStyle(Color.white)
 			.symbol(.circle)
 		}
-		.chartPlotStyle { $0.shadow(radius: 1, y: 1).compositingGroup().opacity(0.7).blendMode(.hardLight) }
+		.chartPlotStyle { $0.opacity(0.5).blendMode(.plusLighter) }
 		.chartXAxis(.hidden)
 		.chartYAxis {
 			AxisMarks(values: .stride(by: 100)) {
 				AxisGridLine(stroke: StrokeStyle(lineWidth: 1))
-					.foregroundStyle(prettyDarkening.opacity(0.2))
+					.foregroundStyle(prettyDarkening.opacity(0.1))
 			}
 		}
 		.chartYScale(domain: .automatic(includesZero: false), range: .plotDimension(padding: verticalPadding + 2.5))
@@ -121,12 +122,14 @@ struct RankRatingChart: View {
 					let bottom = chart.position(forY: tier.number * 100)!
 					let nextBottom = tiers.elementIfValid(at: index + 1)
 					let top = nextBottom.map { chart.position(forY: $0.number * 100)! } ?? min(0, bottom)
-					guard (top..<bottom).overlaps(0..<plotArea.height) else { continue } // wouldn't be visible
+					let minY = top.clamped(to: 0...plotArea.height)
+					let maxY = bottom.clamped(to: 0...plotArea.height)
+					guard minY != maxY else { continue } // wouldn't be visible
 					self.tiers.append(TierBackground(frame: CGRect(
 						x: plotArea.minX + leading,
-						y: plotArea.minY + top,
+						y: plotArea.minY + minY,
 						width: width,
-						height: bottom - top
+						height: maxY - minY
 					), tier: tier))
 				}
 			}
@@ -161,11 +164,9 @@ struct RankRatingChart: View {
 						ViewThatFits {
 							tier.icon?.view()
 								.frame(width: 24)
-								.padding(8)
+								.padding(2)
+								.padding(.horizontal, 4)
 								.shadow(color: .black.opacity(0.2), radius: 1, y: 1)
-								.compositingGroup()
-								.blendMode(.hardLight)
-								.opacity(0.5)
 							
 							Color.clear // else nothing
 						}
@@ -205,8 +206,17 @@ struct Line: Shape {
 struct RankedRatingChart_Previews: PreviewProvider {
     static var previews: some View {
 		List {
-			RankRatingChart(matches: PreviewData.matchList.matches)
-				.listRowInsets(.init())
+			Section {
+				RankRatingChart(matches: PreviewData.matchList.matches)
+			}
+			.listRowInsets(.init())
+			
+			Section {
+				RankRatingChart(matches: PreviewData.matchList.matches
+					.map { $0 <- { $0.tierAfterUpdate += 17 } }
+				)
+			}
+			.listRowInsets(.init())
 		}
     }
 }
