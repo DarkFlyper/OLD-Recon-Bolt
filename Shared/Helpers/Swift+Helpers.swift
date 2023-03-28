@@ -128,3 +128,9 @@ extension FormatStyle where Self == FloatingPointFormatStyle<Double>.Percent {
 		.percent.precision(.fractionLength(1...1))
 	}
 }
+
+extension Comparable {
+	func clamped(to range: ClosedRange<Self>) -> Self {
+		min(range.upperBound, max(range.lowerBound, self))
+	}
+}

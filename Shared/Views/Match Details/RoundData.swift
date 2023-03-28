@@ -11,7 +11,7 @@ struct RoundData: Animatable {
 	let bounds: ClosedRange<Double>
 	var currentPosition: Double {
 		didSet {
-			currentPosition = max(bounds.lowerBound, min(bounds.upperBound, currentPosition))
+			currentPosition = currentPosition.clamped(to: bounds)
 			updateNeighbors()
 		}
 	}

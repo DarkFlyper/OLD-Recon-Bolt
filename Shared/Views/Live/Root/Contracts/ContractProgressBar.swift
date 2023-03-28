@@ -22,7 +22,7 @@ struct ContractProgressBar: View {
 								Color.accentColor.opacity(0.25)
 							}
 							
-							let progressInLevel = max(0, min(currentXP - range.lowerBound, range.upperBound))
+							let progressInLevel = currentXP.clamped(to: range.lowerBound...range.upperBound) - range.lowerBound
 							Color.accentColor
 								.frame(width: CGFloat(progressInLevel) * xpScale)
 								.cornerRadius(0.5)

@@ -142,7 +142,7 @@ struct LoadingSection: View {
 	}
 	
 	func clamp(_ count: Int) -> Int {
-		max(1, min(matchList.matches.count, count))
+		count.clamped(to: 1...matchList.matches.count)
 	}
 }
 
