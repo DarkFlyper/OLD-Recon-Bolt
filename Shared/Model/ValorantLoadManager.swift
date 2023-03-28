@@ -84,14 +84,3 @@ extension EnvironmentValues {
 		}
 	}
 }
-
-extension EnvironmentValues {
-	var location: Location? {
-		get { self[Key2.self] }
-		set { self[Key2.self] = newValue }
-	}
-	
-	private enum Key2: EnvironmentKey {
-		static let defaultValue: Location? = nil
-	}
-}

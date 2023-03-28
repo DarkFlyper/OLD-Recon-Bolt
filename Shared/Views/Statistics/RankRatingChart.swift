@@ -13,51 +13,62 @@ struct RankRatingChart: View {
 	@ScaledMetric(relativeTo: .caption2)
 	private var verticalPadding = 11
 	
+	@CurrentGameConfig private var gameConfig
+	
     var body: some View {
-		let ranked = matches.filter(\.isRanked)
+		let ranked = matches.lazy.filter(\.isRanked)
 		let changes = ranked.prefix(maxCount).reversed() as Array
 		let span = changes.lazy.map(\.eloAfterUpdate).minAndMax().map { $0.max - $0.min } ?? 0
 		GeometryReader { geometry in
 			ScrollView(.horizontal) {
-				AssetsUnwrappingView { assets in
-					let hiddenCount = ranked.count - changes.count
-					chart(
-						changes: changes, assets: assets,
-						leadingPadding: hiddenCount > 0 ? 32 : 0 // space for "show more" button
-					)
-					.overlay(alignment: .leading) {
-						if hiddenCount > 0 {
-							Button {
-								maxCount = ranked.count
-							} label: {
-								Label("Show all matches", systemImage: "ellipsis")
-							}
-							.labelStyle(.iconOnly)
-							.padding(4)
-							.background {
-								Circle()
-									.fill(prettyDarkening.opacity(0.15))
-									.aspectRatio(1, contentMode: .fill)
-							}
-							.foregroundColor(.white)
-							.padding(8)
-						}
-					}
-				}
-				.frame(width: max(10 * CGFloat(changes.count), geometry.size.width))
-				.scaleEffect(x: -1, y: 1, anchor: .center) // unflip from below
+				scrollableContent(changes: changes)
+					.frame(width: max(12 * CGFloat(changes.count), geometry.size.width))
+					.scaleEffect(x: -1, y: 1, anchor: .center) // unflip from below
 			}
 			.scaleEffect(x: -1, y: 1, anchor: .center) // flip to start at trailing edge
 		}
 		.frame(height: max(150, min(300, 1.5 * CGFloat(span))))
     }
 	
-	func chart(changes: [CompetitiveUpdate], assets: AssetCollection, leadingPadding: CGFloat) -> some View {
+	@ViewBuilder
+	func scrollableContent(changes: [CompetitiveUpdate]) -> some View {
+		if let seasons = $gameConfig.seasons {
+			let hiddenCount = matches.count(where: \.isRanked) - changes.count
+			chart(
+				changes: changes, seasons: seasons,
+				leadingPadding: hiddenCount > 0 ? 32 : 0 // space for "show more" button
+			)
+			.overlay(alignment: .leading) {
+				if hiddenCount > 0 {
+					Button {
+						maxCount = .max
+					} label: {
+						Label("Show all matches", systemImage: "ellipsis")
+					}
+					.labelStyle(.iconOnly)
+					.padding(4)
+					.background {
+						Circle()
+							.fill(prettyDarkening.opacity(0.15))
+							.aspectRatio(1, contentMode: .fill)
+					}
+					.foregroundColor(.white)
+					.padding(8)
+				}
+			}
+		} else {
+			Text("Missing season data!")
+				.foregroundStyle(.secondary)
+				.frame(maxHeight: .infinity)
+		}
+	}
+	
+	func chart(changes: [CompetitiveUpdate], seasons: SeasonCollection.Accessor, leadingPadding: CGFloat) -> some View {
 		Chart(changes.indexed(), id: \.index) { index, match in
 			LineMark(
 				x: .value("Match", index),
 				y: .value("ELO", Double(match.eloAfterUpdate) * scaling),
-				series: .value("Season", assets.seasons.currentAct(at: match.startTime)?.nameWithEpisode ?? "")
+				series: .value("Season", seasons.currentAct(at: match.startTime)?.nameWithEpisode ?? "")
 			)
 			.foregroundStyle(Color.white)
 			.symbol(.circle)
@@ -78,7 +89,7 @@ struct RankRatingChart: View {
 					chart: chart,
 					plotArea: geometry[chart.plotAreaFrame],
 					matches: changes,
-					assets: assets
+					seasons: seasons
 				)
 			}
 		}
@@ -88,9 +99,9 @@ struct RankRatingChart: View {
 		var tiers: [TierBackground] = []
 		var seasonSpans: [(act: Act, area: CGRect)] = []
 		
-		init(chart: ChartProxy, plotArea: CGRect, matches: [CompetitiveUpdate], assets: AssetCollection) {
+		init(chart: ChartProxy, plotArea: CGRect, matches: [CompetitiveUpdate], seasons: SeasonCollection.Accessor) {
 			guard let (start, end) = matches.map(\.startTime).minAndMax() else { return }
-			let collections = assets.seasons.tierCollections(relevantTo: start...end)
+			let collections = seasons.tierCollections(relevantTo: start...end)
 			for (index, (act, tiers)) in collections.enumerated() {
 				let startX = matches.firstIndex { act.timeSpan.contains($0.startTime) }
 				guard let startX else { continue } // no match played in this act

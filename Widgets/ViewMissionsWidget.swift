@@ -200,7 +200,7 @@ struct ViewMissionsWidget_Previews: PreviewProvider {
 		if let assets = AssetManager().assets {
 			MissionListView(entry: .init(
 				info: .success(.init(
-					contracts: .init(details: PreviewData.contractDetails, assets: assets)
+					contracts: .init(details: PreviewData.contractDetails, assets: assets, config: PreviewData.gameConfig)
 				)),
 				configuration: .init() <- { _ in
 					//$0.accentColor = .unknown

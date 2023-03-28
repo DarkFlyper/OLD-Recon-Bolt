@@ -8,7 +8,7 @@ struct ActRankView: View {
 	var isIcon = true
 	var isShowingAllWins = false
 	
-	@Environment(\.assets) private var assets
+	@CurrentGameConfig private var gameConfig
 	@EnvironmentObject private var imageManager: ImageManager
 	
 	var body: some View {
@@ -16,7 +16,7 @@ struct ActRankView: View {
 		let standardRowCount = isIcon ? 3 : 7
 		
 		ZStack {
-			let actInfo = assets?.seasons.acts[seasonInfo.seasonID]
+			let actInfo = $gameConfig.seasons?.act(seasonInfo.seasonID)
 			let border = actInfo?.borders.last { seasonInfo.winCount >= $0.winsRequired }
 			if let border {
 				let winsByTier = seasonInfo.winsByTier ?? [:]
@@ -35,7 +35,7 @@ struct ActRankView: View {
 						.lazy // lazily resolve images—essentially waits until a certain tier's triangles are requested to resolve its images
 						.filter { $0.key > 0 } // only ones we can actually display (important for auto-fitting)
 						.map { [context] tier, count -> (TierTriangles, Int) in
-							let tierInfo = assets?.seasons.tierInfo(number: tier, in: actInfo)
+							let tierInfo = $gameConfig.seasons?.tierInfo(number: tier, in: actInfo)
 							let upwards = resolve(tierInfo?.rankTriangleUpwards, using: context)
 							let downwards = resolve(tierInfo?.rankTriangleDownwards, using: context)
 							// i have no idea why in the world this ever happens but i've encountered a person with a negative count. i can't make sense of it so let's just pretend it's zero.

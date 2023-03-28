@@ -9,10 +9,10 @@ struct RankEntryProvider: FetchingIntentTimelineProvider {
 		let target = try context.configuration.account?.userID()
 		let summary = try await context.client.getCareerSummary(userID: target)
 		
-		let act = context.assets.seasons.currentAct()
+		let act = context.seasons.currentAct()
 		let seasonInfo = summary.competitiveInfo?.inSeason(act?.id)
 		let tier = seasonInfo?.competitiveTier
-		let tierInfo = context.assets.seasons.tierInfo(number: tier, in: act)
+		let tierInfo = context.seasons.tierInfo(number: tier, in: act)
 		
 		return .init(
 			summary: summary,

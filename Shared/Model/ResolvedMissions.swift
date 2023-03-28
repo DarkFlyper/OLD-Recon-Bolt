@@ -17,7 +17,7 @@ struct ResolvedContracts {
 		details.missionMetadata.weeklyRefillTime
 	}
 	
-	init(details: ContractDetails, assets: AssetCollection?) {
+	init(details: ContractDetails, assets: AssetCollection?, config: GameConfig?) {
 		self.details = details
 		self.assets = assets
 		
@@ -29,7 +29,7 @@ struct ResolvedContracts {
 		let covered = Set((dailies + weeklies).map(\.mission.id))
 		self.unknown = missions.filter { !covered.contains($0.mission.id) }
 		
-		self.upcomingMissions = assets?.upcomingMissions(for: details)
+		self.upcomingMissions = config.flatMap { assets?.upcomingMissions(for: details, config: $0) }
 		if let upcomingMissions {
 			let now = Date.now
 			let futureStart = upcomingMissions.firstIndex { $0.activationDate! > now }
@@ -45,7 +45,7 @@ struct ResolvedContracts {
 }
 
 private extension AssetCollection {
-	func upcomingMissions(for details: ContractDetails) -> [MissionInfo]? {
+	func upcomingMissions(for details: ContractDetails, config: GameConfig) -> [MissionInfo]? {
 		// the weekly checkpoint is equal to the activation date of the last completed group of weeklies
 		// so we'll figure that out and find all missions starting after that date
 		
@@ -53,7 +53,7 @@ private extension AssetCollection {
 		let checkpointDate = [
 			details.missionMetadata.weeklyCheckpoint?
 				.adding(days: 7), // add one week to skip the completed group
-			seasons.currentAct()?.timeSpan.start
+			seasons.with(config).currentAct()?.timeSpan.start
 		].compacted().max()
 		guard let checkpointDate else { return nil }
 		

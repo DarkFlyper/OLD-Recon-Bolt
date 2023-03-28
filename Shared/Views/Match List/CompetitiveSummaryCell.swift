@@ -5,7 +5,7 @@ import HandyOperators
 struct CompetitiveSummaryCell: View {
 	let summary: CareerSummary?
 	
-	@Environment(\.assets) private var assets
+	@CurrentGameConfig private var gameConfig
 	@Environment(\.colorScheme) private var colorScheme
 	
 	private let artworkSize = 96.0
@@ -42,9 +42,9 @@ struct CompetitiveSummaryCell: View {
 	@ViewBuilder
 	private var currentActInfo: some View {
 		VStack {
-			let act = assets?.seasons.currentAct()
+			let act = $gameConfig.seasons?.currentAct()
 			let info = summary?.competitiveInfo?.inSeason(act?.id)
-			let tierInfo = assets?.seasons.tierInfo(number: info?.competitiveTier, in: act)
+			let tierInfo = $gameConfig.seasons?.tierInfo(number: info?.competitiveTier, in: act)
 			
 			SeasonLabel(season: act?.id)
 				.font(secondaryFont)
@@ -76,8 +76,8 @@ struct CompetitiveSummaryCell: View {
 	@ViewBuilder
 	private var peakInfo: some View {
 		if
-			let peakRank = summary?.peakRank(seasons: assets?.seasons),
-			let info = assets?.seasons.tierInfo(peakRank)
+			let peakRank = summary?.peakRank(seasons: $gameConfig.seasons),
+			let info = $gameConfig.seasons?.tierInfo(peakRank)
 		{
 			VStack {
 				SeasonLabel(season: peakRank.season)
@@ -102,7 +102,7 @@ struct CompetitiveSummaryCell: View {
 	@ViewBuilder
 	private func actRankInfo(for info: CareerSummary.SeasonInfo, in act: Act) -> some View {
 		VStack {
-			let tierInfo = assets?.seasons.tierInfo(number: info.competitiveTier, in: act)
+			let tierInfo = $gameConfig.seasons?.tierInfo(number: info.competitiveTier, in: act)
 			
 			ActRankView(seasonInfo: info)
 				.frame(width: 120, height: 120)
@@ -129,7 +129,7 @@ struct CompetitiveSummaryCell: View {
 #if DEBUG
 struct CompetitiveSummaryCell_Previews: PreviewProvider, PreviewProviderWithAssets {
 	static func previews(assets: AssetCollection) -> some View {
-		let act = assets.seasons.currentAct()!
+		let act = assets.seasons.with(PreviewData.gameConfig).currentAct()!
 		
 		CompetitiveSummaryCell(summary: PreviewData.summary)
 			.buttonStyle(.navigationLinkPreview)

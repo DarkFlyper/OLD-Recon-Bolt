@@ -84,16 +84,16 @@ private extension Color {
 }
 
 extension CareerSummary {
-	func peakRank(seasons: SeasonCollection?) -> RankSnapshot? {
+	func peakRank(seasons: SeasonCollection.Accessor?) -> RankSnapshot? {
 		guard let seasons, let bySeason = competitiveInfo?.bySeason else { return nil }
-		return seasons.actsInOrder
+		return seasons.collection.actsInOrder
 			.reversed() // most recent first
 			.lazy
 			.compactMap { act in bySeason[act.id]?.peakRank() }
 			.max()
 	}
 	
-	func peakRankInfo(seasons: SeasonCollection?) -> CompetitiveTier? {
+	func peakRankInfo(seasons: SeasonCollection.Accessor?) -> CompetitiveTier? {
 		peakRank(seasons: seasons)
 			.flatMap { seasons?.tierInfo($0) }
 	}

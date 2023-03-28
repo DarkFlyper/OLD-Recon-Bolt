@@ -14,15 +14,15 @@ struct RankInfoView: View {
 	
 	var unit: CGFloat { size / 32 }
 	
-	@Environment(\.assets) private var assets
+	@CurrentGameConfig private var gameConfig
 	
 	var body: some View {
 		ZStack {
 			if let summary {
-				let act = assets?.seasons.currentAct()
+				let act = $gameConfig.seasons?.currentAct()
 				let info = summary.competitiveInfo?.inSeason(act?.id)
 				let tier = info?.competitiveTier ?? 0
-				let tierInfo = assets?.seasons.tierInfo(number: tier, in: act)
+				let tierInfo = $gameConfig.seasons?.tierInfo(number: tier, in: act)
 				
 				if shouldShowProgress {
 					progressView(for: tierInfo, rankedRating: info?.adjustedRankedRating ?? 0)
@@ -32,7 +32,7 @@ struct RankInfoView: View {
 					if
 						tier == 0,
 						shouldFallBackOnPrevious,
-						let peakRankInfo = summary.peakRankInfo(seasons: assets?.seasons)
+						let peakRankInfo = summary.peakRankInfo(seasons: $gameConfig.seasons)
 					{
 						peakRankIcon(using: peakRankInfo)
 					} else {
@@ -41,7 +41,7 @@ struct RankInfoView: View {
 				}
 				.scaleEffect(shouldShowProgress ? 0.7 : 1)
 			} else if let info = dataOverride {
-				let tierInfo = assets?.seasons.tierInfo(number: info.competitiveTier, in: info.seasonID)
+				let tierInfo = $gameConfig.seasons?.tierInfo(number: info.competitiveTier, in: info.seasonID)
 				
 				if shouldShowProgress {
 					progressView(for: tierInfo, rankedRating: info.adjustedRankedRating)
@@ -123,9 +123,9 @@ struct RankInfoView: View {
 #if DEBUG
 struct RankInfoView_Previews: PreviewProvider, PreviewProviderWithAssets {
 	static func previews(assets: AssetCollection) -> some View {
-		let act = assets.seasons.currentAct()!
+		let act = assets.seasons.with(PreviewData.gameConfig).currentAct()!
 		let def = CareerSummary.SeasonInfo(seasonID: act.id)
-		let ranks = assets.seasons.competitiveTiers[act.competitiveTiers]!
+		let ranks = assets.seasons.tiers(in: act)
 		
 		func summary(forTier tier: Int) -> CareerSummary {
 			PreviewData.summary <- {
@@ -158,7 +158,7 @@ struct RankInfoView_Previews: PreviewProvider, PreviewProviderWithAssets {
 			.previewDisplayName("Edge Cases")
 			
 			VStack {
-				ForEach([32.0, 64, 96, 128], id: \.self) { size in
+				ForEach([32, 64, 96, 128], id: \.self) { (size: CGFloat) in
 					HStack {
 						RankInfoView(summary: basicSummary, size: size)
 						RankInfoView(summary: basicSummary, size: size, shouldShowProgress: false)

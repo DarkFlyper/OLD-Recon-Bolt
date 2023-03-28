@@ -24,6 +24,7 @@ struct RankEntryView: TimelineEntryView {
 	
 	@Environment(\.adjustedWidgetFamily) private var widgetFamily
 	@Environment(\.assets) private var assets
+	@CurrentGameConfig private var gameConfig
 	
 	var isSmall: Bool {
 		widgetFamily == .systemSmall
@@ -46,7 +47,7 @@ struct RankEntryView: TimelineEntryView {
 	
 	func currentRank(info: RankInfo) -> some View {
 		VStack {
-			let act = assets?.seasons.currentAct()
+			let act = $gameConfig.seasons?.currentAct()
 			
 			column(
 				season: act?.id,
@@ -74,8 +75,9 @@ struct RankEntryView: TimelineEntryView {
 	@ViewBuilder
 	func peakRank(summary: CareerSummary) -> some View {
 		if
-			let peakRank = summary.peakRank(seasons: assets?.seasons),
-			let info = assets?.seasons.tierInfo(peakRank)
+			let seasons = $gameConfig.seasons,
+			let peakRank = summary.peakRank(seasons: seasons),
+			let info = seasons.tierInfo(peakRank)
 		{
 			column(
 				season: peakRank.season,
@@ -149,7 +151,7 @@ struct ViewRankWidget_Previews: PreviewProvider {
 		let view = RankEntryView(entry: .init(
 			info: .success(.init(
 				summary: PreviewData.summary,
-				tierInfo: seasons?.currentTierInfo(number: 22),
+				tierInfo: seasons?.with(PreviewData.gameConfig).currentTierInfo(number: 22),
 				rankedRating: 69
 			))
 		))

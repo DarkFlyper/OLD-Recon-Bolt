@@ -43,15 +43,14 @@ struct LeaderboardRankView: View {
 }
 
 #if DEBUG
-struct LeaderboardRankView_Previews: PreviewProvider {
-	static let assets = AssetManager.forPreviews.assets!
-	static let act = assets.seasons.currentAct()!
-	static let ranks = assets.seasons.competitiveTiers[act.competitiveTiers]!
-	static let distinctlyColoredTiers = ranks.tiers.values
-		.filter { $0.number % 3 == 0 }
-		.sorted(on: \.number)
-	
-	static var previews: some View {
+struct LeaderboardRankView_Previews: PreviewProviderWithAssets {
+	static func previews(assets: AssetCollection) -> some View {
+		let act = assets.seasons.with(PreviewData.gameConfig).currentAct()!
+		let ranks = assets.seasons.competitiveTiers[act.competitiveTiers]!
+		let distinctlyColoredTiers = ranks.tiers.values
+			.filter { $0.number % 3 == 0 }
+			.sorted(on: \.number)
+		
 		VStack {
 			LeaderboardRankView(rank: 69420)
 			ForEach(distinctlyColoredTiers, id: \.number) { tier in

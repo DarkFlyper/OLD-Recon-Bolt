@@ -11,6 +11,7 @@ struct ReconBoltApp: App {
 	@StateObject var imageManager = ImageManager()
 	@StateObject var settings = AppSettings()
 	@StateObject var store = InAppStore()
+	@StateObject var configManager = GameConfigManager()
 	
 	private var isTesting: Bool {
 		ProcessInfo.processInfo.environment["XCInjectBundleInto"] != nil
@@ -29,6 +30,7 @@ struct ReconBoltApp: App {
 				.environmentObject(bookmarkList)
 				.environmentObject(imageManager)
 				.environmentObject(settings)
+				.environmentObject(configManager)
 				.environment(\.assets, assetManager.assets)
 				.environment(\.location, accountManager.activeAccount?.location)
 				.environment(\.ownsProVersion, store.ownsProVersion)
@@ -45,11 +47,11 @@ struct ReconBoltApp: App {
 
 extension EnvironmentValues {
 	var ownsProVersion: Bool {
-		get { self[Key.self] }
-		set { self[Key.self] = newValue }
+		get { self[OwnsProVersionKey.self] }
+		set { self[OwnsProVersionKey.self] = newValue }
 	}
 	
-	private enum Key: EnvironmentKey {
+	private enum OwnsProVersionKey: EnvironmentKey {
 		static let defaultValue = false
 	}
 }

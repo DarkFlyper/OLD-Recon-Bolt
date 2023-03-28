@@ -1,6 +1,7 @@
 import Foundation
 import ValorantAPI
 import Algorithms
+import HandyOperators
 
 struct SeasonCollection: AssetItem, Codable {
 	var episodes: [Episode.ID: Episode]
@@ -11,7 +12,7 @@ struct SeasonCollection: AssetItem, Codable {
 	
 	var competitiveTiers: [CompetitiveTier.Collection.ID: CompetitiveTier.Collection]
 	
-	func currentAct(at time: Date? = nil) -> Act? {
+	private func currentAct(at time: Date?) -> Act? {
 		// not requiring the time to be greater than the start date avoids possible undefined periods between acts (like the 3 days between closed beta and act 1) and lets us use binary search for quicker searching
 		let time = time ?? Date()
 		let firstExceedingIndex = actsInOrder
@@ -25,38 +26,87 @@ struct SeasonCollection: AssetItem, Codable {
 		return actsInOrder.elementIfValid(at: currentIndex - 1)
 	}
 	
-	func tierCollections(
-		relevantTo range: ClosedRange<Date>
-	) -> [(act: Act, tiers: CompetitiveTier.Collection)] {
+	func tierCollections(relevantTo range: ClosedRange<Date>) -> [Act.WithTiers] {
 		actsInOrder
 			.drop { $0.timeSpan.end < range.lowerBound }
 			.prefix { $0.timeSpan.start < range.upperBound }
 			.map { ($0, competitiveTiers[$0.competitiveTiers]!) }
 	}
 	
-	func currentTiers(at time: Date? = nil) -> CompetitiveTier.Collection? {
-		currentAct(at: time).map { competitiveTiers[$0.competitiveTiers]! }
-	}
-	
-	func currentTierInfo(number: Int, at time: Date? = nil) -> CompetitiveTier? {
-		currentTiers(at: time)?.tier(number)
-	}
-	
-	func tierInfo(number: Int, in actID: Act.ID? = nil) -> CompetitiveTier? {
-		tierInfo(number: number, in: actID.flatMap { acts[$0] })
+	func tierInfo(number: Int, in actID: Act.ID) -> CompetitiveTier? {
+		guard let act = acts[actID] else { return nil }
+		return tiers(in: act).tier(number)
 	}
 	
 	func tierInfo(_ snapshot: RankSnapshot) -> CompetitiveTier? {
 		tierInfo(number: snapshot.rank, in: snapshot.season)
 	}
 	
-	func tierInfo(number: Int?, in act: Act? = nil) -> CompetitiveTier? {
-		let tiers = act.map { competitiveTiers[$0.competitiveTiers]! }
-		return (tiers ?? currentTiers())?.tier(number)
+	func tiers(in act: Act) -> CompetitiveTier.Collection {
+		competitiveTiers[act.competitiveTiers]!
+	}
+	
+	func with(_ config: GameConfig) -> Accessor {
+		.init(collection: self, offset: config.seasonOffset)
+	}
+	
+	struct Accessor {
+		var collection: SeasonCollection
+		var offset: TimeInterval
+		
+		/// adjusts acts forwards for matching against unadjusted times
+		func adjust(_ act: Act) -> Act {
+			act <- adjust(_:)
+		}
+		
+		/// adjusts acts forwards for matching against unadjusted times
+		func adjust(_ act: inout Act) {
+			act.timeSpan.offset(by: offset)
+		}
+		
+		/// adjusts times backwards for matching against unadjusted acts
+		private func adjust(_ time: Date?) -> Date? {
+			time.map { $0 - offset }
+		}
+		
+		func act(_ id: Act.ID?) -> Act? {
+			id.flatMap { collection.acts[$0] }.map(adjust(_:))
+		}
+		
+		func tierInfo(number: Int, in actID: Act.ID? = nil) -> CompetitiveTier? {
+			tierInfo(number: number, in: actID.flatMap { collection.acts[$0] })
+		}
+		
+		func tierInfo(_ snapshot: RankSnapshot) -> CompetitiveTier? {
+			collection.tierInfo(snapshot)
+		}
+		
+		func currentAct(at time: Date? = nil) -> Act? {
+			collection.currentAct(at: adjust(time)).map(adjust(_:))
+		}
+		
+		func currentTiers(at time: Date? = nil) -> CompetitiveTier.Collection? {
+			currentAct(at: adjust(time)).map(collection.tiers(in:))
+		}
+		
+		func currentTierInfo(number: Int, at time: Date? = nil) -> CompetitiveTier? {
+			currentTiers(at: adjust(time))?.tier(number)
+		}
+		
+		func tierInfo(number: Int?, in act: Act? = nil) -> CompetitiveTier? {
+			(act.flatMap(collection.tiers(in:)) ?? currentTiers())?.tier(number)
+		}
+		
+		func tierCollections(relevantTo range: ClosedRange<Date>) -> [Act.WithTiers] {
+			collection.tierCollections(relevantTo: range)
+				.map { $0 <- { adjust(&$0.act) } }
+		}
 	}
 }
 
 struct Act: AssetItem, Identifiable, Codable {
+	typealias WithTiers = (act: Act, tiers: CompetitiveTier.Collection)
+	
 	var id: Season.ID
 	var name: String
 	var timeSpan: SeasonTimeSpan
@@ -91,6 +141,11 @@ struct SeasonTimeSpan: Codable {
 	
 	func merging(_ other: Self) -> Self {
 		.init(start: min(start, other.start), end: max(end, other.end))
+	}
+	
+	mutating func offset(by offset: TimeInterval) {
+		start += offset
+		end += offset
 	}
 }
 

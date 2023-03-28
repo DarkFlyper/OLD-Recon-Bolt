@@ -71,11 +71,14 @@ extension FetchingIntentTimelineProvider {
 			}
 			
 			let assets = try await Managers.assets.assets ??? FetchError.noAssets
+			let config = try await Managers.gameConfig.config(for: account.location)
+			??? FetchError.noConfig(account.location)
 			var context = FetchingContext(
 				client: account.client,
 				configuration: configuration,
 				context: timelineContext,
 				assets: assets,
+				seasons: assets.seasons.with(config),
 				link: link
 			)
 			let value = try await fetchValue(in: &context)
@@ -108,11 +111,14 @@ enum WidgetError: Error, LocalizedError {
 
 enum FetchError: Error, LocalizedError {
 	case noAssets
+	case noConfig(Location)
 	
 	var errorDescription: String? {
 		switch self {
 		case .noAssets:
 			return "Missing Assets!"
+		case .noConfig(let location):
+			return "Missing game configuration data for \(location.name) region!"
 		}
 	}
 }
@@ -122,5 +128,6 @@ struct FetchContext<Intent: INIntent> {
 	let configuration: Intent
 	let context: TimelineProviderContext
 	let assets: AssetCollection
+	let seasons: SeasonCollection.Accessor
 	var link: WidgetLink
 }

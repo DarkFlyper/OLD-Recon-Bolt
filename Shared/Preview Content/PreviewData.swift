@@ -38,6 +38,7 @@ enum PreviewData {
 	static let strangeSummary = loadJSON(named: "strange_summary", as: CareerSummary.self)
 	
 	static let contractDetails = loadJSON(named: "example_contracts", as: ContractDetails.self)
+	static let gameConfig = loadJSON(named: "example_config", as: GameConfig.self)
 	
 	static let pregameInfo = loadJSON(named: "example_pregame", as: LivePregameInfo.self)
 	
@@ -74,21 +75,8 @@ enum PreviewData {
 		using decoder: JSONDecoder = ValorantClient.responseDecoder
 	) -> T where T: Decodable {
 		let url = Bundle.main.url(forResource: name, withExtension: "json", subdirectory: subdirectory)!
-		
-		let raw: Data
-		do {
-			raw = try Data(contentsOf: url)
-		} catch {
-			dump(error)
-			fatalError("could not read json file at \(url)")
-		}
-		
-		do {
-			return try decoder.decode(T.self, from: raw)
-		} catch {
-			dump(error)
-			fatalError("could not decode json from file at \(url)")
-		}
+		let raw = try! Data(contentsOf: url)
+		return try! decoder.decode(T.self, from: raw)
 	}
 }
 #endif

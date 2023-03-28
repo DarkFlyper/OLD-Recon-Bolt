@@ -7,8 +7,13 @@ struct ContractsEntryProvider: FetchingIntentTimelineProvider {
 	
 	func fetchValue(in context: inout FetchingContext) async throws -> Value {
 		let details = try await context.client.getContractDetails()
+		let config = await Managers.gameConfig.config(for: context.client.location)
 		return .init(
-			contracts: .init(details: details, assets: context.assets)
+			contracts: .init(
+				details: details,
+				assets: context.assets,
+				config: config
+			)
 		)
 	}
 }

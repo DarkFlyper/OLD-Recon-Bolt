@@ -21,6 +21,7 @@ struct LiveView: View {
 	
 	@Environment(\.valorantLoad) private var load
 	@Environment(\.assets) private var assets
+	@CurrentGameConfig private var gameConfig
 	
 	@LocalData private var user: User?
 	
@@ -47,7 +48,7 @@ struct LiveView: View {
 	var missionsBox: some View {
 		RefreshableBox(title: "Missions", isExpanded: $expandedBoxes.contains(.missions)) {
 			infoOrPlaceholder(placeholder: "Missions not loaded!", contractDetails) {
-				ContractDetailsView(contracts: .init(details: $0, assets: assets))
+				ContractDetailsView(contracts: .init(details: $0, assets: assets, config: gameConfig))
 			}
 		} refresh: {
 			contractDetails = try await $0.getContractDetails()
