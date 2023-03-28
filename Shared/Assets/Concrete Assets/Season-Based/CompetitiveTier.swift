@@ -5,6 +5,7 @@ struct CompetitiveTier: AssetItem, Codable {
 	var number: Int
 	var name: String
 	var division: String
+	var divisionID: DivisionID // doesn't depend on language
 	
 	/// The tier's primary color.
 	@HexEncodedColor var color: Color?
@@ -15,10 +16,15 @@ struct CompetitiveTier: AssetItem, Codable {
 	var rankTriangleDownwards: AssetImage?
 	var rankTriangleUpwards: AssetImage?
 	
+	var isImmortalPlus: Bool {
+		divisionID == .immortal || divisionID == .radiant
+	}
+	
 	private enum CodingKeys: String, CodingKey {
 		case number = "tier"
 		case name = "tierName"
 		case division = "divisionName"
+		case divisionID = "division"
 		case color
 		case backgroundColor
 		
@@ -27,12 +33,27 @@ struct CompetitiveTier: AssetItem, Codable {
 		case rankTriangleUpwards = "rankTriangleUpIcon"
 	}
 	
+	struct DivisionID: NamespacedID {
+		static let immortal = Self("IMMORTAL")
+		static let radiant = Self("RADIANT")
+		
+		static let namespace = "ECompetitiveDivision"
+		var rawValue: String
+	}
+	
 	struct Collection: AssetItem, Codable, Identifiable {
 		var id: ObjectID<Self, LowercaseUUID>
 		var tiers: [Int: CompetitiveTier] // tiers aren't necessarily contiguous! e.g. the second set of tiers skips 22 and 23.
 		
 		func tier(_ number: Int?) -> CompetitiveTier? {
 			tiers[number ?? 0]
+		}
+		
+		func lowestImmortalPlusTier() -> Int? {
+			tiers.values
+				.filter { $0.divisionID == .immortal }
+				.map(\.number)
+				.min()
 		}
 		
 		init(from decoder: Decoder) throws {

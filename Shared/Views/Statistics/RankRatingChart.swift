@@ -8,7 +8,6 @@ import HandyOperators
 struct RankRatingChart: View {
 	var matches: [CompetitiveUpdate]
 	
-	@State var scaling: Double = 1.0
 	@State var maxCount = 20
 	
 	@ScaledMetric(relativeTo: .caption2)
@@ -19,7 +18,7 @@ struct RankRatingChart: View {
     var body: some View {
 		let ranked = matches.lazy.filter(\.isRanked)
 		let changes = ranked.prefix(maxCount).reversed() as Array
-		let span = changes.lazy.map(\.eloAfterUpdate).minAndMax().map { $0.max - $0.min } ?? 0
+		let span = changes.lazy.map(\.tierAfterUpdate).minAndMax().map { $0.max - $0.min } ?? 0
 		GeometryReader { geometry in
 			ScrollView(.horizontal) {
 				scrollableContent(changes: changes)
@@ -28,7 +27,7 @@ struct RankRatingChart: View {
 			}
 			.scaleEffect(x: -1, y: 1, anchor: .center) // flip to start at trailing edge
 		}
-		.frame(height: (CGFloat(span) * 1.5).clamped(to: 150...300))
+		.frame(height: (CGFloat(span) * 150).clamped(to: 150...300))
     }
 	
 	@ViewBuilder
@@ -36,7 +35,7 @@ struct RankRatingChart: View {
 		if let seasons = $gameConfig.seasons {
 			let hiddenCount = matches.count(where: \.isRanked) - changes.count
 			chart(
-				changes: changes, seasons: seasons,
+				from: ChartData(matches: changes, seasons: seasons),
 				leadingPadding: hiddenCount > 0 ? 32 : 0 // space for "show more" button
 			)
 			.overlay(alignment: .leading) {
@@ -64,12 +63,12 @@ struct RankRatingChart: View {
 		}
 	}
 	
-	func chart(changes: [CompetitiveUpdate], seasons: SeasonCollection.Accessor, leadingPadding: CGFloat) -> some View {
-		Chart(changes.indexed(), id: \.index) { index, match in
+	private func chart(from data: ChartData, leadingPadding: CGFloat) -> some View {
+		Chart(data.entries) { entry in
 			LineMark(
-				x: .value("Match", index),
-				y: .value("ELO", Double(match.eloAfterUpdate) * scaling),
-				series: .value("Season", seasons.currentAct(at: match.startTime)?.nameWithEpisode ?? "")
+				x: .value("Match", entry.index),
+				y: .value("ELO", entry.elo),
+				series: .value("Series", entry.series)
 			)
 			.foregroundStyle(Color.white)
 			.symbol(.circle)
@@ -89,10 +88,57 @@ struct RankRatingChart: View {
 				ChartBackground(
 					chart: chart,
 					plotArea: geometry[chart.plotAreaFrame],
-					matches: changes,
-					seasons: seasons
+					data: data
 				)
 			}
+		}
+	}
+	
+	private struct ChartData {
+		var matches: [CompetitiveUpdate]
+		var seasons: SeasonCollection.Accessor
+		var tierCollections: [Act.WithTiers]
+		var entries: [Entry] = []
+		
+		init(matches: [CompetitiveUpdate], seasons: SeasonCollection.Accessor) {
+			self.matches = matches
+			self.seasons = seasons
+			let timeRange = matches.map(\.startTime).minAndMax().map(...)
+			tierCollections = timeRange.map(seasons.tierCollections(relevantTo:)) ?? []
+			
+			var acts = tierCollections[...]
+			var currentAct: Act.WithTiers?
+			var currentAbsoluteThreshold: Int?
+			var lastUpdate: CompetitiveUpdate? // used to determine when to start a new line (discontiguous data or season change)
+			var series = 0
+			for (index, match) in matches.enumerated() {
+				while currentAct?.act.timeSpan.contains(match.startTime) != true {
+					currentAct = acts.isEmpty ? nil : acts.removeFirst() // no data on acts this late, apparently
+					currentAbsoluteThreshold = currentAct?.act.usesAbsoluteRRForImmortalPlus == true
+					? currentAct?.tiers.lowestImmortalPlusTier() : nil
+				}
+				
+				if lastUpdate.map(match.isContiguous(from:)) != true {
+					series += 1 // start new line
+				}
+				
+				let elo: Int
+				if let currentAbsoluteThreshold, match.tierAfterUpdate >= currentAbsoluteThreshold {
+					elo = currentAbsoluteThreshold * 100 + match.tierProgressAfterUpdate
+				} else {
+					elo = match.tierAfterUpdate * 100 + match.tierProgressAfterUpdate
+				}
+				
+				entries.append(.init(id: match.id, index: index, elo: elo, series: series))
+				lastUpdate = match
+			}
+		}
+		
+		struct Entry: Identifiable {
+			var id: Match.ID
+			var index: Int
+			var elo: Int
+			var series: Int
 		}
 	}
 	
@@ -100,15 +146,16 @@ struct RankRatingChart: View {
 		var tiers: [TierBackground] = []
 		var seasonSpans: [(act: Act, area: CGRect)] = []
 		
-		init(chart: ChartProxy, plotArea: CGRect, matches: [CompetitiveUpdate], seasons: SeasonCollection.Accessor) {
-			guard let (start, end) = matches.map(\.startTime).minAndMax() else { return }
-			let collections = seasons.tierCollections(relevantTo: start...end)
-			for (index, (act, tiers)) in collections.enumerated() {
+		init(chart: ChartProxy, plotArea: CGRect, data: ChartData) {
+			let tierSpacing = chart.position(forY: 0)! - chart.position(forY: 100)!
+			
+			let matches = data.matches
+			for (index, (act, tiers)) in data.tierCollections.enumerated() {
 				let startX = matches.firstIndex { act.timeSpan.contains($0.startTime) }
 				guard let startX else { continue } // no match played in this act
 				let endX = matches.suffix(from: startX).firstIndex { !act.timeSpan.contains($0.startTime) } ?? matches.endIndex
 				let leading = index == 0 ? 0 : chart.position(forX: Double(startX) - 0.5)!
-				let isLast = index == collections.count - 1
+				let isLast = index == data.tierCollections.count - 1
 				let trailing = isLast ? plotArea.width : chart.position(forX: Double(endX) - 0.5)!
 				let width = trailing - leading
 				
@@ -117,20 +164,29 @@ struct RankRatingChart: View {
 					width: width, height: plotArea.height
 				)))
 				
+				let absoluteThreshold = act.usesAbsoluteRRForImmortalPlus ? tiers.lowestImmortalPlusTier() : nil
+				
 				let tiers = tiers.tiers.values.sorted(on: \.number)
 				for (index, tier) in tiers.enumerated() {
+					let representsImmortalPlus = tier.number == absoluteThreshold
 					let bottom = chart.position(forY: tier.number * 100)!
-					let nextBottom = tiers.elementIfValid(at: index + 1)
+					let nextBottom = representsImmortalPlus ? nil : tiers.elementIfValid(at: index + 1)
 					let top = nextBottom.map { chart.position(forY: $0.number * 100)! } ?? min(0, bottom)
 					let minY = top.clamped(to: 0...plotArea.height)
 					let maxY = bottom.clamped(to: 0...plotArea.height)
-					guard minY != maxY else { continue } // wouldn't be visible
-					self.tiers.append(TierBackground(frame: CGRect(
-						x: plotArea.minX + leading,
-						y: plotArea.minY + minY,
-						width: width,
-						height: maxY - minY
-					), tier: tier))
+					if minY != maxY { // wouldn't be visible otherwise
+						self.tiers.append(TierBackground(
+							tier: representsImmortalPlus ? nil : tier,
+							frame: CGRect(
+								x: plotArea.minX + leading,
+								y: plotArea.minY + minY,
+								width: width,
+								height: maxY - minY
+							),
+							tierSpacing: tierSpacing
+						))
+					}
+					if representsImmortalPlus { break } // higher ranks already represented
 				}
 			}
 		}
@@ -155,14 +211,15 @@ struct RankRatingChart: View {
 		}
 		
 		struct TierBackground: View {
+			var tier: CompetitiveTier? // nil to represent immortal+ as one
 			var frame: CGRect
-			var tier: CompetitiveTier
+			var tierSpacing: CGFloat // height for 100rr
 			
 			var body: some View {
-				tier.backgroundColor
+				fill
 					.overlay {
 						ViewThatFits {
-							tier.icon?.view()
+							tier?.icon?.view()
 								.frame(width: 24)
 								.padding(2)
 								.padding(.horizontal, 4)
@@ -180,6 +237,20 @@ struct RankRatingChart: View {
 					}
 					.frame(width: frame.width, height: frame.height)
 					.offset(CGSize(frame.origin))
+			}
+			
+			private static let radiant = Color(uiColor: #colorLiteral(red: 1, green: 0.9294117647, blue: 0.6666666667, alpha: 1))
+			private static let immortal = Color(uiColor: #colorLiteral(red: 1, green: 0.3333333333, blue: 0.3176470588, alpha: 1))
+			
+			@ViewBuilder
+			var fill: some View {
+				if let tier {
+					tier.backgroundColor
+				} else {
+					LinearGradient(colors: [Self.immortal, Self.radiant], startPoint: .bottom, endPoint: .top)
+						.frame(minHeight: 4.5 * tierSpacing) // around 450 rr is the threshold for radiant in most regions, no i'm not gonna make this region-dependent lol
+						.frame(height: frame.height, alignment: .bottom)
+				}
 			}
 		}
 	}
@@ -212,8 +283,10 @@ struct RankedRatingChart_Previews: PreviewProvider {
 			.listRowInsets(.init())
 			
 			Section {
-				RankRatingChart(matches: PreviewData.matchList.matches
-					.map { $0 <- { $0.tierAfterUpdate += 17 } }
+				RankRatingChart(matches: PreviewData.matchList.matches.map { $0 <- {
+					$0.tierBeforeUpdate += 14
+					$0.tierAfterUpdate += 14
+				} }
 				)
 			}
 			.listRowInsets(.init())

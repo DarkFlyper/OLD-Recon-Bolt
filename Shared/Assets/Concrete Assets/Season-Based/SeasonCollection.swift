@@ -50,6 +50,11 @@ struct SeasonCollection: AssetItem, Codable {
 		.init(collection: self, offset: config.seasonOffset)
 	}
 	
+	func lowestImmortalPlusTier(in actID: Act.ID) -> Int? {
+		guard let act = acts[actID] else { return nil }
+		return tiers(in: act).lowestImmortalPlusTier()
+	}
+	
 	struct Accessor {
 		var collection: SeasonCollection
 		var offset: TimeInterval
@@ -122,6 +127,11 @@ struct Act: AssetItem, Identifiable, Codable {
 		} else {
 			return name
 		}
+	}
+	
+	private static let absoluteRRStartTime = Date(timeIntervalSince1970: 1611014400) // start of ep2 act1, where they merged immortals
+	var usesAbsoluteRRForImmortalPlus: Bool {
+		timeSpan.start >= Self.absoluteRRStartTime // >= to cover this and future acts, plus it still works if timeSpan was shifted with a season offset since those are positive
 	}
 }
 
