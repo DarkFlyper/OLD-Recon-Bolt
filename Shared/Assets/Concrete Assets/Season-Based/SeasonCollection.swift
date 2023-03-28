@@ -99,7 +99,7 @@ struct SeasonCollection: AssetItem, Codable {
 		}
 		
 		func tierInfo(number: Int?, in act: Act? = nil) -> CompetitiveTier? {
-			(act.flatMap(collection.tiers(in:)) ?? currentTiers())?.tier(number)
+			act.flatMap(collection.tiers(in:))?.tier(number)
 		}
 		
 		func tierCollections(relevantTo range: ClosedRange<Date>) -> [Act.WithTiers] {
