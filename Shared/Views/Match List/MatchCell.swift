@@ -178,6 +178,7 @@ private struct ChangeRing: View {
 	
 	var body: some View {
 		ZStack {
+			// this is technically wrong for immortal+, but it's not a problem
 			let before = CGFloat(match.eloBeforeUpdate) / 100
 			let after = CGFloat(match.eloAfterUpdate) / 100
 			let lower = min(before, after)
