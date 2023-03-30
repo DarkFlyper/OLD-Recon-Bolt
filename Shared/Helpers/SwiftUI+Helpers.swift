@@ -3,7 +3,12 @@ import SwiftUIMissingPieces
 
 #if DEBUG
 var isInSwiftUIPreview: Bool {
+	#if WIDGETS
+	// i'm so sorry
+	ProcessInfo.processInfo.environment["HOME"]?.contains("Previews") == true
+	#else
 	ProcessInfo.processInfo.environment["XCODE_RUNNING_FOR_PREVIEWS"] == "1"
+	#endif
 }
 #else
 let isInSwiftUIPreview = false
