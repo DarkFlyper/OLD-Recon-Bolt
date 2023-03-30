@@ -222,6 +222,7 @@ struct RankRatingChart: View {
 							Text(span.act.name)
 								.font(.caption2)
 								.fixedSize()
+								.padding(.horizontal) // looks neater, and would otherwise intersect widget corners
 								.frame(height: labelHeight)
 								.foregroundStyle(prettyDarkening.opacity(0.3))
 							
@@ -240,7 +241,7 @@ struct RankRatingChart: View {
 			var body: some View {
 				fill
 					.overlay {
-						if frame.height >= tierSpacing { // never show in the vertical margins
+						if frame.height >= tierSpacing - 1e-3 { // never show in the vertical margins (tolerance for FP imprecision)
 							ViewThatFits {
 								tier?.icon?.view()
 									.frame(width: 24)
