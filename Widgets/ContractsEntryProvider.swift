@@ -12,7 +12,7 @@ struct ContractsEntryProvider: FetchingIntentTimelineProvider {
 			contracts: .init(
 				details: details,
 				assets: context.assets,
-				config: config
+				seasons: config.map(context.assets.seasons.with(_:))
 			)
 		)
 	}

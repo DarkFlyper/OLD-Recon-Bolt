@@ -41,7 +41,7 @@ where Entry == FetchedTimelineEntry<Value, Intent>, Intent: FetchingIntent {
 
 extension FetchingIntentTimelineProvider {
 	func placeholder(in context: Context) -> Entry {
-		.init(info: .failure(FakeError.blankPreview))
+		.mocked(error: FakeError.blankPreview)
 	}
 	
 	func getSnapshot(for configuration: Intent, in context: Context) async -> Entry {
@@ -55,6 +55,7 @@ extension FetchingIntentTimelineProvider {
 	
 	func getCurrentEntry(for configuration: Intent, in timelineContext: Context) async -> Entry {
 		var link = WidgetLink()
+		var location: Location?
 		let result: Result<Value, Error>
 		do {
 			await Managers.store.refreshFromDefaults()
@@ -65,6 +66,7 @@ extension FetchingIntentTimelineProvider {
 			await Managers.assets.loadAssets()
 			
 			let account = try await configuration.loadAccount()
+			location = account.location
 			link.account = account.session.userID
 			if let version = await Managers.assets.assets?.version.riotClientVersion {
 				account.setClientVersion(version)
@@ -88,7 +90,8 @@ extension FetchingIntentTimelineProvider {
 			print(error)
 			result = .failure(error)
 		}
-		return .init(date: .now, info: result, configuration: configuration, link: link)
+		
+		return .init(date: .now, info: result, location: location, configuration: configuration, link: link)
 	}
 }
 

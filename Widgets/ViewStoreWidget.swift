@@ -203,11 +203,11 @@ struct ViewStoreWidget_Previews: PreviewProvider {
 	
 	static var previews: some View {
 		Group {
-			let view = StoreEntryView(entry: .init(
-				info: .success(.init(
+			let view = StoreEntryView(entry: .mocked(
+				value: .init(
 					nextRefresh: .init(timeIntervalSinceNow: 12345),
 					skins: Self.skins
-				))
+				)
 			))
 			
 			view.previewContext(WidgetPreviewContext(family: .systemSmall))

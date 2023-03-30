@@ -70,3 +70,9 @@ extension IntentHandler: ViewRankIntentHandling {
 		try await provideUserOptionsCollection()
 	}
 }
+
+extension IntentHandler: ViewRankChangesIntentHandling {
+	func provideAccountOptionsCollection(for intent: ViewRankChangesIntent) async throws -> Accounts {
+		try await provideUserOptionsCollection()
+	}
+}

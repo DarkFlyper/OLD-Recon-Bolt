@@ -7,5 +7,6 @@ struct WidgetsBundle: WidgetBundle {
 		ViewStoreWidget()
 		ViewMissionsWidget()
 		ViewRankWidget()
+		ViewRankChangesWidget()
 	}
 }

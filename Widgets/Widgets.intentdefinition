@@ -309,7 +309,7 @@
 			<key>INIntentCategory</key>
 			<string>information</string>
 			<key>INIntentDescription</key>
-			<string>Customize how your missions are displayd.</string>
+			<string>Customize how your missions are displayed.</string>
 			<key>INIntentDescriptionID</key>
 			<string>s2ilh5</string>
 			<key>INIntentEligibleForWidgets</key>
@@ -464,6 +464,8 @@
 					<integer>1</integer>
 					<key>INIntentParameterMetadata</key>
 					<dict>
+						<key>INIntentParameterMetadataDefaultValue</key>
+						<true/>
 						<key>INIntentParameterMetadataFalseDisplayName</key>
 						<string>false</string>
 						<key>INIntentParameterMetadataFalseDisplayNameID</key>
@@ -550,8 +552,6 @@
 					<integer>3</integer>
 					<key>INIntentParameterMetadata</key>
 					<dict>
-						<key>INIntentParameterMetadataDefaultValue</key>
-						<true/>
 						<key>INIntentParameterMetadataFalseDisplayName</key>
 						<string>false</string>
 						<key>INIntentParameterMetadataFalseDisplayNameID</key>
@@ -692,6 +692,137 @@
 			<string>View Rank</string>
 			<key>INIntentTitleID</key>
 			<string>ZwiyvD</string>
+			<key>INIntentType</key>
+			<string>Custom</string>
+			<key>INIntentVerb</key>
+			<string>View</string>
+		</dict>
+		<dict>
+			<key>INIntentCategory</key>
+			<string>information</string>
+			<key>INIntentDescription</key>
+			<string>Customize how your rank changes are displayed.</string>
+			<key>INIntentDescriptionID</key>
+			<string>X1PqLp</string>
+			<key>INIntentEligibleForWidgets</key>
+			<true/>
+			<key>INIntentIneligibleForSuggestions</key>
+			<true/>
+			<key>INIntentLastParameterTag</key>
+			<integer>4</integer>
+			<key>INIntentName</key>
+			<string>ViewRankChanges</string>
+			<key>INIntentParameters</key>
+			<array>
+				<dict>
+					<key>INIntentParameterConfigurable</key>
+					<true/>
+					<key>INIntentParameterDisplayName</key>
+					<string>Use Active Account</string>
+					<key>INIntentParameterDisplayNameID</key>
+					<string>xE0FGm</string>
+					<key>INIntentParameterDisplayPriority</key>
+					<integer>1</integer>
+					<key>INIntentParameterMetadata</key>
+					<dict>
+						<key>INIntentParameterMetadataDefaultValue</key>
+						<true/>
+						<key>INIntentParameterMetadataFalseDisplayName</key>
+						<string>false</string>
+						<key>INIntentParameterMetadataFalseDisplayNameID</key>
+						<string>FOAOSn</string>
+						<key>INIntentParameterMetadataTrueDisplayName</key>
+						<string>true</string>
+						<key>INIntentParameterMetadataTrueDisplayNameID</key>
+						<string>HfQyGs</string>
+					</dict>
+					<key>INIntentParameterName</key>
+					<string>useActiveAccount</string>
+					<key>INIntentParameterPromptDialogs</key>
+					<array>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Configuration</string>
+						</dict>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Primary</string>
+						</dict>
+					</array>
+					<key>INIntentParameterTag</key>
+					<integer>4</integer>
+					<key>INIntentParameterType</key>
+					<string>Boolean</string>
+				</dict>
+				<dict>
+					<key>INIntentParameterConfigurable</key>
+					<true/>
+					<key>INIntentParameterDisplayName</key>
+					<string>Account</string>
+					<key>INIntentParameterDisplayNameID</key>
+					<string>pr2Nr9</string>
+					<key>INIntentParameterDisplayPriority</key>
+					<integer>2</integer>
+					<key>INIntentParameterName</key>
+					<string>account</string>
+					<key>INIntentParameterObjectType</key>
+					<string>Account</string>
+					<key>INIntentParameterObjectTypeNamespace</key>
+					<string>88xZPY</string>
+					<key>INIntentParameterPromptDialogs</key>
+					<array>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Configuration</string>
+						</dict>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Primary</string>
+						</dict>
+					</array>
+					<key>INIntentParameterRelationship</key>
+					<dict>
+						<key>INIntentParameterRelationshipParentName</key>
+						<string>useActiveAccount</string>
+						<key>INIntentParameterRelationshipPredicateName</key>
+						<string>BooleanHasExactValue</string>
+					</dict>
+					<key>INIntentParameterSupportsDynamicEnumeration</key>
+					<true/>
+					<key>INIntentParameterTag</key>
+					<integer>2</integer>
+					<key>INIntentParameterType</key>
+					<string>Object</string>
+				</dict>
+			</array>
+			<key>INIntentResponse</key>
+			<dict>
+				<key>INIntentResponseCodes</key>
+				<array>
+					<dict>
+						<key>INIntentResponseCodeName</key>
+						<string>success</string>
+						<key>INIntentResponseCodeSuccess</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>INIntentResponseCodeName</key>
+						<string>failure</string>
+					</dict>
+				</array>
+			</dict>
+			<key>INIntentTitle</key>
+			<string>View Rank Changes</string>
+			<key>INIntentTitleID</key>
+			<string>GbrfVR</string>
 			<key>INIntentType</key>
 			<string>Custom</string>
 			<key>INIntentVerb</key>

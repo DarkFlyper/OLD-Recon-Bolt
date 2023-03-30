@@ -177,6 +177,12 @@
 		B997FF2529D15AAC00BB09FF /* GameConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B997FF2429D15AAC00BB09FF /* GameConfigManager.swift */; };
 		B997FF2629D2268E00BB09FF /* GameConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B997FF2429D15AAC00BB09FF /* GameConfigManager.swift */; };
 		B997FF2929D2692900BB09FF /* example_config.json in Resources */ = {isa = PBXBuildFile; fileRef = B997FF2829D2672100BB09FF /* example_config.json */; };
+		B997FF2B29D3B44C00BB09FF /* ViewRankChangesWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B997FF2A29D3B44C00BB09FF /* ViewRankChangesWidget.swift */; };
+		B997FF2D29D3B5DC00BB09FF /* RankChangesEntryProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B997FF2C29D3B5DC00BB09FF /* RankChangesEntryProvider.swift */; };
+		B997FF2E29D3B6DE00BB09FF /* LocalDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9168AE52689440B00866F6A /* LocalDataProvider.swift */; };
+		B997FF2F29D3B6E400BB09FF /* LocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EE0002267EDCB100C08119 /* LocalDataManager.swift */; };
+		B997FF3029D3BAEA00BB09FF /* RankRatingChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = B997FF2229CFCB0A00BB09FF /* RankRatingChart.swift */; };
+		B997FF3129D3C17600BB09FF /* example_config.json in Resources */ = {isa = PBXBuildFile; fileRef = B997FF2829D2672100BB09FF /* example_config.json */; };
 		B998492F26CEC8B00030E83C /* EventMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = B998492E26CEC8B00030E83C /* EventMap.swift */; };
 		B99AA17D294B8AF400115120 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EE6E6126589FAA007E28B5 /* PreviewData.swift */; };
 		B99AA17E294B8B5400115120 /* example_loadout.json in Resources */ = {isa = PBXBuildFile; fileRef = B914AE8828480A270001781F /* example_loadout.json */; };
@@ -454,6 +460,8 @@
 		B997FF2229CFCB0A00BB09FF /* RankRatingChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankRatingChart.swift; sourceTree = "<group>"; };
 		B997FF2429D15AAC00BB09FF /* GameConfigManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameConfigManager.swift; sourceTree = "<group>"; };
 		B997FF2829D2672100BB09FF /* example_config.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = example_config.json; sourceTree = "<group>"; };
+		B997FF2A29D3B44C00BB09FF /* ViewRankChangesWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRankChangesWidget.swift; sourceTree = "<group>"; };
+		B997FF2C29D3B5DC00BB09FF /* RankChangesEntryProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankChangesEntryProvider.swift; sourceTree = "<group>"; };
 		B998492E26CEC8B00030E83C /* EventMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMap.swift; sourceTree = "<group>"; };
 		B99B75942655859C00FBEB60 /* Recon Bolt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Recon Bolt.entitlements"; sourceTree = "<group>"; };
 		B99BF18228313743009515C1 /* example_store_wallet.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_store_wallet.json; sourceTree = "<group>"; };
@@ -894,9 +902,11 @@
 				B939C825294A601C00ABD0C6 /* StoreEntryProvider.swift */,
 				B9E861C7294FB006004F8ADF /* ContractsEntryProvider.swift */,
 				B9E4B8AD29B8364100E999D0 /* RankEntryProvider.swift */,
+				B997FF2C29D3B5DC00BB09FF /* RankChangesEntryProvider.swift */,
 				B939C821294A5CD000ABD0C6 /* ViewStoreWidget.swift */,
 				B94A8D59294AB1F700AC5BCD /* ViewMissionsWidget.swift */,
 				B9E4B8AF29B8390200E999D0 /* ViewRankWidget.swift */,
+				B997FF2A29D3B44C00BB09FF /* ViewRankChangesWidget.swift */,
 				B9E861C1294FADDC004F8ADF /* IntentHelpers.swift */,
 				B9BC89FD293A7D6F00B97626 /* Widgets.intentdefinition */,
 				B9BC89FE293A7D7400B97626 /* Assets.xcassets */,
@@ -1273,6 +1283,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B997FF3129D3C17600BB09FF /* example_config.json in Resources */,
 				B99AA17E294B8B5400115120 /* example_loadout.json in Resources */,
 				B99AA17F294B8B5400115120 /* Local in Resources */,
 				B99AA180294B8B5500115120 /* example matches in Resources */,
@@ -1489,6 +1500,7 @@
 			files = (
 				B97C8F39293C4086002F6A07 /* ValorantAPI+SwiftUI.swift in Sources */,
 				B99AA18F294B8BBA00115120 /* MatchViewData.swift in Sources */,
+				B997FF2E29D3B6DE00BB09FF /* LocalDataProvider.swift in Sources */,
 				B97C8F51293C421F002F6A07 /* SprayAssets.swift in Sources */,
 				B99AA192294B8BCE00115120 /* MatchList.swift in Sources */,
 				B97C8F4B293C421F002F6A07 /* MissionAssets.swift in Sources */,
@@ -1514,6 +1526,7 @@
 				B97C8F52293C421F002F6A07 /* MapAssets.swift in Sources */,
 				B99AA17D294B8AF400115120 /* PreviewData.swift in Sources */,
 				B97C8F46293C421C002F6A07 /* SeasonDecoding.swift in Sources */,
+				B997FF2D29D3B5DC00BB09FF /* RankChangesEntryProvider.swift in Sources */,
 				B9BC89FC293A7D6F00B97626 /* General.swift in Sources */,
 				B97C8F50293C421F002F6A07 /* AgentAssets.swift in Sources */,
 				B97C8F55293C4225002F6A07 /* WeaponImage.swift in Sources */,
@@ -1526,6 +1539,7 @@
 				B9E4B8B029B8390200E999D0 /* ViewRankWidget.swift in Sources */,
 				B9298FA629C0290700DC7778 /* QueueAssets.swift in Sources */,
 				B9FF792E2995FED300DFE90E /* ContentTierAssets.swift in Sources */,
+				B997FF3029D3BAEA00BB09FF /* RankRatingChart.swift in Sources */,
 				B9BC89F8293A7D6F00B97626 /* WidgetsBundle.swift in Sources */,
 				B97C8F4F293C421F002F6A07 /* CurrencyAssets.swift in Sources */,
 				B97C8F41293C4212002F6A07 /* AssetLoading.swift in Sources */,
@@ -1538,9 +1552,11 @@
 				B94A8D70294B052D00AC5BCD /* String+Localization.swift in Sources */,
 				B97C8F4A293C421F002F6A07 /* ContractAssets.swift in Sources */,
 				B97C8F31293BBEA7002F6A07 /* Keychain.swift in Sources */,
+				B997FF2F29D3B6E400BB09FF /* LocalDataManager.swift in Sources */,
 				B9E861C0294FAD24004F8ADF /* TimelineProvider.swift in Sources */,
 				B97C8F4C293C421F002F6A07 /* PlayerCardAssets.swift in Sources */,
 				B97C8F47293C421C002F6A07 /* SeasonCollection.swift in Sources */,
+				B997FF2B29D3B44C00BB09FF /* ViewRankChangesWidget.swift in Sources */,
 				B97C8F3E293C4212002F6A07 /* AssetManager.swift in Sources */,
 				B97C8F3D293C4212002F6A07 /* AssetClient.swift in Sources */,
 				B9E4B8AE29B8364100E999D0 /* RankEntryProvider.swift in Sources */,

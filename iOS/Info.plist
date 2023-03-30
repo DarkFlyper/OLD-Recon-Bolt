@@ -26,6 +26,7 @@
 	<array>
 		<string>ViewMissionsIntent</string>
 		<string>ViewRankIntent</string>
+		<string>ViewRankChangesIntent</string>
 		<string>ViewStoreIntent</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>

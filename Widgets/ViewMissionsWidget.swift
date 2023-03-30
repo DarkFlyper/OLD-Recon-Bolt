@@ -197,11 +197,11 @@ extension EnvironmentValues {
 #if DEBUG
 struct ViewMissionsWidget_Previews: PreviewProvider {
 	static var previews: some View {
-		if let assets = AssetManager().assets {
-			MissionListView(entry: .init(
-				info: .success(.init(
-					contracts: .init(details: PreviewData.contractDetails, assets: assets, config: PreviewData.gameConfig)
-				)),
+		if AssetManager().assets != nil {
+			MissionListView(entry: .mocked(
+				value: .init(
+					contracts: PreviewData.resolvedContracts
+				),
 				configuration: .init() <- { _ in
 					//$0.accentColor = .unknown
 				}

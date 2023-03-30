@@ -57,10 +57,17 @@ struct PreloadingIntentTimelineProvider<
 	
 	func fetchValue(in context: inout Wrapped.FetchingContext) async throws -> Wrapped.Value {
 		let value = try await wrapped.fetchValue(in: &context)
+		let entry = Wrapped.Entry(
+			date: .now,
+			info: .success(value),
+			location: context.client.location,
+			configuration: context.configuration,
+			link: .init()
+		)
 		await preloadImages {
+			let view = content(entry)
 			ForEach(supportedFamilies, id: \.self) {
-				content(.init(info: .success(value)))
-					.environment(\.adjustedWidgetFamily, $0)
+				view.environment(\.adjustedWidgetFamily, $0)
 			}
 		}
 		return value
@@ -80,9 +87,11 @@ extension EnvironmentValues {
 
 @MainActor
 func preloadImages<Content: View>(@ViewBuilder usedIn views: () -> Content) async {
+	AssetImage.used = []
 	ImageRenderer(content: ZStack(content: views)).render { _, _ in }
+	let used = AssetImage.used
 	
-	_ = await AssetImage.used.concurrentMap { image in
+	_ = await used.concurrentMap { image in
 		await image.preload()
 	}
 }

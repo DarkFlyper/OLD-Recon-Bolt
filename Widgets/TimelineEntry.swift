@@ -42,10 +42,31 @@ extension TimelineEntryView {
 }
 
 struct FetchedTimelineEntry<Value: FetchedTimelineValue, Intent: FetchingIntent>: TimelineEntry {
-	var date = Date()
+	var date: Date
 	var info: Result<Value, Error>
-	var configuration = Intent()
-	var link = WidgetLink()
+	let location: Location? // let: no default nil
+	var configuration: Intent
+	var link: WidgetLink
+	
+	#if DEBUG
+	static func mocked(value: Value, configuration: Intent = .init()) -> Self {
+		mocked(info: .success(value), configuration: configuration)
+	}
+	
+	static func mocked(error: Error, configuration: Intent = .init()) -> Self {
+		mocked(info: .failure(error), configuration: configuration)
+	}
+		
+	static func mocked(info: Result<Value, Error>, configuration: Intent = .init()) -> Self {
+		.init(
+			date: .now,
+			info: info,
+			location: .europe,
+			configuration: configuration,
+			link: .init()
+		)
+	}
+	#endif
 	
 	func nextRefresh() -> Date {
 		do {
@@ -72,18 +93,18 @@ protocol FetchedTimelineValue {
 struct TimelineEntryView_Previews: PreviewProvider {
 	static var previews: some View {
 		Group {
-			MockEntryView(entry: .init(
-				info: .failure(StoreEntryProvider.UpdateError.unknownOffer)
+			MockEntryView(entry: .mocked(
+				error: StoreEntryProvider.UpdateError.unknownOffer
 			))
 			.previewDisplayName("No Account")
 			
-			MockEntryView(entry: .init(
-				info: .failure(APIError.rateLimited(retryAfter: 30))
+			MockEntryView(entry: .mocked(
+				error: APIError.rateLimited(retryAfter: 30)
 			))
 			.previewDisplayName("Rate Limited")
 			
-			MockEntryView(entry: .init(
-				info: .failure(APIError.sessionResumptionFailure(URLError(.notConnectedToInternet)))
+			MockEntryView(entry: .mocked(
+				error: APIError.sessionResumptionFailure(URLError(.notConnectedToInternet))
 			))
 			.previewDisplayName("Other Error")
 		}
