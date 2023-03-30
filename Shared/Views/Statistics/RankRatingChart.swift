@@ -11,14 +11,18 @@ struct RankRatingChart: View {
 	@State var maxCount = 20
 	
 	@ScaledMetric(relativeTo: .caption2)
-	private var verticalPadding = 11
+	private var chartPadding = 20
+	let expandButtonWidth: CGFloat = 32 // space for "show more" button
 	
-	@CurrentGameConfig private var gameConfig
+	@Environment(\.seasons) private var seasons
 	
     var body: some View {
 		let ranked = matches.lazy.filter(\.isRanked)
 		let changes = ranked.prefix(maxCount).reversed() as Array
 		let span = changes.lazy.map(\.tierAfterUpdate).minAndMax().map { $0.max - $0.min } ?? 0
+#if WIDGETS
+		scrollableContent(changes: changes)
+#else
 		GeometryReader { geometry in
 			ScrollView(.horizontal) {
 				scrollableContent(changes: changes)
@@ -28,17 +32,21 @@ struct RankRatingChart: View {
 			.scaleEffect(x: -1, y: 1, anchor: .center) // flip to start at trailing edge
 		}
 		.frame(height: (CGFloat(span) * 150).clamped(to: 150...300))
+#endif
     }
 	
 	@ViewBuilder
 	func scrollableContent(changes: [CompetitiveUpdate]) -> some View {
-		if let seasons = $gameConfig.seasons {
-			let hiddenCount = matches.count(where: \.isRanked) - changes.count
-			chart(
-				from: ChartData(matches: changes, seasons: seasons),
-				leadingPadding: hiddenCount > 0 ? 32 : 0 // space for "show more" button
-			)
-			.overlay(alignment: .leading) {
+		if let seasons = seasons {
+			let data = ChartData(matches: changes, seasons: seasons)
+#if WIDGETS
+			chart(from: data, canExpand: false)
+#else
+			ZStack(alignment: .leading) {
+				let hiddenCount = matches.count(where: \.isRanked) - changes.count
+				
+				chart(from: data, canExpand: hiddenCount > 0)
+				
 				if hiddenCount > 0 {
 					Button {
 						maxCount = .max
@@ -54,8 +62,11 @@ struct RankRatingChart: View {
 					}
 					.foregroundColor(.white)
 					.padding(8)
+					.fixedSize()
+					.frame(width: chartPadding + expandButtonWidth)
 				}
 			}
+#endif
 		} else {
 			Text("Missing season data!")
 				.foregroundStyle(.secondary)
@@ -63,7 +74,7 @@ struct RankRatingChart: View {
 		}
 	}
 	
-	private func chart(from data: ChartData, leadingPadding: CGFloat) -> some View {
+	private func chart(from data: ChartData, canExpand: Bool) -> some View {
 		Chart(data.entries) { entry in
 			LineMark(
 				x: .value("Match", entry.index),
@@ -81,14 +92,21 @@ struct RankRatingChart: View {
 					.foregroundStyle(prettyDarkening.opacity(0.1))
 			}
 		}
-		.chartYScale(domain: .automatic(includesZero: false), range: .plotDimension(padding: verticalPadding + 2.5))
-		.chartXScale(range: .plotDimension(startPadding: 12 + leadingPadding, endPadding: 12))
+		.chartXScale(range: .plotDimension(
+			startPadding: chartPadding + (canExpand ? expandButtonWidth : 0),
+			endPadding: chartPadding
+		))
+		.chartYScale(
+			domain: .automatic(includesZero: false),
+			range: .plotDimension(padding: chartPadding)
+		)
 		.chartBackground { chart in
 			GeometryReader { geometry in
 				ChartBackground(
 					chart: chart,
 					plotArea: geometry[chart.plotAreaFrame],
-					data: data
+					data: data,
+					labelHeight: chartPadding
 				)
 			}
 		}
@@ -145,8 +163,11 @@ struct RankRatingChart: View {
 	private struct ChartBackground: View {
 		var tiers: [TierBackground] = []
 		var seasonSpans: [(act: Act, area: CGRect)] = []
+		var labelHeight: CGFloat
 		
-		init(chart: ChartProxy, plotArea: CGRect, data: ChartData) {
+		init(chart: ChartProxy, plotArea: CGRect, data: ChartData, labelHeight: CGFloat) {
+			self.labelHeight = labelHeight
+			
 			let tierSpacing = chart.position(forY: 0)! - chart.position(forY: 100)!
 			
 			let matches = data.matches
@@ -201,6 +222,7 @@ struct RankRatingChart: View {
 							Text(span.act.name)
 								.font(.caption2)
 								.fixedSize()
+								.frame(height: labelHeight)
 								.foregroundStyle(prettyDarkening.opacity(0.3))
 							
 							Color.clear // else nothing
@@ -218,14 +240,16 @@ struct RankRatingChart: View {
 			var body: some View {
 				fill
 					.overlay {
-						ViewThatFits {
-							tier?.icon?.view()
-								.frame(width: 24)
-								.padding(2)
-								.padding(.horizontal, 4)
-								.shadow(color: .black.opacity(0.2), radius: 1, y: 1)
-							
-							Color.clear // else nothing
+						if frame.height >= tierSpacing { // never show in the vertical margins
+							ViewThatFits {
+								tier?.icon?.view()
+									.frame(width: 24)
+									.padding(2)
+									.padding(.horizontal, 4)
+									.shadow(color: .black.opacity(0.2), radius: 1, y: 1)
+								
+								Color.clear // else nothing
+							}
 						}
 					}
 					.overlay(alignment: .leading) {
@@ -274,7 +298,7 @@ struct Line: Shape {
 
 #if DEBUG
 @available(iOS 16.0, *)
-struct RankedRatingChart_Previews: PreviewProvider {
+struct RankRatingChart_Previews: PreviewProvider {
     static var previews: some View {
 		List {
 			Section {
@@ -283,10 +307,12 @@ struct RankedRatingChart_Previews: PreviewProvider {
 			.listRowInsets(.init())
 			
 			Section {
-				RankRatingChart(matches: PreviewData.matchList.matches.map { $0 <- {
-					$0.tierBeforeUpdate += 14
-					$0.tierAfterUpdate += 14
-				} }
+				RankRatingChart(
+					matches: PreviewData.matchList.matches.map { $0 <- {
+						$0.tierBeforeUpdate += 14
+						$0.tierAfterUpdate += 14
+					} },
+					maxCount: 15
 				)
 			}
 			.listRowInsets(.init())

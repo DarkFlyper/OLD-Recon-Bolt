@@ -2,7 +2,7 @@ import SwiftUI
 
 struct CompetitiveTierImage: View {
 	@EnvironmentObject private var imageManager: ImageManager
-	@CurrentGameConfig private var gameConfig
+	@Environment(\.seasons) private var seasons
 	
 	var tier: Int
 	var tierInfo: CompetitiveTier?
@@ -12,11 +12,10 @@ struct CompetitiveTierImage: View {
 	
 	var body: some View {
 		if
-			let seasons = $gameConfig.seasons,
 			let tierInfo = tierInfo
-				?? seasons.tierInfo(number: tier, in: act)
-				?? seasons.tierInfo(number: tier, in: actID)
-				?? seasons.currentTierInfo(number: tier, at: time),
+				?? seasons?.tierInfo(number: tier, in: act)
+				?? seasons?.tierInfo(number: tier, in: actID)
+				?? seasons?.currentTierInfo(number: tier, at: time),
 			let icon = tierInfo.icon
 		{
 			icon.view(shouldLoadImmediately: true)

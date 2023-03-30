@@ -31,6 +31,7 @@ struct ReconBoltApp: App {
 				.environmentObject(imageManager)
 				.environmentObject(settings)
 				.environmentObject(configManager)
+				.environment(\.configs, configManager.configs())
 				.environment(\.assets, assetManager.assets)
 				.environment(\.location, accountManager.activeAccount?.location)
 				.environment(\.ownsProVersion, store.ownsProVersion)

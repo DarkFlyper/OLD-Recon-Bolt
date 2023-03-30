@@ -130,7 +130,7 @@ struct ContractDetailsView: View {
 struct ContractDetailsView_Previews: PreviewProviderWithAssets {
 	static func previews(assets: AssetCollection) -> some View {
 		RefreshableBox(title: "Missions", isExpanded: .constant(true)) {
-			ContractDetailsView(contracts: .init(details: PreviewData.contractDetails, assets: assets, config: PreviewData.gameConfig))
+			ContractDetailsView(contracts: PreviewData.resolvedContracts)
 		} refresh: { _ in }
 		.forPreviews()
 	}

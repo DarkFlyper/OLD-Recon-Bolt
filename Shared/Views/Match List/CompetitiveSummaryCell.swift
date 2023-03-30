@@ -5,7 +5,7 @@ import HandyOperators
 struct CompetitiveSummaryCell: View {
 	let summary: CareerSummary?
 	
-	@CurrentGameConfig private var gameConfig
+	@Environment(\.seasons) private var seasons
 	@Environment(\.colorScheme) private var colorScheme
 	
 	private let artworkSize = 96.0
@@ -35,6 +35,7 @@ struct CompetitiveSummaryCell: View {
 			.fixedSize(horizontal: false, vertical: true)
 			.padding(.vertical)
 			.aligningListRowSeparator()
+			.updatingGameConfig()
 		}
 		.disabled(summary == nil)
 	}
@@ -42,9 +43,9 @@ struct CompetitiveSummaryCell: View {
 	@ViewBuilder
 	private var currentActInfo: some View {
 		VStack {
-			let act = $gameConfig.seasons?.currentAct()
+			let act = seasons?.currentAct()
 			let info = summary?.competitiveInfo?.inSeason(act?.id)
-			let tierInfo = $gameConfig.seasons?.tierInfo(number: info?.competitiveTier, in: act)
+			let tierInfo = seasons?.tierInfo(number: info?.competitiveTier, in: act)
 			
 			SeasonLabel(season: act?.id)
 				.font(secondaryFont)
@@ -76,8 +77,8 @@ struct CompetitiveSummaryCell: View {
 	@ViewBuilder
 	private var peakInfo: some View {
 		if
-			let peakRank = summary?.peakRank(seasons: $gameConfig.seasons),
-			let info = $gameConfig.seasons?.tierInfo(peakRank)
+			let peakRank = summary?.peakRank(seasons: seasons),
+			let info = seasons?.tierInfo(peakRank)
 		{
 			VStack {
 				SeasonLabel(season: peakRank.season)
@@ -102,7 +103,7 @@ struct CompetitiveSummaryCell: View {
 	@ViewBuilder
 	private func actRankInfo(for info: CareerSummary.SeasonInfo, in act: Act) -> some View {
 		VStack {
-			let tierInfo = $gameConfig.seasons?.tierInfo(number: info.competitiveTier, in: act)
+			let tierInfo = seasons?.tierInfo(number: info.competitiveTier, in: act)
 			
 			ActRankView(seasonInfo: info)
 				.frame(width: 120, height: 120)

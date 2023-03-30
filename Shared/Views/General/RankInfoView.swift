@@ -14,15 +14,15 @@ struct RankInfoView: View {
 	
 	var unit: CGFloat { size / 32 }
 	
-	@CurrentGameConfig private var gameConfig
+	@Environment(\.seasons) private var seasons
 	
 	var body: some View {
 		ZStack {
 			if let summary {
-				let act = $gameConfig.seasons?.currentAct()
+				let act = seasons?.currentAct()
 				let info = summary.competitiveInfo?.inSeason(act?.id)
 				let tier = info?.competitiveTier ?? 0
-				let tierInfo = $gameConfig.seasons?.tierInfo(number: tier, in: act)
+				let tierInfo = seasons?.tierInfo(number: tier, in: act)
 				
 				if shouldShowProgress {
 					progressView(for: tierInfo, rankedRating: info?.adjustedRankedRating ?? 0)
@@ -32,7 +32,7 @@ struct RankInfoView: View {
 					if
 						tier == 0,
 						shouldFallBackOnPrevious,
-						let peakRankInfo = summary.peakRankInfo(seasons: $gameConfig.seasons)
+						let peakRankInfo = summary.peakRankInfo(seasons: seasons)
 					{
 						peakRankIcon(using: peakRankInfo)
 					} else {
@@ -41,7 +41,7 @@ struct RankInfoView: View {
 				}
 				.scaleEffect(shouldShowProgress ? 0.7 : 1)
 			} else if let info = dataOverride {
-				let tierInfo = $gameConfig.seasons?.tierInfo(number: info.competitiveTier, in: info.seasonID)
+				let tierInfo = seasons?.tierInfo(number: info.competitiveTier, in: info.seasonID)
 				
 				if shouldShowProgress {
 					progressView(for: tierInfo, rankedRating: info.adjustedRankedRating)
@@ -170,7 +170,7 @@ struct RankInfoView_Previews: PreviewProvider, PreviewProviderWithAssets {
 			}
 			.previewDisplayName("Sizes")
 			
-			LazyVGrid(columns: [.init(), .init(), .init()], spacing: 20) {
+			LazyVGrid(columns: [GridItem(), GridItem(), GridItem()], spacing: 20) {
 				ForEach(ranks.tiers.values.map(\.number).sorted(), id: \.self) {
 					// this would be equivalent, but i want to test this overload too
 					//RankInfoView(summary: summary(forTier: $0), shouldFallBackOnPrevious: false)

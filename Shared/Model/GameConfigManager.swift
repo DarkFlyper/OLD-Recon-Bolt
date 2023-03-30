@@ -16,26 +16,20 @@ final class GameConfigManager: ObservableObject {
 		stored.configs[location]?.config
 	}
 	
-	#if !WIDGETS
-	fileprivate func autoUpdate(for location: Location, using load: @escaping ValorantLoadFunction) {
+	func configs() -> [Location: GameConfig] {
+		stored.configs.mapValues(\.config)
+	}
+	
+	func autoUpdate(for location: Location, using client: ValorantClient) async {
 		if let entry = stored.configs[location], -entry.lastUpdate.timeIntervalSinceNow < updateInterval { return }
 		guard inProgress.insert(location).inserted else { return }
-		Task {
-			await load { [self] client in
-				do {
-					let config = try await client.getGameConfig()
-					store(config, for: location)
-				} catch {
-					print("error updating game config for \(location):", error)
-				}
-				inProgress.remove(location)
-			}
+		defer { inProgress.remove(location) }
+		do {
+			let config = try await client.getGameConfig()
+			stored.configs[location] = .init(lastUpdate: .now, config: config)
+		} catch {
+			print("error updating game config for \(location):", error)
 		}
-	}
-	#endif
-	
-	private func store(_ config: GameConfig, for location: Location) {
-		stored.configs[location] = .init(lastUpdate: .now, config: config)
 	}
 	
 	private struct StoredConfigs: Codable, DefaultsValueConvertible {
@@ -53,47 +47,28 @@ final class GameConfigManager: ObservableObject {
 	}
 }
 
-/// provides access to the current location's config without repetition and immediately (vs a late-initialized solution) thanks to nested property wrappers
-@propertyWrapper
-struct CurrentGameConfig: DynamicProperty {
+#if !WIDGETS
+private struct GameConfigUpdater: ViewModifier {
 	@EnvironmentObject private var manager: GameConfigManager
 	@Environment(\.assets) private var assets
 	@Environment(\.location) private var location
 	
-	var projectedValue: Self { self }
-	
-	var seasons: SeasonCollection.Accessor? {
-		guard let wrappedValue else { return nil }
-		return assets?.seasons.with(wrappedValue)
+	func body(content: Content) -> some View {
+		content
+			.font(nil)
+			.valorantLoadTask(id: location) {
+				guard let location else { return }
+				await manager.autoUpdate(for: location, using: $0)
+			}
 	}
-	
-	init() {}
-	
-#if WIDGETS
-	var wrappedValue: GameConfig? {
-		guard let location else { return nil }
-		return manager.config(for: location)
-	}
-#else
-	@Environment(\.valorantLoad) private var load
-	@StateObject private var storage = Storage()
-	
-	var wrappedValue: GameConfig? {
-		guard let location else { return nil }
-#if DEBUG
-		guard !isInSwiftUIPreview else { return PreviewData.gameConfig }
-#endif
-		if !storage.hasFetched {
-			manager.autoUpdate(for: location, using: load)
-		}
-		return manager.config(for: location)
-	}
-	
-	private final class Storage: ObservableObject {
-		var hasFetched = false // no need for updates, just need this to persist
-	}
-#endif
 }
+
+extension View {
+	func updatingGameConfig() -> some View {
+		modifier(GameConfigUpdater())
+	}
+}
+#endif
 
 extension EnvironmentValues {
 	var location: Location? {
@@ -103,5 +78,27 @@ extension EnvironmentValues {
 	
 	private enum LocationKey: EnvironmentKey {
 		static let defaultValue: Location? = nil
+	}
+	
+	var seasons: SeasonCollection.Accessor? {
+		config.flatMap { assets?.seasons.with($0) }
+	}
+	
+	var config: GameConfig? {
+		location.flatMap { self[ConfigsKey.self]?[$0] ?? (isInSwiftUIPreview ? PreviewData.gameConfig : nil) }
+	}
+	
+	var configs: [Location: GameConfig]? {
+		get { self[ConfigsKey.self] }
+		set { self[ConfigsKey.self] = newValue }
+	}
+	
+	private enum ConfigsKey: EnvironmentKey {
+		#if WIDGETS
+		@MainActor // this is safe right?
+		static let defaultValue: [Location: GameConfig]? = Managers.gameConfig.configs()
+		#else
+		static let defaultValue: [Location: GameConfig]? = nil
+		#endif
 	}
 }

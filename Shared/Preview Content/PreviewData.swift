@@ -39,6 +39,12 @@ enum PreviewData {
 	
 	static let contractDetails = loadJSON(named: "example_contracts", as: ContractDetails.self)
 	static let gameConfig = loadJSON(named: "example_config", as: GameConfig.self)
+	@MainActor
+	static let resolvedContracts = ResolvedContracts(
+		details: contractDetails,
+		assets: AssetManager.forPreviews.assets,
+		seasons: AssetManager.forPreviews.assets?.seasons.with(gameConfig)
+	)
 	
 	static let pregameInfo = loadJSON(named: "example_pregame", as: LivePregameInfo.self)
 	
