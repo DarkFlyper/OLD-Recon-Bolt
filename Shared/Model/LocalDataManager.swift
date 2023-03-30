@@ -168,7 +168,7 @@ private let encoder = JSONEncoder()
 
 private let fileManager = FileManager.default
 
-private let _baseFolderURL = try! fileManager.url(
+private let oldBaseFolder = try! fileManager.url(
 	for: .cachesDirectory,
 	in: .userDomainMask,
 	appropriateFor: nil,
@@ -176,9 +176,26 @@ private let _baseFolderURL = try! fileManager.url(
 )
 .appendingPathComponent("local")
 
+private let newBaseFolder = fileManager
+	.containerURL(forSecurityApplicationGroupIdentifier: "group.juliand665.Recon-Bolt.shared")!
+	.appendingPathComponent("Library/Application Support/local", isDirectory: true)
+<- { newFolder in
+#if !WIDGETS
+	guard fileManager.fileExists(atPath: oldBaseFolder.path) else { return }
+	// migrate
+	do {
+		try fileManager.createDirectory(at: newFolder.deletingLastPathComponent(), withIntermediateDirectories: true)
+		try fileManager.moveItem(at: oldBaseFolder, to: newFolder)
+	} catch {
+		print("could not migrate from \(oldBaseFolder) to \(newFolder):", error)
+		dump(error)
+	}
+#endif
+}
+
 private let baseFolderURL = isInSwiftUIPreview
 	? Bundle.main.resourceURL!.appendingPathComponent("Local", isDirectory: true)
-	: _baseFolderURL
+	: newBaseFolder
 
 extension TimeInterval {
 	static func minutes(_ minutes: Double) -> Self {
