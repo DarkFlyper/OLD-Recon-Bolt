@@ -158,7 +158,7 @@ struct RankInfoView_Previews: PreviewProvider, PreviewProviderWithAssets {
 			.previewDisplayName("Edge Cases")
 			
 			VStack {
-				ForEach([32, 64, 96, 128], id: \.self) { (size: CGFloat) in
+				ForEach([32, 64, 96, 128] as [CGFloat], id: \.self) { (size: CGFloat) in
 					HStack {
 						RankInfoView(summary: basicSummary, size: size)
 						RankInfoView(summary: basicSummary, size: size, shouldShowProgress: false)

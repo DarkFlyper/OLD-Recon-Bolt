@@ -48,7 +48,6 @@ struct FetchedTimelineEntry<Value: FetchedTimelineValue, Intent: FetchingIntent>
 	var configuration: Intent
 	var link: WidgetLink
 	
-	#if DEBUG
 	static func mocked(value: Value, configuration: Intent = .init()) -> Self {
 		mocked(info: .success(value), configuration: configuration)
 	}
@@ -66,7 +65,6 @@ struct FetchedTimelineEntry<Value: FetchedTimelineValue, Intent: FetchingIntent>
 			link: .init()
 		)
 	}
-	#endif
 	
 	func nextRefresh() -> Date {
 		do {
@@ -90,6 +88,7 @@ protocol FetchedTimelineValue {
 	var nextRefresh: Date { get }
 }
 
+#if DEBUG
 struct TimelineEntryView_Previews: PreviewProvider {
 	static var previews: some View {
 		Group {
@@ -119,3 +118,4 @@ struct TimelineEntryView_Previews: PreviewProvider {
 		}
 	}
 }
+#endif

@@ -85,7 +85,13 @@ extension EnvironmentValues {
 	}
 	
 	var config: GameConfig? {
-		location.flatMap { self[ConfigsKey.self]?[$0] ?? (isInSwiftUIPreview ? PreviewData.gameConfig : nil) }
+		guard let location else { return nil }
+		let config = self[ConfigsKey.self]?[location]
+#if DEBUG
+		return config ?? (isInSwiftUIPreview ? PreviewData.gameConfig : nil)
+#else
+		return config
+#endif
 	}
 	
 	var configs: [Location: GameConfig]? {
