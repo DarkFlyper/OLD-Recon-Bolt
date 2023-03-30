@@ -77,7 +77,7 @@ This project would not have been possible (or was significantly eased by) some p
 - **[RumbleMike/ValorantStreamOverlay](https://github.com/RumbleMike/ValorantStreamOverlay)** provided the initial inspiration (and even just let me know it was possible).
 - **[RumbleMike/ValorantClientAPI](https://github.com/RumbleMike/ValorantClientAPI) and the associated Discord**: This has some nice docs and a great community for working with the API I need.
 - **[colinhartigan/valclient.py](https://github.com/colinhartigan/valclient.py)** has filled in where the above docs were incomplete, providing a simple reference of what endpoints exist and how they're accessed.
-- **[techchrism/valorant-api-docs](https://github.com/techchrism/valorant-api-docs)** is another documentation effort that I was recently made aware of, which looks both complete and detailed!
+- **[techchrism/valorant-api-docs](https://github.com/techchrism/valorant-api-docs)** is another documentation effort that I was recently made aware of, which looks both complete and detailed! In fact, it's now my main source, most conveniently accessible [here](https://valapidocs.techchrism.me).
 - **[Valorant-API.com](https://valorant-api.com)** has proven to be a truly invaluable API, serving up the game's assets in an easy-to-use format. They were also wonderfully open and responsive to feature/change requests.
 
 ## Why not Android?
