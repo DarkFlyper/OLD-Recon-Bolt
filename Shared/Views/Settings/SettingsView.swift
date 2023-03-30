@@ -1,5 +1,6 @@
 import SwiftUI
 import ValorantAPI
+import WidgetKit
 
 struct SettingsView: View {
 	@ObservedObject var accountManager: AccountManager
@@ -14,18 +15,6 @@ struct SettingsView: View {
 			AccountSettingsView(accountManager: accountManager)
 			
 			Section("Settings") {
-				NavigationLink("Manage Assets") {
-					AssetsInfoView(assetManager: assetManager)
-				}
-				
-				if let activeAccount = accountManager.activeAccount {
-					NavigationLink("Request Log") {
-						ClientLogView(client: activeAccount.client)
-					}
-				}
-				
-				Toggle("Vibrate when Match Found", isOn: $settings.vibrateOnMatchFound)
-				
 				Picker("Theme", selection: $settings.theme) {
 					ForEach(AppSettings.Theme.allCases, id: \.self) { theme in
 						Text(theme.name)
@@ -42,6 +31,12 @@ struct SettingsView: View {
 						Text(iconManager.currentIcon.name)
 							.foregroundStyle(.secondary)
 					}
+				}
+				
+				Toggle("Vibrate when Match Found", isOn: $settings.vibrateOnMatchFound)
+				
+				NavigationLink("Advanced Settings") {
+					AdvancedSettingsView(accountManager: accountManager, assetManager: assetManager)
 				}
 			}
 			
@@ -62,6 +57,36 @@ struct SettingsView: View {
 			}
 		}
 		.navigationTitle("Settings")
+	}
+}
+
+struct AdvancedSettingsView: View {
+	@ObservedObject var accountManager: AccountManager
+	@ObservedObject var assetManager: AssetManager
+	
+	var body: some View {
+		Form {
+			Section {
+				NavigationLink("Manage Assets") {
+					AssetsInfoView(assetManager: assetManager)
+				}
+				
+				if let activeAccount = accountManager.activeAccount {
+					NavigationLink("Request Log") {
+						ClientLogView(client: activeAccount.client)
+					}
+				}
+			}
+			
+			Section {
+				Button("Force Refresh Widgets") {
+					WidgetCenter.shared.reloadAllTimelines()
+				}
+			} footer: {
+				Text("If your widgets seem broken, use this button to request an immediate refresh from iOS.")
+			}
+		}
+		.navigationTitle("Advanced Settings")
 	}
 }
 
