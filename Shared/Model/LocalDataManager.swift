@@ -140,7 +140,7 @@ final actor LocalDataManager<Object: Identifiable & Codable> where Object.ID: Lo
 	private nonisolated func save(_ entry: Entry) throws {
 		let raw = try encoder.encode(entry)
 		let url = fileURL(for: entry.id)
-		try raw.write(to: url)
+		try raw.write(to: url, options: .atomic)
 	}
 	
 	private func loadEntry(with id: Object.ID) throws -> Entry? {

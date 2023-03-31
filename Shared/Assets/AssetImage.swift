@@ -215,7 +215,7 @@ extension AssetClient {
 			at: image.localURL.deletingLastPathComponent(),
 			withIntermediateDirectories: true
 		)
-		try imageData.write(to: image.localURL)
+		try imageData.write(to: image.localURL, options: .atomic)
 		return true
 	}
 }

@@ -243,7 +243,7 @@ private extension AssetImage {
 	}
 	
 	func save(_ metadata: ImageMetadata) throws {
-		try JSONEncoder().encode(metadata).write(to: metadataURL)
+		try JSONEncoder().encode(metadata).write(to: metadataURL, options: .atomic)
 	}
 }
 
