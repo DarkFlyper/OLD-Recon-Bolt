@@ -77,7 +77,6 @@ struct LoginForm: View {
 		} onDismiss: {
 			$0.completion(.failure(AccountManager.MultifactorPromptError.cancelled))
 		}
-		.loadErrorAlertTitle("Could not sign in!")
 		.navigationTitle("Sign In with your Riot account")
 		.navigationBarTitleDisplayMode(.inline)
 		.toolbar {
@@ -135,7 +134,7 @@ struct LoginForm: View {
 		isSigningIn = true
 		defer { isSigningIn = false }
 		
-		await load {
+		await load("Could not sign in!") {
 			do {
 				try await accountManager.addAccount(using: credentials)
 				dismiss()

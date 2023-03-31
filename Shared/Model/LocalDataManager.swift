@@ -14,13 +14,13 @@ final actor LocalDataManager<Object: Identifiable & Codable> where Object.ID: Lo
 	private var cache: [Object.ID: Entry?] = [:] // nil values represent that we've confirmed there's no cache file
 	private var subjects: [Object.ID: Subject] = [:]
 	
-	let folderURL: URL
+	nonisolated let folderURL: URL
 	/// When the object was last updated longer ago than this, it is automatically updated on next fetch.
 	let ageCausingAutoUpdate: TimeInterval?
 	
 	init(localPath: String = "\(Object.self)", ageCausingAutoUpdate: TimeInterval? = nil) {
-		self.folderURL = baseFolderURL.appendingPathComponent(localPath) <- {
-			try? fileManager.createDirectory(
+		self.folderURL = FolderLocations.localData.appendingPathComponent(localPath) <- {
+			try? FileManager.default.createDirectory(
 				at: $0,
 				withIntermediateDirectories: true,
 				attributes: nil
@@ -54,6 +54,10 @@ final actor LocalDataManager<Object: Identifiable & Codable> where Object.ID: Lo
 	
 	func cachedObject(for id: Object.ID) -> Object? {
 		cachedEntry(for: id)?.object
+	}
+	
+	func cachedObjects(for ids: some Sequence<Object.ID>) -> [Object] {
+		Set(ids).compactMap(cachedObject(for:))
 	}
 	
 	nonisolated func objectPublisher(for id: Object.ID) -> LocalDataPublisher<Object> {
@@ -145,7 +149,7 @@ final actor LocalDataManager<Object: Identifiable & Codable> where Object.ID: Lo
 	
 	private func loadEntry(with id: Object.ID) throws -> Entry? {
 		let url = fileURL(for: id)
-		guard fileManager.fileExists(atPath: url.path) else { return nil }
+		guard FileManager.default.fileExists(atPath: url.path) else { return nil }
 		let data = try Data(contentsOf: url)
 		return try decoder.decode(Entry.self, from: data)
 	}
@@ -153,6 +157,56 @@ final actor LocalDataManager<Object: Identifiable & Codable> where Object.ID: Lo
 	private nonisolated func shouldAutoUpdate(_ entry: Entry) -> Bool {
 		guard let threshold = ageCausingAutoUpdate else { return false }
 		return -entry.lastUpdate.timeIntervalSinceNow > threshold
+	}
+	
+	func diskUsage(
+		for ids: some Sequence<Object.ID>
+	) throws -> DiskUsage {
+		let files = try FileManager.default.contentsOfDirectory(
+			at: folderURL,
+			includingPropertiesForKeys: [.fileSizeKey]
+		)
+		let knownIDs = Set(ids)
+		return .init() <- { usage in
+			for file in files {
+				guard let id = Object.ID(file.deletingPathExtension().lastPathComponent) else { continue }
+				let size = try! Int64(file.resourceValues(forKeys: [.fileSizeKey]).fileSize!)
+				if knownIDs.contains(id) {
+					usage.tally[id, default: 0] += size
+				} else {
+					usage.unaccountedFor += size
+					usage.unknownIDs.insert(id)
+				}
+			}
+		}
+	}
+	
+	struct DiskUsage {
+		var tally: [Object.ID: Int64] = [:]
+		var unaccountedFor: Int64 = 0
+		var unknownIDs: Set<Object.ID> = []
+	}
+	
+	func clearOut(idFilter: Set<Object.ID>? = nil) throws {
+		let files = try FileManager.default.contentsOfDirectory(
+			at: folderURL,
+			includingPropertiesForKeys: []
+		)
+		if let idFilter {
+			for file in files {
+				guard
+					let id = Object.ID(file.deletingPathExtension().lastPathComponent),
+					idFilter.contains(id)
+				else { continue }
+				try FileManager.default.removeItem(at: file)
+				cache.removeValue(forKey: id)
+			}
+		} else {
+			for file in files {
+				try FileManager.default.removeItem(at: file)
+			}
+			cache = [:]
+		}
 	}
 	
 	struct Entry: Codable, Identifiable {
@@ -165,37 +219,6 @@ final actor LocalDataManager<Object: Identifiable & Codable> where Object.ID: Lo
 
 private let decoder = JSONDecoder()
 private let encoder = JSONEncoder()
-
-private let fileManager = FileManager.default
-
-private let oldBaseFolder = try! fileManager.url(
-	for: .cachesDirectory,
-	in: .userDomainMask,
-	appropriateFor: nil,
-	create: true
-)
-.appendingPathComponent("local")
-
-private let newBaseFolder = fileManager
-	.containerURL(forSecurityApplicationGroupIdentifier: "group.juliand665.Recon-Bolt.shared")!
-	.appendingPathComponent("Library/Application Support/local", isDirectory: true)
-<- { newFolder in
-#if !WIDGETS
-	guard fileManager.fileExists(atPath: oldBaseFolder.path) else { return }
-	// migrate
-	do {
-		try fileManager.createDirectory(at: newFolder.deletingLastPathComponent(), withIntermediateDirectories: true)
-		try fileManager.moveItem(at: oldBaseFolder, to: newFolder)
-	} catch {
-		print("could not migrate from \(oldBaseFolder) to \(newFolder):", error)
-		dump(error)
-	}
-#endif
-}
-
-private let baseFolderURL = isInSwiftUIPreview
-	? Bundle.main.resourceURL!.appendingPathComponent("Local", isDirectory: true)
-	: newBaseFolder
 
 extension TimeInterval {
 	static func minutes(_ minutes: Double) -> Self {

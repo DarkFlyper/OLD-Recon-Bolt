@@ -49,7 +49,7 @@ private struct ValorantLoadModifier: ViewModifier {
 		guard let account = manager.activeAccount else { return }
 		guard !Task.isCancelled else { return }
 		
-		await load {
+		await load(nil) {
 			do {
 				try await task(account.client)
 			} catch {

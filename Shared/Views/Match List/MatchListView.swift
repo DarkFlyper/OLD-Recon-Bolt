@@ -83,7 +83,6 @@ struct MatchListView: View {
 		.withLocalData($matchList, id: userID, shouldAutoUpdate: true)
 		.withLocalData($summary, id: userID, shouldAutoUpdate: true)
 		.withLocalData($identity, id: userID)
-		.loadErrorAlertTitle("Could not load matches!")
 		.navigationTitle(title) // localize
 	}
 	

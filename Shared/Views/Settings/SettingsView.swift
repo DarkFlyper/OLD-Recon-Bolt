@@ -63,6 +63,7 @@ struct SettingsView: View {
 struct AdvancedSettingsView: View {
 	@ObservedObject var accountManager: AccountManager
 	@ObservedObject var assetManager: AssetManager
+	@StateObject var storageManager = StorageManager()
 	
 	var body: some View {
 		Form {
@@ -74,6 +75,20 @@ struct AdvancedSettingsView: View {
 				if let activeAccount = accountManager.activeAccount {
 					NavigationLink("Request Log") {
 						ClientLogView(client: activeAccount.client)
+					}
+				}
+				
+				NavigationLink {
+					StorageManagementView(manager: storageManager, accountManager: accountManager)
+						.withLoadErrorAlerts()
+				} label: {
+					HStack {
+						Text("Manage Local Storage")
+						Spacer()
+						if let total = storageManager.totalBytes {
+							Text(total, format: .byteCount(style: .file))
+								.foregroundStyle(.secondary)
+						}
 					}
 				}
 			}
@@ -108,6 +123,10 @@ struct SettingsView_Previews: PreviewProvider {
 	static var previews: some View {
 		SettingsView(accountManager: .mocked, assetManager: .forPreviews, settings: .init(), store: .init())
 			.withToolbar()
+		
+		AdvancedSettingsView(accountManager: .mocked, assetManager: .forPreviews)
+			.withToolbar()
+			.previewDisplayName("Advanced Settings")
 		
 		SettingsView(accountManager: .mockEmpty, assetManager: .mockEmpty, settings: .init(), store: .init())
 			.withToolbar()

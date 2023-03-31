@@ -19,6 +19,10 @@
 		B90B4FB826C5DD8E008A5B5A /* LeaderboardRankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90B4FB726C5DD8E008A5B5A /* LeaderboardRankView.swift */; };
 		B90BC2EE266D224F00C905D4 /* CGeometry in Frameworks */ = {isa = PBXBuildFile; productRef = B90BC2ED266D224F00C905D4 /* CGeometry */; };
 		B90CB17926ACD76500804C27 /* Local in Resources */ = {isa = PBXBuildFile; fileRef = B90CB17826ACD76500804C27 /* Local */; };
+		B90E298B29D6595500F26905 /* StorageManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90E298A29D6595500F26905 /* StorageManagementView.swift */; };
+		B90E298D29D65ADB00F26905 /* FolderLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90E298C29D65ADB00F26905 /* FolderLocations.swift */; };
+		B90E298E29D65AFD00F26905 /* FolderLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90E298C29D65ADB00F26905 /* FolderLocations.swift */; };
+		B90E298F29D65CB400F26905 /* FolderLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90E298C29D65ADB00F26905 /* FolderLocations.swift */; };
 		B90FFF3826B47FFD007BE950 /* LiveGameBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90FFF3726B47FFD007BE950 /* LiveGameBox.swift */; };
 		B90FFF3B26B48288007BE950 /* MissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90FFF3A26B48288007BE950 /* MissionView.swift */; };
 		B90FFF3E26B4BC57007BE950 /* ContractDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90FFF3D26B4BC57007BE950 /* ContractDetailsView.swift */; };
@@ -356,6 +360,8 @@
 		B90B4B63267C270500CACB95 /* CompetitiveTierImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitiveTierImage.swift; sourceTree = "<group>"; };
 		B90B4FB726C5DD8E008A5B5A /* LeaderboardRankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardRankView.swift; sourceTree = "<group>"; };
 		B90CB17826ACD76500804C27 /* Local */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Local; sourceTree = "<group>"; };
+		B90E298A29D6595500F26905 /* StorageManagementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManagementView.swift; sourceTree = "<group>"; };
+		B90E298C29D65ADB00F26905 /* FolderLocations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderLocations.swift; sourceTree = "<group>"; };
 		B90FFF3726B47FFD007BE950 /* LiveGameBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveGameBox.swift; sourceTree = "<group>"; };
 		B90FFF3A26B48288007BE950 /* MissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionView.swift; sourceTree = "<group>"; };
 		B90FFF3D26B4BC57007BE950 /* ContractDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractDetailsView.swift; sourceTree = "<group>"; };
@@ -747,6 +753,7 @@
 				B939C81D294A5A4900ABD0C6 /* WidgetLink.swift */,
 				B9E861CA294FB2E2004F8ADF /* ResolvedMissions.swift */,
 				B997FF2429D15AAC00BB09FF /* GameConfigManager.swift */,
+				B90E298C29D65ADB00F26905 /* FolderLocations.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1048,6 +1055,7 @@
 				B9F7FBC22935B6AB0022F5CE /* AccountSettingsView.swift */,
 				B94931A429386B3400D44A48 /* InAppStorefront.swift */,
 				B9BC89D82939B6FB00B97626 /* AppIconPicker.swift */,
+				B90E298A29D6595500F26905 /* StorageManagementView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -1318,6 +1326,7 @@
 				B939C801294859EC00ABD0C6 /* MatchList.swift in Sources */,
 				B939C7E02948577000ABD0C6 /* IntentHandler.swift in Sources */,
 				B939C7EB2948582200ABD0C6 /* LocalDataProvider.swift in Sources */,
+				B90E298F29D65CB400F26905 /* FolderLocations.swift in Sources */,
 				B939C7EA2948581400ABD0C6 /* AccountManager.swift in Sources */,
 				B939C8072948E80900ABD0C6 /* UserDefault+AppGroups.swift in Sources */,
 				B939C7EE2948584600ABD0C6 /* Keychain.swift in Sources */,
@@ -1361,6 +1370,7 @@
 				B98E4705269B40DB003C9088 /* CircularProgressView.swift in Sources */,
 				B90FFF3826B47FFD007BE950 /* LiveGameBox.swift in Sources */,
 				B9298FA329BF9F6900DC7778 /* StatisticsView.swift in Sources */,
+				B90E298D29D65ADB00F26905 /* FolderLocations.swift in Sources */,
 				B9E861CB294FB2E2004F8ADF /* ResolvedMissions.swift in Sources */,
 				B998492F26CEC8B00030E83C /* EventMap.swift in Sources */,
 				B94C57FA26CB605700CAF257 /* AlwaysPressable.swift in Sources */,
@@ -1473,6 +1483,7 @@
 				B95FA88429C2D8AB001D1998 /* SharedStatsViews.swift in Sources */,
 				B96A0CAA265AE32200844674 /* MissionAssets.swift in Sources */,
 				B9F7FBC32935B6AB0022F5CE /* AccountSettingsView.swift in Sources */,
+				B90E298B29D6595500F26905 /* StorageManagementView.swift in Sources */,
 				B902823426A7A8A9004B1740 /* HenrikAPI.swift in Sources */,
 				B9F7A53927DC5D3D00636DAF /* StoreDetailsView.swift in Sources */,
 				B954A6DB26C8BED200A86CB9 /* WeaponImage.swift in Sources */,
@@ -1507,6 +1518,7 @@
 				B97C8F4E293C421F002F6A07 /* BundleAssets.swift in Sources */,
 				B97C8F48293C421F002F6A07 /* GameModeAssets.swift in Sources */,
 				B99AA194294BC36B00115120 /* CircularProgressView.swift in Sources */,
+				B90E298E29D65AFD00F26905 /* FolderLocations.swift in Sources */,
 				B97C8F42293C4212002F6A07 /* AssetVersion.swift in Sources */,
 				B97C8F3A293C40A7002F6A07 /* SwiftUI+Helpers.swift in Sources */,
 				B97C8F53293C421F002F6A07 /* PlayerTitleAssets.swift in Sources */,

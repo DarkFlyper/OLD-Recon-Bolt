@@ -16,7 +16,6 @@ struct MatchDetailsContainer: View {
 			}
 		}
 		.withLocalData($details, id: matchID, shouldAutoUpdate: true, shouldReportErrors: true)
-		.loadErrorAlertTitle("Could not load match details!")
 		.navigationTitle("Match Details")
 		.navigationBarTitleDisplayMode(.inline)
 	}
