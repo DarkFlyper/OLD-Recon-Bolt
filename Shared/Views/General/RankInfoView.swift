@@ -121,6 +121,7 @@ struct RankInfoView: View {
 }
 
 #if DEBUG
+@available(iOS 16.0, *)
 struct RankInfoView_Previews: PreviewProvider, PreviewProviderWithAssets {
 	static func previews(assets: AssetCollection) -> some View {
 		let act = assets.seasons.with(PreviewData.gameConfig).currentAct()!
@@ -138,50 +139,70 @@ struct RankInfoView_Previews: PreviewProvider, PreviewProviderWithAssets {
 			$0.competitiveInfo!.bySeason![act.id]!.rankedRating = 69
 		}
 		
+		// compiler took ages to type check this so i broke it up </3
+		
+		@ViewBuilder
+		func edgeCases() -> some View {
+			RankInfoView(summary: basicSummary, shouldShowProgress: false)
+			RankInfoView(summary: basicSummary <- { $0.infoByQueue = [:] })
+			RankInfoView(summary: summary(forTier: 0), shouldFallBackOnPrevious: false)
+			RankInfoView(summary: summary(forTier: 0), shouldFallBackOnPrevious: true)
+			RankInfoView(summary: basicSummary)
+			RankInfoView(summary: nil)
+			
+			Group {
+				RankInfoView(summary: summary(forTier: 19), shouldShowProgress: false, shouldFallBackOnPrevious: true)
+				RankInfoView(summary: summary(forTier: 0), shouldShowProgress: false, shouldFallBackOnPrevious: true)
+			}
+			.padding(.horizontal, 64)
+			.background(Color.primary.opacity(0.2))
+		}
+		
+		func differentSizes() -> some View {
+			ForEach([32, 64, 96, 128] as [CGFloat], id: \.self) { (size: CGFloat) in
+				HStack {
+					RankInfoView(summary: basicSummary, size: size)
+					RankInfoView(summary: basicSummary, size: size, shouldShowProgress: false)
+					RankInfoView(summary: summary(forTier: 0), size: size, shouldShowProgress: false)
+					RankInfoView(summary: summary(forTier: 0), size: size)
+				}
+				.background(Color.primary.opacity(0.1))
+			}
+		}
+		
+		func gridContents() -> some View {
+			ForEach(ranks.tiers.values.map(\.number).sorted().chunks(ofCount: 3), id: \.self) { tiers in
+				GridRow {
+					ForEach(tiers, id: \.self) { tier in
+						// this would be equivalent, but i want to test this overload too
+						//RankInfoView(summary: summary(forTier: $0), shouldFallBackOnPrevious: false)
+						RankInfoView(summary: nil, dataOverride: .init(
+							seasonID: act.id,
+							actRank: tier,
+							competitiveTier: tier,
+							rankedRating: 69
+						))
+						.gridCellColumns(tiers.count == 1 ? 3 : 1)
+						.frame(height: 64)
+					}
+				}
+			}
+		}
+		
 		return Group {
 			VStack {
-				RankInfoView(summary: basicSummary, shouldShowProgress: false)
-				RankInfoView(summary: basicSummary <- { $0.infoByQueue = [:] })
-				RankInfoView(summary: summary(forTier: 0), shouldFallBackOnPrevious: false)
-				RankInfoView(summary: summary(forTier: 0), shouldFallBackOnPrevious: true)
-				RankInfoView(summary: basicSummary)
-				RankInfoView(summary: nil)
-				
-				Group {
-					RankInfoView(summary: summary(forTier: 19), shouldShowProgress: false, shouldFallBackOnPrevious: true)
-					RankInfoView(summary: summary(forTier: 0), shouldShowProgress: false, shouldFallBackOnPrevious: true)
-				}
-				.padding(.horizontal, 64)
-				.background(Color.primary.opacity(0.2))
+				edgeCases()
 			}
 			.fixedSize(horizontal: false, vertical: true)
 			.previewDisplayName("Edge Cases")
 			
 			VStack {
-				ForEach([32, 64, 96, 128] as [CGFloat], id: \.self) { (size: CGFloat) in
-					HStack {
-						RankInfoView(summary: basicSummary, size: size)
-						RankInfoView(summary: basicSummary, size: size, shouldShowProgress: false)
-						RankInfoView(summary: summary(forTier: 0), size: size, shouldShowProgress: false)
-						RankInfoView(summary: summary(forTier: 0), size: size)
-					}
-					.background(Color.primary.opacity(0.1))
-				}
+				differentSizes()
 			}
 			.previewDisplayName("Sizes")
 			
-			LazyVGrid(columns: [GridItem(), GridItem(), GridItem()], spacing: 20) {
-				ForEach(ranks.tiers.values.map(\.number).sorted(), id: \.self) {
-					// this would be equivalent, but i want to test this overload too
-					//RankInfoView(summary: summary(forTier: $0), shouldFallBackOnPrevious: false)
-					RankInfoView(summary: nil, dataOverride: .init(
-						seasonID: act.id,
-						actRank: $0,
-						competitiveTier: $0,
-						rankedRating: 69
-					))
-				}
-				.frame(height: 64)
+			Grid(alignment: .center) {
+				gridContents()
 			}
 			.padding()
 			.frame(width: 250)
