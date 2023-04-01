@@ -64,6 +64,7 @@ struct AdvancedSettingsView: View {
 	@ObservedObject var accountManager: AccountManager
 	@ObservedObject var assetManager: AssetManager
 	@StateObject var storageManager = StorageManager()
+	@State var hasRefreshedWidgets = false
 	
 	var body: some View {
 		Form {
@@ -96,10 +97,17 @@ struct AdvancedSettingsView: View {
 			Section {
 				Button("Force Refresh Widgets") {
 					WidgetCenter.shared.reloadAllTimelines()
+					hasRefreshedWidgets = true
 				}
 			} footer: {
 				Text("If your widgets seem broken, use this button to request an immediate refresh from iOS.")
 			}
+			.alert("Widget Refresh Requested", isPresented: $hasRefreshedWidgets) {
+				Button("OK") {}
+			} message: {
+				Text("iOS is a bit finnicky about this, so widgets may not refresh right away, but this is the best we can do!")
+			}
+
 		}
 		.navigationTitle("Advanced Settings")
 	}
