@@ -43,6 +43,7 @@ struct LiveView: View {
 		.background(Color.groupedBackground)
 		.navigationTitle("Live")
 		.withLocalData($user, id: userID)
+		.id(userID) // when user changes, current state is bound to become invalid/irrelevant
 	}
 	
 	var missionsBox: some View {
