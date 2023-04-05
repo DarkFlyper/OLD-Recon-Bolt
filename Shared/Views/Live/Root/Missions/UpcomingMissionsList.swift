@@ -15,24 +15,17 @@ struct UpcomingMissionsList: View {
 			VStack(spacing: 16) {
 				let totalXP = missions.map(\.xpGrant).reduce(0, +)
 				
-				Button {
-					withAnimation { isExpanded.toggle() }
-				} label: {
-					HStack {
-						Image(systemName: "chevron.down")
-							.rotationEffect(.degrees(isExpanded ? 0 : -90))
-						
-						Text("\(missions.count) \(title)")
-							.multilineTextAlignment(.leading)
-						
-						Spacer()
-						
-						Text("+\(totalXP) XP")
-							.font(.caption.weight(.medium))
-							.foregroundStyle(.secondary)
-					}
-					.font(.headline)
+				ExpandButton(isExpanded: $isExpanded) {
+					Text("\(missions.count) \(title)")
+						.multilineTextAlignment(.leading)
+					
+					Spacer()
+					
+					Text("+\(totalXP) XP")
+						.font(.caption.weight(.medium))
+						.foregroundStyle(.secondary)
 				}
+				.font(.headline)
 				
 				if isExpanded {
 					let byActivation = missions.chunked(on: \.activationDate!)
