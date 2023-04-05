@@ -107,7 +107,7 @@ struct RankEntryView: TimelineEntryView {
 		VStack {
 			let shouldShowActName = configuration.showActName != 0
 			let shouldShowRankName = configuration.showRankName != 0
-			let shouldShowRankRating = configuration.showRankRating != 0
+			let shouldShowRankRating = configuration.showRankRating == 1
 			let hasTextBelow = shouldShowRankName || shouldShowRankRating
 			
 			if shouldShowActName, hasTextBelow { // looks stupid above with nothing below

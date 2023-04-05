@@ -286,6 +286,8 @@
 		B9F65C4E2651EDA500C9C34A /* DynamicallyStroked.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F65C4D2651EDA500C9C34A /* DynamicallyStroked.swift */; };
 		B9F66ACE266DC31E008560FD /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F66ACD266DC31E008560FD /* SettingsView.swift */; };
 		B9F794E629DD3BB5007BECEC /* ExpandButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F794E529DD3BB5007BECEC /* ExpandButton.swift */; };
+		B9F794E829DE237F007BECEC /* SwiftUI+Contrast.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F794E729DE237F007BECEC /* SwiftUI+Contrast.swift */; };
+		B9F794E929DE237F007BECEC /* SwiftUI+Contrast.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F794E729DE237F007BECEC /* SwiftUI+Contrast.swift */; };
 		B9F7A53927DC5D3D00636DAF /* StoreDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F7A53827DC5D3D00636DAF /* StoreDetailsView.swift */; };
 		B9F7A53C27DC5DAF00636DAF /* example_store_offers.json in Resources */ = {isa = PBXBuildFile; fileRef = B9F7A53A27DC5DAF00636DAF /* example_store_offers.json */; };
 		B9F7A53D27DC5DAF00636DAF /* example_storefront.json in Resources */ = {isa = PBXBuildFile; fileRef = B9F7A53B27DC5DAF00636DAF /* example_storefront.json */; };
@@ -540,6 +542,7 @@
 		B9F65C4D2651EDA500C9C34A /* DynamicallyStroked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicallyStroked.swift; sourceTree = "<group>"; };
 		B9F66ACD266DC31E008560FD /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		B9F794E529DD3BB5007BECEC /* ExpandButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandButton.swift; sourceTree = "<group>"; };
+		B9F794E729DE237F007BECEC /* SwiftUI+Contrast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUI+Contrast.swift"; sourceTree = "<group>"; };
 		B9F7A53827DC5D3D00636DAF /* StoreDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDetailsView.swift; sourceTree = "<group>"; };
 		B9F7A53A27DC5DAF00636DAF /* example_store_offers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_store_offers.json; sourceTree = "<group>"; };
 		B9F7A53B27DC5DAF00636DAF /* example_storefront.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_storefront.json; sourceTree = "<group>"; };
@@ -839,6 +842,7 @@
 				B9C97DC6263CADFC001E4D1B /* ValorantAPI+Mock.swift */,
 				B9EE6E702659D30A007E28B5 /* Swift+Helpers.swift */,
 				B96A0CA2265ABBC700844674 /* SwiftUI+Helpers.swift */,
+				B9F794E729DE237F007BECEC /* SwiftUI+Contrast.swift */,
 				B9741477266F18A800892B5F /* String+Localization.swift */,
 				B939C7F7294858FB00ABD0C6 /* LocalData+SwiftUI.swift */,
 			);
@@ -1457,6 +1461,7 @@
 				B9318366267810CE0099B13C /* AgentSelectView.swift in Sources */,
 				B9F794E629DD3BB5007BECEC /* ExpandButton.swift in Sources */,
 				B93CD3C22811AC1500628D0E /* MatchListFilterEditor.swift in Sources */,
+				B9F794E829DE237F007BECEC /* SwiftUI+Contrast.swift in Sources */,
 				B963C4702694FDDA0071E14A /* CompetitiveSummaryCell.swift in Sources */,
 				B90FFF3B26B48288007BE950 /* MissionView.swift in Sources */,
 				B9BC8A02293A7D7400B97626 /* Widgets.intentdefinition in Sources */,
@@ -1551,6 +1556,7 @@
 				B939C827294A601C00ABD0C6 /* StoreEntryProvider.swift in Sources */,
 				B997FF2629D2268E00BB09FF /* GameConfigManager.swift in Sources */,
 				B97C8F59293C4225002F6A07 /* GameModeImage.swift in Sources */,
+				B9F794E929DE237F007BECEC /* SwiftUI+Contrast.swift in Sources */,
 				B97C8F56293C4225002F6A07 /* CompetitiveTierImage.swift in Sources */,
 				B97C8F3F293C4212002F6A07 /* AssetImage.swift in Sources */,
 				B9E4B8B029B8390200E999D0 /* ViewRankWidget.swift in Sources */,

@@ -52,11 +52,17 @@ struct StoreDetailsView: View {
 			}
 			
 			ForEach(storefront.skinsPanelLayout.singleItemOffers, id: \.self) { offerID in
-				let offer = offers[offerID]!
-				OfferCell(offer: offer)
-					.background(Color.tertiaryGroupedBackground)
-					.cornerRadius(8)
+				if let offer = offers[offerID] {
+					OfferCell(offer: offer)
+				} else {
+					Text("Unknown Offer!")
+						.foregroundStyle(.secondary)
+						.padding()
+						.frame(maxWidth: .infinity)
+						.background(Color.tertiaryGroupedBackground)
+				}
 			}
+			.cornerRadius(8)
 		}
 		.padding()
 		
@@ -135,10 +141,13 @@ struct OfferCell: View {
 	@State var chromaOffset = 0
 	
 	@Environment(\.assets) private var assets
+	@Environment(\.colorScheme) private var colorScheme
 	
 	var body: some View {
 		let reward = offer.rewards.first!
 		let resolved = assets?.resolveSkin(.init(rawID: reward.itemID))
+		let tier = resolved?.skin.contentTierID.flatMap { assets?.contentTiers[$0] }
+		
 		VStack {
 			let chroma = (resolved?.skin.chromas).map { chromas in
 				chromas[chromaOffset % chromas.count]
@@ -155,8 +164,14 @@ struct OfferCell: View {
 				
 				CurrencyLabel.multiple(for: offer.cost)
 			}
+			.foregroundColor(tier?.color?.opacity(10), adjustedFor: colorScheme)
+		}
+		.overlay(alignment: .topTrailing) {
+			tier?.displayIcon.view()
+				.frame(width: 20)
 		}
 		.padding(12)
+		.background(tier?.color?.opacity(1.5))
 		.onTapGesture {
 			chromaOffset += 1 // cycle through chromas if available
 		}

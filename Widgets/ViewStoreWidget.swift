@@ -101,6 +101,8 @@ struct StoreGrid: View {
 	var columnCount: Int
 	var isCompact: Bool
 	
+	@Environment(\.colorScheme) private var colorScheme
+	
 	var body: some View {
 		FixedColumnGrid(columns: columnCount) {
 			ForEach(info.skins.indexed(), id: \.index) { index, skin in
@@ -116,7 +118,7 @@ struct StoreGrid: View {
 						let isUltraCompact = isCompact && configuration.showRefreshTime != 0
 						Text(skin.name)
 							.font(.caption2)
-							.foregroundColor(skin.tierColor?.opacity(10))
+							.foregroundColor(skin.tierColor?.opacity(10), adjustedFor: colorScheme)
 							.fixedSize(horizontal: false, vertical: true)
 							.frame(height: isCompact ? 10 : nil) // fake smaller height to ensure all cells stay the same size
 							.lineLimit(isShowingIcon || isUltraCompact ? 1 : 2)
@@ -176,28 +178,28 @@ struct FixedColumnGrid: Layout {
 }
 
 struct ViewStoreWidget_Previews: PreviewProvider {
-	static let tiers = Managers.assets.assets?.contentTiers.values.sorted(on: \.name)
+	static let tiers = Managers.assets.assets?.contentTiers.values.sorted(on: \.rank)
 	static let skins: [StorefrontInfo.Skin] = [
 		.init(
 			name: "a long-ass testing name (yes)",
 			icon: Image("Example Skin"),
-			tierColor: tiers?[0].color.wrappedValue,
+			tierColor: tiers?[0].color,
 			tierIcon: Managers.images.image(for: tiers?[0].displayIcon).map(Image.init(uiImage:))
 		),
 		.init(
 			name: "much longer skin name",
 			icon: Image("Example Skin"),
-			tierColor: tiers?[1].color.wrappedValue
+			tierColor: tiers?[2].color
 		),
 		.init(
 			name: "test",
 			icon: Image("Example Skin"),
-			tierColor: tiers?[2].color.wrappedValue
+			tierColor: tiers?[3].color
 		),
 		.init(
 			name: "BlastX Polymer KnifeTech Coated Knife",
 			icon: Image("Example Skin"),
-			tierColor: tiers?[3].color.wrappedValue
+			tierColor: tiers?[4].color
 		),
 	]
 	

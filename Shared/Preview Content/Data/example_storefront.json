@@ -216,10 +216,11 @@
 	},
 	"SkinsPanelLayout": {
 		"SingleItemOffers": [
-			"7cf3af0b-4556-a0db-2e04-eea4368b354b",
-			"1b94d997-4db6-014f-4cb8-c1b4df7d7ebc",
+			"b3d3ff38-4202-20d8-2f41-c783477e5636",
 			"8e9f610a-41ea-ff48-d102-c7a0e5614c84",
-			"63a65008-4266-1117-fe3d-d1bf290b7da9"
+			"851b390a-4852-66bd-8b72-4f96f0919710",
+			"47815b56-43d7-1312-8b3e-5da445f71e31",
+			"5a773352-456e-ef0b-35ab-c99ead159264"
 		],
 		"SingleItemOffersRemainingDurationInSeconds": 72406
 	},

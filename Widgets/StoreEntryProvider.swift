@@ -26,7 +26,7 @@ struct StoreEntryProvider: FetchingIntentTimelineProvider {
 			return await StorefrontInfo.Skin(
 				name: resolved.displayName,
 				icon: icon,
-				tierColor: tier?.color.wrappedValue,
+				tierColor: tier?.color,
 				tierIcon: tierIcon
 			)
 		}

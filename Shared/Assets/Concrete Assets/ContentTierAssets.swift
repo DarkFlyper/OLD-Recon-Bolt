@@ -1,4 +1,4 @@
-import Foundation
+import SwiftUI
 import ValorantAPI
 
 extension AssetClient {
@@ -17,7 +17,7 @@ struct ContentTier: AssetItem, Codable, Identifiable {
 	var id: ObjectID<Self, LowercaseUUID>
 	var name: String
 	var rank: Int
-	var color: HexEncodedColor
+	@HexEncodedColor var color: Color?
 	var displayIcon: AssetImage
 	
 	private enum CodingKeys: String, CodingKey {
