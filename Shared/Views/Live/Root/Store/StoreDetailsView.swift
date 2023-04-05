@@ -7,6 +7,8 @@ struct StoreDetailsView: View {
 	var storefront: Storefront
 	var wallet: StoreWallet
 	
+	@State var isNightMarketExpanded = false
+	
 	@Environment(\.assets) private var assets
 	
 	private static let currencies: [Currency.ID] = [.valorantPoints, .radianitePoints]
@@ -24,7 +26,7 @@ struct StoreDetailsView: View {
 			Divider()
 			
 			if let nightMarket = storefront.nightMarket {
-				HStack {
+				ExpandButton(isExpanded: $isNightMarketExpanded) {
 					Text("Night Market")
 						.font(.headline)
 					
@@ -33,7 +35,9 @@ struct StoreDetailsView: View {
 					remainingTimeLabel(nightMarket.remainingDuration)
 				}
 				
-				nightMarketView(for: nightMarket)
+				if isNightMarketExpanded {
+					nightMarketView(for: nightMarket)
+				}
 				
 				Divider()
 			}

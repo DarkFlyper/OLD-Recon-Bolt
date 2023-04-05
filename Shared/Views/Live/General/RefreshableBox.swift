@@ -12,14 +12,21 @@ struct RefreshableBox<Content: View>: View {
 	var body: some View {
 		VStack(spacing: 0) {
 			HStack {
-				expandButton
-					.padding()
+				ExpandButton(isExpanded: $isExpanded) {
+					HStack {
+						Text(title)
+						
+						Spacer()
+					}
+				}
+				.padding()
 				
 				AsyncButton(action: doRefresh) {
 					Image(systemName: "arrow.clockwise")
 						.padding()
 				}
 			}
+			.font(.title2.weight(.semibold))
 			
 			if isExpanded {
 				content()
@@ -31,25 +38,6 @@ struct RefreshableBox<Content: View>: View {
 		.task(doRefresh)
 		.onSceneActivation(perform: doRefresh)
 		.animation(.default, value: isExpanded)
-	}
-	
-	var expandButton: some View {
-		Button {
-			withAnimation {
-				isExpanded.toggle()
-			}
-		} label: {
-			HStack {
-				Image(systemName: "chevron.down")
-					.rotationEffect(.degrees(isExpanded ? 0 : -90))
-				
-				Text(title)
-					.foregroundColor(.primary)
-				
-				Spacer()
-			}
-			.font(.title2.weight(.semibold))
-		}
 	}
 	
 	@Sendable

@@ -285,6 +285,7 @@
 		B9F65C4B2651DFB100C9C34A /* AgentImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F65C4A2651DFB100C9C34A /* AgentImage.swift */; };
 		B9F65C4E2651EDA500C9C34A /* DynamicallyStroked.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F65C4D2651EDA500C9C34A /* DynamicallyStroked.swift */; };
 		B9F66ACE266DC31E008560FD /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F66ACD266DC31E008560FD /* SettingsView.swift */; };
+		B9F794E629DD3BB5007BECEC /* ExpandButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F794E529DD3BB5007BECEC /* ExpandButton.swift */; };
 		B9F7A53927DC5D3D00636DAF /* StoreDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F7A53827DC5D3D00636DAF /* StoreDetailsView.swift */; };
 		B9F7A53C27DC5DAF00636DAF /* example_store_offers.json in Resources */ = {isa = PBXBuildFile; fileRef = B9F7A53A27DC5DAF00636DAF /* example_store_offers.json */; };
 		B9F7A53D27DC5DAF00636DAF /* example_storefront.json in Resources */ = {isa = PBXBuildFile; fileRef = B9F7A53B27DC5DAF00636DAF /* example_storefront.json */; };
@@ -538,6 +539,7 @@
 		B9F65C4A2651DFB100C9C34A /* AgentImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentImage.swift; sourceTree = "<group>"; };
 		B9F65C4D2651EDA500C9C34A /* DynamicallyStroked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicallyStroked.swift; sourceTree = "<group>"; };
 		B9F66ACD266DC31E008560FD /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		B9F794E529DD3BB5007BECEC /* ExpandButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandButton.swift; sourceTree = "<group>"; };
 		B9F7A53827DC5D3D00636DAF /* StoreDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDetailsView.swift; sourceTree = "<group>"; };
 		B9F7A53A27DC5DAF00636DAF /* example_store_offers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_store_offers.json; sourceTree = "<group>"; };
 		B9F7A53B27DC5DAF00636DAF /* example_storefront.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_storefront.json; sourceTree = "<group>"; };
@@ -1066,6 +1068,7 @@
 				B9F8703126B38F2400C1F784 /* AutoRefresher.swift */,
 				B9F8703326B3A0A000C1F784 /* CountdownText.swift */,
 				B9F8703526B3B01F00C1F784 /* RefreshableBox.swift */,
+				B9F794E529DD3BB5007BECEC /* ExpandButton.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -1452,6 +1455,7 @@
 				B9FB9372269B359900927E03 /* SeasonCollection.swift in Sources */,
 				B9E43DA2265DB94C00F59E35 /* MatchViewData.swift in Sources */,
 				B9318366267810CE0099B13C /* AgentSelectView.swift in Sources */,
+				B9F794E629DD3BB5007BECEC /* ExpandButton.swift in Sources */,
 				B93CD3C22811AC1500628D0E /* MatchListFilterEditor.swift in Sources */,
 				B963C4702694FDDA0071E14A /* CompetitiveSummaryCell.swift in Sources */,
 				B90FFF3B26B48288007BE950 /* MissionView.swift in Sources */,

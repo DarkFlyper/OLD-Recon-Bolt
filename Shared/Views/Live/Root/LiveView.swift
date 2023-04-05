@@ -75,7 +75,8 @@ struct LiveView: View {
 			infoOrPlaceholder(placeholder: "Store not loaded!", storeInfo) { info in
 				StoreDetailsView(
 					updateTime: info.updateTime,
-					offers: info.offers, storefront: info.storefront, wallet: info.wallet)
+					offers: info.offers, storefront: info.storefront, wallet: info.wallet
+				)
 			}
 		} refresh: {
 			storeInfo = try await .init(using: $0)
