@@ -4,13 +4,11 @@ import HandyOperators
 import SwiftUI
 
 protocol FetchingIntent where Self: INIntent {
-	func loadAccount() async throws -> StoredAccount
+	func accountID() throws -> User.ID?
 }
 
 extension FetchingIntent {
-	func loadAccount() async throws -> StoredAccount {
-		try await Managers.accounts.getActiveAccount()
-	}
+	func accountID() throws -> User.ID? { nil }
 }
 
 protocol SelfFetchingIntent: FetchingIntent {
@@ -19,14 +17,10 @@ protocol SelfFetchingIntent: FetchingIntent {
 }
 
 extension SelfFetchingIntent {
-	func loadAccount() async throws -> StoredAccount {
-		if useActiveAccount != 0 {
-			return try await Managers.accounts.getActiveAccount()
-		} else {
-			let rawAccount = try account ??? GetAccountError.noAccountSpecified
-			let accountID = try rawAccount.userID()
-			return try await Managers.accounts.loadAccount(for: accountID)
-		}
+	func accountID() throws -> User.ID? {
+		guard useActiveAccount == 0 else { return nil }
+		let rawAccount = try account ??? GetAccountError.noAccountSpecified
+		return try rawAccount.userID()
 	}
 }
 
@@ -36,8 +30,12 @@ extension Account {
 	}
 }
 
-private extension AccountManager {
-	func getActiveAccount() throws -> StoredAccount {
+extension AccountManager {
+	func getAccount(for id: User.ID?) throws -> StoredAccount {
+		try id.map(loadAccount(for:)) ?? getActiveAccount()
+	}
+	
+	private func getActiveAccount() throws -> StoredAccount {
 		try activeAccount ??? GetAccountError.noAccountActive(accountLoadError)
 	}
 }

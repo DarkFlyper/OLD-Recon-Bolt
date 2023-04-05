@@ -3,8 +3,7 @@ import ValorantAPI
 
 struct BookmarkListView: View {
 	let userID: User.ID
-	@LocalData var myself: User?
-	@State var isShowingSelf = true // initially show self
+	@Binding var selection: SelectedBookmark?
 	
 	@EnvironmentObject private var bookmarkList: BookmarkList
 	@StateObject var history = LookupHistory()
@@ -12,13 +11,12 @@ struct BookmarkListView: View {
 	var body: some View {
 		List {
 			Section {
-				UserCell(userID: userID, isSelected: $isShowingSelf, user: myself)
+				UserCell(userID: userID, isSelected: $selection.equals(.ownUser))
 			}
-			.withLocalData($myself, id: userID, shouldAutoUpdate: true)
 			
 			Section("Bookmarks") {
 				ForEach(bookmarkList.bookmarks, id: \.self) { entry in
-					OtherUserCell(userID: entry.user)
+					UserCell(userID: entry.user, isSelected: $selection.equals(.other(entry.user)))
 						.environment(\.location, entry.location)
 				}
 				.onDelete { bookmarkList.bookmarks.remove(atOffsets: $0) }
@@ -33,7 +31,7 @@ struct BookmarkListView: View {
 				LookupCell(history: history)
 				
 				ForEach(history.entries) { entry in
-					OtherUserCell(userID: entry.user)
+					UserCell(userID: entry.user, isSelected: $selection.equals(.other(entry.user)))
 						.environment(\.location, entry.location)
 				}
 				.onDelete { history.entries.remove(atOffsets: $0) }
@@ -42,13 +40,18 @@ struct BookmarkListView: View {
 		}
 		.navigationTitle("Players")
 	}
+}
+
+enum SelectedBookmark: Hashable {
+	case ownUser
+	case other(User.ID)
 	
-	struct OtherUserCell: View {
-		let userID: User.ID
-		@State var isSelected = false
-		
-		var body: some View {
-			UserCell(userID: userID, isSelected: $isSelected)
+	var userID: User.ID? {
+		switch self {
+		case .ownUser:
+			return nil
+		case .other(let user):
+			return user
 		}
 	}
 }
@@ -58,8 +61,7 @@ struct BookmarksList_Previews: PreviewProvider {
 	static var previews: some View {
 		BookmarkListView(
 			userID: PreviewData.userID,
-			myself: PreviewData.user,
-			isShowingSelf: false,
+			selection: .constant(nil),
 			history: LookupHistory(
 				entries: PreviewData.liveGameInfo.players.prefix(3)
 					.map { .init(user: $0.id, location: .europe) }

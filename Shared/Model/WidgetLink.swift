@@ -3,6 +3,7 @@ import HandyOperators
 import ValorantAPI
 
 struct WidgetLink: Codable {
+	/// if non-nil, this becomes the active account
 	var account: User.ID?
 	var destination: Destination?
 	
@@ -12,6 +13,7 @@ struct WidgetLink: Codable {
 	}
 	
 	enum Destination: Codable {
+		case career(User.ID?)
 		case store
 	}
 }

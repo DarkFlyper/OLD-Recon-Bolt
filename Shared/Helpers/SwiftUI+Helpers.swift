@@ -126,6 +126,16 @@ extension Binding {
 			set: { wrappedValue = $0 ? wrappedValue : nil }
 		)
 	}
+	
+	func equals<T: Equatable>(_ value: T) -> Binding<Bool> where Value == T? {
+		.init(
+			get: { wrappedValue == value },
+			set: { isEqual in
+				guard (wrappedValue == value) != isEqual else { return }
+				wrappedValue = isEqual ? value : nil
+			}
+		)
+	}
 }
 
 extension View {

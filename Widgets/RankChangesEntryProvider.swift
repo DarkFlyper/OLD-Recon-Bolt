@@ -6,10 +6,12 @@ struct RankChangesEntryProvider: FetchingIntentTimelineProvider {
 	typealias Intent = ViewRankChangesIntent
 	
 	func fetchValue(in context: inout FetchingContext) async throws -> Value {
-		let target = try context.configuration.account?.userID() ?? context.client.userID
+		let target = try context.configuration.account?.userID()
+		context.link.destination = .career(target)
+		let userID = target ?? context.client.userID
 		
-		try await context.client.autoUpdateMatchList(for: target)
-		let list = await LocalDataProvider.shared.matchListManager.cachedObject(for: target)!
+		try await context.client.autoUpdateMatchList(for: userID)
+		let list = await LocalDataProvider.shared.matchListManager.cachedObject(for: userID)!
 		
 		return .init(matches: list)
 	}

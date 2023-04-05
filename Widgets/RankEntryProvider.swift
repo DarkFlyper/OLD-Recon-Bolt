@@ -7,6 +7,7 @@ struct RankEntryProvider: FetchingIntentTimelineProvider {
 	
 	func fetchValue(in context: inout FetchingContext) async throws -> Value {
 		let target = try context.configuration.account?.userID()
+		context.link.destination = .career(target)
 		let summary = try await context.client.getCareerSummary(userID: target)
 		
 		let act = context.seasons.currentAct()

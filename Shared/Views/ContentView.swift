@@ -11,9 +11,11 @@ struct ContentView: View {
 	@SceneStorage("tab")
 	var tab = Tab.career
 	
+	@State var selectedBookmark: SelectedBookmark? = .ownUser
+	
 	var body: some View {
 		TabView(selection: $tab) {
-			onlineView { BookmarkListView(userID: $0) }
+			onlineView { BookmarkListView(userID: $0, selection: $selectedBookmark) }
 				.withToolbar()
 				.tabItem { Label("Career", systemImage: "clock") }
 				.tag(Tab.career)
@@ -76,16 +78,26 @@ struct ContentView: View {
 	}
 	
 	func handle(_ widgetLink: WidgetLink) {
+		guard #available(iOS 16.0, *) else { return }
 		print("handling", widgetLink)
-		if let account = widgetLink.account {
+		
+		if let user = widgetLink.account {
 			do {
-				try accountManager.setActive(account)
-				print(accountManager.activeAccount!.session.userID)
+				try accountManager.setActive(user)
 			} catch {
-				print("error setting account to \(account) for widget link")
+				print("error setting account to \(user) for widget link")
 			}
 		}
-		// TODO: handle destination (deep link to e.g. store)
+		
+		switch widgetLink.destination {
+		case .career(let id)?:
+			tab = .career
+			selectedBookmark = id.map(SelectedBookmark.other) ?? .ownUser
+		case .store:
+			tab = .live
+		case nil:
+			break
+		}
 	}
 	
 	func handle(_ link: InAppLink) {
