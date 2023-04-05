@@ -90,11 +90,12 @@ struct ContentView: View {
 		}
 		
 		switch widgetLink.destination {
-		case .career(let id)?:
+		case .career(let id):
 			tab = .career
 			selectedBookmark = id.map(SelectedBookmark.other) ?? .ownUser
-		case .store:
+		case .store, .missions:
 			tab = .live
+			// TODO: scroll to & expand the box in question?
 		case nil:
 			break
 		}

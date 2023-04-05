@@ -15,6 +15,7 @@ struct WidgetLink: Codable {
 	enum Destination: Codable {
 		case career(User.ID?)
 		case store
+		case missions
 	}
 }
 

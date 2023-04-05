@@ -9,6 +9,8 @@ struct StoreEntryProvider: FetchingIntentTimelineProvider {
 	typealias Intent = ViewStoreIntent
 	
 	func fetchValue(in context: inout FetchingContext) async throws -> StorefrontInfo {
+		context.link.destination = .store
+		
 		let store = try await context.client.getStorefront()
 		let offers = Dictionary(values: try await context.client.getStoreOffers())
 		let resolvedOffers = try store.skinsPanelLayout.singleItemOffers.map { offerID in

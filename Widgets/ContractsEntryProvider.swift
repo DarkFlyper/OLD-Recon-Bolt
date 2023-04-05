@@ -6,6 +6,8 @@ struct ContractsEntryProvider: FetchingIntentTimelineProvider {
 	typealias Intent = ViewMissionsIntent
 	
 	func fetchValue(in context: inout FetchingContext) async throws -> Value {
+		context.link.destination = .missions
+		
 		let details = try await context.client.getContractDetails()
 		let config = await Managers.gameConfig.config(for: context.client.location)
 		return .init(
