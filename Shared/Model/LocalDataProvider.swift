@@ -93,11 +93,12 @@ final class LocalDataProvider {
 }
 
 extension LocalDataManager where Object == MatchDetails {
-	func unloadedMatches(in matchList: MatchList, maxCount: Int) -> [Match.ID] {
-		matchList.matches
-			.map(\.id)
-			.prefix(maxCount)
-			.prefix { cachedObject(for: $0) == nil }
+	func unloadedMatches(in matchList: MatchList, maxCount: Int) async -> [Match.ID]? {
+		let matches = matchList.matches.prefix(maxCount + 1) // need at least 1 more to know if it's been exceeded
+		let cached = await cachedObjects(for: matches.lazy.map(\.id))
+		let cachedIDs = Set(cached.lazy.map(\.id))
+		let unloaded = matches.prefix { !cachedIDs.contains($0.id) }
+		return unloaded.count > maxCount ? nil : unloaded.map(\.id)
 	}
 }
 
@@ -112,20 +113,19 @@ extension ValorantClient {
 	
 	func autoFetchMatchListDetails(for matchList: MatchList) {
 		Task.detached { [self] in
+			guard let newestMatch = matchList.matches.first else { return }
+			
 			let manager = LocalDataProvider.shared.matchDetailsManager
 			let maxAutoFetchedMatches = 10
-			let unloadedMatches = await manager.unloadedMatches(
+			if let unloadedMatches = await manager.unloadedMatches(
 				in: matchList,
-				maxCount: maxAutoFetchedMatches + 1 // we don't need more than our maximum except to know that it's been exceeded
-			)
-			guard let newestMatch = unloadedMatches.first else { return }
-			
-			if unloadedMatches.count > maxAutoFetchedMatches {
-				// too many unloaded matches—just fetch the most recent one
-				try? await fetchMatchDetails(for: newestMatch)
-			} else {
+				maxCount: maxAutoFetchedMatches
+			) {
 				// the last loaded match is close enough to catch up with reasonably few requests—let's do it!
 				try? await fetchMatchDetails(for: unloadedMatches)
+			} else {
+				// too many unloaded matches—just fetch the most recent one
+				try? await fetchMatchDetails(for: newestMatch.id)
 			}
 		}
 	}

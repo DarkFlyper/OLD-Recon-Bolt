@@ -107,6 +107,18 @@ struct MatchListView: View {
 	}
 }
 
+extension MatchListView {
+	init(userID: User.ID) {
+		self.init(
+			userID: userID,
+			user: .init(id: userID),
+			matchList: .init(id: userID),
+			summary: .init(id: userID),
+			identity: .init(id: userID)
+		)
+	}
+}
+
 extension MatchListFilter: DefaultsValueConvertible {}
 
 #if DEBUG
@@ -114,10 +126,10 @@ struct MatchListView_Previews: PreviewProvider {
 	static var previews: some View {
 		MatchListView(
 			userID: PreviewData.userID,
-			user: PreviewData.user,
-			matchList: PreviewData.matchList,
-			summary: PreviewData.summary,
-			identity: PreviewData.userIdentity
+			user: .init(preview: PreviewData.user),
+			matchList: .init(preview: PreviewData.matchList),
+			summary: .init(preview: PreviewData.summary),
+			identity: .init(preview: PreviewData.userIdentity)
 		)
 		.withToolbar()
 		.environmentObject(BookmarkList())

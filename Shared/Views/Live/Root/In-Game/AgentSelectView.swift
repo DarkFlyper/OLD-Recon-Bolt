@@ -16,8 +16,8 @@ struct AgentSelectView: View {
 				
 				VStack {
 					VStack {
-						ForEach(pregameInfo.team.players) { player in
-							PlayerView(player: player, userID: userID)
+						ForEach(pregameInfo.team.players) {
+							PlayerView(player: $0, userID: userID)
 						}
 					}
 					.padding()
@@ -142,6 +142,13 @@ struct AgentSelectView: View {
 		@LocalData var summary: CareerSummary?
 		@Environment(\.assets) private var assets
 		
+		init(player: LivePregameInfo.PlayerInfo, userID: User.ID) {
+			self.player = player
+			self.userID = userID
+			self._playerUser = .init(id: player.id)
+			self._summary = .init(id: player.id)
+		}
+		
 		private let iconSize = 48.0
 		
 		var body: some View {
@@ -173,7 +180,7 @@ struct AgentSelectView: View {
 				
 				if player.id != userID {
 					NavigationLink {
-						MatchListView(userID: player.id, user: playerUser)
+						MatchListView(userID: player.id)
 							.environment(\.isIncognito, player.identity.isIncognito)
 					} label: {
 						Image(systemName: "person.crop.circle.fill")

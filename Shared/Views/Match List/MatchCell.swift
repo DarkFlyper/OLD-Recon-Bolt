@@ -134,6 +134,10 @@ struct MatchCell: View {
 				}
 			}
 			.transition(.slide)
+		} else {
+			Text("Open or swipe to fetch details.")
+				.font(.caption)
+				.foregroundStyle(.tertiary)
 		}
 	}
 	
@@ -170,6 +174,15 @@ struct MatchCell: View {
 	
 	private var changeColor: Color {
 		match.ratingEarned > 0 ? .green : match.ratingEarned < 0 ? .red : .gray
+	}
+}
+
+extension MatchCell {
+	init(match: CompetitiveUpdate, userID: User.ID, filter: MatchListFilter) {
+		self.init(
+			match: match, userID: userID, filter: filter,
+			matchDetails: .init(id: match.id)
+		)
 	}
 }
 
@@ -301,7 +314,7 @@ struct MatchCell_Previews: PreviewProvider {
 				match: allExamples.first! <- { $0.id = PreviewData.singleMatch.id },
 				userID: PreviewData.userID,
 				filter: .init(),
-				matchDetails: PreviewData.singleMatch
+				matchDetails: .init(preview: PreviewData.singleMatch)
 			)
 			
 			ForEach(allExamples.dropFirst()) {

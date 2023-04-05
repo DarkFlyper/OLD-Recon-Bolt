@@ -23,7 +23,7 @@ struct LiveView: View {
 	@Environment(\.assets) private var assets
 	@Environment(\.seasons) private var seasons
 	
-	@LocalData private var user: User?
+	@LocalData var user: User?
 	
 	var body: some View {
 		ScrollView {
@@ -107,6 +107,12 @@ struct LiveView: View {
 		case missions
 		case loadout
 		case store
+	}
+}
+
+extension LiveView {
+	init(userID: User.ID) {
+		self.init(userID: userID, user: .init(id: userID))
 	}
 }
 

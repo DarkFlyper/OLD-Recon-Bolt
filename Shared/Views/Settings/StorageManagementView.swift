@@ -160,6 +160,7 @@ extension View {
 	}
 }
 
+@MainActor
 private struct LabeledSpace<Label: View>: View {
 	let bytes: Int64?
 	@ViewBuilder var label: Label

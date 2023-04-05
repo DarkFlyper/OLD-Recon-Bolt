@@ -4,6 +4,7 @@ import ValorantAPI
 struct UserCell: View {
 	let userID: User.ID
 	@Binding var isSelected: Bool
+	
 	@LocalData var user: User?
 	@LocalData var identity: Player.Identity?
 	@LocalData var summary: CareerSummary?
@@ -12,7 +13,7 @@ struct UserCell: View {
 		let artworkSize = 64.0
 		
 		TransparentNavigationLink(isActive: $isSelected) {
-			MatchListView(userID: userID, user: user)
+			MatchListView(userID: userID)
 		} label: {
 			HStack(spacing: 10) {
 				if let identity {
@@ -22,7 +23,7 @@ struct UserCell: View {
 				}
 				
 				VStack(alignment: .leading, spacing: 4) {
-					UserLabel(userID: userID, shouldAutoUpdate: false, user: user)
+					UserLabel(userID: userID, shouldAutoUpdate: false)
 					
 					if let identity {
 						Text("Level \(identity.accountLevel)")
@@ -41,21 +42,30 @@ struct UserCell: View {
 	}
 }
 
+extension UserCell {
+	init(userID: User.ID, isSelected: Binding<Bool>) {
+		self.init(
+			userID: userID,
+			isSelected: isSelected,
+			user: .init(id: userID),
+			identity: .init(id: userID),
+			summary: .init(id: userID)
+		)
+	}
+}
+
 #if DEBUG
 struct UserCell_Previews: PreviewProvider {
 	static var previews: some View {
 		List {
-			UserCell(
-				userID: PreviewData.userID,
-				isSelected: .constant(false)
-			)
+			UserCell(userID: PreviewData.userID, isSelected: .constant(false))
 			
 			UserCell(
 				userID: PreviewData.userID,
 				isSelected: .constant(false),
-				user: PreviewData.user,
-				identity: PreviewData.userIdentity,
-				summary: PreviewData.summary
+				user: .init(preview: PreviewData.user),
+				identity: .init(preview: PreviewData.userIdentity),
+				summary: .init(preview: PreviewData.summary)
 			)
 			.lockingLocalData()
 		}

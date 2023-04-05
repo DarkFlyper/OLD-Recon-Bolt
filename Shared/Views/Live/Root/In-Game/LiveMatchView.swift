@@ -1,6 +1,7 @@
 import SwiftUI
 import ValorantAPI
 
+@MainActor
 struct LiveMatchView: View {
 	let gameInfo: LiveGameInfo
 	let userID: User.ID
@@ -73,6 +74,13 @@ struct LiveMatchView: View {
 		@LocalData var summary: CareerSummary?
 		@Environment(\.assets) private var assets
 		
+		init(player: LiveGameInfo.PlayerInfo, ownPlayer: LiveGameInfo.PlayerInfo) {
+			self.player = player
+			self.ownPlayer = ownPlayer
+			self._playerUser = .init(id: player.id)
+			self._summary = .init(id: player.id)
+		}
+		
 		var body: some View {
 			let isAlly = player.teamID == ownPlayer.teamID
 			let isSelf = player.id == ownPlayer.id
@@ -111,7 +119,7 @@ struct LiveMatchView: View {
 				
 				if !isSelf {
 					NavigationLink {
-						MatchListView(userID: player.id, user: playerUser)
+						MatchListView(userID: player.id)
 							.environment(\.isIncognito, player.identity.isIncognito)
 					} label: {
 						Image(systemName: "person.crop.circle.fill")

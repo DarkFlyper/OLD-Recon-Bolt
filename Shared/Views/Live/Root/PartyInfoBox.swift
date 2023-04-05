@@ -123,6 +123,14 @@ struct PartyInfoBox: View {
 		
 		@Environment(\.valorantLoad) private var load
 		
+		init(party: Binding<Party>, member: Party.Member, userID: User.ID) {
+			self._party = party
+			self.member = member
+			self.userID = userID
+			self._memberUser = .init(id: member.id)
+			self._summary = .init(id: member.id)
+		}
+		
 		var body: some View {
 			let iconSize = 48.0
 			
@@ -158,7 +166,9 @@ struct PartyInfoBox: View {
 				Spacer()
 				
 				if member.id != userID {
-					NavigationLink(destination: MatchListView(userID: member.id, user: memberUser)) {
+					NavigationLink {
+						MatchListView(userID: member.id)
+					} label: {
 						Image(systemName: "person.crop.circle.fill")
 							.padding(.horizontal, 4)
 					}
@@ -168,8 +178,11 @@ struct PartyInfoBox: View {
 					if isSettingReady {
 						ProgressView()
 					} else {
-						Toggle("Ready", isOn: .init(get: { member.isReady }, set: setReady(to:)))
-							.labelsHidden()
+						Toggle("Ready", isOn: Binding(
+							get: { member.isReady },
+							set: { setReady(to: $0) })
+						)
+						.labelsHidden()
 					}
 				}
 			}

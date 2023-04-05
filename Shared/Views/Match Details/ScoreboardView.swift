@@ -46,7 +46,7 @@ struct ScoreboardRowView: View {
 	let data: MatchViewData
 	@Binding var highlight: PlayerHighlightInfo
 	
-	@LocalData private var summary: CareerSummary?
+	@LocalData var summary: CareerSummary?
 	
 	@Environment(\.isIncognito) private var isIncognito
 	
@@ -137,7 +137,7 @@ struct ScoreboardRowView: View {
 		
 		if player.id != data.myself?.id {
 			TransparentNavigationLink {
-				MatchListView(userID: player.id, user: User(player))
+				MatchListView(userID: player.id)
 			} label: {
 				Image(systemName: "person.crop.circle.fill")
 					.frame(maxHeight: .infinity)
@@ -170,6 +170,15 @@ struct ScoreboardRowView: View {
 			}
 		}
 		.opacity(highlight.shouldFade(party) ? 0.5 : 1)
+	}
+}
+
+extension ScoreboardRowView {
+	init(player: Player, data: MatchViewData, highlight: Binding<PlayerHighlightInfo>) {
+		self.init(
+			player: player, data: data, highlight: highlight,
+			summary: .init(id: player.id)
+		)
 	}
 }
 

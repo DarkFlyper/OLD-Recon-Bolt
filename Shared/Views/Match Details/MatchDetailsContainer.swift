@@ -5,7 +5,13 @@ struct MatchDetailsContainer: View {
 	let matchID: Match.ID
 	let userID: User.ID
 	
-	@LocalData private var details: MatchDetails?
+	@LocalData var details: MatchDetails?
+	
+	init(matchID: Match.ID, userID: User.ID) {
+		self.matchID = matchID
+		self.userID = userID
+		self._details = .init(id: matchID)
+	}
 	
 	var body: some View {
 		Group {

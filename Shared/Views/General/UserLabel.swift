@@ -27,6 +27,16 @@ struct UserLabel: View {
 	}
 }
 
+extension UserLabel {
+	init(userID: User.ID, shouldAutoUpdate: Bool = true) {
+		self.init(
+			userID: userID,
+			shouldAutoUpdate: shouldAutoUpdate,
+			user: .init(id: userID)
+		)
+	}
+}
+
 #if DEBUG
 struct UserLabel_Previews: PreviewProvider {
     static var previews: some View {

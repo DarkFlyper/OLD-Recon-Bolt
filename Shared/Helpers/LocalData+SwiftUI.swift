@@ -3,6 +3,7 @@ import Combine
 import ValorantAPI
 
 extension View {
+	@MainActor
 	func withLocalData<Value: LocalDataStored>(
 		_ value: LocalData<Value>,
 		id: Value.ID,
@@ -11,6 +12,7 @@ extension View {
 		modifier(LocalDataModifier(value: value.$wrappedValue, id: id, animation: animation))
 	}
 	
+	@MainActor
 	func withLocalData<Value: LocalDataAutoUpdatable>(
 		_ value: LocalData<Value>,
 		id: Value.ID,
@@ -43,15 +45,28 @@ extension EnvironmentValues {
 	}
 }
 
+@MainActor
 @propertyWrapper
 struct LocalData<Value: LocalDataStored>: DynamicProperty {
 	@State fileprivate(set) var wrappedValue: Value?
 	
 	var projectedValue: Self { self }
 	
-	init(wrappedValue: Value?) {
-		self._wrappedValue = .init(initialValue: wrappedValue)
+	init() {}
+	
+	/// checks the cache even before the first body evaluation
+	init(id: Value.ID?) {
+		self._wrappedValue = .init(initialValue: id.flatMap {
+			LocalDataProvider.shared[keyPath: Value.managerPath]
+				.loadedObject(for: $0)
+		})
 	}
+	
+	#if DEBUG
+	init(preview: Value) {
+		self._wrappedValue = .init(initialValue: preview)
+	}
+	#endif
 }
 
 private struct LocalDataModifier<Value: LocalDataStored>: ViewModifier {
