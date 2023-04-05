@@ -11,7 +11,7 @@ struct CountdownText: View {
 	}
 	
 	var body: some View {
-		if target.timeIntervalSinceNow < 24 * 3600, #available(iOS 16.0, *) {
+		if target >= .now, target.timeIntervalSinceNow < 24 * 3600, #available(iOS 16.0, *) {
 			// this works better for sub-minute times, but shows days as hours, so we'll only use it for targets less than a day away
 			Text(timerInterval: Date.now...target)
 				.monospacedDigit()

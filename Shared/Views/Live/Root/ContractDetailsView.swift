@@ -127,7 +127,7 @@ struct ContractDetailsView: View {
 }
 
 #if DEBUG
-struct ContractDetailsView_Previews: PreviewProviderWithAssets {
+struct ContractDetailsView_Previews: PreviewProvider, PreviewProviderWithAssets {
 	static func previews(assets: AssetCollection) -> some View {
 		RefreshableBox(title: "Missions", isExpanded: .constant(true)) {
 			ContractDetailsView(contracts: PreviewData.resolvedContracts)
