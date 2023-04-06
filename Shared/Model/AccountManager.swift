@@ -96,6 +96,11 @@ final class AccountManager: ObservableObject {
 		WidgetCenter.shared.reloadAllTimelines() // some widgets might be based on the active user
 	}
 	
+	func clear() {
+		activeAccount = nil
+		storedAccounts = []
+	}
+	
 	private var context: StoredAccount.Context {
 		.init(keychain: keychain)
 	}

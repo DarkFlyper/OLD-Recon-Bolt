@@ -53,6 +53,12 @@ struct AccountSettingsView: View {
 			.onMove { accountManager.storedAccounts.move(fromOffsets: $0, toOffset: $1) }
 			.moveDisabled(!ownsProVersion)
 			
+			if !ownsProVersion {
+				Button("Sign Out") {
+					accountManager.clear()
+				}
+			}
+			
 			Button {
 				loginTarget = .extraAccount
 			} label: {
@@ -116,7 +122,7 @@ struct AccountSettingsView: View {
 							.opacity(isActive ? 1 : 0)
 					}
 				}
-				.disabled((index ?? 0) > 0 && !ownsProVersion)
+				.disabled(!ownsProVersion && !isActive && (index ?? 0) > 0)
 				
 				Spacer()
 			}
