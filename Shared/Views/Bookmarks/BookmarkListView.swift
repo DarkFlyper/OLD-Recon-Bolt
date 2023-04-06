@@ -49,8 +49,10 @@ struct BookmarkListView: View {
 			LookupCell(history: history)
 			
 			ForEach(history.entries) { entry in
-				userCell(id: entry.user)
-					.environment(\.location, entry.location)
+				if !bookmarkList.hasBookmark(for: entry.user) {
+					userCell(id: entry.user)
+						.environment(\.location, entry.location)
+				}
 			}
 			.onDelete { history.entries.remove(atOffsets: $0) }
 		}
