@@ -19,28 +19,34 @@ struct LiveView: View {
 	@UserDefault.State("LiveView.expandedBoxes")
 	var expandedBoxes: Set<Box> = [.party]
 	
+	@LocalData var user: User?
+	
 	@Environment(\.valorantLoad) private var load
 	@Environment(\.assets) private var assets
 	@Environment(\.seasons) private var seasons
 	
-	@LocalData var user: User?
+	@Namespace private var missionsBoxID
+	@Namespace private var storeBoxID
 	
 	var body: some View {
-		ScrollView {
-			VStack(spacing: 16) {
-				LiveGameBox(userID: userID, isExpanded: $expandedBoxes.contains(.party))
-				
-				missionsBox
-				
-				loadoutBox
-				
-				storeBox
+		ScrollViewReader { scrollView in
+			ScrollView {
+				VStack(spacing: 16) {
+					LiveGameBox(userID: userID, isExpanded: $expandedBoxes.contains(.party))
+					
+					missionsBox
+					
+					loadoutBox
+					
+					storeBox
+				}
+				.padding()
+				.compositingGroup() // avoid shadows overlapping other boxes
+				.shadow(color: .black.opacity(0.1), radius: 20, x: 0, y: 10)
 			}
-			.padding()
-			.compositingGroup() // avoid shadows overlapping other boxes
-			.shadow(color: .black.opacity(0.1), radius: 20, x: 0, y: 10)
+			.background(Color.groupedBackground)
+			.deepLinkHandler { handle($0, scrollView: scrollView) }
 		}
-		.background(Color.groupedBackground)
 		.navigationTitle("Live")
 		.withLocalData($user, id: userID)
 		.id(userID) // when user changes, current state is bound to become invalid/irrelevant
@@ -54,6 +60,7 @@ struct LiveView: View {
 		} refresh: {
 			contractDetails = try await $0.getContractDetails()
 		}
+		.id(missionsBoxID)
 	}
 	
 	var loadoutBox: some View {
@@ -80,6 +87,25 @@ struct LiveView: View {
 			}
 		} refresh: {
 			storeInfo = try await .init(using: $0)
+		}
+		.id(storeBoxID)
+	}
+	
+	func handle(_ link: DeepLink, scrollView: ScrollViewProxy) {
+		switch link {
+		case .widget(let link):
+			switch link.destination {
+			case .missions:
+				expandedBoxes.insert(.missions)
+				scrollView.scrollTo(missionsBoxID)
+			case .store:
+				expandedBoxes.insert(.store)
+				scrollView.scrollTo(storeBoxID)
+			default:
+				break
+			}
+		default:
+			break
 		}
 	}
 	

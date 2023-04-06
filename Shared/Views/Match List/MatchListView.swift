@@ -35,6 +35,7 @@ struct MatchListView: View {
 					}
 				} label: {
 					Label("View Stats", systemImage: "chart.line.uptrend.xyaxis")
+						.padding(.vertical, 8)
 				}
 				.disabled(user == nil || matchList == nil || isIncognito)
 			}

@@ -288,6 +288,8 @@
 		B9F794E629DD3BB5007BECEC /* ExpandButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F794E529DD3BB5007BECEC /* ExpandButton.swift */; };
 		B9F794E829DE237F007BECEC /* SwiftUI+Contrast.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F794E729DE237F007BECEC /* SwiftUI+Contrast.swift */; };
 		B9F794E929DE237F007BECEC /* SwiftUI+Contrast.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F794E729DE237F007BECEC /* SwiftUI+Contrast.swift */; };
+		B9F794EB29DE2A51007BECEC /* DeepLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F794EA29DE2A51007BECEC /* DeepLink.swift */; };
+		B9F794EC29DE2A51007BECEC /* DeepLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F794EA29DE2A51007BECEC /* DeepLink.swift */; };
 		B9F7A53927DC5D3D00636DAF /* StoreDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F7A53827DC5D3D00636DAF /* StoreDetailsView.swift */; };
 		B9F7A53C27DC5DAF00636DAF /* example_store_offers.json in Resources */ = {isa = PBXBuildFile; fileRef = B9F7A53A27DC5DAF00636DAF /* example_store_offers.json */; };
 		B9F7A53D27DC5DAF00636DAF /* example_storefront.json in Resources */ = {isa = PBXBuildFile; fileRef = B9F7A53B27DC5DAF00636DAF /* example_storefront.json */; };
@@ -543,6 +545,7 @@
 		B9F66ACD266DC31E008560FD /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		B9F794E529DD3BB5007BECEC /* ExpandButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandButton.swift; sourceTree = "<group>"; };
 		B9F794E729DE237F007BECEC /* SwiftUI+Contrast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUI+Contrast.swift"; sourceTree = "<group>"; };
+		B9F794EA29DE2A51007BECEC /* DeepLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLink.swift; sourceTree = "<group>"; };
 		B9F7A53827DC5D3D00636DAF /* StoreDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDetailsView.swift; sourceTree = "<group>"; };
 		B9F7A53A27DC5DAF00636DAF /* example_store_offers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_store_offers.json; sourceTree = "<group>"; };
 		B9F7A53B27DC5DAF00636DAF /* example_storefront.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_storefront.json; sourceTree = "<group>"; };
@@ -759,6 +762,7 @@
 				B9E861CA294FB2E2004F8ADF /* ResolvedMissions.swift */,
 				B997FF2429D15AAC00BB09FF /* GameConfigManager.swift */,
 				B90E298C29D65ADB00F26905 /* FolderLocations.swift */,
+				B9F794EA29DE2A51007BECEC /* DeepLink.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1418,6 +1422,7 @@
 				B9FADF8226A91DBC00A0CA15 /* BookmarkList.swift in Sources */,
 				B9EE6E682658A6D2007E28B5 /* AssetLoading.swift in Sources */,
 				B94931A529386B3400D44A48 /* InAppStorefront.swift in Sources */,
+				B9F794EB29DE2A51007BECEC /* DeepLink.swift in Sources */,
 				B933592728A58A2A00C1A0FB /* BuddyPicker.swift in Sources */,
 				B95D30AA26CE88FF00829BB6 /* EventRow.swift in Sources */,
 				B9CF2E7925A89976004A1458 /* MatchCell.swift in Sources */,
@@ -1591,6 +1596,7 @@
 				B939C8062948E80900ABD0C6 /* UserDefault+AppGroups.swift in Sources */,
 				B97C8F45293C421C002F6A07 /* CompetitiveTier.swift in Sources */,
 				B917FD1929BB7C830082187F /* InAppStore.swift in Sources */,
+				B9F794EC29DE2A51007BECEC /* DeepLink.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

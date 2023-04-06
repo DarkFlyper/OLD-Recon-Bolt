@@ -10,50 +10,61 @@ struct SettingsView: View {
 	
 	@StateObject var iconManager = AppIconManager()
 	
+	@Namespace private var storefrontID
+	
 	var body: some View {
-		Form {
-			AccountSettingsView(accountManager: accountManager)
-			
-			Section("Settings") {
-				Picker("Theme", selection: $settings.theme) {
-					ForEach(AppSettings.Theme.allCases, id: \.self) { theme in
-						Text(theme.name)
-							.tag(theme)
+		ScrollViewReader { scrollView in
+			Form {
+				AccountSettingsView(accountManager: accountManager)
+				
+				Section("Settings") {
+					Picker("Theme", selection: $settings.theme) {
+						ForEach(AppSettings.Theme.allCases, id: \.self) { theme in
+							Text(theme.name)
+								.tag(theme)
+						}
+					}
+					
+					NavigationLink {
+						AppIconPicker(manager: iconManager)
+					} label: {
+						HStack {
+							Text("App Icon")
+							Spacer()
+							Text(iconManager.currentIcon.name)
+								.foregroundStyle(.secondary)
+						}
+					}
+					
+					Toggle("Vibrate when Match Found", isOn: $settings.vibrateOnMatchFound)
+					
+					NavigationLink("Advanced Settings") {
+						AdvancedSettingsView(accountManager: accountManager, assetManager: assetManager)
 					}
 				}
 				
-				NavigationLink {
-					AppIconPicker(manager: iconManager)
-				} label: {
-					HStack {
-						Text("App Icon")
-						Spacer()
-						Text(iconManager.currentIcon.name)
-							.foregroundStyle(.secondary)
+				Section("Store") {
+					InAppStorefront(store: store)
+						.id(storefrontID)
+				}
+				
+				Section("About") {
+					NavigationLink {
+						AboutScreen()
+					} label: {
+						Label("About Recon Bolt", systemImage: "questionmark")
 					}
-				}
-				
-				Toggle("Vibrate when Match Found", isOn: $settings.vibrateOnMatchFound)
-				
-				NavigationLink("Advanced Settings") {
-					AdvancedSettingsView(accountManager: accountManager, assetManager: assetManager)
+					
+					ListLink("Rate on the App Store", icon: "star", destination: "https://apps.apple.com/app/recon-bolt/id1563649061?action=write-review")
+					
+					ListLink("Join the Discord Server", icon: "bubble.left.and.bubble.right", destination: "https://discord.gg/bwENMNRqNa")
 				}
 			}
-			
-			Section("Store") {
-				InAppStorefront(store: store)
-			}
-			
-			Section("About") {
-				NavigationLink {
-					AboutScreen()
-				} label: {
-					Label("About Recon Bolt", systemImage: "questionmark")
+			.deepLinkHandler { deepLink in
+				guard case .inApp(.storefront) = deepLink else { return }
+				withAnimation {
+					scrollView.scrollTo(storefrontID, anchor: .center)
 				}
-				
-				ListLink("Rate on the App Store", icon: "star", destination: "https://apps.apple.com/app/recon-bolt/id1563649061?action=write-review")
-				
-				ListLink("Join the Discord Server", icon: "bubble.left.and.bubble.right", destination: "https://discord.gg/bwENMNRqNa")
 			}
 		}
 		.navigationTitle("Settings")

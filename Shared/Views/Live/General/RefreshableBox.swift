@@ -37,7 +37,6 @@ struct RefreshableBox<Content: View>: View {
 		.cornerRadius(20)
 		.task(doRefresh)
 		.onSceneActivation(perform: doRefresh)
-		.animation(.default, value: isExpanded)
 	}
 	
 	@Sendable

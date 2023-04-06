@@ -11,11 +11,11 @@ struct ContentView: View {
 	@SceneStorage("tab")
 	var tab = Tab.career
 	
-	@State var selectedBookmark: SelectedBookmark? = .ownUser
+	@State var handleDeepLink: DeepLink.Handler?
 	
 	var body: some View {
 		TabView(selection: $tab) {
-			onlineView { BookmarkListView(userID: $0, selection: $selectedBookmark) }
+			onlineView { BookmarkListView(userID: $0) }
 				.withToolbar()
 				.tabItem { Label("Career", systemImage: "clock") }
 				.tag(Tab.career)
@@ -50,6 +50,10 @@ struct ContentView: View {
 		.onSceneActivation {
 			Task { await assetManager.loadAssets() }
 		}
+		.readingDeepLinkHandler {
+			print("setting handler")
+			handleDeepLink = $0
+		}
 		.environment(\.deepLink, handle(_:))
 		.onOpenURL(perform: handle(_:))
 	}
@@ -77,11 +81,11 @@ struct ContentView: View {
 		}
 	}
 	
-	func handle(_ widgetLink: WidgetLink) {
+	func handle(_ link: WidgetLink) {
 		guard #available(iOS 16.0, *) else { return }
-		print("handling", widgetLink)
+		print("handling", link)
 		
-		if let user = widgetLink.account {
+		if let user = link.account {
 			do {
 				try accountManager.setActive(user)
 			} catch {
@@ -89,23 +93,32 @@ struct ContentView: View {
 			}
 		}
 		
-		switch widgetLink.destination {
-		case .career(let id):
+		switch link.destination {
+		case .career:
 			tab = .career
-			selectedBookmark = id.map(SelectedBookmark.other) ?? .ownUser
 		case .store, .missions:
 			tab = .live
-			// TODO: scroll to & expand the box in question?
 		case nil:
 			break
 		}
+		
+		handleWithDelay(.widget(link))
 	}
 	
 	func handle(_ link: InAppLink) {
 		switch link {
 		case .storefront:
 			tab = .settings
-			// TODO: maybe even reset settings nav path & scroll it to be visible? would require a lot of conditionalizing
+		}
+		
+		handleWithDelay(.inApp(link))
+	}
+	
+	private func handleWithDelay(_ link: DeepLink) {
+		// delay to give newly-displayed tabs time to propagate their preferences
+		DispatchQueue.main.asyncAfter(deadline: .now() + 0.01) {
+			print("calling handler")
+			handleDeepLink?(link)
 		}
 	}
 	
@@ -114,23 +127,6 @@ struct ContentView: View {
 		case live
 		case reference
 		case settings
-	}
-}
-
-enum InAppLink {
-	case storefront
-}
-
-extension EnvironmentValues {
-	var deepLink: (InAppLink) -> Void {
-		get { self[DeepLinkKey.self] }
-		set { self[DeepLinkKey.self] = newValue }
-	}
-	
-	struct DeepLinkKey: EnvironmentKey {
-		static var defaultValue: (InAppLink) -> Void = {
-			print("no deep link handler installed; ignoring", $0)
-		}
 	}
 }
 
