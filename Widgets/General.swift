@@ -6,7 +6,6 @@ enum Managers {
 	@MainActor static let assets = AssetManager()
 	@MainActor static let images = ImageManager()
 	@MainActor static let store = InAppStore(isReadOnly: true)
-	@MainActor static let gameConfig = GameConfigManager()
 }
 
 extension AssetImage {

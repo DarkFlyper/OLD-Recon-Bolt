@@ -102,7 +102,7 @@ extension EnvironmentValues {
 	private enum ConfigsKey: EnvironmentKey {
 		#if WIDGETS
 		@MainActor // this is safe right?
-		static let defaultValue: [Location: GameConfig]? = Managers.gameConfig.configs()
+		static let defaultValue: [Location: GameConfig]? = GameConfigManager().configs()
 		#else
 		static let defaultValue: [Location: GameConfig]? = nil
 		#endif

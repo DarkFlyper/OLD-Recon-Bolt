@@ -74,7 +74,7 @@ extension FetchingIntentTimelineProvider {
 			}
 			
 			let assets = try await Managers.assets.assets ??? FetchError.noAssets
-			let config = try await Managers.gameConfig.config(for: account.location)
+			let config = try await GameConfigManager().config(for: account.location)
 			??? FetchError.noConfig(account.location)
 			var context = FetchingContext(
 				client: account.client,

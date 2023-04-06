@@ -9,7 +9,7 @@ struct ContractsEntryProvider: FetchingIntentTimelineProvider {
 		context.link.destination = .missions
 		
 		let details = try await context.client.getContractDetails()
-		let config = await Managers.gameConfig.config(for: context.client.location)
+		let config = await GameConfigManager().config(for: context.client.location)
 		return .init(
 			contracts: .init(
 				details: details,
