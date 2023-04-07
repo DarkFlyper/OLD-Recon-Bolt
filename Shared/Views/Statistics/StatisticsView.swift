@@ -28,9 +28,11 @@ struct StatisticsView: View {
 	
 	var body: some View {
 		Form {
-			Section("Rank Rating Changes") {
-				RankRatingChart(matches: matchList.matches)
-					.listRowInsets(.init())
+			if matchList.matches.contains(where: \.isRanked) {
+				Section("Rank Rating Changes") {
+					RankRatingChart(matches: matchList.matches)
+						.listRowInsets(.init())
+				}
 			}
 			
 			LoadingSection(matchList: matchList, fetchedMatches: $fetchedMatches)
