@@ -50,6 +50,7 @@ struct LiveView: View {
 		.navigationTitle("Live")
 		.withLocalData($user, id: userID)
 		.id(userID) // when user changes, current state is bound to become invalid/irrelevant
+		.updatingGameConfig()
 	}
 	
 	var missionsBox: some View {
