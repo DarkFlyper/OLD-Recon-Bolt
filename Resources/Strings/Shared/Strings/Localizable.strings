@@ -19,7 +19,7 @@
 /* %@ is replaced by a fraction of wins vs. games played, e.g. '5/12 games won'. */
 "%@ games won" = "%@ games won";
 
-/* %@ is replaced by the percentage of rounds won, e.g. '57.3% won'. */
+/* Win Rate Stats by Loadout Delta: placeholder is replaced by the percentage of rounds won, e.g. '57.3% won'. */
 "%@ won" = "%@ won";
 
 /* No comment provided by engineer. */
@@ -40,7 +40,7 @@
 /* No comment provided by engineer. */
 "%lld from other players" = "%lld from other players";
 
-/* No comment provided by engineer. */
+/* Loadout Item Picker: number of hidden items—this should never show nowadays */
 "%lld hidden due to outdated assets" = "%lld hidden due to outdated assets";
 
 /* No comment provided by engineer. */
@@ -58,7 +58,7 @@
 /* No comment provided by engineer. */
 "%lld selected" = "%lld selected";
 
-/* No comment provided by engineer. */
+/* Win Rate Stats by Loadout Delta */
 "%lld to %lld credits" = "%lld to %lld credits";
 
 /* No comment provided by engineer. */
@@ -67,19 +67,19 @@
 /* No comment provided by engineer. */
 "%lld/%lld" = "%lld/%lld";
 
-/* No comment provided by engineer. */
+/* Stats: match loading */
 "%lld/%lld loaded" = "%lld/%lld loaded";
 
-/* No comment provided by engineer. */
+/* Loadout Item Picker: number of items owned out of all such items in the game */
 "%lld/%lld owned" = "%lld/%lld owned";
 
 /* No comment provided by engineer. */
 "%lld / %lld XP" = "%lld / %lld XP";
 
-/* No comment provided by engineer. */
+/* Win Rate Stats by Loadout Delta */
 "(%lld – %lld)" = "(%lld – %lld)";
 
-/* No comment provided by engineer. */
+/* Pro Features List */
 "(You can switch between available icons at any time.)" = "(You can switch between available icons at any time.)";
 
 /* No comment provided by engineer. */
@@ -91,7 +91,7 @@
 /* No comment provided by engineer. */
 "+%lld queued" = "+%lld queued";
 
-/* No comment provided by engineer. */
+/* Night Market Discount */
 "-%lld%%" = "-%lld%%";
 
 /* No comment provided by engineer. */
@@ -162,13 +162,13 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Add another Account" = "Add another Account";
 
-/* No comment provided by engineer. */
+/* Pro Features List */
 "Add multiple accounts and seamlessly switch between them at any time." = "Add multiple accounts and seamlessly switch between them at any time.";
 
 /* No comment provided by engineer. */
 "Advanced Settings" = "Advanced Settings";
 
-/* No comment provided by engineer. */
+/* Pro Store */
 "Advanced Stats" = "Advanced Stats";
 
 /* No comment provided by engineer. */
@@ -177,7 +177,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Agents" = "Agents";
 
-/* No comment provided by engineer. */
+/* Stats: match loading */
 "All %lld" = "All %lld";
 
 /* No comment provided by engineer. */
@@ -210,7 +210,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Are your assets outdated?" = "Are your assets outdated?";
 
-/* No comment provided by engineer. */
+/* Pro Features List */
 "As thanks for your support, you get to show off your status with an exclusive app icon!" = "As thanks for your support, you get to show off your status with an exclusive app icon!";
 
 /* No comment provided by engineer. */
@@ -342,7 +342,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Copy Body" = "Copy Body";
 
-/* No comment provided by engineer. */
+/* Stats: error details, currently not visible */
 "Copy Error" = "Copy Error";
 
 /* No comment provided by engineer. */
@@ -402,7 +402,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Data from %lld games (%lld skipped lacking data)" = "Data from %lld games (%lld skipped lacking data)";
 
-/* No comment provided by engineer. */
+/* Stats: match loading */
 "Data going back to %@" = "Data going back to %@";
 
 /* No comment provided by engineer. */
@@ -435,6 +435,9 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Download Assets Now" = "Download Assets Now";
 
+/* Win Rate Stats: chart legend */
+"Draws" = "Draws";
+
 /* No comment provided by engineer. */
 "ELO" = "ELO";
 
@@ -447,7 +450,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Enter 2FA Code" = "Enter 2FA Code";
 
-/* No comment provided by engineer. */
+/* Stats: error details */
 "Error" = "Error";
 
 /* No comment provided by engineer. */
@@ -462,13 +465,13 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Exchange" = "Exchange";
 
-/* No comment provided by engineer. */
+/* Pro Features List */
 "Exclusive App Icon" = "Exclusive App Icon";
 
 /* No comment provided by engineer. */
 "Exploded" = "Exploded";
 
-/* No comment provided by engineer. */
+/* Pro Features List */
 "Family Sharing" = "Family Sharing";
 
 /* No comment provided by engineer. */
@@ -507,10 +510,10 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Game is not running!" = "Game is not running!";
 
-/* No comment provided by engineer. */
+/* Pro Features List */
 "Gather statistics from anyone's games to gain insights on things like time played by mode/premade, headshot rate over time/by weapon, win rate over time/by map & side, and more!" = "Gather statistics from anyone's games to gain insights on things like time played by mode/premade, headshot rate over time/by weapon, win rate over time/by map & side, and more!";
 
-/* No comment provided by engineer. */
+/* Pro Features List */
 "Getting money from Recon Bolt gives me the flexibility and motivation to keep improving the app!" = "Getting money from Recon Bolt gives me the flexibility and motivation to keep improving the app!";
 
 /* No comment provided by engineer. */
@@ -537,10 +540,10 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Hits" = "Hits";
 
-/* No comment provided by engineer. */
+/* Pro Store */
 "Home Screen Widgets" = "Home Screen Widgets";
 
-/* No comment provided by engineer. */
+/* Pro Store */
 "I hope you enjoy the pro features :)" = "I hope you enjoy the pro features :)";
 
 /* No comment provided by engineer. */
@@ -552,10 +555,10 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "If you don't know your username or don't have one, you can fix that at [account.riotgames.com](https://account.riotgames.com)." = "If you don't know your username or don't have one, you can fix that at [account.riotgames.com](https://account.riotgames.com).";
 
-/* No comment provided by engineer. */
+/* Pro Features List */
 "If you have accounts in multiple regions to play with friends around the world, this is the feature for you!" = "If you have accounts in multiple regions to play with friends around the world, this is the feature for you!";
 
-/* No comment provided by engineer. */
+/* Pro Features List */
 "If you have multiple accounts, you can configure separate widgets for each and have them on your Home Screen at the same time." = "If you have multiple accounts, you can configure separate widgets for each and have them on your Home Screen at the same time.";
 
 /* No comment provided by engineer. */
@@ -603,10 +606,10 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Live Match" = "Live Match";
 
-/* No comment provided by engineer. */
+/* Stats: match loading */
 "Load Data" = "Load Data";
 
-/* No comment provided by engineer. */
+/* Stats: match loading */
 "Load Latest %lld Matches" = "Load Latest %lld Matches";
 
 /* No comment provided by engineer. */
@@ -615,7 +618,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Loading Request log…" = "Loading Request log…";
 
-/* No comment provided by engineer. */
+/* Pro Store */
 "Loading Store Info…" = "Loading Store Info…";
 
 /* No comment provided by engineer. */
@@ -648,6 +651,9 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Looks like you're trying to enter your Riot ID (and tagline) as username! Your username is actually something else: it's what you use to sign into the Valorant launcher." = "Looks like you're trying to enter your Riot ID (and tagline) as username! Your username is actually something else: it's what you use to sign into the Valorant launcher.";
 
+/* Win Rate Stats: chart legend */
+"Losses" = "Losses";
+
 /* No comment provided by engineer. */
 "Manage Assets" = "Manage Assets";
 
@@ -660,7 +666,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Maps" = "Maps";
 
-/* No comment provided by engineer. */
+/* Stats: error details */
 "Match" = "Match";
 
 /* No comment provided by engineer. */
@@ -678,8 +684,8 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Matches" = "Matches";
 
-/* No comment provided by engineer. */
-"Matches to load: " = "Matches to load: ";
+/* Stats: match loading */
+"Matches to load: **%lld**" = "Matches to load: **%lld**";
 
 /* No comment provided by engineer. */
 "Member" = "Member";
@@ -705,10 +711,10 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Month" = "Month";
 
-/* No comment provided by engineer. */
+/* Pro Features List */
 "Multiple Account Support" = "Multiple Account Support";
 
-/* No comment provided by engineer. */
+/* Pro Store */
 "Multiple Accounts" = "Multiple Accounts";
 
 /* No comment provided by engineer. */
@@ -762,10 +768,10 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Not signed in!" = "Not signed in!";
 
-/* No comment provided by engineer. */
+/* Pro Features List */
 "Note: Statistics are only available on iOS 16 and newer." = "Note: Statistics are only available on iOS 16 and newer.";
 
-/* No comment provided by engineer. */
+/* Pro Features List */
 "Note: Widgets are only available on iOS 16 and newer." = "Note: Widgets are only available on iOS 16 and newer.";
 
 /* No comment provided by engineer. */
@@ -837,7 +843,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Purchase Failed!" = "Purchase Failed!";
 
-/* No comment provided by engineer. */
+/* Pro Store (placeholder filled with formatted currency) */
 "Purchase – %@" = "Purchase – %@";
 
 /* No comment provided by engineer. */
@@ -867,10 +873,10 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Recon Bolt Pro" = "Recon Bolt Pro";
 
-/* No comment provided by engineer. */
+/* Pro Features List */
 "Recon Bolt Pro supports Family Sharing, meaning if just one member of your iCloud family buys it, everyone can use it!" = "Recon Bolt Pro supports Family Sharing, meaning if just one member of your iCloud family buys it, everyone can use it!";
 
-/* No comment provided by engineer. */
+/* Pro Features List */
 "Recon Bolt does not have and will never have ads. The only way it can make money is through in-app purchases." = "Recon Bolt does not have and will never have ads. The only way it can make money is through in-app purchases.";
 
 /* No comment provided by engineer. */
@@ -1014,10 +1020,10 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Storefront outdated!" = "Storefront outdated!";
 
-/* No comment provided by engineer. */
+/* Pro Features List */
 "Support Development :)" = "Support Development :)";
 
-/* No comment provided by engineer. */
+/* Pro Store */
 "Support Further Development!" = "Support Further Development!";
 
 /* No comment provided by engineer. */
@@ -1029,7 +1035,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Tag" = "Tag";
 
-/* No comment provided by engineer. */
+/* Pro Store */
 "Thank you for supporting Recon Bolt!" = "Thank you for supporting Recon Bolt!";
 
 /* No comment provided by engineer. */
@@ -1056,7 +1062,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "This is what keeps your credentials safe on your device." = "This is what keeps your credentials safe on your device.";
 
-/* No comment provided by engineer. */
+/* Stats: match loading */
 "To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!";
 
 /* No comment provided by engineer. */
@@ -1131,13 +1137,16 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Users" = "Users";
 
+/* Win Rate Stats by Loadout Delta */
+"Value Difference (credits)" = "Value Difference (credits)";
+
 /* No comment provided by engineer. */
 "Version %@" = "Version %@";
 
 /* No comment provided by engineer. */
 "Vibrate when Match Found" = "Vibrate when Match Found";
 
-/* No comment provided by engineer. */
+/* Pro Store */
 "View All Features" = "View All Features";
 
 /* No comment provided by engineer. */
@@ -1155,7 +1164,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "View your rank rating changes." = "View your rank rating changes.";
 
-/* No comment provided by engineer. */
+/* Pro Features List */
 "View your storefront, daily/weekly missions, or current rank without even having to open the app!" = "View your storefront, daily/weekly missions, or current rank without even having to open the app!";
 
 /* No comment provided by engineer. */
@@ -1179,6 +1188,9 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Win Rate" = "Win Rate";
 
+/* Win Rate Stats: chart legend */
+"Wins" = "Wins";
+
 /* No comment provided by engineer. */
 "Year" = "Year";
 
@@ -1194,7 +1206,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Your session has expired! Recon Bolt has tried to refresh it for you, but needs 2FA confirmation." = "Your session has expired! Recon Bolt has tried to refresh it for you, but needs 2FA confirmation.";
 
-/* No comment provided by engineer. */
+/* Stats: match loading */
 "^[%lld Errors](inflect: true, grammar: { partOfSpeech: \"noun\" })" = "^[%lld Errors](inflect: true, grammar: { partOfSpeech: \"noun\" })";
 
 /* No comment provided by engineer. */
