@@ -12,17 +12,17 @@ struct PlaytimeView: View {
 	
 	var body: some View {
 		List {
-			Section("Over Time") {
+			Section(header: Text("Over Time", comment: "Playtime Stats: section")) {
 				chartOverTime()
 			}
 			
-			Section("Overall") {
+			Section(header: Text("Overall", comment: "Playtime Stats: section")) {
 				Row(entry: playtime.total) {
 					Text("Total Playtime")
 				}
 			}
 			
-			Section("By Queue") {
+			Section(header: Text("By Queue", comment: "Playtime Stats: section")) {
 				ForEach(playtime.byQueue.sorted(), id: \.key) { queue, time in
 					Row(entry: time) {
 						HStack(spacing: 12) {
@@ -35,7 +35,7 @@ struct PlaytimeView: View {
 				}
 			}
 			
-			Section("By Map") {
+			Section(header: Text("By Map", comment: "Playtime Stats: section")) {
 				ForEach(playtime.byMap.sorted(), id: \.key) { map, time in
 					Row(entry: time) {
 						// tried adding icons but couldn't get them to look good
@@ -45,7 +45,7 @@ struct PlaytimeView: View {
 			}
 			
 			ExpandableList(
-				title: "By Premade Teammate",
+				title: Text("By Premade Teammate", comment: "Playtime Stats: section/title"),
 				entries: playtime.byPremade.sorted(), maxCount: 5,
 				emptyPlaceholder: "No games played with premade teammates."
 			) { teammate, playtime in
@@ -59,7 +59,7 @@ struct PlaytimeView: View {
 			}
 			
 			ExpandableList(
-				title: "By Non-Premade Player",
+				title: Text("By Non-Premade Player", comment: "Playtime Stats: section/title"),
 				entries: playtime.byNonPremade.sorted(), maxCount: 3,
 				emptyPlaceholder: "No non-premade players encountered repeatedly. (Un)lucky you!"
 			) { player, playtime in
@@ -91,14 +91,14 @@ struct PlaytimeView: View {
 	}
 	
 	private struct ExpandableList<Key: Hashable, RowContent: View>: View {
-		var title: LocalizedStringKey
+		var title: Text
 		var entries: [(key: Key, value: Playtime.Entry)]
 		var maxCount: Int
 		var emptyPlaceholder: LocalizedStringKey
 		@ViewBuilder var row: (Key, Playtime.Entry) -> RowContent
 		
 		var body: some View {
-			Section(title) {
+			Section(header: title) {
 				if entries.isEmpty {
 					Text(emptyPlaceholder)
 						.foregroundStyle(.secondary)

@@ -24,19 +24,19 @@ struct WinRateView: View {
 	
     var body: some View {
 		List {
-			Section("Over Time") {
+			Section(header: Text("Over Time", comment: "Win Rate Stats: section")) {
 				chartOverTime()
 			}
 			
-			Section("By Map") {
+			Section(header: Text("By Map", comment: "Win Rate Stats: section")) {
 				byMap()
 			}
 			
-			Section("Rounds by Side") {
+			Section(header: Text("Rounds by Side", comment: "Win Rate Stats: section")) {
 				roundsBySide()
 			}
 			
-			Section("Rounds by Loadout Delta") {
+			Section(header: Text("Rounds by Loadout Delta", comment: "Win Rate Stats: section")) {
 				roundsByLoadoutDelta()
 			}
 		}
@@ -97,13 +97,16 @@ struct WinRateView: View {
 		.aligningListRowSeparator()
 		
 		VStack(spacing: 8) {
-			Text("Starting Side:")
+			Text("Starting Side:", comment: "Win Rate Stats")
 				.font(.callout)
 				.frame(maxWidth: .infinity, alignment: .leading)
-			Picker("Starting Side", selection: $startingSideFilter) {
-				Text("Total").tag(nil as Side?)
-				Text("Attacking").tag(.attacking as Side?)
-				Text("Defending").tag(.defending as Side?)
+			Picker(
+				String(localized: "Starting Side", comment: "Win Rate Stats: accessibility label"),
+				selection: $startingSideFilter
+			) {
+				Text("Total", comment: "Win Rate Stats: side name").tag(nil as Side?)
+				Text("Attacking", comment: "Win Rate Stats: side name").tag(.attacking as Side?)
+				Text("Defending", comment: "Win Rate Stats: side name").tag(.defending as Side?)
 			}
 			.pickerStyle(.segmented)
 			
@@ -128,7 +131,7 @@ struct WinRateView: View {
 						if tally.total > 0 {
 							Text(tally.winFraction, format: .precisePercent)
 						} else {
-							Text("No data")
+							Text("No data", comment: "Win Rate Stats: by map")
 						}
 					}
 					.padding(.horizontal, 0.15 * mapRowHeight)

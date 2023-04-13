@@ -4,28 +4,28 @@ struct AboutScreen: View {
 	var body: some View {
 		List {
 			VStack(alignment: .leading, spacing: 8) {
-				Text("Hi! I'm Julian Dunskus, and I made this app.")
-				Text("Recon Bolt started development in early 2021, back when it wasn't yet possible to see your RR gains and losses in the game, but the API offered those numbers.")
-				Text("As you can guess, the scope expanded massively over time to what you're using now. I hope you're enjoying it!")
-				Text("If you've encountered a bug or have some feedback, I'm always happy to hear it on the Discord Server or GitHub :)")
+				Text("Hi! I'm Julian Dunskus, and I made this app.", comment: "About Screen")
+				Text("Recon Bolt started development in early 2021, back when it wasn't yet possible to see your RR gains and losses in the game, but the API offered those numbers.", comment: "About Screen")
+				Text("As you can guess, the scope expanded massively over time to what you're using now. I hope you're enjoying it!", comment: "About Screen")
+				Text("If you've encountered a bug or have some feedback, I'm always happy to hear it on the Discord Server or GitHub :)", comment: "About Screen")
 			}
 			
-			Section("Links") {
+			Section(header: Text("Links", comment: "About Screen: section")) {
 				ListLink("Discord Server", destination: "https://discord.gg/bwENMNRqNa")
 				ListLink("GitHub Repo", destination: "https://github.com/juliand665/Recon-Bolt")
 				ListLink("Official Website", destination: "https://dapprgames.com/recon-bolt")
 				ListLink("Twitter @juliand665", destination: "https://twitter.com/juliand665")
 			}
 			
-			Section("Third-Party Libraries & APIs Used") {
+			Section(header: Text("Third-Party Libraries & APIs Used", comment: "About Screen: section")) {
 				VStack(alignment: .leading, spacing: 8) {
 					Link("keychain-swift" as String, destination: URL(string: "https://github.com/evgenyneu/keychain-swift")!)
-					Text("This is what keeps your credentials safe on your device.")
+					Text("This is what keeps your credentials safe on your device.", comment: "About Screen")
 				}
 				
 				VStack(alignment: .leading, spacing: 8) {
 					Link("Valorant-API.com" as String, destination: URL(string: "https://valorant-api.com")!)
-					Text("An invaluable API hosting all the assets (images, data, etc.) used throughout Valorant. This is where almost every image in the app comes from.")
+					Text("An invaluable API hosting all the assets (images, data, etc.) used throughout Valorant. This is where almost every image in the app comes from.", comment: "About Screen")
 				}
 			}
 		}

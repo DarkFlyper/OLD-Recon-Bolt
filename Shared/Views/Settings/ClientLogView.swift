@@ -82,14 +82,14 @@ struct ClientLogView: View {
 					Text(exchange.time, format: .dateTime)
 				}
 				
-				Section("Request") {
+				Section(header: Text("Request", comment: "Client Log: header")) {
 					labeledRow("Method", describing: exchange.request.httpMethod!)
 					labeledRow("URL", describing: exchange.request.url!)
 					
 					bodyDetailsView(for: exchange.request.httpBody)
 				}
 				
-				Section("Response") {
+				Section(header: Text("Response", comment: "Client Log: header")) {
 					switch exchange.result {
 					case .success(let response):
 						labeledRow("Response Code", describing: response.httpMetadata!.statusCode)
@@ -114,13 +114,13 @@ struct ClientLogView: View {
 				let info = ExchangeInfo(exchange)
 				let encodedInfo = try! JSONEncoder().encode(info)
 				let infoString = String(bytes: encodedInfo, encoding: .utf8)!
-				let mailBody = """
+				let mailBody = String(localized: "Feedback Email Body", defaultValue: """
 What went wrong? Tell me about the error you just encountered:
 
 YOUR BUG REPORT HERE
 
 \(infoString)
-"""
+""")
 				
 				Button {
 					UIPasteboard.general.setData(
@@ -135,7 +135,7 @@ YOUR BUG REPORT HERE
 					Label("Send to Developer", systemImage: "envelope")
 				}
 			}
-			.navigationTitle("Exchange")
+			.navigationTitle(Text("Exchange", comment: "Client Log: title for an exchange"))
 		}
 		
 		func mailtoLink(body: String) -> URL {
@@ -159,8 +159,12 @@ YOUR BUG REPORT HERE
 		}
 		
 		func labeledRow(_ label: LocalizedStringKey, value: Text) -> some View {
+			labeledRow(Text(label), value: value)
+		}
+		
+		func labeledRow(_ label: Text, value: Text) -> some View {
 			HStack {
-				Text(label)
+				label
 					.foregroundStyle(.secondary)
 				Spacer()
 				value
@@ -179,13 +183,13 @@ YOUR BUG REPORT HERE
 								.font(.footnote.monospaced())
 								.frame(maxWidth: .infinity, alignment: .leading)
 						} else {
-							Text("Binary Data")
+							Text("Binary Data", comment: "Client Log: shown for bodies that are not decodable to text")
 								.foregroundStyle(.secondary)
 						}
 					}
 					.padding()
 				}
-				.navigationTitle("Body")
+				.navigationTitle(Text("Body", comment: "Client Log: title for detailed view of request body/contents"))
 				.toolbar {
 					Button {
 						if let string {
@@ -198,7 +202,7 @@ YOUR BUG REPORT HERE
 					}
 				}
 			} label: {
-				labeledRow("Body", value: Text(Int64(body.count), format: .byteCount(style: .file)))
+				labeledRow(Text("Body", comment: "Client Log: entry for request body/contents"), value: Text(Int64(body.count), format: .byteCount(style: .file)))
 			}
 			.disabled(body.isEmpty)
 		}

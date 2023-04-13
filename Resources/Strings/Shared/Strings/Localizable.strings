@@ -55,7 +55,7 @@
 /* Career Summary: button to show data from previous acts (Key in .stringsdict) */
 "%lld previous act(s)" = "%lld previous act(s)";
 
-/* No comment provided by engineer. */
+/* Statistics Filter: shown when not everything is allowed */
 "%lld selected" = "%lld selected";
 
 /* Win Rate Stats by Loadout Delta */
@@ -97,7 +97,7 @@
 /* Missions Widget: how many more weeklies are queued up after the current set */
 "+%lld queued" = "+%lld queued";
 
-/* Night Market Discount */
+/* Store: night market discount */
 "-%lld%%" = "-%lld%%";
 
 /* No comment provided by engineer. */
@@ -174,22 +174,22 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "All Maps" = "All Maps";
 
-/* No comment provided by engineer. */
+/* Statistics Filter (queues or agents) */
 "Allow All" = "Allow All";
 
-/* No comment provided by engineer. */
+/* Statistics Filter (queues or agents) */
 "Allow None" = "Allow None";
 
-/* No comment provided by engineer. */
+/* Statistics Filter */
 "Allowing %lld/%lld matches (%lld filtered out)" = "Allowing %lld/%lld matches (%lld filtered out)";
 
 /* No comment provided by engineer. */
 "An Error Occurred!" = "An Error Occurred!";
 
-/* No comment provided by engineer. */
+/* About Screen */
 "An invaluable API hosting all the assets (images, data, etc.) used throughout Valorant. This is where almost every image in the app comes from." = "An invaluable API hosting all the assets (images, data, etc.) used throughout Valorant. This is where almost every image in the app comes from.";
 
-/* No comment provided by engineer. */
+/* Statistics Filter: shown when everything is allowed */
 "Any" = "Any";
 
 /* No comment provided by engineer. */
@@ -204,7 +204,7 @@ Competitive matches after your placements can be identified without their detail
 /* Pro Features List */
 "As thanks for your support, you get to show off your status with an exclusive app icon!" = "As thanks for your support, you get to show off your status with an exclusive app icon!";
 
-/* No comment provided by engineer. */
+/* About Screen */
 "As you can guess, the scope expanded massively over time to what you're using now. I hope you're enjoying it!" = "As you can guess, the scope expanded massively over time to what you're using now. I hope you're enjoying it!";
 
 /* No comment provided by engineer. */
@@ -228,19 +228,20 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Assuming you signed up for Valorant using Google/Apple/etc., you can set up your account to add a username & password on Riot's site at [account.riotgames.com](https://account.riotgames.com). Note that your Riot ID is **not** the same as your username! If you've forgotten your username, you can reset it at [recovery.riotgames.com](https://recovery.riotgames.com)." = "Assuming you signed up for Valorant using Google/Apple/etc., you can set up your account to add a username & password on Riot's site at [account.riotgames.com](https://account.riotgames.com). Note that your Riot ID is **not** the same as your username! If you've forgotten your username, you can reset it at [recovery.riotgames.com](https://recovery.riotgames.com).";
 
-/* No comment provided by engineer. */
+/* Win Rate Stats: side name */
 "Attacking" = "Attacking";
 
-/* No comment provided by engineer. */
+/* Store: available currency */
 "Available:" = "Available:";
 
 /* Hit Distribution Stats: average HS% */
 "Average: %@" = "Average: %@";
 
-/* No comment provided by engineer. */
+/* Client Log: shown for bodies that are not decodable to text */
 "Binary Data" = "Binary Data";
 
-/* Hit Distribution Stats: region */
+/* Client Log: title for detailed view of request body/contents
+Hit Distribution Stats: region */
 "Body" = "Body";
 
 /* Bookmark/Player List: section */
@@ -249,19 +250,20 @@ Competitive matches after your placements can be identified without their detail
 /* Gun Customizer: section */
 "Buddy" = "Buddy";
 
-/* No comment provided by engineer. */
+/* Storage Management: section */
 "By Kind" = "By Kind";
 
-/* No comment provided by engineer. */
+/* Win Rate Stats: section
+Playtime Stats: section */
 "By Map" = "By Map";
 
-/* No comment provided by engineer. */
+/* Playtime Stats: section/title */
 "By Non-Premade Player" = "By Non-Premade Player";
 
-/* No comment provided by engineer. */
+/* Playtime Stats: section/title */
 "By Premade Teammate" = "By Premade Teammate";
 
-/* No comment provided by engineer. */
+/* Playtime Stats: section */
 "By Queue" = "By Queue";
 
 /* Hit Distribution Stats: section */
@@ -318,16 +320,16 @@ Competitive matches after your placements can be identified without their detail
 /* Contract Picker: title */
 "Choose a Contract" = "Choose a Contract";
 
-/* No comment provided by engineer. */
+/* Buddy Picker: alert shown when both instances of a buddy are in use */
 "Choose a weapon to take %@ from." = "Choose a weapon to take %@ from.";
 
-/* No comment provided by engineer. */
+/* Storage Management: button to delete all entries of a certain kind */
 "Clear All" = "Clear All";
 
 /* Contract Picker */
 "Completed" = "Completed";
 
-/* No comment provided by engineer. */
+/* Storage Management: title for alert to confirm deleting some matches */
 "Confirm Delete" = "Confirm Delete";
 
 /* No comment provided by engineer. */
@@ -390,7 +392,7 @@ Competitive matches after your placements can be identified without their detail
 /* Missions Widget */
 "Daily" = "Daily";
 
-/* No comment provided by engineer. */
+/* Store */
 "Daily Offers" = "Daily Offers";
 
 /* No comment provided by engineer. */
@@ -411,10 +413,10 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Default Icon" = "Default Icon";
 
-/* No comment provided by engineer. */
+/* Win Rate Stats: side name */
 "Defending" = "Defending";
 
-/* No comment provided by engineer. */
+/* Storage Management: button to confirm deleting some matches */
 "Delete %lld Matches" = "Delete %lld Matches";
 
 /* Match Details: button to view details by round */
@@ -459,7 +461,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Example" = "Example";
 
-/* No comment provided by engineer. */
+/* Client Log: title for an exchange */
 "Exchange" = "Exchange";
 
 /* Pro Features List */
@@ -470,6 +472,13 @@ Competitive matches after your placements can be identified without their detail
 
 /* Pro Features List */
 "Family Sharing" = "Family Sharing";
+
+/* No comment provided by engineer. */
+"Feedback Email Body" = "What went wrong? Tell me about the error you just encountered:
+
+YOUR BUG REPORT HERE
+
+%@";
 
 /* No comment provided by engineer. */
 "Fetch Details" = "Fetch Details";
@@ -498,7 +507,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Force Refresh Widgets" = "Force Refresh Widgets";
 
-/* No comment provided by engineer. */
+/* Storage Management: button to free up a certain amount of space */
 "Free up these %@" = "Free up these %@";
 
 /* No comment provided by engineer. */
@@ -528,7 +537,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Headhunter (Chamber)" = "Headhunter (Chamber)";
 
-/* No comment provided by engineer. */
+/* About Screen */
 "Hi! I'm Julian Dunskus, and I made this app." = "Hi! I'm Julian Dunskus, and I made this app.";
 
 /* Hit Distribution Stats: title */
@@ -558,7 +567,7 @@ Competitive matches after your placements can be identified without their detail
 /* Pro Features List */
 "If you have multiple accounts, you can configure separate widgets for each and have them on your Home Screen at the same time." = "If you have multiple accounts, you can configure separate widgets for each and have them on your Home Screen at the same time.";
 
-/* No comment provided by engineer. */
+/* About Screen */
 "If you've encountered a bug or have some feedback, I'm always happy to hear it on the Discord Server or GitHub :)" = "If you've encountered a bug or have some feedback, I'm always happy to hear it on the Discord Server or GitHub :)";
 
 /* No comment provided by engineer. */
@@ -594,7 +603,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Light Mode" = "Light Mode";
 
-/* No comment provided by engineer. */
+/* About Screen: section */
 "Links" = "Links";
 
 /* Top-Level Tab Title */
@@ -720,7 +729,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Newest available: %@" = "Newest available: %@";
 
-/* No comment provided by engineer. */
+/* Store */
 "Night Market" = "Night Market";
 
 /* No comment provided by engineer. */
@@ -738,7 +747,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "No contract active!" = "No contract active!";
 
-/* No comment provided by engineer. */
+/* Win Rate Stats: by map */
 "No data" = "No data";
 
 /* No comment provided by engineer. */
@@ -786,16 +795,18 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Other Players" = "Other Players";
 
-/* No comment provided by engineer. */
+/* Buddy Picker: alert shown when both instances of a buddy are in use */
 "Out of instances!" = "Out of instances!";
 
 /* No comment provided by engineer. */
 "Outcome" = "Outcome";
 
-/* No comment provided by engineer. */
+/* Win Rate Stats: section
+Playtime Stats: section */
 "Over Time" = "Over Time";
 
-/* Hit Distribution Stats: section */
+/* Hit Distribution Stats: section
+Playtime Stats: section */
 "Overall" = "Overall";
 
 /* No comment provided by engineer. */
@@ -876,7 +887,7 @@ Competitive matches after your placements can be identified without their detail
 /* Pro Features List */
 "Recon Bolt does not have and will never have ads. The only way it can make money is through in-app purchases." = "Recon Bolt does not have and will never have ads. The only way it can make money is through in-app purchases.";
 
-/* No comment provided by engineer. */
+/* About Screen */
 "Recon Bolt started development in early 2021, back when it wasn't yet possible to see your RR gains and losses in the game, but the API offered those numbers." = "Recon Bolt started development in early 2021, back when it wasn't yet possible to see your RR gains and losses in the game, but the API offered those numbers.";
 
 /* Top-Level Tab Title */
@@ -897,7 +908,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Repair" = "Repair";
 
-/* No comment provided by engineer. */
+/* Client Log: header */
 "Request" = "Request";
 
 /* No comment provided by engineer. */
@@ -909,7 +920,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Reset" = "Reset";
 
-/* No comment provided by engineer. */
+/* Client Log: header */
 "Response" = "Response";
 
 /* No comment provided by engineer. */
@@ -924,10 +935,10 @@ Competitive matches after your placements can be identified without their detail
 /* Round Details: title */
 "Round Details" = "Round Details";
 
-/* No comment provided by engineer. */
+/* Win Rate Stats: section */
 "Rounds by Loadout Delta" = "Rounds by Loadout Delta";
 
-/* No comment provided by engineer. */
+/* Win Rate Stats: section */
 "Rounds by Side" = "Rounds by Side";
 
 /* Bookmark/Player List: section */
@@ -993,10 +1004,10 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Start Matchmaking?" = "Start Matchmaking?";
 
-/* No comment provided by engineer. */
+/* Win Rate Stats: accessibility label */
 "Starting Side" = "Starting Side";
 
-/* No comment provided by engineer. */
+/* Win Rate Stats */
 "Starting Side:" = "Starting Side:";
 
 /* No comment provided by engineer. */
@@ -1051,19 +1062,20 @@ Settings: section */
 /* No comment provided by engineer. */
 "These are the last %lld requests sent by the app, along with their responses." = "These are the last %lld requests sent by the app, along with their responses.";
 
-/* No comment provided by engineer. */
+/* About Screen: section */
 "Third-Party Libraries & APIs Used" = "Third-Party Libraries & APIs Used";
 
 /* Statistics error for iOS <16 */
 "This feature requires iOS 16 or newer." = "This feature requires iOS 16 or newer.";
 
-/* No comment provided by engineer. */
+/* About Screen */
 "This is what keeps your credentials safe on your device." = "This is what keeps your credentials safe on your device.";
 
 /* Stats: match loading */
 "To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!";
 
-/* Hit Distribution Stats: region */
+/* Win Rate Stats: side name
+Hit Distribution Stats: region */
 "Total" = "Total";
 
 /* No comment provided by engineer. */
@@ -1102,8 +1114,8 @@ Settings: section */
 /* placeholder */
 "Unknown Bundle" = "Unknown Bundle";
 
-/* No comment provided by engineer. */
-"Unknown Offer!" = "Unknown Offer!";
+/* Store */
+"Unknown Offer" = "Unknown Offer";
 
 /* No comment provided by engineer. */
 "Unknown Player" = "Unknown Player";

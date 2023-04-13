@@ -11,7 +11,7 @@ struct StorageManagementView: View {
 			
 			MatchListsSection(accountManager: accountManager)
 			
-			Section("By Kind") {
+			Section(header: Text("By Kind", comment: "Storage Management: section")) {
 				FolderOverview(
 					title: "Match Lists",
 					rootFolder: LocalDataProvider.shared.matchListManager.folderURL
@@ -75,16 +75,23 @@ struct StorageManagementView: View {
 				} ?? "Other Players", bytes: unaccountedFor?.bytes)
 				
 				if let (matches, bytes) = unaccountedFor {
-					Button("Free up these \(bytes, format: .byteCount(style: .file))", role: .destructive) {
+					Button(role: .destructive) {
 						isConfirmingDelete = true
+					} label: {
+						Text("Free up these \(bytes, format: .byteCount(style: .file))", comment: "Storage Management: button to free up a certain amount of space")
 					}
-					.confirmationDialog("Confirm Delete", isPresented: $isConfirmingDelete) {
-						Button("Delete \(matches.count) Matches", role: .destructive) {
+					.confirmationDialog(
+						Text("Confirm Delete", comment: "Storage Management: title for alert to confirm deleting some matches"),
+						isPresented: $isConfirmingDelete
+					) {
+						Button(role: .destructive) {
 							Task {
 								await load("Could not free up space!") {
 									try await LocalDataProvider.shared.matchDetailsManager.clearOut(idFilter: matches)
 								}
 							}
+						} label: {
+							Text("Delete \(matches.count) Matches", comment: "Storage Management: button to confirm deleting some matches")
 						}
 					}
 				}
@@ -139,7 +146,7 @@ struct StorageManagementView: View {
 						AsyncButton(role: .destructive) {
 							await load("Could not delete files!") { try await clear() }
 						} label: {
-							Label("Clear All", systemImage: "trash")
+							Label(String(localized: "Clear All", comment: "Storage Management: button to delete all entries of a certain kind"), systemImage: "trash")
 						}
 					}
 				}

@@ -14,7 +14,7 @@ struct BuddyPicker: View {
 	var body: some View {
 		buddyList
 			.confirmationDialog(
-				"Out of instances!",
+				Text("Out of instances!", comment: "Buddy Picker: alert shown when both instances of a buddy are in use"),
 				isPresented: $isAssigningBuddy,
 				titleVisibility: .visible,
 				presenting: buddyToAssign
@@ -30,7 +30,7 @@ struct BuddyPicker: View {
 					}
 				}
 			} message: { level in
-				Text("Choose a weapon to take \(level.buddy.displayName) from.")
+				Text("Choose a weapon to take \(level.buddy.displayName) from.", comment: "Buddy Picker: alert shown when both instances of a buddy are in use")
 			}
 			.navigationTitle("Choose Buddy")
 	}

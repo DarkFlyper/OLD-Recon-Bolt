@@ -82,7 +82,7 @@ struct StatisticsView: View {
 			if let statistics {
 				let allowed = statistics.matches.count
 				let total = fetchedMatches.count
-				Text("Allowing \(allowed)/\(total) matches (\(total - allowed) filtered out)")
+				Text("Allowing \(allowed)/\(total) matches (\(total - allowed) filtered out)", comment: "Statistics Filter")
 			}
 		}
 	}
@@ -151,11 +151,15 @@ struct StatisticsView: View {
 				.navigationTitle(title)
 				.toolbar {
 					ToolbarItemGroup(placement: .bottomBar) {
-						Button("Allow All") { excluded = [] }
-							.disabled(excluded.isEmpty)
+						Button { excluded = [] } label: {
+							Text("Allow All", comment: "Statistics Filter (queues or agents)")
+						}
+						.disabled(excluded.isEmpty)
 						
-						Button("Allow None") { excluded = Set(all) }
-							.disabled(allowed.isEmpty)
+						Button { excluded = Set(all) } label: {
+							Text("Allow None", comment: "Statistics Filter (queues or agents)")
+						}
+						.disabled(allowed.isEmpty)
 					}
 				}
 			} label: {
@@ -164,11 +168,11 @@ struct StatisticsView: View {
 					Spacer()
 					Group {
 						if excluded.isEmpty {
-							Text("Any")
+							Text("Any", comment: "Statistics Filter: shown when everything is allowed")
 						} else if let allowed = allowed.onlyElement() {
 							allowed.label
 						} else {
-							Text("\(allowed.count) selected")
+							Text("\(allowed.count) selected", comment: "Statistics Filter: shown when not everything is allowed")
 						}
 					}
 					.foregroundStyle(.secondary)

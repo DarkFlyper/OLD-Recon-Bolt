@@ -27,7 +27,7 @@ struct StoreDetailsView: View {
 			
 			if let nightMarket = storefront.nightMarket {
 				ExpandButton(isExpanded: $isNightMarketExpanded) {
-					Text("Night Market")
+					Text("Night Market", comment: "Store")
 						.font(.headline)
 					
 					Spacer()
@@ -43,7 +43,7 @@ struct StoreDetailsView: View {
 			}
 			
 			HStack {
-				Text("Daily Offers")
+				Text("Daily Offers", comment: "Store")
 					.font(.headline)
 				
 				Spacer()
@@ -55,7 +55,7 @@ struct StoreDetailsView: View {
 				if let offer = offers[offerID] {
 					OfferCell(offer: offer)
 				} else {
-					Text("Unknown Offer!")
+					Text("Unknown Offer", comment: "Store")
 						.foregroundStyle(.secondary)
 						.padding()
 						.frame(maxWidth: .infinity)
@@ -69,7 +69,7 @@ struct StoreDetailsView: View {
 		Divider()
 		
 		HStack(spacing: 20) {
-			Text("Available:")
+			Text("Available:", comment: "Store: available currency")
 			
 			Spacer()
 			
@@ -109,7 +109,7 @@ struct StoreDetailsView: View {
 				.overlay(alignment: .bottomTrailing) {
 					VStack {
 						CurrencyLabel.multiple(for: offer.discountedCosts)
-						Text("-\(offer.discountPercent)%", comment: "Night Market Discount")
+						Text("-\(offer.discountPercent)%", comment: "Store: night market discount")
 							.font(.footnote.bold())
 							.foregroundColor(.accentColor)
 					}
