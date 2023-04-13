@@ -48,7 +48,11 @@ struct MatchCell: View {
 					match.startTime.relativeText()
 					if !matchesFilter {
 						Spacer()
-						Text(matchDetails?.matchInfo.queueName ?? "Unfetched")
+						if let matchDetails {
+							matchDetails.matchInfo.queueLabel
+						} else {
+							Text("Unfetched", comment: "Shown when a match does not match the filter and its details have not been fetched.")
+						}
 					}
 				}
 			}
@@ -64,7 +68,7 @@ struct MatchCell: View {
 									GameModeImage(id: matchDetails.matchInfo.modeID)
 										.foregroundColor(.white)
 									
-									Text(matchDetails.matchInfo.queueName)
+									matchDetails.matchInfo.queueLabel
 										.padding(.top, -2) // small caps are shorter
 								}
 							} else {
@@ -261,7 +265,7 @@ extension Date {
 			let relativeCutoff = Calendar.current.date(byAdding: .day, value: -1, to: .now)!
 			if self > relativeCutoff {
 				let formatter = Self.relativeStartTimeFormatter
-				Text("\(formatter.string(from: self, to: .now)!) ago")
+				Text("\(formatter.string(from: self, to: .now)!) ago", comment: "Used for matches less than a day ago. %@ is replaced by the number of hours/minutes, e.g. '3h ago'.")
 					.foregroundStyle(.secondary)
 			} else {
 				Text(self, formatter: Self.startDateFormatter)

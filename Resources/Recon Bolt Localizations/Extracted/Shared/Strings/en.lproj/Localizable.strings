@@ -1,0 +1,1226 @@
+/* No comment provided by engineer. */
+"\"%@\"" = "\"%@\"";
+
+/* No comment provided by engineer. */
+"#" = "#";
+
+/* No comment provided by engineer. */
+"#%@" = "#%@";
+
+/* No comment provided by engineer. */
+"%@" = "%@";
+
+/* No comment provided by engineer. */
+"%@ %@" = "%@ %@";
+
+/* Used for matches less than a day ago. %@ is replaced by the number of hours/minutes, e.g. '3h ago'. */
+"%@ ago" = "%@ ago";
+
+/* %@ is replaced by a fraction of wins vs. games played, e.g. '5/12 games won'. */
+"%@ games won" = "%@ games won";
+
+/* %@ is replaced by the percentage of rounds won, e.g. '57.3% won'. */
+"%@ won" = "%@ won";
+
+/* No comment provided by engineer. */
+"%@%%" = "%@%%";
+
+/* No comment provided by engineer. */
+"%lld" = "%lld";
+
+/* No comment provided by engineer. */
+"%lld Future Weeklies" = "%lld Future Weeklies";
+
+/* No comment provided by engineer. */
+"%lld Queued-Up Weeklies" = "%lld Queued-Up Weeklies";
+
+/* No comment provided by engineer. */
+"%lld RR" = "%lld RR";
+
+/* No comment provided by engineer. */
+"%lld from other players" = "%lld from other players";
+
+/* No comment provided by engineer. */
+"%lld hidden due to outdated assets" = "%lld hidden due to outdated assets";
+
+/* No comment provided by engineer. */
+"%lld hits" = "%lld hits";
+
+/* No comment provided by engineer. */
+"%lld matches" = "%lld matches";
+
+/* Shown at the bottom of the expandable playtime list when there are more entries available. */
+"%lld more" = "%lld more";
+
+/* Career Summary: button to show data from previous acts (Key in .stringsdict) */
+"%lld previous act(s)" = "%lld previous act(s)";
+
+/* No comment provided by engineer. */
+"%lld selected" = "%lld selected";
+
+/* No comment provided by engineer. */
+"%lld to %lld credits" = "%lld to %lld credits";
+
+/* No comment provided by engineer. */
+"%lld%%" = "%lld%%";
+
+/* No comment provided by engineer. */
+"%lld/%lld" = "%lld/%lld";
+
+/* No comment provided by engineer. */
+"%lld/%lld loaded" = "%lld/%lld loaded";
+
+/* No comment provided by engineer. */
+"%lld/%lld owned" = "%lld/%lld owned";
+
+/* No comment provided by engineer. */
+"%lld / %lld XP" = "%lld / %lld XP";
+
+/* No comment provided by engineer. */
+"(%lld – %lld)" = "(%lld – %lld)";
+
+/* No comment provided by engineer. */
+"(You can switch between available icons at any time.)" = "(You can switch between available icons at any time.)";
+
+/* No comment provided by engineer. */
+"+%lld" = "+%lld";
+
+/* No comment provided by engineer. */
+"+%lld XP" = "+%lld XP";
+
+/* No comment provided by engineer. */
+"+%lld queued" = "+%lld queued";
+
+/* No comment provided by engineer. */
+"-%lld%%" = "-%lld%%";
+
+/* No comment provided by engineer. */
+".%@" = ".%@";
+
+/* No comment provided by engineer. */
+"/" = "/";
+
+/* No comment provided by engineer. */
+"//" = "//";
+
+/* No comment provided by engineer. */
+"1 match" = "1 match";
+
+/* No comment provided by engineer. */
+"2-Factor Authentication" = "2-Factor Authentication";
+
+/* Countdown label when the target is in the future. e.g. '< 2d 3h' */
+"< %@" = "< %@";
+
+/* No comment provided by engineer. */
+"<Binary Data>" = "<Binary Data>";
+
+/* No comment provided by engineer. */
+"<Unknown Bundle>" = "<Unknown Bundle>";
+
+/* No comment provided by engineer. */
+"<unknown title>" = "<unknown title>";
+
+/* No comment provided by engineer. */
+"=" = "=";
+
+/* No comment provided by engineer. */
+"A 2FA code has been sent to your email address %@" = "A 2FA code has been sent to your email address %@";
+
+/* No comment provided by engineer. */
+"A match's queue is unknown until its details are fetched (by tapping it or performing the swipe action).
+Competitive matches after your placements can be identified without their details, however." = "A match's queue is unknown until its details are fetched (by tapping it or performing the swipe action).
+Competitive matches after your placements can be identified without their details, however.";
+
+/* No comment provided by engineer. */
+"AFK: %lld" = "AFK: %lld";
+
+/* No comment provided by engineer. */
+"ALL TIME" = "ALL TIME";
+
+/* No comment provided by engineer. */
+"About" = "About";
+
+/* No comment provided by engineer. */
+"About Recon Bolt" = "About Recon Bolt";
+
+/* No comment provided by engineer. */
+"Accounts" = "Accounts";
+
+/* No comment provided by engineer. */
+"Activate" = "Activate";
+
+/* No comment provided by engineer. */
+"Active" = "Active";
+
+/* No comment provided by engineer. */
+"Active Contract" = "Active Contract";
+
+/* No comment provided by engineer. */
+"Add Bookmark" = "Add Bookmark";
+
+/* No comment provided by engineer. */
+"Add another Account" = "Add another Account";
+
+/* No comment provided by engineer. */
+"Add multiple accounts and seamlessly switch between them at any time." = "Add multiple accounts and seamlessly switch between them at any time.";
+
+/* No comment provided by engineer. */
+"Advanced Settings" = "Advanced Settings";
+
+/* No comment provided by engineer. */
+"Advanced Stats" = "Advanced Stats";
+
+/* No comment provided by engineer. */
+"Agent Select" = "Agent Select";
+
+/* No comment provided by engineer. */
+"Agents" = "Agents";
+
+/* No comment provided by engineer. */
+"All %lld" = "All %lld";
+
+/* No comment provided by engineer. */
+"All Maps" = "All Maps";
+
+/* No comment provided by engineer. */
+"Allow All" = "Allow All";
+
+/* No comment provided by engineer. */
+"Allow None" = "Allow None";
+
+/* No comment provided by engineer. */
+"Allowing %lld/%lld matches (%lld filtered out)" = "Allowing %lld/%lld matches (%lld filtered out)";
+
+/* No comment provided by engineer. */
+"An Error Occurred!" = "An Error Occurred!";
+
+/* No comment provided by engineer. */
+"An invaluable API hosting all the assets (images, data, etc.) used throughout Valorant. This is where almost every image in the app comes from." = "An invaluable API hosting all the assets (images, data, etc.) used throughout Valorant. This is where almost every image in the app comes from.";
+
+/* No comment provided by engineer. */
+"Any" = "Any";
+
+/* No comment provided by engineer. */
+"Anything with images will not display correctly." = "Anything with images will not display correctly.";
+
+/* No comment provided by engineer. */
+"App Icon" = "App Icon";
+
+/* No comment provided by engineer. */
+"Are your assets outdated?" = "Are your assets outdated?";
+
+/* No comment provided by engineer. */
+"As thanks for your support, you get to show off your status with an exclusive app icon!" = "As thanks for your support, you get to show off your status with an exclusive app icon!";
+
+/* No comment provided by engineer. */
+"As you can guess, the scope expanded massively over time to what you're using now. I hope you're enjoying it!" = "As you can guess, the scope expanded massively over time to what you're using now. I hope you're enjoying it!";
+
+/* No comment provided by engineer. */
+"Assets" = "Assets";
+
+/* No comment provided by engineer. */
+"Assets complete." = "Assets complete.";
+
+/* No comment provided by engineer. */
+"Assets not loaded!" = "Assets not loaded!";
+
+/* No comment provided by engineer. */
+"Assets out of date!" = "Assets out of date!";
+
+/* No comment provided by engineer. */
+"Assets should be fetched automatically, but in case something went wrong, feel free to initiate the process manually." = "Assets should be fetched automatically, but in case something went wrong, feel free to initiate the process manually.";
+
+/* No comment provided by engineer. */
+"Assets up to date!" = "Assets up to date!";
+
+/* No comment provided by engineer. */
+"Assuming you signed up for Valorant using Google/Apple/etc., you can set up your account to add a username & password on Riot's site at [account.riotgames.com](https://account.riotgames.com). Note that your Riot ID is **not** the same as your username! If you've forgotten your username, you can reset it at [recovery.riotgames.com](https://recovery.riotgames.com)." = "Assuming you signed up for Valorant using Google/Apple/etc., you can set up your account to add a username & password on Riot's site at [account.riotgames.com](https://account.riotgames.com). Note that your Riot ID is **not** the same as your username! If you've forgotten your username, you can reset it at [recovery.riotgames.com](https://recovery.riotgames.com).";
+
+/* No comment provided by engineer. */
+"Attacking" = "Attacking";
+
+/* No comment provided by engineer. */
+"Available:" = "Available:";
+
+/* No comment provided by engineer. */
+"Average: %@" = "Average: %@";
+
+/* No comment provided by engineer. */
+"Body" = "Body";
+
+/* No comment provided by engineer. */
+"Bookmarks" = "Bookmarks";
+
+/* No comment provided by engineer. */
+"Buddy" = "Buddy";
+
+/* No comment provided by engineer. */
+"By Kind" = "By Kind";
+
+/* No comment provided by engineer. */
+"By Map" = "By Map";
+
+/* No comment provided by engineer. */
+"By Non-Premade Player" = "By Non-Premade Player";
+
+/* No comment provided by engineer. */
+"By Premade Teammate" = "By Premade Teammate";
+
+/* No comment provided by engineer. */
+"By Queue" = "By Queue";
+
+/* No comment provided by engineer. */
+"By Weapon" = "By Weapon";
+
+/* No comment provided by engineer. */
+"Cancel" = "Cancel";
+
+/* No comment provided by engineer. */
+"Cancel Matchmaking" = "Cancel Matchmaking";
+
+/* No comment provided by engineer. */
+"Career" = "Career";
+
+/* No comment provided by engineer. */
+"Career Summaries" = "Career Summaries";
+
+/* No comment provided by engineer. */
+"Career Summary" = "Career Summary";
+
+/* No comment provided by engineer. */
+"Change Buddy" = "Change Buddy";
+
+/* No comment provided by engineer. */
+"Change Queue" = "Change Queue";
+
+/* No comment provided by engineer. */
+"Change Skin" = "Change Skin";
+
+/* No comment provided by engineer. */
+"Check your current Valorant storefront." = "Check your current Valorant storefront.";
+
+/* No comment provided by engineer. */
+"Check your progress on daily & weekly missions." = "Check your progress on daily & weekly missions.";
+
+/* No comment provided by engineer. */
+"Choose App Icon" = "Choose App Icon";
+
+/* No comment provided by engineer. */
+"Choose Buddy" = "Choose Buddy";
+
+/* No comment provided by engineer. */
+"Choose Card" = "Choose Card";
+
+/* No comment provided by engineer. */
+"Choose Skin" = "Choose Skin";
+
+/* No comment provided by engineer. */
+"Choose Spray" = "Choose Spray";
+
+/* No comment provided by engineer. */
+"Choose Title" = "Choose Title";
+
+/* No comment provided by engineer. */
+"Choose a Contract" = "Choose a Contract";
+
+/* No comment provided by engineer. */
+"Choose a weapon to take %@ from." = "Choose a weapon to take %@ from.";
+
+/* No comment provided by engineer. */
+"Clear All" = "Clear All";
+
+/* No comment provided by engineer. */
+"Completed" = "Completed";
+
+/* No comment provided by engineer. */
+"Confirm Delete" = "Confirm Delete";
+
+/* No comment provided by engineer. */
+"Contract complete!" = "Contract complete!";
+
+/* No comment provided by engineer. */
+"Copy Body" = "Copy Body";
+
+/* No comment provided by engineer. */
+"Copy Error" = "Copy Error";
+
+/* No comment provided by engineer. */
+"Copy Error Details" = "Copy Error Details";
+
+/* No comment provided by engineer. */
+"Copy Match ID" = "Copy Match ID";
+
+/* No comment provided by engineer. */
+"Copy to Clipboard" = "Copy to Clipboard";
+
+/* No comment provided by engineer. */
+"Could not Change App Icon!" = "Could not Change App Icon!";
+
+/* No comment provided by engineer. */
+"Could not Load Account!" = "Could not Load Account!";
+
+/* No comment provided by engineer. */
+"Could not delete files!" = "Could not delete files!";
+
+/* No comment provided by engineer. */
+"Could not determine used storage!" = "Could not determine used storage!";
+
+/* No comment provided by engineer. */
+"Could not free up space!" = "Could not free up space!";
+
+/* No comment provided by engineer. */
+"Could not look up %@" = "Could not look up %@";
+
+/* No comment provided by engineer. */
+"Could not sign in!" = "Could not sign in!";
+
+/* No comment provided by engineer. */
+"Count" = "Count";
+
+/* No comment provided by engineer. */
+"Current version: %@" = "Current version: %@";
+
+/* No comment provided by engineer. */
+"Currently %@." = "Currently %@.";
+
+/* No comment provided by engineer. */
+"Custom" = "Custom";
+
+/* No comment provided by engineer. */
+"Customize %@" = "Customize %@";
+
+/* No comment provided by engineer. */
+"Daily" = "Daily";
+
+/* No comment provided by engineer. */
+"Daily Offers" = "Daily Offers";
+
+/* No comment provided by engineer. */
+"Dark Mode" = "Dark Mode";
+
+/* No comment provided by engineer. */
+"Data from %lld games (%lld skipped lacking data)" = "Data from %lld games (%lld skipped lacking data)";
+
+/* No comment provided by engineer. */
+"Data going back to %@" = "Data going back to %@";
+
+/* No comment provided by engineer. */
+"Day" = "Day";
+
+/* No comment provided by engineer. */
+"Default" = "Default";
+
+/* No comment provided by engineer. */
+"Default Icon" = "Default Icon";
+
+/* No comment provided by engineer. */
+"Defending" = "Defending";
+
+/* No comment provided by engineer. */
+"Delete %lld Matches" = "Delete %lld Matches";
+
+/* No comment provided by engineer. */
+"Details by Round" = "Details by Round";
+
+/* No comment provided by engineer. */
+"Discord Server" = "Discord Server";
+
+/* No comment provided by engineer. */
+"Distribution Over Time" = "Distribution Over Time";
+
+/* No comment provided by engineer. */
+"Done" = "Done";
+
+/* No comment provided by engineer. */
+"Download Assets Now" = "Download Assets Now";
+
+/* No comment provided by engineer. */
+"ELO" = "ELO";
+
+/* No comment provided by engineer. */
+"ERROR" = "ERROR";
+
+/* No comment provided by engineer. */
+"Edit Filter" = "Edit Filter";
+
+/* No comment provided by engineer. */
+"Enter 2FA Code" = "Enter 2FA Code";
+
+/* No comment provided by engineer. */
+"Error" = "Error";
+
+/* No comment provided by engineer. */
+"Error Details" = "Error Details";
+
+/* No comment provided by engineer. */
+"Error downloading assets!" = "Error downloading assets!";
+
+/* No comment provided by engineer. */
+"Example" = "Example";
+
+/* No comment provided by engineer. */
+"Exchange" = "Exchange";
+
+/* No comment provided by engineer. */
+"Exclusive App Icon" = "Exclusive App Icon";
+
+/* No comment provided by engineer. */
+"Exploded" = "Exploded";
+
+/* No comment provided by engineer. */
+"Family Sharing" = "Family Sharing";
+
+/* No comment provided by engineer. */
+"Fetch Details" = "Fetch Details";
+
+/* No comment provided by engineer. */
+"Filter" = "Filter";
+
+/* No comment provided by engineer. */
+"Filter Maps" = "Filter Maps";
+
+/* No comment provided by engineer. */
+"Filter Match List" = "Filter Match List";
+
+/* No comment provided by engineer. */
+"Filter Queues" = "Filter Queues";
+
+/* No comment provided by engineer. */
+"Filtering by starting side will exclude any matches in single-round modes like Deathmatch, Escalation, etc." = "Filtering by starting side will exclude any matches in single-round modes like Deathmatch, Escalation, etc.";
+
+/* No comment provided by engineer. */
+"Find Match" = "Find Match";
+
+/* No comment provided by engineer. */
+"Finding match… (%@)" = "Finding match… (%@)";
+
+/* No comment provided by engineer. */
+"Force Refresh Widgets" = "Force Refresh Widgets";
+
+/* No comment provided by engineer. */
+"Free up these %@" = "Free up these %@";
+
+/* No comment provided by engineer. */
+"Game Started" = "Game Started";
+
+/* No comment provided by engineer. */
+"Game is not running!" = "Game is not running!";
+
+/* No comment provided by engineer. */
+"Gather statistics from anyone's games to gain insights on things like time played by mode/premade, headshot rate over time/by weapon, win rate over time/by map & side, and more!" = "Gather statistics from anyone's games to gain insights on things like time played by mode/premade, headshot rate over time/by weapon, win rate over time/by map & side, and more!";
+
+/* No comment provided by engineer. */
+"Getting money from Recon Bolt gives me the flexibility and motivation to keep improving the app!" = "Getting money from Recon Bolt gives me the flexibility and motivation to keep improving the app!";
+
+/* No comment provided by engineer. */
+"GitHub Repo" = "GitHub Repo";
+
+/* No comment provided by engineer. */
+"Golden Gun" = "Golden Gun";
+
+/* No comment provided by engineer. */
+"Group by" = "Group by";
+
+/* No comment provided by engineer. */
+"Head" = "Head";
+
+/* No comment provided by engineer. */
+"Headhunter (Chamber)" = "Headhunter (Chamber)";
+
+/* No comment provided by engineer. */
+"Hi! I'm Julian Dunskus, and I made this app." = "Hi! I'm Julian Dunskus, and I made this app.";
+
+/* No comment provided by engineer. */
+"Hit Distribution" = "Hit Distribution";
+
+/* No comment provided by engineer. */
+"Hits" = "Hits";
+
+/* No comment provided by engineer. */
+"Home Screen Widgets" = "Home Screen Widgets";
+
+/* No comment provided by engineer. */
+"I hope you enjoy the pro features :)" = "I hope you enjoy the pro features :)";
+
+/* No comment provided by engineer. */
+"I won't sugarcoat things. Due to the way this app uses the API, I believe there's no other way to sign in than to have people enter their credentials directly. Under those circumstances, there's really no good way for anyone to be sure their credentials remain safe. For what it's worth:" = "I won't sugarcoat things. Due to the way this app uses the API, I believe there's no other way to sign in than to have people enter their credentials directly. Under those circumstances, there's really no good way for anyone to be sure their credentials remain safe. For what it's worth:";
+
+/* No comment provided by engineer. */
+"Identities" = "Identities";
+
+/* No comment provided by engineer. */
+"If you don't know your username or don't have one, you can fix that at [account.riotgames.com](https://account.riotgames.com)." = "If you don't know your username or don't have one, you can fix that at [account.riotgames.com](https://account.riotgames.com).";
+
+/* No comment provided by engineer. */
+"If you have accounts in multiple regions to play with friends around the world, this is the feature for you!" = "If you have accounts in multiple regions to play with friends around the world, this is the feature for you!";
+
+/* No comment provided by engineer. */
+"If you have multiple accounts, you can configure separate widgets for each and have them on your Home Screen at the same time." = "If you have multiple accounts, you can configure separate widgets for each and have them on your Home Screen at the same time.";
+
+/* No comment provided by engineer. */
+"If you've encountered a bug or have some feedback, I'm always happy to hear it on the Discord Server or GitHub :)" = "If you've encountered a bug or have some feedback, I'm always happy to hear it on the Discord Server or GitHub :)";
+
+/* No comment provided by engineer. */
+"If your widgets seem broken, use this button to request an immediate refresh from iOS." = "If your widgets seem broken, use this button to request an immediate refresh from iOS.";
+
+/* No comment provided by engineer. */
+"Image failed to load!" = "Image failed to load!";
+
+/* No comment provided by engineer. */
+"In case something went wrong, use this button to force a full refetch of the assets and images." = "In case something went wrong, use this button to force a full refetch of the assets and images.";
+
+/* No comment provided by engineer. */
+"Is this safe?" = "Is this safe?";
+
+/* No comment provided by engineer. */
+"Join the Discord Server" = "Join the Discord Server";
+
+/* No comment provided by engineer. */
+"Kills by Round" = "Kills by Round";
+
+/* No comment provided by engineer. */
+"Legs" = "Legs";
+
+/* No comment provided by engineer. */
+"Level %lld" = "Level %lld";
+
+/* No comment provided by engineer. */
+"Level %lld / %lld" = "Level %lld / %lld";
+
+/* No comment provided by engineer. */
+"Lifetime Peak" = "Lifetime Peak";
+
+/* No comment provided by engineer. */
+"Light Mode" = "Light Mode";
+
+/* No comment provided by engineer. */
+"Links" = "Links";
+
+/* No comment provided by engineer. */
+"Live" = "Live";
+
+/* No comment provided by engineer. */
+"Live Match" = "Live Match";
+
+/* No comment provided by engineer. */
+"Load Data" = "Load Data";
+
+/* No comment provided by engineer. */
+"Load Latest %lld Matches" = "Load Latest %lld Matches";
+
+/* No comment provided by engineer. */
+"Load Older Matches" = "Load Older Matches";
+
+/* No comment provided by engineer. */
+"Loading Request log…" = "Loading Request log…";
+
+/* No comment provided by engineer. */
+"Loading Store Info…" = "Loading Store Info…";
+
+/* No comment provided by engineer. */
+"Loadout" = "Loadout";
+
+/* No comment provided by engineer. */
+"Loadout Delta" = "Loadout Delta";
+
+/* No comment provided by engineer. */
+"Loadout Delta is computed as the difference between the average loadout value of players on each team. For example, a loadout delta of +1000 means your team's loadouts were an average of 1000 credits more valuable than the enemy team's in that round." = "Loadout Delta is computed as the difference between the average loadout value of players on each team. For example, a loadout delta of +1000 means your team's loadouts were an average of 1000 credits more valuable than the enemy team's in that round.";
+
+/* No comment provided by engineer. */
+"Loadout not loaded!" = "Loadout not loaded!";
+
+/* No comment provided by engineer. */
+"Lobby Dodged" = "Lobby Dodged";
+
+/* No comment provided by engineer. */
+"Lock In" = "Lock In";
+
+/* No comment provided by engineer. */
+"Lock In %@" = "Lock In %@";
+
+/* No comment provided by engineer. */
+"Long" = "Long";
+
+/* No comment provided by engineer. */
+"Look Up" = "Look Up";
+
+/* No comment provided by engineer. */
+"Looks like you're trying to enter your Riot ID (and tagline) as username! Your username is actually something else: it's what you use to sign into the Valorant launcher." = "Looks like you're trying to enter your Riot ID (and tagline) as username! Your username is actually something else: it's what you use to sign into the Valorant launcher.";
+
+/* No comment provided by engineer. */
+"Manage Assets" = "Manage Assets";
+
+/* No comment provided by engineer. */
+"Manage Local Storage" = "Manage Local Storage";
+
+/* No comment provided by engineer. */
+"Map" = "Map";
+
+/* No comment provided by engineer. */
+"Maps" = "Maps";
+
+/* No comment provided by engineer. */
+"Match" = "Match";
+
+/* No comment provided by engineer. */
+"Match Details" = "Match Details";
+
+/* No comment provided by engineer. */
+"Match Lists" = "Match Lists";
+
+/* No comment provided by engineer. */
+"Match Loading Errors" = "Match Loading Errors";
+
+/* No comment provided by engineer. */
+"Match System" = "Match System";
+
+/* No comment provided by engineer. */
+"Matches" = "Matches";
+
+/* No comment provided by engineer. */
+"Matches to load: " = "Matches to load: ";
+
+/* No comment provided by engineer. */
+"Member" = "Member";
+
+/* No comment provided by engineer. */
+"Method" = "Method";
+
+/* No comment provided by engineer. */
+"Missing assets!" = "Missing assets!";
+
+/* No comment provided by engineer. */
+"Missing progress for contract!" = "Missing progress for contract!";
+
+/* No comment provided by engineer. */
+"Missing season data!" = "Missing season data!";
+
+/* No comment provided by engineer. */
+"Missions" = "Missions";
+
+/* No comment provided by engineer. */
+"Missions not loaded!" = "Missions not loaded!";
+
+/* No comment provided by engineer. */
+"Month" = "Month";
+
+/* No comment provided by engineer. */
+"Multiple Account Support" = "Multiple Account Support";
+
+/* No comment provided by engineer. */
+"Multiple Accounts" = "Multiple Accounts";
+
+/* No comment provided by engineer. */
+"Name" = "Name";
+
+/* No comment provided by engineer. */
+"Newest available: %@" = "Newest available: %@";
+
+/* No comment provided by engineer. */
+"Night Market" = "Night Market";
+
+/* No comment provided by engineer. */
+"No Buddy" = "No Buddy";
+
+/* No comment provided by engineer. */
+"No Spray" = "No Spray";
+
+/* No comment provided by engineer. */
+"No Title" = "No Title";
+
+/* No comment provided by engineer. */
+"No buddy selected!" = "No buddy selected!";
+
+/* No comment provided by engineer. */
+"No contract active!" = "No contract active!";
+
+/* No comment provided by engineer. */
+"No data" = "No data";
+
+/* No comment provided by engineer. */
+"No games played with premade teammates." = "No games played with premade teammates.";
+
+/* No comment provided by engineer. */
+"No minimap available!" = "No minimap available!";
+
+/* No comment provided by engineer. */
+"No non-premade players encountered repeatedly. (Un)lucky you!" = "No non-premade players encountered repeatedly. (Un)lucky you!";
+
+/* No comment provided by engineer. */
+"Normalize Charts" = "Normalize Charts";
+
+/* No comment provided by engineer. */
+"Not Ready" = "Not Ready";
+
+/* No comment provided by engineer. */
+"Not enough data!" = "Not enough data!";
+
+/* No comment provided by engineer. */
+"Not signed in yet." = "Not signed in yet.";
+
+/* No comment provided by engineer. */
+"Not signed in!" = "Not signed in!";
+
+/* No comment provided by engineer. */
+"Note: Statistics are only available on iOS 16 and newer." = "Note: Statistics are only available on iOS 16 and newer.";
+
+/* No comment provided by engineer. */
+"Note: Widgets are only available on iOS 16 and newer." = "Note: Widgets are only available on iOS 16 and newer.";
+
+/* No comment provided by engineer. */
+"OK" = "OK";
+
+/* No comment provided by engineer. */
+"Official Website" = "Official Website";
+
+/* No comment provided by engineer. */
+"On that site, navigate to **Riot Account Sign-in** and set yourself a username and password. When you're done, you can use those same credentials to sign in above! Your social account will stay linked and you'll remain able to sign in with that on PC :)" = "On that site, navigate to **Riot Account Sign-in** and set yourself a username and password. When you're done, you can use those same credentials to sign in above! Your social account will stay linked and you'll remain able to sign in with that on PC :)";
+
+/* No comment provided by engineer. */
+"Open or swipe to fetch details." = "Open or swipe to fetch details.";
+
+/* No comment provided by engineer. */
+"Other Players" = "Other Players";
+
+/* No comment provided by engineer. */
+"Out of instances!" = "Out of instances!";
+
+/* No comment provided by engineer. */
+"Outcome" = "Outcome";
+
+/* No comment provided by engineer. */
+"Over Time" = "Over Time";
+
+/* No comment provided by engineer. */
+"Overall" = "Overall";
+
+/* No comment provided by engineer. */
+"Overdrive (Neon)" = "Overdrive (Neon)";
+
+/* No comment provided by engineer. */
+"Part" = "Part";
+
+/* No comment provided by engineer. */
+"Party %@" = "Party %@";
+
+/* No comment provided by engineer. */
+"Password" = "Password";
+
+/* No comment provided by engineer. */
+"Picking…" = "Picking…";
+
+/* No comment provided by engineer. */
+"Player" = "Player";
+
+/* No comment provided by engineer. */
+"Players" = "Players";
+
+/* No comment provided by engineer. */
+"Playtime" = "Playtime";
+
+/* No comment provided by engineer. */
+"Playtime Breakdown" = "Playtime Breakdown";
+
+/* No comment provided by engineer. */
+"Please make sure you are ready to play by the time the game starts!" = "Please make sure you are ready to play by the time the game starts!";
+
+/* No comment provided by engineer. */
+"Pro Blue" = "Pro Blue";
+
+/* No comment provided by engineer. */
+"Pro Features" = "Pro Features";
+
+/* No comment provided by engineer. */
+"Pro Icons" = "Pro Icons";
+
+/* No comment provided by engineer. */
+"Purchase Failed!" = "Purchase Failed!";
+
+/* No comment provided by engineer. */
+"Purchase – %@" = "Purchase – %@";
+
+/* No comment provided by engineer. */
+"Queues" = "Queues";
+
+/* No comment provided by engineer. */
+"Quick" = "Quick";
+
+/* No comment provided by engineer. */
+"Rank" = "Rank";
+
+/* No comment provided by engineer. */
+"Rank %lld" = "Rank %lld";
+
+/* No comment provided by engineer. */
+"Rank Changes" = "Rank Changes";
+
+/* No comment provided by engineer. */
+"Rank Rating Changes" = "Rank Rating Changes";
+
+/* No comment provided by engineer. */
+"Rate on the App Store" = "Rate on the App Store";
+
+/* No comment provided by engineer. */
+"Ready" = "Ready";
+
+/* No comment provided by engineer. */
+"Recon Bolt Pro" = "Recon Bolt Pro";
+
+/* No comment provided by engineer. */
+"Recon Bolt Pro supports Family Sharing, meaning if just one member of your iCloud family buys it, everyone can use it!" = "Recon Bolt Pro supports Family Sharing, meaning if just one member of your iCloud family buys it, everyone can use it!";
+
+/* No comment provided by engineer. */
+"Recon Bolt does not have and will never have ads. The only way it can make money is through in-app purchases." = "Recon Bolt does not have and will never have ads. The only way it can make money is through in-app purchases.";
+
+/* No comment provided by engineer. */
+"Recon Bolt is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games and all associated properties are trademarks or registered trademarks of Riot Games, Inc" = "Recon Bolt is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games and all associated properties are trademarks or registered trademarks of Riot Games, Inc";
+
+/* No comment provided by engineer. */
+"Recon Bolt started development in early 2021, back when it wasn't yet possible to see your RR gains and losses in the game, but the API offered those numbers." = "Recon Bolt started development in early 2021, back when it wasn't yet possible to see your RR gains and losses in the game, but the API offered those numbers.";
+
+/* No comment provided by engineer. */
+"Reference" = "Reference";
+
+/* No comment provided by engineer. */
+"Refresh" = "Refresh";
+
+/* No comment provided by engineer. */
+"Refresh automatically" = "Refresh automatically";
+
+/* No comment provided by engineer. */
+"Refreshes at %@" = "Refreshes at %@";
+
+/* No comment provided by engineer. */
+"Remove Bookmark" = "Remove Bookmark";
+
+/* No comment provided by engineer. */
+"Repair" = "Repair";
+
+/* No comment provided by engineer. */
+"Request" = "Request";
+
+/* No comment provided by engineer. */
+"Request Log" = "Request Log";
+
+/* No comment provided by engineer. */
+"Requests" = "Requests";
+
+/* No comment provided by engineer. */
+"Reset" = "Reset";
+
+/* No comment provided by engineer. */
+"Response" = "Response";
+
+/* No comment provided by engineer. */
+"Response Code" = "Response Code";
+
+/* No comment provided by engineer. */
+"Retry" = "Retry";
+
+/* No comment provided by engineer. */
+"Round %lld of %lld" = "Round %lld of %lld";
+
+/* No comment provided by engineer. */
+"Round Details" = "Round Details";
+
+/* No comment provided by engineer. */
+"Rounds by Loadout Delta" = "Rounds by Loadout Delta";
+
+/* No comment provided by engineer. */
+"Rounds by Side" = "Rounds by Side";
+
+/* No comment provided by engineer. */
+"Search" = "Search";
+
+/* No comment provided by engineer. */
+"Select more matches to see data on hit distribution. Deathmatch, Escalation, and other modes don't provide the necessary information." = "Select more matches to see data on hit distribution. Deathmatch, Escalation, and other modes don't provide the necessary information.";
+
+/* No comment provided by engineer. */
+"Send to Developer" = "Send to Developer";
+
+/* No comment provided by engineer. */
+"Series" = "Series";
+
+/* No comment provided by engineer. */
+"Session expired!" = "Session expired!";
+
+/* No comment provided by engineer. */
+"Settings" = "Settings";
+
+/* No comment provided by engineer. */
+"Shared Matches" = "Shared Matches";
+
+/* No comment provided by engineer. */
+"Show Unfetched Matches" = "Show Unfetched Matches";
+
+/* No comment provided by engineer. */
+"Show all matches" = "Show all matches";
+
+/* No comment provided by engineer. */
+"Show details when found" = "Show details when found";
+
+/* No comment provided by engineer. */
+"Show off your pro status with an exclusive icon!" = "Show off your pro status with an exclusive icon!";
+
+/* No comment provided by engineer. */
+"Side" = "Side";
+
+/* No comment provided by engineer. */
+"Sign In" = "Sign In";
+
+/* No comment provided by engineer. */
+"Sign In with your Riot account" = "Sign In with your Riot account";
+
+/* No comment provided by engineer. */
+"Sign Out" = "Sign Out";
+
+/* No comment provided by engineer. */
+"Sign in with Google/Apple/etc." = "Sign in with Google/Apple/etc.";
+
+/* No comment provided by engineer. */
+"Smoothing" = "Smoothing";
+
+/* No comment provided by engineer. */
+"Spectator" = "Spectator";
+
+/* No comment provided by engineer. */
+"Spike %@" = "Spike %@";
+
+/* No comment provided by engineer. */
+"Start Matchmaking?" = "Start Matchmaking?";
+
+/* No comment provided by engineer. */
+"Starting Side" = "Starting Side";
+
+/* No comment provided by engineer. */
+"Starting Side:" = "Starting Side:";
+
+/* No comment provided by engineer. */
+"Statistics" = "Statistics";
+
+/* No comment provided by engineer. */
+"Statistics not available!" = "Statistics not available!";
+
+/* No comment provided by engineer. */
+"Statistics require %@, a one-time purchase including a variety of features. Want to give them a look?" = "Statistics require %@, a one-time purchase including a variety of features. Want to give them a look?";
+
+/* No comment provided by engineer. */
+"Store" = "Store";
+
+/* No comment provided by engineer. */
+"Store not loaded!" = "Store not loaded!";
+
+/* No comment provided by engineer. */
+"Storefront outdated!" = "Storefront outdated!";
+
+/* No comment provided by engineer. */
+"Support Development :)" = "Support Development :)";
+
+/* No comment provided by engineer. */
+"Support Further Development!" = "Support Further Development!";
+
+/* No comment provided by engineer. */
+"Switch Contract" = "Switch Contract";
+
+/* No comment provided by engineer. */
+"TL;DR: you'll have to take my word for it, but Riot doesn't seem to mind." = "TL;DR: you'll have to take my word for it, but Riot doesn't seem to mind.";
+
+/* No comment provided by engineer. */
+"Tag" = "Tag";
+
+/* No comment provided by engineer. */
+"Thank you for supporting Recon Bolt!" = "Thank you for supporting Recon Bolt!";
+
+/* No comment provided by engineer. */
+"The code is open-source and visible on GitHub; you can build it yourself if you want to be sure of what's running." = "The code is open-source and visible on GitHub; you can build it yourself if you want to be sure of what's running.";
+
+/* No comment provided by engineer. */
+"The default look of Recon Bolt." = "The default look of Recon Bolt.";
+
+/* No comment provided by engineer. */
+"The pro version lets you change the app icon! More icons might be coming in future updates." = "The pro version lets you change the app icon! More icons might be coming in future updates.";
+
+/* No comment provided by engineer. */
+"Theme" = "Theme";
+
+/* No comment provided by engineer. */
+"These are the last %lld requests sent by the app, along with their responses." = "These are the last %lld requests sent by the app, along with their responses.";
+
+/* No comment provided by engineer. */
+"Third-Party Libraries & APIs Used" = "Third-Party Libraries & APIs Used";
+
+/* No comment provided by engineer. */
+"This feature requires iOS 16 or newer." = "This feature requires iOS 16 or newer.";
+
+/* No comment provided by engineer. */
+"This is what keeps your credentials safe on your device." = "This is what keeps your credentials safe on your device.";
+
+/* No comment provided by engineer. */
+"To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!";
+
+/* No comment provided by engineer. */
+"Total" = "Total";
+
+/* No comment provided by engineer. */
+"Total Playtime" = "Total Playtime";
+
+/* No comment provided by engineer. */
+"Total Space Used" = "Total Space Used";
+
+/* No comment provided by engineer. */
+"Tour de Force (Chamber)" = "Tour de Force (Chamber)";
+
+/* No comment provided by engineer. */
+"Twitter @juliand665" = "Twitter @juliand665";
+
+/* No comment provided by engineer. */
+"URL" = "URL";
+
+/* Shown when a match does not match the filter and its details have not been fetched. */
+"Unfetched" = "Unfetched";
+
+/* No comment provided by engineer. */
+"Unfortunately, Valorant doesn't store information about which weapon was used for each hit. All we get is the weapon you started the round with and what weapon you used for each kill. Recon Bolt guesses the weapon involved in each damage based on this information, but it cannot be perfect (and neither can any other tracker)." = "Unfortunately, Valorant doesn't store information about which weapon was used for each hit. All we get is the weapon you started the round with and what weapon you used for each kill. Recon Bolt guesses the weapon involved in each damage based on this information, but it cannot be perfect (and neither can any other tracker).";
+
+/* No comment provided by engineer. */
+"Unfortunately, due to technical limitations, you cannot sign into Recon Bolt via your Google account, Apple ID, or anything but a Riot account." = "Unfortunately, due to technical limitations, you cannot sign into Recon Bolt via your Google account, Apple ID, or anything but a Riot account.";
+
+/* No comment provided by engineer. */
+"Unknown Ability" = "Unknown Ability";
+
+/* No comment provided by engineer. */
+"Unknown Agent" = "Unknown Agent";
+
+/* No comment provided by engineer. */
+"Unknown Offer!" = "Unknown Offer!";
+
+/* No comment provided by engineer. */
+"Unknown Player" = "Unknown Player";
+
+/* No comment provided by engineer. */
+"Unknown Queue" = "Unknown Queue";
+
+/* No comment provided by engineer. */
+"Unknown Tier" = "Unknown Tier";
+
+/* No comment provided by engineer. */
+"Unknown Type" = "Unknown Type";
+
+/* No comment provided by engineer. */
+"Unknown Weapon" = "Unknown Weapon";
+
+/* No comment provided by engineer. */
+"Unknown bundle!" = "Unknown bundle!";
+
+/* No comment provided by engineer. */
+"Unknown contract!" = "Unknown contract!";
+
+/* No comment provided by engineer. */
+"Unknown mission!" = "Unknown mission!";
+
+/* No comment provided by engineer. */
+"Update Now" = "Update Now";
+
+/* No comment provided by engineer. */
+"Update Ranks" = "Update Ranks";
+
+/* No comment provided by engineer. */
+"Username" = "Username";
+
+/* No comment provided by engineer. */
+"Users" = "Users";
+
+/* No comment provided by engineer. */
+"Version %@" = "Version %@";
+
+/* No comment provided by engineer. */
+"Vibrate when Match Found" = "Vibrate when Match Found";
+
+/* No comment provided by engineer. */
+"View All Features" = "View All Features";
+
+/* No comment provided by engineer. */
+"View Full Profile" = "View Full Profile";
+
+/* No comment provided by engineer. */
+"View Stats" = "View Stats";
+
+/* No comment provided by engineer. */
+"View Store in Settings" = "View Store in Settings";
+
+/* No comment provided by engineer. */
+"View your current rank." = "View your current rank.";
+
+/* No comment provided by engineer. */
+"View your rank rating changes." = "View your rank rating changes.";
+
+/* No comment provided by engineer. */
+"View your storefront, daily/weekly missions, or current rank without even having to open the app!" = "View your storefront, daily/weekly missions, or current rank without even having to open the app!";
+
+/* No comment provided by engineer. */
+"WP: +%lld" = "WP: +%lld";
+
+/* No comment provided by engineer. */
+"Weapon Loadout" = "Weapon Loadout";
+
+/* No comment provided by engineer. */
+"Weapons" = "Weapons";
+
+/* No comment provided by engineer. */
+"Week" = "Week";
+
+/* No comment provided by engineer. */
+"Weekly" = "Weekly";
+
+/* No comment provided by engineer. */
+"Widget Refresh Requested" = "Widget Refresh Requested";
+
+/* No comment provided by engineer. */
+"Win Rate" = "Win Rate";
+
+/* No comment provided by engineer. */
+"Year" = "Year";
+
+/* No comment provided by engineer. */
+"You can also tap a round's number in the kill breakdown above to quickly view its details." = "You can also tap a round's number in the kill breakdown above to quickly view its details.";
+
+/* No comment provided by engineer. */
+"You can enable 2-factor authentication, so you'd at least have another layer of security if it went bad." = "You can enable 2-factor authentication, so you'd at least have another layer of security if it went bad.";
+
+/* No comment provided by engineer. */
+"Your credentials only ever leave your device in the form of a login request directly to Riot. They are never stored or sent anywhere else." = "Your credentials only ever leave your device in the form of a login request directly to Riot. They are never stored or sent anywhere else.";
+
+/* No comment provided by engineer. */
+"Your session has expired! Recon Bolt has tried to refresh it for you, but needs 2FA confirmation." = "Your session has expired! Recon Bolt has tried to refresh it for you, but needs 2FA confirmation.";
+
+/* No comment provided by engineer. */
+"^[%lld Errors](inflect: true, grammar: { partOfSpeech: \"noun\" })" = "^[%lld Errors](inflect: true, grammar: { partOfSpeech: \"noun\" })";
+
+/* No comment provided by engineer. */
+"^[%lld maps](inflect: true, grammar: { partOfSpeech: \"noun\" }) selected" = "^[%lld maps](inflect: true, grammar: { partOfSpeech: \"noun\" }) selected";
+
+/* No comment provided by engineer. */
+"^[%lld queues](inflect: true, grammar: { partOfSpeech: \"noun\" }) selected" = "^[%lld queues](inflect: true, grammar: { partOfSpeech: \"noun\" }) selected";
+
+/* No comment provided by engineer. */
+"assets loading" = "assets loading";
+
+/* No comment provided by engineer. */
+"cell tap trigger" = "cell tap trigger";
+
+/* No comment provided by engineer. */
+"iOS is a bit finnicky about this, so widgets may not refresh right away, but this is the best we can do!" = "iOS is a bit finnicky about this, so widgets may not refresh right away, but this is the best we can do!";
+
+/* Countdown label when the target is in the past. Should never really show up, since at this point there's new data. */
+"old" = "old";
+
+/* No comment provided by engineer. */
+"signing in…" = "signing in…";
+
+/* No comment provided by engineer. */
+"–" = "–";
+
+/* No comment provided by engineer. */
+"•" = "•";
+

@@ -46,13 +46,13 @@ struct StoreEntryProvider: FetchingIntentTimelineProvider {
 		var errorDescription: String? {
 			switch self {
 			case .noAssets:
-				return "Missing Assets!"
+				return String(localized: "Missing Assets!", table: "Errors", comment: "store widget error")
 			case .unknownOffer:
-				return "Unknown Offer"
+				return String(localized: "Unknown Offer", table: "Errors", comment: "store widget error")
 			case .malformedOffer:
-				return "Malformed Offer"
+				return String(localized: "Malformed Offer", table: "Errors", comment: "store widget error")
 			case .unknownSkin:
-				return "Unknown Skin"
+				return String(localized: "Unknown Skin", table: "Errors", comment: "store widget error")
 			}
 		}
 	}

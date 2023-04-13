@@ -114,14 +114,12 @@ struct ContractDetailsView: View {
 			let futureStart = upcomingMissions.firstIndex { $0.activationDate! > now }
 				?? upcomingMissions.endIndex
 			
-			UpcomingMissionsList(
-				title: "Queued-Up Weeklies",
-				missions: upcomingMissions.prefix(upTo: futureStart)
-			)
-			UpcomingMissionsList(
-				title: "Future Weeklies",
-				missions: upcomingMissions.suffix(from: futureStart)
-			)
+			UpcomingMissionsList(missions: upcomingMissions.prefix(upTo: futureStart)) {
+				Text("\($0) Queued-Up Weeklies")
+			}
+			UpcomingMissionsList(missions: upcomingMissions.suffix(from: futureStart)) {
+				Text("\($0) Future Weeklies")
+			}
 		}
 	}
 }

@@ -28,8 +28,8 @@ struct LiveMatchView: View {
 				.overlay(MapImage.Label(mapID: gameInfo.mapID).padding(6))
 			
 			VStack(spacing: 10) {
-				Text(gameInfo.queueID?.name ?? gameInfo.provisioningFlowID.name)
-					.fontWeight(.medium)
+				gameInfo.queueLabel
+					.font(.body.weight(.medium))
 					.foregroundStyle(.secondary)
 			}
 			.padding()

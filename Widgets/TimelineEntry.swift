@@ -114,7 +114,7 @@ struct TimelineEntryView_Previews: PreviewProvider {
 		var entry: StoreEntryProvider.Entry
 		
 		func contents(for value: StorefrontInfo) -> some View {
-			Text("It works!")
+			Text("It works!" as String)
 		}
 	}
 }

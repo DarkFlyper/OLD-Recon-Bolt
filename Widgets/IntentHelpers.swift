@@ -48,11 +48,15 @@ private enum GetAccountError: Error, LocalizedError {
 	var errorDescription: String? {
 		switch self {
 		case .noAccountActive(let desc):
-			return "Could not load active account!\n\(desc ?? "<no details>")"
+			let lines = [
+				String(localized: "Could not load active account!", table: "Errors", comment: "error loading the account for a widget"),
+				desc
+			]
+			return lines.compacted().joined(separator: "\n")
 		case .noAccountSpecified:
-			return "No account specified."
+			return String(localized: "No account specified.", table: "Errors", comment: "error loading the account for a widget.")
 		case .malformedAccount:
-			return "Malformed account."
+			return String(localized: "Malformed account.", table: "Errors", comment: "error loading the account for a widget.")
 		}
 	}
 }

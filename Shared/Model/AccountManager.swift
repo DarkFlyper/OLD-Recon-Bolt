@@ -138,7 +138,7 @@ final class AccountManager: ObservableObject {
 		var errorDescription: String? {
 			switch self {
 			case .cancelled:
-				return "Multifactor Prompt Cancelled."
+				return "Multifactor Prompt Cancelled." // never actually shown to users
 			}
 		}
 	}
@@ -206,7 +206,7 @@ final class StoredAccount: ObservableObject, Identifiable {
 		var errorDescription: String? {
 			switch self {
 			case .noStoredSession:
-				return "Missing session for account!\nIf you have Pro, add an account using the same credentials to replace the account with a working version."
+				return String(localized: "Missing session for account!\nIf you have Pro, add an account using the same credentials to replace the account with a working version.", table: "Errors", comment: #"Should not happen anymore, but you never know ¯\_(ツ)_/¯"#)
 			}
 		}
 	}

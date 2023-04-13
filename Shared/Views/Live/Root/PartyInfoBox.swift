@@ -24,7 +24,7 @@ struct PartyInfoBox: View {
 			Divider()
 			
 			HStack {
-				Text(party.matchmakingData.queueID.name)
+				QueueLabel(queue: party.matchmakingData.queueID)
 					.font(.headline)
 				
 				Spacer()
@@ -32,8 +32,10 @@ struct PartyInfoBox: View {
 				ZStack {
 					Menu("Change Queue") {
 						ForEach(party.eligibleQueues ?? [], id: \.self) { queue in
-							Button(queue.name) {
+							Button {
 								changeQueue(to: queue, in: party.id)
+							} label: {
+								QueueLabel(queue: queue)
 							}
 						}
 					}

@@ -149,16 +149,21 @@ private struct WrongAccountError: Error, LocalizedError {
 	var user: User?
 	
 	var errorDescription: String? {
-		"" <- {
-			print("It looks like this account has never played Valorant!", to: &$0)
-			print(to: &$0)
-			print("You've probably signed into the wrong account;", terminator: " ", to: &$0)
-			if let user {
-				print("this one is:\n\n\(user.name)", to: &$0)
-			} else {
-				print("this one has no name & tag.", to: &$0)
-			}
+		let accountDesc: String
+		if let user {
+			accountDesc = String(localized: "this one is:\n\n\(user.name)", table: "Errors", comment: "wrong account error")
+		} else {
+			accountDesc = String(localized: "this one has no Riot ID & Tagline.", table: "Errors", comment: "wrong account error")
 		}
+		return String(
+			localized: """
+It looks like this account has never played Valorant!
+
+You've probably signed into the wrong account; \(accountDesc)
+""",
+			table: "Errors",
+			comment: "wrong account error"
+		)
 	}
 }
 

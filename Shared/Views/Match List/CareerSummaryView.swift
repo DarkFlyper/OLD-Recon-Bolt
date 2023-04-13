@@ -11,7 +11,7 @@ struct CareerSummaryView: View {
 		ScrollView {
 			let queues = Self.queueOrder + summary.infoByQueue.keys
 				.filter { !Self.orderedQueues.contains($0) }
-				.sorted(on: \.name)
+				.sorted(on: \.rawValue)
 			
 			VStack(spacing: 20) {
 				ForEach(queues, id: \.self) { queue in
@@ -42,7 +42,7 @@ struct CareerSummaryView: View {
 		@Environment(\.assets) private var assets
 		
 		var body: some View {
-			Text(queue.name)
+			QueueLabel(queue: queue)
 				.font(.title3.weight(.bold))
 			
 			VStack(spacing: 1) {
@@ -108,8 +108,7 @@ struct CareerSummaryView: View {
 					Image(systemName: "chevron.down")
 						.rotationEffect(.degrees(isExpanded ? 0 : -90))
 					
-					// I tried using the new inflect API here, but it just slowed stuff down and threw errors
-					Text("\(hiddenCount) previous \(hiddenCount > 1 ? "acts" : "act")")
+					Text("\(hiddenCount) previous act(s)", comment: "Career Summary: button to show data from previous acts")
 					
 					Spacer()
 				}
@@ -172,8 +171,9 @@ struct CareerSummaryView: View {
 				.formatted(FloatingPointFormatStyle().precision(.fractionLength(1)))
 			
 			return HStack {
-				Text("\(winCount)/\(gameCount)").fontWeight(.medium)
-				+ Text(" games won").foregroundColor(.secondary)
+				let fraction = Text("\(winCount)/\(gameCount)").fontWeight(.medium)
+				Text("\(fraction) games won", comment: "%@ is replaced by a fraction of wins vs. games played, e.g. '5/12 games won'.")
+					.foregroundColor(.secondary)
 				Spacer()
 				Text("\(winPercentage)%")
 			}

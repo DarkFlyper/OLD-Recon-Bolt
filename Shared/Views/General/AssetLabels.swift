@@ -10,8 +10,21 @@ struct QueueLabel: View {
 		if let queue = assets?.queues[queue] {
 			Text(queue.name)
 		} else {
-			Text(queue.name)
+			Text(queue.rawValue)
 				.foregroundStyle(.secondary)
+		}
+	}
+}
+
+extension BasicMatchInfo {
+	@ViewBuilder
+	var queueLabel: some View {
+		if provisioningFlowID == .customGame {
+			Text("Custom")
+		} else if let queueID {
+			QueueLabel(queue: queueID)
+		} else {
+			Text("Unknown Queue")
 		}
 	}
 }

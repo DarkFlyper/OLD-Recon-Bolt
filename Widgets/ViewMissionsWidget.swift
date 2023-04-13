@@ -175,10 +175,16 @@ struct HourlyCountdownText: View {
 	var body: some View {
 		let now = timeOverride ?? .now
 		if target < now {
-			Text("old")
+			Text(
+				"old",
+				comment: "Countdown label when the target is in the past. Should never really show up, since at this point there's new data."
+			)
 		} else {
 			let delta = now.addingTimeInterval(-3599)..<target // "round up" the hour, lol
-			Text("< \(delta, format: .components(style: .condensedAbbreviated, fields: [.day, .hour]))")
+			Text(
+				"< \(delta, format: .components(style: .condensedAbbreviated, fields: [.day, .hour]))",
+				comment: "Countdown label when the target is in the future. e.g. '< 2d 3h'"
+			)
 		}
 	}
 }
@@ -211,7 +217,7 @@ struct ViewMissionsWidget_Previews: PreviewProvider {
 				year: 2022, month: 11, day: 02, hour: 02, minute: 30, second: 00
 			))!)
 		} else {
-			Text("oh no")
+			Text("oh no" as String)
 				.previewContext(WidgetPreviewContext(family: .systemMedium))
 		}
 	}

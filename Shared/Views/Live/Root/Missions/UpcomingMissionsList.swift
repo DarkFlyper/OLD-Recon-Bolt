@@ -2,9 +2,9 @@ import SwiftUI
 import ValorantAPI
 
 struct UpcomingMissionsList: View {
-	var title: String
 	var missions: ArraySlice<MissionInfo>
 	@State var isExpanded = false
+	var title: (Int) -> Text
 	
 	private static let dateFormatter = RelativeDateTimeFormatter()
 	
@@ -16,7 +16,7 @@ struct UpcomingMissionsList: View {
 				let totalXP = missions.map(\.xpGrant).reduce(0, +)
 				
 				ExpandButton(isExpanded: $isExpanded) {
-					Text("\(missions.count) \(title)")
+					title(missions.count)
 						.multilineTextAlignment(.leading)
 					
 					Spacer()

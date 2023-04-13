@@ -380,7 +380,7 @@ private struct RoundsByLoadoutDeltaChart: View {
 					.foregroundStyle(.secondary)
 				HStack {
 					if tally != .zero {
-						Text("\(tally.winFraction, format: .precisePercent) won")
+						Text("\(tally.winFraction, format: .precisePercent) won", comment: "%@ is replaced by the percentage of rounds won, e.g. '57.3% won'.")
 						Text("(\(tally.wins) – \(tally.losses))")
 							.foregroundStyle(.secondary)
 					} else {

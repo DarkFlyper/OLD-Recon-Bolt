@@ -108,8 +108,8 @@ struct AgentSelectView: View {
 	private var infoBox: some View {
 		VStack(spacing: 10) {
 			if let queueID = pregameInfo.queueID {
-				Text(queueID.name)
-					.fontWeight(.medium)
+				QueueLabel(queue: queueID)
+					.font(.body.weight(.medium))
 					.foregroundStyle(.secondary)
 			}
 			
@@ -125,7 +125,7 @@ struct AgentSelectView: View {
 			.font(.title2.weight(.bold))
 			.foregroundStyle(.primary)
 			
-			Text("\(pregameInfo.team.id.rawID) Team")
+			pregameInfo.team.id.name
 				.foregroundColor(pregameInfo.team.id.color)
 		}
 		.padding()

@@ -108,7 +108,7 @@ enum WidgetError: Error, LocalizedError {
 	var errorDescription: String? {
 		switch self {
 		case .needProVersion:
-			return "Widgets require Recon Bolt Pro!"
+			return String(localized: "Widgets require Recon Bolt Pro!", table: "Errors")
 		}
 	}
 }
@@ -120,9 +120,9 @@ enum FetchError: Error, LocalizedError {
 	var errorDescription: String? {
 		switch self {
 		case .noAssets:
-			return "Missing Assets!"
+			return String(localized: "Missing Assets!", table: "Errors")
 		case .noConfig(let location):
-			return "Missing game configuration data for \(location.name) region!"
+			return String(localized: "Missing game configuration data for \(location.name) region!", table: "Errors")
 		}
 	}
 }

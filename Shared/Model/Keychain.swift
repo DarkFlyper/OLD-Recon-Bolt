@@ -83,7 +83,7 @@ final class OSKeychain: Keychain {
 		var reason: Reason
 		
 		var errorDescription: String? {
-			"Keychain error for key '\(key)': \(reason)"
+			String(localized: "Keychain error for key '\(key)': \(reason.description)", table: "Errors")
 		}
 		
 		enum Reason: CustomStringConvertible {
@@ -93,9 +93,9 @@ final class OSKeychain: Keychain {
 			var description: String {
 				switch self {
 				case .osError(let status):
-					return "Unknown keychain error: \(status)"
+					return String(localized: "Unknown keychain error: \(status)", table: "Errors")
 				case .wrongType(let type):
-					return "Unexpected type found: \(type)"
+					return String(localized: "Unexpected type found: \("\(type)")", table: "Errors", comment: "Keychain error.")
 				}
 			}
 		}

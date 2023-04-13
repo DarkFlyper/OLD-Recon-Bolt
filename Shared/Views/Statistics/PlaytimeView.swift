@@ -115,7 +115,7 @@ struct PlaytimeView: View {
 								.map(\.value)
 								.reduce(.init(), +)
 							Row(entry: missingPlaytime) {
-								Text("\(entries.count - maxCount) more")
+								Text("\(entries.count - maxCount) more", comment: "Shown at the bottom of the expandable playtime list when there are more entries available.")
 									.foregroundStyle(.secondary)
 							}
 						}
@@ -139,7 +139,7 @@ struct PlaytimeView: View {
 					Stats.DurationLabel(duration: entry.time)
 						.fontWeight(.medium)
 					// I tried to use automatic inflection here but it caused hangs of like 600ms when entering the view
-					//Text("^[\(entry.games.count) matches](inflect: true, morphology: { partOfSpeech: \"noun\" })")
+					//Text("^[\(entry.games.count) matches](inflect: true, grammar: { partOfSpeech: \"noun\" })")
 					Text(entry.games.count == 1 ? "1 match" : "\(entry.games.count) matches")
 						.foregroundStyle(.secondary)
 				}

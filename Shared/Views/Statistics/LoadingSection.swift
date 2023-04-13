@@ -63,7 +63,7 @@ struct LoadingSection: View {
 			.padding(.vertical, 4)
 			
 			if !fetcher.errors.isEmpty {
-				NavigationLink("^[\(fetcher.errors.count) Errors](inflect: true, morphology: { partOfSpeech: \"noun\" })") {
+				NavigationLink("^[\(fetcher.errors.count) Errors](inflect: true, grammar: { partOfSpeech: \"noun\" })") {
 					errorList()
 				}
 			}

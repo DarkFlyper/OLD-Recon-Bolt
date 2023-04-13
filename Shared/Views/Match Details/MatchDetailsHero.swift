@@ -17,8 +17,8 @@ struct MatchDetailsHero: View {
 				ScoreSummaryView(data: data)
 					.font(.largeTitle.weight(.bold))
 				
-				Text(data.details.matchInfo.queueName)
-					.fontWeight(.medium)
+				data.details.matchInfo.queueLabel
+					.font(.body.weight(.medium))
 					.foregroundStyle(.secondary)
 			}
 			.padding()

@@ -155,11 +155,15 @@ YOUR BUG REPORT HERE
 		}
 		
 		func labeledRow(_ label: LocalizedStringKey, value: LocalizedStringKey) -> some View {
+			labeledRow(label, value: Text(value))
+		}
+		
+		func labeledRow(_ label: LocalizedStringKey, value: Text) -> some View {
 			HStack {
 				Text(label)
 					.foregroundStyle(.secondary)
 				Spacer()
-				Text(value)
+				value
 					.multilineTextAlignment(.trailing)
 			}
 		}
@@ -172,7 +176,7 @@ YOUR BUG REPORT HERE
 					Group {
 						if let string {
 							Text(string)
-								.font(.body.monospaced())
+								.font(.footnote.monospaced())
 								.frame(maxWidth: .infinity, alignment: .leading)
 						} else {
 							Text("<Binary Data>")
@@ -194,7 +198,7 @@ YOUR BUG REPORT HERE
 					}
 				}
 			} label: {
-				labeledRow("Body", value: "\(body.count) bytes" as LocalizedStringKey)
+				labeledRow("Body", value: Text(Int64(body.count), format: .byteCount(style: .file)))
 			}
 			.disabled(body.isEmpty)
 		}

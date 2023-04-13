@@ -17,12 +17,6 @@ struct RankChangesEntryProvider: FetchingIntentTimelineProvider {
 	}
 }
 
-struct CustomError: LocalizedError {
-	var text: String
-	
-	var errorDescription: String? { text }
-}
-
 extension ViewRankChangesIntent: FetchingIntent {}
 
 struct RankChangesInfo: FetchedTimelineValue {

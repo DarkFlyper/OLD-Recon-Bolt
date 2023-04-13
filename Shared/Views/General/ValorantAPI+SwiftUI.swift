@@ -2,8 +2,6 @@ import SwiftUI
 import ValorantAPI
 import ArrayBuilder
 
-// TODO: make all these localizable!
-
 extension Team.ID {
 	var color: Color? {
 		switch rawID {
@@ -15,49 +13,15 @@ extension Team.ID {
 			return nil
 		}
 	}
-}
-
-extension BasicMatchInfo {
-	var queueName: String {
-		if provisioningFlowID == .customGame {
-			return "Custom"
-		} else {
-			return queueID?.name ?? "Unknown Queue"
-		}
-	}
-}
-
-// FIXME: switch over to queues in assets
-extension QueueID {
-	var name: String {
-		switch rawValue {
-		case "ggteam":
-			return "Escalation"
-		case "spikerush":
-			return "Spike Rush"
-		case "newmap":
-			return "New Map"
-		case "onefa":
-			return "Replication"
-		case "snowball":
-			return "Snowball Fight"
+	
+	var name: Text {
+		switch rawID {
+		case "Blue":
+			return Text("Blue Team", tableName: "Team Names")
+		case "Red":
+			return Text("Red Team", tableName: "Team Names")
 		case let other:
-			return other.capitalized
-		}
-	}
-}
-
-extension ProvisioningFlow.ID {
-	var name: String {
-		switch self {
-		case .matchmaking:
-			return "Matchmaking"
-		case .customGame:
-			return "Custom Game"
-		case .shootingRange:
-			return "The Range"
-		case let other:
-			return other.description
+			return Text("\(other) Team", tableName: "Team Names", comment: "Used for unknown team IDs.")
 		}
 	}
 }
@@ -70,21 +34,21 @@ extension Location {
 	var name: String {
 		switch self {
 		case .europe:
-			return "Europe"
+			return String(localized: "Europe", table: "Locations")
 		case .northAmerica:
-			return "North America"
+			return String(localized: "North America", table: "Locations")
 		case .korea:
-			return "Korea"
+			return String(localized: "Korea", table: "Locations")
 		case .asiaPacific:
-			return "Asia Pacific"
+			return String(localized: "Asia Pacific", table: "Locations")
 		case .brazil:
-			return "Brazil"
+			return String(localized: "Brazil", table: "Locations")
 		case .latinAmerica:
-			return "Latin America"
+			return String(localized: "Latin America", table: "Locations")
 		case .pbe:
-			return "PBE"
+			return String(localized: "PBE", table: "Locations")
 		default:
-			return "<Unknown Location>"
+			return String(localized: "<Unknown Location>", table: "Locations")
 		}
 	}
 }
@@ -93,27 +57,27 @@ extension APIError: LocalizedError {
 	public var errorDescription: String? {
 		switch self {
 		case .unauthorized:
-			return "The API rejected your authorization."
+			return String(localized: "The API rejected your authorization.", table: "Errors", comment: "Riot API Error")
 		case .tokenFailure(message: let message):
-			return "Your token has expired. \(message)"
+			return String(localized: "Your token has expired. \(message)", table: "Errors", comment: "Riot API Error")
 		case .sessionExpired:
-			return "Your session has expired! Please sign in again."
+			return String(localized: "Your session has expired! Please sign in again.", table: "Errors", comment: "Riot API Error")
 		case .sessionResumptionFailure(let error):
-			return "Your session could not be resumed. \(error.localizedDescription)"
+			return String(localized: "Your session could not be resumed. \(error.localizedDescription)", table: "Errors", comment: "Riot API Error")
 		case .scheduledDowntime:
-			return "Valorant is currently undergoing scheduled maintenance. Riot is probably updating the game!"
+			return String(localized: "Valorant is currently undergoing scheduled maintenance. Riot is probably updating the game!", table: "Errors", comment: "Riot API Error")
 		case .resourceNotFound:
-			return "The resource could not be found."
+			return String(localized: "The resource could not be found.", table: "Errors", comment: "Riot API Error")
 		case .badResponseCode(400, _, let error?) where error.errorCode == "INVALID_HEADERS":
-			return "Invalid Headers: You probably need to download/update the assets in the account tab."
+			return String(localized: "Invalid Headers: \(error.message)", table: "Errors", comment: "Riot API Error")
 		case .badResponseCode(let code, _, nil):
-			return "The API returned an error code \(code)."
+			return String(localized: "The API returned an error code \(code).", table: "Errors", comment: "Riot API Error")
 		case .badResponseCode(let code, _, let error?):
-			return "The API returned an error code \(code), i.e. \(error.errorCode). \(error.message)"
+			return String(localized: "The API returned an error code \(code), i.e. \(error.errorCode). \(error.message)", table: "Errors", comment: "Riot API Error")
 		case .rateLimited(retryAfter: let delay):
 			return [String].build {
-				"You are sending too many requests."
-				delay.map { "Please try again in \($0) seconds." }
+				String(localized: "You are sending too many requests.", table: "Errors", comment: "Riot API Error")
+				delay.map { String(localized: "Please try again in \($0) seconds.", table: "Errors", comment: "Riot API Error") }
 			}.joined(separator: " ")
 		}
 	}
