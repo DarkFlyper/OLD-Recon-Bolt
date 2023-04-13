@@ -88,7 +88,7 @@
 /* No comment provided by engineer. */
 "+%lld XP" = "+%lld XP";
 
-/* No comment provided by engineer. */
+/* Missions Widget: how many more weeklies are queued up after the current set */
 "+%lld queued" = "+%lld queued";
 
 /* Night Market Discount */
@@ -109,7 +109,7 @@
 /* No comment provided by engineer. */
 "2-Factor Authentication" = "2-Factor Authentication";
 
-/* Countdown label when the target is in the future. e.g. '< 2d 3h' */
+/* Missions Widget: countdown label when the target is in the future. e.g. '< 2d 3h' */
 "< %@" = "< %@";
 
 /* No comment provided by engineer. */
@@ -297,10 +297,10 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Change Skin" = "Change Skin";
 
-/* No comment provided by engineer. */
+/* Store Widget: description */
 "Check your current Valorant storefront." = "Check your current Valorant storefront.";
 
-/* No comment provided by engineer. */
+/* Missions Widget: description */
 "Check your progress on daily & weekly missions." = "Check your progress on daily & weekly missions.";
 
 /* No comment provided by engineer. */
@@ -390,7 +390,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Customize %@" = "Customize %@";
 
-/* No comment provided by engineer. */
+/* Missions Widget */
 "Daily" = "Daily";
 
 /* No comment provided by engineer. */
@@ -702,7 +702,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Missing season data!" = "Missing season data!";
 
-/* No comment provided by engineer. */
+/* Missions Widget: title */
 "Missions" = "Missions";
 
 /* No comment provided by engineer. */
@@ -852,13 +852,13 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Quick" = "Quick";
 
-/* No comment provided by engineer. */
+/* Rank Widget: title */
 "Rank" = "Rank";
 
 /* No comment provided by engineer. */
 "Rank %lld" = "Rank %lld";
 
-/* No comment provided by engineer. */
+/* Rank Changes Widget: title */
 "Rank Changes" = "Rank Changes";
 
 /* No comment provided by engineer. */
@@ -1011,7 +1011,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Statistics require %@, a one-time purchase including a variety of features. Want to give them a look?" = "Statistics require %@, a one-time purchase including a variety of features. Want to give them a look?";
 
-/* No comment provided by engineer. */
+/* Store Widget: title */
 "Store" = "Store";
 
 /* No comment provided by engineer. */
@@ -1158,10 +1158,10 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "View Store in Settings" = "View Store in Settings";
 
-/* No comment provided by engineer. */
+/* Rank Widget: description */
 "View your current rank." = "View your current rank.";
 
-/* No comment provided by engineer. */
+/* Rank Changes Widget: description */
 "View your rank rating changes." = "View your rank rating changes.";
 
 /* Pro Features List */
@@ -1179,7 +1179,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Week" = "Week";
 
-/* No comment provided by engineer. */
+/* Missions Widget */
 "Weekly" = "Weekly";
 
 /* No comment provided by engineer. */
@@ -1224,7 +1224,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "iOS is a bit finnicky about this, so widgets may not refresh right away, but this is the best we can do!" = "iOS is a bit finnicky about this, so widgets may not refresh right away, but this is the best we can do!";
 
-/* Countdown label when the target is in the past. Should never really show up, since at this point there's new data. */
+/* Missions Widget: countdown label when the target is in the past. Should never really show up, since at this point there's new data. */
 "old" = "old";
 
 /* No comment provided by engineer. */

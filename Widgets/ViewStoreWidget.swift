@@ -15,8 +15,8 @@ struct ViewStoreWidget: Widget {
 			StoreEntryView(entry: entry)
 		}
 		.supportedFamilies([.systemSmall, .systemMedium, .systemLarge])
-		.configurationDisplayName("Store")
-		.description("Check your current Valorant storefront.")
+		.configurationDisplayName(Text("Store", comment: "Store Widget: title"))
+		.description(Text("Check your current Valorant storefront.", comment: "Store Widget: description"))
 	}
 }
 

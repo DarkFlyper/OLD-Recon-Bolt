@@ -14,8 +14,8 @@ struct ViewRankChangesWidget: Widget {
 			RankChangesEntryView(entry: entry)
 				.environment(\.location, entry.location)
 		}
-		.configurationDisplayName("Rank Changes")
-		.description("View your rank rating changes.")
+		.configurationDisplayName(Text("Rank Changes", comment: "Rank Changes Widget: title"))
+		.description(Text("View your rank rating changes.", comment: "Rank Changes Widget: description"))
 	}
 }
 

@@ -15,8 +15,8 @@ struct ViewMissionsWidget: Widget {
 			MissionListView(entry: entry)
 		}
 		.supportedFamilies([.systemSmall, .systemMedium])
-		.configurationDisplayName("Missions")
-		.description("Check your progress on daily & weekly missions.")
+		.configurationDisplayName(Text("Missions", comment: "Missions Widget: title"))
+		.description(Text("Check your progress on daily & weekly missions.", comment: "Missions Widget: description"))
 	}
 }
 
@@ -31,7 +31,8 @@ struct MissionListView: TimelineEntryView {
 			Spacer()
 			
 			CurrentMissionsList(
-				title: "Daily", expectedCount: 2,
+				title: Text("Daily", comment: "Missions Widget"),
+				expectedCount: 2,
 				missions: contracts.dailies,
 				countdownTarget: contracts.dailyRefresh
 			)
@@ -40,10 +41,13 @@ struct MissionListView: TimelineEntryView {
 			
 			if widgetFamily != .systemSmall {
 				CurrentMissionsList(
-					title: "Weekly", expectedCount: 3,
+					title: Text("Weekly", comment: "Missions Widget"),
+					expectedCount: 3,
 					missions: contracts.weeklies,
 					countdownTarget: contracts.weeklyRefresh,
-					supplement: contracts.queuedUpWeeklies.map { "+\($0.count) queued" }
+					supplement: contracts.queuedUpWeeklies.map {
+						Text("+\($0.count) queued", comment: "Missions Widget: how many more weeklies are queued up after the current set")
+					}
 				)
 				
 				Spacer()
@@ -55,16 +59,16 @@ struct MissionListView: TimelineEntryView {
 }
 
 struct CurrentMissionsList: View {
-	var title: LocalizedStringKey
+	var title: Text
 	var expectedCount: Int
 	var missions: [MissionWithInfo]
 	var countdownTarget: Date? = nil
-	var supplement: LocalizedStringKey? = nil
+	var supplement: Text? = nil
 	
 	var body: some View {
 		VStack(spacing: 8) {
 			HStack(alignment: .lastTextBaseline) {
-				Text(title)
+				title
 					.font(.headline)
 					.multilineTextAlignment(.leading)
 				
@@ -102,7 +106,7 @@ struct CurrentMissionsList: View {
 				.cornerRadius(8)
 				
 				if let supplement {
-					Text(supplement)
+					supplement
 						.font(.footnote)
 						.foregroundStyle(.secondary)
 						.padding(.horizontal, 8)
@@ -167,7 +171,7 @@ struct MissionView: View {
 	}
 }
 
-struct HourlyCountdownText: View {
+private struct HourlyCountdownText: View {
 	var target: Date
 	
 	@Environment(\.timeOverride) var timeOverride
@@ -177,13 +181,13 @@ struct HourlyCountdownText: View {
 		if target < now {
 			Text(
 				"old",
-				comment: "Countdown label when the target is in the past. Should never really show up, since at this point there's new data."
+				comment: "Missions Widget: countdown label when the target is in the past. Should never really show up, since at this point there's new data."
 			)
 		} else {
 			let delta = now.addingTimeInterval(-3599)..<target // "round up" the hour, lol
 			Text(
 				"< \(delta, format: .components(style: .condensedAbbreviated, fields: [.day, .hour]))",
-				comment: "Countdown label when the target is in the future. e.g. '< 2d 3h'"
+				comment: "Missions Widget: countdown label when the target is in the future. e.g. '< 2d 3h'"
 			)
 		}
 	}
