@@ -21,7 +21,7 @@ struct KillBreakdownView: View {
 		let rounds = collectRoundData()
 		VStack {
 			HStack {
-				Text("Kills by Round")
+				Text("Kills by Round", comment: "Match Details: section")
 					.font(.headline)
 				
 				Spacer()

@@ -24,7 +24,7 @@ struct MatchListView: View {
 	
 	var body: some View {
 		List {
-			Section(header: Text("Player")) {
+			Section(header: Text("Player", comment: "Match List: section")) {
 				PlayerIdentityCell(user: user, identity: identity)
 				
 				CompetitiveSummaryCell(summary: summary)
@@ -34,13 +34,16 @@ struct MatchListView: View {
 						StatisticsContainer(user: user, matchList: matchList)
 					}
 				} label: {
-					Label("View Stats", systemImage: "chart.line.uptrend.xyaxis")
-						.padding(.vertical, 8)
+					Label(
+						String(localized: "View Stats", comment: "Match List"),
+						systemImage: "chart.line.uptrend.xyaxis"
+					)
+					.padding(.vertical, 8)
 				}
 				.disabled(user == nil || matchList == nil || isIncognito)
 			}
 			
-			Section(header: Text("Matches")) {
+			Section(header: Text("Matches", comment: "Match List: section")) {
 				ForEach(shownMatches) { match in
 					MatchCell(match: match, userID: userID, filter: filter)
 				}
@@ -49,7 +52,10 @@ struct MatchListView: View {
 					AsyncButton {
 						await updateMatchList(update: ValorantClient.loadOlderMatches)
 					} label: {
-						Label("Load Older Matches", systemImage: "ellipsis")
+						Label(
+							String(localized: "Load Older Matches", comment: "Match List"),
+							systemImage: "ellipsis"
+						)
 					}
 				}
 			}
@@ -61,9 +67,15 @@ struct MatchListView: View {
 						bookmarkList.toggleBookmark(for: userID, location: location!)
 					} label: {
 						if bookmarkList.hasBookmark(for: userID) {
-							Label("Remove Bookmark", systemImage: "bookmark.fill")
+							Label(
+								String(localized: "Remove Bookmark", comment: "Match List: accessibility label"),
+								systemImage: "bookmark.fill"
+							)
 						} else {
-							Label("Add Bookmark", systemImage: "bookmark")
+							Label(
+								String(localized: "Add Bookmark", comment: "Match List: accessibility label"),
+								systemImage: "bookmark"
+							)
 						}
 					}
 				}
@@ -71,8 +83,11 @@ struct MatchListView: View {
 				Button {
 					isEditingFilter = true
 				} label: {
-					Label("Edit Filter", systemImage: "line.horizontal.3.decrease.circle")
-						.symbolVariant(filter.isActive ? .fill : .none)
+					Label(
+						String(localized: "Edit Filter", comment: "Match List: accessibility label"),
+						systemImage: "line.horizontal.3.decrease.circle"
+					)
+					.symbolVariant(filter.isActive ? .fill : .none)
 				}
 			}
 		}
@@ -91,7 +106,7 @@ struct MatchListView: View {
 		if !isIncognito, let user {
 			return Text(user.gameName)
 		} else {
-			return Text("Matches")
+			return Text("Matches", comment: "Match List: title if name unknown")
 		}
 	}
 	

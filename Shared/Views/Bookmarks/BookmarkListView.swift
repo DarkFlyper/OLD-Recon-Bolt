@@ -23,7 +23,7 @@ struct BookmarkListView: View {
 				scrollView.scrollTo(selection)
 			}
 		}
-		.navigationTitle("Players")
+		.navigationTitle(Text("Players", comment: "Bookmark/Player List: title"))
 	}
 	
 	@ViewBuilder
@@ -32,7 +32,7 @@ struct BookmarkListView: View {
 			userCell(id: nil)
 		}
 		
-		Section("Bookmarks") {
+		Section(header: Text("Bookmarks", comment: "Bookmark/Player List: section")) {
 			ForEach(bookmarkList.bookmarks, id: \.self) { entry in
 				userCell(id: entry.user)
 					.environment(\.location, entry.location)
@@ -45,7 +45,7 @@ struct BookmarkListView: View {
 			try await $0.fetchUsers(for: bookmarkList.bookmarks.map(\.id))
 		}
 		
-		Section("Search") {
+		Section(header: Text("Search", comment: "Bookmark/Player List: section")) {
 			LookupCell(history: history)
 			
 			ForEach(history.entries) { entry in

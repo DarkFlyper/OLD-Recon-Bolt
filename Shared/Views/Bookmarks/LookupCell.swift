@@ -31,7 +31,7 @@ struct LookupCell: View {
 		ScrollViewReader { scrollView in
 			HStack {
 				HStack {
-					TextField("Name", text: $gameName)
+					TextField(String(localized: "Name", comment: "Bookmark/Player List: lookup name placeholder"), text: $gameName)
 						.frame(maxWidth: maxNameFieldWidth)
 						.focused($focusedField, equals: .gameName)
 						.submitLabel(.next)
@@ -40,10 +40,10 @@ struct LookupCell: View {
 						}
 					
 					HStack {
-						Text("#")
+						Text("#", comment: "Bookmark/Player List: lookup text fields")
 							.foregroundStyle(.secondary)
 						
-						TextField("Tag", text: $tagLine)
+						TextField(String(localized: "Tag", comment: "Bookmark/Player List: lookup tag placeholder"), text: $tagLine)
 							.frame(width: tagFieldWidth)
 							.focused($focusedField, equals: .tagLine)
 							.submitLabel(.search)
@@ -60,7 +60,7 @@ struct LookupCell: View {
 				Button {
 					lookUpPlayer(scrollView: scrollView)
 				} label: {
-					Label("Look Up", systemImage: "magnifyingglass")
+					Label(String(localized: "Look Up", comment: "Bookmark/Player List: lookup button"), systemImage: "magnifyingglass")
 				}
 				.disabled(gameName.isEmpty || tagLine.isEmpty)
 				.fixedSize()

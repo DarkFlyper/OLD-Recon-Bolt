@@ -124,7 +124,7 @@ struct LoadingSection: View {
 			Button {
 				UIPasteboard.general.string = "\(match.id)\n\(error.localizedDescription)"
 			} label: {
-				Label(String(localized: "Copy Error", comment: "Stats: error details, currently not visible"), systemImage: "doc.on.doc")
+				Label(String(localized: "Copy Error", comment: "Stats: error details: accessibility label"), systemImage: "doc.on.doc")
 			}
 		}
 	}

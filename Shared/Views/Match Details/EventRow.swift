@@ -63,7 +63,7 @@ struct EventRow: View, Animatable {
 		Group {
 			// no switch in view builders yet :(
 			if damageType == .bomb {
-				Text("Exploded")
+				Text("Exploded", comment: "Round Details: killed by spike")
 					.fontWeight(.medium)
 			} else if let weaponID = kill.finishingDamage.weapon {
 				WeaponImage.killStreamIcon(weaponID)
@@ -78,11 +78,11 @@ struct EventRow: View, Animatable {
 				if let slot = AgentInfo.Ability.Slot(rawValue: slotName) {
 					AgentImage.ability(killer.agentID!, slot: slot)
 				} else {
-					Text("Unknown Ability")
+					Text("Unknown Ability", comment: "Round Details: killed by unknown ability")
 						.foregroundStyle(.secondary)
 				}
 			} else {
-				Text("Unknown Type")
+				Text("Unknown Type", comment: "Round Details: killed by unknown damage source/type")
 					.foregroundStyle(.secondary)
 			}
 		}
@@ -104,9 +104,15 @@ struct EventRow: View, Animatable {
 				.dynamicallyStroked(radius: 1, color: .white)
 		}
 		
-		Text("Spike \(bombEvent.isDefusal ? "Defused" : "Planted")")
-			.fontWeight(.medium)
-			.frame(maxWidth: .infinity)
+		Group {
+			if bombEvent.isDefusal {
+				Text("Spike Defused", comment: "Round Details: Spike Event")
+			} else {
+				Text("Spike Planted", comment: "Round Details: Spike Event")
+			}
+		}
+		.font(.body.weight(.medium))
+		.frame(maxWidth: .infinity)
 		
 		icon {
 			iconImage(name: bombEvent.isDefusal ? "Defuse" : "Spike")

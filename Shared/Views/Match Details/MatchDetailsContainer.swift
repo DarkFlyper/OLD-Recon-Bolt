@@ -22,7 +22,7 @@ struct MatchDetailsContainer: View {
 			}
 		}
 		.withLocalData($details, id: matchID, shouldAutoUpdate: true, shouldReportErrors: true)
-		.navigationTitle("Match Details")
+		.navigationTitle(Text("Match Details", comment: "Match Details: title"))
 		.navigationBarTitleDisplayMode(.inline)
 	}
 }

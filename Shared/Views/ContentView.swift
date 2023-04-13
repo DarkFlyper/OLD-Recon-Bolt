@@ -17,22 +17,34 @@ struct ContentView: View {
 		TabView(selection: $tab) {
 			onlineView { BookmarkListView(userID: $0) }
 				.withToolbar()
-				.tabItem { Label("Career", systemImage: "clock") }
+				.tabItem { Label(
+					String(localized: "Career", comment: "Top-Level Tab Title"),
+					systemImage: "clock"
+				) }
 				.tag(Tab.career)
 			
 			onlineView { LiveView(userID: $0) }
 				.withToolbar()
-				.tabItem { Label("Live", systemImage: "play") }
+				.tabItem { Label(
+					String(localized: "Live", comment: "Top-Level Tab Title"),
+					systemImage: "play"
+				) }
 				.tag(Tab.live)
 			
 			ReferenceView()
 				.withToolbar()
-				.tabItem { Label("Reference", systemImage: "book") }
+				.tabItem { Label(
+					String(localized: "Reference", comment: "Top-Level Tab Title"),
+					systemImage: "book"
+				) }
 				.tag(Tab.reference)
 			
 			SettingsView(accountManager: accountManager, assetManager: assetManager, settings: settings, store: store)
 				.withToolbar()
-				.tabItem { Label("Settings", systemImage: "gearshape") }
+				.tabItem { Label(
+					String(localized: "Settings", comment: "Top-Level Tab Title"),
+					systemImage: "gearshape"
+				) }
 				.tag(Tab.settings)
 		}
 		.task(id: accountManager.requiresAction) {

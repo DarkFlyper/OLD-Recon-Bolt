@@ -26,7 +26,7 @@ struct UserCell: View {
 					UserLabel(userID: userID, shouldAutoUpdate: false)
 					
 					if let identity {
-						Text("Level \(identity.accountLevel)")
+						Text("Level \(identity.accountLevel)", comment: "Bookmark/Player List: player level")
 					}
 				}
 				

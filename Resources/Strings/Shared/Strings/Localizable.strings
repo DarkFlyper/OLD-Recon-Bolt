@@ -1,7 +1,7 @@
 /* No comment provided by engineer. */
 "\"%@\"" = "\"%@\"";
 
-/* No comment provided by engineer. */
+/* Bookmark/Player List: lookup text fields */
 "#" = "#";
 
 /* No comment provided by engineer. */
@@ -43,11 +43,11 @@
 /* Loadout Item Picker: number of hidden items—this should never show nowadays */
 "%lld hidden due to outdated assets" = "%lld hidden due to outdated assets";
 
-/* No comment provided by engineer. */
+/* Hit Distribution Stats: hit count */
 "%lld hits" = "%lld hits";
 
-/* No comment provided by engineer. */
-"%lld matches" = "%lld matches";
+/* No comment provided by engineer. (Key in .stringsdict) */
+"%lld match(es)" = "%lld match(es)";
 
 /* Shown at the bottom of the expandable playtime list when there are more entries available. */
 "%lld more" = "%lld more";
@@ -73,6 +73,12 @@
 /* Loadout Item Picker: number of items owned out of all such items in the game */
 "%lld/%lld owned" = "%lld/%lld owned";
 
+/* Time Formatting: minutes & seconds (used in round details view) */
+"%lld:%@" = "%lld:%@";
+
+/* Time Formatting: minutes, seconds, & milliseconds (used in round details view) */
+"%lld:%@.%@" = "%lld:%@.%@";
+
 /* No comment provided by engineer. */
 "%lld / %lld XP" = "%lld / %lld XP";
 
@@ -95,16 +101,10 @@
 "-%lld%%" = "-%lld%%";
 
 /* No comment provided by engineer. */
-".%@" = ".%@";
-
-/* No comment provided by engineer. */
 "/" = "/";
 
 /* No comment provided by engineer. */
 "//" = "//";
-
-/* No comment provided by engineer. */
-"1 match" = "1 match";
 
 /* No comment provided by engineer. */
 "2-Factor Authentication" = "2-Factor Authentication";
@@ -156,7 +156,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Active Contract" = "Active Contract";
 
-/* No comment provided by engineer. */
+/* Match List: accessibility label */
 "Add Bookmark" = "Add Bookmark";
 
 /* No comment provided by engineer. */
@@ -243,13 +243,13 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Available:" = "Available:";
 
-/* No comment provided by engineer. */
+/* Hit Distribution Stats: average HS% */
 "Average: %@" = "Average: %@";
 
-/* No comment provided by engineer. */
+/* Hit Distribution Stats: region */
 "Body" = "Body";
 
-/* No comment provided by engineer. */
+/* Bookmark/Player List: section */
 "Bookmarks" = "Bookmarks";
 
 /* No comment provided by engineer. */
@@ -270,7 +270,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "By Queue" = "By Queue";
 
-/* No comment provided by engineer. */
+/* Hit Distribution Stats: section */
 "By Weapon" = "By Weapon";
 
 /* No comment provided by engineer. */
@@ -279,7 +279,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Cancel Matchmaking" = "Cancel Matchmaking";
 
-/* No comment provided by engineer. */
+/* Top-Level Tab Title */
 "Career" = "Career";
 
 /* No comment provided by engineer. */
@@ -342,7 +342,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Copy Body" = "Copy Body";
 
-/* Stats: error details, currently not visible */
+/* Stats: error details: accessibility label */
 "Copy Error" = "Copy Error";
 
 /* No comment provided by engineer. */
@@ -399,7 +399,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Dark Mode" = "Dark Mode";
 
-/* No comment provided by engineer. */
+/* Hit Distribution Stats */
 "Data from %lld games (%lld skipped lacking data)" = "Data from %lld games (%lld skipped lacking data)";
 
 /* Stats: match loading */
@@ -420,13 +420,13 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Delete %lld Matches" = "Delete %lld Matches";
 
-/* No comment provided by engineer. */
+/* Match Details: button to view details by round */
 "Details by Round" = "Details by Round";
 
 /* No comment provided by engineer. */
 "Discord Server" = "Discord Server";
 
-/* No comment provided by engineer. */
+/* Hit Distribution Stats: section */
 "Distribution Over Time" = "Distribution Over Time";
 
 /* No comment provided by engineer. */
@@ -444,7 +444,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "ERROR" = "ERROR";
 
-/* No comment provided by engineer. */
+/* Match List: accessibility label */
 "Edit Filter" = "Edit Filter";
 
 /* No comment provided by engineer. */
@@ -468,7 +468,7 @@ Competitive matches after your placements can be identified without their detail
 /* Pro Features List */
 "Exclusive App Icon" = "Exclusive App Icon";
 
-/* No comment provided by engineer. */
+/* Round Details: killed by spike */
 "Exploded" = "Exploded";
 
 /* Pro Features List */
@@ -525,7 +525,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Group by" = "Group by";
 
-/* No comment provided by engineer. */
+/* Hit Distribution Stats: region */
 "Head" = "Head";
 
 /* No comment provided by engineer. */
@@ -534,7 +534,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Hi! I'm Julian Dunskus, and I made this app." = "Hi! I'm Julian Dunskus, and I made this app.";
 
-/* No comment provided by engineer. */
+/* Hit Distribution Stats: title */
 "Hit Distribution" = "Hit Distribution";
 
 /* No comment provided by engineer. */
@@ -579,13 +579,13 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Join the Discord Server" = "Join the Discord Server";
 
-/* No comment provided by engineer. */
+/* Match Details: section */
 "Kills by Round" = "Kills by Round";
 
-/* No comment provided by engineer. */
+/* Hit Distribution Stats: region */
 "Legs" = "Legs";
 
-/* No comment provided by engineer. */
+/* Bookmark/Player List: player level */
 "Level %lld" = "Level %lld";
 
 /* No comment provided by engineer. */
@@ -600,7 +600,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Links" = "Links";
 
-/* No comment provided by engineer. */
+/* Top-Level Tab Title */
 "Live" = "Live";
 
 /* No comment provided by engineer. */
@@ -612,7 +612,7 @@ Competitive matches after your placements can be identified without their detail
 /* Stats: match loading */
 "Load Latest %lld Matches" = "Load Latest %lld Matches";
 
-/* No comment provided by engineer. */
+/* Match List */
 "Load Older Matches" = "Load Older Matches";
 
 /* No comment provided by engineer. */
@@ -645,7 +645,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Long" = "Long";
 
-/* No comment provided by engineer. */
+/* Bookmark/Player List: lookup button */
 "Look Up" = "Look Up";
 
 /* No comment provided by engineer. */
@@ -669,7 +669,7 @@ Competitive matches after your placements can be identified without their detail
 /* Stats: error details */
 "Match" = "Match";
 
-/* No comment provided by engineer. */
+/* Match Details: title */
 "Match Details" = "Match Details";
 
 /* No comment provided by engineer. */
@@ -681,7 +681,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Match System" = "Match System";
 
-/* No comment provided by engineer. */
+/* Match List: section */
 "Matches" = "Matches";
 
 /* Stats: match loading */
@@ -717,7 +717,7 @@ Competitive matches after your placements can be identified without their detail
 /* Pro Store */
 "Multiple Accounts" = "Multiple Accounts";
 
-/* No comment provided by engineer. */
+/* Bookmark/Player List: lookup name placeholder */
 "Name" = "Name";
 
 /* No comment provided by engineer. */
@@ -759,7 +759,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Not Ready" = "Not Ready";
 
-/* No comment provided by engineer. */
+/* Hit Distribution Stats: error */
 "Not enough data!" = "Not enough data!";
 
 /* No comment provided by engineer. */
@@ -798,7 +798,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Over Time" = "Over Time";
 
-/* No comment provided by engineer. */
+/* Hit Distribution Stats: section */
 "Overall" = "Overall";
 
 /* No comment provided by engineer. */
@@ -816,10 +816,10 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Picking…" = "Picking…";
 
-/* No comment provided by engineer. */
+/* Match List: section */
 "Player" = "Player";
 
-/* No comment provided by engineer. */
+/* Bookmark/Player List: title */
 "Players" = "Players";
 
 /* No comment provided by engineer. */
@@ -885,7 +885,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Recon Bolt started development in early 2021, back when it wasn't yet possible to see your RR gains and losses in the game, but the API offered those numbers." = "Recon Bolt started development in early 2021, back when it wasn't yet possible to see your RR gains and losses in the game, but the API offered those numbers.";
 
-/* No comment provided by engineer. */
+/* Top-Level Tab Title */
 "Reference" = "Reference";
 
 /* No comment provided by engineer. */
@@ -897,7 +897,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Refreshes at %@" = "Refreshes at %@";
 
-/* No comment provided by engineer. */
+/* Match List: accessibility label */
 "Remove Bookmark" = "Remove Bookmark";
 
 /* No comment provided by engineer. */
@@ -924,10 +924,10 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Retry" = "Retry";
 
-/* No comment provided by engineer. */
+/* Round Details: header */
 "Round %lld of %lld" = "Round %lld of %lld";
 
-/* No comment provided by engineer. */
+/* Round Details: title */
 "Round Details" = "Round Details";
 
 /* No comment provided by engineer. */
@@ -936,10 +936,10 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Rounds by Side" = "Rounds by Side";
 
-/* No comment provided by engineer. */
+/* Bookmark/Player List: section */
 "Search" = "Search";
 
-/* No comment provided by engineer. */
+/* Hit Distribution Stats: error */
 "Select more matches to see data on hit distribution. Deathmatch, Escalation, and other modes don't provide the necessary information." = "Select more matches to see data on hit distribution. Deathmatch, Escalation, and other modes don't provide the necessary information.";
 
 /* No comment provided by engineer. */
@@ -951,7 +951,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Session expired!" = "Session expired!";
 
-/* No comment provided by engineer. */
+/* Top-Level Tab Title */
 "Settings" = "Settings";
 
 /* No comment provided by engineer. */
@@ -984,14 +984,17 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Sign in with Google/Apple/etc." = "Sign in with Google/Apple/etc.";
 
-/* No comment provided by engineer. */
+/* Hit Distribution Stats: smoothing slider */
 "Smoothing" = "Smoothing";
 
 /* No comment provided by engineer. */
 "Spectator" = "Spectator";
 
-/* No comment provided by engineer. */
-"Spike %@" = "Spike %@";
+/* Round Details: Spike Event */
+"Spike Defused" = "Spike Defused";
+
+/* Round Details: Spike Event */
+"Spike Planted" = "Spike Planted";
 
 /* No comment provided by engineer. */
 "Start Matchmaking?" = "Start Matchmaking?";
@@ -1032,7 +1035,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "TL;DR: you'll have to take my word for it, but Riot doesn't seem to mind." = "TL;DR: you'll have to take my word for it, but Riot doesn't seem to mind.";
 
-/* No comment provided by engineer. */
+/* Bookmark/Player List: lookup tag placeholder */
 "Tag" = "Tag";
 
 /* Pro Store */
@@ -1065,7 +1068,7 @@ Competitive matches after your placements can be identified without their detail
 /* Stats: match loading */
 "To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!";
 
-/* No comment provided by engineer. */
+/* Hit Distribution Stats: region */
 "Total" = "Total";
 
 /* No comment provided by engineer. */
@@ -1086,13 +1089,13 @@ Competitive matches after your placements can be identified without their detail
 /* Shown when a match does not match the filter and its details have not been fetched. */
 "Unfetched" = "Unfetched";
 
-/* No comment provided by engineer. */
+/* Hit Distribution Stats: footnote */
 "Unfortunately, Valorant doesn't store information about which weapon was used for each hit. All we get is the weapon you started the round with and what weapon you used for each kill. Recon Bolt guesses the weapon involved in each damage based on this information, but it cannot be perfect (and neither can any other tracker)." = "Unfortunately, Valorant doesn't store information about which weapon was used for each hit. All we get is the weapon you started the round with and what weapon you used for each kill. Recon Bolt guesses the weapon involved in each damage based on this information, but it cannot be perfect (and neither can any other tracker).";
 
 /* No comment provided by engineer. */
 "Unfortunately, due to technical limitations, you cannot sign into Recon Bolt via your Google account, Apple ID, or anything but a Riot account." = "Unfortunately, due to technical limitations, you cannot sign into Recon Bolt via your Google account, Apple ID, or anything but a Riot account.";
 
-/* No comment provided by engineer. */
+/* Round Details: killed by unknown ability */
 "Unknown Ability" = "Unknown Ability";
 
 /* No comment provided by engineer. */
@@ -1110,7 +1113,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Unknown Tier" = "Unknown Tier";
 
-/* No comment provided by engineer. */
+/* Round Details: killed by unknown damage source/type */
 "Unknown Type" = "Unknown Type";
 
 /* No comment provided by engineer. */
@@ -1128,7 +1131,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Update Now" = "Update Now";
 
-/* No comment provided by engineer. */
+/* Match Details: button */
 "Update Ranks" = "Update Ranks";
 
 /* No comment provided by engineer. */
@@ -1152,7 +1155,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "View Full Profile" = "View Full Profile";
 
-/* No comment provided by engineer. */
+/* Match List */
 "View Stats" = "View Stats";
 
 /* No comment provided by engineer. */
@@ -1194,7 +1197,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Year" = "Year";
 
-/* No comment provided by engineer. */
+/* Match Details: footnote */
 "You can also tap a round's number in the kill breakdown above to quickly view its details." = "You can also tap a round's number in the kill breakdown above to quickly view its details.";
 
 /* No comment provided by engineer. */

@@ -33,7 +33,7 @@ struct RoundInfoContainer: View {
 			ReviewManager.requestReviewIfAppropriate()
 		}
 		.onChange(of: roundNumber) { _ in updateRoundData() }
-		.navigationTitle("Round Details")
+		.navigationTitle(Text("Round Details", comment: "Round Details: title"))
 		.navigationBarTitleDisplayMode(.inline)
 	}
 	
@@ -50,7 +50,7 @@ struct RoundInfoContainer: View {
 			
 			Spacer()
 			
-			Text("Round \(roundNumber + 1) of \(roundCount)")
+			Text("Round \(roundNumber + 1) of \(roundCount)", comment: "Round Details: header")
 				.font(.headline)
 				.fontWeight(.medium)
 			
@@ -129,17 +129,16 @@ struct RoundInfoView: View {
 private func formattedTime(millis: Int, includeMillis: Bool = false) -> some View {
 	let inSeconds = millis / 1000
 	let seconds = inSeconds % 60
-	let secondsPadding = seconds < 10 ? "0" : ""
-	let secondsPart = "\(secondsPadding)\(seconds)"
-	
+	let secondsPart = "\(seconds)".padding(toLength: 2, withPad: "0", startingAt: 0)
 	let minutes = inSeconds / 60
-	let roughPart = "\(minutes):\(secondsPart)"
 	
 	HStack(spacing: 0) {
-		Text(roughPart)
 		if includeMillis {
 			let millisPart = "\(millis % 1000)".padding(toLength: 3, withPad: "0", startingAt: 0)
-			Text(".\(millisPart)").foregroundStyle(.secondary)
+			Text("\(minutes):\(secondsPart).\(millisPart)", comment: "Time Formatting: minutes, seconds, & milliseconds (used in round details view)")
+				.foregroundStyle(.secondary)
+		} else {
+			Text("\(minutes):\(secondsPart)", comment: "Time Formatting: minutes & seconds (used in round details view)")
 		}
 	}
 	.monospacedDigit()

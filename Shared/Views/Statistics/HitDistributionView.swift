@@ -23,9 +23,9 @@ struct HitDistributionView: View {
 			if distribution.byMatch.isEmpty {
 				GroupBox {
 					VStack(spacing: 8) {
-						Text("Not enough data!")
+						Text("Not enough data!", comment: "Hit Distribution Stats: error")
 							.font(.title2.bold())
-						Text("Select more matches to see data on hit distribution. Deathmatch, Escalation, and other modes don't provide the necessary information.")
+						Text("Select more matches to see data on hit distribution. Deathmatch, Escalation, and other modes don't provide the necessary information.", comment: "Hit Distribution Stats: error")
 					}
 				}
 				.frame(maxWidth: .infinity)
@@ -36,7 +36,7 @@ struct HitDistributionView: View {
 				}
 			}
 		}
-		.navigationTitle("Hit Distribution")
+		.navigationTitle(Text("Hit Distribution", comment: "Hit Distribution Stats: title"))
 	}
 	
 	@ViewBuilder
@@ -44,15 +44,17 @@ struct HitDistributionView: View {
 		Section {
 			chartOverTime()
 		} header: {
-			Text("Distribution Over Time")
+			Text("Distribution Over Time", comment: "Hit Distribution Stats: section")
 		} footer: {
 			let count = distribution.byMatch.count
-			Text("Data from \(count) games (\(statistics.matches.count - count) skipped lacking data)")
+			Text("Data from \(count) games (\(statistics.matches.count - count) skipped lacking data)", comment: "Hit Distribution Stats")
 				.font(.footnote)
 		}
 		
-		Section("Overall") {
+		Section {
 			distributionGrid(for: distribution.overall)
+		} header: {
+			Text("Overall", comment: "Hit Distribution Stats: section")
 		}
 		
 		byWeapon()
@@ -68,7 +70,7 @@ struct HitDistributionView: View {
 		.aligningListRowSeparator()
 		
 		HStack {
-			Text("Smoothing")
+			Text("Smoothing", comment: "Hit Distribution Stats: smoothing slider")
 			
 			Slider(
 				value: $smoothing,
@@ -80,23 +82,23 @@ struct HitDistributionView: View {
 	
 	func distributionGrid(for tally: Tally) -> some View {
 		Grid(horizontalSpacing: 20, verticalSpacing: 4) {
-			distributionRow("Head", count: tally.headshots, from: tally)
-			distributionRow("Body", count: tally.bodyshots, from: tally)
-			distributionRow("Legs", count: tally.legshots, from: tally)
-			distributionRow("Total", count: tally.total, from: tally)
+			distributionRow(Text("Head", comment: "Hit Distribution Stats: region"), count: tally.headshots, from: tally)
+			distributionRow(Text("Body", comment: "Hit Distribution Stats: region"), count: tally.bodyshots, from: tally)
+			distributionRow(Text("Legs", comment: "Hit Distribution Stats: region"), count: tally.legshots, from: tally)
+			distributionRow(Text("Total", comment: "Hit Distribution Stats: region"), count: tally.total, from: tally)
 				.fontWeight(.semibold)
 				.foregroundStyle(.secondary)
 		}
 	}
 	
-	func distributionRow(_ name: LocalizedStringKey, count: Int, from tally: Tally) -> some View {
+	func distributionRow(_ name: Text, count: Int, from tally: Tally) -> some View {
 		GridRow {
-			Text(name)
+			name
 				.gridColumnAlignment(.leading)
 			
 			Spacer()
 			
-			Text("\(count) hits")
+			Text("\(count) hits", comment: "Hit Distribution Stats: hit count")
 				.gridColumnAlignment(.trailing)
 				.foregroundStyle(.secondary)
 			
@@ -110,9 +112,9 @@ struct HitDistributionView: View {
 		Section {
 			ForEach(distribution.byWeapon.sorted(on: \.value.total).reversed(), id: \.key, content: weaponRow)
 		} header: {
-			Text("By Weapon")
+			Text("By Weapon", comment: "Hit Distribution Stats: section")
 		} footer: {
-			Text("Unfortunately, Valorant doesn't store information about which weapon was used for each hit. All we get is the weapon you started the round with and what weapon you used for each kill. Recon Bolt guesses the weapon involved in each damage based on this information, but it cannot be perfect (and neither can any other tracker).")
+			Text("Unfortunately, Valorant doesn't store information about which weapon was used for each hit. All we get is the weapon you started the round with and what weapon you used for each kill. Recon Bolt guesses the weapon involved in each damage based on this information, but it cannot be perfect (and neither can any other tracker).", comment: "Hit Distribution Stats: footnote")
 				.frame(maxWidth: .infinity, alignment: .leading)
 		}
 	}
@@ -169,7 +171,7 @@ struct HitDistributionView: View {
 				RuleMark(y: .value("Hits", 100 * (1 - average)))
 					.lineStyle(.init(lineWidth: 1, dash: [4, 2]))
 					.annotation(position: .bottom) {
-						Text("Average: \(percentage)")
+						Text("Average: \(percentage)", comment: "Hit Distribution Stats: average HS%")
 							.font(.caption)
 							.foregroundStyle(.negative)
 					}
@@ -246,11 +248,11 @@ private enum HitRegionKey: Plottable {
 	var primitivePlottable: String {
 		switch self {
 		case .legs:
-			return String(localized: "Legs", comment: "Hit Distribution Stats: chart legend")
+			return String(localized: "Legs")
 		case .body:
-			return String(localized: "Body", comment: "Hit Distribution Stats: chart legend")
+			return String(localized: "Body")
 		case .head:
-			return String(localized: "Head", comment: "Hit Distribution Stats: chart legend")
+			return String(localized: "Head")
 		}
 	}
 }

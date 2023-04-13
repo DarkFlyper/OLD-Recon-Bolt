@@ -51,12 +51,12 @@ struct MatchDetailsView: View {
 							RoundInfoContainer(matchData: data, roundNumber: 0)
 						} label: {
 							HStack {
-								Text("Details by Round")
+								Text("Details by Round", comment: "Match Details: button to view details by round")
 								Image(systemName: "chevron.right")
 							}
 						}
 						
-						Text("You can also tap a round's number in the kill breakdown above to quickly view its details.")
+						Text("You can also tap a round's number in the kill breakdown above to quickly view its details.", comment: "Match Details: footnote")
 							.font(.footnote)
 							.foregroundColor(.secondary)
 					}
