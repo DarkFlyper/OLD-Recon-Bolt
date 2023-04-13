@@ -50,10 +50,7 @@ struct ContentView: View {
 		.onSceneActivation {
 			Task { await assetManager.loadAssets() }
 		}
-		.readingDeepLinkHandler {
-			print("setting handler")
-			handleDeepLink = $0
-		}
+		.readingDeepLinkHandler { handleDeepLink = $0 }
 		.environment(\.deepLink, handle(_:))
 		.onOpenURL(perform: handle(_:))
 	}
@@ -117,7 +114,6 @@ struct ContentView: View {
 	private func handleWithDelay(_ link: DeepLink) {
 		// delay to give newly-displayed tabs time to propagate their preferences
 		DispatchQueue.main.asyncAfter(deadline: .now() + 0.01) {
-			print("calling handler")
 			handleDeepLink?(link)
 		}
 	}
