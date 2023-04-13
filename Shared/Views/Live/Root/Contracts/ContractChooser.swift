@@ -12,7 +12,7 @@ struct ContractChooser: View {
 		let sorted = (contracts ?? [:]).values
 			.filter { $0.content.relationType == .agent || $0.id == .freeAgents }
 			.sorted(
-				on: { $0.content.relationType?.rawValue ?? "z" }, // sort free agent contract to end
+				on: { $0.content.relationType?.rawValue ?? "zzz" }, // sort free agent contract to end
 				then: \.displayName
 			)
 		
@@ -35,7 +35,7 @@ struct ContractChooser: View {
 			.padding()
 		}
 		.background(Color.groupedBackground)
-		.navigationTitle("Choose a Contract")
+		.navigationTitle(Text("Choose a Contract", comment: "Contract Picker: title"))
 	}
 	
 	@MainActor
@@ -65,9 +65,11 @@ struct ContractChooser: View {
 						Text(data.info.displayName)
 						
 						if isActive {
-							Text("Active").foregroundColor(.secondary)
+							Text("Active", comment: "Contract Picker")
+								.foregroundColor(.secondary)
 						} else if data.isComplete {
-							Text("Completed").foregroundColor(.secondary)
+							Text("Completed", comment: "Contract Picker")
+								.foregroundColor(.secondary)
 						}
 					}
 					.opacity(data.isComplete ? 0.5 : 1)
@@ -81,8 +83,10 @@ struct ContractChooser: View {
 				if isExpanded {
 					ContractProgressBar(data: data)
 					
-					AsyncButton("Activate") {
+					AsyncButton {
 						await activate(data.info.id)
+					} label: {
+						Text("Activate", comment: "Contract Picker: button")
 					}
 					.buttonStyle(.bordered)
 					.disabled(isActive || data.isComplete)

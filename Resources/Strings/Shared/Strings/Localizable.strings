@@ -129,19 +129,19 @@ Competitive matches after your placements can be identified without their detail
 /* Career Summary: header for totals of all time */
 "ALL TIME" = "ALL TIME";
 
-/* No comment provided by engineer. */
+/* Settings: section */
 "About" = "About";
 
 /* No comment provided by engineer. */
 "About Recon Bolt" = "About Recon Bolt";
 
-/* No comment provided by engineer. */
+/* Settings: section */
 "Accounts" = "Accounts";
 
-/* No comment provided by engineer. */
+/* Contract Picker: button */
 "Activate" = "Activate";
 
-/* No comment provided by engineer. */
+/* Contract Picker */
 "Active" = "Active";
 
 /* No comment provided by engineer. */
@@ -150,7 +150,7 @@ Competitive matches after your placements can be identified without their detail
 /* Match List: accessibility label */
 "Add Bookmark" = "Add Bookmark";
 
-/* No comment provided by engineer. */
+/* Account Settings */
 "Add another Account" = "Add another Account";
 
 /* Pro Features List */
@@ -315,7 +315,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Choose Title" = "Choose Title";
 
-/* No comment provided by engineer. */
+/* Contract Picker: title */
 "Choose a Contract" = "Choose a Contract";
 
 /* No comment provided by engineer. */
@@ -324,7 +324,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Clear All" = "Clear All";
 
-/* No comment provided by engineer. */
+/* Contract Picker */
 "Completed" = "Completed";
 
 /* No comment provided by engineer. */
@@ -759,7 +759,7 @@ Competitive matches after your placements can be identified without their detail
 /* Hit Distribution Stats: error */
 "Not enough data!" = "Not enough data!";
 
-/* No comment provided by engineer. */
+/* Account Settings */
 "Not signed in yet." = "Not signed in yet.";
 
 /* No comment provided by engineer. */
@@ -877,15 +877,12 @@ Competitive matches after your placements can be identified without their detail
 "Recon Bolt does not have and will never have ads. The only way it can make money is through in-app purchases." = "Recon Bolt does not have and will never have ads. The only way it can make money is through in-app purchases.";
 
 /* No comment provided by engineer. */
-"Recon Bolt is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games and all associated properties are trademarks or registered trademarks of Riot Games, Inc" = "Recon Bolt is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games and all associated properties are trademarks or registered trademarks of Riot Games, Inc";
-
-/* No comment provided by engineer. */
 "Recon Bolt started development in early 2021, back when it wasn't yet possible to see your RR gains and losses in the game, but the API offered those numbers." = "Recon Bolt started development in early 2021, back when it wasn't yet possible to see your RR gains and losses in the game, but the API offered those numbers.";
 
 /* Top-Level Tab Title */
 "Reference" = "Reference";
 
-/* No comment provided by engineer. */
+/* Account Settings: button to refresh expired session */
 "Refresh" = "Refresh";
 
 /* No comment provided by engineer. */
@@ -945,7 +942,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Series" = "Series";
 
-/* No comment provided by engineer. */
+/* Account Settings */
 "Session expired!" = "Session expired!";
 
 /* Top-Level Tab Title */
@@ -969,13 +966,13 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Side" = "Side";
 
-/* No comment provided by engineer. */
+/* Account Settings: button */
 "Sign In" = "Sign In";
 
 /* No comment provided by engineer. */
 "Sign In with your Riot account" = "Sign In with your Riot account";
 
-/* No comment provided by engineer. */
+/* Account Settings */
 "Sign Out" = "Sign Out";
 
 /* No comment provided by engineer. */
@@ -1005,13 +1002,14 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Statistics" = "Statistics";
 
-/* No comment provided by engineer. */
+/* Statistics Pro purchase prompt */
 "Statistics not available!" = "Statistics not available!";
 
-/* No comment provided by engineer. */
+/* Statistics Pro purchase prompt: 'Recon Bolt Pro' is inserted in the placeholder with a bolder font. */
 "Statistics require %@, a one-time purchase including a variety of features. Want to give them a look?" = "Statistics require %@, a one-time purchase including a variety of features. Want to give them a look?";
 
-/* Store Widget: title */
+/* Store Widget: title
+Settings: section */
 "Store" = "Store";
 
 /* No comment provided by engineer. */
@@ -1056,7 +1054,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Third-Party Libraries & APIs Used" = "Third-Party Libraries & APIs Used";
 
-/* No comment provided by engineer. */
+/* Statistics error for iOS <16 */
 "This feature requires iOS 16 or newer." = "This feature requires iOS 16 or newer.";
 
 /* No comment provided by engineer. */
@@ -1167,7 +1165,7 @@ Competitive matches after your placements can be identified without their detail
 /* Match List */
 "View Stats" = "View Stats";
 
-/* No comment provided by engineer. */
+/* Statistics Pro purchase prompt: button */
 "View Store in Settings" = "View Store in Settings";
 
 /* Rank Widget: description */

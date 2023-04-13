@@ -15,11 +15,11 @@ struct StatisticsContainer: View {
 			} else {
 				GroupBox {
 					VStack {
-						Text("Statistics not available!")
+						Text("Statistics not available!", comment: "Statistics Pro purchase prompt")
 							.font(.title.weight(.bold))
 							.padding(.bottom, 4)
 						
-						Text("Statistics require \(Text("Recon Bolt Pro").fontWeight(.medium)), a one-time purchase including a variety of features. Want to give them a look?")
+						Text("Statistics require \(Text("Recon Bolt Pro").fontWeight(.medium)), a one-time purchase including a variety of features. Want to give them a look?", comment: "Statistics Pro purchase prompt: 'Recon Bolt Pro' is inserted in the placeholder with a bolder font.")
 							.frame(maxWidth: .infinity, alignment: .leading)
 							.padding(.bottom, 12)
 						
@@ -29,7 +29,7 @@ struct StatisticsContainer: View {
 							deepLink(.storefront)
 						} label: {
 							HStack {
-								Text("View Store in Settings")
+								Text("View Store in Settings", comment: "Statistics Pro purchase prompt: button")
 								Image(systemName: "chevron.right")
 							}
 						}
@@ -44,10 +44,10 @@ struct StatisticsContainer: View {
 		} else {
 			GroupBox {
 				VStack {
-					Text("Statistics not available!")
+					Text("Statistics not available!", comment: "Statistics error for iOS <16")
 						.font(.title.weight(.bold))
 						.padding(.bottom, 4)
-					Text("This feature requires iOS 16 or newer.")
+					Text("This feature requires iOS 16 or newer.", comment: "Statistics error for iOS <16")
 				}
 			}
 			.padding()

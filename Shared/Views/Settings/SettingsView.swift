@@ -17,7 +17,7 @@ struct SettingsView: View {
 			Form {
 				AccountSettingsView(accountManager: accountManager)
 				
-				Section("Settings") {
+				Section(header: Text("Settings", comment: "Settings: section")) {
 					Picker("Theme", selection: $settings.theme) {
 						ForEach(AppSettings.Theme.allCases, id: \.self) { theme in
 							Text(theme.name)
@@ -43,12 +43,12 @@ struct SettingsView: View {
 					}
 				}
 				
-				Section("Store") {
+				Section(header: Text("Store", comment: "Settings: section")) {
 					InAppStorefront(store: store)
 						.id(storefrontID)
 				}
 				
-				Section("About") {
+				Section(header: Text("About", comment: "Settings: section")) {
 					NavigationLink {
 						AboutScreen()
 					} label: {

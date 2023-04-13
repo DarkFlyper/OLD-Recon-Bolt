@@ -11,7 +11,7 @@ struct AccountSettingsView: View {
 		Section {
 			cells
 		} header: {
-			Text("Accounts")
+			Text("Accounts", comment: "Settings: section")
 		} footer: {
 			legalBoilerplate
 		}
@@ -29,20 +29,24 @@ struct AccountSettingsView: View {
 	var cells: some View {
 		if accountManager.activeAccount?.session.hasExpired == true {
 			HStack {
-				Text("Session expired!")
+				Text("Session expired!", comment: "Account Settings")
 				Spacer()
-				Button("Refresh") {
+				Button {
 					loginTarget = .sessionRefresh
+				} label: {
+					Text("Refresh", comment: "Account Settings: button to refresh expired session")
 				}
 				.font(.body.bold())
 			}
 		}
 		
 		if accountManager.storedAccounts.isEmpty {
-			Text("Not signed in yet.")
+			Text("Not signed in yet.", comment: "Account Settings")
 			
-			Button("Sign In") {
+			Button {
 				loginTarget = .firstAccount
+			} label: {
+				Text("Sign In", comment: "Account Settings: button")
 			}
 			.font(.body.weight(.medium))
 		} else {
@@ -54,8 +58,10 @@ struct AccountSettingsView: View {
 			.moveDisabled(!ownsProVersion)
 			
 			if !ownsProVersion {
-				Button("Sign Out") {
+				Button {
 					accountManager.clear()
+				} label: {
+					Text("Sign Out", comment: "Account Settings")
 				}
 			}
 			
@@ -63,7 +69,7 @@ struct AccountSettingsView: View {
 				loginTarget = .extraAccount
 			} label: {
 				Label {
-					Text("Add another Account")
+					Text("Add another Account", comment: "Account Settings")
 				} icon: {
 					// the icon doesn't get tinted correctly if i don't do this…
 					Image(systemName: "plus")
@@ -75,7 +81,7 @@ struct AccountSettingsView: View {
 	}
 	
 	var legalBoilerplate: some View {
-		Text("Recon Bolt is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games and all associated properties are trademarks or registered trademarks of Riot Games, Inc")
+		Text(verbatim: "Recon Bolt is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games and all associated properties are trademarks or registered trademarks of Riot Games, Inc.") // legally best not to translate this ig, couldn't find versions in other languages
 			.font(.footnote)
 			.foregroundStyle(.secondary)
 			.frame(maxWidth: .infinity, alignment: .leading)
