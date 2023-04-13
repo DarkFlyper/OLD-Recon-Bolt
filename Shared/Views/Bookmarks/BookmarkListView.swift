@@ -19,7 +19,7 @@ struct BookmarkListView: View {
 					case .career(let id) = link.destination
 				else { return }
 				
-				selection = .init(userID: id)
+				selection = id == userID ? .ownUser : .init(userID: id)
 				scrollView.scrollTo(selection)
 			}
 		}
