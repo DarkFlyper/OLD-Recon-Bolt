@@ -94,8 +94,8 @@ let projectFolder = URL(filePath: #filePath) // this source file
 	.deletingLastPathComponent() // XLIFF Extractor
 	.deletingLastPathComponent() // Recon Bolt
 
-let localizationsFolder = projectFolder.appending(components: "Resources", "Recon Bolt Localizations/")
-let xliff = localizationsFolder.appending(components: "en.xcloc", "Localized Contents", "en.xliff")
+let localizationsFolder = projectFolder.appending(path: "Resources/Recon Bolt Localizations/")
+let xliff = localizationsFolder.appending(path: "en.xcloc/Localized Contents/en.xliff")
 print("Reading from \(xliff.relativePath)")
 
 let reader = Reader()
@@ -109,7 +109,7 @@ guard parser.parse() else {
 	fatalError()
 }
 
-let outputFolder = localizationsFolder.appending(component: "Extracted/")
+let outputFolder = projectFolder.appending(path: "Resources/Strings/")
 print("outputting extracted files to \(outputFolder.relativePath)")
 
 let fileManager = FileManager.default

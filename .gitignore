@@ -3,3 +3,4 @@ xcuserdata/
 
 # Swift Package Manager
 /.swiftpm
+*.xcloc
