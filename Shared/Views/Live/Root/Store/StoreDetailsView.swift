@@ -109,7 +109,7 @@ struct StoreDetailsView: View {
 				.overlay(alignment: .bottomTrailing) {
 					VStack {
 						CurrencyLabel.multiple(for: offer.discountedCosts)
-						Text("-\(offer.discountPercent)%")
+						Text("-\(offer.discountPercent)%", comment: "Night Market Discount")
 							.font(.footnote.bold())
 							.foregroundColor(.accentColor)
 					}

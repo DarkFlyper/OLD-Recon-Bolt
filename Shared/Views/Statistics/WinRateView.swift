@@ -273,9 +273,9 @@ struct WinRateView: View {
 	}
 	
 	private func marks<Y: Plottable>(for tally: Tally, y: PlottableValue<Y>) -> some ChartContent {
-		ForEach(tally.data(), id: \.name) { name, count in
+		ForEach(tally.data(), id: \.key) { key, count in
 			BarMark(x: .value("Count", count), y: y, stacking: stacking)
-				.foregroundStyle(by: .value("Outcome", name))
+				.foregroundStyle(by: .value("Outcome", key))
 		}
 	}
 	
@@ -305,7 +305,7 @@ struct WinRateView: View {
 						y: .value("Count", data.entry.count),
 						stacking: stacking
 					)
-					.foregroundStyle(by: .value("Outcome", data.entry.name))
+					.foregroundStyle(by: .value("Outcome", data.entry.key))
 				}
 			}
 			.chartForegroundStyleScale(Tally.foregroundStyleScale)
@@ -350,12 +350,12 @@ private struct RoundsByLoadoutDeltaChart: View {
 					y: .value("Count", entry.count),
 					stacking: stacking
 				)
-				.foregroundStyle(by: .value("Outcome", entry.name))
+				.foregroundStyle(by: .value("Outcome", entry.key))
 				.opacity(focusedDelta.map { $0.contains(delta) } == false ? 0.5 : 1)
 			}
 		}
 		.chartForegroundStyleScale(Tally.foregroundStyleScale)
-		.chartXAxisLabel("Value Difference (credits)", alignment: .center)
+		.chartXAxisLabel(String(localized: "Value Difference (credits)", comment: "Win Rate Stats by Loadout Delta"), alignment: .center)
 		.chartPlotStyle { $0.frame(height: 200).clipped() }
 		.chartLegend(.hidden)
 		.withChartXGesture { focusedDelta = $0.map(binRange(forDelta:)) }
@@ -375,16 +375,16 @@ private struct RoundsByLoadoutDeltaChart: View {
 				.reduce(into: .zero, +=)
 			
 			VStack(alignment: .leading) {
-				Text("\(focusedDelta.lowerBound) to \(focusedDelta.upperBound) credits")
+				Text("\(focusedDelta.lowerBound) to \(focusedDelta.upperBound) credits", comment: "Win Rate Stats by Loadout Delta")
 					.font(.footnote)
 					.foregroundStyle(.secondary)
 				HStack {
 					if tally != .zero {
-						Text("\(tally.winFraction, format: .precisePercent) won", comment: "%@ is replaced by the percentage of rounds won, e.g. '57.3% won'.")
-						Text("(\(tally.wins) – \(tally.losses))")
+						Text("\(tally.winFraction, format: .precisePercent) won", comment: "Win Rate Stats by Loadout Delta: placeholder is replaced by the percentage of rounds won, e.g. '57.3% won'.")
+						Text("(\(tally.wins) – \(tally.losses))", comment: "Win Rate Stats by Loadout Delta")
 							.foregroundStyle(.secondary)
 					} else {
-						Text("No data")
+						Text("No data", comment: "Win Rate Stats by Loadout Delta")
 							.foregroundStyle(.secondary)
 					}
 				}
@@ -447,36 +447,57 @@ private extension View {
 }
 
 extension Side {
-	var name: String { // TODO: localize!
+	var name: String {
 		switch self {
 		case .attacking:
-			return "Attacking"
+			return String(localized: "Attacking", comment: "Win Rate Stats: side name")
 		case .defending:
-			return "Defending"
+			return String(localized: "Defending", comment: "Win Rate Stats: side name")
 		}
 	}
 }
 
+@available(iOS 16.0, *)
 private extension Tally {
-	typealias Entry = (name: String, count: Int)
+	typealias Entry = (key: MatchOutcomeKey, count: Int)
 	
 	var winFraction: Double {
 		.init(wins) / .init(total)
 	}
 	
-	func data() -> [Entry] { // TODO: localize!
+	func data() -> [Entry] {
 		[
-			("Wins", wins),
-			("Draws", draws),
-			("Losses", losses),
+			(.wins, wins),
+			(.draws, draws),
+			(.losses, losses),
 		]
 	}
 	
-	static let foregroundStyleScale: KeyValuePairs = [
-		"Wins": Color.valorantBlue,
-		"Draws": Color.valorantSelf,
-		"Losses": Color.valorantRed,
+	static let foregroundStyleScale: KeyValuePairs<MatchOutcomeKey, Color> = [
+		.wins: .valorantBlue,
+		.draws: .valorantSelf,
+		.losses: .valorantRed,
 	]
+}
+
+@available(iOS 16.0, *)
+private enum MatchOutcomeKey: Plottable {
+	case wins, draws, losses
+	
+	init?(primitivePlottable: String) {
+		fatalError()
+	}
+	
+	var primitivePlottable: String {
+		switch self {
+		case .wins:
+			return String(localized: "Wins", comment: "Win Rate Stats: chart legend")
+		case .draws:
+			return String(localized: "Draws", comment: "Win Rate Stats: chart legend")
+		case .losses:
+			return String(localized: "Losses", comment: "Win Rate Stats: chart legend")
+		}
+	}
 }
 
 #if DEBUG

@@ -35,10 +35,10 @@ struct SearchableAssetPicker<Item: SearchableAsset, RowContent: View, Deselector
 				}
 			} footer: {
 				VStack(alignment: .leading) {
-					Text("\(ownedItems.count)/\(allItems.count) owned")
+					Text("\(ownedItems.count)/\(allItems.count) owned", comment: "Loadout Item Picker: number of items owned out of all such items in the game")
 					let missing = ownedItems.lazy.filter { allItems[$0] == nil }.count
 					if missing > 0 {
-						Text("\(missing) hidden due to outdated assets")
+						Text("\(missing) hidden due to outdated assets", comment: "Loadout Item Picker: number of hidden items—this should never show nowadays")
 					}
 				}
 			}

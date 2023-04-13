@@ -19,15 +19,15 @@ struct LoadingSection: View {
 	var body: some View {
 		Section {
 			VStack(alignment: .leading, spacing: 16) {
-				Text("To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!")
+				Text("To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!", comment: "Stats: match loading")
 				
 				Divider()
 				
 				VStack {
-					Text("Matches to load: ") + Text("\(fetchCount)").bold()
+					Text("Matches to load: **\(fetchCount)**", comment: "Stats: match loading")
 					
 					let oldestTime = sublist.last!.startTime
-					Text("Data going back to \(oldestTime, format: .dateTime.year().month().day())")
+					Text("Data going back to \(oldestTime, format: .dateTime.year().month().day())", comment: "Stats: match loading")
 						.foregroundStyle(.secondary)
 						.font(.footnote)
 					
@@ -36,8 +36,10 @@ struct LoadingSection: View {
 						changeButtons(magnitude: 10)
 						changeButtons(magnitude: 100)
 						
-						Button("All \(matchList.matches.count)") {
+						Button {
 							fetchCount = matchList.matches.count
+						} label: {
+							Text("All \(matchList.matches.count)", comment: "Stats: match loading")
 						}
 						.disabled(fetchCount == matchList.matches.count)
 					}
@@ -53,8 +55,10 @@ struct LoadingSection: View {
 				
 				Divider()
 				
-				Button("Load Latest \(fetchCount) Matches") {
+				Button {
 					fetcher.fetchMatches(withIDs: sublist.lazy.map(\.id), load: load)
+				} label: {
+					Text("Load Latest \(fetchCount) Matches", comment: "Stats: match loading")
 				}
 				.bold()
 				.buttonStyle(.borderedProminent)
@@ -63,15 +67,17 @@ struct LoadingSection: View {
 			.padding(.vertical, 4)
 			
 			if !fetcher.errors.isEmpty {
-				NavigationLink("^[\(fetcher.errors.count) Errors](inflect: true, grammar: { partOfSpeech: \"noun\" })") {
+				NavigationLink {
 					errorList()
+				} label: {
+					Text("^[\(fetcher.errors.count) Errors](inflect: true, grammar: { partOfSpeech: \"noun\" })", comment: "Stats: match loading")
 				}
 			}
 		} header: {
-			Text("Load Data")
+			Text("Load Data", comment: "Stats: match loading")
 		} footer: {
 			let fetchedCount = sublist.count { fetcher.matches.keys.contains($0.id) }
-			Text("\(fetchedCount)/\(fetchCount) loaded")
+			Text("\(fetchedCount)/\(fetchCount) loaded", comment: "Stats: match loading")
 		}
 		.onReceive(
 			fetcher.objectWillChange
@@ -99,12 +105,12 @@ struct LoadingSection: View {
 	func errorDetails(_ error: Error, for match: CompetitiveUpdate) -> some View {
 		ScrollView {
 			VStack(alignment: .leading, spacing: 8) {
-				Text("Match")
+				Text("Match", comment: "Stats: error details")
 					.font(.title3.bold())
 				match.mapID.map(MapImage.LabelText.init)
 				Text(match.id.description)
 				
-				Text("Error")
+				Text("Error", comment: "Stats: error details")
 					.font(.title3.bold())
 					.padding(.top)
 				Text(error.localizedDescription)
@@ -118,7 +124,7 @@ struct LoadingSection: View {
 			Button {
 				UIPasteboard.general.string = "\(match.id)\n\(error.localizedDescription)"
 			} label: {
-				Label("Copy Error", systemImage: "doc.on.doc")
+				Label(String(localized: "Copy Error", comment: "Stats: error details, currently not visible"), systemImage: "doc.on.doc")
 			}
 		}
 	}

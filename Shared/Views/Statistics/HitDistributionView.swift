@@ -160,9 +160,9 @@ struct HitDistributionView: View {
 			
 			Chart {
 				ForEach(smoothed.indices, id: \.self) { index in
-					ForEach(smoothed[index].data(), id: \.name) { name, hits in
+					ForEach(smoothed[index].data(), id: \.key) { key, hits in
 						AreaMark(x: .value("Match", index), y: .value("Hits", hits), stacking: .normalized)
-							.foregroundStyle(by: .value("Part", name))
+							.foregroundStyle(by: .value("Part", key))
 					}
 				}
 				
@@ -181,9 +181,9 @@ struct HitDistributionView: View {
 			.chartXAxis(.hidden)
 			.chartYAxis(.hidden)
 			.chartForegroundStyleScale([
-				"Legs": Color.valorantRed,
-				"Body": Color.valorantBlue,
-				"Head": Color.valorantSelf,
+				HitRegionKey.legs: Color.valorantRed,
+				HitRegionKey.body: Color.valorantBlue,
+				HitRegionKey.head: Color.valorantSelf,
 			])
 			.compositingGroup()
 		}
@@ -225,15 +225,35 @@ private struct FractionalTally {
 		lhs += rhs.normalized()
 	}
 	
-	func data() -> [(name: String, hits: Double)] {
+	@available(iOS 16.0, *)
+	func data() -> [(key: HitRegionKey, hits: Double)] {
 		[ // order matters
-			("Legs", legshots),
-			("Body", bodyshots),
-			("Head", headshots),
+			(.legs, legshots),
+			(.body, bodyshots),
+			(.head, headshots),
 		]
 	}
 }
 
+@available(iOS 16.0, *)
+private enum HitRegionKey: Plottable {
+	case legs, body, head
+	
+	init?(primitivePlottable: String) {
+		fatalError()
+	}
+	
+	var primitivePlottable: String {
+		switch self {
+		case .legs:
+			return String(localized: "Legs", comment: "Hit Distribution Stats: chart legend")
+		case .body:
+			return String(localized: "Body", comment: "Hit Distribution Stats: chart legend")
+		case .head:
+			return String(localized: "Head", comment: "Hit Distribution Stats: chart legend")
+		}
+	}
+}
 private extension Statistics.HitDistribution.Tally {
 	func normalized() -> FractionalTally {
 		.init(

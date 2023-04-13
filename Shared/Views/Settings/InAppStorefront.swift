@@ -13,19 +13,19 @@ struct InAppStorefront: View {
 				
 				VStack(alignment: .leading, spacing: 8) {
 					if store.ownsProVersion {
-						Text("Thank you for supporting Recon Bolt!").font(.callout)
-						Text("I hope you enjoy the pro features :)").font(.callout)
+						Text("Thank you for supporting Recon Bolt!", comment: "Pro Store").font(.callout)
+						Text("I hope you enjoy the pro features :)", comment: "Pro Store").font(.callout)
 					} else {
-						let bullets: [LocalizedStringKey] = [
-							"Support Further Development!",
-							"Multiple Accounts",
-							"Home Screen Widgets",
-							"Advanced Stats",
+						let bullets = [
+							Text("Support Further Development!", comment: "Pro Store"),
+							Text("Multiple Accounts", comment: "Pro Store"),
+							Text("Home Screen Widgets", comment: "Pro Store"),
+							Text("Advanced Stats", comment: "Pro Store"),
 						]
 						ForEach(bullets.indexed(), id: \.index) { _, bullet in
 							HStack(spacing: 8) {
 								Circle().frame(width: 3, height: 3)
-								Text(bullet)
+								bullet
 							}
 						}
 						.font(.footnote)
@@ -43,8 +43,10 @@ struct InAppStorefront: View {
 				.layoutPriority(-1)
 		}
 		
-		NavigationLink("View All Features") {
+		NavigationLink {
 			ProFeaturesOverview()
+		} label: {
+			Text("View All Features", comment: "Pro Store")
 		}
 		
 		if !store.ownsProVersion {
@@ -63,13 +65,13 @@ struct InAppStorefront: View {
 					purchaseError = error
 				}
 			} label: {
-				Text("Purchase – \(product.displayPrice)")
+				Text("Purchase – \(product.displayPrice)", comment: "Pro Store (placeholder filled with formatted currency)")
 					.frame(maxWidth: .infinity)
 			}
 			.alert("Purchase Failed!", for: $purchaseError)
 		} else {
 			HStack {
-				Text("Loading Store Info…")
+				Text("Loading Store Info…", comment: "Pro Store")
 					.foregroundStyle(.secondary)
 				Spacer()
 				ProgressView()
@@ -83,29 +85,29 @@ struct ProFeaturesOverview: View {
 	var body: some View {
 		List {
 			Section {
-				description("Support Development :)") {
-					Text("Recon Bolt does not have and will never have ads. The only way it can make money is through in-app purchases.")
+				description(Text("Support Development :)", comment: "Pro Features List")) {
+					Text("Recon Bolt does not have and will never have ads. The only way it can make money is through in-app purchases.", comment: "Pro Features List")
 					
-					Text("Getting money from Recon Bolt gives me the flexibility and motivation to keep improving the app!")
+					Text("Getting money from Recon Bolt gives me the flexibility and motivation to keep improving the app!", comment: "Pro Features List")
 				}
 			}
 			
 			Section {
 				image("multiple accounts")
 				
-				description("Multiple Account Support") {
-					Text("Add multiple accounts and seamlessly switch between them at any time.")
-					Text("If you have accounts in multiple regions to play with friends around the world, this is the feature for you!")
+				description(Text("Multiple Account Support", comment: "Pro Features List")) {
+					Text("Add multiple accounts and seamlessly switch between them at any time.", comment: "Pro Features List")
+					Text("If you have accounts in multiple regions to play with friends around the world, this is the feature for you!", comment: "Pro Features List")
 				}
 			}
 			
 			Section {
 				image("widgets")
 				
-				description("Home Screen Widgets") {
-					Text("View your storefront, daily/weekly missions, or current rank without even having to open the app!")
-					Text("If you have multiple accounts, you can configure separate widgets for each and have them on your Home Screen at the same time.")
-					Text("Note: Widgets are only available on iOS 16 and newer.")
+				description(Text("Home Screen Widgets", comment: "Pro Features List")) {
+					Text("View your storefront, daily/weekly missions, or current rank without even having to open the app!", comment: "Pro Features List")
+					Text("If you have multiple accounts, you can configure separate widgets for each and have them on your Home Screen at the same time.", comment: "Pro Features List")
+					Text("Note: Widgets are only available on iOS 16 and newer.", comment: "Pro Features List")
 						.fontWeight(.medium)
 						.font(.footnote)
 				}
@@ -113,9 +115,9 @@ struct ProFeaturesOverview: View {
 			
 			Section {
 				image("stats")
-				description("Advanced Stats") {
-					Text("Gather statistics from anyone's games to gain insights on things like time played by mode/premade, headshot rate over time/by weapon, win rate over time/by map & side, and more!")
-					Text("Note: Statistics are only available on iOS 16 and newer.")
+				description(Text("Advanced Stats", comment: "Pro Features List")) {
+					Text("Gather statistics from anyone's games to gain insights on things like time played by mode/premade, headshot rate over time/by weapon, win rate over time/by map & side, and more!", comment: "Pro Features List")
+					Text("Note: Statistics are only available on iOS 16 and newer.", comment: "Pro Features List")
 						.fontWeight(.medium)
 						.font(.footnote)
 				}
@@ -132,15 +134,15 @@ struct ProFeaturesOverview: View {
 				.padding()
 				.frame(maxHeight: 256)
 				
-				description("Exclusive App Icon") {
-					Text("As thanks for your support, you get to show off your status with an exclusive app icon!")
-					Text("(You can switch between available icons at any time.)")
+				description(Text("Exclusive App Icon", comment: "Pro Features List")) {
+					Text("As thanks for your support, you get to show off your status with an exclusive app icon!", comment: "Pro Features List")
+					Text("(You can switch between available icons at any time.)", comment: "Pro Features List")
 				}
 			}
 			
 			Section {
-				description("Family Sharing") {
-					Text("Recon Bolt Pro supports Family Sharing, meaning if just one member of your iCloud family buys it, everyone can use it!")
+				description(Text("Family Sharing", comment: "Pro Features List")) {
+					Text("Recon Bolt Pro supports Family Sharing, meaning if just one member of your iCloud family buys it, everyone can use it!", comment: "Pro Features List")
 				}
 			}
 		}
@@ -173,9 +175,9 @@ struct ProFeaturesOverview: View {
 			.listRowSeparator(.hidden)
 	}
 	
-	func description(_ headline: LocalizedStringKey, @ViewBuilder _ content: () -> some View) -> some View {
+	func description(_ headline: Text, @ViewBuilder _ content: () -> some View) -> some View {
 		VStack(alignment: .leading, spacing: 8) {
-			Text(headline)
+			headline
 				.font(.title3.bold())
 				.padding(.bottom, 4)
 			
