@@ -1,3 +1,5 @@
 files:
-  - source: /Resources/Recon Bolt Localizations/Extracted
-    translation: /%original_path%/%osx_code%/%file_name%.%file_extension%
+  - source: /Resources/Strings/iOS/*.*
+    translation: /iOS/%osx_code%/%file_name%.%file_extension%
+  - source: /Resources/Strings/Shared/Strings/*.*
+    translation: /Shared/Strings/%osx_code%/%file_name%.%file_extension%
