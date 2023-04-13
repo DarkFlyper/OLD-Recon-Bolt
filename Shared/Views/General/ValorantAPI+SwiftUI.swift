@@ -48,7 +48,7 @@ extension Location {
 		case .pbe:
 			return String(localized: "PBE", table: "Locations")
 		default:
-			return String(localized: "<Unknown Location>", table: "Locations")
+			return String(localized: "Unknown Location", table: "Locations")
 		}
 	}
 }

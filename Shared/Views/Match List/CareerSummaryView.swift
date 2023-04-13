@@ -87,7 +87,7 @@ struct CareerSummaryView: View {
 				.reduce((0, 0)) { ($0.0 + $1.0, $0.1 + $1.1) }
 			
 			VStack {
-				Text("ALL TIME")
+				Text("ALL TIME", comment: "Career Summary: header for totals of all time")
 					.font(.subheadline.weight(.semibold))
 					.foregroundStyle(.secondary)
 				

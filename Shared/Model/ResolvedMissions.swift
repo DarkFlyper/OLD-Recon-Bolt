@@ -90,7 +90,7 @@ struct ResolvedMission {
 			.valorantLocalized(number: toComplete)
 		?? info.displayName
 		?? info.title
-		?? "<Unnamed Mission>"
+		?? "Unnamed Mission"
 	}
 }
 

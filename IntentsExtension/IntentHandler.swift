@@ -46,7 +46,7 @@ final class IntentHandler: NSObject {
 			let user = await manager.cachedObject(for: userID)
 			accounts.append(.init(
 				identifier: userID.rawID.description,
-				display: user?.name ?? "<Unknown Account>"
+				display: user?.name ?? "Unknown Account"
 			))
 		}
 		return INObjectCollection(items: accounts)

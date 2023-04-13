@@ -113,15 +113,6 @@
 "< %@" = "< %@";
 
 /* No comment provided by engineer. */
-"<Binary Data>" = "<Binary Data>";
-
-/* No comment provided by engineer. */
-"<Unknown Bundle>" = "<Unknown Bundle>";
-
-/* No comment provided by engineer. */
-"<unknown title>" = "<unknown title>";
-
-/* No comment provided by engineer. */
 "=" = "=";
 
 /* No comment provided by engineer. */
@@ -135,7 +126,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "AFK: %lld" = "AFK: %lld";
 
-/* No comment provided by engineer. */
+/* Career Summary: header for totals of all time */
 "ALL TIME" = "ALL TIME";
 
 /* No comment provided by engineer. */
@@ -246,13 +237,16 @@ Competitive matches after your placements can be identified without their detail
 /* Hit Distribution Stats: average HS% */
 "Average: %@" = "Average: %@";
 
+/* No comment provided by engineer. */
+"Binary Data" = "Binary Data";
+
 /* Hit Distribution Stats: region */
 "Body" = "Body";
 
 /* Bookmark/Player List: section */
 "Bookmarks" = "Bookmarks";
 
-/* No comment provided by engineer. */
+/* Gun Customizer: section */
 "Buddy" = "Buddy";
 
 /* No comment provided by engineer. */
@@ -294,7 +288,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Change Queue" = "Change Queue";
 
-/* No comment provided by engineer. */
+/* Gun Customizer */
 "Change Skin" = "Change Skin";
 
 /* Store Widget: description */
@@ -387,8 +381,11 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Custom" = "Custom";
 
-/* No comment provided by engineer. */
+/* Gun Customizer: title */
 "Customize %@" = "Customize %@";
+
+/* Gun Customizer: title */
+"Customize Gun" = "Customize Gun";
 
 /* Missions Widget */
 "Daily" = "Daily";
@@ -735,7 +732,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "No Title" = "No Title";
 
-/* No comment provided by engineer. */
+/* Gun Customizer */
 "No buddy selected!" = "No buddy selected!";
 
 /* No comment provided by engineer. */
@@ -1101,6 +1098,12 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Unknown Agent" = "Unknown Agent";
 
+/* placeholder */
+"Unknown Buddy" = "Unknown Buddy";
+
+/* placeholder */
+"Unknown Bundle" = "Unknown Bundle";
+
 /* No comment provided by engineer. */
 "Unknown Offer!" = "Unknown Offer!";
 
@@ -1110,8 +1113,14 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Unknown Queue" = "Unknown Queue";
 
+/* placeholder */
+"Unknown Skin" = "Unknown Skin";
+
 /* No comment provided by engineer. */
 "Unknown Tier" = "Unknown Tier";
+
+/* placeholder */
+"Unknown Title" = "Unknown Title";
 
 /* Round Details: killed by unknown damage source/type */
 "Unknown Type" = "Unknown Type";

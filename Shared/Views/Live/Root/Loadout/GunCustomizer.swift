@@ -17,8 +17,16 @@ struct GunCustomizer: View {
 				buddySection
 			}
 		}
-		.navigationTitle("Customize \(assets?.weapons[gun.id]?.displayName ?? "Gun")")
+		.navigationTitle(title)
 		.navigationBarTitleDisplayMode(.inline)
+	}
+	
+	var title: Text {
+		if let weapon = assets?.weapons[gun.id] {
+			return Text("Customize \(weapon.displayName)", comment: "Gun Customizer: title")
+		} else {
+			return Text("Customize Gun", comment: "Gun Customizer: title")
+		}
 	}
 	
 	var skinSection: some View {
@@ -38,8 +46,10 @@ struct GunCustomizer: View {
 					levelPicker
 				}
 				
-				NavigationLink("Change Skin") {
+				NavigationLink {
 					SkinPicker(gun: $gun, inventory: inventory)
+				} label: {
+					Text("Change Skin", comment: "Gun Customizer")
 				}
 			}
 			.frame(maxWidth: .infinity)
@@ -47,23 +57,25 @@ struct GunCustomizer: View {
 	}
 	
 	var buddySection: some View {
-		Section("Buddy") {
+		Section(header: Text("Buddy", comment: "Gun Customizer: section")) {
 			ZStack {
 				if let buddy = gun.buddy {
 					let info = assets?.buddies[buddy.buddy]
 					VStack {
 						(info?.displayIcon).view()
 							.frame(width: 60)
-						Text(info?.displayName ?? "<unknown buddy>")
+						UnwrappingView(value: info, placeholder: Text("Unknown Buddy", comment: "placeholder")) {
+							Text($0.displayName)
+						}
 					}
 				} else {
-					Text("No buddy selected!")
+					Text("No buddy selected!", comment: "Gun Customizer")
 						.foregroundColor(.secondary)
 				}
 				
-				Text("").frame(maxWidth: .infinity, alignment: .leading)
 			}
 			.frame(maxWidth: .infinity)
+			.aligningListRowSeparator()
 			
 			NavigationLink("Change Buddy") {
 				BuddyPicker(weapon: gun.id, loadout: $loadout, inventory: inventory)

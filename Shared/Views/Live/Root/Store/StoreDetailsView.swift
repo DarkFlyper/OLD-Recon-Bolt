@@ -97,7 +97,7 @@ struct StoreDetailsView: View {
 				}
 				.padding(12)
 			} else {
-				Text("<Unknown Bundle>")
+				Text("Unknown Bundle", comment: "placeholder")
 					.padding(12)
 			}
 		}
@@ -156,9 +156,11 @@ struct OfferCell: View {
 				.frame(height: 60)
 			
 			HStack(alignment: .lastTextBaseline) {
-				Text((resolved?.skin.displayName ?? "<Unknown Skin>"))
-					.fontWeight(.medium)
-					.fixedSize(horizontal: false, vertical: true)
+				UnwrappingView(value: resolved, placeholder: Text("Unknown Skin", comment: "placeholder")) {
+					Text($0.skin.displayName)
+				}
+				.font(.body.weight(.medium))
+				.fixedSize(horizontal: false, vertical: true)
 				
 				Spacer()
 				

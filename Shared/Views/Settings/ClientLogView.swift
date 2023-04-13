@@ -179,7 +179,7 @@ YOUR BUG REPORT HERE
 								.font(.footnote.monospaced())
 								.frame(maxWidth: .infinity, alignment: .leading)
 						} else {
-							Text("<Binary Data>")
+							Text("Binary Data")
 								.foregroundStyle(.secondary)
 						}
 					}

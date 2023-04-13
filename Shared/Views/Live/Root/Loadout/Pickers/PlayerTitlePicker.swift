@@ -41,7 +41,7 @@ struct PlayerTitleLabel: View {
 		} else if titleID.isPseudoNull {
 			blank
 		} else {
-			Text("<unknown title>")
+			Text("Unknown Title", comment: "placeholder")
 				.foregroundStyle(.secondary)
 		}
 	}
