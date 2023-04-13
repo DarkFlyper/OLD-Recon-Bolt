@@ -118,7 +118,8 @@ if fileManager.fileExists(atPath: outputFolder.relativePath) {
 }
 
 for file in reader.files {
-	let outputURL = URL(filePath: file.path, relativeTo: outputFolder)
+	let basePath = file.path.replacingOccurrences(of: "en.lproj/", with: "")
+	let outputURL = URL(filePath: basePath, relativeTo: outputFolder)
 	try! fileManager.createDirectory(at: outputURL.deletingLastPathComponent(), withIntermediateDirectories: true)
 	
 	if file.path.hasSuffix(".strings") {
