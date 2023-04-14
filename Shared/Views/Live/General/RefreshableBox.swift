@@ -2,7 +2,7 @@ import SwiftUI
 import ValorantAPI
 
 struct RefreshableBox<Content: View>: View {
-	var title: String
+	var title: LocalizedStringKey
 	@Binding var isExpanded: Bool
 	@ViewBuilder var content: () -> Content
 	var refresh: (ValorantClient) async throws -> Void

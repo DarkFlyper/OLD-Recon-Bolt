@@ -225,7 +225,7 @@ struct PartyInfoBox_Previews: PreviewProvider {
 	}
 	
 	static func previewBox<Content: View>(@ViewBuilder content: @escaping () -> Content) -> some View {
-		RefreshableBox(title: "Party Info", isExpanded: .constant(true)) {
+		RefreshableBox(title: "\("Party")", isExpanded: .constant(true)) {
 			Divider()
 			content()
 		} refresh: { _ in }

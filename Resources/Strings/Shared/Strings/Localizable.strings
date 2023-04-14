@@ -825,6 +825,9 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Part" = "Part";
 
+/* No comment provided by engineer. */
+"Party" = "Party";
+
 /* Scoreboard: party letter */
 "Party %@" = "Party %@";
 
