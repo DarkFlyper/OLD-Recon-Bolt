@@ -58,7 +58,10 @@ struct WinRateView: View {
 			.aligningListRowSeparator()
 			.padding(.vertical)
 		
-		Picker("Group by", selection: $timeGrouping) {
+		Picker(
+			String(localized: "Group by", comment: "Stats: date grouping size picker"),
+			selection: $timeGrouping
+		) {
 			ForEach(DateBinSize.allCases) { size in
 				Text(size.name).tag(size)
 			}

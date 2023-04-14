@@ -79,7 +79,7 @@
 /* Time Formatting: minutes, seconds, & milliseconds (used in round details view) */
 "%lld:%@.%@" = "%lld:%@.%@";
 
-/* No comment provided by engineer. */
+/* Contract Progress Bar */
 "%lld / %lld XP" = "%lld / %lld XP";
 
 /* Win Rate Stats by Loadout Delta */
@@ -237,10 +237,10 @@ Competitive matches after your placements can be identified without their detail
 /* Hit Distribution Stats: average HS% */
 "Average: %@" = "Average: %@";
 
-/* Client Log: shown for bodies that are not decodable to text */
+/* Request Log: shown for bodies that are not decodable to text */
 "Binary Data" = "Binary Data";
 
-/* Client Log: title for detailed view of request body/contents
+/* Request Log: title for detailed view of request body/contents
 Hit Distribution Stats: region */
 "Body" = "Body";
 
@@ -378,7 +378,10 @@ Playtime Stats: section */
 "Current version: %@" = "Current version: %@";
 
 /* No comment provided by engineer. */
-"Currently %@." = "Currently %@.";
+"Currently in agent select" = "Currently in agent select";
+
+/* No comment provided by engineer. */
+"Currently in-game" = "Currently in-game";
 
 /* No comment provided by engineer. */
 "Custom" = "Custom";
@@ -395,7 +398,7 @@ Playtime Stats: section */
 /* Store */
 "Daily Offers" = "Daily Offers";
 
-/* No comment provided by engineer. */
+/* App Theme */
 "Dark Mode" = "Dark Mode";
 
 /* Hit Distribution Stats */
@@ -407,10 +410,10 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Day" = "Day";
 
-/* No comment provided by engineer. */
+/* App Icon Name */
 "Default" = "Default";
 
-/* No comment provided by engineer. */
+/* App Icon Picker: section */
 "Default Icon" = "Default Icon";
 
 /* Win Rate Stats: side name */
@@ -440,7 +443,7 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "ELO" = "ELO";
 
-/* No comment provided by engineer. */
+/* Request Log: shown in place of a status code (like 200 or 404) when sending failed. */
 "ERROR" = "ERROR";
 
 /* Match List: accessibility label */
@@ -458,10 +461,7 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Error downloading assets!" = "Error downloading assets!";
 
-/* No comment provided by engineer. */
-"Example" = "Example";
-
-/* Client Log: title for an exchange */
+/* Request Log: title for an exchange */
 "Exchange" = "Exchange";
 
 /* Pro Features List */
@@ -480,7 +480,7 @@ YOUR BUG REPORT HERE
 
 %@";
 
-/* No comment provided by engineer. */
+/* Match List: accessibility label */
 "Fetch Details" = "Fetch Details";
 
 /* No comment provided by engineer. */
@@ -501,7 +501,7 @@ YOUR BUG REPORT HERE
 /* No comment provided by engineer. */
 "Find Match" = "Find Match";
 
-/* No comment provided by engineer. */
+/* Party Box: placeholder shows time spent in queue */
 "Finding match… (%@)" = "Finding match… (%@)";
 
 /* No comment provided by engineer. */
@@ -510,7 +510,7 @@ YOUR BUG REPORT HERE
 /* Storage Management: button to free up a certain amount of space */
 "Free up these %@" = "Free up these %@";
 
-/* No comment provided by engineer. */
+/* Agent Select header: shown when timer reaches zero */
 "Game Started" = "Game Started";
 
 /* No comment provided by engineer. */
@@ -528,7 +528,7 @@ YOUR BUG REPORT HERE
 /* No comment provided by engineer. */
 "Golden Gun" = "Golden Gun";
 
-/* No comment provided by engineer. */
+/* Stats: date grouping size picker */
 "Group by" = "Group by";
 
 /* Hit Distribution Stats: region */
@@ -594,13 +594,13 @@ YOUR BUG REPORT HERE
 /* Bookmark/Player List: player level */
 "Level %lld" = "Level %lld";
 
-/* No comment provided by engineer. */
+/* Contract Progress Bar */
 "Level %lld / %lld" = "Level %lld / %lld";
 
 /* No comment provided by engineer. */
 "Lifetime Peak" = "Lifetime Peak";
 
-/* No comment provided by engineer. */
+/* App Theme */
 "Light Mode" = "Light Mode";
 
 /* About Screen: section */
@@ -648,9 +648,6 @@ YOUR BUG REPORT HERE
 /* No comment provided by engineer. */
 "Lock In %@" = "Lock In %@";
 
-/* No comment provided by engineer. */
-"Long" = "Long";
-
 /* Bookmark/Player List: lookup button */
 "Look Up" = "Look Up";
 
@@ -684,7 +681,7 @@ YOUR BUG REPORT HERE
 /* No comment provided by engineer. */
 "Match Loading Errors" = "Match Loading Errors";
 
-/* No comment provided by engineer. */
+/* App Theme */
 "Match System" = "Match System";
 
 /* Match List: section */
@@ -693,7 +690,7 @@ YOUR BUG REPORT HERE
 /* Stats: match loading */
 "Matches to load: **%lld**" = "Matches to load: **%lld**";
 
-/* No comment provided by engineer. */
+/* Party Box: shown when member's name is not yet loaded */
 "Member" = "Member";
 
 /* No comment provided by engineer. */
@@ -762,7 +759,7 @@ YOUR BUG REPORT HERE
 /* No comment provided by engineer. */
 "Normalize Charts" = "Normalize Charts";
 
-/* No comment provided by engineer. */
+/* Party Box */
 "Not Ready" = "Not Ready";
 
 /* Hit Distribution Stats: error */
@@ -839,13 +836,13 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Please make sure you are ready to play by the time the game starts!" = "Please make sure you are ready to play by the time the game starts!";
 
-/* No comment provided by engineer. */
+/* App Icon Name */
 "Pro Blue" = "Pro Blue";
 
 /* No comment provided by engineer. */
 "Pro Features" = "Pro Features";
 
-/* No comment provided by engineer. */
+/* App Icon Picker: section */
 "Pro Icons" = "Pro Icons";
 
 /* No comment provided by engineer. */
@@ -856,9 +853,6 @@ Playtime Stats: section */
 
 /* No comment provided by engineer. */
 "Queues" = "Queues";
-
-/* No comment provided by engineer. */
-"Quick" = "Quick";
 
 /* Rank Widget: title */
 "Rank" = "Rank";
@@ -908,7 +902,7 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Repair" = "Repair";
 
-/* Client Log: header */
+/* Request Log: header */
 "Request" = "Request";
 
 /* No comment provided by engineer. */
@@ -920,7 +914,7 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Reset" = "Reset";
 
-/* Client Log: header */
+/* Request Log: header */
 "Response" = "Response";
 
 /* No comment provided by engineer. */
@@ -971,7 +965,7 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Show details when found" = "Show details when found";
 
-/* No comment provided by engineer. */
+/* App Icon Description: pro blue */
 "Show off your pro status with an exclusive icon!" = "Show off your pro status with an exclusive icon!";
 
 /* No comment provided by engineer. */
@@ -1050,7 +1044,7 @@ Settings: section */
 /* No comment provided by engineer. */
 "The code is open-source and visible on GitHub; you can build it yourself if you want to be sure of what's running." = "The code is open-source and visible on GitHub; you can build it yourself if you want to be sure of what's running.";
 
-/* No comment provided by engineer. */
+/* App Icon Description: default */
 "The default look of Recon Bolt." = "The default look of Recon Bolt.";
 
 /* No comment provided by engineer. */

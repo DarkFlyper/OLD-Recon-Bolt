@@ -188,7 +188,7 @@ struct AgentInfoView: View {
 struct AgentInfoView_Previews: PreviewProvider, PreviewProviderWithAssets {
 	static func previews(assets: AssetCollection) -> some View {
 		NavigationView {
-			NavigationLink("Example", isActive: .constant(true)) {
+			NavigationLink("Example" as String, isActive: .constant(true)) {
 				AgentInfoView(agent: assets.agents[.harbor]!)
 			}
 		}

@@ -115,7 +115,7 @@ struct AgentSelectView: View {
 			
 			Group {
 				if pregameInfo.state == .provisioned {
-					Text("Game Started")
+					Text("Game Started", comment: "Agent Select header: shown when timer reaches zero")
 				} else {
 					let remainingSeconds = Int(pregameInfo.timeRemainingInPhase.rounded())
 					Label("\(remainingSeconds)", systemImage: "timer")

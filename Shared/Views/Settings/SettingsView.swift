@@ -20,7 +20,7 @@ struct SettingsView: View {
 				Section(header: Text("Settings", comment: "Settings: section")) {
 					Picker("Theme", selection: $settings.theme) {
 						ForEach(AppSettings.Theme.allCases, id: \.self) { theme in
-							Text(theme.name)
+							theme.name
 								.tag(theme)
 						}
 					}
@@ -31,7 +31,7 @@ struct SettingsView: View {
 						HStack {
 							Text("App Icon")
 							Spacer()
-							Text(iconManager.currentIcon.name)
+							iconManager.currentIcon.name
 								.foregroundStyle(.secondary)
 						}
 					}
@@ -125,14 +125,14 @@ struct AdvancedSettingsView: View {
 }
 
 private extension AppSettings.Theme {
-	var name: LocalizedStringKey {
+	var name: Text {
 		switch self {
 		case .system:
-			return "Match System"
+			return Text("Match System", comment: "App Theme")
 		case .light:
-			return "Light Mode"
+			return Text("Light Mode", comment: "App Theme")
 		case .dark:
-			return "Dark Mode"
+			return Text("Dark Mode", comment: "App Theme")
 		}
 	}
 }

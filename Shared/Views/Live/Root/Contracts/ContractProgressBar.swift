@@ -37,7 +37,7 @@ struct ContractProgressBar: View {
 			.compositingGroup()
 			
 			HStack {
-				Text("Level \(data.contract.levelReached) / \(data.levels.count)")
+				Text("Level \(data.contract.levelReached) / \(data.levels.count)", comment: "Contract Progress Bar")
 				
 				Spacer()
 				
@@ -45,7 +45,7 @@ struct ContractProgressBar: View {
 					let xpProgress = data.contract.progressionTowardsNextLevel
 					let xpGoal = nextLevel.info.xp
 					
-					Text("\(xpProgress) / \(xpGoal) XP")
+					Text("\(xpProgress) / \(xpGoal) XP", comment: "Contract Progress Bar")
 				}
 			}
 			.foregroundColor(.secondary)

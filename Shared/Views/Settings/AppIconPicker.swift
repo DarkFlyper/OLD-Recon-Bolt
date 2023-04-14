@@ -7,14 +7,16 @@ struct AppIconPicker: View {
 	
 	var body: some View {
 		List {
-			Section("Default Icon") {
+			Section {
 				cell(for: .default)
+			} header: {
+				Text("Default Icon", comment: "App Icon Picker: section")
 			}
 			
 			Section {
 				cell(for: .proBlue)
 			} header: {
-				Text("Pro Icons")
+				Text("Pro Icons", comment: "App Icon Picker: section")
 			} footer: {
 				Text("The pro version lets you change the app icon! More icons might be coming in future updates.")
 			}
@@ -36,10 +38,10 @@ struct AppIconPicker: View {
 				AppIcon.Thumbnail(icon: icon)
 				
 				VStack(alignment: .leading, spacing: 4) {
-					Text(icon.name)
+					icon.name
 						.font(.headline)
 					
-					Text(icon.description)
+					icon.description
 						.font(.footnote)
 				}
 				.tint(.primary)
@@ -96,12 +98,20 @@ final class AppIconManager: ObservableObject {
 
 struct AppIcon: Identifiable, Equatable {
 	static let all = [`default`, proBlue]
-	static let `default` = Self(key: nil, name: "Default", description: "The default look of Recon Bolt.")
-	static let proBlue = Self(key: "AppIconProBlue", name: "Pro Blue", description: "Show off your pro status with an exclusive icon!")
+	static let `default` = Self(
+		key: nil,
+		name: Text("Default", comment: "App Icon Name"),
+		description: Text("The default look of Recon Bolt.", comment: "App Icon Description: default")
+	)
+	static let proBlue = Self(
+		key: "AppIconProBlue",
+		name: Text("Pro Blue", comment: "App Icon Name"),
+		description: Text("Show off your pro status with an exclusive icon!", comment: "App Icon Description: pro blue")
+	)
 	
 	var key: String?
-	var name: LocalizedStringKey
-	var description: LocalizedStringKey
+	var name: Text
+	var description: Text
 	
 	var id: String {
 		key ?? ""

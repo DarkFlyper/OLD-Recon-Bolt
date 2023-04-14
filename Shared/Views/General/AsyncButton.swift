@@ -45,12 +45,16 @@ extension AsyncButton where Label == Text {
 struct AsyncButton_Previews: PreviewProvider {
 	static var previews: some View {
 		Group {
-			AsyncButton("Quick") { print("quick") }
+			AsyncButton { print("quick") } label: {
+				Text(verbatim: "Quick")
+			}
 			
-			AsyncButton("Long") {
+			AsyncButton {
 				print("long starting")
 				await Task.sleep(seconds: 2, tolerance: 0.1)
 				print("long done")
+			} label: {
+				Text(verbatim: "Long")
 			}
 		}
 		.padding()

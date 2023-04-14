@@ -50,7 +50,11 @@ struct LiveGameBox: View {
 	private var content: some View {
 		if let activeMatch {
 			GroupBox {
-				Text("Currently \(activeMatch.inPregame ? "in agent select" : "in-game").")
+				if activeMatch.inPregame {
+					Text("Currently in agent select")
+				} else {
+					Text("Currently in-game")
+				}
 				
 				Group {
 					NavigationLink(tag: activeMatch, selection: $shownMatch) {

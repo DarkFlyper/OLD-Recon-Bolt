@@ -24,7 +24,7 @@ struct MatchCell: View {
 						try await $0.fetchMatchDetails(for: match.id)
 					}
 				} label: {
-					Label("Fetch Details", systemImage: "arrow.down")
+					Label(String(localized: "Fetch Details", comment: "Match List: accessibility label"), systemImage: "arrow.down")
 						.labelStyle(.iconOnly)
 				}
 				.tint(.blue)

@@ -35,7 +35,7 @@ struct ClientLogView: View {
 										Text("\(code)")
 											.foregroundColor(statusColor(forCode: code))
 									} else {
-										Text("ERROR")
+										Text("ERROR", comment: "Request Log: shown in place of a status code (like 200 or 404) when sending failed.")
 											.font(.body.smallCaps())
 											.foregroundColor(.red)
 									}
@@ -82,14 +82,14 @@ struct ClientLogView: View {
 					Text(exchange.time, format: .dateTime)
 				}
 				
-				Section(header: Text("Request", comment: "Client Log: header")) {
+				Section(header: Text("Request", comment: "Request Log: header")) {
 					labeledRow("Method", describing: exchange.request.httpMethod!)
 					labeledRow("URL", describing: exchange.request.url!)
 					
 					bodyDetailsView(for: exchange.request.httpBody)
 				}
 				
-				Section(header: Text("Response", comment: "Client Log: header")) {
+				Section(header: Text("Response", comment: "Request Log: header")) {
 					switch exchange.result {
 					case .success(let response):
 						labeledRow("Response Code", describing: response.httpMetadata!.statusCode)
@@ -135,7 +135,7 @@ YOUR BUG REPORT HERE
 					Label("Send to Developer", systemImage: "envelope")
 				}
 			}
-			.navigationTitle(Text("Exchange", comment: "Client Log: title for an exchange"))
+			.navigationTitle(Text("Exchange", comment: "Request Log: title for an exchange"))
 		}
 		
 		func mailtoLink(body: String) -> URL {
@@ -183,13 +183,13 @@ YOUR BUG REPORT HERE
 								.font(.footnote.monospaced())
 								.frame(maxWidth: .infinity, alignment: .leading)
 						} else {
-							Text("Binary Data", comment: "Client Log: shown for bodies that are not decodable to text")
+							Text("Binary Data", comment: "Request Log: shown for bodies that are not decodable to text")
 								.foregroundStyle(.secondary)
 						}
 					}
 					.padding()
 				}
-				.navigationTitle(Text("Body", comment: "Client Log: title for detailed view of request body/contents"))
+				.navigationTitle(Text("Body", comment: "Request Log: title for detailed view of request body/contents"))
 				.toolbar {
 					Button {
 						if let string {
@@ -202,7 +202,7 @@ YOUR BUG REPORT HERE
 					}
 				}
 			} label: {
-				labeledRow(Text("Body", comment: "Client Log: entry for request body/contents"), value: Text(Int64(body.count), format: .byteCount(style: .file)))
+				labeledRow(Text("Body", comment: "Request Log: entry for request body/contents"), value: Text(Int64(body.count), format: .byteCount(style: .file)))
 			}
 			.disabled(body.isEmpty)
 		}

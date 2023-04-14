@@ -100,7 +100,7 @@ struct PartyInfoBox: View {
 	func queueTimer(entryTime: Date) -> some View {
 		TimelineView(.periodic(from: entryTime, by: 1)) { context in
 			let time = Self.queueTimeFormatter.string(from: context.date.timeIntervalSince(entryTime))!
-			Text("Finding match… (\(time))")
+			Text("Finding match… (\(time))", comment: "Party Box: placeholder shows time spent in queue")
 		}
 	}
 	
@@ -150,16 +150,16 @@ struct PartyInfoBox: View {
 									.foregroundColor(.secondary)
 							}
 						} else {
-							Text("Member")
+							Text("Member", comment: "Party Box: shown when member's name is not yet loaded")
 								.foregroundColor(.secondary)
 						}
 					}
 					
 					if member.isReady {
-						Text("Ready")
+						Text("Ready", comment: "Party Box")
 							.foregroundColor(.secondary)
 					} else {
-						Text("Not Ready")
+						Text("Not Ready", comment: "Party Box")
 							.fontWeight(.medium)
 							.foregroundColor(.secondary)
 					}
