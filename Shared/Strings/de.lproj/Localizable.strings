@@ -204,8 +204,7 @@ Competitive matches after your placements can be identified without their detail
 /* Request Log: shown for bodies that are not decodable to text */
 "Binary Data" = "Binäre Daten";
 
-/* Request Log: title for detailed view of request body/contents
-Hit Distribution Stats: region */
+/* Hit Distribution Stats: region */
 "Body" = "Körper";
 
 /* Bookmark/Player List: section */
@@ -422,6 +421,9 @@ Stats: error details */
 
 /* Request Log: title for an exchange */
 "Exchange" = "Austausch";
+
+/* Request Log: title for detailed view of request body/contents */
+"Exchange Body" = "Körper";
 
 /* Pro Features List */
 "Exclusive App Icon" = "Exklusives App-Icon";
