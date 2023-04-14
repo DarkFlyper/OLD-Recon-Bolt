@@ -344,7 +344,7 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Currently in-game" = "Momentan in einem Spiel";
 
-/* No comment provided by engineer. */
+/* Queue Label: custom game */
 "Custom" = "Eigenes Spiel";
 
 /* Gun Customizer: title */
