@@ -762,6 +762,9 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Overdrive (Neon)" = "Spannungsspitze (Neon)";
 
+/* No comment provided by engineer. */
+"Party" = "Gruppe";
+
 /* Scoreboard: party letter */
 "Party %@" = "Gruppe %@";
 
