@@ -193,7 +193,10 @@ YOUR BUG REPORT HERE
 					}
 					.padding()
 				}
-				.navigationTitle(Text("Body", comment: "Request Log: title for detailed view of request body/contents"))
+				.navigationTitle(String(
+					localized: "Exchange Body", defaultValue: "Body",
+					comment: "Request Log: title for detailed view of request body/contents"
+				))
 				.toolbar {
 					Button {
 						if let string {
@@ -206,7 +209,10 @@ YOUR BUG REPORT HERE
 					}
 				}
 			} label: {
-				labeledRow(Text("Body", comment: "Request Log: entry for request body/contents"), value: Text(Int64(body.count), format: .byteCount(style: .file)))
+				labeledRow(Text(String(
+					localized: "Exchange Body", defaultValue: "Body",
+					comment: "Request Log: entry for request body/contents"
+				)), value: Text(Int64(body.count), format: .byteCount(style: .file)))
 			}
 			.disabled(body.isEmpty)
 		}
