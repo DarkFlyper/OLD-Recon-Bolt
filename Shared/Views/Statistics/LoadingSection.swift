@@ -159,14 +159,15 @@ private final class MatchFetcher: ObservableObject {
 	private var tokens: [Match.ID: AnyCancellable] = [:]
 	
 	func fetchMatches(withIDs ids: some Sequence<Match.ID>, load: @escaping ValorantLoadFunction) {
-		errors = [:]
-		
 		for match in ids {
 			guard tokens[match] == nil else { continue }
 			tokens[match] = LocalDataProvider.shared.matchDetailsManager
 				.objectPublisher(for: match)
 				.receive(on: DispatchQueue.main)
-				.sink { [weak self] in self?.matches[match] = $0.value }
+				.sink { [weak self] in
+					self?.matches[match] = $0.value
+					self?.errors[match] = nil
+				}
 			
 			Task {
 				await load { [weak self] in
