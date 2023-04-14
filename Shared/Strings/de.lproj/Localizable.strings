@@ -1,1 +1,1173 @@
 
+/* Used for matches less than a day ago. %@ is replaced by the number of hours/minutes, e.g. '3h ago'. */
+"%@ ago" = "vor %@";
+
+/* %@ is replaced by a fraction of wins vs. games played, e.g. '5/12 games won'. */
+"%@ games won" = "%@ Spiele gewonnen";
+
+/* Win Rate Stats by Loadout Delta: placeholder is replaced by the percentage of rounds won, e.g. '57.3% won'. */
+"%@ won" = "%@ gewonnen";
+
+/* No comment provided by engineer. */
+"%@%%" = "%@%%";
+
+/* No comment provided by engineer. */
+"%lld Future Weeklies" = "%lld zukünftige Missionen";
+
+/* No comment provided by engineer. */
+"%lld Queued-Up Weeklies" = "%lld aufgereihte Missionen";
+
+/* No comment provided by engineer. */
+"%lld RR" = "%lld RW";
+
+/* Storage Management */
+"%lld from other players" = "%lld von anderen Spielern";
+
+/* Loadout Item Picker: number of hidden items—this should never show nowadays */
+"%lld hidden due to outdated assets" = "%lld versteckt aufgrund veralteter Assets";
+
+/* Hit Distribution Stats: hit count */
+"%lld hits" = "%lld Treffer";
+
+/* Shown at the bottom of the expandable playtime list when there are more entries available. */
+"%lld more" = "%lld weitere";
+
+/* Statistics Filter: shown when not everything is allowed */
+"%lld selected" = "%lld ausgewählt";
+
+/* Win Rate Stats by Loadout Delta */
+"%lld to %lld credits" = "%lld bis %lld Creds";
+
+/* No comment provided by engineer. */
+"%lld%%" = "%lld%%";
+
+/* No comment provided by engineer. */
+"%lld/%lld" = "%lld/%lld";
+
+/* Stats: match loading */
+"%lld/%lld loaded" = "%lld/%lld geladen";
+
+/* Loadout Item Picker: number of items owned out of all such items in the game */
+"%lld/%lld owned" = "%lld/%lld in Besitz";
+
+/* Time Formatting: minutes & seconds (used in round details view) */
+"%lld:%@" = "%lld:%@";
+
+/* Time Formatting: minutes, seconds, & milliseconds (used in round details view) */
+"%lld:%@.%@" = "%lld:%@.%@";
+
+/* Contract Progress Bar */
+"%lld / %lld XP" = "%lld / %lld EP";
+
+/* Win Rate Stats by Loadout Delta */
+"(%lld – %lld)" = "(%lld – %lld)";
+
+/* Pro Features List */
+"(You can switch between available icons at any time.)" = "(Du kannst jederzeit zwischen verfügbaren Icons wechseln.)";
+
+/* No comment provided by engineer. */
+"+%lld XP" = "+%lld EP";
+
+/* Missions Widget: how many more weeklies are queued up after the current set */
+"+%lld queued" = "+%lld aufgereiht";
+
+/* Store: night market discount */
+"-%lld%%" = "-%lld%%";
+
+/* No comment provided by engineer. */
+"2-Factor Authentication" = "2-Faktor-Authentisierung";
+
+/* Missions Widget: countdown label when the target is in the future. e.g. '< 2d 3h' */
+"< %@" = "< %@";
+
+/* No comment provided by engineer. */
+"A 2FA code has been sent to your email address %@" = "Ein 2FA-Code wurde an deine E-Mail-Adresse %@ geschickt.";
+
+/* No comment provided by engineer. */
+"A match's queue is unknown until its details are fetched (by tapping it or performing the swipe action).
+Competitive matches after your placements can be identified without their details, however." = "Der Spielmodus ist erst dann bekannt, wenn die Details eines Spiels geladen sind (indem es angetippt oder nach rechts gewischt wird). Kompetitive Spiele können allerdings auch ohne ihre Details anhand der RW-Änderung identifiziert werden.";
+
+/* No comment provided by engineer. */
+"AFK: %lld" = "AFK: %lld";
+
+/* Career Summary: header for totals of all time */
+"ALL TIME" = "Alle Akte & Episoden";
+
+/* Settings: section */
+"About" = "Über Recon Bolt";
+
+/* No comment provided by engineer. */
+"About Recon Bolt" = "Über Recon Bolt";
+
+/* Settings: section */
+"Accounts" = "Konten";
+
+/* Contract Picker: button */
+"Activate" = "Aktivieren";
+
+/* Contract Picker */
+"Active" = "Aktiv";
+
+/* No comment provided by engineer. */
+"Active Contract" = "Aktiver Auftrag";
+
+/* Match List: accessibility label */
+"Add Bookmark" = "Lesezeichen hinzufügen";
+
+/* Account Settings */
+"Add another Account" = "Weiteres Konto hinzufügen";
+
+/* Pro Features List */
+"Add multiple accounts and seamlessly switch between them at any time." = "Füge mehrere Konten hinzu, um jederzeit dazwischen zu wechseln.";
+
+/* No comment provided by engineer. */
+"Advanced Settings" = "Fortgeschrittene Einstellungen";
+
+/* Pro Store */
+"Advanced Stats" = "Ausführliche Statistiken";
+
+/* No comment provided by engineer. */
+"Agent Select" = "Agentenauswahl";
+
+/* No comment provided by engineer. */
+"Agents" = "Agenten";
+
+/* Stats: match loading */
+"All %lld" = "Alle %lld";
+
+/* No comment provided by engineer. */
+"All Maps" = "Alle Karten";
+
+/* Statistics Filter (queues or agents) */
+"Allow All" = "Alle zulassen";
+
+/* Statistics Filter (queues or agents) */
+"Allow None" = "Keine zulassen";
+
+/* Statistics Filter */
+"Allowing %lld/%lld matches (%lld filtered out)" = "%lld von %lld Spielen zugelassen (%lld rausgefiltert)";
+
+/* No comment provided by engineer. */
+"An Error Occurred!" = "Es ist ein Fehler aufgetreten!";
+
+/* About Screen */
+"An invaluable API hosting all the assets (images, data, etc.) used throughout Valorant. This is where almost every image in the app comes from." = "Eine wertvolle API, die alle möglichen Assets (Bilder, Daten, etc.) verfügbar macht, die in Valorant auftreten. Hier kommt fast jedes Bild her, was in der App angezeigt wird.";
+
+/* Statistics Filter: shown when everything is allowed */
+"Any" = "Alle";
+
+/* Asset Management */
+"Anything with images will not display correctly." = "Alles, was sich auf Bilder verlässt, wird nicht richtig angezeigt werden können.";
+
+/* No comment provided by engineer. */
+"App Icon" = "App-Icon";
+
+/* No comment provided by engineer. */
+"Are your assets outdated?" = "Sind deine Assets aktuell?";
+
+/* Pro Features List */
+"As thanks for your support, you get to show off your status with an exclusive app icon!" = "Als Dankeschön für deine Unterstützung kannst du deinen Status mit einem exklusiven App-Icon demonstrieren!";
+
+/* About Screen */
+"As you can guess, the scope expanded massively over time to what you're using now. I hope you're enjoying it!" = "Wie du dir vielleicht vorstellen kannst, ist das Projekt immer ambitionierter geworden, und wurde schlussendlich zu der App, die du gerade benutzt. Ich hoffe, sie gefällt dir!";
+
+/* No comment provided by engineer. */
+"Assets" = "Assets";
+
+/* Asset Management */
+"Assets complete." = "Assets vollständig.";
+
+/* No comment provided by engineer. */
+"Assets not loaded!" = "Assets nicht geladen!";
+
+/* Asset Management */
+"Assets out of date!" = "Assets veraltet!";
+
+/* No comment provided by engineer. */
+"Assets should be fetched automatically, but in case something went wrong, feel free to initiate the process manually." = "Assets sollten automatisch geladen werden, aber falls etwas schiefgelaufen ist, kannst du hier den Prozess manuell auslösen.";
+
+/* Asset Management */
+"Assets up to date!" = "Assets aktuell!";
+
+/* No comment provided by engineer. */
+"Assuming you signed up for Valorant using Google/Apple/etc., you can set up your account to add a username & password on Riot's site at [account.riotgames.com](https://account.riotgames.com). Note that your Riot ID is **not** the same as your username! If you've forgotten your username, you can reset it at [recovery.riotgames.com](https://recovery.riotgames.com)." = "Wenn du dich über Google/Apple/etc. für Valorant registriert hast, kannst du auf [account.riotgames.com](https://account.riotgames.com) dein Konto ergänzen, um einen Benutzernamen & Passwort zu setzen. Vorsicht: deine Riot ID ist **nicht** dasselbe wie dein Benutzername! Falls du diesen vergessen hast, kannst du ihn auf [recovery.riotgames.com](https://recovery.riotgames.com) zurücksetzen.";
+
+/* Win Rate Stats: side name */
+"Attacking" = "Angreifer";
+
+/* Store: available currency */
+"Available:" = "Verfügbar:";
+
+/* Hit Distribution Stats: average HS% */
+"Average: %@" = "Durchschnitt: %@";
+
+/* Request Log: shown for bodies that are not decodable to text */
+"Binary Data" = "Binäre Daten";
+
+/* Request Log: title for detailed view of request body/contents
+Hit Distribution Stats: region */
+"Body" = "Körper";
+
+/* Bookmark/Player List: section */
+"Bookmarks" = "Lesezeichen";
+
+/* Gun Customizer: section */
+"Buddy" = "Talisman";
+
+/* Storage Management: section */
+"By Kind" = "Nach Datentyp";
+
+/* Win Rate Stats: section
+Playtime Stats: section */
+"By Map" = "Nach Karte";
+
+/* Playtime Stats: section/title */
+"By Non-Premade Player" = "Nach Mitspieler von außerhalb Gruppe";
+
+/* Playtime Stats: section/title */
+"By Premade Teammate" = "Nach Mitspieler in Gruppe";
+
+/* Playtime Stats: section */
+"By Queue" = "Nach Spielmodus";
+
+/* Hit Distribution Stats: section */
+"By Weapon" = "Nach Waffe";
+
+/* No comment provided by engineer. */
+"Cancel" = "Abbrechen";
+
+/* No comment provided by engineer. */
+"Cancel Matchmaking" = "Suche abbrechen";
+
+/* Top-Level Tab Title */
+"Career" = "Verlauf";
+
+/* No comment provided by engineer. */
+"Career Summaries" = "Karrieren";
+
+/* No comment provided by engineer. */
+"Career Summary" = "Karriere";
+
+/* No comment provided by engineer. */
+"Change Buddy" = "Talisman wechseln";
+
+/* No comment provided by engineer. */
+"Change Queue" = "Modus wechseln";
+
+/* Gun Customizer */
+"Change Skin" = "Skin wechseln";
+
+/* Store Widget: description */
+"Check your current Valorant storefront." = "Prüfe deinen aktuellen Valorant-Shop.";
+
+/* Missions Widget: description */
+"Check your progress on daily & weekly missions." = "Prüfe deinen Fortschritt in täglichen & wöchentlichen Missionen.";
+
+/* No comment provided by engineer. */
+"Choose App Icon" = "App-Icon wählen";
+
+/* No comment provided by engineer. */
+"Choose Buddy" = "Talisman wählen";
+
+/* No comment provided by engineer. */
+"Choose Card" = "Banner wählen";
+
+/* No comment provided by engineer. */
+"Choose Skin" = "Skin wählen";
+
+/* No comment provided by engineer. */
+"Choose Spray" = "Graffiti wählen";
+
+/* No comment provided by engineer. */
+"Choose Title" = "Titel wählen";
+
+/* Contract Picker: title */
+"Choose a Contract" = "Auftrag auswählen";
+
+/* Buddy Picker: alert shown when both instances of a buddy are in use */
+"Choose a weapon to take %@ from." = "Wähle eine Waffe, von der du %@ entfernen willst.";
+
+/* Storage Management: button to delete all entries of a certain kind */
+"Clear All" = "Alle Löschen";
+
+/* Contract Picker */
+"Completed" = "Abgeschlossen";
+
+/* Storage Management: title for alert to confirm deleting some matches */
+"Confirm Delete" = "Löschen Bestätigen";
+
+/* No comment provided by engineer. */
+"Contract complete!" = "Auftrag abgeschlossen!";
+
+/* No comment provided by engineer. */
+"Copy Body" = "Inhalt kopieren";
+
+/* Stats: error details: accessibility label */
+"Copy Error" = "Fehler kopieren";
+
+/* No comment provided by engineer. */
+"Copy Error Details" = "Fehlerdetails kopieren";
+
+/* No comment provided by engineer. */
+"Copy Match ID" = "Spiel-ID kopieren";
+
+/* No comment provided by engineer. */
+"Copy to Clipboard" = "Auf Ablage kopieren";
+
+/* No comment provided by engineer. */
+"Could not Change App Icon!" = "App-Icon konnte nicht geändert werden!";
+
+/* No comment provided by engineer. */
+"Could not Load Account!" = "Konto konnte nicht geladen werden!";
+
+/* No comment provided by engineer. */
+"Could not delete files!" = "Dateien konnten nicht gelöscht werden!";
+
+/* No comment provided by engineer. */
+"Could not determine used storage!" = "Verwendeter Speicherplatz konnte nicht gemessen werden!";
+
+/* No comment provided by engineer. */
+"Could not free up space!" = "Speicherplatz konnte nicht freigemacht werden!";
+
+/* No comment provided by engineer. */
+"Could not look up %@" = "Suche nach Spieler %@ fehlgeschlagen";
+
+/* No comment provided by engineer. */
+"Could not sign in!" = "Anmeldung fehlgeschlagen!";
+
+/* Asset Management */
+"Current version: %@" = "Aktuelle Version: %@";
+
+/* No comment provided by engineer. */
+"Currently in agent select" = "Momentan in der Agentenauswahl";
+
+/* No comment provided by engineer. */
+"Currently in-game" = "Momentan in einem Spiel";
+
+/* No comment provided by engineer. */
+"Custom" = "Eigenes Spiel";
+
+/* Gun Customizer: title */
+"Customize %@" = "%@ anpassen";
+
+/* Gun Customizer: title */
+"Customize Gun" = "Waffe anpassen";
+
+/* Missions Widget */
+"Daily" = "Täglich";
+
+/* Store */
+"Daily Offers" = "Tagesangebote";
+
+/* App Theme */
+"Dark Mode" = "Dunkelmodus";
+
+/* Hit Distribution Stats */
+"Data from %lld games (%lld skipped lacking data)" = "Daten von %lld Spielen (%lld übersprungen aufgrund mangelnder Daten)";
+
+/* Stats: match loading */
+"Data going back to %@" = "Daten gehen bis %@ zurück";
+
+/* No comment provided by engineer. */
+"Day" = "Tag";
+
+/* App Icon Name */
+"Default" = "Standard";
+
+/* App Icon Picker: section */
+"Default Icon" = "Standard-Icon";
+
+/* Win Rate Stats: side name */
+"Defending" = "Verteidiger";
+
+/* Storage Management: button to confirm deleting some matches */
+"Delete %lld Matches" = "%lld Spiele löschen";
+
+/* Match Details: button to view details by round */
+"Details by Round" = "Details nach Runde";
+
+/* No comment provided by engineer. */
+"Discord Server" = "Discord-Server";
+
+/* Hit Distribution Stats: section */
+"Distribution Over Time" = "Verteilung über Zeit";
+
+/* No comment provided by engineer. */
+"Done" = "Fertig";
+
+/* No comment provided by engineer. */
+"Download Assets Now" = "Jetzt Assets laden";
+
+/* Win Rate Stats: chart legend */
+"Draws" = "Gleichstände";
+
+/* Request Log: shown in place of a status code (like 200 or 404) when sending failed. */
+"ERROR" = "FEHLER";
+
+/* Match List: accessibility label */
+"Edit Filter" = "Filter bearbeiten";
+
+/* No comment provided by engineer. */
+"Enter 2FA Code" = "2FA-Code eingeben";
+
+/* Request Log
+Stats: error details */
+"Error" = "Fehler";
+
+/* No comment provided by engineer. */
+"Error Details" = "Fehlerdetails";
+
+/* Asset Management */
+"Error downloading assets!" = "Assets konnten nicht geladen werden!";
+
+/* Request Log: title for an exchange */
+"Exchange" = "Austausch";
+
+/* Pro Features List */
+"Exclusive App Icon" = "Exklusives App-Icon";
+
+/* Round Details: killed by spike */
+"Exploded" = "Explodiert";
+
+/* Pro Features List */
+"Family Sharing" = "Familienfreigabe";
+
+/* Request Log: placeholder is replaced by error dump. */
+"Feedback Email Body" = "Was ist schiefgelaufen? Gib mir ein paar Details zum Fehler, den du gerade hattest:
+
+DEINE FEHLERMELDUNG HIER
+
+%@";
+
+/* Match List: accessibility label */
+"Fetch Details" = "Details laden";
+
+/* No comment provided by engineer. */
+"Filter" = "Filter";
+
+/* No comment provided by engineer. */
+"Filter Maps" = "Filtern nach Karte";
+
+/* No comment provided by engineer. */
+"Filter Match List" = "Verlauf filtern";
+
+/* No comment provided by engineer. */
+"Filter Queues" = "Filtern nach Modus";
+
+/* No comment provided by engineer. */
+"Filtering by starting side will exclude any matches in single-round modes like Deathmatch, Escalation, etc." = "Nach Anfangsseite zu filtern schließt alle Spiele aus, die in nur einer Runde gespielt werden, wie z.B. Deathmath, Eskalation, etc.";
+
+/* No comment provided by engineer. */
+"Find Match" = "Match Suchen";
+
+/* Party Box: placeholder shows time spent in queue */
+"Finding match… (%@)" = "Matchmaking läuft… (%@)";
+
+/* No comment provided by engineer. */
+"Force Refresh Widgets" = "Widgets sofort aktualisieren";
+
+/* Storage Management: button to free up a certain amount of space */
+"Free up these %@" = "Diese %@ freimachen";
+
+/* Agent Select header: shown when timer reaches zero */
+"Game Started" = "Spiel lädt";
+
+/* No comment provided by engineer. */
+"Game is not running!" = "Valorant läuft momentan nicht!";
+
+/* Pro Features List */
+"Gather statistics from anyone's games to gain insights on things like time played by mode/premade, headshot rate over time/by weapon, win rate over time/by map & side, and more!" = "Werte Statistiken auf Basis deiner oder anderer Leute Spiele aus, um Einblicke zu erhalten in Bereiche wie Spielzeit nach Modus/Premade, Headshot-Rate über Zeit/nach Waffe, Gewinnrate über Zeit/nach Karte & Seite und mehr!";
+
+/* Pro Features List */
+"Getting money from Recon Bolt gives me the flexibility and motivation to keep improving the app!" = "Mit Recon Bolt Geld zu verdienen gibt mir die Flexibilität und Motivation, weiter an der App zu entwickeln!";
+
+/* No comment provided by engineer. */
+"GitHub Repo" = "GitHub-Repository";
+
+/* No comment provided by engineer. */
+"Golden Gun" = "Goldene Waffe";
+
+/* Stats: date grouping size picker */
+"Group by" = "Gruppieren nach";
+
+/* Hit Distribution Stats: region */
+"Head" = "Kopf";
+
+/* No comment provided by engineer. */
+"Headhunter (Chamber)" = "Kopfjäger (Chamber)";
+
+/* About Screen */
+"Hi! I'm Julian Dunskus, and I made this app." = "Hi! Ich bin Julian Diskus, der (alleinige) Entwickler dieser App.";
+
+/* Hit Distribution Stats: title */
+"Hit Distribution" = "Treffer-Verteilung";
+
+/* Pro Store */
+"Home Screen Widgets" = "Home-Bildschirm-Widgets";
+
+/* Pro Store */
+"I hope you enjoy the pro features :)" = "Ich hoffe, du genießt die Pro-Features :)";
+
+/* No comment provided by engineer. */
+"I won't sugarcoat things. Due to the way this app uses the API, I believe there's no other way to sign in than to have people enter their credentials directly. Under those circumstances, there's really no good way for anyone to be sure their credentials remain safe. For what it's worth:" = "Ich möchte die Sache nicht verharmlosen. Aufgrund der Art und Weise, wie diese App die API verwendet, gibt es meines Erachtens keine andere Möglichkeit zum Anmelden, als dass die Benutzer ihre Anmeldedaten direkt in die App eingeben müssen. Unter diesen Umständen gibt es in der Theorie für niemanden eine gute Möglichkeit, sicherzugehen, dass seine Anmeldedaten sicher bleiben. Allerdings, wozu auch immer das gut sein mag:";
+
+/* No comment provided by engineer. */
+"Identities" = "Identitäten";
+
+/* No comment provided by engineer. */
+"If you don't know your username or don't have one, you can fix that at [account.riotgames.com](https://account.riotgames.com)." = "Falls du deinen Benutzernamen nicht kennst oder keinen hast, kannst du das auf [account.riotgames.com](https://account.riotgames.com) richten.";
+
+/* Pro Features List */
+"If you have accounts in multiple regions to play with friends around the world, this is the feature for you!" = "Falls du Konten in mehreren Regionen hast, um mit Freunden um die Welt zu spielen, ist dies die Feature für dich!";
+
+/* Pro Features List */
+"If you have multiple accounts, you can configure separate widgets for each and have them on your Home Screen at the same time." = "Falls du mehrere Konten hast, kannst du für jedes separate Widgets konfigurieren und alle gleichzeitig auf dem Home-Bildschirm haben.";
+
+/* About Screen */
+"If you've encountered a bug or have some feedback, I'm always happy to hear it on the Discord Server or GitHub :)" = "Falls du auf einen Bug gestoßen bist oder Feedback hast, höre ich so was immer gerne auf dem Discord-Server oder auf GitHub :)";
+
+/* No comment provided by engineer. */
+"If your widgets seem broken, use this button to request an immediate refresh from iOS." = "Falls deine Widgets kaputt zu sein scheinen, kannst du mit diesem Knopf von iOS eine sofortige Aktualisierung anfragen.";
+
+/* No comment provided by engineer. */
+"Image failed to load!" = "Bild konnte nicht geladen werden!";
+
+/* No comment provided by engineer. */
+"In case something went wrong, use this button to force a full refetch of the assets and images." = "Falls etwas schiefgelaufen ist, kannst du mit diesem Knopf alle Assets und Bilder ganz neu laden.";
+
+/* Settings: section */
+"In-App Store" = "Shop";
+
+/* No comment provided by engineer. */
+"Is this safe?" = "Ist das hier sicher?";
+
+/* No comment provided by engineer. */
+"Join the Discord Server" = "Dem Discord-Server beitreten";
+
+/* Match Details: section */
+"Kills by Round" = "Kills nach Runde";
+
+/* Hit Distribution Stats: region */
+"Legs" = "Beine";
+
+/* Bookmark/Player List: player level */
+"Level %lld" = "Level %lld";
+
+/* Contract Progress Bar */
+"Level %lld / %lld" = "Level %lld / %lld";
+
+/* No comment provided by engineer. */
+"Lifetime Peak" = "Rekord";
+
+/* App Theme */
+"Light Mode" = "Hellmodus";
+
+/* About Screen: section */
+"Links" = "Links";
+
+/* Top-Level Tab Title */
+"Live" = "Live";
+
+/* No comment provided by engineer. */
+"Live Match" = "Aktuelles Spiel";
+
+/* Stats: match loading */
+"Load Data" = "Daten laden";
+
+/* Match List */
+"Load Older Matches" = "Ältere Spiele laden";
+
+/* Pro Store */
+"Loading Store Info…" = "App-Store-Info wird geladen…";
+
+/* No comment provided by engineer. */
+"Loading request log…" = "Kommunikationsverlauf wird geladen…";
+
+/* No comment provided by engineer. */
+"Loadout" = "Bewaffnung";
+
+/* No comment provided by engineer. */
+"Loadout Delta" = "Bewaffnungs-Delta";
+
+/* No comment provided by engineer. */
+"Loadout Delta is computed as the difference between the average loadout value of players on each team. For example, a loadout delta of +1000 means your team's loadouts were an average of 1000 credits more valuable than the enemy team's in that round." = "Bewaffnungs-Delta berechnet sich aus der Differenz zwischen dem durchschnittlichen Bewaffnungswert der Spieler auf beiden Teams. Zum Beispiel heißt ein Delta von +1000, dass dein Team durchschnittlich 1000 mehr Creds an wert in seiner Bewaffnung hatte als das gegnerische.";
+
+/* No comment provided by engineer. */
+"Loadout not loaded!" = "Bewaffnung nicht geladen!";
+
+/* No comment provided by engineer. */
+"Lobby Dodged" = "Spiel vermieden";
+
+/* No comment provided by engineer. */
+"Lock In" = "Bestätigen";
+
+/* No comment provided by engineer. */
+"Lock In %@" = "%@ bestätigen";
+
+/* Bookmark/Player List: lookup button */
+"Look Up" = "Suchen";
+
+/* No comment provided by engineer. */
+"Looks like you're trying to enter your Riot ID (and tagline) as username! Your username is actually something else: it's what you use to sign into the Valorant launcher." = "Es sieht so aus, als würdest du versuchen, deine Riot ID (und Tagline) als Benutzernamen einzugeben! Dein Benutzername ist tatsächlich etwas anderes: damit meldest du dich im Launcher an.";
+
+/* Win Rate Stats: chart legend */
+"Losses" = "Niederlagen";
+
+/* No comment provided by engineer. */
+"Manage Assets" = "Assets verwalten";
+
+/* No comment provided by engineer. */
+"Manage Local Storage" = "Lokalen Speicher verwalten";
+
+/* No comment provided by engineer. */
+"Map" = "Karte";
+
+/* No comment provided by engineer. */
+"Maps" = "Karten";
+
+/* Stats: error details */
+"Match" = "Spiel";
+
+/* Match Details: title */
+"Match Details" = "Spieldetails";
+
+/* No comment provided by engineer. */
+"Match Lists" = "Verläufe";
+
+/* No comment provided by engineer. */
+"Match Loading Errors" = "Spiel-Ladefehler";
+
+/* App Theme */
+"Match System" = "Automatisch";
+
+/* Match List: section */
+"Matches" = "Spiele";
+
+/* Stats: match loading */
+"Matches to load: **%lld**" = "Zu ladende Spiele: **%lld**";
+
+/* Party Box: shown when member's name is not yet loaded */
+"Member" = "Mitglied";
+
+/* Request Log */
+"Method" = "Methode";
+
+/* Asset Management */
+"Missing assets!" = "Assets fehlen!";
+
+/* No comment provided by engineer. */
+"Missing progress for contract!" = "Keine Daten für diesen Auftrag!";
+
+/* No comment provided by engineer. */
+"Missing season data!" = "Aktdaten fehlen!";
+
+/* Missions Widget: title */
+"Missions" = "Missionen";
+
+/* No comment provided by engineer. */
+"Missions not loaded!" = "Missionen nicht geladen!";
+
+/* No comment provided by engineer. */
+"Month" = "Monat";
+
+/* Pro Features List */
+"Multiple Account Support" = "Unterstützung für mehrere Konten";
+
+/* Pro Store */
+"Multiple Accounts" = "Mehrere Konten";
+
+/* Bookmark/Player List: lookup name placeholder */
+"Name" = "Name";
+
+/* Asset Management */
+"Newest available: %@" = "Neuste verfügbare: %@";
+
+/* Store */
+"Night Market" = "Nachtmarkt";
+
+/* No comment provided by engineer. */
+"No Buddy" = "Kein Talisman";
+
+/* No comment provided by engineer. */
+"No Spray" = "Kein Graffiti";
+
+/* No comment provided by engineer. */
+"No Title" = "Kein Titel";
+
+/* Gun Customizer */
+"No buddy selected!" = "Kein Talisman ausgewählt!";
+
+/* No comment provided by engineer. */
+"No contract active!" = "Kein Auftrag aktiv!";
+
+/* Win Rate Stats: by map */
+"No data" = "Keine Daten";
+
+/* No comment provided by engineer. */
+"No games played with premade teammates." = "Keine Spiele in einer Gruppe gespielt.";
+
+/* No comment provided by engineer. */
+"No minimap available!" = "Keine Minikarte verfügbar!";
+
+/* No comment provided by engineer. */
+"No non-premade players encountered repeatedly. (Un)lucky you!" = "Keine Spieler von außerhalb deiner Gruppe wiederholt angetroffen. Schade (oder auch nicht)!";
+
+/* No comment provided by engineer. */
+"Normalize Charts" = "Normalisieren";
+
+/* Party Box */
+"Not Ready" = "Nicht bereit";
+
+/* Hit Distribution Stats: error */
+"Not enough data!" = "Zu wenig Daten!";
+
+/* Account Settings */
+"Not signed in yet." = "Noch nicht angemeldet.";
+
+/* No comment provided by engineer. */
+"Not signed in!" = "Nicht angemeldet!";
+
+/* Pro Features List */
+"Note: Statistics are only available on iOS 16 and newer." = "Bemerke: Statistiken sind nur auf iOS 16 und neuer verfügbar.";
+
+/* Pro Features List */
+"Note: Widgets are only available on iOS 16 and newer." = "Bemerke: Widgets sind nur auf iOS 16 und neuer verfügbar.";
+
+/* No comment provided by engineer. */
+"OK" = "OK";
+
+/* No comment provided by engineer. */
+"Official Website" = "Offizielle Website";
+
+/* No comment provided by engineer. */
+"On that site, navigate to **Riot Account Sign-in** and set yourself a username and password. When you're done, you can use those same credentials to sign in above! Your social account will stay linked and you'll remain able to sign in with that on PC :)" = "Auf der Seite scrollst du zu **Riot-Konto-Anmeldung** und setzt dir einen Benutzernamen & Passwort. Wenn du fertig bist, kannst du diese Anmeldedaten hier verwenden! Dein sozialer Account bleibt verlinkt, sodass du dich weiterhin damit am PC anmelden kannst :)";
+
+/* No comment provided by engineer. */
+"Open or swipe to fetch details." = "Details laden: öffnen oder wischen.";
+
+/* Storage Management */
+"Other Players" = "Andere Spieler";
+
+/* Buddy Picker: alert shown when both instances of a buddy are in use */
+"Out of instances!" = "Keine Instanzen übrigen!";
+
+/* Win Rate Stats: section
+Playtime Stats: section */
+"Over Time" = "Über Zeit";
+
+/* Hit Distribution Stats: section
+Playtime Stats: section */
+"Overall" = "Insgesamt";
+
+/* No comment provided by engineer. */
+"Overdrive (Neon)" = "Spannungsspitze (Neon)";
+
+/* Scoreboard: party letter */
+"Party %@" = "Gruppe %@";
+
+/* No comment provided by engineer. */
+"Password" = "Passwort";
+
+/* Agent View: label for player who hasn't picked an agent yet */
+"Picking…" = "Wählt…";
+
+/* Match List: section */
+"Player" = "Spieler";
+
+/* Bookmark/Player List: title */
+"Players" = "Spieler";
+
+/* No comment provided by engineer. */
+"Playtime" = "Spielzeit";
+
+/* No comment provided by engineer. */
+"Playtime Breakdown" = "Spielzeit-Analyse";
+
+/* No comment provided by engineer. */
+"Please make sure you are ready to play by the time the game starts!" = "Bitte stell sicher, dass du am PC sein kannst, wenn das Spiel anfängt!";
+
+/* App Icon Name */
+"Pro Blue" = "Pro-Blau";
+
+/* No comment provided by engineer. */
+"Pro Features" = "Pro-Features";
+
+/* App Icon Picker: section */
+"Pro Icons" = "Pro-Icons";
+
+/* No comment provided by engineer. */
+"Purchase Failed!" = "Kauf fehlgeschlagen!";
+
+/* Pro Store (placeholder filled with formatted currency) */
+"Purchase – %@" = "Kaufen – %@";
+
+/* No comment provided by engineer. */
+"Queues" = "Spielmodi";
+
+/* Rank Widget: title */
+"Rank" = "Rang";
+
+/* No comment provided by engineer. */
+"Rank %lld" = "%lld. Platz";
+
+/* Rank Changes Widget: title */
+"Rank Changes" = "Rang-Änderungen";
+
+/* No comment provided by engineer. */
+"Rank Rating Changes" = "RW-Änderungen";
+
+/* No comment provided by engineer. */
+"Rate on the App Store" = "Auf dem App Store bewerten";
+
+/* accessibility label */
+"Ready" = "Bereit";
+
+/* No comment provided by engineer. */
+"Recon Bolt Pro" = "Recon Bolt Pro";
+
+/* Pro Features List */
+"Recon Bolt Pro supports Family Sharing, meaning if just one member of your iCloud family buys it, everyone can use it!" = "Recon Bolt Pro unterstützt Familienfreigabe. Das heißt, wenn nur ein Mitglied deiner iCloud-Familie es kauft, können es alle verwenden!";
+
+/* Pro Features List */
+"Recon Bolt does not have and will never have ads. The only way it can make money is through in-app purchases." = "Recon Bolt hat keine Werbung und wird auch nie welche haben. In-App-Käufe sind für mich der einzige Weg, daran Geld zu verdienen.";
+
+/* About Screen */
+"Recon Bolt started development in early 2021, back when it wasn't yet possible to see your RR gains and losses in the game, but the API offered those numbers." = "Ich habe 2021 angefangen, an Recon Bolt zu arbeiten. Damals war es noch nicht möglich, deine RW-Änderungen im Game zu sehen, aber die API bot diese Zahlen an.";
+
+/* Top-Level Tab Title */
+"Reference" = "Nachschlagen";
+
+/* Account Settings: button to refresh expired session */
+"Refresh" = "Aktualisieren";
+
+/* No comment provided by engineer. */
+"Refresh automatically" = "Automatisch aktualisieren";
+
+/* Store Widget: next refresh time (hour & minute) */
+"Refreshes at %@" = "Aktualisiert um %@";
+
+/* Match List: accessibility label */
+"Remove Bookmark" = "Lesezeichen entfernen";
+
+/* Asset Management: section */
+"Repair" = "Reparieren";
+
+/* Request Log: header */
+"Request" = "Anfrage";
+
+/* No comment provided by engineer. */
+"Request Log" = "Kommunikationsverlauf";
+
+/* No comment provided by engineer. */
+"Requests" = "Anfragen";
+
+/* Asset Management: button */
+"Reset" = "Zurücksetzen";
+
+/* Request Log: header */
+"Response" = "Antwort";
+
+/* No comment provided by engineer. */
+"Response Code" = "Antwortscode";
+
+/* No comment provided by engineer. */
+"Retry" = "Erneut versuchen";
+
+/* Round Details: header */
+"Round %lld of %lld" = "Rund %lld von %lld";
+
+/* Round Details: title */
+"Round Details" = "Rundendetails";
+
+/* Win Rate Stats: section */
+"Rounds by Loadout Delta" = "Runden nach Bewaffnungs-Delta";
+
+/* Win Rate Stats: section */
+"Rounds by Side" = "Runden nach Seite";
+
+/* Bookmark/Player List: section */
+"Search" = "Suche";
+
+/* Hit Distribution Stats: error */
+"Select more matches to see data on hit distribution. Deathmatch, Escalation, and other modes don't provide the necessary information." = "Wähle mehr Spiele aus, um Daten zur Treffer-Verteilung einzusehen. Deathmatch, Eskalation und andere Modi bieten nicht die nötigen Daten.";
+
+/* No comment provided by engineer. */
+"Send to Developer" = "An Entwickler schicken";
+
+/* Account Settings */
+"Session expired!" = "Sitzung abgelaufen!";
+
+/* Top-Level Tab Title */
+"Settings" = "Einstellungen";
+
+/* Playtime Stats: title for view of matches in common with another player */
+"Shared Matches" = "Gemeinsame Spiele";
+
+/* No comment provided by engineer. */
+"Show Unfetched Matches" = "Ungeladene Spiele anzeigen";
+
+/* No comment provided by engineer. */
+"Show all matches" = "Alle Spiele anzeigen";
+
+/* No comment provided by engineer. */
+"Show details when found" = "Details öffnen, wenn Spiel gefunden wird";
+
+/* App Icon Description: pro blue */
+"Show off your pro status with an exclusive icon!" = "Demonstriere deinen Pro-Status mit einem exklusiven Icon!";
+
+/* Account Settings: button */
+"Sign In" = "Anmelden";
+
+/* No comment provided by engineer. */
+"Sign In with your Riot account" = "Mit Riot-Konto anmelden";
+
+/* Account Settings */
+"Sign Out" = "Abmelden";
+
+/* No comment provided by engineer. */
+"Sign in with Google/Apple/etc." = "Mit Google/Apple/etc. anmelden";
+
+/* Hit Distribution Stats: smoothing slider */
+"Smoothing" = "Glättung";
+
+/* No comment provided by engineer. */
+"Spectator" = "Zuschauer";
+
+/* Round Details: Spike Event */
+"Spike Defused" = "Spike entschärft";
+
+/* Round Details: Spike Event */
+"Spike Planted" = "Spike gesetzt";
+
+/* No comment provided by engineer. */
+"Start Matchmaking?" = "Matchmaking starten?";
+
+/* Win Rate Stats: accessibility label */
+"Starting Side" = "Anfangsseite";
+
+/* Win Rate Stats */
+"Starting Side:" = "Anfangsseite:";
+
+/* No comment provided by engineer. */
+"Statistics" = "Statistiken";
+
+/* Statistics Pro purchase prompt */
+"Statistics not available!" = "Statistiken nicht verfügbar!";
+
+/* Statistics Pro purchase prompt: 'Recon Bolt Pro' is inserted in the placeholder with a bolder font. */
+"Statistics require %@, a one-time purchase including a variety of features. Want to give them a look?" = "Statistiken erfordern %@, einen einmaligen Kauf mit vielen neuen Funktionen. Willst du genaueres dazu erfahren?";
+
+/* Store Widget: title */
+"Store" = "Shop";
+
+/* No comment provided by engineer. */
+"Store not loaded!" = "Shop nicht geladen!";
+
+/* No comment provided by engineer. */
+"Storefront outdated!" = "Shop nicht aktuell!";
+
+/* Pro Features List */
+"Support Development :)" = "Weitere Entwicklung unterstützen :)";
+
+/* Pro Store */
+"Support Further Development!" = "Weitere Entwicklung unterstützen!";
+
+/* No comment provided by engineer. */
+"Switch Contract" = "Auftrag wechseln";
+
+/* No comment provided by engineer. */
+"TL;DR: you'll have to take my word for it, but Riot doesn't seem to mind." = "Schlussendlich musst du mir halt vertrauen, aber Riot scheint es zu tolerieren.";
+
+/* Bookmark/Player List: lookup tag placeholder */
+"Tag" = "Tagline";
+
+/* Pro Store */
+"Thank you for supporting Recon Bolt!" = "Danke, dass du Recon Bolt unterstützt!";
+
+/* No comment provided by engineer. */
+"The code is open-source and visible on GitHub; you can build it yourself if you want to be sure of what's running." = "Der Code ist Open Source und auf GitHub einsehbar; du kannst ihn sogar selbst kompilieren, wenn du ganz sichergehen willst, dass das auch tatsächlich der Code ist, der auf deinem Gerät läuft.";
+
+/* App Icon Description: default */
+"The default look of Recon Bolt." = "Der Standard-Look von Recon Bolt.";
+
+/* No comment provided by engineer. */
+"The pro version lets you change the app icon! More icons might be coming in future updates." = "Mit der Pro-Version kannst du das App-Icon ändern! Zukünftige Updates bringen womöglich neue Icons mit sich.";
+
+/* No comment provided by engineer. */
+"Theme" = "Erscheinungsbild";
+
+/* No comment provided by engineer. */
+"These are the last %lld requests sent by the app, along with their responses." = "Dies sind die letzten %lld Anfragen, die die App gemacht hat, zusammen mit ihren Antworten.";
+
+/* About Screen: section */
+"Third-Party Libraries & APIs Used" = "Verwendete Libraries & APIs";
+
+/* Statistics error for iOS <16 */
+"This feature requires iOS 16 or newer." = "Diese Feature erfordert iOS 16 oder neuer.";
+
+/* Stats: match loading */
+"To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "Um Statistiken auszuwerten, müssen wir zuerst Spiele zur Verarbeitung laden. Beachte, dass große Mengen lange brauchen können, besonders wenn sie zum ersten Mal heruntergeladen werden!";
+
+/* Win Rate Stats: side name
+Hit Distribution Stats: region */
+"Total" = "Insgesamt";
+
+/* No comment provided by engineer. */
+"Total Playtime" = "Gesamtspielzeit";
+
+/* No comment provided by engineer. */
+"Total Space Used" = "Gesamtplatzverbrauch";
+
+/* No comment provided by engineer. */
+"Tour de Force (Chamber)" = "Glanzleistung (Chamber)";
+
+/* No comment provided by engineer. */
+"Twitter @juliand665" = "Twitter @juliand665";
+
+/* Request Log */
+"URL" = "URL";
+
+/* Shown when a match does not match the filter and its details have not been fetched. */
+"Unfetched" = "Ungeladen";
+
+/* Hit Distribution Stats: footnote */
+"Unfortunately, Valorant doesn't store information about which weapon was used for each hit. All we get is the weapon you started the round with and what weapon you used for each kill. Recon Bolt guesses the weapon involved in each damage based on this information, but it cannot be perfect (and neither can any other tracker)." = "Leider speichert Valorant keine Informationen darüber, welche Waffe für die einzelnen Treffer verwendet wurde. Alles, was wir bekommen, ist die Waffe, mit der du die Runde begonnen hast, und welche Waffe du für jeden Kill benutzt hast. Recon Bolt errät die Waffe, die an jedem Schaden beteiligt war, auf Grundlage dieser Informationen, aber es (und jeder anderer Tracker) kann nicht perfekt sein.";
+
+/* No comment provided by engineer. */
+"Unfortunately, due to technical limitations, you cannot sign into Recon Bolt via your Google account, Apple ID, or anything but a Riot account." = "Leider kannst du dich aufgrund technischer Limitierungen nur direkt mit einem Riot-Konto anmelden, und nicht mit deinem Google-Konto, deiner Apple-ID oder irgendeinem anderen Dienst.";
+
+/* Round Details: killed by unknown ability */
+"Unknown Ability" = "Unbekannte Fähigkeit";
+
+/* placeholder */
+"Unknown Agent" = "Unbekannter Agent";
+
+/* placeholder */
+"Unknown Buddy" = "Unbekannter Talisman";
+
+/* placeholder */
+"Unknown Bundle" = "Unbekannte Sammlung";
+
+/* Store */
+"Unknown Offer" = "Unbekanntes Angebot";
+
+/* No comment provided by engineer. */
+"Unknown Player" = "Unbekannter Spieler";
+
+/* No comment provided by engineer. */
+"Unknown Queue" = "Unbekannter Spielmodus";
+
+/* placeholder */
+"Unknown Skin" = "Unbekannte Skin";
+
+/* No comment provided by engineer. */
+"Unknown Tier" = "Unbekannter Rang";
+
+/* placeholder */
+"Unknown Title" = "Unbekannter Titel";
+
+/* Round Details: killed by unknown damage source/type */
+"Unknown Type" = "Unbekannter Typ";
+
+/* No comment provided by engineer. */
+"Unknown Weapon" = "Unbekannte Waffe";
+
+/* No comment provided by engineer. */
+"Unknown bundle!" = "Unbekannte Sammlung!";
+
+/* No comment provided by engineer. */
+"Unknown contract!" = "Unbekannter Auftrag!";
+
+/* No comment provided by engineer. */
+"Unknown mission!" = "Unbekannte Mission!";
+
+/* Asset Management: button */
+"Update Now" = "Jetzt aktualisieren";
+
+/* Match Details: button */
+"Update Ranks" = "Ränge aktualisieren";
+
+/* No comment provided by engineer. */
+"Username" = "Benutzername";
+
+/* No comment provided by engineer. */
+"Users" = "Benutzer";
+
+/* Win Rate Stats by Loadout Delta */
+"Value Difference (credits)" = "Wertunterschied (Creds)";
+
+/* Reference
+Asset Management */
+"Version %@" = "Version %@";
+
+/* No comment provided by engineer. */
+"Vibrate when Match Found" = "Vibrieren, wenn Spiel gefunden wird";
+
+/* Pro Store */
+"View All Features" = "Alle Features sehen";
+
+/* No comment provided by engineer. */
+"View Full Profile" = "Volles Profil anzeigen";
+
+/* Match List */
+"View Stats" = "Statistiken auswerten";
+
+/* Statistics Pro purchase prompt: button */
+"View Store in Settings" = "Mehr erfahren";
+
+/* Rank Widget: description */
+"View your current rank." = "Zeige deinen aktuellen Rang.";
+
+/* Rank Changes Widget: description */
+"View your rank rating changes." = "Sieh deine RW-Änderungen.";
+
+/* Pro Features List */
+"View your storefront, daily/weekly missions, or current rank without even having to open the app!" = "Sieh deinen aktuellen Shop, tägliche/wöchentliche Missionen, oder deinen momentanen Rank, ohne auch nur die App zu öffnen!";
+
+/* No comment provided by engineer. */
+"WP: +%lld" = "WP: +%lld";
+
+/* No comment provided by engineer. */
+"Weapon Loadout" = "Bewaffnung";
+
+/* No comment provided by engineer. */
+"Weapons" = "Waffen";
+
+/* No comment provided by engineer. */
+"Week" = "Woche";
+
+/* Missions Widget */
+"Weekly" = "Wöchentlich";
+
+/* No comment provided by engineer. */
+"Widget Refresh Requested" = "Widget-Aktualisierung angefragt";
+
+/* No comment provided by engineer. */
+"Win Rate" = "Siegesrate";
+
+/* Win Rate Stats: chart legend */
+"Wins" = "Siege";
+
+/* No comment provided by engineer. */
+"Year" = "Jahr";
+
+/* Match Details: footnote */
+"You can also tap a round's number in the kill breakdown above to quickly view its details." = "Du kannst auch oben eine Rundenzahl antippen, um dich schnell auf ihre Details zu navigieren.";
+
+/* No comment provided by engineer. */
+"You can enable 2-factor authentication, so you'd at least have another layer of security if it went bad." = "Du kannst 2-Faktor Authentisierung aktivieren, damit du immerhin eine weitere Absicherung hättest, falls etwas schlimmes passiert.";
+
+/* No comment provided by engineer. */
+"Your credentials only ever leave your device in the form of a login request directly to Riot. They are never stored or sent anywhere else." = "Deine Anmeldedaten verlassen dein Gerät nur in Form einer Anfrage direkt an Riot. Sie werden nie an einen anderen Ort geschickt oder dort gespeichert.";
+
+/* No comment provided by engineer. */
+"Your session has expired! Recon Bolt has tried to refresh it for you, but needs 2FA confirmation." = "Deine Sitzung ist abgelaufen! Recon Bolt hat sie für dich versucht zu erneuern, aber brauch 2FA-Bestätigung.";
+
+/* No comment provided by engineer. */
+"iOS is a bit finnicky about this, so widgets may not refresh right away—feel free to restart if this doesn't help!" = "iOS ist hier etwas intransparent, also werden die Widgets womöglich nicht sofort aktualisiert – wenn es nicht hilft, kannst du auch das Gerät neu starten!";
+
+/* Missions Widget: countdown label when the target is in the past. Should never really show up, since at this point there's new data. */
+"old" = "alt";
+
+/* No comment provided by engineer. */
+"signing in…" = "Anmeldung läuft…";
