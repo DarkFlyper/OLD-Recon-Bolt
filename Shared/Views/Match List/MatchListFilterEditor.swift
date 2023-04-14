@@ -12,7 +12,7 @@ struct MatchListFilterEditor: View {
 					FilterSection(
 						allowList: $filter.queues,
 						toggleLabel: "Filter Queues",
-						disclosureLabel: { "\($0) queue(s) selected" }
+						disclosureLabel: { Text("\($0) queue(s) selected", comment: "Match List Filter") }
 					)
 				}
 				
@@ -20,7 +20,7 @@ struct MatchListFilterEditor: View {
 					FilterSection(
 						allowList: $filter.maps,
 						toggleLabel: "Filter Maps",
-						disclosureLabel: { "\($0) map(s) selected" }
+						disclosureLabel: { Text("\($0) map(s) selected", comment: "Match List Filter") }
 					)
 				}
 				
@@ -47,7 +47,7 @@ struct MatchListFilterEditor: View {
 		@Binding var allowList: MatchListFilter.AllowList<ID>
 		
 		var toggleLabel: LocalizedStringKey
-		var disclosureLabel: (Int) -> LocalizedStringKey
+		var disclosureLabel: (Int) -> Text
 		
 		@Environment(\.assets) var assets
 		
@@ -56,7 +56,7 @@ struct MatchListFilterEditor: View {
 				.font(.headline)
 				.padding(.vertical, 8)
 			
-			DisclosureGroup(disclosureLabel(allowList.allowed.count)) {
+			DisclosureGroup {
 				ForEach(ID.knownIDs(assets: assets), id: \.self) { id in
 					Button {
 						allowList.toggle(id)
@@ -73,6 +73,8 @@ struct MatchListFilterEditor: View {
 						}
 					}
 				}
+			} label: {
+				disclosureLabel(allowList.allowed.count)
 			}
 			.disabled(!allowList.isEnabled)
 		}

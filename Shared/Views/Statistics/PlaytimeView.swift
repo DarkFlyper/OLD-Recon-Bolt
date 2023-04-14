@@ -141,7 +141,7 @@ struct PlaytimeView: View {
 				VStack(alignment: .trailing, spacing: 4) {
 					Stats.DurationLabel(duration: entry.time)
 						.fontWeight(.medium)
-					Text("\(entry.games.count) match(es)")
+					Text("\(entry.games.count) match(es)", comment: "Playtime Stats")
 						.foregroundStyle(.secondary)
 				}
 				.fixedSize()

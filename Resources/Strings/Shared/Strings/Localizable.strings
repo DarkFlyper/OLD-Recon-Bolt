@@ -49,10 +49,10 @@
 /* Hit Distribution Stats: hit count */
 "%lld hits" = "%lld hits";
 
-/* No comment provided by engineer. (Key in .stringsdict) */
+/* Match List Filter (Key in .stringsdict) */
 "%lld map(s) selected" = "%lld map(s) selected";
 
-/* No comment provided by engineer. (Key in .stringsdict) */
+/* Playtime Stats (Key in .stringsdict) */
 "%lld match(es)" = "%lld match(es)";
 
 /* Shown at the bottom of the expandable playtime list when there are more entries available. */
@@ -61,7 +61,7 @@
 /* Career Summary: button to show data from previous acts (Key in .stringsdict) */
 "%lld previous act(s)" = "%lld previous act(s)";
 
-/* No comment provided by engineer. (Key in .stringsdict) */
+/* Match List Filter (Key in .stringsdict) */
 "%lld queue(s) selected" = "%lld queue(s) selected";
 
 /* Statistics Filter: shown when not everything is allowed */
