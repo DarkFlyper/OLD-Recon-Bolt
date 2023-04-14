@@ -64,9 +64,10 @@ struct GunCustomizer: View {
 					VStack {
 						(info?.displayIcon).view()
 							.frame(width: 60)
-						UnwrappingView(value: info, placeholder: Text("Unknown Buddy", comment: "placeholder")) {
-							Text($0.displayName)
-						}
+						UnwrappingView(
+							value: info?.displayName,
+							placeholder: Text("Unknown Buddy", comment: "placeholder")
+						)
 					}
 				} else {
 					Text("No buddy selected!", comment: "Gun Customizer")

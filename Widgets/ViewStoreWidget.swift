@@ -83,7 +83,7 @@ struct StoreEntryView: TimelineEntryView {
 			Image(systemName: "clock")
 			
 			if target > .now {
-				Text("Refreshes at \(target, format: .dateTime.hour().minute())")
+				Text("Refreshes at \(target, format: .dateTime.hour().minute())", comment: "Store Widget: next refresh time (hour & minute)")
 			} else {
 				Text("Storefront outdated!")
 					.foregroundColor(.red)

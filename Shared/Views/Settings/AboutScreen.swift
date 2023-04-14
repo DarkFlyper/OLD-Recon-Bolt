@@ -19,11 +19,6 @@ struct AboutScreen: View {
 			
 			Section(header: Text("Third-Party Libraries & APIs Used", comment: "About Screen: section")) {
 				VStack(alignment: .leading, spacing: 8) {
-					Link("keychain-swift" as String, destination: URL(string: "https://github.com/evgenyneu/keychain-swift")!)
-					Text("This is what keeps your credentials safe on your device.", comment: "About Screen")
-				}
-				
-				VStack(alignment: .leading, spacing: 8) {
 					Link("Valorant-API.com" as String, destination: URL(string: "https://valorant-api.com")!)
 					Text("An invaluable API hosting all the assets (images, data, etc.) used throughout Valorant. This is where almost every image in the app comes from.", comment: "About Screen")
 				}

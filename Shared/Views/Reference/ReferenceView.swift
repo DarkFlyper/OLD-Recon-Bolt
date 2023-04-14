@@ -21,7 +21,7 @@ struct ReferenceView: View {
 					.font(.title2)
 					.padding(.vertical, 8)
 				} footer: {
-					Text("Version \(assets.version.version)")
+					Text("Version \(assets.version.version)", comment: "Reference")
 				}
 			}
 		}

@@ -165,7 +165,7 @@ struct ScoreboardRowView: View {
 			if let partyIndex = data.parties.firstIndex(of: party) {
 				let partyLetter = Self.partyLetters[partyIndex]
 				let shouldEmphasize = highlight.isHighlighting(party) == true
-				Text("Party \(partyLetter)")
+				Text("Party \(partyLetter)", comment: "Scoreboard: party letter")
 					.fontWeight(shouldEmphasize ? .medium : .regular)
 			} else {
 				Text("–")

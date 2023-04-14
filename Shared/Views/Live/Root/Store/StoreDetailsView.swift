@@ -156,9 +156,10 @@ struct OfferCell: View {
 				.frame(height: 60)
 			
 			HStack(alignment: .lastTextBaseline) {
-				UnwrappingView(value: resolved, placeholder: Text("Unknown Skin", comment: "placeholder")) {
-					Text($0.skin.displayName)
-				}
+				UnwrappingView(
+					value: resolved?.skin.displayName,
+					placeholder: Text("Unknown Skin", comment: "placeholder")
+				)
 				.font(.body.weight(.medium))
 				.fixedSize(horizontal: false, vertical: true)
 				

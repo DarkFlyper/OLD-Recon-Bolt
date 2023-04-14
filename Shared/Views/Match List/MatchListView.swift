@@ -99,7 +99,7 @@ struct MatchListView: View {
 		.withLocalData($matchList, id: userID, shouldAutoUpdate: true)
 		.withLocalData($summary, id: userID, shouldAutoUpdate: true)
 		.withLocalData($identity, id: userID)
-		.navigationTitle(title) // localize
+		.navigationTitle(title)
 	}
 	
 	var title: Text {

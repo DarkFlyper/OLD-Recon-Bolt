@@ -11,7 +11,7 @@ struct ClientLogView: View {
     var body: some View {
 		UnwrappingView(
 			value: log,
-			placeholder: "Loading Request log…"
+			placeholder: "Loading request log…"
 		) { log in
 			List {
 				Text("These are the last \(log.exchanges.count) requests sent by the app, along with their responses.")
@@ -83,8 +83,8 @@ struct ClientLogView: View {
 				}
 				
 				Section(header: Text("Request", comment: "Request Log: header")) {
-					labeledRow("Method", describing: exchange.request.httpMethod!)
-					labeledRow("URL", describing: exchange.request.url!)
+					labeledRow(Text("Method", comment: "Request Log"), describing: exchange.request.httpMethod!)
+					labeledRow(Text("URL", comment: "Request Log"), describing: exchange.request.url!)
 					
 					bodyDetailsView(for: exchange.request.httpBody)
 				}
@@ -105,7 +105,7 @@ struct ClientLogView: View {
 							}
 							.navigationTitle("Error Details")
 						} label: {
-							labeledRow("Error", describing: error.localizedDescription.prefix(1000))
+							labeledRow(Text("Error", comment: "Request Log"), describing: error.localizedDescription.prefix(1000))
 								.lineLimit(1)
 						}
 					}
@@ -120,7 +120,7 @@ What went wrong? Tell me about the error you just encountered:
 YOUR BUG REPORT HERE
 
 \(infoString)
-""")
+""", comment: "Request Log: placeholder is replaced by error dump.")
 				
 				Button {
 					UIPasteboard.general.setData(
@@ -151,7 +151,11 @@ YOUR BUG REPORT HERE
 		}
 		
 		func labeledRow(_ label: LocalizedStringKey, describing value: Any) -> some View {
-			labeledRow(label, value: "\(String(describing: value))")
+			labeledRow(Text(label), describing: value)
+		}
+		
+		func labeledRow(_ label: Text, describing value: Any) -> some View {
+			labeledRow(label, value: Text(String(describing: value)))
 		}
 		
 		func labeledRow(_ label: LocalizedStringKey, value: LocalizedStringKey) -> some View {

@@ -43,7 +43,7 @@ struct SettingsView: View {
 					}
 				}
 				
-				Section(header: Text("Store", comment: "Settings: section")) {
+				Section(String(localized: "In-App Store", defaultValue: "Store", comment: "Settings: section")) {
 					InAppStorefront(store: store)
 						.id(storefrontID)
 				}
@@ -116,7 +116,7 @@ struct AdvancedSettingsView: View {
 			.alert("Widget Refresh Requested", isPresented: $hasRefreshedWidgets) {
 				Button("OK") {}
 			} message: {
-				Text("iOS is a bit finnicky about this, so widgets may not refresh right away, but this is the best we can do!")
+				Text("iOS is a bit finnicky about this, so widgets may not refresh right away—feel free to restart if this doesn't help!")
 			}
 
 		}

@@ -218,7 +218,7 @@ struct FilteredMatchListView: View {
 				}
 			}
 		}
-		.navigationTitle("Shared Matches")
+		.navigationTitle(Text("Shared Matches", comment: "Playtime Stats: title for view of matches in common with another player"))
 	}
 }
 

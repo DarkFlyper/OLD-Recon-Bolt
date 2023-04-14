@@ -70,9 +70,12 @@ struct StorageManagementView: View {
 					}
 				}
 				
-				LabeledSpace(unaccountedFor.map {
-					"\($0.matches.count) from other players"
-				} ?? "Other Players", bytes: unaccountedFor?.bytes)
+				LabeledSpace(
+					unaccountedFor.map {
+						Text("\($0.matches.count) from other players", comment: "Storage Management")
+					} ?? Text("Other Players", comment: "Storage Management"),
+					bytes: unaccountedFor?.bytes
+				)
 				
 				if let (matches, bytes) = unaccountedFor {
 					Button(role: .destructive) {
@@ -189,7 +192,11 @@ private struct LabeledSpace<Label: View>: View {
 
 extension LabeledSpace where Label == Text {
 	init(_ title: LocalizedStringKey, bytes: Int64?) {
-		self.init(bytes: bytes) { Text(title) }
+		self.init(Text(title), bytes: bytes)
+	}
+	
+	init(_ title: Text, bytes: Int64?) {
+		self.init(bytes: bytes) { title }
 	}
 }
 

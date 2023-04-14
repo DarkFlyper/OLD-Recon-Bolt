@@ -58,7 +58,7 @@ struct LoadingSection: View {
 				Button {
 					fetcher.fetchMatches(withIDs: sublist.lazy.map(\.id), load: load)
 				} label: {
-					Text("Load Latest \(fetchCount) Matches", comment: "Stats: match loading")
+					Text("Load Latest \(fetchCount) Match(es)", comment: "Stats: match loading")
 				}
 				.bold()
 				.buttonStyle(.borderedProminent)
@@ -70,7 +70,7 @@ struct LoadingSection: View {
 				NavigationLink {
 					errorList()
 				} label: {
-					Text("^[\(fetcher.errors.count) Errors](inflect: true, grammar: { partOfSpeech: \"noun\" })", comment: "Stats: match loading")
+					Text("\(fetcher.errors.count) Error(s)", comment: "Stats: match loading")
 				}
 			}
 		} header: {

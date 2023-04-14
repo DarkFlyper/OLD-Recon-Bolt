@@ -15,6 +15,10 @@ struct UnwrappingView<Value, Content: View>: View {
 		self.content = content
 	}
 	
+	init(value: Value?, placeholder: Text) where Value == String, Content == Text {
+		self.init(value: value, placeholder: placeholder) { Text($0) }
+	}
+	
 	var body: some View {
 		if let value {
 			content(value)

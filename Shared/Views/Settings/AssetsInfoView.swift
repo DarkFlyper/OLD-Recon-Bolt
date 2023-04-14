@@ -9,7 +9,7 @@ struct AssetsInfoView: View {
 	var body: some View {
 		List {
 			if let error = assetManager.error {
-				Text("Error downloading assets!")
+				Text("Error downloading assets!", comment: "Asset Management")
 					.font(.headline)
 				
 				Text(String(describing: error))
@@ -19,56 +19,60 @@ struct AssetsInfoView: View {
 			} else if let assets = assetManager.assets {
 				if let newestVersion, assets.version != newestVersion {
 					VStack(alignment: .leading) {
-						Text("Assets out of date!")
+						Text("Assets out of date!", comment: "Asset Management")
 							.font(.headline)
 						
 						VStack(alignment: .trailing) {
-							Text("Current version: \(assets.version.version)")
-							Text("Newest available: \(newestVersion.version)")
+							Text("Current version: \(assets.version.version)", comment: "Asset Management")
+							Text("Newest available: \(newestVersion.version)", comment: "Asset Management")
 						}
 						.foregroundStyle(.secondary)
 						.font(.callout.monospacedDigit())
 					}
 					
 					Section {
-						AsyncButton("Update Now") {
+						AsyncButton {
 							await assetManager.loadAssets()
+						} label: {
+							Text("Update Now", comment: "Asset Management: button")
 						}
 					} header: {
-						Text("Repair")
+						Text("Repair", comment: "Asset Management: section")
 					} footer: {
 						Text("Assets should be fetched automatically, but in case something went wrong, feel free to initiate the process manually.")
 					}
 				} else {
 					Section {
 						if newestVersion != nil {
-							Text("Assets up to date!")
+							Text("Assets up to date!", comment: "Asset Management")
 								.font(.headline)
 						} else {
-							Text("Assets complete.")
+							Text("Assets complete.", comment: "Asset Management")
 						}
 					} footer: {
-						Text("Version \(assets.version.version)")
+						Text("Version \(assets.version.version)", comment: "Asset Management")
 							.foregroundStyle(.secondary)
 							.font(.callout)
 					}
 					
 					Section {
-						AsyncButton("Reset") {
+						AsyncButton {
 							await assetManager.reset()
 							imageManager.clear()
+						} label: {
+							Text("Reset", comment: "Asset Management: button")
 						}
 					} header: {
-						Text("Repair")
+						Text("Repair", comment: "Asset Management: section")
 					} footer: {
 						Text("In case something went wrong, use this button to force a full refetch of the assets and images.")
 					}
 				}
 			} else {
 				VStack(alignment: .leading) {
-					Text("Missing assets!")
+					Text("Missing assets!", comment: "Asset Management")
 						.font(.headline)
-					Text("Anything with images will not display correctly.")
+					Text("Anything with images will not display correctly.", comment: "Asset Management")
 				}
 				
 				Section {
@@ -76,7 +80,7 @@ struct AssetsInfoView: View {
 						await assetManager.loadAssets()
 					}
 				} header: {
-					Text("Repair")
+					Text("Repair", comment: "Asset Management: section")
 				} footer: {
 					Text("Assets should be fetched automatically, but in case something went wrong, feel free to initiate the process manually.")
 				}

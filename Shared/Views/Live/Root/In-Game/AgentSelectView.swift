@@ -169,10 +169,13 @@ struct AgentSelectView: View {
 					
 					if player.isLockedIn {
 						let agentName = assets?.agents[player.agentID!]?.displayName
-						Text(agentName ?? "Unknown Agent!")
-							.fontWeight(.semibold)
+						UnwrappingView(
+							value: agentName,
+							placeholder: Text("Unknown Agent", comment: "placeholder")
+						)
+						.font(.body.weight(.semibold))
 					} else {
-						Text("Picking…")
+						Text("Picking…", comment: "Agent View: label for player who hasn't picked an agent yet")
 							.foregroundColor(.secondary)
 					}
 				}

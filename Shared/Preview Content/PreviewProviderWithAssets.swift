@@ -22,7 +22,7 @@ struct AssetProvider<Content: View>: View {
 		if let assets {
 			content(assets)
 		} else {
-			Text("assets loading")
+			Text(verbatim: "assets loading")
 		}
 	}
 }

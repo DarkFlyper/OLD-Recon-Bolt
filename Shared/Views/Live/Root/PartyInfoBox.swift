@@ -180,7 +180,7 @@ struct PartyInfoBox: View {
 					if isSettingReady {
 						ProgressView()
 					} else {
-						Toggle("Ready", isOn: Binding(
+						Toggle(String(localized: "Ready", comment: "accessibility label"), isOn: Binding(
 							get: { member.isReady },
 							set: { setReady(to: $0) })
 						)
