@@ -28,6 +28,9 @@
 /* No comment provided by engineer. */
 "%lld" = "%lld";
 
+/* Stats: match loading (Key in .stringsdict) */
+"%lld Error(s)" = "%lld Error(s)";
+
 /* No comment provided by engineer. */
 "%lld Future Weeklies" = "%lld Future Weeklies";
 
@@ -37,7 +40,7 @@
 /* No comment provided by engineer. */
 "%lld RR" = "%lld RR";
 
-/* No comment provided by engineer. */
+/* Storage Management */
 "%lld from other players" = "%lld from other players";
 
 /* Loadout Item Picker: number of hidden items—this should never show nowadays */
@@ -47,6 +50,9 @@
 "%lld hits" = "%lld hits";
 
 /* No comment provided by engineer. (Key in .stringsdict) */
+"%lld map(s) selected" = "%lld map(s) selected";
+
+/* No comment provided by engineer. (Key in .stringsdict) */
 "%lld match(es)" = "%lld match(es)";
 
 /* Shown at the bottom of the expandable playtime list when there are more entries available. */
@@ -54,6 +60,9 @@
 
 /* Career Summary: button to show data from previous acts (Key in .stringsdict) */
 "%lld previous act(s)" = "%lld previous act(s)";
+
+/* No comment provided by engineer. (Key in .stringsdict) */
+"%lld queue(s) selected" = "%lld queue(s) selected";
 
 /* Statistics Filter: shown when not everything is allowed */
 "%lld selected" = "%lld selected";
@@ -192,7 +201,7 @@ Competitive matches after your placements can be identified without their detail
 /* Statistics Filter: shown when everything is allowed */
 "Any" = "Any";
 
-/* No comment provided by engineer. */
+/* Asset Management */
 "Anything with images will not display correctly." = "Anything with images will not display correctly.";
 
 /* No comment provided by engineer. */
@@ -210,19 +219,19 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Assets" = "Assets";
 
-/* No comment provided by engineer. */
+/* Asset Management */
 "Assets complete." = "Assets complete.";
 
 /* No comment provided by engineer. */
 "Assets not loaded!" = "Assets not loaded!";
 
-/* No comment provided by engineer. */
+/* Asset Management */
 "Assets out of date!" = "Assets out of date!";
 
 /* No comment provided by engineer. */
 "Assets should be fetched automatically, but in case something went wrong, feel free to initiate the process manually." = "Assets should be fetched automatically, but in case something went wrong, feel free to initiate the process manually.";
 
-/* No comment provided by engineer. */
+/* Asset Management */
 "Assets up to date!" = "Assets up to date!";
 
 /* No comment provided by engineer. */
@@ -374,7 +383,7 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Count" = "Count";
 
-/* No comment provided by engineer. */
+/* Asset Management */
 "Current version: %@" = "Current version: %@";
 
 /* No comment provided by engineer. */
@@ -452,13 +461,14 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Enter 2FA Code" = "Enter 2FA Code";
 
-/* Stats: error details */
+/* Request Log
+Stats: error details */
 "Error" = "Error";
 
 /* No comment provided by engineer. */
 "Error Details" = "Error Details";
 
-/* No comment provided by engineer. */
+/* Asset Management */
 "Error downloading assets!" = "Error downloading assets!";
 
 /* Request Log: title for an exchange */
@@ -473,7 +483,7 @@ Playtime Stats: section */
 /* Pro Features List */
 "Family Sharing" = "Family Sharing";
 
-/* No comment provided by engineer. */
+/* Request Log: placeholder is replaced by error dump. */
 "Feedback Email Body" = "What went wrong? Tell me about the error you just encountered:
 
 YOUR BUG REPORT HERE
@@ -579,6 +589,9 @@ YOUR BUG REPORT HERE
 /* No comment provided by engineer. */
 "In case something went wrong, use this button to force a full refetch of the assets and images." = "In case something went wrong, use this button to force a full refetch of the assets and images.";
 
+/* Settings: section */
+"In-App Store" = "Store";
+
 /* No comment provided by engineer. */
 "Is this safe?" = "Is this safe?";
 
@@ -615,17 +628,17 @@ YOUR BUG REPORT HERE
 /* Stats: match loading */
 "Load Data" = "Load Data";
 
-/* Stats: match loading */
-"Load Latest %lld Matches" = "Load Latest %lld Matches";
+/* Stats: match loading (Key in .stringsdict) */
+"Load Latest %lld Match(es)" = "Load Latest %lld Match(es)";
 
 /* Match List */
 "Load Older Matches" = "Load Older Matches";
 
-/* No comment provided by engineer. */
-"Loading Request log…" = "Loading Request log…";
-
 /* Pro Store */
 "Loading Store Info…" = "Loading Store Info…";
+
+/* No comment provided by engineer. */
+"Loading request log…" = "Loading request log…";
 
 /* No comment provided by engineer. */
 "Loadout" = "Loadout";
@@ -693,10 +706,10 @@ YOUR BUG REPORT HERE
 /* Party Box: shown when member's name is not yet loaded */
 "Member" = "Member";
 
-/* No comment provided by engineer. */
+/* Request Log */
 "Method" = "Method";
 
-/* No comment provided by engineer. */
+/* Asset Management */
 "Missing assets!" = "Missing assets!";
 
 /* No comment provided by engineer. */
@@ -723,7 +736,7 @@ YOUR BUG REPORT HERE
 /* Bookmark/Player List: lookup name placeholder */
 "Name" = "Name";
 
-/* No comment provided by engineer. */
+/* Asset Management */
 "Newest available: %@" = "Newest available: %@";
 
 /* Store */
@@ -789,7 +802,7 @@ YOUR BUG REPORT HERE
 /* No comment provided by engineer. */
 "Open or swipe to fetch details." = "Open or swipe to fetch details.";
 
-/* No comment provided by engineer. */
+/* Storage Management */
 "Other Players" = "Other Players";
 
 /* Buddy Picker: alert shown when both instances of a buddy are in use */
@@ -812,13 +825,13 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Part" = "Part";
 
-/* No comment provided by engineer. */
+/* Scoreboard: party letter */
 "Party %@" = "Party %@";
 
 /* No comment provided by engineer. */
 "Password" = "Password";
 
-/* No comment provided by engineer. */
+/* Agent View: label for player who hasn't picked an agent yet */
 "Picking…" = "Picking…";
 
 /* Match List: section */
@@ -869,7 +882,7 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Rate on the App Store" = "Rate on the App Store";
 
-/* No comment provided by engineer. */
+/* accessibility label */
 "Ready" = "Ready";
 
 /* No comment provided by engineer. */
@@ -893,13 +906,13 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Refresh automatically" = "Refresh automatically";
 
-/* No comment provided by engineer. */
+/* Store Widget: next refresh time (hour & minute) */
 "Refreshes at %@" = "Refreshes at %@";
 
 /* Match List: accessibility label */
 "Remove Bookmark" = "Remove Bookmark";
 
-/* No comment provided by engineer. */
+/* Asset Management: section */
 "Repair" = "Repair";
 
 /* Request Log: header */
@@ -911,7 +924,7 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Requests" = "Requests";
 
-/* No comment provided by engineer. */
+/* Asset Management: button */
 "Reset" = "Reset";
 
 /* Request Log: header */
@@ -953,7 +966,7 @@ Playtime Stats: section */
 /* Top-Level Tab Title */
 "Settings" = "Settings";
 
-/* No comment provided by engineer. */
+/* Playtime Stats: title for view of matches in common with another player */
 "Shared Matches" = "Shared Matches";
 
 /* No comment provided by engineer. */
@@ -1013,8 +1026,7 @@ Playtime Stats: section */
 /* Statistics Pro purchase prompt: 'Recon Bolt Pro' is inserted in the placeholder with a bolder font. */
 "Statistics require %@, a one-time purchase including a variety of features. Want to give them a look?" = "Statistics require %@, a one-time purchase including a variety of features. Want to give them a look?";
 
-/* Store Widget: title
-Settings: section */
+/* Store Widget: title */
 "Store" = "Store";
 
 /* No comment provided by engineer. */
@@ -1062,9 +1074,6 @@ Settings: section */
 /* Statistics error for iOS <16 */
 "This feature requires iOS 16 or newer." = "This feature requires iOS 16 or newer.";
 
-/* About Screen */
-"This is what keeps your credentials safe on your device." = "This is what keeps your credentials safe on your device.";
-
 /* Stats: match loading */
 "To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!";
 
@@ -1084,7 +1093,7 @@ Hit Distribution Stats: region */
 /* No comment provided by engineer. */
 "Twitter @juliand665" = "Twitter @juliand665";
 
-/* No comment provided by engineer. */
+/* Request Log */
 "URL" = "URL";
 
 /* Shown when a match does not match the filter and its details have not been fetched. */
@@ -1099,7 +1108,7 @@ Hit Distribution Stats: region */
 /* Round Details: killed by unknown ability */
 "Unknown Ability" = "Unknown Ability";
 
-/* No comment provided by engineer. */
+/* placeholder */
 "Unknown Agent" = "Unknown Agent";
 
 /* placeholder */
@@ -1141,7 +1150,7 @@ Hit Distribution Stats: region */
 /* No comment provided by engineer. */
 "Unknown mission!" = "Unknown mission!";
 
-/* No comment provided by engineer. */
+/* Asset Management: button */
 "Update Now" = "Update Now";
 
 /* Match Details: button */
@@ -1156,7 +1165,8 @@ Hit Distribution Stats: region */
 /* Win Rate Stats by Loadout Delta */
 "Value Difference (credits)" = "Value Difference (credits)";
 
-/* No comment provided by engineer. */
+/* Reference
+Asset Management */
 "Version %@" = "Version %@";
 
 /* No comment provided by engineer. */
@@ -1222,23 +1232,11 @@ Hit Distribution Stats: region */
 /* No comment provided by engineer. */
 "Your session has expired! Recon Bolt has tried to refresh it for you, but needs 2FA confirmation." = "Your session has expired! Recon Bolt has tried to refresh it for you, but needs 2FA confirmation.";
 
-/* Stats: match loading */
-"^[%lld Errors](inflect: true, grammar: { partOfSpeech: \"noun\" })" = "^[%lld Errors](inflect: true, grammar: { partOfSpeech: \"noun\" })";
-
-/* No comment provided by engineer. */
-"^[%lld maps](inflect: true, grammar: { partOfSpeech: \"noun\" }) selected" = "^[%lld maps](inflect: true, grammar: { partOfSpeech: \"noun\" }) selected";
-
-/* No comment provided by engineer. */
-"^[%lld queues](inflect: true, grammar: { partOfSpeech: \"noun\" }) selected" = "^[%lld queues](inflect: true, grammar: { partOfSpeech: \"noun\" }) selected";
-
-/* No comment provided by engineer. */
-"assets loading" = "assets loading";
-
 /* No comment provided by engineer. */
 "cell tap trigger" = "cell tap trigger";
 
 /* No comment provided by engineer. */
-"iOS is a bit finnicky about this, so widgets may not refresh right away, but this is the best we can do!" = "iOS is a bit finnicky about this, so widgets may not refresh right away, but this is the best we can do!";
+"iOS is a bit finnicky about this, so widgets may not refresh right away—feel free to restart if this doesn't help!" = "iOS is a bit finnicky about this, so widgets may not refresh right away—feel free to restart if this doesn't help!";
 
 /* Missions Widget: countdown label when the target is in the past. Should never really show up, since at this point there's new data. */
 "old" = "old";
