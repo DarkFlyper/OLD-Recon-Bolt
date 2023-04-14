@@ -20,11 +20,12 @@ extension BasicMatchInfo {
 	@ViewBuilder
 	var queueLabel: some View {
 		if provisioningFlowID == .customGame {
-			Text("Custom")
+			Text("Custom", comment: "Queue Label: custom game")
 		} else if let queueID {
 			QueueLabel(queue: queueID)
 		} else {
 			Text("Unknown Queue")
+				.foregroundStyle(.secondary)
 		}
 	}
 }
