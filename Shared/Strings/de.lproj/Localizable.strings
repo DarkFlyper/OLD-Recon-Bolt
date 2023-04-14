@@ -204,8 +204,7 @@ Competitive matches after your placements can be identified without their detail
 /* Request Log: shown for bodies that are not decodable to text */
 "Binary Data" = "Binäre Daten";
 
-/* Request Log: title for detailed view of request body/contents
-Hit Distribution Stats: region */
+/* Hit Distribution Stats: region */
 "Body" = "Körper";
 
 /* Bookmark/Player List: section */
@@ -423,6 +422,9 @@ Stats: error details */
 /* Request Log: title for an exchange */
 "Exchange" = "Austausch";
 
+/* Request Log: title for detailed view of request body/contents */
+"Exchange Body" = "Inhalt";
+
 /* Pro Features List */
 "Exclusive App Icon" = "Exklusives App-Icon";
 
@@ -536,7 +538,7 @@ DEINE FEHLERMELDUNG HIER
 "In case something went wrong, use this button to force a full refetch of the assets and images." = "Falls etwas schiefgelaufen ist, kannst du mit diesem Knopf alle Assets und Bilder ganz neu laden.";
 
 /* Settings: section */
-"In-App Store" = "Shop";
+"In-App Store" = "Pro Kaufen";
 
 /* No comment provided by engineer. */
 "Is this safe?" = "Ist das hier sicher?";
