@@ -1,6 +1,7 @@
 import SwiftUI
 import HandyOperators
 import ValorantAPI
+import WidgetKit
 
 struct ContentView: View {
 	@ObservedObject var accountManager: AccountManager
@@ -93,6 +94,10 @@ struct ContentView: View {
 	func handle(_ link: WidgetLink) {
 		guard #available(iOS 16.0, *) else { return }
 		print("handling", link)
+		
+		if let kind = link.timelinesToReload {
+			WidgetCenter.shared.reloadTimelines(ofKind: kind.rawValue)
+		}
 		
 		if let user = link.account {
 			do {

@@ -7,14 +7,15 @@ import HandyOperators
 struct ViewRankWidget: Widget {
 	var body: some WidgetConfiguration {
 		IntentConfiguration.preloading(
-			kind: "view rank",
+			kind: .viewRank,
 			intent: ViewRankIntent.self,
-			provider: RankEntryProvider(),
-			supportedFamilies: .systemSmall, .systemMedium
+			provider: RankEntryProvider()
 		) { entry in
 			RankEntryView(entry: entry)
+				.reloadingOnTap(.viewRank)
 				.environment(\.location, entry.location)
 		}
+		.supportedFamilies([.systemSmall, .systemMedium])
 		.configurationDisplayName(Text("Rank", comment: "Rank Widget: title"))
 		.description(Text("View your current rank.", comment: "Rank Widget: description"))
 	}

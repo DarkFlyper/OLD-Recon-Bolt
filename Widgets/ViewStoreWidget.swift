@@ -8,11 +8,12 @@ import CGeometry
 struct ViewStoreWidget: Widget {
 	var body: some WidgetConfiguration {
 		IntentConfiguration(
-			kind: "view store",
+			kind: WidgetKind.viewStore.rawValue,
 			intent: ViewStoreIntent.self,
 			provider: StoreEntryProvider()
 		) { entry in
 			StoreEntryView(entry: entry)
+				.reloadingOnTap(.viewStore)
 		}
 		.supportedFamilies([.systemSmall, .systemMedium, .systemLarge])
 		.configurationDisplayName(Text("Store", comment: "Store Widget: title"))

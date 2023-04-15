@@ -8,11 +8,12 @@ import CGeometry
 struct ViewMissionsWidget: Widget {
 	var body: some WidgetConfiguration {
 		IntentConfiguration(
-			kind: "view missions",
+			kind: WidgetKind.viewMissions.rawValue,
 			intent: ViewMissionsIntent.self,
 			provider: ContractsEntryProvider()
 		) { entry in
 			MissionListView(entry: entry)
+				.reloadingOnTap(.viewMissions)
 		}
 		.supportedFamilies([.systemSmall, .systemMedium])
 		.configurationDisplayName(Text("Missions", comment: "Missions Widget: title"))

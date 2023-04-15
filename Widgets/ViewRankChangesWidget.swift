@@ -6,14 +6,15 @@ import ValorantAPI
 struct ViewRankChangesWidget: Widget {
 	var body: some WidgetConfiguration {
 		IntentConfiguration.preloading(
-			kind: "view rank changes",
+			kind: .viewRankChanges,
 			intent: ViewRankChangesIntent.self,
-			provider: RankChangesEntryProvider(),
-			supportedFamilies: .systemSmall, .systemMedium
+			provider: RankChangesEntryProvider()
 		) { entry in
 			RankChangesEntryView(entry: entry)
+				.reloadingOnTap(.viewRankChanges)
 				.environment(\.location, entry.location)
 		}
+		.supportedFamilies([.systemSmall, .systemMedium])
 		.configurationDisplayName(Text("Rank Changes", comment: "Rank Changes Widget: title"))
 		.description(Text("View your rank rating changes.", comment: "Rank Changes Widget: description"))
 	}

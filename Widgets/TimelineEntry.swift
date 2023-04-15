@@ -1,6 +1,7 @@
 import SwiftUI
 import WidgetKit
 import ValorantAPI
+import HandyOperators
 
 protocol TimelineEntryView: View {
 	associatedtype Value: FetchedTimelineValue
@@ -37,7 +38,38 @@ extension TimelineEntryView {
 			}
 		}
 		.accentColor(Color("AccentColor"))
-		.widgetURL(entry.link.makeURL())
+		.modifier(WidgetLinkResolver(link: entry.link))
+	}
+}
+
+extension View {
+	func reloadingOnTap(_ kind: WidgetKind) -> some View {
+		environment(\.reloadKind, kind)
+	}
+}
+
+private struct WidgetLinkResolver: ViewModifier {
+	let link: WidgetLink
+	
+	@Environment(\.reloadKind) private var reloadKind
+	
+	func body(content: Content) -> some View {
+		let resolved = link <- {
+			$0.timelinesToReload = reloadKind
+		}
+		content
+			.widgetURL(resolved.makeURL())
+	}
+}
+
+private extension EnvironmentValues {
+	var reloadKind: WidgetKind? {
+		get { self[ReloadKindKey.self] }
+		set { self[ReloadKindKey.self] = newValue }
+	}
+	
+	private struct ReloadKindKey: EnvironmentKey {
+		static let defaultValue: WidgetKind? = nil
 	}
 }
 

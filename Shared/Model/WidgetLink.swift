@@ -6,6 +6,7 @@ struct WidgetLink: Codable {
 	/// if non-nil, this becomes the active account
 	var account: User.ID?
 	var destination: Destination?
+	var timelinesToReload: WidgetKind?
 	
 	func makeURL() -> URL {
 		let data = try! JSONEncoder().encode(self)
@@ -31,4 +32,11 @@ extension WidgetLink {
 		case noFragment
 		case notBase64(String)
 	}
+}
+
+enum WidgetKind: String, Codable {
+	case viewRank = "view rank"
+	case viewRankChanges = "view rank changes"
+	case viewStore = "view store"
+	case viewMissions = "view missions"
 }

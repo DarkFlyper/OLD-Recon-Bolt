@@ -24,23 +24,20 @@ extension AssetImage {
 
 extension IntentConfiguration {
 	static func preloading<Provider: FetchingIntentTimelineProvider>(
-		kind: String,
+		kind: WidgetKind,
 		intent: Intent.Type = Intent.self,
 		provider: Provider,
-		supportedFamilies: WidgetFamily...,
 		content: @escaping (Provider.Entry) -> Content
 	) -> some WidgetConfiguration where Intent == Provider.Intent {
 		Self(
-			kind: kind,
+			kind: kind.rawValue,
 			intent: Intent.self,
 			provider: PreloadingIntentTimelineProvider(
 				wrapped: provider,
-				supportedFamilies: supportedFamilies,
 				content: content
 			),
 			content: content
 		)
-		.supportedFamilies(supportedFamilies)
 	}
 }
 
@@ -51,7 +48,6 @@ struct PreloadingIntentTimelineProvider<
 	typealias Intent = Wrapped.Intent
 	
 	let wrapped: Wrapped
-	let supportedFamilies: [WidgetFamily]
 	let content: (Wrapped.Entry) -> Content
 	
 	func fetchValue(in context: inout Wrapped.FetchingContext) async throws -> Wrapped.Value {
@@ -63,11 +59,9 @@ struct PreloadingIntentTimelineProvider<
 			configuration: context.configuration,
 			link: .init()
 		)
+		let family = context.context.family
 		await preloadImages {
-			let view = content(entry)
-			ForEach(supportedFamilies, id: \.self) {
-				view.environment(\.adjustedWidgetFamily, $0)
-			}
+			content(entry).environment(\.adjustedWidgetFamily, family)
 		}
 		return value
 	}
