@@ -2,10 +2,34 @@ import SwiftUI
 import WidgetKit
 
 enum Managers {
-	@MainActor static let accounts = AccountManager()
-	@MainActor static let assets = AssetManager()
+	@AutoReloadedManager static var accounts = AccountManager()
+	@AutoReloadedManager static var assets = AssetManager()
+	@AutoReloadedManager static var store = InAppStore(isReadOnly: true)
 	@MainActor static let images = ImageManager()
-	@MainActor static let store = InAppStore(isReadOnly: true)
+}
+
+/// keeps a manager around for a short time to function as a singleton within one operation,
+/// but clears/reloads it afterwards to make sure it matches the newest data from the app
+@MainActor
+@propertyWrapper
+final class AutoReloadedManager<Value> {
+	private let makeValue: () -> Value
+	private var cache: (Value, Date)?
+	private let reloadDelay: TimeInterval = 30
+	
+	var wrappedValue: Value {
+		if let (value, date) = cache, -date.timeIntervalSinceNow < reloadDelay {
+			return value
+		} else {
+			let value = makeValue()
+			cache = (value, .now)
+			return value
+		}
+	}
+	
+	init(wrappedValue: @escaping @autoclosure @MainActor () -> Value) {
+		makeValue = wrappedValue
+	}
 }
 
 extension AssetImage {
