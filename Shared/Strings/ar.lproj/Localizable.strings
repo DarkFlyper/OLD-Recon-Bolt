@@ -1,1 +1,901 @@
-/* This file exists as a marker to combine the synthesized files from all targets. */
+
+/* Used for matches less than a day ago. %@ is replaced by the number of hours/minutes, e.g. '3h ago'. */
+"%@ ago" = "منذ %@";
+
+/* %@ is replaced by a fraction of wins vs. games played, e.g. '5/12 games won'. */
+"%@ games won" = "فاز في %@ مبارة";
+
+/* Win Rate Stats by Loadout Delta: focused value (drag on graph); placeholder is replaced by the percentage of rounds won, e.g. '57.3% won'. */
+"%@ won" = "فاز %@";
+
+/* No comment provided by engineer. */
+"%@%%" = "%@%%";
+
+/* No comment provided by engineer. */
+"%lld Future Weeklies" = "%lld المهام الأسبوعية القادمة";
+
+/* No comment provided by engineer. */
+"%lld Queued-Up Weeklies" = "%lld المهام الاسبوعية في قائمة الانتظار";
+
+/* No comment provided by engineer. */
+"%lld RR" = "%lld RR";
+
+/* Storage Management */
+"%lld from other players" = "%lld من لاعبين اخرين";
+
+/* Loadout Item Picker: number of hidden items—this should never show nowadays */
+"%lld hidden due to outdated assets" = "%lld مخفية بسبب الموارد القديمة";
+
+/* Hit Distribution Stats: hit count */
+"%lld hits" = "%lld ضربات";
+
+/* Shown at the bottom of the expandable playtime list when there are more entries available. */
+"%lld more" = "%lld غير ذلك";
+
+/* Statistics Filter: shown when not everything is allowed */
+"%lld selected" = "%lld اخترت";
+
+/* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
+"%lld to %lld credits" = "%lld الى %lld عتاد";
+
+/* No comment provided by engineer. */
+"%lld%%" = "%lld%%";
+
+/* No comment provided by engineer. */
+"%lld/%lld" = "%lld/%lld";
+
+/* Stats: match loading */
+"%lld/%lld loaded" = "%lld/%lld محمل";
+
+/* Loadout Item Picker: number of items owned out of all such items in the game */
+"%lld/%lld owned" = "%lld/%lld مملوك";
+
+/* Time Formatting: minutes & seconds (used in round details view) */
+"%lld:%@" = "%lld:%@";
+
+/* Time Formatting: minutes, seconds, & milliseconds (used in round details view) */
+"%lld:%@.%@" = "%lld:%@.%@";
+
+/* Contract Progress Bar */
+"%lld / %lld XP" = "%lld/%lldXP";
+
+/* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
+"(%lld – %lld)" = "(%lld – %lld)";
+
+/* Pro Features List */
+"(You can switch between available icons at any time.)" = "(يمكنك تبديل الايكونات كما تريد)";
+
+/* No comment provided by engineer. */
+"+%lld XP" = "+%lld XP";
+
+/* Missions Widget: how many more weeklies are queued up after the current set */
+"+%lld queued" = "+%lld في قائمة الانتظار";
+
+/* Store: night market discount */
+"-%lld%%" = "-%lld%%";
+
+/* No comment provided by engineer. */
+"2-Factor Authentication" = "2- عامل التوثيق";
+
+/* Missions Widget: countdown label when the target is in the future. e.g. '< 2d 3h' */
+"< %@" = "اقل من %@";
+
+/* No comment provided by engineer. */
+"A 2FA code has been sent to your email address %@" = "تم ارسال كود التوثيق الى هذا الايميل: %@";
+
+/* No comment provided by engineer. */
+"A match's queue is unknown until its details are fetched (by tapping it or performing the swipe action).
+Competitive matches after your placements can be identified without their details, however." = "قائمة انتظار المباراة غير معروفة حتى يتم جلب تفاصيلها (عن طريق النقر عليها أو تنفيذ إجراء التمرير).
+ومع ذلك ، يمكن التعرف على المطابقات التنافسية بعد مواضعك بدون تفاصيلها.";
+
+/* No comment provided by engineer. */
+"AFK: %lld" = "AFK: %lld";
+
+/* Career Summary: header for totals of all time */
+"ALL TIME" = "كل الوقت";
+
+/* Settings: section */
+"About" = "بشأن";
+
+/* No comment provided by engineer. */
+"About Recon Bolt" = "بشأن Recon Bolt";
+
+/* Settings: section */
+"Accounts" = "الحسابات";
+
+/* Contract Picker: button */
+"Activate" = "فعّل";
+
+/* Contract Picker */
+"Active" = "مفُعّل";
+
+/* No comment provided by engineer. */
+"Active Contract" = "عقد مفُعّل";
+
+/* Match List: accessibility label */
+"Add Bookmark" = "أضف إشارة مرجعية";
+
+/* Account Settings */
+"Add another Account" = "أضف حساب";
+
+/* Pro Features List */
+"Add multiple accounts and seamlessly switch between them at any time." = "أضف حسابات متعددة وقم بالتبديل بينها في أي وقت.";
+
+/* No comment provided by engineer. */
+"Advanced Settings" = "إعدادات متقدمة";
+
+/* Pro Store */
+"Advanced Stats" = "احصائيات متقدمة";
+
+/* No comment provided by engineer. */
+"Agent Select" = "اختيار العميل";
+
+/* No comment provided by engineer. */
+"Agents" = "العملاء";
+
+/* Stats: match loading */
+"All %lld" = "جميع ال%lld";
+
+/* No comment provided by engineer. */
+"All Maps" = "جميع الخرائط";
+
+/* Statistics Filter (queues or agents) */
+"Allow All" = "اظهر الكل";
+
+/* Statistics Filter (queues or agents) */
+"Allow None" = "لا تظهر شيء";
+
+/* Statistics Filter */
+"Allowing %lld/%lld matches (%lld filtered out)" = "اظهار %lld / %lld مبارة (اخفاء%lld)";
+
+/* No comment provided by engineer. */
+"An Error Occurred!" = "حدث خطأ!";
+
+/* About Screen */
+"An invaluable API hosting all the assets (images, data, etc.) used throughout Valorant. This is where almost every image in the app comes from." = "واجهة برمجة تطبيقات لا تقدر بثمن تستضيف جميع الموارد (الصور والبيانات وما إلى ذلك) المستخدمة في جميع أنحاء Valorant. هذا هو المكان الذي تأتي منه كل صورة تقريبًا في التطبيق.";
+
+/* Statistics Filter: shown when everything is allowed */
+"Any" = "كل شيء";
+
+/* Asset Management */
+"Anything with images will not display correctly." = "أي شيء به صور لن يعرض بشكل صحيح.";
+
+/* No comment provided by engineer. */
+"App Icon" = "ايقونة التطبيق";
+
+/* No comment provided by engineer. */
+"Are your assets outdated?" = "هل مواردك قديمة؟";
+
+/* Pro Features List */
+"As thanks for your support, you get to show off your status with an exclusive app icon!" = "شكراً لدعمك ، الان تستطيع التباهي بأيقونة تطبيق حصرية!";
+
+/* About Screen */
+"As you can guess, the scope expanded massively over time to what you're using now. I hope you're enjoying it!" = "كما يمكنك التخمين ، توسع النطاق بشكل كبير بمرور الوقت إلى ما تستخدمه الآن. أتمنى أن تكون مستمتعًا به!";
+
+/* No comment provided by engineer. */
+"Assets" = "الموارد";
+
+/* Asset Management: shown before the newest version is fetched, so it's not know yet if the assets are up to date or outdated */
+"Assets complete." = "تم تحميل الموارد.";
+
+/* No comment provided by engineer. */
+"Assets not loaded!" = "فشل في تحويل الموارد!";
+
+/* Asset Management */
+"Assets out of date!" = "الموارد قديمة!";
+
+/* No comment provided by engineer. */
+"Assets should be fetched automatically, but in case something went wrong, feel free to initiate the process manually." = "الموارد يتم تحميلها تلقائيا. اذا تظن ان هنالك خطئ في الموارد يمكنك اعادة تحميلها من هنا.";
+
+/* Asset Management */
+"Assets up to date!" = "الموارد محدثة!";
+
+/* No comment provided by engineer. */
+"Assuming you signed up for Valorant using Google/Apple/etc., you can set up your account to add a username & password on Riot's site at [account.riotgames.com](https://account.riotgames.com). Note that your Riot ID is **not** the same as your username! If you've forgotten your username, you can reset it at [recovery.riotgames.com](https://recovery.riotgames.com)." = "بافتراض أنك اشتركت في Valorant باستخدام Google / Apple / وما إلى ذلك ، يمكنك إعداد حسابك لإضافة اسم مستخدم وكلمة مرور على موقع Riot على [account.riotgames.com] (https://account.riotgames.com). لاحظ أن معرف Riot الخاص بك ** ليس ** هو نفس اسم المستخدم الخاص بك! إذا نسيت اسم المستخدم الخاص بك ، فيمكنك إعادة تعيينه على [recovery.riotgames.com] (https://recovery.riotgames.com).";
+
+/* Win Rate Stats: side name */
+"Attacking" = "هجوم";
+
+/* Store: available currency */
+"Available:" = "في حسابك:";
+
+/* Hit Distribution Stats: average HS% */
+"Average: %@" = "على المعدل: %@";
+
+/* Request Log: shown for bodies that are not decodable to text */
+"Binary Data" = "البيانات الثنائية";
+
+/* Hit Distribution Stats: region */
+"Body" = "طلقات الجسم";
+
+/* Bookmark/Player List: section */
+"Bookmarks" = "الإشارات المرجعية";
+
+/* Gun Customizer: section */
+"Buddy" = "تعليقة السلاح";
+
+/* Storage Management: section */
+"By Kind" = "بالنوع";
+
+/* Win Rate Stats: section
+Playtime Stats: section */
+"By Map" = "بالخريطة";
+
+/* Playtime Stats: section/title */
+"By Non-Premade Player" = "بواسطة لاعب غير معدل مسبقاً";
+
+/* Playtime Stats: section/title */
+"By Premade Teammate" = "عبر اللاعبين المعدَّلين مُسبقاً";
+
+/* Playtime Stats: section */
+"By Queue" = "حسب الطابور";
+
+/* Hit Distribution Stats: section */
+"By Weapon" = "حسب السلاح";
+
+/* No comment provided by engineer. */
+"Cancel" = "الغاء";
+
+/* No comment provided by engineer. */
+"Cancel Matchmaking" = "إلغاء البحث عن المباراة";
+
+/* Top-Level Tab Title */
+"Career" = "المهنة";
+
+/* No comment provided by engineer. */
+"Career Summaries" = "تلخيصات المهنة";
+
+/* No comment provided by engineer. */
+"Career Summary" = "تلخيص المهنة";
+
+/* No comment provided by engineer. */
+"Change Buddy" = "غيّر ملحق السلاح";
+
+/* No comment provided by engineer. */
+"Change Queue" = "غيّر الطابور";
+
+/* Gun Customizer */
+"Change Skin" = "غيّر مظهر السلاح";
+
+/* Store Widget: description */
+"Check your current Valorant storefront." = "تحقق من واجهة متجر Valorant الخاصة بك.";
+
+/* Missions Widget: description */
+"Check your progress on daily & weekly missions." = "تحقق من تقدمك في المهام اليومية والأسبوعية.";
+
+/* No comment provided by engineer. */
+"Choose App Icon" = "غيّر ايقونة التطبيق";
+
+/* No comment provided by engineer. */
+"Choose Buddy" = "اختر ملحق السلاح";
+
+/* No comment provided by engineer. */
+"Choose Card" = "اختر بطاقة اللعب";
+
+/* No comment provided by engineer. */
+"Choose Skin" = "اخطر مظهر السلاح";
+
+/* No comment provided by engineer. */
+"Choose Spray" = "اختر رسمة";
+
+/* No comment provided by engineer. */
+"Choose Title" = "اختر لقب";
+
+/* Contract Picker: title */
+"Choose a Contract" = "اختر عقد";
+
+/* Buddy Picker: alert shown when both instances of a buddy are in use */
+"Choose a weapon to take %@ from." = "اختر سلاح لتأخذ %@ منه";
+
+/* Storage Management: button to delete all entries of a certain kind */
+"Clear All" = "امسح الكل";
+
+/* Contract Picker */
+"Completed" = "اكتمل";
+
+/* Storage Management: title for alert to confirm deleting some matches */
+"Confirm Delete" = "تأكيد الحذف";
+
+/* No comment provided by engineer. */
+"Contract complete!" = "اكتمل العقد!";
+
+/* No comment provided by engineer. */
+"Copy Body" = "نسخ المحتوى";
+
+/* Stats: error details: accessibility label */
+"Copy Error" = "احفظ الخطأ";
+
+/* No comment provided by engineer. */
+"Copy Error Details" = "احفظ تفاصيل الخطأ";
+
+/* No comment provided by engineer. */
+"Copy Match ID" = "احفظ رقم الخطأ التعريفي";
+
+/* No comment provided by engineer. */
+"Copy to Clipboard" = "نسخ إلى الحافظة";
+
+/* No comment provided by engineer. */
+"Could not Change App Icon!" = "لم نستطع تغيير الايقون!";
+
+/* No comment provided by engineer. */
+"Could not Load Account!" = "فشل تحميل الحساب المنشط!";
+
+/* No comment provided by engineer. */
+"Could not delete files!" = "لا يمكن حذف الملفات!";
+
+/* No comment provided by engineer. */
+"Could not determine used storage!" = "فشل في تحديد مساحة التخزين المستخدمة!";
+
+/* No comment provided by engineer. */
+"Could not free up space!" = "لا يمكن إخلاء مساحة!";
+
+/* No comment provided by engineer. */
+"Could not look up %@" = "فشل في العثور على %@";
+
+/* No comment provided by engineer. */
+"Could not sign in!" = "فشل تسجيل الدخول!";
+
+/* Asset Management */
+"Current version: %@" = "الإصدار الحالي: %@";
+
+/* No comment provided by engineer. */
+"Currently in agent select" = "الان في اختيار العميل";
+
+/* No comment provided by engineer. */
+"Currently in-game" = "الان في اللعبة";
+
+/* Queue Label: custom game */
+"Custom" = "لعبة مخصصة";
+
+/* Gun Customizer: title */
+"Customize %@" = "تخصيص%@";
+
+/* Gun Customizer: title */
+"Customize Gun" = "تخصيص السلاح";
+
+/* Missions Widget */
+"Daily" = "يومي";
+
+/* Store */
+"Daily Offers" = "عروض يومية";
+
+/* App Theme */
+"Dark Mode" = "الوضع الداكن";
+
+/* Hit Distribution Stats */
+"Data from %lld games (%lld skipped lacking data)" = "معلومات من %lld مباريات (تم تخطي %lld)";
+
+/* Stats: match loading */
+"Data going back to %@" = "المعلومات تعود الى %@";
+
+/* No comment provided by engineer. */
+"Day" = "النهار";
+
+/* App Icon Name */
+"Default" = "افتراضي";
+
+/* App Icon Picker: section */
+"Default Icon" = "ايقون افتراضي";
+
+/* Win Rate Stats: side name */
+"Defending" = "دفاع";
+
+/* Storage Management: button to confirm deleting some matches */
+"Delete %lld Matches" = "احذف %lld مبارايات";
+
+/* Match Details: button to view details by round */
+"Details by Round" = "التفاصيل حسب الجولة";
+
+/* No comment provided by engineer. */
+"Discord Server" = "خادم ديسكورد";
+
+/* Hit Distribution Stats: section */
+"Distribution Over Time" = "التوزيع بمرور الوقت";
+
+/* No comment provided by engineer. */
+"Done" = "منتهي";
+
+/* No comment provided by engineer. */
+"Download Assets Now" = "حمّل الموارد الان";
+
+/* Win Rate Stats: chart legend */
+"Draws" = "تعادلات";
+
+/* Request Log: shown in place of a status code (like 200 or 404) when sending failed. */
+"ERROR" = "خطأ";
+
+/* Match List: accessibility label */
+"Edit Filter" = "عدّل عامل التصفية";
+
+/* No comment provided by engineer. */
+"Enter 2FA Code" = "ادخل كود التوثيق";
+
+/* Request Log
+Stats: error details */
+"Error" = "خطأ";
+
+/* No comment provided by engineer. */
+"Error Details" = "تفاصيل الخطأ";
+
+/* Asset Management */
+"Error downloading assets!" = "خطأ في تحميل الموارد!";
+
+/* Request Log: title for an exchange */
+"Exchange" = "تبادل";
+
+/* Request Log: title for detailed view of request body/contents */
+"Exchange Body" = "المحتوى";
+
+/* Pro Features List */
+"Exclusive App Icon" = "ايقونة للتطبيق حصري";
+
+/* Round Details: killed by spike */
+"Exploded" = "انفجر";
+
+/* Pro Features List */
+"Family Sharing" = "مشاركة مع العائلة";
+
+/* Request Log: placeholder is replaced by error dump. */
+"Feedback Email Body" = "ماذا حصل؟ أخبرني عن الخطأ الذي واجهته:
+
+تقرير الخطأ الخاص بك هنا
+
+%@";
+
+/* Match List: accessibility label */
+"Fetch Details" = "جلب التفاصيل";
+
+/* No comment provided by engineer. */
+"Filter" = "عامل التصفية";
+
+/* No comment provided by engineer. */
+"Filter Maps" = "صفّي الخرائط";
+
+/* No comment provided by engineer. */
+"Filter Match List" = "صفّي لائحة المباريات";
+
+/* No comment provided by engineer. */
+"Filter Queues" = "صفي طوابير الانتصار";
+
+/* No comment provided by engineer. */
+"Filtering by starting side will exclude any matches in single-round modes like Deathmatch, Escalation, etc." = "التصفية حسب جانب البداية ستستبعد أي مباريات في أوضاع الجولة الواحدة مثل دث-ماتش و اسكيليشن وما إلى ذلك.";
+
+/* No comment provided by engineer. */
+"Find Match" = "اعثر على مبارة";
+
+/* Party Box: placeholder shows time spent in queue */
+"Finding match… (%@)" = "جاري العثور على مبارة (%@)";
+
+/* No comment provided by engineer. */
+"Force Refresh Widgets" = "إعادة تحميل الودجات بالقوة";
+
+/* Storage Management: button to free up a certain amount of space */
+"Free up these %@" = "قم بتفضية هذه %@";
+
+/* Agent Select header: shown when timer reaches zero */
+"Game Started" = "ابتدأت المبارة";
+
+/* No comment provided by engineer. */
+"Game is not running!" = "اللعبة ليست مفتوحة!";
+
+/* Pro Features List */
+"Gather statistics from anyone's games to gain insights on things like time played by mode/premade, headshot rate over time/by weapon, win rate over time/by map & side, and more!" = "اجمع الإحصائيات من ألعاب أي شخص لاكتساب رؤى حول أشياء مثل الوقت الذي يتم لعبه حسب الوضع / العرض المسبق ، ومعدل إصابة الرأس بمرور الوقت / حسب السلاح ، ومعدل الفوز بمرور الوقت / حسب الخريطة والجانب ، والمزيد!";
+
+/* Pro Features List */
+"Getting money from Recon Bolt gives me the flexibility and motivation to keep improving the app!" = "دعمكم ل Recon Bolt يمنحني المرونة والتحفيز لمواصلة تحسين التطبيق!";
+
+/* No comment provided by engineer. */
+"GitHub Repo" = "GitHub Repo";
+
+/* No comment provided by engineer. */
+"Golden Gun" = "سلاح ذهبي";
+
+/* Stats: date grouping size picker */
+"Group by" = "جمّع حسب";
+
+/* Hit Distribution Stats: region */
+"Head" = "ضربة الرأس";
+
+/* No comment provided by engineer. */
+"Headhunter (Chamber)" = "صياد الرؤوس (تشامبر)";
+
+/* About Screen */
+"Hi! I'm Julian Dunskus, and I made this app." = "مرحبا! انا اسمي جوليان ضنسقس وانا قمت بصناعة هذا التطبيق.";
+
+/* Hit Distribution Stats: title */
+"Hit Distribution" = "تقصيم الضربات";
+
+/* Pro Store */
+"Home Screen Widgets" = "ودجات الشاشة الرئيسية";
+
+/* Pro Store */
+"I hope you enjoy the pro features :)" = "اتمنى ان تعجبك مميزات ال Pro!";
+
+/* No comment provided by engineer. */
+"I won't sugarcoat things. Due to the way this app uses the API, I believe there's no other way to sign in than to have people enter their credentials directly. Under those circumstances, there's really no good way for anyone to be sure their credentials remain safe. For what it's worth:" = "لن أقوم بتلوين الأشياء. نظرًا للطريقة التي يستخدم بها هذا التطبيق واجهة برمجة التطبيقات ، أعتقد أنه لا توجد طريقة أخرى لتسجيل الدخول سوى جعل الأشخاص يدخلون بيانات اعتمادهم مباشرة. في ظل هذه الظروف ، لا توجد طريقة جيدة لأي شخص للتأكد من أن أوراق اعتماده تظل آمنة. لما يستحق:";
+
+/* No comment provided by engineer. */
+"Identities" = "الهويات";
+
+/* No comment provided by engineer. */
+"If you don't know your username or don't have one, you can fix that at [account.riotgames.com](https://account.riotgames.com)." = "إذا كنت لا تعرف اسم المستخدم الخاص بك أو لم يكن لديك اسم مستخدم ، فيمكنك إصلاح ذلك على [account.riotgames.com] (https://account.riotgames.com).";
+
+/* Pro Features List */
+"If you have accounts in multiple regions to play with friends around the world, this is the feature for you!" = "إذا كان لديك حسابات في مناطق متعددة للعب مع الأصدقاء حول العالم ، فهذه هي الميزة المناسبة لك!";
+
+/* Pro Features List */
+"If you have multiple accounts, you can configure separate widgets for each and have them on your Home Screen at the same time." = "إذا كان لديك حسابات متعددة ، فيمكنك تكوين ويدجات منفصلة لكل منها ووضعها على شاشتك الرئيسية في نفس الوقت.";
+
+/* About Screen */
+"If you've encountered a bug or have some feedback, I'm always happy to hear it on the Discord Server or GitHub :)" = "إذا واجهت خطأ أو كانت لديك بعض التعليقات ، فأنا دائمًا سعيد لسماعها على Discord Server أو GitHub :)";
+
+/* No comment provided by engineer. */
+"If your widgets seem broken, use this button to request an immediate refresh from iOS." = "إذا بدت الويدجات معطلة ، فاستخدم هذا الزر لطلب تحديث فوري من iOS.";
+
+/* No comment provided by engineer. */
+"Image failed to load!" = "فشل تحميل الصورة!";
+
+/* Asset Management */
+"In case something went wrong, use this button to force a full refetch of the assets and images." = "في حالة حدوث خطأ ما ، استخدم هذا الزر لفرض إعادة الجلب الكامل للموارد والصور.";
+
+/* Settings: section */
+"In-App Store" = "المتجر";
+
+/* No comment provided by engineer. */
+"Is this safe?" = "هل هذا أمن؟";
+
+/* No comment provided by engineer. */
+"Join the Discord Server" = "انضم إلى Discord الخاص بالتطبيق";
+
+/* Match Details: section */
+"Kills by Round" = "القتلى حسب الجولة";
+
+/* Hit Distribution Stats: region */
+"Legs" = "ضربات الارجل";
+
+/* Bookmark/Player List: player level */
+"Level %lld" = "مستوى الحساب %lld";
+
+/* Contract Progress Bar */
+"Level %lld / %lld" = "مستوى %lld / %lld";
+
+/* No comment provided by engineer. */
+"Lifetime Peak" = "أعلى مرتبة على الإطلاق";
+
+/* App Theme */
+"Light Mode" = "الوضع الفاتح";
+
+/* About Screen: section */
+"Links" = "الروابط";
+
+/* Top-Level Tab Title */
+"Live" = "مباشر";
+
+/* No comment provided by engineer. */
+"Live Match" = "المبارة المباشرة";
+
+/* Stats: match loading */
+"Load Data" = "حمّل البيانات";
+
+/* Match List */
+"Load Older Matches" = "حمّل المباريات القديمة";
+
+/* Pro Store */
+"Loading Store Info…" = "جاري تحميل معلومات المتجر…";
+
+/* No comment provided by engineer. */
+"Loading request log…" = "جارٍ تحميل سجل الطلب…";
+
+/* No comment provided by engineer. */
+"Loadout" = "العتاد";
+
+/* No comment provided by engineer. */
+"Loadout Delta" = "دلتا العتاد";
+
+/* No comment provided by engineer. */
+"Loadout Delta is computed as the difference between the average loadout value of players on each team. For example, a loadout delta of +1000 means your team's loadouts were an average of 1000 credits more valuable than the enemy team's in that round." = "يتم حساب دلتا العتاد على أنه الفرق بين متوسط قيمة التحميل للاعبين في كل فريق. على سبيل المثال ، تعني دلتا العتاد بمقدار +1000 أن عتاد فريقك كان في المتوسط 1000 رصيد أكثر قيمة من فريق العدو في تلك الجولة.";
+
+/* No comment provided by engineer. */
+"Loadout not loaded!" = "لم يتم تحميل العتاد!";
+
+/* No comment provided by engineer. */
+"Lobby Dodged" = "الغاء الصالة (تهرّب)";
+
+/* No comment provided by engineer. */
+"Lock In" = "تثبيت";
+
+/* No comment provided by engineer. */
+"Lock In %@" = "قم بتثبيت %@";
+
+/* Bookmark/Player List: lookup button */
+"Look Up" = "إبحث";
+
+/* No comment provided by engineer. */
+"Looks like you're trying to enter your Riot ID (and tagline) as username! Your username is actually something else: it's what you use to sign into the Valorant launcher." = "يبدو أنك تحاول إدخال اسم تعريف RIOT (والشعار) كاسم مستخدم! اسم المستخدم الخاص بك هو في الواقع شيء آخر: إنه ما تستخدمه لتسجيل الدخول إلى مشغّل Valorant.";
+
+/* Win Rate Stats: chart legend */
+"Losses" = "الخسارات";
+
+/* No comment provided by engineer. */
+"Manage Assets" = "إدارة الموارد";
+
+/* No comment provided by engineer. */
+"Manage Local Storage" = "إدارة التخزين المحلي";
+
+/* No comment provided by engineer. */
+"Map" = "الخريطة";
+
+/* No comment provided by engineer. */
+"Maps" = "الخرائط";
+
+/* Stats: error details */
+"Match" = "المبارة";
+
+/* Match Details: title */
+"Match Details" = "تفاصيل المبارة";
+
+/* No comment provided by engineer. */
+"Match Lists" = "لائحة المباريات";
+
+/* No comment provided by engineer. */
+"Match Loading Errors" = "أخطاء في تحميل المباراة";
+
+/* App Theme */
+"Match System" = "طبّق اعدادات الجهاز";
+
+/* Match List: section */
+"Matches" = "المباريات";
+
+/* Stats: match loading */
+"Matches to load: **%lld**" = "باقي تحميل المباريات **%lld**";
+
+/* Party Box: shown when member's name is not yet loaded */
+"Member" = "عضو";
+
+/* Request Log */
+"Method" = "الطريقة";
+
+/* Asset Management */
+"Missing assets!" = "موارد مفقودة!";
+
+/* No comment provided by engineer. */
+"Missing progress for contract!" = "تقدم العقد مفقود!";
+
+/* No comment provided by engineer. */
+"Missing season data!" = "معلومات الموسم مفقودة!";
+
+/* Missions Widget: title */
+"Missions" = "المهام";
+
+/* No comment provided by engineer. */
+"Missions not loaded!" = "لم يتم تحميل المهام!";
+
+/* No comment provided by engineer. */
+"Month" = "الشهر";
+
+/* Pro Features List */
+"Multiple Account Support" = "دعم للحسابات المتعددة";
+
+/* Pro Store */
+"Multiple Accounts" = "حسابات متعددة";
+
+/* Bookmark/Player List: lookup name placeholder */
+"Name" = "الأسم";
+
+/* Asset Management */
+"Newest available: %@" = "المتاح الأحدث: %@";
+
+/* Store */
+"Night Market" = "السوق الليلية";
+
+/* Buddy picker: option at the top to select no buddy */
+"No Buddy" = "بدون ملحق";
+
+/* No comment provided by engineer. */
+"No Spray" = "بدون رسمة";
+
+/* No comment provided by engineer. */
+"No Title" = "بدون لقب";
+
+/* Gun Customizer: shown when a weapon has no buddy active */
+"No buddy selected!" = "لم يتم اختيار ملحق!";
+
+/* No comment provided by engineer. */
+"No contract active!" = "لم يتم تفعيل عقد!";
+
+/* Win Rate Stats: by map */
+"No data" = "لا توجد معلومات";
+
+/* No comment provided by engineer. */
+"No games played with premade teammates." = "لم يتم لعب مباريات مع زملاء مسبقة الإعداد.";
+
+/* No comment provided by engineer. */
+"No minimap available!" = "لا توجد خريطة مصغرة متاحة!";
+
+/* No comment provided by engineer. */
+"No non-premade players encountered repeatedly. (Un)lucky you!" = "لا يوجد لاعبين مسبقة الإعداد متكررين. يا لحظك!";
+
+/* No comment provided by engineer. */
+"Normalize Charts" = "طبّع المخططات";
+
+/* Party Box */
+"Not Ready" = "غير جاهز";
+
+/* Hit Distribution Stats: error */
+"Not enough data!" = "لا توجد معلومات تكفي!";
+
+/* Account Settings */
+"Not signed in yet." = "لم يتم تسجيل الدخول بعد.";
+
+/* No comment provided by engineer. */
+"Not signed in!" = "لم يتم تسجيل الدخول!";
+
+/* Pro Features List */
+"Note: Statistics are only available on iOS 16 and newer." = "ملاحظة: المخططات متاحة فقط للأجهزة التي تستعمل iOS 16 او اجدد.";
+
+/* Pro Features List */
+"Note: Widgets are only available on iOS 16 and newer." = "ملاحظة: الودجات متاحة فقط للأجهزة التي تستعمل iOS 16 او اجدد.";
+
+/* No comment provided by engineer. */
+"OK" = "حسنا";
+
+/* No comment provided by engineer. */
+"Official Website" = "الموقع الرسمي";
+
+/* No comment provided by engineer. */
+"On that site, navigate to **Riot Account Sign-in** and set yourself a username and password. When you're done, you can use those same credentials to sign in above! Your social account will stay linked and you'll remain able to sign in with that on PC :)" = "في هذا الموقع ، انتقل إلى ** تسجيل الدخول إلى حساب Riot ** وقم بتعيين اسم مستخدم وكلمة مرور لنفسك. عند الانتهاء ، يمكنك استخدام نفس بيانات الاعتماد لتسجيل الدخول أعلاه! سيبقى حسابك الاجتماعي مرتبطًا وستظل قادرًا على تسجيل الدخول باستخدام ذلك على جهاز الكمبيوتر :)";
+
+/* No comment provided by engineer. */
+"Open or swipe to fetch details." = "افتح أو اسحب لجلب التفاصيل.";
+
+/* Storage Management */
+"Other Players" = "اللاعبون الآخرون";
+
+/* Buddy Picker: alert shown when both instances of a buddy are in use */
+"Out of instances!" = "انتفذت الكميات!";
+
+/* Win Rate Stats: section
+Playtime Stats: section */
+"Over Time" = "عبر الوقت";
+
+/* Hit Distribution Stats: section
+Playtime Stats: section */
+"Overall" = "إجمالي";
+
+/* No comment provided by engineer. */
+"Overdrive (Neon)" = "السرعة القصوى (نيون)";
+
+/* No comment provided by engineer. */
+"Party" = "فرقة";
+
+/* Scoreboard: party letter */
+"Party %@" = "فرقة %@";
+
+/* No comment provided by engineer. */
+"Password" = "كلمة المرور";
+
+/* Agent View: label for player who hasn't picked an agent yet */
+"Picking…" = "جاري الاختيار …";
+
+/* Match List: section */
+"Player" = "اللاعب";
+
+/* Bookmark/Player List: title */
+"Players" = "اللاعبين";
+
+/* No comment provided by engineer. */
+"Playtime" = "وقت اللعب";
+
+/* No comment provided by engineer. */
+"Playtime Breakdown" = "تفاصيل وقت اللعب";
+
+/* No comment provided by engineer. */
+"Please make sure you are ready to play by the time the game starts!" = "يرجى التأكد من استعدادك للعب في الوقت الذي تبدأ فيه اللعبة!";
+
+/* App Icon Name */
+"Pro Blue" = "ايقون Pro ازرق";
+
+/* No comment provided by engineer. */
+"Pro Features" = "مميزات Pro";
+
+/* App Icon Picker: section */
+"Pro Icons" = "ايقونات Pro";
+
+/* No comment provided by engineer. */
+"Purchase Failed!" = "الشراء لم ينجح!";
+
+/* Pro Store (placeholder filled with formatted currency) */
+"Purchase – %@" = "شراء - %@";
+
+/* No comment provided by engineer. */
+"Queues" = "الطوابير";
+
+/* Rank Widget: title */
+"Rank" = "المرتبة";
+
+/* No comment provided by engineer. */
+"Rank %lld" = "المرتبة %lld";
+
+/* Rank Changes Widget: title */
+"Rank Changes" = "تغير المرتبة";
+
+/* No comment provided by engineer. */
+"Rank Rating Changes" = "تغير نقاط المرتبة";
+
+/* No comment provided by engineer. */
+"Rate on the App Store" = "قيمنا على متجر التطبيقات";
+
+/* accessibility label */
+"Ready" = "جاهز";
+
+/* No comment provided by engineer. */
+"Recon Bolt Pro" = "Recon Bolt Pro";
+
+/* Pro Features List */
+"Recon Bolt Pro supports Family Sharing, meaning if just one member of your iCloud family buys it, everyone can use it!" = "Recon Bolt Pro يدعم ميزة المشاركة العائلية ، مما يعني أنه إذا قام فرد واحد فقط من عائلة iCloud بشرائها ، فيمكن للجميع استخدامها!";
+
+/* Pro Features List */
+"Recon Bolt does not have and will never have ads. The only way it can make money is through in-app purchases." = "ليس هناك في Recon Bolt إعلانات ولن يكون أبدًا. الطريقة الوحيدة لكسب المال هي من خلال عمليات الشراء داخل التطبيق.";
+
+/* About Screen */
+"Recon Bolt started development in early 2021, back when it wasn't yet possible to see your RR gains and losses in the game, but the API offered those numbers." = "بدأ Recon Bolt التطوير في أوائل عام 2021 ، عندما لم يكن من الممكن بعد رؤية مكاسب وخسائر RR الخاصة بك في اللعبة ، لكن API قدمت هذه الأرقام.";
+
+/* Top-Level Tab Title */
+"Reference" = "مرجع";
+
+/* Account Settings: button to refresh expired session */
+"Refresh" = "قم بالتحديث";
+
+/* No comment provided by engineer. */
+"Refresh automatically" = "قم بالتحديث تلقائياً";
+
+/* Store Widget: next refresh time (hour & minute) */
+"Refreshes at %@" = "قم بالتحديث عند %@";
+
+/* Match List: accessibility label */
+"Remove Bookmark" = "احذف العلامة المرجعية";
+
+/* Asset Management: section */
+"Repair" = "إصلاح";
+
+/* Request Log: header */
+"Request" = "طلب";
+
+/* No comment provided by engineer. */
+"Request Log" = "سِجل الطلبات";
+
+/* No comment provided by engineer. */
+"Requests" = "الطلبات";
+
+/* Asset Management: button */
+"Reset" = "إعادة ضبط";
+
+/* Request Log: header */
+"Response" = "الرد";
+
+/* No comment provided by engineer. */
+"Response Code" = "رقم الرد";
+
+/* No comment provided by engineer. */
+"Retry" = "أعد المحاولة";
+
+/* Round Details: header */
+"Round %lld of %lld" = "جولة %lld من %lld";
+
+/* Round Details: title */
+"Round Details" = "تفاصيل الجولة";
+
+/* Win Rate Stats: section */
+"Rounds by Loadout Delta" = "الجولات بحسب فارق العتاد";
+
+/* Win Rate Stats: section */
+"Rounds by Side" = "الجولات حسب الجبهة";
+
+/* Bookmark/Player List: section */
+"Search" = "البحث";
+
+/* Store */
+"Unknown Offer" = "طلب غير معروف";
+
+/* placeholder */
+"Unknown Skin" = "تغليف غير معروف";

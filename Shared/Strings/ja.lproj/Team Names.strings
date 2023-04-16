@@ -1,1 +1,8 @@
-/* This file exists as a marker to combine the synthesized files from all targets. */
+/* Used for unknown team IDs. */
+"%@ Team" = "チーム %@";
+
+/* No comment provided by engineer. */
+"Blue Team" = "青 チーム";
+
+/* No comment provided by engineer. */
+"Red Team" = "赤 チーム";

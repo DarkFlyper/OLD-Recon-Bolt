@@ -1,1 +1,14 @@
-/* This file exists as a marker to combine the synthesized files from all targets. */
+/* Used for unknown team IDs. */
+"%@ Team" = "Clé : %@ Équipe
+Équipe %@
+Utilisé pour les ID d'équipe inconnus.";
+
+/* No comment provided by engineer. */
+"Blue Team" = "Clé : Équipe bleue
+L'équipe bleue
+Pas de commentaire de la part de l'ingénieur.";
+
+/* No comment provided by engineer. */
+"Red Team" = "Clé : Équipe rouge
+Équipe rouge
+Pas de commentaire de la part de l'ingénieur.";

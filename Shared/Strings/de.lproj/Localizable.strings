@@ -5,7 +5,7 @@
 /* %@ is replaced by a fraction of wins vs. games played, e.g. '5/12 games won'. */
 "%@ games won" = "%@ Spiele gewonnen";
 
-/* Win Rate Stats by Loadout Delta: placeholder is replaced by the percentage of rounds won, e.g. '57.3% won'. */
+/* Win Rate Stats by Loadout Delta: focused value (drag on graph); placeholder is replaced by the percentage of rounds won, e.g. '57.3% won'. */
 "%@ won" = "%@ gewonnen";
 
 /* No comment provided by engineer. */
@@ -35,7 +35,7 @@
 /* Statistics Filter: shown when not everything is allowed */
 "%lld selected" = "%lld ausgewählt";
 
-/* Win Rate Stats by Loadout Delta */
+/* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
 "%lld to %lld credits" = "%lld bis %lld Creds";
 
 /* No comment provided by engineer. */
@@ -59,7 +59,7 @@
 /* Contract Progress Bar */
 "%lld / %lld XP" = "%lld / %lld EP";
 
-/* Win Rate Stats by Loadout Delta */
+/* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
 "(%lld – %lld)" = "(%lld – %lld)";
 
 /* Pro Features List */
@@ -174,7 +174,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Assets" = "Assets";
 
-/* Asset Management */
+/* Asset Management: shown before the newest version is fetched, so it's not know yet if the assets are up to date or outdated */
 "Assets complete." = "Assets vollständig.";
 
 /* No comment provided by engineer. */
@@ -534,7 +534,7 @@ DEINE FEHLERMELDUNG HIER
 /* No comment provided by engineer. */
 "Image failed to load!" = "Bild konnte nicht geladen werden!";
 
-/* No comment provided by engineer. */
+/* Asset Management */
 "In case something went wrong, use this button to force a full refetch of the assets and images." = "Falls etwas schiefgelaufen ist, kannst du mit diesem Knopf alle Assets und Bilder ganz neu laden.";
 
 /* Settings: section */
@@ -548,6 +548,9 @@ DEINE FEHLERMELDUNG HIER
 
 /* Match Details: section */
 "Kills by Round" = "Kills nach Runde";
+
+/* Asset Management: this row shows the language of the current assets */
+"Language" = "Sprache";
 
 /* Hit Distribution Stats: region */
 "Legs" = "Beine";
@@ -687,7 +690,7 @@ DEINE FEHLERMELDUNG HIER
 /* Store */
 "Night Market" = "Nachtmarkt";
 
-/* No comment provided by engineer. */
+/* Buddy picker: option at the top to select no buddy */
 "No Buddy" = "Kein Talisman";
 
 /* No comment provided by engineer. */
@@ -696,7 +699,7 @@ DEINE FEHLERMELDUNG HIER
 /* No comment provided by engineer. */
 "No Title" = "Kein Titel";
 
-/* Gun Customizer */
+/* Gun Customizer: shown when a weapon has no buddy active */
 "No buddy selected!" = "Kein Talisman ausgewählt!";
 
 /* No comment provided by engineer. */
@@ -1101,8 +1104,10 @@ Hit Distribution Stats: region */
 /* Win Rate Stats by Loadout Delta */
 "Value Difference (credits)" = "Wertunterschied (Creds)";
 
-/* Reference
-Asset Management */
+/* Asset Management: this row shows the version of the current assets */
+"Version" = "Version";
+
+/* Reference */
 "Version %@" = "Version %@";
 
 /* No comment provided by engineer. */

@@ -1,1 +1,51 @@
-/* This file exists as a marker to combine the synthesized files from all targets. */
+/* error loading the account for a widget */
+"Could not load active account!" = "今使われているアカウントを読み込められませんでした!";
+
+/* store widget error */
+"Missing Assets!" = "ファイルがありません!";
+
+/* No comment provided by engineer. */
+"Missing game configuration data for %@ region!" = "%@のデータがありません!";
+
+/* error loading the account for a widget. */
+"No account specified." = "アカウントは選択されていません";
+
+/* Riot API Error */
+"Please try again in %lld seconds." = "%lld秒でまた試してください";
+
+/* Riot API Error */
+"The API returned an error code %lld, i.e. %@. %@" = "RiotのAPIがエラーを出しました。コードは%lld、i.e. %@. %@ です。";
+
+/* Riot API Error */
+"The API returned an error code %lld." = "RiotのAPIがエラーを出しました。コードは%lldです。";
+
+/* Riot API Error */
+"The resource could not be found." = "ファイルが見つかりませんでした";
+
+/* store widget error */
+"Unknown Offer" = "知らないオファーがあります";
+
+/* store widget error */
+"Unknown Skin" = "知らないスキンがあります";
+
+/* Riot API Error */
+"Valorant is currently undergoing scheduled maintenance. Riot is probably updating the game!" = "VALORANTは今メインテナンス中ですからアプリは今使えません";
+
+/* No comment provided by engineer. */
+"Widgets require Recon Bolt Pro!" = "ウィジェットを使うためにはリコンボルトプロを買わないといけません";
+
+/* Riot API Error */
+"You are sending too many requests." = "アプリを使いすぎです。数分待ってやり直してください。";
+
+/* Riot API Error */
+"Your session has expired! Please sign in again." = "またログインしてください";
+
+/* wrong account error */
+"this one has no Riot ID & Tagline." = "このアカウントは名前がないです";
+
+/* wrong account error */
+"this one is:
+
+%@" = "これは：
+
+%@";
