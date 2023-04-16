@@ -44,8 +44,9 @@ final class AssetManager: ObservableObject {
 	#endif
 	
 	static func loadAssets() async throws -> AssetCollection {
+		let client = AssetClient.shared
 		let version = try await client.getCurrentVersion()
-		if let stored, stored.version == version {
+		if let stored, stored.version == version, stored.language == client.language {
 			return stored
 		} else {
 			return try await client.collectAssets(for: version)
@@ -55,8 +56,6 @@ final class AssetManager: ObservableObject {
 	
 	@UserDefault("AssetManager.stored")
 	fileprivate static var stored: AssetCollection?
-	
-	private static let client = AssetClient()
 }
 
 extension AssetCollection: DefaultsValueConvertible {}

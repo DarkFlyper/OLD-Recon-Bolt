@@ -4,6 +4,7 @@ import ValorantAPI
 
 struct AssetCollection: Codable {
 	let version: AssetVersion
+	let language: String
 	
 	let maps: [MapID: MapInfo]
 	let agents: [Agent.ID: AgentInfo]
@@ -24,26 +25,28 @@ struct AssetCollection: Codable {
 	let contentTiers: [ContentTier.ID: ContentTier]
 }
 
-enum AssetLanguage: String, Codable {
-	case arabic = "ar-AE"
-	case german = "de-DE"
-	case english = "en-US"
-	case spanishEU = "es-ES"
-	case spanishSA = "es-MX"
-	case french = "fr-FR"
-	case indonesian = "id-ID"
-	case italian = "it-IT"
-	case japanese = "ja-JP"
-	case korean = "ko-KR"
-	case polish = "pl-PL"
-	case portuguese = "pt-BR"
-	case russian = "ru-RU"
-	case thai = "th-TH"
-	case turkish = "tr-TR"
-	case vietnamese = "vi-VN"
-	case chineseSimplified = "zh-CN"
-	case chineseTraditional = "zh-TW"
-}
-
 /// just a marker at this point, but still handy for expressivity
 protocol AssetItem {}
+
+extension Locale {
+	static let valorantLanguages: [String] = [
+		"ar-AE", // arabic
+		"de-DE", // german
+		"en-US", // english
+		"es-ES", // spanish (european)
+		"es-MX", // spanish (latin american)
+		"fr-FR", // french
+		"id-ID", // indonesian
+		"it-IT", // italian
+		"ja-JP", // japanese
+		"ko-KR", // korean
+		"pl-PL", // polish
+		"pt-BR", // portuguese (brasilian)
+		"ru-RU", // russian
+		"th-TH", // thai
+		"tr-TR", // turkish
+		"vi-VN", // vietnamese
+		"zh-CN", // chinese (simplified)
+		"zh-TW", // chinese (traditional)
+	]
+}

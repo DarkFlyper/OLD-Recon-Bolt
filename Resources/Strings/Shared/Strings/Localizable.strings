@@ -219,7 +219,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Assets" = "Assets";
 
-/* Asset Management */
+/* Asset Management: shown before the newest version is fetched, so it's not know yet if the assets are up to date or outdated */
 "Assets complete." = "Assets complete.";
 
 /* No comment provided by engineer. */
@@ -588,7 +588,7 @@ YOUR BUG REPORT HERE
 /* No comment provided by engineer. */
 "Image failed to load!" = "Image failed to load!";
 
-/* No comment provided by engineer. */
+/* Asset Management */
 "In case something went wrong, use this button to force a full refetch of the assets and images." = "In case something went wrong, use this button to force a full refetch of the assets and images.";
 
 /* Settings: section */
@@ -602,6 +602,9 @@ YOUR BUG REPORT HERE
 
 /* Match Details: section */
 "Kills by Round" = "Kills by Round";
+
+/* Asset Management: this row shows the language of the current assets */
+"Language" = "Language";
 
 /* Hit Distribution Stats: region */
 "Legs" = "Legs";
@@ -1170,8 +1173,10 @@ Hit Distribution Stats: region */
 /* Win Rate Stats by Loadout Delta */
 "Value Difference (credits)" = "Value Difference (credits)";
 
-/* Reference
-Asset Management */
+/* Asset Management: this row shows the version of the current assets */
+"Version" = "Version";
+
+/* Reference */
 "Version %@" = "Version %@";
 
 /* No comment provided by engineer. */

@@ -198,24 +198,26 @@ private struct ImageManagerProvider: ViewModifier {
 }
 #endif
 
-extension AssetClient {
+extension AssetImage {
 	/// - returns: whether a new image was downloaded (false means old image is still correct)
-	func ensureDownloaded(_ image: AssetImage) async throws -> Bool {
+	func ensureDownloaded() async throws -> Bool {
+		let client = AssetClient.shared
+		
 		// don't download images that we already have (assuming size will always change when the image changes)
-		if let existingSize = fileManager.sizeOfItem(atPath: image.localURL.path) {
-			print("\(image.url) found existing size \(existingSize)")
-			let newSize = try await send(ImageSizeRequest(imageURL: image.url))
+		if let existingSize = fileManager.sizeOfItem(atPath: localURL.path) {
+			print("\(url) found existing size \(existingSize)")
+			let newSize = try await client.send(ImageSizeRequest(imageURL: url))
 			guard newSize != existingSize else { return false }
 		} else {
-			assert(!fileManager.fileExists(atPath: image.localURL.path))
+			assert(!fileManager.fileExists(atPath: localURL.path))
 		}
 		
-		let imageData = try await send(ImageDownloadRequest(imageURL: image.url))
+		let imageData = try await client.send(ImageDownloadRequest(imageURL: url))
 		try fileManager.createDirectory(
-			at: image.localURL.deletingLastPathComponent(),
+			at: localURL.deletingLastPathComponent(),
 			withIntermediateDirectories: true
 		)
-		try imageData.write(to: image.localURL, options: .atomic)
+		try imageData.write(to: localURL, options: .atomic)
 		return true
 	}
 }

@@ -151,7 +151,6 @@ final class ImageManager: ObservableObject {
 	private final actor Updater {
 		private var inProgress: [AssetImage: [CheckedContinuation<Void, Never>]] = [:]
 		private var completed: Set<AssetImage> = []
-		private let client = AssetClient()
 		
 		let stateUpdates = PassthroughSubject<StateUpdate, Never>()
 		let cache: ImageCache
@@ -194,7 +193,7 @@ final class ImageManager: ObservableObject {
 			
 			do {
 				enqueueUpdate(of: image, to: .downloading)
-				let wasReplaced = try await client.ensureDownloaded(image)
+				let wasReplaced = try await image.ensureDownloaded()
 				await cache.updateState(for: image, forceUpdate: wasReplaced)
 				enqueueUpdate(of: image, to: .available)
 			} catch {

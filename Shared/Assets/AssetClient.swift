@@ -3,19 +3,26 @@ import Protoquest
 import HandyOperators
 
 struct AssetClient {
+	static let shared = Self(
+		language: Bundle.preferredLocalizations(from: Locale.valorantLanguages).first ?? "en-US"
+	)
+	
 	let baseURL = URL(string: "https://valorant-api.com")!
 	
+	let language: String
 	let networkLayer: Protolayer
 	
 	private let shouldTrace = true
 	
-	init(networkLayer: Protolayer = .urlSession()) {
+	init(language: String, networkLayer: Protolayer = .urlSession()) {
+		self.language = language
 		self.networkLayer = networkLayer
 	}
 	
 	func send<R: Request>(_ request: R) async throws -> R.Response {
 		let urlRequest = try URLRequest(url: request.url(relativeTo: baseURL))
-		<-  request.configure(_:)
+		<- request.configure(_:)
+		<- configureLanguage(of:)
 		
 		if shouldTrace {
 			print(request, "sending request to", urlRequest.url!)
@@ -30,6 +37,12 @@ struct AssetClient {
 		return try request.decodeResponse(from: response)
 	}
 	
+	private func configureLanguage(of request: inout URLRequest) {
+		var components = URLComponents(url: request.url!, resolvingAgainstBaseURL: false)!
+		components.queryItems = (components.queryItems ?? [])
+		+ [.init(name: "language", value: language)]
+		request.url = components.url!
+	}
 }
 
 private struct AssetResponse<Body>: Decodable where Body: Decodable {

@@ -16,6 +16,7 @@ struct StatisticsContainer: View {
 				GroupBox {
 					VStack {
 						Text("Statistics not available!", comment: "Statistics Pro purchase prompt")
+							.multilineTextAlignment(.center)
 							.font(.title.weight(.bold))
 							.padding(.bottom, 4)
 						

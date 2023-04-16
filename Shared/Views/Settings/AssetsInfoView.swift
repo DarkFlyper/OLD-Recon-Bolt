@@ -47,12 +47,20 @@ struct AssetsInfoView: View {
 							Text("Assets up to date!", comment: "Asset Management")
 								.font(.headline)
 						} else {
-							Text("Assets complete.", comment: "Asset Management")
+							Text("Assets complete.", comment: "Asset Management: shown before the newest version is fetched, so it's not know yet if the assets are up to date or outdated")
 						}
-					} footer: {
-						Text("Version \(assets.version.version)", comment: "Asset Management")
-							.foregroundStyle(.secondary)
-							.font(.callout)
+						HStack {
+							Text("Language", comment: "Asset Management: this row shows the language of the current assets")
+							Spacer()
+							Text(assets.language)
+								.foregroundColor(.secondary)
+						}
+						HStack {
+							Text("Version", comment: "Asset Management: this row shows the version of the current assets")
+							Spacer()
+							Text(assets.version.version)
+								.foregroundColor(.secondary)
+						}
 					}
 					
 					Section {
@@ -65,7 +73,7 @@ struct AssetsInfoView: View {
 					} header: {
 						Text("Repair", comment: "Asset Management: section")
 					} footer: {
-						Text("In case something went wrong, use this button to force a full refetch of the assets and images.")
+						Text("In case something went wrong, use this button to force a full refetch of the assets and images.", comment: "Asset Management")
 					}
 				}
 			} else {
@@ -89,7 +97,7 @@ struct AssetsInfoView: View {
 		.navigationTitle("Assets")
 		.task {
 			do {
-				newestVersion = try await AssetClient().getCurrentVersion()
+				newestVersion = try await AssetClient.shared.getCurrentVersion()
 			} catch {
 				print("could not fetch newest assets version:", error)
 			}

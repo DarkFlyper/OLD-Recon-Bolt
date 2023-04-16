@@ -1,9 +1,9 @@
 import Foundation
 
 extension AssetClient {
-	func collectAssets(
-		for version: AssetVersion
-	) async throws -> AssetCollection {
+	func collectAssets(for version: AssetVersion) async throws -> AssetCollection {
+		print("loading assets for version \(version) in language \(language)")
+		
 		async let maps = getMapInfo()
 		async let agents = getAgentInfo()
 		async let missions = getMissionInfo()
@@ -34,6 +34,7 @@ extension AssetClient {
 		
 		return try await AssetCollection(
 			version: version,
+			language: language,
 			maps: .init(values: maps),
 			agents: .init(values: agents),
 			missions: .init(values: missions),
