@@ -1,1 +1,90 @@
-/* This file exists as a marker to combine the synthesized files from all targets. */
+/* error loading the account for a widget */
+"Could not load active account!" = "Não foi possível carregar a conta ativa!";
+
+/* Riot API Error */
+"Invalid Headers: %@" = "Cabeçalhos Inválidos: %@";
+
+/* wrong account error */
+"It looks like this account has never played Valorant!
+
+You've probably signed into the wrong account; %@" = "Parece que esta conta nunca jogou Valorant!
+
+Você provavelmente entrou na conta errada; %@";
+
+/* No comment provided by engineer. */
+"Keychain error for key '%@': %@" = "Erro do Keychain para a chave '%@': %@";
+
+/* store widget error */
+"Malformed Offer" = "Oferta Malformada";
+
+/* error loading the account for a widget. */
+"Malformed account." = "Conta malformada.";
+
+/* store widget error */
+"Missing Assets!" = "Arquivos faltando!";
+
+/* No comment provided by engineer. */
+"Missing game configuration data for %@ region!" = "Dados de configuração de jogo em falta para a região %@!";
+
+/* Should not happen anymore, but you never know ¯\_(ツ)_/¯ */
+"Missing session for account!
+If you have Pro, add an account using the same credentials to replace the account with a working version." = "Sessão em falta por conta!
+Se tiver o Pro, adicione uma conta usando as mesmas credenciais para substituí-la por uma versão funcional.";
+
+/* error loading the account for a widget. */
+"No account specified." = "Nenhuma conta especificada.";
+
+/* Riot API Error */
+"Please try again in %lld seconds." = "Por favor, tente novamente em %lld segundos.";
+
+/* Riot API Error */
+"The API rejected your authorization." = "A API rejeitou a sua autorização.";
+
+/* Riot API Error */
+"The API returned an error code %lld, i.e. %@. %@" = "A API devolveu o código de erro %lld, ou seja, %@. %@";
+
+/* Riot API Error */
+"The API returned an error code %lld." = "A API devolveu um código de erro %lld.";
+
+/* Riot API Error */
+"The resource could not be found." = "A fonte não pôde ser encontrada.";
+
+/* Keychain error. */
+"Unexpected type found: %@" = "Tipo imprevisto encontrado: %@";
+
+/* store widget error */
+"Unknown Offer" = "Oferta desconhecida";
+
+/* store widget error */
+"Unknown Skin" = "Skin Desconhecida";
+
+/* No comment provided by engineer. */
+"Unknown keychain error: %d" = "Erro de keychain desconhecido: %d";
+
+/* Riot API Error */
+"Valorant is currently undergoing scheduled maintenance. Riot is probably updating the game!" = "O Valorant está atualmente em manutenção programada. A Riot está provavelmente atualizando o jogo!";
+
+/* No comment provided by engineer. */
+"Widgets require Recon Bolt Pro!" = "Widgets requerem Recon Bolt Pro!";
+
+/* Riot API Error */
+"You are sending too many requests." = "Você está enviando muitas solicitações.";
+
+/* Riot API Error */
+"Your session could not be resumed. %@" = "A sua sessão não pôde ser retomada. %@";
+
+/* Riot API Error */
+"Your session has expired! Please sign in again." = "A sua sessão expirou! Por favor, entre novamente em sua conta.";
+
+/* Riot API Error */
+"Your token has expired. %@" = "O seu código de sessão expirou. %@";
+
+/* wrong account error */
+"this one has no Riot ID & Tagline." = "este não tem Riot ID & Tagline.";
+
+/* wrong account error */
+"this one is:
+
+%@" = "este é:
+
+%@";
