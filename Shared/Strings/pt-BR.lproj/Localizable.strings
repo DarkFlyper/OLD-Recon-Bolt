@@ -549,6 +549,9 @@ SEU RELATÓRIO DE BUG AQUI
 /* Match Details: section */
 "Kills by Round" = "Mortes por Rodada";
 
+/* Asset Management: this row shows the language of the current assets */
+"Language" = "Idioma";
+
 /* Hit Distribution Stats: region */
 "Legs" = "Pernas";
 
@@ -1102,6 +1105,9 @@ Infelizmente, devido a limitações técnicas, você não pode fazer login no Re
 
 /* Win Rate Stats by Loadout Delta */
 "Value Difference (credits)" = "Diferença de valor (créditos)";
+
+/* Asset Management: this row shows the version of the current assets */
+"Version" = "Versão";
 
 /* Reference */
 "Version %@" = "Versão %@";
