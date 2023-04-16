@@ -1,1 +1,24 @@
-/* This file exists as a marker to combine the synthesized files from all targets. */
+/* error loading the account for a widget */
+"Could not load active account!" = "Не удалось загрузить активный аккаунт!";
+
+/* Riot API Error */
+"Invalid Headers: %@" = "Неверные Заголовки: %@";
+
+/* wrong account error */
+"It looks like this account has never played Valorant!
+
+You've probably signed into the wrong account; %@" = "С этого аккаунта никогда не играли в Valorant!
+
+Возможно Вы вошли в неверный аккаунт; %@";
+
+/* store widget error */
+"Malformed Offer" = "Ошибка получения данных магазина";
+
+/* error loading the account for a widget. */
+"Malformed account." = "Ошибка получения данных аккаунта.";
+
+/* store widget error */
+"Missing Assets!" = "Отсутствуют ресурсы!";
+
+/* No comment provided by engineer. */
+"Missing game configuration data for %@ region!" = "Отсутствует конфигурация игры для региона %@!";
