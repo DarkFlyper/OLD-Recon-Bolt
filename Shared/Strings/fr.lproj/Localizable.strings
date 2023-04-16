@@ -504,6 +504,84 @@ Stats: error details */
 /* No comment provided by engineer. */
 "Match Lists" = "Liste des parties";
 
+/* Request Log */
+"Method" = "Méthode";
+
+/* No comment provided by engineer. */
+"Missing progress for contract!" = "Progrès manquant pour le contrat! ";
+
+/* No comment provided by engineer. */
+"Missing season data!" = "Données de saison manquantes!";
+
+/* Missions Widget: title */
+"Missions" = "Missions";
+
+/* No comment provided by engineer. */
+"Missions not loaded!" = "Missions non chargées!";
+
+/* No comment provided by engineer. */
+"Month" = "Mois";
+
+/* Pro Features List */
+"Multiple Account Support" = "Plusieurs comptes supportés";
+
+/* Pro Store */
+"Multiple Accounts" = "Plusieurs comptes";
+
+/* Bookmark/Player List: lookup name placeholder */
+"Name" = "Nom";
+
+/* Asset Management */
+"Newest available: %@" = "Dernière version disponible: %@";
+
+/* Store */
+"Night Market" = "Marché nocturne";
+
+/* Buddy picker: option at the top to select no buddy */
+"No Buddy" = "Aucun porte-bonheur";
+
+/* No comment provided by engineer. */
+"No Spray" = "Aucun spray";
+
+/* No comment provided by engineer. */
+"No Title" = "Aucun titre";
+
+/* Gun Customizer: shown when a weapon has no buddy active */
+"No buddy selected!" = "Aucun porte-bonheur choisi!";
+
+/* No comment provided by engineer. */
+"No contract active!" = "Aucun contrat actif!";
+
+/* Win Rate Stats: by map */
+"No data" = "Aucune donnée";
+
+/* App Icon Name */
+"Pro Blue" = "Pro Bleu";
+
+/* No comment provided by engineer. */
+"Pro Features" = "Fonctionnalités Pro";
+
+/* App Icon Picker: section */
+"Pro Icons" = "Icônes Pro";
+
+/* No comment provided by engineer. */
+"Purchase Failed!" = "L'achat a échoué!";
+
+/* Pro Store (placeholder filled with formatted currency) */
+"Purchase – %@" = "Achat - %@";
+
+/* No comment provided by engineer. */
+"Queues" = "Files d'attente";
+
+/* No comment provided by engineer. */
+"Retry" = "Réessayer";
+
+/* Round Details: header */
+"Round %lld of %lld" = "Manche %lld sur %lld";
+
+/* Round Details: title */
+"Round Details" = "Détails de manche";
+
 /* Round Details: Spike Event */
 "Spike Defused" = "Spike désamorcé";
 
