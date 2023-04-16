@@ -1,1 +1,8 @@
-/* This file exists as a marker to combine the synthesized files from all targets. */
+/* Used for unknown team IDs. */
+"%@ Team" = "%@ Time";
+
+/* No comment provided by engineer. */
+"Blue Team" = "Time Azul";
+
+/* No comment provided by engineer. */
+"Red Team" = "Time Vermelho";
