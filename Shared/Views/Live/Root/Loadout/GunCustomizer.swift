@@ -70,7 +70,7 @@ struct GunCustomizer: View {
 						)
 					}
 				} else {
-					Text("No buddy selected!", comment: "Gun Customizer")
+					Text("No buddy selected!", comment: "Gun Customizer: shown when a weapon has no buddy active")
 						.foregroundColor(.secondary)
 				}
 				

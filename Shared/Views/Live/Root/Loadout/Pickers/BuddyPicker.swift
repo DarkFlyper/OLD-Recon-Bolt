@@ -52,7 +52,7 @@ struct BuddyPicker: View {
 				}
 			} deselector: {
 				SelectableRow(selection: Binding($loadout.guns[weapon])!.buddy, item: nil) {
-					Label("No Buddy", systemImage: "xmark")
+					Label(String(localized: "No Buddy", comment: "Buddy picker: option at the top to select no buddy"), systemImage: "xmark")
 				}
 			}
 		}

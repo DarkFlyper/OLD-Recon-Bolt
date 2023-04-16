@@ -381,16 +381,16 @@ private struct RoundsByLoadoutDeltaChart: View {
 				.reduce(into: .zero, +=)
 			
 			VStack(alignment: .leading) {
-				Text("\(focusedDelta.lowerBound) to \(focusedDelta.upperBound) credits", comment: "Win Rate Stats by Loadout Delta")
+				Text("\(focusedDelta.lowerBound) to \(focusedDelta.upperBound) credits", comment: "Win Rate Stats by Loadout Delta: focused value (drag on graph)")
 					.font(.footnote)
 					.foregroundStyle(.secondary)
 				HStack {
 					if tally != .zero {
-						Text("\(tally.winFraction, format: .precisePercent) won", comment: "Win Rate Stats by Loadout Delta: placeholder is replaced by the percentage of rounds won, e.g. '57.3% won'.")
-						Text("(\(tally.wins) – \(tally.losses))", comment: "Win Rate Stats by Loadout Delta")
+						Text("\(tally.winFraction, format: .precisePercent) won", comment: "Win Rate Stats by Loadout Delta: focused value (drag on graph); placeholder is replaced by the percentage of rounds won, e.g. '57.3% won'.")
+						Text("(\(tally.wins) – \(tally.losses))", comment: "Win Rate Stats by Loadout Delta: focused value (drag on graph)")
 							.foregroundStyle(.secondary)
 					} else {
-						Text("No data", comment: "Win Rate Stats by Loadout Delta")
+						Text("No data", comment: "Win Rate Stats by Loadout Delta: focused value (drag on graph)")
 							.foregroundStyle(.secondary)
 					}
 				}

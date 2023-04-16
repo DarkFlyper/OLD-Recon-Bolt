@@ -19,7 +19,7 @@
 /* %@ is replaced by a fraction of wins vs. games played, e.g. '5/12 games won'. */
 "%@ games won" = "%@ games won";
 
-/* Win Rate Stats by Loadout Delta: placeholder is replaced by the percentage of rounds won, e.g. '57.3% won'. */
+/* Win Rate Stats by Loadout Delta: focused value (drag on graph); placeholder is replaced by the percentage of rounds won, e.g. '57.3% won'. */
 "%@ won" = "%@ won";
 
 /* No comment provided by engineer. */
@@ -67,7 +67,7 @@
 /* Statistics Filter: shown when not everything is allowed */
 "%lld selected" = "%lld selected";
 
-/* Win Rate Stats by Loadout Delta */
+/* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
 "%lld to %lld credits" = "%lld to %lld credits";
 
 /* No comment provided by engineer. */
@@ -91,7 +91,7 @@
 /* Contract Progress Bar */
 "%lld / %lld XP" = "%lld / %lld XP";
 
-/* Win Rate Stats by Loadout Delta */
+/* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
 "(%lld – %lld)" = "(%lld – %lld)";
 
 /* Pro Features List */
@@ -744,7 +744,7 @@ YOUR BUG REPORT HERE
 /* Store */
 "Night Market" = "Night Market";
 
-/* No comment provided by engineer. */
+/* Buddy picker: option at the top to select no buddy */
 "No Buddy" = "No Buddy";
 
 /* No comment provided by engineer. */
@@ -753,7 +753,7 @@ YOUR BUG REPORT HERE
 /* No comment provided by engineer. */
 "No Title" = "No Title";
 
-/* Gun Customizer */
+/* Gun Customizer: shown when a weapon has no buddy active */
 "No buddy selected!" = "No buddy selected!";
 
 /* No comment provided by engineer. */
