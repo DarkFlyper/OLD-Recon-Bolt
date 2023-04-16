@@ -1,1 +1,87 @@
-/* This file exists as a marker to combine the synthesized files from all targets. */
+/* error loading the account for a widget */
+"Could not load active account!" = "فشل تحميل الحساب المنشط!";
+
+/* Riot API Error */
+"Invalid Headers: %@" = "عناوين غير صالحة %@";
+
+/* wrong account error */
+"It looks like this account has never played Valorant!
+
+You've probably signed into the wrong account; %@" = "يبدوا أن هذا الحساب لم يلعب Valorant في الماضي!
+من الممكن انك قد سجلت الدخول إلى الحساب الخاطئ; %@";
+
+/* No comment provided by engineer. */
+"Keychain error for key '%@': %@" = "مفتاح تسجيل خاطئ '%@': %@";
+
+/* store widget error */
+"Malformed Offer" = "عرض مشوه";
+
+/* error loading the account for a widget. */
+"Malformed account." = "حساب مشوه.";
+
+/* store widget error */
+"Missing Assets!" = "ألموارد مفقودة!";
+
+/* No comment provided by engineer. */
+"Missing game configuration data for %@ region!" = "إعدادات اللعبة مفقودة لمنطقة %@!";
+
+/* Should not happen anymore, but you never know ¯\_(ツ)_/¯ */
+"Missing session for account!
+If you have Pro, add an account using the same credentials to replace the account with a working version." = "جلسة مفقودة للحساب!
+إذا عندك مميزات \"Pro\" يمكنك استعمال معلومات التسجيل لحسابك.";
+
+/* error loading the account for a widget. */
+"No account specified." = "حساب غير محدد.";
+
+/* Riot API Error */
+"Please try again in %lld seconds." = "الرجاء المحاولة مجددا بعد %lld ثواني.";
+
+/* Riot API Error */
+"The API rejected your authorization." = "واجهات برمجة التطبيقات رفضت توثيقك.";
+
+/* Riot API Error */
+"The API returned an error code %lld, i.e. %@. %@" = "واجهات برمجة التطبيقات رد بخطء رَقْم %lld وهو %@. %@";
+
+/* Riot API Error */
+"The API returned an error code %lld." = "واجهات برمجة التطبيقات رد بخطء رَقْم %lld.";
+
+/* Riot API Error */
+"The resource could not be found." = "لم يتم العثور على المورد.";
+
+/* Keychain error. */
+"Unexpected type found: %@" = "تم العثور على نوع غير متوقع: %@";
+
+/* store widget error */
+"Unknown Offer" = "طلب غير معروف";
+
+/* store widget error */
+"Unknown Skin" = "تغليف غير معروف";
+
+/* No comment provided by engineer. */
+"Unknown keychain error: %d" = "خطأ سلسلة مفاتيح غير معروف: %d";
+
+/* Riot API Error */
+"Valorant is currently undergoing scheduled maintenance. Riot is probably updating the game!" = "Valorant تخضع حاليا للصيانة. شركة Riot تقوم الان بتحديث اللعبة!";
+
+/* No comment provided by engineer. */
+"Widgets require Recon Bolt Pro!" = "ويدجتات تتطلب شراء Pro!";
+
+/* Riot API Error */
+"You are sending too many requests." = "أنت ترسل طلبات كثيرة.";
+
+/* Riot API Error */
+"Your session could not be resumed. %@" = "لم نستطع إكمال جلستك. %@";
+
+/* Riot API Error */
+"Your session has expired! Please sign in again." = "تم انتهاء جلستك! الرجاء تسجيل الدخول مرة اخرى.";
+
+/* Riot API Error */
+"Your token has expired. %@" = "انتهت صلاحية رمزك. %@";
+
+/* wrong account error */
+"this one has no Riot ID & Tagline." = "هذا الحساب لا يحتوي على مُعرّف رايوت او شعار.";
+
+/* wrong account error */
+"this one is:
+
+%@" = "حساب خاطئ %@";
