@@ -64,7 +64,7 @@ final class Reader: NSObject, XMLParserDelegate {
 			currentFile!.entries.append(.init(
 				key: unit.id,
 				value: source,
-				comment: unit.elements[.note]!
+				comment: unit.elements[.note] ?? "No comment provided by engineer."
 			))
 		default:
 			if let _ = EntryElement(rawValue: element) {
@@ -117,12 +117,25 @@ if fileManager.fileExists(atPath: outputFolder.relativePath) {
 	try! fileManager.removeItem(at: outputFolder)
 }
 
+let xliffExtensions: Set = ["strings", "intentdefinition"] // not stringsdict
+
+func outputURL(for path: String) -> URL {
+	let url = URL(filePath: path, relativeTo: outputFolder)
+	try! fileManager.createDirectory(at: url.deletingLastPathComponent(), withIntermediateDirectories: true)
+	return url
+}
+
 for file in reader.files {
-	let basePath = file.path.replacingOccurrences(of: "en.lproj/", with: "")
-	let outputURL = URL(filePath: basePath, relativeTo: outputFolder)
-	try! fileManager.createDirectory(at: outputURL.deletingLastPathComponent(), withIntermediateDirectories: true)
+	var path = file.path
+	path.replace(#/(en|Base).lproj//#) { _ in "" }
+	let match = path.wholeMatch(of: #/.*\.(\w+)/#)!
+	let fileExtension = String(match.output.1)
 	
-	if file.path.hasSuffix(".strings") {
+	let importFromXLIFF = xliffExtensions.contains(fileExtension)
+	if importFromXLIFF {
+		// replace extension
+		path.removeLast(fileExtension.count)
+		path.append("strings")
 		print("file \(file.path) has \(file.entries.count) entries")
 		
 		var fileContents = ""
@@ -131,11 +144,13 @@ for file in reader.files {
 		}
 		let data = fileContents.data(using: .utf8)!
 		
-		try! data.write(to: outputURL)
+		print(path)
+		try! data.write(to: outputURL(for: path))
 	} else {
 		print("file \(file.path) is not a strings file; copying from project")
 		
 		let sourceURL = URL(filePath: file.path, relativeTo: projectFolder)
-		try! fileManager.copyItem(at: sourceURL, to: outputURL)
+		print(file.path)
+		try! fileManager.copyItem(at: sourceURL, to: outputURL(for: path))
 	}
 }

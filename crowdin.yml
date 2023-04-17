@@ -3,3 +3,5 @@ files:
     translation: /iOS/%osx_code%/%file_name%.%file_extension%
   - source: /Resources/Strings/Shared/Strings/*.*
     translation: /Shared/Strings/%osx_code%/%file_name%.%file_extension%
+  - source: /Resources/Strings/Widgets/*.*
+    translation: /Widgets/%osx_code%/%file_name%.%file_extension%
