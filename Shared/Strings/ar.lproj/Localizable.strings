@@ -550,6 +550,9 @@ Stats: error details */
 /* Match Details: section */
 "Kills by Round" = "القتلى حسب الجولة";
 
+/* Asset Management: this row shows the language of the current assets */
+"Language" = "اللغة";
+
 /* Hit Distribution Stats: region */
 "Legs" = "ضربات الارجل";
 
@@ -894,8 +897,258 @@ Playtime Stats: section */
 /* Bookmark/Player List: section */
 "Search" = "البحث";
 
+/* Hit Distribution Stats: error */
+"Select more matches to see data on hit distribution. Deathmatch, Escalation, and other modes don't provide the necessary information." = "حدد المزيد من المباريات لمشاهدة بيانات حول توزيع النتائج. لا توفر تفاصيل لمبارات Deathmatch و Escalation.";
+
+/* No comment provided by engineer. */
+"Send to Developer" = "أرسل إلى المطور";
+
+/* Account Settings */
+"Session expired!" = "انتهت الجلسة!";
+
+/* Top-Level Tab Title */
+"Settings" = "الإعدادات";
+
+/* Playtime Stats: title for view of matches in common with another player */
+"Shared Matches" = "المباريات المشتركة";
+
+/* No comment provided by engineer. */
+"Show Unfetched Matches" = "إظهار المباريات التي لم يتم تحضيرها";
+
+/* No comment provided by engineer. */
+"Show all matches" = "اظهر كل المباريات";
+
+/* No comment provided by engineer. */
+"Show details when found" = "اظهر التافصيل عند وجودها";
+
+/* App Icon Description: pro blue */
+"Show off your pro status with an exclusive icon!" = "تباهر بحالتك Pro بأستخدام ايقونة حصرية للتطبيق!";
+
+/* Account Settings: button */
+"Sign In" = "سجّل الدخول";
+
+/* No comment provided by engineer. */
+"Sign In with your Riot account" = "سجّل الدخول بحساب Riot";
+
+/* Account Settings */
+"Sign Out" = "خروج";
+
+/* No comment provided by engineer. */
+"Sign in with Google/Apple/etc." = "سجّل الدخول بحساب Google/Apple/etc.";
+
+/* Hit Distribution Stats: smoothing slider */
+"Smoothing" = "تنعيم";
+
+/* No comment provided by engineer. */
+"Spectator" = "مُشاهد";
+
+/* Round Details: Spike Event */
+"Spike Defused" = "تم فكّ السبايك";
+
+/* Round Details: Spike Event */
+"Spike Planted" = "تم زرع السبايك";
+
+/* No comment provided by engineer. */
+"Start Matchmaking?" = "ابدأ البحث عن مبارة؟";
+
+/* Win Rate Stats: accessibility label */
+"Starting Side" = "الجبهة الأولية";
+
+/* Win Rate Stats */
+"Starting Side:" = "الجبهة الأولية:";
+
+/* No comment provided by engineer. */
+"Statistics" = "الإحصائيات";
+
+/* Statistics Pro purchase prompt */
+"Statistics not available!" = "الإحصائيات غير متوفرة!";
+
+/* Statistics Pro purchase prompt: 'Recon Bolt Pro' is inserted in the placeholder with a bolder font. */
+"Statistics require %@, a one-time purchase including a variety of features. Want to give them a look?" = "الإحصائيات تتطلب حساب %@, ادفع مرة واحدة لحصل على مجموعة متنوعة من الميزات. هل تريد إلقاء نظرة عليها الان؟";
+
+/* Store Widget: title */
+"Store" = "المتجر";
+
+/* No comment provided by engineer. */
+"Store not loaded!" = "المتجر غير محمّل!";
+
+/* No comment provided by engineer. */
+"Storefront outdated!" = "واجهة المحل قديمة!";
+
+/* Pro Features List */
+"Support Development :)" = "ادعم التطوير :)";
+
+/* Pro Store */
+"Support Further Development!" = "ادعم التطوير على المدى الطويل!";
+
+/* No comment provided by engineer. */
+"Switch Contract" = "بدّل العقد";
+
+/* No comment provided by engineer. */
+"TL;DR: you'll have to take my word for it, but Riot doesn't seem to mind." = "عليك أن تأخذ كلامي من أجل ذلك ، لكن يبدو أن شركة Riot لا تمانع.";
+
+/* Bookmark/Player List: lookup tag placeholder */
+"Tag" = "رقم اللاعب";
+
+/* Pro Store */
+"Thank you for supporting Recon Bolt!" = "شكراً لدعمك ل Recon Bolt!";
+
+/* No comment provided by engineer. */
+"The code is open-source and visible on GitHub; you can build it yourself if you want to be sure of what's running." = "الكود مفتوح المصدر ومرئي على GitHub ؛ يمكنك بنائه بنفسك إذا كنت تريد التأكد مما يتم تشغيله.";
+
+/* App Icon Description: default */
+"The default look of Recon Bolt." = "المظهر الافتراضي لـ Recon Bolt.";
+
+/* No comment provided by engineer. */
+"The pro version lets you change the app icon! More icons might be coming in future updates." = "يتيح لك الإصدار Pro تغيير رمز التطبيق! قد يأتي المزيد من الرموز في التحديثات المستقبلية.";
+
+/* No comment provided by engineer. */
+"Theme" = "النمط";
+
+/* No comment provided by engineer. */
+"These are the last %lld requests sent by the app, along with their responses." = "هذه هي آخر %lld من الطلبات التي أرسلها التطبيق ، بالإضافة إلى استجاباتهم.";
+
+/* About Screen: section */
+"Third-Party Libraries & APIs Used" = "مكتبات الطرف الثالث وواجهات برمجة التطبيقات المستخدمة";
+
+/* Statistics error for iOS <16 */
+"This feature requires iOS 16 or newer." = "تتطلب هذه الميزة iOS 16 أو أحدث.";
+
+/* Stats: match loading */
+"To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "لجمع الإحصائيات ، نحتاج أولاً إلى تحميل المباريات وتفاصيلها. لاحظ أن الكميات الكبيرة يمكن أن تستغرق وقتًا طويلاً ، خاصة عند التنزيل لأول مرة!";
+
+/* Win Rate Stats: side name
+Hit Distribution Stats: region */
+"Total" = "المجموع";
+
+/* No comment provided by engineer. */
+"Total Playtime" = "مجموع وقت اللعب";
+
+/* No comment provided by engineer. */
+"Total Space Used" = "المساحة الإجمالية المستخدمة";
+
+/* No comment provided by engineer. */
+"Twitter @juliand665" = "تويتر @juliand665";
+
+/* Request Log */
+"URL" = "الموقع";
+
+/* Shown when a match does not match the filter and its details have not been fetched. */
+"Unfetched" = "لم يتم تحضيره";
+
+/* Hit Distribution Stats: footnote */
+"Unfortunately, Valorant doesn't store information about which weapon was used for each hit. All we get is the weapon you started the round with and what weapon you used for each kill. Recon Bolt guesses the weapon involved in each damage based on this information, but it cannot be perfect (and neither can any other tracker)." = "لسوء الحظ ، لا يقوم Valorant بتخزين المعلومات حول السلاح الذي تم استخدامه لكل ضربة. كل ما نحصل عليه هو السلاح الذي بدأت به الجولة والسلاح الذي استخدمته في كل عملية قتل. يخمن Recon Bolt السلاح المتضمن في كل ضرر بناءً على هذه المعلومات ، لكنه لا يمكن أن يكون مثاليًا (ولا يمكن لأي tracker آخر).";
+
+/* No comment provided by engineer. */
+"Unfortunately, due to technical limitations, you cannot sign into Recon Bolt via your Google account, Apple ID, or anything but a Riot account." = "لسوء الحظ ، نظرًا للقيود التقنية، لا يمكنك تسجيل الدخول إلى Recon Bolt عبر حساب Google أو معرف Apple أو أي شيء سوى حساب Riot.";
+
+/* Round Details: killed by unknown ability */
+"Unknown Ability" = "قدرة غير معروفة";
+
+/* placeholder */
+"Unknown Agent" = "عميل غير معروف";
+
+/* placeholder */
+"Unknown Buddy" = "ملحق سلاح غير معروف";
+
+/* placeholder */
+"Unknown Bundle" = "حزمة غير معروفة";
+
 /* Store */
 "Unknown Offer" = "طلب غير معروف";
 
+/* No comment provided by engineer. */
+"Unknown Player" = "لاعب غير معروف";
+
+/* No comment provided by engineer. */
+"Unknown Queue" = "طابور غير معروف";
+
 /* placeholder */
 "Unknown Skin" = "تغليف غير معروف";
+
+/* No comment provided by engineer. */
+"Unknown Tier" = "طبقة غير معروفة";
+
+/* placeholder */
+"Unknown Title" = "لقب غير معروف";
+
+/* Round Details: killed by unknown damage source/type */
+"Unknown Type" = "نوع غير معروف";
+
+/* No comment provided by engineer. */
+"Unknown Weapon" = "سلاح غير معروف";
+
+/* No comment provided by engineer. */
+"Unknown bundle!" = "حزمة غير معروفة!";
+
+/* No comment provided by engineer. */
+"Unknown contract!" = "عقد غير معروف!";
+
+/* No comment provided by engineer. */
+"Unknown mission!" = "مهمة غير معروفة!";
+
+/* Asset Management: button */
+"Update Now" = "قم بالتحديث الأن";
+
+/* Match Details: button */
+"Update Ranks" = "حدّث المراتب";
+
+/* No comment provided by engineer. */
+"Username" = "اسم المستخدم";
+
+/* No comment provided by engineer. */
+"Users" = "المستخدمين";
+
+/* Win Rate Stats by Loadout Delta */
+"Value Difference (credits)" = "فرق القيمة (العتاد)";
+
+/* Asset Management: this row shows the version of the current assets */
+"Version" = "إصدار";
+
+/* Reference */
+"Version %@" = "الاصدار %@";
+
+/* No comment provided by engineer. */
+"Vibrate when Match Found" = "اهتزاز الجهاز عند العثور على مبارة";
+
+/* Pro Store */
+"View All Features" = "عرض جميع المميزات";
+
+/* No comment provided by engineer. */
+"View Full Profile" = "عرض الملف الشخصي الكامل";
+
+/* Match List */
+"View Stats" = "اعرض الاحصائيات";
+
+/* Statistics Pro purchase prompt: button */
+"View Store in Settings" = "اعرض المتجر في الاعدادات";
+
+/* Rank Widget: description */
+"View your current rank." = "اعرض مرتبتك الحالية.";
+
+/* Rank Changes Widget: description */
+"View your rank rating changes." = "اعرض التغيّر في مرتبتك الحالية.";
+
+/* Pro Features List */
+"View your storefront, daily/weekly missions, or current rank without even having to open the app!" = "اعرض واجهة المتجر, المهام الاسبوعية واليومية, والمرتبة الحالية من دون فتح التطبيق!";
+
+/* No comment provided by engineer. */
+"WP: +%lld" = "مكافأة اضافية: +%lld";
+
+/* No comment provided by engineer. */
+"Weapon Loadout" = "عتاد الأسلحة";
+
+/* No comment provided by engineer. */
+"Weapons" = "الأسلحة";
+
+/* No comment provided by engineer. */
+"Week" = "الأسبوع";
+
+/* Missions Widget */
+"Weekly" = "اسبوعياً";
+
+/* No comment provided by engineer. */
+"Widget Refresh Requested" = "تم طلب تحديث الأداة";
+
+/* No comment provided by engineer. */
+"Year" = "السنة";

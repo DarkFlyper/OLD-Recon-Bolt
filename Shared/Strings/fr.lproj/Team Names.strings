@@ -1,14 +1,8 @@
 /* Used for unknown team IDs. */
-"%@ Team" = "Clé : %@ Équipe
-Équipe %@
-Utilisé pour les ID d'équipe inconnus.";
+"%@ Team" = "%@ Joueur";
 
 /* No comment provided by engineer. */
-"Blue Team" = "Clé : Équipe bleue
-L'équipe bleue
-Pas de commentaire de la part de l'ingénieur.";
+"Blue Team" = "Équipe Bleue";
 
 /* No comment provided by engineer. */
-"Red Team" = "Clé : Équipe rouge
-Équipe rouge
-Pas de commentaire de la part de l'ingénieur.";
+"Red Team" = "Équipe Rouge";

@@ -1,0 +1,11 @@
+/* error loading the account for a widget */
+"Could not load active account!" = "Anahtar: Aktif hesap yuklenemedi!
+Aktif hesap yuklenemedi!
+Bir pencere öğesi için hesap yüklenirken hata oluştu
+Dosya: Errors. strings!";
+
+/* Riot API Error */
+"Invalid Headers: %@" = "Anahtar: Geçersiz Başlıklar: %@
+Geçersiz Başlıklar: %@
+Riot Api Hatasi
+Dosya: Errors. strings";
