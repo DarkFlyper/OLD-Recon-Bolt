@@ -85,8 +85,10 @@ struct AdvancedSettingsView: View {
 				}
 				
 				if let activeAccount = accountManager.activeAccount {
-					NavigationLink("Request Log") {
+					NavigationLink {
 						ClientLogView(client: activeAccount.client)
+					} label: {
+						Text("Request Log", comment: "Advanced Settings: button to open request log")
 					}
 				}
 				
@@ -128,7 +130,7 @@ private extension AppSettings.Theme {
 	var name: Text {
 		switch self {
 		case .system:
-			return Text("Match System", comment: "App Theme")
+			return Text("Match System", comment: "App Theme: automatically match the system theme")
 		case .light:
 			return Text("Light Mode", comment: "App Theme")
 		case .dark:

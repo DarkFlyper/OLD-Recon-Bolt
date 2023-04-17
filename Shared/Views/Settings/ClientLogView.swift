@@ -57,7 +57,7 @@ struct ClientLogView: View {
 			guard !isInSwiftUIPreview else { return }
 			log = await client.getLog()
 		}
-		.navigationTitle("Request Log")
+		.navigationTitle(Text("Request Log", comment: "Request Log: title"))
     }
 	
 	func statusColor(forCode code: Int) -> Color {

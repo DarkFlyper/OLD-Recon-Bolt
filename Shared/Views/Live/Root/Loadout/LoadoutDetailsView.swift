@@ -121,13 +121,28 @@ private struct LoadoutCustomizer: View {
 						Color.clear
 					}
 					
-					Text(slot.name)
+					slot.name
 						.font(.caption)
 						.foregroundColor(.secondary)
 				}
 			}
 			.buttonStyle(.bordered)
 			.buttonBorderShape(.roundedRectangle(radius: 8))
+		}
+	}
+}
+
+extension Spray.Slot.ID {
+	var name: Text {
+		switch self {
+		case .preRound:
+			return Text("pre-round", comment: "Loadout: spray slot")
+		case .midRound:
+			return Text("mid-round", comment: "Loadout: spray slot")
+		case .postRound:
+			return Text("post-round", comment: "Loadout: spray slot")
+		default:
+			return Text("slot", comment: "Loadout: unknown spray slot (should never appear unless Riot changes something)")
 		}
 	}
 }

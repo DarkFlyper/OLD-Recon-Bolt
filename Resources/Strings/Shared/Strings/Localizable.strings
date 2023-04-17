@@ -699,7 +699,7 @@ YOUR BUG REPORT HERE
 /* No comment provided by engineer. */
 "Match Loading Errors" = "Match Loading Errors";
 
-/* App Theme */
+/* App Theme: automatically match the system theme */
 "Match System" = "Match System";
 
 /* Match List: section */
@@ -926,7 +926,8 @@ Playtime Stats: section */
 /* Request Log: header */
 "Request" = "Request";
 
-/* No comment provided by engineer. */
+/* Advanced Settings: button to open request log
+Request Log: title */
 "Request Log" = "Request Log";
 
 /* No comment provided by engineer. */
@@ -1248,11 +1249,23 @@ Hit Distribution Stats: region */
 /* No comment provided by engineer. */
 "iOS is a bit finnicky about this, so widgets may not refresh right away—feel free to restart if this doesn't help!" = "iOS is a bit finnicky about this, so widgets may not refresh right away—feel free to restart if this doesn't help!";
 
+/* Loadout: spray slot */
+"mid-round" = "mid-round";
+
 /* Missions Widget: countdown label when the target is in the past. Should never really show up, since at this point there's new data. */
 "old" = "old";
 
+/* Loadout: spray slot */
+"post-round" = "post-round";
+
+/* Loadout: spray slot */
+"pre-round" = "pre-round";
+
 /* No comment provided by engineer. */
 "signing in…" = "signing in…";
+
+/* Loadout: unknown spray slot (should never appear unless Riot changes something) */
+"slot" = "slot";
 
 /* No comment provided by engineer. */
 "–" = "–";
