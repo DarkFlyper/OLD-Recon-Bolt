@@ -13,8 +13,8 @@
 			<key>IntentsSupported</key>
 			<array>
 				<string>ViewMissionsIntent</string>
-				<string>ViewRankIntent</string>
 				<string>ViewRankChangesIntent</string>
+				<string>ViewRankIntent</string>
 				<string>ViewStoreIntent</string>
 			</array>
 		</dict>
