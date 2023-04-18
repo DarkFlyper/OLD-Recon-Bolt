@@ -1,3 +1,5 @@
+/* Pro Store: error restoring purchase */
+"A previous transaction was found, but it could not be verified! %@" = "Es wurde eine bestehende Transaktion gefunden, die jedoch nicht überprüft werden konnte! %@";
 
 /* error loading the account for a widget */
 "Could not load active account!" = "Das aktive Konto konnte nicht geladen werden!";
@@ -35,8 +37,14 @@ Wenn du Pro hast, kannst dieses Konto sozusagen als neues Konto nochmal hinzufü
 /* error loading the account for a widget. */
 "No account specified." = "Kein Konto ausgewählt.";
 
+/* Pro Store: error restoring purchase */
+"No previous transaction found!" = "Keine bestehende Transaktion gefunden!";
+
 /* Riot API Error */
 "Please try again in %lld seconds." = "Bitte in %lld Sekunden nochmal versuchen.";
+
+/* Pro Store: error restoring purchase (placeholder is reason why it was revoked) */
+"Previous purchase was revoked! Reason: %@" = "Es wurde ein bestehender Kauf gefunden, aber er wurde widerrufen! Grund: %@ ";
 
 /* Riot API Error */
 "The API rejected your authorization." = "Die API hat deine Autorisierung nicht akzeptiert.";
@@ -61,6 +69,9 @@ Wenn du Pro hast, kannst dieses Konto sozusagen als neues Konto nochmal hinzufü
 
 /* No comment provided by engineer. */
 "Unknown keychain error: %d" = "Unbekannter Schlüsselbund-Fehler: %d";
+
+/* Pro Store: error restoring purchase: replacement for revokation reason on outdated iOS where it's not available */
+"Update to iOS 15.4 to see the reason!" = "Auf iOS 15.4 und neuer kann der Grund angezeigt werden!";
 
 /* Riot API Error */
 "Valorant is currently undergoing scheduled maintenance. Riot is probably updating the game!" = "Valorant wird derzeit einer planmäßigen Wartung unterzogen. Riot aktualisiert wahrscheinlich das Spiel!";
