@@ -1,0 +1,10 @@
+
+/* error loading the account for a widget */
+"Could not load active account!" = "Không thể tải tài khoản đang hoạt động!";
+
+/* wrong account error */
+"It looks like this account has never played Valorant!
+
+You've probably signed into the wrong account; %@" = "Tài khoản này chưa từng chơi Valorant!
+
+Có thể bạn đã đăng nhập vào sai tài khoản; %@";

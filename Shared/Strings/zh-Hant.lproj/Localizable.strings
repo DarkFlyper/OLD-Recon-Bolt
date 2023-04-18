@@ -8,6 +8,9 @@
 /* No comment provided by engineer. */
 "%lld RR" = "%lld 分數";
 
+/* Stats: match loading */
+"%lld/%lld loaded" = "%lld/%lld 已載入";
+
 /* Loadout Item Picker: number of items owned out of all such items in the game */
 "%lld/%lld owned" = "%lld/%lld 擁有";
 

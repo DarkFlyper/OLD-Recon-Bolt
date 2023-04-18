@@ -149,7 +149,7 @@ Les parties compétitives après vos placements peuvent toutefois être identifi
 /* Statistics Filter */
 "Allowing %lld/%lld matches (%lld filtered out)" = "Autoriser les %lld/%lld matchs (%lld filtrés)";
 
-/* No comment provided by engineer. */
+/* Default Error Alert Title */
 "An Error Occurred!" = "Une erreur est survenue!";
 
 /* About Screen */
@@ -317,9 +317,6 @@ Playtime Stats: section */
 
 /* No comment provided by engineer. */
 "Could not Change App Icon!" = "Impossible de changer l'icône de l'application!";
-
-/* No comment provided by engineer. */
-"Could not Load Account!" = "Impossible decharger le compte!";
 
 /* No comment provided by engineer. */
 "Could not delete files!" = "Impossible de supprimer les fichiers!";
@@ -804,10 +801,10 @@ Playtime Stats: section */
 /* App Icon Picker: section */
 "Pro Icons" = "Icônes Pro";
 
-/* No comment provided by engineer. */
+/* Pro Store: error alert title */
 "Purchase Failed!" = "L'achat a échoué!";
 
-/* Pro Store (placeholder filled with formatted currency) */
+/* Pro Store: button (placeholder filled with formatted currency) */
 "Purchase – %@" = "Achat - %@";
 
 /* No comment provided by engineer. */

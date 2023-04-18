@@ -67,7 +67,7 @@ Competitive matches after your placements can be identified without their detail
 /* Statistics Filter */
 "Allowing %lld/%lld matches (%lld filtered out)" = "Отфильтрованы матчи: %lld/%lld (Не подошли: %lld)";
 
-/* No comment provided by engineer. */
+/* Default Error Alert Title */
 "An Error Occurred!" = "Произошла ошибка!";
 
 /* Statistics Filter: shown when everything is allowed */
@@ -420,10 +420,10 @@ Playtime Stats: section */
 /* App Icon Picker: section */
 "Pro Icons" = "Иконки Pro";
 
-/* No comment provided by engineer. */
+/* Pro Store: error alert title */
 "Purchase Failed!" = "Ошибка покупки!";
 
-/* Pro Store (placeholder filled with formatted currency) */
+/* Pro Store: button (placeholder filled with formatted currency) */
 "Purchase – %@" = "Покупка - %@";
 
 /* No comment provided by engineer. */
