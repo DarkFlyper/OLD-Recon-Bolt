@@ -5,11 +5,26 @@
 /* %@ is replaced by a fraction of wins vs. games played, e.g. '5/12 games won'. */
 "%@ games won" = "%@ 遊戲獲勝";
 
+/* Win Rate Stats by Loadout Delta: focused value (drag on graph); placeholder is replaced by the percentage of rounds won, e.g. '57.3% won'. */
+"%@ won" = "%@ 赢了";
+
+/* No comment provided by engineer. */
+"%@%%" = "%@%%";
+
 /* Missions Box: always at least 3 */
 "%lld Future Weeklies" = "%lld 未來每週";
 
 /* No comment provided by engineer. */
 "%lld RR" = "%lld 分數";
+
+/* Storage Management */
+"%lld from other players" = "%lld 來自其他玩家";
+
+/* Loadout Item Picker: number of hidden items—this should never show nowadays */
+"%lld hidden due to outdated assets" = "%lld 由於資源包過期而隱藏";
+
+/* Hit Distribution Stats: hit count */
+"%lld hits" = "%lld 打到";
 
 /* Shown at the bottom of the expandable playtime list when there are more entries available. */
 "%lld more" = "%lld 更多";
@@ -17,20 +32,38 @@
 /* Statistics Filter: shown when not everything is allowed */
 "%lld selected" = "%lld 已選擇";
 
+/* No comment provided by engineer. */
+"%lld%%" = "%lld%%";
+
+/* No comment provided by engineer. */
+"%lld/%lld" = "%lld/%lld";
+
 /* Stats: match loading */
 "%lld/%lld loaded" = "%lld/%lld 已載入";
 
 /* Loadout Item Picker: number of items owned out of all such items in the game */
 "%lld/%lld owned" = "%lld/%lld 擁有";
 
+/* Time Formatting: minutes & seconds (used in round details view) */
+"%lld:%@" = "%lld:%@";
+
+/* Time Formatting: minutes, seconds, & milliseconds (used in round details view) */
+"%lld:%@.%@" = "%lld:%@.%@";
+
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
 "(%lld – %lld)" = "(%lld – %lld)";
+
+/* Pro Features List */
+"(You can switch between available icons at any time.)" = "(你可以在任何時候地換圖示)";
 
 /* No comment provided by engineer. */
 "+%lld XP" = "+%lld 經驗";
 
 /* No comment provided by engineer. */
 "2-Factor Authentication" = "雙重驗證";
+
+/* No comment provided by engineer. */
+"AFK: %lld" = "掛機: %lld";
 
 /* Settings: section */
 "About" = "關於";
@@ -50,14 +83,56 @@
 /* No comment provided by engineer. */
 "Advanced Settings" = "進階設定";
 
+/* No comment provided by engineer. */
+"Agent Select" = "選擇特務";
+
+/* No comment provided by engineer. */
+"Agents" = "特務";
+
 /* Stats: match loading */
 "All %lld" = "全部 %lld";
 
 /* No comment provided by engineer. */
 "All Maps" = "所有地圖";
 
+/* Statistics Filter (queues or agents) */
+"Allow All" = "允許所有";
+
+/* Default Error Alert Title */
+"An Error Occurred!" = "發生錯誤了!";
+
+/* No comment provided by engineer. */
+"App Icon" = "程式圖示";
+
+/* No comment provided by engineer. */
+"Are your assets outdated?" = "你的資源包是過期的嗎？";
+
+/* No comment provided by engineer. */
+"Assets" = "資源包";
+
+/* Asset Management: shown before the newest version is fetched, so it's not know yet if the assets are up to date or outdated */
+"Assets complete." = "資源包完成.";
+
+/* No comment provided by engineer. */
+"Assets not loaded!" = "資源包還沒加載！";
+
+/* Asset Management */
+"Assets out of date!" = "資源包是最新的！";
+
+/* No comment provided by engineer. */
+"Assets should be fetched automatically, but in case something went wrong, feel free to initiate the process manually." = "資源包應該自動獲取，但如果出現問題，你可以隨時手動啟動該過程。";
+
+/* Asset Management */
+"Assets up to date!" = "資源包是最新的！";
+
+/* Win Rate Stats: side name */
+"Attacking" = "攻擊方";
+
 /* Hit Distribution Stats: region */
 "Body" = "身體";
+
+/* Bookmark/Player List: section */
+"Bookmarks" = "書籤";
 
 /* Gun Customizer: section */
 "Buddy" = "吊飾";
@@ -70,6 +145,9 @@
 
 /* Gun Customizer */
 "Change Skin" = "更換造型";
+
+/* No comment provided by engineer. */
+"Choose App Icon" = "選擇圖示";
 
 /* No comment provided by engineer. */
 "Choose Buddy" = "更換吊飾";
@@ -98,14 +176,26 @@
 /* No comment provided by engineer. */
 "Could Not Load Account!" = "無法加載帳號";
 
+/* No comment provided by engineer. */
+"Could not free up space!" = "沒有足夠的空間!";
+
 /* Asset Management */
 "Current version: %@" = "現在版本: %@";
 
 /* No comment provided by engineer. */
+"Currently in agent select" = "在選擇特務中";
+
+/* No comment provided by engineer. */
 "Currently in-game" = "在遊戲中";
+
+/* Queue Label: custom game */
+"Custom" = "自定";
 
 /* Missions Widget */
 "Daily" = "每日";
+
+/* Missions Box: header */
+"Daily Missions" = "每日任務";
 
 /* Store */
 "Daily Offers" = "每日商店";
@@ -122,11 +212,26 @@
 /* Win Rate Stats: side name */
 "Defending" = "防守方";
 
+/* No comment provided by engineer. */
+"Discord Server" = "Discord 伺服器";
+
+/* No comment provided by engineer. */
+"Done" = "完全";
+
+/* No comment provided by engineer. */
+"Download Assets Now" = "現在下載資源包";
+
 /* Win Rate Stats: chart legend */
 "Draws" = "平局";
 
 /* Request Log: shown in place of a status code (like 200 or 404) when sending failed. */
 "ERROR" = "錯誤";
+
+/* Match List: accessibility label */
+"Edit Filter" = "編輯過濾器";
+
+/* No comment provided by engineer. */
+"Enter 2FA Code" = "輸入驗證碼";
 
 /* Request Log
 Stats: error details */
@@ -134,6 +239,184 @@ Stats: error details */
 
 /* No comment provided by engineer. */
 "Error Details" = "錯誤詳細";
+
+/* Asset Management */
+"Error downloading assets!" = "下載資源包時出錯！";
+
+/* Request Log: title for an exchange */
+"Exchange" = "交換";
+
+/* No comment provided by engineer. */
+"Filter" = "過濾器";
+
+/* No comment provided by engineer. */
+"Filter Maps" = "過濾地圖";
+
+/* Agent Select header: shown when timer reaches zero */
+"Game Started" = "遊戲已開始";
+
+/* No comment provided by engineer. */
+"Golden Gun" = "黃金槍";
+
+/* No comment provided by engineer. */
+"Identities" = "身份";
+
+/* Asset Management */
+"In case something went wrong, use this button to force a full refetch of the assets and images." = "如果出現問題，請使用此按鈕強制重新獲取資源包和圖像。";
+
+/* Asset Management: this row shows the language of the current assets */
+"Language" = "語言";
+
+/* Bookmark/Player List: player level */
+"Level %lld" = "等級 %lld";
+
+/* Contract Progress Bar */
+"Level %lld / %lld" = "等級 %lld / %lld";
+
+/* No comment provided by engineer. */
+"Lifetime Peak" = "當前排位";
+
+/* About Screen: section */
+"Links" = "連結";
+
+/* Stats: match loading */
+"Load Data" = "加載資料";
+
+/* No comment provided by engineer. */
+"Lock In" = "鎖定";
+
+/* No comment provided by engineer. */
+"Manage Assets" = "管理資源包";
+
+/* No comment provided by engineer. */
+"Map" = "地圖";
+
+/* No comment provided by engineer. */
+"Maps" = "地圖";
+
+/* Asset Management */
+"Missing assets!" = "缺少資源包！";
+
+/* Missions Widget: title */
+"Missions" = "任務";
+
+/* No comment provided by engineer. */
+"Missions not loaded!" = "資源包還沒加載！";
+
+/* No comment provided by engineer. */
+"Month" = "月";
+
+/* Pro Features List */
+"Multiple Account Support" = "多個帳號支持";
+
+/* Pro Store */
+"Multiple Accounts" = "多個帳號";
+
+/* Bookmark/Player List: lookup name placeholder */
+"Name" = "名稱";
+
+/* Store */
+"Night Market" = "夜市";
+
+/* Buddy picker: option at the top to select no buddy */
+"No Buddy" = "沒有吊飾";
+
+/* Win Rate Stats: by map */
+"No data" = "沒有資料";
+
+/* No comment provided by engineer. */
+"No minimap available!" = "沒有可用的小地圖!";
+
+/* Party Box */
+"Not Ready" = "沒有準備";
+
+/* Hit Distribution Stats: error */
+"Not enough data!" = "沒有足夠的資料!";
+
+/* No comment provided by engineer. */
+"Official Website" = "官方網站";
+
+/* Storage Management */
+"Other Players" = "其他玩家";
+
+/* Agent View: label for player who hasn't picked an agent yet */
+"Picking…" = "選擇中...";
+
+/* Rank Widget: title */
+"Rank" = "排位";
+
+/* No comment provided by engineer. */
+"Rank %lld" = "排位 %lld";
+
+/* Rank Changes Widget: title */
+"Rank Changes" = "排位變動";
+
+/* No comment provided by engineer. */
+"Rank Rating Changes" = "排位分數變動";
+
+/* accessibility label */
+"Ready" = "準備";
+
+/* Account Settings: button to refresh expired session */
+"Refresh" = "重新加載";
+
+/* No comment provided by engineer. */
+"Refresh automatically" = "自動重新加載";
+
+/* Match List: accessibility label */
+"Remove Bookmark" = "刪除書籤";
+
+/* Asset Management: section */
+"Repair" = "修復";
+
+/* Request Log: header */
+"Request" = "請求";
+
+/* Advanced Settings: button to open request log
+Request Log: title */
+"Request Log" = "請求日誌";
+
+/* No comment provided by engineer. */
+"Requests" = "請求";
+
+/* Asset Management: button */
+"Reset" = "重置";
+
+/* Request Log: header */
+"Response" = "回應";
+
+/* No comment provided by engineer. */
+"Response Code" = "回應代碼";
+
+/* Pro Store: error alert title */
+"Restore Failed!" = "恢復失敗!";
+
+/* Pro Store: button */
+"Restore Purchase" = "恢復購買";
+
+/* No comment provided by engineer. */
+"Retry" = "重試";
+
+/* Bookmark/Player List: section */
+"Search" = "搜尋";
+
+/* No comment provided by engineer. */
+"Send to Developer" = "傳送給開發人員";
+
+/* Top-Level Tab Title */
+"Settings" = "設定";
+
+/* Account Settings: button */
+"Sign In" = "登入";
+
+/* No comment provided by engineer. */
+"Sign In with your Riot account" = "登入你的拳頭帳號";
+
+/* Account Settings */
+"Sign Out" = "登出";
+
+/* No comment provided by engineer. */
+"Sign in with Google/Apple/etc." = "登入為 Google/Apple/etc.";
 
 /* Store */
 "Unknown Offer" = "未知商品";
