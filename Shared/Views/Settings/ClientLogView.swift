@@ -114,13 +114,16 @@ struct ClientLogView: View {
 				let info = ExchangeInfo(exchange)
 				let encodedInfo = try! JSONEncoder().encode(info)
 				let infoString = String(bytes: encodedInfo, encoding: .utf8)!
-				let mailBody = String(localized: "Feedback Email Body", defaultValue: """
-What went wrong? Tell me about the error you just encountered:
+				let mailBody = String(
+					localized: "Feedback Email Body",
+					defaultValue: """
+					What went wrong? Tell me about the error you just encountered:
 
-YOUR BUG REPORT HERE
+					YOUR BUG REPORT HERE
 
-\(infoString)
-""", comment: "Request Log: placeholder is replaced by error dump.")
+					\(infoString)
+					""", comment: "Request Log: placeholder is replaced by error dump."
+				)
 				
 				Button {
 					UIPasteboard.general.setData(

@@ -30,7 +30,8 @@ struct MatchListFilterEditor: View {
 					Text("""
 						A match's queue is unknown until its details are fetched (by tapping it or performing the swipe action).
 						Competitive matches after your placements can be identified without their details, however.
-						""")
+						""", comment: "Match List Filter"
+					)
 				}
 			}
 			.navigationTitle("Filter Match List")

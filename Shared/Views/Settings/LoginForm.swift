@@ -16,31 +16,41 @@ struct LoginForm: View {
 	var body: some View {
 		ScrollView {
 			ZStack {
-				ProgressView("signing in…")
-					.opacity(isSigningIn ? 1 : 0)
+				ProgressView {
+					Text("signing in…", comment: "Login Form")
+				}
+				.opacity(isSigningIn ? 1 : 0)
 				
 				VStack(spacing: 20) {
 					VStack(spacing: 12) {
 						VStack {
-							TextField("Username", text: $credentials.username)
-								.autocapitalization(.none)
-								.submitLabel(.next)
-								.onSubmit { isPasswordFieldFocused = true }
+							TextField(text: $credentials.username) {
+								Text("Username", comment: "Login Form")
+							}
+							.autocapitalization(.none)
+							.submitLabel(.next)
+							.onSubmit { isPasswordFieldFocused = true }
 							
-							SecureField("Password", text: $credentials.password)
-								.submitLabel(.go)
-								.onSubmit {
-									isPasswordFieldFocused = false
-									Task { await logIn() }
-								}
-								.focused($isPasswordFieldFocused)
+							SecureField(text: $credentials.password) {
+								Text("Password", comment: "Login Form")
+							}
+							.submitLabel(.go)
+							.onSubmit {
+								isPasswordFieldFocused = false
+								Task { await logIn() }
+							}
+							.focused($isPasswordFieldFocused)
 						}
 						.frame(maxWidth: 240)
 						
 						if credentials.username.contains("#") {
 							VStack(alignment: .leading, spacing: 8) {
-								Text("Looks like you're trying to enter your Riot ID (and tagline) as username! Your username is actually something else: it's what you use to sign into the Valorant launcher.")
-								Text("If you don't know your username or don't have one, you can fix that at [account.riotgames.com](https://account.riotgames.com).")
+								Text("""
+									Looks like you're trying to enter your Riot ID (and tagline) as username! Your username is actually something else: it's what you use to sign into the Valorant launcher.
+
+									If you don't know your username or don't have one, you can fix that at [account.riotgames.com](https://account.riotgames.com).
+									""", comment: "Login Form"
+								)
 							}
 							.font(.callout)
 							.foregroundStyle(.secondary)
@@ -48,7 +58,7 @@ struct LoginForm: View {
 						}
 						
 						AsyncButton(action: logIn) {
-							Text("Sign In")
+							Text("Sign In", comment: "Login Form: button")
 								.bold()
 						}
 						.buttonStyle(.borderedProminent)
@@ -77,7 +87,7 @@ struct LoginForm: View {
 		} onDismiss: {
 			$0.completion(.failure(AccountManager.MultifactorPromptError.cancelled))
 		}
-		.navigationTitle("Sign In with your Riot account")
+		.navigationTitle(Text("Sign In with your Riot account", comment: "Login Form"))
 		.navigationBarTitleDisplayMode(.inline)
 		.toolbar {
 			ToolbarItemGroup(placement: .cancellationAction) {
@@ -92,40 +102,43 @@ struct LoginForm: View {
 	
 	var trustInfo: some View {
 		FreeStandingDisclosureGroup {
-			Text("I won't sugarcoat things. Due to the way this app uses the API, I believe there's no other way to sign in than to have people enter their credentials directly. Under those circumstances, there's really no good way for anyone to be sure their credentials remain safe. For what it's worth:")
+			Text("I won't sugarcoat things. Due to the way this app uses the API, I believe there's no other way to sign in than to have people enter their credentials directly. Under those circumstances, there's really no good way for anyone to be sure their credentials remain safe. For what it's worth:", comment: "Login Form: is this safe?")
 			
-			let lines: [LocalizedStringKey] = [
-				"Your credentials only ever leave your device in the form of a login request directly to Riot. They are never stored or sent anywhere else.",
-				"You can enable 2-factor authentication, so you'd at least have another layer of security if it went bad.",
-				"The code is open-source and visible on GitHub; you can build it yourself if you want to be sure of what's running.",
+			let lines: [Text] = [
+				Text("Your credentials only ever leave your device in the form of a login request directly to Riot. They are never stored or sent anywhere else.", comment: "Login Form: is this safe?"),
+				Text("You can enable 2-factor authentication, so you'd at least have another layer of security if it went bad.", comment: "Login Form: is this safe?"),
+				Text("The code is open-source and visible on GitHub; you can build it yourself if you want to be sure of what's running.", comment: "Login Form: is this safe?"),
 			]
 			ForEach(lines.indices, id: \.self) { index in
 				HStack(alignment: .firstTextBaseline) {
 					Text("•")
-					Text(lines[index])
+					lines[index]
 				}
 			}
 			
-			Text("TL;DR: you'll have to take my word for it, but Riot doesn't seem to mind.")
+			Text("TL;DR: you'll have to take my word for it, but Riot doesn't seem to mind.", comment: "Login Form: is this safe?")
 				.fontWeight(.medium)
 		} label: {
 			Image(systemName: "lock")
 				.frame(width: 24)
-			Text("Is this safe?")
+			Text("Is this safe?", comment: "Login Form: button/header")
 		}
 	}
 	
 	var linkedAccountInfo: some View {
 		FreeStandingDisclosureGroup {
-			Text("Unfortunately, due to technical limitations, you cannot sign into Recon Bolt via your Google account, Apple ID, or anything but a Riot account.")
-			
-			Text("Assuming you signed up for Valorant using Google/Apple/etc., you can set up your account to add a username & password on Riot's site at [account.riotgames.com](https://account.riotgames.com). Note that your Riot ID is **not** the same as your username! If you've forgotten your username, you can reset it at [recovery.riotgames.com](https://recovery.riotgames.com).")
-			
-			Text("On that site, navigate to **Riot Account Sign-in** and set yourself a username and password. When you're done, you can use those same credentials to sign in above! Your social account will stay linked and you'll remain able to sign in with that on PC :)")
+			Text("""
+				Unfortunately, due to technical limitations, you cannot sign into Recon Bolt via your Google account, Apple ID, or anything but a Riot account.
+
+				Assuming you signed up for Valorant using Google/Apple/etc., you can set up your account to add a username & password on Riot's site at [account.riotgames.com](https://account.riotgames.com). Note that your Riot ID is **not** the same as your username! If you've forgotten your username, you can reset it at [recovery.riotgames.com](https://recovery.riotgames.com).
+
+				On that site, navigate to **Riot Account Sign-in** and set yourself a username and password. When you're done, you can use those same credentials to sign in above! Your social account will stay linked and you'll remain able to sign in with that on PC :)
+				""", comment: "Login Form: sign in with google/apple/etc."
+			)
 		} label: {
 			Image(systemName: "link")
 				.frame(width: 24)
-			Text("Sign in with Google/Apple/etc.")
+			Text("Sign in with Google/Apple/etc.", comment: "Login Form: button/header")
 		}
 	}
 	
@@ -134,7 +147,7 @@ struct LoginForm: View {
 		isSigningIn = true
 		defer { isSigningIn = false }
 		
-		await load(errorTitle: "Could not sign in!") {
+		await load(errorTitle: Text("Could not sign in!", comment: "Login Form: error title")) {
 			do {
 				try await accountManager.addAccount(using: credentials)
 				dismiss()
@@ -171,7 +184,7 @@ private struct FreeStandingDisclosureGroup<Content: View, Label: View>: View {
 			.background(Color.tertiaryGroupedBackground)
 			
 			if isExpanded {
-				VStack(alignment: .leading, spacing: 8) {
+				VStack(alignment: .leading, spacing: 12) {
 					content
 				}
 				.frame(maxWidth: .infinity, alignment: .leading)

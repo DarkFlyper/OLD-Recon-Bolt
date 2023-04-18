@@ -168,6 +168,7 @@ struct ProFeaturesOverview: View {
 			}
 		}
 		.navigationTitle("Pro Features")
+		.navigationBarTitleDisplayMode(.inline) // longer localizations don't fit on all devices
 	}
 	
 	func image(_ name: String) -> some View {

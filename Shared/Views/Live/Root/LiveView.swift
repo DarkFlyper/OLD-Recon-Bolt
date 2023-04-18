@@ -157,10 +157,10 @@ private struct WrongAccountError: Error, LocalizedError {
 		}
 		return String(
 			localized: """
-It looks like this account has never played Valorant!
+			It looks like this account has never played Valorant!
 
-You've probably signed into the wrong account; \(accountDesc)
-""",
+			You've probably signed into the wrong account; \(accountDesc)
+			""",
 			table: "Errors",
 			comment: "wrong account error"
 		)
