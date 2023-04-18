@@ -84,7 +84,7 @@ Missions Box */
 /* No comment provided by engineer. */
 "A 2FA code has been sent to your email address %@" = "Ein 2FA-Code wurde an deine E-Mail-Adresse %@ geschickt.";
 
-/* No comment provided by engineer. */
+/* Match List Filter */
 "A match's queue is unknown until its details are fetched (by tapping it or performing the swipe action).
 Competitive matches after your placements can be identified without their details, however." = "Der Spielmodus ist erst dann bekannt, wenn die Details eines Spiels geladen sind (indem es angetippt oder nach rechts gewischt wird). Kompetitive Spiele können allerdings auch ohne ihre Details anhand der RW-Änderung identifiziert werden.";
 
@@ -169,9 +169,6 @@ Competitive matches after your placements can be identified without their detail
 /* Pro Features List */
 "As thanks for your support, you get to show off your status with an exclusive app icon!" = "Als Dankeschön für deine Unterstützung kannst du deinen Status mit einem exklusiven App-Icon demonstrieren!";
 
-/* About Screen */
-"As you can guess, the scope expanded massively over time to what you're using now. I hope you're enjoying it!" = "Wie du dir vielleicht vorstellen kannst, ist das Projekt immer ambitionierter geworden, und wurde schlussendlich zu der App, die du gerade benutzt. Ich hoffe, sie gefällt dir!";
-
 /* No comment provided by engineer. */
 "Assets" = "Assets";
 
@@ -189,9 +186,6 @@ Competitive matches after your placements can be identified without their detail
 
 /* Asset Management */
 "Assets up to date!" = "Assets aktuell!";
-
-/* No comment provided by engineer. */
-"Assuming you signed up for Valorant using Google/Apple/etc., you can set up your account to add a username & password on Riot's site at [account.riotgames.com](https://account.riotgames.com). Note that your Riot ID is **not** the same as your username! If you've forgotten your username, you can reset it at [recovery.riotgames.com](https://recovery.riotgames.com)." = "Wenn du dich über Google/Apple/etc. für Valorant registriert hast, kannst du auf [account.riotgames.com](https://account.riotgames.com) dein Konto ergänzen, um einen Benutzernamen & Passwort zu setzen. Vorsicht: deine Riot ID ist **nicht** dasselbe wie dein Benutzername! Falls du diesen vergessen hast, kannst du ihn auf [recovery.riotgames.com](https://recovery.riotgames.com) zurücksetzen.";
 
 /* Win Rate Stats: side name */
 "Attacking" = "Angreifer";
@@ -332,7 +326,7 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Could not look up %@" = "Suche nach Spieler %@ fehlgeschlagen";
 
-/* No comment provided by engineer. */
+/* Login Form: error title */
 "Could not sign in!" = "Anmeldung fehlgeschlagen!";
 
 /* Asset Management */
@@ -502,9 +496,6 @@ DEINE FEHLERMELDUNG HIER
 /* No comment provided by engineer. */
 "Headhunter (Chamber)" = "Kopfjäger (Chamber)";
 
-/* About Screen */
-"Hi! I'm Julian Dunskus, and I made this app." = "Hi! Ich bin Julian Diskus, der (alleinige) Entwickler dieser App.";
-
 /* Hit Distribution Stats: title */
 "Hit Distribution" = "Treffer-Verteilung";
 
@@ -514,23 +505,17 @@ DEINE FEHLERMELDUNG HIER
 /* Pro Store */
 "I hope you enjoy the pro features :)" = "Ich hoffe, du genießt die Pro-Features :)";
 
-/* No comment provided by engineer. */
+/* Login Form: is this safe? */
 "I won't sugarcoat things. Due to the way this app uses the API, I believe there's no other way to sign in than to have people enter their credentials directly. Under those circumstances, there's really no good way for anyone to be sure their credentials remain safe. For what it's worth:" = "Ich möchte die Sache nicht verharmlosen. Aufgrund der Art und Weise, wie diese App die API verwendet, gibt es meines Erachtens keine andere Möglichkeit zum Anmelden, als dass die Benutzer ihre Anmeldedaten direkt in die App eingeben müssen. Unter diesen Umständen gibt es in der Theorie für niemanden eine gute Möglichkeit, sicherzugehen, dass seine Anmeldedaten sicher bleiben. Allerdings, wozu auch immer das gut sein mag:";
 
 /* No comment provided by engineer. */
 "Identities" = "Identitäten";
-
-/* No comment provided by engineer. */
-"If you don't know your username or don't have one, you can fix that at [account.riotgames.com](https://account.riotgames.com)." = "Falls du deinen Benutzernamen nicht kennst oder keinen hast, kannst du das auf [account.riotgames.com](https://account.riotgames.com) richten.";
 
 /* Pro Features List */
 "If you have accounts in multiple regions to play with friends around the world, this is the feature for you!" = "Falls du Konten in mehreren Regionen hast, um mit Freunden um die Welt zu spielen, ist dies die Feature für dich!";
 
 /* Pro Features List */
 "If you have multiple accounts, you can configure separate widgets for each and have them on your Home Screen at the same time." = "Falls du mehrere Konten hast, kannst du für jedes separate Widgets konfigurieren und alle gleichzeitig auf dem Home-Bildschirm haben.";
-
-/* About Screen */
-"If you've encountered a bug or have some feedback, I'm always happy to hear it on the Discord Server or GitHub :)" = "Falls du auf einen Bug gestoßen bist oder Feedback hast, höre ich so was immer gerne auf dem Discord-Server oder auf GitHub :)";
 
 /* No comment provided by engineer. */
 "If your widgets seem broken, use this button to request an immediate refresh from iOS." = "Falls deine Widgets kaputt zu sein scheinen, kannst du mit diesem Knopf von iOS eine sofortige Aktualisierung anfragen.";
@@ -544,7 +529,7 @@ DEINE FEHLERMELDUNG HIER
 /* Settings: section */
 "In-App Store" = "Pro Kaufen";
 
-/* No comment provided by engineer. */
+/* Login Form: button/header */
 "Is this safe?" = "Ist das hier sicher?";
 
 /* No comment provided by engineer. */
@@ -615,9 +600,6 @@ DEINE FEHLERMELDUNG HIER
 
 /* Bookmark/Player List: lookup button */
 "Look Up" = "Suchen";
-
-/* No comment provided by engineer. */
-"Looks like you're trying to enter your Riot ID (and tagline) as username! Your username is actually something else: it's what you use to sign into the Valorant launcher." = "Es sieht so aus, als würdest du versuchen, deine Riot ID (und Tagline) als Benutzernamen einzugeben! Dein Benutzername ist tatsächlich etwas anderes: damit meldest du dich im Launcher an.";
 
 /* Win Rate Stats: chart legend */
 "Losses" = "Niederlagen";
@@ -749,9 +731,6 @@ DEINE FEHLERMELDUNG HIER
 "Official Website" = "Offizielle Website";
 
 /* No comment provided by engineer. */
-"On that site, navigate to **Riot Account Sign-in** and set yourself a username and password. When you're done, you can use those same credentials to sign in above! Your social account will stay linked and you'll remain able to sign in with that on PC :)" = "Auf der Seite scrollst du zu **Riot-Konto-Anmeldung** und setzt dir einen Benutzernamen & Passwort. Wenn du fertig bist, kannst du diese Anmeldedaten hier verwenden! Dein sozialer Account bleibt verlinkt, sodass du dich weiterhin damit am PC anmelden kannst :)";
-
-/* No comment provided by engineer. */
 "Open or swipe to fetch details." = "Details laden: öffnen oder wischen.";
 
 /* Storage Management */
@@ -777,7 +756,7 @@ Playtime Stats: section */
 /* Scoreboard: party letter */
 "Party %@" = "Gruppe %@";
 
-/* No comment provided by engineer. */
+/* Login Form */
 "Password" = "Passwort";
 
 /* Agent View: label for player who hasn't picked an agent yet */
@@ -842,9 +821,6 @@ Playtime Stats: section */
 
 /* Pro Features List */
 "Recon Bolt does not have and will never have ads. The only way it can make money is through in-app purchases." = "Recon Bolt hat keine Werbung und wird auch nie welche haben. In-App-Käufe sind für mich der einzige Weg, daran Geld zu verdienen.";
-
-/* About Screen */
-"Recon Bolt started development in early 2021, back when it wasn't yet possible to see your RR gains and losses in the game, but the API offered those numbers." = "Ich habe 2021 angefangen, an Recon Bolt zu arbeiten. Damals war es noch nicht möglich, deine RW-Änderungen im Game zu sehen, aber die API bot diese Zahlen an.";
 
 /* Top-Level Tab Title */
 "Reference" = "Nachschlagen";
@@ -934,16 +910,17 @@ Request Log: title */
 /* App Icon Description: pro blue */
 "Show off your pro status with an exclusive icon!" = "Demonstriere deinen Pro-Status mit einem exklusiven Icon!";
 
-/* Account Settings: button */
+/* Account Settings: button
+Login Form: button */
 "Sign In" = "Anmelden";
 
-/* No comment provided by engineer. */
+/* Login Form */
 "Sign In with your Riot account" = "Mit Riot-Konto anmelden";
 
 /* Account Settings */
 "Sign Out" = "Abmelden";
 
-/* No comment provided by engineer. */
+/* Login Form: button/header */
 "Sign in with Google/Apple/etc." = "Mit Google/Apple/etc. anmelden";
 
 /* Hit Distribution Stats: smoothing slider */
@@ -994,7 +971,7 @@ Request Log: title */
 /* Missions Box: button */
 "Switch Contract" = "Auftrag wechseln";
 
-/* No comment provided by engineer. */
+/* Login Form: is this safe? */
 "TL;DR: you'll have to take my word for it, but Riot doesn't seem to mind." = "Schlussendlich musst du mir halt vertrauen, aber Riot scheint es zu tolerieren.";
 
 /* Bookmark/Player List: lookup tag placeholder */
@@ -1003,7 +980,7 @@ Request Log: title */
 /* Pro Store */
 "Thank you for supporting Recon Bolt!" = "Danke, dass du Recon Bolt unterstützt!";
 
-/* No comment provided by engineer. */
+/* Login Form: is this safe? */
 "The code is open-source and visible on GitHub; you can build it yourself if you want to be sure of what's running." = "Der Code ist Open Source und auf GitHub einsehbar; du kannst ihn sogar selbst kompilieren, wenn du ganz sichergehen willst, dass das auch tatsächlich der Code ist, der auf deinem Gerät läuft.";
 
 /* App Icon Description: default */
@@ -1017,9 +994,6 @@ Request Log: title */
 
 /* No comment provided by engineer. */
 "These are the last %lld requests sent by the app, along with their responses." = "Dies sind die letzten %lld Anfragen, die die App gemacht hat, zusammen mit ihren Antworten.";
-
-/* About Screen: section */
-"Third-Party Libraries & APIs Used" = "Verwendete Libraries & APIs";
 
 /* Statistics error for iOS <16 */
 "This feature requires iOS 16 or newer." = "Diese Feature erfordert iOS 16 oder neuer.";
@@ -1054,9 +1028,6 @@ Hit Distribution Stats: region */
 
 /* Hit Distribution Stats: footnote */
 "Unfortunately, Valorant doesn't store information about which weapon was used for each hit. All we get is the weapon you started the round with and what weapon you used for each kill. Recon Bolt guesses the weapon involved in each damage based on this information, but it cannot be perfect (and neither can any other tracker)." = "Leider speichert Valorant keine Informationen darüber, welche Waffe für die einzelnen Treffer verwendet wurde. Alles, was wir bekommen, ist die Waffe, mit der du die Runde begonnen hast, und welche Waffe du für jeden Kill benutzt hast. Recon Bolt errät die Waffe, die an jedem Schaden beteiligt war, auf Grundlage dieser Informationen, aber es (und jeder anderer Tracker) kann nicht perfekt sein.";
-
-/* No comment provided by engineer. */
-"Unfortunately, due to technical limitations, you cannot sign into Recon Bolt via your Google account, Apple ID, or anything but a Riot account." = "Leider kannst du dich aufgrund technischer Limitierungen nur direkt mit einem Riot-Konto anmelden, und nicht mit deinem Google-Konto, deiner Apple-ID oder irgendeinem anderen Dienst.";
 
 /* Round Details: killed by unknown ability */
 "Unknown Ability" = "Unbekannte Fähigkeit";
@@ -1109,7 +1080,7 @@ Hit Distribution Stats: region */
 /* Match Details: button */
 "Update Ranks" = "Ränge aktualisieren";
 
-/* No comment provided by engineer. */
+/* Login Form */
 "Username" = "Benutzername";
 
 /* No comment provided by engineer. */
@@ -1181,10 +1152,10 @@ Hit Distribution Stats: region */
 /* Match Details: footnote */
 "You can also tap a round's number in the kill breakdown above to quickly view its details." = "Du kannst auch oben eine Rundenzahl antippen, um dich schnell auf ihre Details zu navigieren.";
 
-/* No comment provided by engineer. */
+/* Login Form: is this safe? */
 "You can enable 2-factor authentication, so you'd at least have another layer of security if it went bad." = "Du kannst 2-Faktor Authentisierung aktivieren, damit du immerhin eine weitere Absicherung hättest, falls etwas schlimmes passiert.";
 
-/* No comment provided by engineer. */
+/* Login Form: is this safe? */
 "Your credentials only ever leave your device in the form of a login request directly to Riot. They are never stored or sent anywhere else." = "Deine Anmeldedaten verlassen dein Gerät nur in Form einer Anfrage direkt an Riot. Sie werden nie an einen anderen Ort geschickt oder dort gespeichert.";
 
 /* No comment provided by engineer. */
@@ -1205,7 +1176,7 @@ Hit Distribution Stats: region */
 /* Loadout: spray slot */
 "pre-round" = "Anfang";
 
-/* No comment provided by engineer. */
+/* Login Form */
 "signing in…" = "Anmeldung läuft…";
 
 /* Loadout: unknown spray slot (should never appear unless Riot changes something) */
