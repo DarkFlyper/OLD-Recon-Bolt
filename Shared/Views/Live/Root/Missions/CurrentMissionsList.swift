@@ -2,7 +2,7 @@ import SwiftUI
 import ValorantAPI
 
 struct CurrentMissionsList: View {
-	var title: String
+	var title: Text
 	var missions: [MissionWithInfo]
 	var countdownTarget: Date? = nil
 	
@@ -12,7 +12,7 @@ struct CurrentMissionsList: View {
 			
 			VStack(spacing: 16) {
 				HStack(alignment: .lastTextBaseline) {
-					Text(title)
+					title
 						.font(.headline)
 						.multilineTextAlignment(.leading)
 					
@@ -34,6 +34,7 @@ struct CurrentMissionsList: View {
 							MissionView(missionInfo: missionInfo, mission: mission)
 						} else {
 							Text("Unknown mission!")
+								.foregroundStyle(.secondary)
 						}
 					}
 				}

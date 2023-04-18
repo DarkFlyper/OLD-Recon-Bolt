@@ -31,10 +31,10 @@
 /* Stats: match loading (Key in .stringsdict) */
 "%lld Error(s)" = "%lld Error(s)";
 
-/* No comment provided by engineer. */
+/* Missions Box: always at least 3 */
 "%lld Future Weeklies" = "%lld Future Weeklies";
 
-/* No comment provided by engineer. */
+/* Missions Box: always at least 3 */
 "%lld Queued-Up Weeklies" = "%lld Queued-Up Weeklies";
 
 /* No comment provided by engineer. */
@@ -88,7 +88,8 @@
 /* Time Formatting: minutes, seconds, & milliseconds (used in round details view) */
 "%lld:%@.%@" = "%lld:%@.%@";
 
-/* Contract Progress Bar */
+/* Contract Progress Bar
+Missions Box */
 "%lld / %lld XP" = "%lld / %lld XP";
 
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
@@ -153,7 +154,7 @@ Competitive matches after your placements can be identified without their detail
 /* Contract Picker */
 "Active" = "Active";
 
-/* No comment provided by engineer. */
+/* Missions Box: header */
 "Active Contract" = "Active Contract";
 
 /* Match List: accessibility label */
@@ -340,7 +341,7 @@ Playtime Stats: section */
 /* Storage Management: title for alert to confirm deleting some matches */
 "Confirm Delete" = "Confirm Delete";
 
-/* No comment provided by engineer. */
+/* Missions Box */
 "Contract complete!" = "Contract complete!";
 
 /* No comment provided by engineer. */
@@ -402,6 +403,9 @@ Playtime Stats: section */
 
 /* Missions Widget */
 "Daily" = "Daily";
+
+/* Missions Box: header */
+"Daily Missions" = "Daily Missions";
 
 /* Store */
 "Daily Offers" = "Daily Offers";
@@ -717,7 +721,7 @@ YOUR BUG REPORT HERE
 /* Asset Management */
 "Missing assets!" = "Missing assets!";
 
-/* No comment provided by engineer. */
+/* Missions Box */
 "Missing progress for contract!" = "Missing progress for contract!";
 
 /* No comment provided by engineer. */
@@ -759,7 +763,7 @@ YOUR BUG REPORT HERE
 /* Gun Customizer: shown when a weapon has no buddy active */
 "No buddy selected!" = "No buddy selected!";
 
-/* No comment provided by engineer. */
+/* Missions Box */
 "No contract active!" = "No contract active!";
 
 /* Win Rate Stats: by map */
@@ -1050,7 +1054,7 @@ Request Log: title */
 /* Pro Store */
 "Support Further Development!" = "Support Further Development!";
 
-/* No comment provided by engineer. */
+/* Missions Box: button */
 "Switch Contract" = "Switch Contract";
 
 /* No comment provided by engineer. */
@@ -1105,6 +1109,9 @@ Hit Distribution Stats: region */
 /* Request Log */
 "URL" = "URL";
 
+/* Missions Box: header, shown when a mission is not daily or weekly (should not happen unless Riot changes something) */
+"Uncategorized Missions" = "Uncategorized Missions";
+
 /* Shown when a match does not match the filter and its details have not been fetched. */
 "Unfetched" = "Unfetched";
 
@@ -1153,7 +1160,7 @@ Hit Distribution Stats: region */
 /* No comment provided by engineer. */
 "Unknown bundle!" = "Unknown bundle!";
 
-/* No comment provided by engineer. */
+/* Missions Box */
 "Unknown contract!" = "Unknown contract!";
 
 /* No comment provided by engineer. */
@@ -1218,6 +1225,9 @@ Hit Distribution Stats: region */
 
 /* Missions Widget */
 "Weekly" = "Weekly";
+
+/* Missions Box: header */
+"Weekly Missions" = "Weekly Missions";
 
 /* No comment provided by engineer. */
 "Widget Refresh Requested" = "Widget Refresh Requested";

@@ -17,7 +17,7 @@ struct ContractDetailsView: View {
 		Divider()
 		
 		VStack {
-			Text("Active Contract")
+			Text("Active Contract", comment: "Missions Box: header")
 				.font(.headline)
 				.frame(maxWidth: .infinity, alignment: .leading)
 			
@@ -28,21 +28,22 @@ struct ContractDetailsView: View {
 						if let contract = contracts.details.contracts.firstElement(withID: activeContract) {
 							overview(for: ContractData(contract: contract, info: info))
 						} else {
-							Text("Missing progress for contract!")
+							Text("Missing progress for contract!", comment: "Missions Box")
 						}
 					} else {
-						Text("Unknown contract!")
+						Text("Unknown contract!", comment: "Missions Box")
+							.foregroundStyle(.secondary)
 					}
 				} else {
-					Text("No contract active!")
-						.foregroundColor(.secondary)
+					Text("No contract active!", comment: "Missions Box")
+						.foregroundStyle(.secondary)
 				}
 				
 				Divider()
 				
 				NavigationLink(destination: ContractChooser(details: contracts.details)) {
 					HStack {
-						Text("Switch Contract")
+						Text("Switch Contract", comment: "Missions Box: button")
 						Spacer()
 						Image(systemName: "chevron.right")
 					}
@@ -69,10 +70,10 @@ struct ContractDetailsView: View {
 						let currentXP = data.contract.progression.totalEarned
 						
 						if !data.isComplete {
-							Text("\(currentXP) / \(data.totalXP) XP")
+							Text("\(currentXP) / \(data.totalXP) XP", comment: "Missions Box")
 								.font(.footnote)
 						} else {
-							Text("Contract complete!")
+							Text("Contract complete!", comment: "Missions Box")
 						}
 					}
 					.foregroundColor(.secondary)
@@ -90,18 +91,18 @@ struct ContractDetailsView: View {
 	@ViewBuilder
 	var currentMissionsInfo: some View {
 		CurrentMissionsList(
-			title: "Uncategorized Missions",
+			title: Text("Uncategorized Missions", comment: "Missions Box: header, shown when a mission is not daily or weekly (should not happen unless Riot changes something)"),
 			missions: contracts.unknown
 		)
 		
 		CurrentMissionsList(
-			title: "Daily Missions",
+			title: Text("Daily Missions", comment: "Missions Box: header"),
 			missions: contracts.dailies,
 			countdownTarget: contracts.dailyRefresh
 		)
 		
 		CurrentMissionsList(
-			title: "Weekly Missions",
+			title: Text("Weekly Missions", comment: "Missions Box: header"),
 			missions: contracts.weeklies,
 			countdownTarget: contracts.weeklyRefresh
 		)
@@ -115,10 +116,10 @@ struct ContractDetailsView: View {
 				?? upcomingMissions.endIndex
 			
 			UpcomingMissionsList(missions: upcomingMissions.prefix(upTo: futureStart)) {
-				Text("\($0) Queued-Up Weeklies")
+				Text("\($0) Queued-Up Weeklies", comment: "Missions Box: always at least 3")
 			}
 			UpcomingMissionsList(missions: upcomingMissions.suffix(from: futureStart)) {
-				Text("\($0) Future Weeklies")
+				Text("\($0) Future Weeklies", comment: "Missions Box: always at least 3")
 			}
 		}
 	}
