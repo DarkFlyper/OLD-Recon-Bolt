@@ -422,6 +422,15 @@ Stats: error details */
 /* Stats: match loading */
 "Load Data" = "加載資料";
 
+/* Match List */
+"Load Older Matches" = "載入舊對戰";
+
+/* Pro Store */
+"Loading Store Info…" = "載入商店資訊...";
+
+/* No comment provided by engineer. */
+"Loading request log…" = "載入請求日誌...";
+
 /* No comment provided by engineer. */
 "Loadout" = "收藏";
 
@@ -429,13 +438,25 @@ Stats: error details */
 "Lock In" = "鎖定";
 
 /* No comment provided by engineer. */
+"Lock In %@" = "鎖定 %@";
+
+/* Win Rate Stats: chart legend */
+"Losses" = "輸掉";
+
+/* No comment provided by engineer. */
 "Manage Assets" = "管理資源包";
+
+/* No comment provided by engineer. */
+"Manage Local Storage" = "管理本地儲存空間";
 
 /* No comment provided by engineer. */
 "Map" = "地圖";
 
 /* No comment provided by engineer. */
 "Maps" = "地圖";
+
+/* Stats: error details */
+"Match" = "對戰";
 
 /* Asset Management */
 "Missing assets!" = "缺少資源包！";
@@ -464,6 +485,15 @@ Stats: error details */
 /* Buddy picker: option at the top to select no buddy */
 "No Buddy" = "沒有吊飾";
 
+/* No comment provided by engineer. */
+"No Spray" = "沒有噴漆";
+
+/* No comment provided by engineer. */
+"No Title" = "沒有稱號";
+
+/* Gun Customizer: shown when a weapon has no buddy active */
+"No buddy selected!" = "沒有吊飾選取!";
+
 /* Win Rate Stats: by map */
 "No data" = "沒有資料";
 
@@ -476,11 +506,20 @@ Stats: error details */
 /* Hit Distribution Stats: error */
 "Not enough data!" = "沒有足夠的資料!";
 
+/* Account Settings */
+"Not signed in yet." = "未登入.";
+
+/* No comment provided by engineer. */
+"Not signed in!" = "未登入!";
+
 /* No comment provided by engineer. */
 "Official Website" = "官方網站";
 
 /* Storage Management */
 "Other Players" = "其他玩家";
+
+/* No comment provided by engineer. */
+"Password" = "密碼";
 
 /* Agent View: label for player who hasn't picked an agent yet */
 "Picking…" = "選擇中...";
@@ -597,6 +636,9 @@ Request Log: title */
 /* No comment provided by engineer. */
 "Unknown mission!" = "未知任務！";
 
+/* Asset Management: button */
+"Update Now" = "現在更新";
+
 /* Match Details: button */
 "Update Ranks" = "更新排位";
 
@@ -612,6 +654,9 @@ Request Log: title */
 /* Reference */
 "Version %@" = "版本 %@";
 
+/* No comment provided by engineer. */
+"Vibrate when Match Found" = "進入對戰時振動";
+
 /* Pro Store */
 "View All Features" = "查看所有功能";
 
@@ -622,7 +667,34 @@ Request Log: title */
 "View your current rank." = "查看你的當前的排位";
 
 /* No comment provided by engineer. */
+"Weapons" = "武器";
+
+/* No comment provided by engineer. */
+"Week" = "禮拜";
+
+/* Missions Widget */
+"Weekly" = "每週";
+
+/* Missions Box: header */
+"Weekly Missions" = "每週任務";
+
+/* No comment provided by engineer. */
+"Win Rate" = "勝率";
+
+/* Win Rate Stats: chart legend */
+"Wins" = "勝利";
+
+/* No comment provided by engineer. */
 "Year" = "年";
+
+/* Loadout: spray slot */
+"mid-round" = "對戰中";
+
+/* Loadout: spray slot */
+"post-round" = "回合後";
+
+/* Loadout: spray slot */
+"pre-round" = "回合前";
 
 /* No comment provided by engineer. */
 "signing in…" = "登入中...";
