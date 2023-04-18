@@ -315,6 +315,9 @@ Playtime Stats: section */
 "Copy to Clipboard" = "Auf Ablage kopieren";
 
 /* No comment provided by engineer. */
+"Could Not Load Account!" = "Konto konnte nicht geladen werden!";
+
+/* No comment provided by engineer. */
 "Could not Change App Icon!" = "App-Icon konnte nicht geändert werden!";
 
 /* No comment provided by engineer. */
@@ -879,6 +882,12 @@ Request Log: title */
 
 /* No comment provided by engineer. */
 "Response Code" = "Antwortscode";
+
+/* Pro Store: error alert title */
+"Restore Failed!" = "Wiederherstellung fehlgeschlagen!";
+
+/* Pro Store: button */
+"Restore Purchase" = "Kauf wiederherstellen";
 
 /* No comment provided by engineer. */
 "Retry" = "Erneut versuchen";
