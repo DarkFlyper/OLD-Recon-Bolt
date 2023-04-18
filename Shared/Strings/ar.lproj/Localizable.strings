@@ -149,7 +149,7 @@ Competitive matches after your placements can be identified without their detail
 /* Statistics Filter */
 "Allowing %lld/%lld matches (%lld filtered out)" = "اظهار %lld / %lld مبارة (اخفاء%lld)";
 
-/* No comment provided by engineer. */
+/* Default Error Alert Title */
 "An Error Occurred!" = "حدث خطأ!";
 
 /* About Screen */
@@ -317,9 +317,6 @@ Playtime Stats: section */
 
 /* No comment provided by engineer. */
 "Could not Change App Icon!" = "لم نستطع تغيير الايقون!";
-
-/* No comment provided by engineer. */
-"Could not Load Account!" = "فشل تحميل الحساب المنشط!";
 
 /* No comment provided by engineer. */
 "Could not delete files!" = "لا يمكن حذف الملفات!";
@@ -805,10 +802,10 @@ Playtime Stats: section */
 /* App Icon Picker: section */
 "Pro Icons" = "ايقونات Pro";
 
-/* No comment provided by engineer. */
+/* Pro Store: error alert title */
 "Purchase Failed!" = "الشراء لم ينجح!";
 
-/* Pro Store (placeholder filled with formatted currency) */
+/* Pro Store: button (placeholder filled with formatted currency) */
 "Purchase – %@" = "شراء - %@";
 
 /* No comment provided by engineer. */
