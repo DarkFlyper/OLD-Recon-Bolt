@@ -12,7 +12,7 @@
 "%@%%" = "%@%%";
 
 /* Missions Box: always at least 3 */
-"%lld Future Weeklies" = "Événements hebdomadaires à venir %lld";
+"%lld Future Weeklies" = "%lld Événements hebdomadaires à venir";
 
 /* Missions Box: always at least 3 */
 "%lld Queued-Up Weeklies" = "%lld Missions hebdomadaires en attente";
@@ -86,14 +86,14 @@ Missions Box */
 
 /* No comment provided by engineer. */
 "A match's queue is unknown until its details are fetched (by tapping it or performing the swipe action).
-Competitive matches after your placements can be identified without their details, however." = "La file d'attente d'une partie est inconnue jusqu'à ce que ses détails soient recherchés (en tapant dessus ou en faisant glisser).
+Competitive matches after your placements can be identified without their details, however." = "La file d'attente d'une partie est inconnue jusqu'à ce que ses détails soient récupérés (en tapant dessus ou en faisant glisser).
 Les parties compétitives après vos placements peuvent toutefois être identifiés sans leurs détails.";
 
 /* No comment provided by engineer. */
 "AFK: %lld" = "AFK: %lld";
 
 /* Career Summary: header for totals of all time */
-"ALL TIME" = "TOUTE PÉRIODE";
+"ALL TIME" = "TOUTES PÉRIODES";
 
 /* Settings: section */
 "About" = "À propos";
@@ -156,13 +156,13 @@ Les parties compétitives après vos placements peuvent toutefois être identifi
 "An invaluable API hosting all the assets (images, data, etc.) used throughout Valorant. This is where almost every image in the app comes from." = "Une API indispensable qui héberge toutes les ressources (images, données, etc.) utilisées dans Valorant. C'est l'endroit d'où viennent presque toutes les images de l'application.";
 
 /* Statistics Filter: shown when everything is allowed */
-"Any" = "N'importe quel";
+"Any" = "N'importe lequel";
 
 /* Asset Management */
 "Anything with images will not display correctly." = "Tout ce qui contient des images ne s'affichera pas correctement.";
 
 /* No comment provided by engineer. */
-"App Icon" = "Icône de d'application";
+"App Icon" = "Icône de l'application";
 
 /* No comment provided by engineer. */
 "Are your assets outdated?" = "Tes ressources sont-elles obsolètes ?";
