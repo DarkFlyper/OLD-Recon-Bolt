@@ -1,0 +1,33 @@
+
+/* Used for matches less than a day ago. %@ is replaced by the number of hours/minutes, e.g. '3h ago'. */
+"%@ ago" = "%@ trước";
+
+/* %@ is replaced by a fraction of wins vs. games played, e.g. '5/12 games won'. */
+"%@ games won" = "%@ trận thắng";
+
+/* Win Rate Stats by Loadout Delta: focused value (drag on graph); placeholder is replaced by the percentage of rounds won, e.g. '57.3% won'. */
+"%@ won" = "%@ thắng";
+
+/* No comment provided by engineer. */
+"%@%%" = "%@%%";
+
+/* Missions Box: always at least 3 */
+"%lld Future Weeklies" = "%lld nhiệm vụ tuần trong tương lai";
+
+/* Missions Box: always at least 3 */
+"%lld Queued-Up Weeklies" = "%lld Nhiệm vụ tuần đã hết hạn";
+
+/* No comment provided by engineer. */
+"%lld RR" = "%lld ĐXH";
+
+/* Storage Management */
+"%lld from other players" = "%lld từ những người chơi khác";
+
+/* Loadout Item Picker: number of hidden items—this should never show nowadays */
+"%lld hidden due to outdated assets" = "%lld ẩn do nội dung đã hết hạn";
+
+/* Store */
+"Unknown Offer" = "Ưu đãi không xác định";
+
+/* placeholder */
+"Unknown Skin" = "Skin không xác định";
