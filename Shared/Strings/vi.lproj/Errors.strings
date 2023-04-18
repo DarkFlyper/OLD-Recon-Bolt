@@ -2,7 +2,7 @@
 "A previous transaction was found, but it could not be verified! %@" = "Tìm thấy giao dịch trước đó, nhưng không thể xác thực! %@";
 
 /* error loading the account for a widget */
-"Could not load active account!" = "Không thể tải dữ liệu cho tài khoản đang hoạt động!";
+"Could not load active account!" = "Không thể tải dữ liệu cho tài khoản hiện tại!";
 
 /* Riot API Error */
 "Invalid Headers: %@" = "Tiêu đề không hợp lệ: %@";
@@ -12,7 +12,7 @@
 
 You've probably signed into the wrong account; %@" = "Tài khoản này chưa từng chơi Valorant!
 
-Có vẻ bạn đã đăng nhập sai tài khoản; %@";
+Có vẻ bạn đã nhập sai tài khoản; %@";
 
 /* No comment provided by engineer. */
 "Keychain error for key '%@': %@" = "Lỗi chuỗi khóa cho mục '%@': %@";
@@ -31,7 +31,7 @@ Có vẻ bạn đã đăng nhập sai tài khoản; %@";
 
 /* Should not happen anymore, but you never know ¯\_(ツ)_/¯ */
 "Missing session for account!
-If you have Pro, add an account using the same credentials to replace the account with a working version." = "Thiếu phiên cho tài khoản!
+If you have Pro, add an account using the same credentials to replace the account with a working version." = "Không có phiên cho tài khoản!
 Nếu bạn có Pro, thêm tài khoản sử dụng chung thông tin đăng nhập để thay thế tài khoản trước đó với phiên bản đang hoạt động.";
 
 /* error loading the account for a widget. */
