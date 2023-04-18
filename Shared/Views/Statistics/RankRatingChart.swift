@@ -30,6 +30,7 @@ struct RankRatingChart: View {
 					.scaleEffect(x: -1, y: 1, anchor: .center) // unflip from below
 			}
 			.scaleEffect(x: -1, y: 1, anchor: .center) // flip to start at trailing edge
+			.scrollBounceBasedOnSize()
 		}
 		.frame(height: (CGFloat(span) * 150).clamped(to: 150...300))
 #endif
@@ -277,6 +278,17 @@ struct RankRatingChart: View {
 						.frame(height: frame.height, alignment: .bottom)
 				}
 			}
+		}
+	}
+}
+
+private extension View {
+	@ViewBuilder
+	func scrollBounceBasedOnSize() -> some View {
+		if #available(iOS 16.4, *) {
+			self.scrollBounceBehavior(.basedOnSize, axes: [.horizontal, .vertical])
+		} else {
+			self // not available yet
 		}
 	}
 }
