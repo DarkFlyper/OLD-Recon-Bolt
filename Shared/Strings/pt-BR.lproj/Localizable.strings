@@ -315,6 +315,9 @@ Playtime Stats: section */
 "Copy to Clipboard" = "Copiar para a Área de Transferência";
 
 /* No comment provided by engineer. */
+"Could Not Load Account!" = "Não foi possível carregar essa conta!";
+
+/* No comment provided by engineer. */
 "Could not Change App Icon!" = "Não foi possível alterar o ícone do aplicativo!";
 
 /* No comment provided by engineer. */
@@ -352,6 +355,9 @@ Playtime Stats: section */
 
 /* Missions Widget */
 "Daily" = "Diárias";
+
+/* Missions Box: header */
+"Daily Missions" = "Missões diárias";
 
 /* Store */
 "Daily Offers" = "Ofertas diárias";
@@ -877,6 +883,12 @@ Request Log: title */
 /* No comment provided by engineer. */
 "Response Code" = "Código de resposta";
 
+/* Pro Store: error alert title */
+"Restore Failed!" = "Não foi possível restaurar!";
+
+/* Pro Store: button */
+"Restore Purchase" = "Restaurar compras";
+
 /* No comment provided by engineer. */
 "Retry" = "Tentar novamente";
 
@@ -1035,6 +1047,9 @@ Tempo total de jogo";
 /* Request Log */
 "URL" = "URL";
 
+/* Missions Box: header, shown when a mission is not daily or weekly (should not happen unless Riot changes something) */
+"Uncategorized Missions" = "Missões sem categorias";
+
 /* Shown when a match does not match the filter and its details have not been fetched. */
 "Unfetched" = "Não encontrado";
 
@@ -1149,6 +1164,9 @@ Infelizmente, devido a limitações técnicas, você não pode fazer login no Re
 
 /* Missions Widget */
 "Weekly" = "Semanais";
+
+/* Missions Box: header */
+"Weekly Missions" = "Missões Semanais";
 
 /* No comment provided by engineer. */
 "Widget Refresh Requested" = "Atualização do Widget solicitada";

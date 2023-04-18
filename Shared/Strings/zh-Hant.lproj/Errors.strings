@@ -8,11 +8,11 @@
 /* wrong account error */
 "It looks like this account has never played Valorant!
 
-You've probably signed into the wrong account; %@" = "看起來這個賬戶還沒有玩過特戰英豪！
+You've probably signed into the wrong account; %@" = "看起來這個賬號還沒有玩過特戰英豪！
 你可能登入了錯誤的帳號 %@";
 
 /* No comment provided by engineer. */
-"Keychain error for key '%@': %@" = "鑰匙的鑰匙串錯誤 '%@': %@";
+"Keychain error for key '%@': %@" = "鑰匙的關鍵字錯誤 '%@': %@";
 
 /* store widget error */
 "Malformed Offer" = "異常商品";
@@ -21,7 +21,7 @@ You've probably signed into the wrong account; %@" = "看起來這個賬戶還�
 "Malformed account." = "異常帳號.";
 
 /* store widget error */
-"Missing Assets!" = "缺少資源！";
+"Missing Assets!" = "缺少資源包！";
 
 /* No comment provided by engineer. */
 "Missing game configuration data for %@ region!" = "缺少 %@ 地區的遊戲配置數據！";

@@ -1,10 +1,102 @@
+/* Pro Store: error restoring purchase */
+"A previous transaction was found, but it could not be verified! %@" = "Tìm thấy giao dịch trước đó, nhưng không thể xác thực! %@";
 
 /* error loading the account for a widget */
-"Could not load active account!" = "Không thể tải tài khoản đang hoạt động!";
+"Could not load active account!" = "Không thể tải dữ liệu cho tài khoản hiện tại!";
+
+/* Riot API Error */
+"Invalid Headers: %@" = "Tiêu đề không hợp lệ: %@";
 
 /* wrong account error */
 "It looks like this account has never played Valorant!
 
 You've probably signed into the wrong account; %@" = "Tài khoản này chưa từng chơi Valorant!
 
-Có thể bạn đã đăng nhập vào sai tài khoản; %@";
+Có vẻ bạn đã nhập sai tài khoản; %@";
+
+/* No comment provided by engineer. */
+"Keychain error for key '%@': %@" = "Lỗi chuỗi khóa cho mục '%@': %@";
+
+/* store widget error */
+"Malformed Offer" = "Ưu đãi không đúng định dạng";
+
+/* error loading the account for a widget. */
+"Malformed account." = "Tài khoản không đúng định dạng.";
+
+/* store widget error */
+"Missing Assets!" = "Thiếu nội dung!";
+
+/* No comment provided by engineer. */
+"Missing game configuration data for %@ region!" = "Không có sẵn dữ liệu cấu hình cho khu vực %@!";
+
+/* Should not happen anymore, but you never know ¯\_(ツ)_/¯ */
+"Missing session for account!
+If you have Pro, add an account using the same credentials to replace the account with a working version." = "Không có phiên cho tài khoản!
+Nếu bạn có Pro, thêm tài khoản sử dụng chung thông tin đăng nhập để thay thế tài khoản trước đó với phiên bản đang hoạt động.";
+
+/* error loading the account for a widget. */
+"No account specified." = "Không có tài khoản nào được chọn.";
+
+/* Pro Store: error restoring purchase */
+"No previous transaction found!" = "Không tìm thấy giao dịch trước đó!";
+
+/* Riot API Error */
+"Please try again in %lld seconds." = "Hãy thử lại sau %lld giây.";
+
+/* Pro Store: error restoring purchase (placeholder is reason why it was revoked) */
+"Previous purchase was revoked! Reason: %@" = "Đơn hàng ứng dụng trước đó đã bị thu hồi! Lý do: %@";
+
+/* Riot API Error */
+"The API rejected your authorization." = "API từ chối ủy quyền của bạn.";
+
+/* Riot API Error */
+"The API returned an error code %lld, i.e. %@. %@" = "API trả về mã lỗi %lld, như sau %@. %@";
+
+/* Riot API Error */
+"The API returned an error code %lld." = "API trả về mã lỗi %lld.";
+
+/* Riot API Error */
+"The resource could not be found." = "Không thể tìm thấy tài nguyên.";
+
+/* Keychain error. */
+"Unexpected type found: %@" = "Đã tìm thấy dữ liệu không mong muốn: %@";
+
+/* store widget error */
+"Unknown Offer" = "Ưu đãi không xác định";
+
+/* store widget error */
+"Unknown Skin" = "Skin không xác định";
+
+/* No comment provided by engineer. */
+"Unknown keychain error: %d" = "Lỗi chuỗi khóa không xác định: %d";
+
+/* Pro Store: error restoring purchase: replacement for revokation reason on outdated iOS where it's not available */
+"Update to iOS 15.4 to see the reason!" = "Cập nhật lên iOS 15.4 để xem lý do!";
+
+/* Riot API Error */
+"Valorant is currently undergoing scheduled maintenance. Riot is probably updating the game!" = "Valorant hiện đang được bảo trì theo lịch trình. Riot đang cập nhật trò chơi!";
+
+/* No comment provided by engineer. */
+"Widgets require Recon Bolt Pro!" = "Cần Recon Bolt Pro để thêm tiện ích!";
+
+/* Riot API Error */
+"You are sending too many requests." = "Bạn đang gửi quá nhiều yêu cầu.";
+
+/* Riot API Error */
+"Your session could not be resumed. %@" = "Không thể tiếp tục phiên của bạn. %@";
+
+/* Riot API Error */
+"Your session has expired! Please sign in again." = "Phiên đăng nhập của bạn đã hết hạn! Hãy đăng nhập lại.";
+
+/* Riot API Error */
+"Your token has expired. %@" = "Mã token đã hết hạn. %@";
+
+/* wrong account error */
+"this one has no Riot ID & Tagline." = "tài khoản này không có Riot ID & Tagline.";
+
+/* wrong account error */
+"this one is:
+
+%@" = "đây là:
+
+%@";

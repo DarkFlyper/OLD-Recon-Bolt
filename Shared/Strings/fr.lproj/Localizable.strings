@@ -12,7 +12,7 @@
 "%@%%" = "%@%%";
 
 /* Missions Box: always at least 3 */
-"%lld Future Weeklies" = "Événements hebdomadaires à venir %lld";
+"%lld Future Weeklies" = "%lld Événements hebdomadaires à venir";
 
 /* Missions Box: always at least 3 */
 "%lld Queued-Up Weeklies" = "%lld Missions hebdomadaires en attente";
@@ -86,14 +86,14 @@ Missions Box */
 
 /* No comment provided by engineer. */
 "A match's queue is unknown until its details are fetched (by tapping it or performing the swipe action).
-Competitive matches after your placements can be identified without their details, however." = "La file d'attente d'une partie est inconnue jusqu'à ce que ses détails soient recherchés (en tapant dessus ou en faisant glisser).
+Competitive matches after your placements can be identified without their details, however." = "La file d'attente d'une partie est inconnue jusqu'à ce que ses détails soient récupérés (en tapant dessus ou en faisant glisser).
 Les parties compétitives après vos placements peuvent toutefois être identifiés sans leurs détails.";
 
 /* No comment provided by engineer. */
 "AFK: %lld" = "AFK: %lld";
 
 /* Career Summary: header for totals of all time */
-"ALL TIME" = "TOUTE PÉRIODE";
+"ALL TIME" = "TOUTES PÉRIODES";
 
 /* Settings: section */
 "About" = "À propos";
@@ -156,13 +156,13 @@ Les parties compétitives après vos placements peuvent toutefois être identifi
 "An invaluable API hosting all the assets (images, data, etc.) used throughout Valorant. This is where almost every image in the app comes from." = "Une API indispensable qui héberge toutes les ressources (images, données, etc.) utilisées dans Valorant. C'est l'endroit d'où viennent presque toutes les images de l'application.";
 
 /* Statistics Filter: shown when everything is allowed */
-"Any" = "N'importe quel";
+"Any" = "N'importe lequel";
 
 /* Asset Management */
 "Anything with images will not display correctly." = "Tout ce qui contient des images ne s'affichera pas correctement.";
 
 /* No comment provided by engineer. */
-"App Icon" = "Icône de d'application";
+"App Icon" = "Icône de l'application";
 
 /* No comment provided by engineer. */
 "Are your assets outdated?" = "Tes ressources sont-elles obsolètes ?";
@@ -316,6 +316,9 @@ Playtime Stats: section */
 "Copy to Clipboard" = "Copier dans le presse-papier";
 
 /* No comment provided by engineer. */
+"Could Not Load Account!" = "Impossible de charger le compte !";
+
+/* No comment provided by engineer. */
 "Could not Change App Icon!" = "Impossible de changer l'icône de l'application!";
 
 /* No comment provided by engineer. */
@@ -354,6 +357,9 @@ Playtime Stats: section */
 /* Missions Widget */
 "Daily" = "Quotidien";
 
+/* Missions Box: header */
+"Daily Missions" = "Missions quotidiennes";
+
 /* Store */
 "Daily Offers" = "Offre quotidienne";
 
@@ -364,7 +370,7 @@ Playtime Stats: section */
 "Data from %lld games (%lld skipped lacking data)" = "Données provenant des parties %lld (%lld n'a pas été pris en compte en l'absence de données)";
 
 /* Stats: match loading */
-"Data going back to %@" = "Les données remontent à %@";
+"Data going back to %@" = "Les données remontent au %@";
 
 /* No comment provided by engineer. */
 "Day" = "Jour";
@@ -793,7 +799,7 @@ Playtime Stats: section */
 "Please make sure you are ready to play by the time the game starts!" = "Assurez-vous d'être prêt à jouer au moment où la partie commence !";
 
 /* App Icon Name */
-"Pro Blue" = "Pro Bleu";
+"Pro Blue" = "Bleu Pro";
 
 /* No comment provided by engineer. */
 "Pro Features" = "Fonctionnalités Pro";
@@ -876,6 +882,12 @@ Request Log: title */
 
 /* No comment provided by engineer. */
 "Response Code" = "Code de réponse";
+
+/* Pro Store: error alert title */
+"Restore Failed!" = "Échec de la restauration !";
+
+/* Pro Store: button */
+"Restore Purchase" = "Rétablir l'achat";
 
 /* No comment provided by engineer. */
 "Retry" = "Réessayer";
@@ -1034,6 +1046,9 @@ Hit Distribution Stats: region */
 /* Request Log */
 "URL" = "URL";
 
+/* Missions Box: header, shown when a mission is not daily or weekly (should not happen unless Riot changes something) */
+"Uncategorized Missions" = "Missions non catégorisées";
+
 /* Shown when a match does not match the filter and its details have not been fetched. */
 "Unfetched" = "Non trouvé";
 
@@ -1148,11 +1163,14 @@ Hit Distribution Stats: region */
 /* Missions Widget */
 "Weekly" = "Hebdomadaire";
 
+/* Missions Box: header */
+"Weekly Missions" = "Missions hebdomadaires";
+
 /* No comment provided by engineer. */
 "Widget Refresh Requested" = "Actualisation du widget demandée";
 
 /* No comment provided by engineer. */
-"Win Rate" = "Pourcentage de parties gagnées";
+"Win Rate" = "Parties gagnées";
 
 /* Win Rate Stats: chart legend */
 "Wins" = "Victoires";
@@ -1176,16 +1194,16 @@ Hit Distribution Stats: region */
 "iOS is a bit finnicky about this, so widgets may not refresh right away—feel free to restart if this doesn't help!" = "iOS est un peu pointilleux à ce sujet, il se peut donc que les widgets ne soient pas rafraîchis immédiatement - n'hésitez pas à redémarrer si cela ne vous aide pas !";
 
 /* Loadout: spray slot */
-"mid-round" = "mi-manche";
+"mid-round" = "Mi-manche";
 
 /* Missions Widget: countdown label when the target is in the past. Should never really show up, since at this point there's new data. */
 "old" = "ancien";
 
 /* Loadout: spray slot */
-"post-round" = "après manche";
+"post-round" = "Fin de manche";
 
 /* Loadout: spray slot */
-"pre-round" = "pré manche";
+"pre-round" = "Pré-manche";
 
 /* No comment provided by engineer. */
 "signing in…" = "Connexion en cours…";

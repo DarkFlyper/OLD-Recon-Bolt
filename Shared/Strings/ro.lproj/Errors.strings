@@ -1,0 +1,15 @@
+/* Pro Store: error restoring purchase */
+"A previous transaction was found, but it could not be verified! %@" = "A fost găsită o tranzacție anterioară, dar nu a putut fi verificată";
+
+/* error loading the account for a widget */
+"Could not load active account!" = "Nu s-a putut încărca contul activ! ";
+
+/* Riot API Error */
+"Invalid Headers: %@" = "Antete invalide:";
+
+/* wrong account error */
+"It looks like this account has never played Valorant!
+
+You've probably signed into the wrong account; %@" = "Se pare că acest cont nu a jucat niciodată Valorant!
+
+Probabil că te-ai logat în contul greșit;";
