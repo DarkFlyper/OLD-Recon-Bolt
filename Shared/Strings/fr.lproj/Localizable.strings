@@ -316,6 +316,9 @@ Playtime Stats: section */
 "Copy to Clipboard" = "Copier dans le presse-papier";
 
 /* No comment provided by engineer. */
+"Could Not Load Account!" = "Impossible de charger le compte !";
+
+/* No comment provided by engineer. */
 "Could not Change App Icon!" = "Impossible de changer l'icône de l'application!";
 
 /* No comment provided by engineer. */
@@ -354,6 +357,9 @@ Playtime Stats: section */
 /* Missions Widget */
 "Daily" = "Quotidien";
 
+/* Missions Box: header */
+"Daily Missions" = "Missions quotidiennes";
+
 /* Store */
 "Daily Offers" = "Offre quotidienne";
 
@@ -364,7 +370,7 @@ Playtime Stats: section */
 "Data from %lld games (%lld skipped lacking data)" = "Données provenant des parties %lld (%lld n'a pas été pris en compte en l'absence de données)";
 
 /* Stats: match loading */
-"Data going back to %@" = "Les données remontent à %@";
+"Data going back to %@" = "Les données remontent au %@";
 
 /* No comment provided by engineer. */
 "Day" = "Jour";
@@ -793,7 +799,7 @@ Playtime Stats: section */
 "Please make sure you are ready to play by the time the game starts!" = "Assurez-vous d'être prêt à jouer au moment où la partie commence !";
 
 /* App Icon Name */
-"Pro Blue" = "Pro Bleu";
+"Pro Blue" = "Bleu Pro";
 
 /* No comment provided by engineer. */
 "Pro Features" = "Fonctionnalités Pro";
@@ -876,6 +882,9 @@ Request Log: title */
 
 /* No comment provided by engineer. */
 "Response Code" = "Code de réponse";
+
+/* Pro Store: error alert title */
+"Restore Failed!" = "Échec de la restauration !";
 
 /* Pro Store: button */
 "Restore Purchase" = "Rétablir l'achat";
@@ -1161,7 +1170,7 @@ Hit Distribution Stats: region */
 "Widget Refresh Requested" = "Actualisation du widget demandée";
 
 /* No comment provided by engineer. */
-"Win Rate" = "Pourcentage de parties gagnées";
+"Win Rate" = "Parties gagnées";
 
 /* Win Rate Stats: chart legend */
 "Wins" = "Victoires";
