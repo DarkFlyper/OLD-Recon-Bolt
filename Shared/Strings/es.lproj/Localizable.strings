@@ -71,7 +71,7 @@
 /* Statistics Filter (queues or agents) */
 "Allow None" = "No permitir ninguno";
 
-/* No comment provided by engineer. */
+/* Default Error Alert Title */
 "An Error Occurred!" = "¡Un error ha ocurrido!";
 
 /* Statistics Filter: shown when everything is allowed */
@@ -188,9 +188,6 @@ Playtime Stats: section */
 
 /* No comment provided by engineer. */
 "Could not Change App Icon!" = "¡No se ha podido cambiar el icono de la App!";
-
-/* No comment provided by engineer. */
-"Could not Load Account!" = "¡No se ha podido cargar la cuenta!";
 
 /* No comment provided by engineer. */
 "Could not delete files!" = "¡No se ha podido eliminar los archivos!";
@@ -527,7 +524,7 @@ EL REPORTE DEL BUG VA AQUÍ
 /* App Icon Picker: section */
 "Pro Icons" = "Iconos Pro";
 
-/* No comment provided by engineer. */
+/* Pro Store: error alert title */
 "Purchase Failed!" = "¡Compra fallida!";
 
 /* No comment provided by engineer. */
