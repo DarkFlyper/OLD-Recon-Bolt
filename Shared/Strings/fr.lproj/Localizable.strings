@@ -138,7 +138,7 @@ Les parties compétitives après vos placements peuvent toutefois être identifi
 "All %lld" = "Tous %lld";
 
 /* No comment provided by engineer. */
-"All Maps" = "Toutes les maps";
+"All Maps" = "Toutes les cartes";
 
 /* Statistics Filter (queues or agents) */
 "Allow All" = "Tout autoriser";
@@ -229,7 +229,7 @@ Playtime Stats: section */
 "By Premade Teammate" = "Par un joueur qui est dans le groupe";
 
 /* Playtime Stats: section */
-"By Queue" = "Par file d'attente";
+"By Queue" = "Par mode de jeu";
 
 /* Hit Distribution Stats: section */
 "By Weapon" = "Par arme";
@@ -253,7 +253,7 @@ Playtime Stats: section */
 "Change Buddy" = "Changer le porte-bonheur";
 
 /* No comment provided by engineer. */
-"Change Queue" = "Changer de file d'attente";
+"Change Queue" = "Changer de mode de jeu";
 
 /* Gun Customizer */
 "Change Skin" = "Changer de skin";
@@ -265,7 +265,7 @@ Playtime Stats: section */
 "Check your progress on daily & weekly missions." = "Vérifie ta progression sur les missions quotidiennes & hebdomadaires.";
 
 /* No comment provided by engineer. */
-"Choose App Icon" = "Choisir l'icôné de l'application";
+"Choose App Icon" = "Choisir l'icône de l'application";
 
 /* No comment provided by engineer. */
 "Choose Buddy" = "Choisir le porte-bonheur";
@@ -367,7 +367,7 @@ Playtime Stats: section */
 "Dark Mode" = "Mode Sombre";
 
 /* Hit Distribution Stats */
-"Data from %lld games (%lld skipped lacking data)" = "Données provenant des parties %lld (%lld n'a pas été pris en compte en l'absence de données)";
+"Data from %lld games (%lld skipped lacking data)" = "Données provenant des parties %lld (%lld n'a pas été prise en compte en l'absence de données)";
 
 /* Stats: match loading */
 "Data going back to %@" = "Les données remontent au %@";
@@ -566,7 +566,7 @@ TON MESSAGE D'ERREUR ICI
 "Level %lld / %lld" = "Niveau %lld/%lld";
 
 /* No comment provided by engineer. */
-"Lifetime Peak" = "Plus haut classement atteint";
+"Lifetime Peak" = "Plus haut rang atteint";
 
 /* App Theme */
 "Light Mode" = "Mode clair";
@@ -593,7 +593,7 @@ TON MESSAGE D'ERREUR ICI
 "Loading request log…" = "Chargement du journal des requêtes…";
 
 /* No comment provided by engineer. */
-"Loadout" = "Armement";
+"Loadout" = "Équipement";
 
 /* No comment provided by engineer. */
 "Loadout Delta" = "Delta d'armement";
@@ -602,10 +602,10 @@ TON MESSAGE D'ERREUR ICI
 "Loadout Delta is computed as the difference between the average loadout value of players on each team. For example, a loadout delta of +1000 means your team's loadouts were an average of 1000 credits more valuable than the enemy team's in that round." = "Le delta d'armement est calculé comme la différence entre la valeur moyenne des chargements des joueurs de chaque équipe. Par exemple, un delta de chargement de +1000 signifie que les chargements de votre équipe valaient en moyenne 1000 crédits de plus que ceux de l'équipe ennemie lors de ce tour.";
 
 /* No comment provided by engineer. */
-"Loadout not loaded!" = "Chargement n'est pas chargé!";
+"Loadout not loaded!" = "L'équipement n'est pas chargé!";
 
 /* No comment provided by engineer. */
-"Lobby Dodged" = "Lobby dodgé";
+"Lobby Dodged" = "Lobby esquivé";
 
 /* No comment provided by engineer. */
 "Lock In" = "Verrouiller";
@@ -620,7 +620,7 @@ TON MESSAGE D'ERREUR ICI
 "Looks like you're trying to enter your Riot ID (and tagline) as username! Your username is actually something else: it's what you use to sign into the Valorant launcher." = "On dirait que tu essayais d'entrer ton Riot ID (et ton tag) ! Ton nom d'utilisateur est en fait ce que tu utilises pour te connecter à l'application Valorant.";
 
 /* Win Rate Stats: chart legend */
-"Losses" = "Perdues";
+"Losses" = "Défaites";
 
 /* No comment provided by engineer. */
 "Manage Assets" = "Gérer les ressources";
@@ -713,13 +713,13 @@ TON MESSAGE D'ERREUR ICI
 "No data" = "Aucune donnée";
 
 /* No comment provided by engineer. */
-"No games played with premade teammates." = "Pas de parties jouées avec des coéquipiers préformés.";
+"No games played with premade teammates." = "Pas de parties jouées avec des coéquipiers pré-groupés.";
 
 /* No comment provided by engineer. */
 "No minimap available!" = "Pas de minicarte disponible !";
 
 /* No comment provided by engineer. */
-"No non-premade players encountered repeatedly. (Un)lucky you!" = "Aucun joueur non préformé n'a été rencontré à plusieurs reprises. (Chanceux... ou pas !)";
+"No non-premade players encountered repeatedly. (Un)lucky you!" = "Aucun joueur non pré-groupé n'a été rencontré à plusieurs reprises. (Chanceux... ou pas !)";
 
 /* No comment provided by engineer. */
 "Normalize Charts" = "Normaliser les graphiques";
@@ -758,7 +758,7 @@ TON MESSAGE D'ERREUR ICI
 "Other Players" = "Autres joueurs";
 
 /* Buddy Picker: alert shown when both instances of a buddy are in use */
-"Out of instances!" = "Hors instance !";
+"Out of instances!" = "Plus d'exemplaires !";
 
 /* Win Rate Stats: section
 Playtime Stats: section */
@@ -829,7 +829,7 @@ Playtime Stats: section */
 "Rank Rating Changes" = "Changements des notes de rangs";
 
 /* No comment provided by engineer. */
-"Rate on the App Store" = "Note sur l'App Store";
+"Rate on the App Store" = "Notes sur l'App Store";
 
 /* accessibility label */
 "Ready" = "Prêt";
