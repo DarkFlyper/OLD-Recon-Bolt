@@ -1,5 +1,5 @@
 /* error loading the account for a widget */
-"Could not load active account!" = "Impossible de charger le compte.";
+"Could not load active account!" = "Impossible de charger le compte !";
 
 /* Riot API Error */
 "Invalid Headers: %@" = "En-tête invalide: %@";
@@ -15,22 +15,22 @@ Tu t'es probablement trompé de compte; %@";
 "Keychain error for key '%@': %@" = "Erreur de clé d'accès pour le trousseau '%@' : %@";
 
 /* store widget error */
-"Malformed Offer" = "Offre corrompu.";
+"Malformed Offer" = "Offre invalide";
 
 /* error loading the account for a widget. */
-"Malformed account." = "Compte corrompu.";
+"Malformed account." = "Compte invalide.";
 
 /* store widget error */
-"Missing Assets!" = "Ressource manquante!";
+"Missing Assets!" = "Ressources manquantes!";
 
 /* No comment provided by engineer. */
 "Missing game configuration data for %@ region!" = "Données de configuration de jeu manquantes pour la région %@!";
 
 /* Should not happen anymore, but you never know ¯\_(ツ)_/¯ */
 "Missing session for account!
-If you have Pro, add an account using the same credentials to replace the account with a working version." = "Session manquante pour le compte!
-
-Si tu as Recon Bolt Pro, ajoute un compte en utilisant les mêmes identifiants pour remplacer le compte non fonctionnelle.";
+If you have Pro, add an account using the same credentials to replace the account with a working version." = "Session manquante pour le compte !
+Si vous avez acheté Recon Bolt Pro, ajoutez votre compte en utilisant les mêmes informations de connexion pour remplacer ce compte avec une version qui comprend votre achat.
+";
 
 /* error loading the account for a widget. */
 "No account specified." = "Aucun compte spécifié.";
@@ -54,16 +54,16 @@ Si tu as Recon Bolt Pro, ajoute un compte en utilisant les mêmes identifiants p
 "Unexpected type found: %@" = "Type inattendu trouvé: %@";
 
 /* store widget error */
-"Unknown Offer" = "Offre inconnu";
+"Unknown Offer" = "Offre inconnue";
 
 /* store widget error */
 "Unknown Skin" = "Skin inconnu";
 
 /* No comment provided by engineer. */
-"Unknown keychain error: %d" = "Problème inconnu du trousseau de clés.";
+"Unknown keychain error: %d" = "Problème inconnu du trousseau de clés : %d";
 
 /* Riot API Error */
-"Valorant is currently undergoing scheduled maintenance. Riot is probably updating the game!" = "Valorant est actuellement en maintenance. Riot met probablement à jour le jeu ! Erreur de l'API.";
+"Valorant is currently undergoing scheduled maintenance. Riot is probably updating the game!" = "Valorant est actuellement en maintenance. Riot met probablement à jour le jeu! ";
 
 /* No comment provided by engineer. */
 "Widgets require Recon Bolt Pro!" = "Les widgets nécessitent Recon Bolt Pro!";
