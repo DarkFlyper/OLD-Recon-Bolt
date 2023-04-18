@@ -5,14 +5,26 @@
 /* %@ is replaced by a fraction of wins vs. games played, e.g. '5/12 games won'. */
 "%@ games won" = "%@ 遊戲獲勝";
 
+/* Missions Box: always at least 3 */
+"%lld Future Weeklies" = "%lld 未來每週";
+
 /* No comment provided by engineer. */
 "%lld RR" = "%lld 分數";
+
+/* Shown at the bottom of the expandable playtime list when there are more entries available. */
+"%lld more" = "%lld 更多";
+
+/* Statistics Filter: shown when not everything is allowed */
+"%lld selected" = "%lld 已選擇";
 
 /* Stats: match loading */
 "%lld/%lld loaded" = "%lld/%lld 已載入";
 
 /* Loadout Item Picker: number of items owned out of all such items in the game */
 "%lld/%lld owned" = "%lld/%lld 擁有";
+
+/* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
+"(%lld – %lld)" = "(%lld – %lld)";
 
 /* No comment provided by engineer. */
 "+%lld XP" = "+%lld 經驗";
@@ -28,6 +40,21 @@
 
 /* Settings: section */
 "Accounts" = "帳號";
+
+/* Match List: accessibility label */
+"Add Bookmark" = "增加書籤";
+
+/* Account Settings */
+"Add another Account" = "增加帳號";
+
+/* No comment provided by engineer. */
+"Advanced Settings" = "進階設定";
+
+/* Stats: match loading */
+"All %lld" = "全部 %lld";
+
+/* No comment provided by engineer. */
+"All Maps" = "所有地圖";
 
 /* Hit Distribution Stats: region */
 "Body" = "身體";
@@ -68,14 +95,32 @@
 /* No comment provided by engineer. */
 "Copy Error Details" = "複製錯誤詳細";
 
+/* No comment provided by engineer. */
+"Could Not Load Account!" = "無法加載帳號";
+
+/* Asset Management */
+"Current version: %@" = "現在版本: %@";
+
+/* No comment provided by engineer. */
+"Currently in-game" = "在遊戲中";
+
 /* Missions Widget */
 "Daily" = "每日";
 
 /* Store */
 "Daily Offers" = "每日商店";
 
+/* App Theme */
+"Dark Mode" = "黑暗模式";
+
+/* App Icon Name */
+"Default" = "預設";
+
 /* App Icon Picker: section */
 "Default Icon" = "預設圖示";
+
+/* Win Rate Stats: side name */
+"Defending" = "防守方";
 
 /* Win Rate Stats: chart legend */
 "Draws" = "平局";
