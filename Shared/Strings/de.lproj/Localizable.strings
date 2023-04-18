@@ -11,10 +11,10 @@
 /* No comment provided by engineer. */
 "%@%%" = "%@%%";
 
-/* No comment provided by engineer. */
+/* Missions Box: always at least 3 */
 "%lld Future Weeklies" = "%lld zukünftige Missionen";
 
-/* No comment provided by engineer. */
+/* Missions Box: always at least 3 */
 "%lld Queued-Up Weeklies" = "%lld aufgereihte Missionen";
 
 /* No comment provided by engineer. */
@@ -56,7 +56,8 @@
 /* Time Formatting: minutes, seconds, & milliseconds (used in round details view) */
 "%lld:%@.%@" = "%lld:%@.%@";
 
-/* Contract Progress Bar */
+/* Contract Progress Bar
+Missions Box */
 "%lld / %lld XP" = "%lld / %lld EP";
 
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
@@ -108,7 +109,7 @@ Competitive matches after your placements can be identified without their detail
 /* Contract Picker */
 "Active" = "Aktiv";
 
-/* No comment provided by engineer. */
+/* Missions Box: header */
 "Active Contract" = "Aktiver Auftrag";
 
 /* Match List: accessibility label */
@@ -295,7 +296,7 @@ Playtime Stats: section */
 /* Storage Management: title for alert to confirm deleting some matches */
 "Confirm Delete" = "Löschen Bestätigen";
 
-/* No comment provided by engineer. */
+/* Missions Box */
 "Contract complete!" = "Auftrag abgeschlossen!";
 
 /* No comment provided by engineer. */
@@ -354,6 +355,9 @@ Playtime Stats: section */
 
 /* Missions Widget */
 "Daily" = "Täglich";
+
+/* Missions Box: header */
+"Daily Missions" = "Tägliche Missionen";
 
 /* Store */
 "Daily Offers" = "Tagesangebote";
@@ -642,7 +646,7 @@ DEINE FEHLERMELDUNG HIER
 /* No comment provided by engineer. */
 "Match Loading Errors" = "Spiel-Ladefehler";
 
-/* App Theme */
+/* App Theme: automatically match the system theme */
 "Match System" = "Automatisch";
 
 /* Match List: section */
@@ -660,7 +664,7 @@ DEINE FEHLERMELDUNG HIER
 /* Asset Management */
 "Missing assets!" = "Assets fehlen!";
 
-/* No comment provided by engineer. */
+/* Missions Box */
 "Missing progress for contract!" = "Keine Daten für diesen Auftrag!";
 
 /* No comment provided by engineer. */
@@ -702,7 +706,7 @@ DEINE FEHLERMELDUNG HIER
 /* Gun Customizer: shown when a weapon has no buddy active */
 "No buddy selected!" = "Kein Talisman ausgewählt!";
 
-/* No comment provided by engineer. */
+/* Missions Box */
 "No contract active!" = "Kein Auftrag aktiv!";
 
 /* Win Rate Stats: by map */
@@ -863,7 +867,8 @@ Playtime Stats: section */
 /* Request Log: header */
 "Request" = "Anfrage";
 
-/* No comment provided by engineer. */
+/* Advanced Settings: button to open request log
+Request Log: title */
 "Request Log" = "Kommunikationsverlauf";
 
 /* No comment provided by engineer. */
@@ -980,7 +985,7 @@ Playtime Stats: section */
 /* Pro Store */
 "Support Further Development!" = "Weitere Entwicklung unterstützen!";
 
-/* No comment provided by engineer. */
+/* Missions Box: button */
 "Switch Contract" = "Auftrag wechseln";
 
 /* No comment provided by engineer. */
@@ -1035,6 +1040,9 @@ Hit Distribution Stats: region */
 /* Request Log */
 "URL" = "URL";
 
+/* Missions Box: header, shown when a mission is not daily or weekly (should not happen unless Riot changes something) */
+"Uncategorized Missions" = "Unkategorisierte Missionen";
+
 /* Shown when a match does not match the filter and its details have not been fetched. */
 "Unfetched" = "Ungeladen";
 
@@ -1083,7 +1091,7 @@ Hit Distribution Stats: region */
 /* No comment provided by engineer. */
 "Unknown bundle!" = "Unbekannte Sammlung!";
 
-/* No comment provided by engineer. */
+/* Missions Box */
 "Unknown contract!" = "Unbekannter Auftrag!";
 
 /* No comment provided by engineer. */
@@ -1149,6 +1157,9 @@ Hit Distribution Stats: region */
 /* Missions Widget */
 "Weekly" = "Wöchentlich";
 
+/* Missions Box: header */
+"Weekly Missions" = "Wöchentliche Missionen";
+
 /* No comment provided by engineer. */
 "Widget Refresh Requested" = "Widget-Aktualisierung angefragt";
 
@@ -1176,8 +1187,20 @@ Hit Distribution Stats: region */
 /* No comment provided by engineer. */
 "iOS is a bit finnicky about this, so widgets may not refresh right away—feel free to restart if this doesn't help!" = "iOS ist hier etwas intransparent, also werden die Widgets womöglich nicht sofort aktualisiert – wenn es nicht hilft, kannst du auch das Gerät neu starten!";
 
+/* Loadout: spray slot */
+"mid-round" = "Mitte";
+
 /* Missions Widget: countdown label when the target is in the past. Should never really show up, since at this point there's new data. */
 "old" = "alt";
 
+/* Loadout: spray slot */
+"post-round" = "Ende";
+
+/* Loadout: spray slot */
+"pre-round" = "Anfang";
+
 /* No comment provided by engineer. */
 "signing in…" = "Anmeldung läuft…";
+
+/* Loadout: unknown spray slot (should never appear unless Riot changes something) */
+"slot" = "Spray";
