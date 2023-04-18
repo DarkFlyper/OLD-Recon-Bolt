@@ -28,7 +28,7 @@ Competitive matches after your placements can be identified without their detail
 /* Contract Picker */
 "Active" = "Активен";
 
-/* No comment provided by engineer. */
+/* Missions Box: header */
 "Active Contract" = "Активный контракт";
 
 /* Match List: accessibility label */
@@ -322,7 +322,7 @@ Stats: error details */
 /* Gun Customizer: shown when a weapon has no buddy active */
 "No buddy selected!" = "Брелок не выбран!";
 
-/* No comment provided by engineer. */
+/* Missions Box */
 "No contract active!" = "Нет активного контракта!";
 
 /* Win Rate Stats: by map */
