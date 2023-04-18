@@ -26,6 +26,391 @@
 /* Loadout Item Picker: number of hidden items—this should never show nowadays */
 "%lld hidden due to outdated assets" = "%lld ẩn do nội dung đã hết hạn";
 
+/* Hit Distribution Stats: hit count */
+"%lld hits" = "%lld trúng đích";
+
+/* Shown at the bottom of the expandable playtime list when there are more entries available. */
+"%lld more" = "%lld thêm";
+
+/* Statistics Filter: shown when not everything is allowed */
+"%lld selected" = "%lld đã chọn";
+
+/* No comment provided by engineer. */
+"%lld%%" = "%lld%%";
+
+/* No comment provided by engineer. */
+"%lld/%lld" = "%lld/%lld";
+
+/* Stats: match loading */
+"%lld/%lld loaded" = "%lld/%lld đã tải";
+
+/* Loadout Item Picker: number of items owned out of all such items in the game */
+"%lld/%lld owned" = "%lld/%lld đã sở hữu";
+
+/* Time Formatting: minutes & seconds (used in round details view) */
+"%lld:%@" = "%lld:%@";
+
+/* Time Formatting: minutes, seconds, & milliseconds (used in round details view) */
+"%lld:%@.%@" = "%lld:%@.%@";
+
+/* Contract Progress Bar
+Missions Box */
+"%lld / %lld XP" = "%lld / %lld XP";
+
+/* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
+"(%lld – %lld)" = "(%lld – %lld)";
+
+/* Pro Features List */
+"(You can switch between available icons at any time.)" = "(Bạn có thể chuyển đổi giữa các biểu tượng có sẵn bất cứ lúc nào.)";
+
+/* No comment provided by engineer. */
+"+%lld XP" = "+%lld XP";
+
+/* Missions Widget: how many more weeklies are queued up after the current set */
+"+%lld queued" = "+%lld đã hết hạn";
+
+/* Store: night market discount */
+"-%lld%%" = "-%lld%%";
+
+/* No comment provided by engineer. */
+"2-Factor Authentication" = "Xác thực 2 yếu tố";
+
+/* Missions Widget: countdown label when the target is in the future. e.g. '< 2d 3h' */
+"< %@" = "< %@";
+
+/* No comment provided by engineer. */
+"A 2FA code has been sent to your email address %@" = "Mã xác thực 2 yếu tố đã được gửi đến địa chỉ email của bạn %@";
+
+/* No comment provided by engineer. */
+"AFK: %lld" = "AFK: %lld";
+
+/* Career Summary: header for totals of all time */
+"ALL TIME" = "Hồi và Phần";
+
+/* Settings: section */
+"About" = "Về Recon Bolt";
+
+/* No comment provided by engineer. */
+"About Recon Bolt" = "Về Recon Bolt";
+
+/* Settings: section */
+"Accounts" = "Tài khoản";
+
+/* Contract Picker: button */
+"Activate" = "Kích hoạt";
+
+/* Contract Picker */
+"Active" = "Đang giao kèo";
+
+/* Missions Box: header */
+"Active Contract" = "Giao kèo đang được kích hoạt";
+
+/* Match List: accessibility label */
+"Add Bookmark" = "Thêm dấu trang";
+
+/* Account Settings */
+"Add another Account" = "Thêm tài khoản";
+
+/* Pro Features List */
+"Add multiple accounts and seamlessly switch between them at any time." = "Thêm nhiều tài khoản và chuyển đổi liên tục bất cứ lúc nào.";
+
+/* No comment provided by engineer. */
+"Advanced Settings" = "Cài đặt nâng cao";
+
+/* Pro Store */
+"Advanced Stats" = "Thống kê chi tiết";
+
+/* No comment provided by engineer. */
+"Agent Select" = "Chọn đặc vụ";
+
+/* No comment provided by engineer. */
+"Agents" = "Đặc vụ";
+
+/* Stats: match loading */
+"All %lld" = "Tất cả %lld";
+
+/* No comment provided by engineer. */
+"All Maps" = "Tất cả bản đồ";
+
+/* Statistics Filter (queues or agents) */
+"Allow All" = "Lựa chọn tất cả";
+
+/* Statistics Filter (queues or agents) */
+"Allow None" = "Bỏ chọn tất cả";
+
+/* Statistics Filter */
+"Allowing %lld/%lld matches (%lld filtered out)" = "Chọn %lld/%lld trận đấu (%lld bị lọc)";
+
+/* Default Error Alert Title */
+"An Error Occurred!" = "Đã xảy ra lỗi!";
+
+/* About Screen */
+"An invaluable API hosting all the assets (images, data, etc.) used throughout Valorant. This is where almost every image in the app comes from." = "Một API vô cùng quan trọng lưu trữ tất cả nội dung (hình ảnh, dữ liệu, v. v.) được sử dụng xuyên suốt Valorant. Đây là nguồn gốc của hầu hết mọi hình ảnh trong ứng dụng.";
+
+/* Statistics Filter: shown when everything is allowed */
+"Any" = "Bất kì";
+
+/* Asset Management */
+"Anything with images will not display correctly." = "Mọi thứ có hình ảnh sẽ không hiển thị chính xác.";
+
+/* No comment provided by engineer. */
+"App Icon" = "Biểu tượng ứng dụng";
+
+/* No comment provided by engineer. */
+"Are your assets outdated?" = "Dữ liệu của bạn có được cập nhật không?";
+
+/* Pro Features List */
+"As thanks for your support, you get to show off your status with an exclusive app icon!" = "Để cảm ơn sự hỗ trợ của bạn, bạn có thể thể hiện trạng thái của mình bằng một biểu tượng ứng dụng độc quyền!";
+
+/* About Screen */
+"As you can guess, the scope expanded massively over time to what you're using now. I hope you're enjoying it!" = "Như bạn có thể đoán được, dự án ngày càng trở nên lớn hơn, cuối cùng trở thành ứng dụng mà bạn hiện đang sử dụng. Tôi hy vọng bạn thích nó!";
+
+/* No comment provided by engineer. */
+"Assets" = "Tài nguyên";
+
+/* Bookmark/Player List: section */
+"Bookmarks" = "Dấu trang";
+
+/* Gun Customizer: section */
+"Buddy" = "Phụ kiện";
+
+/* Storage Management: section */
+"By Kind" = "Theo loại";
+
+/* Win Rate Stats: section
+Playtime Stats: section */
+"By Map" = "Theo bản đồ";
+
+/* No comment provided by engineer. */
+"Change Buddy" = "Đổi phụ kiện";
+
+/* No comment provided by engineer. */
+"Change Queue" = "Đổi hàng chờ";
+
+/* Gun Customizer */
+"Change Skin" = "Đổi skin";
+
+/* Store Widget: description */
+"Check your current Valorant storefront." = "Kiểm tra cửa hàng Valorant hiện tại của bạn.";
+
+/* Missions Widget: description */
+"Check your progress on daily & weekly missions." = "Kiểm tra tiến độ của nhiệm vụ hàng ngày & hàng tuần.";
+
+/* No comment provided by engineer. */
+"Choose App Icon" = "Chọn biểu tượng ứng dụng";
+
+/* No comment provided by engineer. */
+"Choose Buddy" = "Chọn phụ kiện";
+
+/* No comment provided by engineer. */
+"Choose Card" = "Chọn thẻ";
+
+/* No comment provided by engineer. */
+"Choose Skin" = "Chọn skin";
+
+/* No comment provided by engineer. */
+"Choose Spray" = "Chọn hình phun sơn";
+
+/* No comment provided by engineer. */
+"Choose Title" = "Chọn danh hiệu";
+
+/* Contract Picker: title */
+"Choose a Contract" = "Chọn một giao kèo";
+
+/* Buddy Picker: alert shown when both instances of a buddy are in use */
+"Choose a weapon to take %@ from." = "Chọn một vũ khí để lấy %@ từ.";
+
+/* Storage Management: button to delete all entries of a certain kind */
+"Clear All" = "Xóa tất cả";
+
+/* Contract Picker */
+"Completed" = "Đã hoàn thành";
+
+/* Storage Management: title for alert to confirm deleting some matches */
+"Confirm Delete" = "Xác nhận xóa";
+
+/* Missions Box */
+"Contract complete!" = "Giao kèo hoàn tất!";
+
+/* No comment provided by engineer. */
+"Copy Body" = "Sao chép nội dung";
+
+/* Stats: error details: accessibility label */
+"Copy Error" = "Sao chép lỗi";
+
+/* No comment provided by engineer. */
+"Copy Error Details" = "Sao chép chi tiết lỗi";
+
+/* No comment provided by engineer. */
+"Copy Match ID" = "Sao chép ID trận";
+
+/* No comment provided by engineer. */
+"Copy to Clipboard" = "Sao chép vào Clipboard";
+
+/* No comment provided by engineer. */
+"Could Not Load Account!" = "Không thể tải tài khoản!";
+
+/* No comment provided by engineer. */
+"Could not Change App Icon!" = "Không thể thay đổi biểu tượng ứng dụng!";
+
+/* No comment provided by engineer. */
+"Could not delete files!" = "Không thể xóa tệp!";
+
+/* No comment provided by engineer. */
+"Could not determine used storage!" = "Không thể xác định bộ nhớ đã sử dụng!";
+
+/* No comment provided by engineer. */
+"Could not free up space!" = "Không thể giải phóng dung lượng!";
+
+/* No comment provided by engineer. */
+"Could not look up %@" = "Không tìm thấy %@";
+
+/* No comment provided by engineer. */
+"Could not sign in!" = "Không thể đăng nhập!";
+
+/* Asset Management */
+"Current version: %@" = "Phiên bản hiện tại: %@";
+
+/* No comment provided by engineer. */
+"Currently in agent select" = "Đang chọn đặc vụ";
+
+/* No comment provided by engineer. */
+"Currently in-game" = "Đang trong trận";
+
+/* Queue Label: custom game */
+"Custom" = "Chơi tự do";
+
+/* Gun Customizer: title */
+"Customize %@" = "Tùy chỉnh %@";
+
+/* Gun Customizer: title */
+"Customize Gun" = "Tùy chỉnh súng";
+
+/* Gun Customizer: shown when a weapon has no buddy active */
+"No buddy selected!" = "Không có phụ kiện nào được chọn!";
+
+/* No comment provided by engineer. */
+"Not signed in!" = "Chưa đăng nhập!";
+
+/* No comment provided by engineer. */
+"On that site, navigate to **Riot Account Sign-in** and set yourself a username and password. When you're done, you can use those same credentials to sign in above! Your social account will stay linked and you'll remain able to sign in with that on PC :)" = "Trên trang web đó, hãy đến trang **Riot Account Sign-in** và đặt cho mình một tên người dùng và mật khẩu. Khi hoàn tất, bạn có thể sử dụng các thông tin xác thực đó để đăng nhập ở trên! Tài khoản mạng xã hội của bạn sẽ vẫn được liên kết có thể đăng nhập bằng tài khoản đó trên PC :)";
+
+/* No comment provided by engineer. */
+"Open or swipe to fetch details." = "Mở hoặc vuốt để tìm thông tin chi tiết.";
+
+/* Storage Management */
+"Other Players" = "Người chơi khác";
+
+/* Buddy Picker: alert shown when both instances of a buddy are in use */
+"Out of instances!" = "Không đủ số lượng!";
+
+/* Win Rate Stats: section
+Playtime Stats: section */
+"Over Time" = "Hiệp phụ";
+
+/* Hit Distribution Stats: section
+Playtime Stats: section */
+"Overall" = "Tổng quan";
+
+/* No comment provided by engineer. */
+"Overdrive (Neon)" = "Quá tải (Neon)";
+
+/* No comment provided by engineer. */
+"Party" = "Tổ đội";
+
+/* Scoreboard: party letter */
+"Party %@" = "Tổ đội %@";
+
+/* No comment provided by engineer. */
+"Password" = "Mật khẩu";
+
+/* Agent View: label for player who hasn't picked an agent yet */
+"Picking…" = "Đang chọn…";
+
+/* Match List: section */
+"Player" = "Người chơi";
+
+/* Bookmark/Player List: title */
+"Players" = "Người chơi";
+
+/* No comment provided by engineer. */
+"Playtime" = "Thời gian chơi";
+
+/* No comment provided by engineer. */
+"Playtime Breakdown" = "Thời gian chơi chi tiết";
+
+/* No comment provided by engineer. */
+"Please make sure you are ready to play by the time the game starts!" = "Vui lòng đảm bảo rằng bạn đã sẵn sàng chơi khi trò chơi bắt đầu!";
+
+/* App Icon Name */
+"Pro Blue" = "Pro Blue";
+
+/* No comment provided by engineer. */
+"Pro Features" = "Tính năng Pro";
+
+/* App Icon Picker: section */
+"Pro Icons" = "Biểu tượng Pro";
+
+/* Pro Store: error alert title */
+"Purchase Failed!" = "Giao dịch thất bại!";
+
+/* Pro Store: button (placeholder filled with formatted currency) */
+"Purchase – %@" = "Mua – %@";
+
+/* No comment provided by engineer. */
+"Queues" = "Hàng chờ";
+
+/* Rank Widget: title */
+"Rank" = "Xếp hạng";
+
+/* No comment provided by engineer. */
+"Rank %lld" = "Xếp hạng %lld";
+
+/* Rank Changes Widget: title */
+"Rank Changes" = "Thay đổi xếp hạng";
+
+/* No comment provided by engineer. */
+"Rank Rating Changes" = "Thay đổi điểm xếp hạng";
+
+/* No comment provided by engineer. */
+"Rate on the App Store" = "Đánh giá trên App Store";
+
+/* accessibility label */
+"Ready" = "Sẵn sàng";
+
+/* No comment provided by engineer. */
+"Recon Bolt Pro" = "Recon Bolt Pro";
+
+/* Pro Features List */
+"Recon Bolt Pro supports Family Sharing, meaning if just one member of your iCloud family buys it, everyone can use it!" = "Recon Bolt Pro hỗ trợ Chia sẻ gia đình, nghĩa là nếu chỉ một thành viên trong gia đình iCloud của bạn mua nó, thì mọi người đều có thể sử dụng nó!";
+
+/* Pro Features List */
+"Recon Bolt does not have and will never have ads. The only way it can make money is through in-app purchases." = "Recon Bolt không có và sẽ không bao giờ có quảng cáo. Cách duy nhất nó có thể kiếm tiền là thông qua mua hàng trong ứng dụng.";
+
+/* About Screen */
+"Recon Bolt started development in early 2021, back when it wasn't yet possible to see your RR gains and losses in the game, but the API offered those numbers." = "Recon Bolt bắt đầu phát triển vào đầu năm 2021, khi chưa thể xem các khoản ĐXH nhận và mất của bạn trong trò chơi, nhưng API đã cung cấp những con số đó.";
+
+/* Top-Level Tab Title */
+"Reference" = "Tham khảo";
+
+/* Account Settings: button to refresh expired session */
+"Refresh" = "Làm mới";
+
+/* No comment provided by engineer. */
+"Refresh automatically" = "Làm mới tự động";
+
+/* Store Widget: next refresh time (hour & minute) */
+"Refreshes at %@" = "Làm mới lúc %@";
+
+/* Match List: accessibility label */
+"Remove Bookmark" = "Xóa dấu trang";
+
+/* Asset Management: section */
+"Repair" = "Sửa";
+
+/* Request Log: header */
+"Request" = "Yêu cầu";
+
 /* Store */
 "Unknown Offer" = "Ưu đãi không xác định";
 
