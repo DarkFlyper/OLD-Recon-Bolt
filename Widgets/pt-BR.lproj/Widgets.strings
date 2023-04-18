@@ -1,90 +1,134 @@
-"0QJv6f" = "true";
+/* No comment provided by engineer. */
+"0QJv6f" = "verdadeiro";
 
-"3Pu3cz" = "false";
+/* No comment provided by engineer. */
+"3Pu3cz" = "falso";
 
-"4IOoOp" = "false";
+/* No comment provided by engineer. */
+"4IOoOp" = "falso";
 
-"4yOuwl" = "Use Active Account";
+/* No comment provided by engineer. */
+"4yOuwl" = "Usar a conta ativa";
 
-"51sGCO" = "Use Active Account";
+/* No comment provided by engineer. */
+"51sGCO" = "Usar a conta ativa";
 
-"BWVoH6" = "Show Refresh Time";
+/* No comment provided by engineer. */
+"BWVoH6" = "Exibir o tempo de recarregamento";
 
-"ELeFnO" = "true";
+/* No comment provided by engineer. */
+"ELeFnO" = "verdadeiro";
 
-"FOAOSn" = "false";
+/* No comment provided by engineer. */
+"FOAOSn" = "falso";
 
-"GG3gxD" = "false";
+/* No comment provided by engineer. */
+"GG3gxD" = "falso";
 
-"GbrfVR" = "View Rank Changes";
+/* No comment provided by engineer. */
+"GbrfVR" = "Ver as alterações de rank";
 
-"HfQyGs" = "true";
+/* No comment provided by engineer. */
+"HfQyGs" = "verdadeiro";
 
-"IknZ9D-bnwtq2" = "Just to confirm, you wanted ‘Text Only’?";
+/* No comment provided by engineer. */
+"IknZ9D-bnwtq2" = "Só para confirmar, você quer ‘somente texto‘?";
 
-"IknZ9D-dxyWk1" = "Just to confirm, you wanted ‘Icon Only’?";
+/* No comment provided by engineer. */
+"IknZ9D-dxyWk1" = "Só para confirmar, você quer \"somente ícone\"? ";
 
-"IknZ9D-lgroW3" = "Just to confirm, you wanted ‘Unknown’?";
+/* No comment provided by engineer. */
+"IknZ9D-lgroW3" = "Só para confirmar, você quer ‘Desconhecido‘?";
 
-"IknZ9D-oTWtFZ" = "Just to confirm, you wanted ‘Icon & Text’?";
+/* No comment provided by engineer. */
+"IknZ9D-oTWtFZ" = "Só para confirmar, você quer ‘Ícone e Texto‘?";
 
-"Knw5Ua" = "Store Display Mode";
+/* No comment provided by engineer. */
+"Knw5Ua" = "Modo de exibição da loja";
 
-"LjLkHK-bnwtq2" = "There are ${count} options matching ‘Text Only’.";
+/* No comment provided by engineer. */
+"LjLkHK-bnwtq2" = "Existem ${count} opções que correspondem a 'Somente Texto'.";
 
-"LjLkHK-dxyWk1" = "There are ${count} options matching ‘Icon Only’.";
+/* No comment provided by engineer. */
+"LjLkHK-dxyWk1" = "Existem ${count} opções que correspondem a 'Somente ícone'.";
 
-"LjLkHK-lgroW3" = "There are ${count} options matching ‘Unknown’.";
+/* No comment provided by engineer. */
+"LjLkHK-lgroW3" = "Existem ${count} opções que correspondem a 'Desconhecido'.";
 
-"LjLkHK-oTWtFZ" = "There are ${count} options matching ‘Icon & Text’.";
+/* No comment provided by engineer. */
+"LjLkHK-oTWtFZ" = "Existem ${count} opções que correspondem a 'Ícone e Texto'.";
 
-"P9aMrE" = "Account";
+/* No comment provided by engineer. */
+"P9aMrE" = "Conta";
 
-"QVPlYZ" = "Customize how your rank is shown off.";
+/* No comment provided by engineer. */
+"QVPlYZ" = "Personalize a forma de como seu rank é exibido.";
 
-"QbxEtQ" = "Player";
+/* No comment provided by engineer. */
+"QbxEtQ" = "Jogador";
 
-"UNCyEe" = "false";
+/* No comment provided by engineer. */
+"UNCyEe" = "falso";
 
-"WR1VRq" = "View Missions";
+/* No comment provided by engineer. */
+"WR1VRq" = "Ver Missões";
 
-"X1PqLp" = "Customize how your rank changes are displayed.";
+/* No comment provided by engineer. */
+"X1PqLp" = "Personalize a forma de como as alterações do seu rank é exibido.";
 
-"ZqiAs4" = "Account";
+/* No comment provided by engineer. */
+"ZqiAs4" = "Conta";
 
-"ZwiyvD" = "View Rank";
+/* No comment provided by engineer. */
+"ZwiyvD" = "Ver rank";
 
-"aMHs7G" = "Show Rank Rating";
+/* No comment provided by engineer. */
+"aMHs7G" = "Ver a pontuação do rank";
 
-"biLdDr" = "Display Mode";
+/* No comment provided by engineer. */
+"biLdDr" = "Modo de exibição";
 
-"bnwtq2" = "Text Only";
+/* No comment provided by engineer. */
+"bnwtq2" = "Somente Texto";
 
-"dxyWk1" = "Icon Only";
+/* No comment provided by engineer. */
+"dxyWk1" = "Somente Ícone";
 
-"f1wpE1" = "Show Act Name";
+/* No comment provided by engineer. */
+"f1wpE1" = "Mostrar nome do Ato";
 
-"gpCwrM" = "View Store";
+/* No comment provided by engineer. */
+"gpCwrM" = "Ver a Loja";
 
-"lgroW3" = "Unknown";
+/* No comment provided by engineer. */
+"lgroW3" = "Desconhecido";
 
-"mqieyu" = "Show Rank Name";
+/* No comment provided by engineer. */
+"mqieyu" = "Mostrar nome do Rank";
 
-"nBU0nl" = "true";
+/* No comment provided by engineer. */
+"nBU0nl" = "verdadeiro";
 
-"oTWtFZ" = "Icon & Text";
+/* No comment provided by engineer. */
+"oTWtFZ" = "Ícone e Texto";
 
-"pr2Nr9" = "Account";
+/* No comment provided by engineer. */
+"pr2Nr9" = "Conta";
 
-"r5YctV" = "true";
+/* No comment provided by engineer. */
+"r5YctV" = "verdadeiro";
 
-"rA2NkU" = "Use Active Account";
+/* No comment provided by engineer. */
+"rA2NkU" = "Usar a conta ativa";
 
-"s2ilh5" = "Customize how your missions are displayed.";
+/* No comment provided by engineer. */
+"s2ilh5" = "Personalize a forma de como as missões são exibidas.";
 
-"tVvJ9c" = "Customize how your store is displayed.";
+/* No comment provided by engineer. */
+"tVvJ9c" = "Personalize a forma de como a loja é exibida.";
 
-"uVkZBs" = "Account";
+/* No comment provided by engineer. */
+"uVkZBs" = "Conta";
 
-"xE0FGm" = "Use Active Account";
-
+/* No comment provided by engineer. */
+"xE0FGm" = "Usar a conta ativa";
