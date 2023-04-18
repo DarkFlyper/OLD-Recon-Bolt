@@ -74,11 +74,23 @@
 /* Settings: section */
 "Accounts" = "帳號";
 
+/* Contract Picker: button */
+"Activate" = "激活";
+
+/* Contract Picker */
+"Active" = "啟用";
+
+/* Missions Box: header */
+"Active Contract" = "當前契約";
+
 /* Match List: accessibility label */
 "Add Bookmark" = "增加書籤";
 
 /* Account Settings */
 "Add another Account" = "增加帳號";
+
+/* Pro Features List */
+"Add multiple accounts and seamlessly switch between them at any time." = "新增多個帳號，你可以隨時隨地切換帳號。";
 
 /* No comment provided by engineer. */
 "Advanced Settings" = "進階設定";
@@ -100,6 +112,9 @@
 
 /* Default Error Alert Title */
 "An Error Occurred!" = "發生錯誤了!";
+
+/* Statistics Filter: shown when everything is allowed */
+"Any" = "任何";
 
 /* No comment provided by engineer. */
 "App Icon" = "程式圖示";
@@ -128,6 +143,9 @@
 /* Win Rate Stats: side name */
 "Attacking" = "攻擊方";
 
+/* Hit Distribution Stats: average HS% */
+"Average: %@" = "平均: %@";
+
 /* Hit Distribution Stats: region */
 "Body" = "身體";
 
@@ -137,14 +155,39 @@
 /* Gun Customizer: section */
 "Buddy" = "吊飾";
 
+/* Storage Management: section */
+"By Kind" = "按種類";
+
+/* Win Rate Stats: section
+Playtime Stats: section */
+"By Map" = "按地圖";
+
+/* Hit Distribution Stats: section */
+"By Weapon" = "按武器";
+
 /* No comment provided by engineer. */
 "Cancel" = "取消";
 
 /* No comment provided by engineer. */
+"Cancel Matchmaking" = "取消配對";
+
+/* Top-Level Tab Title */
+"Career" = "生涯";
+
+/* No comment provided by engineer. */
 "Change Buddy" = "更換吊飾";
+
+/* No comment provided by engineer. */
+"Change Queue" = "更換模式";
 
 /* Gun Customizer */
 "Change Skin" = "更換造型";
+
+/* Store Widget: description */
+"Check your current Valorant storefront." = "查看您的特戰英豪的商店優惠";
+
+/* Missions Widget: description */
+"Check your progress on daily & weekly missions." = "查看您的每日和每週任務的進度";
 
 /* No comment provided by engineer. */
 "Choose App Icon" = "選擇圖示";
@@ -178,6 +221,9 @@
 
 /* No comment provided by engineer. */
 "Could not free up space!" = "沒有足夠的空間!";
+
+/* No comment provided by engineer. */
+"Could not sign in!" = "無法登入!";
 
 /* Asset Management */
 "Current version: %@" = "現在版本: %@";
@@ -246,6 +292,12 @@ Stats: error details */
 /* Request Log: title for an exchange */
 "Exchange" = "交換";
 
+/* Round Details: killed by spike */
+"Exploded" = "已爆炸";
+
+/* Pro Features List */
+"Family Sharing" = "家庭共享";
+
 /* No comment provided by engineer. */
 "Filter" = "過濾器";
 
@@ -256,7 +308,25 @@ Stats: error details */
 "Game Started" = "遊戲已開始";
 
 /* No comment provided by engineer. */
+"Game is not running!" = "遊戲沒在運行!";
+
+/* No comment provided by engineer. */
 "Golden Gun" = "黃金槍";
+
+/* Stats: date grouping size picker */
+"Group by" = "分組";
+
+/* Hit Distribution Stats: region */
+"Head" = "頭";
+
+/* No comment provided by engineer. */
+"Headhunter (Chamber)" = "獵頭 (錢伯爾)";
+
+/* About Screen */
+"Hi! I'm Julian Dunskus, and I made this app." = "你好 我是Julian Dunskus, 我製作這個程式.";
+
+/* Pro Store */
+"Home Screen Widgets" = "主頁面小工貝";
 
 /* No comment provided by engineer. */
 "Identities" = "身份";
@@ -362,6 +432,9 @@ Stats: error details */
 
 /* No comment provided by engineer. */
 "Refresh automatically" = "自動重新加載";
+
+/* Store Widget: next refresh time (hour & minute) */
+"Refreshes at %@" = "刷新在 %@";
 
 /* Match List: accessibility label */
 "Remove Bookmark" = "刪除書籤";
