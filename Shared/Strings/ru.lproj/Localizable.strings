@@ -1,4 +1,83 @@
 
+/* Used for matches less than a day ago. %@ is replaced by the number of hours/minutes, e.g. '3h ago'. */
+"%@ ago" = "%@ назад";
+
+/* %@ is replaced by a fraction of wins vs. games played, e.g. '5/12 games won'. */
+"%@ games won" = "%@ матчей выиграно";
+
+/* Win Rate Stats by Loadout Delta: focused value (drag on graph); placeholder is replaced by the percentage of rounds won, e.g. '57.3% won'. */
+"%@ won" = "%@ выиграно";
+
+/* No comment provided by engineer. */
+"%@%%" = "%@%%";
+
+/* Missions Box: always at least 3 */
+"%lld Future Weeklies" = "%lld Будущих еженедельных заданий";
+
+/* Missions Box: always at least 3 */
+"%lld Queued-Up Weeklies" = "%lld еженедельных задания";
+
+/* No comment provided by engineer. */
+"%lld RR" = "%lld РРИ";
+
+/* Storage Management */
+"%lld from other players" = "%lld от других игроков";
+
+/* Loadout Item Picker: number of hidden items—this should never show nowadays */
+"%lld hidden due to outdated assets" = "%lld скрыто из-за устаревших ресурсов";
+
+/* Hit Distribution Stats: hit count */
+"%lld hits" = "%lld попаданий";
+
+/* Shown at the bottom of the expandable playtime list when there are more entries available. */
+"%lld more" = "Еще %lld";
+
+/* Statistics Filter: shown when not everything is allowed */
+"%lld selected" = "%lld выбран(о)";
+
+/* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
+"%lld to %lld credits" = "%lld до %lld кредитов";
+
+/* No comment provided by engineer. */
+"%lld%%" = "%lld%%";
+
+/* No comment provided by engineer. */
+"%lld/%lld" = "%lld/%lld";
+
+/* Stats: match loading */
+"%lld/%lld loaded" = "%lld/%lld загружено";
+
+/* Loadout Item Picker: number of items owned out of all such items in the game */
+"%lld/%lld owned" = "%lld/%lld принадлежит";
+
+/* Time Formatting: minutes & seconds (used in round details view) */
+"%lld:%@" = "%lld:%@";
+
+/* Time Formatting: minutes, seconds, & milliseconds (used in round details view) */
+"%lld:%@.%@" = "%lld:%@.%@";
+
+/* Contract Progress Bar
+Missions Box */
+"%lld / %lld XP" = "%lld/%lld XP";
+
+/* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
+"(%lld – %lld)" = "(%lld - %lld)";
+
+/* Pro Features List */
+"(You can switch between available icons at any time.)" = "(Вы можете переключаться между доступными иконками в любое время.)";
+
+/* No comment provided by engineer. */
+"+%lld XP" = "+%lld XP";
+
+/* Missions Widget: how many more weeklies are queued up after the current set */
+"+%lld queued" = "+%lld в очереди";
+
+/* Store: night market discount */
+"-%lld%%" = "-%lld%%";
+
+/* No comment provided by engineer. */
+"2-Factor Authentication" = "Двухфакторная аутентификация";
+
 /* Missions Widget: countdown label when the target is in the future. e.g. '< 2d 3h' */
 "< %@" = "< %@";
 
@@ -143,6 +222,9 @@ Playtime Stats: section */
 /* Playtime Stats: section */
 "By Queue" = "По режиму";
 
+/* No comment provided by engineer. */
+"Day" = "День";
+
 /* App Icon Name */
 "Default" = "Стандарт";
 
@@ -191,6 +273,9 @@ Stats: error details */
 
 /* Asset Management */
 "Error downloading assets!" = "Произошла ошибка при загрузке ресурсов!";
+
+/* Request Log: title for an exchange */
+"Exchange" = "Exchange";
 
 /* Request Log: title for detailed view of request body/contents */
 "Exchange Body" = "Тело";
@@ -294,6 +379,78 @@ Stats: error details */
 
 /* Pro Features List */
 "If you have multiple accounts, you can configure separate widgets for each and have them on your Home Screen at the same time." = "Если у вас есть несколько аккаунтов, можно создать несколько виджетов для каждого и иметь их на Домашнем Экране одновременно.";
+
+/* About Screen */
+"If you've encountered a bug or have some feedback, I'm always happy to hear it on the Discord Server or GitHub :)" = "Если вы столкнулись с ошибкой или у вас есть отзывы, я всегда рад прочитать их на сервере Discord или на GitHub :)";
+
+/* No comment provided by engineer. */
+"If your widgets seem broken, use this button to request an immediate refresh from iOS." = "Если ваши виджеты кажутся нерабочими, используйте эту кнопку, чтобы запросить немедленное обновление от iOS.";
+
+/* No comment provided by engineer. */
+"Image failed to load!" = "Изображение не удалось загрузить!";
+
+/* Asset Management */
+"In case something went wrong, use this button to force a full refetch of the assets and images." = "Если что-то пошло не так, используйте эту кнопку для принудительной полной повторной загрузки ресурсов и изображений.";
+
+/* Settings: section */
+"In-App Store" = "Магазин";
+
+/* No comment provided by engineer. */
+"Is this safe?" = "Это безопасно?";
+
+/* No comment provided by engineer. */
+"Join the Discord Server" = "Присоединяйтесь к серверу Discord";
+
+/* Match Details: section */
+"Kills by Round" = "Убийства по раундам";
+
+/* Asset Management: this row shows the language of the current assets */
+"Language" = "Язык";
+
+/* Hit Distribution Stats: region */
+"Legs" = "Ноги";
+
+/* Bookmark/Player List: player level */
+"Level %lld" = "Уровень %lld";
+
+/* Contract Progress Bar */
+"Level %lld / %lld" = "Уровень %lld/%lld";
+
+/* No comment provided by engineer. */
+"Lifetime Peak" = "Максимум за все время";
+
+/* App Theme */
+"Light Mode" = "Светлый режим";
+
+/* About Screen: section */
+"Links" = "Ссылки";
+
+/* No comment provided by engineer. */
+"Live Match" = "Текущий матч";
+
+/* Stats: match loading */
+"Load Data" = "Загрузить данные";
+
+/* Match List */
+"Load Older Matches" = "Загрузить более старые матчи";
+
+/* Pro Store */
+"Loading Store Info…" = "Загрузка информации о магазине…";
+
+/* No comment provided by engineer. */
+"Loading request log…" = "Загрузка журнала запросов…";
+
+/* No comment provided by engineer. */
+"Loadout" = "Комплект";
+
+/* No comment provided by engineer. */
+"Loadout Delta" = "Дельте комплекта";
+
+/* No comment provided by engineer. */
+"Loadout Delta is computed as the difference between the average loadout value of players on each team. For example, a loadout delta of +1000 means your team's loadouts were an average of 1000 credits more valuable than the enemy team's in that round." = "Дельта комплекта рассчитывается как разница между средними значениями цены оружий и способностей игроков каждой команды. Например, дельта комплекта +1000 означает, что цена оружий и способностей вашей команды были в среднем на 1000 кредитов выше, чем у команды противника в этом раунде.";
+
+/* No comment provided by engineer. */
+"Loadout not loaded!" = "Комплект не загружен!";
 
 /* Pro Features List */
 "Multiple Account Support" = "Поддержка нескольких аккаунтов";
@@ -443,3 +600,9 @@ Playtime Stats: section */
 
 /* No comment provided by engineer. */
 "Rate on the App Store" = "Оценить в App Store";
+
+/* Store */
+"Unknown Offer" = "Неизвестное предложение";
+
+/* placeholder */
+"Unknown Skin" = "Неизвестный Скин";
