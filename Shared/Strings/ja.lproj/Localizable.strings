@@ -8,10 +8,10 @@
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph); placeholder is replaced by the percentage of rounds won, e.g. '57.3% won'. */
 "%@ won" = "%@の試合を勝ちました。";
 
-/* No comment provided by engineer. */
+/* Missions Box: always at least 3 */
 "%lld Future Weeklies" = "今後のウイークリー";
 
-/* No comment provided by engineer. */
+/* Missions Box: always at least 3 */
 "%lld Queued-Up Weeklies" = "次のウィークリー";
 
 /* No comment provided by engineer. */
@@ -53,7 +53,8 @@
 /* Time Formatting: minutes, seconds, & milliseconds (used in round details view) */
 "%lld:%@.%@" = "%lld:%@.%@";
 
-/* Contract Progress Bar */
+/* Contract Progress Bar
+Missions Box */
 "%lld / %lld XP" = "%lld/%lld XP";
 
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph) */

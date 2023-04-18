@@ -1,5 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-  <dict/>
+  <dict>
+    <key>%lld Error(s)</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@errors@</string>
+      <key>errors</key>
+      <dict>
+        <key>zero</key>
+        <string>لا اخطاء</string>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>one</key>
+        <string>حظأ واحد</string>
+        <key>two</key>
+        <string>خطئين</string>
+        <key>few</key>
+        <string>اخطاء قليلة</string>
+        <key>many</key>
+        <string>اخطاء كثيرة</string>
+        <key>other</key>
+        <string>عدد اخطاء %lld</string>
+      </dict>
+    </dict>
+    <key>%lld map(s) selected</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>تم تحديد %#@maps@ خرائط</string>
+      <key>maps</key>
+      <dict>
+        <key>zero</key>
+        <string>لا خرائط</string>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>one</key>
+        <string>خريطة واحدة</string>
+        <key>two</key>
+        <string>خريطتين</string>
+        <key>few</key>
+        <string>عدة خرائط</string>
+        <key>many</key>
+        <string>خرائط كثيرة</string>
+        <key>other</key>
+        <string>عدد الخرائط: %lld</string>
+      </dict>
+    </dict>
+    <key>%lld queue(s) selected</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>تم تحديد طوابير %#@queues@</string>
+      <key>queues</key>
+      <dict>
+        <key>zero</key>
+        <string>لا طابور</string>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>one</key>
+        <string>طابور واحد</string>
+        <key>two</key>
+        <string>طابورين</string>
+        <key>few</key>
+        <string>عدة طوابير</string>
+        <key>many</key>
+        <string>طوابير كثيرة</string>
+        <key>other</key>
+        <string>عدد الطوابير: %lld</string>
+      </dict>
+    </dict>
+    <key>Load Latest %lld Match(es)</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>حمّل الأجدد %#@matches@</string>
+      <key>matches</key>
+      <dict>
+        <key>zero</key>
+        <string>لا مباريات</string>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>one</key>
+        <string>مباراة واحدة</string>
+        <key>two</key>
+        <string>مباراتين</string>
+        <key>few</key>
+        <string>مبارايات عديدة</string>
+        <key>many</key>
+        <string>مبارايات كثيرة</string>
+        <key>other</key>
+        <string>عدد المبارايات: %lld</string>
+      </dict>
+    </dict>
+    <key>%lld match(es)</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@matches@</string>
+      <key>matches</key>
+      <dict>
+        <key>zero</key>
+        <string>لا مبارايات</string>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>one</key>
+        <string>مباراة واحدة</string>
+        <key>two</key>
+        <string>مباراتين</string>
+        <key>few</key>
+        <string>مبارايات عديدة</string>
+        <key>many</key>
+        <string>مبارايات كثيرة</string>
+        <key>other</key>
+        <string>عدد المبارايات: %lld</string>
+      </dict>
+    </dict>
+    <key>%lld previous act(s)</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@acts@</string>
+      <key>acts</key>
+      <dict>
+        <key>zero</key>
+        <string>0 مشاهد سابقة</string>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>one</key>
+        <string>1 مشهد سابق</string>
+        <key>two</key>
+        <string>2 مشاهد سابقة</string>
+        <key>few</key>
+        <string>مشاهد سابقة عديدة</string>
+        <key>many</key>
+        <string>مشاهد سابقة كثيرة</string>
+        <key>other</key>
+        <string>مشاهد سابقة: %lld</string>
+      </dict>
+    </dict>
+  </dict>
 </plist>

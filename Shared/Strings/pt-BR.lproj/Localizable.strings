@@ -11,10 +11,10 @@
 /* No comment provided by engineer. */
 "%@%%" = "%@%%";
 
-/* No comment provided by engineer. */
+/* Missions Box: always at least 3 */
 "%lld Future Weeklies" = "%lld Futuras missões semanais";
 
-/* No comment provided by engineer. */
+/* Missions Box: always at least 3 */
 "%lld Queued-Up Weeklies" = "%lld Semanais pela frente";
 
 /* No comment provided by engineer. */
@@ -56,7 +56,8 @@
 /* Time Formatting: minutes, seconds, & milliseconds (used in round details view) */
 "%lld:%@.%@" = "%lld:%@.%@";
 
-/* Contract Progress Bar */
+/* Contract Progress Bar
+Missions Box */
 "%lld / %lld XP" = "%lld / %lld EXP";
 
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
@@ -108,7 +109,7 @@ Competitive matches after your placements can be identified without their detail
 /* Contract Picker */
 "Active" = "Ativo";
 
-/* No comment provided by engineer. */
+/* Missions Box: header */
 "Active Contract" = "Contrato ativo";
 
 /* Match List: accessibility label */
@@ -236,7 +237,7 @@ Playtime Stats: section */
 "Cancel" = "Cancelar";
 
 /* No comment provided by engineer. */
-"Cancel Matchmaking" = "Cancelar busca por partida";
+"Cancel Matchmaking" = "Cancelar a procura por partida";
 
 /* Top-Level Tab Title */
 "Career" = "Carreira";
@@ -269,7 +270,7 @@ Playtime Stats: section */
 "Choose Buddy" = "Escolha Chaveiro";
 
 /* No comment provided by engineer. */
-"Choose Card" = "Escolha Estandarte";
+"Choose Card" = "Cards do jogador";
 
 /* No comment provided by engineer. */
 "Choose Skin" = "Escolha Skin";
@@ -295,7 +296,7 @@ Playtime Stats: section */
 /* Storage Management: title for alert to confirm deleting some matches */
 "Confirm Delete" = "Confirmar Apagar";
 
-/* No comment provided by engineer. */
+/* Missions Box */
 "Contract complete!" = "Contrato completo!";
 
 /* No comment provided by engineer. */
@@ -562,7 +563,7 @@ SEU RELATÓRIO DE BUG AQUI
 "Level %lld / %lld" = "Nível %lld / %lld";
 
 /* No comment provided by engineer. */
-"Lifetime Peak" = "Maior rank alcançado";
+"Lifetime Peak" = "Rank mais alto";
 
 /* App Theme */
 "Light Mode" = "Modo Claro";
@@ -589,16 +590,16 @@ SEU RELATÓRIO DE BUG AQUI
 "Loading request log…" = "Carregando registro de pedidos…";
 
 /* No comment provided by engineer. */
-"Loadout" = "Equipamentos";
+"Loadout" = "Inventário";
 
 /* No comment provided by engineer. */
-"Loadout Delta" = "Delta de Equipamentos";
+"Loadout Delta" = "Diferença de Equipamentos";
 
 /* No comment provided by engineer. */
-"Loadout Delta is computed as the difference between the average loadout value of players on each team. For example, a loadout delta of +1000 means your team's loadouts were an average of 1000 credits more valuable than the enemy team's in that round." = "Delta de Equipamentos é calculado como a diferença entre a média de equipamentos entre os jogadores de cada time. Por exemplo, um delta de equipamentos de +1000 significa que o equipamento do seu time era, em média, 1000 créditos mais valioso que o do time inimigo naquela rodada.";
+"Loadout Delta is computed as the difference between the average loadout value of players on each team. For example, a loadout delta of +1000 means your team's loadouts were an average of 1000 credits more valuable than the enemy team's in that round." = "Diferença de Equipamentos é calculado como a diferença entre a média de equipamentos entre os jogadores de cada time. Por exemplo, um delta de equipamentos de +1000 significa que o equipamento do seu time era, em média, 1000 créditos mais valioso que o do time inimigo naquela rodada.";
 
 /* No comment provided by engineer. */
-"Loadout not loaded!" = "Equipamento não carregado!";
+"Loadout not loaded!" = "Inventário não carregado!";
 
 /* No comment provided by engineer. */
 "Lobby Dodged" = "Evasão do Lobby";
@@ -642,8 +643,8 @@ SEU RELATÓRIO DE BUG AQUI
 /* No comment provided by engineer. */
 "Match Loading Errors" = "Erros de carregamento de partida";
 
-/* App Theme */
-"Match System" = "Sistema da Partida";
+/* App Theme: automatically match the system theme */
+"Match System" = "Automático";
 
 /* Match List: section */
 "Matches" = "Partidas";
@@ -660,7 +661,7 @@ SEU RELATÓRIO DE BUG AQUI
 /* Asset Management */
 "Missing assets!" = "Arquivos em falta!";
 
-/* No comment provided by engineer. */
+/* Missions Box */
 "Missing progress for contract!" = "Progresso por contrato em falta!";
 
 /* No comment provided by engineer. */
@@ -702,7 +703,7 @@ SEU RELATÓRIO DE BUG AQUI
 /* Gun Customizer: shown when a weapon has no buddy active */
 "No buddy selected!" = "Nenhum chaveiro selecionado!";
 
-/* No comment provided by engineer. */
+/* Missions Box */
 "No contract active!" = "Nenhum contrato ativo!";
 
 /* Win Rate Stats: by map */
@@ -837,7 +838,7 @@ Playtime Stats: section */
 "Recon Bolt Pro supports Family Sharing, meaning if just one member of your iCloud family buys it, everyone can use it!" = "Recon Bolt Pro permite o Compartilhamento Familiar, sendo assim, se apenas um membro da sua família do iCloud comprar, todos podem usar!";
 
 /* Pro Features List */
-"Recon Bolt does not have and will never have ads. The only way it can make money is through in-app purchases." = "Recon Bolt não tem e nunca terá anúncios. O único modo de fazer dinheiro é através de compras dentro do aplicativo.";
+"Recon Bolt does not have and will never have ads. The only way it can make money is through in-app purchases." = "O Recon Bolt não possui e nunca terá anúncios. A única maneira pela qual ela pode gerar receita é através de compras dentro do aplicativo.";
 
 /* About Screen */
 "Recon Bolt started development in early 2021, back when it wasn't yet possible to see your RR gains and losses in the game, but the API offered those numbers." = "O desenvolvimento do Recon Bolt começou no início de 2021, quando ainda não era possível ver seus ganhos e perdas de Pontos no jogo, mas a API oferecia estes números.";
@@ -863,7 +864,8 @@ Playtime Stats: section */
 /* Request Log: header */
 "Request" = "Solicitação";
 
-/* No comment provided by engineer. */
+/* Advanced Settings: button to open request log
+Request Log: title */
 "Request Log" = "Registro de pedidos";
 
 /* No comment provided by engineer. */
@@ -921,7 +923,7 @@ Playtime Stats: section */
 "Show details when found" = "Mostrar detalhes quando encontrar";
 
 /* App Icon Description: pro blue */
-"Show off your pro status with an exclusive icon!" = "Mostre seu pro status com um ícone exclusivo!";
+"Show off your pro status with an exclusive icon!" = "Mostre seu status pro com um ícone exclusivo!";
 
 /* Account Settings: button */
 "Sign In" = "Entrar";
@@ -930,7 +932,7 @@ Playtime Stats: section */
 "Sign In with your Riot account" = "Entrar com sua conta Riot";
 
 /* Account Settings */
-"Sign Out" = "Encerrar";
+"Sign Out" = "Finalizar sessão";
 
 /* No comment provided by engineer. */
 "Sign in with Google/Apple/etc." = "Entrar com Google/Apple/etc.";
@@ -948,7 +950,7 @@ Playtime Stats: section */
 "Spike Planted" = "Spike Plantada";
 
 /* No comment provided by engineer. */
-"Start Matchmaking?" = "Começar busca por partida?";
+"Start Matchmaking?" = "Iniciar uma partida?";
 
 /* Win Rate Stats: accessibility label */
 "Starting Side" = "Lado de início";
@@ -980,7 +982,7 @@ Playtime Stats: section */
 /* Pro Store */
 "Support Further Development!" = "Apoie o Desenvolvimento adicional!";
 
-/* No comment provided by engineer. */
+/* Missions Box: button */
 "Switch Contract" = "Trocar o contrato";
 
 /* No comment provided by engineer. */
@@ -1085,7 +1087,7 @@ Infelizmente, devido a limitações técnicas, você não pode fazer login no Re
 /* No comment provided by engineer. */
 "Unknown bundle!" = "Pacote Desconhecido!";
 
-/* No comment provided by engineer. */
+/* Missions Box */
 "Unknown contract!" = "Contrato desconhecido!";
 
 /* No comment provided by engineer. */
@@ -1140,7 +1142,7 @@ Infelizmente, devido a limitações técnicas, você não pode fazer login no Re
 "WP: +%lld" = "MVP: +%lld";
 
 /* No comment provided by engineer. */
-"Weapon Loadout" = "Carregamento de armas";
+"Weapon Loadout" = "Inventário de armas";
 
 /* No comment provided by engineer. */
 "Weapons" = "Armas";
@@ -1178,8 +1180,20 @@ Infelizmente, devido a limitações técnicas, você não pode fazer login no Re
 /* No comment provided by engineer. */
 "iOS is a bit finnicky about this, so widgets may not refresh right away—feel free to restart if this doesn't help!" = "O iOS é um pouco exigente quanto a isso, então os Widgets podem não ser atualizados imediatamente - sinta-se à vontade para reiniciar se isso não ajudar!";
 
+/* Loadout: spray slot */
+"mid-round" = "Meio da rodada";
+
 /* Missions Widget: countdown label when the target is in the past. Should never really show up, since at this point there's new data. */
 "old" = "antigo";
 
+/* Loadout: spray slot */
+"post-round" = "Pós-rodada";
+
+/* Loadout: spray slot */
+"pre-round" = "Pré-rodada";
+
 /* No comment provided by engineer. */
 "signing in…" = "Entrando…";
+
+/* Loadout: unknown spray slot (should never appear unless Riot changes something) */
+"slot" = "slot";

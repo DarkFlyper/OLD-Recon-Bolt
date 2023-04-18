@@ -1,0 +1,50 @@
+/* error loading the account for a widget */
+"Could not load active account!" = "無法加載活躍帳號";
+
+/* Riot API Error */
+"Invalid Headers: %@" = "無效的Headers: %@";
+
+/* wrong account error */
+"It looks like this account has never played Valorant!
+
+You've probably signed into the wrong account; %@" = "看起來這個賬戶還沒有玩過特戰英豪！
+你可能登入了錯誤的帳號 %@";
+
+/* No comment provided by engineer. */
+"Keychain error for key '%@': %@" = "鑰匙的鑰匙串錯誤 '%@': %@";
+
+/* store widget error */
+"Malformed Offer" = "異常商品";
+
+/* error loading the account for a widget. */
+"Malformed account." = "異常帳號.";
+
+/* store widget error */
+"Missing Assets!" = "缺少資源！";
+
+/* No comment provided by engineer. */
+"Missing game configuration data for %@ region!" = "缺少 %@ 地區的遊戲配置數據！";
+
+/* error loading the account for a widget. */
+"No account specified." = "沒有指定帳號.";
+
+/* Riot API Error */
+"Please try again in %lld seconds." = "請在 %lld 秒後重試。";
+
+/* Riot API Error */
+"The API rejected your authorization." = "API 拒絕了您的授權。";
+
+/* Riot API Error */
+"The API returned an error code %lld." = "API 回傳代碼 %lld";
+
+/* Riot API Error */
+"The resource could not be found." = "找不到資源。";
+
+/* store widget error */
+"Unknown Offer" = "未知商品";
+
+/* store widget error */
+"Unknown Skin" = "未知造型";
+
+/* Riot API Error */
+"You are sending too many requests." = "您發送的請求過多。";

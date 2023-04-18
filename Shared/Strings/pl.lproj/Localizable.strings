@@ -10,11 +10,11 @@
 "%@ won" = "%@ won
 [%s] wygranych";
 
-/* No comment provided by engineer. */
+/* Missions Box: always at least 3 */
 "%lld Future Weeklies" = "future weeklies
 przyszłe tygodniki";
 
-/* No comment provided by engineer. */
+/* Missions Box: always at least 3 */
 "%lld Queued-Up Weeklies" = "%lld Queued-Up Weeklies
 Ustawiony w kolejce tygodniki";
 

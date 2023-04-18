@@ -1,0 +1,136 @@
+
+/* Used for matches less than a day ago. %@ is replaced by the number of hours/minutes, e.g. '3h ago'. */
+"%@ ago" = "%@ 之前";
+
+/* %@ is replaced by a fraction of wins vs. games played, e.g. '5/12 games won'. */
+"%@ games won" = "%@ 遊戲獲勝";
+
+/* No comment provided by engineer. */
+"%lld RR" = "%lld 分數";
+
+/* Loadout Item Picker: number of items owned out of all such items in the game */
+"%lld/%lld owned" = "%lld/%lld 擁有";
+
+/* No comment provided by engineer. */
+"+%lld XP" = "+%lld 經驗";
+
+/* No comment provided by engineer. */
+"2-Factor Authentication" = "雙重驗證";
+
+/* Settings: section */
+"About" = "關於";
+
+/* No comment provided by engineer. */
+"About Recon Bolt" = "關於Recon Bolt";
+
+/* Settings: section */
+"Accounts" = "帳號";
+
+/* Hit Distribution Stats: region */
+"Body" = "身體";
+
+/* Gun Customizer: section */
+"Buddy" = "吊飾";
+
+/* No comment provided by engineer. */
+"Cancel" = "取消";
+
+/* No comment provided by engineer. */
+"Change Buddy" = "更換吊飾";
+
+/* Gun Customizer */
+"Change Skin" = "更換造型";
+
+/* No comment provided by engineer. */
+"Choose Buddy" = "更換吊飾";
+
+/* No comment provided by engineer. */
+"Choose Card" = "更換卡面";
+
+/* No comment provided by engineer. */
+"Choose Skin" = "更換造型";
+
+/* Storage Management: button to delete all entries of a certain kind */
+"Clear All" = "清除全部";
+
+/* Contract Picker */
+"Completed" = "已完成";
+
+/* Storage Management: title for alert to confirm deleting some matches */
+"Confirm Delete" = "確定刪除";
+
+/* Stats: error details: accessibility label */
+"Copy Error" = "複製錯誤";
+
+/* No comment provided by engineer. */
+"Copy Error Details" = "複製錯誤詳細";
+
+/* Missions Widget */
+"Daily" = "每日";
+
+/* Store */
+"Daily Offers" = "每日商店";
+
+/* App Icon Picker: section */
+"Default Icon" = "預設圖示";
+
+/* Win Rate Stats: chart legend */
+"Draws" = "平局";
+
+/* Request Log: shown in place of a status code (like 200 or 404) when sending failed. */
+"ERROR" = "錯誤";
+
+/* Request Log
+Stats: error details */
+"Error" = "錯誤";
+
+/* No comment provided by engineer. */
+"Error Details" = "錯誤詳細";
+
+/* Store */
+"Unknown Offer" = "未知商品";
+
+/* placeholder */
+"Unknown Skin" = "未知造型";
+
+/* Round Details: killed by unknown damage source/type */
+"Unknown Type" = "未知類型";
+
+/* No comment provided by engineer. */
+"Unknown Weapon" = "未知武器";
+
+/* No comment provided by engineer. */
+"Unknown bundle!" = "未知組合包！";
+
+/* No comment provided by engineer. */
+"Unknown mission!" = "未知任務！";
+
+/* Match Details: button */
+"Update Ranks" = "更新排位";
+
+/* No comment provided by engineer. */
+"Username" = "用戶名";
+
+/* No comment provided by engineer. */
+"Users" = "使用者";
+
+/* Asset Management: this row shows the version of the current assets */
+"Version" = "版本";
+
+/* Reference */
+"Version %@" = "版本 %@";
+
+/* Pro Store */
+"View All Features" = "查看所有功能";
+
+/* Match List */
+"View Stats" = "查看戰績";
+
+/* Rank Widget: description */
+"View your current rank." = "查看你的當前的排位";
+
+/* No comment provided by engineer. */
+"Year" = "年";
+
+/* No comment provided by engineer. */
+"signing in…" = "登入中...";

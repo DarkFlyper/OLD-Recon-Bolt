@@ -11,10 +11,10 @@
 /* No comment provided by engineer. */
 "%@%%" = "%@%%";
 
-/* No comment provided by engineer. */
+/* Missions Box: always at least 3 */
 "%lld Future Weeklies" = "%lld المهام الأسبوعية القادمة";
 
-/* No comment provided by engineer. */
+/* Missions Box: always at least 3 */
 "%lld Queued-Up Weeklies" = "%lld المهام الاسبوعية في قائمة الانتظار";
 
 /* No comment provided by engineer. */
@@ -56,7 +56,8 @@
 /* Time Formatting: minutes, seconds, & milliseconds (used in round details view) */
 "%lld:%@.%@" = "%lld:%@.%@";
 
-/* Contract Progress Bar */
+/* Contract Progress Bar
+Missions Box */
 "%lld / %lld XP" = "%lld/%lldXP";
 
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
@@ -109,7 +110,7 @@ Competitive matches after your placements can be identified without their detail
 /* Contract Picker */
 "Active" = "مفُعّل";
 
-/* No comment provided by engineer. */
+/* Missions Box: header */
 "Active Contract" = "عقد مفُعّل";
 
 /* Match List: accessibility label */
@@ -296,7 +297,7 @@ Playtime Stats: section */
 /* Storage Management: title for alert to confirm deleting some matches */
 "Confirm Delete" = "تأكيد الحذف";
 
-/* No comment provided by engineer. */
+/* Missions Box */
 "Contract complete!" = "اكتمل العقد!";
 
 /* No comment provided by engineer. */
@@ -643,7 +644,7 @@ Stats: error details */
 /* No comment provided by engineer. */
 "Match Loading Errors" = "أخطاء في تحميل المباراة";
 
-/* App Theme */
+/* App Theme: automatically match the system theme */
 "Match System" = "طبّق اعدادات الجهاز";
 
 /* Match List: section */
@@ -661,7 +662,7 @@ Stats: error details */
 /* Asset Management */
 "Missing assets!" = "موارد مفقودة!";
 
-/* No comment provided by engineer. */
+/* Missions Box */
 "Missing progress for contract!" = "تقدم العقد مفقود!";
 
 /* No comment provided by engineer. */
@@ -703,7 +704,7 @@ Stats: error details */
 /* Gun Customizer: shown when a weapon has no buddy active */
 "No buddy selected!" = "لم يتم اختيار ملحق!";
 
-/* No comment provided by engineer. */
+/* Missions Box */
 "No contract active!" = "لم يتم تفعيل عقد!";
 
 /* Win Rate Stats: by map */
@@ -864,7 +865,8 @@ Playtime Stats: section */
 /* Request Log: header */
 "Request" = "طلب";
 
-/* No comment provided by engineer. */
+/* Advanced Settings: button to open request log
+Request Log: title */
 "Request Log" = "سِجل الطلبات";
 
 /* No comment provided by engineer. */
@@ -981,7 +983,7 @@ Playtime Stats: section */
 /* Pro Store */
 "Support Further Development!" = "ادعم التطوير على المدى الطويل!";
 
-/* No comment provided by engineer. */
+/* Missions Box: button */
 "Switch Contract" = "بدّل العقد";
 
 /* No comment provided by engineer. */
@@ -1026,6 +1028,9 @@ Hit Distribution Stats: region */
 
 /* No comment provided by engineer. */
 "Total Space Used" = "المساحة الإجمالية المستخدمة";
+
+/* No comment provided by engineer. */
+"Tour de Force (Chamber)" = "ضربة معلم (تشامبر)";
 
 /* No comment provided by engineer. */
 "Twitter @juliand665" = "تويتر @juliand665";
@@ -1081,7 +1086,7 @@ Hit Distribution Stats: region */
 /* No comment provided by engineer. */
 "Unknown bundle!" = "حزمة غير معروفة!";
 
-/* No comment provided by engineer. */
+/* Missions Box */
 "Unknown contract!" = "عقد غير معروف!";
 
 /* No comment provided by engineer. */
@@ -1151,4 +1156,31 @@ Hit Distribution Stats: region */
 "Widget Refresh Requested" = "تم طلب تحديث الأداة";
 
 /* No comment provided by engineer. */
+"Win Rate" = "معدل الفوز";
+
+/* Win Rate Stats: chart legend */
+"Wins" = "انتصارات";
+
+/* No comment provided by engineer. */
 "Year" = "السنة";
+
+/* Match Details: footnote */
+"You can also tap a round's number in the kill breakdown above to quickly view its details." = "يمكنك أيضًا النقر فوق رقم الجولة في تفاصيل القتل أعلاه لعرض تفاصيلها بسرعة.";
+
+/* No comment provided by engineer. */
+"You can enable 2-factor authentication, so you'd at least have another layer of security if it went bad." = "يمكنك تمكين المصادقة الثنائية ، بحيث يكون لديك على الأقل طبقة أخرى من الأمان.";
+
+/* No comment provided by engineer. */
+"Your credentials only ever leave your device in the form of a login request directly to Riot. They are never stored or sent anywhere else." = "لا تترك بيانات الاعتماد الخاصة بك جهازك إلا في شكل طلب تسجيل دخول مباشرة إلى شركة Riot. لا يتم تخزينها أو إرسالها إلى أي مكان آخر.";
+
+/* No comment provided by engineer. */
+"Your session has expired! Recon Bolt has tried to refresh it for you, but needs 2FA confirmation." = "انتهت صلاحية جلستك! حاول Recon Bolt تحديثه لك ، لكنه يحتاج إلى تأكيد 2FA.";
+
+/* No comment provided by engineer. */
+"iOS is a bit finnicky about this, so widgets may not refresh right away—feel free to restart if this doesn't help!" = "نظام iOS صعب بعض الشيء حيال هذا الأمر ، لذا قد لا يتم تحديث الأدوات على الفور - لا تتردد في إعادة التشغيل الجهاز إذا لم يساعد ذلك!";
+
+/* Missions Widget: countdown label when the target is in the past. Should never really show up, since at this point there's new data. */
+"old" = "قديم";
+
+/* No comment provided by engineer. */
+"signing in…" = "جاري تسجيل الدخول…";
