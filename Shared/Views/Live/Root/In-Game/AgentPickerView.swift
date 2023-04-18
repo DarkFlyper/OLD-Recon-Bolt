@@ -65,7 +65,7 @@ struct AgentPickerView: View {
 					// random agent
 					AsyncButton {
 						await load {
-							let agent = inventory.agents.subtracting(takenAgents).randomElement()!
+							guard let agent = inventory.agents.subtracting(takenAgents).randomElement() else { return }
 							pregameInfo = try await $0.pickAgent(agent, in: pregameInfo.id)
 						}
 					} label: {
