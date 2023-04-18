@@ -84,7 +84,7 @@ Missions Box */
 /* No comment provided by engineer. */
 "A 2FA code has been sent to your email address %@" = "تم ارسال كود التوثيق الى هذا الايميل: %@";
 
-/* No comment provided by engineer. */
+/* Match List Filter */
 "A match's queue is unknown until its details are fetched (by tapping it or performing the swipe action).
 Competitive matches after your placements can be identified without their details, however." = "قائمة انتظار المباراة غير معروفة حتى يتم جلب تفاصيلها (عن طريق النقر عليها أو تنفيذ إجراء التمرير).
 ومع ذلك ، يمكن التعرف على المطابقات التنافسية بعد مواضعك بدون تفاصيلها.";
@@ -170,9 +170,6 @@ Competitive matches after your placements can be identified without their detail
 /* Pro Features List */
 "As thanks for your support, you get to show off your status with an exclusive app icon!" = "شكراً لدعمك ، الان تستطيع التباهي بأيقونة تطبيق حصرية!";
 
-/* About Screen */
-"As you can guess, the scope expanded massively over time to what you're using now. I hope you're enjoying it!" = "كما يمكنك التخمين ، توسع النطاق بشكل كبير بمرور الوقت إلى ما تستخدمه الآن. أتمنى أن تكون مستمتعًا به!";
-
 /* No comment provided by engineer. */
 "Assets" = "الموارد";
 
@@ -190,9 +187,6 @@ Competitive matches after your placements can be identified without their detail
 
 /* Asset Management */
 "Assets up to date!" = "الموارد محدثة!";
-
-/* No comment provided by engineer. */
-"Assuming you signed up for Valorant using Google/Apple/etc., you can set up your account to add a username & password on Riot's site at [account.riotgames.com](https://account.riotgames.com). Note that your Riot ID is **not** the same as your username! If you've forgotten your username, you can reset it at [recovery.riotgames.com](https://recovery.riotgames.com)." = "بافتراض أنك اشتركت في Valorant باستخدام Google / Apple / وما إلى ذلك ، يمكنك إعداد حسابك لإضافة اسم مستخدم وكلمة مرور على موقع Riot على [account.riotgames.com] (https://account.riotgames.com). لاحظ أن معرف Riot الخاص بك ** ليس ** هو نفس اسم المستخدم الخاص بك! إذا نسيت اسم المستخدم الخاص بك ، فيمكنك إعادة تعيينه على [recovery.riotgames.com] (https://recovery.riotgames.com).";
 
 /* Win Rate Stats: side name */
 "Attacking" = "هجوم";
@@ -330,7 +324,7 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Could not look up %@" = "فشل في العثور على %@";
 
-/* No comment provided by engineer. */
+/* Login Form: error title */
 "Could not sign in!" = "فشل تسجيل الدخول!";
 
 /* Asset Management */
@@ -497,9 +491,6 @@ Stats: error details */
 /* No comment provided by engineer. */
 "Headhunter (Chamber)" = "صياد الرؤوس (تشامبر)";
 
-/* About Screen */
-"Hi! I'm Julian Dunskus, and I made this app." = "مرحبا! انا اسمي جوليان ضنسقس وانا قمت بصناعة هذا التطبيق.";
-
 /* Hit Distribution Stats: title */
 "Hit Distribution" = "تقصيم الضربات";
 
@@ -509,23 +500,17 @@ Stats: error details */
 /* Pro Store */
 "I hope you enjoy the pro features :)" = "اتمنى ان تعجبك مميزات ال Pro!";
 
-/* No comment provided by engineer. */
+/* Login Form: is this safe? */
 "I won't sugarcoat things. Due to the way this app uses the API, I believe there's no other way to sign in than to have people enter their credentials directly. Under those circumstances, there's really no good way for anyone to be sure their credentials remain safe. For what it's worth:" = "لن أقوم بتلوين الأشياء. نظرًا للطريقة التي يستخدم بها هذا التطبيق واجهة برمجة التطبيقات ، أعتقد أنه لا توجد طريقة أخرى لتسجيل الدخول سوى جعل الأشخاص يدخلون بيانات اعتمادهم مباشرة. في ظل هذه الظروف ، لا توجد طريقة جيدة لأي شخص للتأكد من أن أوراق اعتماده تظل آمنة. لما يستحق:";
 
 /* No comment provided by engineer. */
 "Identities" = "الهويات";
-
-/* No comment provided by engineer. */
-"If you don't know your username or don't have one, you can fix that at [account.riotgames.com](https://account.riotgames.com)." = "إذا كنت لا تعرف اسم المستخدم الخاص بك أو لم يكن لديك اسم مستخدم ، فيمكنك إصلاح ذلك على [account.riotgames.com] (https://account.riotgames.com).";
 
 /* Pro Features List */
 "If you have accounts in multiple regions to play with friends around the world, this is the feature for you!" = "إذا كان لديك حسابات في مناطق متعددة للعب مع الأصدقاء حول العالم ، فهذه هي الميزة المناسبة لك!";
 
 /* Pro Features List */
 "If you have multiple accounts, you can configure separate widgets for each and have them on your Home Screen at the same time." = "إذا كان لديك حسابات متعددة ، فيمكنك تكوين ويدجات منفصلة لكل منها ووضعها على شاشتك الرئيسية في نفس الوقت.";
-
-/* About Screen */
-"If you've encountered a bug or have some feedback, I'm always happy to hear it on the Discord Server or GitHub :)" = "إذا واجهت خطأ أو كانت لديك بعض التعليقات ، فأنا دائمًا سعيد لسماعها على Discord Server أو GitHub :)";
 
 /* No comment provided by engineer. */
 "If your widgets seem broken, use this button to request an immediate refresh from iOS." = "إذا بدت الويدجات معطلة ، فاستخدم هذا الزر لطلب تحديث فوري من iOS.";
@@ -539,7 +524,7 @@ Stats: error details */
 /* Settings: section */
 "In-App Store" = "المتجر";
 
-/* No comment provided by engineer. */
+/* Login Form: button/header */
 "Is this safe?" = "هل هذا أمن؟";
 
 /* No comment provided by engineer. */
@@ -610,9 +595,6 @@ Stats: error details */
 
 /* Bookmark/Player List: lookup button */
 "Look Up" = "إبحث";
-
-/* No comment provided by engineer. */
-"Looks like you're trying to enter your Riot ID (and tagline) as username! Your username is actually something else: it's what you use to sign into the Valorant launcher." = "يبدو أنك تحاول إدخال اسم تعريف RIOT (والشعار) كاسم مستخدم! اسم المستخدم الخاص بك هو في الواقع شيء آخر: إنه ما تستخدمه لتسجيل الدخول إلى مشغّل Valorant.";
 
 /* Win Rate Stats: chart legend */
 "Losses" = "الخسارات";
@@ -744,9 +726,6 @@ Stats: error details */
 "Official Website" = "الموقع الرسمي";
 
 /* No comment provided by engineer. */
-"On that site, navigate to **Riot Account Sign-in** and set yourself a username and password. When you're done, you can use those same credentials to sign in above! Your social account will stay linked and you'll remain able to sign in with that on PC :)" = "في هذا الموقع ، انتقل إلى ** تسجيل الدخول إلى حساب Riot ** وقم بتعيين اسم مستخدم وكلمة مرور لنفسك. عند الانتهاء ، يمكنك استخدام نفس بيانات الاعتماد لتسجيل الدخول أعلاه! سيبقى حسابك الاجتماعي مرتبطًا وستظل قادرًا على تسجيل الدخول باستخدام ذلك على جهاز الكمبيوتر :)";
-
-/* No comment provided by engineer. */
 "Open or swipe to fetch details." = "افتح أو اسحب لجلب التفاصيل.";
 
 /* Storage Management */
@@ -772,7 +751,7 @@ Playtime Stats: section */
 /* Scoreboard: party letter */
 "Party %@" = "فرقة %@";
 
-/* No comment provided by engineer. */
+/* Login Form */
 "Password" = "كلمة المرور";
 
 /* Agent View: label for player who hasn't picked an agent yet */
@@ -837,9 +816,6 @@ Playtime Stats: section */
 
 /* Pro Features List */
 "Recon Bolt does not have and will never have ads. The only way it can make money is through in-app purchases." = "ليس هناك في Recon Bolt إعلانات ولن يكون أبدًا. الطريقة الوحيدة لكسب المال هي من خلال عمليات الشراء داخل التطبيق.";
-
-/* About Screen */
-"Recon Bolt started development in early 2021, back when it wasn't yet possible to see your RR gains and losses in the game, but the API offered those numbers." = "بدأ Recon Bolt التطوير في أوائل عام 2021 ، عندما لم يكن من الممكن بعد رؤية مكاسب وخسائر RR الخاصة بك في اللعبة ، لكن API قدمت هذه الأرقام.";
 
 /* Top-Level Tab Title */
 "Reference" = "مرجع";
@@ -923,16 +899,17 @@ Request Log: title */
 /* App Icon Description: pro blue */
 "Show off your pro status with an exclusive icon!" = "تباهر بحالتك Pro بأستخدام ايقونة حصرية للتطبيق!";
 
-/* Account Settings: button */
+/* Account Settings: button
+Login Form: button */
 "Sign In" = "سجّل الدخول";
 
-/* No comment provided by engineer. */
+/* Login Form */
 "Sign In with your Riot account" = "سجّل الدخول بحساب Riot";
 
 /* Account Settings */
 "Sign Out" = "خروج";
 
-/* No comment provided by engineer. */
+/* Login Form: button/header */
 "Sign in with Google/Apple/etc." = "سجّل الدخول بحساب Google/Apple/etc.";
 
 /* Hit Distribution Stats: smoothing slider */
@@ -983,7 +960,7 @@ Request Log: title */
 /* Missions Box: button */
 "Switch Contract" = "بدّل العقد";
 
-/* No comment provided by engineer. */
+/* Login Form: is this safe? */
 "TL;DR: you'll have to take my word for it, but Riot doesn't seem to mind." = "عليك أن تأخذ كلامي من أجل ذلك ، لكن يبدو أن شركة Riot لا تمانع.";
 
 /* Bookmark/Player List: lookup tag placeholder */
@@ -992,7 +969,7 @@ Request Log: title */
 /* Pro Store */
 "Thank you for supporting Recon Bolt!" = "شكراً لدعمك ل Recon Bolt!";
 
-/* No comment provided by engineer. */
+/* Login Form: is this safe? */
 "The code is open-source and visible on GitHub; you can build it yourself if you want to be sure of what's running." = "الكود مفتوح المصدر ومرئي على GitHub ؛ يمكنك بنائه بنفسك إذا كنت تريد التأكد مما يتم تشغيله.";
 
 /* App Icon Description: default */
@@ -1006,9 +983,6 @@ Request Log: title */
 
 /* No comment provided by engineer. */
 "These are the last %lld requests sent by the app, along with their responses." = "هذه هي آخر %lld من الطلبات التي أرسلها التطبيق ، بالإضافة إلى استجاباتهم.";
-
-/* About Screen: section */
-"Third-Party Libraries & APIs Used" = "مكتبات الطرف الثالث وواجهات برمجة التطبيقات المستخدمة";
 
 /* Statistics error for iOS <16 */
 "This feature requires iOS 16 or newer." = "تتطلب هذه الميزة iOS 16 أو أحدث.";
@@ -1040,9 +1014,6 @@ Hit Distribution Stats: region */
 
 /* Hit Distribution Stats: footnote */
 "Unfortunately, Valorant doesn't store information about which weapon was used for each hit. All we get is the weapon you started the round with and what weapon you used for each kill. Recon Bolt guesses the weapon involved in each damage based on this information, but it cannot be perfect (and neither can any other tracker)." = "لسوء الحظ ، لا يقوم Valorant بتخزين المعلومات حول السلاح الذي تم استخدامه لكل ضربة. كل ما نحصل عليه هو السلاح الذي بدأت به الجولة والسلاح الذي استخدمته في كل عملية قتل. يخمن Recon Bolt السلاح المتضمن في كل ضرر بناءً على هذه المعلومات ، لكنه لا يمكن أن يكون مثاليًا (ولا يمكن لأي tracker آخر).";
-
-/* No comment provided by engineer. */
-"Unfortunately, due to technical limitations, you cannot sign into Recon Bolt via your Google account, Apple ID, or anything but a Riot account." = "لسوء الحظ ، نظرًا للقيود التقنية، لا يمكنك تسجيل الدخول إلى Recon Bolt عبر حساب Google أو معرف Apple أو أي شيء سوى حساب Riot.";
 
 /* Round Details: killed by unknown ability */
 "Unknown Ability" = "قدرة غير معروفة";
@@ -1095,7 +1066,7 @@ Hit Distribution Stats: region */
 /* Match Details: button */
 "Update Ranks" = "حدّث المراتب";
 
-/* No comment provided by engineer. */
+/* Login Form */
 "Username" = "اسم المستخدم";
 
 /* No comment provided by engineer. */
@@ -1164,10 +1135,10 @@ Hit Distribution Stats: region */
 /* Match Details: footnote */
 "You can also tap a round's number in the kill breakdown above to quickly view its details." = "يمكنك أيضًا النقر فوق رقم الجولة في تفاصيل القتل أعلاه لعرض تفاصيلها بسرعة.";
 
-/* No comment provided by engineer. */
+/* Login Form: is this safe? */
 "You can enable 2-factor authentication, so you'd at least have another layer of security if it went bad." = "يمكنك تمكين المصادقة الثنائية ، بحيث يكون لديك على الأقل طبقة أخرى من الأمان.";
 
-/* No comment provided by engineer. */
+/* Login Form: is this safe? */
 "Your credentials only ever leave your device in the form of a login request directly to Riot. They are never stored or sent anywhere else." = "لا تترك بيانات الاعتماد الخاصة بك جهازك إلا في شكل طلب تسجيل دخول مباشرة إلى شركة Riot. لا يتم تخزينها أو إرسالها إلى أي مكان آخر.";
 
 /* No comment provided by engineer. */
@@ -1179,5 +1150,5 @@ Hit Distribution Stats: region */
 /* Missions Widget: countdown label when the target is in the past. Should never really show up, since at this point there's new data. */
 "old" = "قديم";
 
-/* No comment provided by engineer. */
+/* Login Form */
 "signing in…" = "جاري تسجيل الدخول…";
