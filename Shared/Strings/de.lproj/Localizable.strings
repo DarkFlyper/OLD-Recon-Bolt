@@ -148,7 +148,7 @@ Competitive matches after your placements can be identified without their detail
 /* Statistics Filter */
 "Allowing %lld/%lld matches (%lld filtered out)" = "%lld von %lld Spielen zugelassen (%lld rausgefiltert)";
 
-/* No comment provided by engineer. */
+/* Default Error Alert Title */
 "An Error Occurred!" = "Es ist ein Fehler aufgetreten!";
 
 /* About Screen */
@@ -316,9 +316,6 @@ Playtime Stats: section */
 
 /* No comment provided by engineer. */
 "Could not Change App Icon!" = "App-Icon konnte nicht geändert werden!";
-
-/* No comment provided by engineer. */
-"Could not Load Account!" = "Konto konnte nicht geladen werden!";
 
 /* No comment provided by engineer. */
 "Could not delete files!" = "Dateien konnten nicht gelöscht werden!";
@@ -807,10 +804,10 @@ Playtime Stats: section */
 /* App Icon Picker: section */
 "Pro Icons" = "Pro-Icons";
 
-/* No comment provided by engineer. */
+/* Pro Store: error alert title */
 "Purchase Failed!" = "Kauf fehlgeschlagen!";
 
-/* Pro Store (placeholder filled with formatted currency) */
+/* Pro Store: button (placeholder filled with formatted currency) */
 "Purchase – %@" = "Kaufen – %@";
 
 /* No comment provided by engineer. */
