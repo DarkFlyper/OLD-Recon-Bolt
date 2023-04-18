@@ -8,7 +8,7 @@
 /* wrong account error */
 "It looks like this account has never played Valorant!
 
-You've probably signed into the wrong account; %@" = "看起來這個賬戶還沒有玩過特戰英豪！
+You've probably signed into the wrong account; %@" = "看起來這個賬號還沒有玩過特戰英豪！
 你可能登入了錯誤的帳號 %@";
 
 /* No comment provided by engineer. */
