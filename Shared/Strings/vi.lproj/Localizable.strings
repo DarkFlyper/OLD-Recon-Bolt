@@ -12,10 +12,10 @@
 "%@%%" = "%@%%";
 
 /* Missions Box: always at least 3 */
-"%lld Future Weeklies" = "%lld nhiệm vụ tuần trong tương lai";
+"%lld Future Weeklies" = "%lld Nhiệm vụ tuần trong tương lai";
 
 /* Missions Box: always at least 3 */
-"%lld Queued-Up Weeklies" = "%lld Nhiệm vụ tuần đã hết hạn";
+"%lld Queued-Up Weeklies" = "%lld Hàng chờ nhiệm vụ tuần";
 
 /* No comment provided by engineer. */
 "%lld RR" = "%lld ĐXH";
@@ -24,10 +24,10 @@
 "%lld from other players" = "%lld từ những người chơi khác";
 
 /* Loadout Item Picker: number of hidden items—this should never show nowadays */
-"%lld hidden due to outdated assets" = "%lld ẩn do nội dung đã hết hạn";
+"%lld hidden due to outdated assets" = "%lld bị ẩn do nội dung lỗi thời";
 
 /* Hit Distribution Stats: hit count */
-"%lld hits" = "%lld trúng đích";
+"%lld hits" = "%lld lần trúng đích";
 
 /* Shown at the bottom of the expandable playtime list when there are more entries available. */
 "%lld more" = "%lld thêm";
