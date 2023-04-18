@@ -12,7 +12,7 @@
 
 You've probably signed into the wrong account; %@" = "Tài khoản này chưa từng chơi Valorant!
 
-Có thể bạn đã đăng nhập vào sai tài khoản; %@";
+Có vẻ bạn đã đăng nhập sai tài khoản; %@";
 
 /* No comment provided by engineer. */
 "Keychain error for key '%@': %@" = "Lỗi chuỗi khóa cho mục '%@': %@";
@@ -22,6 +22,9 @@ Có thể bạn đã đăng nhập vào sai tài khoản; %@";
 
 /* error loading the account for a widget. */
 "Malformed account." = "Tài khoản không đúng định dạng.";
+
+/* store widget error */
+"Missing Assets!" = "Thiếu nội dung!";
 
 /* No comment provided by engineer. */
 "Missing game configuration data for %@ region!" = "Không có sẵn dữ liệu cấu hình cho khu vực %@!";
