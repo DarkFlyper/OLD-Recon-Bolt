@@ -15,7 +15,7 @@
 "%lld Future Weeklies" = "%lld Nhiệm vụ tuần trong tương lai";
 
 /* Missions Box: always at least 3 */
-"%lld Queued-Up Weeklies" = "%lld Hàng chờ nhiệm vụ tuần";
+"%lld Queued-Up Weeklies" = "%lld hàng chờ nhiệm vụ";
 
 /* No comment provided by engineer. */
 "%lld RR" = "%lld ĐXH";
@@ -329,6 +329,9 @@ Playtime Stats: section */
 /* Login Form: error title */
 "Could not sign in!" = "Không thể đăng nhập!";
 
+/* About Screen: section */
+"Credits" = "Credits";
+
 /* Asset Management */
 "Current version: %@" = "Phiên bản hiện tại: %@";
 
@@ -360,7 +363,7 @@ Playtime Stats: section */
 "Dark Mode" = "Chế độ tối";
 
 /* Hit Distribution Stats */
-"Data from %lld games (%lld skipped lacking data)" = "Dữ liệu từ %lld trận (%lld đã bỏ qua dữ liệu bị thiếu)";
+"Data from %lld games (%lld skipped lacking data)" = "Dữ liệu từ %lld trận (%lld trận đã bị loại bỏ do thiếu dữ liệu)";
 
 /* Stats: match loading */
 "Data going back to %@" = "Dữ liệu trở lại đến %@";
@@ -496,6 +499,21 @@ BÁO CÁO LỖI CỦA BẠN TẠI ĐÂY
 /* No comment provided by engineer. */
 "Headhunter (Chamber)" = "Kẻ săn đầu người (Chamber)";
 
+/* About Screen */
+"Hi! I'm Julian Dunskus, and I made this app.
+
+Recon Bolt started development in early 2021, back when it wasn't yet possible to see your RR gains and losses in the game, but the API offered those numbers. I made an app to see the numbers and better understand my rank changes.
+
+As you can guess, the scope expanded massively over time to what you're using now. I hope you're enjoying it!
+
+If you've encountered a bug or have some feedback, I'm always happy to hear it on the Discord Server or GitHub :)" = "Chào! Tôi là Julian Dunskus và tôi đã tạo ứng dụng này.
+
+Recon Bolt bắt đầu phát triển vào đầu năm 2021, khi chưa thể xem sự tăng giảm ĐXH của bạn trong trò chơi, nhưng API đã cung cấp những con số đó. Tôi đã tạo một ứng dụng để xem các con số và hiểu rõ hơn về sự thay đổi thứ hạng của mình. 
+
+Như bạn có thể đoán được, dự án ngày càng trở lên lớn hơn theo thời gian, cuối cùng trở thành ứng dụng mà bạn đang sử dụng. Tôi hy vọng bạn thích nó! 
+
+Nếu bạn gặp lỗi hoặc có một số phản hồi, tôi luôn sẵn lòng lắng nghe điều đó trên Discord hoặc GitHub :)";
+
 /* Hit Distribution Stats: title */
 "Hit Distribution" = "Phân bố bắn trúng đích";
 
@@ -601,6 +619,13 @@ BÁO CÁO LỖI CỦA BẠN TẠI ĐÂY
 /* Bookmark/Player List: lookup button */
 "Look Up" = "Tìm kiếm";
 
+/* Login Form */
+"Looks like you're trying to enter your Riot ID (and tagline) as username! Your username is actually something else: it's what you use to sign into the Valorant launcher.
+
+If you don't know your username or don't have one, you can fix that at [account.riotgames.com](https://account.riotgames.com)." = "Có vẻ như bạn đang cố nhập ID Riot (và tagline) của mình làm tên người dùng! Tên người dùng của bạn thực ra là một thứ khác: đó là thứ bạn dùng để đăng nhập vào Valorant qua Riot Client. 
+
+Nếu không biết tên người dùng của mình hoặc không có, bạn có thể lấy lại tại [account.riotgames.com](https://account.riotgames.com).";
+
 /* Win Rate Stats: chart legend */
 "Losses" = "Thua";
 
@@ -609,6 +634,9 @@ BÁO CÁO LỖI CỦA BẠN TẠI ĐÂY
 
 /* No comment provided by engineer. */
 "Manage Local Storage" = "Quản lý bộ nhớ cục bộ";
+
+/* About Screen */
+"Many thanks to the volunteer translators from our Discord server who have been hard at working translating the app to new languages!" = "Rất cảm ơn các dịch giả tình nguyện từ máy chủ Discord của chúng tôi, những người đã làm việc chăm chỉ để dịch ứng dụng sang các ngôn ngữ mới!";
 
 /* No comment provided by engineer. */
 "Map" = "Bản đồ";
@@ -1028,6 +1056,17 @@ Hit Distribution Stats: region */
 
 /* Hit Distribution Stats: footnote */
 "Unfortunately, Valorant doesn't store information about which weapon was used for each hit. All we get is the weapon you started the round with and what weapon you used for each kill. Recon Bolt guesses the weapon involved in each damage based on this information, but it cannot be perfect (and neither can any other tracker)." = "Thật không may, Valorant không lưu trữ thông tin về vũ khí nào được sử dụng cho mỗi lần bắn trúng đích. Tất cả những gì chúng tôi nhận được là vũ khí bạn bắt đầu hiệp đấu và vũ khí bạn sử dụng cho mỗi lần tiêu diệt. Recon Bolt đoán vũ khí đã gây sát thương dựa trên thông tin này, nhưng nó không thể hoàn toàn chính xác (và các trang thông số khác cũng vậy).";
+
+/* Login Form: sign in with google/apple/etc. */
+"Unfortunately, due to technical limitations, you cannot sign into Recon Bolt via your Google account, Apple ID, or anything but a Riot account.
+
+Assuming you signed up for Valorant using Google/Apple/etc., you can set up your account to add a username & password on Riot's site at [account.riotgames.com](https://account.riotgames.com). Note that your Riot ID is **not** the same as your username! If you've forgotten your username, you can reset it at [recovery.riotgames.com](https://recovery.riotgames.com).
+
+On that site, navigate to **Riot Account Sign-in** and set yourself a username and password. When you're done, you can use those same credentials to sign in above! Your social account will stay linked and you'll remain able to sign in with that on PC :)" = "Thật không may, do những hạn chế về kỹ thuật, bạn không thể đăng nhập vào Recon Bolt thông qua tài khoản Google, ID Apple hoặc bất kỳ thứ gì khác ngoài tài khoản Riot. 
+
+Giả sử bạn đã đăng ký Valorant bằng Google/Apple/v.v., bạn có thể thiết lập tài khoản của mình để thêm tên người dùng và mật khẩu trên trang web của Riot tại [account.riotgames.com](https://account.riotgames.com). Lưu ý rằng Riot ID của bạn **không** giống với tên người dùng của bạn! Nếu bạn quên tên người dùng của mình, bạn có thể đặt lại tên người dùng đó tại [recovery.riotgames.com](https://recovery.riotgames.com). 
+
+Trên trang web đó, hãy điều hướng đến **Riot Account Sign-in** và đặt cho mình một tên người dùng và mật khẩu. Khi hoàn tất, bạn có thể sử dụng các thông tin đăng nhập đó để đăng nhập ở trên! Tài khoản mạng xã hội của bạn sẽ được liên kết và bạn vẫn có thể đăng nhập bằng tài khoản đó trên PC :)";
 
 /* Round Details: killed by unknown ability */
 "Unknown Ability" = "Kỹ năng không xác định";
