@@ -247,7 +247,7 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Could not free up space!" = "沒有足夠的空間!";
 
-/* No comment provided by engineer. */
+/* Login Form: error title */
 "Could not sign in!" = "無法登入!";
 
 /* Asset Management */
@@ -377,9 +377,6 @@ Stats: error details */
 /* No comment provided by engineer. */
 "Headhunter (Chamber)" = "獵頭 (錢伯爾)";
 
-/* About Screen */
-"Hi! I'm Julian Dunskus, and I made this app." = "你好 我是Julian Dunskus, 我製作這個應用程式.";
-
 /* Pro Store */
 "Home Screen Widgets" = "主頁面小工貝";
 
@@ -392,7 +389,7 @@ Stats: error details */
 /* Settings: section */
 "In-App Store" = "商店";
 
-/* No comment provided by engineer. */
+/* Login Form: button/header */
 "Is this safe?" = "這安全嗎?";
 
 /* Asset Management: this row shows the language of the current assets */
@@ -518,7 +515,7 @@ Stats: error details */
 /* Storage Management */
 "Other Players" = "其他玩家";
 
-/* No comment provided by engineer. */
+/* Login Form */
 "Password" = "密碼";
 
 /* Agent View: label for player who hasn't picked an agent yet */
@@ -600,16 +597,17 @@ Request Log: title */
 /* Top-Level Tab Title */
 "Settings" = "設定";
 
-/* Account Settings: button */
+/* Account Settings: button
+Login Form: button */
 "Sign In" = "登入";
 
-/* No comment provided by engineer. */
+/* Login Form */
 "Sign In with your Riot account" = "登入你的拳頭帳號";
 
 /* Account Settings */
 "Sign Out" = "登出";
 
-/* No comment provided by engineer. */
+/* Login Form: button/header */
 "Sign in with Google/Apple/etc." = "登入為 Google/Apple/etc.";
 
 /* App Icon Description: default */
@@ -642,7 +640,7 @@ Request Log: title */
 /* Match Details: button */
 "Update Ranks" = "更新排位";
 
-/* No comment provided by engineer. */
+/* Login Form */
 "Username" = "用戶名";
 
 /* No comment provided by engineer. */
@@ -696,7 +694,7 @@ Request Log: title */
 /* Loadout: spray slot */
 "pre-round" = "回合前";
 
-/* No comment provided by engineer. */
+/* Login Form */
 "signing in…" = "登入中...";
 
 /* Loadout: unknown spray slot (should never appear unless Riot changes something) */
