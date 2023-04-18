@@ -3,6 +3,7 @@ import SwiftUI
 struct InAppStorefront: View {
 	@ObservedObject var store: InAppStore
 	@State var purchaseError: Error?
+	@State var restorationError: Error?
 	
 	var body: some View {
 		HStack {
@@ -51,6 +52,7 @@ struct InAppStorefront: View {
 		
 		if !store.ownsProVersion {
 			purchaseButton
+			restoreButton
 		}
 	}
 	
@@ -65,10 +67,12 @@ struct InAppStorefront: View {
 					purchaseError = error
 				}
 			} label: {
-				Text("Purchase – \(product.displayPrice)", comment: "Pro Store (placeholder filled with formatted currency)")
+				Text("Purchase – \(product.displayPrice)", comment: "Pro Store: button (placeholder filled with formatted currency)")
+					.fontWeight(.medium)
 					.frame(maxWidth: .infinity)
 			}
-			.alert("Purchase Failed!", for: $purchaseError)
+			.alert(Text("Purchase Failed!", comment: "Pro Store: error alert title"), for: $purchaseError)
+			.aligningListRowSeparator()
 		} else {
 			HStack {
 				Text("Loading Store Info…", comment: "Pro Store")
@@ -78,6 +82,23 @@ struct InAppStorefront: View {
 			}
 			.task { await store.fetchProducts() }
 		}
+	}
+	
+	@ViewBuilder
+	var restoreButton: some View {
+		AsyncButton {
+			do {
+				try await store.restorePurchase(for: store.proVersion)
+			} catch {
+				print(error)
+				restorationError = error
+			}
+		} label: {
+			Text("Restore Purchase", comment: "Pro Store: button")
+				.frame(maxWidth: .infinity)
+		}
+		.alert(Text("Restore Failed!", comment: "Pro Store: error alert title"), for: $restorationError)
+		.aligningListRowSeparator()
 	}
 }
 

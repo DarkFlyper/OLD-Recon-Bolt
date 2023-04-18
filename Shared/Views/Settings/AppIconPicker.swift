@@ -22,7 +22,7 @@ struct AppIconPicker: View {
 			}
 		}
 		.navigationTitle("Choose App Icon")
-		.alert("Could not Change App Icon!", for: $selectionError)
+		.alert(Text("Could not Change App Icon!"), for: $selectionError)
 	}
 	
 	func cell(for icon: AppIcon) -> some View {

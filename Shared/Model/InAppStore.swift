@@ -82,9 +82,21 @@ final class InAppStore: ObservableObject {
 		}
 	}
 	
-	func updateStatus(of product: ResolvableProduct) async {
-		let latest = await Transaction.latest(for: product.id)
-		guard let transaction = try? latest?.payloadValue else { return }
+	func restorePurchase(for product: ResolvableProduct) async throws {
+		let latest = try await Transaction.latest(for: product.id)
+		??? PurchaseRestorationError.noTransaction
+		
+		let transaction: Transaction
+		do {
+			transaction = try latest.payloadValue
+		} catch {
+			throw PurchaseRestorationError.errorVerifying(error)
+		}
+		
+		if let reason = transaction.revocationReason {
+			throw PurchaseRestorationError.transactionRevoked(reason)
+		}
+		
 		update(from: transaction)
 	}
 	
@@ -92,9 +104,10 @@ final class InAppStore: ObservableObject {
 		.detached { [weak self] in
 			for await result in Transaction.updates {
 				do {
+					guard let self else { break }
 					print("received", result)
 					let transaction = try result.payloadValue
-					await self?.update(from: transaction)
+					await self.update(from: transaction)
 					await transaction.finish()
 				} catch {
 					print("error processing listened transaction:", error)
@@ -112,6 +125,45 @@ final class InAppStore: ObservableObject {
 			products.insert(transaction.productID)
 		} else {
 			products.remove(transaction.productID)
+		}
+	}
+}
+
+enum PurchaseRestorationError: LocalizedError {
+	case noTransaction
+	case transactionRevoked(Transaction.RevocationReason)
+	case errorVerifying(Error)
+	
+	var errorDescription: String? {
+		switch self {
+		case .noTransaction:
+			return String(
+				localized: "No previous transaction found!",
+				table: "Errors",
+				comment: "Pro Store: error restoring purchase"
+			)
+		case .transactionRevoked(let reason):
+			let description: String
+			if #available(iOS 15.4, *) {
+				description = reason.localizedDescription
+			} else {
+				description = String(
+					localized: "Update to iOS 15.4 to see the reason!",
+					table: "Errors",
+					comment: "Pro Store: error restoring purchase: replacement for revokation reason on outdated iOS where it's not available"
+				)
+			}
+			return String(
+				localized: "Previous purchase was revoked! Reason: \(description)",
+				table: "Errors",
+				comment: "Pro Store: error restoring purchase (placeholder is reason why it was revoked)"
+			)
+		case .errorVerifying(let error):
+			return String(
+				localized: "A previous transaction was found, but it could not be verified! \(error.localizedDescription)",
+				table: "Errors",
+				comment: "Pro Store: error restoring purchase"
+			)
 		}
 	}
 }

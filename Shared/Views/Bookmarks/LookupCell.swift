@@ -81,7 +81,7 @@ struct LookupCell: View {
 		Task {
 			isLoading = true
 			let name = "\(gameName) #\(tagLine)"
-			await load("Could not look up \(name)") {
+			await load(errorTitle: "Could not look up \(name)") {
 				let (user, location) = try await HenrikClient.shared.lookUpPlayer(name: gameName, tag: tagLine)
 				LocalDataProvider.dataFetched(user)
 				dispatchPrecondition(condition: .onQueue(.main))

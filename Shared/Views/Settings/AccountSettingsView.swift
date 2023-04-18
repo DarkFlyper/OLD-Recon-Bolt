@@ -132,7 +132,7 @@ struct AccountSettingsView: View {
 				
 				Spacer()
 			}
-			.alert("Could not Load Account!", for: $loadError)
+			.alert(Text("Could Not Load Account!"), for: $loadError)
 			.deleteDisabled(isActive)
 		}
 	}

@@ -1,3 +1,6 @@
+/* Pro Store: error restoring purchase */
+"A previous transaction was found, but it could not be verified! %@" = "A previous transaction was found, but it could not be verified! %@";
+
 /* error loading the account for a widget */
 "Could not load active account!" = "Could not load active account!";
 
@@ -34,8 +37,14 @@ If you have Pro, add an account using the same credentials to replace the accoun
 /* error loading the account for a widget. */
 "No account specified." = "No account specified.";
 
+/* Pro Store: error restoring purchase */
+"No previous transaction found!" = "No previous transaction found!";
+
 /* Riot API Error */
 "Please try again in %lld seconds." = "Please try again in %lld seconds.";
+
+/* Pro Store: error restoring purchase (placeholder is reason why it was revoked) */
+"Previous purchase was revoked! Reason: %@" = "Previous purchase was revoked! Reason: %@";
 
 /* Riot API Error */
 "The API rejected your authorization." = "The API rejected your authorization.";
@@ -60,6 +69,9 @@ If you have Pro, add an account using the same credentials to replace the accoun
 
 /* No comment provided by engineer. */
 "Unknown keychain error: %d" = "Unknown keychain error: %d";
+
+/* Pro Store: error restoring purchase: replacement for revokation reason on outdated iOS where it's not available */
+"Update to iOS 15.4 to see the reason!" = "Update to iOS 15.4 to see the reason!";
 
 /* Riot API Error */
 "Valorant is currently undergoing scheduled maintenance. Riot is probably updating the game!" = "Valorant is currently undergoing scheduled maintenance. Riot is probably updating the game!";

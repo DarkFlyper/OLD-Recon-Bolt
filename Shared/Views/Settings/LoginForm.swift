@@ -134,7 +134,7 @@ struct LoginForm: View {
 		isSigningIn = true
 		defer { isSigningIn = false }
 		
-		await load("Could not sign in!") {
+		await load(errorTitle: "Could not sign in!") {
 			do {
 				try await accountManager.addAccount(using: credentials)
 				dismiss()

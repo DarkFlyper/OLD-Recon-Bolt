@@ -10,15 +10,18 @@ extension View {
 
 private struct LoadWrapper: ViewModifier {
 	@State private var loadError: Error?
-	@State private var errorTitle: LocalizedStringKey?
+	@State private var errorTitle: Text?
 	
 	func body(content: Content) -> some View {
 		content
-			.environment(\.loadWithErrorAlerts, runTask)
-			.alert(errorTitle ?? "An Error Occurred!", for: $loadError)
+			.environment(\.loadWithErrorAlerts, .init(closure: runTask))
+			.alert(
+				errorTitle ?? Text(""), // should never happen, but can't force unwrap here, and can't set title based on presented value directly
+				for: $loadError
+			)
 	}
 	
-	func runTask(errorTitle: LocalizedStringKey? = nil, _ task: () async throws -> Void) async {
+	func runTask(errorTitle: Text, _ task: () async throws -> Void) async {
 		do {
 			try await task()
 		} catch is CancellationError {
@@ -37,6 +40,10 @@ private struct LoadWrapper: ViewModifier {
 
 extension View {
 	func alert(_ title: LocalizedStringKey, for error: Binding<Error?>) -> some View {
+		alert(Text(title), for: error)
+	}
+	
+	func alert(_ title: Text, for error: Binding<Error?>) -> some View {
 		alert(
 			title,
 			isPresented: error.isSome(),
@@ -53,19 +60,35 @@ extension View {
 }
 
 extension EnvironmentValues {
-	typealias LoadTask = () async throws -> Void
-	
 	/// Executes some remote loading operation, handling any errors by displaying a dismissable alert.
-	var loadWithErrorAlerts: (LocalizedStringKey?, @escaping LoadTask) async -> Void {
+	var loadWithErrorAlerts: LoadWithErrorAlerts {
 		get { self[Key.self] }
 		set { self[Key.self] = newValue }
 	}
 	
 	private enum Key: EnvironmentKey {
-		static let defaultValue: (LocalizedStringKey?, @escaping LoadTask) async -> Void = { _, _ in
+		static let defaultValue: LoadWithErrorAlerts = .init { _, _ in
 			guard !isInSwiftUIPreview else { return }
 			fatalError("no load function provided in environment!")
 		}
+	}
+}
+
+struct LoadWithErrorAlerts {
+	typealias LoadTask = () async throws -> Void
+	
+	fileprivate var closure: (Text, @escaping LoadTask) async -> Void
+	
+	public func callAsFunction(task: @escaping LoadTask) async {
+		await closure(Text("An Error Occurred!", comment: "Default Error Alert Title"), task)
+	}
+	
+	public func callAsFunction(errorTitle: LocalizedStringKey, task: @escaping LoadTask) async {
+		await closure(Text(errorTitle), task)
+	}
+	
+	public func callAsFunction(errorTitle: Text, task: @escaping LoadTask) async {
+		await closure(errorTitle, task)
 	}
 }
 

@@ -89,7 +89,7 @@ struct StorageManagementView: View {
 					) {
 						Button(role: .destructive) {
 							Task {
-								await load("Could not free up space!") {
+								await load(errorTitle: "Could not free up space!") {
 									try await LocalDataProvider.shared.matchDetailsManager.clearOut(idFilter: matches)
 								}
 							}
@@ -100,7 +100,7 @@ struct StorageManagementView: View {
 				}
 			}
 			.detachedTask {
-				await load("Could not determine used storage!") {
+				await load(errorTitle: "Could not determine used storage!") {
 					try await computeTotals()
 				}
 			}
@@ -147,7 +147,7 @@ struct StorageManagementView: View {
 				.swipeActions {
 					if let clear {
 						AsyncButton(role: .destructive) {
-							await load("Could not delete files!") { try await clear() }
+							await load(errorTitle: "Could not delete files!") { try await clear() }
 						} label: {
 							Label(String(localized: "Clear All", comment: "Storage Management: button to delete all entries of a certain kind"), systemImage: "trash")
 						}

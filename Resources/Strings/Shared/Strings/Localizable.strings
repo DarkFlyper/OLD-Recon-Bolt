@@ -193,7 +193,7 @@ Competitive matches after your placements can be identified without their detail
 /* Statistics Filter */
 "Allowing %lld/%lld matches (%lld filtered out)" = "Allowing %lld/%lld matches (%lld filtered out)";
 
-/* No comment provided by engineer. */
+/* Default Error Alert Title */
 "An Error Occurred!" = "An Error Occurred!";
 
 /* About Screen */
@@ -360,10 +360,10 @@ Playtime Stats: section */
 "Copy to Clipboard" = "Copy to Clipboard";
 
 /* No comment provided by engineer. */
-"Could not Change App Icon!" = "Could not Change App Icon!";
+"Could Not Load Account!" = "Could Not Load Account!";
 
 /* No comment provided by engineer. */
-"Could not Load Account!" = "Could not Load Account!";
+"Could not Change App Icon!" = "Could not Change App Icon!";
 
 /* No comment provided by engineer. */
 "Could not delete files!" = "Could not delete files!";
@@ -870,10 +870,10 @@ Playtime Stats: section */
 /* App Icon Picker: section */
 "Pro Icons" = "Pro Icons";
 
-/* No comment provided by engineer. */
+/* Pro Store: error alert title */
 "Purchase Failed!" = "Purchase Failed!";
 
-/* Pro Store (placeholder filled with formatted currency) */
+/* Pro Store: button (placeholder filled with formatted currency) */
 "Purchase – %@" = "Purchase – %@";
 
 /* No comment provided by engineer. */
@@ -945,6 +945,12 @@ Request Log: title */
 
 /* No comment provided by engineer. */
 "Response Code" = "Response Code";
+
+/* Pro Store: error alert title */
+"Restore Failed!" = "Restore Failed!";
+
+/* Pro Store: button */
+"Restore Purchase" = "Restore Purchase";
 
 /* No comment provided by engineer. */
 "Retry" = "Retry";
