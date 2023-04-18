@@ -225,6 +225,9 @@ Playtime Stats: section */
 /* Missions Widget */
 "Daily" = "Diario";
 
+/* Missions Box: header */
+"Daily Missions" = "Misiones diarias";
+
 /* Store */
 "Daily Offers" = "Ofertas diarias";
 
@@ -775,6 +778,9 @@ Hit Distribution Stats: region */
 
 /* Missions Widget */
 "Weekly" = "Semanal";
+
+/* Missions Box: header */
+"Weekly Missions" = "Misiones semanales";
 
 /* No comment provided by engineer. */
 "Widget Refresh Requested" = "Solicitud de actualizar el Widget";
