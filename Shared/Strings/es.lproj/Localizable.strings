@@ -41,7 +41,7 @@
 /* Contract Picker */
 "Active" = "Activo";
 
-/* No comment provided by engineer. */
+/* Missions Box: header */
 "Active Contract" = "Contrato activo";
 
 /* Account Settings */
@@ -174,7 +174,7 @@ Playtime Stats: section */
 /* Storage Management: title for alert to confirm deleting some matches */
 "Confirm Delete" = "Confirmar eliminación";
 
-/* No comment provided by engineer. */
+/* Missions Box */
 "Contract complete!" = "¡Contrato completado!";
 
 /* Stats: error details: accessibility label */
@@ -458,7 +458,7 @@ EL REPORTE DEL BUG VA AQUÍ
 /* Gun Customizer: shown when a weapon has no buddy active */
 "No buddy selected!" = "¡Ningún amuleto seleccionado!";
 
-/* No comment provided by engineer. */
+/* Missions Box */
 "No contract active!" = "¡Ningún contrato activo!";
 
 /* Win Rate Stats: by map */
@@ -575,7 +575,8 @@ EL REPORTE DEL BUG VA AQUÍ
 /* Request Log: header */
 "Request" = "Petición";
 
-/* No comment provided by engineer. */
+/* Advanced Settings: button to open request log
+Request Log: title */
 "Request Log" = "Log de peticiones";
 
 /* No comment provided by engineer. */
@@ -668,7 +669,7 @@ EL REPORTE DEL BUG VA AQUÍ
 /* Pro Features List */
 "Support Development :)" = "Apoya al desarrollo :)";
 
-/* No comment provided by engineer. */
+/* Missions Box: button */
 "Switch Contract" = "Cambiar Contrato";
 
 /* Pro Store */
@@ -738,7 +739,7 @@ Hit Distribution Stats: region */
 /* No comment provided by engineer. */
 "Unknown bundle!" = "¡Amuleto desconocido!";
 
-/* No comment provided by engineer. */
+/* Missions Box */
 "Unknown contract!" = "¡Contrato desconocido!";
 
 /* No comment provided by engineer. */
