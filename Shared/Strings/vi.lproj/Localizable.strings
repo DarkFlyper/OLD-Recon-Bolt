@@ -136,11 +136,23 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "All Maps" = "Tất cả bản đồ";
 
+/* Statistics Filter: button to allow all agents */
+"Allow All Agents" = "Lựa chọn tất cả";
+
+/* Statistics Filter: button to allow all queues */
+"Allow All Queues" = "Lựa chọn tất cả";
+
 /* Default Error Alert Title */
 "An Error Occurred!" = "Đã xảy ra lỗi!";
 
 /* About Screen */
 "An invaluable API hosting all the assets (images, data, etc.) used throughout Valorant. This is where almost every image in the app comes from." = "Một API vô cùng quan trọng lưu trữ tất cả nội dung (hình ảnh, dữ liệu, v. v.) được sử dụng xuyên suốt Valorant. Đây là nguồn gốc của hầu hết mọi hình ảnh trong ứng dụng.";
+
+/* Statistics filter: shown when every agent is allowed */
+"Any Agent" = "Mọi đặc vụ";
+
+/* Statistics filter: shown when every queue is allowed */
+"Any Queue" = "Mọi hàng chờ";
 
 /* Asset Management */
 "Anything with images will not display correctly." = "Mọi thứ có hình ảnh sẽ không hiển thị chính xác.";
@@ -406,7 +418,13 @@ Stats: error details */
 "Exchange" = "Trao đổi";
 
 /* Request Log: title for detailed view of request body/contents */
-"Exchange Body" = "Thân";
+"Exchange Body" = "Nội dung";
+
+/* Statistics Filter: button to exclude all agents */
+"Exclude All Agents" = "Bỏ chọn tất cả";
+
+/* Statistics Filter: button to exclude all queues */
+"Exclude All Queues" = "Bỏ chọn tất cả";
 
 /* Pro Features List */
 "Exclusive App Icon" = "Biểu tượng ứng dụng độc quyền";
@@ -418,7 +436,7 @@ Stats: error details */
 "Family Sharing" = "Chia sẻ gia đình";
 
 /* Request Log: placeholder is replaced by error dump. */
-"Feedback Email Body" = "Nếu gặp phải lỗi? Hãy báo với tôi về lỗi bạn vừa gặp phải:
+"Feedback Email Body" = "Nếu gặp phải lỗi? Hãy báo cáo với tôi về lỗi bạn vừa gặp phải:
 
 BÁO CÁO LỖI CỦA BẠN TẠI ĐÂY
 
@@ -461,10 +479,10 @@ BÁO CÁO LỖI CỦA BẠN TẠI ĐÂY
 "Game is not running!" = "Valorant hiện không chạy!";
 
 /* Pro Features List */
-"Gather statistics from anyone's games to gain insights on things like time played by mode/premade, headshot rate over time/by weapon, win rate over time/by map & side, and more!" = "Thu thập số liệu thống kê từ các trận đấu của bất kỳ ai để hiểu rõ hơn về những thứ như thời gian chơi theo chế độ/được tạo trước, tỷ lệ bắn trúng đầu theo thời gian/theo vũ khí, tỷ lệ thắng theo thời gian/theo bản đồ & phe, v. v!";
+"Gather statistics from anyone's games to gain insights on things like time played by mode/premade, headshot rate over time/by weapon, win rate over time/by map & side, and more!" = "Thu thập số liệu thống kê từ các trận đấu của bất kỳ ai để hiểu rõ hơn về những thứ như thời gian chơi theo chế độ/tổ đội, tỷ lệ bắn trúng đầu theo thời gian/theo vũ khí, tỷ lệ thắng theo thời gian/theo bản đồ & phe, v. v!";
 
 /* Pro Features List */
-"Getting money from Recon Bolt gives me the flexibility and motivation to keep improving the app!" = "Nhận tiền từ Recon Bolt mang lại cho tôi sự linh hoạt và động lực để tiếp tục cải thiện ứng dụng!";
+"Getting money from Recon Bolt gives me the flexibility and motivation to keep improving the app!" = "Mọi sự đóng góp thông qua thanh toán Recon Bolt Pro mang lại cho tôi động lực để tiếp tục cải thiện ứng dụng!";
 
 /* No comment provided by engineer. */
 "GitHub Repo" = "GitHub Repo";
@@ -503,7 +521,7 @@ Nếu bạn gặp lỗi hoặc có một số phản hồi, tôi luôn sẵn lò
 "Home Screen Widgets" = "Tiện ích màn hình chính";
 
 /* Pro Store */
-"I hope you enjoy the pro features :)" = "Tôi hy vọng bạn thích các tính năng của phiên bản Pro :)";
+"I hope you enjoy the pro features :)" = "Hy vọng bạn thích các tính năng của phiên bản Pro :)";
 
 /* Login Form: is this safe? */
 "I won't sugarcoat things. Due to the way this app uses the API, I believe there's no other way to sign in than to have people enter their credentials directly. Under those circumstances, there's really no good way for anyone to be sure their credentials remain safe. For what it's worth:" = "Tôi sẽ không tô vẽ mọi thứ. Do cách ứng dụng này sử dụng API, tôi tin rằng không có cách nào khác để đăng nhập ngoài việc yêu cầu mọi người nhập trực tiếp thông tin đăng nhập của họ. Trong trường hợp đó, thực sự không có cách nào là chắc chắn cho bất kỳ ai để đảm bảo thông tin đăng nhập của họ vẫn an toàn. Cho những gì nó xứng với:";
@@ -618,7 +636,7 @@ Nếu không biết tên người dùng của mình hoặc không có, bạn có
 "Manage Local Storage" = "Quản lý bộ nhớ cục bộ";
 
 /* About Screen */
-"Many thanks to the volunteer translators from our Discord server who have been hard at working translating the app to new languages!" = "Rất cảm ơn các dịch giả tình nguyện từ máy chủ Discord của chúng tôi, những người đã làm việc chăm chỉ để dịch ứng dụng sang các ngôn ngữ mới!";
+"Many thanks to the volunteer translators from our Discord server who have been hard at working translating the app to new languages!" = "Gửi lời cảm ơn to lớn tới các phiên dịch viên tình nguyện từ Discord, những người đã làm việc chăm chỉ để dịch ứng dụng sang các ngôn ngữ mới!";
 
 /* No comment provided by engineer. */
 "Map" = "Bản đồ";
@@ -1003,7 +1021,7 @@ Login Form: button */
 "Theme" = "Chủ đề";
 
 /* No comment provided by engineer. */
-"These are the last %lld requests sent by the app, along with their responses." = "Đây là những yêu cầu %lld cuối cùng được gửi bởi ứng dụng, cùng với phản hồi của chúng.";
+"These are the last %lld requests sent by the app, along with their responses." = "Đây là %lld yêu cầu cuối cùng được gửi bởi ứng dụng, cùng với phản hồi của chúng.";
 
 /* Statistics error for iOS <16 */
 "This feature requires iOS 16 or newer." = "Tính năng này yêu cầu iOS 16 trở lên.";

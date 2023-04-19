@@ -136,11 +136,23 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "All Maps" = "Todos os mapas";
 
+/* Statistics Filter: button to allow all agents */
+"Allow All Agents" = "Permitir todos";
+
+/* Statistics Filter: button to allow all queues */
+"Allow All Queues" = "Permitir todas";
+
 /* Default Error Alert Title */
 "An Error Occurred!" = "Ocorreu um erro!";
 
 /* About Screen */
 "An invaluable API hosting all the assets (images, data, etc.) used throughout Valorant. This is where almost every image in the app comes from." = "Uma API inestimável armazena todos estes arquivos (imagens, dados, etc.) usados por todo o Valorant. Daqui quase todas as imagens do aplicativo vêm.";
+
+/* Statistics filter: shown when every agent is allowed */
+"Any Agent" = "Qualquer agente";
+
+/* Statistics filter: shown when every queue is allowed */
+"Any Queue" = "Qualquer fila";
 
 /* Asset Management */
 "Anything with images will not display correctly." = "Qualquer coisa com imagens não será exibido corretamente.";
@@ -407,6 +419,12 @@ Stats: error details */
 
 /* Request Log: title for detailed view of request body/contents */
 "Exchange Body" = "Corpo";
+
+/* Statistics Filter: button to exclude all agents */
+"Exclude All Agents" = "Excluir todos";
+
+/* Statistics Filter: button to exclude all queues */
+"Exclude All Queues" = "Excluir todas";
 
 /* Pro Features List */
 "Exclusive App Icon" = "Ícone Exclusivo do Aplicativo";

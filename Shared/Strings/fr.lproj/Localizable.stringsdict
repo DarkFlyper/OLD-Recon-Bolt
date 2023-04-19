@@ -98,5 +98,161 @@
         <string>%lld ancien actes</string>
       </dict>
     </dict>
+    <key>%lld hidden due to outdated assets</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@items@</string>
+      <key>items</key>
+      <dict>
+        <key>one</key>
+        <string>%lld cachés en raison de ressources obsolètes</string>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld Cachés en raison d'actifs obsolètes</string>
+      </dict>
+    </dict>
+    <key>%lld agents selected</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@agents@</string>
+      <key>agents</key>
+      <dict>
+        <key>one</key>
+        <string>%lld Sélectionné</string>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld Sélectionné</string>
+      </dict>
+    </dict>
+    <key>%lld queues selected</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@queues@</string>
+      <key>queues</key>
+      <dict>
+        <key>one</key>
+        <string>%lld sélectionné</string>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld sélectionnées</string>
+      </dict>
+    </dict>
+    <key>Using data from %lld match(es) (%lld filtered out)</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>Utilisation des données de %#@allowed@ (%#@filtered@)</string>
+      <key>allowed</key>
+      <dict>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>one</key>
+        <string>une seule partie</string>
+        <key>other</key>
+        <string>%lld parties</string>
+      </dict>
+      <key>filtered</key>
+      <dict>
+        <key>one</key>
+        <string>%lld filtrée</string>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld filtrées</string>
+      </dict>
+    </dict>
+    <key>%lld/%lld loaded</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@loaded@</string>
+      <key>loaded</key>
+      <dict>
+        <key>one</key>
+        <string>%lld/%#@total@ chargé</string>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld/%#@total@ chargés</string>
+      </dict>
+      <key>total</key>
+      <dict>
+        <key>one</key>
+        <string>%lld</string>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld</string>
+      </dict>
+    </dict>
+    <key>%lld/%lld owned</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@owned@</string>
+      <key>owned</key>
+      <dict>
+        <key>one</key>
+        <string>%lld/%#@total@ possédé</string>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld/%#@total@ possédés</string>
+      </dict>
+      <key>total</key>
+      <dict>
+        <key>one</key>
+        <string>%lld</string>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld</string>
+      </dict>
+    </dict>
+    <key>Data from %lld game(s) (%lld skipped lacking data)</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>Données provenant de %#@games@ (%#@skipped@)</string>
+      <key>games</key>
+      <dict>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld parties</string>
+        <key>one</key>
+        <string>%lld partie</string>
+      </dict>
+      <key>skipped</key>
+      <dict>
+        <key>one</key>
+        <string>%lld données manquantes ignorées</string>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld données manquantes ignorées</string>
+      </dict>
+    </dict>
   </dict>
 </plist>

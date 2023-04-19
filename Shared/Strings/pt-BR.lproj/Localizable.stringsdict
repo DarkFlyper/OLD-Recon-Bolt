@@ -98,5 +98,53 @@
         <string>%lld atos anteriores</string>
       </dict>
     </dict>
+    <key>%lld hidden due to outdated assets</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@items@</string>
+      <key>items</key>
+      <dict>
+        <key>one</key>
+        <string>%lld escondido devido a arquivo desatualizado</string>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld escondido devido a arquivos desatualizados</string>
+      </dict>
+    </dict>
+    <key>%lld agents selected</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@agents@</string>
+      <key>agents</key>
+      <dict>
+        <key>one</key>
+        <string>%lld selecionado</string>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld selecionados</string>
+      </dict>
+    </dict>
+    <key>%lld queues selected</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@queues@</string>
+      <key>queues</key>
+      <dict>
+        <key>one</key>
+        <string>%lld selecionada</string>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld selecionadas</string>
+      </dict>
+    </dict>
   </dict>
 </plist>

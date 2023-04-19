@@ -322,6 +322,9 @@ Playtime Stats: section */
 /* Login Form: error title */
 "Could not sign in!" = "無法登入!";
 
+/* About Screen: section */
+"Credits" = "感謝";
+
 /* Asset Management */
 "Current version: %@" = "現在版本: %@";
 
@@ -445,7 +448,7 @@ Stats: error details */
 "Filter Match List" = "過濾對戰列表";
 
 /* No comment provided by engineer. */
-"Filter Queues" = "過濾佇列";
+"Filter Queues" = "過濾模式";
 
 /* No comment provided by engineer. */
 "Find Match" = "開始配對";
@@ -464,6 +467,9 @@ Stats: error details */
 
 /* No comment provided by engineer. */
 "Game is not running!" = "遊戲沒在運行!";
+
+/* Pro Features List */
+"Gather statistics from anyone's games to gain insights on things like time played by mode/premade, headshot rate over time/by weapon, win rate over time/by map & side, and more!" = "從任何人的遊戲中收集統計資料，以深入瞭解模式/預製時間、時間/武器的爆頭率、時間/地圖和對面的獲勝率等！";
 
 /* Pro Features List */
 "Getting money from Recon Bolt gives me the flexibility and motivation to keep improving the app!" = "從Recon Bolt那裡獲得資金給了我靈活性和動力，讓我不斷改進應用程式！";
@@ -497,6 +503,9 @@ Stats: error details */
 
 /* Pro Features List */
 "If you have accounts in multiple regions to play with friends around the world, this is the feature for you!" = "如果您在多個地區都有帳號可以與世界各地的朋友一起玩，這功能很適合您！";
+
+/* Pro Features List */
+"If you have multiple accounts, you can configure separate widgets for each and have them on your Home Screen at the same time." = "如果您有多個帳號，您可以為每個帳戶設定單獨的小工具，並同時將它們放在主螢幕上。";
 
 /* No comment provided by engineer. */
 "If your widgets seem broken, use this button to request an immediate refresh from iOS." = "如果您的小工具看起來壞了，請使用這個按鈕從iOS請求立即重新整理。";
@@ -532,7 +541,7 @@ Stats: error details */
 "Level %lld / %lld" = "等級 %lld / %lld";
 
 /* No comment provided by engineer. */
-"Lifetime Peak" = "當前排位";
+"Lifetime Peak" = "最高排位";
 
 /* App Theme */
 "Light Mode" = "淺色模式";
@@ -751,6 +760,9 @@ Playtime Stats: section */
 "Playtime" = "遊玩時間";
 
 /* No comment provided by engineer. */
+"Playtime Breakdown" = "遊玩分析";
+
+/* No comment provided by engineer. */
 "Please make sure you are ready to play by the time the game starts!" = "請確保您在遊戲開始前準備好！";
 
 /* App Icon Name */
@@ -890,6 +902,9 @@ Login Form: button */
 /* Login Form: button/header */
 "Sign in with Google/Apple/etc." = "登入為 Google/Apple/etc.";
 
+/* Hit Distribution Stats: smoothing slider */
+"Smoothing" = "平均";
+
 /* No comment provided by engineer. */
 "Spectator" = "旁觀者";
 
@@ -932,6 +947,9 @@ Login Form: button */
 /* Missions Box: button */
 "Switch Contract" = "更改契約";
 
+/* Login Form: is this safe? */
+"TL;DR: you'll have to take my word for it, but Riot doesn't seem to mind." = "太長了不要看：你必須相信我的話，但Riot似乎並不介意。";
+
 /* Bookmark/Player List: lookup tag placeholder */
 "Tag" = "Tag";
 
@@ -955,6 +973,9 @@ Login Form: button */
 
 /* Statistics error for iOS <16 */
 "This feature requires iOS 16 or newer." = "這功能需要iOS 16或以上版本。";
+
+/* Stats: match loading */
+"To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "為了收集統計資料，我們首先需要載入對戰記錄來處理。 請注意：大量數量可能需要很長時間，特別是第一次下載時！";
 
 /* Win Rate Stats: side name
 Hit Distribution Stats: region */

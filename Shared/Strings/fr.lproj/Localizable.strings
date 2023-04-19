@@ -137,11 +137,23 @@ Les parties compétitives après vos placements peuvent toutefois être identifi
 /* No comment provided by engineer. */
 "All Maps" = "Toutes les cartes";
 
+/* Statistics Filter: button to allow all agents */
+"Allow All Agents" = "Tout sélectionner";
+
+/* Statistics Filter: button to allow all queues */
+"Allow All Queues" = "Tout sélectionner";
+
 /* Default Error Alert Title */
 "An Error Occurred!" = "Une erreur est survenue!";
 
 /* About Screen */
 "An invaluable API hosting all the assets (images, data, etc.) used throughout Valorant. This is where almost every image in the app comes from." = "Une API indispensable qui héberge toutes les ressources (images, données, etc.) utilisées dans Valorant. C'est l'endroit d'où viennent presque toutes les images de l'application.";
+
+/* Statistics filter: shown when every agent is allowed */
+"Any Agent" = "N'importe quel agent";
+
+/* Statistics filter: shown when every queue is allowed */
+"Any Queue" = "N'importe quel mode de jeu";
 
 /* Asset Management */
 "Anything with images will not display correctly." = "Tout ce qui contient des images ne s'affichera pas correctement.";
@@ -217,7 +229,7 @@ Playtime Stats: section */
 "Cancel" = "Annuler";
 
 /* No comment provided by engineer. */
-"Cancel Matchmaking" = "Recherche de partie annulée";
+"Cancel Matchmaking" = "Annuler la recherche";
 
 /* Top-Level Tab Title */
 "Career" = "Carrière";
@@ -408,6 +420,12 @@ Stats: error details */
 
 /* Request Log: title for detailed view of request body/contents */
 "Exchange Body" = "Corps";
+
+/* Statistics Filter: button to exclude all agents */
+"Exclude All Agents" = "Tout supprimer";
+
+/* Statistics Filter: button to exclude all queues */
+"Exclude All Queues" = "Tout supprimer";
 
 /* Pro Features List */
 "Exclusive App Icon" = "Icône d'application exclusive";
@@ -882,7 +900,7 @@ Request Log: title */
 "Round %lld of %lld" = "Manche %lld sur %lld";
 
 /* Round Details: title */
-"Round Details" = "Détails de manche";
+"Round Details" = "Détails de la manche";
 
 /* Win Rate Stats: section */
 "Rounds by Loadout Delta" = "Manches par Delta d’armement";
@@ -991,7 +1009,7 @@ Login Form: button */
 "Thank you for supporting Recon Bolt!" = "Merci de soutenir Recon Bolt !";
 
 /* Login Form: is this safe? */
-"The code is open-source and visible on GitHub; you can build it yourself if you want to be sure of what's running." = "\"Le code est open source et visible sur GitHub ; vous pouvez le construire vous-même si vous voulez être sûr de ce qui se passe.";
+"The code is open-source and visible on GitHub; you can build it yourself if you want to be sure of what's running." = "Le code est open source et visible sur GitHub ; vous pouvez le construire vous-même si vous voulez être sûr de ce qui se passe.";
 
 /* App Icon Description: default */
 "The default look of Recon Bolt." = "L'aspect par défaut de Recon Bolt.";

@@ -86,5 +86,139 @@
         <string>%lld phần trước</string>
       </dict>
     </dict>
+    <key>%lld hidden due to outdated assets</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@items@</string>
+      <key>items</key>
+      <dict>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld bị ẩn do nội dung đã lỗi thời</string>
+      </dict>
+    </dict>
+    <key>%lld agents selected</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@agents@</string>
+      <key>agents</key>
+      <dict>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld đã chọn</string>
+      </dict>
+    </dict>
+    <key>%lld queues selected</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@queues@</string>
+      <key>queues</key>
+      <dict>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld đã chọn</string>
+      </dict>
+    </dict>
+    <key>Using data from %lld match(es) (%lld filtered out)</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>Sử dụng dữ liệu từ %#@allowed@ (%#@filtered@)</string>
+      <key>allowed</key>
+      <dict>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld trận</string>
+      </dict>
+      <key>filtered</key>
+      <dict>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld bị lọc ra</string>
+      </dict>
+    </dict>
+    <key>%lld/%lld loaded</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@loaded@</string>
+      <key>loaded</key>
+      <dict>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld/%#@total@ đã tải</string>
+      </dict>
+      <key>total</key>
+      <dict>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld</string>
+      </dict>
+    </dict>
+    <key>%lld/%lld owned</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@owned@</string>
+      <key>owned</key>
+      <dict>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld/%#@total@ đã sở hữu</string>
+      </dict>
+      <key>total</key>
+      <dict>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld</string>
+      </dict>
+    </dict>
+    <key>Data from %lld game(s) (%lld skipped lacking data)</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>Dữ liệu từ %#@games@ (%#@skipped@)</string>
+      <key>games</key>
+      <dict>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld trận</string>
+      </dict>
+      <key>skipped</key>
+      <dict>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld trận bị bỏ qua do thiếu dữ liệu</string>
+      </dict>
+    </dict>
   </dict>
 </plist>

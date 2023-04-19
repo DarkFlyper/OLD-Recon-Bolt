@@ -83,7 +83,7 @@
         <key>NSStringFormatValueTypeKey</key>
         <string>lld</string>
         <key>other</key>
-        <string>%lld 上個賽季</string>
+        <string>%lld 個賽季</string>
       </dict>
     </dict>
     <key>%lld hidden due to outdated assets</key>
@@ -128,6 +128,52 @@
         <string>%lld 已選擇</string>
       </dict>
     </dict>
+    <key>Using data from %lld match(es) (%lld filtered out)</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>使用%#@allowed@(%#@filtered@) 的資料</string>
+      <key>allowed</key>
+      <dict>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld 對戰</string>
+      </dict>
+      <key>filtered</key>
+      <dict>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld 已過濾掉</string>
+      </dict>
+    </dict>
+    <key>%lld/%lld loaded</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@loaded@</string>
+      <key>loaded</key>
+      <dict>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld/%#@total@ 已載入</string>
+      </dict>
+      <key>total</key>
+      <dict>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld</string>
+      </dict>
+    </dict>
     <key>%lld/%lld owned</key>
     <dict>
       <key>NSStringLocalizedFormatKey</key>
@@ -149,6 +195,29 @@
         <string>lld</string>
         <key>other</key>
         <string>%lld</string>
+      </dict>
+    </dict>
+    <key>Data from %lld game(s) (%lld skipped lacking data)</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>資訊來自 %#@games@ (%#@skipped@)</string>
+      <key>games</key>
+      <dict>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld 遊戲</string>
+      </dict>
+      <key>skipped</key>
+      <dict>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld 跳過缺少資料</string>
       </dict>
     </dict>
   </dict>
