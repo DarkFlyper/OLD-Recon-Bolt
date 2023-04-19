@@ -21,7 +21,7 @@ Tu t'es probablement trompé de compte; %@";
 "Malformed Offer" = "Offre invalide";
 
 /* error loading the account for a widget. */
-"Malformed account." = "Compte invalide.";
+"Malformed account." = "Compte corrompu.";
 
 /* store widget error */
 "Missing Assets!" = "Ressources manquantes!";
