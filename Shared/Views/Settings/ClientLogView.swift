@@ -208,7 +208,7 @@ struct ClientLogView: View {
 							UIPasteboard.general.setData(body, forPasteboardType: UTType.data.identifier)
 						}
 					} label: {
-						Label("Copy Body", systemImage: "doc.on.doc")
+						Label(String(localized: "Copy Body", comment: "Request Log: button to copy the request's body/contents (accessibility label)"), systemImage: "doc.on.doc")
 					}
 				}
 			} label: {

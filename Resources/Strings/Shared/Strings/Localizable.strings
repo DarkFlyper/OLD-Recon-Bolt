@@ -22,7 +22,7 @@
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph); placeholder is replaced by the percentage of rounds won, e.g. '57.3% won'. */
 "%@ won" = "%@ won";
 
-/* No comment provided by engineer. */
+/* used throughout the app to format percentages—placeholder is replaced by a number */
 "%@%%" = "%@%%";
 
 /* No comment provided by engineer. */
@@ -40,10 +40,13 @@
 /* No comment provided by engineer. */
 "%lld RR" = "%lld RR";
 
+/* Statistics Filter: shown when not every agent is allowed (Key in .stringsdict) */
+"%lld agents selected" = "%lld agents selected";
+
 /* Storage Management */
 "%lld from other players" = "%lld from other players";
 
-/* Loadout Item Picker: number of hidden items—this should never show nowadays */
+/* Loadout Item Picker: number of hidden items—this should never show nowadays (Key in .stringsdict) */
 "%lld hidden due to outdated assets" = "%lld hidden due to outdated assets";
 
 /* Hit Distribution Stats: hit count */
@@ -64,8 +67,8 @@
 /* Match List Filter (Key in .stringsdict) */
 "%lld queue(s) selected" = "%lld queue(s) selected";
 
-/* Statistics Filter: shown when not everything is allowed */
-"%lld selected" = "%lld selected";
+/* Statistics Filter: shown when not every queue is allowed (Key in .stringsdict) */
+"%lld queues selected" = "%lld queues selected";
 
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
 "%lld to %lld credits" = "%lld to %lld credits";
@@ -76,10 +79,10 @@
 /* No comment provided by engineer. */
 "%lld/%lld" = "%lld/%lld";
 
-/* Stats: match loading */
+/* Stats: match loading (Key in .stringsdict) */
 "%lld/%lld loaded" = "%lld/%lld loaded";
 
-/* Loadout Item Picker: number of items owned out of all such items in the game */
+/* Loadout Item Picker: number of items owned out of all such items in the game (Key in .stringsdict) */
 "%lld/%lld owned" = "%lld/%lld owned";
 
 /* Time Formatting: minutes & seconds (used in round details view) */
@@ -175,7 +178,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Agent Select" = "Agent Select";
 
-/* No comment provided by engineer. */
+/* Statistics filter: button */
 "Agents" = "Agents";
 
 /* Stats: match loading */
@@ -184,14 +187,11 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "All Maps" = "All Maps";
 
-/* Statistics Filter (queues or agents) */
-"Allow All" = "Allow All";
+/* Statistics Filter: button to allow all agents */
+"Allow All Agents" = "Allow All";
 
-/* Statistics Filter (queues or agents) */
-"Allow None" = "Allow None";
-
-/* Statistics Filter */
-"Allowing %lld/%lld matches (%lld filtered out)" = "Allowing %lld/%lld matches (%lld filtered out)";
+/* Statistics Filter: button to allow all queues */
+"Allow All Queues" = "Allow All";
 
 /* Default Error Alert Title */
 "An Error Occurred!" = "An Error Occurred!";
@@ -199,8 +199,11 @@ Competitive matches after your placements can be identified without their detail
 /* About Screen */
 "An invaluable API hosting all the assets (images, data, etc.) used throughout Valorant. This is where almost every image in the app comes from." = "An invaluable API hosting all the assets (images, data, etc.) used throughout Valorant. This is where almost every image in the app comes from.";
 
-/* Statistics Filter: shown when everything is allowed */
-"Any" = "Any";
+/* Statistics filter: shown when every agent is allowed */
+"Any Agent" = "Any Agent";
+
+/* Statistics filter: shown when every queue is allowed */
+"Any Queue" = "Any Queue";
 
 /* Asset Management */
 "Anything with images will not display correctly." = "Anything with images will not display correctly.";
@@ -338,7 +341,7 @@ Playtime Stats: section */
 /* Missions Box */
 "Contract complete!" = "Contract complete!";
 
-/* No comment provided by engineer. */
+/* Request Log: button to copy the request's body/contents (accessibility label) */
 "Copy Body" = "Copy Body";
 
 /* Stats: error details: accessibility label */
@@ -410,8 +413,8 @@ Playtime Stats: section */
 /* App Theme */
 "Dark Mode" = "Dark Mode";
 
-/* Hit Distribution Stats */
-"Data from %lld games (%lld skipped lacking data)" = "Data from %lld games (%lld skipped lacking data)";
+/* Hit Distribution Stats (Key in .stringsdict) */
+"Data from %lld game(s) (%lld skipped lacking data)" = "Data from %lld game(s) (%lld skipped lacking data)";
 
 /* Stats: match loading */
 "Data going back to %@" = "Data going back to %@";
@@ -477,6 +480,12 @@ Stats: error details */
 /* Request Log: title for detailed view of request body/contents */
 "Exchange Body" = "Body";
 
+/* Statistics Filter: button to exclude all agents */
+"Exclude All Agents" = "Exclude All";
+
+/* Statistics Filter: button to exclude all queues */
+"Exclude All Queues" = "Exclude All";
+
 /* Pro Features List */
 "Exclusive App Icon" = "Exclusive App Icon";
 
@@ -496,7 +505,7 @@ YOUR BUG REPORT HERE
 /* Match List: accessibility label */
 "Fetch Details" = "Fetch Details";
 
-/* No comment provided by engineer. */
+/* Statistics Filter: title (section) */
 "Filter" = "Filter";
 
 /* No comment provided by engineer. */
@@ -883,7 +892,7 @@ Playtime Stats: section */
 /* Pro Store: button (placeholder filled with formatted currency) */
 "Purchase – %@" = "Purchase – %@";
 
-/* No comment provided by engineer. */
+/* Statistics filter: button */
 "Queues" = "Queues";
 
 /* Rank Widget: title */
@@ -1193,6 +1202,9 @@ On that site, navigate to **Riot Account Sign-in** and set yourself a username a
 
 /* No comment provided by engineer. */
 "Users" = "Users";
+
+/* Statistics Filter (Key in .stringsdict) */
+"Using data from %lld match(es) (%lld filtered out)" = "Using data from %lld match(es) (%lld filtered out)";
 
 /* Win Rate Stats by Loadout Delta */
 "Value Difference (credits)" = "Value Difference (credits)";

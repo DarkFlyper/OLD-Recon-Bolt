@@ -98,5 +98,143 @@
 			<string>%lld previous acts</string>
 		</dict>
 	</dict>
+	<key>%lld hidden due to outdated assets</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@items@</string>
+		<key>items</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>other</key>
+			<string>%lld hidden due to outdated assets</string>
+		</dict>
+	</dict>
+	<key>%lld agents selected</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@agents@</string>
+		<key>agents</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>other</key>
+			<string>%lld selected</string>
+		</dict>
+	</dict>
+	<key>%lld queues selected</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@queues@</string>
+		<key>queues</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>other</key>
+			<string>%lld selected</string>
+		</dict>
+	</dict>
+	<key>Using data from %lld match(es) (%lld filtered out)</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>Using data from %#@allowed@ (%#@filtered@)</string>
+		<key>allowed</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>a single match</string>
+			<key>other</key>
+			<string>%lld matches</string>
+		</dict>
+		<key>filtered</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>other</key>
+			<string>%lld filtered out</string>
+		</dict>
+	</dict>
+	<key>%lld/%lld loaded</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@loaded@</string>
+		<key>loaded</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>other</key>
+			<string>%lld/%#@total@ loaded</string>
+		</dict>
+		<key>total</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>other</key>
+			<string>%lld</string>
+		</dict>
+	</dict>
+	<key>%lld/%lld owned</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@owned@</string>
+		<key>owned</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>other</key>
+			<string>%lld/%#@total@ owned</string>
+		</dict>
+		<key>total</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>other</key>
+			<string>%lld</string>
+		</dict>
+	</dict>
+	<key>Data from %lld game(s) (%lld skipped lacking data)</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>Data from %#@games@ (%#@skipped@)</string>
+		<key>games</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>other</key>
+			<string>%lld games</string>
+			<key>one</key>
+			<string>%lld game</string>
+		</dict>
+		<key>skipped</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>other</key>
+			<string>%lld skipped lacking data</string>
+		</dict>
+	</dict>
 </dict>
 </plist>

@@ -175,7 +175,7 @@ struct CareerSummaryView: View {
 				Text("\(fraction) games won", comment: "%@ is replaced by a fraction of wins vs. games played, e.g. '5/12 games won'.")
 					.foregroundColor(.secondary)
 				Spacer()
-				Text("\(winPercentage)%")
+				Text("\(winPercentage)%", comment: "used throughout the app to format percentages—placeholder is replaced by a number")
 			}
 			.font(.body.monospacedDigit())
 		}

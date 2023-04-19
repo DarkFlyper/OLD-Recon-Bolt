@@ -74,15 +74,57 @@ struct StatisticsView: View {
 	
 	func filterSection() -> some View {
 		Section {
-			FilterPicker(title: "Queues", excluded: $excludedQueues)
-			FilterPicker(title: "Agents", excluded: $excludedAgents)
+			FilterPicker(
+				title: String(localized: "Queues", comment: "Statistics filter: button"),
+				allAllowedLabel: String(
+					localized: "Any Queue",
+					comment: "Statistics filter: shown when every queue is allowed"
+				),
+				allowedLabel: { String(
+					localized: "\($0) queues selected",
+					comment: "Statistics Filter: shown when not every queue is allowed"
+				) },
+				allowAllButton: String(
+					localized: "Allow All Queues",
+					defaultValue: "Allow All",
+					comment: "Statistics Filter: button to allow all queues"
+				),
+				allowNoneButton: String(
+					localized: "Exclude All Queues",
+					defaultValue: "Exclude All",
+					comment: "Statistics Filter: button to exclude all queues"
+				),
+				excluded: $excludedQueues
+			)
+			FilterPicker(
+				title: String(localized: "Agents", comment: "Statistics filter: button"),
+				allAllowedLabel: String(
+					localized: "Any Agent",
+					comment: "Statistics filter: shown when every agent is allowed"
+				),
+				allowedLabel: { String(
+					localized: "\($0) agents selected",
+					comment: "Statistics Filter: shown when not every agent is allowed"
+				) },
+				allowAllButton: String(
+					localized: "Allow All Agents",
+					defaultValue: "Allow All",
+					comment: "Statistics Filter: button to allow all agents"
+				),
+				allowNoneButton: String(
+					localized: "Exclude All Agents",
+					defaultValue: "Exclude All",
+					comment: "Statistics Filter: button to exclude all agents"
+				),
+				excluded: $excludedAgents
+			)
 		} header: {
-			Text("Filter")
+			Text("Filter", comment: "Statistics Filter: title (section)")
 		} footer: {
 			if let statistics {
 				let allowed = statistics.matches.count
-				let total = fetchedMatches.count
-				Text("Allowing \(allowed)/\(total) matches (\(total - allowed) filtered out)", comment: "Statistics Filter")
+				let filtered = fetchedMatches.count - allowed
+				Text("Using data from \(allowed) match(es) (\(filtered) filtered out)", comment: "Statistics Filter")
 			}
 		}
 	}
@@ -135,7 +177,11 @@ struct StatisticsView: View {
 	}
 	
 	private struct FilterPicker<ID: FilterableID>: View {
-		var title: LocalizedStringKey
+		var title: String
+		var allAllowedLabel: String
+		var allowedLabel: (Int) -> String
+		var allowAllButton: String
+		var allowNoneButton: String
 		
 		@Binding var excluded: Set<ID>
 		
@@ -151,15 +197,11 @@ struct StatisticsView: View {
 				.navigationTitle(title)
 				.toolbar {
 					ToolbarItemGroup(placement: .bottomBar) {
-						Button { excluded = [] } label: {
-							Text("Allow All", comment: "Statistics Filter (queues or agents)")
-						}
-						.disabled(excluded.isEmpty)
+						Button(allowAllButton) { excluded = [] }
+							.disabled(excluded.isEmpty)
 						
-						Button { excluded = Set(all) } label: {
-							Text("Allow None", comment: "Statistics Filter (queues or agents)")
-						}
-						.disabled(allowed.isEmpty)
+						Button(allowNoneButton) { excluded = Set(all) }
+							.disabled(allowed.isEmpty)
 					}
 				}
 			} label: {
@@ -168,11 +210,11 @@ struct StatisticsView: View {
 					Spacer()
 					Group {
 						if excluded.isEmpty {
-							Text("Any", comment: "Statistics Filter: shown when everything is allowed")
+							Text(allAllowedLabel)
 						} else if let allowed = allowed.onlyElement() {
 							allowed.label
 						} else {
-							Text("\(allowed.count) selected", comment: "Statistics Filter: shown when not everything is allowed")
+							Text(allowedLabel(allowed.count))
 						}
 					}
 					.foregroundStyle(.secondary)

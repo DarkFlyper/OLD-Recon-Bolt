@@ -47,7 +47,7 @@ struct HitDistributionView: View {
 			Text("Distribution Over Time", comment: "Hit Distribution Stats: section")
 		} footer: {
 			let count = distribution.byMatch.count
-			Text("Data from \(count) games (\(statistics.matches.count - count) skipped lacking data)", comment: "Hit Distribution Stats")
+			Text("Data from \(count) game(s) (\(statistics.matches.count - count) skipped lacking data)", comment: "Hit Distribution Stats")
 				.font(.footnote)
 		}
 		
