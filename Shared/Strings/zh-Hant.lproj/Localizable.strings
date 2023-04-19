@@ -32,6 +32,9 @@
 /* Statistics Filter: shown when not everything is allowed */
 "%lld selected" = "%lld 已選擇";
 
+/* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
+"%lld to %lld credits" = "%lld 到 %lld 點數";
+
 /* No comment provided by engineer. */
 "%lld%%" = "%lld%%";
 
@@ -120,17 +123,26 @@ Missions Box */
 /* Statistics Filter (queues or agents) */
 "Allow All" = "允許所有";
 
+/* Statistics Filter */
+"Allowing %lld/%lld matches (%lld filtered out)" = "允許 %lld/%lld 對戰 (%lld 過濾)";
+
 /* Default Error Alert Title */
 "An Error Occurred!" = "發生錯誤了!";
 
 /* Statistics Filter: shown when everything is allowed */
 "Any" = "任何";
 
+/* Asset Management */
+"Anything with images will not display correctly." = "任何帶有圖片的東西都不會正確顯示。";
+
 /* No comment provided by engineer. */
 "App Icon" = "應用程式圖示";
 
 /* No comment provided by engineer. */
 "Are your assets outdated?" = "你的資源包是過期的嗎？";
+
+/* Pro Features List */
+"As thanks for your support, you get to show off your status with an exclusive app icon!" = "感謝您的支持，您可以用獨家應用程式圖示來展示您的狀態！";
 
 /* No comment provided by engineer. */
 "Assets" = "資源包";
@@ -153,6 +165,9 @@ Missions Box */
 /* Win Rate Stats: side name */
 "Attacking" = "攻擊方";
 
+/* Store: available currency */
+"Available:" = "可用:";
+
 /* Hit Distribution Stats: average HS% */
 "Average: %@" = "平均: %@";
 
@@ -171,6 +186,9 @@ Missions Box */
 /* Win Rate Stats: section
 Playtime Stats: section */
 "By Map" = "按地圖";
+
+/* Playtime Stats: section */
+"By Queue" = "按對戰";
 
 /* Hit Distribution Stats: section */
 "By Weapon" = "按武器";
@@ -225,6 +243,9 @@ Playtime Stats: section */
 
 /* Storage Management: title for alert to confirm deleting some matches */
 "Confirm Delete" = "確定刪除";
+
+/* Missions Box */
+"Contract complete!" = "契約完成!";
 
 /* Stats: error details: accessibility label */
 "Copy Error" = "複製錯誤";
@@ -392,6 +413,9 @@ Stats: error details */
 /* Login Form: button/header */
 "Is this safe?" = "這安全嗎?";
 
+/* No comment provided by engineer. */
+"Join the Discord Server" = "加入Discord 伺服器";
+
 /* Asset Management: this row shows the language of the current assets */
 "Language" = "語言";
 
@@ -412,6 +436,9 @@ Stats: error details */
 
 /* About Screen: section */
 "Links" = "連結";
+
+/* Top-Level Tab Title */
+"Live" = "遊戲";
 
 /* No comment provided by engineer. */
 "Live Match" = "即時戰況";
@@ -491,6 +518,9 @@ Stats: error details */
 /* Gun Customizer: shown when a weapon has no buddy active */
 "No buddy selected!" = "沒有吊飾選取!";
 
+/* Missions Box */
+"No contract active!" = "沒有契約啟用!";
+
 /* Win Rate Stats: by map */
 "No data" = "沒有資料";
 
@@ -515,17 +545,44 @@ Stats: error details */
 /* Storage Management */
 "Other Players" = "其他玩家";
 
+/* No comment provided by engineer. */
+"Party" = "組隊房間";
+
+/* Scoreboard: party letter */
+"Party %@" = "組隊房間 %@";
+
 /* Login Form */
 "Password" = "密碼";
 
 /* Agent View: label for player who hasn't picked an agent yet */
 "Picking…" = "選擇中...";
 
+/* Match List: section */
+"Player" = "玩家";
+
+/* Bookmark/Player List: title */
+"Players" = "玩家";
+
+/* No comment provided by engineer. */
+"Playtime" = "遊玩時間";
+
 /* App Icon Name */
 "Pro Blue" = "Pro 藍色";
 
+/* No comment provided by engineer. */
+"Pro Features" = "Pro 功能";
+
 /* App Icon Picker: section */
 "Pro Icons" = "Pro 圖示";
+
+/* Pro Store: error alert title */
+"Purchase Failed!" = "購買失敗！";
+
+/* Pro Store: button (placeholder filled with formatted currency) */
+"Purchase – %@" = "購買 – %@";
+
+/* No comment provided by engineer. */
+"Queues" = "隊列";
 
 /* Rank Widget: title */
 "Rank" = "排位";
@@ -609,6 +666,9 @@ Login Form: button */
 
 /* Login Form: button/header */
 "Sign in with Google/Apple/etc." = "登入為 Google/Apple/etc.";
+
+/* Missions Box: button */
+"Switch Contract" = "更改契約";
 
 /* App Icon Description: default */
 "The default look of Recon Bolt." = "預設外觀 Recon Bolt";
