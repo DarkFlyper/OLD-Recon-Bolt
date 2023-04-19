@@ -8,7 +8,7 @@
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph); placeholder is replaced by the percentage of rounds won, e.g. '57.3% won'. */
 "%@ won" = "%@ gewonnen";
 
-/* No comment provided by engineer. */
+/* used throughout the app to format percentages—placeholder is replaced by a number */
 "%@%%" = "%@%%";
 
 /* Missions Box: always at least 3 */
@@ -23,7 +23,7 @@
 /* Storage Management */
 "%lld from other players" = "%lld von anderen Spielern";
 
-/* Loadout Item Picker: number of hidden items—this should never show nowadays */
+/* Loadout Item Picker: number of hidden items—this should never show nowadays (Key in .stringsdict) */
 "%lld hidden due to outdated assets" = "%lld versteckt aufgrund veralteter Assets";
 
 /* Hit Distribution Stats: hit count */
@@ -31,9 +31,6 @@
 
 /* Shown at the bottom of the expandable playtime list when there are more entries available. */
 "%lld more" = "%lld weitere";
-
-/* Statistics Filter: shown when not everything is allowed */
-"%lld selected" = "%lld ausgewählt";
 
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
 "%lld to %lld credits" = "%lld bis %lld Creds";
@@ -44,10 +41,10 @@
 /* No comment provided by engineer. */
 "%lld/%lld" = "%lld/%lld";
 
-/* Stats: match loading */
+/* Stats: match loading (Key in .stringsdict) */
 "%lld/%lld loaded" = "%lld/%lld geladen";
 
-/* Loadout Item Picker: number of items owned out of all such items in the game */
+/* Loadout Item Picker: number of items owned out of all such items in the game (Key in .stringsdict) */
 "%lld/%lld owned" = "%lld/%lld in Besitz";
 
 /* Time Formatting: minutes & seconds (used in round details view) */
@@ -130,7 +127,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Agent Select" = "Agentenauswahl";
 
-/* No comment provided by engineer. */
+/* Statistics filter: button */
 "Agents" = "Agenten";
 
 /* Stats: match loading */
@@ -139,23 +136,11 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "All Maps" = "Alle Karten";
 
-/* Statistics Filter (queues or agents) */
-"Allow All" = "Alle zulassen";
-
-/* Statistics Filter (queues or agents) */
-"Allow None" = "Keine zulassen";
-
-/* Statistics Filter */
-"Allowing %lld/%lld matches (%lld filtered out)" = "%lld von %lld Spielen zugelassen (%lld rausgefiltert)";
-
 /* Default Error Alert Title */
 "An Error Occurred!" = "Es ist ein Fehler aufgetreten!";
 
 /* About Screen */
 "An invaluable API hosting all the assets (images, data, etc.) used throughout Valorant. This is where almost every image in the app comes from." = "Eine wertvolle API, die alle möglichen Assets (Bilder, Daten, etc.) verfügbar macht, die in Valorant auftreten. Hier kommt fast jedes Bild her, was in der App angezeigt wird.";
-
-/* Statistics Filter: shown when everything is allowed */
-"Any" = "Alle";
 
 /* Asset Management */
 "Anything with images will not display correctly." = "Alles, was sich auf Bilder verlässt, wird nicht richtig angezeigt werden können.";
@@ -293,7 +278,7 @@ Playtime Stats: section */
 /* Missions Box */
 "Contract complete!" = "Auftrag abgeschlossen!";
 
-/* No comment provided by engineer. */
+/* Request Log: button to copy the request's body/contents (accessibility label) */
 "Copy Body" = "Inhalt kopieren";
 
 /* Stats: error details: accessibility label */
@@ -361,9 +346,6 @@ Playtime Stats: section */
 
 /* App Theme */
 "Dark Mode" = "Dunkelmodus";
-
-/* Hit Distribution Stats */
-"Data from %lld games (%lld skipped lacking data)" = "Daten von %lld Spielen (%lld übersprungen aufgrund mangelnder Daten)";
 
 /* Stats: match loading */
 "Data going back to %@" = "Daten gehen bis %@ zurück";
@@ -445,7 +427,7 @@ DEINE FEHLERMELDUNG HIER
 /* Match List: accessibility label */
 "Fetch Details" = "Details laden";
 
-/* No comment provided by engineer. */
+/* Statistics Filter: title (section) */
 "Filter" = "Filter";
 
 /* No comment provided by engineer. */
@@ -820,7 +802,7 @@ Playtime Stats: section */
 /* Pro Store: button (placeholder filled with formatted currency) */
 "Purchase – %@" = "Kaufen – %@";
 
-/* No comment provided by engineer. */
+/* Statistics filter: button */
 "Queues" = "Spielmodi";
 
 /* Rank Widget: title */
