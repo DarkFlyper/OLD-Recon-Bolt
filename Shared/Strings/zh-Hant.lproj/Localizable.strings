@@ -8,7 +8,7 @@
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph); placeholder is replaced by the percentage of rounds won, e.g. '57.3% won'. */
 "%@ won" = "%@ 赢了";
 
-/* No comment provided by engineer. */
+/* used throughout the app to format percentages—placeholder is replaced by a number */
 "%@%%" = "%@%%";
 
 /* Missions Box: always at least 3 */
@@ -23,7 +23,7 @@
 /* Storage Management */
 "%lld from other players" = "%lld 來自其他玩家";
 
-/* Loadout Item Picker: number of hidden items—this should never show nowadays */
+/* Loadout Item Picker: number of hidden items—this should never show nowadays (Key in .stringsdict) */
 "%lld hidden due to outdated assets" = "%lld 由於資源包過期而隱藏";
 
 /* Hit Distribution Stats: hit count */
@@ -31,9 +31,6 @@
 
 /* Shown at the bottom of the expandable playtime list when there are more entries available. */
 "%lld more" = "%lld 更多";
-
-/* Statistics Filter: shown when not everything is allowed */
-"%lld selected" = "%lld 已選擇";
 
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
 "%lld to %lld credits" = "%lld 到 %lld 點數";
@@ -44,10 +41,10 @@
 /* No comment provided by engineer. */
 "%lld/%lld" = "%lld/%lld";
 
-/* Stats: match loading */
+/* Stats: match loading (Key in .stringsdict) */
 "%lld/%lld loaded" = "%lld/%lld 已載入";
 
-/* Loadout Item Picker: number of items owned out of all such items in the game */
+/* Loadout Item Picker: number of items owned out of all such items in the game (Key in .stringsdict) */
 "%lld/%lld owned" = "%lld/%lld 擁有";
 
 /* Time Formatting: minutes & seconds (used in round details view) */
@@ -126,7 +123,7 @@ Missions Box */
 /* No comment provided by engineer. */
 "Agent Select" = "選擇特務";
 
-/* No comment provided by engineer. */
+/* Statistics filter: button */
 "Agents" = "特務";
 
 /* Stats: match loading */
@@ -135,20 +132,8 @@ Missions Box */
 /* No comment provided by engineer. */
 "All Maps" = "所有地圖";
 
-/* Statistics Filter (queues or agents) */
-"Allow All" = "允許所有";
-
-/* Statistics Filter (queues or agents) */
-"Allow None" = "允許無";
-
-/* Statistics Filter */
-"Allowing %lld/%lld matches (%lld filtered out)" = "允許 %lld/%lld 對戰 (%lld 過濾)";
-
 /* Default Error Alert Title */
 "An Error Occurred!" = "發生錯誤了!";
-
-/* Statistics Filter: shown when everything is allowed */
-"Any" = "任何";
 
 /* Asset Management */
 "Anything with images will not display correctly." = "任何帶有圖片的東西都不會正確顯示。";
@@ -268,7 +253,7 @@ Playtime Stats: section */
 /* Missions Box */
 "Contract complete!" = "契約完成!";
 
-/* No comment provided by engineer. */
+/* Request Log: button to copy the request's body/contents (accessibility label) */
 "Copy Body" = "複製內容";
 
 /* Stats: error details: accessibility label */
@@ -333,9 +318,6 @@ Playtime Stats: section */
 
 /* App Theme */
 "Dark Mode" = "黑暗模式";
-
-/* Hit Distribution Stats */
-"Data from %lld games (%lld skipped lacking data)" = "來自 %lld 遊戲的資料 (%lld 跳過缺乏資料)";
 
 /* Stats: match loading */
 "Data going back to %@" = "資料返回到 %@";
@@ -414,7 +396,7 @@ Stats: error details */
 /* Match List: accessibility label */
 "Fetch Details" = "獲取詳情";
 
-/* No comment provided by engineer. */
+/* Statistics Filter: title (section) */
 "Filter" = "過濾器";
 
 /* No comment provided by engineer. */
@@ -448,6 +430,9 @@ Stats: error details */
 "Getting money from Recon Bolt gives me the flexibility and motivation to keep improving the app!" = "從Recon Bolt那裡獲得資金給了我靈活性和動力，讓我不斷改進應用程式！";
 
 /* No comment provided by engineer. */
+"GitHub Repo" = "GitHub Repo";
+
+/* No comment provided by engineer. */
 "Golden Gun" = "黃金槍";
 
 /* Stats: date grouping size picker */
@@ -458,6 +443,9 @@ Stats: error details */
 
 /* No comment provided by engineer. */
 "Headhunter (Chamber)" = "獵頭 (錢伯爾)";
+
+/* Hit Distribution Stats: title */
+"Hit Distribution" = "命中分配";
 
 /* Pro Store */
 "Home Screen Widgets" = "主頁面小工貝";
@@ -732,7 +720,7 @@ Playtime Stats: section */
 /* Pro Store: button (placeholder filled with formatted currency) */
 "Purchase – %@" = "購買 – %@";
 
-/* No comment provided by engineer. */
+/* Statistics filter: button */
 "Queues" = "隊列";
 
 /* Rank Widget: title */
@@ -957,8 +945,14 @@ Hit Distribution Stats: region */
 /* No comment provided by engineer. */
 "Unknown Player" = "未知玩家";
 
+/* No comment provided by engineer. */
+"Unknown Queue" = "未知模式";
+
 /* placeholder */
 "Unknown Skin" = "未知造型";
+
+/* No comment provided by engineer. */
+"Unknown Tier" = "末知等级";
 
 /* placeholder */
 "Unknown Title" = "末知稱號";
@@ -1017,8 +1011,14 @@ Hit Distribution Stats: region */
 /* Rank Changes Widget: description */
 "View your rank rating changes." = "查看你的排位分數變動";
 
+/* Pro Features List */
+"View your storefront, daily/weekly missions, or current rank without even having to open the app!" = "查看您的商店、每日/每週任務或當前排位，甚至無需開啟遊戲！";
+
 /* No comment provided by engineer. */
 "WP: +%lld" = "WP: +%lld";
+
+/* No comment provided by engineer. */
+"Weapon Loadout" = "武器裝備";
 
 /* No comment provided by engineer. */
 "Weapons" = "武器";
@@ -1043,6 +1043,12 @@ Hit Distribution Stats: region */
 
 /* No comment provided by engineer. */
 "Year" = "年";
+
+/* Login Form: is this safe? */
+"You can enable 2-factor authentication, so you'd at least have another layer of security if it went bad." = "您可以打開雙重驗證，您至少擁有另一層安全措施。";
+
+/* No comment provided by engineer. */
+"Your session has expired! Recon Bolt has tried to refresh it for you, but needs 2FA confirmation." = "您的會話已過期！ Recon Bolt已嘗試為您重新整理，但需要驗證碼確認。";
 
 /* Loadout: spray slot */
 "mid-round" = "對戰中";
