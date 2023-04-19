@@ -79,12 +79,12 @@ Missions Box */
 "< %@" = "< %@";
 
 /* No comment provided by engineer. */
-"A 2FA code has been sent to your email address %@" = "Un code d'authentification a été envoyé à votre adresse email %@";
+"A 2FA code has been sent to your email address %@" = "Un code d'authentification a été envoyé sur ton adresse email %@";
 
 /* Match List Filter */
 "A match's queue is unknown until its details are fetched (by tapping it or performing the swipe action).
-Competitive matches after your placements can be identified without their details, however." = "La file d'attente d'une partie est inconnue jusqu'à ce que ses détails soient récupérés (en tapant dessus ou en faisant glisser).
-Les parties compétitives après vos placements peuvent toutefois être identifiés sans leurs détails.";
+Competitive matches after your placements can be identified without their details, however." = "La visibilité d'une partie peut être incomplète jusqu'à ce que ses détails soient récupérés manuellement (Par exemple en cliquant dessus ou en faisant glisser de gauche à droite). 
+Cependant, les parties compétitives qui ont lieu après votre placement de rang peuvent être visibles sans que leurs détails ne soient affichés.";
 
 /* No comment provided by engineer. */
 "AFK: %lld" = "AFK: %lld";
