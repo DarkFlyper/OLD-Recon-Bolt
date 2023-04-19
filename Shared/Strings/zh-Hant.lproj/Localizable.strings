@@ -14,6 +14,9 @@
 /* Missions Box: always at least 3 */
 "%lld Future Weeklies" = "%lld 未來每週";
 
+/* Missions Box: always at least 3 */
+"%lld Queued-Up Weeklies" = "%lld 已匹配的每週";
+
 /* No comment provided by engineer. */
 "%lld RR" = "%lld 分數";
 
@@ -66,6 +69,9 @@ Missions Box */
 /* No comment provided by engineer. */
 "+%lld XP" = "+%lld 經驗";
 
+/* Missions Widget: how many more weeklies are queued up after the current set */
+"+%lld queued" = "+%lld 已匹配";
+
 /* Store: night market discount */
 "-%lld%%" = "-%lld%%";
 
@@ -74,6 +80,9 @@ Missions Box */
 
 /* Missions Widget: countdown label when the target is in the future. e.g. '< 2d 3h' */
 "< %@" = "< %@";
+
+/* No comment provided by engineer. */
+"A 2FA code has been sent to your email address %@" = "雙重驗證代碼已傳送到您的電子郵件地址 %@";
 
 /* No comment provided by engineer. */
 "AFK: %lld" = "掛機: %lld";
@@ -107,6 +116,9 @@ Missions Box */
 
 /* No comment provided by engineer. */
 "Advanced Settings" = "進階設定";
+
+/* Pro Store */
+"Advanced Stats" = "進階戰績";
 
 /* No comment provided by engineer. */
 "Agent Select" = "選擇特務";
@@ -235,6 +247,9 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Choose Title" = "更換稱號";
 
+/* Contract Picker: title */
+"Choose a Contract" = "選擇契約";
+
 /* Storage Management: button to delete all entries of a certain kind */
 "Clear All" = "清除全部";
 
@@ -295,6 +310,9 @@ Playtime Stats: section */
 /* App Theme */
 "Dark Mode" = "黑暗模式";
 
+/* Stats: match loading */
+"Data going back to %@" = "資料返回到 %@";
+
 /* No comment provided by engineer. */
 "Day" = "日";
 
@@ -306,6 +324,9 @@ Playtime Stats: section */
 
 /* Win Rate Stats: side name */
 "Defending" = "防守方";
+
+/* Match Details: button to view details by round */
+"Details by Round" = "按回合分類";
 
 /* No comment provided by engineer. */
 "Discord Server" = "Discord 伺服器";
@@ -401,8 +422,17 @@ Stats: error details */
 /* Pro Store */
 "Home Screen Widgets" = "主頁面小工貝";
 
+/* Pro Store */
+"I hope you enjoy the pro features :)" = "我希望你喜歡專業版功能:)";
+
 /* No comment provided by engineer. */
 "Identities" = "身份";
+
+/* No comment provided by engineer. */
+"If your widgets seem broken, use this button to request an immediate refresh from iOS." = "如果您的小工具看起來壞了，請使用這個按鈕從iOS請求立即重新整理。";
+
+/* No comment provided by engineer. */
+"Image failed to load!" = "圖片載入失敗！";
 
 /* Asset Management */
 "In case something went wrong, use this button to force a full refetch of the assets and images." = "如果出現問題，請使用此按鈕強制重新獲取資源包和圖像。";
@@ -415,6 +445,9 @@ Stats: error details */
 
 /* No comment provided by engineer. */
 "Join the Discord Server" = "加入Discord 伺服器";
+
+/* Match Details: section */
+"Kills by Round" = "按擊殺分類";
 
 /* Asset Management: this row shows the language of the current assets */
 "Language" = "語言";
@@ -482,8 +515,29 @@ Stats: error details */
 /* Stats: error details */
 "Match" = "對戰";
 
+/* Match Details: title */
+"Match Details" = "回合詳情";
+
+/* No comment provided by engineer. */
+"Match Lists" = "對戰列表";
+
+/* Match List: section */
+"Matches" = "對戰";
+
+/* Stats: match loading */
+"Matches to load: **%lld**" = "要載入的對戰：**%lld**";
+
+/* Party Box: shown when member's name is not yet loaded */
+"Member" = "成員";
+
+/* Request Log */
+"Method" = "方式";
+
 /* Asset Management */
 "Missing assets!" = "缺少資源包！";
+
+/* Missions Box */
+"Missing progress for contract!" = "缺少契約進度！";
 
 /* Missions Widget: title */
 "Missions" = "任務";
@@ -539,11 +593,24 @@ Stats: error details */
 /* No comment provided by engineer. */
 "Not signed in!" = "未登入!";
 
+/* Pro Features List */
+"Note: Widgets are only available on iOS 16 and newer." = "注意：小工具只能在iOS 16及以上版本可用。";
+
+/* No comment provided by engineer. */
+"OK" = "OK";
+
 /* No comment provided by engineer. */
 "Official Website" = "官方網站";
 
+/* No comment provided by engineer. */
+"Open or swipe to fetch details." = "開啟或滑動以獲取詳細資訊.";
+
 /* Storage Management */
 "Other Players" = "其他玩家";
+
+/* Win Rate Stats: section
+Playtime Stats: section */
+"Over Time" = "延長賽";
 
 /* No comment provided by engineer. */
 "Party" = "組隊房間";
@@ -567,13 +634,13 @@ Stats: error details */
 "Playtime" = "遊玩時間";
 
 /* App Icon Name */
-"Pro Blue" = "Pro 藍色";
+"Pro Blue" = "專業版藍色";
 
 /* No comment provided by engineer. */
-"Pro Features" = "Pro 功能";
+"Pro Features" = "專業版功能";
 
 /* App Icon Picker: section */
-"Pro Icons" = "Pro 圖示";
+"Pro Icons" = "專業版圖示";
 
 /* Pro Store: error alert title */
 "Purchase Failed!" = "購買失敗！";
@@ -601,6 +668,18 @@ Stats: error details */
 
 /* accessibility label */
 "Ready" = "準備";
+
+/* No comment provided by engineer. */
+"Recon Bolt Pro" = "Recon Bolt 專業版";
+
+/* Pro Features List */
+"Recon Bolt Pro supports Family Sharing, meaning if just one member of your iCloud family buys it, everyone can use it!" = "Recon Bolt 專業版支援“家人共享”，如果您的iCloud家庭中只有一個成員購買專業版，每個人都可以使用它！";
+
+/* Pro Features List */
+"Recon Bolt does not have and will never have ads. The only way it can make money is through in-app purchases." = "Recon Bolt 不會有廣告。唯一賺錢方法是透過應用程式內購買。";
+
+/* Top-Level Tab Title */
+"Reference" = "查獲";
 
 /* Account Settings: button to refresh expired session */
 "Refresh" = "重新加載";
@@ -645,14 +724,35 @@ Request Log: title */
 /* No comment provided by engineer. */
 "Retry" = "重試";
 
+/* Round Details: header */
+"Round %lld of %lld" = "%lld 的回合%lld";
+
+/* Round Details: title */
+"Round Details" = "回合詳情";
+
 /* Bookmark/Player List: section */
 "Search" = "搜尋";
 
 /* No comment provided by engineer. */
 "Send to Developer" = "傳送給開發人員";
 
+/* Account Settings */
+"Session expired!" = "會話已過期！";
+
 /* Top-Level Tab Title */
 "Settings" = "設定";
+
+/* Playtime Stats: title for view of matches in common with another player */
+"Shared Matches" = "分享對戰";
+
+/* No comment provided by engineer. */
+"Show Unfetched Matches" = "顯示未獲取的對戰";
+
+/* No comment provided by engineer. */
+"Show all matches" = "顯示所有對戰";
+
+/* No comment provided by engineer. */
+"Show details when found" = "找到時顯示詳細資訊";
 
 /* Account Settings: button
 Login Form: button */
@@ -667,17 +767,87 @@ Login Form: button */
 /* Login Form: button/header */
 "Sign in with Google/Apple/etc." = "登入為 Google/Apple/etc.";
 
+/* No comment provided by engineer. */
+"Spectator" = "旁觀者";
+
+/* No comment provided by engineer. */
+"Start Matchmaking?" = "開始配對?";
+
+/* No comment provided by engineer. */
+"Statistics" = "戰績";
+
+/* Statistics Pro purchase prompt */
+"Statistics not available!" = "統計資料不可用！";
+
+/* Store Widget: title */
+"Store" = "商店";
+
+/* No comment provided by engineer. */
+"Store not loaded!" = "商店還沒加載！";
+
+/* Pro Features List */
+"Support Development :)" = "支援開發 :)";
+
+/* Pro Store */
+"Support Further Development!" = "支援進一步的開發！";
+
 /* Missions Box: button */
 "Switch Contract" = "更改契約";
+
+/* Bookmark/Player List: lookup tag placeholder */
+"Tag" = "Tag";
+
+/* Pro Store */
+"Thank you for supporting Recon Bolt!" = "謝謝你的支持 Recon Bolt!";
 
 /* App Icon Description: default */
 "The default look of Recon Bolt." = "預設外觀 Recon Bolt";
 
+/* No comment provided by engineer. */
+"The pro version lets you change the app icon! More icons might be coming in future updates." = "專業版允許您更改應用程式圖示！ 未來更新中可能會出現更多圖示。";
+
+/* No comment provided by engineer. */
+"Theme" = "主題";
+
+/* Win Rate Stats: side name
+Hit Distribution Stats: region */
+"Total" = "總共";
+
+/* No comment provided by engineer. */
+"Total Playtime" = "總遊玩時間";
+
+/* No comment provided by engineer. */
+"Total Space Used" = "總共使用的空間";
+
+/* No comment provided by engineer. */
+"Twitter @juliand665" = "Twitter @juliand665";
+
+/* Request Log */
+"URL" = "網址";
+
 /* Missions Box: header, shown when a mission is not daily or weekly (should not happen unless Riot changes something) */
 "Uncategorized Missions" = "未分類的任務";
 
+/* Shown when a match does not match the filter and its details have not been fetched. */
+"Unfetched" = "未獲取";
+
+/* Round Details: killed by unknown ability */
+"Unknown Ability" = "未知技能";
+
+/* placeholder */
+"Unknown Agent" = "未知特務";
+
+/* placeholder */
+"Unknown Buddy" = "未知吊飾";
+
+/* placeholder */
+"Unknown Bundle" = "未知組合包";
+
 /* Store */
 "Unknown Offer" = "未知商品";
+
+/* No comment provided by engineer. */
+"Unknown Player" = "未知玩家";
 
 /* placeholder */
 "Unknown Skin" = "未知造型";
@@ -690,6 +860,9 @@ Login Form: button */
 
 /* No comment provided by engineer. */
 "Unknown bundle!" = "未知組合包！";
+
+/* Missions Box */
+"Unknown contract!" = "末知契約!";
 
 /* No comment provided by engineer. */
 "Unknown mission!" = "未知任務！";
@@ -747,6 +920,9 @@ Login Form: button */
 
 /* Loadout: spray slot */
 "mid-round" = "對戰中";
+
+/* Missions Widget: countdown label when the target is in the past. Should never really show up, since at this point there's new data. */
+"old" = "舊";
 
 /* Loadout: spray slot */
 "post-round" = "回合後";
