@@ -8,7 +8,7 @@
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph); placeholder is replaced by the percentage of rounds won, e.g. '57.3% won'. */
 "%@ won" = "فاز %@";
 
-/* No comment provided by engineer. */
+/* used throughout the app to format percentages—placeholder is replaced by a number */
 "%@%%" = "%@%%";
 
 /* Missions Box: always at least 3 */
@@ -23,7 +23,7 @@
 /* Storage Management */
 "%lld from other players" = "%lld من لاعبين اخرين";
 
-/* Loadout Item Picker: number of hidden items—this should never show nowadays */
+/* Loadout Item Picker: number of hidden items—this should never show nowadays (Key in .stringsdict) */
 "%lld hidden due to outdated assets" = "%lld مخفية بسبب الموارد القديمة";
 
 /* Hit Distribution Stats: hit count */
@@ -31,9 +31,6 @@
 
 /* Shown at the bottom of the expandable playtime list when there are more entries available. */
 "%lld more" = "%lld غير ذلك";
-
-/* Statistics Filter: shown when not everything is allowed */
-"%lld selected" = "%lld اخترت";
 
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
 "%lld to %lld credits" = "%lld الى %lld عتاد";
@@ -44,10 +41,10 @@
 /* No comment provided by engineer. */
 "%lld/%lld" = "%lld/%lld";
 
-/* Stats: match loading */
+/* Stats: match loading (Key in .stringsdict) */
 "%lld/%lld loaded" = "%lld/%lld محمل";
 
-/* Loadout Item Picker: number of items owned out of all such items in the game */
+/* Loadout Item Picker: number of items owned out of all such items in the game (Key in .stringsdict) */
 "%lld/%lld owned" = "%lld/%lld مملوك";
 
 /* Time Formatting: minutes & seconds (used in round details view) */
@@ -131,7 +128,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Agent Select" = "اختيار العميل";
 
-/* No comment provided by engineer. */
+/* Statistics filter: button */
 "Agents" = "العملاء";
 
 /* Stats: match loading */
@@ -140,23 +137,11 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "All Maps" = "جميع الخرائط";
 
-/* Statistics Filter (queues or agents) */
-"Allow All" = "اظهر الكل";
-
-/* Statistics Filter (queues or agents) */
-"Allow None" = "لا تظهر شيء";
-
-/* Statistics Filter */
-"Allowing %lld/%lld matches (%lld filtered out)" = "اظهار %lld / %lld مبارة (اخفاء%lld)";
-
 /* Default Error Alert Title */
 "An Error Occurred!" = "حدث خطأ!";
 
 /* About Screen */
 "An invaluable API hosting all the assets (images, data, etc.) used throughout Valorant. This is where almost every image in the app comes from." = "واجهة برمجة تطبيقات لا تقدر بثمن تستضيف جميع الموارد (الصور والبيانات وما إلى ذلك) المستخدمة في جميع أنحاء Valorant. هذا هو المكان الذي تأتي منه كل صورة تقريبًا في التطبيق.";
-
-/* Statistics Filter: shown when everything is allowed */
-"Any" = "كل شيء";
 
 /* Asset Management */
 "Anything with images will not display correctly." = "أي شيء به صور لن يعرض بشكل صحيح.";
@@ -294,7 +279,7 @@ Playtime Stats: section */
 /* Missions Box */
 "Contract complete!" = "اكتمل العقد!";
 
-/* No comment provided by engineer. */
+/* Request Log: button to copy the request's body/contents (accessibility label) */
 "Copy Body" = "نسخ المحتوى";
 
 /* Stats: error details: accessibility label */
@@ -353,9 +338,6 @@ Playtime Stats: section */
 
 /* App Theme */
 "Dark Mode" = "الوضع الداكن";
-
-/* Hit Distribution Stats */
-"Data from %lld games (%lld skipped lacking data)" = "معلومات من %lld مباريات (تم تخطي %lld)";
 
 /* Stats: match loading */
 "Data going back to %@" = "المعلومات تعود الى %@";
@@ -437,7 +419,7 @@ Stats: error details */
 /* Match List: accessibility label */
 "Fetch Details" = "جلب التفاصيل";
 
-/* No comment provided by engineer. */
+/* Statistics Filter: title (section) */
 "Filter" = "عامل التصفية";
 
 /* No comment provided by engineer. */
@@ -787,7 +769,7 @@ Playtime Stats: section */
 /* Pro Store: button (placeholder filled with formatted currency) */
 "Purchase – %@" = "شراء - %@";
 
-/* No comment provided by engineer. */
+/* Statistics filter: button */
 "Queues" = "الطوابير";
 
 /* Rank Widget: title */
