@@ -8,7 +8,7 @@
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph); placeholder is replaced by the percentage of rounds won, e.g. '57.3% won'. */
 "%@ won" = "%@ выиграно";
 
-/* No comment provided by engineer. */
+/* used throughout the app to format percentages—placeholder is replaced by a number */
 "%@%%" = "%@%%";
 
 /* Missions Box: always at least 3 */
@@ -23,7 +23,7 @@
 /* Storage Management */
 "%lld from other players" = "%lld от других игроков";
 
-/* Loadout Item Picker: number of hidden items—this should never show nowadays */
+/* Loadout Item Picker: number of hidden items—this should never show nowadays (Key in .stringsdict) */
 "%lld hidden due to outdated assets" = "%lld скрыто из-за устаревших ресурсов";
 
 /* Hit Distribution Stats: hit count */
@@ -31,9 +31,6 @@
 
 /* Shown at the bottom of the expandable playtime list when there are more entries available. */
 "%lld more" = "Еще %lld";
-
-/* Statistics Filter: shown when not everything is allowed */
-"%lld selected" = "%lld выбран(о)";
 
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
 "%lld to %lld credits" = "%lld до %lld кредитов";
@@ -44,10 +41,10 @@
 /* No comment provided by engineer. */
 "%lld/%lld" = "%lld/%lld";
 
-/* Stats: match loading */
+/* Stats: match loading (Key in .stringsdict) */
 "%lld/%lld loaded" = "%lld/%lld загружено";
 
-/* Loadout Item Picker: number of items owned out of all such items in the game */
+/* Loadout Item Picker: number of items owned out of all such items in the game (Key in .stringsdict) */
 "%lld/%lld owned" = "%lld/%lld принадлежит";
 
 /* Time Formatting: minutes & seconds (used in round details view) */
@@ -128,7 +125,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Agent Select" = "Выбор агента";
 
-/* No comment provided by engineer. */
+/* Statistics filter: button */
 "Agents" = "Агенты";
 
 /* Stats: match loading */
@@ -137,20 +134,8 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "All Maps" = "Все карты";
 
-/* Statistics Filter (queues or agents) */
-"Allow All" = "Включить все";
-
-/* Statistics Filter (queues or agents) */
-"Allow None" = "Выключить все";
-
-/* Statistics Filter */
-"Allowing %lld/%lld matches (%lld filtered out)" = "Отфильтрованы матчи: %lld/%lld (Не подошли: %lld)";
-
 /* Default Error Alert Title */
 "An Error Occurred!" = "Произошла ошибка!";
-
-/* Statistics Filter: shown when everything is allowed */
-"Any" = "Все";
 
 /* Asset Management */
 "Anything with images will not display correctly." = "Все с изображениями не будет отображаться корректно.";
@@ -293,7 +278,7 @@ Stats: error details */
 /* Match List: accessibility label */
 "Fetch Details" = "Получить детали";
 
-/* No comment provided by engineer. */
+/* Statistics Filter: title (section) */
 "Filter" = "Фильтр";
 
 /* No comment provided by engineer. */
@@ -565,7 +550,7 @@ Playtime Stats: section */
 /* Pro Store: button (placeholder filled with formatted currency) */
 "Purchase – %@" = "Покупка - %@";
 
-/* No comment provided by engineer. */
+/* Statistics filter: button */
 "Queues" = "Режимы";
 
 /* Rank Widget: title */
