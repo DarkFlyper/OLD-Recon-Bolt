@@ -469,6 +469,9 @@ Stats: error details */
 "Game is not running!" = "遊戲沒在運行!";
 
 /* Pro Features List */
+"Gather statistics from anyone's games to gain insights on things like time played by mode/premade, headshot rate over time/by weapon, win rate over time/by map & side, and more!" = "從任何人的遊戲中收集統計資料，以深入瞭解模式/預製時間、時間/武器的爆頭率、時間/地圖和對面的獲勝率等！";
+
+/* Pro Features List */
 "Getting money from Recon Bolt gives me the flexibility and motivation to keep improving the app!" = "從Recon Bolt那裡獲得資金給了我靈活性和動力，讓我不斷改進應用程式！";
 
 /* No comment provided by engineer. */
@@ -757,6 +760,9 @@ Playtime Stats: section */
 "Playtime" = "遊玩時間";
 
 /* No comment provided by engineer. */
+"Playtime Breakdown" = "遊玩分析";
+
+/* No comment provided by engineer. */
 "Please make sure you are ready to play by the time the game starts!" = "請確保您在遊戲開始前準備好！";
 
 /* App Icon Name */
@@ -895,6 +901,9 @@ Login Form: button */
 
 /* Login Form: button/header */
 "Sign in with Google/Apple/etc." = "登入為 Google/Apple/etc.";
+
+/* Hit Distribution Stats: smoothing slider */
+"Smoothing" = "平均";
 
 /* No comment provided by engineer. */
 "Spectator" = "旁觀者";
