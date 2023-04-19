@@ -1,8 +1,8 @@
 /* Pro Store: error restoring purchase */
-"A previous transaction was found, but it could not be verified! %@" = "Une transaction antérieure a été trouvée, mais elle n'a pas pu être vérifiée ! %@";
+"A previous transaction was found, but it could not be verified! %@" = "Une transaction antérieure a été trouvée, mais elle n'a pas pu être vérifiée! %@";
 
 /* error loading the account for a widget */
-"Could not load active account!" = "Impossible de charger le compte !";
+"Could not load active account!" = "Impossible de charger le compte!";
 
 /* Riot API Error */
 "Invalid Headers: %@" = "En-tête invalide: %@";
@@ -21,7 +21,7 @@ Tu t'es probablement trompé de compte; %@";
 "Malformed Offer" = "Offre invalide";
 
 /* error loading the account for a widget. */
-"Malformed account." = "Compte invalide.";
+"Malformed account." = "Compte corrompu.";
 
 /* store widget error */
 "Missing Assets!" = "Ressources manquantes!";

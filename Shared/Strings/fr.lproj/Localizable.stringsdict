@@ -245,13 +245,13 @@
       <key>skipped</key>
       <dict>
         <key>one</key>
-        <string>%lld données manquantes ignorées</string>
+        <string>%lld Donnée manquante ignorée</string>
         <key>NSStringFormatSpecTypeKey</key>
         <string>NSStringPluralRuleType</string>
         <key>NSStringFormatValueTypeKey</key>
         <string>lld</string>
         <key>other</key>
-        <string>%lld données manquantes ignorées</string>
+        <string>%lld Données manquantes ignorées</string>
       </dict>
     </dict>
   </dict>
