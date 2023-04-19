@@ -8,7 +8,7 @@
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph); placeholder is replaced by the percentage of rounds won, e.g. '57.3% won'. */
 "%@ won" = "%@ thắng";
 
-/* No comment provided by engineer. */
+/* used throughout the app to format percentages—placeholder is replaced by a number */
 "%@%%" = "%@%%";
 
 /* Missions Box: always at least 3 */
@@ -23,7 +23,7 @@
 /* Storage Management */
 "%lld from other players" = "%lld từ những người chơi khác";
 
-/* Loadout Item Picker: number of hidden items—this should never show nowadays */
+/* Loadout Item Picker: number of hidden items—this should never show nowadays (Key in .stringsdict) */
 "%lld hidden due to outdated assets" = "%lld bị ẩn do nội dung lỗi thời";
 
 /* Hit Distribution Stats: hit count */
@@ -31,9 +31,6 @@
 
 /* Shown at the bottom of the expandable playtime list when there are more entries available. */
 "%lld more" = "%lld thêm";
-
-/* Statistics Filter: shown when not everything is allowed */
-"%lld selected" = "%lld đã chọn";
 
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
 "%lld to %lld credits" = "%lld đến %lld credits";
@@ -44,10 +41,10 @@
 /* No comment provided by engineer. */
 "%lld/%lld" = "%lld/%lld";
 
-/* Stats: match loading */
+/* Stats: match loading (Key in .stringsdict) */
 "%lld/%lld loaded" = "%lld/%lld đã tải";
 
-/* Loadout Item Picker: number of items owned out of all such items in the game */
+/* Loadout Item Picker: number of items owned out of all such items in the game (Key in .stringsdict) */
 "%lld/%lld owned" = "%lld/%lld đã sở hữu";
 
 /* Time Formatting: minutes & seconds (used in round details view) */
@@ -130,7 +127,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Agent Select" = "Chọn đặc vụ";
 
-/* No comment provided by engineer. */
+/* Statistics filter: button */
 "Agents" = "Đặc vụ";
 
 /* Stats: match loading */
@@ -139,23 +136,11 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "All Maps" = "Tất cả bản đồ";
 
-/* Statistics Filter (queues or agents) */
-"Allow All" = "Lựa chọn tất cả";
-
-/* Statistics Filter (queues or agents) */
-"Allow None" = "Bỏ chọn tất cả";
-
-/* Statistics Filter */
-"Allowing %lld/%lld matches (%lld filtered out)" = "Chọn %lld/%lld trận đấu (%lld bị lọc)";
-
 /* Default Error Alert Title */
 "An Error Occurred!" = "Đã xảy ra lỗi!";
 
 /* About Screen */
 "An invaluable API hosting all the assets (images, data, etc.) used throughout Valorant. This is where almost every image in the app comes from." = "Một API vô cùng quan trọng lưu trữ tất cả nội dung (hình ảnh, dữ liệu, v. v.) được sử dụng xuyên suốt Valorant. Đây là nguồn gốc của hầu hết mọi hình ảnh trong ứng dụng.";
-
-/* Statistics Filter: shown when everything is allowed */
-"Any" = "Bất kì";
 
 /* Asset Management */
 "Anything with images will not display correctly." = "Mọi thứ có hình ảnh sẽ không hiển thị chính xác.";
@@ -293,7 +278,7 @@ Playtime Stats: section */
 /* Missions Box */
 "Contract complete!" = "Giao kèo hoàn tất!";
 
-/* No comment provided by engineer. */
+/* Request Log: button to copy the request's body/contents (accessibility label) */
 "Copy Body" = "Sao chép nội dung";
 
 /* Stats: error details: accessibility label */
@@ -361,9 +346,6 @@ Playtime Stats: section */
 
 /* App Theme */
 "Dark Mode" = "Chế độ tối";
-
-/* Hit Distribution Stats */
-"Data from %lld games (%lld skipped lacking data)" = "Dữ liệu từ %lld trận (%lld trận đã bị loại bỏ do thiếu dữ liệu)";
 
 /* Stats: match loading */
 "Data going back to %@" = "Dữ liệu trở lại đến %@";
@@ -445,7 +427,7 @@ BÁO CÁO LỖI CỦA BẠN TẠI ĐÂY
 /* Match List: accessibility label */
 "Fetch Details" = "Tìm nạp chi tiết";
 
-/* No comment provided by engineer. */
+/* Statistics Filter: title (section) */
 "Filter" = "Bộ lọc";
 
 /* No comment provided by engineer. */
@@ -820,7 +802,7 @@ Playtime Stats: section */
 /* Pro Store: button (placeholder filled with formatted currency) */
 "Purchase – %@" = "Mua – %@";
 
-/* No comment provided by engineer. */
+/* Statistics filter: button */
 "Queues" = "Hàng chờ";
 
 /* Rank Widget: title */
