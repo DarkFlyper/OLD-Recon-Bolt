@@ -8,7 +8,7 @@
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph); placeholder is replaced by the percentage of rounds won, e.g. '57.3% won'. */
 "%@ won" = "%@ ganadas";
 
-/* No comment provided by engineer. */
+/* used throughout the app to format percentages—placeholder is replaced by a number */
 "%@%%" = "%@%%";
 
 /* No comment provided by engineer. */
@@ -17,7 +17,7 @@
 /* Storage Management */
 "%lld from other players" = "%lld de otros jugadores";
 
-/* Loadout Item Picker: number of hidden items—this should never show nowadays */
+/* Loadout Item Picker: number of hidden items—this should never show nowadays (Key in .stringsdict) */
 "%lld hidden due to outdated assets" = "%lld escondido debido a /assets/ antiguos";
 
 /* Hit Distribution Stats: hit count */
@@ -59,23 +59,14 @@
 /* No comment provided by engineer. */
 "Agent Select" = "Seleccionar agente";
 
-/* No comment provided by engineer. */
+/* Statistics filter: button */
 "Agents" = "Agentes";
 
 /* No comment provided by engineer. */
 "All Maps" = "Todos los mapas";
 
-/* Statistics Filter (queues or agents) */
-"Allow All" = "Permitir todos";
-
-/* Statistics Filter (queues or agents) */
-"Allow None" = "No permitir ninguno";
-
 /* Default Error Alert Title */
 "An Error Occurred!" = "¡Un error ha ocurrido!";
-
-/* Statistics Filter: shown when everything is allowed */
-"Any" = "Cualquiera";
 
 /* No comment provided by engineer. */
 "App Icon" = "Icono de la App";
@@ -290,7 +281,7 @@ EL REPORTE DEL BUG VA AQUÍ
 /* Match List: accessibility label */
 "Fetch Details" = "Buscar detalles";
 
-/* No comment provided by engineer. */
+/* Statistics Filter: title (section) */
 "Filter" = "Filtro";
 
 /* No comment provided by engineer. */
@@ -524,7 +515,7 @@ EL REPORTE DEL BUG VA AQUÍ
 /* Pro Store: error alert title */
 "Purchase Failed!" = "¡Compra fallida!";
 
-/* No comment provided by engineer. */
+/* Statistics filter: button */
 "Queues" = "Colas";
 
 /* Rank Widget: title */
