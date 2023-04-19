@@ -322,6 +322,9 @@ Playtime Stats: section */
 /* Login Form: error title */
 "Could not sign in!" = "無法登入!";
 
+/* About Screen: section */
+"Credits" = "感謝";
+
 /* Asset Management */
 "Current version: %@" = "現在版本: %@";
 
@@ -445,7 +448,7 @@ Stats: error details */
 "Filter Match List" = "過濾對戰列表";
 
 /* No comment provided by engineer. */
-"Filter Queues" = "過濾佇列";
+"Filter Queues" = "過濾模式";
 
 /* No comment provided by engineer. */
 "Find Match" = "開始配對";
