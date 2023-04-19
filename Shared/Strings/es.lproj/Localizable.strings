@@ -8,7 +8,7 @@
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph); placeholder is replaced by the percentage of rounds won, e.g. '57.3% won'. */
 "%@ won" = "%@ ganadas";
 
-/* No comment provided by engineer. */
+/* used throughout the app to format percentages—placeholder is replaced by a number */
 "%@%%" = "%@%%";
 
 /* No comment provided by engineer. */
@@ -17,7 +17,7 @@
 /* Storage Management */
 "%lld from other players" = "%lld de otros jugadores";
 
-/* Loadout Item Picker: number of hidden items—this should never show nowadays */
+/* Loadout Item Picker: number of hidden items—this should never show nowadays (Key in .stringsdict) */
 "%lld hidden due to outdated assets" = "%lld escondido debido a /assets/ antiguos";
 
 /* Hit Distribution Stats: hit count */
@@ -59,23 +59,14 @@
 /* No comment provided by engineer. */
 "Agent Select" = "Seleccionar agente";
 
-/* No comment provided by engineer. */
+/* Statistics filter: button */
 "Agents" = "Agentes";
 
 /* No comment provided by engineer. */
 "All Maps" = "Todos los mapas";
 
-/* Statistics Filter (queues or agents) */
-"Allow All" = "Permitir todos";
-
-/* Statistics Filter (queues or agents) */
-"Allow None" = "No permitir ninguno";
-
 /* Default Error Alert Title */
 "An Error Occurred!" = "¡Un error ha ocurrido!";
-
-/* Statistics Filter: shown when everything is allowed */
-"Any" = "Cualquiera";
 
 /* No comment provided by engineer. */
 "App Icon" = "Icono de la App";
@@ -201,7 +192,7 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Could not look up %@" = "No se ha podido buscar %@";
 
-/* No comment provided by engineer. */
+/* Login Form: error title */
 "Could not sign in!" = "¡No se ha podido registrar!";
 
 /* Asset Management */
@@ -224,6 +215,9 @@ Playtime Stats: section */
 
 /* Missions Widget */
 "Daily" = "Diario";
+
+/* Missions Box: header */
+"Daily Missions" = "Misiones diarias";
 
 /* Store */
 "Daily Offers" = "Ofertas diarias";
@@ -287,7 +281,7 @@ EL REPORTE DEL BUG VA AQUÍ
 /* Match List: accessibility label */
 "Fetch Details" = "Buscar detalles";
 
-/* No comment provided by engineer. */
+/* Statistics Filter: title (section) */
 "Filter" = "Filtro";
 
 /* No comment provided by engineer. */
@@ -323,9 +317,6 @@ EL REPORTE DEL BUG VA AQUÍ
 /* Hit Distribution Stats: region */
 "Head" = "Cabeza";
 
-/* About Screen */
-"Hi! I'm Julian Dunskus, and I made this app." = "¡Hola! Soy Julian Dunskus, y he hecho esta app.";
-
 /* Hit Distribution Stats: title */
 "Hit Distribution" = "Distribución de Disparos";
 
@@ -339,15 +330,12 @@ EL REPORTE DEL BUG VA AQUÍ
 "Identities" = "Identidades";
 
 /* No comment provided by engineer. */
-"If you don't know your username or don't have one, you can fix that at [account.riotgames.com](https://account.riotgames.com)." = "Si no te sabes el nombre de usuario o no sabes cuál es, puedes arreglar eso en [account.riotgames.com](https://account.riotgames.com).";
-
-/* No comment provided by engineer. */
 "Image failed to load!" = "¡Error al cargar la imagen!";
 
 /* Settings: section */
 "In-App Store" = "Tienda";
 
-/* No comment provided by engineer. */
+/* Login Form: button/header */
 "Is this safe?" = "¿Es esto seguro?";
 
 /* No comment provided by engineer. */
@@ -500,7 +488,7 @@ EL REPORTE DEL BUG VA AQUÍ
 /* Scoreboard: party letter */
 "Party %@" = "Grupo %@";
 
-/* No comment provided by engineer. */
+/* Login Form */
 "Password" = "Contraseña";
 
 /* Agent View: label for player who hasn't picked an agent yet */
@@ -527,7 +515,7 @@ EL REPORTE DEL BUG VA AQUÍ
 /* Pro Store: error alert title */
 "Purchase Failed!" = "¡Compra fallida!";
 
-/* No comment provided by engineer. */
+/* Statistics filter: button */
 "Queues" = "Colas";
 
 /* Rank Widget: title */
@@ -621,16 +609,17 @@ Request Log: title */
 /* App Icon Description: pro blue */
 "Show off your pro status with an exclusive icon!" = "¡Demuestra que eres pro con un icono exclusivo!";
 
-/* Account Settings: button */
+/* Account Settings: button
+Login Form: button */
 "Sign In" = "Registrate";
 
-/* No comment provided by engineer. */
+/* Login Form */
 "Sign In with your Riot account" = "Regístrate con tu cuenta de Riot";
 
 /* Account Settings */
 "Sign Out" = "Cerrar sesión";
 
-/* No comment provided by engineer. */
+/* Login Form: button/header */
 "Sign in with Google/Apple/etc." = "Regístrate con Google/Apple/etc.";
 
 /* No comment provided by engineer. */
@@ -672,7 +661,7 @@ Request Log: title */
 /* Pro Store */
 "Thank you for supporting Recon Bolt!" = "¡Gracias por ayudar a Recon Bolt!";
 
-/* No comment provided by engineer. */
+/* Login Form: is this safe? */
 "The code is open-source and visible on GitHub; you can build it yourself if you want to be sure of what's running." = "El código es público para todo el mundo en GitHub; Puedes reconstruirlo tu mismo para saber que es lo que hace.";
 
 /* App Icon Description: default */
@@ -683,9 +672,6 @@ Request Log: title */
 
 /* No comment provided by engineer. */
 "Theme" = "Temática";
-
-/* About Screen: section */
-"Third-Party Libraries & APIs Used" = "Librerías de terceros & API utilizadas";
 
 /* Statistics error for iOS <16 */
 "This feature requires iOS 16 or newer." = "La función requiere de iOS 16 o superior.";
@@ -748,7 +734,7 @@ Hit Distribution Stats: region */
 /* Match Details: button */
 "Update Ranks" = "Actualizar rangos";
 
-/* No comment provided by engineer. */
+/* Login Form */
 "Username" = "Nombre de usuario";
 
 /* No comment provided by engineer. */
@@ -784,6 +770,9 @@ Hit Distribution Stats: region */
 /* Missions Widget */
 "Weekly" = "Semanal";
 
+/* Missions Box: header */
+"Weekly Missions" = "Misiones semanales";
+
 /* No comment provided by engineer. */
 "Widget Refresh Requested" = "Solicitud de actualizar el Widget";
 
@@ -796,10 +785,10 @@ Hit Distribution Stats: region */
 /* No comment provided by engineer. */
 "Year" = "Año";
 
-/* No comment provided by engineer. */
+/* Login Form: is this safe? */
 "You can enable 2-factor authentication, so you'd at least have another layer of security if it went bad." = "Puedes activar la autentificación en 2 pasos. Por si algo saliera mal, tuvieras otra capa de seguridad.";
 
-/* No comment provided by engineer. */
+/* Login Form: is this safe? */
 "Your credentials only ever leave your device in the form of a login request directly to Riot. They are never stored or sent anywhere else." = "Tus credenciales solo salen del dispositivo para ir al formulario de inicio de sesión de Riot. Nunca se guardan en ningún otro sitio.";
 
 /* No comment provided by engineer. */
@@ -808,5 +797,5 @@ Hit Distribution Stats: region */
 /* Missions Widget: countdown label when the target is in the past. Should never really show up, since at this point there's new data. */
 "old" = "antiguo";
 
-/* No comment provided by engineer. */
+/* Login Form */
 "signing in…" = "registrando…";

@@ -41,7 +41,7 @@
         <key>NSStringFormatValueTypeKey</key>
         <string>lld</string>
         <key>other</key>
-        <string>%lld hàng chiwf</string>
+        <string>%lld hàng chờ</string>
       </dict>
     </dict>
     <key>Load Latest %lld Match(es)</key>

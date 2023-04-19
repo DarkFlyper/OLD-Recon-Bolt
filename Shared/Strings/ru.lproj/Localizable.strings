@@ -8,7 +8,7 @@
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph); placeholder is replaced by the percentage of rounds won, e.g. '57.3% won'. */
 "%@ won" = "%@ выиграно";
 
-/* No comment provided by engineer. */
+/* used throughout the app to format percentages—placeholder is replaced by a number */
 "%@%%" = "%@%%";
 
 /* Missions Box: always at least 3 */
@@ -23,7 +23,7 @@
 /* Storage Management */
 "%lld from other players" = "%lld от других игроков";
 
-/* Loadout Item Picker: number of hidden items—this should never show nowadays */
+/* Loadout Item Picker: number of hidden items—this should never show nowadays (Key in .stringsdict) */
 "%lld hidden due to outdated assets" = "%lld скрыто из-за устаревших ресурсов";
 
 /* Hit Distribution Stats: hit count */
@@ -31,9 +31,6 @@
 
 /* Shown at the bottom of the expandable playtime list when there are more entries available. */
 "%lld more" = "Еще %lld";
-
-/* Statistics Filter: shown when not everything is allowed */
-"%lld selected" = "%lld выбран(о)";
 
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
 "%lld to %lld credits" = "%lld до %lld кредитов";
@@ -44,10 +41,10 @@
 /* No comment provided by engineer. */
 "%lld/%lld" = "%lld/%lld";
 
-/* Stats: match loading */
+/* Stats: match loading (Key in .stringsdict) */
 "%lld/%lld loaded" = "%lld/%lld загружено";
 
-/* Loadout Item Picker: number of items owned out of all such items in the game */
+/* Loadout Item Picker: number of items owned out of all such items in the game (Key in .stringsdict) */
 "%lld/%lld owned" = "%lld/%lld принадлежит";
 
 /* Time Formatting: minutes & seconds (used in round details view) */
@@ -84,7 +81,7 @@ Missions Box */
 /* No comment provided by engineer. */
 "A 2FA code has been sent to your email address %@" = "Код двухфакторной аутентификации был отправлен на вашу почту %@";
 
-/* No comment provided by engineer. */
+/* Match List Filter */
 "A match's queue is unknown until its details are fetched (by tapping it or performing the swipe action).
 Competitive matches after your placements can be identified without their details, however." = "Детали матча неизвестны, пока не будут получены с сервера (нажатием на матч или свайпом).
 Матчи соревновательного режима после калибровки могут быть идентифицированы и без деталей.";
@@ -128,7 +125,7 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Agent Select" = "Выбор агента";
 
-/* No comment provided by engineer. */
+/* Statistics filter: button */
 "Agents" = "Агенты";
 
 /* Stats: match loading */
@@ -137,20 +134,8 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "All Maps" = "Все карты";
 
-/* Statistics Filter (queues or agents) */
-"Allow All" = "Включить все";
-
-/* Statistics Filter (queues or agents) */
-"Allow None" = "Выключить все";
-
-/* Statistics Filter */
-"Allowing %lld/%lld matches (%lld filtered out)" = "Отфильтрованы матчи: %lld/%lld (Не подошли: %lld)";
-
 /* Default Error Alert Title */
 "An Error Occurred!" = "Произошла ошибка!";
-
-/* Statistics Filter: shown when everything is allowed */
-"Any" = "Все";
 
 /* Asset Management */
 "Anything with images will not display correctly." = "Все с изображениями не будет отображаться корректно.";
@@ -163,9 +148,6 @@ Competitive matches after your placements can be identified without their detail
 
 /* Pro Features List */
 "As thanks for your support, you get to show off your status with an exclusive app icon!" = "Как благодарность за поддержку, вы можете воспользоваться эксклюзивной иконкой приложения!";
-
-/* About Screen */
-"As you can guess, the scope expanded massively over time to what you're using now. I hope you're enjoying it!" = "Как вы можете догадаться, область применения значительно расширилась со временем до того, что вы используете сейчас. Надеюсь, вам это нравится!";
 
 /* No comment provided by engineer. */
 "Assets" = "Ресурсы";
@@ -181,9 +163,6 @@ Competitive matches after your placements can be identified without their detail
 
 /* Asset Management */
 "Assets up to date!" = "Ресурсы актуальны!";
-
-/* No comment provided by engineer. */
-"Assuming you signed up for Valorant using Google/Apple/etc., you can set up your account to add a username & password on Riot's site at [account.riotgames.com](https://account.riotgames.com). Note that your Riot ID is **not** the same as your username! If you've forgotten your username, you can reset it at [recovery.riotgames.com](https://recovery.riotgames.com)." = "Если вы зарегистрировались в Valorant с помощью Google/Apple/и т. д., вы можете настроить свою учетную запись, чтобы добавить имя пользователя и пароль на сайте Riot по адресу [account.riotgames.com](https://account.riotgames.com). Обратите внимание, что ваш Riot ID **не** совпадает с вашим именем пользователя! Если вы забыли свое имя пользователя, вы можете сбросить его на [recovery.riotgames.com](https://recovery.riotgames.com).";
 
 /* Win Rate Stats: side name */
 "Attacking" = "Атака";
@@ -299,7 +278,7 @@ Stats: error details */
 /* Match List: accessibility label */
 "Fetch Details" = "Получить детали";
 
-/* No comment provided by engineer. */
+/* Statistics Filter: title (section) */
 "Filter" = "Фильтр";
 
 /* No comment provided by engineer. */
@@ -353,9 +332,6 @@ Stats: error details */
 /* No comment provided by engineer. */
 "Headhunter (Chamber)" = "Охотник за головами (Chamber)";
 
-/* About Screen */
-"Hi! I'm Julian Dunskus, and I made this app." = "Привет! Я Джулиан Дунскус, и я создал это приложение.";
-
 /* Hit Distribution Stats: title */
 "Hit Distribution" = "Распределение попаданий";
 
@@ -365,23 +341,17 @@ Stats: error details */
 /* Pro Store */
 "I hope you enjoy the pro features :)" = "Надеюсь, вам нравятся про-функции приложения :)";
 
-/* No comment provided by engineer. */
+/* Login Form: is this safe? */
 "I won't sugarcoat things. Due to the way this app uses the API, I believe there's no other way to sign in than to have people enter their credentials directly. Under those circumstances, there's really no good way for anyone to be sure their credentials remain safe. For what it's worth:" = "Я не буду приукрашивать вещи. Из-за того, как это приложение использует API, я считаю, что нет другого способа войти в систему, кроме как напрямую ввести свои учетные данные. В этих обстоятельствах действительно нет хорошего способа убедиться, что их учетные данные остаются в безопасности. Для чего это стоит:";
 
 /* No comment provided by engineer. */
 "Identities" = "Личности";
-
-/* No comment provided by engineer. */
-"If you don't know your username or don't have one, you can fix that at [account.riotgames.com](https://account.riotgames.com)." = "Если вы не знаете свое имя пользователя или его нет, вы можете изменить это на [account.riotgames.com](https://account.riotgames.com).";
 
 /* Pro Features List */
 "If you have accounts in multiple regions to play with friends around the world, this is the feature for you!" = "Если у вас есть несколько аккаунтов с разными регионами, чтобы играть с друзьями со всего мира, эта функция для вас!";
 
 /* Pro Features List */
 "If you have multiple accounts, you can configure separate widgets for each and have them on your Home Screen at the same time." = "Если у вас есть несколько аккаунтов, можно создать несколько виджетов для каждого и иметь их на Домашнем Экране одновременно.";
-
-/* About Screen */
-"If you've encountered a bug or have some feedback, I'm always happy to hear it on the Discord Server or GitHub :)" = "Если вы столкнулись с ошибкой или у вас есть отзывы, я всегда рад прочитать их на сервере Discord или на GitHub :)";
 
 /* No comment provided by engineer. */
 "If your widgets seem broken, use this button to request an immediate refresh from iOS." = "Если ваши виджеты кажутся нерабочими, используйте эту кнопку, чтобы запросить немедленное обновление от iOS.";
@@ -395,7 +365,7 @@ Stats: error details */
 /* Settings: section */
 "In-App Store" = "Магазин";
 
-/* No comment provided by engineer. */
+/* Login Form: button/header */
 "Is this safe?" = "Это безопасно?";
 
 /* No comment provided by engineer. */
@@ -522,9 +492,6 @@ Stats: error details */
 "Official Website" = "Официальный сайт";
 
 /* No comment provided by engineer. */
-"On that site, navigate to **Riot Account Sign-in** and set yourself a username and password. When you're done, you can use those same credentials to sign in above! Your social account will stay linked and you'll remain able to sign in with that on PC :)" = "На этой странице перейдите к **Вход в учетную запись Riot** и задайте себе имя пользователя и пароль. Когда вы закончите, вы можете использовать те же учетные данные для входа выше! Ваша учетная запись соцсети останется связанной, и вы сможете войти с ней на ПК :)";
-
-/* No comment provided by engineer. */
 "Open or swipe to fetch details." = "Откройте или свайпните вправо для получения деталей.";
 
 /* Storage Management */
@@ -550,7 +517,7 @@ Playtime Stats: section */
 /* Scoreboard: party letter */
 "Party %@" = "Группа %@";
 
-/* No comment provided by engineer. */
+/* Login Form */
 "Password" = "Пароль";
 
 /* Agent View: label for player who hasn't picked an agent yet */
@@ -583,7 +550,7 @@ Playtime Stats: section */
 /* Pro Store: button (placeholder filled with formatted currency) */
 "Purchase – %@" = "Покупка - %@";
 
-/* No comment provided by engineer. */
+/* Statistics filter: button */
 "Queues" = "Режимы";
 
 /* Rank Widget: title */

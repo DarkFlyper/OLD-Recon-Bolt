@@ -8,6 +8,9 @@
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph); placeholder is replaced by the percentage of rounds won, e.g. '57.3% won'. */
 "%@ won" = "%@の試合を勝ちました。";
 
+/* used throughout the app to format percentages—placeholder is replaced by a number */
+"%@%%" = "%@%%";
+
 /* Missions Box: always at least 3 */
 "%lld Future Weeklies" = "今後のウイークリー";
 
@@ -20,7 +23,7 @@
 /* Storage Management */
 "%lld from other players" = "他の人から %lld";
 
-/* Loadout Item Picker: number of hidden items—this should never show nowadays */
+/* Loadout Item Picker: number of hidden items—this should never show nowadays (Key in .stringsdict) */
 "%lld hidden due to outdated assets" = "%lld のファイルが古いから見えませんん";
 
 /* Hit Distribution Stats: hit count */
@@ -28,9 +31,6 @@
 
 /* Shown at the bottom of the expandable playtime list when there are more entries available. */
 "%lld more" = "もう%lldつ";
-
-/* Statistics Filter: shown when not everything is allowed */
-"%lld selected" = "%lld を選択されています";
 
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
 "%lld to %lld credits" = "%lldから%lldクレジット";
@@ -41,10 +41,10 @@
 /* No comment provided by engineer. */
 "%lld/%lld" = "%lld/%lld";
 
-/* Stats: match loading */
+/* Stats: match loading (Key in .stringsdict) */
 "%lld/%lld loaded" = "%lld/%lldが読み込まれました";
 
-/* Loadout Item Picker: number of items owned out of all such items in the game */
+/* Loadout Item Picker: number of items owned out of all such items in the game (Key in .stringsdict) */
 "%lld/%lld owned" = "%lld/%lldを持っています";
 
 /* Time Formatting: minutes & seconds (used in round details view) */
@@ -59,6 +59,65 @@ Missions Box */
 
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
 "(%lld – %lld)" = "(%lld – %lld)";
+
+/* Pro Features List */
+"(You can switch between available icons at any time.)" = "(いつでもアイコンを変えられます。)";
+
+/* No comment provided by engineer. */
+"+%lld XP" = "+%lld XP";
+
+/* Missions Widget: how many more weeklies are queued up after the current set */
+"+%lld queued" = "+%lld を待っています";
+
+/* Store: night market discount */
+"-%lld%%" = "-%lld%%";
+
+/* No comment provided by engineer. */
+"2-Factor Authentication" = "多要素認証";
+
+/* Missions Widget: countdown label when the target is in the future. e.g. '< 2d 3h' */
+"< %@" = "< %@";
+
+/* No comment provided by engineer. */
+"A 2FA code has been sent to your email address %@" = "メールアドレスに2FAのコードが送られています %@";
+
+/* Match List Filter */
+"A match's queue is unknown until its details are fetched (by tapping it or performing the swipe action).
+Competitive matches after your placements can be identified without their details, however." = "試合のキューはデータを取る（タップするかスワイプする）まで知りません。
+振り分け戦の後のコンペティティブの試合はデータがなくても見つけられます。";
+
+/* No comment provided by engineer. */
+"AFK: %lld" = "AFK: %lld";
+
+/* Career Summary: header for totals of all time */
+"ALL TIME" = "全部";
+
+/* Settings: section */
+"About" = "アプリについて";
+
+/* No comment provided by engineer. */
+"About Recon Bolt" = "レコン ボルト について";
+
+/* Settings: section */
+"Accounts" = "アカウント";
+
+/* Contract Picker: button */
+"Activate" = "変える";
+
+/* Contract Picker */
+"Active" = "今";
+
+/* Missions Box: header */
+"Active Contract" = "今の契約";
+
+/* Match List: accessibility label */
+"Add Bookmark" = "ブックマークする";
+
+/* Account Settings */
+"Add another Account" = "アカウントをたす";
+
+/* Pro Features List */
+"Add multiple accounts and seamlessly switch between them at any time." = "いつでも何回も新しいアカウントにログインできます。";
 
 /* Store */
 "Unknown Offer" = "知らないオファーがあります";

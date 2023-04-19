@@ -21,7 +21,7 @@ Ustawiony w kolejce tygodniki";
 /* Storage Management */
 "%lld from other players" = "%lld od innych graczy";
 
-/* Loadout Item Picker: number of hidden items—this should never show nowadays */
+/* Loadout Item Picker: number of hidden items—this should never show nowadays (Key in .stringsdict) */
 "%lld hidden due to outdated assets" = "%lld ukryte z powodu starych aktywów";
 
 /* Hit Distribution Stats: hit count */
@@ -30,17 +30,14 @@ Ustawiony w kolejce tygodniki";
 /* Shown at the bottom of the expandable playtime list when there are more entries available. */
 "%lld more" = "więcej";
 
-/* Statistics Filter: shown when not everything is allowed */
-"%lld selected" = "wybrane";
-
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
 "%lld to %lld credits" = "od %lld do %lld kredyty";
 
-/* Stats: match loading */
+/* Stats: match loading (Key in .stringsdict) */
 "%lld/%lld loaded" = "match loaded
 mecz załadowany";
 
-/* Loadout Item Picker: number of items owned out of all such items in the game */
+/* Loadout Item Picker: number of items owned out of all such items in the game (Key in .stringsdict) */
 "%lld/%lld owned" = "owned 
 obecnie posiadany";
 
@@ -56,11 +53,6 @@ w kolejce";
 
 /* Asset Management */
 "Assets up to date!" = "aktywa są aktualne";
-
-/* No comment provided by engineer. */
-"Assuming you signed up for Valorant using Google/Apple/etc., you can set up your account to add a username & password on Riot's site at [account.riotgames.com](https://account.riotgames.com). Note that your Riot ID is **not** the same as your username! If you've forgotten your username, you can reset it at [recovery.riotgames.com](https://recovery.riotgames.com)." = "Zakładając, że zapisałeś się do Valorant używając Google/Apple/etc., możesz skonfigurować swoje konto, aby dodać nazwę użytkownika i hasło na stronie Riotu pod adresem 
-[account.riotgames.com](https://account.riotgames.com). Zauważ, że twój Riot ID to **nie** to samo co twoja nazwa użytkownika! Jeśli zapomniałeś swojej nazwy użytkownika, możesz ją zresetować na stronie
- [recovery.riotgames.com](https://recovery.riotgames.com).";
 
 /* Win Rate Stats: side name */
 "Attacking" = "atakuje";

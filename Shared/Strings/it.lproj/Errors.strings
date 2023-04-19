@@ -1,0 +1,12 @@
+/* Pro Store: error restoring purchase */
+"A previous transaction was found, but it could not be verified! %@" = "È stata trovata una transazione precedente, ma non è stata verificata! %@";
+
+/* error loading the account for a widget */
+"Could not load active account!" = "Impossibile caricare l'account attivo!";
+
+/* wrong account error */
+"It looks like this account has never played Valorant!
+
+You've probably signed into the wrong account; %@" = "Sembra che questo account non abbia mai giocato a Valorant!
+
+Probabilmente hai effettuato l'accesso con l'account sbagliato; %@";
