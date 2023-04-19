@@ -418,7 +418,7 @@ Stats: error details */
 "Exchange" = "Trao đổi";
 
 /* Request Log: title for detailed view of request body/contents */
-"Exchange Body" = "Thân";
+"Exchange Body" = "Nội dung";
 
 /* Statistics Filter: button to exclude all agents */
 "Exclude All Agents" = "Bỏ chọn tất cả";
@@ -436,7 +436,7 @@ Stats: error details */
 "Family Sharing" = "Chia sẻ gia đình";
 
 /* Request Log: placeholder is replaced by error dump. */
-"Feedback Email Body" = "Nếu gặp phải lỗi? Hãy báo với tôi về lỗi bạn vừa gặp phải:
+"Feedback Email Body" = "Nếu gặp phải lỗi? Hãy báo cáo với tôi về lỗi bạn vừa gặp phải:
 
 BÁO CÁO LỖI CỦA BẠN TẠI ĐÂY
 
@@ -521,7 +521,7 @@ Nếu bạn gặp lỗi hoặc có một số phản hồi, tôi luôn sẵn lò
 "Home Screen Widgets" = "Tiện ích màn hình chính";
 
 /* Pro Store */
-"I hope you enjoy the pro features :)" = "Tôi hy vọng bạn thích các tính năng của phiên bản Pro :)";
+"I hope you enjoy the pro features :)" = "Hy vọng bạn thích các tính năng của phiên bản Pro :)";
 
 /* Login Form: is this safe? */
 "I won't sugarcoat things. Due to the way this app uses the API, I believe there's no other way to sign in than to have people enter their credentials directly. Under those circumstances, there's really no good way for anyone to be sure their credentials remain safe. For what it's worth:" = "Tôi sẽ không tô vẽ mọi thứ. Do cách ứng dụng này sử dụng API, tôi tin rằng không có cách nào khác để đăng nhập ngoài việc yêu cầu mọi người nhập trực tiếp thông tin đăng nhập của họ. Trong trường hợp đó, thực sự không có cách nào là chắc chắn cho bất kỳ ai để đảm bảo thông tin đăng nhập của họ vẫn an toàn. Cho những gì nó xứng với:";
@@ -1021,7 +1021,7 @@ Login Form: button */
 "Theme" = "Chủ đề";
 
 /* No comment provided by engineer. */
-"These are the last %lld requests sent by the app, along with their responses." = "Đây là những yêu cầu %lld cuối cùng được gửi bởi ứng dụng, cùng với phản hồi của chúng.";
+"These are the last %lld requests sent by the app, along with their responses." = "Đây là %lld yêu cầu cuối cùng được gửi bởi ứng dụng, cùng với phản hồi của chúng.";
 
 /* Statistics error for iOS <16 */
 "This feature requires iOS 16 or newer." = "Tính năng này yêu cầu iOS 16 trở lên.";
