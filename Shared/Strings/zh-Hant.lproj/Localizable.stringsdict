@@ -83,7 +83,7 @@
         <key>NSStringFormatValueTypeKey</key>
         <string>lld</string>
         <key>other</key>
-        <string>%lld 上個賽季</string>
+        <string>%lld 個賽季</string>
       </dict>
     </dict>
     <key>%lld hidden due to outdated assets</key>
