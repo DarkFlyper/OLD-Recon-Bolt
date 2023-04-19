@@ -230,6 +230,12 @@ Playtime Stats: section */
 "Career" = "生涯";
 
 /* No comment provided by engineer. */
+"Career Summaries" = "生涯總結";
+
+/* No comment provided by engineer. */
+"Career Summary" = "生涯總結";
+
+/* No comment provided by engineer. */
 "Change Buddy" = "更換吊飾";
 
 /* No comment provided by engineer. */
@@ -556,6 +562,12 @@ Stats: error details */
 "Loadout" = "收藏";
 
 /* No comment provided by engineer. */
+"Loadout not loaded!" = "收藏還沒加載！";
+
+/* No comment provided by engineer. */
+"Lobby Dodged" = "大廳退出";
+
+/* No comment provided by engineer. */
 "Lock In" = "鎖定";
 
 /* No comment provided by engineer. */
@@ -837,6 +849,9 @@ Request Log: title */
 
 /* Round Details: title */
 "Round Details" = "回合詳情";
+
+/* Win Rate Stats: section */
+"Rounds by Side" = "按方回合";
 
 /* Bookmark/Player List: section */
 "Search" = "搜尋";
