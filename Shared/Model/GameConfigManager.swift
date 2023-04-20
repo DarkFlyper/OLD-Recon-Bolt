@@ -5,8 +5,12 @@ import UserDefault
 @MainActor
 final class GameConfigManager: ObservableObject {
 	@Published
-	private var stored = Storage.stored {
-		didSet { Storage.stored = stored }
+	// got intractable errors when trying to compose these naively
+	private var _stored = UserDefault(wrappedValue: StoredConfigs(), "GameConfigManager.stored", defaults: .shared)
+	
+	private var stored: StoredConfigs {
+		get { _stored.wrappedValue }
+		set { _stored.wrappedValue = newValue }
 	}
 	
 	private var inProgress: Set<Location> = []
@@ -39,11 +43,6 @@ final class GameConfigManager: ObservableObject {
 			var lastUpdate: Date
 			var config: GameConfig
 		}
-	}
-	
-	private enum Storage {
-		@UserDefault("GameConfigManager.stored", defaults: .shared)
-		static var stored: StoredConfigs = .init()
 	}
 }
 
