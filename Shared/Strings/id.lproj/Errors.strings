@@ -1,0 +1,24 @@
+/* Pro Store: error restoring purchase */
+"A previous transaction was found, but it could not be verified! %@" = "Transaksi sebelumnya ditemukan, tetapi tidak dapat diverifikasi! %@";
+
+/* error loading the account for a widget */
+"Could not load active account!" = "Tidak dapat memuat akun aktif!";
+
+/* Pro Store: error restoring purchase: replacement for revokation reason on outdated iOS where it's not available */
+"Update to iOS 15.4 to see the reason!" = "Perbarui ke iOS 15.4 untuk mengetahui alasannya!";
+
+/* Riot API Error */
+"Valorant is currently undergoing scheduled maintenance. Riot is probably updating the game!" = "Valorant saat ini sedang menjalani pemeliharaan terjadwal. Riot mungkin sedang memperbarui game ini!";
+
+/* No comment provided by engineer. */
+"Widgets require Recon Bolt Pro!" = "Widget membutuhkan Recon Bolt Pro!";
+
+/* Riot API Error */
+"Your token has expired. %@" = "Token Anda telah kedaluwarsa. %@";
+
+/* wrong account error */
+"this one is:
+
+%@" = "yang satu ini adalah:
+
+%@";
