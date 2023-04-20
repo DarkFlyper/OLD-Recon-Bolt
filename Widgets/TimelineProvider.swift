@@ -58,7 +58,6 @@ extension FetchingIntentTimelineProvider {
 		var location: Location?
 		let result: Result<Value, Error>
 		do {
-			await Managers.store.refreshFromDefaults()
 			guard await Managers.store.ownsProVersion else {
 				throw WidgetError.needProVersion
 			}
