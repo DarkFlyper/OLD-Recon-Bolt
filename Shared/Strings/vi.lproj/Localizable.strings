@@ -508,7 +508,7 @@ As you can guess, the scope expanded massively over time to what you're using no
 
 If you've encountered a bug or have some feedback, I'm always happy to hear it on the Discord Server or GitHub :)" = "Chào! Tôi là Julian Dunskus và tôi đã tạo ứng dụng này.
 
-Recon Bolt bắt đầu phát triển vào đầu năm 2021, khi chưa thể xem sự tăng giảm ĐXH của bạn trong trò chơi, nhưng API đã cung cấp những con số đó. Tôi đã tạo một ứng dụng để xem các con số và hiểu rõ hơn về sự thay đổi thứ hạng của mình. 
+Recon Bolt bắt đầu phát triển vào đầu năm 2021, khi chưa thể xem sự tăng giảm ĐXH của bạn trong trò chơi, nhưng API đã cung cấp những con số đó. Tôi đã tạo ra một ứng dụng để xem các con số và hiểu rõ hơn về sự thay đổi thứ hạng của mình. 
 
 Như bạn có thể đoán được, dự án ngày càng trở lên lớn hơn theo thời gian, cuối cùng trở thành ứng dụng mà bạn đang sử dụng. Tôi hy vọng bạn thích nó! 
 
@@ -575,7 +575,7 @@ Nếu bạn gặp lỗi hoặc có một số phản hồi, tôi luôn sẵn lò
 "Light Mode" = "Chế độ sáng";
 
 /* About Screen: section */
-"Links" = "Những liên kết";
+"Links" = "Những liên kết của tôi";
 
 /* Top-Level Tab Title */
 "Live" = "Trực tiếp";
