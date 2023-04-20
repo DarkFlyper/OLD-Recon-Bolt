@@ -16,48 +16,6 @@
         <string>%lld 錯誤</string>
       </dict>
     </dict>
-    <key>%lld map(s) selected</key>
-    <dict>
-      <key>NSStringLocalizedFormatKey</key>
-      <string>%#@maps@ 已選擇</string>
-      <key>maps</key>
-      <dict>
-        <key>NSStringFormatSpecTypeKey</key>
-        <string>NSStringPluralRuleType</string>
-        <key>NSStringFormatValueTypeKey</key>
-        <string>lld</string>
-        <key>other</key>
-        <string>%lld 地圖</string>
-      </dict>
-    </dict>
-    <key>%lld queue(s) selected</key>
-    <dict>
-      <key>NSStringLocalizedFormatKey</key>
-      <string>%#@queues@ 已選擇</string>
-      <key>queues</key>
-      <dict>
-        <key>NSStringFormatSpecTypeKey</key>
-        <string>NSStringPluralRuleType</string>
-        <key>NSStringFormatValueTypeKey</key>
-        <string>lld</string>
-        <key>other</key>
-        <string>%lld 隊列</string>
-      </dict>
-    </dict>
-    <key>Load Latest %lld Match(es)</key>
-    <dict>
-      <key>NSStringLocalizedFormatKey</key>
-      <string>載入最新 %#@matches@</string>
-      <key>matches</key>
-      <dict>
-        <key>NSStringFormatSpecTypeKey</key>
-        <string>NSStringPluralRuleType</string>
-        <key>NSStringFormatValueTypeKey</key>
-        <string>lld</string>
-        <key>other</key>
-        <string>%lld 埸對戰記錄</string>
-      </dict>
-    </dict>
     <key>%lld match(es)</key>
     <dict>
       <key>NSStringLocalizedFormatKey</key>
