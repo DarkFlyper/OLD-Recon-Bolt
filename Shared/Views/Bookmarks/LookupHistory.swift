@@ -4,15 +4,18 @@ import UserDefault
 
 @MainActor
 final class LookupHistory: ObservableObject {
-	@UserDefault("LookupHistory.stored")
-	private static var stored: [Entry] = []
 	private static let maxCount = 3
 	
-	@Published var entries: [Entry] = LookupHistory.stored {
-		didSet { Self.stored = entries }
+	@UserDefault("LookupHistory.stored")
+	private var stored: [Entry] = []
+	
+	@Published var entries: [Entry] {
+		didSet { stored = entries }
 	}
 	
-	init() {}
+	init() {
+		entries = _stored.wrappedValue
+	}
 	
 #if DEBUG
 	init(entries: [Entry]) {

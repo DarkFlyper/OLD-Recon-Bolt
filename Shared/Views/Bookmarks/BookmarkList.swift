@@ -6,13 +6,14 @@ import UserDefault
 @MainActor
 final class BookmarkList: ObservableObject {
 	@UserDefault("BookmarkList.stored.v2", migratingTo: .shared)
-	private static var stored: [Entry] = []
+	private var stored: [Entry] = []
 	
-	@Published var bookmarks: [Entry] = BookmarkList.stored {
-		didSet { Self.stored = bookmarks }
+	@Published var bookmarks: [Entry] {
+		didSet { stored = bookmarks }
 	}
 	
 	init() {
+		self.bookmarks = _stored.wrappedValue
 		if bookmarks.isEmpty, BackwardsCompatibility.canMigrate {
 			Task {
 				guard let location = AccountManager().activeAccount?.location else { return }
@@ -24,7 +25,7 @@ final class BookmarkList: ObservableObject {
 #if DEBUG
 	init(bookmarks: [Entry]) {
 		assert(isInSwiftUIPreview)
-		_bookmarks = .init(wrappedValue: bookmarks)
+		self.bookmarks = bookmarks
 	}
 #endif
 	

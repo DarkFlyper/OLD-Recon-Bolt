@@ -1,9 +1,15 @@
 import SwiftUI
 import WidgetKit
+import HandyOperators
 
 enum Managers {
 	@AutoReloadedManager static var accounts = AccountManager()
-	@AutoReloadedManager static var assets = AssetManager()
+	@AutoReloadedManager static var assets = AssetManager() <- {
+		if let assets = $0.assets {
+			// autoclosure, not called until accessed, so no need to worry about initialization order
+			images.setVersion(assets.version)
+		}
+	}
 	@AutoReloadedManager static var store = InAppStore(isReadOnly: true)
 	@MainActor static let images = ImageManager()
 }

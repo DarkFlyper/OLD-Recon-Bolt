@@ -6,11 +6,13 @@ import WidgetKit
 @MainActor
 final class InAppStore: ObservableObject {
 	@UserDefault("ownedProducts", migratingTo: .shared)
-	private static var ownedProducts: Set<Product.ID> = [] {
+	private var storedProducts: Set<Product.ID> = [] {
 		didSet {
+			#if !WIDGETS
 			if ownedProducts != oldValue {
 				WidgetCenter.shared.reloadAllTimelines()
 			}
+			#endif
 		}
 	}
 	
@@ -22,11 +24,13 @@ final class InAppStore: ObservableObject {
 	private var updateListenerTask: Task<Void, Never>? = nil
 	
 	@Published
-	private var ownedProducts: Set<Product.ID> = InAppStore.ownedProducts {
-		didSet { Self.ownedProducts = ownedProducts }
+	private var ownedProducts: Set<Product.ID> {
+		didSet { storedProducts = ownedProducts }
 	}
 	
 	init(isReadOnly: Bool = false) {
+		ownedProducts = _storedProducts.wrappedValue
+		
 		if !isReadOnly {
 			updateListenerTask = listenForTransactions()
 			
@@ -46,11 +50,6 @@ final class InAppStore: ObservableObject {
 	
 	deinit {
 		updateListenerTask?.cancel()
-	}
-	
-	func refreshFromDefaults() {
-		Self._ownedProducts.loadValue()
-		ownedProducts = Self.ownedProducts
 	}
 	
 	func fetchProducts() async {

@@ -12,20 +12,20 @@ final class AccountManager: ObservableObject {
 	
 	@Published var activeAccount: StoredAccount? = nil {
 		didSet {
-			Storage.activeAccount = activeAccount?.id
+			storage.activeAccount = activeAccount?.id
 			updateClientVersion()
 		}
 	}
 	
-	@Published var storedAccounts: [User.ID] = Storage.storedAccounts {
+	@Published var storedAccounts: [User.ID] {
 		didSet {
-			Storage.storedAccounts = storedAccounts
+			storage.storedAccounts = storedAccounts
 		}
 	}
 	
-	@Published var clientVersion = Storage.clientVersion {
+	@Published var clientVersion: String? {
 		didSet {
-			Storage.clientVersion = clientVersion
+			storage.clientVersion = clientVersion
 			updateClientVersion()
 		}
 	}
@@ -34,11 +34,19 @@ final class AccountManager: ObservableObject {
 		activeAccount?.session.hasExpired != false
 	}
 	
-	var accountLoadError: String?
+	private(set) var accountLoadError: String?
+	
+	@Published private var storage: Storage
 	
 	init() {
 		self.keychain = .standard
-		if let accountID = Storage.activeAccount {
+		
+		let storage = Storage()
+		self.storage = storage // can't use @Published's value before self is initialized, so we'll go this way instead
+		
+		self.storedAccounts = storage.storedAccounts
+		self.clientVersion = storage.clientVersion
+		if let accountID = storage.activeAccount {
 			do {
 				self.activeAccount = try loadAccount(for: accountID)
 			} catch {
@@ -57,6 +65,7 @@ final class AccountManager: ObservableObject {
 	@_disfavoredOverload
 	init(mockAccounts: [User.ID] = [], activeAccount: StoredAccount? = nil) {
 		self.keychain = MockKeychain()
+		self.storage = .init()
 		self.activeAccount = activeAccount
 		self.storedAccounts = mockAccounts
 		if let activeAccount, !self.storedAccounts.contains(activeAccount.id) {
@@ -80,6 +89,7 @@ final class AccountManager: ObservableObject {
 			storedAccounts.append(session.userID)
 		}
 		activeAccount = StoredAccount(session: session, context: context)
+		// FIXME: figure out why this might not be resetting isExpired
 	}
 	
 	func toggleActive(_ id: User.ID) throws {
@@ -110,13 +120,13 @@ final class AccountManager: ObservableObject {
 		activeAccount?.setClientVersion(clientVersion)
 	}
 	
-	private enum Storage {
+	private struct Storage {
 		@UserDefault("AccountManager.activeAccount", migratingTo: .shared)
-		static var activeAccount: User.ID?
+		var activeAccount: User.ID?
 		@UserDefault("AccountManager.storedAccounts", migratingTo: .shared)
-		static var storedAccounts: [User.ID] = []
+		var storedAccounts: [User.ID] = []
 		@UserDefault("AccountManager.clientVersion", migratingTo: .shared)
-		static var clientVersion: String?
+		var clientVersion: String?
 	}
 	
 	func handleMultifactor(info: MultifactorInfo) async throws -> String {
