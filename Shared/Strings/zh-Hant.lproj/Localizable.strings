@@ -492,6 +492,21 @@ Stats: error details */
 /* No comment provided by engineer. */
 "Headhunter (Chamber)" = "獵頭 (錢伯爾)";
 
+/* About Screen */
+"Hi! I'm Julian Dunskus, and I made this app.
+
+Recon Bolt started development in early 2021, back when it wasn't yet possible to see your RR gains and losses in the game, but the API offered those numbers. I made an app to see the numbers and better understand my rank changes.
+
+As you can guess, the scope expanded massively over time to what you're using now. I hope you're enjoying it!
+
+If you've encountered a bug or have some feedback, I'm always happy to hear it on the Discord Server or GitHub :)" = "嗨！ 我是Julian Dunskus，我做了這個應用程式。
+
+Recon Bolt於2021年當初開始開發，當時還無法在遊戲中看到您的RR上升和下跌，但API提供了這些數字。 我製作了一個應用程式來檢視數字並更好地瞭解我的排名變化。
+
+正如您可以猜測的那樣，隨著時間的推移，範圍會大大擴充套件到您現在使用的內容。 我希望你喜歡它！
+
+如果您遇到錯誤或有一些反饋，我總是很高興在Discord伺服器或GitHub上聽到它:)";
+
 /* Hit Distribution Stats: title */
 "Hit Distribution" = "命中分配";
 
@@ -742,6 +757,9 @@ Playtime Stats: section */
 "Overall" = "總計";
 
 /* No comment provided by engineer. */
+"Overdrive (Neon)" = "電能超載 (妮虹)";
+
+/* No comment provided by engineer. */
 "Party" = "組隊房間";
 
 /* Scoreboard: party letter */
@@ -892,6 +910,9 @@ Request Log: title */
 /* No comment provided by engineer. */
 "Show details when found" = "找到時顯示詳細資訊";
 
+/* App Icon Description: pro blue */
+"Show off your pro status with an exclusive icon!" = "您可以用獨家圖示炫耀專業版！";
+
 /* Account Settings: button
 Login Form: button */
 "Sign In" = "登入";
@@ -1001,6 +1022,9 @@ Hit Distribution Stats: region */
 
 /* Shown when a match does not match the filter and its details have not been fetched. */
 "Unfetched" = "未獲取";
+
+/* Hit Distribution Stats: footnote */
+"Unfortunately, Valorant doesn't store information about which weapon was used for each hit. All we get is the weapon you started the round with and what weapon you used for each kill. Recon Bolt guesses the weapon involved in each damage based on this information, but it cannot be perfect (and neither can any other tracker)." = "不幸的是，Valorant沒有儲存關於每次命中使用哪種武器的資訊。 我們得到的只是你開始回合的武器，以及你每次殺戮都用什麼武器。 Recon Bolt根據這些資訊猜測每種傷害所涉及的武器，但它不可能是完美的(任何其他Tracker也不行)";
 
 /* Round Details: killed by unknown ability */
 "Unknown Ability" = "未知技能";
@@ -1119,11 +1143,17 @@ Hit Distribution Stats: region */
 /* No comment provided by engineer. */
 "Year" = "年";
 
+/* Match Details: footnote */
+"You can also tap a round's number in the kill breakdown above to quickly view its details." = "你可以點回合數內以馬上查詢詳細資訊";
+
 /* Login Form: is this safe? */
 "You can enable 2-factor authentication, so you'd at least have another layer of security if it went bad." = "您可以打開雙重驗證，您至少擁有另一層安全措施。";
 
 /* No comment provided by engineer. */
 "Your session has expired! Recon Bolt has tried to refresh it for you, but needs 2FA confirmation." = "您的會話已過期！ Recon Bolt已嘗試為您重新整理，但需要驗證碼確認。";
+
+/* No comment provided by engineer. */
+"iOS is a bit finnicky about this, so widgets may not refresh right away—feel free to restart if this doesn't help!" = "iOS有點挑剔，因此小工具可能不會立即重新整理——如果這沒有幫助，請隨時重新啟動！";
 
 /* Loadout: spray slot */
 "mid-round" = "對戰中";
