@@ -158,7 +158,8 @@ struct WinRateView: View {
 					.gridColumnAlignment(.leading)
 					.frame(height: 0) // to "anchor" offset to center instead of top edge
 					.offset(y: sideRowHeight)
-				roundsBySide(map: nil, bySide: total)
+				
+				roundsBySide(total)
 					.chartXAxis { maybePercentageLabels() }
 			}
 			
@@ -173,7 +174,7 @@ struct WinRateView: View {
 						.frame(height: 0) // to "anchor" offset to center instead of top edge
 						.offset(y: sideRowHeight)
 					
-					roundsBySide(map: map, bySide: bySide)
+					roundsBySide(bySide)
 						.chartXScale(domain: .automatic(dataType: Int.self) { domain in
 							if !shouldNormalize {
 								let max = winRate.roundsBySide.values
@@ -209,14 +210,14 @@ struct WinRateView: View {
 		keys.sorted { $0.map(name(for:)) ?? "" }
 	}
 	
-	private func roundsBySide(map: MapID?, bySide: [Side: Tally]) -> some View {
+	private func roundsBySide(_ bySide: [Side: Tally]) -> some View {
 		Chart {
 			ForEach(Side.allCases, id: \.self) { side in
 				let tally = bySide[side] ?? .zero // always show both sides (one could be zero if there's only a single surrendered match)
 				BarMark(x: .value("Count", tally.wins), y: .value("Side", side.name), stacking: stacking)
-					.foregroundStyle(by: .value("Outcome", "Wins"))
+					.foregroundStyle(by: .value("Outcome", MatchOutcomeKey.wins))
 				BarMark(x: .value("Count", tally.losses), y: .value("Side", side.name), stacking: stacking)
-					.foregroundStyle(by: .value("Outcome", "Losses"))
+					.foregroundStyle(by: .value("Outcome", MatchOutcomeKey.losses))
 			}
 		}
 		.chartOverlay { chart in
@@ -512,6 +513,9 @@ struct WinRateView_Previews: PreviewProvider {
 	static var previews: some View {
 		WinRateView(statistics: PreviewData.statistics, timeGrouping: .year)
 			.withToolbar()
+		WinRateView(statistics: PreviewData.statistics, timeGrouping: .year)
+			.withToolbar()
+			.environment(\.locale, .init(identifier: "de-DE"))
 		WinRateView(statistics: .init(userID: PreviewData.userID, matches: [PreviewData.surrenderedMatch]))
 			.withToolbar()
 	}
