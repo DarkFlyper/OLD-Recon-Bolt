@@ -22,3 +22,24 @@ Muhtemelen yanlış hesaba giriş yaptınız; %@";
 
 /* No comment provided by engineer. */
 "Keychain error for key '%@': %@" = "'%@' anahtarı için anahtar zinciri hatası: %@";
+
+/* error loading the account for a widget. */
+"No account specified." = "Hesap belirtilmemiş.";
+
+/* Riot API Error */
+"Please try again in %lld seconds." = "Lütfen %lld saniye içinde tekrar deneyin.";
+
+/* store widget error */
+"Unknown Offer" = "Bilinmeyen Teklif";
+
+/* store widget error */
+"Unknown Skin" = "Bilinmeyen Skin";
+
+/* Pro Store: error restoring purchase: replacement for revokation reason on outdated iOS where it's not available */
+"Update to iOS 15.4 to see the reason!" = "Nedenini görmek için iOS 15.4'e güncelleyin!";
+
+/* Riot API Error */
+"Your session could not be resumed. %@" = "Oturumunuz devam ettirilemedi. %@";
+
+/* Riot API Error */
+"Your session has expired! Please sign in again." = "Oturumunuzun süresi doldu! Lütfen tekrar giriş yapın.";
