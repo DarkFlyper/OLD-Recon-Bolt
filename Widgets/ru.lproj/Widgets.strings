@@ -1,90 +1,66 @@
-"0QJv6f" = "true";
 
-"3Pu3cz" = "false";
+/* No comment provided by engineer. */
+"P9aMrE" = "Аккаунт";
 
-"4IOoOp" = "false";
+/* No comment provided by engineer. */
+"QVPlYZ" = "Настройте, как будет отображаться ваше звание.";
 
-"4yOuwl" = "Use Active Account";
+/* No comment provided by engineer. */
+"QbxEtQ" = "Игрок";
 
-"51sGCO" = "Use Active Account";
+/* No comment provided by engineer. */
+"WR1VRq" = "Посмотреть миссии";
 
-"BWVoH6" = "Show Refresh Time";
+/* No comment provided by engineer. */
+"X1PqLp" = "Настройте отображение изменений вашего ранга.";
 
-"ELeFnO" = "true";
+/* No comment provided by engineer. */
+"ZqiAs4" = "Аккаунт";
 
-"FOAOSn" = "false";
+/* No comment provided by engineer. */
+"ZwiyvD" = "Просмотреть ранг";
 
-"GG3gxD" = "false";
+/* No comment provided by engineer. */
+"aMHs7G" = "Показывать РРИ";
 
-"GbrfVR" = "View Rank Changes";
+/* No comment provided by engineer. */
+"biLdDr" = "Режим отображения";
 
-"HfQyGs" = "true";
+/* No comment provided by engineer. */
+"bnwtq2" = "Только текст";
 
-"IknZ9D-bnwtq2" = "Just to confirm, you wanted ‘Text Only’?";
+/* No comment provided by engineer. */
+"dxyWk1" = "Только значок";
 
-"IknZ9D-dxyWk1" = "Just to confirm, you wanted ‘Icon Only’?";
+/* No comment provided by engineer. */
+"f1wpE1" = "Показывать название акта";
 
-"IknZ9D-lgroW3" = "Just to confirm, you wanted ‘Unknown’?";
+/* No comment provided by engineer. */
+"gpCwrM" = "Просмотр магазина";
 
-"IknZ9D-oTWtFZ" = "Just to confirm, you wanted ‘Icon & Text’?";
+/* No comment provided by engineer. */
+"lgroW3" = "Неизвестно";
 
-"Knw5Ua" = "Store Display Mode";
+/* No comment provided by engineer. */
+"mqieyu" = "Показывать название ранга";
 
-"LjLkHK-bnwtq2" = "There are ${count} options matching ‘Text Only’.";
+/* No comment provided by engineer. */
+"oTWtFZ" = "Значок и текст";
 
-"LjLkHK-dxyWk1" = "There are ${count} options matching ‘Icon Only’.";
+/* No comment provided by engineer. */
+"pr2Nr9" = "Аккаунт";
 
-"LjLkHK-lgroW3" = "There are ${count} options matching ‘Unknown’.";
+/* No comment provided by engineer. */
+"rA2NkU" = "Использовать текущий аккаунт";
 
-"LjLkHK-oTWtFZ" = "There are ${count} options matching ‘Icon & Text’.";
+/* No comment provided by engineer. */
+"s2ilh5" = "Настройте отображение ваших миссий.";
 
-"P9aMrE" = "Account";
+/* No comment provided by engineer. */
+"tVvJ9c" = "Настройте отображение вашего магазина.";
 
-"QVPlYZ" = "Customize how your rank is shown off.";
+/* No comment provided by engineer. */
+"uVkZBs" = "Аккаунт";
 
-"QbxEtQ" = "Player";
-
-"UNCyEe" = "false";
-
-"WR1VRq" = "View Missions";
-
-"X1PqLp" = "Customize how your rank changes are displayed.";
-
-"ZqiAs4" = "Account";
-
-"ZwiyvD" = "View Rank";
-
-"aMHs7G" = "Show Rank Rating";
-
-"biLdDr" = "Display Mode";
-
-"bnwtq2" = "Text Only";
-
-"dxyWk1" = "Icon Only";
-
-"f1wpE1" = "Show Act Name";
-
-"gpCwrM" = "View Store";
-
-"lgroW3" = "Unknown";
-
-"mqieyu" = "Show Rank Name";
-
-"nBU0nl" = "true";
-
-"oTWtFZ" = "Icon & Text";
-
-"pr2Nr9" = "Account";
-
-"r5YctV" = "true";
-
-"rA2NkU" = "Use Active Account";
-
-"s2ilh5" = "Customize how your missions are displayed.";
-
-"tVvJ9c" = "Customize how your store is displayed.";
-
-"uVkZBs" = "Account";
-
-"xE0FGm" = "Use Active Account";
-
+/* No comment provided by engineer. */
+"xE0FGm" = "Использовать текущий аккаунт";
