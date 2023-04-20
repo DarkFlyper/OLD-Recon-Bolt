@@ -39,6 +39,7 @@ final class AutoReloadedManager<Value> {
 }
 
 extension AssetImage {
+	@MainActor
 	func resolved() async -> Image? {
 		if let existing = AssetImage.preloaded[self] {
 			return existing
@@ -47,6 +48,7 @@ extension AssetImage {
 		}
 	}
 	
+	@MainActor
 	func preload() async {
 		AssetImage.preloaded[self] = await resolved()
 	}

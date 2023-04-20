@@ -28,6 +28,7 @@ struct AssetImage: Hashable {
 	
 #if WIDGETS
 	static var used: Set<Self> = []
+	@MainActor
 	static var preloaded: [Self: Image] = [:]
 #endif
 	
