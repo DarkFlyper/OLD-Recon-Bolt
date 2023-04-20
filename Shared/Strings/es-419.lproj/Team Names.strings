@@ -1,0 +1,8 @@
+/* Used for unknown team IDs. */
+"%@ Team" = "Equipo %@";
+
+/* No comment provided by engineer. */
+"Blue Team" = "Equipo azul";
+
+/* No comment provided by engineer. */
+"Red Team" = "Equipo rojo";
