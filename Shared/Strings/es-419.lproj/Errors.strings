@@ -1,0 +1,63 @@
+
+/* error loading the account for a widget */
+"Could not load active account!" = "¡No se ha podido cargar la cuenta activa!";
+
+/* wrong account error */
+"It looks like this account has never played Valorant!
+
+You've probably signed into the wrong account; %@" = "¡Parece que esta cuenta nunca ha jugado a Valorant!";
+
+/* error loading the account for a widget. */
+"No account specified." = "Ninguna cuenta ha sido elegido.";
+
+/* Riot API Error */
+"Please try again in %lld seconds." = "Por favor, prueba de nuevo en %lld segundos.";
+
+/* Riot API Error */
+"The API rejected your authorization." = "La API ha denegado tu autorización.";
+
+/* Riot API Error */
+"The API returned an error code %lld, i.e. %@. %@" = "La API ha devuelto el código de error %lld. i.e. %@. %@";
+
+/* Riot API Error */
+"The API returned an error code %lld." = "La API ha devuelto un código de error %lld.";
+
+/* Riot API Error */
+"The resource could not be found." = "El recurso no se ha podido encontrar.";
+
+/* store widget error */
+"Unknown Offer" = "Oferta desconocida";
+
+/* store widget error */
+"Unknown Skin" = "Diseño desconocido";
+
+/* Pro Store: error restoring purchase: replacement for revokation reason on outdated iOS where it's not available */
+"Update to iOS 15.4 to see the reason!" = "¡Actualice a iOS 15.4 para ver la razón!";
+
+/* Riot API Error */
+"Valorant is currently undergoing scheduled maintenance. Riot is probably updating the game!" = "Valorant esta actualmente en un mantenimiento programado. ¡Seguramente Riot va a actualizar el juego!";
+
+/* No comment provided by engineer. */
+"Widgets require Recon Bolt Pro!" = "¡Los widgets requieren de Recon Bolt Pro!";
+
+/* Riot API Error */
+"You are sending too many requests." = "Estás enviando demasiadas peticiones.";
+
+/* Riot API Error */
+"Your session could not be resumed. %@" = "Tu sesión no ha podido ser reanudada. %@";
+
+/* Riot API Error */
+"Your session has expired! Please sign in again." = "¡La sesión ha expirado! Por favor, regístrate de nuevo.";
+
+/* Riot API Error */
+"Your token has expired. %@" = "Tu token ha expirado. %@";
+
+/* wrong account error */
+"this one has no Riot ID & Tagline." = "este no tiene Riot ID & [Tagline not finished]";
+
+/* wrong account error */
+"this one is:
+
+%@" = "esta es:
+
+%@";
