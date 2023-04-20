@@ -31,6 +31,9 @@ You've probably signed into the wrong account; %@" = "¡Parece que esta cuenta n
 /* store widget error */
 "Unknown Skin" = "Diseño desconocido";
 
+/* Pro Store: error restoring purchase: replacement for revokation reason on outdated iOS where it's not available */
+"Update to iOS 15.4 to see the reason!" = "¡Actualice a iOS 15.4 para ver la razón!";
+
 /* Riot API Error */
 "Valorant is currently undergoing scheduled maintenance. Riot is probably updating the game!" = "Valorant esta actualmente en un mantenimiento programado. ¡Seguramente Riot va a actualizar el juego!";
 
