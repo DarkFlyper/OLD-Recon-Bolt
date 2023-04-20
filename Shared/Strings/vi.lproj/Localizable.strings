@@ -458,7 +458,7 @@ BÁO CÁO LỖI CỦA BẠN TẠI ĐÂY
 "Filter Queues" = "Lọc hàng chờ";
 
 /* No comment provided by engineer. */
-"Filtering by starting side will exclude any matches in single-round modes like Deathmatch, Escalation, etc." = "Lọc theo bên bắt đầu sẽ loại trừ bất kỳ trận đấu nào trong chế độ một vòng như Sinh tử, Tăng tiến, v. v.";
+"Filtering by starting side will exclude any matches in single-round modes like Deathmatch, Escalation, etc." = "Lọc theo bên bắt đầu sẽ loại trừ bất kỳ trận đấu nào thuộc chế độ một vòng đấu như Sinh tử, Tăng tiến, v. v.";
 
 /* No comment provided by engineer. */
 "Find Match" = "Tìm trận";
@@ -602,7 +602,7 @@ Nếu bạn gặp lỗi hoặc có một số phản hồi, tôi luôn sẵn lò
 "Loadout Delta" = "Biểu đồ trang bị";
 
 /* No comment provided by engineer. */
-"Loadout Delta is computed as the difference between the average loadout value of players on each team. For example, a loadout delta of +1000 means your team's loadouts were an average of 1000 credits more valuable than the enemy team's in that round." = "Biểu đồ trang bị được tính là sự khác biệt giữa giá trị trang bị trung bình của người chơi trong mỗi đội. Ví dụ: biểu đồ trang bị +1000 có nghĩa là trang bị của đội bạn trung bình có giá trị hơn 1000 credits so với của đội địch trong vòng đó.";
+"Loadout Delta is computed as the difference between the average loadout value of players on each team. For example, a loadout delta of +1000 means your team's loadouts were an average of 1000 credits more valuable than the enemy team's in that round." = "Biểu đồ trang bị được tính là sự khác biệt giữa giá trị trang bị trung bình của người chơi trong mỗi đội. Ví dụ: biểu đồ trang bị +1000 có nghĩa là trang bị của đội bạn có giá trị trung bình hơn 1000 credits so với của đội địch trong vòng đó.";
 
 /* No comment provided by engineer. */
 "Loadout not loaded!" = "Trang bị chưa được tải!";
