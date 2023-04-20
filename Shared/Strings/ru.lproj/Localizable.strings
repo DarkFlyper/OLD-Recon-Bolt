@@ -866,6 +866,158 @@ Playtime Stats: section */
 /* Match List: accessibility label */
 "Remove Bookmark" = "Удалить закладку";
 
+/* Asset Management: section */
+"Repair" = "Восстановить";
+
+/* Request Log: header */
+"Request" = "Запрос";
+
+/* Advanced Settings: button to open request log
+Request Log: title */
+"Request Log" = "Журнал запросов";
+
+/* No comment provided by engineer. */
+"Requests" = "Запросы";
+
+/* Asset Management: button */
+"Reset" = "Сброс";
+
+/* Request Log: header */
+"Response" = "Ответ";
+
+/* No comment provided by engineer. */
+"Response Code" = "Код ответа";
+
+/* Pro Store: error alert title */
+"Restore Failed!" = "Восстановление не удалось!";
+
+/* Pro Store: button */
+"Restore Purchase" = "Восстановить покупку";
+
+/* No comment provided by engineer. */
+"Retry" = "Повторить";
+
+/* Round Details: header */
+"Round %lld of %lld" = "Раунд %lld из %lld";
+
+/* Round Details: title */
+"Round Details" = "Подробности раунда";
+
+/* Win Rate Stats: section */
+"Rounds by Loadout Delta" = "Раунды по дельте комплекта";
+
+/* Win Rate Stats: section */
+"Rounds by Side" = "Раунды по стороне";
+
+/* Bookmark/Player List: section */
+"Search" = "Поиск";
+
+/* Hit Distribution Stats: error */
+"Select more matches to see data on hit distribution. Deathmatch, Escalation, and other modes don't provide the necessary information." = "Выберите больше матчей для получения данных по распределению попаданий. Бой насмерть, Эскалация, и другие режимы не предоставляют нужной информации.";
+
+/* No comment provided by engineer. */
+"Send to Developer" = "Отправить разработчику";
+
+/* Account Settings */
+"Session expired!" = "Сессия истекла!";
+
+/* Top-Level Tab Title */
+"Settings" = "Настройки";
+
+/* Playtime Stats: title for view of matches in common with another player */
+"Shared Matches" = "Совместные матчи";
+
+/* No comment provided by engineer. */
+"Show Unfetched Matches" = "Показывать незагруженные матчи";
+
+/* No comment provided by engineer. */
+"Show all matches" = "Показать все матчи";
+
+/* No comment provided by engineer. */
+"Show details when found" = "Показать детали, когда найдено";
+
+/* App Icon Description: pro blue */
+"Show off your pro status with an exclusive icon!" = "Покажите свой статус Pro с помощью эксклюзивного значка!";
+
+/* Account Settings: button
+Login Form: button */
+"Sign In" = "Войти";
+
+/* Login Form */
+"Sign In with your Riot account" = "Войдите в систему, используя свою учетную запись Riot";
+
+/* Account Settings */
+"Sign Out" = "Выйти";
+
+/* Login Form: button/header */
+"Sign in with Google/Apple/etc." = "Войдите в систему с помощью Google/Apple/прочее.";
+
+/* Hit Distribution Stats: smoothing slider */
+"Smoothing" = "Сглаживание";
+
+/* No comment provided by engineer. */
+"Spectator" = "Зритель";
+
+/* Round Details: Spike Event */
+"Spike Defused" = "Spike обезврежен";
+
+/* Round Details: Spike Event */
+"Spike Planted" = "Spike установлен";
+
+/* No comment provided by engineer. */
+"Start Matchmaking?" = "Начать поиск матча?";
+
+/* Win Rate Stats: accessibility label */
+"Starting Side" = "Первая сторона";
+
+/* Win Rate Stats */
+"Starting Side:" = "Первая сторона:";
+
+/* No comment provided by engineer. */
+"Statistics" = "Статистика";
+
+/* Statistics Pro purchase prompt */
+"Statistics not available!" = "Статистика недоступна!";
+
+/* Statistics Pro purchase prompt: 'Recon Bolt Pro' is inserted in the placeholder with a bolder font. */
+"Statistics require %@, a one-time purchase including a variety of features. Want to give them a look?" = "Статистика требует %@, единовременной покупки, включающей множество функций. Хотите взглянуть на них?";
+
+/* Store Widget: title */
+"Store" = "Магазин";
+
+/* No comment provided by engineer. */
+"Store not loaded!" = "Магазин не загружен!";
+
+/* No comment provided by engineer. */
+"Storefront outdated!" = "Предметы магазина устарели!";
+
+/* Pro Features List */
+"Support Development :)" = "Поддержать разработку :)";
+
+/* Pro Store */
+"Support Further Development!" = "Поддержать будущую разработку!";
+
+/* Missions Box: button */
+"Switch Contract" = "Изменить контракт";
+
+/* Login Form: is this safe? */
+"TL;DR: you'll have to take my word for it, but Riot doesn't seem to mind." = "P.S.: вам придется поверить мне на слово, но Riot, похоже, не возражает.";
+
+/* Bookmark/Player List: lookup tag placeholder */
+"Tag" = "Метка";
+
+/* Pro Store */
+"Thank you for supporting Recon Bolt!" = "Благодарим вас за поддержку Recon Bolt!";
+
+/* Login Form: is this safe? */
+"The code is open-source and visible on GitHub; you can build it yourself if you want to be sure of what's running." = "Код является открытым и размещен на GitHub; вы можете собрать его самостоятельно, если хотите быть уверены в том, что работает.";
+
+/* App Icon Description: default */
+"The default look of Recon Bolt." = "Внешний вид Recon Bolt по умолчанию.";
+
+/* No comment provided by engineer. */
+"The pro version lets you change the app icon! More icons might be coming in future updates." = "В версии pro вы можете изменить значок приложения! Другие иконки могут появиться в будущих обновлениях.";
+
 /* No comment provided by engineer. */
 "Theme" = "Тема";
 
@@ -938,6 +1090,9 @@ On that site, navigate to **Riot Account Sign-in** and set yourself a username a
 /* No comment provided by engineer. */
 "Unknown Queue" = "Неизвестный режим";
 
+/* Match List: should never appear unless assets are missing/outdated */
+"Unknown Rank" = "Неизвестный ранг";
+
 /* placeholder */
 "Unknown Skin" = "Неизвестный Скин";
 
@@ -991,3 +1146,78 @@ On that site, navigate to **Riot Account Sign-in** and set yourself a username a
 
 /* Match List */
 "View Stats" = "Посмотреть статистику";
+
+/* Statistics Pro purchase prompt: button */
+"View Store in Settings" = "Просмотреть опции покупки в настройках";
+
+/* Rank Widget: description */
+"View your current rank." = "Просмотрите свое текущее звание.";
+
+/* Rank Changes Widget: description */
+"View your rank rating changes." = "Просматривайте изменения своего рейтинга.";
+
+/* Pro Features List */
+"View your storefront, daily/weekly missions, or current rank without even having to open the app!" = "Просматривайте свои предметы магазина, ежедневные/недельные задания или текущий ранг, даже не открывая приложение!";
+
+/* No comment provided by engineer. */
+"WP: +%lld" = "WP: +%lld";
+
+/* No comment provided by engineer. */
+"Weapon Loadout" = "Комплект оружия";
+
+/* No comment provided by engineer. */
+"Weapons" = "Оружия";
+
+/* No comment provided by engineer. */
+"Week" = "Неделя";
+
+/* Missions Widget */
+"Weekly" = "Еженедельные";
+
+/* Missions Box: header */
+"Weekly Missions" = "Еженедельные миссии";
+
+/* No comment provided by engineer. */
+"Widget Refresh Requested" = "Обновление виджета запрошено";
+
+/* No comment provided by engineer. */
+"Win Rate" = "Винрейт";
+
+/* Win Rate Stats: chart legend */
+"Wins" = "Победы";
+
+/* No comment provided by engineer. */
+"Year" = "Год";
+
+/* Match Details: footnote */
+"You can also tap a round's number in the kill breakdown above to quickly view its details." = "Вы также можете нажать на номер раунда в распределении убийств выше, чтобы быстро просмотреть их детали.";
+
+/* Login Form: is this safe? */
+"You can enable 2-factor authentication, so you'd at least have another layer of security if it went bad." = "Вы можете включить двухфакторную аутентификацию, чтобы, по крайней мере, иметь еще один уровень безопасности, если все пойдет не так.";
+
+/* Login Form: is this safe? */
+"Your credentials only ever leave your device in the form of a login request directly to Riot. They are never stored or sent anywhere else." = "Ваши учетные данные покидают ваше устройство только в виде запроса на вход в систему непосредственно в Riot. Они никогда не хранятся и не отправляются куда-либо еще.";
+
+/* No comment provided by engineer. */
+"Your session has expired! Recon Bolt has tried to refresh it for you, but needs 2FA confirmation." = "Срок действия вашей сессии истек! Recon Bolt попытался обновить его для вас, но требуется подтверждения 2FA.";
+
+/* No comment provided by engineer. */
+"iOS is a bit finnicky about this, so widgets may not refresh right away—feel free to restart if this doesn't help!" = "iOS немного привередлива в этом вопросе, поэтому виджеты могут обновляться не сразу - не стесняйтесь перезагрузить, если это не поможет!";
+
+/* Loadout: spray slot */
+"mid-round" = "в раунде";
+
+/* Missions Widget: countdown label when the target is in the past. Should never really show up, since at this point there's new data. */
+"old" = "старый";
+
+/* Loadout: spray slot */
+"post-round" = "после раунда";
+
+/* Loadout: spray slot */
+"pre-round" = "до раунда ";
+
+/* Login Form */
+"signing in…" = "вход в систему…";
+
+/* Loadout: unknown spray slot (should never appear unless Riot changes something) */
+"slot" = "слот";
