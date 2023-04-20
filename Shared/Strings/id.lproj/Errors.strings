@@ -4,6 +4,31 @@
 /* error loading the account for a widget */
 "Could not load active account!" = "Tidak dapat memuat akun aktif!";
 
+/* Riot API Error */
+"Invalid Headers: %@" = "Tajuk Tidak Valid: %@";
+
+/* wrong account error */
+"It looks like this account has never played Valorant!
+
+You've probably signed into the wrong account; %@" = "Sepertinya akun ini belum pernah memainkan Valorant!
+
+Anda mungkin masuk ke akun yang salah; %@";
+
+/* No comment provided by engineer. */
+"Keychain error for key '%@': %@" = "Kesalahan rantai kunci untuk kunci '%@': %@";
+
+/* store widget error */
+"Malformed Offer" = "Penawaran cacat";
+
+/* error loading the account for a widget. */
+"Malformed account." = "Akun cacat.";
+
+/* store widget error */
+"Missing Assets!" = "Aset hilang!";
+
+/* No comment provided by engineer. */
+"Missing game configuration data for %@ region!" = "Data konfigurasi game yang hilang untuk wilayah %@!";
+
 /* Pro Store: error restoring purchase: replacement for revokation reason on outdated iOS where it's not available */
 "Update to iOS 15.4 to see the reason!" = "Perbarui ke iOS 15.4 untuk mengetahui alasannya!";
 
