@@ -12,7 +12,7 @@
 "%@%%" = "%@%%";
 
 /* Missions Box: always at least 3 */
-"%lld Future Weeklies" = "%lld Nhiệm vụ tuần trong tương lai";
+"%lld Future Weeklies" = "%lld Nhiệm vụ trong tương lai";
 
 /* Missions Box: always at least 3 */
 "%lld Queued-Up Weeklies" = "%lld hàng chờ nhiệm vụ";
@@ -282,7 +282,7 @@ Playtime Stats: section */
 "Clear All" = "Xóa tất cả";
 
 /* Contract Picker */
-"Completed" = "Đã hoàn thành";
+"Completed" = "Hoàn thành";
 
 /* Storage Management: title for alert to confirm deleting some matches */
 "Confirm Delete" = "Xác nhận xóa";
@@ -375,7 +375,7 @@ Playtime Stats: section */
 "Defending" = "Phòng thủ";
 
 /* Storage Management: button to confirm deleting some matches */
-"Delete %lld Matches" = "Xóa %lld Trận";
+"Delete %lld Matches" = "Xóa %lld trận";
 
 /* Match Details: button to view details by round */
 "Details by Round" = "Chi tiết theo vòng đấu";
