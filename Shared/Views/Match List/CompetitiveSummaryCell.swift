@@ -58,7 +58,7 @@ struct CompetitiveSummaryCell: View {
 					Text(tierInfo.name)
 						.font(primaryFont)
 				} else {
-					Text("Unknown Tier")
+					Text("Unknown Rank", comment: "Match List: should never appear unless assets are missing/outdated")
 						.foregroundStyle(.secondary)
 						.font(primaryFont)
 				}

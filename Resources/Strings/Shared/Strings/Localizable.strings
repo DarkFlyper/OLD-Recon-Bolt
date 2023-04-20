@@ -1167,11 +1167,11 @@ On that site, navigate to **Riot Account Sign-in** and set yourself a username a
 /* No comment provided by engineer. */
 "Unknown Queue" = "Unknown Queue";
 
+/* Match List: should never appear unless assets are missing/outdated */
+"Unknown Rank" = "Unknown Rank";
+
 /* placeholder */
 "Unknown Skin" = "Unknown Skin";
-
-/* No comment provided by engineer. */
-"Unknown Tier" = "Unknown Tier";
 
 /* placeholder */
 "Unknown Title" = "Unknown Title";
