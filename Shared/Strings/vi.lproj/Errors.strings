@@ -2,7 +2,7 @@
 "A previous transaction was found, but it could not be verified! %@" = "Tìm thấy giao dịch trước đó, nhưng không thể xác thực! %@";
 
 /* error loading the account for a widget */
-"Could not load active account!" = "Không thể tải được tài khoản hiện tại!";
+"Could not load active account!" = "Không thể tải dữ liệu cho tài khoản hiện tại!";
 
 /* Riot API Error */
 "Invalid Headers: %@" = "Tiêu đề không hợp lệ: %@";
@@ -10,9 +10,9 @@
 /* wrong account error */
 "It looks like this account has never played Valorant!
 
-You've probably signed into the wrong account; %@" = "Có vẻ là tài khoản này chưa từng chơi Valorant!
+You've probably signed into the wrong account; %@" = "Tài khoản này chưa từng chơi Valorant!
 
-Chắc bạn đã nhập sai tài khoản; %@";
+Có vẻ bạn đã nhập sai tài khoản; %@";
 
 /* No comment provided by engineer. */
 "Keychain error for key '%@': %@" = "Lỗi chuỗi khóa cho mục '%@': %@";
