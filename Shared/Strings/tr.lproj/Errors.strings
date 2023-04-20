@@ -1,3 +1,5 @@
+/* Pro Store: error restoring purchase */
+"A previous transaction was found, but it could not be verified! %@" = "Önceki bir işlem bulundu, ancak doğrulanamadı! %@";
 
 /* error loading the account for a widget */
 "Could not load active account!" = "Anahtar: Aktif hesap yuklenemedi!
@@ -10,3 +12,13 @@ Dosya: Errors. strings!";
 Geçersiz Başlıklar: %@
 Riot Api Hatasi
 Dosya: Errors. strings";
+
+/* wrong account error */
+"It looks like this account has never played Valorant!
+
+You've probably signed into the wrong account; %@" = "Görünüşe göre bu hesap hiç Valorant oynamamış!
+
+Muhtemelen yanlış hesaba giriş yaptınız; %@";
+
+/* No comment provided by engineer. */
+"Keychain error for key '%@': %@" = "'%@' anahtarı için anahtar zinciri hatası: %@";
