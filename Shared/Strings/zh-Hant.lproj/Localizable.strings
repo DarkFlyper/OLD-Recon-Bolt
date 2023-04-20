@@ -1149,6 +1149,9 @@ Hit Distribution Stats: region */
 /* Login Form: is this safe? */
 "You can enable 2-factor authentication, so you'd at least have another layer of security if it went bad." = "您可以打開雙重驗證，您至少擁有另一層安全措施。";
 
+/* Login Form: is this safe? */
+"Your credentials only ever leave your device in the form of a login request directly to Riot. They are never stored or sent anywhere else." = "您的密碼只會以登入請求的形式直接在您的裝置到Riot。 它們從未被儲存或傳送到其他地方。";
+
 /* No comment provided by engineer. */
 "Your session has expired! Recon Bolt has tried to refresh it for you, but needs 2FA confirmation." = "您的會話已過期！ Recon Bolt已嘗試為您重新整理，但需要驗證碼確認。";
 
