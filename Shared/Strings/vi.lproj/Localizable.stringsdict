@@ -13,7 +13,49 @@
         <key>NSStringFormatValueTypeKey</key>
         <string>lld</string>
         <key>other</key>
-        <string>%lld Lỗi</string>
+        <string>%lld lỗi</string>
+      </dict>
+    </dict>
+    <key>%lld map(s) selected</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@maps@</string>
+      <key>maps</key>
+      <dict>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>đã chọn %lld bản đồ</string>
+      </dict>
+    </dict>
+    <key>%lld queue(s) selected</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@queues@</string>
+      <key>queues</key>
+      <dict>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>đã chọn %lld hàng chờ</string>
+      </dict>
+    </dict>
+    <key>Load Latest %lld Match(es)</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>Tải %#@matches@</string>
+      <key>matches</key>
+      <dict>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld trận gần nhất</string>
       </dict>
     </dict>
     <key>%lld match(es)</key>
@@ -27,7 +69,7 @@
         <key>NSStringFormatValueTypeKey</key>
         <string>lld</string>
         <key>other</key>
-        <string>%lld Trận</string>
+        <string>%lld trận</string>
       </dict>
     </dict>
     <key>%lld previous act(s)</key>
@@ -106,7 +148,7 @@
         <key>NSStringFormatValueTypeKey</key>
         <string>lld</string>
         <key>other</key>
-        <string>%lld bị lọc ra</string>
+        <string>%lld trận bị lọc ra</string>
       </dict>
     </dict>
     <key>%lld/%lld loaded</key>
