@@ -1089,6 +1089,9 @@ Navigiere auf dieser Seite zu **Riot Account Sign-in** und gib dir einen Benutze
 /* No comment provided by engineer. */
 "Unknown Queue" = "Unbekannter Spielmodus";
 
+/* Match List: should never appear unless assets are missing/outdated */
+"Unknown Rank" = "Unbekannter Rang";
+
 /* placeholder */
 "Unknown Skin" = "Unbekannte Skin";
 
