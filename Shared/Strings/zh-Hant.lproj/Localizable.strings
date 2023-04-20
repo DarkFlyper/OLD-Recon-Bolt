@@ -379,6 +379,9 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Discord Server" = "Discord 伺服器";
 
+/* Hit Distribution Stats: section */
+"Distribution Over Time" = "時間分佈";
+
 /* No comment provided by engineer. */
 "Done" = "完全";
 
@@ -732,7 +735,7 @@ If you don't know your username or don't have one, you can fix that at [account.
 
 /* Win Rate Stats: section
 Playtime Stats: section */
-"Over Time" = "延長賽";
+"Over Time" = "時間分佈";
 
 /* Hit Distribution Stats: section
 Playtime Stats: section */
