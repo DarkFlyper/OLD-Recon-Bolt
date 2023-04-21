@@ -567,7 +567,7 @@ Stats: error details */
 "Loadout not loaded!" = "لم يتم تحميل العتاد!";
 
 /* No comment provided by engineer. */
-"Lobby Dodged" = "الغاء الصالة (تهرّب)";
+"Match Dodged" = "الغاء الصالة (تهرّب)";
 
 /* No comment provided by engineer. */
 "Lock In" = "تثبيت";
