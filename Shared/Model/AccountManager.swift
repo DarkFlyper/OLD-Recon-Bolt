@@ -12,6 +12,9 @@ final class AccountManager: ObservableObject {
 	
 	@Published var activeAccount: StoredAccount? = nil {
 		didSet {
+			if oldValue !== activeAccount {
+				oldValue?.invalidate()
+			}
 			storage.activeAccount = activeAccount?.id
 			updateClientVersion()
 		}
@@ -174,9 +177,9 @@ final class StoredAccount: ObservableObject, Identifiable {
 		}
 	}
 	private var sessionUpdateListener: AnyCancellable?
+	private var isActive = true
 	
 	var id: User.ID { session.userID }
-	
 	var location: Location { session.location }
 	
 	fileprivate init(session: APISession, context: Context) throws {
@@ -205,10 +208,18 @@ final class StoredAccount: ObservableObject, Identifiable {
 	}
 	
 	private func save() throws {
+#if !WIDGETS // don't override from widgets to avoid overwriting new app data with old widgets data
+		guard isActive else { throw SavingError.replaced }
 		try context.keychain.store(
 			try! JSONEncoder().encode(session),
 			forKey: id.rawID.description
 		)
+#endif
+	}
+	
+	/// invalidates an account object when it's no longer active, so it doesn't save old data to the keychain
+	func invalidate() {
+		isActive = false
 	}
 	
 	func setClientVersion(_ version: String) {
@@ -225,6 +236,10 @@ final class StoredAccount: ObservableObject, Identifiable {
 				return String(localized: "Missing session for account!\nIf you have Pro, add an account using the same credentials to replace the account with a working version.", table: "Errors", comment: #"Should not happen anymore, but you never know ¯\_(ツ)_/¯"#)
 			}
 		}
+	}
+	
+	enum SavingError: Error {
+		case replaced
 	}
 	
 	#if DEBUG
