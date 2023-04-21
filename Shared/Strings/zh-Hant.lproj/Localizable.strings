@@ -81,6 +81,12 @@ Missions Box */
 /* No comment provided by engineer. */
 "A 2FA code has been sent to your email address %@" = "雙重驗證代碼已傳送到您的電子郵件地址 %@";
 
+/* Match List Filter */
+"A match's queue is unknown until its details are fetched (by tapping it or performing the swipe action).
+Competitive matches after your placements can be identified without their details, however." = "在獲取其詳細資訊之前，匹配的對戰是未知的 (透過點選它或執行滑動操作)。
+
+然而，您的位置後可以識別競爭性匹配，而無需其詳細資訊。";
+
 /* No comment provided by engineer. */
 "AFK: %lld" = "掛機: %lld";
 
@@ -454,6 +460,9 @@ Stats: error details */
 "Filter Queues" = "過濾模式";
 
 /* No comment provided by engineer. */
+"Filtering by starting side will exclude any matches in single-round modes like Deathmatch, Escalation, etc." = "從開始方過濾將排除1個模式中的任何匹配，例如死鬥、超激進戰等。";
+
+/* No comment provided by engineer. */
 "Find Match" = "開始配對";
 
 /* Party Box: placeholder shows time spent in queue */
@@ -484,7 +493,7 @@ Stats: error details */
 "Golden Gun" = "黃金槍";
 
 /* Stats: date grouping size picker */
-"Group by" = "分組";
+"Group by" = "分類";
 
 /* Hit Distribution Stats: region */
 "Head" = "頭";
@@ -587,6 +596,9 @@ Recon Bolt於2021年當初開始開發，當時還無法在遊戲中看到您的
 
 /* No comment provided by engineer. */
 "Loadout" = "收藏";
+
+/* No comment provided by engineer. */
+"Loadout Delta" = "裝備三角形";
 
 /* No comment provided by engineer. */
 "Loadout not loaded!" = "收藏還沒加載！";
@@ -887,6 +899,9 @@ Request Log: title */
 "Round Details" = "回合詳情";
 
 /* Win Rate Stats: section */
+"Rounds by Loadout Delta" = "按裝備三角形回合";
+
+/* Win Rate Stats: section */
 "Rounds by Side" = "按方回合";
 
 /* Bookmark/Player List: section */
@@ -1059,6 +1074,9 @@ Hit Distribution Stats: region */
 /* No comment provided by engineer. */
 "Unknown Queue" = "未知模式";
 
+/* Match List: should never appear unless assets are missing/outdated */
+"Unknown Rank" = "未知排位";
+
 /* placeholder */
 "Unknown Skin" = "未知造型";
 
@@ -1091,6 +1109,9 @@ Hit Distribution Stats: region */
 
 /* No comment provided by engineer. */
 "Users" = "使用者";
+
+/* Win Rate Stats by Loadout Delta */
+"Value Difference (credits)" = "價值差異 (點數)";
 
 /* Asset Management: this row shows the version of the current assets */
 "Version" = "版本";
