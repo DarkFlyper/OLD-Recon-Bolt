@@ -111,6 +111,9 @@ Missions Box */
 /* Pro Store */
 "Advanced Stats" = "Pokročilé statistiky";
 
+/* No comment provided by engineer. */
+"Agent Select" = "Výběr Agenta";
+
 /* Statistics filter: button */
 "Agents" = "Agenti";
 
@@ -263,6 +266,85 @@ Pokud jste narazili na chybu nebo máte nějakou zpětnou vazbu, vždy si ji rá
 
 /* Pro Store */
 "Loading Store Info…" = "Načítání informací o obchodě…";
+
+/* Pro Store: button */
+"Restore Purchase" = "Obnovení Nákupu";
+
+/* No comment provided by engineer. */
+"Retry" = "Opakovat";
+
+/* Round Details: header */
+"Round %lld of %lld" = "Kolo %lld z %lld";
+
+/* Round Details: title */
+"Round Details" = "Podrobnosti o kole";
+
+/* Bookmark/Player List: section */
+"Search" = "Hledat";
+
+/* Hit Distribution Stats: error */
+"Select more matches to see data on hit distribution. Deathmatch, Escalation, and other modes don't provide the necessary information." = "Chcete-li zobrazit údaje o distribuci zásahů, vyberte více zápasů. Režimy Deathmatch, Escalation a další neposkytují potřebné informace.";
+
+/* No comment provided by engineer. */
+"Send to Developer" = "Odeslat vývojáři";
+
+/* Account Settings */
+"Session expired!" = "Relace vypršela!";
+
+/* Top-Level Tab Title */
+"Settings" = "Nastavení";
+
+/* Playtime Stats: title for view of matches in common with another player */
+"Shared Matches" = "Sdílené Zápasy";
+
+/* No comment provided by engineer. */
+"Show all matches" = "Zobrazit všechny zápasy";
+
+/* No comment provided by engineer. */
+"Show details when found" = "Zobrazit podrobnosti po nalezení zápasu";
+
+/* App Icon Description: pro blue */
+"Show off your pro status with an exclusive icon!" = "Pochlubte se svým statusem Pro s exkluzivní ikonou!";
+
+/* Account Settings: button
+Login Form: button */
+"Sign In" = "Přihlásit se";
+
+/* Login Form */
+"Sign In with your Riot account" = "Přihlaste se pomocí Riot účtu";
+
+/* Account Settings */
+"Sign Out" = "Odhlásit se";
+
+/* Login Form: button/header */
+"Sign in with Google/Apple/etc." = "Přihlaste se pomocí Google/Apple atd.";
+
+/* No comment provided by engineer. */
+"Statistics" = "Statistiky";
+
+/* Statistics Pro purchase prompt */
+"Statistics not available!" = "Statistiky nejsou k dispozici!";
+
+/* Statistics Pro purchase prompt: 'Recon Bolt Pro' is inserted in the placeholder with a bolder font. */
+"Statistics require %@, a one-time purchase including a variety of features. Want to give them a look?" = "Statistiky vyžadují %@, jednorázový nákup zahrnující řadu funkcí. Chcete se na ně podívat?";
+
+/* Store Widget: title */
+"Store" = "Obchod";
+
+/* No comment provided by engineer. */
+"Store not loaded!" = "Obchod není načten!";
+
+/* Pro Features List */
+"Support Development :)" = "Podpora vývoje :)";
+
+/* No comment provided by engineer. */
+"Twitter @juliand665" = "Twitter @juliand665";
+
+/* Request Log */
+"URL" = "URL";
+
+/* Missions Box: header, shown when a mission is not daily or weekly (should not happen unless Riot changes something) */
+"Uncategorized Missions" = "Nezařazené mise";
 
 /* Store */
 "Unknown Offer" = "Neznámá Nabídka";
