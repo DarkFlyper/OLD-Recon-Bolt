@@ -23,6 +23,190 @@
 /* Hit Distribution Stats: hit count */
 "%lld hits" = "%lld zásahů";
 
+/* Shown at the bottom of the expandable playtime list when there are more entries available. */
+"%lld more" = "%lld více";
+
+/* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
+"%lld to %lld credits" = "%lld na %lld kredity";
+
+/* No comment provided by engineer. */
+"%lld%%" = "%lld%%";
+
+/* No comment provided by engineer. */
+"%lld/%lld" = "%lld/%lld";
+
+/* Time Formatting: minutes & seconds (used in round details view) */
+"%lld:%@" = "%lld:%@";
+
+/* Time Formatting: minutes, seconds, & milliseconds (used in round details view) */
+"%lld:%@.%@" = "%lld:%@.%@";
+
+/* Contract Progress Bar
+Missions Box */
+"%lld / %lld XP" = "%lld / %lld XP";
+
+/* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
+"(%lld – %lld)" = "(%lld - %lld)";
+
+/* Pro Features List */
+"(You can switch between available icons at any time.)" = "(Mezi dostupnými ikonami můžete kdykoli přepínat.)";
+
+/* No comment provided by engineer. */
+"+%lld XP" = "+%lld XP";
+
+/* Missions Widget: how many more weeklies are queued up after the current set */
+"+%lld queued" = "+%lld ve frontě";
+
+/* Store: night market discount */
+"-%lld%%" = "-%lld%%";
+
+/* No comment provided by engineer. */
+"2-Factor Authentication" = "Dvoufaktorové ověření";
+
+/* Missions Widget: countdown label when the target is in the future. e.g. '< 2d 3h' */
+"< %@" = "< %@";
+
+/* No comment provided by engineer. */
+"A 2FA code has been sent to your email address %@" = "2FA kód byl odeslán na vaši e-mailovou adresu %@";
+
+/* No comment provided by engineer. */
+"AFK: %lld" = "AFK: %lld";
+
+/* Career Summary: header for totals of all time */
+"ALL TIME" = "Všechny Acty & Epizody";
+
+/* Settings: section */
+"About" = "O Recon Bolt";
+
+/* No comment provided by engineer. */
+"About Recon Bolt" = "O Recon Bolt";
+
+/* Settings: section */
+"Accounts" = "Účty";
+
+/* Contract Picker: button */
+"Activate" = "Aktivovat";
+
+/* Contract Picker */
+"Active" = "Aktivní";
+
+/* Match List: accessibility label */
+"Add Bookmark" = "Přidat záložku";
+
+/* Account Settings */
+"Add another Account" = "Přidat další účet";
+
+/* Pro Features List */
+"Add multiple accounts and seamlessly switch between them at any time." = "Přidejte si více účtů a kdykoli mezi nimi plynule přepínejte.";
+
+/* No comment provided by engineer. */
+"Advanced Settings" = "Rozšířená nastavení";
+
+/* Pro Store */
+"Advanced Stats" = "Pokročilé statistiky";
+
+/* Statistics filter: button */
+"Agents" = "Agenti";
+
+/* Stats: match loading */
+"All %lld" = "Všechny %lld";
+
+/* No comment provided by engineer. */
+"All Maps" = "Všechny mapy";
+
+/* Statistics Filter: button to allow all agents */
+"Allow All Agents" = "Povolit vše";
+
+/* Statistics Filter: button to allow all queues */
+"Allow All Queues" = "Povolit vše";
+
+/* Default Error Alert Title */
+"An Error Occurred!" = "Došlo k chybě!";
+
+/* About Screen */
+"An invaluable API hosting all the assets (images, data, etc.) used throughout Valorant. This is where almost every image in the app comes from." = "Neocenitelné API, ve kterém jsou umístěny všechny prostředky (obrázky, data atd.) používané ve Valorantu. Odtud pochází téměř každý obrázek v aplikaci.";
+
+/* Statistics filter: shown when every agent is allowed */
+"Any Agent" = "Jakýkoli agent";
+
+/* Asset Management */
+"Anything with images will not display correctly." = "Cokoli s obrázky se nezobrazí správně.";
+
+/* No comment provided by engineer. */
+"App Icon" = "Ikona aplikace";
+
+/* Pro Features List */
+"As thanks for your support, you get to show off your status with an exclusive app icon!" = "Jako poděkování za vaši podporu se můžete pochlubit svým statusem s exkluzivní ikonou aplikace!";
+
+/* No comment provided by engineer. */
+"Assets should be fetched automatically, but in case something went wrong, feel free to initiate the process manually." = "Aktiva by měla být automaticky stažena, ale v případě problémů můžete proces spustit manuálně.";
+
+/* Asset Management */
+"Assets up to date!" = "Aktiva jsou aktuální!";
+
+/* Store: available currency */
+"Available:" = "K dispozici:";
+
+/* Hit Distribution Stats: average HS% */
+"Average: %@" = "Průměr: %@";
+
+/* Request Log: shown for bodies that are not decodable to text */
+"Binary Data" = "Binární data";
+
+/* Hit Distribution Stats: region */
+"Body" = "Tělo";
+
+/* Bookmark/Player List: section */
+"Bookmarks" = "Záložky";
+
+/* No comment provided by engineer. */
+"Cancel" = "Zrušit";
+
+/* No comment provided by engineer. */
+"Cancel Matchmaking" = "Zrušit Vyhledávání";
+
+/* Top-Level Tab Title */
+"Career" = "Kariéra";
+
+/* Gun Customizer */
+"Change Skin" = "Změna Skinu";
+
+/* Store Widget: description */
+"Check your current Valorant storefront." = "Zkontrolujte svůj aktuální obchod ve Valorantu.";
+
+/* Missions Widget: description */
+"Check your progress on daily & weekly missions." = "Zkontrolujte svůj pokrok v denních a týdenních misích.";
+
+/* No comment provided by engineer. */
+"Choose App Icon" = "Výběr ikony aplikace";
+
+/* No comment provided by engineer. */
+"Choose Skin" = "Vybrat Skin";
+
+/* No comment provided by engineer. */
+"Choose Spray" = "Vybrat Sprej";
+
+/* No comment provided by engineer. */
+"Choose Title" = "Vybrat Titul";
+
+/* Contract Picker */
+"Completed" = "Dokončen";
+
+/* Request Log: button to copy the request's body/contents (accessibility label) */
+"Copy Body" = "Kopírovat tělo";
+
+/* Login Form: error title */
+"Could not sign in!" = "Nelze se přihlásit!";
+
+/* About Screen: section */
+"Credits" = "Kredity";
+
+/* Asset Management */
+"Current version: %@" = "Aktuální verze: %@";
+
+/* Gun Customizer: title */
+"Customize %@" = "Přizpůsobení %@";
+
 /* Store */
 "Unknown Offer" = "Neznámá Nabídka";
 
