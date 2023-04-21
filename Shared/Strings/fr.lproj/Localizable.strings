@@ -1089,6 +1089,9 @@ Sur ce site, naviguez vers **Connexion au compte Riot** et définissez votre nom
 /* No comment provided by engineer. */
 "Unknown Queue" = "Mode de jeu inconnu";
 
+/* Match List: should never appear unless assets are missing/outdated */
+"Unknown Rank" = "Rang inconnu";
+
 /* placeholder */
 "Unknown Skin" = "Skin inconnu";
 
