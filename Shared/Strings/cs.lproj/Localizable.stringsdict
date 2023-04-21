@@ -1,5 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-  <dict/>
+  <dict>
+    <key>%lld Error(s)</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@errors@</string>
+      <key>errors</key>
+      <dict>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>one</key>
+        <string>1 Chyba</string>
+        <key>few</key>
+        <string>%lld Chyb</string>
+        <key>many</key>
+        <string>%lld Chyb</string>
+        <key>other</key>
+        <string>%lld Chyb</string>
+      </dict>
+    </dict>
+    <key>%lld map(s) selected</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@maps@</string>
+      <key>maps</key>
+      <dict>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>one</key>
+        <string>Vybrána 1 mapa</string>
+        <key>few</key>
+        <string>Vybráno %lld map</string>
+        <key>many</key>
+        <string>Vybráno %lld map</string>
+        <key>other</key>
+        <string>Vybráno %lld map</string>
+      </dict>
+    </dict>
+    <key>%lld match(es)</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@matches@</string>
+      <key>matches</key>
+      <dict>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>one</key>
+        <string>1 zápas</string>
+        <key>few</key>
+        <string>%lld zápasů</string>
+        <key>many</key>
+        <string>%lld zápasů</string>
+        <key>other</key>
+        <string>%lld zápasů</string>
+      </dict>
+    </dict>
+    <key>%lld previous act(s)</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@acts@</string>
+      <key>acts</key>
+      <dict>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>one</key>
+        <string>1 předchozí akt</string>
+        <key>few</key>
+        <string>%lld předchozích aktů</string>
+        <key>many</key>
+        <string>%lld předchozích aktů</string>
+        <key>other</key>
+        <string>%lld předchozích aktů</string>
+      </dict>
+    </dict>
+    <key>%lld/%lld owned</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@owned@</string>
+      <key>owned</key>
+      <dict>
+        <key>one</key>
+        <string>%lld/%#@total@ odemčeno</string>
+        <key>few</key>
+        <string>%lld/%#@total@ odemčeno</string>
+        <key>many</key>
+        <string>%lld/%#@total@ odemčeno</string>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld/%#@total@ odemčeno</string>
+      </dict>
+      <key>total</key>
+      <dict>
+        <key>one</key>
+        <string>%lld</string>
+        <key>few</key>
+        <string>%lld</string>
+        <key>many</key>
+        <string>%lld</string>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld</string>
+      </dict>
+    </dict>
+  </dict>
 </plist>
