@@ -1090,6 +1090,9 @@ No site da Riot, vá para Login da Conta Riot e defina um nome de usuário e sen
 /* No comment provided by engineer. */
 "Unknown Queue" = "Fila Desconhecida";
 
+/* Match List: should never appear unless assets are missing/outdated */
+"Unknown Rank" = "Rank Desconhecido";
+
 /* placeholder */
 "Unknown Skin" = "Skin Desconhecida";
 
