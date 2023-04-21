@@ -88,8 +88,7 @@ final class AccountManager: ObservableObject {
 		if !storedAccounts.contains(session.userID) {
 			storedAccounts.append(session.userID)
 		}
-		activeAccount = StoredAccount(session: session, context: context)
-		// FIXME: figure out why this might not be resetting isExpired
+		activeAccount = try StoredAccount(session: session, context: context)
 	}
 	
 	func toggleActive(_ id: User.ID) throws {
@@ -164,7 +163,7 @@ final class StoredAccount: ObservableObject, Identifiable {
 	let context: Context
 	
 	@Published private(set) var session: APISession {
-		didSet { save() }
+		didSet { trySave() }
 	}
 	
 	private(set) lazy var client = ValorantClient(session: session) <- {
@@ -180,10 +179,13 @@ final class StoredAccount: ObservableObject, Identifiable {
 	
 	var location: Location { session.location }
 	
-	fileprivate init(session: APISession, context: Context) {
+	fileprivate init(session: APISession, context: Context) throws {
 		self.context = context
 		self.session = session
-		save()
+#if DEBUG
+		if context.keychain is MockKeychain { return }
+#endif
+		try save()
 	}
 	
 	fileprivate init(loadingFor id: User.ID, using context: Context) throws {
@@ -193,21 +195,25 @@ final class StoredAccount: ObservableObject, Identifiable {
 		self.session = try JSONDecoder().decode(APISession.self, from: stored)
 	}
 	
-	func save() {
+	func trySave() {
 		do {
-			try context.keychain.store(
-				try! JSONEncoder().encode(session),
-				forKey: id.rawID.description
-			)
+			try save()
 			print("saved account for \(id)")
 		} catch {
 			print("error saving account for \(id):", error.localizedDescription)
 		}
 	}
 	
+	private func save() throws {
+		try context.keychain.store(
+			try! JSONEncoder().encode(session),
+			forKey: id.rawID.description
+		)
+	}
+	
 	func setClientVersion(_ version: String) {
 		client.clientVersion = version
-		save()
+		trySave()
 	}
 	
 	enum LoadingError: Error, LocalizedError {
@@ -222,7 +228,7 @@ final class StoredAccount: ObservableObject, Identifiable {
 	}
 	
 	#if DEBUG
-	static let mocked = StoredAccount(session: .mocked, context: .init(keychain: MockKeychain()))
+	static let mocked = try! StoredAccount(session: .mocked, context: .init(keychain: MockKeychain()))
 	#endif
 	
 	struct Context {
