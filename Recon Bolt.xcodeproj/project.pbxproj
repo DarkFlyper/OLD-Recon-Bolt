@@ -477,6 +477,9 @@
 		B95FA88129C2D839001D1998 /* UserLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLabel.swift; sourceTree = "<group>"; };
 		B95FA88329C2D8AB001D1998 /* SharedStatsViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedStatsViews.swift; sourceTree = "<group>"; };
 		B95FA88529C582A5001D1998 /* WinRateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinRateView.swift; sourceTree = "<group>"; };
+		B9613E5429F2D1360001A048 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Widgets.strings; sourceTree = "<group>"; };
+		B9613E5529F2D1580001A048 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Widgets.strings; sourceTree = "<group>"; };
+		B9613E5629F2D1620001A048 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Widgets.strings; sourceTree = "<group>"; };
 		B963C46F2694FDDA0071E14A /* CompetitiveSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitiveSummaryCell.swift; sourceTree = "<group>"; };
 		B963C4722694FE920071E14A /* example_summary.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_summary.json; sourceTree = "<group>"; };
 		B963C47526950FE90071E14A /* RankInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankInfoView.swift; sourceTree = "<group>"; };
@@ -1398,6 +1401,9 @@
 				es,
 				vi,
 				"zh-Hant",
+				cs,
+				tr,
+				id,
 			);
 			mainGroup = B941B63D25A5BC8800F675C1;
 			packageReferences = (
@@ -1935,6 +1941,9 @@
 				B967A25229ED8CEF00AB4E92 /* ar */,
 				B967A25329EEE68200AB4E92 /* vi */,
 				B967A25A29EEE6BD00AB4E92 /* zh-Hant */,
+				B9613E5429F2D1360001A048 /* cs */,
+				B9613E5529F2D1580001A048 /* tr */,
+				B9613E5629F2D1620001A048 /* id */,
 			);
 			name = Widgets.intentdefinition;
 			sourceTree = "<group>";
