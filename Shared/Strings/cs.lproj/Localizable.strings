@@ -210,6 +210,18 @@ Missions Box */
 /* Request Log: button to copy the request's body/contents (accessibility label) */
 "Copy Body" = "Kopírovat tělo";
 
+/* Stats: error details: accessibility label */
+"Copy Error" = "Kopírovat Chybu";
+
+/* No comment provided by engineer. */
+"Copy Error Details" = "Kopírovat podrobnosti o chybě";
+
+/* No comment provided by engineer. */
+"Copy Match ID" = "Kopírovat ID zápasu";
+
+/* No comment provided by engineer. */
+"Copy to Clipboard" = "Kopírovat do schránky";
+
 /* No comment provided by engineer. */
 "Could Not Load Account!" = "Nebylo možné načíst účet!";
 
@@ -243,8 +255,26 @@ Missions Box */
 /* App Theme */
 "Dark Mode" = "Tmavý Režim";
 
+/* No comment provided by engineer. */
+"Day" = "Den";
+
 /* App Icon Name */
 "Default" = "Výchozí";
+
+/* App Icon Picker: section */
+"Default Icon" = "Výchozí Ikona";
+
+/* No comment provided by engineer. */
+"Discord Server" = "Discord Server";
+
+/* No comment provided by engineer. */
+"Done" = "Hotovo";
+
+/* Request Log: shown in place of a status code (like 200 or 404) when sending failed. */
+"ERROR" = "CHYBA";
+
+/* Match List: accessibility label */
+"Edit Filter" = "Upravit Filtr";
 
 /* About Screen */
 "Hi! I'm Julian Dunskus, and I made this app.
@@ -290,6 +320,45 @@ Pokud jste narazili na chybu nebo máte nějakou zpětnou vazbu, vždy si ji rá
 
 /* Pro Store */
 "Loading Store Info…" = "Načítání informací o obchodě…";
+
+/* About Screen */
+"Many thanks to the volunteer translators from our Discord server who have been hard at working translating the app to new languages!" = "Děkujeme dobrovolným překladatelům z našeho Discord serveru, kteří usilovně pracují na překladu aplikace do nových jazyků!";
+
+/* No comment provided by engineer. */
+"Map" = "Mapa";
+
+/* No comment provided by engineer. */
+"Maps" = "Mapy";
+
+/* Stats: error details */
+"Match" = "Zápas";
+
+/* Match Details: title */
+"Match Details" = "Podrobnosti o zápase";
+
+/* Party Box: shown when member's name is not yet loaded */
+"Member" = "Člen";
+
+/* No comment provided by engineer. */
+"Party" = "Party";
+
+/* No comment provided by engineer. */
+"Please make sure you are ready to play by the time the game starts!" = "Ujistěte se, že můžete být u počítače v době zahájení hry!";
+
+/* App Icon Name */
+"Pro Blue" = "Pro Modrá";
+
+/* No comment provided by engineer. */
+"Pro Features" = "Pro Funkce";
+
+/* App Icon Picker: section */
+"Pro Icons" = "Pro Ikony";
+
+/* Pro Store: error alert title */
+"Purchase Failed!" = "Nákup se nezdařil!";
+
+/* Asset Management: section */
+"Repair" = "Opravit";
 
 /* Pro Store: button */
 "Restore Purchase" = "Obnovení Nákupu";
@@ -344,6 +413,9 @@ Login Form: button */
 "Sign in with Google/Apple/etc." = "Přihlaste se pomocí Google/Apple atd.";
 
 /* No comment provided by engineer. */
+"Start Matchmaking?" = "Zahájit Vyhledávání?";
+
+/* No comment provided by engineer. */
 "Statistics" = "Statistiky";
 
 /* Statistics Pro purchase prompt */
@@ -370,8 +442,86 @@ Login Form: button */
 /* Missions Box: header, shown when a mission is not daily or weekly (should not happen unless Riot changes something) */
 "Uncategorized Missions" = "Nezařazené mise";
 
+/* placeholder */
+"Unknown Agent" = "Neznámý Agent";
+
+/* placeholder */
+"Unknown Buddy" = "Neznámý Přívěšek";
+
+/* placeholder */
+"Unknown Bundle" = "Neznámá Kolekce";
+
 /* Store */
 "Unknown Offer" = "Neznámá Nabídka";
 
+/* No comment provided by engineer. */
+"Unknown Player" = "Neznámý Hráč";
+
+/* Match List: should never appear unless assets are missing/outdated */
+"Unknown Rank" = "Neznámá Hodnost";
+
 /* placeholder */
 "Unknown Skin" = "Neznámý Skin";
+
+/* Round Details: killed by unknown damage source/type */
+"Unknown Type" = "Neznámý Typ";
+
+/* Asset Management: button */
+"Update Now" = "Aktualizovat nyní";
+
+/* Match Details: button */
+"Update Ranks" = "Aktualizovat hodnosti";
+
+/* Login Form */
+"Username" = "Uživatelské jméno";
+
+/* Asset Management: this row shows the version of the current assets */
+"Version" = "Verze";
+
+/* Reference */
+"Version %@" = "Verze %@";
+
+/* No comment provided by engineer. */
+"Vibrate when Match Found" = "Vibrovat při nalezení zápasu";
+
+/* Pro Store */
+"View All Features" = "Zobrazit Všechny Funkce";
+
+/* No comment provided by engineer. */
+"View Full Profile" = "Zobrazit Celý Profil";
+
+/* Match List */
+"View Stats" = "Zobrazit Statistiky";
+
+/* No comment provided by engineer. */
+"Weapons" = "Zbraně";
+
+/* No comment provided by engineer. */
+"Week" = "Týden";
+
+/* Missions Widget */
+"Weekly" = "Týdenní";
+
+/* Missions Box: header */
+"Weekly Missions" = "Týdenní Mise";
+
+/* No comment provided by engineer. */
+"Widget Refresh Requested" = "Požadavek na obnovení widgetu";
+
+/* No comment provided by engineer. */
+"Year" = "Rok";
+
+/* Match Details: footnote */
+"You can also tap a round's number in the kill breakdown above to quickly view its details." = "Klepnutím na číslo kola ve výše uvedeném rozpisu zabití můžete také rychle zobrazit podrobnosti.";
+
+/* Login Form: is this safe? */
+"You can enable 2-factor authentication, so you'd at least have another layer of security if it went bad." = "Můžete povolit dvoufaktorové ověřování, takže budete mít alespoň další vrstvu zabezpečení, pokud by se něco pokazilo.";
+
+/* Login Form: is this safe? */
+"Your credentials only ever leave your device in the form of a login request directly to Riot. They are never stored or sent anywhere else." = "Vaše přihlašovací údaje opustí vaše zařízení pouze ve formě žádosti o přihlášení přímo do systému Riot. Nikdy se neukládají ani neposílají nikam jinam.";
+
+/* No comment provided by engineer. */
+"Your session has expired! Recon Bolt has tried to refresh it for you, but needs 2FA confirmation." = "Vaše relace vypršela! Recon Bolt se ji pokusil obnovit, ale potřebuje potvrzení 2FA.";
+
+/* No comment provided by engineer. */
+"iOS is a bit finnicky about this, so widgets may not refresh right away—feel free to restart if this doesn't help!" = "iOS je v tomto ohledu trochu vybíravý, takže widgety se nemusí obnovit hned - pokud to nepomůže, klidně je restartujte!";

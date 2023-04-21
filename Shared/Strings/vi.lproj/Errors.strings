@@ -24,7 +24,7 @@ Có vẻ bạn đã nhập sai tài khoản; %@";
 "Malformed account." = "Tài khoản không đúng định dạng.";
 
 /* store widget error */
-"Missing Assets!" = "Thiếu nội dung!";
+"Missing Assets!" = "Thiếu tài nguyên!";
 
 /* No comment provided by engineer. */
 "Missing game configuration data for %@ region!" = "Không có sẵn dữ liệu cấu hình cho khu vực %@!";

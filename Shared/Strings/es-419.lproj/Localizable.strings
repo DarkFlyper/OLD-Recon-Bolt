@@ -12,7 +12,7 @@
 "%@%%" = "%@%%";
 
 /* No comment provided by engineer. */
-"%lld RR" = "%lld RR";
+"%lld RR" = "%lld PR";
 
 /* Storage Management */
 "%lld from other players" = "%lld de otros jugadores";
@@ -25,6 +25,15 @@
 
 /* Pro Features List */
 "(You can switch between available icons at any time.)" = "(Puedes cambiar entre los iconos disponibles en cada momento.)";
+
+/* No comment provided by engineer. */
+"2-Factor Authentication" = "Autentificación en 2 pasos";
+
+/* Missions Widget: countdown label when the target is in the future. e.g. '< 2d 3h' */
+"< %@" = "< %@";
+
+/* No comment provided by engineer. */
+"A 2FA code has been sent to your email address %@" = "El código de verificación en 2 pasos se ha enviado a tu correo %@";
 
 /* Settings: section */
 "About" = "Sobre";
@@ -43,6 +52,9 @@
 
 /* Missions Box: header */
 "Active Contract" = "Contrato activo";
+
+/* Match List: accessibility label */
+"Add Bookmark" = "Añadir a Favoritos";
 
 /* Account Settings */
 "Add another Account" = "Añade otra cuenta";
@@ -65,8 +77,23 @@
 /* No comment provided by engineer. */
 "All Maps" = "Todos los mapas";
 
+/* Statistics Filter: button to allow all agents */
+"Allow All Agents" = "Permitir todos";
+
+/* Statistics Filter: button to allow all queues */
+"Allow All Queues" = "Permitir todas";
+
 /* Default Error Alert Title */
 "An Error Occurred!" = "¡Un error ha ocurrido!";
+
+/* Statistics filter: shown when every agent is allowed */
+"Any Agent" = "Cualquier agente";
+
+/* Statistics filter: shown when every queue is allowed */
+"Any Queue" = "Cualquier cola";
+
+/* Asset Management */
+"Anything with images will not display correctly." = "Cualquier cosa con imágenes no se mostrará correctamente.";
 
 /* No comment provided by engineer. */
 "App Icon" = "Icono de la App";
@@ -87,7 +114,7 @@
 "Body" = "Cuerpo";
 
 /* Bookmark/Player List: section */
-"Bookmarks" = "Marca páginas";
+"Bookmarks" = "Favoritos";
 
 /* Gun Customizer: section */
 "Buddy" = "Amuleto";
@@ -178,6 +205,9 @@ Playtime Stats: section */
 "Copy to Clipboard" = "Copiar al portapapeles";
 
 /* No comment provided by engineer. */
+"Could Not Load Account!" = "¡No se ha podido cargar la cuenta!";
+
+/* No comment provided by engineer. */
 "Could not Change App Icon!" = "¡No se ha podido cambiar el icono de la App!";
 
 /* No comment provided by engineer. */
@@ -194,6 +224,9 @@ Playtime Stats: section */
 
 /* Login Form: error title */
 "Could not sign in!" = "¡No se ha podido registrar!";
+
+/* About Screen: section */
+"Credits" = "Créditos";
 
 /* Asset Management */
 "Current version: %@" = "Versión actual %@";
@@ -344,6 +377,9 @@ EL REPORTE DEL BUG VA AQUÍ
 /* Match Details: section */
 "Kills by Round" = "Asesinatos por Rondas";
 
+/* Asset Management: this row shows the language of the current assets */
+"Language" = "Idioma";
+
 /* Hit Distribution Stats: region */
 "Legs" = "Piernas";
 
@@ -363,7 +399,7 @@ EL REPORTE DEL BUG VA AQUÍ
 "Links" = "Enlaces";
 
 /* Top-Level Tab Title */
-"Live" = "Vivo";
+"Live" = "En Vivo";
 
 /* No comment provided by engineer. */
 "Live Match" = "Partida en vivo";
@@ -554,6 +590,9 @@ EL REPORTE DEL BUG VA AQUÍ
 /* Store Widget: next refresh time (hour & minute) */
 "Refreshes at %@" = "Se actualiza a las %@";
 
+/* Match List: accessibility label */
+"Remove Bookmark" = "Quitar de Favoritos";
+
 /* Asset Management: section */
 "Repair" = "Reparar";
 
@@ -658,6 +697,9 @@ Login Form: button */
 /* Missions Box: button */
 "Switch Contract" = "Cambiar Contrato";
 
+/* Bookmark/Player List: lookup tag placeholder */
+"Tag" = "Tag";
+
 /* Pro Store */
 "Thank you for supporting Recon Bolt!" = "¡Gracias por ayudar a Recon Bolt!";
 
@@ -740,6 +782,9 @@ Hit Distribution Stats: region */
 /* No comment provided by engineer. */
 "Users" = "Usuarios";
 
+/* Asset Management: this row shows the version of the current assets */
+"Version" = "Versión";
+
 /* Reference */
 "Version %@" = "Versión %@";
 
@@ -760,6 +805,9 @@ Hit Distribution Stats: region */
 
 /* Pro Features List */
 "View your storefront, daily/weekly missions, or current rank without even having to open the app!" = "¡Mira tu tienda, misiones diarias y semanales o tu rango actual incluso sin tener que abrir la app!";
+
+/* No comment provided by engineer. */
+"Weapon Loadout" = "Colección";
 
 /* No comment provided by engineer. */
 "Weapons" = "Armamento";
