@@ -1,4 +1,342 @@
 
+/* Used for matches less than a day ago. %@ is replaced by the number of hours/minutes, e.g. '3h ago'. */
+"%@ ago" = "%@ atrás";
+
+/* %@ is replaced by a fraction of wins vs. games played, e.g. '5/12 games won'. */
+"%@ games won" = "%@ jogos ganhos";
+
+/* Win Rate Stats by Loadout Delta: focused value (drag on graph); placeholder is replaced by the percentage of rounds won, e.g. '57.3% won'. */
+"%@ won" = "%@ ganhou";
+
+/* used throughout the app to format percentages—placeholder is replaced by a number */
+"%@%%" = "%@%%";
+
+/* Missions Box: always at least 3 */
+"%lld Future Weeklies" = "%lld Futuras missões semanais";
+
+/* Missions Box: always at least 3 */
+"%lld Queued-Up Weeklies" = "%lld Semanais pela frente";
+
+/* No comment provided by engineer. */
+"%lld RR" = "%lld RR";
+
+/* Storage Management */
+"%lld from other players" = "%lld de outros jogadores";
+
+/* Hit Distribution Stats: hit count */
+"%lld hits" = "%lld acertos";
+
+/* Shown at the bottom of the expandable playtime list when there are more entries available. */
+"%lld more" = "%lld mais";
+
+/* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
+"%lld to %lld credits" = "%lld para %lld créditos";
+
+/* No comment provided by engineer. */
+"%lld%%" = "%lld%%";
+
+/* No comment provided by engineer. */
+"%lld/%lld" = "%lld/%lld";
+
+/* Time Formatting: minutes & seconds (used in round details view) */
+"%lld:%@" = "%lld/%@";
+
+/* Time Formatting: minutes, seconds, & milliseconds (used in round details view) */
+"%lld:%@.%@" = "%lld:%@.%@";
+
+/* Contract Progress Bar
+Missions Box */
+"%lld / %lld XP" = "%lld / %lld EXP";
+
+/* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
+"(%lld – %lld)" = "(%lld – %lld)";
+
+/* Pro Features List */
+"(You can switch between available icons at any time.)" = "(Pode alternar entre ícones disponíveis em qualquer altura).";
+
+/* No comment provided by engineer. */
+"+%lld XP" = "+%lld EXP";
+
+/* Missions Widget: how many more weeklies are queued up after the current set */
+"+%lld queued" = "+%lld por vir";
+
+/* Store: night market discount */
+"-%lld%%" = "-%lld%%";
+
+/* No comment provided by engineer. */
+"2-Factor Authentication" = "Autenticação de 2 fatores";
+
+/* Missions Widget: countdown label when the target is in the future. e.g. '< 2d 3h' */
+"< %@" = "< %@";
+
+/* No comment provided by engineer. */
+"A 2FA code has been sent to your email address %@" = "Foi enviado um código 2FA para o seu email %@";
+
+/* Match List Filter */
+"A match's queue is unknown until its details are fetched (by tapping it or performing the swipe action).
+Competitive matches after your placements can be identified without their details, however." = "A fila de uma partida é desconhecida até que seus detalhes sejam obtidos (clicando ou realizando a ação de deslizar). Partidas Competitivas depois da sua colocação inicial podem ser identificadas sem seus detalhes, entretanto.";
+
+/* No comment provided by engineer. */
+"AFK: %lld" = "AFK: %lld";
+
+/* Career Summary: header for totals of all time */
+"ALL TIME" = "DESDE SEMPRE";
+
+/* Settings: section */
+"About" = "Sobre";
+
+/* No comment provided by engineer. */
+"About Recon Bolt" = "Sobre o Recon Bolt";
+
+/* Settings: section */
+"Accounts" = "Contas";
+
+/* Contract Picker: button */
+"Activate" = "Ativar";
+
+/* Contract Picker */
+"Active" = "Ativo";
+
+/* Missions Box: header */
+"Active Contract" = "Contrato ativo";
+
+/* Match List: accessibility label */
+"Add Bookmark" = "Adicionar aos Favoritos";
+
+/* Account Settings */
+"Add another Account" = "Adicionar outra conta";
+
+/* Pro Features List */
+"Add multiple accounts and seamlessly switch between them at any time." = "Adicione múltiplas contas e alterne entre elas a qualquer momento sem problemas.";
+
+/* No comment provided by engineer. */
+"Advanced Settings" = "Configurações avançadas";
+
+/* Pro Store */
+"Advanced Stats" = "Estatísticas avançadas";
+
+/* No comment provided by engineer. */
+"Agent Select" = "Seleção do Agente";
+
+/* Statistics filter: button */
+"Agents" = "Agentes";
+
+/* Stats: match loading */
+"All %lld" = "Todos %lld";
+
+/* No comment provided by engineer. */
+"All Maps" = "Todos os mapas";
+
+/* Statistics Filter: button to allow all agents */
+"Allow All Agents" = "Permitir todos";
+
+/* Statistics Filter: button to allow all queues */
+"Allow All Queues" = "Permitir todas";
+
+/* Default Error Alert Title */
+"An Error Occurred!" = "Ocorreu um erro!";
+
+/* About Screen */
+"An invaluable API hosting all the assets (images, data, etc.) used throughout Valorant. This is where almost every image in the app comes from." = "Uma API inestimável que alberga todos os bens (imagens, dados, etc.) utilizados em toda o Valorant. É daqui que provém quase todas as imagens da aplicação.";
+
+/* Statistics filter: shown when every agent is allowed */
+"Any Agent" = "Qualquer agente";
+
+/* Statistics filter: shown when every queue is allowed */
+"Any Queue" = "Qualquer fila de espera";
+
+/* Asset Management */
+"Anything with images will not display correctly." = "Qualquer coisa com imagens não será exibida corretamente.";
+
+/* No comment provided by engineer. */
+"App Icon" = "Ícone de aplicação";
+
+/* No comment provided by engineer. */
+"Are your assets outdated?" = "Os seus arquivos estão desatualizados?";
+
+/* Pro Features List */
+"As thanks for your support, you get to show off your status with an exclusive app icon!" = "Como agradecimento pelo seu apoio, pode mostrar o seu estatuto com um ícone de aplicação exclusivo!";
+
+/* No comment provided by engineer. */
+"Assets" = "Arquivos";
+
+/* Asset Management: shown before the newest version is fetched, so it's not know yet if the assets are up to date or outdated */
+"Assets complete." = "Arquivos concluídos.";
+
+/* No comment provided by engineer. */
+"Assets not loaded!" = "Arquivos não carregados!";
+
+/* Asset Management */
+"Assets out of date!" = "Arquivos desatualizados!";
+
+/* No comment provided by engineer. */
+"Assets should be fetched automatically, but in case something went wrong, feel free to initiate the process manually." = "Os arquivos devem ser buscados automaticamente, mas no caso de algo correr mal, sinta-se à vontade para iniciar o processo manualmente.";
+
+/* Asset Management */
+"Assets up to date!" = "Arquivos atualizados!";
+
+/* Win Rate Stats: side name */
+"Attacking" = "Ataque";
+
+/* Store: available currency */
+"Available:" = "Disponível:";
+
+/* Hit Distribution Stats: average HS% */
+"Average: %@" = "Média: %@";
+
+/* Request Log: shown for bodies that are not decodable to text */
+"Binary Data" = "Dados binários";
+
+/* Hit Distribution Stats: region */
+"Body" = "Corpo";
+
+/* Bookmark/Player List: section */
+"Bookmarks" = "Favoritos";
+
+/* Gun Customizer: section */
+"Buddy" = "Chaveiro";
+
+/* Storage Management: section */
+"By Kind" = "Por Tipo";
+
+/* Win Rate Stats: section
+Playtime Stats: section */
+"By Map" = "Por Mapa";
+
+/* Playtime Stats: section/title */
+"By Non-Premade Player" = "Por Jogador sozinho";
+
+/* Playtime Stats: section/title */
+"By Premade Teammate" = "Por jogador da equipa";
+
+/* App Icon Picker: section */
+"Default Icon" = "Ícone predefinido";
+
+/* Win Rate Stats: side name */
+"Defending" = "A defender";
+
+/* Storage Management: button to confirm deleting some matches */
+"Delete %lld Matches" = "Excluir %lld partidas";
+
+/* Match Details: button to view details by round */
+"Details by Round" = "Detalhes por Ronda";
+
+/* No comment provided by engineer. */
+"Discord Server" = "Servidor do Discord";
+
+/* Hit Distribution Stats: section */
+"Distribution Over Time" = "Distribuição ao longo do tempo";
+
+/* No comment provided by engineer. */
+"Done" = "Feito";
+
+/* No comment provided by engineer. */
+"Download Assets Now" = "Descarregar arquivos agora";
+
+/* Win Rate Stats: chart legend */
+"Draws" = "Empates";
+
+/* Request Log: shown in place of a status code (like 200 or 404) when sending failed. */
+"ERROR" = "ERRO";
+
+/* Match List: accessibility label */
+"Edit Filter" = "Editar Filtro";
+
+/* No comment provided by engineer. */
+"Enter 2FA Code" = "Introduza o código 2FA";
+
+/* Request Log
+Stats: error details */
+"Error" = "Erro";
+
+/* No comment provided by engineer. */
+"Error Details" = "Detalhes do erro";
+
+/* Asset Management */
+"Error downloading assets!" = "Erro ao descarregar arquivos!";
+
+/* Request Log: title for an exchange */
+"Exchange" = "Troca";
+
+/* Request Log: title for detailed view of request body/contents */
+"Exchange Body" = "Corpo";
+
+/* Statistics Filter: button to exclude all agents */
+"Exclude All Agents" = "Excluir todos";
+
+/* Statistics Filter: button to exclude all queues */
+"Exclude All Queues" = "Excluir todos";
+
+/* Pro Features List */
+"Exclusive App Icon" = "Ícone Exclusivo da Aplicação";
+
+/* Round Details: killed by spike */
+"Exploded" = "Explodido";
+
+/* Pro Features List */
+"Family Sharing" = "Partilha Familiar";
+
+/* Request Log: placeholder is replaced by error dump. */
+"Feedback Email Body" = "O que correu mal? Fale-me sobre o erro que acabou de encontrar:
+
+O SEU RELATÓRIO DE BUG AQUI
+
+%@";
+
+/* Match List: accessibility label */
+"Fetch Details" = "Detalhes de Busca";
+
+/* Statistics Filter: title (section) */
+"Filter" = "Filtro";
+
+/* No comment provided by engineer. */
+"Filter Maps" = "Filtrar por Mapas";
+
+/* No comment provided by engineer. */
+"Filter Match List" = "Filtrar lista de correspondências";
+
+/* No comment provided by engineer. */
+"Filter Queues" = "Filtros de fila";
+
+/* No comment provided by engineer. */
+"Filtering by starting side will exclude any matches in single-round modes like Deathmatch, Escalation, etc." = "A filtragem pelo lado de partida excluirá quaisquer jogos em modos de uma volta como Deathmatch, Escalada, etc.";
+
+/* No comment provided by engineer. */
+"Find Match" = "Encontrar partida";
+
+/* Party Box: placeholder shows time spent in queue */
+"Finding match… (%@)" = "Encontrando partida… (%@)";
+
+/* No comment provided by engineer. */
+"Force Refresh Widgets" = "Forçar Atualização dos Widgets";
+
+/* Storage Management: button to free up a certain amount of space */
+"Free up these %@" = "Liberte estes %@";
+
+/* Agent Select header: shown when timer reaches zero */
+"Game Started" = "Jogo Iniciado";
+
+/* No comment provided by engineer. */
+"Game is not running!" = "O jogo não está a decorrer!";
+
+/* Pro Features List */
+"Gather statistics from anyone's games to gain insights on things like time played by mode/premade, headshot rate over time/by weapon, win rate over time/by map & side, and more!" = "Reúna estatísticas dos jogos de qualquer pessoa para obter conhecimentos sobre coisas como o tempo jogado por modo/preparação, taxa de disparos de cabeça ao longo do tempo/por arma, taxa de vitória ao longo do tempo/por mapa & lado, e muito mais!";
+
+/* Pro Features List */
+"Getting money from Recon Bolt gives me the flexibility and motivation to keep improving the app!" = "Conseguir dinheiro do Recon Bolt dá-me a flexibilidade e a motivação para continuar a melhorar a aplicação!";
+
+/* No comment provided by engineer. */
+"GitHub Repo" = "Repositório do GitHub";
+
+/* No comment provided by engineer. */
+"Golden Gun" = "Arma Dourada";
+
+/* Stats: date grouping size picker */
+"Group by" = "Agrupar por";
+
+/* Hit Distribution Stats: region */
+"Head" = "Cabeça";
+
 /* Store */
 "Unknown Offer" = "Oferta desconhecida";
 
