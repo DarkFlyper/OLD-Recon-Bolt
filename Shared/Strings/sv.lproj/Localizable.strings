@@ -256,3 +256,115 @@
 
 /* Stats: match loading */
 "Load Data" = "Ladda data";
+
+/* Match List */
+"Load Older Matches" = "Ladda gamla matcher";
+
+/* Pro Store */
+"Loading Store Info…" = "Laddar shoppen…";
+
+/* No comment provided by engineer. */
+"Loading request log…" = "Laddar efterfrågan av logg…";
+
+/* No comment provided by engineer. */
+"Loadout" = "Loadout";
+
+/* No comment provided by engineer. */
+"Loadout Delta" = "Loadout Delta";
+
+/* No comment provided by engineer. */
+"Loadout Delta is computed as the difference between the average loadout value of players on each team. For example, a loadout delta of +1000 means your team's loadouts were an average of 1000 credits more valuable than the enemy team's in that round." = "Loadout Delta beräknas som skillnaden mellan det genomsnittliga loadoutvärdet för spelarna i varje lag. Till exempel innebär ett loadout-delta på +1000 att ditt lags loadouts i genomsnitt var 1000 krediter mer värdefulla än fiendens lags i den omgången.";
+
+/* No comment provided by engineer. */
+"Loadout not loaded!" = "Loadout inte laddad!";
+
+/* No comment provided by engineer. */
+"Lobby Dodged" = "Lobbyn blev dodgad";
+
+/* No comment provided by engineer. */
+"Lock In" = "Lås in Agent";
+
+/* No comment provided by engineer. */
+"Lock In %@" = "Lås in %@";
+
+/* Bookmark/Player List: lookup button */
+"Look Up" = "Leta upp";
+
+/* Login Form */
+"Looks like you're trying to enter your Riot ID (and tagline) as username! Your username is actually something else: it's what you use to sign into the Valorant launcher.
+
+If you don't know your username or don't have one, you can fix that at [account.riotgames.com](https://account.riotgames.com)." = "Det verkar som om du försöker ange ditt Riot-ID (och din tagline) som användarnamn! Ditt användarnamn är faktiskt något annat: det är det du använder för att logga in på Valorant-clienten på datorn.
+
+Om du inte vet ditt användarnamn eller inte har något kan du hitta det på [account.riotgames.com](https://account.riotgames.com).";
+
+/* Win Rate Stats: chart legend */
+"Losses" = "Förluster";
+
+/* No comment provided by engineer. */
+"Manage Assets" = "Hantera tillgångar";
+
+/* No comment provided by engineer. */
+"Manage Local Storage" = "Hantera lokal lagring";
+
+/* About Screen */
+"Many thanks to the volunteer translators from our Discord server who have been hard at working translating the app to new languages!" = "Ett stort tack till de frivilliga översättarna från vår Discord-server som har arbetat hårt med att översätta appen till nya språk!";
+
+/* No comment provided by engineer. */
+"Map" = "Kartor";
+
+/* No comment provided by engineer. */
+"Maps" = "Kartor";
+
+/* Stats: error details */
+"Match" = "Match";
+
+/* Match Details: title */
+"Match Details" = "Uppgifter om matchen";
+
+/* No comment provided by engineer. */
+"Match Lists" = "Matchlistor";
+
+/* No comment provided by engineer. */
+"Match Loading Errors" = "Fel vid laddning av matcher";
+
+/* App Theme: automatically match the system theme */
+"Match System" = "Matcha färgen med systemet";
+
+/* Match List: section */
+"Matches" = "Matcher";
+
+/* Party Box: shown when member's name is not yet loaded */
+"Member" = "Medlem";
+
+/* Request Log */
+"Method" = "Metod";
+
+/* Asset Management */
+"Missing assets!" = "Saknade tillgångar!";
+
+/* Missions Box */
+"Missing progress for contract!" = "Saknar framsteg för kontraktet!";
+
+/* No comment provided by engineer. */
+"Missing season data!" = "Uppgifter om säsong saknas!";
+
+/* Missions Widget: title */
+"Missions" = "Uppdrag";
+
+/* Bookmark/Player List: lookup name placeholder */
+"Name" = "Namn";
+
+/* Buddy picker: option at the top to select no buddy */
+"No Buddy" = "Ingen buddy";
+
+/* Loadout: spray slot */
+"post-round" = "efter rundan";
+
+/* Loadout: spray slot */
+"pre-round" = "pre-round";
+
+/* Login Form */
+"signing in…" = "loggar in…";
+
+/* Loadout: unknown spray slot (should never appear unless Riot changes something) */
+"slot" = "slot";
