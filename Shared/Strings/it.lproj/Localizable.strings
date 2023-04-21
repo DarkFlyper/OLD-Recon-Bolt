@@ -1,0 +1,99 @@
+
+/* Used for matches less than a day ago. %@ is replaced by the number of hours/minutes, e.g. '3h ago'. */
+"%@ ago" = "%@ fa";
+
+/* %@ is replaced by a fraction of wins vs. games played, e.g. '5/12 games won'. */
+"%@ games won" = "%@ partite vinte";
+
+/* Win Rate Stats by Loadout Delta: focused value (drag on graph); placeholder is replaced by the percentage of rounds won, e.g. '57.3% won'. */
+"%@ won" = "%@ vinto";
+
+/* used throughout the app to format percentages—placeholder is replaced by a number */
+"%@%%" = "%@%%";
+
+/* Missions Box: always at least 3 */
+"%lld Future Weeklies" = "%lld Settimanali futuri";
+
+/* Missions Box: always at least 3 */
+"%lld Queued-Up Weeklies" = "%lld Settimanali in coda";
+
+/* No comment provided by engineer. */
+"%lld RR" = "%lld RR";
+
+/* Storage Management */
+"%lld from other players" = "%lld da altri giocatori";
+
+/* Hit Distribution Stats: hit count */
+"%lld hits" = "%lld colpi";
+
+/* Shown at the bottom of the expandable playtime list when there are more entries available. */
+"%lld more" = "%lld piu";
+
+/* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
+"%lld to %lld credits" = "Da %lld a %lld crediti";
+
+/* No comment provided by engineer. */
+"%lld%%" = "%lld%%";
+
+/* No comment provided by engineer. */
+"%lld/%lld" = "%lld/%lld";
+
+/* Time Formatting: minutes & seconds (used in round details view) */
+"%lld:%@" = "%lld:%@";
+
+/* Time Formatting: minutes, seconds, & milliseconds (used in round details view) */
+"%lld:%@.%@" = "%lld:%@.%@";
+
+/* Contract Progress Bar
+Missions Box */
+"%lld / %lld XP" = "%lld / %lld XP";
+
+/* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
+"(%lld – %lld)" = "(%lld – %lld)";
+
+/* Pro Features List */
+"(You can switch between available icons at any time.)" = "(Puoi passare da un'icona all'altra in qualsiasi momento.)";
+
+/* No comment provided by engineer. */
+"+%lld XP" = "+%lld XP";
+
+/* Missions Widget: how many more weeklies are queued up after the current set */
+"+%lld queued" = "+%lld in coda";
+
+/* Store: night market discount */
+"-%lld%%" = "-%lld%%";
+
+/* No comment provided by engineer. */
+"2-Factor Authentication" = "2-Factor Authentication";
+
+/* Missions Widget: countdown label when the target is in the future. e.g. '< 2d 3h' */
+"< %@" = "< %@";
+
+/* No comment provided by engineer. */
+"A 2FA code has been sent to your email address %@" = "Un codice 2FA è stato inviato al tuo indirizzo email %@";
+
+/* Match List Filter */
+"A match's queue is unknown until its details are fetched (by tapping it or performing the swipe action).
+Competitive matches after your placements can be identified without their details, however." = "La coda di una corrispondenza è sconosciuta fino a quando non vengono recuperati i suoi dettagli (toccandola o eseguendo l'azione di scorrimento).
+Tuttavia, le partite competitive dopo i tuoi posizionamenti possono essere identificate senza i loro dettagli.";
+
+/* No comment provided by engineer. */
+"AFK: %lld" = "AFK: %lld";
+
+/* Career Summary: header for totals of all time */
+"ALL TIME" = "SEMPRE";
+
+/* Settings: section */
+"About" = "Di";
+
+/* No comment provided by engineer. */
+"About Recon Bolt" = "Di Recon Bolt";
+
+/* Settings: section */
+"Accounts" = "Accounts";
+
+/* Store */
+"Unknown Offer" = "Offerta sconosciuta";
+
+/* placeholder */
+"Unknown Skin" = "Skin sconosciuta";
