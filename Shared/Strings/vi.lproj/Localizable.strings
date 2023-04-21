@@ -146,7 +146,7 @@ Competitive matches after your placements can be identified without their detail
 "An Error Occurred!" = "Đã xảy ra lỗi!";
 
 /* About Screen */
-"An invaluable API hosting all the assets (images, data, etc.) used throughout Valorant. This is where almost every image in the app comes from." = "Một API vô cùng quan trọng lưu trữ tất cả nội dung (hình ảnh, dữ liệu, v.v.) được sử dụng xuyên suốt Valorant. Đây là nguồn gốc của hầu hết mọi hình ảnh trong ứng dụng.";
+"An invaluable API hosting all the assets (images, data, etc.) used throughout Valorant. This is where almost every image in the app comes from." = "Một API vô cùng quan trọng lưu trữ tất cả tài nguyên (hình ảnh, dữ liệu, v.v.) được sử dụng xuyên suốt Valorant. Đây là nguồn gốc của hầu hết mọi hình ảnh trong ứng dụng.";
 
 /* Statistics filter: shown when every agent is allowed */
 "Any Agent" = "Mọi đặc vụ";
@@ -161,28 +161,28 @@ Competitive matches after your placements can be identified without their detail
 "App Icon" = "Biểu tượng ứng dụng";
 
 /* No comment provided by engineer. */
-"Are your assets outdated?" = "Nội dung của bạn đã lỗi thời?";
+"Are your assets outdated?" = "Tài nguyên của bạn đã lỗi thời?";
 
 /* Pro Features List */
-"As thanks for your support, you get to show off your status with an exclusive app icon!" = "Để cảm ơn sự hỗ trợ của bạn, bạn có thể thể hiện trạng thái của mình bằng một biểu tượng ứng dụng độc quyền!";
+"As thanks for your support, you get to show off your status with an exclusive app icon!" = "Để cảm ơn sự ủng hộ của bạn, bạn có thể khoe trạng thái của mình bằng một biểu tượng ứng dụng độc quyền!";
 
 /* No comment provided by engineer. */
-"Assets" = "Nội dung";
+"Assets" = "Tài nguyên";
 
 /* Asset Management: shown before the newest version is fetched, so it's not know yet if the assets are up to date or outdated */
-"Assets complete." = "Nội dung đã tải hoàn tất.";
+"Assets complete." = "Tài nguyên đã tải hoàn tất.";
 
 /* No comment provided by engineer. */
-"Assets not loaded!" = "Nội dung không được tải!";
+"Assets not loaded!" = "Tài nguyên không được tải!";
 
 /* Asset Management */
-"Assets out of date!" = "Nội dung đẫ lỗi thời!";
+"Assets out of date!" = "Tài nguyên đẫ lỗi thời!";
 
 /* No comment provided by engineer. */
-"Assets should be fetched automatically, but in case something went wrong, feel free to initiate the process manually." = "Nội dung sẽ được tìm nạp tự động nhưng trong trường hợp xảy ra sự cố, vui lòng bắt đầu quy trình theo cách thủ công.";
+"Assets should be fetched automatically, but in case something went wrong, feel free to initiate the process manually." = "Tài nguyên sẽ được tìm nạp tự động nhưng trong trường hợp xảy ra sự cố, vui lòng bắt đầu quy trình theo cách thủ công.";
 
 /* Asset Management */
-"Assets up to date!" = "Nội dung đã cập nhật!";
+"Assets up to date!" = "Tài nguyên đã cập nhật!";
 
 /* Win Rate Stats: side name */
 "Attacking" = "Tấn công";
@@ -412,7 +412,7 @@ Stats: error details */
 "Error Details" = "Chi tiết lỗi";
 
 /* Asset Management */
-"Error downloading assets!" = "Lỗi khi tải nội dung xuống!";
+"Error downloading assets!" = "Lỗi khi tải tài nguyên xuống!";
 
 /* Request Log: title for an exchange */
 "Exchange" = "Trao đổi";
@@ -542,7 +542,7 @@ Nếu bạn gặp lỗi hoặc có một số phản hồi, tôi luôn sẵn lò
 "Image failed to load!" = "Không thể tải hình ảnh!";
 
 /* Asset Management */
-"In case something went wrong, use this button to force a full refetch of the assets and images." = "Trong trường hợp xảy ra sự cố, hãy sử dụng nút này để buộc tải lại toàn bộ nội dung và hình ảnh.";
+"In case something went wrong, use this button to force a full refetch of the assets and images." = "Trong trường hợp xảy ra sự cố, hãy sử dụng nút này để buộc tải lại toàn bộ tài nguyên và hình ảnh.";
 
 /* Settings: section */
 "In-App Store" = "Cửa hàng";
@@ -630,7 +630,7 @@ Nếu không biết tên người dùng của mình hoặc không có, bạn có
 "Losses" = "Thua";
 
 /* No comment provided by engineer. */
-"Manage Assets" = "Quản lý nội dung";
+"Manage Assets" = "Quản lý tài nguyên";
 
 /* No comment provided by engineer. */
 "Manage Local Storage" = "Quản lý bộ nhớ cục bộ";
@@ -672,7 +672,7 @@ Nếu không biết tên người dùng của mình hoặc không có, bạn có
 "Method" = "Phương thức";
 
 /* Asset Management */
-"Missing assets!" = "Không tìm thấy nội dung!";
+"Missing assets!" = "Không tìm thấy tài nguyên!";
 
 /* Missions Box */
 "Missing progress for contract!" = "Thiếu tiến độ cho giao kèo!";
