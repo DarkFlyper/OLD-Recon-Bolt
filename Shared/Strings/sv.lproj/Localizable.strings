@@ -192,7 +192,7 @@
 "Daily Missions" = "Dagliga uppdrag";
 
 /* Store */
-"Daily Offers" = "Dagliga erbjudanden";
+"Daily Offers" = "Daglig Butik";
 
 /* App Theme */
 "Dark Mode" = "Mörkt läge";
@@ -423,11 +423,76 @@ Om du inte vet ditt användarnamn eller inte har något kan du hitta det på [ac
 /* Storage Management */
 "Other Players" = "Andra spelare";
 
+/* Buddy Picker: alert shown when both instances of a buddy are in use */
+"Out of instances!" = "Inga exempel!";
+
+/* Win Rate Stats: section
+Playtime Stats: section */
+"Over Time" = "Over Time";
+
+/* Hit Distribution Stats: section
+Playtime Stats: section */
+"Overall" = "Overall";
+
+/* No comment provided by engineer. */
+"Overdrive (Neon)" = "Overdrive (Neon)";
+
+/* No comment provided by engineer. */
+"Party" = "Party";
+
+/* Scoreboard: party letter */
+"Party %@" = "Party %@";
+
+/* Login Form */
+"Password" = "Lösenord";
+
+/* Agent View: label for player who hasn't picked an agent yet */
+"Picking…" = "Väljer…";
+
+/* Match List: section */
+"Player" = "Spelare";
+
+/* Bookmark/Player List: title */
+"Players" = "Spelare";
+
+/* No comment provided by engineer. */
+"Playtime" = "Speltid";
+
+/* App Icon Name */
+"Pro Blue" = "Pro Blue";
+
+/* App Icon Picker: section */
+"Pro Icons" = "Pro Ikoner";
+
+/* Pro Store: error alert title */
+"Purchase Failed!" = "Köp misslyckades!";
+
+/* Pro Store: button (placeholder filled with formatted currency) */
+"Purchase – %@" = "Köp - %@";
+
+/* Statistics filter: button */
+"Queues" = "Köer";
+
+/* Rank Widget: title */
+"Rank" = "Rank";
+
+/* Rank Changes Widget: title */
+"Rank Changes" = "Rank ändringar";
+
+/* accessibility label */
+"Ready" = "Redo";
+
+/* No comment provided by engineer. */
+"Recon Bolt Pro" = "Recon Bolt Pro";
+
 /* Pro Features List */
 "Recon Bolt Pro supports Family Sharing, meaning if just one member of your iCloud family buys it, everyone can use it!" = "Recon Bolt Pro stöder Familjedelning, vilket innebär att om bara en medlem av din iCloud-familj köper den kan alla använda den!";
 
 /* Pro Features List */
 "Recon Bolt does not have and will never have ads. The only way it can make money is through in-app purchases." = "Recon Bolt har inte och kommer aldrig att ha annonser. Det enda sättet att tjäna pengar är genom köp i appen.";
+
+/* Top-Level Tab Title */
+"Reference" = "Referens";
 
 /* No comment provided by engineer. */
 "Refresh automatically" = "Uppdatera automatiskt";
@@ -623,6 +688,9 @@ Hit Distribution Stats: region */
 /* Pro Store */
 "View All Features" = "Visa alla funktioner";
 
+/* Match List */
+"View Stats" = "Visa statistik";
+
 /* Statistics Pro purchase prompt: button */
 "View Store in Settings" = "Visa butik i inställningar";
 
@@ -637,6 +705,12 @@ Hit Distribution Stats: region */
 
 /* No comment provided by engineer. */
 "WP: +%lld" = "WP: +%lld";
+
+/* Win Rate Stats: chart legend */
+"Wins" = "Vinst";
+
+/* No comment provided by engineer. */
+"Year" = "År";
 
 /* Loadout: spray slot */
 "post-round" = "efter rundan";
