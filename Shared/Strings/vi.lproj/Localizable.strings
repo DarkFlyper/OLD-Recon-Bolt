@@ -1089,6 +1089,9 @@ Trên trang web đó, hãy điều hướng đến **Riot Account Sign-in** và 
 /* No comment provided by engineer. */
 "Unknown Queue" = "Hàng chờ không xác định";
 
+/* Match List: should never appear unless assets are missing/outdated */
+"Unknown Rank" = "Xếp hạng không xác định";
+
 /* placeholder */
 "Unknown Skin" = "Skin không xác định";
 
