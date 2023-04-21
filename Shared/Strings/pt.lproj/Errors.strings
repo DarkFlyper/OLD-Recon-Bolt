@@ -75,3 +75,28 @@ Se tem o Pro, adiciona uma conta usando as mesmas credenciais para substituir a 
 
 /* Riot API Error */
 "Valorant is currently undergoing scheduled maintenance. Riot is probably updating the game!" = "A Valorant está atualmente em manutenção programada. Riot está provavelmente a atualizar o jogo!";
+
+/* No comment provided by engineer. */
+"Widgets require Recon Bolt Pro!" = "As widgets requerem Recon Bolt Pro!";
+
+/* Riot API Error */
+"You are sending too many requests." = "Está a enviar demasiados pedidos.";
+
+/* Riot API Error */
+"Your session could not be resumed. %@" = "A sua sessão não pôde ser retomada. %@";
+
+/* Riot API Error */
+"Your session has expired! Please sign in again." = "A sua sessão expirou! Por favor, inscreva-se novamente.";
+
+/* Riot API Error */
+"Your token has expired. %@" = "A sua token expirou. %@";
+
+/* wrong account error */
+"this one has no Riot ID & Tagline." = "este não tem identificação Riot ID & Tagline.";
+
+/* wrong account error */
+"this one is:
+
+%@" = "este é:
+
+%@";
