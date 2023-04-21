@@ -609,7 +609,7 @@ Recon Bolt начал разрабатываться в начале 2021 год
 "Loadout not loaded!" = "Комплект не загружен!";
 
 /* No comment provided by engineer. */
-"Lobby Dodged" = "От матча уклонились";
+"Match Dodged" = "От матча уклонились";
 
 /* No comment provided by engineer. */
 "Lock In" = "Выбрать";
