@@ -643,7 +643,7 @@ Request Log: title */
 "Show all matches" = "Mostrar todas las partidas";
 
 /* No comment provided by engineer. */
-"Show details when found" = "Mostrar detalles cuando se ha encontrado";
+"Show details when found" = "Mostrar detalles cuando se encuentre partida";
 
 /* App Icon Description: pro blue */
 "Show off your pro status with an exclusive icon!" = "¡Demuestra que eres pro con un icono exclusivo!";
