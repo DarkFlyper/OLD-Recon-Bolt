@@ -1,0 +1,258 @@
+
+/* Used for matches less than a day ago. %@ is replaced by the number of hours/minutes, e.g. '3h ago'. */
+"%@ ago" = "%@ sedan";
+
+/* Win Rate Stats by Loadout Delta: focused value (drag on graph); placeholder is replaced by the percentage of rounds won, e.g. '57.3% won'. */
+"%@ won" = "%@ vunnit";
+
+/* used throughout the app to format percentages—placeholder is replaced by a number */
+"%@%%" = "%@%%";
+
+/* No comment provided by engineer. */
+"%lld RR" = "%lld RR";
+
+/* Storage Management */
+"%lld from other players" = "%lld från andra spelare";
+
+/* Hit Distribution Stats: hit count */
+"%lld hits" = "%lld träffar";
+
+/* No comment provided by engineer. */
+"2-Factor Authentication" = "2-faktor autentisering";
+
+/* No comment provided by engineer. */
+"About Recon Bolt" = "Om Recon Bolt";
+
+/* Contract Picker: button */
+"Activate" = "Aktivera";
+
+/* Contract Picker */
+"Active" = "Aktiv";
+
+/* Match List: accessibility label */
+"Add Bookmark" = "Lägg till som bokmärke";
+
+/* Pro Features List */
+"Add multiple accounts and seamlessly switch between them at any time." = "Lägg till flera konton och växla smidigt mellan dem.";
+
+/* No comment provided by engineer. */
+"Advanced Settings" = "Avancerade inställningar";
+
+/* Pro Store */
+"Advanced Stats" = "Avancerad statistik";
+
+/* No comment provided by engineer. */
+"Agent Select" = "Välj agent";
+
+/* Statistics filter: button */
+"Agents" = "Agents";
+
+/* Stats: match loading */
+"All %lld" = "Alla %lld";
+
+/* No comment provided by engineer. */
+"All Maps" = "Alla kartor";
+
+/* Statistics Filter: button to allow all agents */
+"Allow All Agents" = "Tillåt allt";
+
+/* Default Error Alert Title */
+"An Error Occurred!" = "Ett fel inträffade!";
+
+/* About Screen */
+"An invaluable API hosting all the assets (images, data, etc.) used throughout Valorant. This is where almost every image in the app comes from." = "En API som innehåller alla tillägg (bilder, data osv.) som används i Valorant. Det är här nästan alla bilder i appen kommer ifrån.";
+
+/* Statistics filter: shown when every agent is allowed */
+"Any Agent" = "Alla agents";
+
+/* Statistics filter: shown when every queue is allowed */
+"Any Queue" = "Alla queues";
+
+/* Asset Management */
+"Anything with images will not display correctly." = "Allt som innehåller bilder kommer inte att visas korrekt.";
+
+/* No comment provided by engineer. */
+"App Icon" = "App-ikon";
+
+/* No comment provided by engineer. */
+"Career Summary" = "Karriär sammanfattning";
+
+/* No comment provided by engineer. */
+"Change Buddy" = "Byt gun-buddy";
+
+/* No comment provided by engineer. */
+"Change Queue" = "Byt queue";
+
+/* Gun Customizer */
+"Change Skin" = "Byt skin";
+
+/* Store Widget: description */
+"Check your current Valorant storefront." = "Kolla din Valorant shop.";
+
+/* Missions Widget: description */
+"Check your progress on daily & weekly missions." = "Kolla dina framsteg på dagliga och veckovisa uppdrag.";
+
+/* No comment provided by engineer. */
+"Choose App Icon" = "Välj app ikon";
+
+/* No comment provided by engineer. */
+"Choose Buddy" = "Välj gun-buddy";
+
+/* No comment provided by engineer. */
+"Choose Card" = "Välj playercard";
+
+/* No comment provided by engineer. */
+"Choose Skin" = "Välj skin";
+
+/* No comment provided by engineer. */
+"Choose Spray" = "Välj spray";
+
+/* No comment provided by engineer. */
+"Choose Title" = "Välj titel";
+
+/* Contract Picker: title */
+"Choose a Contract" = "Välj ett kontrakt";
+
+/* Buddy Picker: alert shown when both instances of a buddy are in use */
+"Choose a weapon to take %@ from." = "Välj ett vapen att ta bort %@ från.";
+
+/* Storage Management: button to delete all entries of a certain kind */
+"Clear All" = "Rensa allt";
+
+/* Contract Picker */
+"Completed" = "Slutfört";
+
+/* Storage Management: title for alert to confirm deleting some matches */
+"Confirm Delete" = "Bekräfta att radera";
+
+/* Missions Box */
+"Contract complete!" = "Kontraktet är klart!";
+
+/* Request Log: button to copy the request's body/contents (accessibility label) */
+"Copy Body" = "Kopiera kroppen";
+
+/* Stats: error details: accessibility label */
+"Copy Error" = "Kopieringsfel";
+
+/* No comment provided by engineer. */
+"Copy Error Details" = "Kopiera feldetaljer";
+
+/* No comment provided by engineer. */
+"Copy Match ID" = "Kopiera match-ID";
+
+/* No comment provided by engineer. */
+"Copy to Clipboard" = "Kopiera till Urklipp";
+
+/* No comment provided by engineer. */
+"Could Not Load Account!" = "Kunde inte ladda konto!";
+
+/* No comment provided by engineer. */
+"Could not Change App Icon!" = "Det gick inte att ändra app-ikonen!";
+
+/* No comment provided by engineer. */
+"Could not delete files!" = "Det gick inte att radera filer!";
+
+/* No comment provided by engineer. */
+"Could not determine used storage!" = "Kunde inte bestämma använd förvaring!";
+
+/* No comment provided by engineer. */
+"Could not free up space!" = "Kunde inte frigöra utrymme!";
+
+/* No comment provided by engineer. */
+"Could not look up %@" = "Kunde inte söka upp %@";
+
+/* Login Form: error title */
+"Could not sign in!" = "Kunde inte logga in!";
+
+/* About Screen: section */
+"Credits" = "Cred";
+
+/* Asset Management */
+"Current version: %@" = "Nuvarande version: %@";
+
+/* No comment provided by engineer. */
+"Currently in agent select" = "För närvarande i agent select";
+
+/* No comment provided by engineer. */
+"Currently in-game" = "För närvarande i spelet";
+
+/* Queue Label: custom game */
+"Custom" = "Anpassad";
+
+/* Gun Customizer: title */
+"Customize %@" = "Anpassa %@";
+
+/* Gun Customizer: title */
+"Customize Gun" = "Anpassa vapen";
+
+/* Missions Widget */
+"Daily" = "Daglig";
+
+/* Missions Box: header */
+"Daily Missions" = "Dagliga uppdrag";
+
+/* Store */
+"Daily Offers" = "Dagliga erbjudanden";
+
+/* App Theme */
+"Dark Mode" = "Mörkt läge";
+
+/* Stats: match loading */
+"Data going back to %@" = "Data som går tillbaka till %@";
+
+/* No comment provided by engineer. */
+"Day" = "Dag";
+
+/* App Icon Name */
+"Default" = "Standard";
+
+/* App Icon Picker: section */
+"Default Icon" = "Standardikon";
+
+/* Win Rate Stats: side name */
+"Defending" = "Defens";
+
+/* Storage Management: button to confirm deleting some matches */
+"Delete %lld Matches" = "Ta bort %lld matcher";
+
+/* Match Details: button to view details by round */
+"Details by Round" = "Detaljer om rundor";
+
+/* No comment provided by engineer. */
+"Discord Server" = "Discord-server";
+
+/* Hit Distribution Stats: section */
+"Distribution Over Time" = "Fördelning över tiden";
+
+/* Match Details: section */
+"Kills by Round" = "Kills per runda";
+
+/* Asset Management: this row shows the language of the current assets */
+"Language" = "Språk";
+
+/* Hit Distribution Stats: region */
+"Legs" = "Ben";
+
+/* Bookmark/Player List: player level */
+"Level %lld" = "Nivå %lld";
+
+/* Contract Progress Bar */
+"Level %lld / %lld" = "Nivå %lld/%lld";
+
+/* No comment provided by engineer. */
+"Lifetime Peak" = "Livstid Peak";
+
+/* App Theme */
+"Light Mode" = "Ljusläge";
+
+/* About Screen: section */
+"Links" = "Länkar";
+
+/* Top-Level Tab Title */
+"Live" = "Live";
+
+/* No comment provided by engineer. */
+"Live Match" = "Live-match";
+
+/* Stats: match loading */
+"Load Data" = "Ladda data";
