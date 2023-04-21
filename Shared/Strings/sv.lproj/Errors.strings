@@ -1,0 +1,15 @@
+/* Pro Store: error restoring purchase */
+"A previous transaction was found, but it could not be verified! %@" = "Din transaktion hittades, men den verifierades inte!";
+
+/* error loading the account for a widget */
+"Could not load active account!" = "Kunde inte ladda ditt konto!";
+
+/* wrong account error */
+"It looks like this account has never played Valorant!
+
+You've probably signed into the wrong account; %@" = "Det ser ut som att detta kontot aldrig har spelat Valorant!
+
+Du har säkert loggat in på fel konto;";
+
+/* store widget error */
+"Missing Assets!" = "Saknar tillgångar!";
