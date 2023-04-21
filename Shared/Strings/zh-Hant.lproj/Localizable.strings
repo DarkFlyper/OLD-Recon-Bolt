@@ -604,7 +604,7 @@ Recon Bolt於2021年當初開始開發，當時還無法在遊戲中看到您的
 "Loadout not loaded!" = "收藏還沒加載！";
 
 /* No comment provided by engineer. */
-"Lobby Dodged" = "大廳退出";
+"Match Dodged" = "大廳退出";
 
 /* No comment provided by engineer. */
 "Lock In" = "鎖定";
