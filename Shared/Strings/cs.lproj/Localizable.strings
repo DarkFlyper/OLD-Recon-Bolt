@@ -14,6 +14,9 @@
 /* Missions Box: always at least 3 */
 "%lld Future Weeklies" = "%lld nadcházející týdenní mise";
 
+/* Missions Box: always at least 3 */
+"%lld Queued-Up Weeklies" = "%lld Týdenní úkoly ve frontě";
+
 /* No comment provided by engineer. */
 "%lld RR" = "%lld RR";
 
@@ -22,6 +25,350 @@
 
 /* Hit Distribution Stats: hit count */
 "%lld hits" = "%lld zásahů";
+
+/* Shown at the bottom of the expandable playtime list when there are more entries available. */
+"%lld more" = "%lld více";
+
+/* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
+"%lld to %lld credits" = "%lld na %lld kredity";
+
+/* No comment provided by engineer. */
+"%lld%%" = "%lld%%";
+
+/* No comment provided by engineer. */
+"%lld/%lld" = "%lld/%lld";
+
+/* Time Formatting: minutes & seconds (used in round details view) */
+"%lld:%@" = "%lld:%@";
+
+/* Time Formatting: minutes, seconds, & milliseconds (used in round details view) */
+"%lld:%@.%@" = "%lld:%@.%@";
+
+/* Contract Progress Bar
+Missions Box */
+"%lld / %lld XP" = "%lld / %lld XP";
+
+/* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
+"(%lld – %lld)" = "(%lld - %lld)";
+
+/* Pro Features List */
+"(You can switch between available icons at any time.)" = "(Mezi dostupnými ikonami můžete kdykoli přepínat.)";
+
+/* No comment provided by engineer. */
+"+%lld XP" = "+%lld XP";
+
+/* Missions Widget: how many more weeklies are queued up after the current set */
+"+%lld queued" = "+%lld ve frontě";
+
+/* Store: night market discount */
+"-%lld%%" = "-%lld%%";
+
+/* No comment provided by engineer. */
+"2-Factor Authentication" = "Dvoufaktorové ověření";
+
+/* Missions Widget: countdown label when the target is in the future. e.g. '< 2d 3h' */
+"< %@" = "< %@";
+
+/* No comment provided by engineer. */
+"A 2FA code has been sent to your email address %@" = "2FA kód byl odeslán na vaši e-mailovou adresu %@";
+
+/* No comment provided by engineer. */
+"AFK: %lld" = "AFK: %lld";
+
+/* Career Summary: header for totals of all time */
+"ALL TIME" = "Všechny Acty & Epizody";
+
+/* Settings: section */
+"About" = "O Recon Bolt";
+
+/* No comment provided by engineer. */
+"About Recon Bolt" = "O Recon Bolt";
+
+/* Settings: section */
+"Accounts" = "Účty";
+
+/* Contract Picker: button */
+"Activate" = "Aktivovat";
+
+/* Contract Picker */
+"Active" = "Aktivní";
+
+/* Missions Box: header */
+"Active Contract" = "Aktivní Kontrakt";
+
+/* Match List: accessibility label */
+"Add Bookmark" = "Přidat záložku";
+
+/* Account Settings */
+"Add another Account" = "Přidat další účet";
+
+/* Pro Features List */
+"Add multiple accounts and seamlessly switch between them at any time." = "Přidejte si více účtů a kdykoli mezi nimi plynule přepínejte.";
+
+/* No comment provided by engineer. */
+"Advanced Settings" = "Rozšířená nastavení";
+
+/* Pro Store */
+"Advanced Stats" = "Pokročilé statistiky";
+
+/* No comment provided by engineer. */
+"Agent Select" = "Výběr Agenta";
+
+/* Statistics filter: button */
+"Agents" = "Agenti";
+
+/* Stats: match loading */
+"All %lld" = "Všechny %lld";
+
+/* No comment provided by engineer. */
+"All Maps" = "Všechny mapy";
+
+/* Statistics Filter: button to allow all agents */
+"Allow All Agents" = "Povolit vše";
+
+/* Statistics Filter: button to allow all queues */
+"Allow All Queues" = "Povolit vše";
+
+/* Default Error Alert Title */
+"An Error Occurred!" = "Došlo k chybě!";
+
+/* About Screen */
+"An invaluable API hosting all the assets (images, data, etc.) used throughout Valorant. This is where almost every image in the app comes from." = "Neocenitelné API, ve kterém jsou umístěny všechny prostředky (obrázky, data atd.) používané ve Valorantu. Odtud pochází téměř každý obrázek v aplikaci.";
+
+/* Statistics filter: shown when every agent is allowed */
+"Any Agent" = "Jakýkoli agent";
+
+/* Asset Management */
+"Anything with images will not display correctly." = "Cokoli s obrázky se nezobrazí správně.";
+
+/* No comment provided by engineer. */
+"App Icon" = "Ikona aplikace";
+
+/* Pro Features List */
+"As thanks for your support, you get to show off your status with an exclusive app icon!" = "Jako poděkování za vaši podporu se můžete pochlubit svým statusem s exkluzivní ikonou aplikace!";
+
+/* No comment provided by engineer. */
+"Assets should be fetched automatically, but in case something went wrong, feel free to initiate the process manually." = "Aktiva by měla být automaticky stažena, ale v případě problémů můžete proces spustit manuálně.";
+
+/* Asset Management */
+"Assets up to date!" = "Aktiva jsou aktuální!";
+
+/* Store: available currency */
+"Available:" = "K dispozici:";
+
+/* Hit Distribution Stats: average HS% */
+"Average: %@" = "Průměr: %@";
+
+/* Request Log: shown for bodies that are not decodable to text */
+"Binary Data" = "Binární data";
+
+/* Hit Distribution Stats: region */
+"Body" = "Tělo";
+
+/* Bookmark/Player List: section */
+"Bookmarks" = "Záložky";
+
+/* Hit Distribution Stats: section */
+"By Weapon" = "Podle Zbraně";
+
+/* No comment provided by engineer. */
+"Cancel" = "Zrušit";
+
+/* No comment provided by engineer. */
+"Cancel Matchmaking" = "Zrušit Vyhledávání";
+
+/* Top-Level Tab Title */
+"Career" = "Kariéra";
+
+/* Gun Customizer */
+"Change Skin" = "Změna Skinu";
+
+/* Store Widget: description */
+"Check your current Valorant storefront." = "Zkontrolujte svůj aktuální obchod ve Valorantu.";
+
+/* Missions Widget: description */
+"Check your progress on daily & weekly missions." = "Zkontrolujte svůj pokrok v denních a týdenních misích.";
+
+/* No comment provided by engineer. */
+"Choose App Icon" = "Výběr ikony aplikace";
+
+/* No comment provided by engineer. */
+"Choose Skin" = "Vybrat Skin";
+
+/* No comment provided by engineer. */
+"Choose Spray" = "Vybrat Sprej";
+
+/* No comment provided by engineer. */
+"Choose Title" = "Vybrat Titul";
+
+/* Contract Picker: title */
+"Choose a Contract" = "Vybrat kontrakt";
+
+/* Contract Picker */
+"Completed" = "Dokončen";
+
+/* Request Log: button to copy the request's body/contents (accessibility label) */
+"Copy Body" = "Kopírovat tělo";
+
+/* No comment provided by engineer. */
+"Could Not Load Account!" = "Nebylo možné načíst účet!";
+
+/* No comment provided by engineer. */
+"Could not Change App Icon!" = "Nelze změnit ikonu aplikace!";
+
+/* No comment provided by engineer. */
+"Could not delete files!" = "Nelze odstranit soubory!";
+
+/* No comment provided by engineer. */
+"Could not determine used storage!" = "Nebylo možné určit využité úložiště!";
+
+/* No comment provided by engineer. */
+"Could not free up space!" = "Nelze uvolnit místo!";
+
+/* No comment provided by engineer. */
+"Could not look up %@" = "Nelze vyhledat %@";
+
+/* Login Form: error title */
+"Could not sign in!" = "Nelze se přihlásit!";
+
+/* About Screen: section */
+"Credits" = "Kredity";
+
+/* Asset Management */
+"Current version: %@" = "Aktuální verze: %@";
+
+/* Gun Customizer: title */
+"Customize %@" = "Přizpůsobení %@";
+
+/* App Theme */
+"Dark Mode" = "Tmavý Režim";
+
+/* App Icon Name */
+"Default" = "Výchozí";
+
+/* About Screen */
+"Hi! I'm Julian Dunskus, and I made this app.
+
+Recon Bolt started development in early 2021, back when it wasn't yet possible to see your RR gains and losses in the game, but the API offered those numbers. I made an app to see the numbers and better understand my rank changes.
+
+As you can guess, the scope expanded massively over time to what you're using now. I hope you're enjoying it!
+
+If you've encountered a bug or have some feedback, I'm always happy to hear it on the Discord Server or GitHub :)" = "Ahoj! Jsem Julian Dunskus a vytvořil jsem tuto aplikaci.
+
+Recon Bolt jsem začal vyvíjet na začátku roku 2021, tedy v době, kdy ještě nebylo možné ve hře vidět zisky a ztráty RR, ale API tato čísla nabízelo. Vytvořil jsem aplikaci, abych tato čísla viděl a lépe pochopil změny svých hodností.
+
+Jak asi tušíte, rozsah se časem masivně rozšířil až na to, co používáte nyní. Doufám, že se vám to líbí!
+
+Pokud jste narazili na chybu nebo máte nějakou zpětnou vazbu, vždy si ji rád vyslechnu na Discord serveru nebo GitHubu :)";
+
+/* Pro Store */
+"Home Screen Widgets" = "Widgety na domovské obrazovce";
+
+/* Pro Features List */
+"If you have multiple accounts, you can configure separate widgets for each and have them on your Home Screen at the same time." = "Pokud máte více účtů, můžete pro každý z nich nakonfigurovat samostatné widgety a mít je současně na domovské obrazovce.";
+
+/* No comment provided by engineer. */
+"If your widgets seem broken, use this button to request an immediate refresh from iOS." = "Pokud se widgety zdají být nefunkční, můžete si pomocí tohoto tlačítka vyžádat okamžitou aktualizaci ze systému iOS.";
+
+/* No comment provided by engineer. */
+"Image failed to load!" = "Obrázek se nepodařilo načíst!";
+
+/* Asset Management: this row shows the language of the current assets */
+"Language" = "Jazyk";
+
+/* Hit Distribution Stats: region */
+"Legs" = "Nohy";
+
+/* App Theme */
+"Light Mode" = "Světlý režim";
+
+/* About Screen: section */
+"Links" = "Odkazy";
+
+/* Top-Level Tab Title */
+"Live" = "Live";
+
+/* Pro Store */
+"Loading Store Info…" = "Načítání informací o obchodě…";
+
+/* Pro Store: button */
+"Restore Purchase" = "Obnovení Nákupu";
+
+/* No comment provided by engineer. */
+"Retry" = "Opakovat";
+
+/* Round Details: header */
+"Round %lld of %lld" = "Kolo %lld z %lld";
+
+/* Round Details: title */
+"Round Details" = "Podrobnosti o kole";
+
+/* Bookmark/Player List: section */
+"Search" = "Hledat";
+
+/* Hit Distribution Stats: error */
+"Select more matches to see data on hit distribution. Deathmatch, Escalation, and other modes don't provide the necessary information." = "Chcete-li zobrazit údaje o distribuci zásahů, vyberte více zápasů. Režimy Deathmatch, Escalation a další neposkytují potřebné informace.";
+
+/* No comment provided by engineer. */
+"Send to Developer" = "Odeslat vývojáři";
+
+/* Account Settings */
+"Session expired!" = "Relace vypršela!";
+
+/* Top-Level Tab Title */
+"Settings" = "Nastavení";
+
+/* Playtime Stats: title for view of matches in common with another player */
+"Shared Matches" = "Sdílené Zápasy";
+
+/* No comment provided by engineer. */
+"Show all matches" = "Zobrazit všechny zápasy";
+
+/* No comment provided by engineer. */
+"Show details when found" = "Zobrazit podrobnosti po nalezení zápasu";
+
+/* App Icon Description: pro blue */
+"Show off your pro status with an exclusive icon!" = "Pochlubte se svým statusem Pro s exkluzivní ikonou!";
+
+/* Account Settings: button
+Login Form: button */
+"Sign In" = "Přihlásit se";
+
+/* Login Form */
+"Sign In with your Riot account" = "Přihlaste se pomocí Riot účtu";
+
+/* Account Settings */
+"Sign Out" = "Odhlásit se";
+
+/* Login Form: button/header */
+"Sign in with Google/Apple/etc." = "Přihlaste se pomocí Google/Apple atd.";
+
+/* No comment provided by engineer. */
+"Statistics" = "Statistiky";
+
+/* Statistics Pro purchase prompt */
+"Statistics not available!" = "Statistiky nejsou k dispozici!";
+
+/* Statistics Pro purchase prompt: 'Recon Bolt Pro' is inserted in the placeholder with a bolder font. */
+"Statistics require %@, a one-time purchase including a variety of features. Want to give them a look?" = "Statistiky vyžadují %@, jednorázový nákup zahrnující řadu funkcí. Chcete se na ně podívat?";
+
+/* Store Widget: title */
+"Store" = "Obchod";
+
+/* No comment provided by engineer. */
+"Store not loaded!" = "Obchod není načten!";
+
+/* Pro Features List */
+"Support Development :)" = "Podpora vývoje :)";
+
+/* No comment provided by engineer. */
+"Twitter @juliand665" = "Twitter @juliand665";
+
+/* Request Log */
+"URL" = "URL";
+
+/* Missions Box: header, shown when a mission is not daily or weekly (should not happen unless Riot changes something) */
+"Uncategorized Missions" = "Nezařazené mise";
 
 /* Store */
 "Unknown Offer" = "Neznámá Nabídka";
