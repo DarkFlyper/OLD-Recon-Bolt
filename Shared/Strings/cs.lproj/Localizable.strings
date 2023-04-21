@@ -14,6 +14,9 @@
 /* Missions Box: always at least 3 */
 "%lld Future Weeklies" = "%lld nadcházející týdenní mise";
 
+/* Missions Box: always at least 3 */
+"%lld Queued-Up Weeklies" = "%lld Týdenní úkoly ve frontě";
+
 /* No comment provided by engineer. */
 "%lld RR" = "%lld RR";
 
@@ -89,6 +92,9 @@ Missions Box */
 
 /* Contract Picker */
 "Active" = "Aktivní";
+
+/* Missions Box: header */
+"Active Contract" = "Aktivní Kontrakt";
 
 /* Match List: accessibility label */
 "Add Bookmark" = "Přidat záložku";
@@ -206,6 +212,57 @@ Missions Box */
 
 /* Gun Customizer: title */
 "Customize %@" = "Přizpůsobení %@";
+
+/* App Theme */
+"Dark Mode" = "Tmavý Režim";
+
+/* App Icon Name */
+"Default" = "Výchozí";
+
+/* About Screen */
+"Hi! I'm Julian Dunskus, and I made this app.
+
+Recon Bolt started development in early 2021, back when it wasn't yet possible to see your RR gains and losses in the game, but the API offered those numbers. I made an app to see the numbers and better understand my rank changes.
+
+As you can guess, the scope expanded massively over time to what you're using now. I hope you're enjoying it!
+
+If you've encountered a bug or have some feedback, I'm always happy to hear it on the Discord Server or GitHub :)" = "Ahoj! Jsem Julian Dunskus a vytvořil jsem tuto aplikaci.
+
+Recon Bolt jsem začal vyvíjet na začátku roku 2021, tedy v době, kdy ještě nebylo možné ve hře vidět zisky a ztráty RR, ale API tato čísla nabízelo. Vytvořil jsem aplikaci, abych tato čísla viděl a lépe pochopil změny svých hodností.
+
+Jak asi tušíte, rozsah se časem masivně rozšířil až na to, co používáte nyní. Doufám, že se vám to líbí!
+
+Pokud jste narazili na chybu nebo máte nějakou zpětnou vazbu, vždy si ji rád vyslechnu na Discord serveru nebo GitHubu :)";
+
+/* Pro Store */
+"Home Screen Widgets" = "Widgety na domovské obrazovce";
+
+/* Pro Features List */
+"If you have multiple accounts, you can configure separate widgets for each and have them on your Home Screen at the same time." = "Pokud máte více účtů, můžete pro každý z nich nakonfigurovat samostatné widgety a mít je současně na domovské obrazovce.";
+
+/* No comment provided by engineer. */
+"If your widgets seem broken, use this button to request an immediate refresh from iOS." = "Pokud se widgety zdají být nefunkční, můžete si pomocí tohoto tlačítka vyžádat okamžitou aktualizaci ze systému iOS.";
+
+/* No comment provided by engineer. */
+"Image failed to load!" = "Obrázek se nepodařilo načíst!";
+
+/* Asset Management: this row shows the language of the current assets */
+"Language" = "Jazyk";
+
+/* Hit Distribution Stats: region */
+"Legs" = "Nohy";
+
+/* App Theme */
+"Light Mode" = "Světlý režim";
+
+/* About Screen: section */
+"Links" = "Odkazy";
+
+/* Top-Level Tab Title */
+"Live" = "Live";
+
+/* Pro Store */
+"Loading Store Info…" = "Načítání informací o obchodě…";
 
 /* Store */
 "Unknown Offer" = "Neznámá Nabídka";
