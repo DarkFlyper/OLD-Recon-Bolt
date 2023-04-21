@@ -61,8 +61,8 @@ struct MatchCell: View {
 			
 			if matchesFilter {
 				if let mapID = match.mapID {
-					HStack {
-						ZStack {
+					HStack(spacing: 0) { // plenty of padding built into the agent icon
+						Group {
 							if let matchDetails {
 								HStack {
 									GameModeImage(id: matchDetails.matchInfo.modeID)
@@ -70,20 +70,23 @@ struct MatchCell: View {
 									
 									matchDetails.matchInfo.queueLabel
 										.padding(.top, -2) // small caps are shorter
+										.lineLimit(1)
+										.minimumScaleFactor(0.5)
+										.layoutPriority(-100)
 								}
 							} else {
 								MapImage.LabelText(mapID: mapID)
-									.fixedSize()
 									.padding(.top, -2) // small caps are shorter
+									.lineLimit(1)
+									.minimumScaleFactor(0.5)
 							}
 						}
 						.font(.callout.bold().smallCaps())
 						.foregroundColor(.white.opacity(0.8))
 						.shadow(color: .black, radius: 2, y: 1)
-						.padding(4)
-						.padding(.horizontal, 2)
-						
-						Spacer()
+						.padding(.vertical, 4)
+						.padding(.leading, 6)
+						.frame(maxWidth: .infinity, alignment: .leading)
 						
 						let myself = matchDetails?.players.firstElement(withID: userID)
 						if let myself {
@@ -105,7 +108,7 @@ struct MatchCell: View {
 						.font(.caption)
 						.frame(maxWidth: .infinity)
 				} else {
-					Text("Lobby Dodged")
+					Text("Match Dodged", comment: "Match List: shown when a match didn't get past Agent Select (because someone dodged/left)")
 						.font(.body.weight(.medium))
 						.foregroundStyle(.secondary)
 						.frame(maxWidth: .infinity)
@@ -140,7 +143,8 @@ struct MatchCell: View {
 			.transition(.slide)
 		} else {
 			Text("Open or swipe to fetch details.")
-				.font(.caption)
+				.lineLimit(1)
+				.minimumScaleFactor(0.1)
 				.foregroundStyle(.tertiary)
 		}
 	}
@@ -285,7 +289,7 @@ struct MatchCell_Previews: PreviewProvider {
 	static let increase = CompetitiveUpdate.example(tierChange: (8, 8), tierProgressChange: (40, 60), index: 3)
 	static let promotion = CompetitiveUpdate.example(tierChange: (20, 21), tierProgressChange: (80, 10), index: 4) <- {
 		$0.afkPenalty = -3
-		$0.performanceBonus = 11
+		$0.performanceBonus = 9
 	}
 	
 	static let unranked = CompetitiveUpdate.example(tierChange: (0, 0), tierProgressChange: (0, 0), index: 5)
