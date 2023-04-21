@@ -168,6 +168,9 @@ Missions Box */
 /* Bookmark/Player List: section */
 "Bookmarks" = "Záložky";
 
+/* Hit Distribution Stats: section */
+"By Weapon" = "Podle Zbraně";
+
 /* No comment provided by engineer. */
 "Cancel" = "Zrušit";
 
@@ -198,11 +201,32 @@ Missions Box */
 /* No comment provided by engineer. */
 "Choose Title" = "Vybrat Titul";
 
+/* Contract Picker: title */
+"Choose a Contract" = "Vybrat kontrakt";
+
 /* Contract Picker */
 "Completed" = "Dokončen";
 
 /* Request Log: button to copy the request's body/contents (accessibility label) */
 "Copy Body" = "Kopírovat tělo";
+
+/* No comment provided by engineer. */
+"Could Not Load Account!" = "Nebylo možné načíst účet!";
+
+/* No comment provided by engineer. */
+"Could not Change App Icon!" = "Nelze změnit ikonu aplikace!";
+
+/* No comment provided by engineer. */
+"Could not delete files!" = "Nelze odstranit soubory!";
+
+/* No comment provided by engineer. */
+"Could not determine used storage!" = "Nebylo možné určit využité úložiště!";
+
+/* No comment provided by engineer. */
+"Could not free up space!" = "Nelze uvolnit místo!";
+
+/* No comment provided by engineer. */
+"Could not look up %@" = "Nelze vyhledat %@";
 
 /* Login Form: error title */
 "Could not sign in!" = "Nelze se přihlásit!";
