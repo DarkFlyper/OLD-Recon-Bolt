@@ -608,7 +608,7 @@ Se você encontrou um bug ou tem algum feedback, ficarei muito feliz em ouvir no
 "Loadout not loaded!" = "Inventário não carregado!";
 
 /* No comment provided by engineer. */
-"Lobby Dodged" = "Evasão do Lobby";
+"Match Dodged" = "Evasão do Lobby";
 
 /* No comment provided by engineer. */
 "Lock In" = "Confirmar";
