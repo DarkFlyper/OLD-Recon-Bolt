@@ -243,8 +243,26 @@ Missions Box */
 /* App Theme */
 "Dark Mode" = "Tmavý Režim";
 
+/* No comment provided by engineer. */
+"Day" = "Den";
+
 /* App Icon Name */
 "Default" = "Výchozí";
+
+/* App Icon Picker: section */
+"Default Icon" = "Výchozí Ikona";
+
+/* No comment provided by engineer. */
+"Discord Server" = "Discord Server";
+
+/* No comment provided by engineer. */
+"Done" = "Hotovo";
+
+/* Request Log: shown in place of a status code (like 200 or 404) when sending failed. */
+"ERROR" = "CHYBA";
+
+/* Match List: accessibility label */
+"Edit Filter" = "Upravit Filtr";
 
 /* About Screen */
 "Hi! I'm Julian Dunskus, and I made this app.
@@ -290,6 +308,36 @@ Pokud jste narazili na chybu nebo máte nějakou zpětnou vazbu, vždy si ji rá
 
 /* Pro Store */
 "Loading Store Info…" = "Načítání informací o obchodě…";
+
+/* About Screen */
+"Many thanks to the volunteer translators from our Discord server who have been hard at working translating the app to new languages!" = "Děkujeme dobrovolným překladatelům z našeho Discord serveru, kteří usilovně pracují na překladu aplikace do nových jazyků!";
+
+/* No comment provided by engineer. */
+"Map" = "Mapa";
+
+/* No comment provided by engineer. */
+"Maps" = "Mapy";
+
+/* Stats: error details */
+"Match" = "Zápas";
+
+/* Match Details: title */
+"Match Details" = "Podrobnosti o zápase";
+
+/* No comment provided by engineer. */
+"Please make sure you are ready to play by the time the game starts!" = "Ujistěte se, že můžete být u počítače v době zahájení hry!";
+
+/* App Icon Name */
+"Pro Blue" = "Pro Modrá";
+
+/* No comment provided by engineer. */
+"Pro Features" = "Pro Funkce";
+
+/* App Icon Picker: section */
+"Pro Icons" = "Pro Ikony";
+
+/* Pro Store: error alert title */
+"Purchase Failed!" = "Nákup se nezdařil!";
 
 /* Pro Store: button */
 "Restore Purchase" = "Obnovení Nákupu";
@@ -342,6 +390,9 @@ Login Form: button */
 
 /* Login Form: button/header */
 "Sign in with Google/Apple/etc." = "Přihlaste se pomocí Google/Apple atd.";
+
+/* No comment provided by engineer. */
+"Start Matchmaking?" = "Zahájit Vyhledávání?";
 
 /* No comment provided by engineer. */
 "Statistics" = "Statistiky";
