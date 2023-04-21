@@ -97,7 +97,7 @@
         <key>NSStringFormatValueTypeKey</key>
         <string>lld</string>
         <key>other</key>
-        <string>%lld bị ẩn do nội dung đã lỗi thời</string>
+        <string>%lld bị ẩn do tài nguyên đã lỗi thời</string>
       </dict>
     </dict>
     <key>%lld agents selected</key>
