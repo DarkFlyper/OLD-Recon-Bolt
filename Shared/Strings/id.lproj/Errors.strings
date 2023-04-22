@@ -31,8 +31,8 @@ Anda mungkin masuk ke akun yang salah; %@";
 
 /* Should not happen anymore, but you never know ¯\_(ツ)_/¯ */
 "Missing session for account!
-If you have Pro, add an account using the same credentials to replace the account with a working version." = "Sesi yang hilang untuk akun!
-Jika Anda memiliki Pro, tambahkan akun menggunakan kredensial yang sama untuk mengganti akun dengan versi yang berfungsi.";
+If you have Pro, add an account using the same credentials to replace the account with a working version." = "Sesi hilang untuk akun ini!
+Jika Anda memiliki versi Pro, silakan tambahkan akun dengan kata sandi atau kredensial yang sama untuk menggantikan akun yang tersedia.";
 
 /* error loading the account for a widget. */
 "No account specified." = "Tidak ada akun yang ditentukan.";
