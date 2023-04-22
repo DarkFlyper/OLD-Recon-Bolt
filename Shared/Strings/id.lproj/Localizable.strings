@@ -11,6 +11,12 @@
 /* used throughout the app to format percentages—placeholder is replaced by a number */
 "%@%%" = "%@%%";
 
+/* Missions Box: always at least 3 */
+"%lld Future Weeklies" = "%lld Minggu Depan";
+
+/* Missions Box: always at least 3 */
+"%lld Queued-Up Weeklies" = "%lld Antrian Misi Mingguan";
+
 /* No comment provided by engineer. */
 "%lld RR" = "%lld RR";
 
@@ -22,6 +28,9 @@
 
 /* Shown at the bottom of the expandable playtime list when there are more entries available. */
 "%lld more" = "%lld lebih lanjut";
+
+/* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
+"%lld to %lld credits" = "%lld ke %lld kredit";
 
 /* No comment provided by engineer. */
 "%lld%%" = "%lld%%";
@@ -47,6 +56,9 @@ Missions Box */
 
 /* No comment provided by engineer. */
 "+%lld XP" = "%lld XP";
+
+/* Missions Widget: how many more weeklies are queued up after the current set */
+"+%lld queued" = "+%lld mengantri";
 
 /* Store: night market discount */
 "-%lld%%" = "-%lld%%";
@@ -163,6 +175,9 @@ Competitive matches after your placements can be identified without their detail
 /* Asset Management */
 "Assets up to date!" = "Menggunakan aset terkini!";
 
+/* Win Rate Stats: side name */
+"Attacking" = "Penyerang";
+
 /* Store: available currency */
 "Available:" = "Tersedia:";
 
@@ -188,6 +203,12 @@ Competitive matches after your placements can be identified without their detail
 Playtime Stats: section */
 "By Map" = "Dengan Map";
 
+/* Playtime Stats: section/title */
+"By Non-Premade Player" = "Oleh Pemain yang acak";
+
+/* Playtime Stats: section/title */
+"By Premade Teammate" = "Dari rekan setim yang dibuat";
+
 /* Playtime Stats: section */
 "By Queue" = "Dengan Antrian";
 
@@ -203,11 +224,140 @@ Playtime Stats: section */
 /* Top-Level Tab Title */
 "Career" = "Karier";
 
+/* No comment provided by engineer. */
+"Career Summaries" = "Ringkasan Karier";
+
+/* No comment provided by engineer. */
+"Career Summary" = "Ringkasan Karier";
+
+/* No comment provided by engineer. */
+"Change Buddy" = "Ubah Buddy";
+
+/* No comment provided by engineer. */
+"Change Queue" = "Ubah Mode";
+
+/* Gun Customizer */
+"Change Skin" = "Ubah Skin";
+
+/* Store Widget: description */
+"Check your current Valorant storefront." = "Periksa etalase Valorant Anda saat ini.";
+
+/* Missions Widget: description */
+"Check your progress on daily & weekly missions." = "Periksa kemajuan Anda di misi harian & mingguan.";
+
+/* No comment provided by engineer. */
+"Choose App Icon" = "Pilih Ikon Aplikasi";
+
+/* No comment provided by engineer. */
+"Choose Buddy" = "Pilih Buddy";
+
+/* No comment provided by engineer. */
+"Choose Card" = "Pilih Banner";
+
+/* No comment provided by engineer. */
+"Choose Skin" = "Pilih Skin";
+
+/* No comment provided by engineer. */
+"Choose Spray" = "Pilih Grafiti";
+
+/* No comment provided by engineer. */
+"Choose Title" = "Pilih Title";
+
+/* Contract Picker: title */
+"Choose a Contract" = "Pilih Kontrak Agen";
+
+/* Buddy Picker: alert shown when both instances of a buddy are in use */
+"Choose a weapon to take %@ from." = "Pilih senjata yang akan diambil dari %@.";
+
+/* Storage Management: button to delete all entries of a certain kind */
+"Clear All" = "Hapus Semua";
+
+/* Contract Picker */
+"Completed" = "Selesai";
+
+/* Storage Management: title for alert to confirm deleting some matches */
+"Confirm Delete" = "Konfirmasi Hapus";
+
+/* Missions Box */
+"Contract complete!" = "Kontrak agen selesai!";
+
+/* Request Log: button to copy the request's body/contents (accessibility label) */
+"Copy Body" = "Salin Body";
+
+/* Stats: error details: accessibility label */
+"Copy Error" = "Salin Kesalahan";
+
+/* No comment provided by engineer. */
+"Copy Error Details" = "Salin Detail dari Error";
+
+/* No comment provided by engineer. */
+"Copy Match ID" = "Salin ID Pertandingan";
+
+/* No comment provided by engineer. */
+"Copy to Clipboard" = "Salin ke Papan Klip";
+
+/* No comment provided by engineer. */
+"Could Not Load Account!" = "Tidak dapat memuat Akun!";
+
+/* No comment provided by engineer. */
+"Could not Change App Icon!" = "Tidak dapat mengubah Ikon Aplikasi!";
+
+/* No comment provided by engineer. */
+"Could not delete files!" = "Tidak dapat menghapus file!";
+
+/* No comment provided by engineer. */
+"Could not determine used storage!" = "Tidak dapat menentukan penyimpanan yang digunakan!";
+
+/* No comment provided by engineer. */
+"Could not free up space!" = "Tidak dapat mengosongkan ruang!";
+
+/* No comment provided by engineer. */
+"Could not look up %@" = "Tidak dapat mengambil data %@";
+
 /* Login Form: error title */
 "Could not sign in!" = "Tidak dapat masuk!";
 
+/* About Screen: section */
+"Credits" = "Kredit";
+
+/* Asset Management */
+"Current version: %@" = "Versi saat ini: %@";
+
+/* No comment provided by engineer. */
+"Currently in agent select" = "Dalam pemilihan agen";
+
+/* No comment provided by engineer. */
+"Currently in-game" = "Dalam permainan";
+
+/* Queue Label: custom game */
+"Custom" = "Kustom";
+
+/* Gun Customizer: title */
+"Customize %@" = "Menyesuaikan %@";
+
+/* Gun Customizer: title */
+"Customize Gun" = "Menyesuaikan Senjata";
+
+/* Missions Widget */
+"Daily" = "Harian";
+
+/* Missions Box: header */
+"Daily Missions" = "Misi Harian";
+
+/* Store */
+"Daily Offers" = "Penawaran Harian";
+
+/* App Theme */
+"Dark Mode" = "Mode Gelap";
+
+/* Stats: match loading */
+"Data going back to %@" = "Mengembalikan data ke %@";
+
 /* No comment provided by engineer. */
 "Day" = "Hari";
+
+/* App Icon Name */
+"Default" = "Default";
 
 /* App Icon Picker: section */
 "Default Icon" = "Ikon Default";
@@ -412,8 +562,413 @@ Jika Anda menemukan bug atau memiliki feedback, saya selalu senang mendengarnya 
 /* No comment provided by engineer. */
 "No games played with premade teammates." = "Tidak ada permainan yang dimainkan bersama dengan tim yang sudah dibuat sebelumnya.";
 
+/* No comment provided by engineer. */
+"No minimap available!" = "Minimap tidak tersedia!";
+
+/* No comment provided by engineer. */
+"No non-premade players encountered repeatedly. (Un)lucky you!" = "Tidak ada pemain yang tidak dibuat sebelumnya setelah ditemukan berulang kali. (Tidak) beruntungnya Anda!";
+
+/* No comment provided by engineer. */
+"Normalize Charts" = "Menormalkan Grafik";
+
+/* Party Box */
+"Not Ready" = "Belum Siap";
+
+/* Hit Distribution Stats: error */
+"Not enough data!" = "Tidak cukup data!";
+
+/* Account Settings */
+"Not signed in yet." = "Anda belum masuk.";
+
+/* No comment provided by engineer. */
+"Not signed in!" = "Anda belum masuk!";
+
+/* Pro Features List */
+"Note: Statistics are only available on iOS 16 and newer." = "N.B: Statistik hanya tersedia di iOS 16 dan yang lebih baru.";
+
+/* Pro Features List */
+"Note: Widgets are only available on iOS 16 and newer." = "N.B: Widget hanya tersedia di iOS 16 dan yang lebih baru.";
+
+/* No comment provided by engineer. */
+"OK" = "OK";
+
+/* No comment provided by engineer. */
+"Official Website" = "Situs web resmi";
+
+/* No comment provided by engineer. */
+"Open or swipe to fetch details." = "Buka atau geser untuk mengambil detail.";
+
+/* Storage Management */
+"Other Players" = "Pemain lain";
+
+/* Buddy Picker: alert shown when both instances of a buddy are in use */
+"Out of instances!" = "Semua telah dipakai!";
+
+/* Win Rate Stats: section
+Playtime Stats: section */
+"Over Time" = "Waktu Tambahan";
+
+/* Hit Distribution Stats: section
+Playtime Stats: section */
+"Overall" = "Keseluruhan";
+
+/* No comment provided by engineer. */
+"Overdrive (Neon)" = "Overdrive (Neon)";
+
+/* No comment provided by engineer. */
+"Party" = "Grup Party";
+
+/* Scoreboard: party letter */
+"Party %@" = "Grup Party %@";
+
+/* Login Form */
+"Password" = "Kata sandi";
+
+/* Agent View: label for player who hasn't picked an agent yet */
+"Picking…" = "Sedang memilih…";
+
+/* Match List: section */
+"Player" = "Pemain";
+
+/* Bookmark/Player List: title */
+"Players" = "Pemain";
+
+/* No comment provided by engineer. */
+"Playtime" = "Waktu bermain";
+
+/* No comment provided by engineer. */
+"Playtime Breakdown" = "Rincian Waktu Bermain";
+
+/* No comment provided by engineer. */
+"Please make sure you are ready to play by the time the game starts!" = "Pastikan Anda siap untuk bermain pada saat permainan ditemukan!";
+
+/* App Icon Name */
+"Pro Blue" = "Pro Blue";
+
+/* No comment provided by engineer. */
+"Pro Features" = "Fitur Pro";
+
+/* App Icon Picker: section */
+"Pro Icons" = "Ikon Pro";
+
+/* Pro Store: error alert title */
+"Purchase Failed!" = "Pembelian Gagal!";
+
+/* Pro Store: button (placeholder filled with formatted currency) */
+"Purchase – %@" = "Pembelian - %@";
+
+/* Statistics filter: button */
+"Queues" = "Antrian";
+
+/* Rank Widget: title */
+"Rank" = "Rank";
+
+/* No comment provided by engineer. */
+"Rank %lld" = "Rank %lld";
+
+/* Rank Changes Widget: title */
+"Rank Changes" = "Perubahan Rank";
+
+/* No comment provided by engineer. */
+"Rank Rating Changes" = "Perubahan Rank Rating";
+
+/* No comment provided by engineer. */
+"Rate on the App Store" = "Mengulas aplikasi di App Store";
+
+/* accessibility label */
+"Ready" = "Siap";
+
+/* No comment provided by engineer. */
+"Recon Bolt Pro" = "Recon Bolt Pro";
+
+/* Pro Features List */
+"Recon Bolt Pro supports Family Sharing, meaning if just one member of your iCloud family buys it, everyone can use it!" = "Recon Bolt Pro mendukung Keluarga Berbagi, yang berarti jika Anda memiliki satu anggota keluarga iCloud yang membelinya, semua orang dapat menggunakannya!";
+
+/* Pro Features List */
+"Recon Bolt does not have and will never have ads. The only way it can make money is through in-app purchases." = "Recon Bolt tidak memiliki, dan tidak akan pernah memiliki iklan. Salah satu cara untuk menghasilkan uang melalui pembelian dalam aplikasi.";
+
+/* Top-Level Tab Title */
+"Reference" = "Referensi";
+
+/* Account Settings: button to refresh expired session */
+"Refresh" = "Refresh";
+
+/* No comment provided by engineer. */
+"Refresh automatically" = "Refres dengan otomatis";
+
+/* Store Widget: next refresh time (hour & minute) */
+"Refreshes at %@" = "Akan direfresh pada %@";
+
+/* Match List: accessibility label */
+"Remove Bookmark" = "Hapus Penanda";
+
+/* Asset Management: section */
+"Repair" = "Perbaikan";
+
+/* Request Log: header */
+"Request" = "Permintaan";
+
+/* Advanced Settings: button to open request log
+Request Log: title */
+"Request Log" = "Log Permintaan";
+
+/* No comment provided by engineer. */
+"Requests" = "Permintaan";
+
+/* Asset Management: button */
+"Reset" = "Mengatur ulang";
+
+/* Request Log: header */
+"Response" = "Response";
+
+/* No comment provided by engineer. */
+"Response Code" = "Kode Response";
+
+/* Pro Store: error alert title */
+"Restore Failed!" = "Pengembalian gagal!";
+
+/* Pro Store: button */
+"Restore Purchase" = "Memulihkan Pembelian";
+
+/* No comment provided by engineer. */
+"Retry" = "Ulang";
+
+/* Round Details: header */
+"Round %lld of %lld" = "Round %lld dari %lld";
+
+/* Round Details: title */
+"Round Details" = "Detail Round";
+
+/* No comment provided by engineer. */
+"Storefront outdated!" = "Etalase belum di update!";
+
+/* Pro Features List */
+"Support Development :)" = "Dukung Pengembangan :)";
+
+/* Pro Store */
+"Support Further Development!" = "Dukung Pengembangan Lebih Lanjut!";
+
+/* Missions Box: button */
+"Switch Contract" = "Beralih Kontrak";
+
+/* Login Form: is this safe? */
+"TL;DR: you'll have to take my word for it, but Riot doesn't seem to mind." = "Inti: Anda dapat mempercayai kata-kata saya, sepertinya Riot tampaknya tidak keberatan.";
+
+/* Bookmark/Player List: lookup tag placeholder */
+"Tag" = "Tag";
+
+/* Pro Store */
+"Thank you for supporting Recon Bolt!" = "Terima kasih sudah mendukung Recon Bolt!";
+
+/* Login Form: is this safe? */
+"The code is open-source and visible on GitHub; you can build it yourself if you want to be sure of what's running." = "Kode ini merupakan sumber terbuka dan dapat dilihat melalui GitHub; Anda dapat membuatnya sendiri jika Anda ingin memastikan semua ini.";
+
+/* App Icon Description: default */
+"The default look of Recon Bolt." = "Ikon default dari Recon Bolt.";
+
+/* No comment provided by engineer. */
+"The pro version lets you change the app icon! More icons might be coming in future updates." = "Versi pro memungkinkan Anda mengubah ikon aplikasi! Kami mungkin akan menambahkan ikon lain di update selanjutnya.";
+
+/* No comment provided by engineer. */
+"Theme" = "Tema";
+
+/* No comment provided by engineer. */
+"These are the last %lld requests sent by the app, along with their responses." = "Ini adalah %lld permintaan terakhir yang dikirim lewat aplikasi beserta dengan response nya.";
+
+/* Statistics error for iOS <16 */
+"This feature requires iOS 16 or newer." = "Fitur ini memerlukan setidaknya iOS 16 atau yang lebih baru.";
+
+/* Stats: match loading */
+"To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "Untuk mengumpulkan statistik, kita perlu memuat pertandingan untuk diproses. Perhatikan jika jumlah yang besar dapat memakan waktu lama terutama jika kita mengunduh untuk pertama kalinya!";
+
+/* Win Rate Stats: side name
+Hit Distribution Stats: region */
+"Total" = "Total";
+
+/* No comment provided by engineer. */
+"Total Playtime" = "Total Waktu Bermain";
+
+/* No comment provided by engineer. */
+"Total Space Used" = "Total Penyimpanan yang Digunakan";
+
+/* No comment provided by engineer. */
+"Tour de Force (Chamber)" = "Tour de Force (Chamber)";
+
+/* No comment provided by engineer. */
+"Twitter @juliand665" = "Twitter @juliand665";
+
+/* Request Log */
+"URL" = "URL";
+
+/* Missions Box: header, shown when a mission is not daily or weekly (should not happen unless Riot changes something) */
+"Uncategorized Missions" = "Misi yang tidak memiliki kategori";
+
+/* Shown when a match does not match the filter and its details have not been fetched. */
+"Unfetched" = "Data belum diambil";
+
+/* Hit Distribution Stats: footnote */
+"Unfortunately, Valorant doesn't store information about which weapon was used for each hit. All we get is the weapon you started the round with and what weapon you used for each kill. Recon Bolt guesses the weapon involved in each damage based on this information, but it cannot be perfect (and neither can any other tracker)." = "Sayangnya, Valorant tidak menyimpan informasi tentang senjata yang digunakan setiap hit. Kami hanya mendapatkan data senjata yang Anda gunakan untuk memulai ronde dan senjata apa yang digunakan pada setiap bunuhnya. Recon Bolt menebak senjata yang terlibat dalam setiap damage berdasarkan informasi ini. Tetapi tidak sempurna (Begitu pula dengan aplikasi tracker lain-nya).";
+
+/* Login Form: sign in with google/apple/etc. */
+"Unfortunately, due to technical limitations, you cannot sign into Recon Bolt via your Google account, Apple ID, or anything but a Riot account.
+
+Assuming you signed up for Valorant using Google/Apple/etc., you can set up your account to add a username & password on Riot's site at [account.riotgames.com](https://account.riotgames.com). Note that your Riot ID is **not** the same as your username! If you've forgotten your username, you can reset it at [recovery.riotgames.com](https://recovery.riotgames.com).
+
+On that site, navigate to **Riot Account Sign-in** and set yourself a username and password. When you're done, you can use those same credentials to sign in above! Your social account will stay linked and you'll remain able to sign in with that on PC :)" = "Sayangnya, karena keterbatasan teknis Anda tidak dapat masuk ke Recon Bolt melalui akun Google, Apple ID, dan lainnya selain akun Riot.
+
+Dengan asumsi Anda mendaftar ke Valorant Menggunakan Google/Apple/dll, Anda dapat mengatur akun Anda untuk menambahkan nama pengguna & kata sandi di situs Riot di [account.riotgames.com](https://account.riotgames.com). Pastikan bahwa ID Riot Anda **tidak** sama dengan pengguna Anda! Jika Anda lupa nama pengguna Anda, Anda dapat mengatur ulang nama pengguna Anda di [recovery.riotgames.com](https://recovery.riotgames.com).
+
+Di situs tersebut, buka **Masuk Akun Riot** dan tentukan nama pengguna dan kata sandi Anda. Setelah selesai, Anda dapat menggunakan kredensial yang sama untuk masuk di atas! Akun sosial Anda akan tetap terhubung dan Anda akan tetap dapat masuk dengan akun tersebut di PC :)";
+
+/* Round Details: killed by unknown ability */
+"Unknown Ability" = "Ability tidak diketahui";
+
+/* placeholder */
+"Unknown Agent" = "Agen tidak diketahui";
+
+/* placeholder */
+"Unknown Buddy" = "Buddy tidak diketahui";
+
+/* placeholder */
+"Unknown Bundle" = "Bundle tidak diketahui";
+
 /* Store */
 "Unknown Offer" = "Penawaran Tidak Dikenal";
 
+/* No comment provided by engineer. */
+"Unknown Player" = "Pemain tidak diketahui";
+
+/* No comment provided by engineer. */
+"Unknown Queue" = "Mode tidak diketahui";
+
+/* Match List: should never appear unless assets are missing/outdated */
+"Unknown Rank" = "Rank tidak diketahui";
+
 /* placeholder */
 "Unknown Skin" = "Skin tidak dikenal";
+
+/* placeholder */
+"Unknown Title" = "Title tidak diketahui";
+
+/* Round Details: killed by unknown damage source/type */
+"Unknown Type" = "Jenis tidak diketahui";
+
+/* No comment provided by engineer. */
+"Unknown Weapon" = "Senjata tidak diketahui";
+
+/* No comment provided by engineer. */
+"Unknown bundle!" = "Bundle tidak diketahui!";
+
+/* Missions Box */
+"Unknown contract!" = "Kontrak tidak diketahui!";
+
+/* No comment provided by engineer. */
+"Unknown mission!" = "Misi tidak diketahui!";
+
+/* Asset Management: button */
+"Update Now" = "Perbarui Sekarang";
+
+/* Match Details: button */
+"Update Ranks" = "Perbarui Rank";
+
+/* Login Form */
+"Username" = "Nama pengguna";
+
+/* No comment provided by engineer. */
+"Users" = "Pengguna";
+
+/* Win Rate Stats by Loadout Delta */
+"Value Difference (credits)" = "Selisih Nilai (Credit)";
+
+/* Asset Management: this row shows the version of the current assets */
+"Version" = "Versi";
+
+/* Reference */
+"Version %@" = "Versi %@";
+
+/* No comment provided by engineer. */
+"Vibrate when Match Found" = "Mode getar ketika pertandingan ditemukan";
+
+/* Pro Store */
+"View All Features" = "Lihat semua Fitur";
+
+/* No comment provided by engineer. */
+"View Full Profile" = "Lihat profil lengkap";
+
+/* Match List */
+"View Stats" = "Lihat Statistik";
+
+/* Statistics Pro purchase prompt: button */
+"View Store in Settings" = "Lihat Toko di Pengaturan";
+
+/* Rank Widget: description */
+"View your current rank." = "Lihat Rank Anda saat ini.";
+
+/* Rank Changes Widget: description */
+"View your rank rating changes." = "Lihat perubahan Rank Rating Anda.";
+
+/* Pro Features List */
+"View your storefront, daily/weekly missions, or current rank without even having to open the app!" = "Lihat etalase, misi harian/mingguan, atau Rank Anda saat ini tanpa perlu membuka aplikasi!";
+
+/* No comment provided by engineer. */
+"WP: +%lld" = "WP: +%lld";
+
+/* No comment provided by engineer. */
+"Weapon Loadout" = "Loadout Senjata";
+
+/* No comment provided by engineer. */
+"Weapons" = "Senjata";
+
+/* No comment provided by engineer. */
+"Week" = "Minggu";
+
+/* Missions Widget */
+"Weekly" = "Mingguan";
+
+/* Missions Box: header */
+"Weekly Missions" = "Misi Mingguan";
+
+/* No comment provided by engineer. */
+"Widget Refresh Requested" = "Permintaan Refresh Widget";
+
+/* No comment provided by engineer. */
+"Win Rate" = "Tingkat Kemenangan";
+
+/* Win Rate Stats: chart legend */
+"Wins" = "Menang";
+
+/* No comment provided by engineer. */
+"Year" = "Tahun";
+
+/* Match Details: footnote */
+"You can also tap a round's number in the kill breakdown above to quickly view its details." = "Anda juga dapat mengetuk nomor ronde dalam rincian kill di atas untuk melihat detail dengan cepat.";
+
+/* Login Form: is this safe? */
+"You can enable 2-factor authentication, so you'd at least have another layer of security if it went bad." = "Anda bisa mengaktifkan autentifikasi 2 Factor, setidaknya Anda memiliki keamanan tingkat tinggi jika terjadi kesalahan.";
+
+/* Login Form: is this safe? */
+"Your credentials only ever leave your device in the form of a login request directly to Riot. They are never stored or sent anywhere else." = "Kredensial Anda hanya pernah meninggalkan perangkat Anda dalam bentuk permintaan login langsung ke Riot. Mereka tidak pernah menyimpan atau mengirim ke tempat lain.";
+
+/* No comment provided by engineer. */
+"Your session has expired! Recon Bolt has tried to refresh it for you, but needs 2FA confirmation." = "Sesi Anda telah kadaluarsa! Recon Bolt telah mencoba menyegarkan sesi tersebut, tetapi membutuhkan konfirmasi 2FA.";
+
+/* No comment provided by engineer. */
+"iOS is a bit finnicky about this, so widgets may not refresh right away—feel free to restart if this doesn't help!" = "iOS agak ribet terhadap hal ini, kemungkinan widget tidak langsung dapat di refresh dan jangan ragu untuk memulai ulang jika tidak membantu!";
+
+/* Loadout: spray slot */
+"mid-round" = "Pertengahan round";
+
+/* Missions Widget: countdown label when the target is in the past. Should never really show up, since at this point there's new data. */
+"old" = "tua";
+
+/* Loadout: spray slot */
+"post-round" = "Pasca permainan";
+
+/* Loadout: spray slot */
+"pre-round" = "Pra putaran";
+
+/* Login Form */
+"signing in…" = "mencoba masuk…";
+
+/* Loadout: unknown spray slot (should never appear unless Riot changes something) */
+"slot" = "slot";
