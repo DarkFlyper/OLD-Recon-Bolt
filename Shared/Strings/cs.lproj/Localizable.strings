@@ -27,7 +27,7 @@
 "%lld hits" = "%lld zásahů";
 
 /* Shown at the bottom of the expandable playtime list when there are more entries available. */
-"%lld more" = "%lld více";
+"%lld more" = "%lld dalších";
 
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
 "%lld to %lld credits" = "%lld na %lld kredity";
@@ -71,6 +71,10 @@ Missions Box */
 
 /* No comment provided by engineer. */
 "A 2FA code has been sent to your email address %@" = "2FA kód byl odeslán na vaši e-mailovou adresu %@";
+
+/* Match List Filter */
+"A match's queue is unknown until its details are fetched (by tapping it or performing the swipe action).
+Competitive matches after your placements can be identified without their details, however." = "Herní mód je znám pouze po načtení podrobností o hře (klepnutím nebo přejetím doprava). Hodnocené zápasy však lze identifikovat podle změny RR i bez jejich podrobností.";
 
 /* No comment provided by engineer. */
 "AFK: %lld" = "AFK: %lld";
@@ -124,7 +128,7 @@ Missions Box */
 "All Maps" = "Všechny mapy";
 
 /* Statistics Filter: button to allow all agents */
-"Allow All Agents" = "Povolit vše";
+"Allow All Agents" = "Povolit všechny";
 
 /* Statistics Filter: button to allow all queues */
 "Allow All Queues" = "Povolit vše";
@@ -136,7 +140,10 @@ Missions Box */
 "An invaluable API hosting all the assets (images, data, etc.) used throughout Valorant. This is where almost every image in the app comes from." = "Neocenitelné API, ve kterém jsou umístěny všechny assety (obrázky, data atd.) používané ve Valorantu. Odtud pochází téměř každý obrázek v aplikaci.";
 
 /* Statistics filter: shown when every agent is allowed */
-"Any Agent" = "Jakýkoli agent";
+"Any Agent" = "Všichni agenti";
+
+/* Statistics filter: shown when every queue is allowed */
+"Any Queue" = "Všechny herní módy";
 
 /* Asset Management */
 "Anything with images will not display correctly." = "Cokoli s obrázky se nezobrazí správně.";
@@ -190,6 +197,15 @@ Missions Box */
 Playtime Stats: section */
 "By Map" = "Podle mapy";
 
+/* Playtime Stats: section/title */
+"By Non-Premade Player" = "Podle hráčů mimo party";
+
+/* Playtime Stats: section/title */
+"By Premade Teammate" = "Podle hráčů v party";
+
+/* Playtime Stats: section */
+"By Queue" = "Podle herního módu";
+
 /* Hit Distribution Stats: section */
 "By Weapon" = "Podle Zbraně";
 
@@ -201,6 +217,9 @@ Playtime Stats: section */
 
 /* Top-Level Tab Title */
 "Career" = "Kariéra";
+
+/* No comment provided by engineer. */
+"Change Queue" = "Změnit herní mód";
 
 /* Gun Customizer */
 "Change Skin" = "Změna Skinu";
@@ -271,6 +290,9 @@ Playtime Stats: section */
 /* Asset Management */
 "Current version: %@" = "Aktuální verze: %@";
 
+/* Queue Label: custom game */
+"Custom" = "Vlastní Hra";
+
 /* Gun Customizer: title */
 "Customize %@" = "Přizpůsobení %@";
 
@@ -314,11 +336,23 @@ Stats: error details */
 /* Asset Management */
 "Error downloading assets!" = "Chyba při stahování assetů!";
 
+/* Statistics Filter: button to exclude all agents */
+"Exclude All Agents" = "Vyloučit všechny";
+
+/* Statistics Filter: button to exclude all queues */
+"Exclude All Queues" = "Vyloučit vše";
+
 /* Pro Features List */
 "Family Sharing" = "Rodinné sdílení";
 
 /* Statistics Filter: title (section) */
 "Filter" = "Filtr";
+
+/* No comment provided by engineer. */
+"Filter Queues" = "Filtrování podle herního módu";
+
+/* Party Box: placeholder shows time spent in queue */
+"Finding match… (%@)" = "Vyhledání zápasu... (%@)";
 
 /* About Screen */
 "Hi! I'm Julian Dunskus, and I made this app.
@@ -398,8 +432,25 @@ Pokud jste narazili na chybu nebo máte nějakou zpětnou vazbu, vždy si ji rá
 /* Asset Management */
 "Missing assets!" = "Chybí assety!";
 
+/* Win Rate Stats: section
+Playtime Stats: section */
+"Over Time" = "V průběhu času";
+
+/* Hit Distribution Stats: section
+Playtime Stats: section */
+"Overall" = "Celkem";
+
 /* No comment provided by engineer. */
 "Party" = "Party";
+
+/* Agent View: label for player who hasn't picked an agent yet */
+"Picking…" = "Vybírá…";
+
+/* No comment provided by engineer. */
+"Playtime" = "Odehraný čas";
+
+/* No comment provided by engineer. */
+"Playtime Breakdown" = "Rozdělení odehraného času";
 
 /* No comment provided by engineer. */
 "Please make sure you are ready to play by the time the game starts!" = "Ujistěte se, že můžete být u počítače v době zahájení hry!";
@@ -415,6 +466,9 @@ Pokud jste narazili na chybu nebo máte nějakou zpětnou vazbu, vždy si ji rá
 
 /* Pro Store: error alert title */
 "Purchase Failed!" = "Nákup se nezdařil!";
+
+/* Statistics filter: button */
+"Queues" = "Herní módy";
 
 /* No comment provided by engineer. */
 "Rank Rating Changes" = "Změny RR";
@@ -495,8 +549,23 @@ Login Form: button */
 /* Pro Features List */
 "Support Development :)" = "Podpora vývoje :)";
 
+/* Pro Store */
+"Thank you for supporting Recon Bolt!" = "Děkujeme za podporu Recon Boltu!";
+
+/* App Icon Description: default */
+"The default look of Recon Bolt." = "Výchozí vzhled Recon Boltu.";
+
+/* No comment provided by engineer. */
+"The pro version lets you change the app icon! More icons might be coming in future updates." = "Verze pro umožňuje změnit ikonu aplikace! Další ikony se mohou objevit v budoucích aktualizacích.";
+
+/* No comment provided by engineer. */
+"Theme" = "Téma";
+
 /* Stats: match loading */
 "To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "Chcete-li shromažďovat statistiky, musíte nejprve načíst zápasy ke zpracování. Upozorňujeme, že velké objemy mohou trvat dlouho, zejména při prvním nahrávání!";
+
+/* No comment provided by engineer. */
+"Total Playtime" = "Celkový odehraný čas";
 
 /* No comment provided by engineer. */
 "Twitter @juliand665" = "Twitter @juliand665";
@@ -521,6 +590,9 @@ Login Form: button */
 
 /* No comment provided by engineer. */
 "Unknown Player" = "Neznámý Hráč";
+
+/* No comment provided by engineer. */
+"Unknown Queue" = "Neznámý herní mód";
 
 /* Match List: should never appear unless assets are missing/outdated */
 "Unknown Rank" = "Neznámá Hodnost";
