@@ -1,90 +1,51 @@
-"0QJv6f" = "true";
 
-"3Pu3cz" = "false";
+/* No comment provided by engineer. */
+"4yOuwl" = "إستعمل الحساب المفعّل";
 
-"4IOoOp" = "false";
+/* No comment provided by engineer. */
+"51sGCO" = "إستعمل الحساب المفعّل";
 
-"4yOuwl" = "Use Active Account";
+/* No comment provided by engineer. */
+"BWVoH6" = "اظهر وقت تحديث المتجر";
 
-"51sGCO" = "Use Active Account";
+/* No comment provided by engineer. */
+"GbrfVR" = "اظهر تغير المرتبة";
 
-"BWVoH6" = "Show Refresh Time";
+/* No comment provided by engineer. */
+"Knw5Ua" = "نمط اظهار المتجر";
 
-"ELeFnO" = "true";
+/* No comment provided by engineer. */
+"P9aMrE" = "الحساب";
 
-"FOAOSn" = "false";
+/* No comment provided by engineer. */
+"QVPlYZ" = "شخّص كيف يظهر مرتبك";
 
-"GG3gxD" = "false";
+/* No comment provided by engineer. */
+"QbxEtQ" = "لاعب";
 
-"GbrfVR" = "View Rank Changes";
+/* No comment provided by engineer. */
+"WR1VRq" = "اظهر المهام";
 
-"HfQyGs" = "true";
+/* No comment provided by engineer. */
+"X1PqLp" = "شخّص كيف نُظهر تغير مرتبك";
 
-"IknZ9D-bnwtq2" = "Just to confirm, you wanted ‘Text Only’?";
+/* No comment provided by engineer. */
+"ZqiAs4" = "الحساب";
 
-"IknZ9D-dxyWk1" = "Just to confirm, you wanted ‘Icon Only’?";
+/* No comment provided by engineer. */
+"ZwiyvD" = "اظهر المرتبة";
 
-"IknZ9D-lgroW3" = "Just to confirm, you wanted ‘Unknown’?";
+/* No comment provided by engineer. */
+"aMHs7G" = "اظهر RR";
 
-"IknZ9D-oTWtFZ" = "Just to confirm, you wanted ‘Icon & Text’?";
+/* No comment provided by engineer. */
+"biLdDr" = "نمط العرض";
 
-"Knw5Ua" = "Store Display Mode";
+/* No comment provided by engineer. */
+"bnwtq2" = "الأسم فقط";
 
-"LjLkHK-bnwtq2" = "There are ${count} options matching ‘Text Only’.";
+/* No comment provided by engineer. */
+"dxyWk1" = "الأيقونة فقط";
 
-"LjLkHK-dxyWk1" = "There are ${count} options matching ‘Icon Only’.";
-
-"LjLkHK-lgroW3" = "There are ${count} options matching ‘Unknown’.";
-
-"LjLkHK-oTWtFZ" = "There are ${count} options matching ‘Icon & Text’.";
-
-"P9aMrE" = "Account";
-
-"QVPlYZ" = "Customize how your rank is shown off.";
-
-"QbxEtQ" = "Player";
-
-"UNCyEe" = "false";
-
-"WR1VRq" = "View Missions";
-
-"X1PqLp" = "Customize how your rank changes are displayed.";
-
-"ZqiAs4" = "Account";
-
-"ZwiyvD" = "View Rank";
-
-"aMHs7G" = "Show Rank Rating";
-
-"biLdDr" = "Display Mode";
-
-"bnwtq2" = "Text Only";
-
-"dxyWk1" = "Icon Only";
-
-"f1wpE1" = "Show Act Name";
-
-"gpCwrM" = "View Store";
-
-"lgroW3" = "Unknown";
-
-"mqieyu" = "Show Rank Name";
-
-"nBU0nl" = "true";
-
-"oTWtFZ" = "Icon & Text";
-
-"pr2Nr9" = "Account";
-
-"r5YctV" = "true";
-
-"rA2NkU" = "Use Active Account";
-
-"s2ilh5" = "Customize how your missions are displayed.";
-
-"tVvJ9c" = "Customize how your store is displayed.";
-
-"uVkZBs" = "Account";
-
-"xE0FGm" = "Use Active Account";
-
+/* No comment provided by engineer. */
+"f1wpE1" = "اظهر اسم المشهد";
