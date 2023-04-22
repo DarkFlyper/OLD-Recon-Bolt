@@ -412,6 +412,49 @@ Stats: error details */
 /* Request Log: title for detailed view of request body/contents */
 "Exchange Body" = "Corpo";
 
+/* Statistics Filter: button to exclude all agents */
+"Exclude All Agents" = "Escludere tutti";
+
+/* Statistics Filter: button to exclude all queues */
+"Exclude All Queues" = "Escludere tutti";
+
+/* Pro Features List */
+"Exclusive App Icon" = "Icona Esclusiva App";
+
+/* Round Details: killed by spike */
+"Exploded" = "Esploso";
+
+/* Pro Features List */
+"Family Sharing" = "Condivisione della famiglia";
+
+/* Request Log: placeholder is replaced by error dump. */
+"Feedback Email Body" = "Cosa è andato storto? Raccontami l'errore che hai riscontrato:
+
+LA TUA SEGNALAZIONE DI BUG QUI
+
+%@";
+
+/* Match List: accessibility label */
+"Fetch Details" = "Dettagli";
+
+/* Statistics Filter: title (section) */
+"Filter" = "Filtro";
+
+/* No comment provided by engineer. */
+"Filter Maps" = "Mappe filtro";
+
+/* No comment provided by engineer. */
+"Filter Match List" = "Filtrare l'elenco delle corrispondenze";
+
+/* No comment provided by engineer. */
+"Filter Queues" = "Filtro code";
+
+/* No comment provided by engineer. */
+"Filtering by starting side will exclude any matches in single-round modes like Deathmatch, Escalation, etc." = "Il filtro per lato iniziale esclude le partite in modalità a round singolo come Deathmatch, Escalation, ecc.";
+
+/* No comment provided by engineer. */
+"Find Match" = "Trova Partita";
+
 /* Pro Features List */
 "Getting money from Recon Bolt gives me the flexibility and motivation to keep improving the app!" = "Ricevere soldi da Recon Bolt mi dà la flessibilità e la motivazione per continuare a migliorare l'app!";
 
