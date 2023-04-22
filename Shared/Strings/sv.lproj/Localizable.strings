@@ -168,6 +168,15 @@ Missions Box */
 /* Hit Distribution Stats: average HS% */
 "Average: %@" = "Genomsnittligt: %@";
 
+/* Request Log: shown for bodies that are not decodable to text */
+"Binary Data" = "Binära data";
+
+/* Hit Distribution Stats: region */
+"Body" = "Body";
+
+/* Bookmark/Player List: section */
+"Bookmarks" = "Bokmärken";
+
 /* Gun Customizer: section */
 "Buddy" = "Buddy";
 
@@ -345,12 +354,64 @@ Missions Box */
 /* Request Log: shown in place of a status code (like 200 or 404) when sending failed. */
 "ERROR" = "FEL";
 
+/* Match List: accessibility label */
+"Edit Filter" = "Redigera filter";
+
 /* No comment provided by engineer. */
 "Enter 2FA Code" = "Ange 2FA-kod";
 
 /* Request Log
 Stats: error details */
 "Error" = "Fel";
+
+/* No comment provided by engineer. */
+"Error Details" = "Detaljer om fel";
+
+/* Asset Management */
+"Error downloading assets!" = "Fel vid nedladdning av tillgångar!";
+
+/* Request Log: title for an exchange */
+"Exchange" = "Utbyte";
+
+/* Request Log: title for detailed view of request body/contents */
+"Exchange Body" = "Body";
+
+/* Statistics Filter: button to exclude all agents */
+"Exclude All Agents" = "Exkludera alla";
+
+/* Statistics Filter: button to exclude all queues */
+"Exclude All Queues" = "Exkludera alla";
+
+/* Pro Features List */
+"Exclusive App Icon" = "Exklusiv app-ikon";
+
+/* Round Details: killed by spike */
+"Exploded" = "Exploderad";
+
+/* Pro Features List */
+"Family Sharing" = "Familjedelning";
+
+/* Request Log: placeholder is replaced by error dump. */
+"Feedback Email Body" = "Vad gick fel? Berätta om felet du just stötte på:
+
+DIN FELRAPPORT HÄR
+
+%@";
+
+/* Match List: accessibility label */
+"Fetch Details" = "Uppgifter om matchen";
+
+/* Statistics Filter: title (section) */
+"Filter" = "Filter";
+
+/* No comment provided by engineer. */
+"Filter Maps" = "Filtrera kartor";
+
+/* No comment provided by engineer. */
+"Filter Match List" = "Filtrera matchlistan";
+
+/* No comment provided by engineer. */
+"Filter Queues" = "Filtrera köer";
 
 /* Login Form: is this safe? */
 "I won't sugarcoat things. Due to the way this app uses the API, I believe there's no other way to sign in than to have people enter their credentials directly. Under those circumstances, there's really no good way for anyone to be sure their credentials remain safe. For what it's worth:" = "Jag ska inte skönmåla saker. På grund av det sätt som den här appen använder API: et tror jag inte att det finns något annat sätt att logga in än att låta folk ange sina autentiseringsuppgifter direkt. Under dessa omständigheter finns det egentligen inget bra sätt för någon att vara säker på att deras inloggningsuppgifter är säkra. För vad det är värt:";
