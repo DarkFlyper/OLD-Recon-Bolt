@@ -3,7 +3,7 @@
 "%@ ago" = "před %@";
 
 /* %@ is replaced by a fraction of wins vs. games played, e.g. '5/12 games won'. */
-"%@ games won" = "%@ vyhraných her";
+"%@ games won" = "%@ vyhraných zápasů";
 
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph); placeholder is replaced by the percentage of rounds won, e.g. '57.3% won'. */
 "%@ won" = "%@ vyhraných";
@@ -12,10 +12,10 @@
 "%@%%" = "%@%%";
 
 /* Missions Box: always at least 3 */
-"%lld Future Weeklies" = "%lld nadcházející týdenní mise";
+"%lld Future Weeklies" = "%lld Budoucí týdenní úkoly";
 
 /* Missions Box: always at least 3 */
-"%lld Queued-Up Weeklies" = "%lld Týdenní úkoly ve frontě";
+"%lld Queued-Up Weeklies" = "%lld Týdenní úkoly";
 
 /* No comment provided by engineer. */
 "%lld RR" = "%lld RR";
@@ -79,7 +79,7 @@ Missions Box */
 "ALL TIME" = "Všechny Acty & Epizody";
 
 /* Settings: section */
-"About" = "O Recon Bolt";
+"About" = "О Recon Boltu";
 
 /* No comment provided by engineer. */
 "About Recon Bolt" = "O Recon Bolt";
@@ -97,7 +97,7 @@ Missions Box */
 "Active Contract" = "Aktivní Kontrakt";
 
 /* Match List: accessibility label */
-"Add Bookmark" = "Přidat záložku";
+"Add Bookmark" = "Přidat do oblíbených";
 
 /* Account Settings */
 "Add another Account" = "Přidat další účet";
@@ -106,10 +106,10 @@ Missions Box */
 "Add multiple accounts and seamlessly switch between them at any time." = "Přidejte si více účtů a kdykoli mezi nimi plynule přepínejte.";
 
 /* No comment provided by engineer. */
-"Advanced Settings" = "Rozšířená nastavení";
+"Advanced Settings" = "Rozšířená Nastavení";
 
 /* Pro Store */
-"Advanced Stats" = "Pokročilé statistiky";
+"Advanced Stats" = "Pokročilé Statistiky";
 
 /* No comment provided by engineer. */
 "Agent Select" = "Výběr Agenta";
@@ -133,7 +133,7 @@ Missions Box */
 "An Error Occurred!" = "Došlo k chybě!";
 
 /* About Screen */
-"An invaluable API hosting all the assets (images, data, etc.) used throughout Valorant. This is where almost every image in the app comes from." = "Neocenitelné API, ve kterém jsou umístěny všechny prostředky (obrázky, data atd.) používané ve Valorantu. Odtud pochází téměř každý obrázek v aplikaci.";
+"An invaluable API hosting all the assets (images, data, etc.) used throughout Valorant. This is where almost every image in the app comes from." = "Neocenitelné API, ve kterém jsou umístěny všechny assety (obrázky, data atd.) používané ve Valorantu. Odtud pochází téměř každý obrázek v aplikaci.";
 
 /* Statistics filter: shown when every agent is allowed */
 "Any Agent" = "Jakýkoli agent";
@@ -144,14 +144,29 @@ Missions Box */
 /* No comment provided by engineer. */
 "App Icon" = "Ikona aplikace";
 
+/* No comment provided by engineer. */
+"Are your assets outdated?" = "Jsou vaše assety aktuální?";
+
 /* Pro Features List */
 "As thanks for your support, you get to show off your status with an exclusive app icon!" = "Jako poděkování za vaši podporu se můžete pochlubit svým statusem s exkluzivní ikonou aplikace!";
 
 /* No comment provided by engineer. */
-"Assets should be fetched automatically, but in case something went wrong, feel free to initiate the process manually." = "Aktiva by měla být automaticky stažena, ale v případě problémů můžete proces spustit manuálně.";
+"Assets" = "Assety";
+
+/* Asset Management: shown before the newest version is fetched, so it's not know yet if the assets are up to date or outdated */
+"Assets complete." = "Assety načteny.";
+
+/* No comment provided by engineer. */
+"Assets not loaded!" = "Assety nejsou načteny!";
 
 /* Asset Management */
-"Assets up to date!" = "Aktiva jsou aktuální!";
+"Assets out of date!" = "Assety jsou neaktuální!";
+
+/* No comment provided by engineer. */
+"Assets should be fetched automatically, but in case something went wrong, feel free to initiate the process manually." = "Assety by se měly načítat automaticky, ale pokud se něco pokazí, lze je načíst ručně.";
+
+/* Asset Management */
+"Assets up to date!" = "Assety jsou aktuální!";
 
 /* Store: available currency */
 "Available:" = "K dispozici:";
@@ -166,7 +181,7 @@ Missions Box */
 "Body" = "Tělo";
 
 /* Bookmark/Player List: section */
-"Bookmarks" = "Záložky";
+"Bookmarks" = "Oblíbené";
 
 /* Hit Distribution Stats: section */
 "By Weapon" = "Podle Zbraně";
@@ -270,11 +285,17 @@ Missions Box */
 /* No comment provided by engineer. */
 "Done" = "Hotovo";
 
+/* No comment provided by engineer. */
+"Download Assets Now" = "Stáhnout Assety";
+
 /* Request Log: shown in place of a status code (like 200 or 404) when sending failed. */
 "ERROR" = "CHYBA";
 
 /* Match List: accessibility label */
 "Edit Filter" = "Upravit Filtr";
+
+/* Asset Management */
+"Error downloading assets!" = "Chyba při stahování assetů!";
 
 /* About Screen */
 "Hi! I'm Julian Dunskus, and I made this app.
@@ -303,6 +324,9 @@ Pokud jste narazili na chybu nebo máte nějakou zpětnou vazbu, vždy si ji rá
 /* No comment provided by engineer. */
 "Image failed to load!" = "Obrázek se nepodařilo načíst!";
 
+/* Asset Management */
+"In case something went wrong, use this button to force a full refetch of the assets and images." = "Pokud se něco pokazilo, použijte toto tlačítko k vynucení opětovného načtení assetů a obrázků.";
+
 /* Asset Management: this row shows the language of the current assets */
 "Language" = "Jazyk";
 
@@ -321,6 +345,9 @@ Pokud jste narazili na chybu nebo máte nějakou zpětnou vazbu, vždy si ji rá
 /* Pro Store */
 "Loading Store Info…" = "Načítání informací o obchodě…";
 
+/* No comment provided by engineer. */
+"Manage Assets" = "Správa Assetů";
+
 /* About Screen */
 "Many thanks to the volunteer translators from our Discord server who have been hard at working translating the app to new languages!" = "Děkujeme dobrovolným překladatelům z našeho Discord serveru, kteří usilovně pracují na překladu aplikace do nových jazyků!";
 
@@ -338,6 +365,9 @@ Pokud jste narazili na chybu nebo máte nějakou zpětnou vazbu, vždy si ji rá
 
 /* Party Box: shown when member's name is not yet loaded */
 "Member" = "Člen";
+
+/* Asset Management */
+"Missing assets!" = "Chybí assety!";
 
 /* No comment provided by engineer. */
 "Party" = "Party";
