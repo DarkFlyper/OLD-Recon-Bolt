@@ -275,6 +275,9 @@ Playtime Stats: section */
 /* Contract Picker */
 "Completed" = "Dokončen";
 
+/* Storage Management: title for alert to confirm deleting some matches */
+"Confirm Delete" = "Potvrdit Smazání";
+
 /* Missions Box */
 "Contract complete!" = "Kontrakt dokončen!";
 
@@ -320,6 +323,12 @@ Playtime Stats: section */
 /* Asset Management */
 "Current version: %@" = "Aktuální verze: %@";
 
+/* No comment provided by engineer. */
+"Currently in agent select" = "Momentálně ve výběru agenta";
+
+/* No comment provided by engineer. */
+"Currently in-game" = "Momentálně ve hře";
+
 /* Queue Label: custom game */
 "Custom" = "Vlastní Hra";
 
@@ -334,6 +343,9 @@ Playtime Stats: section */
 
 /* Missions Box: header */
 "Daily Missions" = "Denní úkoly";
+
+/* Store */
+"Daily Offers" = "Denní Nabídky";
 
 /* App Theme */
 "Dark Mode" = "Tmavý Režim";
@@ -352,6 +364,12 @@ Playtime Stats: section */
 
 /* Win Rate Stats: side name */
 "Defending" = "Obrana";
+
+/* Storage Management: button to confirm deleting some matches */
+"Delete %lld Matches" = "Vymazat %lld Zápasů";
+
+/* Match Details: button to view details by round */
+"Details by Round" = "Podrobnosti podle kola";
 
 /* No comment provided by engineer. */
 "Discord Server" = "Discord Server";
@@ -374,6 +392,9 @@ Playtime Stats: section */
 /* Match List: accessibility label */
 "Edit Filter" = "Upravit Filtr";
 
+/* No comment provided by engineer. */
+"Enter 2FA Code" = "Zadejte kód 2FA";
+
 /* Request Log
 Stats: error details */
 "Error" = "Chyba";
@@ -384,6 +405,9 @@ Stats: error details */
 /* Asset Management */
 "Error downloading assets!" = "Chyba při stahování assetů!";
 
+/* Request Log: title for detailed view of request body/contents */
+"Exchange Body" = "Tělo";
+
 /* Statistics Filter: button to exclude all agents */
 "Exclude All Agents" = "Vyloučit všechny";
 
@@ -391,7 +415,20 @@ Stats: error details */
 "Exclude All Queues" = "Vyloučit vše";
 
 /* Pro Features List */
+"Exclusive App Icon" = "Exkluzivní ikona aplikace";
+
+/* Pro Features List */
 "Family Sharing" = "Rodinné sdílení";
+
+/* Request Log: placeholder is replaced by error dump. */
+"Feedback Email Body" = "Co se stalo špatně? Popište prosím chybu, kterou jste právě zaznamenali:
+
+VAŠE HLÁŠENÍ CHYBY ZDE
+
+%@";
+
+/* Match List: accessibility label */
+"Fetch Details" = "Načíst podrobnosti";
 
 /* Statistics Filter: title (section) */
 "Filter" = "Filtr";
