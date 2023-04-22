@@ -413,11 +413,35 @@ DIN FELRAPPORT HÄR
 /* No comment provided by engineer. */
 "Filter Queues" = "Filtrera köer";
 
+/* No comment provided by engineer. */
+"Find Match" = "Starta kö";
+
+/* Party Box: placeholder shows time spent in queue */
+"Finding match… (%@)" = "Hittar match… (%@)";
+
+/* Agent Select header: shown when timer reaches zero */
+"Game Started" = "Spelet har börjat";
+
+/* No comment provided by engineer. */
+"Game is not running!" = "Spelet körs inte just nu!";
+
+/* Pro Store */
+"I hope you enjoy the pro features :)" = "Jag hoppas att du gillar de nya pro-funktionerna :)";
+
 /* Login Form: is this safe? */
 "I won't sugarcoat things. Due to the way this app uses the API, I believe there's no other way to sign in than to have people enter their credentials directly. Under those circumstances, there's really no good way for anyone to be sure their credentials remain safe. For what it's worth:" = "Jag ska inte skönmåla saker. På grund av det sätt som den här appen använder API: et tror jag inte att det finns något annat sätt att logga in än att låta folk ange sina autentiseringsuppgifter direkt. Under dessa omständigheter finns det egentligen inget bra sätt för någon att vara säker på att deras inloggningsuppgifter är säkra. För vad det är värt:";
 
+/* No comment provided by engineer. */
+"Identities" = "Identiteter";
+
 /* Pro Features List */
 "If you have multiple accounts, you can configure separate widgets for each and have them on your Home Screen at the same time." = "Om du har flera konton kan du konfigurera separata widgetar för varje konto och ha dem på startskärmen samtidigt.";
+
+/* Settings: section */
+"In-App Store" = "Butik";
+
+/* Login Form: button/header */
+"Is this safe?" = "Är detta säkert?";
 
 /* Match Details: section */
 "Kills by Round" = "Kills per runda";
@@ -649,6 +673,9 @@ Playtime Stats: section */
 
 /* App Icon Name */
 "Pro Blue" = "Pro Blue";
+
+/* No comment provided by engineer. */
+"Pro Features" = "Pro-funktioner";
 
 /* App Icon Picker: section */
 "Pro Icons" = "Pro Ikoner";
