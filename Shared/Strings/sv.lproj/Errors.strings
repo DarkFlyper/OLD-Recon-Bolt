@@ -4,6 +4,9 @@
 /* error loading the account for a widget */
 "Could not load active account!" = "Kunde inte ladda ditt konto!";
 
+/* Riot API Error */
+"Invalid Headers: %@" = "Ogiltiga rubriker: %@";
+
 /* wrong account error */
 "It looks like this account has never played Valorant!
 
@@ -11,5 +14,17 @@ You've probably signed into the wrong account; %@" = "Det ser ut som att detta k
 
 Du har säkert loggat in på fel konto;";
 
+/* No comment provided by engineer. */
+"Keychain error for key '%@': %@" = "Fel i nyckelringen för nyckeln '%@': %@";
+
+/* store widget error */
+"Malformed Offer" = "Felaktigt erbjudande";
+
+/* error loading the account for a widget. */
+"Malformed account." = "Felaktigt konto.";
+
 /* store widget error */
 "Missing Assets!" = "Saknar tillgångar!";
+
+/* No comment provided by engineer. */
+"Missing game configuration data for %@ region!" = "Saknar spelkonfigurationsdata för %@ -regionen!";
