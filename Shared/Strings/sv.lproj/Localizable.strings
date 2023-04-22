@@ -710,6 +710,9 @@ Playtime Stats: section */
 /* Top-Level Tab Title */
 "Reference" = "Referens";
 
+/* Account Settings: button to refresh expired session */
+"Refresh" = "Uppdatera";
+
 /* No comment provided by engineer. */
 "Refresh automatically" = "Uppdatera automatiskt";
 
@@ -724,6 +727,9 @@ Playtime Stats: section */
 
 /* Pro Store: error alert title */
 "Restore Failed!" = "Återställning misslyckades!";
+
+/* Pro Store: button */
+"Restore Purchase" = "Återställ köpet";
 
 /* No comment provided by engineer. */
 "Retry" = "Försök igen";
