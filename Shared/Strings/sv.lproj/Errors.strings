@@ -45,3 +45,9 @@ Om du har Pro kan du lägga till ett konto med samma autentiseringsuppgifter fö
 
 /* Riot API Error */
 "The API rejected your authorization." = "API:et avvisade din auktorisering.";
+
+/* Riot API Error */
+"Your token has expired. %@" = "Din token har gått ut. %@";
+
+/* wrong account error */
+"this one has no Riot ID & Tagline." = "den här har inget Riot ID och ingen Tagline.";
