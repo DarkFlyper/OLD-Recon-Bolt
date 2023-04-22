@@ -74,7 +74,7 @@ Missions Box */
 
 /* Match List Filter */
 "A match's queue is unknown until its details are fetched (by tapping it or performing the swipe action).
-Competitive matches after your placements can be identified without their details, however." = "Herní mód je znám pouze po načtení podrobností o hře (klepnutím nebo přejetím doprava). Hodnocené zápasy však lze identifikovat podle změny RR i bez jejich podrobností.";
+Competitive matches after your placements can be identified without their details, however." = "Herní mód je znám pouze po načtení podrobností o hře (klepnutím nebo přejetím doprava). Kompetitivní zápasy však lze identifikovat podle změny RR i bez jejich podrobností.";
 
 /* No comment provided by engineer. */
 "AFK: %lld" = "AFK: %lld";
@@ -175,6 +175,9 @@ Competitive matches after your placements can be identified without their detail
 /* Asset Management */
 "Assets up to date!" = "Assety jsou aktuální!";
 
+/* Win Rate Stats: side name */
+"Attacking" = "Útok";
+
 /* Store: available currency */
 "Available:" = "K dispozici:";
 
@@ -192,6 +195,9 @@ Competitive matches after your placements can be identified without their detail
 
 /* Gun Customizer: section */
 "Buddy" = "Přívěšek";
+
+/* Storage Management: section */
+"By Kind" = "Podle Typu";
 
 /* Win Rate Stats: section
 Playtime Stats: section */
@@ -219,6 +225,15 @@ Playtime Stats: section */
 "Career" = "Kariéra";
 
 /* No comment provided by engineer. */
+"Career Summaries" = "Shrnutí kariéry";
+
+/* No comment provided by engineer. */
+"Career Summary" = "Shrnutí Kariéry";
+
+/* No comment provided by engineer. */
+"Change Buddy" = "Změnit Přívěšek";
+
+/* No comment provided by engineer. */
 "Change Queue" = "Změnit herní mód";
 
 /* Gun Customizer */
@@ -234,6 +249,12 @@ Playtime Stats: section */
 "Choose App Icon" = "Výběr ikony aplikace";
 
 /* No comment provided by engineer. */
+"Choose Buddy" = "Vybrat Přívěšek";
+
+/* No comment provided by engineer. */
+"Choose Card" = "Vybrat Kartu";
+
+/* No comment provided by engineer. */
 "Choose Skin" = "Vybrat Skin";
 
 /* No comment provided by engineer. */
@@ -245,8 +266,17 @@ Playtime Stats: section */
 /* Contract Picker: title */
 "Choose a Contract" = "Vybrat kontrakt";
 
+/* Buddy Picker: alert shown when both instances of a buddy are in use */
+"Choose a weapon to take %@ from." = "Vyberte zbraň, ze které chcete vzít %@.";
+
+/* Storage Management: button to delete all entries of a certain kind */
+"Clear All" = "Vymazat vše";
+
 /* Contract Picker */
 "Completed" = "Dokončen";
+
+/* Missions Box */
+"Contract complete!" = "Kontrakt dokončen!";
 
 /* Request Log: button to copy the request's body/contents (accessibility label) */
 "Copy Body" = "Kopírovat tělo";
@@ -296,6 +326,15 @@ Playtime Stats: section */
 /* Gun Customizer: title */
 "Customize %@" = "Přizpůsobení %@";
 
+/* Gun Customizer: title */
+"Customize Gun" = "Přizpůsobení zbraně";
+
+/* Missions Widget */
+"Daily" = "Denní";
+
+/* Missions Box: header */
+"Daily Missions" = "Denní úkoly";
+
 /* App Theme */
 "Dark Mode" = "Tmavý Režim";
 
@@ -311,14 +350,23 @@ Playtime Stats: section */
 /* App Icon Picker: section */
 "Default Icon" = "Výchozí Ikona";
 
+/* Win Rate Stats: side name */
+"Defending" = "Obrana";
+
 /* No comment provided by engineer. */
 "Discord Server" = "Discord Server";
+
+/* Hit Distribution Stats: section */
+"Distribution Over Time" = "Časové rozložení";
 
 /* No comment provided by engineer. */
 "Done" = "Hotovo";
 
 /* No comment provided by engineer. */
 "Download Assets Now" = "Stáhnout Assety";
+
+/* Win Rate Stats: chart legend */
+"Draws" = "Remíza";
 
 /* Request Log: shown in place of a status code (like 200 or 404) when sending failed. */
 "ERROR" = "CHYBA";
@@ -354,6 +402,15 @@ Stats: error details */
 /* Party Box: placeholder shows time spent in queue */
 "Finding match… (%@)" = "Vyhledání zápasu... (%@)";
 
+/* Pro Features List */
+"Gather statistics from anyone's games to gain insights on things like time played by mode/premade, headshot rate over time/by weapon, win rate over time/by map & side, and more!" = "Sbírejte statistiky z her ostatních lidí a získejte přehled o věcech, jako je herní doba podle herního módu/osamoceně nebo v party, statistiky headshotů za časové období/podle zbraně, procenta vítězství za časové období/podle mapy/podle strany a mnoho dalšího!";
+
+/* Stats: date grouping size picker */
+"Group by" = "Seskupit podle";
+
+/* Hit Distribution Stats: region */
+"Head" = "Hlava";
+
 /* About Screen */
 "Hi! I'm Julian Dunskus, and I made this app.
 
@@ -363,11 +420,14 @@ As you can guess, the scope expanded massively over time to what you're using no
 
 If you've encountered a bug or have some feedback, I'm always happy to hear it on the Discord Server or GitHub :)" = "Ahoj! Jsem Julian Dunskus a vytvořil jsem tuto aplikaci.
 
-Recon Bolt jsem začal vyvíjet na začátku roku 2021, tedy v době, kdy ještě nebylo možné ve hře vidět zisky a ztráty RR, ale API tato čísla nabízelo. Vytvořil jsem aplikaci, abych tato čísla viděl a lépe pochopil změny svých hodností.
+Recon Bolt jsem začal vyvíjet na začátku roku 2021, tedy v době, kdy ještě nebylo možné ve hře vidět zisky a ztráty RR, ale API tato čísla nabízelo. Vytvořil jsem aplikaci, abych tato čísla viděl a lépe pochopil změny svého ranku.
 
 Jak asi tušíte, rozsah se časem masivně rozšířil až na to, co používáte nyní. Doufám, že se vám to líbí!
 
 Pokud jste narazili na chybu nebo máte nějakou zpětnou vazbu, vždy si ji rád vyslechnu na Discord serveru nebo GitHubu :)";
+
+/* Hit Distribution Stats: title */
+"Hit Distribution" = "Distribuce Zásahů";
 
 /* Pro Store */
 "Home Screen Widgets" = "Widgety na domovské obrazovce";
@@ -405,6 +465,9 @@ Pokud jste narazili na chybu nebo máte nějakou zpětnou vazbu, vždy si ji rá
 /* Pro Store */
 "Loading Store Info…" = "Načítání informací o obchodě…";
 
+/* Win Rate Stats: chart legend */
+"Losses" = "Ztráty";
+
 /* No comment provided by engineer. */
 "Manage Assets" = "Správa Assetů";
 
@@ -431,6 +494,15 @@ Pokud jste narazili na chybu nebo máte nějakou zpětnou vazbu, vždy si ji rá
 
 /* Asset Management */
 "Missing assets!" = "Chybí assety!";
+
+/* No comment provided by engineer. */
+"Missing season data!" = "Chybějící data o actu!";
+
+/* Win Rate Stats: by map */
+"No data" = "Žádné data";
+
+/* Hit Distribution Stats: error */
+"Not enough data!" = "Nedostatek dat!";
 
 /* Win Rate Stats: section
 Playtime Stats: section */
@@ -470,6 +542,15 @@ Playtime Stats: section */
 /* Statistics filter: button */
 "Queues" = "Herní módy";
 
+/* Rank Widget: title */
+"Rank" = "Rank";
+
+/* No comment provided by engineer. */
+"Rank %lld" = "Rank %lld";
+
+/* Rank Changes Widget: title */
+"Rank Changes" = "Změny ranku";
+
 /* No comment provided by engineer. */
 "Rank Rating Changes" = "Změny RR";
 
@@ -487,6 +568,9 @@ Playtime Stats: section */
 
 /* Round Details: title */
 "Round Details" = "Podrobnosti o kole";
+
+/* Win Rate Stats: section */
+"Rounds by Side" = "Kola podle strany";
 
 /* Bookmark/Player List: section */
 "Search" = "Hledat";
@@ -528,6 +612,9 @@ Login Form: button */
 /* Login Form: button/header */
 "Sign in with Google/Apple/etc." = "Přihlaste se pomocí Google/Apple atd.";
 
+/* Hit Distribution Stats: smoothing slider */
+"Smoothing" = "Vyhlazování";
+
 /* No comment provided by engineer. */
 "Start Matchmaking?" = "Zahájit Vyhledávání?";
 
@@ -564,8 +651,15 @@ Login Form: button */
 /* Stats: match loading */
 "To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "Chcete-li shromažďovat statistiky, musíte nejprve načíst zápasy ke zpracování. Upozorňujeme, že velké objemy mohou trvat dlouho, zejména při prvním nahrávání!";
 
+/* Win Rate Stats: side name
+Hit Distribution Stats: region */
+"Total" = "Celkem";
+
 /* No comment provided by engineer. */
 "Total Playtime" = "Celkový odehraný čas";
+
+/* No comment provided by engineer. */
+"Total Space Used" = "Celkové využité místo";
 
 /* No comment provided by engineer. */
 "Twitter @juliand665" = "Twitter @juliand665";
@@ -575,6 +669,9 @@ Login Form: button */
 
 /* Missions Box: header, shown when a mission is not daily or weekly (should not happen unless Riot changes something) */
 "Uncategorized Missions" = "Nezařazené mise";
+
+/* Hit Distribution Stats: footnote */
+"Unfortunately, Valorant doesn't store information about which weapon was used for each hit. All we get is the weapon you started the round with and what weapon you used for each kill. Recon Bolt guesses the weapon involved in each damage based on this information, but it cannot be perfect (and neither can any other tracker)." = "Valorant bohužel neukládá informace o tom, jaká zbraň byla použita pro každý zásah. Jediné, co se dozvíme, je, s jakou zbraní jste kolo zahájili a jakou zbraň jste použili při každém zabití. Recon Bolt na základě těchto informací odhaduje, jaká zbraň se podílela na každém poškození, ale nemůže být dokonalý (stejně jako žádný jiný tracker).";
 
 /* placeholder */
 "Unknown Agent" = "Neznámý Agent";
@@ -595,7 +692,7 @@ Login Form: button */
 "Unknown Queue" = "Neznámý herní mód";
 
 /* Match List: should never appear unless assets are missing/outdated */
-"Unknown Rank" = "Neznámá Hodnost";
+"Unknown Rank" = "Neznámý Rank";
 
 /* placeholder */
 "Unknown Skin" = "Neznámý Skin";
@@ -607,10 +704,13 @@ Login Form: button */
 "Update Now" = "Aktualizovat nyní";
 
 /* Match Details: button */
-"Update Ranks" = "Aktualizovat hodnosti";
+"Update Ranks" = "Aktualizovat ranky";
 
 /* Login Form */
 "Username" = "Uživatelské jméno";
+
+/* Win Rate Stats by Loadout Delta */
+"Value Difference (credits)" = "Hodnotový rozdíl (kredity)";
 
 /* Asset Management: this row shows the version of the current assets */
 "Version" = "Verze";
@@ -630,6 +730,18 @@ Login Form: button */
 /* Match List */
 "View Stats" = "Zobrazit Statistiky";
 
+/* Rank Widget: description */
+"View your current rank." = "Zobrazte si svůj aktuální rank.";
+
+/* Rank Changes Widget: description */
+"View your rank rating changes." = "Podívejte se na změny RR.";
+
+/* Pro Features List */
+"View your storefront, daily/weekly missions, or current rank without even having to open the app!" = "Zobrazte si obchod, denní/týdenní mise nebo aktuální rank, aniž byste museli aplikaci otevřít!";
+
+/* No comment provided by engineer. */
+"WP: +%lld" = "WP: +%lld";
+
 /* No comment provided by engineer. */
 "Weapons" = "Zbraně";
 
@@ -644,6 +756,12 @@ Login Form: button */
 
 /* No comment provided by engineer. */
 "Widget Refresh Requested" = "Požadavek na obnovení widgetu";
+
+/* No comment provided by engineer. */
+"Win Rate" = "Míra vítězství";
+
+/* Win Rate Stats: chart legend */
+"Wins" = "Výhry";
 
 /* No comment provided by engineer. */
 "Year" = "Rok";
@@ -662,3 +780,9 @@ Login Form: button */
 
 /* No comment provided by engineer. */
 "iOS is a bit finnicky about this, so widgets may not refresh right away—feel free to restart if this doesn't help!" = "iOS je v tomto ohledu trochu vybíravý, takže widgety se nemusí obnovit hned - pokud to nepomůže, klidně je restartujte!";
+
+/* Missions Widget: countdown label when the target is in the past. Should never really show up, since at this point there's new data. */
+"old" = "staré";
+
+/* Login Form */
+"signing in…" = "Přihlašování…";
