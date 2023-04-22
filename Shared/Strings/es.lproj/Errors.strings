@@ -7,6 +7,9 @@
 
 You've probably signed into the wrong account; %@" = "¡Parece que esta cuenta nunca ha jugado a Valorant!";
 
+/* store widget error */
+"Missing Assets!" = "¡Archivos no encontrados!";
+
 /* error loading the account for a widget. */
 "No account specified." = "Ninguna cuenta ha sido elegido.";
 

@@ -4,6 +4,9 @@
 /* error loading the account for a widget */
 "Could not load active account!" = "Kunde inte ladda ditt konto!";
 
+/* Riot API Error */
+"Invalid Headers: %@" = "Ogiltiga rubriker: %@";
+
 /* wrong account error */
 "It looks like this account has never played Valorant!
 
@@ -11,5 +14,40 @@ You've probably signed into the wrong account; %@" = "Det ser ut som att detta k
 
 Du har säkert loggat in på fel konto;";
 
+/* No comment provided by engineer. */
+"Keychain error for key '%@': %@" = "Fel i nyckelringen för nyckeln '%@': %@";
+
+/* store widget error */
+"Malformed Offer" = "Felaktigt erbjudande";
+
+/* error loading the account for a widget. */
+"Malformed account." = "Felaktigt konto.";
+
 /* store widget error */
 "Missing Assets!" = "Saknar tillgångar!";
+
+/* No comment provided by engineer. */
+"Missing game configuration data for %@ region!" = "Saknar spelkonfigurationsdata för %@ -regionen!";
+
+/* Should not happen anymore, but you never know ¯\_(ツ)_/¯ */
+"Missing session for account!
+If you have Pro, add an account using the same credentials to replace the account with a working version." = "Saknar session för konto!
+Om du har Pro kan du lägga till ett konto med samma autentiseringsuppgifter för att ersätta kontot med en fungerande version.";
+
+/* error loading the account for a widget. */
+"No account specified." = "Inget konto har angetts.";
+
+/* Pro Store: error restoring purchase */
+"No previous transaction found!" = "Ingen tidigare transaktion hittades!";
+
+/* Riot API Error */
+"Please try again in %lld seconds." = "Försök igen om %lld sekunder.";
+
+/* Riot API Error */
+"The API rejected your authorization." = "API:et avvisade din auktorisering.";
+
+/* Riot API Error */
+"Your token has expired. %@" = "Din token har gått ut. %@";
+
+/* wrong account error */
+"this one has no Riot ID & Tagline." = "den här har inget Riot ID och ingen Tagline.";

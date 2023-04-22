@@ -2,11 +2,20 @@
 /* Used for matches less than a day ago. %@ is replaced by the number of hours/minutes, e.g. '3h ago'. */
 "%@ ago" = "%@ sedan";
 
+/* %@ is replaced by a fraction of wins vs. games played, e.g. '5/12 games won'. */
+"%@ games won" = "%@ vunna matcher";
+
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph); placeholder is replaced by the percentage of rounds won, e.g. '57.3% won'. */
 "%@ won" = "%@ vunnit";
 
 /* used throughout the app to format percentages—placeholder is replaced by a number */
 "%@%%" = "%@%%";
+
+/* Missions Box: always at least 3 */
+"%lld Future Weeklies" = "%lld Framtida weeklies";
+
+/* Missions Box: always at least 3 */
+"%lld Queued-Up Weeklies" = "%lld weeklies som står i kö";
 
 /* No comment provided by engineer. */
 "%lld RR" = "%lld RR";
@@ -17,11 +26,66 @@
 /* Hit Distribution Stats: hit count */
 "%lld hits" = "%lld träffar";
 
+/* Shown at the bottom of the expandable playtime list when there are more entries available. */
+"%lld more" = "%lld mer";
+
+/* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
+"%lld to %lld credits" = "%lld till %lld credits";
+
+/* No comment provided by engineer. */
+"%lld%%" = "%lld%%";
+
+/* No comment provided by engineer. */
+"%lld/%lld" = "%lld/%lld";
+
+/* Time Formatting: minutes & seconds (used in round details view) */
+"%lld:%@" = "%lld:%@";
+
+/* Time Formatting: minutes, seconds, & milliseconds (used in round details view) */
+"%lld:%@.%@" = "%lld:%@.%@";
+
+/* Contract Progress Bar
+Missions Box */
+"%lld / %lld XP" = "%lld/%lld XP";
+
+/* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
+"(%lld – %lld)" = "(%lld - %lld)";
+
+/* Pro Features List */
+"(You can switch between available icons at any time.)" = "(Du kan när som helst växla mellan tillgängliga ikoner.)";
+
+/* No comment provided by engineer. */
+"+%lld XP" = "+%lld XP";
+
+/* Missions Widget: how many more weeklies are queued up after the current set */
+"+%lld queued" = "+%lld köade";
+
+/* Store: night market discount */
+"-%lld%%" = "-%lld%%";
+
 /* No comment provided by engineer. */
 "2-Factor Authentication" = "2-faktor autentisering";
 
+/* Missions Widget: countdown label when the target is in the future. e.g. '< 2d 3h' */
+"< %@" = "< %@";
+
+/* No comment provided by engineer. */
+"A 2FA code has been sent to your email address %@" = "En 2FA-kod har skickats till din e-postadress %@";
+
+/* No comment provided by engineer. */
+"AFK: %lld" = "AFK: %lld";
+
+/* Career Summary: header for totals of all time */
+"ALL TIME" = "ALL TIME";
+
+/* Settings: section */
+"About" = "Om";
+
 /* No comment provided by engineer. */
 "About Recon Bolt" = "Om Recon Bolt";
+
+/* Settings: section */
+"Accounts" = "Konton";
 
 /* Contract Picker: button */
 "Activate" = "Aktivera";
@@ -29,8 +93,14 @@
 /* Contract Picker */
 "Active" = "Aktiv";
 
+/* Missions Box: header */
+"Active Contract" = "Aktivt kontrakt";
+
 /* Match List: accessibility label */
 "Add Bookmark" = "Lägg till som bokmärke";
+
+/* Account Settings */
+"Add another Account" = "Lägg till ett annat konto";
 
 /* Pro Features List */
 "Add multiple accounts and seamlessly switch between them at any time." = "Lägg till flera konton och växla smidigt mellan dem.";
@@ -56,6 +126,9 @@
 /* Statistics Filter: button to allow all agents */
 "Allow All Agents" = "Tillåt allt";
 
+/* Statistics Filter: button to allow all queues */
+"Allow All Queues" = "Tillåt allt";
+
 /* Default Error Alert Title */
 "An Error Occurred!" = "Ett fel inträffade!";
 
@@ -73,6 +146,51 @@
 
 /* No comment provided by engineer. */
 "App Icon" = "App-ikon";
+
+/* No comment provided by engineer. */
+"Are your assets outdated?" = "Är dina assets gamla?";
+
+/* Pro Features List */
+"As thanks for your support, you get to show off your status with an exclusive app icon!" = "Som tack för ditt stöd får du visa upp din status med en exklusiv app-ikon!";
+
+/* No comment provided by engineer. */
+"Assets" = "Assets";
+
+/* Asset Management: shown before the newest version is fetched, so it's not know yet if the assets are up to date or outdated */
+"Assets complete." = "Assets klara.";
+
+/* No comment provided by engineer. */
+"Assets not loaded!" = "Assets har inte laddats!";
+
+/* Store: available currency */
+"Available:" = "Tillgänglig:";
+
+/* Hit Distribution Stats: average HS% */
+"Average: %@" = "Genomsnittligt: %@";
+
+/* Request Log: shown for bodies that are not decodable to text */
+"Binary Data" = "Binära data";
+
+/* Hit Distribution Stats: region */
+"Body" = "Body";
+
+/* Bookmark/Player List: section */
+"Bookmarks" = "Bokmärken";
+
+/* Gun Customizer: section */
+"Buddy" = "Buddy";
+
+/* No comment provided by engineer. */
+"Cancel" = "Avbryt";
+
+/* No comment provided by engineer. */
+"Cancel Matchmaking" = "Avbryt matchmaking";
+
+/* Top-Level Tab Title */
+"Career" = "Karriär";
+
+/* No comment provided by engineer. */
+"Career Summaries" = "Karriär sammanfattning";
 
 /* No comment provided by engineer. */
 "Career Summary" = "Karriär sammanfattning";
@@ -224,11 +342,106 @@
 /* Hit Distribution Stats: section */
 "Distribution Over Time" = "Fördelning över tiden";
 
+/* No comment provided by engineer. */
+"Done" = "Klart";
+
+/* No comment provided by engineer. */
+"Download Assets Now" = "Ladda ner assets nu";
+
+/* Win Rate Stats: chart legend */
+"Draws" = "Draws";
+
+/* Request Log: shown in place of a status code (like 200 or 404) when sending failed. */
+"ERROR" = "FEL";
+
+/* Match List: accessibility label */
+"Edit Filter" = "Redigera filter";
+
+/* No comment provided by engineer. */
+"Enter 2FA Code" = "Ange 2FA-kod";
+
+/* Request Log
+Stats: error details */
+"Error" = "Fel";
+
+/* No comment provided by engineer. */
+"Error Details" = "Detaljer om fel";
+
+/* Asset Management */
+"Error downloading assets!" = "Fel vid nedladdning av tillgångar!";
+
+/* Request Log: title for an exchange */
+"Exchange" = "Utbyte";
+
+/* Request Log: title for detailed view of request body/contents */
+"Exchange Body" = "Body";
+
+/* Statistics Filter: button to exclude all agents */
+"Exclude All Agents" = "Exkludera alla";
+
+/* Statistics Filter: button to exclude all queues */
+"Exclude All Queues" = "Exkludera alla";
+
+/* Pro Features List */
+"Exclusive App Icon" = "Exklusiv app-ikon";
+
+/* Round Details: killed by spike */
+"Exploded" = "Exploderad";
+
+/* Pro Features List */
+"Family Sharing" = "Familjedelning";
+
+/* Request Log: placeholder is replaced by error dump. */
+"Feedback Email Body" = "Vad gick fel? Berätta om felet du just stötte på:
+
+DIN FELRAPPORT HÄR
+
+%@";
+
+/* Match List: accessibility label */
+"Fetch Details" = "Uppgifter om matchen";
+
+/* Statistics Filter: title (section) */
+"Filter" = "Filter";
+
+/* No comment provided by engineer. */
+"Filter Maps" = "Filtrera kartor";
+
+/* No comment provided by engineer. */
+"Filter Match List" = "Filtrera matchlistan";
+
+/* No comment provided by engineer. */
+"Filter Queues" = "Filtrera köer";
+
+/* No comment provided by engineer. */
+"Find Match" = "Starta kö";
+
+/* Party Box: placeholder shows time spent in queue */
+"Finding match… (%@)" = "Hittar match… (%@)";
+
+/* Agent Select header: shown when timer reaches zero */
+"Game Started" = "Spelet har börjat";
+
+/* No comment provided by engineer. */
+"Game is not running!" = "Spelet körs inte just nu!";
+
+/* Pro Store */
+"I hope you enjoy the pro features :)" = "Jag hoppas att du gillar de nya pro-funktionerna :)";
+
 /* Login Form: is this safe? */
 "I won't sugarcoat things. Due to the way this app uses the API, I believe there's no other way to sign in than to have people enter their credentials directly. Under those circumstances, there's really no good way for anyone to be sure their credentials remain safe. For what it's worth:" = "Jag ska inte skönmåla saker. På grund av det sätt som den här appen använder API: et tror jag inte att det finns något annat sätt att logga in än att låta folk ange sina autentiseringsuppgifter direkt. Under dessa omständigheter finns det egentligen inget bra sätt för någon att vara säker på att deras inloggningsuppgifter är säkra. För vad det är värt:";
 
+/* No comment provided by engineer. */
+"Identities" = "Identiteter";
+
 /* Pro Features List */
 "If you have multiple accounts, you can configure separate widgets for each and have them on your Home Screen at the same time." = "Om du har flera konton kan du konfigurera separata widgetar för varje konto och ha dem på startskärmen samtidigt.";
+
+/* Settings: section */
+"In-App Store" = "Butik";
+
+/* Login Form: button/header */
+"Is this safe?" = "Är detta säkert?";
 
 /* Match Details: section */
 "Kills by Round" = "Kills per runda";
@@ -461,6 +674,9 @@ Playtime Stats: section */
 /* App Icon Name */
 "Pro Blue" = "Pro Blue";
 
+/* No comment provided by engineer. */
+"Pro Features" = "Pro-funktioner";
+
 /* App Icon Picker: section */
 "Pro Icons" = "Pro Ikoner";
 
@@ -494,6 +710,9 @@ Playtime Stats: section */
 /* Top-Level Tab Title */
 "Reference" = "Referens";
 
+/* Account Settings: button to refresh expired session */
+"Refresh" = "Uppdatera";
+
 /* No comment provided by engineer. */
 "Refresh automatically" = "Uppdatera automatiskt";
 
@@ -508,6 +727,9 @@ Playtime Stats: section */
 
 /* Pro Store: error alert title */
 "Restore Failed!" = "Återställning misslyckades!";
+
+/* Pro Store: button */
+"Restore Purchase" = "Återställ köpet";
 
 /* No comment provided by engineer. */
 "Retry" = "Försök igen";
@@ -537,7 +759,7 @@ Playtime Stats: section */
 "Show all matches" = "Visa alla matcher";
 
 /* No comment provided by engineer. */
-"Show details when found" = "Visa information när den hittas";
+"Show details when found" = "Visa info när du hittar game";
 
 /* Account Settings: button
 Login Form: button */

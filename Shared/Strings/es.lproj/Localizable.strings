@@ -98,6 +98,18 @@
 /* No comment provided by engineer. */
 "App Icon" = "Icono de la App";
 
+/* No comment provided by engineer. */
+"Assets" = "Archivos";
+
+/* Asset Management: shown before the newest version is fetched, so it's not know yet if the assets are up to date or outdated */
+"Assets complete." = "Archivos descargados.";
+
+/* No comment provided by engineer. */
+"Assets not loaded!" = "¡Los archivos no se han descargado!";
+
+/* Asset Management */
+"Assets out of date!" = "¡Archivos desactualizados!";
+
 /* Win Rate Stats: side name */
 "Attacking" = "Atacando";
 
@@ -118,6 +130,9 @@
 
 /* Gun Customizer: section */
 "Buddy" = "Amuleto";
+
+/* Storage Management: section */
+"By Kind" = "Por tipo";
 
 /* Win Rate Stats: section
 Playtime Stats: section */
@@ -329,8 +344,14 @@ EL REPORTE DEL BUG VA AQUÍ
 /* No comment provided by engineer. */
 "Find Match" = "Buscar partida";
 
+/* Party Box: placeholder shows time spent in queue */
+"Finding match… (%@)" = "Encontrando partida... (%@)";
+
 /* No comment provided by engineer. */
-"Force Refresh Widgets" = "Forzar el reinicio de los widgets";
+"Force Refresh Widgets" = "Forzar reinicio de los Widgets";
+
+/* Storage Management: button to free up a certain amount of space */
+"Free up these %@" = "Liberar %@";
 
 /* Agent Select header: shown when timer reaches zero */
 "Game Started" = "Partida comenzada";
@@ -357,13 +378,16 @@ EL REPORTE DEL BUG VA AQUÍ
 "Home Screen Widgets" = "Widgets de la pantalla de inicio";
 
 /* Pro Store */
-"I hope you enjoy the pro features :)" = "Espero que disfrutes con tus funciones pro :)";
+"I hope you enjoy the pro features :)" = "Espero que disfrutes con tus funciones Pro :)";
 
 /* No comment provided by engineer. */
 "Identities" = "Identidades";
 
 /* No comment provided by engineer. */
 "Image failed to load!" = "¡Error al cargar la imagen!";
+
+/* Asset Management */
+"In case something went wrong, use this button to force a full refetch of the assets and images." = "En el caso de que algo no funcione, utiliza este botón para forzar el reinicio de los archivos.";
 
 /* Settings: section */
 "In-App Store" = "Tienda";
@@ -749,6 +773,9 @@ Hit Distribution Stats: region */
 /* No comment provided by engineer. */
 "Unknown Queue" = "Cola desconocida";
 
+/* Match List: should never appear unless assets are missing/outdated */
+"Unknown Rank" = "Rango desconocido";
+
 /* placeholder */
 "Unknown Skin" = "Diseño desconocido";
 
@@ -789,7 +816,7 @@ Hit Distribution Stats: region */
 "Version %@" = "Versión %@";
 
 /* No comment provided by engineer. */
-"Vibrate when Match Found" = "Vibrar cuando encuentre una partida";
+"Vibrate when Match Found" = "Vibrar cuando se encuentre partida";
 
 /* Pro Store */
 "View All Features" = "Ver todas las funciones";

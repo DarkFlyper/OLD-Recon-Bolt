@@ -318,6 +318,143 @@ Playtime Stats: section */
 /* Login Form: error title */
 "Could not sign in!" = "Impossibile accedere!";
 
+/* About Screen: section */
+"Credits" = "Crediti";
+
+/* Asset Management */
+"Current version: %@" = "Versione attuale: %@";
+
+/* No comment provided by engineer. */
+"Currently in agent select" = "Attualmente è in corso la selezione degli agenti";
+
+/* No comment provided by engineer. */
+"Currently in-game" = "Attualmente in gioco";
+
+/* Queue Label: custom game */
+"Custom" = "Personalizzato";
+
+/* Gun Customizer: title */
+"Customize %@" = "Personalizzare %@";
+
+/* Gun Customizer: title */
+"Customize Gun" = "Personalizzare la pistola";
+
+/* Missions Widget */
+"Daily" = "Giornaliero";
+
+/* Missions Box: header */
+"Daily Missions" = "Missioni quotidiane";
+
+/* Store */
+"Daily Offers" = "Offerte giornaliere";
+
+/* App Theme */
+"Dark Mode" = "Modalità scura";
+
+/* Stats: match loading */
+"Data going back to %@" = "Dati risalenti a %@";
+
+/* No comment provided by engineer. */
+"Day" = "Giorno";
+
+/* App Icon Name */
+"Default" = "Predefinito";
+
+/* App Icon Picker: section */
+"Default Icon" = "Icona predefinita";
+
+/* Win Rate Stats: side name */
+"Defending" = "Difendere";
+
+/* Storage Management: button to confirm deleting some matches */
+"Delete %lld Matches" = "Cancellare le corrispondenze di %lld";
+
+/* Match Details: button to view details by round */
+"Details by Round" = "Dettagli per girone";
+
+/* No comment provided by engineer. */
+"Discord Server" = "Server Discord";
+
+/* Hit Distribution Stats: section */
+"Distribution Over Time" = "Distribuzione nel tempo";
+
+/* No comment provided by engineer. */
+"Done" = "Fatto";
+
+/* No comment provided by engineer. */
+"Download Assets Now" = "Scarica ora le attività";
+
+/* Win Rate Stats: chart legend */
+"Draws" = "Estrazioni";
+
+/* Request Log: shown in place of a status code (like 200 or 404) when sending failed. */
+"ERROR" = "ERRORE";
+
+/* Match List: accessibility label */
+"Edit Filter" = "Modifica filtro";
+
+/* No comment provided by engineer. */
+"Enter 2FA Code" = "Inserire il codice 2FA";
+
+/* Request Log
+Stats: error details */
+"Error" = "Errore";
+
+/* No comment provided by engineer. */
+"Error Details" = "Dettagli sull'errore";
+
+/* Asset Management */
+"Error downloading assets!" = "Errore nel download degli asset!";
+
+/* Request Log: title for an exchange */
+"Exchange" = "Scambio";
+
+/* Request Log: title for detailed view of request body/contents */
+"Exchange Body" = "Corpo";
+
+/* Statistics Filter: button to exclude all agents */
+"Exclude All Agents" = "Escludere tutti";
+
+/* Statistics Filter: button to exclude all queues */
+"Exclude All Queues" = "Escludere tutti";
+
+/* Pro Features List */
+"Exclusive App Icon" = "Icona Esclusiva App";
+
+/* Round Details: killed by spike */
+"Exploded" = "Esploso";
+
+/* Pro Features List */
+"Family Sharing" = "Condivisione della famiglia";
+
+/* Request Log: placeholder is replaced by error dump. */
+"Feedback Email Body" = "Cosa è andato storto? Raccontami l'errore che hai riscontrato:
+
+LA TUA SEGNALAZIONE DI BUG QUI
+
+%@";
+
+/* Match List: accessibility label */
+"Fetch Details" = "Dettagli";
+
+/* Statistics Filter: title (section) */
+"Filter" = "Filtro";
+
+/* No comment provided by engineer. */
+"Filter Maps" = "Mappe filtro";
+
+/* No comment provided by engineer. */
+"Filter Match List" = "Filtrare l'elenco delle corrispondenze";
+
+/* No comment provided by engineer. */
+"Filter Queues" = "Filtro code";
+
+/* No comment provided by engineer. */
+"Filtering by starting side will exclude any matches in single-round modes like Deathmatch, Escalation, etc." = "Il filtro per lato iniziale esclude le partite in modalità a round singolo come Deathmatch, Escalation, ecc.";
+
+/* No comment provided by engineer. */
+"Find Match" = "Trova Partita";
+
 /* Pro Features List */
 "Getting money from Recon Bolt gives me the flexibility and motivation to keep improving the app!" = "Ricevere soldi da Recon Bolt mi dà la flessibilità e la motivazione per continuare a migliorare l'app!";
 
