@@ -365,6 +365,9 @@ Playtime Stats: section */
 /* Win Rate Stats: side name */
 "Defending" = "Pertahanan";
 
+/* Storage Management: button to confirm deleting some matches */
+"Delete %lld Matches" = "Hapus %lld kecocokan";
+
 /* Match Details: button to view details by round */
 "Details by Round" = "Detail berdasarkan Round";
 
@@ -379,6 +382,9 @@ Playtime Stats: section */
 
 /* No comment provided by engineer. */
 "Download Assets Now" = "Unduh Aset Sekarang";
+
+/* Win Rate Stats: chart legend */
+"Draws" = "Seri";
 
 /* Request Log: shown in place of a status code (like 200 or 404) when sending failed. */
 "ERROR" = "KESALAHAN";
@@ -519,6 +525,154 @@ Jika Anda menemukan bug atau memiliki feedback, saya selalu senang mendengarnya 
 
 /* Pro Features List */
 "If you have multiple accounts, you can configure separate widgets for each and have them on your Home Screen at the same time." = "Jika Anda memiliki beberapa akun, Anda dapat mengonfigurasi widget terpisah untuk masing-masing akun dan memilikinya di Layar Utama Anda secara bersamaan.";
+
+/* No comment provided by engineer. */
+"If your widgets seem broken, use this button to request an immediate refresh from iOS." = "Jika widget Anda terlihat rusak, gunakan tombol ini untuk meminta refresh langsung dari iOS.";
+
+/* No comment provided by engineer. */
+"Image failed to load!" = "Gambar tidak dapat dimuat!";
+
+/* Asset Management */
+"In case something went wrong, use this button to force a full refetch of the assets and images." = "Jika terjadi suatu kesalahan, gunakan tombol ini untuk memaksakan pengambilang ulang aset dan gambar secara menyeluruh.";
+
+/* Settings: section */
+"In-App Store" = "Toko";
+
+/* Login Form: button/header */
+"Is this safe?" = "Apakah ini aman?";
+
+/* No comment provided by engineer. */
+"Join the Discord Server" = "Bergabunglah di Server Discord";
+
+/* Match Details: section */
+"Kills by Round" = "Bunuh per Round";
+
+/* Asset Management: this row shows the language of the current assets */
+"Language" = "Bahasa";
+
+/* Hit Distribution Stats: region */
+"Legs" = "Kaki";
+
+/* Bookmark/Player List: player level */
+"Level %lld" = "Level %lld";
+
+/* Contract Progress Bar */
+"Level %lld / %lld" = "Level %lld / %lld";
+
+/* No comment provided by engineer. */
+"Lifetime Peak" = "Rank Tertinggi";
+
+/* App Theme */
+"Light Mode" = "Mode Terang";
+
+/* About Screen: section */
+"Links" = "Tautan";
+
+/* Top-Level Tab Title */
+"Live" = "Langsung";
+
+/* No comment provided by engineer. */
+"Live Match" = "Pertandingan Langsung";
+
+/* Stats: match loading */
+"Load Data" = "Muat Data";
+
+/* Match List */
+"Load Older Matches" = "Muat Pertandingan Lama";
+
+/* Pro Store */
+"Loading Store Info…" = "Memuat Info Toko…";
+
+/* No comment provided by engineer. */
+"Loading request log…" = "Memuat log permintaan…";
+
+/* No comment provided by engineer. */
+"Loadout" = "Loadout";
+
+/* No comment provided by engineer. */
+"Loadout Delta" = "Loadout Delta";
+
+/* No comment provided by engineer. */
+"Loadout Delta is computed as the difference between the average loadout value of players on each team. For example, a loadout delta of +1000 means your team's loadouts were an average of 1000 credits more valuable than the enemy team's in that round." = "Loadout Delta kami hitung sebagai selisih antara nilai rata-rata loadout pemain di setiap tim. Contoh, loadout delta +1000 berarti loadout tim Anda rata-rata 1000 kredit lebih banyak daripada tim musuh di ronde tersebut.";
+
+/* No comment provided by engineer. */
+"Loadout not loaded!" = "Loadout tidak dimuat!";
+
+/* No comment provided by engineer. */
+"Match Dodged" = "Menghindari Pertandingan";
+
+/* No comment provided by engineer. */
+"Lock In" = "Kunci";
+
+/* No comment provided by engineer. */
+"Lock In %@" = "Kunci di %@";
+
+/* Bookmark/Player List: lookup button */
+"Look Up" = "Lihat";
+
+/* Login Form */
+"Looks like you're trying to enter your Riot ID (and tagline) as username! Your username is actually something else: it's what you use to sign into the Valorant launcher.
+
+If you don't know your username or don't have one, you can fix that at [account.riotgames.com](https://account.riotgames.com)." = "Sepertinya Anda mencoba memasukan Riot ID (serta tagline) Anda sebagai nama pengguna! Nama pengguna Anda sebenarnya adalah sesuatu yang berbeda: nama pengguna yang Anda gunakan untuk masuk ke launcher Valorant.
+
+Jika Anda tidak tahu nama pengguna Anda atau belum memilikinya, Anda dapat memperbaikinya di [account.riotgames.com](https://account.riotgames.com).";
+
+/* Win Rate Stats: chart legend */
+"Losses" = "Kalah";
+
+/* No comment provided by engineer. */
+"Manage Assets" = "Mengelola Aset";
+
+/* No comment provided by engineer. */
+"Manage Local Storage" = "Mengelola Penyimpanan Lokal";
+
+/* About Screen */
+"Many thanks to the volunteer translators from our Discord server who have been hard at working translating the app to new languages!" = "Terima kasih kepada para penerjemah volunteer dari server Discord kami yang telah bekerja keras menerjemahkan aplikasi ini banyak bahasa-bahasa yang ada!";
+
+/* No comment provided by engineer. */
+"Map" = "Map";
+
+/* No comment provided by engineer. */
+"Maps" = "Map";
+
+/* Stats: error details */
+"Match" = "Pertandingan";
+
+/* Match Details: title */
+"Match Details" = "Detail Pertandingan";
+
+/* No comment provided by engineer. */
+"Match Lists" = "Daftar Pertandingan";
+
+/* No comment provided by engineer. */
+"Match Loading Errors" = "Kesalahan Pemuatan Game";
+
+/* App Theme: automatically match the system theme */
+"Match System" = "Sesuai Sistem";
+
+/* Match List: section */
+"Matches" = "Pertandingan";
+
+/* Stats: match loading */
+"Matches to load: **%lld**" = "Pertandingan untuk dimuat: **%lld**";
+
+/* Party Box: shown when member's name is not yet loaded */
+"Member" = "Member";
+
+/* Request Log */
+"Method" = "Metode";
+
+/* Asset Management */
+"Missing assets!" = "Beberapa aset hilang!";
+
+/* Missions Box */
+"Missing progress for contract!" = "Kemajuan hilang untuk kontrak!";
+
+/* No comment provided by engineer. */
+"Missing season data!" = "Data musim tidak ada!";
+
+/* Missions Widget: title */
+"Missions" = "Misi";
 
 /* No comment provided by engineer. */
 "Missions not loaded!" = "Misi belum dimuat!";
@@ -738,6 +892,91 @@ Request Log: title */
 
 /* Round Details: title */
 "Round Details" = "Detail Round";
+
+/* Win Rate Stats: section */
+"Rounds by Loadout Delta" = "Round oleh Pemuatan Delta";
+
+/* Win Rate Stats: section */
+"Rounds by Side" = "Round dalam Map";
+
+/* Bookmark/Player List: section */
+"Search" = "Pencarian";
+
+/* Hit Distribution Stats: error */
+"Select more matches to see data on hit distribution. Deathmatch, Escalation, and other modes don't provide the necessary information." = "Pilih lebih banyak pertandingan untuk melihat data tentang distribusi hit. Deathmatch, Escalation, dan mode lainnya yang tidak memberikan informasi yang diperlukan.";
+
+/* No comment provided by engineer. */
+"Send to Developer" = "Kirim ke Developer";
+
+/* Account Settings */
+"Session expired!" = "Sesi berakhir!";
+
+/* Top-Level Tab Title */
+"Settings" = "Pengaturan";
+
+/* Playtime Stats: title for view of matches in common with another player */
+"Shared Matches" = "Pertandingan Bersama";
+
+/* No comment provided by engineer. */
+"Show Unfetched Matches" = "Tampilkan Pertandingan yang belum Diambil";
+
+/* No comment provided by engineer. */
+"Show all matches" = "Tampilkan semua pertandingan";
+
+/* No comment provided by engineer. */
+"Show details when found" = "Tampilkan detail pada saat ditemukan";
+
+/* App Icon Description: pro blue */
+"Show off your pro status with an exclusive icon!" = "Tunjukan status pro Anda dengan ikon eksklusif!";
+
+/* Account Settings: button
+Login Form: button */
+"Sign In" = "Masuk";
+
+/* Login Form */
+"Sign In with your Riot account" = "Masuk menggunakan akun Riot Anda";
+
+/* Account Settings */
+"Sign Out" = "Keluar";
+
+/* Login Form: button/header */
+"Sign in with Google/Apple/etc." = "Masuk menggunakan Google/Apple/dll.";
+
+/* Hit Distribution Stats: smoothing slider */
+"Smoothing" = "Menghaluskan";
+
+/* No comment provided by engineer. */
+"Spectator" = "Penonton";
+
+/* Round Details: Spike Event */
+"Spike Defused" = "Spike Dijinakkan";
+
+/* Round Details: Spike Event */
+"Spike Planted" = "Spike Ditempatkan";
+
+/* No comment provided by engineer. */
+"Start Matchmaking?" = "Mulai Permainan?";
+
+/* Win Rate Stats: accessibility label */
+"Starting Side" = "Sisi Awal";
+
+/* Win Rate Stats */
+"Starting Side:" = "Sisi Awal:";
+
+/* No comment provided by engineer. */
+"Statistics" = "Statistik";
+
+/* Statistics Pro purchase prompt */
+"Statistics not available!" = "Statistik tidak tersedia!";
+
+/* Statistics Pro purchase prompt: 'Recon Bolt Pro' is inserted in the placeholder with a bolder font. */
+"Statistics require %@, a one-time purchase including a variety of features. Want to give them a look?" = "Statistik memerlukan %@, sebagai pembelian satu kali termasuk dengan fitur lain-nya. Ingin mencoba?";
+
+/* Store Widget: title */
+"Store" = "Toko";
+
+/* No comment provided by engineer. */
+"Store not loaded!" = "Toko tidak dimuat!";
 
 /* No comment provided by engineer. */
 "Storefront outdated!" = "Etalase belum di update!";
