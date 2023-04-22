@@ -28,3 +28,20 @@ Du har säkert loggat in på fel konto;";
 
 /* No comment provided by engineer. */
 "Missing game configuration data for %@ region!" = "Saknar spelkonfigurationsdata för %@ -regionen!";
+
+/* Should not happen anymore, but you never know ¯\_(ツ)_/¯ */
+"Missing session for account!
+If you have Pro, add an account using the same credentials to replace the account with a working version." = "Saknar session för konto!
+Om du har Pro kan du lägga till ett konto med samma autentiseringsuppgifter för att ersätta kontot med en fungerande version.";
+
+/* error loading the account for a widget. */
+"No account specified." = "Inget konto har angetts.";
+
+/* Pro Store: error restoring purchase */
+"No previous transaction found!" = "Ingen tidigare transaktion hittades!";
+
+/* Riot API Error */
+"Please try again in %lld seconds." = "Försök igen om %lld sekunder.";
+
+/* Riot API Error */
+"The API rejected your authorization." = "API:et avvisade din auktorisering.";
