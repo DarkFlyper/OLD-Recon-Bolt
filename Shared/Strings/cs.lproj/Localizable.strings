@@ -183,6 +183,13 @@ Missions Box */
 /* Bookmark/Player List: section */
 "Bookmarks" = "Oblíbené";
 
+/* Gun Customizer: section */
+"Buddy" = "Přívěšek";
+
+/* Win Rate Stats: section
+Playtime Stats: section */
+"By Map" = "Podle mapy";
+
 /* Hit Distribution Stats: section */
 "By Weapon" = "Podle Zbraně";
 
@@ -270,6 +277,9 @@ Missions Box */
 /* App Theme */
 "Dark Mode" = "Tmavý Režim";
 
+/* Stats: match loading */
+"Data going back to %@" = "Data do %@";
+
 /* No comment provided by engineer. */
 "Day" = "Den";
 
@@ -294,8 +304,21 @@ Missions Box */
 /* Match List: accessibility label */
 "Edit Filter" = "Upravit Filtr";
 
+/* Request Log
+Stats: error details */
+"Error" = "Chyba";
+
+/* No comment provided by engineer. */
+"Error Details" = "Podrobnosti o chybě";
+
 /* Asset Management */
 "Error downloading assets!" = "Chyba při stahování assetů!";
+
+/* Pro Features List */
+"Family Sharing" = "Rodinné sdílení";
+
+/* Statistics Filter: title (section) */
+"Filter" = "Filtr";
 
 /* About Screen */
 "Hi! I'm Julian Dunskus, and I made this app.
@@ -342,6 +365,9 @@ Pokud jste narazili na chybu nebo máte nějakou zpětnou vazbu, vždy si ji rá
 /* Top-Level Tab Title */
 "Live" = "Live";
 
+/* Stats: match loading */
+"Load Data" = "Načíst data";
+
 /* Pro Store */
 "Loading Store Info…" = "Načítání informací o obchodě…";
 
@@ -362,6 +388,9 @@ Pokud jste narazili na chybu nebo máte nějakou zpětnou vazbu, vždy si ji rá
 
 /* Match Details: title */
 "Match Details" = "Podrobnosti o zápase";
+
+/* Stats: match loading */
+"Matches to load: **%lld**" = "Zápasy ke načtení: **%lld**";
 
 /* Party Box: shown when member's name is not yet loaded */
 "Member" = "Člen";
@@ -386,6 +415,9 @@ Pokud jste narazili na chybu nebo máte nějakou zpětnou vazbu, vždy si ji rá
 
 /* Pro Store: error alert title */
 "Purchase Failed!" = "Nákup se nezdařil!";
+
+/* No comment provided by engineer. */
+"Rank Rating Changes" = "Změny RR";
 
 /* Asset Management: section */
 "Repair" = "Opravit";
@@ -462,6 +494,9 @@ Login Form: button */
 
 /* Pro Features List */
 "Support Development :)" = "Podpora vývoje :)";
+
+/* Stats: match loading */
+"To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "Chcete-li shromažďovat statistiky, musíte nejprve načíst zápasy ke zpracování. Upozorňujeme, že velké objemy mohou trvat dlouho, zejména při prvním nahrávání!";
 
 /* No comment provided by engineer. */
 "Twitter @juliand665" = "Twitter @juliand665";
