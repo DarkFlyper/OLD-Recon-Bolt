@@ -2,11 +2,20 @@
 /* Used for matches less than a day ago. %@ is replaced by the number of hours/minutes, e.g. '3h ago'. */
 "%@ ago" = "%@ sedan";
 
+/* %@ is replaced by a fraction of wins vs. games played, e.g. '5/12 games won'. */
+"%@ games won" = "%@ vunna matcher";
+
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph); placeholder is replaced by the percentage of rounds won, e.g. '57.3% won'. */
 "%@ won" = "%@ vunnit";
 
 /* used throughout the app to format percentages—placeholder is replaced by a number */
 "%@%%" = "%@%%";
+
+/* Missions Box: always at least 3 */
+"%lld Future Weeklies" = "%lld Framtida weeklies";
+
+/* Missions Box: always at least 3 */
+"%lld Queued-Up Weeklies" = "%lld weeklies som står i kö";
 
 /* No comment provided by engineer. */
 "%lld RR" = "%lld RR";
@@ -17,11 +26,66 @@
 /* Hit Distribution Stats: hit count */
 "%lld hits" = "%lld träffar";
 
+/* Shown at the bottom of the expandable playtime list when there are more entries available. */
+"%lld more" = "%lld mer";
+
+/* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
+"%lld to %lld credits" = "%lld till %lld credits";
+
+/* No comment provided by engineer. */
+"%lld%%" = "%lld%%";
+
+/* No comment provided by engineer. */
+"%lld/%lld" = "%lld/%lld";
+
+/* Time Formatting: minutes & seconds (used in round details view) */
+"%lld:%@" = "%lld:%@";
+
+/* Time Formatting: minutes, seconds, & milliseconds (used in round details view) */
+"%lld:%@.%@" = "%lld:%@.%@";
+
+/* Contract Progress Bar
+Missions Box */
+"%lld / %lld XP" = "%lld/%lld XP";
+
+/* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
+"(%lld – %lld)" = "(%lld - %lld)";
+
+/* Pro Features List */
+"(You can switch between available icons at any time.)" = "(Du kan när som helst växla mellan tillgängliga ikoner.)";
+
+/* No comment provided by engineer. */
+"+%lld XP" = "+%lld XP";
+
+/* Missions Widget: how many more weeklies are queued up after the current set */
+"+%lld queued" = "+%lld köade";
+
+/* Store: night market discount */
+"-%lld%%" = "-%lld%%";
+
 /* No comment provided by engineer. */
 "2-Factor Authentication" = "2-faktor autentisering";
 
+/* Missions Widget: countdown label when the target is in the future. e.g. '< 2d 3h' */
+"< %@" = "< %@";
+
+/* No comment provided by engineer. */
+"A 2FA code has been sent to your email address %@" = "En 2FA-kod har skickats till din e-postadress %@";
+
+/* No comment provided by engineer. */
+"AFK: %lld" = "AFK: %lld";
+
+/* Career Summary: header for totals of all time */
+"ALL TIME" = "ALL TIME";
+
+/* Settings: section */
+"About" = "Om";
+
 /* No comment provided by engineer. */
 "About Recon Bolt" = "Om Recon Bolt";
+
+/* Settings: section */
+"Accounts" = "Konton";
 
 /* Contract Picker: button */
 "Activate" = "Aktivera";
@@ -29,8 +93,14 @@
 /* Contract Picker */
 "Active" = "Aktiv";
 
+/* Missions Box: header */
+"Active Contract" = "Aktivt kontrakt";
+
 /* Match List: accessibility label */
 "Add Bookmark" = "Lägg till som bokmärke";
+
+/* Account Settings */
+"Add another Account" = "Lägg till ett annat konto";
 
 /* Pro Features List */
 "Add multiple accounts and seamlessly switch between them at any time." = "Lägg till flera konton och växla smidigt mellan dem.";
@@ -56,6 +126,9 @@
 /* Statistics Filter: button to allow all agents */
 "Allow All Agents" = "Tillåt allt";
 
+/* Statistics Filter: button to allow all queues */
+"Allow All Queues" = "Tillåt allt";
+
 /* Default Error Alert Title */
 "An Error Occurred!" = "Ett fel inträffade!";
 
@@ -73,6 +146,9 @@
 
 /* No comment provided by engineer. */
 "App Icon" = "App-ikon";
+
+/* No comment provided by engineer. */
+"Are your assets outdated?" = "Är dina assets gamla?";
 
 /* No comment provided by engineer. */
 "Career Summary" = "Karriär sammanfattning";
@@ -537,7 +613,7 @@ Playtime Stats: section */
 "Show all matches" = "Visa alla matcher";
 
 /* No comment provided by engineer. */
-"Show details when found" = "Visa information när den hittas";
+"Show details when found" = "Visa info när du hittar game";
 
 /* Account Settings: button
 Login Form: button */
