@@ -150,6 +150,39 @@ Missions Box */
 /* No comment provided by engineer. */
 "Are your assets outdated?" = "Är dina assets gamla?";
 
+/* Pro Features List */
+"As thanks for your support, you get to show off your status with an exclusive app icon!" = "Som tack för ditt stöd får du visa upp din status med en exklusiv app-ikon!";
+
+/* No comment provided by engineer. */
+"Assets" = "Assets";
+
+/* Asset Management: shown before the newest version is fetched, so it's not know yet if the assets are up to date or outdated */
+"Assets complete." = "Assets klara.";
+
+/* No comment provided by engineer. */
+"Assets not loaded!" = "Assets har inte laddats!";
+
+/* Store: available currency */
+"Available:" = "Tillgänglig:";
+
+/* Hit Distribution Stats: average HS% */
+"Average: %@" = "Genomsnittligt: %@";
+
+/* Gun Customizer: section */
+"Buddy" = "Buddy";
+
+/* No comment provided by engineer. */
+"Cancel" = "Avbryt";
+
+/* No comment provided by engineer. */
+"Cancel Matchmaking" = "Avbryt matchmaking";
+
+/* Top-Level Tab Title */
+"Career" = "Karriär";
+
+/* No comment provided by engineer. */
+"Career Summaries" = "Karriär sammanfattning";
+
 /* No comment provided by engineer. */
 "Career Summary" = "Karriär sammanfattning";
 
@@ -299,6 +332,25 @@ Missions Box */
 
 /* Hit Distribution Stats: section */
 "Distribution Over Time" = "Fördelning över tiden";
+
+/* No comment provided by engineer. */
+"Done" = "Klart";
+
+/* No comment provided by engineer. */
+"Download Assets Now" = "Ladda ner assets nu";
+
+/* Win Rate Stats: chart legend */
+"Draws" = "Draws";
+
+/* Request Log: shown in place of a status code (like 200 or 404) when sending failed. */
+"ERROR" = "FEL";
+
+/* No comment provided by engineer. */
+"Enter 2FA Code" = "Ange 2FA-kod";
+
+/* Request Log
+Stats: error details */
+"Error" = "Fel";
 
 /* Login Form: is this safe? */
 "I won't sugarcoat things. Due to the way this app uses the API, I believe there's no other way to sign in than to have people enter their credentials directly. Under those circumstances, there's really no good way for anyone to be sure their credentials remain safe. For what it's worth:" = "Jag ska inte skönmåla saker. På grund av det sätt som den här appen använder API: et tror jag inte att det finns något annat sätt att logga in än att låta folk ange sina autentiseringsuppgifter direkt. Under dessa omständigheter finns det egentligen inget bra sätt för någon att vara säker på att deras inloggningsuppgifter är säkra. För vad det är värt:";
