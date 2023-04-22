@@ -16,5 +16,19 @@
         <string>%lld Kesalahan</string>
       </dict>
     </dict>
+    <key>%lld map(s) selected</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@maps@</string>
+      <key>maps</key>
+      <dict>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld map dipilih</string>
+      </dict>
+    </dict>
   </dict>
 </plist>
