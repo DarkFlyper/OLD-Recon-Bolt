@@ -1,4 +1,180 @@
 
+/* Used for matches less than a day ago. %@ is replaced by the number of hours/minutes, e.g. '3h ago'. */
+"%@ ago" = "%@ yang lalu";
+
+/* %@ is replaced by a fraction of wins vs. games played, e.g. '5/12 games won'. */
+"%@ games won" = "%@ pertandingan dimenangkan";
+
+/* Win Rate Stats by Loadout Delta: focused value (drag on graph); placeholder is replaced by the percentage of rounds won, e.g. '57.3% won'. */
+"%@ won" = "%@ menang";
+
+/* used throughout the app to format percentages—placeholder is replaced by a number */
+"%@%%" = "%@%%";
+
+/* No comment provided by engineer. */
+"%lld RR" = "%lld RR";
+
+/* Hit Distribution Stats: hit count */
+"%lld hits" = "%lld hit";
+
+/* Pro Features List */
+"(You can switch between available icons at any time.)" = "(Anda dapat mengubah ikon yang tersedia kapan saja.)";
+
+/* No comment provided by engineer. */
+"+%lld XP" = "%lld XP";
+
+/* Store: night market discount */
+"-%lld%%" = "-%lld%%";
+
+/* No comment provided by engineer. */
+"2-Factor Authentication" = "Autentikasi 2 faktor";
+
+/* Missions Widget: countdown label when the target is in the future. e.g. '< 2d 3h' */
+"< %@" = "< %@";
+
+/* No comment provided by engineer. */
+"A 2FA code has been sent to your email address %@" = "Kode 2FA telah kami kirimkan ke alamat email %@";
+
+/* Match List Filter */
+"A match's queue is unknown until its details are fetched (by tapping it or performing the swipe action).
+Competitive matches after your placements can be identified without their details, however." = "Antrean pertandingan tidak diketahui sampai data detail kami ambil. (Dengan cara membuka maupun menggesekkan). Namun, Pertandingan kompetitif setelah penempatan Anda dapat kami identifikasi tanpa detailnya.";
+
+/* No comment provided by engineer. */
+"AFK: %lld" = "AFK: %lld";
+
+/* Career Summary: header for totals of all time */
+"ALL TIME" = "SEMUA WAKTU";
+
+/* Settings: section */
+"About" = "Tentang";
+
+/* No comment provided by engineer. */
+"About Recon Bolt" = "Tentang Recon Bolt";
+
+/* Settings: section */
+"Accounts" = "Akun";
+
+/* Contract Picker: button */
+"Activate" = "Aktifkan";
+
+/* Contract Picker */
+"Active" = "Aktif";
+
+/* Missions Box: header */
+"Active Contract" = "Kontrak Aktif";
+
+/* Match List: accessibility label */
+"Add Bookmark" = "Tambahkan Penanda";
+
+/* Account Settings */
+"Add another Account" = "Tambahkan Akun lain";
+
+/* Pro Features List */
+"Add multiple accounts and seamlessly switch between them at any time." = "Tambahkan beberapa akun dan beralih diantara akun-akun yang kamu tambahkan kapan saja.";
+
+/* No comment provided by engineer. */
+"Advanced Settings" = "Pengaturan Lanjutan";
+
+/* Pro Store */
+"Advanced Stats" = "Statistik Lanjutan";
+
+/* No comment provided by engineer. */
+"Agent Select" = "Pilih Agen";
+
+/* Statistics filter: button */
+"Agents" = "Agen";
+
+/* Stats: match loading */
+"All %lld" = "Semua %lld";
+
+/* No comment provided by engineer. */
+"All Maps" = "Semua Map";
+
+/* Statistics Filter: button to allow all agents */
+"Allow All Agents" = "Izinkan Semua";
+
+/* Statistics Filter: button to allow all queues */
+"Allow All Queues" = "Izinkan Semua";
+
+/* Default Error Alert Title */
+"An Error Occurred!" = "Terjadi kesalahan!";
+
+/* About Screen */
+"An invaluable API hosting all the assets (images, data, etc.) used throughout Valorant. This is where almost every image in the app comes from." = "API yang digunakan untuk menghosting semua aset (gambar, data, dll.) yang kami gunakan di seluruh Valorant. Dari sini hampir semua asset gambar berasal.";
+
+/* Asset Management */
+"Anything with images will not display correctly." = "Apapun yang memiliki gambar tidak akan ditampilkan dengan benar.";
+
+/* No comment provided by engineer. */
+"App Icon" = "Ikon Aplikasi";
+
+/* No comment provided by engineer. */
+"Are your assets outdated?" = "Apakah aset Anda belum diperbarui?";
+
+/* Pro Features List */
+"As thanks for your support, you get to show off your status with an exclusive app icon!" = "Sebagai ucapan terima kasih atas dukungan Anda, Anda dapat menggunakan ikon aplikasi eksklusif kami untuk di pamerkan!";
+
+/* No comment provided by engineer. */
+"Assets" = "Aset";
+
+/* Asset Management: shown before the newest version is fetched, so it's not know yet if the assets are up to date or outdated */
+"Assets complete." = "Aset sempurna.";
+
+/* No comment provided by engineer. */
+"Assets not loaded!" = "Asset belum dimuat!";
+
+/* Asset Management */
+"Assets out of date!" = "Aset belum diperbarui!";
+
+/* No comment provided by engineer. */
+"Assets should be fetched automatically, but in case something went wrong, feel free to initiate the process manually." = "Aset seharusnya kami ambil secara otomatis, tetapi jika terjadi kesalahan jangan ragu untuk memulai proses ini secara manual.";
+
+/* Asset Management */
+"Assets up to date!" = "Menggunakan aset terkini!";
+
+/* Store: available currency */
+"Available:" = "Tersedia:";
+
+/* Hit Distribution Stats: average HS% */
+"Average: %@" = "Rata-rata: %@";
+
+/* Request Log: shown for bodies that are not decodable to text */
+"Binary Data" = "Data Binary";
+
+/* Hit Distribution Stats: region */
+"Body" = "Badan";
+
+/* Bookmark/Player List: section */
+"Bookmarks" = "Penanda";
+
+/* Gun Customizer: section */
+"Buddy" = "Buddy";
+
+/* Storage Management: section */
+"By Kind" = "Dengan Jenis";
+
+/* Win Rate Stats: section
+Playtime Stats: section */
+"By Map" = "Dengan Map";
+
+/* Playtime Stats: section */
+"By Queue" = "Dengan Antrian";
+
+/* Hit Distribution Stats: section */
+"By Weapon" = "Dengan Senjata";
+
+/* No comment provided by engineer. */
+"Cancel" = "Batal";
+
+/* No comment provided by engineer. */
+"Cancel Matchmaking" = "Batal Pertandingan";
+
+/* Top-Level Tab Title */
+"Career" = "Karier";
+
+/* Login Form: error title */
+"Could not sign in!" = "Tidak dapat masuk!";
+
 /* Store */
 "Unknown Offer" = "Penawaran Tidak Dikenal";
 

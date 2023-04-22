@@ -4,9 +4,99 @@
 /* error loading the account for a widget */
 "Could not load active account!" = "Impossibile caricare l'account attivo!";
 
+/* Riot API Error */
+"Invalid Headers: %@" = "Intestazioni non valide: %@";
+
 /* wrong account error */
 "It looks like this account has never played Valorant!
 
 You've probably signed into the wrong account; %@" = "Sembra che questo account non abbia mai giocato a Valorant!
 
 Probabilmente hai effettuato l'accesso con l'account sbagliato; %@";
+
+/* No comment provided by engineer. */
+"Keychain error for key '%@': %@" = "Errore keychain per la key '%@': %@";
+
+/* store widget error */
+"Malformed Offer" = "Offerta malformata";
+
+/* error loading the account for a widget. */
+"Malformed account." = "Offerta malformata.";
+
+/* store widget error */
+"Missing Assets!" = "Risorse mancanti!";
+
+/* No comment provided by engineer. */
+"Missing game configuration data for %@ region!" = "Dati di configurazione del gioco mancanti per la regione %@!";
+
+/* Should not happen anymore, but you never know ¯\_(ツ)_/¯ */
+"Missing session for account!
+If you have Pro, add an account using the same credentials to replace the account with a working version." = "Sessione mancante per account!
+Se hai la versione Pro, aggiungi un account utilizzando le stesse credenziali per sostituire l'account con una versione funzionante.";
+
+/* error loading the account for a widget. */
+"No account specified." = "Nessun account specificato.";
+
+/* Pro Store: error restoring purchase */
+"No previous transaction found!" = "Nessuna transazione precedente trovata!";
+
+/* Riot API Error */
+"Please try again in %lld seconds." = "Riprova tra %lld secondi.";
+
+/* Pro Store: error restoring purchase (placeholder is reason why it was revoked) */
+"Previous purchase was revoked! Reason: %@" = "L'acquisto precedente è stato revocato! Motivi: %@";
+
+/* Riot API Error */
+"The API rejected your authorization." = "L'API ha rifiutato la tua autorizzazione.";
+
+/* Riot API Error */
+"The API returned an error code %lld, i.e. %@. %@" = "L'API ha restituito un codice di errore %lld, per esempio %@. %@";
+
+/* Riot API Error */
+"The API returned an error code %lld." = "L'API ha restituito un codice di errore %lld.";
+
+/* Riot API Error */
+"The resource could not be found." = "Impossibile trovare la risorsa.";
+
+/* Keychain error. */
+"Unexpected type found: %@" = "Tipo imprevisto trovato: %@";
+
+/* store widget error */
+"Unknown Offer" = "Offerta sconosciuta";
+
+/* store widget error */
+"Unknown Skin" = "Skin sconosciuta";
+
+/* No comment provided by engineer. */
+"Unknown keychain error: %d" = "Errore sconosciuto del keychain: %d";
+
+/* Pro Store: error restoring purchase: replacement for revokation reason on outdated iOS where it's not available */
+"Update to iOS 15.4 to see the reason!" = "Aggiorna a iOS 15.4 per vedere il motivo!";
+
+/* Riot API Error */
+"Valorant is currently undergoing scheduled maintenance. Riot is probably updating the game!" = "Valorant è attualmente in fase di manutenzione programmata. Probabilmente Riot sta aggiornando il gioco!";
+
+/* No comment provided by engineer. */
+"Widgets require Recon Bolt Pro!" = "I widget richiedono Recon Bolt Pro!";
+
+/* Riot API Error */
+"You are sending too many requests." = "Stai inviando troppe richieste.";
+
+/* Riot API Error */
+"Your session could not be resumed. %@" = "Impossibile riprendere la sessione. %@";
+
+/* Riot API Error */
+"Your session has expired! Please sign in again." = "La tua sessione è scaduta! Accedi di nuovo.";
+
+/* Riot API Error */
+"Your token has expired. %@" = "Il tuo token è scaduto. %@";
+
+/* wrong account error */
+"this one has no Riot ID & Tagline." = "questo non ha Riot ID e slogan.";
+
+/* wrong account error */
+"this one is:
+
+%@" = "questo è:
+
+%@";
