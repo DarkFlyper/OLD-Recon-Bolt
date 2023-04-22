@@ -434,19 +434,55 @@ VAŠE HLÁŠENÍ CHYBY ZDE
 "Filter" = "Filtr";
 
 /* No comment provided by engineer. */
+"Filter Maps" = "Filtrovat mapy";
+
+/* No comment provided by engineer. */
+"Filter Match List" = "Filtrovat seznam zápasů";
+
+/* No comment provided by engineer. */
 "Filter Queues" = "Filtrování podle herního módu";
+
+/* No comment provided by engineer. */
+"Filtering by starting side will exclude any matches in single-round modes like Deathmatch, Escalation, etc." = "Filtrování podle počáteční strany vyloučí jakékoliv zápasy v módech s jedním kolem, jako jsou Deathmatch, Escalation atd.";
+
+/* No comment provided by engineer. */
+"Find Match" = "Najít zápas";
 
 /* Party Box: placeholder shows time spent in queue */
 "Finding match… (%@)" = "Vyhledání zápasu... (%@)";
 
+/* No comment provided by engineer. */
+"Force Refresh Widgets" = "Vynutit obnovení widgetů";
+
+/* Storage Management: button to free up a certain amount of space */
+"Free up these %@" = "Uvolnit tyto %@";
+
+/* Agent Select header: shown when timer reaches zero */
+"Game Started" = "Zápas začal";
+
+/* No comment provided by engineer. */
+"Game is not running!" = "Valorant není spuštěn!";
+
 /* Pro Features List */
 "Gather statistics from anyone's games to gain insights on things like time played by mode/premade, headshot rate over time/by weapon, win rate over time/by map & side, and more!" = "Sbírejte statistiky z her ostatních lidí a získejte přehled o věcech, jako je herní doba podle herního módu/osamoceně nebo v party, statistiky headshotů za časové období/podle zbraně, procenta vítězství za časové období/podle mapy/podle strany a mnoho dalšího!";
+
+/* Pro Features List */
+"Getting money from Recon Bolt gives me the flexibility and motivation to keep improving the app!" = "Získávání peněz z Recon Boltu mi poskytuje flexibilitu a motivaci k neustálému zlepšování aplikace!";
+
+/* No comment provided by engineer. */
+"GitHub Repo" = "GitHub Repozitář";
+
+/* No comment provided by engineer. */
+"Golden Gun" = "Golden Gun";
 
 /* Stats: date grouping size picker */
 "Group by" = "Seskupit podle";
 
 /* Hit Distribution Stats: region */
 "Head" = "Hlava";
+
+/* No comment provided by engineer. */
+"Headhunter (Chamber)" = "Headhunter (Chamber)";
 
 /* About Screen */
 "Hi! I'm Julian Dunskus, and I made this app.
@@ -469,6 +505,15 @@ Pokud jste narazili na chybu nebo máte nějakou zpětnou vazbu, vždy si ji rá
 /* Pro Store */
 "Home Screen Widgets" = "Widgety na domovské obrazovce";
 
+/* Pro Store */
+"I hope you enjoy the pro features :)" = "Doufám, že si užijete funkce verze Pro :)";
+
+/* No comment provided by engineer. */
+"Identities" = "Identity";
+
+/* Pro Features List */
+"If you have accounts in multiple regions to play with friends around the world, this is the feature for you!" = "Pokud máte účty v několika regionech kvůli hraní s přáteli po celém světě, tato funkce je pro vás!";
+
 /* Pro Features List */
 "If you have multiple accounts, you can configure separate widgets for each and have them on your Home Screen at the same time." = "Pokud máte více účtů, můžete pro každý z nich nakonfigurovat samostatné widgety a mít je současně na domovské obrazovce.";
 
@@ -481,11 +526,32 @@ Pokud jste narazili na chybu nebo máte nějakou zpětnou vazbu, vždy si ji rá
 /* Asset Management */
 "In case something went wrong, use this button to force a full refetch of the assets and images." = "Pokud se něco pokazilo, použijte toto tlačítko k vynucení opětovného načtení assetů a obrázků.";
 
+/* Settings: section */
+"In-App Store" = "Obchod";
+
+/* Login Form: button/header */
+"Is this safe?" = "Je to bezpečné?";
+
+/* No comment provided by engineer. */
+"Join the Discord Server" = "Připojte se k Discord serveru";
+
+/* Match Details: section */
+"Kills by Round" = "Zabití podle kola";
+
 /* Asset Management: this row shows the language of the current assets */
 "Language" = "Jazyk";
 
 /* Hit Distribution Stats: region */
 "Legs" = "Nohy";
+
+/* Bookmark/Player List: player level */
+"Level %lld" = "Úroveň %lld";
+
+/* Contract Progress Bar */
+"Level %lld / %lld" = "Úroveň %lld/%lld";
+
+/* No comment provided by engineer. */
+"Lifetime Peak" = "Nejvyšší Dosažený Rank";
 
 /* App Theme */
 "Light Mode" = "Světlý režim";
@@ -498,6 +564,9 @@ Pokud jste narazili na chybu nebo máte nějakou zpětnou vazbu, vždy si ji rá
 
 /* Stats: match loading */
 "Load Data" = "Načíst data";
+
+/* Match List */
+"Load Older Matches" = "Načíst starší zápasy";
 
 /* Pro Store */
 "Loading Store Info…" = "Načítání informací o obchodě…";
@@ -522,6 +591,9 @@ Pokud jste narazili na chybu nebo máte nějakou zpětnou vazbu, vždy si ji rá
 
 /* Match Details: title */
 "Match Details" = "Podrobnosti o zápase";
+
+/* App Theme: automatically match the system theme */
+"Match System" = "Automaticky";
 
 /* Stats: match loading */
 "Matches to load: **%lld**" = "Zápasy ke načtení: **%lld**";
