@@ -23,7 +23,7 @@
         <key>many</key>
         <string>اخطاء كثيرة</string>
         <key>other</key>
-        <string>عدد اخطاء %lld</string>
+        <string>عدة اخطاء %lld</string>
       </dict>
     </dict>
     <key>%lld match(es)</key>
