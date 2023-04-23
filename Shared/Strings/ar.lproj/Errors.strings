@@ -1,5 +1,5 @@
 /* Pro Store: error restoring purchase */
-"A previous transaction was found, but it could not be verified! %@" = "تم ايجاد معاملة سابقة لكم لم نتسطع تأكيدها! %@";
+"A previous transaction was found, but it could not be verified! %@" = "تم يجاد معاملة سابقة لكم لم تسطع تأكيدها! %@";
 
 /* error loading the account for a widget */
 "Could not load active account!" = "فشل تحميل الحساب المنشط!";
