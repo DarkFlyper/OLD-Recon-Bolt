@@ -18,6 +18,38 @@
         <string>%lld Errores</string>
       </dict>
     </dict>
+    <key>%lld map(s) selected</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@maps@</string>
+      <key>maps</key>
+      <dict>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>one</key>
+        <string>1 mapa seleccionado</string>
+        <key>other</key>
+        <string>%lld Mapas seleccionados</string>
+      </dict>
+    </dict>
+    <key>%lld queue(s) selected</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@queues@</string>
+      <key>queues</key>
+      <dict>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>one</key>
+        <string>1 cola seleccionada</string>
+        <key>other</key>
+        <string>%lld Colas seleccionadas</string>
+      </dict>
+    </dict>
     <key>%lld match(es)</key>
     <dict>
       <key>NSStringLocalizedFormatKey</key>
