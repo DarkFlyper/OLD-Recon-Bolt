@@ -62,10 +62,10 @@ Jika Anda memiliki versi Pro, silakan tambahkan akun dengan kata sandi atau kred
 "Unexpected type found: %@" = "Jenis yang tidak diharapkan ditemukan: %@";
 
 /* store widget error */
-"Unknown Offer" = "Penawaran Tidak Dikenal";
+"Unknown Offer" = "Penawaran tidak diketahui";
 
 /* store widget error */
-"Unknown Skin" = "Skin tidak dikenal";
+"Unknown Skin" = "Skin tidak diketahui";
 
 /* No comment provided by engineer. */
 "Unknown keychain error: %d" = "Kesalahan rantai kunci tidak dikenal: %d";
