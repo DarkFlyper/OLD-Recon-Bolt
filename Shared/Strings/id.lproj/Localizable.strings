@@ -499,7 +499,7 @@ As you can guess, the scope expanded massively over time to what you're using no
 
 If you've encountered a bug or have some feedback, I'm always happy to hear it on the Discord Server or GitHub :)" = "Hai! Nama saya Julian Dunskus, dan saya membuat aplikasi ini.
 
-Recon Bolt dibuat dan dikembangkan pada awal 2021, mengingat pada waktu itu melihat RR yang didapatkan dan kekalahkan di Valorant belum memungkinkan, tetapi API memungkinkan fitur-fitur tersebut. Saya membuat aplikasi ini untuk melihat fitur tersebut dan lebih dapat memahami perubahan Rank saya. 
+Recon Bolt dibuat dan dikembangkan pada awal 2021, mengingat pada waktu itu ketika saya melihat kekalahkan pertandingan dan RR yang didapatkan di Valorant tidak memungkinkan, tetapi API memungkinkan fitur-fitur tersebut. Saya membuat aplikasi ini untuk melihat fitur tersebut dan lebih dapat memahami perubahan Rank saya. 
 
 Seperti yang kalian tebak, cakupannya berkembang secara besar-besaran waktu ke waktu sehingga aplikasi ini menjadi seperti yang persis Anda gunakan sekarang. Saya harap Anda menikmatinya!
 
@@ -515,7 +515,7 @@ Jika Anda menemukan bug atau memiliki feedback, saya selalu senang mendengarnya 
 "I hope you enjoy the pro features :)" = "Saya harap Anda menikmati fitur-fitur Pro :)";
 
 /* Login Form: is this safe? */
-"I won't sugarcoat things. Due to the way this app uses the API, I believe there's no other way to sign in than to have people enter their credentials directly. Under those circumstances, there's really no good way for anyone to be sure their credentials remain safe. For what it's worth:" = "Saya tidak menyukai menutup-nutupi sesuatu. Karena cara aplikasi ini bekerja menggunakan API, dan saya yakin tidak ada cara lain untuk masuk selain meminta orang memasukan data kredensial mereka secara langsung. Keaadan ini yang membuat tidak ada cara yang baik bagi siapa pun untuk memastikan kredensial mereka tetap aman. Untuk apa yang berharga:";
+"I won't sugarcoat things. Due to the way this app uses the API, I believe there's no other way to sign in than to have people enter their credentials directly. Under those circumstances, there's really no good way for anyone to be sure their credentials remain safe. For what it's worth:" = "Saya tidak menyukai menutup-nutupi sesuatu. Karena cara aplikasi ini bekerja menggunakan API, dan saya yakin tidak ada cara lain untuk masuk ke dalam akun selain meminta orang memasukan data kredensial mereka secara langsung. Keaadan ini yang membuat tidak ada cara yang baik bagi siapa pun untuk memastikan kredensial mereka tetap aman. Ini dia hal hal yang perlu diperhatikan:";
 
 /* No comment provided by engineer. */
 "Identities" = "Identitas";
@@ -536,7 +536,7 @@ Jika Anda menemukan bug atau memiliki feedback, saya selalu senang mendengarnya 
 "In case something went wrong, use this button to force a full refetch of the assets and images." = "Jika terjadi suatu kesalahan, gunakan tombol ini untuk memaksakan pengambilang ulang aset dan gambar secara menyeluruh.";
 
 /* Settings: section */
-"In-App Store" = "Toko";
+"In-App Store" = "Store";
 
 /* Login Form: button/header */
 "Is this safe?" = "Apakah ini aman?";
@@ -630,10 +630,10 @@ Jika Anda tidak tahu nama pengguna Anda atau belum memilikinya, Anda dapat mempe
 "Many thanks to the volunteer translators from our Discord server who have been hard at working translating the app to new languages!" = "Terima kasih kepada para penerjemah volunteer dari server Discord kami yang telah bekerja keras menerjemahkan aplikasi ini banyak bahasa-bahasa yang ada!";
 
 /* No comment provided by engineer. */
-"Map" = "Map";
+"Map" = "Peta";
 
 /* No comment provided by engineer. */
-"Maps" = "Map";
+"Maps" = "Peta";
 
 /* Stats: error details */
 "Match" = "Pertandingan";
@@ -666,7 +666,7 @@ Jika Anda tidak tahu nama pengguna Anda atau belum memilikinya, Anda dapat mempe
 "Missing assets!" = "Beberapa aset hilang!";
 
 /* Missions Box */
-"Missing progress for contract!" = "Kemajuan hilang untuk kontrak!";
+"Missing progress for contract!" = "Tidak ada progress untuk kontrak!";
 
 /* No comment provided by engineer. */
 "Missing season data!" = "Data musim tidak ada!";
@@ -699,10 +699,10 @@ Jika Anda tidak tahu nama pengguna Anda atau belum memilikinya, Anda dapat mempe
 "No Buddy" = "Tidak memiliki Buddy";
 
 /* No comment provided by engineer. */
-"No Spray" = "Tidak ada Grafiti";
+"No Spray" = "Tidak memiliki Grafiti";
 
 /* No comment provided by engineer. */
-"No Title" = "Tidak ada Title";
+"No Title" = "Tidak memiliki Title";
 
 /* Gun Customizer: shown when a weapon has no buddy active */
 "No buddy selected!" = "Tidak ada Buddy yang dipilih!";
@@ -714,13 +714,13 @@ Jika Anda tidak tahu nama pengguna Anda atau belum memilikinya, Anda dapat mempe
 "No data" = "Tidak ada data";
 
 /* No comment provided by engineer. */
-"No games played with premade teammates." = "Tidak ada permainan yang dimainkan bersama dengan tim yang sudah dibuat sebelumnya.";
+"No games played with premade teammates." = "Tidak ada permainan yang dimainkan bersama dengan tim yang sudah dimainkan sebelumnya.";
 
 /* No comment provided by engineer. */
 "No minimap available!" = "Minimap tidak tersedia!";
 
 /* No comment provided by engineer. */
-"No non-premade players encountered repeatedly. (Un)lucky you!" = "Tidak ada pemain yang tidak dibuat sebelumnya setelah ditemukan berulang kali. (Tidak) beruntungnya Anda!";
+"No non-premade players encountered repeatedly. (Un)lucky you!" = "Tidak ada pemain random yang bermain bersama setelah ditemukan berulang kali. (Kurang) beruntungnya Anda!";
 
 /* No comment provided by engineer. */
 "Normalize Charts" = "Menormalkan Grafik";
@@ -848,7 +848,7 @@ Playtime Stats: section */
 "Refresh" = "Refresh";
 
 /* No comment provided by engineer. */
-"Refresh automatically" = "Refres dengan otomatis";
+"Refresh automatically" = "Refresh dengan otomatis";
 
 /* Store Widget: next refresh time (hour & minute) */
 "Refreshes at %@" = "Akan direfresh pada %@";
@@ -1147,7 +1147,7 @@ Di situs tersebut, buka **Masuk Akun Riot** dan tentukan nama pengguna dan kata 
 "View your rank rating changes." = "Lihat perubahan Rank Rating Anda.";
 
 /* Pro Features List */
-"View your storefront, daily/weekly missions, or current rank without even having to open the app!" = "Lihat etalase, misi harian/mingguan, atau Rank Anda saat ini tanpa perlu membuka aplikasi!";
+"View your storefront, daily/weekly missions, or current rank without even having to open the app!" = "Lihat store, misi harian/mingguan, atau Rank Anda saat ini tanpa perlu membuka aplikasi!";
 
 /* No comment provided by engineer. */
 "WP: +%lld" = "WP: +%lld";
