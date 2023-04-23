@@ -74,7 +74,7 @@ Missions Box */
 
 /* Match List Filter */
 "A match's queue is unknown until its details are fetched (by tapping it or performing the swipe action).
-Competitive matches after your placements can be identified without their details, however." = "Antrean pertandingan tidak diketahui sampai data detail kami ambil. (Dengan cara membuka maupun menggesekkan). Namun, Pertandingan kompetitif setelah penempatan Anda dapat kami identifikasi tanpa detailnya.";
+Competitive matches after your placements can be identified without their details, however." = "Antrean pertandingan tidak diketahui sampai data detail kami ambil. (Dengan cara membuka maupun menggeserkan). Namun, Pertandingan kompetitif setelah penempatan Anda dapat kami identifikasi tanpa detailnya.";
 
 /* No comment provided by engineer. */
 "AFK: %lld" = "AFK: %lld";
@@ -125,7 +125,7 @@ Competitive matches after your placements can be identified without their detail
 "All %lld" = "Semua %lld";
 
 /* No comment provided by engineer. */
-"All Maps" = "Semua Map";
+"All Maps" = "Semua Peta";
 
 /* Statistics Filter: button to allow all agents */
 "Allow All Agents" = "Izinkan Semua";
@@ -137,7 +137,7 @@ Competitive matches after your placements can be identified without their detail
 "An Error Occurred!" = "Terjadi kesalahan!";
 
 /* About Screen */
-"An invaluable API hosting all the assets (images, data, etc.) used throughout Valorant. This is where almost every image in the app comes from." = "API yang digunakan untuk menghosting semua aset (gambar, data, dll.) yang kami gunakan di seluruh Valorant. Dari sini hampir semua asset gambar berasal.";
+"An invaluable API hosting all the assets (images, data, etc.) used throughout Valorant. This is where almost every image in the app comes from." = "API ini digunakan sebagai media hosting semua aset yang Valorant miliki (gambar, data, dll). Hampir semua aset berupa gambar dan data dari sini.";
 
 /* Statistics filter: shown when every agent is allowed */
 "Any Agent" = "Semua Agen";
@@ -146,7 +146,7 @@ Competitive matches after your placements can be identified without their detail
 "Any Queue" = "Semua Mode";
 
 /* Asset Management */
-"Anything with images will not display correctly." = "Apapun yang memiliki gambar tidak akan ditampilkan dengan benar.";
+"Anything with images will not display correctly." = "Hal-hal yang menggunakan gambar disini tidak ada ditampilkan dengan menyeluruh.";
 
 /* No comment provided by engineer. */
 "App Icon" = "Ikon Aplikasi";
@@ -197,23 +197,23 @@ Competitive matches after your placements can be identified without their detail
 "Buddy" = "Buddy";
 
 /* Storage Management: section */
-"By Kind" = "Dengan Jenis";
+"By Kind" = "Sesuai Jenis";
 
 /* Win Rate Stats: section
 Playtime Stats: section */
-"By Map" = "Dengan Map";
+"By Map" = "Sesuai Peta";
 
 /* Playtime Stats: section/title */
-"By Non-Premade Player" = "Oleh Pemain yang acak";
+"By Non-Premade Player" = "Sesuai Pemain acak";
 
 /* Playtime Stats: section/title */
-"By Premade Teammate" = "Dari rekan setim yang dibuat";
+"By Premade Teammate" = "Dari tim yang dibuat";
 
 /* Playtime Stats: section */
-"By Queue" = "Dengan Antrian";
+"By Queue" = "Sesuai Mode";
 
 /* Hit Distribution Stats: section */
-"By Weapon" = "Dengan Senjata";
+"By Weapon" = "Sesuai Senjata";
 
 /* No comment provided by engineer. */
 "Cancel" = "Batal";
@@ -240,7 +240,7 @@ Playtime Stats: section */
 "Change Skin" = "Ubah Skin";
 
 /* Store Widget: description */
-"Check your current Valorant storefront." = "Periksa etalase Valorant Anda saat ini.";
+"Check your current Valorant storefront." = "Periksa shop Valorant Anda saat ini.";
 
 /* Missions Widget: description */
 "Check your progress on daily & weekly missions." = "Periksa kemajuan Anda di misi harian & mingguan.";
@@ -279,10 +279,10 @@ Playtime Stats: section */
 "Confirm Delete" = "Konfirmasi Hapus";
 
 /* Missions Box */
-"Contract complete!" = "Kontrak agen selesai!";
+"Contract complete!" = "Kontrak agen telah diselesaikan!";
 
 /* Request Log: button to copy the request's body/contents (accessibility label) */
-"Copy Body" = "Salin Body";
+"Copy Body" = "Copy Body";
 
 /* Stats: error details: accessibility label */
 "Copy Error" = "Salin Kesalahan";
@@ -440,13 +440,13 @@ LAPORKAN BUG ANDA DISINI
 "Filter" = "Filter";
 
 /* No comment provided by engineer. */
-"Filter Maps" = "Filter Map";
+"Filter Maps" = "Filter Peta";
 
 /* No comment provided by engineer. */
 "Filter Match List" = "Filter List Pertandingan";
 
 /* No comment provided by engineer. */
-"Filter Queues" = "Filter Mode Antrian";
+"Filter Queues" = "Filter Mode";
 
 /* No comment provided by engineer. */
 "Filtering by starting side will exclude any matches in single-round modes like Deathmatch, Escalation, etc." = "Memfilter berdasarkan sisi awal akan menghilangkan pertandingan dalam pertandingan satu ronde seperti Deathmatch, Escalation, dll.";
@@ -470,7 +470,7 @@ LAPORKAN BUG ANDA DISINI
 "Game is not running!" = "Valorant belum dibuka!";
 
 /* Pro Features List */
-"Gather statistics from anyone's games to gain insights on things like time played by mode/premade, headshot rate over time/by weapon, win rate over time/by map & side, and more!" = "Mengumpulkan statistik dari permainan siapa saja untuk mendapatkan wawasan terhadap hal-hal seperti waktu bermain berdasarkan mode/premade, tingkat headshot dari waktu ke waktu/dengan senjata, tingkat kemenangan dari waktu ke waktu/berdasarkan map, dan banyak lagi!";
+"Gather statistics from anyone's games to gain insights on things like time played by mode/premade, headshot rate over time/by weapon, win rate over time/by map & side, and more!" = "Mengumpulkan statistik dari permainan siapa saja untuk mendapatkan wawasan terhadap hal-hal seperti waktu bermain berdasarkan mode/premade, tingkat headshot dari waktu ke waktu/dengan senjata, tingkat kemenangan dari waktu ke waktu/berdasarkan peta, dan banyak lagi!";
 
 /* Pro Features List */
 "Getting money from Recon Bolt gives me the flexibility and motivation to keep improving the app!" = "Mendapatkan uang dari Recon Bolt dapat memberikan saya fleksibilitas dan motivasi untuk terus meningkatkan aplikasi!";
@@ -1072,7 +1072,7 @@ Di situs tersebut, buka **Masuk Akun Riot** dan tentukan nama pengguna dan kata 
 "Unknown Bundle" = "Bundle tidak diketahui";
 
 /* Store */
-"Unknown Offer" = "Penawaran Tidak Dikenal";
+"Unknown Offer" = "Penawaran tidak diketahui";
 
 /* No comment provided by engineer. */
 "Unknown Player" = "Pemain tidak diketahui";
@@ -1084,7 +1084,7 @@ Di situs tersebut, buka **Masuk Akun Riot** dan tentukan nama pengguna dan kata 
 "Unknown Rank" = "Rank tidak diketahui";
 
 /* placeholder */
-"Unknown Skin" = "Skin tidak dikenal";
+"Unknown Skin" = "Skin tidak diketahui";
 
 /* placeholder */
 "Unknown Title" = "Title tidak diketahui";
