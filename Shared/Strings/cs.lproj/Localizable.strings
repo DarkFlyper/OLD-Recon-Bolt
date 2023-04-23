@@ -571,6 +571,9 @@ Pokud jste narazili na chybu nebo máte nějakou zpětnou vazbu, vždy si ji rá
 /* Pro Store */
 "Loading Store Info…" = "Načítání informací o obchodě…";
 
+/* Bookmark/Player List: lookup button */
+"Look Up" = "Hledat";
+
 /* Win Rate Stats: chart legend */
 "Losses" = "Ztráty";
 
@@ -607,11 +610,17 @@ Pokud jste narazili na chybu nebo máte nějakou zpětnou vazbu, vždy si ji rá
 /* No comment provided by engineer. */
 "Missing season data!" = "Chybějící data o actu!";
 
+/* Bookmark/Player List: lookup name placeholder */
+"Name" = "Jméno";
+
 /* Win Rate Stats: by map */
 "No data" = "Žádné data";
 
 /* Hit Distribution Stats: error */
 "Not enough data!" = "Nedostatek dat!";
+
+/* Storage Management */
+"Other Players" = "Ostatní Hráči";
 
 /* Win Rate Stats: section
 Playtime Stats: section */
@@ -626,6 +635,12 @@ Playtime Stats: section */
 
 /* Agent View: label for player who hasn't picked an agent yet */
 "Picking…" = "Vybírá…";
+
+/* Match List: section */
+"Player" = "Hráč";
+
+/* Bookmark/Player List: title */
+"Players" = "Hráči";
 
 /* No comment provided by engineer. */
 "Playtime" = "Odehraný čas";
@@ -745,6 +760,9 @@ Login Form: button */
 /* Pro Features List */
 "Support Development :)" = "Podpora vývoje :)";
 
+/* Bookmark/Player List: lookup tag placeholder */
+"Tag" = "Tag";
+
 /* Pro Store */
 "Thank you for supporting Recon Bolt!" = "Děkujeme za podporu Recon Boltu!";
 
@@ -777,7 +795,7 @@ Hit Distribution Stats: region */
 "URL" = "URL";
 
 /* Missions Box: header, shown when a mission is not daily or weekly (should not happen unless Riot changes something) */
-"Uncategorized Missions" = "Nezařazené mise";
+"Uncategorized Missions" = "Nezařazené úkoly";
 
 /* Hit Distribution Stats: footnote */
 "Unfortunately, Valorant doesn't store information about which weapon was used for each hit. All we get is the weapon you started the round with and what weapon you used for each kill. Recon Bolt guesses the weapon involved in each damage based on this information, but it cannot be perfect (and neither can any other tracker)." = "Valorant bohužel neukládá informace o tom, jaká zbraň byla použita pro každý zásah. Jediné, co se dozvíme, je, s jakou zbraní jste kolo zahájili a jakou zbraň jste použili při každém zabití. Recon Bolt na základě těchto informací odhaduje, jaká zbraň se podílela na každém poškození, ale nemůže být dokonalý (stejně jako žádný jiný tracker).";
@@ -861,7 +879,7 @@ Hit Distribution Stats: region */
 "Weekly" = "Týdenní";
 
 /* Missions Box: header */
-"Weekly Missions" = "Týdenní Mise";
+"Weekly Missions" = "Týdenní Úkoly";
 
 /* No comment provided by engineer. */
 "Widget Refresh Requested" = "Požadavek na obnovení widgetu";
