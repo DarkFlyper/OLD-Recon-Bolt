@@ -140,7 +140,7 @@ struct PositionedEvent: Identifiable, Equatable {
 		if let kill = event as? Kill, kill.finishingDamage.type == .bomb {
 			self.relativeColor = .secondary
 		} else {
-			self.relativeColor = matchData.relativeColor(of: event.actor)
+			self.relativeColor = matchData.relativeColor(of: event.actor!)
 		}
 	}
 	
@@ -214,7 +214,7 @@ extension RoundResult {
 protocol RoundEvent {
 	var roundTimeMillis: Int { get }
 	var time: TimeInterval { get }
-	var actor: Player.ID { get }
+	var actor: Player.ID? { get }
 	var playerLocations: [PlayerLocation] { get }
 }
 
@@ -225,7 +225,7 @@ extension RoundEvent {
 }
 
 extension Kill: RoundEvent {
-	var actor: Player.ID { killer }
+	var actor: Player.ID? { killer }
 }
 
 struct BombEvent: RoundEvent {
@@ -233,6 +233,6 @@ struct BombEvent: RoundEvent {
 	var action: RoundResult.BombAction
 	
 	var roundTimeMillis: Int { action.roundTimeMillis }
-	var actor: Player.ID { action.actor }
+	var actor: Player.ID? { action.actor }
 	var playerLocations: [PlayerLocation] { action.playerLocations }
 }

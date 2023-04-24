@@ -25,6 +25,14 @@ struct MatchViewData {
 			.map(\.key)
 	}
 	
+	func player(_ id: Player.ID) -> Player {
+		players[id]!
+	}
+	
+	func player(_ id: Player.ID?) -> Player? {
+		id.map(player(_:))
+	}
+	
 	func relativeColor(of other: Player) -> Color? {
 		let teamColor = relativeColor(of: other.teamID) ?? .valorantBlue
 		return other.id == myself?.id ? .valorantSelf : teamColor

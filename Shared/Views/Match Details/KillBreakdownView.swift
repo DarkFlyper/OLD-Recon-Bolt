@@ -53,10 +53,10 @@ struct KillBreakdownView: View {
 		// order players by number of kills, with self in first place
 		let killsByPlayer = Dictionary(
 			grouping: data.details.validKills(),
-			by: \.killer
+			by: \.killer!
 		)
 		let order = killsByPlayer
-			.sorted { data.players[$0.key]!.score }
+			.sorted { data.player($0.key)!.score }
 				then: { $0.key.description }
 			.map(\.key)
 			.reversed()
@@ -75,8 +75,8 @@ struct KillBreakdownView: View {
 				kills: kills,
 				killsByTeam: orderedTeams.map { team in
 					kills
-						.filter { data.players[$0.killer]!.teamID == team.id }
-						.sorted { playerOrder[$0.killer]! }
+						.filter { data.player($0.killer!).teamID == team.id }
+						.sorted { playerOrder[$0.killer!]! }
 				}
 			)
 		}
@@ -137,7 +137,7 @@ struct KillBreakdownView: View {
 	private func killIcons(for kills: [Kill]) -> some View {
 		VStack(spacing: spacing) {
 			ForEach(Array(kills.enumerated()), id: \.offset) { _, kill in
-				playerIcon(for: kill.killer)
+				playerIcon(for: kill.killer!)
 			}
 		}
 		.padding(spacing)
@@ -214,7 +214,7 @@ private extension MatchDetails {
 		return kills
 			.lazy
 			.filter { $0.finishingDamage.type != .bomb } // no bomb kills
-			.filter { teams[$0.killer] != teams[$0.victim] } // no team kills
+			.filter { teams[ifSome: $0.killer] != teams[$0.victim] } // no team kills
 	}
 	
 	func killsByRound() -> [[Kill]] {

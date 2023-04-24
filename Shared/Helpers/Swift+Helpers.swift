@@ -134,3 +134,9 @@ extension Comparable {
 		min(range.upperBound, max(range.lowerBound, self))
 	}
 }
+
+extension Dictionary {
+	subscript(ifSome key: Key?) -> Value? {
+		key.flatMap { self[$0] }
+	}
+}
