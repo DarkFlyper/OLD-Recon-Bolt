@@ -20,7 +20,6 @@ struct AgentInfoView: View {
 					.padding()
 					.background(Color.secondaryGroupedBackground)
 				}
-				.animation(.default, value: activeAbilitySlot)
 			}
 			.background(Color.groupedBackground)
 			.coordinateSpace(name: "fixed")
@@ -143,8 +142,8 @@ struct AgentInfoView: View {
 						.padding(2)
 						.foregroundColor(isActive ? .accentColor : .primary)
 						.onTapGesture {
-							activeAbilitySlot = ability.slot
 							withAnimation {
+								activeAbilitySlot = ability.slot
 								scrollView.scrollTo(boxID, anchor: .bottom)
 							}
 						}
