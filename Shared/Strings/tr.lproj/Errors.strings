@@ -29,6 +29,9 @@ Muhtemelen yanlış hesaba giriş yaptınız; %@";
 /* Riot API Error */
 "Please try again in %lld seconds." = "Lütfen %lld saniye içinde tekrar deneyin.";
 
+/* Riot API Error */
+"The resource could not be found." = "Kaynak bulunamadı.";
+
 /* store widget error */
 "Unknown Offer" = "Bilinmeyen Teklif";
 
@@ -37,6 +40,9 @@ Muhtemelen yanlış hesaba giriş yaptınız; %@";
 
 /* Pro Store: error restoring purchase: replacement for revokation reason on outdated iOS where it's not available */
 "Update to iOS 15.4 to see the reason!" = "Nedenini görmek için iOS 15.4'e güncelleyin!";
+
+/* Riot API Error */
+"Valorant is currently undergoing scheduled maintenance. Riot is probably updating the game!" = "Valorant şu anda planlı bir bakım altında. Riot muhtemelen oyunu güncelliyordur!";
 
 /* Riot API Error */
 "Your session could not be resumed. %@" = "Oturumunuz devam ettirilemedi. %@";
