@@ -55,3 +55,10 @@ Muhtemelen yanlış hesaba giriş yaptınız; %@";
 
 /* wrong account error */
 "this one has no Riot ID & Tagline." = "bunda Riot ADI ve Etiket yok.";
+
+/* wrong account error */
+"this one is:
+
+%@" = "bu: 
+
+%@";
