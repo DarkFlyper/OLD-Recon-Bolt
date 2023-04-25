@@ -1,22 +1,21 @@
 import SwiftUI
 import AVKit
 
-struct FullScreenVideoPlayer<Label: View>: View {
-	var url: URL
-	var aspectRatio: CGFloat = 16/9
+typealias AVPlayer = AVKit.AVPlayer
+
+// had to move away from having a self-contained button because rotating to landscape could make a list unload it and stop the sheet
+
+extension View {
+	func fullScreenVideoPlayer(player: Binding<AVPlayer?>) -> some View {
+		modifier(PlayerModifier(player: player))
+	}
+}
+
+private struct PlayerModifier: ViewModifier {
+	@Binding var player: AVPlayer?
 	
-	@ViewBuilder var label: Label
-	
-	@State var player: AVPlayer?
-	
-	var body: some View {
-		Button {
-			player = .init(url: url)
-			player!.play()
-		} label: {
-			label
-		}
-		.sheet(item: $player) { player in
+	func body(content: Content) -> some View {
+		content.sheet(item: $player) { player in
 			VideoPlayer(player: player)
 				.overlay(alignment: .topLeading) {
 					Button {
@@ -35,3 +34,12 @@ struct FullScreenVideoPlayer<Label: View>: View {
 }
 
 extension AVPlayer: Identifiable {}
+
+extension AVPlayer {
+	convenience init(url: URL, autoplay: Bool = false) {
+		self.init(url: url)
+		if autoplay {
+			play()
+		}
+	}
+}

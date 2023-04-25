@@ -3,6 +3,8 @@ import SwiftUI
 struct SkinDetailsView: View {
 	var skin: WeaponSkin
 	
+	@State var videoPlayer: AVPlayer?
+	
 	var body: some View {
 		List {
 			Section { chromas() } header: {
@@ -14,6 +16,7 @@ struct SkinDetailsView: View {
 		}
 		.navigationTitle(skin.displayName)
 		.navigationBarTitleDisplayMode(.inline)
+		.fullScreenVideoPlayer(player: $videoPlayer)
 	}
 	
 	func chromas() -> some View {
@@ -23,11 +26,7 @@ struct SkinDetailsView: View {
 				.frame(maxWidth: .infinity)
 				.padding()
 				.overlay(alignment: .bottomTrailing) {
-					if let videoURL = chroma.streamedVideo {
-						FullScreenVideoPlayer(url: videoURL) {
-							Image(systemName: "play.circle")
-						}
-					}
+					videoButton(for: chroma.streamedVideo)
 				}
 		}
 	}
@@ -44,13 +43,20 @@ struct SkinDetailsView: View {
 						.foregroundColor(.secondary)
 				}
 				
-				if let videoURL = level.streamedVideo {
-					FullScreenVideoPlayer(url: videoURL) {
-						Image(systemName: "play.circle")
-					}
-				}
+				videoButton(for: level.streamedVideo)
 			}
 			.aligningListRowSeparator()
+		}
+	}
+	
+	@ViewBuilder
+	func videoButton(for url: URL?) -> some View {
+		if let url {
+			Button {
+				videoPlayer = .init(url: url, autoplay: true)
+			} label: {
+				Image(systemName: "play.circle")
+			}
 		}
 	}
 }
