@@ -608,9 +608,6 @@ Nếu bạn gặp lỗi hoặc có một số phản hồi, tôi luôn sẵn lò
 "Loadout not loaded!" = "Trang bị chưa được tải!";
 
 /* No comment provided by engineer. */
-"Match Dodged" = "Rời sảnh chờ";
-
-/* No comment provided by engineer. */
 "Lock In" = "Khóa chọn";
 
 /* No comment provided by engineer. */
@@ -649,6 +646,9 @@ Nếu không biết tên người dùng của mình hoặc không có, bạn có
 
 /* Match Details: title */
 "Match Details" = "Chi tiết trận đấu";
+
+/* Match List: shown when a match didn't get past Agent Select (because someone dodged/left) */
+"Match Dodged" = "Rời sảnh chờ";
 
 /* No comment provided by engineer. */
 "Match Lists" = "Danh sách trận";
@@ -1101,7 +1101,8 @@ Trên trang web đó, hãy điều hướng đến **Riot Account Sign-in** và 
 /* Round Details: killed by unknown damage source/type */
 "Unknown Type" = "Loại không xác định";
 
-/* No comment provided by engineer. */
+/* Stats: label for a weapon that the app doesn't know for some reason
+Round Details: killed by unknown/unspecified weapon */
 "Unknown Weapon" = "Vũ khí không xác định";
 
 /* No comment provided by engineer. */
