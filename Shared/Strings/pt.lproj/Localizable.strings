@@ -209,6 +209,156 @@ Playtime Stats: section */
 /* Playtime Stats: section/title */
 "By Premade Teammate" = "Por jogador da equipa";
 
+/* Playtime Stats: section */
+"By Queue" = "Por Fila de espera";
+
+/* Hit Distribution Stats: section */
+"By Weapon" = "Por Arma";
+
+/* No comment provided by engineer. */
+"Cancel" = "Cancelar";
+
+/* No comment provided by engineer. */
+"Cancel Matchmaking" = "Cancelar o Matchmaking";
+
+/* Top-Level Tab Title */
+"Career" = "Carreira";
+
+/* No comment provided by engineer. */
+"Career Summaries" = "Resumos de carreira";
+
+/* No comment provided by engineer. */
+"Career Summary" = "Resumo da carreira";
+
+/* No comment provided by engineer. */
+"Change Buddy" = "Mudar Chaveiro";
+
+/* No comment provided by engineer. */
+"Change Queue" = "Alterar fila";
+
+/* Gun Customizer */
+"Change Skin" = "Mudar Skin";
+
+/* Store Widget: description */
+"Check your current Valorant storefront." = "Verifique a sua atual montra Valorant.";
+
+/* Missions Widget: description */
+"Check your progress on daily & weekly missions." = "Verifique o seu progresso nas missões diárias e semanais.";
+
+/* No comment provided by engineer. */
+"Choose App Icon" = "Escolher o ícone da aplicação";
+
+/* No comment provided by engineer. */
+"Choose Buddy" = "Escolha Chaveiro";
+
+/* No comment provided by engineer. */
+"Choose Card" = "Escolher cartão";
+
+/* No comment provided by engineer. */
+"Choose Skin" = "Escolha Skin";
+
+/* No comment provided by engineer. */
+"Choose Spray" = "Escolher o spray";
+
+/* No comment provided by engineer. */
+"Choose Title" = "Selecionar o título";
+
+/* Contract Picker: title */
+"Choose a Contract" = "Selecionar um contrato";
+
+/* Buddy Picker: alert shown when both instances of a buddy are in use */
+"Choose a weapon to take %@ from." = "Escolhe uma arma para receber %@ .";
+
+/* Storage Management: button to delete all entries of a certain kind */
+"Clear All" = "Limpar tudo";
+
+/* Contract Picker */
+"Completed" = "Concluído";
+
+/* Storage Management: title for alert to confirm deleting some matches */
+"Confirm Delete" = "Confirmar Apagar";
+
+/* Missions Box */
+"Contract complete!" = "Contrato concluído!";
+
+/* Request Log: button to copy the request's body/contents (accessibility label) */
+"Copy Body" = "Copiar Corpo";
+
+/* Stats: error details: accessibility label */
+"Copy Error" = "Copiar Erro";
+
+/* No comment provided by engineer. */
+"Copy Error Details" = "Copiar detalhes do erro";
+
+/* No comment provided by engineer. */
+"Copy Match ID" = "Copiar ID de Partida";
+
+/* No comment provided by engineer. */
+"Copy to Clipboard" = "Copiar para a Área de Transferência";
+
+/* No comment provided by engineer. */
+"Could Not Load Account!" = "Não foi possível carregar a conta!";
+
+/* No comment provided by engineer. */
+"Could not Change App Icon!" = "Não foi possível alterar o ícone da aplicação!";
+
+/* No comment provided by engineer. */
+"Could not delete files!" = "Não foi possível eliminar ficheiros!";
+
+/* No comment provided by engineer. */
+"Could not determine used storage!" = "Não foi possível determinar o armazenamento usado!";
+
+/* No comment provided by engineer. */
+"Could not free up space!" = "Não foi possível libertar espaço!";
+
+/* No comment provided by engineer. */
+"Could not look up %@" = "Não foi possível consultar o sítio %@";
+
+/* Login Form: error title */
+"Could not sign in!" = "Não foi possível iniciar sessão!";
+
+/* About Screen: section */
+"Credits" = "Créditos";
+
+/* Asset Management */
+"Current version: %@" = "Versão atual: %@";
+
+/* No comment provided by engineer. */
+"Currently in agent select" = "Atualmente na seleção de agentes";
+
+/* No comment provided by engineer. */
+"Currently in-game" = "Atualmente no jogo";
+
+/* Queue Label: custom game */
+"Custom" = "Personalizado";
+
+/* Gun Customizer: title */
+"Customize %@" = "Personalizar %@";
+
+/* Gun Customizer: title */
+"Customize Gun" = "Personalizar arma";
+
+/* Missions Widget */
+"Daily" = "Diário";
+
+/* Missions Box: header */
+"Daily Missions" = "Missões diárias";
+
+/* Store */
+"Daily Offers" = "Ofertas diárias";
+
+/* App Theme */
+"Dark Mode" = "Modo escuro";
+
+/* Stats: match loading */
+"Data going back to %@" = "Dados que remontam a %@";
+
+/* No comment provided by engineer. */
+"Day" = "Dia";
+
+/* App Icon Name */
+"Default" = "Predefinição";
+
 /* App Icon Picker: section */
 "Default Icon" = "Ícone predefinido";
 
@@ -336,6 +486,158 @@ O SEU RELATÓRIO DE BUG AQUI
 
 /* Hit Distribution Stats: region */
 "Head" = "Cabeça";
+
+/* Stats: match loading */
+"Matches to load: **%lld**" = "Jogos a carregar: **%lld**";
+
+/* Party Box: shown when member's name is not yet loaded */
+"Member" = "Membro";
+
+/* Request Log */
+"Method" = "Método";
+
+/* Asset Management */
+"Missing assets!" = "Ficheiros em falta!";
+
+/* Missions Box */
+"Missing progress for contract!" = "Progresso em falta para o contrato!";
+
+/* No comment provided by engineer. */
+"Missing season data!" = "Dados da época em falta!";
+
+/* Missions Widget: title */
+"Missions" = "Missões";
+
+/* No comment provided by engineer. */
+"Missions not loaded!" = "Missões não carregadas!";
+
+/* No comment provided by engineer. */
+"Month" = "Mês";
+
+/* Pro Features List */
+"Multiple Account Support" = "Suporte a várias contas";
+
+/* Pro Store */
+"Multiple Accounts" = "Contas múltiplas";
+
+/* Bookmark/Player List: lookup name placeholder */
+"Name" = "Nome";
+
+/* Asset Management */
+"Newest available: %@" = "O mais recente disponível: %@";
+
+/* Store */
+"Night Market" = "Mercado Noturno";
+
+/* Buddy picker: option at the top to select no buddy */
+"No Buddy" = "Sem Chaveiro";
+
+/* No comment provided by engineer. */
+"No Spray" = "Sem spray";
+
+/* No comment provided by engineer. */
+"No Title" = "Sem título";
+
+/* Gun Customizer: shown when a weapon has no buddy active */
+"No buddy selected!" = "Nenhum chaveiro selecionado!";
+
+/* Missions Box */
+"No contract active!" = "Sem contrato ativo!";
+
+/* Win Rate Stats: by map */
+"No data" = "Sem dados";
+
+/* No comment provided by engineer. */
+"No games played with premade teammates." = "Não se jogam jogos com colegas de equipa predefinidos.";
+
+/* No comment provided by engineer. */
+"No minimap available!" = "Não há mini mapa disponível!";
+
+/* No comment provided by engineer. */
+"No non-premade players encountered repeatedly. (Un)lucky you!" = "Nenhum jogador sozinho encontrado repetidamente. Sorte(?) a sua!";
+
+/* No comment provided by engineer. */
+"Normalize Charts" = "Normalizar gráficos";
+
+/* Party Box */
+"Not Ready" = "Não está pronto";
+
+/* Hit Distribution Stats: error */
+"Not enough data!" = "Não há dados suficientes!";
+
+/* Account Settings */
+"Not signed in yet." = "Ainda não está registado.";
+
+/* No comment provided by engineer. */
+"Not signed in!" = "Não está registado!";
+
+/* Pro Features List */
+"Note: Statistics are only available on iOS 16 and newer." = "Nota: As estatísticas só estão disponíveis no iOS 16 e mais recente.";
+
+/* Pro Features List */
+"Note: Widgets are only available on iOS 16 and newer." = "Nota: os widgets só estão disponíveis no iOS 16 e mais recente.";
+
+/* No comment provided by engineer. */
+"OK" = "OK";
+
+/* No comment provided by engineer. */
+"Official Website" = "Sítio Web oficial";
+
+/* No comment provided by engineer. */
+"Open or swipe to fetch details." = "Abra ou passe o dedo para obter detalhes.";
+
+/* Storage Management */
+"Other Players" = "Outros jogadores";
+
+/* Buddy Picker: alert shown when both instances of a buddy are in use */
+"Out of instances!" = "Fora das instâncias!";
+
+/* Win Rate Stats: section
+Playtime Stats: section */
+"Over Time" = "Prorrogação";
+
+/* Hit Distribution Stats: section
+Playtime Stats: section */
+"Overall" = "Em geral";
+
+/* No comment provided by engineer. */
+"Overdrive (Neon)" = "Sobrecarga (Neon)";
+
+/* No comment provided by engineer. */
+"Party" = "Equipe";
+
+/* Scoreboard: party letter */
+"Party %@" = "Festa %@";
+
+/* Login Form */
+"Password" = "Palavra-passe";
+
+/* Agent View: label for player who hasn't picked an agent yet */
+"Picking…" = "Escolhendo…";
+
+/* Match List: section */
+"Player" = "Jogador";
+
+/* Bookmark/Player List: title */
+"Players" = "Jogadores";
+
+/* No comment provided by engineer. */
+"Playtime" = "Tempo de jogo";
+
+/* No comment provided by engineer. */
+"Playtime Breakdown" = "Detalhes do tempo de jogo";
+
+/* No comment provided by engineer. */
+"Please make sure you are ready to play by the time the game starts!" = "Certifica-te de que estás pronto para jogar à hora do início do jogo!";
+
+/* App Icon Name */
+"Pro Blue" = "Pro Azul";
+
+/* No comment provided by engineer. */
+"Pro Features" = "Funcionalidades Pro";
+
+/* App Icon Picker: section */
+"Pro Icons" = "Ícones Pro";
 
 /* Store */
 "Unknown Offer" = "Oferta desconhecida";
