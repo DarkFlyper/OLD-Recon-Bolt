@@ -52,7 +52,7 @@ struct MatchDetailsView: View {
 						} label: {
 							HStack {
 								Text("Details by Round", comment: "Match Details: button to view details by round")
-								Image(systemName: "chevron.right")
+								Image(systemName: "chevron.forward")
 							}
 						}
 						

@@ -31,7 +31,7 @@ struct StatisticsContainer: View {
 						} label: {
 							HStack {
 								Text("View Store in Settings", comment: "Statistics Pro purchase prompt: button")
-								Image(systemName: "chevron.right")
+								Image(systemName: "chevron.forward")
 							}
 						}
 						.buttonStyle(.borderedProminent)

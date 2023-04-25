@@ -54,7 +54,7 @@ private struct LoadoutCustomizer: View {
 			} label: {
 				HStack {
 					Text("Weapon Loadout")
-					Image(systemName: "chevron.right")
+					Image(systemName: "chevron.forward")
 				}
 			}
 			.buttonStyle(.bordered)

@@ -64,7 +64,7 @@ struct RoundInfoContainer: View {
 		Button {
 			roundNumber += step
 		} label: {
-			Image(systemName: step > 0 ? "chevron.right" : "chevron.left")
+			Image(systemName: step > 0 ? "chevron.forward" : "chevron.backward")
 				.frame(maxWidth: .infinity)
 				.aspectRatio(1, contentMode: .fit)
 				.padding(8)

@@ -98,10 +98,10 @@ struct WeaponInfoView: View {
 		if #available(iOS 16.0, *) {
 			Grid(alignment: .trailing, horizontalSpacing: 20, verticalSpacing: 4) {
 				GridRow {
-					Text("Range")
-					Text("Head")
-					Text("Body")
-					Text("Legs")
+					Text("Range", comment: "Weapon Reference: stats")
+					Text("Head", comment: "Weapon Reference: stats")
+					Text("Body", comment: "Weapon Reference: stats")
+					Text("Legs", comment: "Weapon Reference: stats")
 				}
 				.gridCellAnchor(.center)
 				.fontWeight(.semibold)
@@ -111,7 +111,7 @@ struct WeaponInfoView: View {
 				
 				ForEach(ranges, id: \.start) { range in
 					GridRow {
-						Text("\(range.start) – \(range.end)m")
+						Text("\(range.start) – \(range.end)m", comment: "Weapon Reference: stats: damage range")
 							.fontWeight(.medium)
 						Text(range.damageToHead, format: .number.precision(.fractionLength(2)))
 						Text(range.damageToBody, format: .number.precision(.fractionLength(2)))
