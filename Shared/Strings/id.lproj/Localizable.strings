@@ -599,9 +599,6 @@ Jika Anda menemukan bug atau memiliki feedback, saya selalu senang mendengarnya 
 "Loadout not loaded!" = "Loadout tidak dimuat!";
 
 /* No comment provided by engineer. */
-"Match Dodged" = "Menghindari Pertandingan";
-
-/* No comment provided by engineer. */
 "Lock In" = "Kunci";
 
 /* No comment provided by engineer. */
@@ -640,6 +637,9 @@ Jika Anda tidak tahu nama pengguna Anda atau belum memilikinya, Anda dapat mempe
 
 /* Match Details: title */
 "Match Details" = "Detail Pertandingan";
+
+/* Match List: shown when a match didn't get past Agent Select (because someone dodged/left) */
+"Match Dodged" = "Menghindari Pertandingan";
 
 /* No comment provided by engineer. */
 "Match Lists" = "Daftar Pertandingan";
@@ -1092,7 +1092,8 @@ Di situs tersebut, buka **Masuk Akun Riot** dan tentukan nama pengguna dan kata 
 /* Round Details: killed by unknown damage source/type */
 "Unknown Type" = "Jenis tidak diketahui";
 
-/* No comment provided by engineer. */
+/* Stats: label for a weapon that the app doesn't know for some reason
+Round Details: killed by unknown/unspecified weapon */
 "Unknown Weapon" = "Senjata tidak diketahui";
 
 /* No comment provided by engineer. */
