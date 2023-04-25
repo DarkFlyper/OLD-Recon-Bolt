@@ -498,9 +498,6 @@ DIN FELRAPPORT HÄR
 "Loadout not loaded!" = "Loadout inte laddad!";
 
 /* No comment provided by engineer. */
-"Match Dodged" = "Lobbyn blev dodgad";
-
-/* No comment provided by engineer. */
 "Lock In" = "Lås in Agent";
 
 /* No comment provided by engineer. */
@@ -539,6 +536,9 @@ Om du inte vet ditt användarnamn eller inte har något kan du hitta det på [ac
 
 /* Match Details: title */
 "Match Details" = "Uppgifter om matchen";
+
+/* Match List: shown when a match didn't get past Agent Select (because someone dodged/left) */
+"Match Dodged" = "Lobbyn blev dodgad";
 
 /* No comment provided by engineer. */
 "Match Lists" = "Matchlistor";
@@ -877,7 +877,8 @@ Hit Distribution Stats: region */
 /* Round Details: killed by unknown damage source/type */
 "Unknown Type" = "Okänd typ";
 
-/* No comment provided by engineer. */
+/* Stats: label for a weapon that the app doesn't know for some reason
+Round Details: killed by unknown/unspecified weapon */
 "Unknown Weapon" = "Okänt vapen";
 
 /* No comment provided by engineer. */
