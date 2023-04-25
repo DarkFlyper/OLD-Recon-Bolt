@@ -18,7 +18,7 @@ struct ReferenceView: View {
 							Label("Agents", systemImage: "person")
 						}
 					}
-					.font(.title2)
+					.font(.title2.weight(.medium))
 					.padding(.vertical, 8)
 				} footer: {
 					Text("Version \(assets.version.version)", comment: "Reference")
