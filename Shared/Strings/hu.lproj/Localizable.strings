@@ -57,6 +57,12 @@ Missions Box */
 /* No comment provided by engineer. */
 "+%lld XP" = "+%lld XP";
 
+/* Missions Widget: how many more weeklies are queued up after the current set */
+"+%lld queued" = "+%lld soron következő";
+
+/* Store: night market discount */
+"-%lld%%" = "-%lld%%";
+
 /* No comment provided by engineer. */
 "2-Factor Authentication" = "2-Faktoros hitelesítés";
 
@@ -65,6 +71,126 @@ Missions Box */
 
 /* No comment provided by engineer. */
 "A 2FA code has been sent to your email address %@" = "A 2FA kód el lett küldve a következő email címre: %@";
+
+/* Match List Filter */
+"A match's queue is unknown until its details are fetched (by tapping it or performing the swipe action).
+Competitive matches after your placements can be identified without their details, however." = "Egy mérkőzés várakozási sorrendje ismeretlen, amíg a részleteit le nem kérdezik (a rákattintással vagy az elcsúsztatással).
+Az elhelyezés utáni versenyszerű mérkőzések azonban az adataik nélkül is azonosíthatók.";
+
+/* No comment provided by engineer. */
+"AFK: %lld" = "AFK: %lld";
+
+/* Career Summary: header for totals of all time */
+"ALL TIME" = "Mindig";
+
+/* Settings: section */
+"About" = "Rólunk";
+
+/* No comment provided by engineer. */
+"About Recon Bolt" = "A Recon Boltról";
+
+/* Settings: section */
+"Accounts" = "Fiókok";
+
+/* Contract Picker: button */
+"Activate" = "Aktiválás";
+
+/* Contract Picker */
+"Active" = "Aktív";
+
+/* Missions Box: header */
+"Active Contract" = "Aktív Contract";
+
+/* Match List: accessibility label */
+"Add Bookmark" = "Könyvjelző hozzáadása";
+
+/* Account Settings */
+"Add another Account" = "Másik fiók hozzáadása";
+
+/* Pro Features List */
+"Add multiple accounts and seamlessly switch between them at any time." = "Adj hozzá több fiókot, hogy bármikor könnyedén válthass közöttük.";
+
+/* No comment provided by engineer. */
+"Advanced Settings" = "Speciális beállítások";
+
+/* Pro Store */
+"Advanced Stats" = "Speciális statisztikák";
+
+/* No comment provided by engineer. */
+"Agent Select" = "Agent választó";
+
+/* Statistics filter: button */
+"Agents" = "Ügynökök";
+
+/* Stats: match loading */
+"All %lld" = "Minden %lld";
+
+/* No comment provided by engineer. */
+"All Maps" = "Mindegyik pálya";
+
+/* Statistics Filter: button to allow all agents */
+"Allow All Agents" = "Összes engedélyezése";
+
+/* Statistics Filter: button to allow all queues */
+"Allow All Queues" = "Összes engedélyezése";
+
+/* Default Error Alert Title */
+"An Error Occurred!" = "Valami hiba történt!";
+
+/* About Screen */
+"An invaluable API hosting all the assets (images, data, etc.) used throughout Valorant. This is where almost every image in the app comes from." = "Egy felbecsülhetetlen értékű API, amely a Valorantban használt összes eszközt (képek, adatok stb.) tárolja. Innen származik szinte minden kép az alkalmazásban.";
+
+/* Statistics filter: shown when every agent is allowed */
+"Any Agent" = "Összes Ügynök";
+
+/* Statistics filter: shown when every queue is allowed */
+"Any Queue" = "Összes Queue";
+
+/* Asset Management */
+"Anything with images will not display correctly." = "Bármi ami képet tartalmaz, és nem jeleník meg helyesen.";
+
+/* No comment provided by engineer. */
+"App Icon" = "Alkalmazás ikon";
+
+/* Asset Management */
+"Assets up to date!" = "A frissítések naprakészek!";
+
+/* Win Rate Stats: side name */
+"Attacking" = "Támadó";
+
+/* Store: available currency */
+"Available:" = "Elérhető:";
+
+/* Hit Distribution Stats: average HS% */
+"Average: %@" = "Átlagosan: %@";
+
+/* Request Log: shown for bodies that are not decodable to text */
+"Binary Data" = "Bináris adatok";
+
+/* Hit Distribution Stats: region */
+"Body" = "Test";
+
+/* Bookmark/Player List: section */
+"Bookmarks" = "Könyvjelzők";
+
+/* Gun Customizer: section */
+"Buddy" = "Buddy";
+
+/* Win Rate Stats: section
+Playtime Stats: section */
+"By Map" = "Pálya alapján";
+
+/* Top-Level Tab Title */
+"Career" = "Karrier";
+
+/* No comment provided by engineer. */
+"Career Summaries" = "Karrier összefoglalók";
+
+/* No comment provided by engineer. */
+"Career Summary" = "Karrier összefoglaló";
+
+/* No comment provided by engineer. */
+"Change Buddy" = "Buddy váltás";
 
 /* Store */
 "Unknown Offer" = "Ismeretlen tétel";
