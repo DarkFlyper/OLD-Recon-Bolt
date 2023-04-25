@@ -12,9 +12,8 @@ struct SeasonCollection: AssetItem, Codable {
 	
 	var competitiveTiers: [CompetitiveTier.Collection.ID: CompetitiveTier.Collection]
 	
-	private func currentAct(at time: Date?) -> Act? {
+	private func currentAct(at time: Date) -> Act? {
 		// not requiring the time to be greater than the start date avoids possible undefined periods between acts (like the 3 days between closed beta and act 1) and lets us use binary search for quicker searching
-		let time = time ?? Date()
 		let firstExceedingIndex = actsInOrder
 			.partitioningIndex { time < $0.timeSpan.end } // binary search
 		return actsInOrder.elementIfValid(at: firstExceedingIndex)
@@ -70,8 +69,8 @@ struct SeasonCollection: AssetItem, Codable {
 		}
 		
 		/// adjusts times backwards for matching against unadjusted acts
-		private func adjust(_ time: Date?) -> Date? {
-			time.map { $0 - offset }
+		private func adjust(_ time: Date?) -> Date {
+			(time ?? .now) - offset
 		}
 		
 		func act(_ id: Act.ID?) -> Act? {
