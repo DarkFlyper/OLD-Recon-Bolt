@@ -52,3 +52,6 @@ Muhtemelen yanlış hesaba giriş yaptınız; %@";
 
 /* Riot API Error */
 "Your session has expired! Please sign in again." = "Oturumunuzun süresi doldu! Lütfen tekrar giriş yapın.";
+
+/* wrong account error */
+"this one has no Riot ID & Tagline." = "bunda Riot ADI ve Etiket yok.";
