@@ -44,6 +44,9 @@ Muhtemelen yanlış hesaba giriş yaptınız; %@";
 /* Riot API Error */
 "Valorant is currently undergoing scheduled maintenance. Riot is probably updating the game!" = "Valorant şu anda planlı bir bakım altında. Riot muhtemelen oyunu güncelliyordur!";
 
+/* No comment provided by engineer. */
+"Widgets require Recon Bolt Pro!" = "Araç Takımları Recon Bolt Pro gerektirir!";
+
 /* Riot API Error */
 "Your session could not be resumed. %@" = "Oturumunuz devam ettirilemedi. %@";
 
