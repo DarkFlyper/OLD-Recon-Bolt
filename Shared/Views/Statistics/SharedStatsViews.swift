@@ -21,7 +21,7 @@ enum Stats {
 			} else if let override = Self.overrides[weapon] {
 				Text(override)
 			} else {
-				Text("Unknown Weapon")
+				Text("Unknown Weapon", comment: "Stats: label for a weapon that the app doesn't know for some reason")
 					.foregroundStyle(.secondary)
 			}
 		}

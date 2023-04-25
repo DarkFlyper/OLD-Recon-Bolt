@@ -65,10 +65,15 @@ struct EventRow: View, Animatable {
 			if damageType == .bomb {
 				Text("Exploded", comment: "Round Details: killed by spike")
 					.fontWeight(.medium)
-			} else if let weaponID = kill.finishingDamage.weapon {
-				WeaponImage.killStreamIcon(weaponID)
-					.scaleEffect(x: -1, y: 1, anchor: .center)
-					.padding(4)
+			} else if damageType == .weapon {
+				if let weaponID = kill.finishingDamage.weapon {
+					WeaponImage.killStreamIcon(weaponID)
+						.scaleEffect(x: -1, y: 1, anchor: .center)
+						.padding(4)
+				} else {
+					Text("Unknown Weapon", comment: "Round Details: killed by unknown/unspecified weapon")
+						.foregroundStyle(.secondary)
+				}
 			} else if damageType == .melee {
 				WeaponImage.killStreamIcon(.melee)
 					.scaleEffect(x: -1, y: 1, anchor: .center)
