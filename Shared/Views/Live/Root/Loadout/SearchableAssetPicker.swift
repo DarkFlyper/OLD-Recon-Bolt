@@ -1,5 +1,6 @@
 import SwiftUI
 import ValorantAPI
+import RegexBuilder
 
 struct SearchableAssetPicker<Item: SearchableAsset, RowContent: View, Deselector: View>: View {
 	var allItems: [Item.ID: Item]
@@ -10,16 +11,10 @@ struct SearchableAssetPicker<Item: SearchableAsset, RowContent: View, Deselector
 	@State private var search = ""
 	
 	var body: some View {
-		let lowerSearch = search.lowercased()
 		let results = ownedItems
 			.lazy
 			.compactMap { allItems[$0] }
-			.filter {
-				$0.searchableText
-					.lowercased()
-					.split(separator: " ", omittingEmptySubsequences: false) // important for default title = " "
-					.contains { $0.hasPrefix(lowerSearch) }
-			}
+			.filter { searchAccepts(candidate: $0.searchableText) }
 			.sorted(on: \.sortValue)
 		
 		List {
@@ -44,6 +39,17 @@ struct SearchableAssetPicker<Item: SearchableAsset, RowContent: View, Deselector
 			}
 		}
 		.searchable(text: $search)
+	}
+	
+	func searchAccepts(candidate: String) -> Bool {
+		if #available(iOS 16.0, *) {
+			return candidate.firstMatch(of: Regex {
+				Anchor.wordBoundary
+				search
+			}.ignoresCase()) != nil
+		} else {
+			return candidate.lowercased().starts(with: search.lowercased()) // basic fallback
+		}
 	}
 }
 
