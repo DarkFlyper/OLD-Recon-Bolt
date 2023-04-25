@@ -1,4 +1,71 @@
 
+/* Used for matches less than a day ago. %@ is replaced by the number of hours/minutes, e.g. '3h ago'. */
+"%@ ago" = "%@ ezelött";
+
+/* %@ is replaced by a fraction of wins vs. games played, e.g. '5/12 games won'. */
+"%@ games won" = "%@ nyertes meccsek";
+
+/* Win Rate Stats by Loadout Delta: focused value (drag on graph); placeholder is replaced by the percentage of rounds won, e.g. '57.3% won'. */
+"%@ won" = "%@ győzelem";
+
+/* used throughout the app to format percentages—placeholder is replaced by a number */
+"%@%%" = "%@%%";
+
+/* Missions Box: always at least 3 */
+"%lld Future Weeklies" = "%lld jövőbeli heti küldetések";
+
+/* Missions Box: always at least 3 */
+"%lld Queued-Up Weeklies" = "%lld Soron következő heti küldetések";
+
+/* No comment provided by engineer. */
+"%lld RR" = "%lld RR";
+
+/* Storage Management */
+"%lld from other players" = "%lld más játékosoktól";
+
+/* Hit Distribution Stats: hit count */
+"%lld hits" = "%lld találatok";
+
+/* Shown at the bottom of the expandable playtime list when there are more entries available. */
+"%lld more" = "%lld több";
+
+/* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
+"%lld to %lld credits" = "%lld kreditről %lld kereditre";
+
+/* No comment provided by engineer. */
+"%lld%%" = "%lld%%";
+
+/* No comment provided by engineer. */
+"%lld/%lld" = "%lld/%lld";
+
+/* Time Formatting: minutes & seconds (used in round details view) */
+"%lld:%@" = "%lld:%@";
+
+/* Time Formatting: minutes, seconds, & milliseconds (used in round details view) */
+"%lld:%@.%@" = "%lld:%@.%@";
+
+/* Contract Progress Bar
+Missions Box */
+"%lld / %lld XP" = "%lld / %lld XP";
+
+/* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
+"(%lld – %lld)" = "(%lld – %lld)";
+
+/* Pro Features List */
+"(You can switch between available icons at any time.)" = "(A meglévő ikonok között bármikor válthat)";
+
+/* No comment provided by engineer. */
+"+%lld XP" = "+%lld XP";
+
+/* No comment provided by engineer. */
+"2-Factor Authentication" = "2-Faktoros hitelesítés";
+
+/* Missions Widget: countdown label when the target is in the future. e.g. '< 2d 3h' */
+"< %@" = "< %@";
+
+/* No comment provided by engineer. */
+"A 2FA code has been sent to your email address %@" = "A 2FA kód el lett küldve a következő email címre: %@";
+
 /* Store */
 "Unknown Offer" = "Ismeretlen tétel";
 
