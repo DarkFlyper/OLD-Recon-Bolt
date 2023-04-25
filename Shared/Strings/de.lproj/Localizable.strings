@@ -608,9 +608,6 @@ Wenn du auf einen Fehler gestoßen bist oder ein Feedback hast, freue ich mich i
 "Loadout not loaded!" = "Bewaffnung nicht geladen!";
 
 /* No comment provided by engineer. */
-"Match Dodged" = "Spiel vermieden";
-
-/* No comment provided by engineer. */
 "Lock In" = "Bestätigen";
 
 /* No comment provided by engineer. */
@@ -649,6 +646,9 @@ Wenn du deinen Benutzernamen nicht kennst oder keinen hast, kannst du das unter 
 
 /* Match Details: title */
 "Match Details" = "Spieldetails";
+
+/* Match List: shown when a match didn't get past Agent Select (because someone dodged/left) */
+"Match Dodged" = "Spiel vermieden";
 
 /* No comment provided by engineer. */
 "Match Lists" = "Verläufe";
@@ -1101,7 +1101,8 @@ Navigiere auf dieser Seite zu **Riot Account Sign-in** und gib dir einen Benutze
 /* Round Details: killed by unknown damage source/type */
 "Unknown Type" = "Unbekannter Typ";
 
-/* No comment provided by engineer. */
+/* Stats: label for a weapon that the app doesn't know for some reason
+Round Details: killed by unknown/unspecified weapon */
 "Unknown Weapon" = "Unbekannte Waffe";
 
 /* No comment provided by engineer. */
