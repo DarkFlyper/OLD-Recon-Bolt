@@ -152,6 +152,27 @@ Az elhelyezés utáni versenyszerű mérkőzések azonban az adataik nélkül is
 /* No comment provided by engineer. */
 "App Icon" = "Alkalmazás ikon";
 
+/* No comment provided by engineer. */
+"Are your assets outdated?" = "Elavultak az eszközei?";
+
+/* Pro Features List */
+"As thanks for your support, you get to show off your status with an exclusive app icon!" = "A támogatásért köszönetképpen egy egyedi alkalmazás ikon segítségével mutathatod meg státuszodat!";
+
+/* No comment provided by engineer. */
+"Assets" = "Eszközök";
+
+/* Asset Management: shown before the newest version is fetched, so it's not know yet if the assets are up to date or outdated */
+"Assets complete." = "Az eszközök készenállnak.";
+
+/* No comment provided by engineer. */
+"Assets not loaded!" = "Az eszközöket nem lehet betölteni!";
+
+/* Asset Management */
+"Assets out of date!" = "Az eszközök elavultak!";
+
+/* No comment provided by engineer. */
+"Assets should be fetched automatically, but in case something went wrong, feel free to initiate the process manually." = "Az eszközöknek automatikusan kell lekérődniük, de ha valami hiba történt nyugodtan indítsa el a folyamatot manuálisan.";
+
 /* Asset Management */
 "Assets up to date!" = "A frissítések naprakészek!";
 
@@ -191,6 +212,27 @@ Playtime Stats: section */
 
 /* No comment provided by engineer. */
 "Change Buddy" = "Buddy váltás";
+
+/* No comment provided by engineer. */
+"Choose App Icon" = "Alkalmazás ikon kiválasztása";
+
+/* No comment provided by engineer. */
+"Choose Buddy" = "Buddy választás";
+
+/* No comment provided by engineer. */
+"Choose Card" = "Válasszon kártyát";
+
+/* No comment provided by engineer. */
+"Choose Skin" = "Válasszon skint";
+
+/* No comment provided by engineer. */
+"Choose Spray" = "Válasszon festéket";
+
+/* No comment provided by engineer. */
+"Choose Title" = "Válasszon feliratot";
+
+/* Contract Picker: title */
+"Choose a Contract" = "Válasszon Contract-ot";
 
 /* Store */
 "Unknown Offer" = "Ismeretlen tétel";
