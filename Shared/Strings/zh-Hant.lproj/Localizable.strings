@@ -610,9 +610,6 @@ Recon Bolt於2021年當初開始開發，當時還無法在遊戲中看到您的
 "Loadout not loaded!" = "收藏還沒加載！";
 
 /* No comment provided by engineer. */
-"Match Dodged" = "大廳退出";
-
-/* No comment provided by engineer. */
 "Lock In" = "鎖定";
 
 /* No comment provided by engineer. */
@@ -651,6 +648,9 @@ If you don't know your username or don't have one, you can fix that at [account.
 
 /* Match Details: title */
 "Match Details" = "回合詳情";
+
+/* Match List: shown when a match didn't get past Agent Select (because someone dodged/left) */
+"Match Dodged" = "大廳退出";
 
 /* No comment provided by engineer. */
 "Match Lists" = "對戰列表";
@@ -1103,7 +1103,8 @@ On that site, navigate to **Riot Account Sign-in** and set yourself a username a
 /* Round Details: killed by unknown damage source/type */
 "Unknown Type" = "未知類型";
 
-/* No comment provided by engineer. */
+/* Stats: label for a weapon that the app doesn't know for some reason
+Round Details: killed by unknown/unspecified weapon */
 "Unknown Weapon" = "未知武器";
 
 /* No comment provided by engineer. */
