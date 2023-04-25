@@ -1,5 +1,258 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-  <dict/>
+  <dict>
+    <key>%lld Error(s)</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@errors@</string>
+      <key>errors</key>
+      <dict>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>one</key>
+        <string>1 Erro</string>
+        <key>other</key>
+        <string>%lld Erros</string>
+      </dict>
+    </dict>
+    <key>%lld map(s) selected</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@maps@</string>
+      <key>maps</key>
+      <dict>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>one</key>
+        <string>1 mapa selecionado</string>
+        <key>other</key>
+        <string>%lld mapas selecionados</string>
+      </dict>
+    </dict>
+    <key>%lld queue(s) selected</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@queues@</string>
+      <key>queues</key>
+      <dict>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>one</key>
+        <string>1 fila de espera selecionada</string>
+        <key>other</key>
+        <string>%lld filas selecionadas</string>
+      </dict>
+    </dict>
+    <key>Load Latest %lld Match(es)</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>Carregar %#@matches@</string>
+      <key>matches</key>
+      <dict>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>one</key>
+        <string>Última partida</string>
+        <key>other</key>
+        <string>Últimas %lld Partidas</string>
+      </dict>
+    </dict>
+    <key>%lld match(es)</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@matches@</string>
+      <key>matches</key>
+      <dict>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>one</key>
+        <string>1 partida</string>
+        <key>other</key>
+        <string>%lld partidas</string>
+      </dict>
+    </dict>
+    <key>%lld previous act(s)</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@acts@</string>
+      <key>acts</key>
+      <dict>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>one</key>
+        <string>1 ato anterior</string>
+        <key>other</key>
+        <string>%lld atos anteriores</string>
+      </dict>
+    </dict>
+    <key>%lld hidden due to outdated assets</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@items@</string>
+      <key>items</key>
+      <dict>
+        <key>one</key>
+        <string>%lld escondido devido a arquivo desatualizado</string>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld escondido devido a arquivos desatualizados</string>
+      </dict>
+    </dict>
+    <key>%lld agents selected</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@agents@</string>
+      <key>agents</key>
+      <dict>
+        <key>one</key>
+        <string>%lld selecionado</string>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld selecionados</string>
+      </dict>
+    </dict>
+    <key>%lld queues selected</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@queues@</string>
+      <key>queues</key>
+      <dict>
+        <key>one</key>
+        <string>%lld selecionado</string>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld selecionadas</string>
+      </dict>
+    </dict>
+    <key>Using data from %lld match(es) (%lld filtered out)</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>Utilizando dados de %#@allowed@ (%#@filtered@)</string>
+      <key>allowed</key>
+      <dict>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>one</key>
+        <string>uma única partida</string>
+        <key>other</key>
+        <string>%lld partidas</string>
+      </dict>
+      <key>filtered</key>
+      <dict>
+        <key>one</key>
+        <string>%lld filtrado</string>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld filtradas</string>
+      </dict>
+    </dict>
+    <key>%lld/%lld loaded</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@loaded@</string>
+      <key>loaded</key>
+      <dict>
+        <key>one</key>
+        <string>%lld/%#@total@ carregado</string>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld/%#@total@ carregado</string>
+      </dict>
+      <key>total</key>
+      <dict>
+        <key>one</key>
+        <string>%lld</string>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld</string>
+      </dict>
+    </dict>
+    <key>%lld/%lld owned</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@owned@</string>
+      <key>owned</key>
+      <dict>
+        <key>one</key>
+        <string>%lld/%#@total@ adquirido</string>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld/%#@total@ adquiridos</string>
+      </dict>
+      <key>total</key>
+      <dict>
+        <key>one</key>
+        <string>%lld</string>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld</string>
+      </dict>
+    </dict>
+    <key>Data from %lld game(s) (%lld skipped lacking data)</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>Dados de %#@games@ (%#@skipped@)</string>
+      <key>games</key>
+      <dict>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld jogos</string>
+        <key>one</key>
+        <string>%lld jogo</string>
+      </dict>
+      <key>skipped</key>
+      <dict>
+        <key>one</key>
+        <string>%lld omitiu dados em falta</string>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld omitiu dados em falta</string>
+      </dict>
+    </dict>
+  </dict>
 </plist>
