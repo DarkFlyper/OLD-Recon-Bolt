@@ -159,7 +159,7 @@ struct GunCustomizer: View {
 					.buttonStyle(.plain)
 					
 					if let item = level.levelItem {
-						Text(item.description)
+						item.description
 							.lineLimit(3)
 							.multilineTextAlignment(.center)
 							.font(.caption)

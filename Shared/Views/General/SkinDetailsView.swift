@@ -39,7 +39,7 @@ struct SkinDetailsView: View {
 				Spacer()
 				
 				if let item = level.levelItem {
-					Text(item.description)
+					item.description
 						.foregroundColor(.secondary)
 				}
 				
