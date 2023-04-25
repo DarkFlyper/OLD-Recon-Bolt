@@ -608,9 +608,6 @@ Se você encontrou um bug ou tem algum feedback, ficarei muito feliz em ouvir no
 "Loadout not loaded!" = "Inventário não carregado!";
 
 /* No comment provided by engineer. */
-"Match Dodged" = "Evasão do Lobby";
-
-/* No comment provided by engineer. */
 "Lock In" = "Confirmar";
 
 /* No comment provided by engineer. */
@@ -649,6 +646,9 @@ Se você não sabe o seu nome de usuário ou não tem um, pode resolver isso em 
 
 /* Match Details: title */
 "Match Details" = "Detalhes da Partida";
+
+/* Match List: shown when a match didn't get past Agent Select (because someone dodged/left) */
+"Match Dodged" = "Evasão do Lobby";
 
 /* No comment provided by engineer. */
 "Match Lists" = "Lista de Partidas";
@@ -1102,7 +1102,8 @@ No site da Riot, vá para Login da Conta Riot e defina um nome de usuário e sen
 /* Round Details: killed by unknown damage source/type */
 "Unknown Type" = "Tipo Desconhecido";
 
-/* No comment provided by engineer. */
+/* Stats: label for a weapon that the app doesn't know for some reason
+Round Details: killed by unknown/unspecified weapon */
 "Unknown Weapon" = "Arma Desconhecida";
 
 /* No comment provided by engineer. */

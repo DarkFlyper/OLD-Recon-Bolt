@@ -609,9 +609,6 @@ Recon Bolt начал разрабатываться в начале 2021 год
 "Loadout not loaded!" = "Комплект не загружен!";
 
 /* No comment provided by engineer. */
-"Match Dodged" = "От матча уклонились";
-
-/* No comment provided by engineer. */
 "Lock In" = "Выбрать";
 
 /* No comment provided by engineer. */
@@ -650,6 +647,9 @@ If you don't know your username or don't have one, you can fix that at [account.
 
 /* Match Details: title */
 "Match Details" = "Подробности матча";
+
+/* Match List: shown when a match didn't get past Agent Select (because someone dodged/left) */
+"Match Dodged" = "От матча уклонились";
 
 /* No comment provided by engineer. */
 "Match Lists" = "Списки матчей";
@@ -1102,7 +1102,8 @@ On that site, navigate to **Riot Account Sign-in** and set yourself a username a
 /* Round Details: killed by unknown damage source/type */
 "Unknown Type" = "Неизвестный тип";
 
-/* No comment provided by engineer. */
+/* Stats: label for a weapon that the app doesn't know for some reason
+Round Details: killed by unknown/unspecified weapon */
 "Unknown Weapon" = "Неизвестное оружие";
 
 /* No comment provided by engineer. */

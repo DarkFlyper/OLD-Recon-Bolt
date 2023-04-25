@@ -785,7 +785,8 @@ Hit Distribution Stats: region */
 /* Round Details: killed by unknown damage source/type */
 "Unknown Type" = "Forma desconocido";
 
-/* No comment provided by engineer. */
+/* Stats: label for a weapon that the app doesn't know for some reason
+Round Details: killed by unknown/unspecified weapon */
 "Unknown Weapon" = "Arma desconocida";
 
 /* No comment provided by engineer. */
