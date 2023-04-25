@@ -45,7 +45,7 @@ struct ContractDetailsView: View {
 					HStack {
 						Text("Switch Contract", comment: "Missions Box: button")
 						Spacer()
-						Image(systemName: "chevron.right")
+						Image(systemName: "chevron.forward")
 					}
 				}
 			}
