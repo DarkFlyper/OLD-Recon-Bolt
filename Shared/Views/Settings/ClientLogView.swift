@@ -83,8 +83,8 @@ struct ClientLogView: View {
 				}
 				
 				Section(header: Text("Request", comment: "Request Log: header")) {
-					labeledRow(Text("Method", comment: "Request Log"), describing: exchange.request.httpMethod!)
-					labeledRow(Text("URL", comment: "Request Log"), describing: exchange.request.url!)
+					LabeledRow(Text("Method", comment: "Request Log"), describing: exchange.request.httpMethod!)
+					LabeledRow(Text("URL", comment: "Request Log"), describing: exchange.request.url!)
 					
 					bodyDetailsView(for: exchange.request.httpBody)
 				}
@@ -92,7 +92,7 @@ struct ClientLogView: View {
 				Section(header: Text("Response", comment: "Request Log: header")) {
 					switch exchange.result {
 					case .success(let response):
-						labeledRow("Response Code", describing: response.httpMetadata!.statusCode)
+						LabeledRow("Response Code", describing: response.httpMetadata!.statusCode)
 						
 						bodyDetailsView(for: response.body)
 					case .failure(let error):
@@ -105,7 +105,7 @@ struct ClientLogView: View {
 							}
 							.navigationTitle("Error Details")
 						} label: {
-							labeledRow(Text("Error", comment: "Request Log"), describing: error.localizedDescription.prefix(1000))
+							LabeledRow(Text("Error", comment: "Request Log"), describing: error.localizedDescription.prefix(1000))
 								.lineLimit(1)
 						}
 					}
@@ -153,32 +153,6 @@ struct ClientLogView: View {
 			.url!
 		}
 		
-		func labeledRow(_ label: LocalizedStringKey, describing value: Any) -> some View {
-			labeledRow(Text(label), describing: value)
-		}
-		
-		func labeledRow(_ label: Text, describing value: Any) -> some View {
-			labeledRow(label, value: Text(String(describing: value)))
-		}
-		
-		func labeledRow(_ label: LocalizedStringKey, value: LocalizedStringKey) -> some View {
-			labeledRow(label, value: Text(value))
-		}
-		
-		func labeledRow(_ label: LocalizedStringKey, value: Text) -> some View {
-			labeledRow(Text(label), value: value)
-		}
-		
-		func labeledRow(_ label: Text, value: Text) -> some View {
-			HStack {
-				label
-					.foregroundStyle(.secondary)
-				Spacer()
-				value
-					.multilineTextAlignment(.trailing)
-			}
-		}
-		
 		func bodyDetailsView(for data: Data?) -> some View {
 			let body = data ?? .init()
 			let string = String(bytes: body, encoding: .utf8)
@@ -212,7 +186,7 @@ struct ClientLogView: View {
 					}
 				}
 			} label: {
-				labeledRow(Text(String(
+				LabeledRow(Text(String(
 					localized: "Exchange Body", defaultValue: "Body",
 					comment: "Request Log: entry for request body/contents"
 				)), value: Text(Int64(body.count), format: .byteCount(style: .file)))

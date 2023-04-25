@@ -119,67 +119,61 @@ struct GunCustomizer: View {
 	}
 	
 	var levelPicker: some View {
-		ZStack {
-			HStack(alignment: .top, spacing: 2) {
-				ForEach(resolved.skin.levels.indexed(), id: \.element.id) { index, level in
-					let isOwned = index == 0 || inventory.owns(level.id)
-					let isActive = resolved.levelIndex >= index
-					
-					if index > 0 {
-						Rectangle().frame(height: 2)
-							.offset(y: 21) // sorry lol
-							.frame(maxWidth: 32)
-							.foregroundColor(isActive ? .accentColor : .secondary)
-							.opacity(0.25)
-							.opacity(isOwned ? 1 : 0.5)
-							.zIndex(-1)
-					}
-					
-					VStack {
-						Button {
-							gun.skin.level = level.id
-						} label: {
-							ZStack {
-								let isSelected = gun.skin.level == level.id
-								Circle()
-									.foregroundColor(isSelected ? .accentColor : .secondary.opacity(0.25))
-									.foregroundColor(.secondary.opacity(0.25))
-								Text("\(index + 1)")
-									.font(.callout)
-									.foregroundColor(isSelected ? .white : .accentColor)
-									.foregroundColor(.accentColor)
-								
-								if true, isSelected {
-									Circle().stroke(lineWidth: 6).blendMode(.destinationOut)
-									Circle().stroke(Color.accentColor, lineWidth: 2)
-								}
+		HStack(alignment: .top, spacing: 2) {
+			ForEach(resolved.skin.levels.indexed(), id: \.element.id) { index, level in
+				let isOwned = index == 0 || inventory.owns(level.id)
+				let isActive = resolved.levelIndex >= index
+				
+				if index > 0 {
+					Rectangle().frame(height: 2)
+						.offset(y: 21) // sorry lol
+						.frame(maxWidth: 32)
+						.foregroundColor(isActive ? .accentColor : .secondary)
+						.opacity(0.25)
+						.opacity(isOwned ? 1 : 0.5)
+						.zIndex(-1)
+				}
+				
+				VStack {
+					Button {
+						gun.skin.level = level.id
+					} label: {
+						ZStack {
+							let isSelected = gun.skin.level == level.id
+							Circle()
+								.foregroundColor(isSelected ? .accentColor : .secondary.opacity(0.25))
+								.foregroundColor(.secondary.opacity(0.25))
+							Text("\(index + 1)")
+								.font(.callout)
+								.foregroundColor(isSelected ? .white : .accentColor)
+								.foregroundColor(.accentColor)
+							
+							if isSelected {
+								Circle().stroke(lineWidth: 6).blendMode(.destinationOut)
+								Circle().stroke(Color.accentColor, lineWidth: 2)
 							}
-							.frame(height: 44)
 						}
-						.disabled(!isOwned)
-						.buttonStyle(.plain)
-						
-						if let item = level.levelItem {
-							Text(item.description)
-								.lineLimit(3)
-								.multilineTextAlignment(.center)
-								.font(.caption)
-								.foregroundColor(.secondary)
-								.frame(width: 72)
-								.fixedSize()
-								.frame(width: 1) // fake smaller width
-								.opacity(isOwned ? 1 : 0.5)
-						}
+						.frame(height: 44)
+					}
+					.disabled(!isOwned)
+					.buttonStyle(.plain)
+					
+					if let item = level.levelItem {
+						Text(item.description)
+							.lineLimit(3)
+							.multilineTextAlignment(.center)
+							.font(.caption)
+							.foregroundColor(.secondary)
+							.frame(width: 72)
+							.fixedSize()
+							.frame(width: 1) // fake smaller width
+							.opacity(isOwned ? 1 : 0.5)
 					}
 				}
 			}
-			.compositingGroup()
-			
-			HStack {
-				Text("") // the separator insets to the leftmost text it finds
-				Spacer()
-			}
 		}
+		.compositingGroup()
+		.aligningListRowSeparator()
 	}
 }
 

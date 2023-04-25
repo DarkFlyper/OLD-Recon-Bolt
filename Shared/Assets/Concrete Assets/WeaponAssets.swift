@@ -134,6 +134,7 @@ struct WeaponSkin: AssetItem, Codable, Identifiable {
 			static let topFrag = Self("TopFrag")
 			static let vfx = Self("VFX")
 			static let voiceover = Self("Voiceover")
+			static let soundEffects = Self("SoundEffects")
 			
 			static let namespace = "EEquippableSkinLevelItem"
 			var rawValue: String
@@ -143,6 +144,7 @@ struct WeaponSkin: AssetItem, Codable, Identifiable {
 				.killBanner: "Kill Banner",
 				.topFrag: "Champion's Aura",
 				.inspectAndKill: "Inspect & Kill Effects",
+				.soundEffects: "Sound Effects",
 			]
 			
 			var description: String {

@@ -98,6 +98,8 @@
 		B941B6DE25A7BC3800F675C1 /* View+Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B6DD25A7BC3800F675C1 /* View+Styling.swift */; };
 		B941B6E525A7C48300F675C1 /* LoginForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941B6E425A7C48300F675C1 /* LoginForm.swift */; };
 		B941B6EC25A7C83700F675C1 /* example_updates.json in Resources */ = {isa = PBXBuildFile; fileRef = B941B6EB25A7C83700F675C1 /* example_updates.json */; };
+		B94288A129F7A97700F9415B /* FullScreenVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94288A029F7A97700F9415B /* FullScreenVideoPlayer.swift */; };
+		B94288A329F7A99900F9415B /* SkinDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94288A229F7A99900F9415B /* SkinDetailsView.swift */; };
 		B9485F84264B1DD300AC3456 /* AgentAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9485F83264B1DD300AC3456 /* AgentAssets.swift */; };
 		B9485F87264B5BD700AC3456 /* AssetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9485F86264B5BD700AC3456 /* AssetImage.swift */; };
 		B9485F90264B639F00AC3456 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9485F8F264B639F00AC3456 /* Tests.swift */; };
@@ -118,6 +120,9 @@
 		B95FA88229C2D839001D1998 /* UserLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95FA88129C2D839001D1998 /* UserLabel.swift */; };
 		B95FA88429C2D8AB001D1998 /* SharedStatsViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95FA88329C2D8AB001D1998 /* SharedStatsViews.swift */; };
 		B95FA88629C582A5001D1998 /* WinRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95FA88529C582A5001D1998 /* WinRateView.swift */; };
+		B9613E6D29F4E58F0001A048 /* WeaponListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9613E6C29F4E58F0001A048 /* WeaponListView.swift */; };
+		B9613E6F29F4E5C60001A048 /* WeaponInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9613E6E29F4E5C60001A048 /* WeaponInfoView.swift */; };
+		B9613E7129F4E8FB0001A048 /* LabeledRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9613E7029F4E8FB0001A048 /* LabeledRow.swift */; };
 		B963C4702694FDDA0071E14A /* CompetitiveSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B963C46F2694FDDA0071E14A /* CompetitiveSummaryCell.swift */; };
 		B963C4732694FE920071E14A /* example_summary.json in Resources */ = {isa = PBXBuildFile; fileRef = B963C4722694FE920071E14A /* example_summary.json */; };
 		B963C47626950FE90071E14A /* RankInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B963C47526950FE90071E14A /* RankInfoView.swift */; };
@@ -456,6 +461,8 @@
 		B941B6DD25A7BC3800F675C1 /* View+Styling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Styling.swift"; sourceTree = "<group>"; };
 		B941B6E425A7C48300F675C1 /* LoginForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginForm.swift; sourceTree = "<group>"; };
 		B941B6EB25A7C83700F675C1 /* example_updates.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_updates.json; sourceTree = "<group>"; };
+		B94288A029F7A97700F9415B /* FullScreenVideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenVideoPlayer.swift; sourceTree = "<group>"; };
+		B94288A229F7A99900F9415B /* SkinDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinDetailsView.swift; sourceTree = "<group>"; };
 		B9485F83264B1DD300AC3456 /* AgentAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentAssets.swift; sourceTree = "<group>"; };
 		B9485F86264B5BD700AC3456 /* AssetImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetImage.swift; sourceTree = "<group>"; };
 		B9485F8D264B639F00AC3456 /* Recon Bolt Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Recon Bolt Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -501,6 +508,9 @@
 		B9613E6929F2E56C0001A048 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = id; path = id.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		B9613E6A29F2E56E0001A048 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = sv; path = sv.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		B9613E6B29F2E56F0001A048 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = tr; path = tr.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
+		B9613E6C29F4E58F0001A048 /* WeaponListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponListView.swift; sourceTree = "<group>"; };
+		B9613E6E29F4E5C60001A048 /* WeaponInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponInfoView.swift; sourceTree = "<group>"; };
+		B9613E7029F4E8FB0001A048 /* LabeledRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledRow.swift; sourceTree = "<group>"; };
 		B963C46F2694FDDA0071E14A /* CompetitiveSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitiveSummaryCell.swift; sourceTree = "<group>"; };
 		B963C4722694FE920071E14A /* example_summary.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_summary.json; sourceTree = "<group>"; };
 		B963C47526950FE90071E14A /* RankInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankInfoView.swift; sourceTree = "<group>"; };
@@ -789,6 +799,8 @@
 				B9131D6B266AFA7900E85F46 /* MapInfoView.swift */,
 				B9CD085827D2878000BD485A /* AgentListView.swift */,
 				B9CD085B27D28D7500BD485A /* AgentInfoView.swift */,
+				B9613E6C29F4E58F0001A048 /* WeaponListView.swift */,
+				B9613E6E29F4E5C60001A048 /* WeaponInfoView.swift */,
 			);
 			path = Reference;
 			sourceTree = "<group>";
@@ -1063,6 +1075,9 @@
 				B9224D842921E8700056224F /* TransparentNavigationLink.swift */,
 				B95FA88129C2D839001D1998 /* UserLabel.swift */,
 				B9F174F929C97AF7008722B1 /* AssetLabels.swift */,
+				B9613E7029F4E8FB0001A048 /* LabeledRow.swift */,
+				B94288A029F7A97700F9415B /* FullScreenVideoPlayer.swift */,
+				B94288A229F7A99900F9415B /* SkinDetailsView.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -1661,6 +1676,7 @@
 				B95FA88629C582A5001D1998 /* WinRateView.swift in Sources */,
 				B95B1A4F269CE1D10080EC81 /* KDASummaryView.swift in Sources */,
 				B90FFF3E26B4BC57007BE950 /* ContractDetailsView.swift in Sources */,
+				B94288A329F7A99900F9415B /* SkinDetailsView.swift in Sources */,
 				B95FA88229C2D839001D1998 /* UserLabel.swift in Sources */,
 				B932A10C279122FF009FAEE5 /* UpcomingMissionsList.swift in Sources */,
 				B927719C284DBA1D00F25FC3 /* SprayAssets.swift in Sources */,
@@ -1689,6 +1705,7 @@
 				B9F07CBA26474F4E006CD4F5 /* MapAssets.swift in Sources */,
 				B939C81E294A5A4900ABD0C6 /* WidgetLink.swift in Sources */,
 				B939C8052948E80900ABD0C6 /* UserDefault+AppGroups.swift in Sources */,
+				B9613E7129F4E8FB0001A048 /* LabeledRow.swift in Sources */,
 				B932A102279121E2009FAEE5 /* ContractProgressBar.swift in Sources */,
 				B937C39229C22620008A4FFB /* Statistics.swift in Sources */,
 				B9C97DC7263CADFC001E4D1B /* ValorantAPI+Mock.swift in Sources */,
@@ -1699,10 +1716,13 @@
 				B90B4B52267C112F00CACB95 /* CompetitiveTier.swift in Sources */,
 				B9FADF8526A91DC400A0CA15 /* LookupHistory.swift in Sources */,
 				B997FF2529D15AAC00BB09FF /* GameConfigManager.swift in Sources */,
+				B9613E6F29F4E5C60001A048 /* WeaponInfoView.swift in Sources */,
 				B9AEB7D727B0A03F0090A203 /* PartyInfoBox.swift in Sources */,
+				B94288A129F7A97700F9415B /* FullScreenVideoPlayer.swift in Sources */,
 				B9EF0F21263CFC870067176A /* MatchDetailsView.swift in Sources */,
 				B97B5330283002700082CE1C /* MatchListFilter.swift in Sources */,
 				B9DCC24328C96F5400C03B90 /* AboutScreen.swift in Sources */,
+				B9613E6D29F4E58F0001A048 /* WeaponListView.swift in Sources */,
 				B90B4B58267C167B00CACB95 /* PlayerCardAssets.swift in Sources */,
 				B95FA88429C2D8AB001D1998 /* SharedStatsViews.swift in Sources */,
 				B96A0CAA265AE32200844674 /* MissionAssets.swift in Sources */,
