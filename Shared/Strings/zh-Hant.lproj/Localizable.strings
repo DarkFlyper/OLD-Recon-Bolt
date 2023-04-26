@@ -21,7 +21,7 @@
 "%lld RR" = "%lld 分數";
 
 /* Storage Management */
-"%lld from other players" = "%lld 來自其他玩家";
+"%lld from other players" = "%lld 位來自其他玩家";
 
 /* Loadout Item Picker: number of hidden items—this should never show nowadays (Key in .stringsdict) */
 "%lld hidden due to outdated assets" = "%lld 由於資源包過期而隱藏";
@@ -525,6 +525,9 @@ Recon Bolt於2021年當初開始開發，當時還無法在遊戲中看到您的
 /* Pro Store */
 "I hope you enjoy the pro features :)" = "我希望你喜歡專業版功能:)";
 
+/* Login Form: is this safe? */
+"I won't sugarcoat things. Due to the way this app uses the API, I believe there's no other way to sign in than to have people enter their credentials directly. Under those circumstances, there's really no good way for anyone to be sure their credentials remain safe. For what it's worth:" = "我不會粉飾任何東西。 由於這個應用程式使用API的方式運作，我相信除了讓人們直接輸入他們的密碼除外，沒有其他登入方式。 在這種情況下，真的沒有辦法讓任何人確保他們的密碼保持安全。 值得什麼：";
+
 /* No comment provided by engineer. */
 "Identities" = "身份";
 
@@ -601,10 +604,10 @@ Recon Bolt於2021年當初開始開發，當時還無法在遊戲中看到您的
 "Loadout Delta" = "裝備三角形";
 
 /* No comment provided by engineer. */
-"Loadout not loaded!" = "收藏還沒加載！";
+"Loadout Delta is computed as the difference between the average loadout value of players on each team. For example, a loadout delta of +1000 means your team's loadouts were an average of 1000 credits more valuable than the enemy team's in that round." = "裝備三角形是計算為每支團隊玩家的平均裝載價值之間的差異。 例如，負載增量為+1000意味著您團隊的負載平均比該輪敵隊更有價值1000個分數。";
 
 /* No comment provided by engineer. */
-"Match Dodged" = "大廳退出";
+"Loadout not loaded!" = "收藏還沒加載！";
 
 /* No comment provided by engineer. */
 "Lock In" = "鎖定";
@@ -645,6 +648,9 @@ If you don't know your username or don't have one, you can fix that at [account.
 
 /* Match Details: title */
 "Match Details" = "回合詳情";
+
+/* Match List: shown when a match didn't get past Agent Select (because someone dodged/left) */
+"Match Dodged" = "大廳退出";
 
 /* No comment provided by engineer. */
 "Match Lists" = "對戰列表";
@@ -999,7 +1005,7 @@ Login Form: button */
 "TL;DR: you'll have to take my word for it, but Riot doesn't seem to mind." = "太長了不要看：你必須相信我的話，但Riot似乎並不介意。";
 
 /* Bookmark/Player List: lookup tag placeholder */
-"Tag" = "Tag";
+"Tag" = "標籤";
 
 /* Pro Store */
 "Thank you for supporting Recon Bolt!" = "謝謝你的支持 Recon Bolt!";
@@ -1053,6 +1059,17 @@ Hit Distribution Stats: region */
 /* Hit Distribution Stats: footnote */
 "Unfortunately, Valorant doesn't store information about which weapon was used for each hit. All we get is the weapon you started the round with and what weapon you used for each kill. Recon Bolt guesses the weapon involved in each damage based on this information, but it cannot be perfect (and neither can any other tracker)." = "不幸的是，Valorant沒有儲存關於每次命中使用哪種武器的資訊。 我們得到的只是你開始回合的武器，以及你每次殺戮都用什麼武器。 Recon Bolt根據這些資訊猜測每種傷害所涉及的武器，但它不可能是完美的(任何其他Tracker也不行)";
 
+/* Login Form: sign in with google/apple/etc. */
+"Unfortunately, due to technical limitations, you cannot sign into Recon Bolt via your Google account, Apple ID, or anything but a Riot account.
+
+Assuming you signed up for Valorant using Google/Apple/etc., you can set up your account to add a username & password on Riot's site at [account.riotgames.com](https://account.riotgames.com). Note that your Riot ID is **not** the same as your username! If you've forgotten your username, you can reset it at [recovery.riotgames.com](https://recovery.riotgames.com).
+
+On that site, navigate to **Riot Account Sign-in** and set yourself a username and password. When you're done, you can use those same credentials to sign in above! Your social account will stay linked and you'll remain able to sign in with that on PC :)" = "不幸的是，由於技術限制，您無法透過Google帳號, Apple ID或Riot帳戶以外的方式登入Recon Bolt。
+
+假設您使用Google/蘋果等註冊特戰英豪，您可以設定您的帳戶，在Riot的網站上[account.riotgames.com](https://account.riotgames.com)上新增使用者名稱和密碼。 請注意，您的Riot ID與您的使用者名稱**不**相同！ 如果您忘記了使用者名稱，您可以在[recovery.riotgames.com](https://recovery.riotgames.com)上重置它。
+
+在網站上，導航到**Riot帳戶登入**，併為自己設定使用者名稱和密碼。 完成後，您可以使用這些相同的密碼在上面登入！ 您的社交帳戶將保持連結，並且您仍然可以在PC上登入 :)";
+
 /* Round Details: killed by unknown ability */
 "Unknown Ability" = "未知技能";
 
@@ -1086,7 +1103,8 @@ Hit Distribution Stats: region */
 /* Round Details: killed by unknown damage source/type */
 "Unknown Type" = "未知類型";
 
-/* No comment provided by engineer. */
+/* Stats: label for a weapon that the app doesn't know for some reason
+Round Details: killed by unknown/unspecified weapon */
 "Unknown Weapon" = "未知武器";
 
 /* No comment provided by engineer. */

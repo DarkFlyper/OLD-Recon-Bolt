@@ -102,7 +102,7 @@ struct SeasonCollection: AssetItem, Codable {
 		}
 		
 		func tierCollections(relevantTo range: ClosedRange<Date>) -> [Act.WithTiers] {
-			collection.tierCollections(relevantTo: range)
+			collection.tierCollections(relevantTo: adjust(range.lowerBound)...adjust(range.upperBound))
 				.map { $0 <- { adjust(&$0.act) } }
 		}
 	}

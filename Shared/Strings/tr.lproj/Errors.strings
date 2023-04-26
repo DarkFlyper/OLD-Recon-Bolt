@@ -29,6 +29,9 @@ Muhtemelen yanlış hesaba giriş yaptınız; %@";
 /* Riot API Error */
 "Please try again in %lld seconds." = "Lütfen %lld saniye içinde tekrar deneyin.";
 
+/* Riot API Error */
+"The resource could not be found." = "Kaynak bulunamadı.";
+
 /* store widget error */
 "Unknown Offer" = "Bilinmeyen Teklif";
 
@@ -39,7 +42,23 @@ Muhtemelen yanlış hesaba giriş yaptınız; %@";
 "Update to iOS 15.4 to see the reason!" = "Nedenini görmek için iOS 15.4'e güncelleyin!";
 
 /* Riot API Error */
+"Valorant is currently undergoing scheduled maintenance. Riot is probably updating the game!" = "Valorant şu anda planlı bir bakım altında. Riot muhtemelen oyunu güncelliyordur!";
+
+/* No comment provided by engineer. */
+"Widgets require Recon Bolt Pro!" = "Araç Takımları Recon Bolt Pro gerektirir!";
+
+/* Riot API Error */
 "Your session could not be resumed. %@" = "Oturumunuz devam ettirilemedi. %@";
 
 /* Riot API Error */
 "Your session has expired! Please sign in again." = "Oturumunuzun süresi doldu! Lütfen tekrar giriş yapın.";
+
+/* wrong account error */
+"this one has no Riot ID & Tagline." = "bunda Riot ADI ve Etiket yok.";
+
+/* wrong account error */
+"this one is:
+
+%@" = "bu: 
+
+%@";

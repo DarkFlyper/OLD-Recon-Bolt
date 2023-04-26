@@ -72,6 +72,11 @@ Missions Box */
 /* No comment provided by engineer. */
 "A 2FA code has been sent to your email address %@" = "En 2FA-kod har skickats till din e-postadress %@";
 
+/* Match List Filter */
+"A match's queue is unknown until its details are fetched (by tapping it or performing the swipe action).
+Competitive matches after your placements can be identified without their details, however." = "En matchkö är okänd tills dess att detaljerna hämtas (genom att du trycker på den eller sveper den).
+Konkurrerande matchningar efter dina placeringar kan dock identifieras utan deras uppgifter.";
+
 /* No comment provided by engineer. */
 "AFK: %lld" = "AFK: %lld";
 
@@ -161,6 +166,18 @@ Missions Box */
 
 /* No comment provided by engineer. */
 "Assets not loaded!" = "Assets har inte laddats!";
+
+/* Asset Management */
+"Assets out of date!" = "Tillgångarna är föråldrade!";
+
+/* No comment provided by engineer. */
+"Assets should be fetched automatically, but in case something went wrong, feel free to initiate the process manually." = "Tillgångarna ska hämtas automatiskt, men om något gick fel kan du gärna starta processen manuellt.";
+
+/* Asset Management */
+"Assets up to date!" = "Tillgångarna är uppdaterade!";
+
+/* Win Rate Stats: side name */
+"Attacking" = "Attack";
 
 /* Store: available currency */
 "Available:" = "Tillgänglig:";
@@ -498,9 +515,6 @@ DIN FELRAPPORT HÄR
 "Loadout not loaded!" = "Loadout inte laddad!";
 
 /* No comment provided by engineer. */
-"Match Dodged" = "Lobbyn blev dodgad";
-
-/* No comment provided by engineer. */
 "Lock In" = "Lås in Agent";
 
 /* No comment provided by engineer. */
@@ -539,6 +553,9 @@ Om du inte vet ditt användarnamn eller inte har något kan du hitta det på [ac
 
 /* Match Details: title */
 "Match Details" = "Uppgifter om matchen";
+
+/* Match List: shown when a match didn't get past Agent Select (because someone dodged/left) */
+"Match Dodged" = "Lobbyn blev dodgad";
 
 /* No comment provided by engineer. */
 "Match Lists" = "Matchlistor";
@@ -877,7 +894,8 @@ Hit Distribution Stats: region */
 /* Round Details: killed by unknown damage source/type */
 "Unknown Type" = "Okänd typ";
 
-/* No comment provided by engineer. */
+/* Stats: label for a weapon that the app doesn't know for some reason
+Round Details: killed by unknown/unspecified weapon */
 "Unknown Weapon" = "Okänt vapen";
 
 /* No comment provided by engineer. */
@@ -895,8 +913,14 @@ Hit Distribution Stats: region */
 /* Match Details: button */
 "Update Ranks" = "Uppdatera ranks";
 
+/* Login Form */
+"Username" = "Användarnamn";
+
 /* No comment provided by engineer. */
 "Users" = "Användare";
+
+/* Win Rate Stats by Loadout Delta */
+"Value Difference (credits)" = "Värdeskillnad (krediter)";
 
 /* Asset Management: this row shows the version of the current assets */
 "Version" = "Version";
@@ -909,6 +933,9 @@ Hit Distribution Stats: region */
 
 /* Pro Store */
 "View All Features" = "Visa alla funktioner";
+
+/* No comment provided by engineer. */
+"View Full Profile" = "Visa fullständig profil";
 
 /* Match List */
 "View Stats" = "Visa statistik";
@@ -927,6 +954,18 @@ Hit Distribution Stats: region */
 
 /* No comment provided by engineer. */
 "WP: +%lld" = "WP: +%lld";
+
+/* No comment provided by engineer. */
+"Weapon Loadout" = "Vapenutrustning";
+
+/* No comment provided by engineer. */
+"Weapons" = "Vapen";
+
+/* No comment provided by engineer. */
+"Week" = "Vecka";
+
+/* Missions Widget */
+"Weekly" = "Veckovis";
 
 /* Win Rate Stats: chart legend */
 "Wins" = "Vinst";

@@ -582,9 +582,6 @@ Se avete riscontrato un bug o avete un feedback, sono sempre felice di ascoltarl
 "Loadout not loaded!" = "Loadout non caricato!";
 
 /* No comment provided by engineer. */
-"Match Dodged" = "Partita schivata";
-
-/* No comment provided by engineer. */
 "Lock In" = "Bloccaggio";
 
 /* No comment provided by engineer. */
@@ -620,6 +617,9 @@ Se non conosci il tuo nome utente o non ne hai uno, puoi risolvere il problema s
 
 /* Stats: error details */
 "Match" = "Partita";
+
+/* Match List: shown when a match didn't get past Agent Select (because someone dodged/left) */
+"Match Dodged" = "Partita schivata";
 
 /* Store */
 "Unknown Offer" = "Offerta sconosciuta";

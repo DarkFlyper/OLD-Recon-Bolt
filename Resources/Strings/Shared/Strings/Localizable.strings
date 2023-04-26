@@ -674,9 +674,6 @@ If you've encountered a bug or have some feedback, I'm always happy to hear it o
 "Loadout not loaded!" = "Loadout not loaded!";
 
 /* No comment provided by engineer. */
-"Lobby Dodged" = "Lobby Dodged";
-
-/* No comment provided by engineer. */
 "Lock In" = "Lock In";
 
 /* No comment provided by engineer. */
@@ -715,6 +712,9 @@ If you don't know your username or don't have one, you can fix that at [account.
 
 /* Match Details: title */
 "Match Details" = "Match Details";
+
+/* Match List: shown when a match didn't get past Agent Select (because someone dodged/left) */
+"Match Dodged" = "Match Dodged";
 
 /* No comment provided by engineer. */
 "Match Lists" = "Match Lists";
@@ -1179,7 +1179,8 @@ On that site, navigate to **Riot Account Sign-in** and set yourself a username a
 /* Round Details: killed by unknown damage source/type */
 "Unknown Type" = "Unknown Type";
 
-/* No comment provided by engineer. */
+/* Stats: label for a weapon that the app doesn't know for some reason
+Round Details: killed by unknown/unspecified weapon */
 "Unknown Weapon" = "Unknown Weapon";
 
 /* No comment provided by engineer. */

@@ -13,13 +13,9 @@
         <key>NSStringFormatValueTypeKey</key>
         <string>lld</string>
         <key>one</key>
-        <string>1 Ошибка</string>
-        <key>few</key>
-        <string>Ошибки: %lld</string>
-        <key>many</key>
-        <string>Ошибки: %lld</string>
+        <string>%lld Hibák</string>
         <key>other</key>
-        <string>Ошибки: %lld</string>
+        <string>%lld Hibák</string>
       </dict>
     </dict>
     <key>%lld map(s) selected</key>
@@ -33,13 +29,9 @@
         <key>NSStringFormatValueTypeKey</key>
         <string>lld</string>
         <key>one</key>
-        <string>%lld карта выбрана</string>
-        <key>few</key>
-        <string>%lld карты выбрано</string>
-        <key>many</key>
-        <string>%lld карт выбрано</string>
+        <string>%lld Pálya kiválasztva</string>
         <key>other</key>
-        <string>Выбрано карт: %lld</string>
+        <string>%lld Pálya kiválasztva</string>
       </dict>
     </dict>
     <key>%lld queue(s) selected</key>
@@ -53,19 +45,15 @@
         <key>NSStringFormatValueTypeKey</key>
         <string>lld</string>
         <key>one</key>
-        <string>Выбрано режимов: %lld</string>
-        <key>few</key>
-        <string>Выбрано режимов: %lld</string>
-        <key>many</key>
-        <string>Выбрано режимов: %lld</string>
+        <string>%lld Várólista kiválasztva</string>
         <key>other</key>
-        <string>Выбрано режимов: %lld</string>
+        <string>%lld Várólista kiválasztva</string>
       </dict>
     </dict>
     <key>Load Latest %lld Match(es)</key>
     <dict>
       <key>NSStringLocalizedFormatKey</key>
-      <string>Загрузка %#@matches@</string>
+      <string>Töltés %#@matches@</string>
       <key>matches</key>
       <dict>
         <key>NSStringFormatSpecTypeKey</key>
@@ -73,13 +61,9 @@
         <key>NSStringFormatValueTypeKey</key>
         <string>lld</string>
         <key>one</key>
-        <string>Последний матч</string>
-        <key>few</key>
-        <string>Последние %lld матча</string>
-        <key>many</key>
-        <string>Последние %lld матчей</string>
+        <string>Legutóbbi %lld Mecsek</string>
         <key>other</key>
-        <string>Последние матчи: %lld</string>
+        <string>Legutóbbi %lld Mecsek</string>
       </dict>
     </dict>
     <key>%lld match(es)</key>
@@ -93,13 +77,9 @@
         <key>NSStringFormatValueTypeKey</key>
         <string>lld</string>
         <key>one</key>
-        <string>%lld матч</string>
-        <key>few</key>
-        <string>%lld матча</string>
-        <key>many</key>
-        <string>%lld матчей</string>
+        <string>%lld Mecsek</string>
         <key>other</key>
-        <string>%lld матчей</string>
+        <string>%lld Mecsek</string>
       </dict>
     </dict>
     <key>%lld previous act(s)</key>
@@ -113,13 +93,9 @@
         <key>NSStringFormatValueTypeKey</key>
         <string>lld</string>
         <key>one</key>
-        <string>%lld прошлый акт</string>
-        <key>few</key>
-        <string>%lld прошлых акта</string>
-        <key>many</key>
-        <string>%lld прошлых актов</string>
+        <string>%lld Legutóbbi actok</string>
         <key>other</key>
-        <string>%lld прошлых акта</string>
+        <string>%lld Legutóbbi actok</string>
       </dict>
     </dict>
     <key>%lld hidden due to outdated assets</key>
@@ -129,17 +105,13 @@
       <key>items</key>
       <dict>
         <key>one</key>
-        <string>%lld скрыт из-за устаревших ресурсов</string>
-        <key>few</key>
-        <string>%lld скрыто из-за устаревших ресурсов</string>
-        <key>many</key>
-        <string>%lld скрыто из-за устаревших ресурсов</string>
+        <string>%lld Elavult eszközök miatt rejtve</string>
         <key>NSStringFormatSpecTypeKey</key>
         <string>NSStringPluralRuleType</string>
         <key>NSStringFormatValueTypeKey</key>
         <string>lld</string>
         <key>other</key>
-        <string>%lld скрыто из-за устаревших ресурсов</string>
+        <string>%lld Elavult eszközök miatt rejtve</string>
       </dict>
     </dict>
     <key>%lld agents selected</key>
@@ -149,17 +121,13 @@
       <key>agents</key>
       <dict>
         <key>one</key>
-        <string>%lld выбран</string>
-        <key>few</key>
-        <string>%lld выбрано</string>
-        <key>many</key>
-        <string>%lld выбрано</string>
+        <string>%lld Kiválasztva</string>
         <key>NSStringFormatSpecTypeKey</key>
         <string>NSStringPluralRuleType</string>
         <key>NSStringFormatValueTypeKey</key>
         <string>lld</string>
         <key>other</key>
-        <string>%lld выбрано</string>
+        <string>%lld kiválasztva</string>
       </dict>
     </dict>
     <key>%lld queues selected</key>
@@ -169,23 +137,19 @@
       <key>queues</key>
       <dict>
         <key>one</key>
-        <string>%lld выбран</string>
-        <key>few</key>
-        <string>%lld выбрано</string>
-        <key>many</key>
-        <string>%lld выбрано</string>
+        <string>%lld kiválasztva</string>
         <key>NSStringFormatSpecTypeKey</key>
         <string>NSStringPluralRuleType</string>
         <key>NSStringFormatValueTypeKey</key>
         <string>lld</string>
         <key>other</key>
-        <string>%lld выбрано</string>
+        <string>%lld selected</string>
       </dict>
     </dict>
     <key>Using data from %lld match(es) (%lld filtered out)</key>
     <dict>
       <key>NSStringLocalizedFormatKey</key>
-      <string>Используются данные из %#@allowed@ (%#@filtered@)</string>
+      <string>A %#@allowed@ (%#@filtered@) adatainak felhasználásával</string>
       <key>allowed</key>
       <dict>
         <key>NSStringFormatSpecTypeKey</key>
@@ -193,28 +157,20 @@
         <key>NSStringFormatValueTypeKey</key>
         <string>lld</string>
         <key>one</key>
-        <string>%lld матч</string>
-        <key>few</key>
-        <string>%lld матча</string>
-        <key>many</key>
-        <string>%lld матчей</string>
+        <string>egy meccs</string>
         <key>other</key>
-        <string>%lld матчей</string>
+        <string>%lld meccsek</string>
       </dict>
       <key>filtered</key>
       <dict>
         <key>one</key>
-        <string>%lld отфильтрован</string>
-        <key>few</key>
-        <string>%lld отфильтровано</string>
-        <key>many</key>
-        <string>%lld отфильтрованы</string>
+        <string>%lld kiszűrve</string>
         <key>NSStringFormatSpecTypeKey</key>
         <string>NSStringPluralRuleType</string>
         <key>NSStringFormatValueTypeKey</key>
         <string>lld</string>
         <key>other</key>
-        <string>%lld отфильтровано</string>
+        <string>%lld kiszűrve</string>
       </dict>
     </dict>
     <key>%lld/%lld loaded</key>
@@ -224,25 +180,17 @@
       <key>loaded</key>
       <dict>
         <key>one</key>
-        <string>%lld/%#@total@ загружен</string>
-        <key>few</key>
-        <string>%lld/%#@total@ загружено</string>
-        <key>many</key>
-        <string>%lld/%#@total@ загружены</string>
+        <string>%lld/%#@total@ betöltött</string>
         <key>NSStringFormatSpecTypeKey</key>
         <string>NSStringPluralRuleType</string>
         <key>NSStringFormatValueTypeKey</key>
         <string>lld</string>
         <key>other</key>
-        <string>%lld/%#@total@ загружены</string>
+        <string>%lld/%#@total@ betöltött</string>
       </dict>
       <key>total</key>
       <dict>
         <key>one</key>
-        <string>%lld</string>
-        <key>few</key>
-        <string>%lld</string>
-        <key>many</key>
         <string>%lld</string>
         <key>NSStringFormatSpecTypeKey</key>
         <string>NSStringPluralRuleType</string>
@@ -259,25 +207,17 @@
       <key>owned</key>
       <dict>
         <key>one</key>
-        <string>%lld/%#@total@ принадлежит</string>
-        <key>few</key>
-        <string>%lld/%#@total@ принадлежат</string>
-        <key>many</key>
-        <string>%lld/%#@total@ принадлежит</string>
+        <string>%lld/%#@total@ birtokolt</string>
         <key>NSStringFormatSpecTypeKey</key>
         <string>NSStringPluralRuleType</string>
         <key>NSStringFormatValueTypeKey</key>
         <string>lld</string>
         <key>other</key>
-        <string>%lld/%#@total@ принадлежит</string>
+        <string>%lld/%#@total@ birtokolt</string>
       </dict>
       <key>total</key>
       <dict>
         <key>one</key>
-        <string>%lld</string>
-        <key>few</key>
-        <string>%lld</string>
-        <key>many</key>
         <string>%lld</string>
         <key>NSStringFormatSpecTypeKey</key>
         <string>NSStringPluralRuleType</string>
@@ -290,7 +230,7 @@
     <key>Data from %lld game(s) (%lld skipped lacking data)</key>
     <dict>
       <key>NSStringLocalizedFormatKey</key>
-      <string>Данные из %#@games@ (%#@skipped@)</string>
+      <string>A %#@games@ (%#@skipped@) adatai</string>
       <key>games</key>
       <dict>
         <key>NSStringFormatSpecTypeKey</key>
@@ -298,28 +238,20 @@
         <key>NSStringFormatValueTypeKey</key>
         <string>lld</string>
         <key>other</key>
-        <string>%lld игр</string>
+        <string>%lld meccsek</string>
         <key>one</key>
-        <string>%lld игра</string>
-        <key>few</key>
-        <string>%lld игры</string>
-        <key>many</key>
-        <string>%lld игр</string>
+        <string>%lld meccs</string>
       </dict>
       <key>skipped</key>
       <dict>
         <key>one</key>
-        <string>%lld пропущен из-за потери данных</string>
-        <key>few</key>
-        <string>%lld пропущено из-за потери данных</string>
-        <key>many</key>
-        <string>%lld пропущено из-за потери данных</string>
+        <string>%lld kihagyott hiányzó adatok</string>
         <key>NSStringFormatSpecTypeKey</key>
         <string>NSStringPluralRuleType</string>
         <key>NSStringFormatValueTypeKey</key>
         <string>lld</string>
         <key>other</key>
-        <string>%lld пропущено из-за потери данных</string>
+        <string>%lld kihagyott hiányzó adatok</string>
       </dict>
     </dict>
   </dict>

@@ -1,4 +1,40 @@
 
+/* Used for matches less than a day ago. %@ is replaced by the number of hours/minutes, e.g. '3h ago'. */
+"%@ ago" = "%@ önce";
+
+/* Missions Widget: countdown label when the target is in the future. e.g. '< 2d 3h' */
+"< %@" = "< %@";
+
+/* No comment provided by engineer. */
+"AFK: %lld" = "AFK: %lld";
+
+/* Settings: section */
+"About" = "Hakkında";
+
+/* No comment provided by engineer. */
+"About Recon Bolt" = "Recon Bolt Hakkında";
+
+/* Settings: section */
+"Accounts" = "Hesaplar";
+
+/* Contract Picker: button */
+"Activate" = "Etkinleştir";
+
+/* Contract Picker */
+"Active" = "Aktif";
+
+/* Account Settings */
+"Add another Account" = "Başka bir Hesap Ekle";
+
+/* No comment provided by engineer. */
+"Advanced Settings" = "Gelişmiş Ayarlar";
+
+/* No comment provided by engineer. */
+"App Icon" = "Uygulama Simgesi";
+
+/* Pro Features List */
+"As thanks for your support, you get to show off your status with an exclusive app icon!" = "Desteğinize bir teşekkür olarak, size verilen özel bir uygulama simgesi ile statünüzü gösterebilirsiniz!";
+
 /* Store */
 "Unknown Offer" = "Bilinmeyen Teklif";
 
