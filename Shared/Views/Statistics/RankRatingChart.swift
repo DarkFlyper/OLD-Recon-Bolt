@@ -131,10 +131,10 @@ struct RankRatingChart: View {
 			var lastUpdate: CompetitiveUpdate? // used to determine when to start a new line (discontiguous data or season change)
 			var series = 0
 			for (index, match) in matches.enumerated() {
-				while currentAct?.act.timeSpan.contains(match.startTime) != true {
-					currentAct = acts.isEmpty ? nil : acts.removeFirst() // no data on acts this late, apparently
-					currentAbsoluteThreshold = currentAct?.act.usesAbsoluteRRForImmortalPlus == true
-					? currentAct?.tiers.lowestImmortalPlusTier() : nil
+				while currentAct?.act.timeSpan.contains(match.startTime) != true, let next = acts.popFirst() {
+					currentAct = next // no data on acts this late, apparently
+					currentAbsoluteThreshold = next.act.usesAbsoluteRRForImmortalPlus
+					? next.tiers.lowestImmortalPlusTier() : nil
 				}
 				
 				if lastUpdate.map(match.isContiguous(from:)) != true {
