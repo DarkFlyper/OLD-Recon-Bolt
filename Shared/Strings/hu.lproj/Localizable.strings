@@ -649,7 +649,7 @@ Ha nem tudod a felhasználóneved, vagy nincs, akkor ezt a [account.riotgames.co
 "Match Loading Errors" = "Meccs betöltési hibák";
 
 /* App Theme: automatically match the system theme */
-"Match System" = "Meccs rendszer";
+"Match System" = "Ugyanaz mint a rendszer beállítása";
 
 /* Match List: section */
 "Matches" = "Meccsek";
