@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>%lld Error(s)</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@errors@</string>
+      <key>errors</key>
+      <dict>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>one</key>
+        <string>%lld Hibák</string>
+        <key>other</key>
+        <string>%lld Hibák</string>
+      </dict>
+    </dict>
+    <key>%lld map(s) selected</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@maps@</string>
+      <key>maps</key>
+      <dict>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>one</key>
+        <string>%lld Pálya kiválasztva</string>
+        <key>other</key>
+        <string>%lld Pálya kiválasztva</string>
+      </dict>
+    </dict>
+    <key>%lld queue(s) selected</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@queues@</string>
+      <key>queues</key>
+      <dict>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>one</key>
+        <string>%lld Várólista kiválasztva</string>
+        <key>other</key>
+        <string>%lld Várólista kiválasztva</string>
+      </dict>
+    </dict>
+    <key>Load Latest %lld Match(es)</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>Töltés %#@matches@</string>
+      <key>matches</key>
+      <dict>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>one</key>
+        <string>Legutóbbi %lld Mecsek</string>
+        <key>other</key>
+        <string>Legutóbbi %lld Mecsek</string>
+      </dict>
+    </dict>
+    <key>%lld match(es)</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@matches@</string>
+      <key>matches</key>
+      <dict>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>one</key>
+        <string>%lld Mecsek</string>
+        <key>other</key>
+        <string>%lld Mecsek</string>
+      </dict>
+    </dict>
+    <key>%lld previous act(s)</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@acts@</string>
+      <key>acts</key>
+      <dict>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>one</key>
+        <string>%lld Legutóbbi actok</string>
+        <key>other</key>
+        <string>%lld Legutóbbi actok</string>
+      </dict>
+    </dict>
+    <key>%lld hidden due to outdated assets</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@items@</string>
+      <key>items</key>
+      <dict>
+        <key>one</key>
+        <string>%lld Elavult eszközök miatt rejtve</string>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld Elavult eszközök miatt rejtve</string>
+      </dict>
+    </dict>
+    <key>%lld agents selected</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@agents@</string>
+      <key>agents</key>
+      <dict>
+        <key>one</key>
+        <string>%lld Kiválasztva</string>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld kiválasztva</string>
+      </dict>
+    </dict>
+    <key>%lld queues selected</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@queues@</string>
+      <key>queues</key>
+      <dict>
+        <key>one</key>
+        <string>%lld kiválasztva</string>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld selected</string>
+      </dict>
+    </dict>
+    <key>Using data from %lld match(es) (%lld filtered out)</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>A %#@allowed@ (%#@filtered@) adatainak felhasználásával</string>
+      <key>allowed</key>
+      <dict>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>one</key>
+        <string>egy meccs</string>
+        <key>other</key>
+        <string>%lld meccsek</string>
+      </dict>
+      <key>filtered</key>
+      <dict>
+        <key>one</key>
+        <string>%lld kiszűrve</string>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld kiszűrve</string>
+      </dict>
+    </dict>
+    <key>%lld/%lld loaded</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@loaded@</string>
+      <key>loaded</key>
+      <dict>
+        <key>one</key>
+        <string>%lld/%#@total@ betöltött</string>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld/%#@total@ betöltött</string>
+      </dict>
+      <key>total</key>
+      <dict>
+        <key>one</key>
+        <string>%lld</string>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld</string>
+      </dict>
+    </dict>
+    <key>%lld/%lld owned</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@owned@</string>
+      <key>owned</key>
+      <dict>
+        <key>one</key>
+        <string>%lld/%#@total@ birtokolt</string>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld/%#@total@ birtokolt</string>
+      </dict>
+      <key>total</key>
+      <dict>
+        <key>one</key>
+        <string>%lld</string>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld</string>
+      </dict>
+    </dict>
+    <key>Data from %lld game(s) (%lld skipped lacking data)</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>A %#@games@ (%#@skipped@) adatai</string>
+      <key>games</key>
+      <dict>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld meccsek</string>
+        <key>one</key>
+        <string>%lld meccs</string>
+      </dict>
+      <key>skipped</key>
+      <dict>
+        <key>one</key>
+        <string>%lld kihagyott hiányzó adatok</string>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld kihagyott hiányzó adatok</string>
+      </dict>
+    </dict>
+  </dict>
+</plist>

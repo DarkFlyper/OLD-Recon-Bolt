@@ -146,7 +146,7 @@ Competitive matches after your placements can be identified without their detail
 "Any Queue" = "Semua Mode";
 
 /* Asset Management */
-"Anything with images will not display correctly." = "Hal-hal yang menggunakan gambar disini tidak ada ditampilkan dengan menyeluruh.";
+"Anything with images will not display correctly." = "Hal-hal yang menggunakan gambar disini tidak akan ditampilkan dengan menyeluruh.";
 
 /* No comment provided by engineer. */
 "App Icon" = "Ikon Aplikasi";

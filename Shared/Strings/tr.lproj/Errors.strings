@@ -44,8 +44,21 @@ Muhtemelen yanlış hesaba giriş yaptınız; %@";
 /* Riot API Error */
 "Valorant is currently undergoing scheduled maintenance. Riot is probably updating the game!" = "Valorant şu anda planlı bir bakım altında. Riot muhtemelen oyunu güncelliyordur!";
 
+/* No comment provided by engineer. */
+"Widgets require Recon Bolt Pro!" = "Araç Takımları Recon Bolt Pro gerektirir!";
+
 /* Riot API Error */
 "Your session could not be resumed. %@" = "Oturumunuz devam ettirilemedi. %@";
 
 /* Riot API Error */
 "Your session has expired! Please sign in again." = "Oturumunuzun süresi doldu! Lütfen tekrar giriş yapın.";
+
+/* wrong account error */
+"this one has no Riot ID & Tagline." = "bunda Riot ADI ve Etiket yok.";
+
+/* wrong account error */
+"this one is:
+
+%@" = "bu: 
+
+%@";
