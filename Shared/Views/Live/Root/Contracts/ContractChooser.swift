@@ -62,7 +62,7 @@ struct ContractChooser: View {
 					}
 					
 					VStack(alignment: .leading) {
-						Text(data.info.displayName)
+						Text(data.info.displayName.localizedCapitalized)
 						
 						if isActive {
 							Text("Active", comment: "Contract Picker")
