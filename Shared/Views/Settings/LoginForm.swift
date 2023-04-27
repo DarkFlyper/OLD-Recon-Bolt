@@ -27,13 +27,14 @@ struct LoginForm: View {
 							TextField(text: $credentials.username) {
 								Text("Username", comment: "Login Form")
 							}
-							.autocapitalization(.none)
+							.textContentType(.username)
 							.submitLabel(.next)
 							.onSubmit { isPasswordFieldFocused = true }
 							
 							SecureField(text: $credentials.password) {
 								Text("Password", comment: "Login Form")
 							}
+							.textContentType(.password)
 							.submitLabel(.go)
 							.onSubmit {
 								isPasswordFieldFocused = false
@@ -41,6 +42,8 @@ struct LoginForm: View {
 							}
 							.focused($isPasswordFieldFocused)
 						}
+						.autocorrectionDisabled()
+						.textInputAutocapitalization(.never)
 						.frame(maxWidth: 240)
 						
 						if credentials.username.contains("#") {

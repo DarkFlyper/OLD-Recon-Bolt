@@ -53,6 +53,8 @@ struct LookupCell: View {
 						focusedField = .tagLine
 					}
 				}
+				.textInputAutocapitalization(.never)
+				.autocorrectionDisabled()
 				.opacity(isLoading ? 0.5 : 1)
 				
 				Spacer()
