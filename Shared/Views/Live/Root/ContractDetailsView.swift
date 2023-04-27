@@ -63,7 +63,7 @@ struct ContractDetailsView: View {
 				}
 				
 				VStack(alignment: .leading) {
-					Text(data.info.displayName)
+					Text(data.info.displayName.localizedCapitalized) // capitalization is inconsistent in turkish assets
 						.fontWeight(.semibold)
 					
 					HStack {
