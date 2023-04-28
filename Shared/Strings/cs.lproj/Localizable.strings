@@ -405,8 +405,11 @@ Stats: error details */
 /* Asset Management */
 "Error downloading assets!" = "Chyba při stahování assetů!";
 
+/* Request Log: title for an exchange */
+"Exchange" = "Exchange";
+
 /* Request Log: title for detailed view of request body/contents */
-"Exchange Body" = "Tělo";
+"Exchange Body" = "Body";
 
 /* Statistics Filter: button to exclude all agents */
 "Exclude All Agents" = "Vyloučit všechny";
@@ -636,7 +639,7 @@ Pokud své uživatelské jméno neznáte nebo ho nemáte, můžete jej zjistit n
 "Member" = "Člen";
 
 /* Request Log */
-"Method" = "Metoda";
+"Method" = "Method";
 
 /* Asset Management */
 "Missing assets!" = "Chybí assety!";
@@ -765,6 +768,15 @@ Playtime Stats: section */
 
 /* No comment provided by engineer. */
 "Rate on the App Store" = "Hodnotit v App Store";
+
+/* No comment provided by engineer. */
+"Recon Bolt Pro" = "Recon Bolt Pro";
+
+/* Pro Features List */
+"Recon Bolt Pro supports Family Sharing, meaning if just one member of your iCloud family buys it, everyone can use it!" = "Recon Bolt Pro podporuje rodinné sdílení. To znamená, že pokud si ho koupí jeden člen vaší rodiny, mohou ho používat všichni!";
+
+/* Pro Features List */
+"Recon Bolt does not have and will never have ads. The only way it can make money is through in-app purchases." = "Recon Bolt nemá a nikdy nebude mít reklamy. Jediný způsob, jak může vydělávat peníze, jsou nákupy v aplikaci.";
 
 /* Top-Level Tab Title */
 "Reference" = "Reference";
