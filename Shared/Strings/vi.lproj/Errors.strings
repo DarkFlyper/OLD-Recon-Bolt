@@ -1,5 +1,5 @@
 /* Pro Store: error restoring purchase */
-"A previous transaction was found, but it could not be verified! %@" = "Tìm thấy giao dịch trước đó, nhưng không thể xác thực! %@";
+"A previous transaction was found, but it could not be verified! %@" = "Tìm thấy một giao dịch trước đó, nhưng không thể xác thực! %@";
 
 /* error loading the account for a widget */
 "Could not load active account!" = "Không thể tải dữ liệu cho tài khoản hiện tại!";
