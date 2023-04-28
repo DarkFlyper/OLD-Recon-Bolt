@@ -13,17 +13,6 @@ extension Team.ID {
 			return nil
 		}
 	}
-	
-	var name: Text {
-		switch rawID {
-		case "Blue":
-			return Text("Blue Team", tableName: "Team Names")
-		case "Red":
-			return Text("Red Team", tableName: "Team Names")
-		case let other:
-			return Text("\(other) Team", tableName: "Team Names", comment: "Used for unknown team IDs.")
-		}
-	}
 }
 
 extension Location: Identifiable {

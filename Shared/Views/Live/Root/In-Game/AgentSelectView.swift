@@ -50,10 +50,7 @@ struct AgentSelectView: View {
 			}
 		}
 		.disabled(hasEnded)
-		.overlay(alignment: .top) {
-			infoBox
-				.padding()
-		}
+		.overlay(alignment: .top) { infoBox }
 		.navigationTitle("Agent Select")
 		.navigationBarTitleDisplayMode(.inline)
 		.task {
@@ -93,11 +90,13 @@ struct AgentSelectView: View {
 		.symbolVariant(.fill)
 	}
 	
+	private let heroHeight: CGFloat = 150
+	
 	@ViewBuilder
 	private var hero: some View {
 		MapImage.splash(pregameInfo.mapID)
 			.aspectRatio(contentMode: .fill)
-			.frame(height: 150)
+			.frame(height: heroHeight)
 			.clipped()
 			// TODO: this doesn't do anything—probably a bug?
 			//.ignoresSafeArea()
@@ -124,14 +123,13 @@ struct AgentSelectView: View {
 			}
 			.font(.title2.weight(.bold))
 			.foregroundStyle(.primary)
-			
-			pregameInfo.team.id.name
-				.foregroundColor(pregameInfo.team.id.color)
 		}
 		.padding()
 		.background(Material.thin)
 		.cornerRadius(8)
 		.shadow(radius: 10)
+		.padding()
+		.frame(minHeight: heroHeight)
 	}
 	
 	struct PlayerView: View {
