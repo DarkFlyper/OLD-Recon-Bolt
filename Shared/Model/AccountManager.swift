@@ -15,6 +15,7 @@ final class AccountManager: ObservableObject {
 			if oldValue !== activeAccount {
 				oldValue?.invalidate()
 			}
+			linkActiveAccount()
 			storage.activeAccount = activeAccount?.id
 			updateClientVersion()
 		}
@@ -49,9 +50,11 @@ final class AccountManager: ObservableObject {
 		
 		self.storedAccounts = storage.storedAccounts
 		self.clientVersion = storage.clientVersion
+		
 		if let accountID = storage.activeAccount {
 			do {
 				self.activeAccount = try loadAccount(for: accountID)
+				linkActiveAccount()
 			} catch {
 				print("Could not load active account!")
 				print(error.localizedDescription)
@@ -76,6 +79,12 @@ final class AccountManager: ObservableObject {
 		}
 	}
 #endif
+	
+	private var accountChangeForwarding: AnyCancellable?
+	private func linkActiveAccount() {
+		accountChangeForwarding = activeAccount?.objectWillChange
+			.sink { [objectWillChange] in objectWillChange.send() }
+	}
 	
 	func loadAccount(for id: User.ID) throws -> StoredAccount {
 		try .init(loadingFor: id, using: context)
