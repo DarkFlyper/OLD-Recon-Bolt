@@ -79,7 +79,7 @@ Missions Box */
 "< %@" = "< %@";
 
 /* No comment provided by engineer. */
-"A 2FA code has been sent to your email address %@" = "Mã xác thực 2 yếu tố đã được gửi đến địa chỉ email của bạn %@";
+"A 2FA code has been sent to your email address %@" = "Một mã xác thực 2 yếu tố đã được gửi đến địa chỉ email của bạn %@";
 
 /* Match List Filter */
 "A match's queue is unknown until its details are fetched (by tapping it or performing the swipe action).
@@ -506,11 +506,11 @@ Recon Bolt started development in early 2021, back when it wasn't yet possible t
 
 As you can guess, the scope expanded massively over time to what you're using now. I hope you're enjoying it!
 
-If you've encountered a bug or have some feedback, I'm always happy to hear it on the Discord Server or GitHub :)" = "Chào! Tôi là Julian Dunskus và tôi đã tạo ứng dụng này.
+If you've encountered a bug or have some feedback, I'm always happy to hear it on the Discord Server or GitHub :)" = "Xin chào! Tôi là Julian Dunskus và tôi đã tạo ứng dụng này.
 
-Recon Bolt bắt đầu phát triển vào đầu năm 2021, khi chưa thể xem sự tăng giảm ĐXH của bạn trong trò chơi, nhưng API đã cung cấp những con số đó. Tôi đã tạo ra một ứng dụng để xem các con số và hiểu rõ hơn về sự thay đổi thứ hạng của mình. 
+Recon Bolt bắt đầu phát triển vào đầu năm 2021, khi chưa thể xem sự tăng giảm ĐXH của bạn trong trò chơi, nhưng API đã cung cấp những thông số đó. Tôi đã tạo ra một ứng dụng để xem các con số và hiểu rõ hơn về sự thay đổi thứ hạng của mình. 
 
-Như bạn có thể đoán được, dự án ngày càng trở lên lớn hơn theo thời gian, cuối cùng trở thành ứng dụng mà bạn đang sử dụng. Tôi hy vọng bạn thích nó! 
+Như bạn có thể đoán được, dự án ngày càng trở nên lớn hơn theo thời gian và cuối cùng trở thành ứng dụng mà bạn đang sử dụng. Tôi hy vọng bạn thích nó! 
 
 Nếu bạn gặp lỗi hoặc có một số phản hồi, tôi luôn sẵn lòng lắng nghe điều đó trên Discord hoặc GitHub :)";
 
