@@ -129,12 +129,12 @@ struct RoundInfoView: View {
 private func formattedTime(millis: Int, includeMillis: Bool = false) -> some View {
 	let inSeconds = millis / 1000
 	let seconds = inSeconds % 60
-	let secondsPart = "\(seconds)".padding(toLength: 2, withPad: "0", startingAt: 0)
+	let secondsPart = "\(seconds)".zeroPadded(toLength: 2)
 	let minutes = inSeconds / 60
 	
 	HStack(spacing: 0) {
 		if includeMillis {
-			let millisPart = "\(millis % 1000)".padding(toLength: 3, withPad: "0", startingAt: 0)
+			let millisPart = "\(millis % 1000)".zeroPadded(toLength: 3)
 			Text("\(minutes):\(secondsPart).\(millisPart)", comment: "Time Formatting: minutes, seconds, & milliseconds (used in round details view)")
 				.foregroundStyle(.secondary)
 		} else {
@@ -142,6 +142,14 @@ private func formattedTime(millis: Int, includeMillis: Bool = false) -> some Vie
 		}
 	}
 	.monospacedDigit()
+}
+
+extension String {
+	func zeroPadded(toLength length: Int) -> Self {
+		let toPad = length - count
+		guard toPad > 0 else { return self }
+		return .init(repeating: "0", count: toPad) + self
+	}
 }
 
 extension RoundEvent {
