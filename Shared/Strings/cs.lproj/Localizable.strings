@@ -409,7 +409,7 @@ Stats: error details */
 "Exchange" = "Exchange";
 
 /* Request Log: title for detailed view of request body/contents */
-"Exchange Body" = "Body";
+"Exchange Body" = "Tělo";
 
 /* Statistics Filter: button to exclude all agents */
 "Exclude All Agents" = "Vyloučit všechny";
@@ -514,6 +514,9 @@ Pokud jste narazili na chybu nebo máte nějakou zpětnou vazbu, vždy si ji rá
 /* Pro Store */
 "I hope you enjoy the pro features :)" = "Doufám, že si užijete funkce verze Pro :)";
 
+/* Login Form: is this safe? */
+"I won't sugarcoat things. Due to the way this app uses the API, I believe there's no other way to sign in than to have people enter their credentials directly. Under those circumstances, there's really no good way for anyone to be sure their credentials remain safe. For what it's worth:" = "Nechci tento problém zlehčovat. Vzhledem ke způsobu, jakým tato aplikace využívá rozhraní API, si nemyslím, že existuje jiný způsob přihlášení, než že uživatelé zadají své přihlašovací údaje přímo do aplikace. Za těchto okolností neexistuje žádný dobrý způsob, jak zajistit, aby přihlašovací údaje zůstaly v bezpečí. Nicméně, ať to stojí, co to stojí:";
+
 /* No comment provided by engineer. */
 "Identities" = "Identity";
 
@@ -581,6 +584,9 @@ Pokud jste narazili na chybu nebo máte nějakou zpětnou vazbu, vždy si ji rá
 "Loading Store Info…" = "Načítání informací o obchodě…";
 
 /* No comment provided by engineer. */
+"Loading request log…" = "Načítání záznamu požadavků…";
+
+/* No comment provided by engineer. */
 "Loadout" = "Inventář";
 
 /* No comment provided by engineer. */
@@ -632,8 +638,14 @@ Pokud své uživatelské jméno neznáte nebo ho nemáte, můžete jej zjistit n
 /* Match Details: title */
 "Match Details" = "Podrobnosti o zápase";
 
+/* Match List: shown when a match didn't get past Agent Select (because someone dodged/left) */
+"Match Dodged" = "Zápasu se podařilo vyhnout";
+
 /* No comment provided by engineer. */
 "Match Lists" = "Seznamy Zápasů";
+
+/* No comment provided by engineer. */
+"Match Loading Errors" = "Chyba při načítání zápasu";
 
 /* App Theme: automatically match the system theme */
 "Match System" = "Automaticky";
@@ -652,6 +664,9 @@ Pokud své uživatelské jméno neznáte nebo ho nemáte, můžete jej zjistit n
 
 /* Asset Management */
 "Missing assets!" = "Chybí assety!";
+
+/* Missions Box */
+"Missing progress for contract!" = "Žádné data pro tento kontrakt!";
 
 /* No comment provided by engineer. */
 "Missing season data!" = "Chybějící data o actu!";
@@ -673,6 +688,9 @@ Pokud své uživatelské jméno neznáte nebo ho nemáte, můžete jej zjistit n
 
 /* Bookmark/Player List: lookup name placeholder */
 "Name" = "Jméno";
+
+/* Asset Management */
+"Newest available: %@" = "Nejnovější dostupné: %@";
 
 /* Store */
 "Night Market" = "Noční Trh";
@@ -696,7 +714,19 @@ Pokud své uživatelské jméno neznáte nebo ho nemáte, můžete jej zjistit n
 "No data" = "Žádné data";
 
 /* No comment provided by engineer. */
+"No games played with premade teammates." = "Žádné zápasy hrané v party.";
+
+/* No comment provided by engineer. */
 "No minimap available!" = "Minimapa není k dispozici!";
+
+/* No comment provided by engineer. */
+"No non-premade players encountered repeatedly. (Un)lucky you!" = "Opakovaně jste se nesetkali s žádným hráčem, který by nebyl v party. (Ne)štěstí!";
+
+/* No comment provided by engineer. */
+"Normalize Charts" = "Normalizace Grafů";
+
+/* Party Box */
+"Not Ready" = "Nepřipraven";
 
 /* Hit Distribution Stats: error */
 "Not enough data!" = "Nedostatek dat!";
@@ -719,8 +749,14 @@ Pokud své uživatelské jméno neznáte nebo ho nemáte, můžete jej zjistit n
 /* No comment provided by engineer. */
 "Official Website" = "Oficiální Webové Stránky";
 
+/* No comment provided by engineer. */
+"Open or swipe to fetch details." = "Otevřete nebo přejeďte prstem pro načtení podrobností.";
+
 /* Storage Management */
 "Other Players" = "Ostatní Hráči";
+
+/* Buddy Picker: alert shown when both instances of a buddy are in use */
+"Out of instances!" = "Žádné zbývající instance!";
 
 /* Win Rate Stats: section
 Playtime Stats: section */
@@ -793,6 +829,9 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Rate on the App Store" = "Hodnotit v App Store";
 
+/* accessibility label */
+"Ready" = "Připraven";
+
 /* No comment provided by engineer. */
 "Recon Bolt Pro" = "Recon Bolt Pro";
 
@@ -839,6 +878,9 @@ Request Log: title */
 /* No comment provided by engineer. */
 "Response Code" = "Kód Odpovědi";
 
+/* Pro Store: error alert title */
+"Restore Failed!" = "Obnovení se nezdařilo!";
+
 /* Pro Store: button */
 "Restore Purchase" = "Obnovení Nákupu";
 
@@ -850,6 +892,9 @@ Request Log: title */
 
 /* Round Details: title */
 "Round Details" = "Podrobnosti o kole";
+
+/* Win Rate Stats: section */
+"Rounds by Loadout Delta" = "Kola podle delty výstroje";
 
 /* Win Rate Stats: section */
 "Rounds by Side" = "Kola podle strany";
@@ -871,6 +916,9 @@ Request Log: title */
 
 /* Playtime Stats: title for view of matches in common with another player */
 "Shared Matches" = "Sdílené Zápasy";
+
+/* No comment provided by engineer. */
+"Show Unfetched Matches" = "Zobrazit Nenačtené Zápasy";
 
 /* No comment provided by engineer. */
 "Show all matches" = "Zobrazit všechny zápasy";
@@ -903,8 +951,17 @@ Login Form: button */
 /* Round Details: Spike Event */
 "Spike Defused" = "Spike Zneškodněn";
 
+/* Round Details: Spike Event */
+"Spike Planted" = "Spike Položen";
+
 /* No comment provided by engineer. */
 "Start Matchmaking?" = "Zahájit Vyhledávání?";
+
+/* Win Rate Stats: accessibility label */
+"Starting Side" = "Počáteční Strana";
+
+/* Win Rate Stats */
+"Starting Side:" = "Počáteční Strana:";
 
 /* No comment provided by engineer. */
 "Statistics" = "Statistiky";
@@ -921,17 +978,29 @@ Login Form: button */
 /* No comment provided by engineer. */
 "Store not loaded!" = "Obchod není načten!";
 
+/* No comment provided by engineer. */
+"Storefront outdated!" = "Obchod není aktuální!";
+
 /* Pro Features List */
 "Support Development :)" = "Podpora vývoje :)";
 
+/* Pro Store */
+"Support Further Development!" = "Podpořte Budoucí Vývoj!";
+
 /* Missions Box: button */
 "Switch Contract" = "Změnit Kontrakt";
+
+/* Login Form: is this safe? */
+"TL;DR: you'll have to take my word for it, but Riot doesn't seem to mind." = "Budete mě muset vzít za slovo, ale Riotu to zřejmě nevadí.";
 
 /* Bookmark/Player List: lookup tag placeholder */
 "Tag" = "Tag";
 
 /* Pro Store */
 "Thank you for supporting Recon Bolt!" = "Děkujeme za podporu Recon Boltu!";
+
+/* Login Form: is this safe? */
+"The code is open-source and visible on GitHub; you can build it yourself if you want to be sure of what's running." = "Kód je open source a viditelný na GitHubu; pokud si chcete být jisti, že se jedná o stejný kód, můžete si jej sestavit sami.";
 
 /* App Icon Description: default */
 "The default look of Recon Bolt." = "Výchozí vzhled Recon Boltu.";
@@ -941,6 +1010,9 @@ Login Form: button */
 
 /* No comment provided by engineer. */
 "Theme" = "Téma";
+
+/* No comment provided by engineer. */
+"These are the last %lld requests sent by the app, along with their responses." = "%lld posledních požadavků odeslané aplikací a odpovědi na ně.";
 
 /* Statistics error for iOS <16 */
 "This feature requires iOS 16 or newer." = "Tato funkce vyžaduje iOS 16 nebo novější.";
@@ -969,6 +1041,9 @@ Hit Distribution Stats: region */
 
 /* Missions Box: header, shown when a mission is not daily or weekly (should not happen unless Riot changes something) */
 "Uncategorized Missions" = "Nezařazené úkoly";
+
+/* Shown when a match does not match the filter and its details have not been fetched. */
+"Unfetched" = "Není načten";
 
 /* Hit Distribution Stats: footnote */
 "Unfortunately, Valorant doesn't store information about which weapon was used for each hit. All we get is the weapon you started the round with and what weapon you used for each kill. Recon Bolt guesses the weapon involved in each damage based on this information, but it cannot be perfect (and neither can any other tracker)." = "Valorant bohužel neukládá informace o tom, jaká zbraň byla použita pro každý zásah. Jediné, co se dozvíme, je, s jakou zbraní jste kolo zahájili a jakou zbraň jste použili při každém zabití. Recon Bolt na základě těchto informací odhaduje, jaká zbraň se podílela na každém poškození, ale nemůže být dokonalý (stejně jako žádný jiný tracker).";
@@ -1062,6 +1137,9 @@ Round Details: killed by unknown/unspecified weapon */
 
 /* Match List */
 "View Stats" = "Zobrazit Statistiky";
+
+/* Statistics Pro purchase prompt: button */
+"View Store in Settings" = "Zjistit více";
 
 /* Rank Widget: description */
 "View your current rank." = "Zobrazte si svůj aktuální rank.";
