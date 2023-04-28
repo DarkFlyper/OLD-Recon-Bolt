@@ -12,7 +12,7 @@
 "%@%%" = "%@%%";
 
 /* Missions Box: always at least 3 */
-"%lld Future Weeklies" = "%lld Nhiệm vụ trong tương lai";
+"%lld Future Weeklies" = "%lld nhiệm vụ tương lai";
 
 /* Missions Box: always at least 3 */
 "%lld Queued-Up Weeklies" = "%lld hàng chờ nhiệm vụ";

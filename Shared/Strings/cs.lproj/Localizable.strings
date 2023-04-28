@@ -86,7 +86,7 @@ Competitive matches after your placements can be identified without their detail
 "About" = "О Recon Boltu";
 
 /* No comment provided by engineer. */
-"About Recon Bolt" = "O Recon Bolt";
+"About Recon Bolt" = "O Recon Boltu";
 
 /* Settings: section */
 "Accounts" = "Účty";
@@ -282,7 +282,7 @@ Playtime Stats: section */
 "Contract complete!" = "Kontrakt dokončen!";
 
 /* Request Log: button to copy the request's body/contents (accessibility label) */
-"Copy Body" = "Kopírovat tělo";
+"Copy Body" = "Kopírovat Tělo";
 
 /* Stats: error details: accessibility label */
 "Copy Error" = "Kopírovat Chybu";
@@ -405,6 +405,9 @@ Stats: error details */
 /* Asset Management */
 "Error downloading assets!" = "Chyba při stahování assetů!";
 
+/* Request Log: title for an exchange */
+"Exchange" = "Exchange";
+
 /* Request Log: title for detailed view of request body/contents */
 "Exchange Body" = "Tělo";
 
@@ -416,6 +419,9 @@ Stats: error details */
 
 /* Pro Features List */
 "Exclusive App Icon" = "Exkluzivní ikona aplikace";
+
+/* Round Details: killed by spike */
+"Exploded" = "Explodoval";
 
 /* Pro Features List */
 "Family Sharing" = "Rodinné sdílení";
@@ -508,6 +514,9 @@ Pokud jste narazili na chybu nebo máte nějakou zpětnou vazbu, vždy si ji rá
 /* Pro Store */
 "I hope you enjoy the pro features :)" = "Doufám, že si užijete funkce verze Pro :)";
 
+/* Login Form: is this safe? */
+"I won't sugarcoat things. Due to the way this app uses the API, I believe there's no other way to sign in than to have people enter their credentials directly. Under those circumstances, there's really no good way for anyone to be sure their credentials remain safe. For what it's worth:" = "Nechci tento problém zlehčovat. Vzhledem ke způsobu, jakým tato aplikace využívá rozhraní API, si nemyslím, že existuje jiný způsob přihlášení, než že uživatelé zadají své přihlašovací údaje přímo do aplikace. Za těchto okolností neexistuje žádný dobrý způsob, jak zajistit, aby přihlašovací údaje zůstaly v bezpečí. Nicméně, ať to stojí, co to stojí:";
+
 /* No comment provided by engineer. */
 "Identities" = "Identity";
 
@@ -562,6 +571,9 @@ Pokud jste narazili na chybu nebo máte nějakou zpětnou vazbu, vždy si ji rá
 /* Top-Level Tab Title */
 "Live" = "Live";
 
+/* No comment provided by engineer. */
+"Live Match" = "Aktuální Zápas";
+
 /* Stats: match loading */
 "Load Data" = "Načíst data";
 
@@ -572,6 +584,9 @@ Pokud jste narazili na chybu nebo máte nějakou zpětnou vazbu, vždy si ji rá
 "Loading Store Info…" = "Načítání informací o obchodě…";
 
 /* No comment provided by engineer. */
+"Loading request log…" = "Načítání záznamu požadavků…";
+
+/* No comment provided by engineer. */
 "Loadout" = "Inventář";
 
 /* No comment provided by engineer. */
@@ -579,6 +594,9 @@ Pokud jste narazili na chybu nebo máte nějakou zpětnou vazbu, vždy si ji rá
 
 /* No comment provided by engineer. */
 "Loadout Delta is computed as the difference between the average loadout value of players on each team. For example, a loadout delta of +1000 means your team's loadouts were an average of 1000 credits more valuable than the enemy team's in that round." = "Delta výstroje se vypočítá jako rozdíl mezi průměrnou cenou zbraní a schopností každého týmu. Například delta výstroje +1000 znamená, že cena zbraní a schopností vašeho týmu je v daném kole v průměru o 1000 kreditů vyšší než cena zbraní a schopností soupeřova týmu.";
+
+/* No comment provided by engineer. */
+"Loadout not loaded!" = "Inventář není načten!";
 
 /* No comment provided by engineer. */
 "Lock In" = "Vybrat";
@@ -620,8 +638,14 @@ Pokud své uživatelské jméno neznáte nebo ho nemáte, můžete jej zjistit n
 /* Match Details: title */
 "Match Details" = "Podrobnosti o zápase";
 
+/* Match List: shown when a match didn't get past Agent Select (because someone dodged/left) */
+"Match Dodged" = "Zápasu se podařilo vyhnout";
+
 /* No comment provided by engineer. */
 "Match Lists" = "Seznamy Zápasů";
+
+/* No comment provided by engineer. */
+"Match Loading Errors" = "Chyba při načítání zápasu";
 
 /* App Theme: automatically match the system theme */
 "Match System" = "Automaticky";
@@ -636,16 +660,22 @@ Pokud své uživatelské jméno neznáte nebo ho nemáte, můžete jej zjistit n
 "Member" = "Člen";
 
 /* Request Log */
-"Method" = "Metoda";
+"Method" = "Method";
 
 /* Asset Management */
 "Missing assets!" = "Chybí assety!";
+
+/* Missions Box */
+"Missing progress for contract!" = "Žádné data pro tento kontrakt!";
 
 /* No comment provided by engineer. */
 "Missing season data!" = "Chybějící data o actu!";
 
 /* Missions Widget: title */
 "Missions" = "Úkoly";
+
+/* No comment provided by engineer. */
+"Missions not loaded!" = "Úkoly nejsou načteny!";
 
 /* No comment provided by engineer. */
 "Month" = "Měsíc";
@@ -658,6 +688,9 @@ Pokud své uživatelské jméno neznáte nebo ho nemáte, můžete jej zjistit n
 
 /* Bookmark/Player List: lookup name placeholder */
 "Name" = "Jméno";
+
+/* Asset Management */
+"Newest available: %@" = "Nejnovější dostupné: %@";
 
 /* Store */
 "Night Market" = "Noční Trh";
@@ -680,11 +713,35 @@ Pokud své uživatelské jméno neznáte nebo ho nemáte, můžete jej zjistit n
 /* Win Rate Stats: by map */
 "No data" = "Žádné data";
 
+/* No comment provided by engineer. */
+"No games played with premade teammates." = "Žádné zápasy hrané v party.";
+
+/* No comment provided by engineer. */
+"No minimap available!" = "Minimapa není k dispozici!";
+
+/* No comment provided by engineer. */
+"No non-premade players encountered repeatedly. (Un)lucky you!" = "Opakovaně jste se nesetkali s žádným hráčem, který by nebyl v party. (Ne)štěstí!";
+
+/* No comment provided by engineer. */
+"Normalize Charts" = "Normalizace Grafů";
+
+/* Party Box */
+"Not Ready" = "Nepřipraven";
+
 /* Hit Distribution Stats: error */
 "Not enough data!" = "Nedostatek dat!";
 
+/* Account Settings */
+"Not signed in yet." = "Ještě nejste přihlášeni.";
+
 /* No comment provided by engineer. */
 "Not signed in!" = "Nejste přihlášeni!";
+
+/* Pro Features List */
+"Note: Statistics are only available on iOS 16 and newer." = "Poznámka: Statistiky jsou k dispozici pouze v systému iOS 16 a novějším.";
+
+/* Pro Features List */
+"Note: Widgets are only available on iOS 16 and newer." = "Poznámka: Widgety jsou k dispozici pouze v systému iOS 16 a novějším.";
 
 /* No comment provided by engineer. */
 "OK" = "OK";
@@ -692,8 +749,14 @@ Pokud své uživatelské jméno neznáte nebo ho nemáte, můžete jej zjistit n
 /* No comment provided by engineer. */
 "Official Website" = "Oficiální Webové Stránky";
 
+/* No comment provided by engineer. */
+"Open or swipe to fetch details." = "Otevřete nebo přejeďte prstem pro načtení podrobností.";
+
 /* Storage Management */
 "Other Players" = "Ostatní Hráči";
+
+/* Buddy Picker: alert shown when both instances of a buddy are in use */
+"Out of instances!" = "Žádné zbývající instance!";
 
 /* Win Rate Stats: section
 Playtime Stats: section */
@@ -766,6 +829,18 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Rate on the App Store" = "Hodnotit v App Store";
 
+/* accessibility label */
+"Ready" = "Připraven";
+
+/* No comment provided by engineer. */
+"Recon Bolt Pro" = "Recon Bolt Pro";
+
+/* Pro Features List */
+"Recon Bolt Pro supports Family Sharing, meaning if just one member of your iCloud family buys it, everyone can use it!" = "Recon Bolt Pro podporuje rodinné sdílení. To znamená, že pokud si ho koupí jeden člen vaší rodiny, mohou ho používat všichni!";
+
+/* Pro Features List */
+"Recon Bolt does not have and will never have ads. The only way it can make money is through in-app purchases." = "Recon Bolt nemá a nikdy nebude mít reklamy. Jediný způsob, jak může vydělávat peníze, jsou nákupy v aplikaci.";
+
 /* Top-Level Tab Title */
 "Reference" = "Reference";
 
@@ -775,11 +850,36 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Refresh automatically" = "Automatické obnovení";
 
+/* Store Widget: next refresh time (hour & minute) */
+"Refreshes at %@" = "Aktualizuje se v %@";
+
 /* Match List: accessibility label */
 "Remove Bookmark" = "Odebrat z oblíbených";
 
 /* Asset Management: section */
 "Repair" = "Opravit";
+
+/* Request Log: header */
+"Request" = "Požadavek";
+
+/* Advanced Settings: button to open request log
+Request Log: title */
+"Request Log" = "Záznam Požadavků";
+
+/* No comment provided by engineer. */
+"Requests" = "Požadavky";
+
+/* Asset Management: button */
+"Reset" = "Resetovat";
+
+/* Request Log: header */
+"Response" = "Odpověď";
+
+/* No comment provided by engineer. */
+"Response Code" = "Kód Odpovědi";
+
+/* Pro Store: error alert title */
+"Restore Failed!" = "Obnovení se nezdařilo!";
 
 /* Pro Store: button */
 "Restore Purchase" = "Obnovení Nákupu";
@@ -792,6 +892,9 @@ Playtime Stats: section */
 
 /* Round Details: title */
 "Round Details" = "Podrobnosti o kole";
+
+/* Win Rate Stats: section */
+"Rounds by Loadout Delta" = "Kola podle delty výstroje";
 
 /* Win Rate Stats: section */
 "Rounds by Side" = "Kola podle strany";
@@ -813,6 +916,9 @@ Playtime Stats: section */
 
 /* Playtime Stats: title for view of matches in common with another player */
 "Shared Matches" = "Sdílené Zápasy";
+
+/* No comment provided by engineer. */
+"Show Unfetched Matches" = "Zobrazit Nenačtené Zápasy";
 
 /* No comment provided by engineer. */
 "Show all matches" = "Zobrazit všechny zápasy";
@@ -840,7 +946,22 @@ Login Form: button */
 "Smoothing" = "Vyhlazování";
 
 /* No comment provided by engineer. */
+"Spectator" = "Divák";
+
+/* Round Details: Spike Event */
+"Spike Defused" = "Spike Zneškodněn";
+
+/* Round Details: Spike Event */
+"Spike Planted" = "Spike Položen";
+
+/* No comment provided by engineer. */
 "Start Matchmaking?" = "Zahájit Vyhledávání?";
+
+/* Win Rate Stats: accessibility label */
+"Starting Side" = "Počáteční Strana";
+
+/* Win Rate Stats */
+"Starting Side:" = "Počáteční Strana:";
 
 /* No comment provided by engineer. */
 "Statistics" = "Statistiky";
@@ -857,17 +978,29 @@ Login Form: button */
 /* No comment provided by engineer. */
 "Store not loaded!" = "Obchod není načten!";
 
+/* No comment provided by engineer. */
+"Storefront outdated!" = "Obchod není aktuální!";
+
 /* Pro Features List */
 "Support Development :)" = "Podpora vývoje :)";
 
+/* Pro Store */
+"Support Further Development!" = "Podpořte Budoucí Vývoj!";
+
 /* Missions Box: button */
 "Switch Contract" = "Změnit Kontrakt";
+
+/* Login Form: is this safe? */
+"TL;DR: you'll have to take my word for it, but Riot doesn't seem to mind." = "Budete mě muset vzít za slovo, ale Riotu to zřejmě nevadí.";
 
 /* Bookmark/Player List: lookup tag placeholder */
 "Tag" = "Tag";
 
 /* Pro Store */
 "Thank you for supporting Recon Bolt!" = "Děkujeme za podporu Recon Boltu!";
+
+/* Login Form: is this safe? */
+"The code is open-source and visible on GitHub; you can build it yourself if you want to be sure of what's running." = "Kód je open source a viditelný na GitHubu; pokud si chcete být jisti, že se jedná o stejný kód, můžete si jej sestavit sami.";
 
 /* App Icon Description: default */
 "The default look of Recon Bolt." = "Výchozí vzhled Recon Boltu.";
@@ -877,6 +1010,9 @@ Login Form: button */
 
 /* No comment provided by engineer. */
 "Theme" = "Téma";
+
+/* No comment provided by engineer. */
+"These are the last %lld requests sent by the app, along with their responses." = "%lld posledních požadavků odeslané aplikací a odpovědi na ně.";
 
 /* Statistics error for iOS <16 */
 "This feature requires iOS 16 or newer." = "Tato funkce vyžaduje iOS 16 nebo novější.";
@@ -906,8 +1042,25 @@ Hit Distribution Stats: region */
 /* Missions Box: header, shown when a mission is not daily or weekly (should not happen unless Riot changes something) */
 "Uncategorized Missions" = "Nezařazené úkoly";
 
+/* Shown when a match does not match the filter and its details have not been fetched. */
+"Unfetched" = "Není načten";
+
 /* Hit Distribution Stats: footnote */
 "Unfortunately, Valorant doesn't store information about which weapon was used for each hit. All we get is the weapon you started the round with and what weapon you used for each kill. Recon Bolt guesses the weapon involved in each damage based on this information, but it cannot be perfect (and neither can any other tracker)." = "Valorant bohužel neukládá informace o tom, jaká zbraň byla použita pro každý zásah. Jediné, co se dozvíme, je, s jakou zbraní jste kolo zahájili a jakou zbraň jste použili při každém zabití. Recon Bolt na základě těchto informací odhaduje, jaká zbraň se podílela na každém poškození, ale nemůže být dokonalý (stejně jako žádný jiný tracker).";
+
+/* Login Form: sign in with google/apple/etc. */
+"Unfortunately, due to technical limitations, you cannot sign into Recon Bolt via your Google account, Apple ID, or anything but a Riot account.
+
+Assuming you signed up for Valorant using Google/Apple/etc., you can set up your account to add a username & password on Riot's site at [account.riotgames.com](https://account.riotgames.com). Note that your Riot ID is **not** the same as your username! If you've forgotten your username, you can reset it at [recovery.riotgames.com](https://recovery.riotgames.com).
+
+On that site, navigate to **Riot Account Sign-in** and set yourself a username and password. When you're done, you can use those same credentials to sign in above! Your social account will stay linked and you'll remain able to sign in with that on PC :)" = "Kvůli technickým omezením se bohužel nemůžete do Recon Bolt přihlásit prostřednictvím účtu Google, Apple ID nebo jiného.
+
+Pokud jste se zaregistrovali do Valorantu pomocí účtu Google/Apple/jiného, můžete si svůj účet nastavit přidáním uživatelského jména a hesla na webových stránkách Riotu na adrese [account.riotgames.com](https://account.riotgames.com). Všimněte si, že vaše Riot ID **není** stejné jako vaše uživatelské jméno! Pokud jste své uživatelské jméno zapomněli, můžete jej obnovit na adrese [recovery.riotgames.com](https://recovery.riotgames.com).
+
+Na této stránce přejděte na **Přihlášení k účtu Riot** a nastavte si uživatelské jméno a heslo. Poté budete moci použít stejné přihlašovací údaje jako výše! Váš účet na sociální síti zůstane propojen a budete se moci pomocí něj přihlásit i na počítači :)";
+
+/* Round Details: killed by unknown ability */
+"Unknown Ability" = "Neznámá Schopnost";
 
 /* placeholder */
 "Unknown Agent" = "Neznámý Agent";
@@ -933,11 +1086,24 @@ Hit Distribution Stats: region */
 /* placeholder */
 "Unknown Skin" = "Neznámý Skin";
 
+/* placeholder */
+"Unknown Title" = "Neznámý Titul";
+
 /* Round Details: killed by unknown damage source/type */
 "Unknown Type" = "Neznámý Typ";
 
+/* Stats: label for a weapon that the app doesn't know for some reason
+Round Details: killed by unknown/unspecified weapon */
+"Unknown Weapon" = "Neznámá Zbraň";
+
+/* No comment provided by engineer. */
+"Unknown bundle!" = "Neznámá kolekce!";
+
 /* Missions Box */
 "Unknown contract!" = "Neznámý kontrakt!";
+
+/* No comment provided by engineer. */
+"Unknown mission!" = "Neznámý úkol!";
 
 /* Asset Management: button */
 "Update Now" = "Aktualizovat nyní";
@@ -947,6 +1113,9 @@ Hit Distribution Stats: region */
 
 /* Login Form */
 "Username" = "Uživatelské jméno";
+
+/* No comment provided by engineer. */
+"Users" = "Uživatelé";
 
 /* Win Rate Stats by Loadout Delta */
 "Value Difference (credits)" = "Hodnotový rozdíl (kredity)";
@@ -969,6 +1138,9 @@ Hit Distribution Stats: region */
 /* Match List */
 "View Stats" = "Zobrazit Statistiky";
 
+/* Statistics Pro purchase prompt: button */
+"View Store in Settings" = "Zjistit více";
+
 /* Rank Widget: description */
 "View your current rank." = "Zobrazte si svůj aktuální rank.";
 
@@ -976,10 +1148,13 @@ Hit Distribution Stats: region */
 "View your rank rating changes." = "Podívejte se na změny RR.";
 
 /* Pro Features List */
-"View your storefront, daily/weekly missions, or current rank without even having to open the app!" = "Zobrazte si obchod, denní/týdenní mise nebo aktuální rank, aniž byste museli aplikaci otevřít!";
+"View your storefront, daily/weekly missions, or current rank without even having to open the app!" = "Zobrazte si obchod, denní/týdenní úkoly nebo aktuální rank, aniž byste museli aplikaci otevřít!";
 
 /* No comment provided by engineer. */
 "WP: +%lld" = "WP: +%lld";
+
+/* No comment provided by engineer. */
+"Weapon Loadout" = "Inventář Zbraní";
 
 /* No comment provided by engineer. */
 "Weapons" = "Zbraně";
@@ -1020,8 +1195,20 @@ Hit Distribution Stats: region */
 /* No comment provided by engineer. */
 "iOS is a bit finnicky about this, so widgets may not refresh right away—feel free to restart if this doesn't help!" = "iOS je v tomto ohledu trochu vybíravý, takže widgety se nemusí obnovit hned - pokud to nepomůže, klidně je restartujte!";
 
+/* Loadout: spray slot */
+"mid-round" = "mid-round";
+
 /* Missions Widget: countdown label when the target is in the past. Should never really show up, since at this point there's new data. */
 "old" = "staré";
 
+/* Loadout: spray slot */
+"post-round" = "post-round";
+
+/* Loadout: spray slot */
+"pre-round" = "pre-round";
+
 /* Login Form */
 "signing in…" = "Přihlašování…";
+
+/* Loadout: unknown spray slot (should never appear unless Riot changes something) */
+"slot" = "slot";
