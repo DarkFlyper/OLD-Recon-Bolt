@@ -79,7 +79,7 @@ Missions Box */
 "< %@" = "< %@";
 
 /* No comment provided by engineer. */
-"A 2FA code has been sent to your email address %@" = "Mã xác thực 2 yếu tố đã được gửi đến địa chỉ email của bạn %@";
+"A 2FA code has been sent to your email address %@" = "Một mã xác thực 2 yếu tố đã được gửi đến địa chỉ email của bạn %@";
 
 /* Match List Filter */
 "A match's queue is unknown until its details are fetched (by tapping it or performing the swipe action).
