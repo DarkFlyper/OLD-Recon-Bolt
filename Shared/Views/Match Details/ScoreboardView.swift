@@ -50,7 +50,7 @@ struct ScoreboardRowView: View {
 	
 	@LocalData var summary: CareerSummary?
 	
-	@Environment(\.isIncognito) private var isIncognito
+	@Environment(\.shouldAnonymize) private var shouldAnonymize
 	
 	var body: some View {
 		let divider = Rectangle()
@@ -119,7 +119,7 @@ struct ScoreboardRowView: View {
 	@ViewBuilder
 	var identitySection: some View {
 		Group {
-			if isIncognito {
+			if shouldAnonymize(player.id) {
 				Text("Player")
 					.foregroundStyle(.secondary)
 			} else {

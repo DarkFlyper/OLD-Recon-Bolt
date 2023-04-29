@@ -57,7 +57,7 @@ protocol EnvironmentKeyPathCollection {
 
 enum ReconBoltKeyPathCollection: EnvironmentKeyPathCollection {
 	static let copiedValues: [any EnvironmentKeyPath] = [
-		\EnvironmentValues.isIncognito,
+		\EnvironmentValues.anonymization,
 		\EnvironmentValues.location,
 	]
 }

@@ -4,6 +4,7 @@ import HandyOperators
 
 struct LiveGameContainer: View {
 	var userID: User.ID
+	var playersInParty: Set<Player.ID>
 	@State var activeMatch: ActiveMatch?
 	@State var details: Details?
 	
@@ -44,11 +45,17 @@ struct LiveGameContainer: View {
 				pregameInfo: pregameInfo
 			)
 			.id(pregameInfo.id)
+			.anonymizing(additionally: .some(playersToAnonymize(from: pregameInfo.team.players.lazy.map(\.identity))))
 		case .liveGame(let liveGameInfo)?:
 			LiveMatchView(gameInfo: liveGameInfo, userID: userID)
+				.anonymizing(additionally: .some(playersToAnonymize(from: liveGameInfo.players.lazy.map(\.identity))))
 		case nil:
 			ProgressView()
 		}
+	}
+	
+	func playersToAnonymize(from players: some Collection<Player.Identity>) -> Set<Player.ID> {
+		Set(players.lazy.filter { !playersInParty.contains($0.id) && $0.isIncognito }.map(\.id))
 	}
 	
 	func fetchDetails() async {
@@ -102,6 +109,7 @@ struct LiveGameContainer_Previews: PreviewProvider {
 	static var previews: some View {
 		LiveGameContainer(
 			userID: PreviewData.userID,
+			playersInParty: [],
 			activeMatch: .init(id: PreviewData.liveGameInfo.id, inPregame: false),
 			details: .liveGame(PreviewData.liveGameInfo)
 		)

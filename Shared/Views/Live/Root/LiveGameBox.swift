@@ -58,7 +58,11 @@ struct LiveGameBox: View {
 				
 				Group {
 					NavigationLink(tag: activeMatch, selection: $shownMatch) {
-						LiveGameContainer(userID: userID, activeMatch: activeMatch)
+						LiveGameContainer(
+							userID: userID,
+							playersInParty: Set(party?.members.map(\.id) ?? []), 
+							activeMatch: activeMatch
+						)
 					} label: {
 						HStack {
 							if activeMatch.inPregame {

@@ -120,7 +120,6 @@ struct LiveMatchView: View {
 				if !isSelf {
 					NavigationLink {
 						MatchListView(userID: player.id)
-							.environment(\.isIncognito, player.identity.isIncognito)
 					} label: {
 						Image(systemName: "person.crop.circle.fill")
 							.padding(.horizontal, 4)
@@ -137,13 +136,51 @@ struct LiveMatchView: View {
 }
 
 extension EnvironmentValues {
-	var isIncognito: Bool {
-		get { self[Key.self] }
-		set { self[Key.self] = newValue }
+	var anonymization: AnonymizationMode {
+		get { self[AnonymizationModeKey.self] }
+		set { self[AnonymizationModeKey.self] = newValue }
 	}
 	
-	private enum Key: EnvironmentKey {
-		static let defaultValue = false
+	var shouldAnonymize: (Player.ID) -> Bool {
+		anonymization.shouldAnonymize(_:)
+	}
+	
+	private enum AnonymizationModeKey: EnvironmentKey {
+		static let defaultValue = AnonymizationMode.none
+	}
+}
+
+extension View {
+	func anonymizing(additionally mode: AnonymizationMode) -> some View {
+		transformEnvironment(\.anonymization) { $0 = $0.merging(mode) }
+	}
+}
+
+enum AnonymizationMode {
+	case all
+	case some(Set<Player.ID>)
+	case none
+	
+	func merging(_ other: Self) -> Self {
+		switch (self, other) {
+		case (.all, _), (_, .all):
+			return .all
+		case (.none, let other), (let other, .none):
+			return other
+		case (.some(let p1), .some(let p2)):
+			return .some(p1.union(p2))
+		}
+	}
+	
+	func shouldAnonymize(_ player: Player.ID) -> Bool {
+		switch self {
+		case .all:
+			return true
+		case .some(let anonymized):
+			return anonymized.contains(player)
+		case .none:
+			return false
+		}
 	}
 }
 

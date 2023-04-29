@@ -14,7 +14,7 @@ struct MatchListView: View {
 	@UserDefault.State("MatchListView.filter") var filter = MatchListFilter()
 	
 	@Environment(\.valorantLoad) private var load
-	@Environment(\.isIncognito) private var isIncognito
+	@Environment(\.shouldAnonymize) private var shouldAnonymize
 	@Environment(\.location) private var location
 	@EnvironmentObject private var bookmarkList: BookmarkList
 	
@@ -40,7 +40,7 @@ struct MatchListView: View {
 					)
 					.padding(.vertical, 8)
 				}
-				.disabled(user == nil || matchList == nil || isIncognito)
+				.disabled(user == nil || matchList == nil)
 			}
 			
 			Section(header: Text("Matches", comment: "Match List: section")) {
@@ -62,7 +62,7 @@ struct MatchListView: View {
 		}
 		.toolbar {
 			ToolbarItemGroup(placement: .navigationBarTrailing) {
-				if !isIncognito {
+				if !shouldAnonymize(userID) {
 					Button {
 						bookmarkList.toggleBookmark(for: userID, location: location!)
 					} label: {
@@ -99,14 +99,15 @@ struct MatchListView: View {
 		.withLocalData($matchList, id: userID, shouldAutoUpdate: true)
 		.withLocalData($summary, id: userID, shouldAutoUpdate: true)
 		.withLocalData($identity, id: userID)
+		.anonymizing(additionally: shouldAnonymize(userID) ? .all : .none)
 		.navigationTitle(title)
 	}
 	
 	var title: Text {
-		if !isIncognito, let user {
+		if !shouldAnonymize(userID), let user {
 			return Text(user.gameName)
 		} else {
-			return Text("Matches", comment: "Match List: title if name unknown")
+			return Text("Matches", comment: "Match List: title if name unknown/hidden")
 		}
 	}
 	

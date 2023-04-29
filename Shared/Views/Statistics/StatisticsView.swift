@@ -24,7 +24,6 @@ struct StatisticsView: View {
 	var excludedAgents: Set<Agent.ID> = []
 	
 	@Environment(\.assets) private var assets
-	@Environment(\.isIncognito) private var isIncognito
 	
 	var body: some View {
 		Form {

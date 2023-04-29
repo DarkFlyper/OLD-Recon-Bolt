@@ -182,7 +182,6 @@ struct AgentSelectView: View {
 				if player.id != userID {
 					NavigationLink {
 						MatchListView(userID: player.id)
-							.environment(\.isIncognito, player.identity.isIncognito)
 					} label: {
 						Image(systemName: "person.crop.circle.fill")
 							.padding(.horizontal, 4)

@@ -7,13 +7,13 @@ struct PlayerIdentityCell: View {
 	let identity: Player.Identity?
 	
 	@Environment(\.assets) private var assets
-	@Environment(\.isIncognito) private var isIncognito
+	@Environment(\.shouldAnonymize) private var shouldAnonymize
 	
 	var body: some View {
 		VStack(spacing: 0) {
 			HStack {
 				HStack(spacing: 4) {
-					if !isIncognito, let user {
+					if let user, !shouldAnonymize(user.id) {
 						Text(user.gameName)
 							.fontWeight(.semibold)
 						
