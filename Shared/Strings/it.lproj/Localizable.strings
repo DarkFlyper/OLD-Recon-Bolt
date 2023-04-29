@@ -455,6 +455,18 @@ LA TUA SEGNALAZIONE DI BUG QUI
 /* No comment provided by engineer. */
 "Find Match" = "Trova Partita";
 
+/* Party Box: placeholder shows time spent in queue */
+"Finding match… (%@)" = "Trovare una partita… (%@)";
+
+/* No comment provided by engineer. */
+"Force Refresh Widgets" = "Forza l'aggiornamento dei widget";
+
+/* Storage Management: button to free up a certain amount of space */
+"Free up these %@" = "Liberate questi %@";
+
+/* Agent Select header: shown when timer reaches zero */
+"Game Started" = "Il gioco è iniziato";
+
 /* Pro Features List */
 "Getting money from Recon Bolt gives me the flexibility and motivation to keep improving the app!" = "Ricevere soldi da Recon Bolt mi dà la flessibilità e la motivazione per continuare a migliorare l'app!";
 
