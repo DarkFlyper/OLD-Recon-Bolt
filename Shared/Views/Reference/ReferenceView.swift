@@ -17,6 +17,12 @@ struct ReferenceView: View {
 						} label: {
 							Label("Agents", systemImage: "person")
 						}
+						
+						NavigationLink {
+							WeaponListView()
+						} label: {
+							Label("Weapons", systemImage: "scope")
+						}
 					}
 					.font(.title2.weight(.medium))
 					.padding(.vertical, 8)

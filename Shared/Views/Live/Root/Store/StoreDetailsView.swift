@@ -138,7 +138,6 @@ struct StoreDetailsView: View {
 
 struct OfferCell: View {
 	var offer: StoreOffer
-	@State var chromaOffset = 0
 	
 	@Environment(\.assets) private var assets
 	@Environment(\.colorScheme) private var colorScheme
@@ -148,36 +147,45 @@ struct OfferCell: View {
 		let resolved = assets?.resolveSkin(.init(rawID: reward.itemID))
 		let tier = resolved?.skin.contentTierID.flatMap { assets?.contentTiers[$0] }
 		
-		VStack {
-			let chroma = (resolved?.skin.chromas).map { chromas in
-				chromas[chromaOffset % chromas.count]
+		NavigationLink {
+			if let resolved {
+				SkinDetailsView(skin: resolved.skin)
 			}
-			(chroma?.fullRender ?? chroma?.displayIcon ?? resolved?.displayIcon)?.view()
-				.frame(height: 60)
-			
-			HStack(alignment: .lastTextBaseline) {
-				UnwrappingView(
-					value: resolved?.skin.displayName,
-					placeholder: Text("Unknown Skin", comment: "placeholder")
-				)
-				.font(.body.weight(.medium))
-				.fixedSize(horizontal: false, vertical: true)
+		} label: {
+			VStack {
+				let chroma = resolved?.skin.chromas.first
+				(chroma?.fullRender ?? chroma?.displayIcon ?? resolved?.displayIcon)?.view()
+					.frame(height: 60)
 				
-				Spacer()
-				
-				CurrencyLabel.multiple(for: offer.cost)
+				HStack(alignment: .lastTextBaseline) {
+					UnwrappingView(
+						value: resolved?.skin.displayName,
+						placeholder: Text("Unknown Skin", comment: "placeholder")
+					)
+					.font(.body.weight(.medium))
+					.multilineTextAlignment(.leading)
+					.fixedSize(horizontal: false, vertical: true)
+					
+					Spacer()
+					
+					CurrencyLabel.multiple(for: offer.cost)
+				}
 			}
+			.overlay(alignment: .topLeading) {
+				tier?.displayIcon.view()
+					.frame(width: 20)
+			}
+			.overlay(alignment: .topTrailing) {
+				if resolved != nil {
+					Image(systemName: "chevron.forward")
+						.font(.body.weight(.medium))
+				}
+			}
+			.padding(12)
 			.foregroundColor(tier?.color?.opacity(10), adjustedFor: colorScheme)
+			.background(tier?.color?.opacity(1.5))
 		}
-		.overlay(alignment: .topTrailing) {
-			tier?.displayIcon.view()
-				.frame(width: 20)
-		}
-		.padding(12)
-		.background(tier?.color?.opacity(1.5))
-		.onTapGesture {
-			chromaOffset += 1 // cycle through chromas if available
-		}
+		.disabled(resolved == nil)
 	}
 }
 

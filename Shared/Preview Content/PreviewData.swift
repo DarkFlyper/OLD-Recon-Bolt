@@ -80,9 +80,15 @@ enum PreviewData {
 		as type: T.Type = T.self,
 		using decoder: JSONDecoder = ValorantClient.responseDecoder
 	) -> T where T: Decodable {
-		let url = Bundle.main.url(forResource: name, withExtension: "json", subdirectory: subdirectory)!
-		let raw = try! Data(contentsOf: url)
-		return try! decoder.decode(T.self, from: raw)
+		guard let url = Bundle.main.url(forResource: name, withExtension: "json", subdirectory: subdirectory) else {
+			fatalError("missing file \(name).json")
+		}
+		do {
+			let raw = try Data(contentsOf: url)
+			return try decoder.decode(T.self, from: raw)
+		} catch {
+			fatalError("error decoding \(name).json: \(error)")
+		}
 	}
 }
 #endif

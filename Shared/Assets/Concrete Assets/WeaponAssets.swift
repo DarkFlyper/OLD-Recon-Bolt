@@ -1,4 +1,4 @@
-import Foundation
+import SwiftUI
 import ValorantAPI
 import HandyOperators
 
@@ -131,6 +131,7 @@ struct WeaponSkin: AssetItem, Codable, Identifiable {
 			static let killCounter = Self("KillCounter")
 			static let killBanner = Self("KillBanner")
 			static let randomizer = Self("Randomizer")
+			static let soundEffects = Self("SoundEffects")
 			static let topFrag = Self("TopFrag")
 			static let vfx = Self("VFX")
 			static let voiceover = Self("Voiceover")
@@ -138,15 +139,26 @@ struct WeaponSkin: AssetItem, Codable, Identifiable {
 			static let namespace = "EEquippableSkinLevelItem"
 			var rawValue: String
 			
-			private static let descriptionOverrides: [Self: String] = [
-				.killCounter: "Kill Counter",
-				.killBanner: "Kill Banner",
-				.topFrag: "Champion's Aura",
-				.inspectAndKill: "Inspect & Kill Effects",
+			private static let descriptionOverrides: [Self: Text] = [
+				.animation: Text("Animation", tableName: "Skin Level Effects"),
+				.finisher: Text("Finisher", tableName: "Skin Level Effects"),
+				.inspectAndKill: Text("Inspect & Kill Effects", tableName: "Skin Level Effects"),
+				.killCounter: Text("Kill Counter", tableName: "Skin Level Effects"),
+				.killBanner: Text("Kill Banner", tableName: "Skin Level Effects"),
+				.randomizer: Text("Randomizer", tableName: "Skin Level Effects"),
+				.soundEffects: Text("Sound Effects", tableName: "Skin Level Effects"),
+				.topFrag: Text("Champion's Aura", tableName: "Skin Level Effects"),
+				.vfx: Text("VFX", tableName: "Skin Level Effects"),
+				.voiceover: Text("Voiceover", tableName: "Skin Level Effects"),
 			]
 			
-			var description: String {
-				Self.descriptionOverrides[self] ?? rawValue
+			@ViewBuilder
+			var description: some View {
+				if let override = Self.descriptionOverrides[self] {
+					override
+				} else {
+					Text(rawValue).foregroundStyle(.secondary)
+				}
 			}
 		}
 		

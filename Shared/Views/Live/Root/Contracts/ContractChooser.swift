@@ -64,21 +64,47 @@ struct ContractChooser: View {
 					VStack(alignment: .leading) {
 						Text(data.info.displayName.localizedCapitalized)
 						
-						if isActive {
-							Text("Active", comment: "Contract Picker")
-								.foregroundColor(.secondary)
-						} else if data.isComplete {
-							Text("Completed", comment: "Contract Picker")
-								.foregroundColor(.secondary)
+						Group {
+							if isActive {
+								Text("Active", comment: "Contract Picker")
+									.foregroundColor(.accentColor)
+							} else if data.isComplete {
+								Text("Completed", comment: "Contract Picker")
+							} else if let agent = data.info.content.agentID {
+								if Inventory.starterAgents.contains(agent) {
+									Text("Free Agent", comment: "Contract Picker")
+								} else {
+									if data.levelNumber >= 5 {
+										Text("Agent Unlocked", comment: "Contract Picker")
+									} else {
+										Text("Agent Unlockable", comment: "Contract Picker")
+									}
+								}
+							}
 						}
+						.foregroundStyle(.secondary)
 					}
-					.opacity(data.isComplete ? 0.5 : 1)
 					
 					Spacer()
 					
+					if isActive {
+						Image(systemName: "checkmark")
+							.foregroundColor(.accentColor)
+					}
+					
+					if
+						!data.isComplete,
+						data.levelNumber < 5,
+						let agent = data.info.content.agentID,
+						!Inventory.starterAgents.contains(agent)
+					{
+						Image(systemName: "lock")
+					}
+					
 					ContractLevelProgressView(data: data)
-						.opacity(data.isComplete ? 0.5 : 1)
 				}
+				.opacity(data.isComplete ? 0.5 : 1)
+				.font(.body.weight(isActive ? .medium : .regular))
 				
 				if isExpanded {
 					ContractProgressBar(data: data)
