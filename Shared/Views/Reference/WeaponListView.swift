@@ -1,4 +1,5 @@
 import SwiftUI
+import ValorantAPI
 
 struct WeaponListView: View {
 	@Environment(\.assets) private var assets
@@ -7,8 +8,8 @@ struct WeaponListView: View {
 	var body: some View {
 		List {
 			if let assets {
-				let weapons = assets.weapons.values.sorted(on: \.displayName)
-				ForEach(weapons) { weapon in
+				ForEach(Weapon.ID.orderInCollection, id: \.self) { gunID in
+					let weapon = assets.weapons[gunID]!
 					NavigationLink(destination: WeaponInfoView(weapon: weapon)) {
 						row(for: weapon)
 					}
