@@ -455,6 +455,24 @@ LA TUA SEGNALAZIONE DI BUG QUI
 /* No comment provided by engineer. */
 "Find Match" = "Trova Partita";
 
+/* Party Box: placeholder shows time spent in queue */
+"Finding match… (%@)" = "Trovare una partita… (%@)";
+
+/* No comment provided by engineer. */
+"Force Refresh Widgets" = "Forza l'aggiornamento dei widget";
+
+/* Storage Management: button to free up a certain amount of space */
+"Free up these %@" = "Liberate questi %@";
+
+/* Agent Select header: shown when timer reaches zero */
+"Game Started" = "Il gioco è iniziato";
+
+/* No comment provided by engineer. */
+"Game is not running!" = "Il gioco non funziona!";
+
+/* Pro Features List */
+"Gather statistics from anyone's games to gain insights on things like time played by mode/premade, headshot rate over time/by weapon, win rate over time/by map & side, and more!" = "Raccogliete le statistiche delle partite di chiunque per ottenere informazioni su aspetti quali il tempo di gioco per modalità/preparazione, la percentuale di headshot nel tempo/per arma, la percentuale di vittorie nel tempo/per mappa e lato e molto altro ancora!";
+
 /* Pro Features List */
 "Getting money from Recon Bolt gives me the flexibility and motivation to keep improving the app!" = "Ricevere soldi da Recon Bolt mi dà la flessibilità e la motivazione per continuare a migliorare l'app!";
 
@@ -618,8 +636,44 @@ Se non conosci il tuo nome utente o non ne hai uno, puoi risolvere il problema s
 /* Stats: error details */
 "Match" = "Partita";
 
+/* Match Details: title */
+"Match Details" = "Dettagli della partita";
+
 /* Match List: shown when a match didn't get past Agent Select (because someone dodged/left) */
 "Match Dodged" = "Partita schivata";
+
+/* No comment provided by engineer. */
+"Match Lists" = "Elenchi di partite";
+
+/* No comment provided by engineer. */
+"Match Loading Errors" = "Errori di caricamento delle partite";
+
+/* App Theme: automatically match the system theme */
+"Match System" = "Sistema di partite";
+
+/* Match List: section */
+"Matches" = "Partita";
+
+/* Stats: match loading */
+"Matches to load: **%lld**" = "Partite da caricare: **%lld**";
+
+/* Party Box: shown when member's name is not yet loaded */
+"Member" = "Membro";
+
+/* Request Log */
+"Method" = "Metodo";
+
+/* Asset Management */
+"Missing assets!" = "Risorse mancanti!";
+
+/* Missions Box */
+"Missing progress for contract!" = "Mancano i progressi per il contratto!";
+
+/* No comment provided by engineer. */
+"Missing season data!" = "Dati della stagione mancanti!";
+
+/* Missions Widget: title */
+"Missions" = "Missioni";
 
 /* Store */
 "Unknown Offer" = "Offerta sconosciuta";
