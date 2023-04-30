@@ -126,10 +126,14 @@ struct WeaponSkin: AssetItem, Codable, Identifiable {
 		
 		struct Item: NamespacedID {
 			static let animation = Self("Animation")
+			static let attackerDefenderSwap = Self("AttackerDefenderSwap")
 			static let finisher = Self("Finisher")
+			static let fishAnimation = Self("FishAnimation")
+			static let heartbeatAndMapSensor = Self("HeartbeatAndMapSensor")
 			static let inspectAndKill = Self("InspectAndKill")
-			static let killCounter = Self("KillCounter")
 			static let killBanner = Self("KillBanner")
+			static let killCounter = Self("KillCounter")
+			static let killEffect = Self("KillEffect")
 			static let randomizer = Self("Randomizer")
 			static let soundEffects = Self("SoundEffects")
 			static let topFrag = Self("TopFrag")
@@ -141,10 +145,14 @@ struct WeaponSkin: AssetItem, Codable, Identifiable {
 			
 			private static let descriptionOverrides: [Self: Text] = [
 				.animation: Text("Animation", tableName: "Skin Level Effects"),
+				.attackerDefenderSwap: Text("Attacker/Defender Swap", tableName: "Skin Level Effects"),
 				.finisher: Text("Finisher", tableName: "Skin Level Effects"),
+				.fishAnimation: Text("Fish Animation", tableName: "Skin Level Effects"),
+				.heartbeatAndMapSensor: Text("Heartbeat & Map Sensor", tableName: "Skin Level Effects"),
 				.inspectAndKill: Text("Inspect & Kill Effects", tableName: "Skin Level Effects"),
-				.killCounter: Text("Kill Counter", tableName: "Skin Level Effects"),
 				.killBanner: Text("Kill Banner", tableName: "Skin Level Effects"),
+				.killCounter: Text("Kill Counter", tableName: "Skin Level Effects"),
+				.killEffect: Text("Kill Effect", tableName: "Skin Level Effects"),
 				.randomizer: Text("Randomizer", tableName: "Skin Level Effects"),
 				.soundEffects: Text("Sound Effects", tableName: "Skin Level Effects"),
 				.topFrag: Text("Champion's Aura", tableName: "Skin Level Effects"),
