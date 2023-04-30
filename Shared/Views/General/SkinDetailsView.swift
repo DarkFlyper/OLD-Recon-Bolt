@@ -61,9 +61,11 @@ struct SkinDetailsView: View {
 	}
 }
 
+#if DEBUG
 struct SkinDetailsView_Previews: PreviewProvider, PreviewProviderWithAssets {
 	static func previews(assets: AssetCollection) -> some View {
 		SkinDetailsView(skin: assets.weapons[.phantom]!.skins[1])
 			.withToolbar()
     }
 }
+#endif
