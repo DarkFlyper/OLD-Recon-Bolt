@@ -187,7 +187,8 @@ Competitive matches after your placements can be identified without their detail
 /* Request Log: shown for bodies that are not decodable to text */
 "Binary Data" = "Data Binary";
 
-/* Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Body" = "Badan";
 
 /* Bookmark/Player List: section */
@@ -484,7 +485,8 @@ LAPORKAN BUG ANDA DISINI
 /* Stats: date grouping size picker */
 "Group by" = "Dikelompokkan berdasarkan";
 
-/* Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Head" = "Kepala";
 
 /* No comment provided by engineer. */
@@ -550,7 +552,8 @@ Jika Anda menemukan bug atau memiliki feedback, saya selalu senang mendengarnya 
 /* Asset Management: this row shows the language of the current assets */
 "Language" = "Bahasa";
 
-/* Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Legs" = "Kaki";
 
 /* Bookmark/Player List: player level */
