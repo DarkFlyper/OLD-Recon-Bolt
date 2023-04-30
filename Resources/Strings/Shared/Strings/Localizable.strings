@@ -16,6 +16,9 @@
 /* Used for matches less than a day ago. %@ is replaced by the number of hours/minutes, e.g. '3h ago'. */
 "%@ ago" = "%@ ago";
 
+/* Weapon Reference: stats */
+"%@ bullets/sec" = "%@ bullets/sec";
+
 /* %@ is replaced by a fraction of wins vs. games played, e.g. '5/12 games won'. */
 "%@ games won" = "%@ games won";
 
@@ -24,6 +27,15 @@
 
 /* used throughout the app to format percentages—placeholder is replaced by a number */
 "%@%%" = "%@%%";
+
+/* Weapon Reference: time in seconds (with decimal digits) */
+"%@s" = "%@s";
+
+/* Weapon Reference: stats */
+"%@°" = "%@°";
+
+/* No comment provided by engineer. */
+"%lf" = "%lf";
 
 /* No comment provided by engineer. */
 "%lld" = "%lld";
@@ -43,6 +55,12 @@
 /* Statistics Filter: shown when not every agent is allowed (Key in .stringsdict) */
 "%lld agents selected" = "%lld agents selected";
 
+/* Weapon Reference: stats */
+"%lld bullets" = "%lld bullets";
+
+/* Weapon Reference: price, always at least 150 */
+"%lld credits" = "%lld credits";
+
 /* Storage Management */
 "%lld from other players" = "%lld from other players";
 
@@ -61,6 +79,9 @@
 /* Shown at the bottom of the expandable playtime list when there are more entries available. */
 "%lld more" = "%lld more";
 
+/* Weapon Reference: stats */
+"%lld pellets" = "%lld pellets";
+
 /* Career Summary: button to show data from previous acts (Key in .stringsdict) */
 "%lld previous act(s)" = "%lld previous act(s)";
 
@@ -72,6 +93,9 @@
 
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
 "%lld to %lld credits" = "%lld to %lld credits";
+
+/* Weapon Reference: stats: damage range */
+"%lld – %lldm" = "%lld – %lldm";
 
 /* No comment provided by engineer. */
 "%lld%%" = "%lld%%";
@@ -178,6 +202,12 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Agent Select" = "Agent Select";
 
+/* Contract Picker */
+"Agent Unlockable" = "Agent Unlockable";
+
+/* Contract Picker */
+"Agent Unlocked" = "Agent Unlocked";
+
 /* Statistics filter: button */
 "Agents" = "Agents";
 
@@ -247,7 +277,8 @@ Competitive matches after your placements can be identified without their detail
 /* Request Log: shown for bodies that are not decodable to text */
 "Binary Data" = "Binary Data";
 
-/* Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Body" = "Body";
 
 /* Bookmark/Player List: section */
@@ -290,6 +321,9 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Career Summary" = "Career Summary";
 
+/* Weapon Reference */
+"Category" = "Category";
+
 /* No comment provided by engineer. */
 "Change Buddy" = "Change Buddy";
 
@@ -331,6 +365,9 @@ Playtime Stats: section */
 
 /* Storage Management: button to delete all entries of a certain kind */
 "Clear All" = "Clear All";
+
+/* Skin Details: section */
+"Color Variants" = "Color Variants";
 
 /* Contract Picker */
 "Completed" = "Completed";
@@ -464,6 +501,9 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Enter 2FA Code" = "Enter 2FA Code";
 
+/* Weapon Reference: stats */
+"Equip Time" = "Equip Time";
+
 /* Request Log
 Stats: error details */
 "Error" = "Error";
@@ -526,8 +566,17 @@ YOUR BUG REPORT HERE
 /* Party Box: placeholder shows time spent in queue */
 "Finding match… (%@)" = "Finding match… (%@)";
 
+/* Weapon Reference: stats */
+"Fire Rate" = "Fire Rate";
+
+/* Weapon Reference: stats */
+"First Bullet Spread" = "First Bullet Spread";
+
 /* No comment provided by engineer. */
 "Force Refresh Widgets" = "Force Refresh Widgets";
+
+/* Contract Picker */
+"Free Agent" = "Free Agent";
 
 /* Storage Management: button to free up a certain amount of space */
 "Free up these %@" = "Free up these %@";
@@ -553,7 +602,8 @@ YOUR BUG REPORT HERE
 /* Stats: date grouping size picker */
 "Group by" = "Group by";
 
-/* Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Head" = "Head";
 
 /* No comment provided by engineer. */
@@ -622,7 +672,8 @@ If you've encountered a bug or have some feedback, I'm always happy to hear it o
 /* Asset Management: this row shows the language of the current assets */
 "Language" = "Language";
 
-/* Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Legs" = "Legs";
 
 /* Bookmark/Player List: player level */
@@ -691,6 +742,9 @@ If you don't know your username or don't have one, you can fix that at [account.
 
 /* Win Rate Stats: chart legend */
 "Losses" = "Losses";
+
+/* Weapon Reference: stats */
+"Magazine Size" = "Magazine Size";
 
 /* No comment provided by engineer. */
 "Manage Assets" = "Manage Assets";
@@ -877,6 +931,9 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Please make sure you are ready to play by the time the game starts!" = "Please make sure you are ready to play by the time the game starts!";
 
+/* Weapon Reference */
+"Price" = "Price";
+
 /* App Icon Name */
 "Pro Blue" = "Pro Blue";
 
@@ -894,6 +951,9 @@ Playtime Stats: section */
 
 /* Statistics filter: button */
 "Queues" = "Queues";
+
+/* Weapon Reference: stats */
+"Range" = "Range";
 
 /* Rank Widget: title */
 "Rank" = "Rank";
@@ -933,6 +993,9 @@ Playtime Stats: section */
 
 /* Store Widget: next refresh time (hour & minute) */
 "Refreshes at %@" = "Refreshes at %@";
+
+/* Weapon Reference: stats */
+"Reload Time" = "Reload Time";
 
 /* Match List: accessibility label */
 "Remove Bookmark" = "Remove Bookmark";
@@ -980,6 +1043,9 @@ Request Log: title */
 /* Win Rate Stats: section */
 "Rounds by Side" = "Rounds by Side";
 
+/* Weapon Reference: stats */
+"Run Speed" = "Run Speed";
+
 /* Bookmark/Player List: section */
 "Search" = "Search";
 
@@ -1000,6 +1066,9 @@ Request Log: title */
 
 /* Playtime Stats: title for view of matches in common with another player */
 "Shared Matches" = "Shared Matches";
+
+/* Weapon Reference: stats */
+"Shotgun Pellets" = "Shotgun Pellets";
 
 /* No comment provided by engineer. */
 "Show Unfetched Matches" = "Show Unfetched Matches";
@@ -1028,6 +1097,15 @@ Login Form: button */
 
 /* Login Form: button/header */
 "Sign in with Google/Apple/etc." = "Sign in with Google/Apple/etc.";
+
+/* Skin Details: level name */
+"Skin Level %lld" = "Level %lld";
+
+/* Skin Details: section */
+"Skin Levels" = "Skin Levels";
+
+/* Weapon Reference: button */
+"Skins" = "Skins";
 
 /* Hit Distribution Stats: smoothing slider */
 "Smoothing" = "Smoothing";
@@ -1245,6 +1323,9 @@ Round Details: killed by unknown/unspecified weapon */
 
 /* No comment provided by engineer. */
 "Weapon Loadout" = "Weapon Loadout";
+
+/* Weapon Reference: section */
+"Weapon Statistics" = "Weapon Statistics";
 
 /* No comment provided by engineer. */
 "Weapons" = "Weapons";

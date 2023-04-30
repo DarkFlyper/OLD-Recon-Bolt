@@ -1,8 +1,0 @@
-/* Used for unknown team IDs. */
-"%@ Team" = "%@ Team";
-
-/* No comment provided by engineer. */
-"Blue Team" = "Blaues Team";
-
-/* No comment provided by engineer. */
-"Red Team" = "Rotes Team";

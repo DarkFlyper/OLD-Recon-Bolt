@@ -1,8 +1,0 @@
-/* Used for unknown team IDs. */
-"%@ Team" = "الفريق ال%@";
-
-/* No comment provided by engineer. */
-"Blue Team" = "الفريق الأزرق";
-
-/* No comment provided by engineer. */
-"Red Team" = "الفريق الأحمر";

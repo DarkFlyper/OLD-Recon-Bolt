@@ -1,8 +1,0 @@
-/* Used for unknown team IDs. */
-"%@ Team" = "チーム %@";
-
-/* No comment provided by engineer. */
-"Blue Team" = "青 チーム";
-
-/* No comment provided by engineer. */
-"Red Team" = "赤 チーム";

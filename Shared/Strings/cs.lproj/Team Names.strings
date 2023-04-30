@@ -1,8 +1,0 @@
-/* Used for unknown team IDs. */
-"%@ Team" = "Tým %@";
-
-/* No comment provided by engineer. */
-"Blue Team" = "Modrý Tým";
-
-/* No comment provided by engineer. */
-"Red Team" = "Červený Tým";
