@@ -188,7 +188,8 @@ Az elhelyezés utáni versenyszerű mérkőzések azonban az adataik nélkül is
 /* Request Log: shown for bodies that are not decodable to text */
 "Binary Data" = "Bináris adatok";
 
-/* Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Body" = "Test";
 
 /* Bookmark/Player List: section */
@@ -485,7 +486,8 @@ HIBAJELENTÉSED ITT:
 /* Stats: date grouping size picker */
 "Group by" = "Csoportosítás";
 
-/* Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Head" = "Fej";
 
 /* No comment provided by engineer. */
@@ -551,7 +553,8 @@ Ha hibával találkoztál, vagy van valami visszajelzésed, mindig örömmel meg
 /* Asset Management: this row shows the language of the current assets */
 "Language" = "Nyelv";
 
-/* Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Legs" = "Lábak";
 
 /* Bookmark/Player List: player level */
