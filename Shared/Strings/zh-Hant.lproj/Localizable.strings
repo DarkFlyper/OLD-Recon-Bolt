@@ -198,7 +198,8 @@ Competitive matches after your placements can be identified without their detail
 /* Request Log: shown for bodies that are not decodable to text */
 "Binary Data" = "二進制資料";
 
-/* Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Body" = "身體";
 
 /* Bookmark/Player List: section */
@@ -495,7 +496,8 @@ Stats: error details */
 /* Stats: date grouping size picker */
 "Group by" = "分類";
 
-/* Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Head" = "頭";
 
 /* No comment provided by engineer. */
@@ -561,7 +563,8 @@ Recon Bolt於2021年當初開始開發，當時還無法在遊戲中看到您的
 /* Asset Management: this row shows the language of the current assets */
 "Language" = "語言";
 
-/* Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Legs" = "腳";
 
 /* Bookmark/Player List: player level */
