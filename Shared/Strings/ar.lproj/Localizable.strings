@@ -197,7 +197,8 @@ Competitive matches after your placements can be identified without their detail
 /* Request Log: shown for bodies that are not decodable to text */
 "Binary Data" = "البيانات الثنائية";
 
-/* Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Body" = "طلقات الجسم";
 
 /* Bookmark/Player List: section */
@@ -494,7 +495,8 @@ Stats: error details */
 /* Stats: date grouping size picker */
 "Group by" = "جمّع حسب";
 
-/* Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Head" = "ضربة الرأس";
 
 /* No comment provided by engineer. */
@@ -560,7 +562,8 @@ If you've encountered a bug or have some feedback, I'm always happy to hear it o
 /* Asset Management: this row shows the language of the current assets */
 "Language" = "اللغة";
 
-/* Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Legs" = "ضربات الارجل";
 
 /* Bookmark/Player List: player level */
