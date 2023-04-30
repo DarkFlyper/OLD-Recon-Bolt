@@ -188,7 +188,8 @@ Tuttavia, le partite competitive dopo i tuoi posizionamenti possono essere ident
 /* Request Log: shown for bodies that are not decodable to text */
 "Binary Data" = "Dati binari";
 
-/* Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Body" = "Body";
 
 /* Bookmark/Player List: section */
@@ -485,7 +486,8 @@ LA TUA SEGNALAZIONE DI BUG QUI
 /* Stats: date grouping size picker */
 "Group by" = "Gruppo per";
 
-/* Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Head" = "Testa";
 
 /* No comment provided by engineer. */
@@ -551,7 +553,8 @@ Se avete riscontrato un bug o avete un feedback, sono sempre felice di ascoltarl
 /* Asset Management: this row shows the language of the current assets */
 "Language" = "Lingua";
 
-/* Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Legs" = "Gambe";
 
 /* Bookmark/Player List: player level */
