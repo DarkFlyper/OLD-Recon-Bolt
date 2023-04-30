@@ -351,6 +351,9 @@ EL REPORTE DEL BUG VA AQUÍ
 /* No comment provided by engineer. */
 "Force Refresh Widgets" = "Forzar reinicio de los Widgets";
 
+/* Contract Picker */
+"Free Agent" = "Agente gratuito";
+
 /* Storage Management: button to free up a certain amount of space */
 "Free up these %@" = "Liberar %@";
 
@@ -417,7 +420,7 @@ Weapon Reference: stats */
 "Level %lld / %lld" = "Nivel %lld / %lld";
 
 /* No comment provided by engineer. */
-"Lifetime Peak" = "Pico de toda la vida";
+"Lifetime Peak" = "Pico máximo";
 
 /* App Theme */
 "Light Mode" = "Modo Claro";
@@ -438,7 +441,10 @@ Weapon Reference: stats */
 "Loading Store Info…" = "Cargando información de la tienda…";
 
 /* No comment provided by engineer. */
-"Loading request log…" = "Cargando peticiones de log…";
+"Loading request log…" = "Cargando peticiones…";
+
+/* No comment provided by engineer. */
+"Loadout" = "Colección";
 
 /* No comment provided by engineer. */
 "Lock In" = "Seleccionar";
@@ -531,7 +537,7 @@ Weapon Reference: stats */
 "Not signed in!" = "¡No estás registrado!";
 
 /* Pro Features List */
-"Note: Statistics are only available on iOS 16 and newer." = "Nota: Estadísticas solo están disponibles a partir de iOS 16 y superiores.";
+"Note: Statistics are only available on iOS 16 and newer." = "Nota: Las estadísticas solo están disponibles a partir de iOS 16 y superiores.";
 
 /* Pro Features List */
 "Note: Widgets are only available on iOS 16 and newer." = "Nota: Los Widgets solo están disponible a partir de iOS 16 y superiores.";
@@ -628,7 +634,7 @@ Weapon Reference: stats */
 
 /* Advanced Settings: button to open request log
 Request Log: title */
-"Request Log" = "Log de peticiones";
+"Request Log" = "Registro de peticiones";
 
 /* No comment provided by engineer. */
 "Requests" = "Peticiones";
@@ -687,6 +693,9 @@ Login Form: button */
 
 /* Login Form: button/header */
 "Sign in with Google/Apple/etc." = "Regístrate con Google/Apple/etc.";
+
+/* Weapon Reference: button */
+"Skins" = "Diseños";
 
 /* No comment provided by engineer. */
 "Spectator" = "Espectador";
