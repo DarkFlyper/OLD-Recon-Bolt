@@ -73,6 +73,7 @@ struct LiveMatchView: View {
 		@LocalData var playerUser: User?
 		@LocalData var summary: CareerSummary?
 		@Environment(\.assets) private var assets
+		@Environment(\.shouldAnonymize) private var shouldAnonymize
 		
 		init(player: LiveGameInfo.PlayerInfo, ownPlayer: LiveGameInfo.PlayerInfo) {
 			self.player = player
@@ -100,11 +101,11 @@ struct LiveMatchView: View {
 				}
 				
 				VStack(alignment: .leading, spacing: 4) {
-					if !player.identity.isIncognito, let playerUser {
+					if !shouldAnonymize(player.id), let playerUser {
 						HStack {
 							Text(playerUser.gameName)
 							Text("#\(playerUser.tagLine)")
-								.foregroundColor(.secondary)
+								.foregroundStyle(.secondary)
 						}
 					}
 					
@@ -118,7 +119,7 @@ struct LiveMatchView: View {
 				Spacer()
 				
 				if !isSelf {
-					NavigationLink {
+					TransparentNavigationLink {
 						MatchListView(userID: player.id)
 					} label: {
 						Image(systemName: "person.crop.circle.fill")

@@ -139,6 +139,7 @@ struct AgentSelectView: View {
 		@LocalData var playerUser: User?
 		@LocalData var summary: CareerSummary?
 		@Environment(\.assets) private var assets
+		@Environment(\.shouldAnonymize) private var shouldAnonymize
 		
 		init(player: LivePregameInfo.PlayerInfo, userID: User.ID) {
 			self.player = player
@@ -156,7 +157,7 @@ struct AgentSelectView: View {
 				icon
 				
 				VStack(alignment: .leading, spacing: 4) {
-					if !player.identity.isIncognito, let playerUser {
+					if !shouldAnonymize(player.id), let playerUser {
 						HStack {
 							Text(playerUser.gameName)
 							Text("#\(playerUser.tagLine)")
@@ -180,7 +181,7 @@ struct AgentSelectView: View {
 				.frame(maxWidth: .infinity, alignment: .leading)
 				
 				if player.id != userID {
-					NavigationLink {
+					TransparentNavigationLink {
 						MatchListView(userID: player.id)
 					} label: {
 						Image(systemName: "person.crop.circle.fill")
