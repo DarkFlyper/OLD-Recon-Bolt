@@ -122,7 +122,8 @@
 /* Request Log: shown for bodies that are not decodable to text */
 "Binary Data" = "Data en binario";
 
-/* Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Body" = "Cuerpo";
 
 /* Bookmark/Player List: section */
@@ -368,7 +369,8 @@ EL REPORTE DEL BUG VA AQUÍ
 /* Stats: date grouping size picker */
 "Group by" = "Ordenar por";
 
-/* Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Head" = "Cabeza";
 
 /* Hit Distribution Stats: title */
@@ -404,7 +406,8 @@ EL REPORTE DEL BUG VA AQUÍ
 /* Asset Management: this row shows the language of the current assets */
 "Language" = "Idioma";
 
-/* Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Legs" = "Piernas";
 
 /* Bookmark/Player List: player level */
