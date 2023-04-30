@@ -298,6 +298,9 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Done" = "Hecho";
 
+/* No comment provided by engineer. */
+"Download Assets Now" = "Descargar archivos ahora";
+
 /* Win Rate Stats: chart legend */
 "Draws" = "Empates";
 
@@ -376,6 +379,21 @@ EL REPORTE DEL BUG VA AQUÍ
 Weapon Reference: stats */
 "Head" = "Cabeza";
 
+/* About Screen */
+"Hi! I'm Julian Dunskus, and I made this app.
+
+Recon Bolt started development in early 2021, back when it wasn't yet possible to see your RR gains and losses in the game, but the API offered those numbers. I made an app to see the numbers and better understand my rank changes.
+
+As you can guess, the scope expanded massively over time to what you're using now. I hope you're enjoying it!
+
+If you've encountered a bug or have some feedback, I'm always happy to hear it on the Discord Server or GitHub :)" = "Hola, soy Julian Dunskus y he creado esta aplicación.
+
+Recon Bolt comenzó a desarrollarse a principios de 2021, cuando aún no era posible ver tus ganancias y pérdidas de RR en el juego, pero la API ofrecía esas cifras. Creé una aplicación para ver las cifras y comprender mejor mis cambios de rango.
+
+Como puedes adivinar, el alcance se amplió enormemente con el tiempo hasta lo que estás usando ahora. Espero que lo disfrutes.
+
+Si has encontrado un error o tienes algún comentario, siempre estoy encantado de escucharlo en el servidor Discord o GitHub :)";
+
 /* Hit Distribution Stats: title */
 "Hit Distribution" = "Distribución de Disparos";
 
@@ -384,6 +402,9 @@ Weapon Reference: stats */
 
 /* Pro Store */
 "I hope you enjoy the pro features :)" = "Espero que disfrutes con tus funciones Pro :)";
+
+/* Login Form: is this safe? */
+"I won't sugarcoat things. Due to the way this app uses the API, I believe there's no other way to sign in than to have people enter their credentials directly. Under those circumstances, there's really no good way for anyone to be sure their credentials remain safe. For what it's worth:" = "No voy a endulzar las cosas. Debido a la forma en que esta aplicación utiliza la API, creo que no hay otra forma de iniciar sesión que hacer que la gente introduzca sus credenciales directamente. En esas circunstancias, no hay forma de que nadie se asegure de que sus credenciales están a salvo. Por si sirve de algo:";
 
 /* No comment provided by engineer. */
 "Identities" = "Identidades";
@@ -572,6 +593,9 @@ Weapon Reference: stats */
 /* No comment provided by engineer. */
 "Please make sure you are ready to play by the time the game starts!" = "¡Por favor asegúrate de estar listo para jugar cuando la partida empiece!";
 
+/* Weapon Reference */
+"Price" = "Precio";
+
 /* App Icon Name */
 "Pro Blue" = "Pro Blue";
 
@@ -583,6 +607,9 @@ Weapon Reference: stats */
 
 /* Pro Store: error alert title */
 "Purchase Failed!" = "¡Compra fallida!";
+
+/* Pro Store: button (placeholder filled with formatted currency) */
+"Purchase – %@" = "Comprar - %@";
 
 /* Statistics filter: button */
 "Queues" = "Colas";
@@ -697,6 +724,9 @@ Login Form: button */
 /* Weapon Reference: button */
 "Skins" = "Diseños";
 
+/* Hit Distribution Stats: smoothing slider */
+"Smoothing" = "Suavizado";
+
 /* No comment provided by engineer. */
 "Spectator" = "Espectador";
 
@@ -766,6 +796,12 @@ Hit Distribution Stats: region */
 
 /* No comment provided by engineer. */
 "Twitter @juliand665" = "Twitter @juliand665";
+
+/* Request Log */
+"URL" = "URL";
+
+/* Hit Distribution Stats: footnote */
+"Unfortunately, Valorant doesn't store information about which weapon was used for each hit. All we get is the weapon you started the round with and what weapon you used for each kill. Recon Bolt guesses the weapon involved in each damage based on this information, but it cannot be perfect (and neither can any other tracker)." = "Lamentablemente, Valorant no almacena información sobre qué arma se utilizó para cada golpe. Todo lo que tenemos es el arma con la que empezaste la ronda y qué arma usaste para cada muerte. Recon Bolt adivina el arma implicada en cada daño basándose en esta información, pero no puede ser perfecto (como tampoco puede serlo ningún otro rastreador).";
 
 /* Round Details: killed by unknown ability */
 "Unknown Ability" = "Habilidad desconocida";
@@ -887,3 +923,6 @@ Round Details: killed by unknown/unspecified weapon */
 
 /* Login Form */
 "signing in…" = "registrando…";
+
+/* Loadout: unknown spray slot (should never appear unless Riot changes something) */
+"slot" = "ranura";
