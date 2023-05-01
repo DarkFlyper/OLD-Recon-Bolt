@@ -721,6 +721,9 @@ Login Form: button */
 /* Login Form: button/header */
 "Sign in with Google/Apple/etc." = "Regístrate con Google/Apple/etc.";
 
+/* Skin Details: level name */
+"Skin Level %lld" = "Nivel %lld";
+
 /* Weapon Reference: button */
 "Skins" = "Diseños";
 
