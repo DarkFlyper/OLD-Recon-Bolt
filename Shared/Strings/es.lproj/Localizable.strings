@@ -724,6 +724,9 @@ Login Form: button */
 /* Skin Details: level name */
 "Skin Level %lld" = "Nivel %lld";
 
+/* Skin Details: section */
+"Skin Levels" = "Nivel de mejora";
+
 /* Weapon Reference: button */
 "Skins" = "Diseños";
 
