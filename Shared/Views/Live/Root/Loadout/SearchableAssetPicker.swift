@@ -14,7 +14,7 @@ struct SearchableAssetPicker<Item: SearchableAsset, RowContent: View, Deselector
 		let results = ownedItems
 			.lazy
 			.compactMap { allItems[$0] }
-			.filter { searchAccepts(candidate: $0.searchableText) }
+			.filter { searchAccepts($0.searchableText) }
 			.sorted(on: \.sortValue)
 		
 		List {
@@ -41,7 +41,7 @@ struct SearchableAssetPicker<Item: SearchableAsset, RowContent: View, Deselector
 		.searchable(text: $search)
 	}
 	
-	func searchAccepts(candidate: String) -> Bool {
+	func searchAccepts(_ candidate: String) -> Bool {
 		if #available(iOS 16.0, *) {
 			return candidate.firstMatch(of: Regex {
 				Anchor.wordBoundary
