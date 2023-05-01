@@ -2,6 +2,9 @@
 /* Used for matches less than a day ago. %@ is replaced by the number of hours/minutes, e.g. '3h ago'. */
 "%@ ago" = "%@ 之前";
 
+/* Weapon Reference: stats */
+"%@ bullets/sec" = "%@ 子彈/秒";
+
 /* %@ is replaced by a fraction of wins vs. games played, e.g. '5/12 games won'. */
 "%@ games won" = "%@ 遊戲獲勝";
 
@@ -471,6 +474,9 @@ Stats: error details */
 
 /* No comment provided by engineer. */
 "Force Refresh Widgets" = "強制重新整理小工具";
+
+/* Contract Picker */
+"Free Agent" = "免費特務";
 
 /* Storage Management: button to free up a certain amount of space */
 "Free up these %@" = "釋放這些 %@";
@@ -955,6 +961,9 @@ Login Form: button */
 
 /* Login Form: button/header */
 "Sign in with Google/Apple/etc." = "登入為 Google/Apple/etc.";
+
+/* Skin Details: level name */
+"Skin Level %lld" = "等級 %lld";
 
 /* Hit Distribution Stats: smoothing slider */
 "Smoothing" = "平滑度";
