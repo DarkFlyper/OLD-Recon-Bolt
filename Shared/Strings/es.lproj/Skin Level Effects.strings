@@ -8,10 +8,22 @@
 "Finisher" = "Remate";
 
 /* No comment provided by engineer. */
+"Heartbeat & Map Sensor" = "Sensor de latido y mapa";
+
+/* No comment provided by engineer. */
 "Inspect & Kill Effects" = "Inspeccionar & Efectos de asesinatos";
 
 /* No comment provided by engineer. */
 "Kill Counter" = "Contador de asesinatos";
 
 /* No comment provided by engineer. */
+"Randomizer" = "Aleatorizado";
+
+/* No comment provided by engineer. */
 "Sound Effects" = "Efectos de sonido";
+
+/* No comment provided by engineer. */
+"VFX" = "VFX";
+
+/* No comment provided by engineer. */
+"Voiceover" = "Voz en off";
