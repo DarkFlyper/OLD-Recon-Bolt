@@ -2,11 +2,23 @@
 /* Used for matches less than a day ago. %@ is replaced by the number of hours/minutes, e.g. '3h ago'. */
 "%@ ago" = "%@ önce";
 
+/* %@ is replaced by a fraction of wins vs. games played, e.g. '5/12 games won'. */
+"%@ games won" = "%@ kazanılan oyunlar";
+
+/* used throughout the app to format percentages—placeholder is replaced by a number */
+"%@%%" = "%@%%";
+
+/* No comment provided by engineer. */
+"%lld RR" = "%lld KP";
+
 /* Missions Widget: countdown label when the target is in the future. e.g. '< 2d 3h' */
 "< %@" = "< %@";
 
 /* No comment provided by engineer. */
 "AFK: %lld" = "AFK: %lld";
+
+/* Career Summary: header for totals of all time */
+"ALL TIME" = "TÜM ZAMANLAR";
 
 /* Settings: section */
 "About" = "Hakkında";
@@ -22,6 +34,9 @@
 
 /* Contract Picker */
 "Active" = "Aktif";
+
+/* Missions Box: header */
+"Active Contract" = "Aktif Kontrat";
 
 /* Account Settings */
 "Add another Account" = "Başka bir Hesap Ekle";
