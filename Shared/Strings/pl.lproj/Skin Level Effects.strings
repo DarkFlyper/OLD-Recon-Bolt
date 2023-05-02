@@ -1,1 +1,41 @@
-/* This file exists as a marker to combine the synthesized files from all targets. */
+/* No comment provided by engineer. */
+"Animation" = "Animacja";
+
+/* No comment provided by engineer. */
+"Attacker/Defender Swap" = "Zamiana stron atakujących/obrońców";
+
+/* No comment provided by engineer. */
+"Champion's Aura" = "Aura Mistrza";
+
+/* No comment provided by engineer. */
+"Finisher" = "Finisher";
+
+/* No comment provided by engineer. */
+"Fish Animation" = "Animacja ryb";
+
+/* No comment provided by engineer. */
+"Heartbeat & Map Sensor" = "Czujnik tętna i mapy";
+
+/* No comment provided by engineer. */
+"Inspect & Kill Effects" = "Efekty inspekcji i zabić";
+
+/* No comment provided by engineer. */
+"Kill Banner" = "Banner zabić";
+
+/* No comment provided by engineer. */
+"Kill Counter" = "Licznik zabić";
+
+/* No comment provided by engineer. */
+"Kill Effect" = "Efekt zabicia";
+
+/* No comment provided by engineer. */
+"Randomizer" = "Randomizer";
+
+/* No comment provided by engineer. */
+"Sound Effects" = "Efekty dźwiękowe";
+
+/* No comment provided by engineer. */
+"VFX" = "VFX";
+
+/* No comment provided by engineer. */
+"Voiceover" = "Lektor (voiceover)";

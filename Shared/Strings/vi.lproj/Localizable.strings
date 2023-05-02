@@ -2,6 +2,9 @@
 /* Used for matches less than a day ago. %@ is replaced by the number of hours/minutes, e.g. '3h ago'. */
 "%@ ago" = "%@ trước";
 
+/* Weapon Reference: stats */
+"%@ bullets/sec" = "%@ viên đạn/giây";
+
 /* %@ is replaced by a fraction of wins vs. games played, e.g. '5/12 games won'. */
 "%@ games won" = "%@ trận thắng";
 
@@ -10,6 +13,12 @@
 
 /* used throughout the app to format percentages—placeholder is replaced by a number */
 "%@%%" = "%@%%";
+
+/* Weapon Reference: time in seconds (with decimal digits) */
+"%@s" = "%@s";
+
+/* Weapon Reference: stats */
+"%@°" = "%@°";
 
 /* Missions Box: always at least 3 */
 "%lld Future Weeklies" = "%lld nhiệm vụ tương lai";
@@ -196,7 +205,8 @@ Competitive matches after your placements can be identified without their detail
 /* Request Log: shown for bodies that are not decodable to text */
 "Binary Data" = "Dữ liệu nhị phân";
 
-/* Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Body" = "Thân";
 
 /* Bookmark/Player List: section */
@@ -493,7 +503,8 @@ BÁO CÁO LỖI CỦA BẠN TẠI ĐÂY
 /* Stats: date grouping size picker */
 "Group by" = "Nhóm theo";
 
-/* Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Head" = "Đầu";
 
 /* No comment provided by engineer. */
@@ -559,7 +570,8 @@ Nếu bạn gặp lỗi hoặc có một số phản hồi, tôi luôn sẵn lò
 /* Asset Management: this row shows the language of the current assets */
 "Language" = "Ngôn ngữ";
 
-/* Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Legs" = "Chân";
 
 /* Bookmark/Player List: player level */

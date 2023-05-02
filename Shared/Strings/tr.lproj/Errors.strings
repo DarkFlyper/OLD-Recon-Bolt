@@ -23,6 +23,12 @@ Muhtemelen yanlış hesaba giriş yaptınız; %@";
 /* No comment provided by engineer. */
 "Keychain error for key '%@': %@" = "'%@' anahtarı için anahtar zinciri hatası: %@";
 
+/* store widget error */
+"Missing Assets!" = "Kayıp Varlıklar!";
+
+/* No comment provided by engineer. */
+"Missing game configuration data for %@ region!" = "%@ bölgesi için eksik oyun yapılandırma verileri!";
+
 /* error loading the account for a widget. */
 "No account specified." = "Hesap belirtilmemiş.";
 
@@ -31,6 +37,9 @@ Muhtemelen yanlış hesaba giriş yaptınız; %@";
 
 /* Riot API Error */
 "The resource could not be found." = "Kaynak bulunamadı.";
+
+/* Keychain error. */
+"Unexpected type found: %@" = "Beklenmeyen tür bulundu: %@";
 
 /* store widget error */
 "Unknown Offer" = "Bilinmeyen Teklif";
@@ -48,10 +57,16 @@ Muhtemelen yanlış hesaba giriş yaptınız; %@";
 "Widgets require Recon Bolt Pro!" = "Araç Takımları Recon Bolt Pro gerektirir!";
 
 /* Riot API Error */
+"You are sending too many requests." = "Çok fazla istek gönderiyorsunuz.";
+
+/* Riot API Error */
 "Your session could not be resumed. %@" = "Oturumunuz devam ettirilemedi. %@";
 
 /* Riot API Error */
 "Your session has expired! Please sign in again." = "Oturumunuzun süresi doldu! Lütfen tekrar giriş yapın.";
+
+/* Riot API Error */
+"Your token has expired. %@" = "Tokeninizin süresi doldu. %@";
 
 /* wrong account error */
 "this one has no Riot ID & Tagline." = "bunda Riot ADI ve Etiket yok.";

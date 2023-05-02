@@ -188,7 +188,8 @@ Konkurrerande matchningar efter dina placeringar kan dock identifieras utan dera
 /* Request Log: shown for bodies that are not decodable to text */
 "Binary Data" = "Binära data";
 
-/* Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Body" = "Body";
 
 /* Bookmark/Player List: section */
@@ -466,7 +467,8 @@ DIN FELRAPPORT HÄR
 /* Asset Management: this row shows the language of the current assets */
 "Language" = "Språk";
 
-/* Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Legs" = "Ben";
 
 /* Bookmark/Player List: player level */

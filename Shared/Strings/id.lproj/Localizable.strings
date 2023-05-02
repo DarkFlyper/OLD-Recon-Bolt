@@ -2,6 +2,9 @@
 /* Used for matches less than a day ago. %@ is replaced by the number of hours/minutes, e.g. '3h ago'. */
 "%@ ago" = "%@ yang lalu";
 
+/* Weapon Reference: stats */
+"%@ bullets/sec" = "%@ peluru / detik";
+
 /* %@ is replaced by a fraction of wins vs. games played, e.g. '5/12 games won'. */
 "%@ games won" = "%@ pertandingan dimenangkan";
 
@@ -11,6 +14,12 @@
 /* used throughout the app to format percentages—placeholder is replaced by a number */
 "%@%%" = "%@%%";
 
+/* Weapon Reference: time in seconds (with decimal digits) */
+"%@s" = "%@s";
+
+/* Weapon Reference: stats */
+"%@°" = "%@°";
+
 /* Missions Box: always at least 3 */
 "%lld Future Weeklies" = "%lld Minggu Depan";
 
@@ -19,6 +28,12 @@
 
 /* No comment provided by engineer. */
 "%lld RR" = "%lld RR";
+
+/* Weapon Reference: stats */
+"%lld bullets" = "%lld peluru";
+
+/* Weapon Reference: price, always at least 150 */
+"%lld credits" = "%lld kredit";
 
 /* Storage Management */
 "%lld from other players" = "%lld dari pemain lain";
@@ -187,7 +202,8 @@ Competitive matches after your placements can be identified without their detail
 /* Request Log: shown for bodies that are not decodable to text */
 "Binary Data" = "Data Binary";
 
-/* Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Body" = "Badan";
 
 /* Bookmark/Player List: section */
@@ -484,7 +500,8 @@ LAPORKAN BUG ANDA DISINI
 /* Stats: date grouping size picker */
 "Group by" = "Dikelompokkan berdasarkan";
 
-/* Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Head" = "Kepala";
 
 /* No comment provided by engineer. */
@@ -550,7 +567,8 @@ Jika Anda menemukan bug atau memiliki feedback, saya selalu senang mendengarnya 
 /* Asset Management: this row shows the language of the current assets */
 "Language" = "Bahasa";
 
-/* Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Legs" = "Kaki";
 
 /* Bookmark/Player List: player level */

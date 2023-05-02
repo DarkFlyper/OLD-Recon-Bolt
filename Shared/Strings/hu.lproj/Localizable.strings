@@ -2,6 +2,9 @@
 /* Used for matches less than a day ago. %@ is replaced by the number of hours/minutes, e.g. '3h ago'. */
 "%@ ago" = "%@ ezelőtt";
 
+/* Weapon Reference: stats */
+"%@ bullets/sec" = "%@ golyó/másodperc";
+
 /* %@ is replaced by a fraction of wins vs. games played, e.g. '5/12 games won'. */
 "%@ games won" = "%@ nyertes meccsek";
 
@@ -10,6 +13,12 @@
 
 /* used throughout the app to format percentages—placeholder is replaced by a number */
 "%@%%" = "%@%%";
+
+/* Weapon Reference: time in seconds (with decimal digits) */
+"%@s" = "%@s";
+
+/* Weapon Reference: stats */
+"%@°" = "%@*";
 
 /* Missions Box: always at least 3 */
 "%lld Future Weeklies" = "%lld jövőbeli heti küldetések";
@@ -20,6 +29,12 @@
 /* No comment provided by engineer. */
 "%lld RR" = "%lld RR";
 
+/* Weapon Reference: stats */
+"%lld bullets" = "%lld golyók";
+
+/* Weapon Reference: price, always at least 150 */
+"%lld credits" = "%lld kreditek";
+
 /* Storage Management */
 "%lld from other players" = "%lld más játékosoktól";
 
@@ -29,8 +44,14 @@
 /* Shown at the bottom of the expandable playtime list when there are more entries available. */
 "%lld more" = "%lld több";
 
+/* Weapon Reference: stats */
+"%lld pellets" = "%lld töltények";
+
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
 "%lld to %lld credits" = "%lld kreditről %lld kereditre";
+
+/* Weapon Reference: stats: damage range */
+"%lld – %lldm" = "%lld - %lldm";
 
 /* No comment provided by engineer. */
 "%lld%%" = "%lld%%";
@@ -119,6 +140,12 @@ Az elhelyezés utáni versenyszerű mérkőzések azonban az adataik nélkül is
 /* No comment provided by engineer. */
 "Agent Select" = "Agent választó";
 
+/* Contract Picker */
+"Agent Unlockable" = "Ügynök feloldható";
+
+/* Contract Picker */
+"Agent Unlocked" = "Ügynök feloldva";
+
 /* Statistics filter: button */
 "Agents" = "Ügynökök";
 
@@ -188,7 +215,8 @@ Az elhelyezés utáni versenyszerű mérkőzések azonban az adataik nélkül is
 /* Request Log: shown for bodies that are not decodable to text */
 "Binary Data" = "Bináris adatok";
 
-/* Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Body" = "Test";
 
 /* Bookmark/Player List: section */
@@ -231,6 +259,9 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Career Summary" = "Karrier összefoglaló";
 
+/* Weapon Reference */
+"Category" = "Kategória";
+
 /* No comment provided by engineer. */
 "Change Buddy" = "Buddy váltás";
 
@@ -272,6 +303,9 @@ Playtime Stats: section */
 
 /* Storage Management: button to delete all entries of a certain kind */
 "Clear All" = "Minden törlése";
+
+/* Skin Details: section */
+"Color Variants" = "Színváltozatok";
 
 /* Contract Picker */
 "Completed" = "Befejezett";
@@ -458,8 +492,14 @@ HIBAJELENTÉSED ITT:
 /* Party Box: placeholder shows time spent in queue */
 "Finding match… (%@)" = "Meccs keresése… (%@)";
 
+/* Weapon Reference: stats */
+"Fire Rate" = "Tűzerő";
+
 /* No comment provided by engineer. */
 "Force Refresh Widgets" = "Widgetek kényszerfrissítése";
+
+/* Contract Picker */
+"Free Agent" = "Ingyenes ügynök";
 
 /* Storage Management: button to free up a certain amount of space */
 "Free up these %@" = "Szabadítsd fel ezeket a %@";
@@ -485,7 +525,8 @@ HIBAJELENTÉSED ITT:
 /* Stats: date grouping size picker */
 "Group by" = "Csoportosítás";
 
-/* Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Head" = "Fej";
 
 /* No comment provided by engineer. */
@@ -551,7 +592,8 @@ Ha hibával találkoztál, vagy van valami visszajelzésed, mindig örömmel meg
 /* Asset Management: this row shows the language of the current assets */
 "Language" = "Nyelv";
 
-/* Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Legs" = "Lábak";
 
 /* Bookmark/Player List: player level */
@@ -617,6 +659,9 @@ Ha nem tudod a felhasználóneved, vagy nincs, akkor ezt a [account.riotgames.co
 
 /* Win Rate Stats: chart legend */
 "Losses" = "Veszteségek";
+
+/* Weapon Reference: stats */
+"Magazine Size" = "Tár mérete";
 
 /* No comment provided by engineer. */
 "Manage Assets" = "Fájlok kezelése";
@@ -797,6 +842,9 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Please make sure you are ready to play by the time the game starts!" = "Kérjük, győződj meg róla, hogy a játék kezdetére készen állsz a játékra!";
 
+/* Weapon Reference */
+"Price" = "Ár";
+
 /* App Icon Name */
 "Pro Blue" = "Pro Kék";
 
@@ -854,6 +902,9 @@ Playtime Stats: section */
 /* Store Widget: next refresh time (hour & minute) */
 "Refreshes at %@" = "Frissítés %@ múlva";
 
+/* Weapon Reference: stats */
+"Reload Time" = "Újratöltési idő";
+
 /* Match List: accessibility label */
 "Remove Bookmark" = "Könyvjelző eltávolítása";
 
@@ -899,6 +950,9 @@ Request Log: title */
 
 /* Win Rate Stats: section */
 "Rounds by Side" = "Körök oldalanként";
+
+/* Weapon Reference: stats */
+"Run Speed" = "Futási sebesség";
 
 /* Bookmark/Player List: section */
 "Search" = "Keresés";

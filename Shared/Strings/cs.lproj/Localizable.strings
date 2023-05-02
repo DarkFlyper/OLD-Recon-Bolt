@@ -187,7 +187,8 @@ Competitive matches after your placements can be identified without their detail
 /* Request Log: shown for bodies that are not decodable to text */
 "Binary Data" = "Binární data";
 
-/* Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Body" = "Tělo";
 
 /* Bookmark/Player List: section */
@@ -484,7 +485,8 @@ VAŠE HLÁŠENÍ CHYBY ZDE
 /* Stats: date grouping size picker */
 "Group by" = "Seskupit podle";
 
-/* Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Head" = "Hlava";
 
 /* No comment provided by engineer. */
@@ -550,7 +552,8 @@ Pokud jste narazili na chybu nebo máte nějakou zpětnou vazbu, vždy si ji rá
 /* Asset Management: this row shows the language of the current assets */
 "Language" = "Jazyk";
 
-/* Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Legs" = "Nohy";
 
 /* Bookmark/Player List: player level */

@@ -196,7 +196,8 @@ Competitive matches after your placements can be identified without their detail
 /* Request Log: shown for bodies that are not decodable to text */
 "Binary Data" = "Dados do Binário";
 
-/* Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Body" = "Corpo";
 
 /* Bookmark/Player List: section */
@@ -493,7 +494,8 @@ SEU RELATÓRIO DE BUG AQUI
 /* Stats: date grouping size picker */
 "Group by" = "Agrupar por";
 
-/* Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Head" = "Cabeça";
 
 /* No comment provided by engineer. */
@@ -559,7 +561,8 @@ Se você encontrou um bug ou tem algum feedback, ficarei muito feliz em ouvir no
 /* Asset Management: this row shows the language of the current assets */
 "Language" = "Idioma";
 
-/* Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Legs" = "Pernas";
 
 /* Bookmark/Player List: player level */
