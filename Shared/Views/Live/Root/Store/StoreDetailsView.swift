@@ -18,9 +18,14 @@ struct StoreDetailsView: View {
 		
 		VStack(spacing: 16) {
 			ForEach(storefront.featuredBundle.bundles) { bundle in
-				bundleCell(for: bundle)
-					.background(Color.tertiaryGroupedBackground)
-					.cornerRadius(8)
+				NavigationLink {
+					BundleDetailsView(bundle: bundle)
+				} label: {
+					bundleCell(for: bundle)
+						.background(Color.tertiaryGroupedBackground)
+						.cornerRadius(8)
+						.tint(.primary)
+				}
 			}
 			
 			Divider()
@@ -90,10 +95,15 @@ struct StoreDetailsView: View {
 				HStack {
 					Text(info.displayName)
 						.fontWeight(.medium)
+						.multilineTextAlignment(.leading)
 					
 					Spacer()
 					
 					remainingTimeLabel(bundle.remainingDuration)
+					
+					Image(systemName: "chevron.forward")
+						.foregroundStyle(.secondary)
+						.imageScale(.small)
 				}
 				.padding(12)
 			} else {
@@ -158,13 +168,10 @@ struct OfferCell: View {
 					.frame(height: 60)
 				
 				HStack(alignment: .lastTextBaseline) {
-					UnwrappingView(
-						value: resolved?.skin.displayName,
-						placeholder: Text("Unknown Skin", comment: "placeholder")
-					)
-					.font(.body.weight(.medium))
-					.multilineTextAlignment(.leading)
-					.fixedSize(horizontal: false, vertical: true)
+					(resolved?.skin).label()
+						.font(.body.weight(.medium))
+						.multilineTextAlignment(.leading)
+						.fixedSize(horizontal: false, vertical: true)
 					
 					Spacer()
 					
@@ -179,6 +186,7 @@ struct OfferCell: View {
 				if resolved != nil {
 					Image(systemName: "chevron.forward")
 						.font(.body.weight(.medium))
+						.imageScale(.small)
 				}
 			}
 			.padding(12)
@@ -186,6 +194,15 @@ struct OfferCell: View {
 			.background(tier?.color?.opacity(1.5))
 		}
 		.disabled(resolved == nil)
+	}
+}
+
+extension WeaponSkin? {
+	func label() -> some View {
+		UnwrappingView(
+			value: self?.displayName,
+			placeholder: Text("Unknown Skin", comment: "placeholder")
+		)
 	}
 }
 
@@ -227,6 +244,7 @@ struct StoreDetailsView_Previews: PreviewProvider {
 			} refresh: { _ in }
 				.forPreviews()
 		}
+		.withToolbar()
 	}
 }
 #endif

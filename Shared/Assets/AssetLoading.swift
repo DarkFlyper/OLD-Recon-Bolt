@@ -32,6 +32,12 @@ extension AssetClient {
 			}
 		)
 		
+		let buddiesByLevelID = try await Dictionary(
+			uniqueKeysWithValues: buddies.lazy.flatMap { buddy in
+				buddy.levels.map { ($0.id, buddy.id) }
+			}
+		)
+		
 		return try await AssetCollection(
 			version: version,
 			language: language,
@@ -50,6 +56,7 @@ extension AssetClient {
 			skinsByLevelID: skinsByLevelID,
 			sprays: .init(values: sprays),
 			buddies: .init(values: buddies),
+			buddiesByLevelID: buddiesByLevelID,
 			currencies: .init(values: currencies),
 			bundles: .init(values: bundles),
 			contentTiers: .init(values: contentTiers)

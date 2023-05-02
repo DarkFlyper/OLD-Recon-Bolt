@@ -192,6 +192,10 @@ extension AssetCollection {
 		self[skinsByLevelID[level]]
 	}
 	
+	func resolveBuddy(_ level: Weapon.Buddy.Level.ID) -> BuddyInfo? {
+		buddiesByLevelID[level].flatMap { buddies[$0] }
+	}
+	
 	subscript(path: WeaponSkin.Level.Path?) -> ResolvedLevel? {
 		guard
 			let path,

@@ -64,10 +64,7 @@ struct GunCustomizer: View {
 					VStack {
 						(info?.displayIcon).view()
 							.frame(width: 60)
-						UnwrappingView(
-							value: info?.displayName,
-							placeholder: Text("Unknown Buddy", comment: "placeholder")
-						)
+						info.label()
 					}
 				} else {
 					Text("No buddy selected!", comment: "Gun Customizer: shown when a weapon has no buddy active")
@@ -174,6 +171,15 @@ struct GunCustomizer: View {
 		}
 		.compositingGroup()
 		.aligningListRowSeparator()
+	}
+}
+
+extension BuddyInfo? {
+	func label() -> some View {
+		UnwrappingView(
+			value: self?.displayName,
+			placeholder: Text("Unknown Buddy", comment: "placeholder")
+		)
 	}
 }
 
