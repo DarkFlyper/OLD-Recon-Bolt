@@ -22,11 +22,11 @@ private struct PlayerModifier: ViewModifier {
 						self.player = nil
 					} label: {
 						Image(systemName: "xmark.circle.fill")
+							.padding()
 					}
 					.font(.title)
 					.preferredColorScheme(.light)
 					.foregroundStyle(.regularMaterial)
-					.padding()
 				}
 				.edgesIgnoringSafeArea(.all)
 		}
