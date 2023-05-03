@@ -2,6 +2,9 @@
 /* Used for matches less than a day ago. %@ is replaced by the number of hours/minutes, e.g. '3h ago'. */
 "%@ ago" = "il y a %@";
 
+/* Weapon Reference: stats */
+"%@ bullets/sec" = "%@ balles/sec";
+
 /* %@ is replaced by a fraction of wins vs. games played, e.g. '5/12 games won'. */
 "%@ games won" = "%@ parties gagnées";
 
@@ -10,6 +13,9 @@
 
 /* used throughout the app to format percentages—placeholder is replaced by a number */
 "%@%%" = "%@%%";
+
+/* Weapon Reference: time in seconds (with decimal digits) */
+"%@s" = "%@s";
 
 /* Missions Box: always at least 3 */
 "%lld Future Weeklies" = "%lld Événements hebdomadaires à venir";
