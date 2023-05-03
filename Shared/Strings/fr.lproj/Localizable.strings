@@ -61,7 +61,7 @@ Missions Box */
 "(%lld – %lld)" = "(%lld – %lld)";
 
 /* Pro Features List */
-"(You can switch between available icons at any time.)" = "(Vous pouvez changer entre les icônes disponibles à tout moment.)";
+"(You can switch between available icons at any time.)" = "(Tu peux changer l'icône à tout moment.)";
 
 /* No comment provided by engineer. */
 "+%lld XP" = "+%lld XP";
@@ -117,7 +117,7 @@ Cependant, les parties compétitives qui ont lieu après votre placement de rang
 "Add another Account" = "Ajouter un autre compte";
 
 /* Pro Features List */
-"Add multiple accounts and seamlessly switch between them at any time." = "Ajoutez plusieurs comptes et passez de l'un à l'autre à tout moment.";
+"Add multiple accounts and seamlessly switch between them at any time." = "Ajoute plusieurs comptes et passe de l'un à l'autre à tout moment.";
 
 /* No comment provided by engineer. */
 "Advanced Settings" = "Paramètres avancés";

@@ -11,6 +11,12 @@
 /* used throughout the app to format percentages—placeholder is replaced by a number */
 "%@%%" = "%@%%";
 
+/* Weapon Reference: time in seconds (with decimal digits) */
+"%@s" = "%@s";
+
+/* Weapon Reference: stats */
+"%@°" = "%@°";
+
 /* Missions Box: always at least 3 */
 "%lld Future Weeklies" = "%lld Budoucí týdenní úkoly";
 
@@ -19,6 +25,9 @@
 
 /* No comment provided by engineer. */
 "%lld RR" = "%lld RR";
+
+/* Weapon Reference: price, always at least 150 */
+"%lld credits" = "%lld kreditů";
 
 /* Storage Management */
 "%lld from other players" = "%lld od ostatních hráčů";
@@ -29,8 +38,14 @@
 /* Shown at the bottom of the expandable playtime list when there are more entries available. */
 "%lld more" = "%lld dalších";
 
+/* Weapon Reference: stats */
+"%lld pellets" = "%lld broků";
+
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
 "%lld to %lld credits" = "%lld na %lld kredity";
+
+/* Weapon Reference: stats: damage range */
+"%lld – %lldm" = "%lld - %lldm";
 
 /* No comment provided by engineer. */
 "%lld%%" = "%lld%%";
@@ -231,6 +246,9 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Career Summary" = "Shrnutí Kariéry";
 
+/* Weapon Reference */
+"Category" = "Kategorie";
+
 /* No comment provided by engineer. */
 "Change Buddy" = "Změnit Přívěšek";
 
@@ -272,6 +290,9 @@ Playtime Stats: section */
 
 /* Storage Management: button to delete all entries of a certain kind */
 "Clear All" = "Vymazat vše";
+
+/* Skin Details: section */
+"Color Variants" = "Barevné Varianty";
 
 /* Contract Picker */
 "Completed" = "Dokončen";
@@ -343,7 +364,7 @@ Playtime Stats: section */
 "Daily" = "Denní";
 
 /* Missions Box: header */
-"Daily Missions" = "Denní úkoly";
+"Daily Missions" = "Denní Úkoly";
 
 /* Store */
 "Daily Offers" = "Denní Nabídky";
@@ -457,6 +478,9 @@ VAŠE HLÁŠENÍ CHYBY ZDE
 
 /* Party Box: placeholder shows time spent in queue */
 "Finding match… (%@)" = "Vyhledání zápasu... (%@)";
+
+/* Weapon Reference: stats */
+"Fire Rate" = "Rychlost Střelby";
 
 /* No comment provided by engineer. */
 "Force Refresh Widgets" = "Vynutit obnovení widgetů";
@@ -619,6 +643,9 @@ Pokud své uživatelské jméno neznáte nebo ho nemáte, můžete jej zjistit n
 
 /* Win Rate Stats: chart legend */
 "Losses" = "Ztráty";
+
+/* Weapon Reference: stats */
+"Magazine Size" = "Velikost Zásobníku";
 
 /* No comment provided by engineer. */
 "Manage Assets" = "Správa Assetů";
@@ -799,6 +826,9 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Please make sure you are ready to play by the time the game starts!" = "Ujistěte se, že můžete být u počítače v době zahájení hry!";
 
+/* Weapon Reference */
+"Price" = "Cena";
+
 /* App Icon Name */
 "Pro Blue" = "Pro Modrá";
 
@@ -816,6 +846,9 @@ Playtime Stats: section */
 
 /* Statistics filter: button */
 "Queues" = "Herní módy";
+
+/* Weapon Reference: stats */
+"Range" = "Vzdálenost";
 
 /* Rank Widget: title */
 "Rank" = "Rank";
@@ -902,6 +935,9 @@ Request Log: title */
 /* Win Rate Stats: section */
 "Rounds by Side" = "Kola podle strany";
 
+/* Weapon Reference: stats */
+"Run Speed" = "Rychlost Běhu";
+
 /* Bookmark/Player List: section */
 "Search" = "Hledat";
 
@@ -944,6 +980,15 @@ Login Form: button */
 
 /* Login Form: button/header */
 "Sign in with Google/Apple/etc." = "Přihlaste se pomocí Google/Apple atd.";
+
+/* Skin Details: level name */
+"Skin Level %lld" = "Úroveň %lld";
+
+/* Skin Details: section */
+"Skin Levels" = "Úrovně Skinu";
+
+/* Weapon Reference: button */
+"Skins" = "Skiny";
 
 /* Hit Distribution Stats: smoothing slider */
 "Smoothing" = "Vyhlazování";
@@ -1159,6 +1204,9 @@ Round Details: killed by unknown/unspecified weapon */
 /* No comment provided by engineer. */
 "Weapon Loadout" = "Inventář Zbraní";
 
+/* Weapon Reference: section */
+"Weapon Statistics" = "Statistiky Zbraně";
+
 /* No comment provided by engineer. */
 "Weapons" = "Zbraně";
 
@@ -1199,16 +1247,16 @@ Round Details: killed by unknown/unspecified weapon */
 "iOS is a bit finnicky about this, so widgets may not refresh right away—feel free to restart if this doesn't help!" = "iOS je v tomto ohledu trochu vybíravý, takže widgety se nemusí obnovit hned - pokud to nepomůže, klidně je restartujte!";
 
 /* Loadout: spray slot */
-"mid-round" = "mid-round";
+"mid-round" = "v polovině kola";
 
 /* Missions Widget: countdown label when the target is in the past. Should never really show up, since at this point there's new data. */
 "old" = "staré";
 
 /* Loadout: spray slot */
-"post-round" = "post-round";
+"post-round" = "po kole";
 
 /* Loadout: spray slot */
-"pre-round" = "pre-round";
+"pre-round" = "předkolem";
 
 /* Login Form */
 "signing in…" = "Přihlašování…";

@@ -44,8 +44,14 @@
 /* Shown at the bottom of the expandable playtime list when there are more entries available. */
 "%lld more" = "%lld lebih lanjut";
 
+/* Weapon Reference: stats */
+"%lld pellets" = "%lld pelet";
+
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
 "%lld to %lld credits" = "%lld ke %lld kredit";
+
+/* Weapon Reference: stats: damage range */
+"%lld – %lldm" = "%lld – %lldm";
 
 /* No comment provided by engineer. */
 "%lld%%" = "%lld%%";
@@ -132,6 +138,12 @@ Competitive matches after your placements can be identified without their detail
 
 /* No comment provided by engineer. */
 "Agent Select" = "Pilih Agen";
+
+/* Contract Picker */
+"Agent Unlockable" = "Agen Tidak Dapat Dikunci";
+
+/* Contract Picker */
+"Agent Unlocked" = "Agen Tidak Terkunci";
 
 /* Statistics filter: button */
 "Agents" = "Agen";
@@ -246,6 +258,9 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Career Summary" = "Ringkasan Karier";
 
+/* Weapon Reference */
+"Category" = "Kategori";
+
 /* No comment provided by engineer. */
 "Change Buddy" = "Ubah Buddy";
 
@@ -287,6 +302,9 @@ Playtime Stats: section */
 
 /* Storage Management: button to delete all entries of a certain kind */
 "Clear All" = "Hapus Semua";
+
+/* Skin Details: section */
+"Color Variants" = "Varian Warna";
 
 /* Contract Picker */
 "Completed" = "Selesai";
@@ -411,6 +429,9 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Enter 2FA Code" = "Masukkan Kode 2FA";
 
+/* Weapon Reference: stats */
+"Equip Time" = "Siagakan Kecepatan";
+
 /* Request Log
 Stats: error details */
 "Error" = "Kesalahan";
@@ -473,8 +494,17 @@ LAPORKAN BUG ANDA DISINI
 /* Party Box: placeholder shows time spent in queue */
 "Finding match… (%@)" = "Dalam antrean.. (%@)";
 
+/* Weapon Reference: stats */
+"Fire Rate" = "Laju Tembakan";
+
+/* Weapon Reference: stats */
+"First Bullet Spread" = "Sebaran Tembakan ke-1";
+
 /* No comment provided by engineer. */
 "Force Refresh Widgets" = "Memaksa Refresh Widget";
+
+/* Contract Picker */
+"Free Agent" = "Agen Gratis";
 
 /* Storage Management: button to free up a certain amount of space */
 "Free up these %@" = "Membersihkan penyimpanan lokal %@";
@@ -634,6 +664,9 @@ Jika Anda tidak tahu nama pengguna Anda atau belum memilikinya, Anda dapat mempe
 
 /* Win Rate Stats: chart legend */
 "Losses" = "Kalah";
+
+/* Weapon Reference: stats */
+"Magazine Size" = "Ukuran Magasin";
 
 /* No comment provided by engineer. */
 "Manage Assets" = "Mengelola Aset";
@@ -814,6 +847,9 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Please make sure you are ready to play by the time the game starts!" = "Pastikan Anda siap untuk bermain pada saat permainan ditemukan!";
 
+/* Weapon Reference */
+"Price" = "Harga";
+
 /* App Icon Name */
 "Pro Blue" = "Pro Blue";
 
@@ -831,6 +867,9 @@ Playtime Stats: section */
 
 /* Statistics filter: button */
 "Queues" = "Antrian";
+
+/* Weapon Reference: stats */
+"Range" = "Jangkauan";
 
 /* Rank Widget: title */
 "Rank" = "Rank";
@@ -870,6 +909,9 @@ Playtime Stats: section */
 
 /* Store Widget: next refresh time (hour & minute) */
 "Refreshes at %@" = "Akan direfresh pada %@";
+
+/* Weapon Reference: stats */
+"Reload Time" = "Kecepatan Isi Ulang";
 
 /* Match List: accessibility label */
 "Remove Bookmark" = "Hapus Penanda";
@@ -917,6 +959,9 @@ Request Log: title */
 /* Win Rate Stats: section */
 "Rounds by Side" = "Round dalam Map";
 
+/* Weapon Reference: stats */
+"Run Speed" = "Kecepatan Lari";
+
 /* Bookmark/Player List: section */
 "Search" = "Pencarian";
 
@@ -934,6 +979,9 @@ Request Log: title */
 
 /* Playtime Stats: title for view of matches in common with another player */
 "Shared Matches" = "Pertandingan Bersama";
+
+/* Weapon Reference: stats */
+"Shotgun Pellets" = "Pelet Senapan";
 
 /* No comment provided by engineer. */
 "Show Unfetched Matches" = "Tampilkan Pertandingan yang belum Diambil";
@@ -959,6 +1007,15 @@ Login Form: button */
 
 /* Login Form: button/header */
 "Sign in with Google/Apple/etc." = "Masuk menggunakan Google/Apple/dll.";
+
+/* Skin Details: level name */
+"Skin Level %lld" = "Level %lld";
+
+/* Skin Details: section */
+"Skin Levels" = "Level Skin";
+
+/* Weapon Reference: button */
+"Skins" = "Skin";
 
 /* Hit Distribution Stats: smoothing slider */
 "Smoothing" = "Menghaluskan";
@@ -1173,6 +1230,9 @@ Round Details: killed by unknown/unspecified weapon */
 
 /* No comment provided by engineer. */
 "Weapon Loadout" = "Loadout Senjata";
+
+/* Weapon Reference: section */
+"Weapon Statistics" = "Statistik Senjata";
 
 /* No comment provided by engineer. */
 "Weapons" = "Senjata";

@@ -14,6 +14,12 @@
 /* used throughout the app to format percentages—placeholder is replaced by a number */
 "%@%%" = "%@%%";
 
+/* Weapon Reference: time in seconds (with decimal digits) */
+"%@s" = "%@";
+
+/* Weapon Reference: stats */
+"%@°" = "%@°";
+
 /* Missions Box: always at least 3 */
 "%lld Future Weeklies" = "%lld 未來每週";
 
@@ -22,6 +28,12 @@
 
 /* No comment provided by engineer. */
 "%lld RR" = "%lld 分數";
+
+/* Weapon Reference: stats */
+"%lld bullets" = "%lld 子彈";
+
+/* Weapon Reference: price, always at least 150 */
+"%lld credits" = "%lld 點數";
 
 /* Storage Management */
 "%lld from other players" = "%lld 位來自其他玩家";
@@ -35,8 +47,14 @@
 /* Shown at the bottom of the expandable playtime list when there are more entries available. */
 "%lld more" = "%lld 更多";
 
+/* Weapon Reference: stats */
+"%lld pellets" = "%lld 顆粒";
+
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
 "%lld to %lld credits" = "%lld 到 %lld 點數";
+
+/* Weapon Reference: stats: damage range */
+"%lld – %lldm" = "%lld – %lldm";
 
 /* No comment provided by engineer. */
 "%lld%%" = "%lld%%";
@@ -131,6 +149,12 @@ Competitive matches after your placements can be identified without their detail
 
 /* No comment provided by engineer. */
 "Agent Select" = "選擇特務";
+
+/* Contract Picker */
+"Agent Unlockable" = "特務可解鎖";
+
+/* Contract Picker */
+"Agent Unlocked" = "特務已解鎖";
 
 /* Statistics filter: button */
 "Agents" = "特務";
@@ -244,6 +268,9 @@ Playtime Stats: section */
 
 /* No comment provided by engineer. */
 "Career Summary" = "生涯總結";
+
+/* Weapon Reference */
+"Category" = "分類";
 
 /* No comment provided by engineer. */
 "Change Buddy" = "更換吊飾";
@@ -409,6 +436,9 @@ Playtime Stats: section */
 
 /* No comment provided by engineer. */
 "Enter 2FA Code" = "輸入驗證碼";
+
+/* Weapon Reference: stats */
+"Equip Time" = "裝備時間";
 
 /* Request Log
 Stats: error details */
@@ -815,6 +845,9 @@ Playtime Stats: section */
 
 /* No comment provided by engineer. */
 "Please make sure you are ready to play by the time the game starts!" = "請確保您在遊戲開始前準備好！";
+
+/* Weapon Reference */
+"Price" = "價格";
 
 /* App Icon Name */
 "Pro Blue" = "專業版藍色";
