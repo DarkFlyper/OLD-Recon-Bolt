@@ -11,6 +11,12 @@
 /* used throughout the app to format percentages—placeholder is replaced by a number */
 "%@%%" = "%@%%";
 
+/* Missions Box: always at least 3 */
+"%lld Future Weeklies" = "%lld Próximas semanales";
+
+/* Missions Box: always at least 3 */
+"%lld Queued-Up Weeklies" = "%lld Acumuladas semanalmente";
+
 /* No comment provided by engineer. */
 "%lld RR" = "%lld PR";
 
