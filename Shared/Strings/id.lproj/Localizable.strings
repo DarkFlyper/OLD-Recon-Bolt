@@ -44,8 +44,14 @@
 /* Shown at the bottom of the expandable playtime list when there are more entries available. */
 "%lld more" = "%lld lebih lanjut";
 
+/* Weapon Reference: stats */
+"%lld pellets" = "%lld pelet";
+
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
 "%lld to %lld credits" = "%lld ke %lld kredit";
+
+/* Weapon Reference: stats: damage range */
+"%lld – %lldm" = "%lld – %lldm";
 
 /* No comment provided by engineer. */
 "%lld%%" = "%lld%%";
@@ -132,6 +138,12 @@ Competitive matches after your placements can be identified without their detail
 
 /* No comment provided by engineer. */
 "Agent Select" = "Pilih Agen";
+
+/* Contract Picker */
+"Agent Unlockable" = "Agen Tidak Dapat Dikunci";
+
+/* Contract Picker */
+"Agent Unlocked" = "Agen Tidak Terkunci";
 
 /* Statistics filter: button */
 "Agents" = "Agen";
@@ -246,6 +258,9 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Career Summary" = "Ringkasan Karier";
 
+/* Weapon Reference */
+"Category" = "Kategori";
+
 /* No comment provided by engineer. */
 "Change Buddy" = "Ubah Buddy";
 
@@ -287,6 +302,9 @@ Playtime Stats: section */
 
 /* Storage Management: button to delete all entries of a certain kind */
 "Clear All" = "Hapus Semua";
+
+/* Skin Details: section */
+"Color Variants" = "Varian Warna";
 
 /* Contract Picker */
 "Completed" = "Selesai";
@@ -475,6 +493,9 @@ LAPORKAN BUG ANDA DISINI
 
 /* No comment provided by engineer. */
 "Force Refresh Widgets" = "Memaksa Refresh Widget";
+
+/* Contract Picker */
+"Free Agent" = "Agen Gratis";
 
 /* Storage Management: button to free up a certain amount of space */
 "Free up these %@" = "Membersihkan penyimpanan lokal %@";
