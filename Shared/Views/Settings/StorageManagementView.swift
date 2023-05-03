@@ -7,7 +7,7 @@ struct StorageManagementView: View {
 	
 	var body: some View {
 		List {
-			LabeledSpace("Total Space Used", bytes: manager.totalBytes)
+			LabeledSpace("Total Space Used", bytes: try? manager.totalBytes?.get())
 			
 			MatchListsSection(accountManager: accountManager)
 			
@@ -109,7 +109,7 @@ struct StorageManagementView: View {
 		nonisolated func computeTotals() async throws {
 			let listManager = LocalDataProvider.shared.matchListManager
 			let matchManager = LocalDataProvider.shared.matchDetailsManager
-			let total = recursiveSize(ofDirectory: listManager.folderURL)
+			let total = try recursiveSize(ofDirectory: listManager.folderURL)
 			guard !Task.isCancelled else { return }
 			
 			let knownAccounts = await accountManager.storedAccounts + bookmarkList.bookmarks.lazy.map(\.user)
@@ -137,13 +137,13 @@ struct StorageManagementView: View {
 		var rootFolder: URL
 		var clear: (() async throws -> Void)?
 		
-		@State var total: Int64?
+		@State var total: Result<Int64, Error>?
 		
 		@Environment(\.loadWithErrorAlerts) private var load
 		
 		var body: some View {
-			LabeledSpace(title, bytes: total)
-				.detachedTask { total = recursiveSize(ofDirectory: rootFolder) }
+			LabeledSpace(title, bytes: try? total?.get())
+				.detachedTask { total = tryRecursiveSize(ofDirectory: rootFolder) }
 				.swipeActions {
 					if let clear {
 						AsyncButton(role: .destructive) {
@@ -208,11 +208,11 @@ extension LabeledSpace where Label == UserLabel {
 
 @MainActor
 final class StorageManager: ObservableObject {
-	@Published private(set) var totalBytes: Int64?
+	@Published private(set) var totalBytes: Result<Int64, Error>?
 	
 	init() {
 		Task.detached(priority: .userInitiated) {
-			let total = recursiveSize(ofDirectory: FolderLocations.localData)
+			let total = tryRecursiveSize(ofDirectory: FolderLocations.localData)
 			await MainActor.run {
 				self.totalBytes = total
 			}
@@ -220,21 +220,25 @@ final class StorageManager: ObservableObject {
 	}
 }
 
-private func recursiveSize(ofDirectory root: URL) -> Int64 {
+private func tryRecursiveSize(ofDirectory root: URL) -> Result<Int64, Error> {
+	.init { try recursiveSize(ofDirectory: root) }
+}
+
+private func recursiveSize(ofDirectory root: URL) throws -> Int64 {
 	guard !isInSwiftUIPreview else { return 12345 }
 	
 	// rather than lots of little filesystem requests, we'll just do one directory listing and work with that.
-	let contents = try! FileManager.default.contentsOfDirectory(
+	let contents = try FileManager.default.contentsOfDirectory(
 		at: root,
 		includingPropertiesForKeys: [.isDirectoryKey, .fileSizeKey]
 	)
 	
-	return contents
+	return try contents
 		.lazy
 		.map { url -> Int64 in
 			guard !Task.isCancelled else { return 0 }
 			let values = try! url.resourceValues(forKeys: [.isDirectoryKey, .fileSizeKey])
-			return values.isDirectory! ? recursiveSize(ofDirectory: url) : Int64(values.fileSize!)
+			return values.isDirectory! ? try recursiveSize(ofDirectory: url) : Int64(values.fileSize!)
 		}
 		.reduce(0, +)
 }

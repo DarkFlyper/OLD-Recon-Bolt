@@ -99,7 +99,7 @@ struct AdvancedSettingsView: View {
 					HStack {
 						Text("Manage Local Storage")
 						Spacer()
-						if let total = storageManager.totalBytes {
+						if let total = try? storageManager.totalBytes?.get() {
 							Text(total, format: .byteCount(style: .file))
 								.foregroundStyle(.secondary)
 						}

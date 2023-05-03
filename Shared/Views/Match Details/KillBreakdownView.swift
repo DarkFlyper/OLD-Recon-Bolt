@@ -214,7 +214,8 @@ private extension MatchDetails {
 		return kills
 			.lazy
 			.filter { $0.finishingDamage.type != .bomb } // no bomb kills
-			.filter { teams[ifSome: $0.killer] != teams[$0.victim] } // no team kills
+			.filter { $0.killer != nil } // some kills don't list a killer for some reason
+			.filter { teams[$0.killer!] != teams[$0.victim] } // no team kills
 	}
 	
 	func killsByRound() -> [[Kill]] {
