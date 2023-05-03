@@ -167,7 +167,7 @@ private struct SkinsList: View {
 	}
 	
 	func searchAccepts(skin: String) -> Bool {
-		if #available(iOS 16.0, *) {
+		if #available(iOS 16.1, *) { // due to a bug from apple, this crashes in 16.0
 			return skin.firstMatch(of: Regex {
 				Anchor.wordBoundary
 				search

@@ -42,7 +42,7 @@ struct SearchableAssetPicker<Item: SearchableAsset, RowContent: View, Deselector
 	}
 	
 	func searchAccepts(_ candidate: String) -> Bool {
-		if #available(iOS 16.0, *) {
+		if #available(iOS 16.1, *) { // due to a bug from apple, this crashes in 16.0
 			return candidate.firstMatch(of: Regex {
 				Anchor.wordBoundary
 				search
