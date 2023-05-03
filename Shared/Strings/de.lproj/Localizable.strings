@@ -2,6 +2,9 @@
 /* Used for matches less than a day ago. %@ is replaced by the number of hours/minutes, e.g. '3h ago'. */
 "%@ ago" = "vor %@";
 
+/* Weapon Reference: stats */
+"%@ bullets/sec" = "%@ Schuss/Sek.";
+
 /* %@ is replaced by a fraction of wins vs. games played, e.g. '5/12 games won'. */
 "%@ games won" = "%@ Spiele gewonnen";
 
@@ -11,6 +14,12 @@
 /* used throughout the app to format percentages—placeholder is replaced by a number */
 "%@%%" = "%@%%";
 
+/* Weapon Reference: time in seconds (with decimal digits) */
+"%@s" = "%@s";
+
+/* Weapon Reference: stats */
+"%@°" = "%@°";
+
 /* Missions Box: always at least 3 */
 "%lld Future Weeklies" = "%lld zukünftige Missionen";
 
@@ -19,6 +28,12 @@
 
 /* No comment provided by engineer. */
 "%lld RR" = "%lld RW";
+
+/* Weapon Reference: stats */
+"%lld bullets" = "%lld Kugeln";
+
+/* Weapon Reference: price, always at least 150 */
+"%lld credits" = "%lld Creds";
 
 /* Storage Management */
 "%lld from other players" = "%lld von anderen Spielern";
@@ -32,8 +47,14 @@
 /* Shown at the bottom of the expandable playtime list when there are more entries available. */
 "%lld more" = "%lld weitere";
 
+/* Weapon Reference: stats */
+"%lld pellets" = "%lld Splitter";
+
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
 "%lld to %lld credits" = "%lld bis %lld Creds";
+
+/* Weapon Reference: stats: damage range */
+"%lld – %lldm" = "%lld – %lldm";
 
 /* No comment provided by engineer. */
 "%lld%%" = "%lld%%";
@@ -126,6 +147,12 @@ Competitive matches after your placements can be identified without their detail
 
 /* No comment provided by engineer. */
 "Agent Select" = "Agentenauswahl";
+
+/* Contract Picker */
+"Agent Unlockable" = "Agent freischaltbar";
+
+/* Contract Picker */
+"Agent Unlocked" = "Agent freigeschaltet";
 
 /* Statistics filter: button */
 "Agents" = "Agenten";
@@ -240,6 +267,9 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Career Summary" = "Karriere";
 
+/* Weapon Reference */
+"Category" = "Kategorie";
+
 /* No comment provided by engineer. */
 "Change Buddy" = "Talisman wechseln";
 
@@ -281,6 +311,9 @@ Playtime Stats: section */
 
 /* Storage Management: button to delete all entries of a certain kind */
 "Clear All" = "Alle Löschen";
+
+/* Skin Details: section */
+"Color Variants" = "Farbvarianten";
 
 /* Contract Picker */
 "Completed" = "Abgeschlossen";
@@ -405,6 +438,9 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Enter 2FA Code" = "2FA-Code eingeben";
 
+/* Weapon Reference: stats */
+"Equip Time" = "Ausrüstungszeit";
+
 /* Request Log
 Stats: error details */
 "Error" = "Fehler";
@@ -467,8 +503,17 @@ DEINE FEHLERMELDUNG HIER
 /* Party Box: placeholder shows time spent in queue */
 "Finding match… (%@)" = "Matchmaking läuft… (%@)";
 
+/* Weapon Reference: stats */
+"Fire Rate" = "Feuerrate";
+
+/* Weapon Reference: stats */
+"First Bullet Spread" = "Erster-Schuss-Ausbreitung";
+
 /* No comment provided by engineer. */
 "Force Refresh Widgets" = "Widgets sofort aktualisieren";
+
+/* Contract Picker */
+"Free Agent" = "Gratis-Agent";
 
 /* Storage Management: button to free up a certain amount of space */
 "Free up these %@" = "Diese %@ freimachen";
@@ -628,6 +673,9 @@ Wenn du deinen Benutzernamen nicht kennst oder keinen hast, kannst du das unter 
 
 /* Win Rate Stats: chart legend */
 "Losses" = "Niederlagen";
+
+/* Weapon Reference: stats */
+"Magazine Size" = "Magazingröße";
 
 /* No comment provided by engineer. */
 "Manage Assets" = "Assets verwalten";
@@ -808,6 +856,9 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Please make sure you are ready to play by the time the game starts!" = "Bitte stell sicher, dass du am PC sein kannst, wenn das Spiel anfängt!";
 
+/* Weapon Reference */
+"Price" = "Preis";
+
 /* App Icon Name */
 "Pro Blue" = "Pro-Blau";
 
@@ -825,6 +876,9 @@ Playtime Stats: section */
 
 /* Statistics filter: button */
 "Queues" = "Spielmodi";
+
+/* Weapon Reference: stats */
+"Range" = "Distanz";
 
 /* Rank Widget: title */
 "Rank" = "Rang";
@@ -864,6 +918,9 @@ Playtime Stats: section */
 
 /* Store Widget: next refresh time (hour & minute) */
 "Refreshes at %@" = "Aktualisiert um %@";
+
+/* Weapon Reference: stats */
+"Reload Time" = "Nachladezeit";
 
 /* Match List: accessibility label */
 "Remove Bookmark" = "Lesezeichen entfernen";
@@ -911,6 +968,9 @@ Request Log: title */
 /* Win Rate Stats: section */
 "Rounds by Side" = "Runden nach Seite";
 
+/* Weapon Reference: stats */
+"Run Speed" = "Lauftempo";
+
 /* Bookmark/Player List: section */
 "Search" = "Suche";
 
@@ -928,6 +988,9 @@ Request Log: title */
 
 /* Playtime Stats: title for view of matches in common with another player */
 "Shared Matches" = "Gemeinsame Spiele";
+
+/* Weapon Reference: stats */
+"Shotgun Pellets" = "Schrotkugeln";
 
 /* No comment provided by engineer. */
 "Show Unfetched Matches" = "Ungeladene Spiele anzeigen";
@@ -953,6 +1016,15 @@ Login Form: button */
 
 /* Login Form: button/header */
 "Sign in with Google/Apple/etc." = "Mit Google/Apple/etc. anmelden";
+
+/* Skin Details: level name */
+"Skin Level %lld" = "Level %lld";
+
+/* Skin Details: section */
+"Skin Levels" = "Skin-Levels";
+
+/* Weapon Reference: button */
+"Skins" = "Skins";
 
 /* Hit Distribution Stats: smoothing slider */
 "Smoothing" = "Glättung";
@@ -1167,6 +1239,9 @@ Round Details: killed by unknown/unspecified weapon */
 
 /* No comment provided by engineer. */
 "Weapon Loadout" = "Bewaffnung";
+
+/* Weapon Reference: section */
+"Weapon Statistics" = "Zahlen";
 
 /* No comment provided by engineer. */
 "Weapons" = "Waffen";
