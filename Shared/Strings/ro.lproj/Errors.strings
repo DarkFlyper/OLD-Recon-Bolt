@@ -5,11 +5,44 @@
 "Could not load active account!" = "Nu s-a putut încărca contul activ! ";
 
 /* Riot API Error */
-"Invalid Headers: %@" = "Antete invalide:";
+"Invalid Headers: %@" = "Antete invalide: %@";
 
 /* wrong account error */
 "It looks like this account has never played Valorant!
 
 You've probably signed into the wrong account; %@" = "Se pare că acest cont nu a jucat niciodată Valorant!
 
-Probabil că te-ai logat în contul greșit;";
+Probabil că te-ai logat în contul greșit; %@";
+
+/* No comment provided by engineer. */
+"Missing game configuration data for %@ region!" = "Lipsesc datele de configurare a jocului pentru regiunea %@!";
+
+/* Pro Store: error restoring purchase */
+"No previous transaction found!" = "Nu a fost găsita nicio tranzacție anterioară!";
+
+/* Riot API Error */
+"Please try again in %lld seconds." = "Te rugăm să încerci din nou în %lld secunde.";
+
+/* Pro Store: error restoring purchase (placeholder is reason why it was revoked) */
+"Previous purchase was revoked! Reason: %@" = "Achiziția anterioara a fost anulată! Motiv: %@";
+
+/* Riot API Error */
+"The API rejected your authorization." = "API-ul a resprins autorizarea ta.";
+
+/* Riot API Error */
+"The API returned an error code %lld." = "API-ul a returnat codul de eroare %lld.";
+
+/* store widget error */
+"Unknown Offer" = "Ofertă Necunoscută";
+
+/* store widget error */
+"Unknown Skin" = "Skin Necunoscut";
+
+/* No comment provided by engineer. */
+"Widgets require Recon Bolt Pro!" = "Pentru a utiliza widget-urile ai nevoie de Recon Bolt Pro!";
+
+/* Riot API Error */
+"Your session could not be resumed. %@" = "Sesiuna ta nu a putut fi restaurată. %@";
+
+/* Riot API Error */
+"Your session has expired! Please sign in again." = "Sesiuna a expirat! Te rog loghează-te din nou.";
