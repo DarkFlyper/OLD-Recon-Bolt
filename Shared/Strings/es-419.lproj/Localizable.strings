@@ -11,6 +11,12 @@
 /* used throughout the app to format percentages—placeholder is replaced by a number */
 "%@%%" = "%@%%";
 
+/* Missions Box: always at least 3 */
+"%lld Future Weeklies" = "%lld Próximas semanales";
+
+/* Missions Box: always at least 3 */
+"%lld Queued-Up Weeklies" = "%lld Acumuladas semanalmente";
+
 /* No comment provided by engineer. */
 "%lld RR" = "%lld PR";
 
@@ -70,6 +76,12 @@
 
 /* No comment provided by engineer. */
 "Agent Select" = "Seleccionar agente";
+
+/* Contract Picker */
+"Agent Unlockable" = "Agente para desbloquear";
+
+/* Contract Picker */
+"Agent Unlocked" = "Agente desbloqueado";
 
 /* Statistics filter: button */
 "Agents" = "Agentes";
@@ -298,6 +310,9 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Done" = "Hecho";
 
+/* No comment provided by engineer. */
+"Download Assets Now" = "Descargar archivos ahora";
+
 /* Win Rate Stats: chart legend */
 "Draws" = "Empates";
 
@@ -351,6 +366,9 @@ EL REPORTE DEL BUG VA AQUÍ
 /* No comment provided by engineer. */
 "Force Refresh Widgets" = "Forzar reinicio de los Widgets";
 
+/* Contract Picker */
+"Free Agent" = "Agente gratuito";
+
 /* Storage Management: button to free up a certain amount of space */
 "Free up these %@" = "Liberar %@";
 
@@ -373,6 +391,21 @@ EL REPORTE DEL BUG VA AQUÍ
 Weapon Reference: stats */
 "Head" = "Cabeza";
 
+/* About Screen */
+"Hi! I'm Julian Dunskus, and I made this app.
+
+Recon Bolt started development in early 2021, back when it wasn't yet possible to see your RR gains and losses in the game, but the API offered those numbers. I made an app to see the numbers and better understand my rank changes.
+
+As you can guess, the scope expanded massively over time to what you're using now. I hope you're enjoying it!
+
+If you've encountered a bug or have some feedback, I'm always happy to hear it on the Discord Server or GitHub :)" = "Hola, soy Julian Dunskus y he creado esta aplicación.
+
+Recon Bolt comenzó a desarrollarse a principios de 2021, cuando aún no era posible ver tus ganancias y pérdidas de RR en el juego, pero la API ofrecía esas cifras. Creé una aplicación para ver las cifras y comprender mejor mis cambios de rango.
+
+Como puedes adivinar, el alcance se amplió enormemente con el tiempo hasta lo que estás usando ahora. Espero que lo disfrutes.
+
+Si has encontrado un error o tienes algún comentario, siempre estoy encantado de escucharlo en el servidor Discord o GitHub :)";
+
 /* Hit Distribution Stats: title */
 "Hit Distribution" = "Distribución de Disparos";
 
@@ -381,6 +414,9 @@ Weapon Reference: stats */
 
 /* Pro Store */
 "I hope you enjoy the pro features :)" = "Espero que disfrutes con tus funciones Pro :)";
+
+/* Login Form: is this safe? */
+"I won't sugarcoat things. Due to the way this app uses the API, I believe there's no other way to sign in than to have people enter their credentials directly. Under those circumstances, there's really no good way for anyone to be sure their credentials remain safe. For what it's worth:" = "No voy a endulzar las cosas. Debido a la forma en que esta aplicación utiliza la API, creo que no hay otra forma de iniciar sesión que hacer que la gente introduzca sus credenciales directamente. En esas circunstancias, no hay forma de que nadie se asegure de que sus credenciales están a salvo. Por si sirve de algo:";
 
 /* No comment provided by engineer. */
 "Identities" = "Identidades";
@@ -417,7 +453,7 @@ Weapon Reference: stats */
 "Level %lld / %lld" = "Nivel %lld / %lld";
 
 /* No comment provided by engineer. */
-"Lifetime Peak" = "Pico de toda la vida";
+"Lifetime Peak" = "Pico máximo";
 
 /* App Theme */
 "Light Mode" = "Modo Claro";
@@ -438,7 +474,10 @@ Weapon Reference: stats */
 "Loading Store Info…" = "Cargando información de la tienda…";
 
 /* No comment provided by engineer. */
-"Loading request log…" = "Cargando peticiones de log…";
+"Loading request log…" = "Cargando peticiones…";
+
+/* No comment provided by engineer. */
+"Loadout" = "Colección";
 
 /* No comment provided by engineer. */
 "Lock In" = "Seleccionar";
@@ -469,6 +508,9 @@ Weapon Reference: stats */
 
 /* No comment provided by engineer. */
 "Match Lists" = "Lista de partidas";
+
+/* App Theme: automatically match the system theme */
+"Match System" = "Ajustes del sistema";
 
 /* Match List: section */
 "Matches" = "Partidas";
@@ -525,13 +567,13 @@ Weapon Reference: stats */
 "Not enough data!" = "¡Sin datos suficientes!";
 
 /* Account Settings */
-"Not signed in yet." = "No te has registrado aún.";
+"Not signed in yet." = "No te has registrado.";
 
 /* No comment provided by engineer. */
 "Not signed in!" = "¡No estás registrado!";
 
 /* Pro Features List */
-"Note: Statistics are only available on iOS 16 and newer." = "Nota: Estadísticas solo están disponibles a partir de iOS 16 y superiores.";
+"Note: Statistics are only available on iOS 16 and newer." = "Nota: Las estadísticas solo están disponibles a partir de iOS 16 y superiores.";
 
 /* Pro Features List */
 "Note: Widgets are only available on iOS 16 and newer." = "Nota: Los Widgets solo están disponible a partir de iOS 16 y superiores.";
@@ -566,6 +608,9 @@ Weapon Reference: stats */
 /* No comment provided by engineer. */
 "Please make sure you are ready to play by the time the game starts!" = "¡Por favor asegúrate de estar listo para jugar cuando la partida empiece!";
 
+/* Weapon Reference */
+"Price" = "Precio";
+
 /* App Icon Name */
 "Pro Blue" = "Pro Blue";
 
@@ -577,6 +622,9 @@ Weapon Reference: stats */
 
 /* Pro Store: error alert title */
 "Purchase Failed!" = "¡Compra fallida!";
+
+/* Pro Store: button (placeholder filled with formatted currency) */
+"Purchase – %@" = "Comprar - %@";
 
 /* Statistics filter: button */
 "Queues" = "Colas";
@@ -628,7 +676,7 @@ Weapon Reference: stats */
 
 /* Advanced Settings: button to open request log
 Request Log: title */
-"Request Log" = "Log de peticiones";
+"Request Log" = "Registro de peticiones";
 
 /* No comment provided by engineer. */
 "Requests" = "Peticiones";
@@ -687,6 +735,18 @@ Login Form: button */
 
 /* Login Form: button/header */
 "Sign in with Google/Apple/etc." = "Regístrate con Google/Apple/etc.";
+
+/* Skin Details: level name */
+"Skin Level %lld" = "Nivel %lld";
+
+/* Skin Details: section */
+"Skin Levels" = "Nivel de mejora";
+
+/* Weapon Reference: button */
+"Skins" = "Diseños";
+
+/* Hit Distribution Stats: smoothing slider */
+"Smoothing" = "Suavizado";
 
 /* No comment provided by engineer. */
 "Spectator" = "Espectador";
@@ -758,6 +818,23 @@ Hit Distribution Stats: region */
 /* No comment provided by engineer. */
 "Twitter @juliand665" = "Twitter @juliand665";
 
+/* Request Log */
+"URL" = "URL";
+
+/* Hit Distribution Stats: footnote */
+"Unfortunately, Valorant doesn't store information about which weapon was used for each hit. All we get is the weapon you started the round with and what weapon you used for each kill. Recon Bolt guesses the weapon involved in each damage based on this information, but it cannot be perfect (and neither can any other tracker)." = "Lamentablemente, Valorant no almacena información sobre qué arma se utilizó para cada golpe. Todo lo que tenemos es el arma con la que empezaste la ronda y qué arma usaste para cada muerte. Recon Bolt adivina el arma implicada en cada daño basándose en esta información, pero no puede ser perfecto (como tampoco puede serlo ningún otro rastreador).";
+
+/* Login Form: sign in with google/apple/etc. */
+"Unfortunately, due to technical limitations, you cannot sign into Recon Bolt via your Google account, Apple ID, or anything but a Riot account.
+
+Assuming you signed up for Valorant using Google/Apple/etc., you can set up your account to add a username & password on Riot's site at [account.riotgames.com](https://account.riotgames.com). Note that your Riot ID is **not** the same as your username! If you've forgotten your username, you can reset it at [recovery.riotgames.com](https://recovery.riotgames.com).
+
+On that site, navigate to **Riot Account Sign-in** and set yourself a username and password. When you're done, you can use those same credentials to sign in above! Your social account will stay linked and you'll remain able to sign in with that on PC :)" = "Lamentablemente, debido a limitaciones técnicas, no puedes iniciar sesión en Recon Bolt a través de tu cuenta de Google, ID de Apple o cualquier otra cosa que no sea una cuenta de Riot.
+
+Suponiendo que te hayas registrado en Valorant a través de Google/Apple/etc., puedes configurar tu cuenta para añadir un nombre de usuario y una contraseña en Riot en [account.riotgames.com](https://account.riotgames.com). Ten en cuenta que tu Riot ID **no** coincide con tu nombre de usuario. Si has olvidado tu nombre de usuario, puedes restablecerlo en [recovery.riotgames.com](https://recovery.riotgames.com).
+
+En ese sitio, ve a **Inicio de sesión de cuenta de Riot** y establece un nombre de usuario y una contraseña. Cuando lo hayas hecho, podrás utilizar esas mismas credenciales para iniciar sesión. Tu cuenta social permanecerá vinculada y podrás seguir iniciando sesión con ella en el PC :)";
+
 /* Round Details: killed by unknown ability */
 "Unknown Ability" = "Habilidad desconocida";
 
@@ -766,6 +843,9 @@ Hit Distribution Stats: region */
 
 /* placeholder */
 "Unknown Buddy" = "Amuleto desconocido";
+
+/* placeholder */
+"Unknown Bundle" = "Paquete desconocido";
 
 /* Store */
 "Unknown Offer" = "Oferta desconocida";
@@ -853,7 +933,7 @@ Round Details: killed by unknown/unspecified weapon */
 "Weekly Missions" = "Misiones semanales";
 
 /* No comment provided by engineer. */
-"Widget Refresh Requested" = "Solicitud de actualizar el Widget";
+"Widget Refresh Requested" = "Solicitud de actualización del Widget";
 
 /* No comment provided by engineer. */
 "Win Rate" = "Tasa de partidas ganadas";
@@ -873,8 +953,17 @@ Round Details: killed by unknown/unspecified weapon */
 /* No comment provided by engineer. */
 "Your session has expired! Recon Bolt has tried to refresh it for you, but needs 2FA confirmation." = "¡Tu sesión ha expirado! Recon Bolt ha intentado actualizarla por ti, pero necesita la confirmación de 2FA.";
 
+/* No comment provided by engineer. */
+"iOS is a bit finnicky about this, so widgets may not refresh right away—feel free to restart if this doesn't help!" = "¡iOS es un poco quisquilloso sobre esto, es posible que los Widgets no se actualicen de inmediato; no dudes en reiniciar si esto no ayuda!";
+
+/* Loadout: spray slot */
+"mid-round" = "mitad de ronda";
+
 /* Missions Widget: countdown label when the target is in the past. Should never really show up, since at this point there's new data. */
 "old" = "antiguo";
 
 /* Login Form */
 "signing in…" = "registrando…";
+
+/* Loadout: unknown spray slot (should never appear unless Riot changes something) */
+"slot" = "ranura";
