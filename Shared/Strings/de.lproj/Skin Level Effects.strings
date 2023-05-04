@@ -2,7 +2,25 @@
 "Animation" = "Animation";
 
 /* No comment provided by engineer. */
+"Attacker/Defender Swap" = "Angreifer/Verteidiger-Wechsel";
+
+/* No comment provided by engineer. */
 "Finisher" = "Finisher";
+
+/* No comment provided by engineer. */
+"Fish Animation" = "Fisch-Animation";
+
+/* No comment provided by engineer. */
+"Kill Banner" = "Kill-Banner";
+
+/* No comment provided by engineer. */
+"Kill Counter" = "Kill-Zähler";
+
+/* No comment provided by engineer. */
+"Kill Effect" = "Kill-Effekt";
+
+/* No comment provided by engineer. */
+"Randomizer" = "Zufällig";
 
 /* No comment provided by engineer. */
 "Sound Effects" = "Soundeffekte";
