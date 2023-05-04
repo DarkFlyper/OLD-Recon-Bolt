@@ -5,10 +5,19 @@
 "Attacker/Defender Swap" = "Angreifer/Verteidiger-Wechsel";
 
 /* No comment provided by engineer. */
+"Champion's Aura" = "Aura des Champions";
+
+/* No comment provided by engineer. */
 "Finisher" = "Finisher";
 
 /* No comment provided by engineer. */
 "Fish Animation" = "Fisch-Animation";
+
+/* No comment provided by engineer. */
+"Heartbeat & Map Sensor" = "Pulssensor";
+
+/* No comment provided by engineer. */
+"Inspect & Kill Effects" = "Inspektions- & Kill-Effekte";
 
 /* No comment provided by engineer. */
 "Kill Banner" = "Kill-Banner";
@@ -20,7 +29,13 @@
 "Kill Effect" = "Kill-Effekt";
 
 /* No comment provided by engineer. */
-"Randomizer" = "Zufällig";
+"Randomizer" = "Zufallsgenerator";
 
 /* No comment provided by engineer. */
 "Sound Effects" = "Soundeffekte";
+
+/* No comment provided by engineer. */
+"VFX" = "VFX";
+
+/* No comment provided by engineer. */
+"Voiceover" = "Sprachausgabe";
