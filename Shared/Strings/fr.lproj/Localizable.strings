@@ -26,6 +26,12 @@
 /* No comment provided by engineer. */
 "%lld RR" = "%lld RR";
 
+/* Weapon Reference: stats */
+"%lld bullets" = "%lld balles";
+
+/* Weapon Reference: price, always at least 150 */
+"%lld credits" = "%lld Crédits";
+
 /* Storage Management */
 "%lld from other players" = "%lld de la part d'autres joueurs";
 
@@ -133,6 +139,9 @@ Cependant, les parties compétitives qui ont lieu après votre placement de rang
 
 /* No comment provided by engineer. */
 "Agent Select" = "Sélection des agents";
+
+/* Contract Picker */
+"Agent Unlocked" = "Agent débloqué";
 
 /* Statistics filter: button */
 "Agents" = "Agents";
@@ -246,6 +255,9 @@ Playtime Stats: section */
 
 /* No comment provided by engineer. */
 "Career Summary" = "Résumé de carrière";
+
+/* Weapon Reference */
+"Category" = "Catégorie";
 
 /* No comment provided by engineer. */
 "Change Buddy" = "Changer le porte-bonheur";
