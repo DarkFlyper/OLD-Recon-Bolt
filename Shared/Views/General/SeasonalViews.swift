@@ -18,6 +18,8 @@ struct SeasonLabel: View {
 				Text(act.name)
 			}
 			.foregroundStyle(.secondary)
+			.fixedSize()
+			.scaledToFit()
 		}
 	}
 }
