@@ -1,4 +1,175 @@
 
+/* Used for matches less than a day ago. %@ is replaced by the number of hours/minutes, e.g. '3h ago'. */
+"%@ ago" = "acum %@";
+
+/* Weapon Reference: stats */
+"%@ bullets/sec" = "%@ gloanțe/sec";
+
+/* %@ is replaced by a fraction of wins vs. games played, e.g. '5/12 games won'. */
+"%@ games won" = "%@ meciuri câștigate";
+
+/* Win Rate Stats by Loadout Delta: focused value (drag on graph); placeholder is replaced by the percentage of rounds won, e.g. '57.3% won'. */
+"%@ won" = "%@ câștigate";
+
+/* used throughout the app to format percentages—placeholder is replaced by a number */
+"%@%%" = "%@%%";
+
+/* Weapon Reference: time in seconds (with decimal digits) */
+"%@s" = "%@s";
+
+/* Weapon Reference: stats */
+"%@°" = "%@°";
+
+/* Missions Box: always at least 3 */
+"%lld Future Weeklies" = "%lld Misiuni Săptămânale Viitoare";
+
+/* Missions Box: always at least 3 */
+"%lld Queued-Up Weeklies" = "%lld Misiuni Săptămânale în așteptare";
+
+/* No comment provided by engineer. */
+"%lld RR" = "%lld RR";
+
+/* Weapon Reference: stats */
+"%lld bullets" = "%lld gloanțe";
+
+/* Weapon Reference: price, always at least 150 */
+"%lld credits" = "%lld credite";
+
+/* Storage Management */
+"%lld from other players" = "%lld de la alți jucători";
+
+/* Hit Distribution Stats: hit count */
+"%lld hits" = "%lld lovituri";
+
+/* Shown at the bottom of the expandable playtime list when there are more entries available. */
+"%lld more" = "încă %lld";
+
+/* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
+"%lld to %lld credits" = "între %lld și %lld credite";
+
+/* Weapon Reference: stats: damage range */
+"%lld – %lldm" = "%lld – %lldm";
+
+/* No comment provided by engineer. */
+"%lld%%" = "%lld%%";
+
+/* No comment provided by engineer. */
+"%lld/%lld" = "%lld/%lld";
+
+/* Time Formatting: minutes & seconds (used in round details view) */
+"%lld:%@" = "%lld:%@";
+
+/* Time Formatting: minutes, seconds, & milliseconds (used in round details view) */
+"%lld:%@.%@" = "%lld:%@.%@";
+
+/* Contract Progress Bar
+Missions Box */
+"%lld / %lld XP" = "%lld / %lld XP";
+
+/* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
+"(%lld – %lld)" = "(%lld – %lld)";
+
+/* Pro Features List */
+"(You can switch between available icons at any time.)" = "(Poți alege unul dintre icon-urile disponibile în orice moment)";
+
+/* No comment provided by engineer. */
+"+%lld XP" = "+%lld XP";
+
+/* Missions Widget: how many more weeklies are queued up after the current set */
+"+%lld queued" = "+%lld în așteptare";
+
+/* Store: night market discount */
+"-%lld%%" = "-%lld%%";
+
+/* No comment provided by engineer. */
+"2-Factor Authentication" = "Autentificare cu 2 Factori";
+
+/* Missions Widget: countdown label when the target is in the future. e.g. '< 2d 3h' */
+"< %@" = "< %@";
+
+/* No comment provided by engineer. */
+"A 2FA code has been sent to your email address %@" = "Un cod 2FA a fost trimis la adresa ta de e-mail %@";
+
+/* Match List Filter */
+"A match's queue is unknown until its details are fetched (by tapping it or performing the swipe action).
+Competitive matches after your placements can be identified without their details, however." = "Coada unui meci e necunoscută până când detaliile lui sunt obținute (prin apăsarea lui sau prin swipe).
+Meciurile de Competitive de după cele de plasament pot fi totuși identificate fără detaliile lor.";
+
+/* No comment provided by engineer. */
+"AFK: %lld" = "AFK: %lld";
+
+/* Career Summary: header for totals of all time */
+"ALL TIME" = "TOT TIMPUL";
+
+/* Settings: section */
+"About" = "Despre";
+
+/* No comment provided by engineer. */
+"About Recon Bolt" = "Despre Recon Bolt";
+
+/* Settings: section */
+"Accounts" = "Conturi";
+
+/* Contract Picker: button */
+"Activate" = "Activează";
+
+/* Contract Picker */
+"Active" = "Activ";
+
+/* Missions Box: header */
+"Active Contract" = "Contract Activ";
+
+/* Match List: accessibility label */
+"Add Bookmark" = "Adaugă un Bookmark";
+
+/* Account Settings */
+"Add another Account" = "Adaugă încă un Cont";
+
+/* Pro Features List */
+"Add multiple accounts and seamlessly switch between them at any time." = "Adaugă mai multe conturi și treci ușor de la unul la altul oricând.";
+
+/* No comment provided by engineer. */
+"Advanced Settings" = "Setări Avansate";
+
+/* Pro Store */
+"Advanced Stats" = "Statistici Avansate";
+
+/* No comment provided by engineer. */
+"Agent Select" = "Agent Select";
+
+/* Contract Picker */
+"Agent Unlockable" = "Agent Deblocabil";
+
+/* Contract Picker */
+"Agent Unlocked" = "Agent Deblocat";
+
+/* Statistics filter: button */
+"Agents" = "Agenți";
+
+/* Stats: match loading */
+"All %lld" = "Toate %lld";
+
+/* Storage Management: button to delete all entries of a certain kind */
+"Clear All" = "Șterge Tot";
+
+/* Skin Details: section */
+"Color Variants" = "Variante de Culoare";
+
+/* Contract Picker */
+"Completed" = "Finalizat";
+
+/* Storage Management: title for alert to confirm deleting some matches */
+"Confirm Delete" = "Confirmă Ștergerea";
+
+/* Missions Box */
+"Contract complete!" = "Contract finalizat!";
+
+/* Request Log: button to copy the request's body/contents (accessibility label) */
+"Copy Body" = "Copiază conținutul";
+
+/* Stats: error details: accessibility label */
+"Copy Error" = "Eroare de Copiere";
+
 /* Store */
 "Unknown Offer" = "Ofertă Necunoscută";
 
