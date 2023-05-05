@@ -2,6 +2,9 @@
 /* Used for matches less than a day ago. %@ is replaced by the number of hours/minutes, e.g. '3h ago'. */
 "%@ ago" = "il y a %@";
 
+/* Weapon Reference: stats */
+"%@ bullets/sec" = "%@ balles/sec";
+
 /* %@ is replaced by a fraction of wins vs. games played, e.g. '5/12 games won'. */
 "%@ games won" = "%@ parties gagnées";
 
@@ -11,6 +14,12 @@
 /* used throughout the app to format percentages—placeholder is replaced by a number */
 "%@%%" = "%@%%";
 
+/* Weapon Reference: time in seconds (with decimal digits) */
+"%@s" = "%@s";
+
+/* Weapon Reference: stats */
+"%@°" = "%@°";
+
 /* Missions Box: always at least 3 */
 "%lld Future Weeklies" = "%lld Événements hebdomadaires à venir";
 
@@ -19,6 +28,12 @@
 
 /* No comment provided by engineer. */
 "%lld RR" = "%lld RR";
+
+/* Weapon Reference: stats */
+"%lld bullets" = "%lld balles";
+
+/* Weapon Reference: price, always at least 150 */
+"%lld credits" = "%lld Crédits";
 
 /* Storage Management */
 "%lld from other players" = "%lld de la part d'autres joueurs";
@@ -127,6 +142,9 @@ Cependant, les parties compétitives qui ont lieu après votre placement de rang
 
 /* No comment provided by engineer. */
 "Agent Select" = "Sélection des agents";
+
+/* Contract Picker */
+"Agent Unlocked" = "Agent débloqué";
 
 /* Statistics filter: button */
 "Agents" = "Agents";
@@ -241,6 +259,9 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Career Summary" = "Résumé de carrière";
 
+/* Weapon Reference */
+"Category" = "Catégorie";
+
 /* No comment provided by engineer. */
 "Change Buddy" = "Changer le porte-bonheur";
 
@@ -282,6 +303,9 @@ Playtime Stats: section */
 
 /* Storage Management: button to delete all entries of a certain kind */
 "Clear All" = "Supprimer tout";
+
+/* Skin Details: section */
+"Color Variants" = "Variantes de couleurs";
 
 /* Contract Picker */
 "Completed" = "Terminé";
@@ -406,6 +430,9 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Enter 2FA Code" = "Saisir le code d'authentification à 2 facteurs";
 
+/* Weapon Reference: stats */
+"Equip Time" = "Temps d'équipement";
+
 /* Request Log
 Stats: error details */
 "Error" = "Erreur";
@@ -469,6 +496,9 @@ TON MESSAGE D'ERREUR ICI
 
 /* No comment provided by engineer. */
 "Force Refresh Widgets" = "Forcer l'actualisation des Widgets";
+
+/* Contract Picker */
+"Free Agent" = "Agent gratuit";
 
 /* Storage Management: button to free up a certain amount of space */
 "Free up these %@" = "Libérer %@";
@@ -628,6 +658,9 @@ Si tu ne connais pas ton nom d'utilisateur ou si tu n'en as pas, tu peux le corr
 
 /* Win Rate Stats: chart legend */
 "Losses" = "Défaites";
+
+/* Weapon Reference: stats */
+"Magazine Size" = "Taille du chargeur";
 
 /* No comment provided by engineer. */
 "Manage Assets" = "Gérer les ressources";
@@ -808,6 +841,9 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Please make sure you are ready to play by the time the game starts!" = "Assurez-vous d'être prêt à jouer au moment où la partie commence !";
 
+/* Weapon Reference */
+"Price" = "Prix";
+
 /* App Icon Name */
 "Pro Blue" = "Bleu Pro";
 
@@ -864,6 +900,9 @@ Playtime Stats: section */
 
 /* Store Widget: next refresh time (hour & minute) */
 "Refreshes at %@" = "Actualisé à %@";
+
+/* Weapon Reference: stats */
+"Reload Time" = "Temps de rechargement";
 
 /* Match List: accessibility label */
 "Remove Bookmark" = "Supprimer un signet";
@@ -953,6 +992,9 @@ Login Form: button */
 
 /* Login Form: button/header */
 "Sign in with Google/Apple/etc." = "Se connecter avec Google/Apple/etc.";
+
+/* Skin Details: level name */
+"Skin Level %lld" = "Niveau %lld";
 
 /* Hit Distribution Stats: smoothing slider */
 "Smoothing" = "Lissage";
@@ -1167,6 +1209,9 @@ Round Details: killed by unknown/unspecified weapon */
 
 /* No comment provided by engineer. */
 "Weapon Loadout" = "Armes";
+
+/* Weapon Reference: section */
+"Weapon Statistics" = "Statistiques sur l'arme";
 
 /* No comment provided by engineer. */
 "Weapons" = "Armes";

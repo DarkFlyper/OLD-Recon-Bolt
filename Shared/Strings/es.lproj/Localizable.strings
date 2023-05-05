@@ -11,6 +11,12 @@
 /* used throughout the app to format percentages—placeholder is replaced by a number */
 "%@%%" = "%@%%";
 
+/* Missions Box: always at least 3 */
+"%lld Future Weeklies" = "%lld Próximas semanales";
+
+/* Missions Box: always at least 3 */
+"%lld Queued-Up Weeklies" = "%lld Acumuladas semanalmente";
+
 /* No comment provided by engineer. */
 "%lld RR" = "%lld PR";
 
@@ -70,6 +76,12 @@
 
 /* No comment provided by engineer. */
 "Agent Select" = "Seleccionar agente";
+
+/* Contract Picker */
+"Agent Unlockable" = "Agente para desbloquear";
+
+/* Contract Picker */
+"Agent Unlocked" = "Agente desbloqueado";
 
 /* Statistics filter: button */
 "Agents" = "Agentes";
@@ -497,6 +509,9 @@ Weapon Reference: stats */
 /* No comment provided by engineer. */
 "Match Lists" = "Lista de partidas";
 
+/* App Theme: automatically match the system theme */
+"Match System" = "Ajustes del sistema";
+
 /* Match List: section */
 "Matches" = "Partidas";
 
@@ -552,7 +567,7 @@ Weapon Reference: stats */
 "Not enough data!" = "¡Sin datos suficientes!";
 
 /* Account Settings */
-"Not signed in yet." = "No te has registrado aún.";
+"Not signed in yet." = "No te has registrado.";
 
 /* No comment provided by engineer. */
 "Not signed in!" = "¡No estás registrado!";
@@ -809,6 +824,17 @@ Hit Distribution Stats: region */
 /* Hit Distribution Stats: footnote */
 "Unfortunately, Valorant doesn't store information about which weapon was used for each hit. All we get is the weapon you started the round with and what weapon you used for each kill. Recon Bolt guesses the weapon involved in each damage based on this information, but it cannot be perfect (and neither can any other tracker)." = "Lamentablemente, Valorant no almacena información sobre qué arma se utilizó para cada golpe. Todo lo que tenemos es el arma con la que empezaste la ronda y qué arma usaste para cada muerte. Recon Bolt adivina el arma implicada en cada daño basándose en esta información, pero no puede ser perfecto (como tampoco puede serlo ningún otro rastreador).";
 
+/* Login Form: sign in with google/apple/etc. */
+"Unfortunately, due to technical limitations, you cannot sign into Recon Bolt via your Google account, Apple ID, or anything but a Riot account.
+
+Assuming you signed up for Valorant using Google/Apple/etc., you can set up your account to add a username & password on Riot's site at [account.riotgames.com](https://account.riotgames.com). Note that your Riot ID is **not** the same as your username! If you've forgotten your username, you can reset it at [recovery.riotgames.com](https://recovery.riotgames.com).
+
+On that site, navigate to **Riot Account Sign-in** and set yourself a username and password. When you're done, you can use those same credentials to sign in above! Your social account will stay linked and you'll remain able to sign in with that on PC :)" = "Lamentablemente, debido a limitaciones técnicas, no puedes iniciar sesión en Recon Bolt a través de tu cuenta de Google, ID de Apple o cualquier otra cosa que no sea una cuenta de Riot.
+
+Suponiendo que te hayas registrado en Valorant a través de Google/Apple/etc., puedes configurar tu cuenta para añadir un nombre de usuario y una contraseña en Riot en [account.riotgames.com](https://account.riotgames.com). Ten en cuenta que tu Riot ID **no** coincide con tu nombre de usuario. Si has olvidado tu nombre de usuario, puedes restablecerlo en [recovery.riotgames.com](https://recovery.riotgames.com).
+
+En ese sitio, ve a **Inicio de sesión de cuenta de Riot** y establece un nombre de usuario y una contraseña. Cuando lo hayas hecho, podrás utilizar esas mismas credenciales para iniciar sesión. Tu cuenta social permanecerá vinculada y podrás seguir iniciando sesión con ella en el PC :)";
+
 /* Round Details: killed by unknown ability */
 "Unknown Ability" = "Habilidad desconocida";
 
@@ -907,7 +933,7 @@ Round Details: killed by unknown/unspecified weapon */
 "Weekly Missions" = "Misiones semanales";
 
 /* No comment provided by engineer. */
-"Widget Refresh Requested" = "Solicitud de actualizar el Widget";
+"Widget Refresh Requested" = "Solicitud de actualización del Widget";
 
 /* No comment provided by engineer. */
 "Win Rate" = "Tasa de partidas ganadas";
