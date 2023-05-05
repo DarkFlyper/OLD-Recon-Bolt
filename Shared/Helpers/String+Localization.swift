@@ -17,14 +17,28 @@ extension String {
 				
 				let placeholderName = String(parser.consume(through: "}")!)
 				guard let arg = args[placeholderName] else {
-					fatalError("No format argument found for placeholder \(placeholderName) in string '\(self)'!")
+					output += "<\(placeholderName)>"
+					continue
 				}
 				
-				if parser.tryConsume("|plural(one=") {
-					let singular = parser.consume(through: ",")!
-					parser.consume("other=")
-					let plural = parser.consume(through: ")")!
-					output += arg == 1 ? singular : plural
+				if parser.tryConsume("|plural(") {
+					var forms: [String: String] = [:]
+					while true {
+						guard
+							let category = parser.consume(through: "="),
+							let (form, separator) = parser.consume(through: [",", ")"])
+						else { break } // just fail and output the remaining raw string
+						forms[String(category)] = String(form)
+						guard separator == "," else { break } // done
+					}
+					
+					func form(_ category: String) -> String {
+						forms[category] ?? forms["other"] ?? "<???>"
+					}
+					output += arg == 0 ? form("zero")
+					: arg == 1 ? form("one")
+					: arg == 2 ? form("two")
+					: form("other") // few/many rules vary between e.g. arabic and polish, so we can't support them without much more effort, and riot doesn't seem to care much either.
 				} else {
 					output += arg.formatted()
 				}
@@ -68,6 +82,14 @@ private struct Parser {
 		guard let index = input.firstIndex(of: separator) else { return nil }
 		defer { input = input[index...].dropFirst() }
 		return input.prefix(upTo: index)
+	}
+	
+	/// consumes through the first separator in the set that's encountered
+	@discardableResult
+	mutating func consume(through separators: Set<Character>) -> (Substring, Character)? {
+		guard let index = input.firstIndex(where: separators.contains(_:)) else { return nil }
+		defer { input = input[index...].dropFirst() }
+		return (input.prefix(upTo: index), input[index])
 	}
 	
 	mutating func consumeRest() -> Substring {
