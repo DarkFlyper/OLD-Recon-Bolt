@@ -447,6 +447,9 @@ Playtime Stats: section */
 /* Store */
 "Daily Offers" = "Daily Offers";
 
+/* No comment provided by engineer. */
+"Damage" = "Damage";
+
 /* App Theme */
 "Dark Mode" = "Dark Mode";
 
@@ -1236,6 +1239,9 @@ On that site, navigate to **Riot Account Sign-in** and set yourself a username a
 /* placeholder */
 "Unknown Bundle" = "Unknown Bundle";
 
+/* placeholder */
+"Unknown Card" = "Unknown Card";
+
 /* Store */
 "Unknown Offer" = "Unknown Offer";
 
@@ -1252,6 +1258,9 @@ On that site, navigate to **Riot Account Sign-in** and set yourself a username a
 "Unknown Skin" = "Unknown Skin";
 
 /* placeholder */
+"Unknown Spray" = "Unknown Spray";
+
+/* placeholder */
 "Unknown Title" = "Unknown Title";
 
 /* Round Details: killed by unknown damage source/type */
@@ -1266,6 +1275,9 @@ Round Details: killed by unknown/unspecified weapon */
 
 /* Missions Box */
 "Unknown contract!" = "Unknown contract!";
+
+/* Store Bundle Details: should never show, but if Riot adds a new kind of item to a bundle, this would show */
+"Unknown item of type %@" = "Unknown item of type %@";
 
 /* No comment provided by engineer. */
 "Unknown mission!" = "Unknown mission!";
