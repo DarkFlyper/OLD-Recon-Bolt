@@ -5,6 +5,8 @@ import RegexBuilder
 struct WeaponInfoView: View {
 	let weapon: WeaponInfo
 	
+	@Environment(\.horizontalSizeClass) private var horizontalSizeClass
+	
 	var body: some View {
 		List {
 			Section {
@@ -63,11 +65,6 @@ struct WeaponInfoView: View {
 		)
 		
 		damageRangesGrid(for: stats.damageRanges)
-			.padding()
-			.background(Color.tertiaryGroupedBackground)
-			.cornerRadius(8)
-			.frame(maxWidth: .infinity)
-			.aligningListRowSeparator()
 		
 		LabeledRow(
 			Text("Equip Time", comment: "Weapon Reference: stats"),
@@ -95,7 +92,7 @@ struct WeaponInfoView: View {
 	
 	@ViewBuilder
 	func damageRangesGrid(for ranges: [WeaponStats.DamageRange]) -> some View {
-		if #available(iOS 16.0, *) {
+		if #available(iOS 16.0, *), horizontalSizeClass == .regular {
 			Grid(alignment: .trailing, horizontalSpacing: 20, verticalSpacing: 4) {
 				GridRow {
 					Text("Range", comment: "Weapon Reference: stats")
@@ -116,6 +113,39 @@ struct WeaponInfoView: View {
 						Text(range.damageToHead, format: .number.precision(.fractionLength(2)))
 						Text(range.damageToBody, format: .number.precision(.fractionLength(2)))
 						Text(range.damageToLegs, format: .number.precision(.fractionLength(2)))
+					}
+					.monospacedDigit()
+				}
+			}
+			.padding()
+			.background(Color.tertiaryGroupedBackground)
+			.cornerRadius(8)
+			.frame(maxWidth: .infinity)
+			.aligningListRowSeparator()
+		} else {
+			ForEach(ranges, id: \.start) { range in
+				HStack {
+					VStack(alignment: .leading) {
+						Text("Damage")
+						Text("\(range.start) – \(range.end)m", comment: "Weapon Reference: stats: damage range")
+					}
+					.foregroundStyle(.secondary)
+					
+					Spacer()
+					
+					VStack(alignment: .trailing) {
+						HStack {
+							Text("Head", comment: "Weapon Reference: stats").foregroundStyle(.secondary)
+							Text(range.damageToHead, format: .number.precision(.fractionLength(2)))
+						}
+						HStack {
+							Text("Body", comment: "Weapon Reference: stats").foregroundStyle(.secondary)
+							Text(range.damageToBody, format: .number.precision(.fractionLength(2)))
+						}
+						HStack {
+							Text("Legs", comment: "Weapon Reference: stats").foregroundStyle(.secondary)
+							Text(range.damageToLegs, format: .number.precision(.fractionLength(2)))
+						}
 					}
 					.monospacedDigit()
 				}
