@@ -314,6 +314,9 @@ Playtime Stats: section */
 /* Storage Management: button to delete all entries of a certain kind */
 "Clear All" = "清除全部";
 
+/* Skin Details: section */
+"Color Variants" = "幻彩顏色";
+
 /* Contract Picker */
 "Completed" = "已完成";
 
@@ -906,6 +909,9 @@ Playtime Stats: section */
 /* Store Widget: next refresh time (hour & minute) */
 "Refreshes at %@" = "刷新在 %@";
 
+/* Weapon Reference: stats */
+"Reload Time" = "換彈時間";
+
 /* Match List: accessibility label */
 "Remove Bookmark" = "刪除書籤";
 
@@ -997,6 +1003,9 @@ Login Form: button */
 
 /* Skin Details: level name */
 "Skin Level %lld" = "等級 %lld";
+
+/* Skin Details: section */
+"Skin Levels" = "造型等級";
 
 /* Weapon Reference: button */
 "Skins" = "造型";
@@ -1214,6 +1223,9 @@ Round Details: killed by unknown/unspecified weapon */
 
 /* No comment provided by engineer. */
 "Weapon Loadout" = "武器裝備";
+
+/* Weapon Reference: section */
+"Weapon Statistics" = "武器統計";
 
 /* No comment provided by engineer. */
 "Weapons" = "武器";
