@@ -998,6 +998,9 @@ Login Form: button */
 /* Skin Details: level name */
 "Skin Level %lld" = "等級 %lld";
 
+/* Weapon Reference: button */
+"Skins" = "造型";
+
 /* Hit Distribution Stats: smoothing slider */
 "Smoothing" = "平滑度";
 
