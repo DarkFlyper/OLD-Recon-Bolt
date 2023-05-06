@@ -44,6 +44,9 @@
 /* Shown at the bottom of the expandable playtime list when there are more entries available. */
 "%lld more" = "%lld Altro";
 
+/* Weapon Reference: stats */
+"%lld pellets" = "%lld Pallini";
+
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
 "%lld to %lld credits" = "Da %lld a %lld Crediti";
 
@@ -456,18 +459,18 @@ Stats: error details */
 "Exclude All Queues" = "Escludi Tutte le Modalità";
 
 /* Pro Features List */
-"Exclusive App Icon" = "Icona Esclusiva App";
+"Exclusive App Icon" = "Icona Esclusiva dell' App";
 
 /* Round Details: killed by spike */
 "Exploded" = "Esploso";
 
 /* Pro Features List */
-"Family Sharing" = "Condivisione della famiglia";
+"Family Sharing" = "Condivisione con la Famiglia iCloud";
 
 /* Request Log: placeholder is replaced by error dump. */
-"Feedback Email Body" = "Cosa è andato storto? Raccontami l'errore che hai riscontrato:
+"Feedback Email Body" = "Cosa è andato storto? Descrivi l'errore che hai riscontrato:
 
-LA TUA SEGNALAZIONE DI BUG QUI
+SEGNALA I BUG QUI
 
 %@";
 
@@ -478,22 +481,22 @@ LA TUA SEGNALAZIONE DI BUG QUI
 "Filter" = "Filtro";
 
 /* No comment provided by engineer. */
-"Filter Maps" = "Mappe filtro";
+"Filter Maps" = "Filtra per Mappe";
 
 /* No comment provided by engineer. */
-"Filter Match List" = "Filtrare l'elenco delle corrispondenze";
+"Filter Match List" = "Filtra l'elenco delle Partite";
 
 /* No comment provided by engineer. */
-"Filter Queues" = "Filtro code";
+"Filter Queues" = "Filtro Modalità";
 
 /* No comment provided by engineer. */
 "Filtering by starting side will exclude any matches in single-round modes like Deathmatch, Escalation, etc." = "Il filtro per lato iniziale esclude le partite in modalità a round singolo come Deathmatch, Escalation, ecc.";
 
 /* No comment provided by engineer. */
-"Find Match" = "Trova Partita";
+"Find Match" = "Cerca Partita";
 
 /* Party Box: placeholder shows time spent in queue */
-"Finding match… (%@)" = "Trovare una partita… (%@)";
+"Finding match… (%@)" = "Cercando una partita… (%@)";
 
 /* Weapon Reference: stats */
 "Fire Rate" = "Rateo di fuoco";
@@ -504,23 +507,26 @@ LA TUA SEGNALAZIONE DI BUG QUI
 /* No comment provided by engineer. */
 "Force Refresh Widgets" = "Forza l'aggiornamento dei widget";
 
+/* Contract Picker */
+"Free Agent" = "Agente Gratis";
+
 /* Storage Management: button to free up a certain amount of space */
-"Free up these %@" = "Liberate questi %@";
+"Free up these %@" = "Libera %@ di Memoria";
 
 /* Agent Select header: shown when timer reaches zero */
-"Game Started" = "Il gioco è iniziato";
+"Game Started" = "La partita' è iniziata!";
 
 /* No comment provided by engineer. */
-"Game is not running!" = "Il gioco non funziona!";
+"Game is not running!" = "Il Gioco non è in Esecuzione!";
 
 /* Pro Features List */
 "Gather statistics from anyone's games to gain insights on things like time played by mode/premade, headshot rate over time/by weapon, win rate over time/by map & side, and more!" = "Raccogliete le statistiche delle partite di chiunque per ottenere informazioni su aspetti quali il tempo di gioco per modalità/preparazione, la percentuale di headshot nel tempo/per arma, la percentuale di vittorie nel tempo/per mappa e lato e molto altro ancora!";
 
 /* Pro Features List */
-"Getting money from Recon Bolt gives me the flexibility and motivation to keep improving the app!" = "Ricevere soldi da Recon Bolt mi dà la flessibilità e la motivazione per continuare a migliorare l'app!";
+"Getting money from Recon Bolt gives me the flexibility and motivation to keep improving the app!" = "Guadagnare soldi da Recon Bolt mi dà la flessibilità e la motivazione per continuare a migliorare l'app!";
 
 /* No comment provided by engineer. */
-"GitHub Repo" = "Repo GitHub";
+"GitHub Repo" = "Repository di GitHub";
 
 /* No comment provided by engineer. */
 "Golden Gun" = "Pistola d'oro";
@@ -542,9 +548,9 @@ Recon Bolt started development in early 2021, back when it wasn't yet possible t
 
 As you can guess, the scope expanded massively over time to what you're using now. I hope you're enjoying it!
 
-If you've encountered a bug or have some feedback, I'm always happy to hear it on the Discord Server or GitHub :)" = "Ciao, sono Julian Dunskus e ho creato questa applicazione.
+If you've encountered a bug or have some feedback, I'm always happy to hear it on the Discord Server or GitHub :)" = "Ciao, sono Julian Dunskus e ho creato questa app.
 
-Recon Bolt è stata sviluppata all'inizio del 2021, quando ancora non era possibile vedere i guadagni e le perdite di RR nel gioco, ma l'API offriva questi numeri. Ho creato un'app per vedere i numeri e capire meglio le mie variazioni di rango.
+Recon Bolt è stata sviluppata all'inizio del 2021, quando ancora non era possibile vedere i guadagni e le perdite di RR nel gioco, ma l'API offriva questi dati. Ho creato questa app per consultare i dati dell' API e capire meglio le variazioni del mio Grado.
 
 Come potete immaginare, nel corso del tempo l'applicazione si è ampliata in modo massiccio fino a diventare quella che state usando ora. Spero che vi piaccia!
 
@@ -554,25 +560,25 @@ Se avete riscontrato un bug o avete un feedback, sono sempre felice di ascoltarl
 "Hit Distribution" = "Distribuzione dei colpi";
 
 /* Pro Store */
-"Home Screen Widgets" = "Widget per la schermata iniziale";
+"Home Screen Widgets" = "Widget per la schermata Home";
 
 /* Pro Store */
-"I hope you enjoy the pro features :)" = "Spero che vi piacciano le funzioni pro :)";
+"I hope you enjoy the pro features :)" = "Spero che vi piacciano le funzioni Pro :)";
 
 /* Login Form: is this safe? */
-"I won't sugarcoat things. Due to the way this app uses the API, I believe there's no other way to sign in than to have people enter their credentials directly. Under those circumstances, there's really no good way for anyone to be sure their credentials remain safe. For what it's worth:" = "Non indorerò la pillola. A causa del modo in cui questa applicazione utilizza l'API, credo che non ci sia altro modo per accedere se non quello di far inserire direttamente le proprie credenziali. In queste circostanze, non c'è un buon modo per essere sicuri che le proprie credenziali rimangano al sicuro. Per quello che vale:";
+"I won't sugarcoat things. Due to the way this app uses the API, I believe there's no other way to sign in than to have people enter their credentials directly. Under those circumstances, there's really no good way for anyone to be sure their credentials remain safe. For what it's worth:" = "Non mentiro'. A causa del modo in cui questa applicazione utilizza l'API, credo che non ci sia altro modo per accedere se non inserendo direttamente le proprie credenziali. Per via di queste circostanze, non c'è un modo per essere sicuri che le proprie credenziali rimangano al sicuro. Per quello che vale:";
 
 /* No comment provided by engineer. */
 "Identities" = "Identità";
 
 /* Pro Features List */
-"If you have accounts in multiple regions to play with friends around the world, this is the feature for you!" = "Se avete account in più regioni per giocare con gli amici di tutto il mondo, questa è la funzione che fa per voi!";
+"If you have accounts in multiple regions to play with friends around the world, this is the feature for you!" = "Se hai account in più regioni per giocare con gli amici di tutto il mondo, questa è la funzione che fa per voi!";
 
 /* Pro Features List */
-"If you have multiple accounts, you can configure separate widgets for each and have them on your Home Screen at the same time." = "Se si dispone di più account, è possibile configurare widget separati per ciascuno di essi e averli contemporaneamente sulla schermata iniziale.";
+"If you have multiple accounts, you can configure separate widgets for each and have them on your Home Screen at the same time." = "Se disponi di più account, è possibile configurare Widget separati per ciascuno di essi e averli contemporaneamente sulla schermata iniziale.";
 
 /* No comment provided by engineer. */
-"If your widgets seem broken, use this button to request an immediate refresh from iOS." = "Se i widget sembrano rotti, utilizzare questo pulsante per richiedere un aggiornamento immediato da parte di iOS.";
+"If your widgets seem broken, use this button to request an immediate refresh from iOS." = "Se i Widget sembrano rotti, utilizza questo pulsante per riaggiornarli.";
 
 /* No comment provided by engineer. */
 "Image failed to load!" = "Immagine non caricata!";
@@ -587,10 +593,10 @@ Se avete riscontrato un bug o avete un feedback, sono sempre felice di ascoltarl
 "Is this safe?" = "È sicuro?";
 
 /* No comment provided by engineer. */
-"Join the Discord Server" = "Unisciti al server Discord";
+"Join the Discord Server" = "Unisciti al nostro Server Discord";
 
 /* Match Details: section */
-"Kills by Round" = "Uccisioni per round";
+"Kills by Round" = "Uccisioni per Round";
 
 /* Asset Management: this row shows the language of the current assets */
 "Language" = "Lingua";
@@ -606,7 +612,7 @@ Weapon Reference: stats */
 "Level %lld / %lld" = "Livello %lld/%lld";
 
 /* No comment provided by engineer. */
-"Lifetime Peak" = "Picco di vita";
+"Lifetime Peak" = "Grado massimo Raggiunto";
 
 /* App Theme */
 "Light Mode" = "Modalità luce";
@@ -621,19 +627,19 @@ Weapon Reference: stats */
 "Live Match" = "Partita in diretta";
 
 /* Stats: match loading */
-"Load Data" = "Dati di carico";
+"Load Data" = "Caricamento della Partita";
 
 /* Match List */
 "Load Older Matches" = "Caricare le partite più vecchie";
 
 /* Pro Store */
-"Loading Store Info…" = "Caricamento delle informazioni sul negozio…";
+"Loading Store Info…" = "Caricamento delle Negozio…";
 
 /* No comment provided by engineer. */
-"Loading request log…" = "Caricamento del registro delle richieste…";
+"Loading request log…" = "Caricamento della richiesta del Log…";
 
 /* No comment provided by engineer. */
-"Loadout" = "Carico";
+"Loadout" = "Equipaggiamento";
 
 /* No comment provided by engineer. */
 "Loadout Delta" = "Delta Equipaggiamento";
@@ -645,13 +651,13 @@ Weapon Reference: stats */
 "Loadout not loaded!" = "Loadout non caricato!";
 
 /* No comment provided by engineer. */
-"Lock In" = "Bloccaggio";
+"Lock In" = "Conferma";
 
 /* No comment provided by engineer. */
-"Lock In %@" = "Lock In %@";
+"Lock In %@" = "Conferma %@";
 
 /* Bookmark/Player List: lookup button */
-"Look Up" = "Guardare in alto";
+"Look Up" = "Torna in Cima";
 
 /* Login Form */
 "Looks like you're trying to enter your Riot ID (and tagline) as username! Your username is actually something else: it's what you use to sign into the Valorant launcher.
@@ -670,7 +676,7 @@ Se non conosci il tuo nome utente o non ne hai uno, puoi risolvere il problema s
 "Manage Assets" = "Gestire le attività";
 
 /* No comment provided by engineer. */
-"Manage Local Storage" = "Gestire l'archiviazione locale";
+"Manage Local Storage" = "Gestisci l'Archiviazione Locale";
 
 /* About Screen */
 "Many thanks to the volunteer translators from our Discord server who have been hard at working translating the app to new languages!" = "Grazie ai traduttori volontari del nostro server Discord che hanno lavorato duramente per tradurre l'applicazione in nuove lingue!";
@@ -688,16 +694,16 @@ Se non conosci il tuo nome utente o non ne hai uno, puoi risolvere il problema s
 "Match Details" = "Dettagli della partita";
 
 /* Match List: shown when a match didn't get past Agent Select (because someone dodged/left) */
-"Match Dodged" = "Partita schivata";
+"Match Dodged" = "Partita Dodgeata";
 
 /* No comment provided by engineer. */
-"Match Lists" = "Elenchi di partite";
+"Match Lists" = "Elenco delle Partite";
 
 /* No comment provided by engineer. */
-"Match Loading Errors" = "Errori di caricamento delle partite";
+"Match Loading Errors" = "Errori di Caricamento delle Partite";
 
 /* App Theme: automatically match the system theme */
-"Match System" = "Sistema di partite";
+"Match System" = "Abbina il tema al tema del Sistema";
 
 /* Match List: section */
 "Matches" = "Partita";
@@ -737,6 +743,9 @@ Se non conosci il tuo nome utente o non ne hai uno, puoi risolvere il problema s
 
 /* Bookmark/Player List: lookup name placeholder */
 "Name" = "Nome";
+
+/* Asset Management */
+"Newest available: %@" = "Dati più recenti: %@";
 
 /* Store */
 "Night Market" = "Mercato Nero";
@@ -780,6 +789,12 @@ Se non conosci il tuo nome utente o non ne hai uno, puoi risolvere il problema s
 /* Pro Features List */
 "Note: Statistics are only available on iOS 16 and newer." = "Nota: le Statistiche sono disponibili solo su iOS 16 e versioni successive.";
 
+/* Pro Features List */
+"Note: Widgets are only available on iOS 16 and newer." = "Nota: I Widget sono disponibili solo su iOS 16 e versioni successive.";
+
+/* No comment provided by engineer. */
+"OK" = "OK";
+
 /* No comment provided by engineer. */
 "Official Website" = "Sito Web Ufficiale";
 
@@ -789,9 +804,19 @@ Se non conosci il tuo nome utente o non ne hai uno, puoi risolvere il problema s
 /* Storage Management */
 "Other Players" = "Altri Giocatori";
 
+/* Buddy Picker: alert shown when both instances of a buddy are in use */
+"Out of instances!" = "Questo accessorio è già presente su due armi!";
+
 /* Win Rate Stats: section
 Playtime Stats: section */
 "Over Time" = "Supplementari";
+
+/* Hit Distribution Stats: section
+Playtime Stats: section */
+"Overall" = "In Generale";
+
+/* No comment provided by engineer. */
+"Overdrive (Neon)" = "Overdrive (Neon)";
 
 /* No comment provided by engineer. */
 "Party" = "Gruppo";
@@ -804,6 +829,18 @@ Playtime Stats: section */
 
 /* Agent View: label for player who hasn't picked an agent yet */
 "Picking…" = "Selezionando l'agente…";
+
+/* Match List: section */
+"Player" = "Giocatore";
+
+/* Bookmark/Player List: title */
+"Players" = "Giocatori";
+
+/* No comment provided by engineer. */
+"Playtime" = "Tempo di Gioco";
+
+/* No comment provided by engineer. */
+"Please make sure you are ready to play by the time the game starts!" = "Assicurati di essere pronto a giocare per l'inizio della partita!";
 
 /* Weapon Reference */
 "Price" = "Prezzo";
@@ -938,6 +975,12 @@ Request Log: title */
 /* Playtime Stats: title for view of matches in common with another player */
 "Shared Matches" = "Partite Condivise";
 
+/* Weapon Reference: stats */
+"Shotgun Pellets" = "Pallini per Fucile a Pompa";
+
+/* No comment provided by engineer. */
+"Show Unfetched Matches" = "Mostra le partite non Ancora Trovate";
+
 /* No comment provided by engineer. */
 "Show all matches" = "Mostra tutte le partite";
 
@@ -968,6 +1011,9 @@ Login Form: button */
 
 /* Weapon Reference: button */
 "Skins" = "Skins";
+
+/* Hit Distribution Stats: smoothing slider */
+"Smoothing" = "Errore di Fuoco";
 
 /* No comment provided by engineer. */
 "Spectator" = "Spettatore";
@@ -1055,10 +1101,22 @@ Hit Distribution Stats: region */
 "Total Space Used" = "Spazio Totale Utilizzato";
 
 /* No comment provided by engineer. */
+"Tour de Force (Chamber)" = "Tour de Force (Chamber)";
+
+/* No comment provided by engineer. */
 "Twitter @juliand665" = "Twitter @juliand665";
+
+/* Request Log */
+"URL" = "URL";
 
 /* Missions Box: header, shown when a mission is not daily or weekly (should not happen unless Riot changes something) */
 "Uncategorized Missions" = "Missioni senza Categoria";
+
+/* Shown when a match does not match the filter and its details have not been fetched. */
+"Unfetched" = "Non Trovato";
+
+/* Hit Distribution Stats: footnote */
+"Unfortunately, Valorant doesn't store information about which weapon was used for each hit. All we get is the weapon you started the round with and what weapon you used for each kill. Recon Bolt guesses the weapon involved in each damage based on this information, but it cannot be perfect (and neither can any other tracker)." = "Sfortunatamente, Valorant non memorizza le informazioni sull'arma utilizzata per ogni colpo. Tutto ciò che si ottiene è l'arma con cui si è iniziato il round e quella che si è usata per ogni uccisione. Recon Bolt indovina l'arma coinvolta in ogni danno sulla base di queste informazioni, ma non può essere perfetto (e nemmeno qualsiasi altro tracker).";
 
 /* Login Form: sign in with google/apple/etc. */
 "Unfortunately, due to technical limitations, you cannot sign into Recon Bolt via your Google account, Apple ID, or anything but a Riot account.
@@ -1071,14 +1129,123 @@ Supponendo che ti sei loggato in Valorant utilizzando Google/Apple/etc., puoi co
 
 Sul sito, vai su **Accesso account Riot** e imposta un nome utente e una password. Una volta terminato, è possibile utilizzare le stesse credenziali per accedere al gioco! Il tuo account social rimarrà collegato e potrai accedere con quello sul PC :)";
 
+/* Round Details: killed by unknown ability */
+"Unknown Ability" = "Abilità Sconosciuta";
+
+/* placeholder */
+"Unknown Agent" = "Agente Sconosciuto";
+
+/* placeholder */
+"Unknown Buddy" = "Accessorio Sconosciuto";
+
+/* placeholder */
+"Unknown Bundle" = "Bundle Sconosciuto";
+
+/* placeholder */
+"Unknown Card" = "Scheda Sconosciuta";
+
 /* Store */
 "Unknown Offer" = "Offerta sconosciuta";
+
+/* No comment provided by engineer. */
+"Unknown Player" = "Giocatore Sconosciuto";
+
+/* No comment provided by engineer. */
+"Unknown Queue" = "Modalità Sconosciuta";
+
+/* Match List: should never appear unless assets are missing/outdated */
+"Unknown Rank" = "Grado Sconosciuto";
 
 /* placeholder */
 "Unknown Skin" = "Skin sconosciuta";
 
+/* placeholder */
+"Unknown Spray" = "Spray Sconosciuto";
+
+/* placeholder */
+"Unknown Title" = "Titolo Sconosciuto";
+
+/* Round Details: killed by unknown damage source/type */
+"Unknown Type" = "Soggetto Sconosciuto";
+
+/* Stats: label for a weapon that the app doesn't know for some reason
+Round Details: killed by unknown/unspecified weapon */
+"Unknown Weapon" = "Arma Sconosciuta";
+
+/* No comment provided by engineer. */
+"Unknown bundle!" = "Bundle Sconosciuto!";
+
+/* Missions Box */
+"Unknown contract!" = "Contratto Sconosciuto!";
+
+/* Store Bundle Details: should never show, but if Riot adds a new kind of item to a bundle, this would show */
+"Unknown item of type %@" = "Oggetto Sconosciuto di tipo %@";
+
+/* No comment provided by engineer. */
+"Unknown mission!" = "Missione Sconosciuta!";
+
+/* Asset Management: button */
+"Update Now" = "Aggiorna Adesso";
+
+/* Match Details: button */
+"Update Ranks" = "Aggiorna il Grado";
+
+/* Login Form */
+"Username" = "Username";
+
+/* No comment provided by engineer. */
+"Users" = "Utenti";
+
 /* Win Rate Stats by Loadout Delta */
 "Value Difference (credits)" = "Differenza di Spesa (Crediti)";
+
+/* Asset Management: this row shows the version of the current assets */
+"Version" = "Versione";
+
+/* Reference */
+"Version %@" = "Versione %@";
+
+/* No comment provided by engineer. */
+"Vibrate when Match Found" = "Vibra quando viene Trovata una Partita";
+
+/* Pro Store */
+"View All Features" = "Visualizza Tutte le Caratteristiche";
+
+/* No comment provided by engineer. */
+"View Full Profile" = "Visualizza il Profilo Completo";
+
+/* Match List */
+"View Stats" = "Visualizza le Statistiche";
+
+/* Statistics Pro purchase prompt: button */
+"View Store in Settings" = "Visualizza il Negozio in Impostazioni";
+
+/* Rank Widget: description */
+"View your current rank." = "Visualizza il tuo Grado attuale.";
+
+/* Rank Changes Widget: description */
+"View your rank rating changes." = "Visualizza le modifiche del tuo Grado.";
+
+/* Pro Features List */
+"View your storefront, daily/weekly missions, or current rank without even having to open the app!" = "Visualizza il negozio, le missioni giornaliere/settimanali e il vostro grado attuale senza nemmeno dover aprire l'app!";
+
+/* No comment provided by engineer. */
+"WP: +%lld" = "WP: +%lld";
+
+/* No comment provided by engineer. */
+"Weapon Loadout" = "Equipaggiamento delle Armi";
+
+/* Weapon Reference: section */
+"Weapon Statistics" = "Statistiche delle Armi";
+
+/* No comment provided by engineer. */
+"Weapons" = "Armi";
+
+/* No comment provided by engineer. */
+"Week" = "Settimana";
+
+/* Missions Widget */
+"Weekly" = "Settimanale";
 
 /* Missions Box: header */
 "Weekly Missions" = "Missioni Settimanali";
