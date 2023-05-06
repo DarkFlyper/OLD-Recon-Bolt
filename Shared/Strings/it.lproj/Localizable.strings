@@ -736,7 +736,7 @@ Se non conosci il tuo nome utente o non ne hai uno, puoi risolvere il problema s
 "Month" = "Mese";
 
 /* Pro Features List */
-"Multiple Account Support" = "Supporto per Account Multipli";
+"Multiple Account Support" = "Supporto per più Account";
 
 /* Pro Store */
 "Multiple Accounts" = "Più Account";
@@ -769,7 +769,13 @@ Se non conosci il tuo nome utente o non ne hai uno, puoi risolvere il problema s
 "No data" = "Nessun dato disponibile";
 
 /* No comment provided by engineer. */
+"No games played with premade teammates." = "Nessuna partita giocata con il Gruppo.";
+
+/* No comment provided by engineer. */
 "No minimap available!" = "Nessuna minimappa disponibile!";
+
+/* No comment provided by engineer. */
+"No non-premade players encountered repeatedly. (Un)lucky you!" = "Non hai incontrato nessun giocatore con cui tu abbia mai fatto un gruppo. (Un)Lucky!";
 
 /* No comment provided by engineer. */
 "Normalize Charts" = "Normalizza i Grafici";
@@ -787,7 +793,7 @@ Se non conosci il tuo nome utente o non ne hai uno, puoi risolvere il problema s
 "Not signed in!" = "Non hai effettuato l'accesso!";
 
 /* Pro Features List */
-"Note: Statistics are only available on iOS 16 and newer." = "Nota: le Statistiche sono disponibili solo su iOS 16 e versioni successive.";
+"Note: Statistics are only available on iOS 16 and newer." = "Nota: Le Statistiche sono disponibili solo su iOS 16 e versioni successive.";
 
 /* Pro Features List */
 "Note: Widgets are only available on iOS 16 and newer." = "Nota: I Widget sono disponibili solo su iOS 16 e versioni successive.";
@@ -838,6 +844,9 @@ Playtime Stats: section */
 
 /* No comment provided by engineer. */
 "Playtime" = "Tempo di Gioco";
+
+/* No comment provided by engineer. */
+"Playtime Breakdown" = "Ripartizione dell'ora di gioco";
 
 /* No comment provided by engineer. */
 "Please make sure you are ready to play by the time the game starts!" = "Assicurati di essere pronto a giocare per l'inizio della partita!";
@@ -1052,7 +1061,7 @@ Login Form: button */
 "Storefront outdated!" = "Aggiorna il negozio!";
 
 /* Pro Features List */
-"Support Development :)" = "Sostieni lo sviluppo :)";
+"Support Development :)" = "Sostieni lo Sviluppo :)";
 
 /* Pro Store */
 "Support Further Development!" = "Sostieni i Futuri Aggiornamenti!";
@@ -1088,7 +1097,7 @@ Login Form: button */
 "This feature requires iOS 16 or newer." = "Questa funzione richiede iOS 16 or +.";
 
 /* Stats: match loading */
-"To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "Per raccogliere le statistiche, dobbiamo prima elaborare le partite. Nota che grandi quantità di dati possono richiedere molto tempo, soprattutto quando si scaricano per la prima volta!";
+"To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "Per raccogliere le statistiche, dobbiamo prima caricare le partite già elaborate da Valorant. Nota che grandi quantità di dati possono richiedere molto tempo, soprattutto quando si scaricano per la prima volta!";
 
 /* Win Rate Stats: side name
 Hit Distribution Stats: region */
@@ -1266,7 +1275,7 @@ Round Details: killed by unknown/unspecified weapon */
 "You can also tap a round's number in the kill breakdown above to quickly view its details." = "È possibile cliccare il numero di un round nella sezione delle uccisioni in alto per visualizzare rapidamente i dettagli.";
 
 /* Login Form: is this safe? */
-"You can enable 2-factor authentication, so you'd at least have another layer of security if it went bad." = "È possibile attivare l'autenticazione a due fattori, cosi da avere almeno un altro livello di sicurezza in caso di problemi.";
+"You can enable 2-factor authentication, so you'd at least have another layer of security if it went bad." = "È possibile attivare l'autenticazione a due fattori cosi da avere almeno un altro livello di sicurezza in caso di problemi.";
 
 /* Login Form: is this safe? */
 "Your credentials only ever leave your device in the form of a login request directly to Riot. They are never stored or sent anywhere else." = "Le credenziali lasciano il dispositivo sotto forma di richiesta di accesso direttamente da Riot. Non vengono mai memorizzate o inviate altrove.";
@@ -1275,7 +1284,7 @@ Round Details: killed by unknown/unspecified weapon */
 "Your session has expired! Recon Bolt has tried to refresh it for you, but needs 2FA confirmation." = "La sessione è scaduta! Recon Bolt ha cercato di aggiornarla per te, ma necessita di una conferma 2FA.";
 
 /* No comment provided by engineer. */
-"iOS is a bit finnicky about this, so widgets may not refresh right away—feel free to restart if this doesn't help!" = "iOS è un po' pignolo su questo punto e i widget potrebbero non aggiornarsi subito; non esitare a riavviare se questo non aiuta!";
+"iOS is a bit finnicky about this, so widgets may not refresh right away—feel free to restart if this doesn't help!" = "iOS è un po' pignolo su questo punto e i Widget potrebbero non aggiornarsi subito; non esitare a riavviare il telefono se questo non aiuta!";
 
 /* Loadout: spray slot */
 "mid-round" = "Metà-round";
