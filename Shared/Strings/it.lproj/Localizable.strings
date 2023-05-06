@@ -2,6 +2,9 @@
 /* Used for matches less than a day ago. %@ is replaced by the number of hours/minutes, e.g. '3h ago'. */
 "%@ ago" = "%@ fa";
 
+/* Weapon Reference: stats */
+"%@ bullets/sec" = "%@ colpi/sec";
+
 /* %@ is replaced by a fraction of wins vs. games played, e.g. '5/12 games won'. */
 "%@ games won" = "%@ partite vinte";
 
@@ -11,6 +14,12 @@
 /* used throughout the app to format percentages—placeholder is replaced by a number */
 "%@%%" = "%@%%";
 
+/* Weapon Reference: time in seconds (with decimal digits) */
+"%@s" = "%@s";
+
+/* Weapon Reference: stats */
+"%@°" = "%@°";
+
 /* Missions Box: always at least 3 */
 "%lld Future Weeklies" = "%lld Settimanali futuri";
 
@@ -19,6 +28,12 @@
 
 /* No comment provided by engineer. */
 "%lld RR" = "%lld RR";
+
+/* Weapon Reference: stats */
+"%lld bullets" = "%lld colpi";
+
+/* Weapon Reference: price, always at least 150 */
+"%lld credits" = "%lld crediti";
 
 /* Storage Management */
 "%lld from other players" = "%lld da altri giocatori";
@@ -31,6 +46,9 @@
 
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
 "%lld to %lld credits" = "Da %lld a %lld crediti";
+
+/* Weapon Reference: stats: damage range */
+"%lld – %lldm" = "%lld – %lldm";
 
 /* No comment provided by engineer. */
 "%lld%%" = "%lld%%";
@@ -118,6 +136,12 @@ Tuttavia, le partite competitive dopo i tuoi posizionamenti possono essere ident
 
 /* No comment provided by engineer. */
 "Agent Select" = "Seleziona agente";
+
+/* Contract Picker */
+"Agent Unlockable" = "Agente Sbloccabile";
+
+/* Contract Picker */
+"Agent Unlocked" = "Agente Sbloccato";
 
 /* Statistics filter: button */
 "Agents" = "Agenti";
@@ -231,6 +255,9 @@ Playtime Stats: section */
 
 /* No comment provided by engineer. */
 "Career Summary" = "Carriera in Sintesi";
+
+/* Weapon Reference */
+"Category" = "Categoria";
 
 /* No comment provided by engineer. */
 "Change Buddy" = "Cambia Buddy";
@@ -397,6 +424,9 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Enter 2FA Code" = "Inserire il codice 2FA";
 
+/* Weapon Reference: stats */
+"Equip Time" = "Tempo di equipaggiamento";
+
 /* Request Log
 Stats: error details */
 "Error" = "Errore";
@@ -458,6 +488,9 @@ LA TUA SEGNALAZIONE DI BUG QUI
 
 /* Party Box: placeholder shows time spent in queue */
 "Finding match… (%@)" = "Trovare una partita… (%@)";
+
+/* Weapon Reference: stats */
+"First Bullet Spread" = "Diffusione del primo proiettile";
 
 /* No comment provided by engineer. */
 "Force Refresh Widgets" = "Forza l'aggiornamento dei widget";
@@ -621,6 +654,9 @@ Se non conosci il tuo nome utente o non ne hai uno, puoi risolvere il problema s
 /* Win Rate Stats: chart legend */
 "Losses" = "Perdite";
 
+/* Weapon Reference: stats */
+"Magazine Size" = "Capacita del caricatore";
+
 /* No comment provided by engineer. */
 "Manage Assets" = "Gestire le attività";
 
@@ -678,6 +714,227 @@ Se non conosci il tuo nome utente o non ne hai uno, puoi risolvere il problema s
 /* Missions Widget: title */
 "Missions" = "Missioni";
 
+/* No comment provided by engineer. */
+"Missions not loaded!" = "Missioni non caricate!";
+
+/* No comment provided by engineer. */
+"Month" = "Mese";
+
+/* Pro Features List */
+"Multiple Account Support" = "Supporto per Account Multipli";
+
+/* Bookmark/Player List: lookup name placeholder */
+"Name" = "Nome";
+
+/* Store */
+"Night Market" = "Mercato Nero";
+
+/* Buddy picker: option at the top to select no buddy */
+"No Buddy" = "Rimuovi Accessorio";
+
+/* No comment provided by engineer. */
+"No Spray" = "Rimuovi Spray";
+
+/* No comment provided by engineer. */
+"No Title" = "Rimuovi Titolo";
+
+/* Gun Customizer: shown when a weapon has no buddy active */
+"No buddy selected!" = "Nessun accessorio selezionato!";
+
+/* Missions Box */
+"No contract active!" = "Nessun contratto attivo!";
+
+/* Win Rate Stats: by map */
+"No data" = "Nessun dato disponibile";
+
+/* No comment provided by engineer. */
+"No minimap available!" = "Nessuna minimappa disponibile!";
+
+/* Party Box */
+"Not Ready" = "Non pronto";
+
+/* Account Settings */
+"Not signed in yet." = "Non hai ancora effettuato l'accesso.";
+
+/* No comment provided by engineer. */
+"Not signed in!" = "Non hai effettuato l'accesso!";
+
+/* No comment provided by engineer. */
+"Official Website" = "Sito Web Ufficiale";
+
+/* No comment provided by engineer. */
+"Open or swipe to fetch details." = "Apri o scorri per vedere i dettagli.";
+
+/* Storage Management */
+"Other Players" = "Altri Giocatori";
+
+/* Win Rate Stats: section
+Playtime Stats: section */
+"Over Time" = "Supplementari";
+
+/* No comment provided by engineer. */
+"Party" = "Gruppo";
+
+/* Scoreboard: party letter */
+"Party %@" = "Gruppo %@";
+
+/* Login Form */
+"Password" = "Password";
+
+/* Agent View: label for player who hasn't picked an agent yet */
+"Picking…" = "Selezionando l'agente…";
+
+/* Request Log: header */
+"Response" = "Risposta";
+
+/* No comment provided by engineer. */
+"Response Code" = "Codice di risposta";
+
+/* Pro Store: error alert title */
+"Restore Failed!" = "Ripristino fallito!";
+
+/* Pro Store: button */
+"Restore Purchase" = "Ripristina gli Acquisti";
+
+/* No comment provided by engineer. */
+"Retry" = "Riprova";
+
+/* Round Details: header */
+"Round %lld of %lld" = "Round %lld di %lld";
+
+/* Round Details: title */
+"Round Details" = "Dettagli del Round";
+
+/* Win Rate Stats: section */
+"Rounds by Side" = "Rounds per Lato";
+
+/* Weapon Reference: stats */
+"Run Speed" = "Velocità di movimento";
+
+/* Bookmark/Player List: section */
+"Search" = "Cerca";
+
+/* Hit Distribution Stats: error */
+"Select more matches to see data on hit distribution. Deathmatch, Escalation, and other modes don't provide the necessary information." = "Seleziona più partite per vedere i dati sulla distribuzione dei colpi. Deathmatch, Corsa alle Armi e altre modalità \"speciali\" non forniscono i dati necessari.";
+
+/* No comment provided by engineer. */
+"Send to Developer" = "Invia allo sviluppatore";
+
+/* Account Settings */
+"Session expired!" = "Sessione scaduta!";
+
+/* Top-Level Tab Title */
+"Settings" = "Impostazioni";
+
+/* Playtime Stats: title for view of matches in common with another player */
+"Shared Matches" = "Partite Condivise";
+
+/* No comment provided by engineer. */
+"Show all matches" = "Mostra tutte le partite";
+
+/* No comment provided by engineer. */
+"Show details when found" = "Mostra i dettagli quando viene trovata la partita";
+
+/* App Icon Description: pro blue */
+"Show off your pro status with an exclusive icon!" = "Mostra il tuo Pro status con un'icona esclusiva!";
+
+/* Account Settings: button
+Login Form: button */
+"Sign In" = "Accedi";
+
+/* Login Form */
+"Sign In with your Riot account" = "Accedi con il tuo account Riot";
+
+/* Account Settings */
+"Sign Out" = "Esci";
+
+/* Login Form: button/header */
+"Sign in with Google/Apple/etc." = "Accedi con Google/Apple/ecc.";
+
+/* Skin Details: level name */
+"Skin Level %lld" = "Livello %lld";
+
+/* Skin Details: section */
+"Skin Levels" = "Livello della Skin";
+
+/* Weapon Reference: button */
+"Skins" = "Skins";
+
+/* No comment provided by engineer. */
+"Spectator" = "Spettatore";
+
+/* Round Details: Spike Event */
+"Spike Defused" = "Spike Disinnescata";
+
+/* Round Details: Spike Event */
+"Spike Planted" = "Spike Inizializzata";
+
+/* No comment provided by engineer. */
+"Start Matchmaking?" = "Iniziare la Ricerca per la Partita?";
+
+/* Win Rate Stats: accessibility label */
+"Starting Side" = "Lato di partenza";
+
+/* Win Rate Stats */
+"Starting Side:" = "Lato di partenza:";
+
+/* No comment provided by engineer. */
+"Statistics" = "Statistiche";
+
+/* Statistics Pro purchase prompt */
+"Statistics not available!" = "Statistiche non disponibili!";
+
+/* Statistics Pro purchase prompt: 'Recon Bolt Pro' is inserted in the placeholder with a bolder font. */
+"Statistics require %@, a one-time purchase including a variety of features. Want to give them a look?" = "Le statistiche richiedono %@, un acquisto unico che include una serie di funzioni. Volete dare un'occhiata?";
+
+/* Store Widget: title */
+"Store" = "Negozio";
+
+/* No comment provided by engineer. */
+"Store not loaded!" = "Negozio non caricato!";
+
+/* No comment provided by engineer. */
+"Storefront outdated!" = "Aggiorna il negozio!";
+
+/* Pro Features List */
+"Support Development :)" = "Sostieni lo sviluppo :)";
+
+/* Pro Store */
+"Support Further Development!" = "Sostieni i Futuri Aggiornamenti!";
+
+/* Missions Box: button */
+"Switch Contract" = "Cambia Contratto";
+
+/* Login Form: is this safe? */
+"TL;DR: you'll have to take my word for it, but Riot doesn't seem to mind." = "TL;DR: Dovete fidarvi della mia parola, a Riot non sembra importare.";
+
+/* Bookmark/Player List: lookup tag placeholder */
+"Tag" = "Tag";
+
+/* Pro Store */
+"Thank you for supporting Recon Bolt!" = "Grazie per sostenere Recon Bolt!";
+
+/* Login Form: is this safe? */
+"The code is open-source and visible on GitHub; you can build it yourself if you want to be sure of what's running." = "Il codice è open-source e visibile su GitHub; Potete controllarlo voi stessi se volete essere sicuri.";
+
+/* App Icon Description: default */
+"The default look of Recon Bolt." = "L' aspetto predefinito di Recon Bolt.";
+
+/* No comment provided by engineer. */
+"The pro version lets you change the app icon! More icons might be coming in future updates." = "La versione Pro consente di cambiare l'icona dell'app! Potrebbero essere disponibili altre icone nei prossimi aggiornamenti.";
+
+/* No comment provided by engineer. */
+"Theme" = "Tema";
+
+/* No comment provided by engineer. */
+"These are the last %lld requests sent by the app, along with their responses." = "Queste sono le ultime richieste %lld inviate dall'applicazione, insieme alle relative risposte.";
+
+/* Statistics error for iOS <16 */
+"This feature requires iOS 16 or newer." = "Questa funzione richiede iOS 16 or +.";
+
+/* Stats: match loading */
+"To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "Per raccogliere le statistiche, dobbiamo prima elaborare le partite. Nota che grandi quantità di dati possono richiedere molto tempo, soprattutto quando si scaricano per la prima volta!";
+
 /* Login Form: sign in with google/apple/etc. */
 "Unfortunately, due to technical limitations, you cannot sign into Recon Bolt via your Google account, Apple ID, or anything but a Riot account.
 
@@ -694,6 +951,36 @@ Sul sito, vai su **Accesso account Riot** e imposta un nome utente e una passwor
 
 /* placeholder */
 "Unknown Skin" = "Skin sconosciuta";
+
+/* Missions Box: header */
+"Weekly Missions" = "Missioni Settimanali";
+
+/* No comment provided by engineer. */
+"Widget Refresh Requested" = "Richiesta di aggiornamento dei Widget";
+
+/* No comment provided by engineer. */
+"Win Rate" = "Tasso di Vittoria";
+
+/* Win Rate Stats: chart legend */
+"Wins" = "Vittorie";
+
+/* No comment provided by engineer. */
+"Year" = "Anno";
+
+/* Match Details: footnote */
+"You can also tap a round's number in the kill breakdown above to quickly view its details." = "È possibile cliccare il numero di un round nella sezione delle uccisioni in alto per visualizzare rapidamente i dettagli.";
+
+/* Login Form: is this safe? */
+"You can enable 2-factor authentication, so you'd at least have another layer of security if it went bad." = "È possibile attivare l'autenticazione a due fattori, cosi da avere almeno un altro livello di sicurezza in caso di problemi.";
+
+/* Login Form: is this safe? */
+"Your credentials only ever leave your device in the form of a login request directly to Riot. They are never stored or sent anywhere else." = "Le credenziali lasciano il dispositivo sotto forma di richiesta di accesso direttamente da Riot. Non vengono mai memorizzate o inviate altrove.";
+
+/* No comment provided by engineer. */
+"Your session has expired! Recon Bolt has tried to refresh it for you, but needs 2FA confirmation." = "La sessione è scaduta! Recon Bolt ha cercato di aggiornarla per te, ma necessita di una conferma 2FA.";
+
+/* Missions Widget: countdown label when the target is in the past. Should never really show up, since at this point there's new data. */
+"old" = "obsoleto";
 
 /* Login Form */
 "signing in…" = "Accedendo…";
