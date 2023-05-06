@@ -103,6 +103,14 @@ final class AccountManager: ObservableObject {
 		activeAccount = try StoredAccount(session: session, context: context)
 	}
 	
+	func removeAccounts(at offsets: IndexSet) {
+		let isDeletingActive = offsets.contains { storedAccounts[$0] == activeAccount?.id }
+		if isDeletingActive {
+			activeAccount = nil
+		}
+		storedAccounts.remove(atOffsets: offsets)
+	}
+	
 	func toggleActive(_ id: User.ID) throws {
 		if activeAccount?.id == id {
 			activeAccount = nil

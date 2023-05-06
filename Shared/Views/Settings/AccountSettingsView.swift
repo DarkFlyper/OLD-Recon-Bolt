@@ -53,7 +53,7 @@ struct AccountSettingsView: View {
 			ForEach(accountManager.storedAccounts, id: \.self) { accountID in
 				AccountCell(accountID: accountID, accountManager: accountManager)
 			}
-			.onDelete { accountManager.storedAccounts.remove(atOffsets: $0) }
+			.onDelete { accountManager.removeAccounts(at: $0) }
 			.onMove { accountManager.storedAccounts.move(fromOffsets: $0, toOffset: $1) }
 			.moveDisabled(!ownsProVersion)
 			
