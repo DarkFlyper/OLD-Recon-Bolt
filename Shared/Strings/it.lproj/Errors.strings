@@ -5,7 +5,7 @@
 "Could not load active account!" = "Impossibile caricare l'account attivo!";
 
 /* Riot API Error */
-"Invalid Headers: %@" = "Intestazioni non valide: %@";
+"Invalid Headers: %@" = "Headers non valido: %@";
 
 /* wrong account error */
 "It looks like this account has never played Valorant!
