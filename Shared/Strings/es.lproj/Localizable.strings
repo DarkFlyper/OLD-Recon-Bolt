@@ -283,6 +283,9 @@ Playtime Stats: section */
 /* Store */
 "Daily Offers" = "Ofertas diarias";
 
+/* No comment provided by engineer. */
+"Damage" = "Daño";
+
 /* App Theme */
 "Dark Mode" = "Modo oscuro";
 
@@ -847,6 +850,9 @@ En ese sitio, ve a **Inicio de sesión de cuenta de Riot** y establece un nombre
 /* placeholder */
 "Unknown Bundle" = "Paquete desconocido";
 
+/* placeholder */
+"Unknown Card" = "Tarjeta desconocida";
+
 /* Store */
 "Unknown Offer" = "Oferta desconocida";
 
@@ -861,6 +867,9 @@ En ese sitio, ve a **Inicio de sesión de cuenta de Riot** y establece un nombre
 
 /* placeholder */
 "Unknown Skin" = "Diseño desconocido";
+
+/* placeholder */
+"Unknown Spray" = "Grafiti desconocido";
 
 /* placeholder */
 "Unknown Title" = "Título desconocido";
