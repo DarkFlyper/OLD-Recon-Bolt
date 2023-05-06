@@ -597,7 +597,7 @@ Weapon Reference: stats */
 "Loadout Delta" = "Delta di carico";
 
 /* No comment provided by engineer. */
-"Loadout Delta is computed as the difference between the average loadout value of players on each team. For example, a loadout delta of +1000 means your team's loadouts were an average of 1000 credits more valuable than the enemy team's in that round." = "Il delta di loadout è calcolato come la differenza tra il valore medio del loadout dei giocatori di ogni squadra. Ad esempio, un delta di loadout di +1000 significa che il loadout della propria squadra è stato in media di 1000 crediti più prezioso di quello della squadra nemica in quel round.";
+"Loadout Delta is computed as the difference between the average loadout value of players on each team. For example, a loadout delta of +1000 means your team's loadouts were an average of 1000 credits more valuable than the enemy team's in that round." = "Il delta di loadout è calcolato come la differenza tra il valore medio del loadout dei giocatori di ogni squadra. Ad esempio, un delta di loadout di +1000 significa che il loadout della propria squadra è stato in media di 1000 crediti più costoso di quello della squadra nemica in quel round.";
 
 /* No comment provided by engineer. */
 "Loadout not loaded!" = "Loadout non caricato!";
@@ -678,8 +678,22 @@ Se non conosci il tuo nome utente o non ne hai uno, puoi risolvere il problema s
 /* Missions Widget: title */
 "Missions" = "Missioni";
 
+/* Login Form: sign in with google/apple/etc. */
+"Unfortunately, due to technical limitations, you cannot sign into Recon Bolt via your Google account, Apple ID, or anything but a Riot account.
+
+Assuming you signed up for Valorant using Google/Apple/etc., you can set up your account to add a username & password on Riot's site at [account.riotgames.com](https://account.riotgames.com). Note that your Riot ID is **not** the same as your username! If you've forgotten your username, you can reset it at [recovery.riotgames.com](https://recovery.riotgames.com).
+
+On that site, navigate to **Riot Account Sign-in** and set yourself a username and password. When you're done, you can use those same credentials to sign in above! Your social account will stay linked and you'll remain able to sign in with that on PC :)" = "Purtroppo, a causa di limitazioni tecniche, non è possibile accedere a Recon Bolt tramite l'account Google, l'ID Apple o qualsiasi altra cosa che non sia un account Riot.
+
+Supponendo che ti sei loggato in Valorant utilizzando Google/Apple/etc., puoi configurare il tuo account aggiungendo un nome utente e una password sul sito della Riot all'indirizzo [account.riotgames.com](https://account.riotgames.com). Nota che l'ID Riot **non coincide** con il nome utente! Se hai dimenticato il tuo nome utente, puoi reimpostarlo su [recovery.riotgames.com](https://recovery.riotgames.com).
+
+Sul sito, vai su **Accesso account Riot** e imposta un nome utente e una password. Una volta terminato, è possibile utilizzare le stesse credenziali per accedere al gioco! Il tuo account social rimarrà collegato e potrai accedere con quello sul PC :)";
+
 /* Store */
 "Unknown Offer" = "Offerta sconosciuta";
 
 /* placeholder */
 "Unknown Skin" = "Skin sconosciuta";
+
+/* Login Form */
+"signing in…" = "Accedendo…";
