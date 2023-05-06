@@ -9,7 +9,7 @@
 "%@ games won" = "%@ partite vinte";
 
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph); placeholder is replaced by the percentage of rounds won, e.g. '57.3% won'. */
-"%@ won" = "%@ vinto";
+"%@ won" = "%@ vinti";
 
 /* used throughout the app to format percentages—placeholder is replaced by a number */
 "%@%%" = "%@%%";
@@ -21,10 +21,10 @@
 "%@°" = "%@°";
 
 /* Missions Box: always at least 3 */
-"%lld Future Weeklies" = "%lld Settimanali futuri";
+"%lld Future Weeklies" = "%lld Future Settimanali";
 
 /* Missions Box: always at least 3 */
-"%lld Queued-Up Weeklies" = "%lld Settimanali in coda";
+"%lld Queued-Up Weeklies" = "%lld Settimanali in Scadenza";
 
 /* No comment provided by engineer. */
 "%lld RR" = "%lld RR";
@@ -39,13 +39,13 @@
 "%lld from other players" = "%lld da altri giocatori";
 
 /* Hit Distribution Stats: hit count */
-"%lld hits" = "%lld colpi";
+"%lld hits" = "%lld colpi a segno";
 
 /* Shown at the bottom of the expandable playtime list when there are more entries available. */
-"%lld more" = "%lld piu";
+"%lld more" = "%lld Altro";
 
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
-"%lld to %lld credits" = "Da %lld a %lld crediti";
+"%lld to %lld credits" = "Da %lld a %lld Crediti";
 
 /* Weapon Reference: stats: damage range */
 "%lld – %lldm" = "%lld – %lldm";
@@ -82,7 +82,7 @@ Missions Box */
 "-%lld%%" = "-%lld%%";
 
 /* No comment provided by engineer. */
-"2-Factor Authentication" = "2-Factor Authentication";
+"2-Factor Authentication" = "Autenticazione a 2 fattori";
 
 /* Missions Widget: countdown label when the target is in the future. e.g. '< 2d 3h' */
 "< %@" = "< %@";
@@ -92,7 +92,7 @@ Missions Box */
 
 /* Match List Filter */
 "A match's queue is unknown until its details are fetched (by tapping it or performing the swipe action).
-Competitive matches after your placements can be identified without their details, however." = "La coda di una corrispondenza è sconosciuta fino a quando non vengono recuperati i suoi dettagli (toccandola o eseguendo l'azione di scorrimento).
+Competitive matches after your placements can be identified without their details, however." = "La coda di una partita è sconosciuta fino a quando non vengono recuperati i suoi dettagli (cliccandola o scorrendo).
 Tuttavia, le partite competitive dopo i tuoi posizionamenti possono essere identificate senza i loro dettagli.";
 
 /* No comment provided by engineer. */
@@ -102,10 +102,10 @@ Tuttavia, le partite competitive dopo i tuoi posizionamenti possono essere ident
 "ALL TIME" = "SEMPRE";
 
 /* Settings: section */
-"About" = "Di";
+"About" = "Chi sono";
 
 /* No comment provided by engineer. */
-"About Recon Bolt" = "Di Recon Bolt";
+"About Recon Bolt" = "Informazioni su Recon Bolt";
 
 /* Settings: section */
 "Accounts" = "Accounts";
@@ -153,25 +153,25 @@ Tuttavia, le partite competitive dopo i tuoi posizionamenti possono essere ident
 "All Maps" = "Tutte le mappe";
 
 /* Statistics Filter: button to allow all agents */
-"Allow All Agents" = "Permettere tutto";
+"Allow All Agents" = "Includi Tutto";
 
 /* Statistics Filter: button to allow all queues */
-"Allow All Queues" = "Permettere tutto";
+"Allow All Queues" = "Includi Tutte le Modalità";
 
 /* Default Error Alert Title */
 "An Error Occurred!" = "Si è verificato un errore!";
 
 /* About Screen */
-"An invaluable API hosting all the assets (images, data, etc.) used throughout Valorant. This is where almost every image in the app comes from." = "Un'API inestimabile che ospita tutte le risorse (immagini, dati, ecc.) utilizzate in Valorant. È da qui che provengono quasi tutte le immagini nell'app.";
+"An invaluable API hosting all the assets (images, data, etc.) used throughout Valorant. This is where almost every image in the app comes from." = "Una preziosa API che ospita tutte le risorse (immagini, dati, ecc.) utilizzate in Valorant. Da qui provengono quasi tutte le immagini dell'applicazione.";
 
 /* Statistics filter: shown when every agent is allowed */
-"Any Agent" = "Qualsiasi agente";
+"Any Agent" = "Tutti gli Agenti";
 
 /* Statistics filter: shown when every queue is allowed */
-"Any Queue" = "Qualsiasi coda";
+"Any Queue" = "Qualsiasi Modalità";
 
 /* Asset Management */
-"Anything with images will not display correctly." = "Qualsiasi cosa con immagini non verrà visualizzata correttamente.";
+"Anything with images will not display correctly." = "Tutte le immagini non verranno visualizzate correttamente.";
 
 /* No comment provided by engineer. */
 "App Icon" = "Icona dell'app";
@@ -180,28 +180,28 @@ Tuttavia, le partite competitive dopo i tuoi posizionamenti possono essere ident
 "Are your assets outdated?" = "I tuoi asset sono obsoleti?";
 
 /* Pro Features List */
-"As thanks for your support, you get to show off your status with an exclusive app icon!" = "Come ringraziamento per il tuo supporto, puoi mostrare il tuo stato con un'icona dell'app esclusiva!";
+"As thanks for your support, you get to show off your status with an exclusive app icon!" = "Come ringraziamento per il tuo supporto, puoi mostrare il tuo stato Pro con un'icona dell'app esclusiva!";
 
 /* No comment provided by engineer. */
 "Assets" = "Risorse";
 
 /* Asset Management: shown before the newest version is fetched, so it's not know yet if the assets are up to date or outdated */
-"Assets complete." = "Asset completi.";
+"Assets complete." = "Attività completate.";
 
 /* No comment provided by engineer. */
 "Assets not loaded!" = "Risorse non caricate!";
 
 /* Asset Management */
-"Assets out of date!" = "Asset scaduti!";
+"Assets out of date!" = "Risorse obsolete!";
 
 /* No comment provided by engineer. */
-"Assets should be fetched automatically, but in case something went wrong, feel free to initiate the process manually." = "Le risorse dovrebbero essere recuperate automaticamente, ma nel caso qualcosa andasse storto, sentiti libero di avviare il processo manualmente.";
+"Assets should be fetched automatically, but in case something went wrong, feel free to initiate the process manually." = "Le risorse dovrebbero essere recuperate automaticamente, ma nel caso qualcosa andasse storto, avvia il processo manualmente.";
 
 /* Asset Management */
 "Assets up to date!" = "Risorse aggiornate!";
 
 /* Win Rate Stats: side name */
-"Attacking" = "Attaccare";
+"Attacking" = "Attacco";
 
 /* Store: available currency */
 "Available:" = "Disponibile:";
@@ -214,20 +214,20 @@ Tuttavia, le partite competitive dopo i tuoi posizionamenti possono essere ident
 
 /* Hit Distribution Stats: region
 Weapon Reference: stats */
-"Body" = "Body";
+"Body" = "Corpo";
 
 /* Bookmark/Player List: section */
 "Bookmarks" = "Segnalibri";
 
 /* Gun Customizer: section */
-"Buddy" = "Buddy";
+"Buddy" = "Accessori";
 
 /* Storage Management: section */
-"By Kind" = "Fatto da Kind";
+"By Kind" = "By Kind";
 
 /* Win Rate Stats: section
 Playtime Stats: section */
-"By Map" = "Per mappa";
+"By Map" = "Per Mappa";
 
 /* Playtime Stats: section/title */
 "By Non-Premade Player" = "Da giocatore non preconfezionato";
@@ -301,6 +301,9 @@ Playtime Stats: section */
 /* Storage Management: button to delete all entries of a certain kind */
 "Clear All" = "Cancella tutto";
 
+/* Skin Details: section */
+"Color Variants" = "Varante Colore Skin";
+
 /* Contract Picker */
 "Completed" = "Completato";
 
@@ -359,13 +362,13 @@ Playtime Stats: section */
 "Currently in-game" = "Attualmente in gioco";
 
 /* Queue Label: custom game */
-"Custom" = "Personalizzato";
+"Custom" = "Partita Personalizzata";
 
 /* Gun Customizer: title */
-"Customize %@" = "Personalizzare %@";
+"Customize %@" = "Personalizza %@";
 
 /* Gun Customizer: title */
-"Customize Gun" = "Personalizzare la pistola";
+"Customize Gun" = "Personalizza le Armi";
 
 /* Missions Widget */
 "Daily" = "Giornaliero";
@@ -375,6 +378,9 @@ Playtime Stats: section */
 
 /* Store */
 "Daily Offers" = "Offerte giornaliere";
+
+/* No comment provided by engineer. */
+"Damage" = "Danno";
 
 /* App Theme */
 "Dark Mode" = "Modalità scura";
@@ -444,10 +450,10 @@ Stats: error details */
 "Exchange Body" = "Corpo";
 
 /* Statistics Filter: button to exclude all agents */
-"Exclude All Agents" = "Escludere tutti";
+"Exclude All Agents" = "Escludi Tutti";
 
 /* Statistics Filter: button to exclude all queues */
-"Exclude All Queues" = "Escludere tutti";
+"Exclude All Queues" = "Escludi Tutte le Modalità";
 
 /* Pro Features List */
 "Exclusive App Icon" = "Icona Esclusiva App";
@@ -488,6 +494,9 @@ LA TUA SEGNALAZIONE DI BUG QUI
 
 /* Party Box: placeholder shows time spent in queue */
 "Finding match… (%@)" = "Trovare una partita… (%@)";
+
+/* Weapon Reference: stats */
+"Fire Rate" = "Rateo di fuoco";
 
 /* Weapon Reference: stats */
 "First Bullet Spread" = "Diffusione del primo proiettile";
@@ -627,10 +636,10 @@ Weapon Reference: stats */
 "Loadout" = "Carico";
 
 /* No comment provided by engineer. */
-"Loadout Delta" = "Delta di carico";
+"Loadout Delta" = "Delta Equipaggiamento";
 
 /* No comment provided by engineer. */
-"Loadout Delta is computed as the difference between the average loadout value of players on each team. For example, a loadout delta of +1000 means your team's loadouts were an average of 1000 credits more valuable than the enemy team's in that round." = "Il delta di loadout è calcolato come la differenza tra il valore medio del loadout dei giocatori di ogni squadra. Ad esempio, un delta di loadout di +1000 significa che il loadout della propria squadra è stato in media di 1000 crediti più costoso di quello della squadra nemica in quel round.";
+"Loadout Delta is computed as the difference between the average loadout value of players on each team. For example, a loadout delta of +1000 means your team's loadouts were an average of 1000 credits more valuable than the enemy team's in that round." = "Il delta dell' equipaggiamento è calcolato come la differenza tra il valore medio dell equipaggiamento dei giocatori di ogni squadra. Ad esempio, un delta di equipaggiamento di +1000 significa che l' equipaggiamento della propria squadra è stato in media di 1000 crediti più costoso di quello della squadra nemica in quel round.";
 
 /* No comment provided by engineer. */
 "Loadout not loaded!" = "Loadout non caricato!";
@@ -723,6 +732,9 @@ Se non conosci il tuo nome utente o non ne hai uno, puoi risolvere il problema s
 /* Pro Features List */
 "Multiple Account Support" = "Supporto per Account Multipli";
 
+/* Pro Store */
+"Multiple Accounts" = "Più Account";
+
 /* Bookmark/Player List: lookup name placeholder */
 "Name" = "Nome";
 
@@ -750,14 +762,23 @@ Se non conosci il tuo nome utente o non ne hai uno, puoi risolvere il problema s
 /* No comment provided by engineer. */
 "No minimap available!" = "Nessuna minimappa disponibile!";
 
+/* No comment provided by engineer. */
+"Normalize Charts" = "Normalizza i Grafici";
+
 /* Party Box */
 "Not Ready" = "Non pronto";
+
+/* Hit Distribution Stats: error */
+"Not enough data!" = "Non ci sono abbastanza dati!";
 
 /* Account Settings */
 "Not signed in yet." = "Non hai ancora effettuato l'accesso.";
 
 /* No comment provided by engineer. */
 "Not signed in!" = "Non hai effettuato l'accesso!";
+
+/* Pro Features List */
+"Note: Statistics are only available on iOS 16 and newer." = "Nota: le Statistiche sono disponibili solo su iOS 16 e versioni successive.";
 
 /* No comment provided by engineer. */
 "Official Website" = "Sito Web Ufficiale";
@@ -784,6 +805,91 @@ Playtime Stats: section */
 /* Agent View: label for player who hasn't picked an agent yet */
 "Picking…" = "Selezionando l'agente…";
 
+/* Weapon Reference */
+"Price" = "Prezzo";
+
+/* App Icon Name */
+"Pro Blue" = "Pro Blue";
+
+/* No comment provided by engineer. */
+"Pro Features" = "Caratteristiche Pro";
+
+/* App Icon Picker: section */
+"Pro Icons" = "Icone Pro";
+
+/* Pro Store: error alert title */
+"Purchase Failed!" = "Acquisto Fallito!";
+
+/* Pro Store: button (placeholder filled with formatted currency) */
+"Purchase – %@" = "Acquisto - %@";
+
+/* Statistics filter: button */
+"Queues" = "Modalità";
+
+/* Weapon Reference: stats */
+"Range" = "Distanza";
+
+/* Rank Widget: title */
+"Rank" = "Grado";
+
+/* No comment provided by engineer. */
+"Rank %lld" = "Grado %lld";
+
+/* Rank Changes Widget: title */
+"Rank Changes" = "Cambiamenti di Grado";
+
+/* No comment provided by engineer. */
+"Rank Rating Changes" = "Modifiche alla valutazione del Grado";
+
+/* No comment provided by engineer. */
+"Rate on the App Store" = "Vota sull'App Store";
+
+/* accessibility label */
+"Ready" = "Pronto";
+
+/* No comment provided by engineer. */
+"Recon Bolt Pro" = "Recon Bolt Pro";
+
+/* Pro Features List */
+"Recon Bolt Pro supports Family Sharing, meaning if just one member of your iCloud family buys it, everyone can use it!" = "Recon Bolt Pro supporta la condivisione in famiglia, il che significa che se un solo membro della vostra famiglia iCloud lo acquista, tutti possono usarlo!";
+
+/* Pro Features List */
+"Recon Bolt does not have and will never have ads. The only way it can make money is through in-app purchases." = "Recon Bolt non ha e non avrà mai pubblicità. L'unico nostro modo per guadagnare è attraverso gli acquisti in-app.";
+
+/* Top-Level Tab Title */
+"Reference" = "Riferimento";
+
+/* Account Settings: button to refresh expired session */
+"Refresh" = "Aggiorna";
+
+/* No comment provided by engineer. */
+"Refresh automatically" = "Aggiorna automaticamente";
+
+/* Store Widget: next refresh time (hour & minute) */
+"Refreshes at %@" = "Aggiorna a %@";
+
+/* Weapon Reference: stats */
+"Reload Time" = "Tempo di Aggiornamento";
+
+/* Match List: accessibility label */
+"Remove Bookmark" = "Rimuovi Segnalibro";
+
+/* Asset Management: section */
+"Repair" = "Ripara";
+
+/* Request Log: header */
+"Request" = "Richiedi";
+
+/* Advanced Settings: button to open request log
+Request Log: title */
+"Request Log" = "Richiedi un Log";
+
+/* No comment provided by engineer. */
+"Requests" = "Richiedi";
+
+/* Asset Management: button */
+"Reset" = "Reset";
+
 /* Request Log: header */
 "Response" = "Risposta";
 
@@ -804,6 +910,9 @@ Playtime Stats: section */
 
 /* Round Details: title */
 "Round Details" = "Dettagli del Round";
+
+/* Win Rate Stats: section */
+"Rounds by Loadout Delta" = "Rounds / Delta Equipaggiamento";
 
 /* Win Rate Stats: section */
 "Rounds by Side" = "Rounds per Lato";
@@ -935,6 +1044,22 @@ Login Form: button */
 /* Stats: match loading */
 "To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "Per raccogliere le statistiche, dobbiamo prima elaborare le partite. Nota che grandi quantità di dati possono richiedere molto tempo, soprattutto quando si scaricano per la prima volta!";
 
+/* Win Rate Stats: side name
+Hit Distribution Stats: region */
+"Total" = "Totale";
+
+/* No comment provided by engineer. */
+"Total Playtime" = "Tempo di Gioco Totale";
+
+/* No comment provided by engineer. */
+"Total Space Used" = "Spazio Totale Utilizzato";
+
+/* No comment provided by engineer. */
+"Twitter @juliand665" = "Twitter @juliand665";
+
+/* Missions Box: header, shown when a mission is not daily or weekly (should not happen unless Riot changes something) */
+"Uncategorized Missions" = "Missioni senza Categoria";
+
 /* Login Form: sign in with google/apple/etc. */
 "Unfortunately, due to technical limitations, you cannot sign into Recon Bolt via your Google account, Apple ID, or anything but a Riot account.
 
@@ -951,6 +1076,9 @@ Sul sito, vai su **Accesso account Riot** e imposta un nome utente e una passwor
 
 /* placeholder */
 "Unknown Skin" = "Skin sconosciuta";
+
+/* Win Rate Stats by Loadout Delta */
+"Value Difference (credits)" = "Differenza di Spesa (Crediti)";
 
 /* Missions Box: header */
 "Weekly Missions" = "Missioni Settimanali";
@@ -979,8 +1107,23 @@ Sul sito, vai su **Accesso account Riot** e imposta un nome utente e una passwor
 /* No comment provided by engineer. */
 "Your session has expired! Recon Bolt has tried to refresh it for you, but needs 2FA confirmation." = "La sessione è scaduta! Recon Bolt ha cercato di aggiornarla per te, ma necessita di una conferma 2FA.";
 
+/* No comment provided by engineer. */
+"iOS is a bit finnicky about this, so widgets may not refresh right away—feel free to restart if this doesn't help!" = "iOS è un po' pignolo su questo punto e i widget potrebbero non aggiornarsi subito; non esitare a riavviare se questo non aiuta!";
+
+/* Loadout: spray slot */
+"mid-round" = "Metà-round";
+
 /* Missions Widget: countdown label when the target is in the past. Should never really show up, since at this point there's new data. */
-"old" = "obsoleto";
+"old" = "Obsoleto";
+
+/* Loadout: spray slot */
+"post-round" = "Post-round";
+
+/* Loadout: spray slot */
+"pre-round" = "Pre-round";
 
 /* Login Form */
 "signing in…" = "Accedendo…";
+
+/* Loadout: unknown spray slot (should never appear unless Riot changes something) */
+"slot" = "Slot";
