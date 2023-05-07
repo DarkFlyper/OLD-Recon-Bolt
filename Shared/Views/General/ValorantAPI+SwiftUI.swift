@@ -59,6 +59,8 @@ extension APIError: LocalizedError {
 			return String(localized: "The resource could not be found.", table: "Errors", comment: "Riot API Error")
 		case .badResponseCode(400, _, let error?) where error.errorCode == "INVALID_HEADERS":
 			return String(localized: "Invalid Headers: \(error.message)", table: "Errors", comment: "Riot API Error")
+		case .badResponseCode(404, _, let error?) where error.errorCode == "MATCH_NOT_FOUND":
+			return String(localized: "This match could not be loaded! Valorant discards match details for older matches after a few months.", table: "Errors", comment: "Riot API Error")
 		case .badResponseCode(let code, _, nil):
 			return String(localized: "The API returned an error code \(code).", table: "Errors", comment: "Riot API Error")
 		case .badResponseCode(let code, _, let error?):
