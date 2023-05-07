@@ -118,7 +118,7 @@ struct AdvancedSettingsView: View {
 			.alert("Widget Refresh Requested", isPresented: $hasRefreshedWidgets) {
 				Button("OK") {}
 			} message: {
-				Text("iOS is a bit finnicky about this, so widgets may not refresh right away—feel free to restart if this doesn't help!")
+				Text("iOS is a bit finnicky about this, so widgets may not refresh right away—feel free to reboot your device if this doesn't help!")
 			}
 
 		}
