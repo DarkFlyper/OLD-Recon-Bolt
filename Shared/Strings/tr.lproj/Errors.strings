@@ -64,6 +64,9 @@ Pro'ya sahipseniz, hesabı çalışan bir sürümle değiştirmek için aynı ki
 /* Riot API Error */
 "The resource could not be found." = "Kaynak bulunamadı.";
 
+/* Riot API Error */
+"This match could not be loaded! Valorant discards match details for older matches after a few months." = "Bu maç yüklenemedi! Valorant, birkaç ay sonra eski maçlar için maç ayrıntılarını atar.";
+
 /* Keychain error. */
 "Unexpected type found: %@" = "Beklenmeyen tür bulundu: %@";
 
