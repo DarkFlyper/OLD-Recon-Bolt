@@ -184,7 +184,7 @@ Competitive matches after your placements can be identified without their detail
 /* Asset Management */
 "Anything with images will not display correctly." = "Alles, was sich auf Bilder verlässt, wird nicht richtig angezeigt werden können.";
 
-/* No comment provided by engineer. */
+/* Settings: button */
 "App Icon" = "App-Icon";
 
 /* No comment provided by engineer. */
@@ -213,6 +213,9 @@ Competitive matches after your placements can be identified without their detail
 
 /* Win Rate Stats: side name */
 "Attacking" = "Angreifer";
+
+/* Settings: toggle */
+"Automatically Sign Back In" = "Automatisch neu anmelden";
 
 /* Store: available currency */
 "Available:" = "Verfügbar:";
@@ -276,7 +279,7 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Change Queue" = "Modus wechseln";
 
-/* Gun Customizer */
+/* Gun Customizer: button */
 "Change Skin" = "Skin wechseln";
 
 /* Store Widget: description */
@@ -776,7 +779,7 @@ Wenn du deinen Benutzernamen nicht kennst oder keinen hast, kannst du das unter 
 /* No comment provided by engineer. */
 "No games played with premade teammates." = "Keine Spiele in einer Gruppe gespielt.";
 
-/* No comment provided by engineer. */
+/* Map Reference */
 "No minimap available!" = "Keine Minikarte verfügbar!";
 
 /* No comment provided by engineer. */
@@ -858,6 +861,9 @@ Playtime Stats: section */
 
 /* Weapon Reference */
 "Price" = "Preis";
+
+/* Badge applied to buttons that are exclusive to Pro, e.g. in the account settings */
+"Pro" = "Pro";
 
 /* App Icon Name */
 "Pro Blue" = "Pro-Blau";
@@ -1011,9 +1017,6 @@ Login Form: button */
 /* Login Form */
 "Sign In with your Riot account" = "Mit Riot-Konto anmelden";
 
-/* Account Settings: button */
-"Sign Out" = "Abmelden";
-
 /* Login Form: button/header */
 "Sign in with Google/Apple/etc." = "Mit Google/Apple/etc. anmelden";
 
@@ -1092,7 +1095,7 @@ Login Form: button */
 /* No comment provided by engineer. */
 "The pro version lets you change the app icon! More icons might be coming in future updates." = "Mit der Pro-Version kannst du das App-Icon ändern! Zukünftige Updates bringen womöglich neue Icons mit sich.";
 
-/* No comment provided by engineer. */
+/* Settings: picker */
 "Theme" = "Erscheinungsbild";
 
 /* No comment provided by engineer. */
@@ -1210,7 +1213,7 @@ Round Details: killed by unknown/unspecified weapon */
 /* Reference */
 "Version %@" = "Version %@";
 
-/* No comment provided by engineer. */
+/* Settings: toggle */
 "Vibrate when Match Found" = "Vibrieren, wenn Spiel gefunden wird";
 
 /* Pro Store */
