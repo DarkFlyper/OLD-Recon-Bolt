@@ -107,7 +107,7 @@
 /* Asset Management */
 "Anything with images will not display correctly." = "Cualquier cosa con imágenes no se mostrará correctamente.";
 
-/* No comment provided by engineer. */
+/* Settings: button */
 "App Icon" = "Icono de la App";
 
 /* No comment provided by engineer. */
@@ -181,7 +181,7 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Change Queue" = "Cambiar cola";
 
-/* Gun Customizer */
+/* Gun Customizer: button */
 "Change Skin" = "Cambiar diseño";
 
 /* Store Widget: description */
@@ -283,7 +283,7 @@ Playtime Stats: section */
 /* Store */
 "Daily Offers" = "Ofertas diarias";
 
-/* No comment provided by engineer. */
+/* Weapon Reference: stats */
 "Damage" = "Daño";
 
 /* App Theme */
@@ -560,7 +560,7 @@ Weapon Reference: stats */
 /* No comment provided by engineer. */
 "No games played with premade teammates." = "No hay partidas con compañeros en el equipo.";
 
-/* No comment provided by engineer. */
+/* Map Reference */
 "No minimap available!" = "¡No está el minimapa disponible!";
 
 /* Party Box */
@@ -733,9 +733,6 @@ Login Form: button */
 /* Login Form */
 "Sign In with your Riot account" = "Regístrate con tu cuenta de Riot";
 
-/* Account Settings: button */
-"Sign Out" = "Cerrar sesión";
-
 /* Login Form: button/header */
 "Sign in with Google/Apple/etc." = "Regístrate con Google/Apple/etc.";
 
@@ -802,7 +799,7 @@ Login Form: button */
 /* No comment provided by engineer. */
 "The pro version lets you change the app icon! More icons might be coming in future updates." = "¡La versión pro te deja cambiar el icono de la app! Es posible que más iconos se añadan en futuras actualizaciones.";
 
-/* No comment provided by engineer. */
+/* Settings: picker */
 "Theme" = "Temática";
 
 /* Statistics error for iOS <16 */
@@ -908,7 +905,7 @@ Round Details: killed by unknown/unspecified weapon */
 /* Reference */
 "Version %@" = "Versión %@";
 
-/* No comment provided by engineer. */
+/* Settings: toggle */
 "Vibrate when Match Found" = "Vibrar cuando se encuentre partida";
 
 /* Pro Store */
