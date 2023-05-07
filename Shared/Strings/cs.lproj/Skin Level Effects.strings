@@ -2,6 +2,12 @@
 "Animation" = "Animace";
 
 /* No comment provided by engineer. */
+"Attacker/Defender Swap" = "Výměna útočníků/obránců";
+
+/* No comment provided by engineer. */
+"Champion's Aura" = "Aura Šampiona";
+
+/* No comment provided by engineer. */
 "Finisher" = "Finišer";
 
 /* No comment provided by engineer. */
@@ -9,6 +15,12 @@
 
 /* No comment provided by engineer. */
 "Heartbeat & Map Sensor" = "Snímač srdečního tepu a mapy";
+
+/* No comment provided by engineer. */
+"Inspect & Kill Effects" = "Efekty eliminace a inspekce";
+
+/* No comment provided by engineer. */
+"Kill Banner" = "Baner Eliminace";
 
 /* No comment provided by engineer. */
 "Kill Counter" = "Počítadlo Zabití";
@@ -21,3 +33,9 @@
 
 /* No comment provided by engineer. */
 "Sound Effects" = "Zvukové Efekty";
+
+/* No comment provided by engineer. */
+"VFX" = "VFX";
+
+/* No comment provided by engineer. */
+"Voiceover" = "Hlas";
