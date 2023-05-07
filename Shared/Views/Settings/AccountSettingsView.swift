@@ -8,38 +8,59 @@ struct AccountSettingsView: View {
 	@Environment(\.ownsProVersion) private var ownsProVersion
 	
 	var body: some View {
-		Section {
-			cells
-		} header: {
-			Text("Accounts", comment: "Settings: section")
-		} footer: {
-			legalBoilerplate
-		}
-		.sheet(item: $loginTarget) { target in
-			let storedCredentals = accountManager.activeAccount?.session.credentials
-			LoginForm(
-				accountManager: accountManager,
-				credentials: (target.shouldRestoreCredentials ? storedCredentals : nil) ?? .init()
-			)
-			.withLoadErrorAlerts()
+		Group {
+			Section {
+				cells
+			} header: {
+				Text("Accounts", comment: "Settings: section")
+			} footer: {
+				legalBoilerplate
+			}
+			.sheet(item: $loginTarget) { target in
+				let storedCredentals = accountManager.activeAccount?.session.credentials
+				LoginForm(
+					accountManager: accountManager,
+					credentials: (target.shouldRestoreCredentials ? storedCredentals : nil) ?? .init()
+				)
+				.withLoadErrorAlerts()
+			}
+			
+			Section {
+				if accountManager.activeAccount?.session.hasExpired == true {
+					HStack {
+						Text("Session expired!", comment: "Account Settings: shown when the current account's session has expired")
+						Spacer()
+						Button {
+							loginTarget = .sessionRefresh
+						} label: {
+							Text("Refresh", comment: "Account Settings: button to refresh expired session")
+						}
+						.font(.body.bold())
+					}
+				}
+				
+				if !ownsProVersion {
+					Button {
+						accountManager.clear()
+					} label: {
+						Text("Sign Out", comment: "Account Settings: button")
+					}
+					.disabled(accountManager.storedAccounts.isEmpty)
+				}
+				
+				Toggle(isOn: $accountManager.shouldReauthAutomatically) {
+					Text("Automatically Sign Back In", comment: "Settings: toggle")
+						.padding(.bottom, 1e-9)
+					Text("This makes Recon Bolt automatically use your username & password to sign in again if you get signed out.\nIf you have 2-factor authentication, this may fail if it requires a new code, but it sometimes works.", comment: "Settings: toggle description")
+				}
+			} header: {
+				Text("Management", comment: "Settings: section")
+			}
 		}
 	}
 	
 	@ViewBuilder
 	var cells: some View {
-		if accountManager.activeAccount?.session.hasExpired == true {
-			HStack {
-				Text("Session expired!", comment: "Account Settings")
-				Spacer()
-				Button {
-					loginTarget = .sessionRefresh
-				} label: {
-					Text("Refresh", comment: "Account Settings: button to refresh expired session")
-				}
-				.font(.body.bold())
-			}
-		}
-		
 		if accountManager.storedAccounts.isEmpty {
 			Text("Not signed in yet.", comment: "Account Settings")
 			
@@ -56,14 +77,6 @@ struct AccountSettingsView: View {
 			.onDelete { accountManager.removeAccounts(at: $0) }
 			.onMove { accountManager.storedAccounts.move(fromOffsets: $0, toOffset: $1) }
 			.moveDisabled(!ownsProVersion)
-			
-			if !ownsProVersion {
-				Button {
-					accountManager.clear()
-				} label: {
-					Text("Sign Out", comment: "Account Settings")
-				}
-			}
 			
 			Button {
 				loginTarget = .extraAccount
@@ -158,3 +171,14 @@ struct ProExclusiveBadge: View {
 			.compositingGroup()
 	}
 }
+
+#if DEBUG
+struct AccountSettingsView_Previews: PreviewProvider {
+	static var previews: some View {
+		List { AccountSettingsView(accountManager: .mocked) }
+			.withToolbar()
+		List { AccountSettingsView(accountManager: .mockEmpty) }
+			.withToolbar()
+	}
+}
+#endif

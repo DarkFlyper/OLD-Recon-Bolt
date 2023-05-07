@@ -21,16 +21,24 @@ final class AccountManager: ObservableObject {
 		}
 	}
 	
-	@Published var storedAccounts: [User.ID] {
-		didSet {
-			storage.storedAccounts = storedAccounts
+	var storedAccounts: [User.ID] {
+		get { storage.storedAccounts }
+		set { storage.storedAccounts = newValue }
+	}
+	
+	var clientVersion: String? {
+		get { storage.clientVersion }
+		set {
+			storage.clientVersion = newValue
+			updateClientVersion()
 		}
 	}
 	
-	@Published var clientVersion: String? {
-		didSet {
-			storage.clientVersion = clientVersion
-			updateClientVersion()
+	var shouldReauthAutomatically: Bool {
+		get { storage.shouldReauthAutomatically }
+		set {
+			storage.shouldReauthAutomatically = newValue
+			activeAccount?.setReauthBehavior(reauthBehavior)
 		}
 	}
 	
@@ -38,6 +46,7 @@ final class AccountManager: ObservableObject {
 		activeAccount?.session.hasExpired != false
 	}
 	
+	// only set initially, for widget diagnostics
 	private(set) var accountLoadError: String?
 	
 	@Published private var storage: Storage
@@ -47,9 +56,6 @@ final class AccountManager: ObservableObject {
 		
 		let storage = Storage()
 		self.storage = storage // can't use @Published's value before self is initialized, so we'll go this way instead
-		
-		self.storedAccounts = storage.storedAccounts
-		self.clientVersion = storage.clientVersion
 		
 		if let accountID = storage.activeAccount {
 			do {
@@ -131,7 +137,11 @@ final class AccountManager: ObservableObject {
 	}
 	
 	private var context: StoredAccount.Context {
-		.init(keychain: keychain)
+		.init(keychain: keychain, reauthBehavior: reauthBehavior)
+	}
+	
+	private var reauthBehavior: ValorantClient.ReauthBehavior {
+		shouldReauthAutomatically ? .full(handleMultifactor(info:)) : .noReauth
 	}
 	
 	func updateClientVersion() {
@@ -146,6 +156,8 @@ final class AccountManager: ObservableObject {
 		var storedAccounts: [User.ID] = []
 		@UserDefault("AccountManager.clientVersion", migratingTo: .shared)
 		var clientVersion: String?
+		@UserDefault("AccountManager.shouldReauthAutomatically", migratingTo: .shared)
+		var shouldReauthAutomatically = false
 	}
 	
 	func handleMultifactor(info: MultifactorInfo) async throws -> String {
@@ -206,6 +218,7 @@ final class StoredAccount: ObservableObject, Identifiable {
 		if context.keychain is MockKeychain { return }
 #endif
 		try save()
+		setReauthBehavior(context.reauthBehavior)
 	}
 	
 	fileprivate init(loadingFor id: User.ID, using context: Context) throws {
@@ -244,6 +257,12 @@ final class StoredAccount: ObservableObject, Identifiable {
 		trySave()
 	}
 	
+	func setReauthBehavior(_ behavior: ValorantClient.ReauthBehavior) {
+		Task {
+			await client.setReauthBehavior(context.reauthBehavior)
+		}
+	}
+	
 	enum LoadingError: Error, LocalizedError {
 		case noStoredSession
 		
@@ -260,11 +279,15 @@ final class StoredAccount: ObservableObject, Identifiable {
 	}
 	
 	#if DEBUG
-	static let mocked = try! StoredAccount(session: .mocked, context: .init(keychain: MockKeychain()))
+	static let mocked = try! StoredAccount(
+		session: .mocked,
+		context: .init(keychain: MockKeychain(), reauthBehavior: .noReauth)
+	)
 	#endif
 	
 	struct Context {
 		var keychain: any Keychain
+		var reauthBehavior: ValorantClient.ReauthBehavior
 	}
 }
 
