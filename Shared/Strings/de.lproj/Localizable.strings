@@ -980,7 +980,7 @@ Request Log: title */
 /* No comment provided by engineer. */
 "Send to Developer" = "An Entwickler schicken";
 
-/* Account Settings */
+/* Account Settings: shown when the current account's session has expired */
 "Session expired!" = "Sitzung abgelaufen!";
 
 /* Top-Level Tab Title */
@@ -1011,7 +1011,7 @@ Login Form: button */
 /* Login Form */
 "Sign In with your Riot account" = "Mit Riot-Konto anmelden";
 
-/* Account Settings */
+/* Account Settings: button */
 "Sign Out" = "Abmelden";
 
 /* Login Form: button/header */
