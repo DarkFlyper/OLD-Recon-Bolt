@@ -921,7 +921,7 @@ Request Log: title */
 /* No comment provided by engineer. */
 "Send to Developer" = "Отправить разработчику";
 
-/* Account Settings */
+/* Account Settings: shown when the current account's session has expired */
 "Session expired!" = "Сессия истекла!";
 
 /* Top-Level Tab Title */
@@ -949,7 +949,7 @@ Login Form: button */
 /* Login Form */
 "Sign In with your Riot account" = "Войдите в систему, используя свою учетную запись Riot";
 
-/* Account Settings */
+/* Account Settings: button */
 "Sign Out" = "Выйти";
 
 /* Login Form: button/header */
