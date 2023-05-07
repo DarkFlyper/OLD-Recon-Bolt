@@ -967,7 +967,7 @@ Request Log: title */
 /* No comment provided by engineer. */
 "Send to Developer" = "傳送給開發人員";
 
-/* Account Settings */
+/* Account Settings: shown when the current account's session has expired */
 "Session expired!" = "會話已過期！";
 
 /* Top-Level Tab Title */
@@ -995,7 +995,7 @@ Login Form: button */
 /* Login Form */
 "Sign In with your Riot account" = "登入你的拳頭帳號";
 
-/* Account Settings */
+/* Account Settings: button */
 "Sign Out" = "登出";
 
 /* Login Form: button/header */
