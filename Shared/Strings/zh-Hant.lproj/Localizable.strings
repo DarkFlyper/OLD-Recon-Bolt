@@ -505,6 +505,9 @@ Stats: error details */
 /* Party Box: placeholder shows time spent in queue */
 "Finding match… (%@)" = "列隊等候中... (%@)";
 
+/* Weapon Reference: stats */
+"Fire Rate" = "射速";
+
 /* No comment provided by engineer. */
 "Force Refresh Widgets" = "強制重新整理小工具";
 
@@ -967,7 +970,7 @@ Request Log: title */
 /* No comment provided by engineer. */
 "Send to Developer" = "傳送給開發人員";
 
-/* Account Settings */
+/* Account Settings: shown when the current account's session has expired */
 "Session expired!" = "會話已過期！";
 
 /* Top-Level Tab Title */
@@ -995,7 +998,7 @@ Login Form: button */
 /* Login Form */
 "Sign In with your Riot account" = "登入你的拳頭帳號";
 
-/* Account Settings */
+/* Account Settings: button */
 "Sign Out" = "登出";
 
 /* Login Form: button/header */
@@ -1264,7 +1267,7 @@ Round Details: killed by unknown/unspecified weapon */
 "Your session has expired! Recon Bolt has tried to refresh it for you, but needs 2FA confirmation." = "您的會話已過期！ Recon Bolt已嘗試為您重新整理，但需要驗證碼確認。";
 
 /* No comment provided by engineer. */
-"iOS is a bit finnicky about this, so widgets may not refresh right away—feel free to restart if this doesn't help!" = "iOS有點挑剔，因此小工具可能不會立即重新整理——如果這沒有幫助，請隨時重新啟動！";
+"iOS is a bit finnicky about this, so widgets may not refresh right away—feel free to reboot your device if this doesn't help!" = "iOS有點挑剔，因此小工具可能不會立即重新整理——如果這沒有幫助，請隨時重新啟動！";
 
 /* Loadout: spray slot */
 "mid-round" = "對戰中";

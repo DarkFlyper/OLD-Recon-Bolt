@@ -929,7 +929,7 @@ Request Log: title */
 /* No comment provided by engineer. */
 "Send to Developer" = "Gửi tới người phát triển";
 
-/* Account Settings */
+/* Account Settings: shown when the current account's session has expired */
 "Session expired!" = "Phiên hết hạn!";
 
 /* Top-Level Tab Title */
@@ -957,7 +957,7 @@ Login Form: button */
 /* Login Form */
 "Sign In with your Riot account" = "Đăng nhập tài khoản Riot của bạn";
 
-/* Account Settings */
+/* Account Settings: button */
 "Sign Out" = "Đăng xuất";
 
 /* Login Form: button/header */
@@ -1214,7 +1214,7 @@ Round Details: killed by unknown/unspecified weapon */
 "Your session has expired! Recon Bolt has tried to refresh it for you, but needs 2FA confirmation." = "Phiên của bạn đã hết hạn! Recon Bolt đã cố gắng làm mới nó cho bạn, nhưng cần xác thực 2 yếu tố.";
 
 /* No comment provided by engineer. */
-"iOS is a bit finnicky about this, so widgets may not refresh right away—feel free to restart if this doesn't help!" = "iOS khá chặt chẽ về vấn đề này, vì vậy các tiện ích có thể không làm mới ngay lập tức—vui lòng khởi động lại nếu điều này không giúp ích được gì!";
+"iOS is a bit finnicky about this, so widgets may not refresh right away—feel free to reboot your device if this doesn't help!" = "iOS khá chặt chẽ về vấn đề này, vì vậy các tiện ích có thể không làm mới ngay lập tức—vui lòng khởi động lại nếu điều này không giúp ích được gì!";
 
 /* Loadout: spray slot */
 "mid-round" = "giữa vòng đấu";

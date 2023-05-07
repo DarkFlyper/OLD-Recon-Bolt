@@ -921,7 +921,7 @@ Request Log: title */
 /* No comment provided by engineer. */
 "Send to Developer" = "Отправить разработчику";
 
-/* Account Settings */
+/* Account Settings: shown when the current account's session has expired */
 "Session expired!" = "Сессия истекла!";
 
 /* Top-Level Tab Title */
@@ -949,7 +949,7 @@ Login Form: button */
 /* Login Form */
 "Sign In with your Riot account" = "Войдите в систему, используя свою учетную запись Riot";
 
-/* Account Settings */
+/* Account Settings: button */
 "Sign Out" = "Выйти";
 
 /* Login Form: button/header */
@@ -1206,7 +1206,7 @@ Round Details: killed by unknown/unspecified weapon */
 "Your session has expired! Recon Bolt has tried to refresh it for you, but needs 2FA confirmation." = "Срок действия вашей сессии истек! Recon Bolt попытался обновить его для вас, но требуется подтверждения 2FA.";
 
 /* No comment provided by engineer. */
-"iOS is a bit finnicky about this, so widgets may not refresh right away—feel free to restart if this doesn't help!" = "iOS немного привередлива в этом вопросе, поэтому виджеты могут обновляться не сразу - не стесняйтесь перезагрузить, если это не поможет!";
+"iOS is a bit finnicky about this, so widgets may not refresh right away—feel free to reboot your device if this doesn't help!" = "iOS немного привередлива в этом вопросе, поэтому виджеты могут обновляться не сразу - не стесняйтесь перезагрузить, если это не поможет!";
 
 /* Loadout: spray slot */
 "mid-round" = "в раунде";
