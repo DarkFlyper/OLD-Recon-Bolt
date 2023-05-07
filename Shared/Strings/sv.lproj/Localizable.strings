@@ -149,7 +149,7 @@ Konkurrerande matchningar efter dina placeringar kan dock identifieras utan dera
 /* Asset Management */
 "Anything with images will not display correctly." = "Allt som innehåller bilder kommer inte att visas korrekt.";
 
-/* No comment provided by engineer. */
+/* Settings: button */
 "App Icon" = "App-ikon";
 
 /* No comment provided by engineer. */
@@ -219,7 +219,7 @@ Weapon Reference: stats */
 /* No comment provided by engineer. */
 "Change Queue" = "Byt queue";
 
-/* Gun Customizer */
+/* Gun Customizer: button */
 "Change Skin" = "Byt skin";
 
 /* Store Widget: description */
@@ -625,7 +625,7 @@ Om du inte vet ditt användarnamn eller inte har något kan du hitta det på [ac
 /* Win Rate Stats: by map */
 "No data" = "Ingen data";
 
-/* No comment provided by engineer. */
+/* Map Reference */
 "No minimap available!" = "Ingen minimap tillgänglig!";
 
 /* No comment provided by engineer. */
@@ -787,9 +787,6 @@ Login Form: button */
 /* Login Form */
 "Sign In with your Riot account" = "Logga in med ditt Riot-konto";
 
-/* Account Settings: button */
-"Sign Out" = "Logga ut";
-
 /* Login Form: button/header */
 "Sign in with Google/Apple/etc." = "Logga in med Google/Apple/etc.";
 
@@ -844,7 +841,7 @@ Login Form: button */
 /* No comment provided by engineer. */
 "The pro version lets you change the app icon! More icons might be coming in future updates." = "I pro-versionen kan du ändra app-ikonen! Fler ikoner kan komma i framtida uppdateringar.";
 
-/* No comment provided by engineer. */
+/* Settings: picker */
 "Theme" = "Tema";
 
 /* Statistics error for iOS <16 */
@@ -930,7 +927,7 @@ Round Details: killed by unknown/unspecified weapon */
 /* Reference */
 "Version %@" = "Version %@";
 
-/* No comment provided by engineer. */
+/* Settings: toggle */
 "Vibrate when Match Found" = "Vibrera när en match hittas";
 
 /* Pro Store */
