@@ -176,7 +176,7 @@ Tuttavia, le partite competitive possono essere identificate senza dover ottener
 /* Asset Management */
 "Anything with images will not display correctly." = "Tutte le immagini non verranno visualizzate correttamente.";
 
-/* No comment provided by engineer. */
+/* Settings: button */
 "App Icon" = "Icona dell'app";
 
 /* No comment provided by engineer. */
@@ -268,7 +268,7 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Change Queue" = "Cambia Modalità";
 
-/* Gun Customizer */
+/* Gun Customizer: button */
 "Change Skin" = "Cambia Skin";
 
 /* Store Widget: description */
@@ -382,7 +382,7 @@ Playtime Stats: section */
 /* Store */
 "Daily Offers" = "Offerte giornaliere";
 
-/* No comment provided by engineer. */
+/* Weapon Reference: stats */
 "Damage" = "Danno";
 
 /* App Theme */
@@ -771,7 +771,7 @@ Se non conosci il tuo nome utente o non ne hai uno, puoi risolvere il problema s
 /* No comment provided by engineer. */
 "No games played with premade teammates." = "Nessuna partita giocata con il Gruppo.";
 
-/* No comment provided by engineer. */
+/* Map Reference */
 "No minimap available!" = "Nessuna minimappa disponibile!";
 
 /* No comment provided by engineer. */
@@ -1006,9 +1006,6 @@ Login Form: button */
 /* Login Form */
 "Sign In with your Riot account" = "Accedi con il tuo account Riot";
 
-/* Account Settings: button */
-"Sign Out" = "Esci";
-
 /* Login Form: button/header */
 "Sign in with Google/Apple/etc." = "Accedi con Google/Apple/ecc.";
 
@@ -1087,7 +1084,7 @@ Login Form: button */
 /* No comment provided by engineer. */
 "The pro version lets you change the app icon! More icons might be coming in future updates." = "La versione Pro consente di cambiare l'icona dell'app! Potrebbero essere disponibili altre icone nei prossimi aggiornamenti.";
 
-/* No comment provided by engineer. */
+/* Settings: picker */
 "Theme" = "Tema";
 
 /* No comment provided by engineer. */
@@ -1214,7 +1211,7 @@ Round Details: killed by unknown/unspecified weapon */
 /* Reference */
 "Version %@" = "Versione %@";
 
-/* No comment provided by engineer. */
+/* Settings: toggle */
 "Vibrate when Match Found" = "Vibra quando viene Trovata una Partita";
 
 /* Pro Store */
