@@ -1281,7 +1281,7 @@ Round Details: killed by unknown/unspecified weapon */
 "Your session has expired! Recon Bolt has tried to refresh it for you, but needs 2FA confirmation." = "Sua sessão expirou! O Recon Bolt tentou atualizar, porém precisa da confirmação de autenticação em 2 fatores.";
 
 /* No comment provided by engineer. */
-"iOS is a bit finnicky about this, so widgets may not refresh right away—feel free to restart if this doesn't help!" = "O iOS é um pouco exigente quanto a isso, então os Widgets podem não ser atualizados imediatamente - sinta-se à vontade para reiniciar se isso não ajudar!";
+"iOS is a bit finnicky about this, so widgets may not refresh right away—feel free to reboot your device if this doesn't help!" = "O iOS é um pouco exigente quanto a isso, então os Widgets podem não ser atualizados imediatamente - sinta-se à vontade para reiniciar se isso não ajudar!";
 
 /* Loadout: spray slot */
 "mid-round" = "Meio da rodada";
