@@ -226,6 +226,7 @@ final class StoredAccount: ObservableObject, Identifiable {
 		let stored = try context.keychain.loadData(forKey: id.rawID.description)
 		??? LoadingError.noStoredSession
 		self.session = try JSONDecoder().decode(APISession.self, from: stored)
+		setReauthBehavior(context.reauthBehavior)
 	}
 	
 	func trySave() {
