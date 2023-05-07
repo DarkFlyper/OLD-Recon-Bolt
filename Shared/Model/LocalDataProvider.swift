@@ -133,11 +133,23 @@ extension ValorantClient {
 	func updateMatchList(for userID: User.ID, update: @escaping (inout MatchList) async throws -> Void) async throws {
 		let manager = LocalDataProvider.shared.matchListManager
 		guard let matchList = await manager.cachedObject(for: userID) else { return }
+		
+		// never update match history for people on the denylist, but allow the first time
+		guard matchList.matches.isEmpty || userID == self.userID || Denylist.allows(userID) else { return }
+		
 		LocalDataProvider.shared.store(try await matchList <- update <- autoFetchMatchListDetails)
 	}
 	
 	func fetchCareerSummary(for userID: User.ID, forceFetch: Bool = false) async throws {
 		let manager = LocalDataProvider.shared.careerSummaryManager
+		
+		// never update career summary for people on the denylist
+		if userID != self.userID, !Denylist.allows(userID) {
+			// but allow the first time
+			let existing = await manager.cachedObject(for: userID)
+			guard existing == nil else { return }
+		}
+		
 		if forceFetch {
 			try await manager.store(getCareerSummary(userID: userID), asOf: .now)
 		} else {

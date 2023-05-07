@@ -40,6 +40,12 @@
 		B91D3DA126C810E0007D18B8 /* RoundInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91D3DA026C810E0007D18B8 /* RoundInfoView.swift */; };
 		B91D3DA426C8492F007D18B8 /* WeaponAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91D3DA326C8492F007D18B8 /* WeaponAssets.swift */; };
 		B91FF85426C7072400D0DFAA /* MagnifiableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91FF85326C7072400D0DFAA /* MagnifiableView.swift */; };
+		B920ED242A07C2A8001213D0 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B920ED232A07C2A8001213D0 /* main.swift */; };
+		B920ED292A07C7ED001213D0 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = B920ED282A07C7ED001213D0 /* Algorithms */; };
+		B920ED2F2A07CE28001213D0 /* Denylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = B920ED2E2A07CE28001213D0 /* Denylist.swift */; };
+		B920ED302A07CE28001213D0 /* Denylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = B920ED2E2A07CE28001213D0 /* Denylist.swift */; };
+		B920ED312A07CE57001213D0 /* Denylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = B920ED2E2A07CE28001213D0 /* Denylist.swift */; };
+		B920ED322A07D39E001213D0 /* Denylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = B920ED2E2A07CE28001213D0 /* Denylist.swift */; };
 		B9224D852921E8700056224F /* TransparentNavigationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9224D842921E8700056224F /* TransparentNavigationLink.swift */; };
 		B927614B266284B700CF2100 /* PlayerHighlightInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B927614A266284B700CF2100 /* PlayerHighlightInfo.swift */; };
 		B927719C284DBA1D00F25FC3 /* SprayAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B927719B284DBA1D00F25FC3 /* SprayAssets.swift */; };
@@ -360,6 +366,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		B920ED1F2A07C2A8001213D0 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		B967A20B29E7859200AB4E92 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -411,6 +426,9 @@
 		B91D3DA026C810E0007D18B8 /* RoundInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundInfoView.swift; sourceTree = "<group>"; };
 		B91D3DA326C8492F007D18B8 /* WeaponAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponAssets.swift; sourceTree = "<group>"; };
 		B91FF85326C7072400D0DFAA /* MagnifiableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagnifiableView.swift; sourceTree = "<group>"; };
+		B920ED212A07C2A8001213D0 /* Denylist Hasher */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Denylist Hasher"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B920ED232A07C2A8001213D0 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		B920ED2E2A07CE28001213D0 /* Denylist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Denylist.swift; sourceTree = "<group>"; };
 		B9224D842921E8700056224F /* TransparentNavigationLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransparentNavigationLink.swift; sourceTree = "<group>"; };
 		B927614A266284B700CF2100 /* PlayerHighlightInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerHighlightInfo.swift; sourceTree = "<group>"; };
 		B927719B284DBA1D00F25FC3 /* SprayAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprayAssets.swift; sourceTree = "<group>"; };
@@ -731,6 +749,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B920ED1E2A07C2A8001213D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B920ED292A07C7ED001213D0 /* Algorithms in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B939C7D92948576F00ABD0C6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -827,6 +853,14 @@
 				B9613E6E29F4E5C60001A048 /* WeaponInfoView.swift */,
 			);
 			path = Reference;
+			sourceTree = "<group>";
+		};
+		B920ED222A07C2A8001213D0 /* Denylist Hasher */ = {
+			isa = PBXGroup;
+			children = (
+				B920ED232A07C2A8001213D0 /* main.swift */,
+			);
+			path = "Denylist Hasher";
 			sourceTree = "<group>";
 		};
 		B9318364267810BE0099B13C /* Live */ = {
@@ -933,6 +967,7 @@
 				B997FF2429D15AAC00BB09FF /* GameConfigManager.swift */,
 				B90E298C29D65ADB00F26905 /* FolderLocations.swift */,
 				B9F794EA29DE2A51007BECEC /* DeepLink.swift */,
+				B920ED2E2A07CE28001213D0 /* Denylist.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -950,6 +985,7 @@
 				B9BC89F6293A7D6F00B97626 /* Widgets */,
 				B939C7DE2948577000ABD0C6 /* IntentsExtension */,
 				B967A20E29E7859300AB4E92 /* XLIFF Extractor */,
+				B920ED222A07C2A8001213D0 /* Denylist Hasher */,
 				B941B64B25A5BC8A00F675C1 /* Products */,
 				B941B66D25A5C3AD00F675C1 /* Frameworks */,
 			);
@@ -979,6 +1015,7 @@
 				B9BC89F1293A7D6F00B97626 /* WidgetsExtension.appex */,
 				B939C7DC2948577000ABD0C6 /* IntentsExtension.appex */,
 				B967A20D29E7859300AB4E92 /* XLIFF Extractor */,
+				B920ED212A07C2A8001213D0 /* Denylist Hasher */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1303,6 +1340,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		B920ED202A07C2A8001213D0 /* Denylist Hasher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B920ED252A07C2A8001213D0 /* Build configuration list for PBXNativeTarget "Denylist Hasher" */;
+			buildPhases = (
+				B920ED1D2A07C2A8001213D0 /* Sources */,
+				B920ED1E2A07C2A8001213D0 /* Frameworks */,
+				B920ED1F2A07C2A8001213D0 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Denylist Hasher";
+			packageProductDependencies = (
+				B920ED282A07C7ED001213D0 /* Algorithms */,
+			);
+			productName = "Denylist Hasher";
+			productReference = B920ED212A07C2A8001213D0 /* Denylist Hasher */;
+			productType = "com.apple.product-type.tool";
+		};
 		B939C7DB2948576F00ABD0C6 /* IntentsExtension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B939C7E62948577100ABD0C6 /* Build configuration list for PBXNativeTarget "IntentsExtension" */;
@@ -1426,6 +1483,9 @@
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					B920ED202A07C2A8001213D0 = {
+						CreatedOnToolsVersion = 14.3;
+					};
 					B939C7DB2948576F00ABD0C6 = {
 						CreatedOnToolsVersion = 14.1;
 					};
@@ -1487,6 +1547,7 @@
 				B9BC89F0293A7D6F00B97626 /* WidgetsExtension */,
 				B939C7DB2948576F00ABD0C6 /* IntentsExtension */,
 				B967A20C29E7859200AB4E92 /* XLIFF Extractor */,
+				B920ED202A07C2A8001213D0 /* Denylist Hasher */,
 			);
 		};
 /* End PBXProject section */
@@ -1578,6 +1639,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B920ED1D2A07C2A8001213D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B920ED312A07CE57001213D0 /* Denylist.swift in Sources */,
+				B920ED242A07C2A8001213D0 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B939C7D82948576F00ABD0C6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1591,6 +1661,7 @@
 				B90E298F29D65CB400F26905 /* FolderLocations.swift in Sources */,
 				B939C7EA2948581400ABD0C6 /* AccountManager.swift in Sources */,
 				B939C8072948E80900ABD0C6 /* UserDefault+AppGroups.swift in Sources */,
+				B920ED322A07D39E001213D0 /* Denylist.swift in Sources */,
 				B939C7EE2948584600ABD0C6 /* Keychain.swift in Sources */,
 				B917FD1B29BD5F010082187F /* BookmarkList.swift in Sources */,
 			);
@@ -1670,6 +1741,7 @@
 				B95B1A74269CEC7B0080EC81 /* BookmarkListView.swift in Sources */,
 				B989466B26860D8A00C8059A /* AsyncButton.swift in Sources */,
 				B9FADF8226A91DBC00A0CA15 /* BookmarkList.swift in Sources */,
+				B920ED2F2A07CE28001213D0 /* Denylist.swift in Sources */,
 				B9EE6E682658A6D2007E28B5 /* AssetLoading.swift in Sources */,
 				B94931A529386B3400D44A48 /* InAppStorefront.swift in Sources */,
 				B9F794EB29DE2A51007BECEC /* DeepLink.swift in Sources */,
@@ -1843,6 +1915,7 @@
 				B94A8D70294B052D00AC5BCD /* String+Localization.swift in Sources */,
 				B97C8F4A293C421F002F6A07 /* ContractAssets.swift in Sources */,
 				B97C8F31293BBEA7002F6A07 /* Keychain.swift in Sources */,
+				B920ED302A07CE28001213D0 /* Denylist.swift in Sources */,
 				B997FF2F29D3B6E400BB09FF /* LocalDataManager.swift in Sources */,
 				B9E861C0294FAD24004F8ADF /* TimelineProvider.swift in Sources */,
 				B97C8F4C293C421F002F6A07 /* PlayerCardAssets.swift in Sources */,
@@ -2065,6 +2138,34 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		B920ED262A07C2A8001213D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V2EPDFA9PV;
+				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		B920ED272A07C2A8001213D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V2EPDFA9PV;
+				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		B939C7E72948577100ABD0C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2444,6 +2545,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B920ED252A07C2A8001213D0 /* Build configuration list for PBXNativeTarget "Denylist Hasher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B920ED262A07C2A8001213D0 /* Debug */,
+				B920ED272A07C2A8001213D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B939C7E62948577100ABD0C6 /* Build configuration list for PBXNativeTarget "IntentsExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -2556,6 +2666,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B90BC2EC266D224F00C905D4 /* XCRemoteSwiftPackageReference "CGeometry" */;
 			productName = CGeometry;
+		};
+		B920ED282A07C7ED001213D0 /* Algorithms */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B9EE6E732659D6DF007E28B5 /* XCRemoteSwiftPackageReference "swift-algorithms" */;
+			productName = Algorithms;
 		};
 		B932A11127912882009FAEE5 /* HandyOperators */ = {
 			isa = XCSwiftPackageProductDependency;
