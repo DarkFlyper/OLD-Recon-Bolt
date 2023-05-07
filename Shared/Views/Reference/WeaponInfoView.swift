@@ -126,7 +126,7 @@ struct WeaponInfoView: View {
 			ForEach(ranges, id: \.start) { range in
 				HStack {
 					VStack(alignment: .leading) {
-						Text("Damage")
+						Text("Damage", comment: "Weapon Reference: stats")
 						Text("\(range.start) – \(range.end)m", comment: "Weapon Reference: stats: damage range")
 					}
 					.foregroundStyle(.secondary)
