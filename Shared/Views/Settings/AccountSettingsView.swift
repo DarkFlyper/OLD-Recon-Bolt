@@ -39,14 +39,12 @@ struct AccountSettingsView: View {
 					}
 				}
 				
-				if !ownsProVersion {
-					Button {
-						accountManager.clear()
-					} label: {
-						Text("Sign Out", comment: "Account Settings: button")
-					}
-					.disabled(accountManager.storedAccounts.isEmpty)
+				Button {
+					accountManager.clear()
+				} label: {
+					Text("Sign Out of All Accounts", comment: "Account Settings: button")
 				}
+				.disabled(accountManager.storedAccounts.isEmpty)
 				
 				Toggle(isOn: $accountManager.shouldReauthAutomatically) {
 					Text("Automatically Sign Back In", comment: "Settings: toggle")
