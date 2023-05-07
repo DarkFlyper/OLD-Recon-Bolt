@@ -963,7 +963,7 @@ Request Log: title */
 /* No comment provided by engineer. */
 "Send to Developer" = "Küldés a fejlesztőnek";
 
-/* Account Settings */
+/* Account Settings: shown when the current account's session has expired */
 "Session expired!" = "A munkamenet lejárt!";
 
 /* Top-Level Tab Title */
@@ -991,7 +991,7 @@ Login Form: button */
 /* Login Form */
 "Sign In with your Riot account" = "Bejelentkezés a Riot fiókoddal";
 
-/* Account Settings */
+/* Account Settings: button */
 "Sign Out" = "Kijelentkezés";
 
 /* Login Form: button/header */
