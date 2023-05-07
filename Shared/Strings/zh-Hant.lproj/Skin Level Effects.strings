@@ -11,4 +11,28 @@
 "Finisher" = "終結特效";
 
 /* No comment provided by engineer. */
+"Fish Animation" = "魚兒動畫";
+
+/* No comment provided by engineer. */
+"Heartbeat & Map Sensor" = "心跳感應器";
+
+/* No comment provided by engineer. */
 "Kill Banner" = "擊殺橫幅";
+
+/* No comment provided by engineer. */
+"Kill Counter" = "擊殺計數器";
+
+/* No comment provided by engineer. */
+"Kill Effect" = "擊殺特效";
+
+/* No comment provided by engineer. */
+"Randomizer" = "隨機模組產生器";
+
+/* No comment provided by engineer. */
+"Sound Effects" = "音效";
+
+/* No comment provided by engineer. */
+"VFX" = "視覺效果";
+
+/* No comment provided by engineer. */
+"Voiceover" = "語音";
