@@ -238,7 +238,7 @@ Competitive matches after your placements can be identified without their detail
 /* Asset Management */
 "Anything with images will not display correctly." = "Anything with images will not display correctly.";
 
-/* No comment provided by engineer. */
+/* Settings: button */
 "App Icon" = "App Icon";
 
 /* No comment provided by engineer. */
@@ -330,10 +330,13 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Change Buddy" = "Change Buddy";
 
+/* Settings: button */
+"Change Language" = "Change Language";
+
 /* No comment provided by engineer. */
 "Change Queue" = "Change Queue";
 
-/* Gun Customizer */
+/* Gun Customizer: button */
 "Change Skin" = "Change Skin";
 
 /* Store Widget: description */
@@ -450,7 +453,7 @@ Playtime Stats: section */
 /* Store */
 "Daily Offers" = "Daily Offers";
 
-/* No comment provided by engineer. */
+/* Weapon Reference: stats */
 "Damage" = "Damage";
 
 /* App Theme */
@@ -854,7 +857,7 @@ If you don't know your username or don't have one, you can fix that at [account.
 /* No comment provided by engineer. */
 "No games played with premade teammates." = "No games played with premade teammates.";
 
-/* No comment provided by engineer. */
+/* Map Reference */
 "No minimap available!" = "No minimap available!";
 
 /* No comment provided by engineer. */
@@ -1105,7 +1108,7 @@ Login Form: button */
 "Sign In with your Riot account" = "Sign In with your Riot account";
 
 /* Account Settings: button */
-"Sign Out" = "Sign Out";
+"Sign Out of All Accounts" = "Sign Out of All Accounts";
 
 /* Login Form: button/header */
 "Sign in with Google/Apple/etc." = "Sign in with Google/Apple/etc.";
@@ -1185,7 +1188,7 @@ Login Form: button */
 /* No comment provided by engineer. */
 "The pro version lets you change the app icon! More icons might be coming in future updates." = "The pro version lets you change the app icon! More icons might be coming in future updates.";
 
-/* No comment provided by engineer. */
+/* Settings: picker */
 "Theme" = "Theme";
 
 /* No comment provided by engineer. */
@@ -1195,9 +1198,7 @@ Login Form: button */
 "This feature requires iOS 16 or newer." = "This feature requires iOS 16 or newer.";
 
 /* Settings: toggle description */
-"This makes Recon Bolt automatically use your username & password to sign in again if you get signed out.
-If you have 2-factor authentication, this may fail if it requires a new code, but it sometimes works." = "This makes Recon Bolt automatically use your username & password to sign in again if you get signed out.
-If you have 2-factor authentication, this may fail if it requires a new code, but it sometimes works.";
+"This makes Recon Bolt automatically use your username & password to sign in again if you get signed out. If you have 2-factor authentication enabled, this may fail if it requires a new code, but it still works sometimes." = "This makes Recon Bolt automatically use your username & password to sign in again if you get signed out. If you have 2-factor authentication enabled, this may fail if it requires a new code, but it still works sometimes.";
 
 /* Stats: match loading */
 "To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!";
@@ -1320,7 +1321,7 @@ Round Details: killed by unknown/unspecified weapon */
 /* Reference */
 "Version %@" = "Version %@";
 
-/* No comment provided by engineer. */
+/* Settings: toggle */
 "Vibrate when Match Found" = "Vibrate when Match Found";
 
 /* Pro Store */
@@ -1328,6 +1329,9 @@ Round Details: killed by unknown/unspecified weapon */
 
 /* No comment provided by engineer. */
 "View Full Profile" = "View Full Profile";
+
+/* Gun Customizer: button */
+"View Skin Details" = "View Skin Details";
 
 /* Match List */
 "View Stats" = "View Stats";

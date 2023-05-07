@@ -58,6 +58,9 @@ If you have Pro, add an account using the same credentials to replace the accoun
 /* Riot API Error */
 "The resource could not be found." = "The resource could not be found.";
 
+/* Riot API Error */
+"This match could not be loaded! Valorant discards match details for older matches after a few months." = "This match could not be loaded! Valorant discards match details for older matches after a few months.";
+
 /* Keychain error. */
 "Unexpected type found: %@" = "Unexpected type found: %@";
 
