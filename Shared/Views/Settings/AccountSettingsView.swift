@@ -47,9 +47,12 @@ struct AccountSettingsView: View {
 				.disabled(accountManager.storedAccounts.isEmpty)
 				
 				Toggle(isOn: $accountManager.shouldReauthAutomatically) {
-					Text("Automatically Sign Back In", comment: "Settings: toggle")
-						.padding(.bottom, 1e-9)
-					Text("This makes Recon Bolt automatically use your username & password to sign in again if you get signed out.\nIf you have 2-factor authentication, this may fail if it requires a new code, but it sometimes works.", comment: "Settings: toggle description")
+					VStack(alignment: .leading, spacing: 4) {
+						Text("Automatically Sign Back In", comment: "Settings: toggle")
+						Text("This makes Recon Bolt automatically use your username & password to sign in again if you get signed out. If you have 2-factor authentication enabled, this may fail if it requires a new code, but it still works sometimes.", comment: "Settings: toggle description")
+							.font(.footnote)
+							.foregroundStyle(.secondary)
+					}
 				}
 			} header: {
 				Text("Management", comment: "Settings: section")
