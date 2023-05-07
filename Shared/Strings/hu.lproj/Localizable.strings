@@ -1248,7 +1248,7 @@ Round Details: killed by unknown/unspecified weapon */
 "Your session has expired! Recon Bolt has tried to refresh it for you, but needs 2FA confirmation." = "Az Ön munkamenete lejárt! A Recon Bolt megpróbálta frissíteni az Ön számára, de 2FA megerősítésre van szüksége.";
 
 /* No comment provided by engineer. */
-"iOS is a bit finnicky about this, so widgets may not refresh right away—feel free to restart if this doesn't help!" = "az iOS egy kicsit kényes ezzel kapcsolatban, ezért előfordulhat, hogy a widgetek nem frissülnek azonnal - ha ez nem segít, nyugodtan indítsd újra!";
+"iOS is a bit finnicky about this, so widgets may not refresh right away—feel free to reboot your device if this doesn't help!" = "az iOS egy kicsit kényes ezzel kapcsolatban, ezért előfordulhat, hogy a widgetek nem frissülnek azonnal - ha ez nem segít, nyugodtan indítsd újra!";
 
 /* Loadout: spray slot */
 "mid-round" = "középső kör";
