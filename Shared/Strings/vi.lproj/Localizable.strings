@@ -929,7 +929,7 @@ Request Log: title */
 /* No comment provided by engineer. */
 "Send to Developer" = "Gửi tới người phát triển";
 
-/* Account Settings */
+/* Account Settings: shown when the current account's session has expired */
 "Session expired!" = "Phiên hết hạn!";
 
 /* Top-Level Tab Title */
@@ -957,7 +957,7 @@ Login Form: button */
 /* Login Form */
 "Sign In with your Riot account" = "Đăng nhập tài khoản Riot của bạn";
 
-/* Account Settings */
+/* Account Settings: button */
 "Sign Out" = "Đăng xuất";
 
 /* Login Form: button/header */
