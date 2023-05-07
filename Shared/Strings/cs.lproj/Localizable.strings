@@ -205,6 +205,9 @@ Competitive matches after your placements can be identified without their detail
 /* Win Rate Stats: side name */
 "Attacking" = "Útok";
 
+/* Settings: toggle */
+"Automatically Sign Back In" = "Automatické znovupřihlášení";
+
 /* Store: available currency */
 "Available:" = "K dispozici:";
 
@@ -380,6 +383,9 @@ Playtime Stats: section */
 
 /* Store */
 "Daily Offers" = "Denní Nabídky";
+
+/* No comment provided by engineer. */
+"Damage" = "Poškození";
 
 /* App Theme */
 "Dark Mode" = "Tmavý Režim";
@@ -674,6 +680,9 @@ Pokud své uživatelské jméno neznáte nebo ho nemáte, můžete jej zjistit n
 /* No comment provided by engineer. */
 "Manage Local Storage" = "Správa Místního Uložiště";
 
+/* Settings: section */
+"Management" = "Správa";
+
 /* About Screen */
 "Many thanks to the volunteer translators from our Discord server who have been hard at working translating the app to new languages!" = "Děkujeme dobrovolným překladatelům z našeho Discord serveru, kteří usilovně pracují na překladu aplikace do nových jazyků!";
 
@@ -849,6 +858,9 @@ Playtime Stats: section */
 
 /* Weapon Reference */
 "Price" = "Cena";
+
+/* Badge applied to buttons that are exclusive to Pro, e.g. in the account settings */
+"Pro" = "Pro";
 
 /* App Icon Name */
 "Pro Blue" = "Pro Modrá";
@@ -1092,6 +1104,11 @@ Login Form: button */
 /* Statistics error for iOS <16 */
 "This feature requires iOS 16 or newer." = "Tato funkce vyžaduje iOS 16 nebo novější.";
 
+/* Settings: toggle description */
+"This makes Recon Bolt automatically use your username & password to sign in again if you get signed out.
+If you have 2-factor authentication, this may fail if it requires a new code, but it sometimes works." = "Pokud se odhlásíte, Recon Bolt automaticky použije vaše uživatelské jméno a heslo k opětovnému přihlášení.
+Pokud máte dvoufaktorové ověřování, může to selhat, pokud vyžaduje nový kód, ale někdy to funguje.";
+
 /* Stats: match loading */
 "To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "Chcete-li shromažďovat statistiky, musíte nejprve načíst zápasy ke zpracování. Upozorňujeme, že velké objemy mohou trvat dlouho, zejména při prvním nahrávání!";
 
@@ -1146,6 +1163,9 @@ Na této stránce přejděte na **Přihlášení k účtu Riot** a nastavte si u
 /* placeholder */
 "Unknown Bundle" = "Neznámá Kolekce";
 
+/* placeholder */
+"Unknown Card" = "Neznámá Karta";
+
 /* Store */
 "Unknown Offer" = "Neznámá Nabídka";
 
@@ -1162,6 +1182,9 @@ Na této stránce přejděte na **Přihlášení k účtu Riot** a nastavte si u
 "Unknown Skin" = "Neznámý Skin";
 
 /* placeholder */
+"Unknown Spray" = "Neznámý Sprej";
+
+/* placeholder */
 "Unknown Title" = "Neznámý Titul";
 
 /* Round Details: killed by unknown damage source/type */
@@ -1176,6 +1199,9 @@ Round Details: killed by unknown/unspecified weapon */
 
 /* Missions Box */
 "Unknown contract!" = "Neznámý kontrakt!";
+
+/* Store Bundle Details: should never show, but if Riot adds a new kind of item to a bundle, this would show */
+"Unknown item of type %@" = "Neznámá položka typu %@";
 
 /* No comment provided by engineer. */
 "Unknown mission!" = "Neznámý úkol!";
