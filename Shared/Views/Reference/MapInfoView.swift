@@ -13,15 +13,18 @@ struct MapInfoView: View {
 	var body: some View {
 		ScrollView {
 			VStack(spacing: 16) {
-				MapImage.splash(map.id).overlay(
-					Text("\(map.id.rawValue)")
-						.foregroundColor(.white)
-						.shadow(radius: 8)
-						.frame(maxHeight: .infinity, alignment: .bottom)
-						.padding()
-						.opacity(0.8)
-				)
-				.frame(maxHeight: verticalSizeClass == .compact ? 300 : nil)
+				MapImage.splash(map.id)
+					.frame(maxHeight: verticalSizeClass == .compact ? 300 : nil)
+				
+				VStack(spacing: 8) {
+					Text(map.id.rawValue)
+					
+					if let coordinates = map.coordinates {
+						Text(coordinates)
+					}
+				}
+				.padding(.horizontal)
+				.foregroundStyle(.secondary)
 				
 				if map.displayIcon != nil {
 					MagnifiableView(magnificationScale: magnificationScale) {
@@ -35,7 +38,7 @@ struct MapInfoView: View {
 						.frame(maxHeight: verticalSizeClass == .compact ? 300 : nil)
 						.padding(.horizontal)
 				} else {
-					Text("No minimap available!")
+					Text("No minimap available!", comment: "Map Reference")
 						.foregroundColor(.secondary)
 						.padding(.horizontal)
 				}
