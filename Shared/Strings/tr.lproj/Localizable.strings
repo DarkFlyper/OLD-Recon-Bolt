@@ -957,7 +957,7 @@ Request Log: title */
 /* No comment provided by engineer. */
 "Send to Developer" = "Geliştiriciye Gönder";
 
-/* Account Settings */
+/* Account Settings: shown when the current account's session has expired */
 "Session expired!" = "Oturum süresi doldu!";
 
 /* Top-Level Tab Title */
@@ -985,7 +985,7 @@ Login Form: button */
 /* Login Form */
 "Sign In with your Riot account" = "Riot hesabınızla oturum açın";
 
-/* Account Settings */
+/* Account Settings: button */
 "Sign Out" = "Oturumu kapat";
 
 /* Login Form: button/header */
