@@ -176,7 +176,7 @@ Cependant, les parties compétitives qui ont lieu après votre placement de rang
 /* Asset Management */
 "Anything with images will not display correctly." = "Tout ce qui contient des images ne s'affichera pas correctement.";
 
-/* No comment provided by engineer. */
+/* Settings: button */
 "App Icon" = "Icône de l'application";
 
 /* No comment provided by engineer. */
@@ -268,7 +268,7 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Change Queue" = "Changer de mode de jeu";
 
-/* Gun Customizer */
+/* Gun Customizer: button */
 "Change Skin" = "Changer de skin";
 
 /* Store Widget: description */
@@ -761,7 +761,7 @@ Si tu ne connais pas ton nom d'utilisateur ou si tu n'en as pas, tu peux le corr
 /* No comment provided by engineer. */
 "No games played with premade teammates." = "Pas de parties jouées avec des coéquipiers pré-groupés.";
 
-/* No comment provided by engineer. */
+/* Map Reference */
 "No minimap available!" = "Pas de minicarte disponible !";
 
 /* No comment provided by engineer. */
@@ -987,9 +987,6 @@ Login Form: button */
 /* Login Form */
 "Sign In with your Riot account" = "Connectez-vous avec votre compte Riot";
 
-/* Account Settings: button */
-"Sign Out" = "Se déconnecter";
-
 /* Login Form: button/header */
 "Sign in with Google/Apple/etc." = "Se connecter avec Google/Apple/etc.";
 
@@ -1062,7 +1059,7 @@ Login Form: button */
 /* No comment provided by engineer. */
 "The pro version lets you change the app icon! More icons might be coming in future updates." = "La version pro vous permet de changer l'icône de l'application ! D'autres icônes pourraient être ajoutées dans les prochaines mises à jour.";
 
-/* No comment provided by engineer. */
+/* Settings: picker */
 "Theme" = "Thème";
 
 /* No comment provided by engineer. */
@@ -1180,7 +1177,7 @@ Round Details: killed by unknown/unspecified weapon */
 /* Reference */
 "Version %@" = "Version %@";
 
-/* No comment provided by engineer. */
+/* Settings: toggle */
 "Vibrate when Match Found" = "Vibrer quand la partie est trouvée";
 
 /* Pro Store */
