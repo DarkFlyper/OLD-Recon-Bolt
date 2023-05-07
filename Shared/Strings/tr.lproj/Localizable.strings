@@ -173,7 +173,7 @@ Ancak, yerleştirmelerinizden sonraki rekabetçi eşleşmeler, ayrıntıları ol
 /* Asset Management */
 "Anything with images will not display correctly." = "Resim içeren hiçbir şey düzgün görüntülenmeyecektir.";
 
-/* No comment provided by engineer. */
+/* Settings: button */
 "App Icon" = "Uygulama Simgesi";
 
 /* No comment provided by engineer. */
@@ -265,7 +265,7 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Change Queue" = "Oyun Modunu Değiştir";
 
-/* Gun Customizer */
+/* Gun Customizer: button */
 "Change Skin" = "Kaplamayı Değiştir";
 
 /* Store Widget: description */
@@ -379,7 +379,7 @@ Playtime Stats: section */
 /* Store */
 "Daily Offers" = "Günlük Teklifler";
 
-/* No comment provided by engineer. */
+/* Weapon Reference: stats */
 "Damage" = "Hasar";
 
 /* App Theme */
@@ -765,7 +765,7 @@ Kullanıcı adınızı bilmiyorsanız veya kullanıcı adınız yoksa, bunu [acc
 /* No comment provided by engineer. */
 "No games played with premade teammates." = "Grup arkadaşlarıyla hiç oyun oynanmadı.";
 
-/* No comment provided by engineer. */
+/* Map Reference */
 "No minimap available!" = "Minimap mevcut değil!";
 
 /* Party Box */
@@ -985,9 +985,6 @@ Login Form: button */
 /* Login Form */
 "Sign In with your Riot account" = "Riot hesabınızla oturum açın";
 
-/* Account Settings: button */
-"Sign Out" = "Oturumu kapat";
-
 /* Login Form: button/header */
 "Sign in with Google/Apple/etc." = "Google/Apple/vb. ile oturum açın.";
 
@@ -1066,7 +1063,7 @@ Login Form: button */
 /* No comment provided by engineer. */
 "The pro version lets you change the app icon! More icons might be coming in future updates." = "Pro sürüm, uygulama simgesini değiştirmenize izin verir! Gelecek güncellemelerde daha fazla simge gelebilir.";
 
-/* No comment provided by engineer. */
+/* Settings: picker */
 "Theme" = "Tema";
 
 /* No comment provided by engineer. */
@@ -1190,7 +1187,7 @@ Round Details: killed by unknown/unspecified weapon */
 /* Reference */
 "Version %@" = "Versiyon %@";
 
-/* No comment provided by engineer. */
+/* Settings: toggle */
 "Vibrate when Match Found" = "Maç Bulunduğunda Titret";
 
 /* Pro Store */
