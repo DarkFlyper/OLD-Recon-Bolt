@@ -166,7 +166,7 @@ Competitive matches after your placements can be identified without their detail
 /* Asset Management */
 "Anything with images will not display correctly." = "Mọi thứ có hình ảnh sẽ không hiển thị chính xác.";
 
-/* No comment provided by engineer. */
+/* Settings: button */
 "App Icon" = "Biểu tượng ứng dụng";
 
 /* No comment provided by engineer. */
@@ -255,7 +255,7 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Change Queue" = "Đổi hàng chờ";
 
-/* Gun Customizer */
+/* Gun Customizer: button */
 "Change Skin" = "Đổi skin";
 
 /* Store Widget: description */
@@ -737,7 +737,7 @@ Nếu không biết tên người dùng của mình hoặc không có, bạn có
 /* No comment provided by engineer. */
 "No games played with premade teammates." = "Không có trò chơi nào được chơi với các đồng đội trong cùng tổ đội.";
 
-/* No comment provided by engineer. */
+/* Map Reference */
 "No minimap available!" = "Không có bản đồ nhỏ nào!";
 
 /* No comment provided by engineer. */
@@ -957,9 +957,6 @@ Login Form: button */
 /* Login Form */
 "Sign In with your Riot account" = "Đăng nhập tài khoản Riot của bạn";
 
-/* Account Settings: button */
-"Sign Out" = "Đăng xuất";
-
 /* Login Form: button/header */
 "Sign in with Google/Apple/etc." = "Đăng nhập bằng Google/Apple/v.v.";
 
@@ -1029,7 +1026,7 @@ Login Form: button */
 /* No comment provided by engineer. */
 "The pro version lets you change the app icon! More icons might be coming in future updates." = "Phiên bản pro cho phép bạn thay đổi biểu tượng ứng dụng! Nhiều biểu tượng hơn có thể sẽ xuất hiện trong các bản cập nhật trong tương lai.";
 
-/* No comment provided by engineer. */
+/* Settings: picker */
 "Theme" = "Chủ đề";
 
 /* No comment provided by engineer. */
@@ -1147,7 +1144,7 @@ Round Details: killed by unknown/unspecified weapon */
 /* Reference */
 "Version %@" = "Phiên bản %@";
 
-/* No comment provided by engineer. */
+/* Settings: toggle */
 "Vibrate when Match Found" = "Rung khi tìm thấy trận";
 
 /* Pro Store */
