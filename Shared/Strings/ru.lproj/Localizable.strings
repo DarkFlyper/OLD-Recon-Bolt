@@ -158,7 +158,7 @@ Competitive matches after your placements can be identified without their detail
 /* Asset Management */
 "Anything with images will not display correctly." = "Все с изображениями не будет отображаться корректно.";
 
-/* No comment provided by engineer. */
+/* Settings: button */
 "App Icon" = "Иконка приложения";
 
 /* No comment provided by engineer. */
@@ -247,7 +247,7 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Change Queue" = "Изменить режим";
 
-/* Gun Customizer */
+/* Gun Customizer: button */
 "Change Skin" = "Изменить скин";
 
 /* Store Widget: description */
@@ -729,7 +729,7 @@ If you don't know your username or don't have one, you can fix that at [account.
 /* No comment provided by engineer. */
 "No games played with premade teammates." = "Не было сыграно ни одной игры в группе.";
 
-/* No comment provided by engineer. */
+/* Map Reference */
 "No minimap available!" = "Миникарта недоступна!";
 
 /* No comment provided by engineer. */
@@ -949,9 +949,6 @@ Login Form: button */
 /* Login Form */
 "Sign In with your Riot account" = "Войдите в систему, используя свою учетную запись Riot";
 
-/* Account Settings: button */
-"Sign Out" = "Выйти";
-
 /* Login Form: button/header */
 "Sign in with Google/Apple/etc." = "Войдите в систему с помощью Google/Apple/прочее.";
 
@@ -1021,7 +1018,7 @@ Login Form: button */
 /* No comment provided by engineer. */
 "The pro version lets you change the app icon! More icons might be coming in future updates." = "В версии pro вы можете изменить значок приложения! Другие иконки могут появиться в будущих обновлениях.";
 
-/* No comment provided by engineer. */
+/* Settings: picker */
 "Theme" = "Тема";
 
 /* No comment provided by engineer. */
@@ -1139,7 +1136,7 @@ Round Details: killed by unknown/unspecified weapon */
 /* Reference */
 "Version %@" = "Версия %@";
 
-/* No comment provided by engineer. */
+/* Settings: toggle */
 "Vibrate when Match Found" = "Вибрировать, когда матч найден";
 
 /* Pro Store */
