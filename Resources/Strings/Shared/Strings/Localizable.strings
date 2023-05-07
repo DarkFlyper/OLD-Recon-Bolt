@@ -268,6 +268,9 @@ Competitive matches after your placements can be identified without their detail
 /* Win Rate Stats: side name */
 "Attacking" = "Attacking";
 
+/* Settings: toggle */
+"Automatically Sign Back In" = "Automatically Sign Back In";
+
 /* Store: available currency */
 "Available:" = "Available:";
 
@@ -755,6 +758,9 @@ If you don't know your username or don't have one, you can fix that at [account.
 /* No comment provided by engineer. */
 "Manage Local Storage" = "Manage Local Storage";
 
+/* Settings: section */
+"Management" = "Management";
+
 /* About Screen */
 "Many thanks to the volunteer translators from our Discord server who have been hard at working translating the app to new languages!" = "Many thanks to the volunteer translators from our Discord server who have been hard at working translating the app to new languages!";
 
@@ -937,6 +943,9 @@ Playtime Stats: section */
 /* Weapon Reference */
 "Price" = "Price";
 
+/* Badge applied to buttons that are exclusive to Pro, e.g. in the account settings */
+"Pro" = "Pro";
+
 /* App Icon Name */
 "Pro Blue" = "Pro Blue";
 
@@ -1061,7 +1070,7 @@ Request Log: title */
 /* No comment provided by engineer. */
 "Series" = "Series";
 
-/* Account Settings */
+/* Account Settings: shown when the current account's session has expired */
 "Session expired!" = "Session expired!";
 
 /* Top-Level Tab Title */
@@ -1095,7 +1104,7 @@ Login Form: button */
 /* Login Form */
 "Sign In with your Riot account" = "Sign In with your Riot account";
 
-/* Account Settings */
+/* Account Settings: button */
 "Sign Out" = "Sign Out";
 
 /* Login Form: button/header */
@@ -1184,6 +1193,11 @@ Login Form: button */
 
 /* Statistics error for iOS <16 */
 "This feature requires iOS 16 or newer." = "This feature requires iOS 16 or newer.";
+
+/* Settings: toggle description */
+"This makes Recon Bolt automatically use your username & password to sign in again if you get signed out.
+If you have 2-factor authentication, this may fail if it requires a new code, but it sometimes works." = "This makes Recon Bolt automatically use your username & password to sign in again if you get signed out.
+If you have 2-factor authentication, this may fail if it requires a new code, but it sometimes works.";
 
 /* Stats: match loading */
 "To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!";
@@ -1379,7 +1393,7 @@ Round Details: killed by unknown/unspecified weapon */
 "cell tap trigger" = "cell tap trigger";
 
 /* No comment provided by engineer. */
-"iOS is a bit finnicky about this, so widgets may not refresh right away—feel free to restart if this doesn't help!" = "iOS is a bit finnicky about this, so widgets may not refresh right away—feel free to restart if this doesn't help!";
+"iOS is a bit finnicky about this, so widgets may not refresh right away—feel free to reboot your device if this doesn't help!" = "iOS is a bit finnicky about this, so widgets may not refresh right away—feel free to reboot your device if this doesn't help!";
 
 /* Loadout: spray slot */
 "mid-round" = "mid-round";
