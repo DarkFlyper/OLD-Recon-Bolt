@@ -45,7 +45,7 @@
 "%lld more" = "%lld Altro";
 
 /* Weapon Reference: stats */
-"%lld pellets" = "%lld pallini";
+"%lld pellets" = "%lld pallini a segno";
 
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
 "%lld to %lld credits" = "Da %lld a %lld crediti";
@@ -229,7 +229,7 @@ Weapon Reference: stats */
 "Buddy" = "Accessori";
 
 /* Storage Management: section */
-"By Kind" = "By Kind";
+"By Kind" = "Altro";
 
 /* Win Rate Stats: section
 Playtime Stats: section */
@@ -257,7 +257,7 @@ Playtime Stats: section */
 "Career" = "Carriera";
 
 /* No comment provided by engineer. */
-"Career Summaries" = "Sintesi di carriera";
+"Career Summaries" = "Carriera";
 
 /* No comment provided by engineer. */
 "Career Summary" = "Carriera in Sintesi";
@@ -993,7 +993,7 @@ Request Log: title */
 "Shared Matches" = "Partite Condivise";
 
 /* Weapon Reference: stats */
-"Shotgun Pellets" = "Pallini per Fucile a Pompa";
+"Shotgun Pellets" = "Pallini per Colpo";
 
 /* No comment provided by engineer. */
 "Show Unfetched Matches" = "Mostra le Partite non ancora Aperte";
