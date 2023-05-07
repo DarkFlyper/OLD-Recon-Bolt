@@ -762,7 +762,7 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Send to Developer" = "Skicka till utvecklare";
 
-/* Account Settings */
+/* Account Settings: shown when the current account's session has expired */
 "Session expired!" = "Sessionen har gått ut!";
 
 /* Top-Level Tab Title */
@@ -787,7 +787,7 @@ Login Form: button */
 /* Login Form */
 "Sign In with your Riot account" = "Logga in med ditt Riot-konto";
 
-/* Account Settings */
+/* Account Settings: button */
 "Sign Out" = "Logga ut";
 
 /* Login Form: button/header */
