@@ -23,6 +23,9 @@
 /* No comment provided by engineer. */
 "%lld RR" = "%lld KP";
 
+/* Weapon Reference: stats */
+"%lld bullets" = "%lld Mermiler";
+
 /* Weapon Reference: price, always at least 150 */
 "%lld credits" = "%lld krediler";
 
@@ -35,6 +38,9 @@
 /* Shown at the bottom of the expandable playtime list when there are more entries available. */
 "%lld more" = "%lld daha fazla";
 
+/* Weapon Reference: stats: damage range */
+"%lld – %lldm" = "%lld - %lldm";
+
 /* No comment provided by engineer. */
 "%lld%%" = "%lld%%";
 
@@ -44,8 +50,24 @@
 /* Time Formatting: minutes & seconds (used in round details view) */
 "%lld:%@" = "%lld:%@";
 
+/* Time Formatting: minutes, seconds, & milliseconds (used in round details view) */
+"%lld:%@.%@" = "%lld:%@.%@";
+
+/* Contract Progress Bar
+Missions Box */
+"%lld / %lld XP" = "%lld/%lld XP";
+
+/* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
+"(%lld – %lld)" = "(%lld - %lld)";
+
 /* Pro Features List */
 "(You can switch between available icons at any time.)" = "(İstediğiniz zaman mevcut ikonlar arasında geçiş yapabilirsiniz.)";
+
+/* No comment provided by engineer. */
+"+%lld XP" = "+%lld XP";
+
+/* Store: night market discount */
+"-%lld%%" = "-%lld%%";
 
 /* No comment provided by engineer. */
 "2-Factor Authentication" = "2 Faktörlü Kimlik Doğrulama";
@@ -55,6 +77,11 @@
 
 /* No comment provided by engineer. */
 "A 2FA code has been sent to your email address %@" = "E-posta adresinize bir 2FA kodu gönderildi %@";
+
+/* Match List Filter */
+"A match's queue is unknown until its details are fetched (by tapping it or performing the swipe action).
+Competitive matches after your placements can be identified without their details, however." = "Bir eşleşmenin sırası, ayrıntıları alınana kadar (dokunarak veya kaydırma eylemini gerçekleştirerek) bilinmez.
+Ancak, yerleştirmelerinizden sonraki rekabetçi eşleşmeler, ayrıntıları olmadan tanımlanabilir.";
 
 /* No comment provided by engineer. */
 "AFK: %lld" = "AFK: %lld";
@@ -80,8 +107,14 @@
 /* Missions Box: header */
 "Active Contract" = "Aktif Kontrat";
 
+/* Match List: accessibility label */
+"Add Bookmark" = "Yer İşareti Ekle";
+
 /* Account Settings */
 "Add another Account" = "Başka bir Hesap Ekle";
+
+/* Pro Features List */
+"Add multiple accounts and seamlessly switch between them at any time." = "Birden fazla hesap ekleyin ve istediğiniz zaman bunlar arasında sorunsuzca geçiş yapın.";
 
 /* No comment provided by engineer. */
 "Advanced Settings" = "Gelişmiş Ayarlar";
@@ -119,6 +152,12 @@
 /* Statistics filter: shown when every agent is allowed */
 "Any Agent" = "Herhangi Bir Ajan";
 
+/* Statistics filter: shown when every queue is allowed */
+"Any Queue" = "Herhangi bir Kuyruk";
+
+/* Asset Management */
+"Anything with images will not display correctly." = "Resim içeren hiçbir şey düzgün görüntülenmeyecektir.";
+
 /* No comment provided by engineer. */
 "App Icon" = "Uygulama Simgesi";
 
@@ -140,14 +179,24 @@
 /* Asset Management */
 "Assets out of date!" = "Varlıklar güncel değil!";
 
+/* No comment provided by engineer. */
+"Assets should be fetched automatically, but in case something went wrong, feel free to initiate the process manually." = "Varlıklar otomatik olarak getirilmelidir, ancak bir şeylerin yanlış gitmesi durumunda süreci manuel olarak getirmekten çekinmeyin.";
+
 /* Asset Management */
 "Assets up to date!" = "Varlıklar güncel!";
+
+/* Win Rate Stats: side name */
+"Attacking" = "Saldırı";
 
 /* Store: available currency */
 "Available:" = "Mevcut:";
 
 /* Hit Distribution Stats: average HS% */
 "Average: %@" = "Ortalama: %@";
+
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
+"Body" = "Vücut";
 
 /* Bookmark/Player List: section */
 "Bookmarks" = "Yer İmleri";
