@@ -971,7 +971,7 @@ Request Log: title */
 /* No comment provided by engineer. */
 "Send to Developer" = "Odeslat vývojáři";
 
-/* Account Settings */
+/* Account Settings: shown when the current account's session has expired */
 "Session expired!" = "Relace vypršela!";
 
 /* Top-Level Tab Title */
@@ -1002,7 +1002,7 @@ Login Form: button */
 /* Login Form */
 "Sign In with your Riot account" = "Přihlaste se pomocí Riot účtu";
 
-/* Account Settings */
+/* Account Settings: button */
 "Sign Out" = "Odhlásit se";
 
 /* Login Form: button/header */
