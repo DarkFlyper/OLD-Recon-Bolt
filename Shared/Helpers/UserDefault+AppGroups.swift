@@ -17,7 +17,7 @@ extension UserDefault {
 		@UserDefault<Bool>("UserDefaults.hasMigrated.\(key)", defaults: defaults)
 		var hasMigrated = false
 		
-		// always try to migrate items that aren't present, since the migration clearly failed and
+		// always try to migrate items that aren't present, since the migration clearly failed and this avoids a failed migration from one process preventing a would-be successful migration in another
 		guard !wasLoadedSuccessfully || !hasMigrated else { return }
 		
 		print(key, "needs migration", hasMigrated ? "because it failed to load" : "")
