@@ -68,12 +68,20 @@ struct AccountSettingsView: View {
 			Button {
 				loginTarget = .extraAccount
 			} label: {
-				Label {
-					Text("Add another Account", comment: "Account Settings")
-				} icon: {
-					// the icon doesn't get tinted correctly if i don't do this…
-					Image(systemName: "plus")
-						.foregroundColor(ownsProVersion ? nil : .secondary)
+				HStack {
+					Label {
+						Text("Add another Account", comment: "Account Settings")
+					} icon: {
+						// the icon doesn't get tinted correctly if i don't do this…
+						Image(systemName: "plus")
+							.foregroundColor(ownsProVersion ? nil : .primary.opacity(0.25))
+					}
+					
+					Spacer()
+					
+					if !ownsProVersion {
+						ProExclusiveBadge()
+					}
 				}
 			}
 			.disabled(!ownsProVersion)
@@ -135,5 +143,18 @@ struct AccountSettingsView: View {
 			.alert(Text("Could Not Load Account!"), for: $loadError)
 			.deleteDisabled(isActive)
 		}
+	}
+}
+
+struct ProExclusiveBadge: View {
+	var body: some View {
+		Text("Pro", comment: "Badge applied to buttons that are exclusive to Pro, e.g. in the account settings")
+			.font(.callout.smallCaps())
+			.padding(.horizontal, 4)
+			.offset(y: -1) // visually center the small caps
+			.foregroundColor(.white)
+			.blendMode(.destinationOut)
+			.background(RoundedRectangle(cornerRadius: 4, style: .continuous))
+			.compositingGroup()
 	}
 }

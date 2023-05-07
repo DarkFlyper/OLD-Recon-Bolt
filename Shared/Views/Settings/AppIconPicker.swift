@@ -38,8 +38,13 @@ struct AppIconPicker: View {
 				AppIcon.Thumbnail(icon: icon)
 				
 				VStack(alignment: .leading, spacing: 4) {
-					icon.name
-						.font(.headline)
+					HStack {
+						if !isAllowed {
+							ProExclusiveBadge()
+						}
+						icon.name
+							.font(.headline)
+					}
 					
 					icon.description
 						.font(.footnote)
