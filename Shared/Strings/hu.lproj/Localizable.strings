@@ -176,7 +176,7 @@ Az elhelyezés utáni versenyszerű mérkőzések azonban az adataik nélkül is
 /* Asset Management */
 "Anything with images will not display correctly." = "Bármi ami képet tartalmaz, és nem jeleník meg helyesen.";
 
-/* No comment provided by engineer. */
+/* Settings: button */
 "App Icon" = "Alkalmazás ikon";
 
 /* No comment provided by engineer. */
@@ -268,7 +268,7 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Change Queue" = "Queue váltás";
 
-/* Gun Customizer */
+/* Gun Customizer: button */
 "Change Skin" = "Válasszon skint";
 
 /* Store Widget: description */
@@ -762,7 +762,7 @@ Ha nem tudod a felhasználóneved, vagy nincs, akkor ezt a [account.riotgames.co
 /* No comment provided by engineer. */
 "No games played with premade teammates." = "Nincs előre összeállított csapattársakkal játszott játék.";
 
-/* No comment provided by engineer. */
+/* Map Reference */
 "No minimap available!" = "Nincs elérhető térkép!";
 
 /* No comment provided by engineer. */
@@ -991,9 +991,6 @@ Login Form: button */
 /* Login Form */
 "Sign In with your Riot account" = "Bejelentkezés a Riot fiókoddal";
 
-/* Account Settings: button */
-"Sign Out" = "Kijelentkezés";
-
 /* Login Form: button/header */
 "Sign in with Google/Apple/etc." = "Jelentkezzen be a Google/Apple/etc. segítségével.";
 
@@ -1063,7 +1060,7 @@ Login Form: button */
 /* No comment provided by engineer. */
 "The pro version lets you change the app icon! More icons might be coming in future updates." = "A pro verzió lehetővé teszi az alkalmazás ikonjának megváltoztatását! A jövőbeni frissítésekben további ikonok is megjelenhetnek.";
 
-/* No comment provided by engineer. */
+/* Settings: picker */
 "Theme" = "Téma";
 
 /* No comment provided by engineer. */
@@ -1181,7 +1178,7 @@ Round Details: killed by unknown/unspecified weapon */
 /* Reference */
 "Version %@" = "Verzió %@";
 
-/* No comment provided by engineer. */
+/* Settings: toggle */
 "Vibrate when Match Found" = "Rezgés, ha meccset talált";
 
 /* Pro Store */
