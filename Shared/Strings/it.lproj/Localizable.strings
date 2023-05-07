@@ -621,7 +621,7 @@ Weapon Reference: stats */
 "Lifetime Peak" = "Grado massimo raggiunto";
 
 /* App Theme */
-"Light Mode" = "Modalità luce";
+"Light Mode" = "Modalità chiara";
 
 /* About Screen: section */
 "Links" = "Collegamenti";
@@ -1105,7 +1105,7 @@ Login Form: button */
 "This feature requires iOS 16 or newer." = "Questa funzione richiede iOS 16 or +.";
 
 /* Settings: toggle description */
-"This makes Recon Bolt automatically use your username & password to sign in again if you get signed out. If you have 2-factor authentication enabled, this may fail if it requires a new code, but it still works sometimes." = "Questo opzione fa sì che Recon Bolt utilizzi automaticamente il nome utente e la password per accedere di nuovo se si è usciti. Se l'autenticazione a due fattori è attiva, questa operazione potrebbe fallire se Riot dovesse richiedere un nuovo codice, ma a volte funziona comunque.";
+"This makes Recon Bolt automatically use your username & password to sign in again if you get signed out. If you have 2-factor authentication enabled, this may fail if it requires a new code, but it still works sometimes." = "Questa opzione fa sì che Recon Bolt utilizzi automaticamente il nome utente e la password per accedere di nuovo se si è usciti. Se l'autenticazione a due fattori è attiva, questa operazione potrebbe fallire se Riot dovesse richiedere un nuovo codice, ma a volte funziona comunque.";
 
 /* Stats: match loading */
 "To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "Per raccogliere le statistiche, dobbiamo prima caricare le partite già elaborate da Valorant. Nota che grandi quantità di dati possono richiedere molto tempo, soprattutto quando si scaricano per la prima volta!";
