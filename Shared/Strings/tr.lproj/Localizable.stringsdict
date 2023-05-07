@@ -82,6 +82,22 @@
         <string>%lld eşleşmeler</string>
       </dict>
     </dict>
+    <key>%lld previous act(s)</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@acts@</string>
+      <key>acts</key>
+      <dict>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>one</key>
+        <string>1 önceki bölüm</string>
+        <key>other</key>
+        <string>%lld önceki bölümler</string>
+      </dict>
+    </dict>
     <key>%lld hidden due to outdated assets</key>
     <dict>
       <key>NSStringLocalizedFormatKey</key>
@@ -96,6 +112,33 @@
         <string>lld</string>
         <key>other</key>
         <string>%lld eski varlıklar nedeniyle gizli</string>
+      </dict>
+    </dict>
+    <key>%lld/%lld owned</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@owned@</string>
+      <key>owned</key>
+      <dict>
+        <key>one</key>
+        <string>%lld/%#@total@ sahip</string>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld/%#@total@ sahip</string>
+      </dict>
+      <key>total</key>
+      <dict>
+        <key>one</key>
+        <string>%lld</string>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld</string>
       </dict>
     </dict>
   </dict>
