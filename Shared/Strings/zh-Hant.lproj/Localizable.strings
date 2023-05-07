@@ -505,6 +505,9 @@ Stats: error details */
 /* Party Box: placeholder shows time spent in queue */
 "Finding match… (%@)" = "列隊等候中... (%@)";
 
+/* Weapon Reference: stats */
+"Fire Rate" = "射速";
+
 /* No comment provided by engineer. */
 "Force Refresh Widgets" = "強制重新整理小工具";
 
