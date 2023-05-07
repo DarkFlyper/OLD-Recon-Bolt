@@ -58,6 +58,9 @@ Wenn du Pro hast, kannst dieses Konto sozusagen als neues Konto nochmal hinzufü
 /* Riot API Error */
 "The resource could not be found." = "Die Ressource konnte nicht gefunden werden.";
 
+/* Riot API Error */
+"This match could not be loaded! Valorant discards match details for older matches after a few months." = "Dieses Spiel konnte nicht geladen werden! Valorant verwirft die Details für ältere Spiele nach ein paar Monaten.";
+
 /* Keychain error. */
 "Unexpected type found: %@" = "Unerwarteter Datentyp: %@";
 
