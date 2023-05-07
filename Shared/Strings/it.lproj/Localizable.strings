@@ -627,7 +627,7 @@ Weapon Reference: stats */
 "Live Match" = "Partita in diretta";
 
 /* Stats: match loading */
-"Load Data" = "Caricamento delle partite";
+"Load Data" = "Carica i dati";
 
 /* Match List */
 "Load Older Matches" = "Caricare le partite più vecchie";
