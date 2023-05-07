@@ -44,12 +44,21 @@ struct GunCustomizer: View {
 				
 				if resolved.skin.levels.count > 1 {
 					levelPicker
+						.aligningListRowSeparator()
+				}
+				
+				if !resolved.skin.themeID.isFree {
+					NavigationLink {
+						SkinDetailsView(skin: resolved.skin)
+					} label: {
+						Text("View Skin Details", comment: "Gun Customizer: button")
+					}
 				}
 				
 				NavigationLink {
 					SkinPicker(gun: $gun, inventory: inventory)
 				} label: {
-					Text("Change Skin", comment: "Gun Customizer")
+					Text("Change Skin", comment: "Gun Customizer: button")
 				}
 			}
 			.frame(maxWidth: .infinity)
