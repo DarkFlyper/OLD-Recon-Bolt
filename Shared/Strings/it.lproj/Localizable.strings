@@ -45,7 +45,7 @@
 "%lld more" = "%lld Altro";
 
 /* Weapon Reference: stats */
-"%lld pellets" = "%lld pallini";
+"%lld pellets" = "%lld pallini a segno";
 
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
 "%lld to %lld credits" = "Da %lld a %lld crediti";
@@ -95,8 +95,8 @@ Missions Box */
 
 /* Match List Filter */
 "A match's queue is unknown until its details are fetched (by tapping it or performing the swipe action).
-Competitive matches after your placements can be identified without their details, however." = "La modalità di gioco di una partita è sconosciuta fino a quando non vengono recuperati i suoi dettagli (cliccandola o scorrendo).
-Tuttavia, le partite competitive possono essere identificate senza dover ottenere i dettagli.";
+Competitive matches after your placements can be identified without their details, however." = "La modalità di gioco di una partita è sconosciuta fino a quando non vengono recuperati i suoi dettagli (cliccandola).
+Tuttavia, le partite competitive possono essere identificate senza dover ottenere dettagli.";
 
 /* No comment provided by engineer. */
 "AFK: %lld" = "AFK: %lld";
@@ -206,6 +206,9 @@ Tuttavia, le partite competitive possono essere identificate senza dover ottener
 /* Win Rate Stats: side name */
 "Attacking" = "Attacco";
 
+/* Settings: toggle */
+"Automatically Sign Back In" = "Accedi Automaticamente";
+
 /* Store: available currency */
 "Available:" = "Crediti Disponibili:";
 
@@ -226,20 +229,20 @@ Weapon Reference: stats */
 "Buddy" = "Accessori";
 
 /* Storage Management: section */
-"By Kind" = "By Kind";
+"By Kind" = "Altro";
 
 /* Win Rate Stats: section
 Playtime Stats: section */
 "By Map" = "Per Mappa";
 
 /* Playtime Stats: section/title */
-"By Non-Premade Player" = "Da giocatore non preconfezionato";
+"By Non-Premade Player" = "Con giocatori non in gruppo";
 
 /* Playtime Stats: section/title */
-"By Premade Teammate" = "Dal compagno di squadra Premade";
+"By Premade Teammate" = "Con i compagni di gruppo";
 
 /* Playtime Stats: section */
-"By Queue" = "Per coda";
+"By Queue" = "Per Modalità";
 
 /* Hit Distribution Stats: section */
 "By Weapon" = "Per arma";
@@ -254,7 +257,7 @@ Playtime Stats: section */
 "Career" = "Carriera";
 
 /* No comment provided by engineer. */
-"Career Summaries" = "Sintesi di carriera";
+"Career Summaries" = "Carriera";
 
 /* No comment provided by engineer. */
 "Career Summary" = "Carriera in Sintesi";
@@ -264,6 +267,9 @@ Playtime Stats: section */
 
 /* No comment provided by engineer. */
 "Change Buddy" = "Cambia Accessorio";
+
+/* Settings: button */
+"Change Language" = "Cambia Lingua";
 
 /* No comment provided by engineer. */
 "Change Queue" = "Cambia Modalità";
@@ -407,7 +413,7 @@ Playtime Stats: section */
 "Delete %lld Matches" = "Cancellare le corrispondenze di %lld";
 
 /* Match Details: button to view details by round */
-"Details by Round" = "Dettagli per girone";
+"Details by Round" = "Dettagli per Round";
 
 /* No comment provided by engineer. */
 "Discord Server" = "Server Discord";
@@ -447,10 +453,10 @@ Stats: error details */
 "Error downloading assets!" = "Errore nel download degli asset!";
 
 /* Request Log: title for an exchange */
-"Exchange" = "Scambio";
+"Exchange" = "Richiesta all'API";
 
 /* Request Log: title for detailed view of request body/contents */
-"Exchange Body" = "Corpo";
+"Exchange Body" = "Contenuto";
 
 /* Statistics Filter: button to exclude all agents */
 "Exclude All Agents" = "Escludi Tutti";
@@ -487,7 +493,7 @@ SEGNALA I BUG QUI
 "Filter Match List" = "Filtra l'elenco delle Partite";
 
 /* No comment provided by engineer. */
-"Filter Queues" = "Filtro Modalità";
+"Filter Queues" = "Filtra per Modalità";
 
 /* No comment provided by engineer. */
 "Filtering by starting side will exclude any matches in single-round modes like Deathmatch, Escalation, etc." = "Il filtro per lato iniziale esclude le partite in modalità a round singolo come Deathmatch, Escalation, ecc.";
@@ -523,7 +529,7 @@ SEGNALA I BUG QUI
 "Gather statistics from anyone's games to gain insights on things like time played by mode/premade, headshot rate over time/by weapon, win rate over time/by map & side, and more!" = "Raccogliete le statistiche delle partite di chiunque per ottenere informazioni su aspetti quali il tempo di gioco per modalità/preparazione, la percentuale di headshot nel tempo/per arma, la percentuale di vittorie nel tempo/per mappa e lato e molto altro ancora!";
 
 /* Pro Features List */
-"Getting money from Recon Bolt gives me the flexibility and motivation to keep improving the app!" = "Guadagnare soldi da Recon Bolt mi dà la flessibilità e la motivazione per continuare a migliorare l'app!";
+"Getting money from Recon Bolt gives me the flexibility and motivation to keep improving the app!" = "Guadagnare soldi con Recon Bolt mi dà la flessibilità e la motivazione per continuare a migliorare l'app!";
 
 /* No comment provided by engineer. */
 "GitHub Repo" = "Repository di GitHub";
@@ -532,14 +538,14 @@ SEGNALA I BUG QUI
 "Golden Gun" = "Pistola d'oro";
 
 /* Stats: date grouping size picker */
-"Group by" = "Gruppo per";
+"Group by" = "Filtra per";
 
 /* Hit Distribution Stats: region
 Weapon Reference: stats */
 "Head" = "Testa";
 
 /* No comment provided by engineer. */
-"Headhunter (Chamber)" = "Headhunter (Chamber)";
+"Headhunter (Chamber)" = "Cacciatore di teste (Chamber)";
 
 /* About Screen */
 "Hi! I'm Julian Dunskus, and I made this app.
@@ -678,8 +684,11 @@ Se non conosci il tuo nome utente o non ne hai uno, puoi risolvere il problema s
 /* No comment provided by engineer. */
 "Manage Local Storage" = "Gestisci l'Archiviazione Locale";
 
+/* Settings: section */
+"Management" = "Gestione Account";
+
 /* About Screen */
-"Many thanks to the volunteer translators from our Discord server who have been hard at working translating the app to new languages!" = "Grazie ai traduttori volontari del nostro server Discord che hanno lavorato duramente per tradurre l'applicazione in nuove lingue!";
+"Many thanks to the volunteer translators from our Discord server who have been hard at working translating the app to new languages!" = "Grazie ai traduttori volontari del nostro Server Discord che hanno lavorato duramente per tradurre l'applicazione in nuove lingue!";
 
 /* No comment provided by engineer. */
 "Map" = "Mappa";
@@ -691,7 +700,7 @@ Se non conosci il tuo nome utente o non ne hai uno, puoi risolvere il problema s
 "Match" = "Partita";
 
 /* Match Details: title */
-"Match Details" = "Dettagli della partita";
+"Match Details" = "Dettagli delle Partita";
 
 /* Match List: shown when a match didn't get past Agent Select (because someone dodged/left) */
 "Match Dodged" = "Partita Dodgeata";
@@ -703,7 +712,7 @@ Se non conosci il tuo nome utente o non ne hai uno, puoi risolvere il problema s
 "Match Loading Errors" = "Errori di Caricamento delle Partite";
 
 /* App Theme: automatically match the system theme */
-"Match System" = "Abbina il tema al tema del Sistema";
+"Match System" = "Abbina il tema al sistema";
 
 /* Match List: section */
 "Matches" = "Partita";
@@ -813,16 +822,12 @@ Se non conosci il tuo nome utente o non ne hai uno, puoi risolvere il problema s
 /* Buddy Picker: alert shown when both instances of a buddy are in use */
 "Out of instances!" = "Questo accessorio è già presente su due armi!";
 
-/* Win Rate Stats: section
-Playtime Stats: section */
-"Over Time" = "Supplementari";
-
 /* Hit Distribution Stats: section
 Playtime Stats: section */
-"Overall" = "In Generale";
+"Overall" = "Totale";
 
 /* No comment provided by engineer. */
-"Overdrive (Neon)" = "Overdrive (Neon)";
+"Overdrive (Neon)" = "Sovraccarico (Neon)";
 
 /* No comment provided by engineer. */
 "Party" = "Gruppo";
@@ -853,6 +858,9 @@ Playtime Stats: section */
 
 /* Weapon Reference */
 "Price" = "Prezzo";
+
+/* Badge applied to buttons that are exclusive to Pro, e.g. in the account settings */
+"Pro" = "Pro";
 
 /* App Icon Name */
 "Pro Blue" = "Pro Blue";
@@ -885,7 +893,7 @@ Playtime Stats: section */
 "Rank Changes" = "Andamento del grado";
 
 /* No comment provided by engineer. */
-"Rank Rating Changes" = "Modifiche alla valutazione del Grado";
+"Rank Rating Changes" = "Andamento del grado";
 
 /* No comment provided by engineer. */
 "Rate on the App Store" = "Vota sull'App Store";
@@ -900,7 +908,7 @@ Playtime Stats: section */
 "Recon Bolt Pro supports Family Sharing, meaning if just one member of your iCloud family buys it, everyone can use it!" = "Recon Bolt Pro supporta la condivisione in famiglia, il che significa che se un solo membro della vostra famiglia iCloud lo acquista, tutti possono usarlo!";
 
 /* Pro Features List */
-"Recon Bolt does not have and will never have ads. The only way it can make money is through in-app purchases." = "Recon Bolt non ha e non avrà mai pubblicità. L'unico nostro modo per guadagnare è attraverso gli acquisti in-app.";
+"Recon Bolt does not have and will never have ads. The only way it can make money is through in-app purchases." = "Recon Bolt non ha e non avrà mai pubblicità. L'unico modo per guadagnare è attraverso gli acquisti in-app.";
 
 /* Top-Level Tab Title */
 "Reference" = "Wiki";
@@ -924,14 +932,14 @@ Playtime Stats: section */
 "Repair" = "Ripara";
 
 /* Request Log: header */
-"Request" = "Richiedi";
+"Request" = "Log delle Richieste";
 
 /* Advanced Settings: button to open request log
 Request Log: title */
-"Request Log" = "Richiedi un Log";
+"Request Log" = "Log Richieste all'API";
 
 /* No comment provided by engineer. */
-"Requests" = "Richiedi";
+"Requests" = "Log della Richiesta";
 
 /* Asset Management: button */
 "Reset" = "Reset";
@@ -985,19 +993,19 @@ Request Log: title */
 "Shared Matches" = "Partite Condivise";
 
 /* Weapon Reference: stats */
-"Shotgun Pellets" = "Pallini per Fucile a Pompa";
+"Shotgun Pellets" = "Pallini per Colpo";
 
 /* No comment provided by engineer. */
-"Show Unfetched Matches" = "Mostra le partite non Ancora Trovate";
+"Show Unfetched Matches" = "Mostra le Partite non ancora Aperte";
 
 /* No comment provided by engineer. */
-"Show all matches" = "Mostra tutte le partite";
+"Show all matches" = "Mostra tutte le Partite";
 
 /* No comment provided by engineer. */
-"Show details when found" = "Mostra i dettagli quando viene trovata la partita";
+"Show details when found" = "Mostra i Dettagli quando viene trovata la Partita";
 
 /* App Icon Description: pro blue */
-"Show off your pro status with an exclusive icon!" = "Mostra il tuo Pro status con un'icona esclusiva!";
+"Show off your pro status with an exclusive icon!" = "Mostra il tuo Pro Status con un'icona Esclusiva!";
 
 /* Account Settings: button
 Login Form: button */
@@ -1005,6 +1013,9 @@ Login Form: button */
 
 /* Login Form */
 "Sign In with your Riot account" = "Accedi con il tuo account Riot";
+
+/* Account Settings: button */
+"Sign Out of All Accounts" = "Esci da Tutti gli Account";
 
 /* Login Form: button/header */
 "Sign in with Google/Apple/etc." = "Accedi con Google/Apple/ecc.";
@@ -1088,10 +1099,13 @@ Login Form: button */
 "Theme" = "Tema";
 
 /* No comment provided by engineer. */
-"These are the last %lld requests sent by the app, along with their responses." = "Queste sono le ultime richieste %lld inviate dall'applicazione, insieme alle relative risposte.";
+"These are the last %lld requests sent by the app, along with their responses." = "Queste sono le ultime %lld richieste inviate all'API, insieme alle relative risposte.";
 
 /* Statistics error for iOS <16 */
 "This feature requires iOS 16 or newer." = "Questa funzione richiede iOS 16 or +.";
+
+/* Settings: toggle description */
+"This makes Recon Bolt automatically use your username & password to sign in again if you get signed out. If you have 2-factor authentication enabled, this may fail if it requires a new code, but it still works sometimes." = "Questo opzione fa sì che Recon Bolt utilizzi automaticamente il nome utente e la password per accedere di nuovo se si è usciti. Se l'autenticazione a due fattori è attiva, questa operazione potrebbe fallire se Riot dovesse richiedere un nuovo codice, ma a volte funziona comunque.";
 
 /* Stats: match loading */
 "To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "Per raccogliere le statistiche, dobbiamo prima caricare le partite già elaborate da Valorant. Nota che grandi quantità di dati possono richiedere molto tempo, soprattutto quando si scaricano per la prima volta!";
@@ -1220,6 +1234,9 @@ Round Details: killed by unknown/unspecified weapon */
 /* No comment provided by engineer. */
 "View Full Profile" = "Visualizza il Profilo Completo";
 
+/* Gun Customizer: button */
+"View Skin Details" = "Dettagli della skin";
+
 /* Match List */
 "View Stats" = "Visualizza le Statistiche";
 
@@ -1230,7 +1247,7 @@ Round Details: killed by unknown/unspecified weapon */
 "View your current rank." = "Visualizza il tuo grado attuale.";
 
 /* Rank Changes Widget: description */
-"View your rank rating changes." = "Visualizza le modifiche del tuo Grado.";
+"View your rank rating changes." = "Visualizza l'andamento del tuo grado.";
 
 /* Pro Features List */
 "View your storefront, daily/weekly missions, or current rank without even having to open the app!" = "Visualizza il negozio, le missioni giornaliere/settimanali e il vostro grado attuale senza nemmeno dover aprire l'app!";
