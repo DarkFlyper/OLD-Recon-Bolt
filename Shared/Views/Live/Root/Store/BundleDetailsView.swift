@@ -25,12 +25,24 @@ struct BundleDetailsView: View {
 		}
 	}
 	
+	@ScaledMetric private var priceLabelOffset = 48
+	
 	@ViewBuilder
 	func contents(for info: StoreBundleInfo) -> some View {
 		Section {
 			info.displayIcon.view()
 				.listRowInsets(.init())
 				.aligningListRowSeparator()
+				.overlay(alignment: .bottomTrailing) {
+					let totalCost = bundle.items.lazy.map(\.discountedPrice).reduce(0, +)
+					CurrencyLabel(amount: totalCost, currencyID: bundle.currencyID)
+						.padding(8)
+						.frame(width: priceLabelOffset * 4) // gotta make sure the corners aren't visible
+						.background(Material.ultraThin)
+						.frame(width: 0)
+						.offset(y: -priceLabelOffset)
+						.rotationEffect(.degrees(-45), anchor: .bottom)
+				}
 				.onTapGesture { fullscreenImages = [info.displayIcon] }
 			
 			if let extraDescription = info.extraDescription {

@@ -113,6 +113,8 @@ struct StoreDetailsView: View {
 		}
 	}
 	
+	@ScaledMetric private var priceLabelOffset = 16
+	
 	func nightMarketView(for market: Storefront.NightMarket) -> some View {
 		ForEach(market.offers) { offer in
 			OfferCell(offer: offer.offer)
@@ -124,10 +126,10 @@ struct StoreDetailsView: View {
 							.foregroundColor(.accentColor)
 					}
 					.padding(8)
-					.frame(width: 256)
+					.frame(width: 12 * priceLabelOffset) // make sure edges aren't visibleπ
 					.background(Material.ultraThin)
 					.frame(width: 0)
-					.offset(y: -16)
+					.offset(y: -priceLabelOffset)
 					.rotationEffect(.degrees(-45), anchor: .bottom)
 				}
 				.background(Color.tertiaryGroupedBackground)
@@ -216,6 +218,7 @@ struct CurrencyLabel: View {
 	var body: some View {
 		HStack {
 			Text("\(amount)")
+				.monospacedDigit()
 			let currency = assets?.currencies[currencyID]
 			currency?.displayIcon.view(renderingMode: .template)
 				.frame(width: iconSize, height: iconSize)
