@@ -158,7 +158,7 @@ Competitive matches after your placements can be identified without their detail
 /* Asset Management */
 "Anything with images will not display correctly." = "أي شيء به صور لن يعرض بشكل صحيح.";
 
-/* No comment provided by engineer. */
+/* Settings: button */
 "App Icon" = "ايقونة التطبيق";
 
 /* No comment provided by engineer. */
@@ -247,7 +247,7 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Change Queue" = "غيّر الطابور";
 
-/* Gun Customizer */
+/* Gun Customizer: button */
 "Change Skin" = "غيّر مظهر السلاح";
 
 /* Store Widget: description */
@@ -729,7 +729,7 @@ If you don't know your username or don't have one, you can fix that at [account.
 /* No comment provided by engineer. */
 "No games played with premade teammates." = "لم يتم لعب مباريات مع زملاء مسبقة الإعداد.";
 
-/* No comment provided by engineer. */
+/* Map Reference */
 "No minimap available!" = "لا توجد خريطة مصغرة متاحة!";
 
 /* No comment provided by engineer. */
@@ -949,9 +949,6 @@ Login Form: button */
 /* Login Form */
 "Sign In with your Riot account" = "سجّل الدخول بحساب Riot";
 
-/* Account Settings: button */
-"Sign Out" = "خروج";
-
 /* Login Form: button/header */
 "Sign in with Google/Apple/etc." = "سجّل الدخول بحساب Google/Apple/etc.";
 
@@ -1021,7 +1018,7 @@ Login Form: button */
 /* No comment provided by engineer. */
 "The pro version lets you change the app icon! More icons might be coming in future updates." = "يتيح لك الإصدار Pro تغيير رمز التطبيق! قد يأتي المزيد من الرموز في التحديثات المستقبلية.";
 
-/* No comment provided by engineer. */
+/* Settings: picker */
 "Theme" = "النمط";
 
 /* No comment provided by engineer. */
@@ -1139,7 +1136,7 @@ Round Details: killed by unknown/unspecified weapon */
 /* Reference */
 "Version %@" = "الاصدار %@";
 
-/* No comment provided by engineer. */
+/* Settings: toggle */
 "Vibrate when Match Found" = "اهتزاز الجهاز عند العثور على مبارة";
 
 /* Pro Store */
