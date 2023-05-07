@@ -175,7 +175,7 @@ Competitive matches after your placements can be identified without their detail
 /* Asset Management */
 "Anything with images will not display correctly." = "Hal-hal yang menggunakan gambar disini tidak akan ditampilkan dengan menyeluruh.";
 
-/* No comment provided by engineer. */
+/* Settings: button */
 "App Icon" = "Ikon Aplikasi";
 
 /* No comment provided by engineer. */
@@ -267,7 +267,7 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Change Queue" = "Ubah Mode";
 
-/* Gun Customizer */
+/* Gun Customizer: button */
 "Change Skin" = "Ubah Skin";
 
 /* Store Widget: description */
@@ -767,7 +767,7 @@ Jika Anda tidak tahu nama pengguna Anda atau belum memilikinya, Anda dapat mempe
 /* No comment provided by engineer. */
 "No games played with premade teammates." = "Tidak ada permainan yang dimainkan bersama dengan tim yang sudah dimainkan sebelumnya.";
 
-/* No comment provided by engineer. */
+/* Map Reference */
 "No minimap available!" = "Minimap tidak tersedia!";
 
 /* No comment provided by engineer. */
@@ -1002,9 +1002,6 @@ Login Form: button */
 /* Login Form */
 "Sign In with your Riot account" = "Masuk menggunakan akun Riot Anda";
 
-/* Account Settings: button */
-"Sign Out" = "Keluar";
-
 /* Login Form: button/header */
 "Sign in with Google/Apple/etc." = "Masuk menggunakan Google/Apple/dll.";
 
@@ -1083,7 +1080,7 @@ Login Form: button */
 /* No comment provided by engineer. */
 "The pro version lets you change the app icon! More icons might be coming in future updates." = "Versi pro memungkinkan Anda mengubah ikon aplikasi! Kami mungkin akan menambahkan ikon lain di update selanjutnya.";
 
-/* No comment provided by engineer. */
+/* Settings: picker */
 "Theme" = "Tema";
 
 /* No comment provided by engineer. */
@@ -1201,7 +1198,7 @@ Round Details: killed by unknown/unspecified weapon */
 /* Reference */
 "Version %@" = "Versi %@";
 
-/* No comment provided by engineer. */
+/* Settings: toggle */
 "Vibrate when Match Found" = "Mode getar ketika pertandingan ditemukan";
 
 /* Pro Store */
