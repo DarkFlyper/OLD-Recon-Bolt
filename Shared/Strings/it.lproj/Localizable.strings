@@ -21,7 +21,7 @@
 "%@°" = "%@°";
 
 /* Missions Box: always at least 3 */
-"%lld Future Weeklies" = "%lld Future Settimanali";
+"%lld Future Weeklies" = "%lld Prossime Settimanali";
 
 /* Missions Box: always at least 3 */
 "%lld Queued-Up Weeklies" = "%lld Settimanali in Scadenza";
@@ -45,10 +45,10 @@
 "%lld more" = "%lld Altro";
 
 /* Weapon Reference: stats */
-"%lld pellets" = "%lld Pallini";
+"%lld pellets" = "%lld pallini";
 
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
-"%lld to %lld credits" = "Da %lld a %lld Crediti";
+"%lld to %lld credits" = "Da %lld a %lld crediti";
 
 /* Weapon Reference: stats: damage range */
 "%lld – %lldm" = "%lld – %lldm";
@@ -95,17 +95,17 @@ Missions Box */
 
 /* Match List Filter */
 "A match's queue is unknown until its details are fetched (by tapping it or performing the swipe action).
-Competitive matches after your placements can be identified without their details, however." = "La coda di una partita è sconosciuta fino a quando non vengono recuperati i suoi dettagli (cliccandola o scorrendo).
-Tuttavia, le partite competitive dopo i tuoi posizionamenti possono essere identificate senza i loro dettagli.";
+Competitive matches after your placements can be identified without their details, however." = "La modalità di gioco di una partita è sconosciuta fino a quando non vengono recuperati i suoi dettagli (cliccandola o scorrendo).
+Tuttavia, le partite competitive possono essere identificate senza dover ottenere i dettagli.";
 
 /* No comment provided by engineer. */
 "AFK: %lld" = "AFK: %lld";
 
 /* Career Summary: header for totals of all time */
-"ALL TIME" = "SEMPRE";
+"ALL TIME" = "TUTTI GLI ATTI";
 
 /* Settings: section */
-"About" = "Chi sono";
+"About" = "Chi Sono";
 
 /* No comment provided by engineer. */
 "About Recon Bolt" = "Informazioni su Recon Bolt";
@@ -114,7 +114,7 @@ Tuttavia, le partite competitive dopo i tuoi posizionamenti possono essere ident
 "Accounts" = "Accounts";
 
 /* Contract Picker: button */
-"Activate" = "Attivare";
+"Activate" = "Attiva";
 
 /* Contract Picker */
 "Active" = "Attivo";
@@ -123,7 +123,7 @@ Tuttavia, le partite competitive dopo i tuoi posizionamenti possono essere ident
 "Active Contract" = "Contratto attivo";
 
 /* Match List: accessibility label */
-"Add Bookmark" = "Aggiungi segnalibro";
+"Add Bookmark" = "Aggiungi Segnalibro";
 
 /* Account Settings */
 "Add another Account" = "Aggiungi un altro account";
@@ -156,10 +156,10 @@ Tuttavia, le partite competitive dopo i tuoi posizionamenti possono essere ident
 "All Maps" = "Tutte le mappe";
 
 /* Statistics Filter: button to allow all agents */
-"Allow All Agents" = "Includi Tutto";
+"Allow All Agents" = "Includi Tutti";
 
 /* Statistics Filter: button to allow all queues */
-"Allow All Queues" = "Includi Tutte le Modalità";
+"Allow All Queues" = "Includi Tutte";
 
 /* Default Error Alert Title */
 "An Error Occurred!" = "Si è verificato un errore!";
@@ -207,7 +207,7 @@ Tuttavia, le partite competitive dopo i tuoi posizionamenti possono essere ident
 "Attacking" = "Attacco";
 
 /* Store: available currency */
-"Available:" = "Disponibile:";
+"Available:" = "Crediti Disponibili:";
 
 /* Hit Distribution Stats: average HS% */
 "Average: %@" = "Media: %@";
@@ -263,19 +263,19 @@ Playtime Stats: section */
 "Category" = "Categoria";
 
 /* No comment provided by engineer. */
-"Change Buddy" = "Cambia Buddy";
+"Change Buddy" = "Cambia Accessorio";
 
 /* No comment provided by engineer. */
-"Change Queue" = "Cambia coda";
+"Change Queue" = "Cambia Modalità";
 
 /* Gun Customizer */
 "Change Skin" = "Cambia Skin";
 
 /* Store Widget: description */
-"Check your current Valorant storefront." = "Controlla la tua attuale vetrina di Valorant.";
+"Check your current Valorant storefront." = "Mostra il tuo negozio attuale di valorant.";
 
 /* Missions Widget: description */
-"Check your progress on daily & weekly missions." = "Controlla i tuoi progressi nelle missioni giornaliere e settimanali.";
+"Check your progress on daily & weekly missions." = "Controlla i progressi delle missioni giornaliere e settimanali.";
 
 /* No comment provided by engineer. */
 "Choose App Icon" = "Scegli l'icona dell'app";
@@ -296,10 +296,10 @@ Playtime Stats: section */
 "Choose Title" = "Scegliere il titolo";
 
 /* Contract Picker: title */
-"Choose a Contract" = "Scegliere un contratto";
+"Choose a Contract" = "Scegli un Contratto";
 
 /* Buddy Picker: alert shown when both instances of a buddy are in use */
-"Choose a weapon to take %@ from." = "Scegliere un'arma da cui prendere %@.";
+"Choose a weapon to take %@ from." = "Sceglie un'arma da cui prendere l'accessorio %@.";
 
 /* Storage Management: button to delete all entries of a certain kind */
 "Clear All" = "Cancella tutto";
@@ -377,7 +377,7 @@ Playtime Stats: section */
 "Daily" = "Giornaliero";
 
 /* Missions Box: header */
-"Daily Missions" = "Missioni quotidiane";
+"Daily Missions" = "Missioni Giornaliere";
 
 /* Store */
 "Daily Offers" = "Offerte giornaliere";
@@ -434,7 +434,7 @@ Playtime Stats: section */
 "Enter 2FA Code" = "Inserire il codice 2FA";
 
 /* Weapon Reference: stats */
-"Equip Time" = "Tempo di equipaggiamento";
+"Equip Time" = "Tempo di Equipaggiamento";
 
 /* Request Log
 Stats: error details */
@@ -456,7 +456,7 @@ Stats: error details */
 "Exclude All Agents" = "Escludi Tutti";
 
 /* Statistics Filter: button to exclude all queues */
-"Exclude All Queues" = "Escludi Tutte le Modalità";
+"Exclude All Queues" = "Escludi Tutte";
 
 /* Pro Features List */
 "Exclusive App Icon" = "Icona Esclusiva dell' App";
@@ -575,10 +575,10 @@ Se avete riscontrato un bug o avete un feedback, sono sempre felice di ascoltarl
 "If you have accounts in multiple regions to play with friends around the world, this is the feature for you!" = "Se hai account in più regioni per giocare con gli amici di tutto il mondo, questa è la funzione che fa per voi!";
 
 /* Pro Features List */
-"If you have multiple accounts, you can configure separate widgets for each and have them on your Home Screen at the same time." = "Se disponi di più account, è possibile configurare Widget separati per ciascuno di essi e averli contemporaneamente sulla schermata iniziale.";
+"If you have multiple accounts, you can configure separate widgets for each and have them on your Home Screen at the same time." = "Se disponi di più account, è possibile configurare widget separati per ciascuno di essi e averli contemporaneamente sulla schermata Home.";
 
 /* No comment provided by engineer. */
-"If your widgets seem broken, use this button to request an immediate refresh from iOS." = "Se i Widget sembrano rotti, utilizza questo pulsante per riaggiornarli.";
+"If your widgets seem broken, use this button to request an immediate refresh from iOS." = "Se i widget sembrano rotti, utilizza questo pulsante per aggiornarli.";
 
 /* No comment provided by engineer. */
 "Image failed to load!" = "Immagine non caricata!";
@@ -612,7 +612,7 @@ Weapon Reference: stats */
 "Level %lld / %lld" = "Livello %lld/%lld";
 
 /* No comment provided by engineer. */
-"Lifetime Peak" = "Grado massimo Raggiunto";
+"Lifetime Peak" = "Grado massimo raggiunto";
 
 /* App Theme */
 "Light Mode" = "Modalità luce";
@@ -627,7 +627,7 @@ Weapon Reference: stats */
 "Live Match" = "Partita in diretta";
 
 /* Stats: match loading */
-"Load Data" = "Caricamento della Partita";
+"Load Data" = "Carica i dati";
 
 /* Match List */
 "Load Older Matches" = "Caricare le partite più vecchie";
@@ -796,7 +796,7 @@ Se non conosci il tuo nome utente o non ne hai uno, puoi risolvere il problema s
 "Note: Statistics are only available on iOS 16 and newer." = "Nota: Le Statistiche sono disponibili solo su iOS 16 e versioni successive.";
 
 /* Pro Features List */
-"Note: Widgets are only available on iOS 16 and newer." = "Nota: I Widget sono disponibili solo su iOS 16 e versioni successive.";
+"Note: Widgets are only available on iOS 16 and newer." = "Nota: I widget sono disponibili solo su iOS 16 e versioni successive.";
 
 /* No comment provided by engineer. */
 "OK" = "OK";
@@ -882,7 +882,7 @@ Playtime Stats: section */
 "Rank %lld" = "Grado %lld";
 
 /* Rank Changes Widget: title */
-"Rank Changes" = "Cambiamenti di Grado";
+"Rank Changes" = "Andamento del grado";
 
 /* No comment provided by engineer. */
 "Rank Rating Changes" = "Modifiche alla valutazione del Grado";
@@ -903,7 +903,7 @@ Playtime Stats: section */
 "Recon Bolt does not have and will never have ads. The only way it can make money is through in-app purchases." = "Recon Bolt non ha e non avrà mai pubblicità. L'unico nostro modo per guadagnare è attraverso gli acquisti in-app.";
 
 /* Top-Level Tab Title */
-"Reference" = "Riferimento";
+"Reference" = "Wiki";
 
 /* Account Settings: button to refresh expired session */
 "Refresh" = "Aggiorna";
@@ -915,7 +915,7 @@ Playtime Stats: section */
 "Refreshes at %@" = "Aggiorna a %@";
 
 /* Weapon Reference: stats */
-"Reload Time" = "Tempo di Aggiornamento";
+"Reload Time" = "Tempo di Ricarica";
 
 /* Match List: accessibility label */
 "Remove Bookmark" = "Rimuovi Segnalibro";
@@ -964,7 +964,7 @@ Request Log: title */
 "Rounds by Side" = "Rounds per Lato";
 
 /* Weapon Reference: stats */
-"Run Speed" = "Velocità di movimento";
+"Run Speed" = "Velocità di Movimento";
 
 /* Bookmark/Player List: section */
 "Search" = "Cerca";
@@ -1163,7 +1163,7 @@ Sul sito, vai su **Accesso account Riot** e imposta un nome utente e una passwor
 "Unknown Queue" = "Modalità Sconosciuta";
 
 /* Match List: should never appear unless assets are missing/outdated */
-"Unknown Rank" = "Grado Sconosciuto";
+"Unknown Rank" = "Grado sconosciuto";
 
 /* placeholder */
 "Unknown Skin" = "Skin sconosciuta";
@@ -1230,7 +1230,7 @@ Round Details: killed by unknown/unspecified weapon */
 "View Store in Settings" = "Visualizza il Negozio in Impostazioni";
 
 /* Rank Widget: description */
-"View your current rank." = "Visualizza il tuo Grado attuale.";
+"View your current rank." = "Visualizza il tuo grado attuale.";
 
 /* Rank Changes Widget: description */
 "View your rank rating changes." = "Visualizza le modifiche del tuo Grado.";
@@ -1245,7 +1245,7 @@ Round Details: killed by unknown/unspecified weapon */
 "Weapon Loadout" = "Equipaggiamento delle Armi";
 
 /* Weapon Reference: section */
-"Weapon Statistics" = "Statistiche delle Armi";
+"Weapon Statistics" = "Statistiche dell'arma";
 
 /* No comment provided by engineer. */
 "Weapons" = "Armi";
@@ -1260,7 +1260,7 @@ Round Details: killed by unknown/unspecified weapon */
 "Weekly Missions" = "Missioni Settimanali";
 
 /* No comment provided by engineer. */
-"Widget Refresh Requested" = "Richiesta di aggiornamento dei Widget";
+"Widget Refresh Requested" = "Richiesta di aggiornamento dei widget";
 
 /* No comment provided by engineer. */
 "Win Rate" = "Tasso di Vittoria";

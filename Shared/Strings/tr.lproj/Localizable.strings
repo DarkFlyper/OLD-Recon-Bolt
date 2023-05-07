@@ -23,6 +23,9 @@
 /* No comment provided by engineer. */
 "%lld RR" = "%lld KP";
 
+/* Weapon Reference: stats */
+"%lld bullets" = "%lld Mermiler";
+
 /* Weapon Reference: price, always at least 150 */
 "%lld credits" = "%lld krediler";
 
@@ -35,6 +38,9 @@
 /* Shown at the bottom of the expandable playtime list when there are more entries available. */
 "%lld more" = "%lld daha fazla";
 
+/* Weapon Reference: stats: damage range */
+"%lld – %lldm" = "%lld - %lldm";
+
 /* No comment provided by engineer. */
 "%lld%%" = "%lld%%";
 
@@ -44,8 +50,27 @@
 /* Time Formatting: minutes & seconds (used in round details view) */
 "%lld:%@" = "%lld:%@";
 
+/* Time Formatting: minutes, seconds, & milliseconds (used in round details view) */
+"%lld:%@.%@" = "%lld:%@.%@";
+
+/* Contract Progress Bar
+Missions Box */
+"%lld / %lld XP" = "%lld/%lld XP";
+
+/* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
+"(%lld – %lld)" = "(%lld - %lld)";
+
 /* Pro Features List */
 "(You can switch between available icons at any time.)" = "(İstediğiniz zaman mevcut ikonlar arasında geçiş yapabilirsiniz.)";
+
+/* No comment provided by engineer. */
+"+%lld XP" = "+%lld XP";
+
+/* Missions Widget: how many more weeklies are queued up after the current set */
+"+%lld queued" = "+%lld sıraya alındı";
+
+/* Store: night market discount */
+"-%lld%%" = "-%lld%%";
 
 /* No comment provided by engineer. */
 "2-Factor Authentication" = "2 Faktörlü Kimlik Doğrulama";
@@ -55,6 +80,11 @@
 
 /* No comment provided by engineer. */
 "A 2FA code has been sent to your email address %@" = "E-posta adresinize bir 2FA kodu gönderildi %@";
+
+/* Match List Filter */
+"A match's queue is unknown until its details are fetched (by tapping it or performing the swipe action).
+Competitive matches after your placements can be identified without their details, however." = "Bir eşleşmenin sırası, ayrıntıları alınana kadar (dokunarak veya kaydırma eylemini gerçekleştirerek) bilinmez.
+Ancak, yerleştirmelerinizden sonraki rekabetçi eşleşmeler, ayrıntıları olmadan tanımlanabilir.";
 
 /* No comment provided by engineer. */
 "AFK: %lld" = "AFK: %lld";
@@ -80,8 +110,14 @@
 /* Missions Box: header */
 "Active Contract" = "Aktif Kontrat";
 
+/* Match List: accessibility label */
+"Add Bookmark" = "Yer İşareti Ekle";
+
 /* Account Settings */
 "Add another Account" = "Başka bir Hesap Ekle";
+
+/* Pro Features List */
+"Add multiple accounts and seamlessly switch between them at any time." = "Birden fazla hesap ekleyin ve istediğiniz zaman bunlar arasında sorunsuzca geçiş yapın.";
 
 /* No comment provided by engineer. */
 "Advanced Settings" = "Gelişmiş Ayarlar";
@@ -119,6 +155,12 @@
 /* Statistics filter: shown when every agent is allowed */
 "Any Agent" = "Herhangi Bir Ajan";
 
+/* Statistics filter: shown when every queue is allowed */
+"Any Queue" = "Herhangi bir Kuyruk";
+
+/* Asset Management */
+"Anything with images will not display correctly." = "Resim içeren hiçbir şey düzgün görüntülenmeyecektir.";
+
 /* No comment provided by engineer. */
 "App Icon" = "Uygulama Simgesi";
 
@@ -140,8 +182,14 @@
 /* Asset Management */
 "Assets out of date!" = "Varlıklar güncel değil!";
 
+/* No comment provided by engineer. */
+"Assets should be fetched automatically, but in case something went wrong, feel free to initiate the process manually." = "Varlıklar otomatik olarak getirilmelidir, ancak bir şeylerin yanlış gitmesi durumunda süreci manuel olarak getirmekten çekinmeyin.";
+
 /* Asset Management */
 "Assets up to date!" = "Varlıklar güncel!";
+
+/* Win Rate Stats: side name */
+"Attacking" = "Saldırı";
 
 /* Store: available currency */
 "Available:" = "Mevcut:";
@@ -149,12 +197,28 @@
 /* Hit Distribution Stats: average HS% */
 "Average: %@" = "Ortalama: %@";
 
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
+"Body" = "Vücut";
+
 /* Bookmark/Player List: section */
 "Bookmarks" = "Yer İmleri";
 
 /* Win Rate Stats: section
 Playtime Stats: section */
 "By Map" = "Harita ile";
+
+/* Playtime Stats: section/title */
+"By Non-Premade Player" = "Grup Arkadaşı Olmayan Tarafından";
+
+/* Playtime Stats: section/title */
+"By Premade Teammate" = "Grup Arkadaşı Tarafından";
+
+/* Playtime Stats: section */
+"By Queue" = "Kuyruk tarafından";
+
+/* Hit Distribution Stats: section */
+"By Weapon" = "Silah tarafından";
 
 /* No comment provided by engineer. */
 "Cancel" = "İptal";
@@ -165,11 +229,41 @@ Playtime Stats: section */
 /* Top-Level Tab Title */
 "Career" = "Kariyer";
 
+/* No comment provided by engineer. */
+"Career Summaries" = "Kariyer Özetleri";
+
+/* No comment provided by engineer. */
+"Career Summary" = "Kariyer Özeti";
+
 /* Weapon Reference */
 "Category" = "Kategori";
 
 /* No comment provided by engineer. */
+"Change Queue" = "Kuyruğu Değiştir";
+
+/* Gun Customizer */
+"Change Skin" = "Kapla Değiştirme";
+
+/* Store Widget: description */
+"Check your current Valorant storefront." = "Mevcut Valorant vitrininizi kontrol edin.";
+
+/* Missions Widget: description */
+"Check your progress on daily & weekly missions." = "Günlük ve haftalık görevlerdeki ilerlemenizi kontrol edin.";
+
+/* No comment provided by engineer. */
 "Choose App Icon" = "Uygulama Simgesini Seçin";
+
+/* No comment provided by engineer. */
+"Choose Buddy" = "Uğurluk seçin";
+
+/* No comment provided by engineer. */
+"Choose Card" = "Kart Seçin";
+
+/* No comment provided by engineer. */
+"Choose Skin" = "Kaplama Seçin";
+
+/* No comment provided by engineer. */
+"Choose Spray" = "Sprey Seçin";
 
 /* No comment provided by engineer. */
 "Choose Title" = "Unvan Seçiniz";
@@ -185,6 +279,15 @@ Playtime Stats: section */
 
 /* Contract Picker */
 "Completed" = "Tamamlandı";
+
+/* Storage Management: title for alert to confirm deleting some matches */
+"Confirm Delete" = "Silme İşlemini Onayla";
+
+/* Missions Box */
+"Contract complete!" = "Kontrat tamamlandı!";
+
+/* Stats: error details: accessibility label */
+"Copy Error" = "Kopyalama Hatası";
 
 /* No comment provided by engineer. */
 "Copy Error Details" = "Hata Detaylarını Kopyala";
@@ -229,6 +332,9 @@ Playtime Stats: section */
 "Custom" = "Özel";
 
 /* Gun Customizer: title */
+"Customize %@" = "Özelleştirin %@";
+
+/* Gun Customizer: title */
 "Customize Gun" = "Silahı Özelleştir";
 
 /* Missions Widget */
@@ -239,6 +345,9 @@ Playtime Stats: section */
 
 /* Store */
 "Daily Offers" = "Günlük Teklifler";
+
+/* No comment provided by engineer. */
+"Damage" = "Hasar";
 
 /* App Theme */
 "Dark Mode" = "Karanlık Mod";
@@ -267,6 +376,129 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Done" = "Tamamlandı";
 
+/* No comment provided by engineer. */
+"Download Assets Now" = "Varlıkları Şimdi İndirin";
+
+/* Win Rate Stats: chart legend */
+"Draws" = "Berabereler";
+
+/* Request Log: shown in place of a status code (like 200 or 404) when sending failed. */
+"ERROR" = "HATA";
+
+/* Match List: accessibility label */
+"Edit Filter" = "Filtreyi Düzenle";
+
+/* No comment provided by engineer. */
+"Enter 2FA Code" = "2FA Kodunu Girin";
+
+/* Request Log
+Stats: error details */
+"Error" = "Hata";
+
+/* No comment provided by engineer. */
+"Error Details" = "Hata Detayları";
+
+/* Asset Management */
+"Error downloading assets!" = "Varlıklar indirilirken hata oluştu!";
+
+/* Request Log: title for detailed view of request body/contents */
+"Exchange Body" = "Vücut";
+
+/* Round Details: killed by spike */
+"Exploded" = "Patlatılmış";
+
+/* Pro Features List */
+"Family Sharing" = "Aile Paylaşımı";
+
+/* Request Log: placeholder is replaced by error dump. */
+"Feedback Email Body" = "Ne yanlış gitti? Karşılaştığınız hatayı bana anlatın:
+
+HATA RAPORUNUZ BURADA
+
+%@";
+
+/* Match List: accessibility label */
+"Fetch Details" = "Detayları Getir";
+
+/* Statistics Filter: title (section) */
+"Filter" = "Filtre";
+
+/* No comment provided by engineer. */
+"Filter Maps" = "Haritaları Filtrele";
+
+/* No comment provided by engineer. */
+"Filter Match List" = "Maç Listesini Filtrele";
+
+/* No comment provided by engineer. */
+"Filter Queues" = "Kuyruklerı Filtrele";
+
+/* No comment provided by engineer. */
+"Find Match" = "Maç Bul";
+
+/* Party Box: placeholder shows time spent in queue */
+"Finding match… (%@)" = "Maç bulma… (%@)";
+
+/* Weapon Reference: stats */
+"First Bullet Spread" = "İlk Kurşun Yayılımı";
+
+/* No comment provided by engineer. */
+"Force Refresh Widgets" = "Widget'ları Yenilemeye Zorla";
+
+/* Contract Picker */
+"Free Agent" = "Bedava Ajan";
+
+/* Agent Select header: shown when timer reaches zero */
+"Game Started" = "Oyun Başladı";
+
+/* No comment provided by engineer. */
+"Game is not running!" = "Oyun çalışmıyor!";
+
+/* Pro Features List */
+"Getting money from Recon Bolt gives me the flexibility and motivation to keep improving the app!" = "Recon Bolt'tan para almak bana uygulamayı geliştirmeye devam etmem için esneklik ve motivasyon sağlıyor!";
+
+/* No comment provided by engineer. */
+"GitHub Repo" = "GitHub Repo";
+
+/* No comment provided by engineer. */
+"Golden Gun" = "Altın Tabanca";
+
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
+"Head" = "Kafa";
+
+/* About Screen */
+"Hi! I'm Julian Dunskus, and I made this app.
+
+Recon Bolt started development in early 2021, back when it wasn't yet possible to see your RR gains and losses in the game, but the API offered those numbers. I made an app to see the numbers and better understand my rank changes.
+
+As you can guess, the scope expanded massively over time to what you're using now. I hope you're enjoying it!
+
+If you've encountered a bug or have some feedback, I'm always happy to hear it on the Discord Server or GitHub :)" = "Merhaba! Ben Julian Dunskus ve bu uygulamayı ben yaptım.
+
+Recon Bolt, 2021'in başlarında, oyundaki KP kazançlarınızı ve kayıplarınızı görmenin henüz mümkün olmadığı, ancak API'nin bu sayıları sunduğu zamanlarda geliştirilmeye başlandı. Rakamları görmek ve rütbe değişimlerimi daha iyi anlamak için bir uygulama yaptım.
+
+Tahmin edebileceğiniz gibi, zaman içinde büyük ölçüde genişleyerek şu anda kullandığınız hale geldi. Umarım hoşunuza gidiyordur!
+
+Bir hatayla karşılaştıysanız veya geri bildiriminiz varsa, Discord Sunucusu veya GitHub'da sorunlarınızı duymaktan her zaman mutluluk duyarım :)";
+
+/* Pro Features List */
+"If you have accounts in multiple regions to play with friends around the world, this is the feature for you!" = "Dünyanın dört bir yanındaki arkadaşlarınızla oynamak için birden fazla bölgede hesabınız varsa, bu özellik tam size göre!";
+
+/* Pro Features List */
+"If you have multiple accounts, you can configure separate widgets for each and have them on your Home Screen at the same time." = "Birden fazla hesabınız varsa, her biri için ayrı widget'lar yapılandırabilir ve bunları aynı anda Ana Ekranınızda kullanabilirsiniz.";
+
+/* No comment provided by engineer. */
+"If your widgets seem broken, use this button to request an immediate refresh from iOS." = "Eğer widget'larınız bozuk görünüyorsa, iOS'tan anında yenileme istemek için bu butonu kullanın.";
+
+/* No comment provided by engineer. */
+"Image failed to load!" = "Resim yüklenemedi!";
+
+/* Asset Management */
+"In case something went wrong, use this button to force a full refetch of the assets and images." = "Bir şeylerin yanlış gitmesi durumunda, varlıkların ve görüntülerin tamamen yeniden alınmasını zorlamak için bu butonu kullanın.";
+
+/* Settings: section */
+"In-App Store" = "Mağaza";
+
 /* Login Form: button/header */
 "Is this safe?" = "Bu güvenilir mi?";
 
@@ -279,14 +511,24 @@ Playtime Stats: section */
 /* Asset Management: this row shows the language of the current assets */
 "Language" = "Dil";
 
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
+"Legs" = "Bacaklar";
+
 /* Bookmark/Player List: player level */
 "Level %lld" = "Seviye %lld";
 
 /* Contract Progress Bar */
 "Level %lld / %lld" = "Seviye %lld/%lld";
 
+/* No comment provided by engineer. */
+"Lifetime Peak" = "Ömür Boyu Zirve";
+
 /* App Theme */
 "Light Mode" = "Beyaz Mod";
+
+/* About Screen: section */
+"Links" = "Bağlantılar";
 
 /* Top-Level Tab Title */
 "Live" = "Canlı";
@@ -319,6 +561,9 @@ If you don't know your username or don't have one, you can fix that at [account.
 
 Kullanıcı adınızı bilmiyorsanız veya kullanıcı adınız yoksa, bunu [account.riotgames.com](https://account.riotgames.com) adresinden düzeltebilirsiniz.";
 
+/* Win Rate Stats: chart legend */
+"Losses" = "Kaybedilenler";
+
 /* No comment provided by engineer. */
 "Manage Assets" = "Varlıkları Yönet";
 
@@ -349,6 +594,9 @@ Kullanıcı adınızı bilmiyorsanız veya kullanıcı adınız yoksa, bunu [acc
 /* No comment provided by engineer. */
 "Match Loading Errors" = "Maç Yükleme Hataları";
 
+/* App Theme: automatically match the system theme */
+"Match System" = "Sisteme Uy";
+
 /* Match List: section */
 "Matches" = "Maçlar";
 
@@ -367,11 +615,100 @@ Kullanıcı adınızı bilmiyorsanız veya kullanıcı adınız yoksa, bunu [acc
 /* Missions Box */
 "Missing progress for contract!" = "Kontrat için eksik ilerleme!";
 
+/* No comment provided by engineer. */
+"Missing season data!" = "Kayıp sezon verileri!";
+
 /* Missions Widget: title */
 "Missions" = "Görevler";
 
 /* No comment provided by engineer. */
 "Missions not loaded!" = "Görevler yüklenmedi!";
+
+/* No comment provided by engineer. */
+"Month" = "Ay";
+
+/* Pro Features List */
+"Multiple Account Support" = "Çoklu Hesap Desteği";
+
+/* Pro Store */
+"Multiple Accounts" = "Çoklu Hesap";
+
+/* Bookmark/Player List: lookup name placeholder */
+"Name" = "İsim";
+
+/* Asset Management */
+"Newest available: %@" = "En yeni mevcut: %@";
+
+/* Store */
+"Night Market" = "Gece Pazarı";
+
+/* Buddy picker: option at the top to select no buddy */
+"No Buddy" = "Uğur yok";
+
+/* No comment provided by engineer. */
+"No Spray" = "Sprey Yok";
+
+/* Gun Customizer: shown when a weapon has no buddy active */
+"No buddy selected!" = "Uğurluk seçilmedi!";
+
+/* Missions Box */
+"No contract active!" = "Aktif kontrat yok!";
+
+/* Win Rate Stats: by map */
+"No data" = "Veri yok";
+
+/* No comment provided by engineer. */
+"No minimap available!" = "Minimap mevcut değil!";
+
+/* Party Box */
+"Not Ready" = "Hazır değil";
+
+/* Hit Distribution Stats: error */
+"Not enough data!" = "Yeterli veri yok!";
+
+/* Account Settings */
+"Not signed in yet." = "Henüz oturum açmadın.";
+
+/* No comment provided by engineer. */
+"Not signed in!" = "Oturum açılmadı!";
+
+/* Pro Features List */
+"Note: Statistics are only available on iOS 16 and newer." = "Not: İstatistikler yalnızca iOS 16 ve daha yeni sürümlerde kullanılabilir.";
+
+/* Pro Features List */
+"Note: Widgets are only available on iOS 16 and newer." = "Not: Widget'lar yalnızca iOS 16 ve daha yeni sürümlerde kullanılabilir.";
+
+/* No comment provided by engineer. */
+"OK" = "TAMAM";
+
+/* No comment provided by engineer. */
+"Official Website" = "Resmi Web Sitesi";
+
+/* No comment provided by engineer. */
+"Open or swipe to fetch details." = "Ayrıntıları almak için açın veya kaydırın.";
+
+/* Storage Management */
+"Other Players" = "Diğer Oyuncular";
+
+/* Win Rate Stats: section
+Playtime Stats: section */
+"Over Time" = "Zaman İçinde";
+
+/* Hit Distribution Stats: section
+Playtime Stats: section */
+"Overall" = "Genel olarak";
+
+/* No comment provided by engineer. */
+"Party" = "Grup";
+
+/* Scoreboard: party letter */
+"Party %@" = "Grup %@";
+
+/* Login Form */
+"Password" = "Şifre";
+
+/* Agent View: label for player who hasn't picked an agent yet */
+"Picking…" = "Seçiyor…";
 
 /* Match List: section */
 "Player" = "Oyuncu";
@@ -381,6 +718,12 @@ Kullanıcı adınızı bilmiyorsanız veya kullanıcı adınız yoksa, bunu [acc
 
 /* No comment provided by engineer. */
 "Playtime" = "Oyun Zamanı";
+
+/* No comment provided by engineer. */
+"Playtime Breakdown" = "Oyun Süresi Dağılımı";
+
+/* No comment provided by engineer. */
+"Please make sure you are ready to play by the time the game starts!" = "Lütfen oyun başladığında oynamaya hazır olduğunuzdan emin olun!";
 
 /* Weapon Reference */
 "Price" = "Fiyat";
@@ -400,14 +743,23 @@ Kullanıcı adınızı bilmiyorsanız veya kullanıcı adınız yoksa, bunu [acc
 /* Pro Store: button (placeholder filled with formatted currency) */
 "Purchase – %@" = "Satın Alma - %@";
 
+/* Statistics filter: button */
+"Queues" = "Kuyruklar";
+
 /* Weapon Reference: stats */
 "Range" = "Menzil";
 
 /* Rank Widget: title */
 "Rank" = "Rütbe";
 
+/* No comment provided by engineer. */
+"Rank %lld" = "Rütbe %lld";
+
 /* Rank Changes Widget: title */
 "Rank Changes" = "Rütbe Değişiklikleri";
+
+/* No comment provided by engineer. */
+"Rank Rating Changes" = "Rütbe Derecelendirme Değişiklikleri";
 
 /* No comment provided by engineer. */
 "Rate on the App Store" = "App Store'da Değerlendirin";
@@ -433,8 +785,14 @@ Kullanıcı adınızı bilmiyorsanız veya kullanıcı adınız yoksa, bunu [acc
 /* No comment provided by engineer. */
 "Refresh automatically" = "Otomatik olarak yenile";
 
+/* Store Widget: next refresh time (hour & minute) */
+"Refreshes at %@" = "%@ süresinde yenilenir";
+
 /* Weapon Reference: stats */
 "Reload Time" = "Yeniden Yükleme Süresi";
+
+/* Match List: accessibility label */
+"Remove Bookmark" = "Yer İşaretini Kaldır";
 
 /* Asset Management: section */
 "Repair" = "Onarım";
@@ -473,11 +831,298 @@ Request Log: title */
 /* Bookmark/Player List: section */
 "Search" = "Arama";
 
+/* No comment provided by engineer. */
+"Send to Developer" = "Geliştiriciye Gönder";
+
+/* Account Settings */
+"Session expired!" = "Oturum süresi doldu!";
+
+/* Top-Level Tab Title */
+"Settings" = "Ayarlar";
+
+/* Playtime Stats: title for view of matches in common with another player */
+"Shared Matches" = "Paylaşılan Maçlar";
+
+/* No comment provided by engineer. */
+"Show all matches" = "Tüm maçları göster";
+
+/* No comment provided by engineer. */
+"Show details when found" = "Bulunduğunda ayrıntıları göster";
+
+/* App Icon Description: pro blue */
+"Show off your pro status with an exclusive icon!" = "Özel bir simge ile profesyonel statünüzü gösterin!";
+
+/* Account Settings: button
+Login Form: button */
+"Sign In" = "Oturum Aç";
+
+/* Login Form */
+"Sign In with your Riot account" = "Riot hesabınızla oturum açın";
+
+/* Account Settings */
+"Sign Out" = "Oturumu kapat";
+
+/* Login Form: button/header */
+"Sign in with Google/Apple/etc." = "Google/Apple/vb. ile oturum açın.";
+
+/* Skin Details: level name */
+"Skin Level %lld" = "Seviye %lld";
+
+/* Skin Details: section */
+"Skin Levels" = "Kaplama Seviyeleri";
+
+/* Weapon Reference: button */
+"Skins" = "Kaplamalar";
+
+/* No comment provided by engineer. */
+"Spectator" = "İzleyici";
+
+/* Round Details: Spike Event */
+"Spike Defused" = "Spike Etkisiz Hale Getirildi";
+
+/* Round Details: Spike Event */
+"Spike Planted" = "Spike kuruldu";
+
+/* No comment provided by engineer. */
+"Start Matchmaking?" = "Eşleştirmeye başlatılsın mı?";
+
+/* Win Rate Stats: accessibility label */
+"Starting Side" = "Başlangıç Tarafı";
+
+/* Win Rate Stats */
+"Starting Side:" = "Başlangıç tarafı:";
+
+/* No comment provided by engineer. */
+"Statistics" = "İstatistikler";
+
+/* Statistics Pro purchase prompt */
+"Statistics not available!" = "İstatistikler mevcut değil!";
+
+/* Statistics Pro purchase prompt: 'Recon Bolt Pro' is inserted in the placeholder with a bolder font. */
+"Statistics require %@, a one-time purchase including a variety of features. Want to give them a look?" = "İstatistikler, çeşitli özellikler içeren tek seferlik bir satın alma olan %@ gerektirir. Bir göz atmak ister misiniz?";
+
+/* Store Widget: title */
+"Store" = "Mağaza";
+
+/* No comment provided by engineer. */
+"Store not loaded!" = "Mağaza yüklenmedi!";
+
+/* No comment provided by engineer. */
+"Storefront outdated!" = "Vitrin süresi geçmiş!";
+
+/* Pro Features List */
+"Support Development :)" = "Geliştirmeyi Destekle :)";
+
+/* Pro Store */
+"Support Further Development!" = "Daha Fazla Gelişitirmeyi Destekleyin!";
+
+/* Missions Box: button */
+"Switch Contract" = "Kontrat Değiştirme";
+
+/* Bookmark/Player List: lookup tag placeholder */
+"Tag" = "Etiket";
+
+/* Pro Store */
+"Thank you for supporting Recon Bolt!" = "Recon Bolt'u desteklediğiniz için teşekkür ederiz!";
+
+/* Login Form: is this safe? */
+"The code is open-source and visible on GitHub; you can build it yourself if you want to be sure of what's running." = "Kod açık kaynaklıdır ve GitHub'da görülebilir; neyin çalıştığından emin olmak istiyorsanız kendiniz derleyebilirsiniz.";
+
+/* App Icon Description: default */
+"The default look of Recon Bolt." = "Recon Bolt'un varsayılan görünümü.";
+
+/* No comment provided by engineer. */
+"The pro version lets you change the app icon! More icons might be coming in future updates." = "Pro sürüm, uygulama simgesini değiştirmenize izin verir! Gelecek güncellemelerde daha fazla simge gelebilir.";
+
+/* No comment provided by engineer. */
+"Theme" = "Tema";
+
+/* No comment provided by engineer. */
+"These are the last %lld requests sent by the app, along with their responses." = "Bunlar, yanıtlarıyla birlikte uygulama tarafından gönderilen son %lld istekleridir.";
+
+/* Statistics error for iOS <16 */
+"This feature requires iOS 16 or newer." = "Bu özellik iOS 16 veya daha yenisini gerektirir.";
+
+/* Stats: match loading */
+"To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "İstatistik toplamak için öncelikle işlenecek maçları yüklememiz gerekir. Özellikle ilk kez indirirken büyük miktarların uzun zaman alabileceğini unutmayın!";
+
+/* Win Rate Stats: side name
+Hit Distribution Stats: region */
+"Total" = "Toplam";
+
+/* No comment provided by engineer. */
+"Total Playtime" = "Toplam Oyun Süresi";
+
+/* No comment provided by engineer. */
+"Total Space Used" = "Kullanılan Toplam Depolama Alan";
+
+/* No comment provided by engineer. */
+"Twitter @juliand665" = "Twitter @juliand665";
+
+/* Request Log */
+"URL" = "URL";
+
+/* Missions Box: header, shown when a mission is not daily or weekly (should not happen unless Riot changes something) */
+"Uncategorized Missions" = "Kategorize Edilmemiş Görevler";
+
+/* Hit Distribution Stats: footnote */
+"Unfortunately, Valorant doesn't store information about which weapon was used for each hit. All we get is the weapon you started the round with and what weapon you used for each kill. Recon Bolt guesses the weapon involved in each damage based on this information, but it cannot be perfect (and neither can any other tracker)." = "Ne yazık ki Valorant her vuruşta hangi silahın kullanıldığı bilgisini saklamıyor. Elimizdeki tek şey, tura hangi silahla başladığınız ve her öldürme için hangi silahı kullandığınız. Recon Bolt bu bilgilere dayanarak her hasarda kullanılan silahı tahmin eder, ancak mükemmel olamaz (ve başka herhangi bir izleyici de olamaz).";
+
+/* Login Form: sign in with google/apple/etc. */
+"Unfortunately, due to technical limitations, you cannot sign into Recon Bolt via your Google account, Apple ID, or anything but a Riot account.
+
+Assuming you signed up for Valorant using Google/Apple/etc., you can set up your account to add a username & password on Riot's site at [account.riotgames.com](https://account.riotgames.com). Note that your Riot ID is **not** the same as your username! If you've forgotten your username, you can reset it at [recovery.riotgames.com](https://recovery.riotgames.com).
+
+On that site, navigate to **Riot Account Sign-in** and set yourself a username and password. When you're done, you can use those same credentials to sign in above! Your social account will stay linked and you'll remain able to sign in with that on PC :)" = "Ne yazık ki, teknik sınırlamalar nedeniyle, Recon Bolt'a Google hesabınız, Apple ID'niz veya Riot hesabı dışında herhangi bir şeyle giriş yapamazsınız.
+
+Valorant'a Google/Apple/vb. kullanarak kaydolduğunuzu varsayarsak, Riot'un [account.riotgames.com](https://account.riotgames.com) adresindeki sitesinde bir kullanıcı adı ve şifre eklemek için hesabınızı ayarlayabilirsiniz. Riot ID'nizin kullanıcı adınızla **aynı olmadığını** unutmayın! Kullanıcı adınızı unuttuysanız, [recovery.riotgames.com](https://recovery.riotgames.com) adresinden sıfırlayabilirsiniz.
+
+Bu sitede **Riot Hesabına Giriş** bölümüne gidin ve kendinize bir kullanıcı adı ve şifre belirleyin. İşiniz bittiğinde, yukarıda oturum açmak için aynı kimlik bilgilerini kullanabilirsiniz! Sosyal hesabınız bağlı kalacak ve PC'de bununla oturum açmaya devam edebileceksiniz :)";
+
+/* Round Details: killed by unknown ability */
+"Unknown Ability" = "Bilinmeyen Yetenek";
+
+/* placeholder */
+"Unknown Agent" = "Bilinmeyen Ajan";
+
+/* placeholder */
+"Unknown Buddy" = "Bilinmeyen Uğurluk";
+
+/* placeholder */
+"Unknown Card" = "Bilinmeyen Kart";
+
 /* Store */
 "Unknown Offer" = "Bilinmeyen Teklif";
+
+/* No comment provided by engineer. */
+"Unknown Player" = "Bilinmeyen Oyuncu";
+
+/* No comment provided by engineer. */
+"Unknown Queue" = "Bilinmeyen Kuyruk";
 
 /* Match List: should never appear unless assets are missing/outdated */
 "Unknown Rank" = "Bilinmeyen Rütbe";
 
 /* placeholder */
-"Unknown Skin" = "Bilinmeyen Skin";
+"Unknown Skin" = "Bilinmeyen Kaplama";
+
+/* placeholder */
+"Unknown Spray" = "Bilinmeyen Sprey";
+
+/* placeholder */
+"Unknown Title" = "Bilinmeyen Ünvan";
+
+/* Round Details: killed by unknown damage source/type */
+"Unknown Type" = "Bilinmeyen Tip";
+
+/* Stats: label for a weapon that the app doesn't know for some reason
+Round Details: killed by unknown/unspecified weapon */
+"Unknown Weapon" = "Bilinmeyen Silah";
+
+/* Missions Box */
+"Unknown contract!" = "Bilinmeyen Kontrat!";
+
+/* Store Bundle Details: should never show, but if Riot adds a new kind of item to a bundle, this would show */
+"Unknown item of type %@" = "Türü bilinmeyen öğe %@";
+
+/* No comment provided by engineer. */
+"Unknown mission!" = "Bilinmeyen görev!";
+
+/* Asset Management: button */
+"Update Now" = "Şimdi Güncelle";
+
+/* Match Details: button */
+"Update Ranks" = "Rütbeleri Güncelle";
+
+/* Login Form */
+"Username" = "Kullanıcı Adı";
+
+/* No comment provided by engineer. */
+"Users" = "Kullanıcılar";
+
+/* Win Rate Stats by Loadout Delta */
+"Value Difference (credits)" = "Değer Farkı (krediler)";
+
+/* Asset Management: this row shows the version of the current assets */
+"Version" = "Versiyon";
+
+/* Reference */
+"Version %@" = "Versiyon %@";
+
+/* No comment provided by engineer. */
+"Vibrate when Match Found" = "Maç Bulunduğunda Titret";
+
+/* Pro Store */
+"View All Features" = "Tüm Özellikleri Görüntüle";
+
+/* No comment provided by engineer. */
+"View Full Profile" = "Tam Profili Görüntüle";
+
+/* Match List */
+"View Stats" = "İstatistikleri Görüntüle";
+
+/* Statistics Pro purchase prompt: button */
+"View Store in Settings" = "Ayarlar'da Mağazayı Görüntüle";
+
+/* Rank Widget: description */
+"View your current rank." = "Mevcut rütbenizi görüntüleyin.";
+
+/* Rank Changes Widget: description */
+"View your rank rating changes." = "Rütbe derecesi değişikliklerinizi görüntüleyin.";
+
+/* Pro Features List */
+"View your storefront, daily/weekly missions, or current rank without even having to open the app!" = "Uygulamayı açmanıza bile gerek kalmadan vitrininizi, günlük/haftalık görevlerinizi veya mevcut rütbenizi görüntüleyin!";
+
+/* No comment provided by engineer. */
+"WP: +%lld" = "WP: +%lld";
+
+/* Weapon Reference: section */
+"Weapon Statistics" = "Silah İstatistikleri";
+
+/* No comment provided by engineer. */
+"Weapons" = "Silahlar";
+
+/* No comment provided by engineer. */
+"Week" = "Hafta";
+
+/* Missions Widget */
+"Weekly" = "Haftalık";
+
+/* Missions Box: header */
+"Weekly Missions" = "Haftalık Görevler";
+
+/* No comment provided by engineer. */
+"Widget Refresh Requested" = "Widget Yenileme İstendi";
+
+/* No comment provided by engineer. */
+"Win Rate" = "Kazanma Oranı";
+
+/* Win Rate Stats: chart legend */
+"Wins" = "Kazanılanlar";
+
+/* No comment provided by engineer. */
+"Year" = "Yıl";
+
+/* Login Form: is this safe? */
+"You can enable 2-factor authentication, so you'd at least have another layer of security if it went bad." = "2 faktörlü kimlik doğrulamayı etkinleştirebilirsiniz, böylece işler kötü giderse en azından başka bir güvenlik katmanına sahip olursunuz.";
+
+/* Login Form: is this safe? */
+"Your credentials only ever leave your device in the form of a login request directly to Riot. They are never stored or sent anywhere else." = "Kimlik bilgileriniz cihazınızdan sadece doğrudan Riot'a bir giriş talebi şeklinde çıkar. Asla saklanmazlar veya başka bir yere gönderilmezler.";
+
+/* No comment provided by engineer. */
+"Your session has expired! Recon Bolt has tried to refresh it for you, but needs 2FA confirmation." = "Oturumunuzun süresi doldu! Recon Bolt sizin için yenilemeyi denedi, ancak 2FA onayı gerekiyor.";
+
+/* No comment provided by engineer. */
+"iOS is a bit finnicky about this, so widgets may not refresh right away—feel free to restart if this doesn't help!" = "iOS bu konuda biraz titizdir, bu nedenle widget'lar hemen yenilenmeyebilir; bu işe yaramazsa telefonu yeniden başlatmaktan çekinmeyin!";
+
+/* Loadout: spray slot */
+"mid-round" = "tur ortası";
+
+/* Missions Widget: countdown label when the target is in the past. Should never really show up, since at this point there's new data. */
+"old" = "eski";
+
+/* Loadout: spray slot */
+"pre-round" = "tur öncesi";
+
+/* Login Form */
+"signing in…" = "giriş yapılıyor...";
