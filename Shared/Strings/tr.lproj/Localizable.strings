@@ -535,6 +535,9 @@ HATA RAPORUNUZ BURADA
 Weapon Reference: stats */
 "Head" = "Kafa";
 
+/* No comment provided by engineer. */
+"Headhunter (Chamber)" = "Kelle Avcısı (Chamber)";
+
 /* About Screen */
 "Hi! I'm Julian Dunskus, and I made this app.
 
@@ -936,11 +939,20 @@ Request Log: title */
 /* Round Details: title */
 "Round Details" = "Tur Ayrıntıları";
 
+/* Win Rate Stats: section */
+"Rounds by Loadout Delta" = "Yükleme Farkına Göre Turlar";
+
+/* Win Rate Stats: section */
+"Rounds by Side" = "Tarafına Göre Turlar";
+
 /* Weapon Reference: stats */
 "Run Speed" = "Koşma Hızı";
 
 /* Bookmark/Player List: section */
 "Search" = "Arama";
+
+/* Hit Distribution Stats: error */
+"Select more matches to see data on hit distribution. Deathmatch, Escalation, and other modes don't provide the necessary information." = "Hit dağılımı hakkındaki verileri görmek için daha fazla eşleşme seçin. Deathmatch, Escalation ve diğer modlar gerekli bilgileri sağlamaz.";
 
 /* No comment provided by engineer. */
 "Send to Developer" = "Geliştiriciye Gönder";
@@ -1075,6 +1087,9 @@ Hit Distribution Stats: region */
 
 /* No comment provided by engineer. */
 "Total Space Used" = "Kullanılan Toplam Depolama Alan";
+
+/* No comment provided by engineer. */
+"Tour de Force (Chamber)" = "Kuvvet Gösterisi (Chamber)";
 
 /* No comment provided by engineer. */
 "Twitter @juliand665" = "Twitter @juliand665";
@@ -1232,6 +1247,9 @@ Round Details: killed by unknown/unspecified weapon */
 /* No comment provided by engineer. */
 "Year" = "Yıl";
 
+/* Match Details: footnote */
+"You can also tap a round's number in the kill breakdown above to quickly view its details." = "Kill ayrıntılarına hızlıca bakmak için, öldürme ayrıntıları bölümündeki bir turun numarasına dokunabilirsiniz.";
+
 /* Login Form: is this safe? */
 "You can enable 2-factor authentication, so you'd at least have another layer of security if it went bad." = "2 faktörlü kimlik doğrulamayı etkinleştirebilirsiniz, böylece işler kötü giderse en azından başka bir güvenlik katmanına sahip olursunuz.";
 
@@ -1242,7 +1260,7 @@ Round Details: killed by unknown/unspecified weapon */
 "Your session has expired! Recon Bolt has tried to refresh it for you, but needs 2FA confirmation." = "Oturumunuzun süresi doldu! Recon Bolt sizin için yenilemeyi denedi, ancak 2FA onayı gerekiyor.";
 
 /* No comment provided by engineer. */
-"iOS is a bit finnicky about this, so widgets may not refresh right away—feel free to restart if this doesn't help!" = "iOS bu konuda biraz titizdir, bu nedenle widget'lar hemen yenilenmeyebilir; bu işe yaramazsa telefonu yeniden başlatmaktan çekinmeyin!";
+"iOS is a bit finnicky about this, so widgets may not refresh right away—feel free to reboot your device if this doesn't help!" = "iOS bu konuda biraz titizdir, bu nedenle widget'lar hemen yenilenmeyebilir; bu işe yaramazsa telefonu yeniden başlatmaktan çekinmeyin!";
 
 /* Loadout: spray slot */
 "mid-round" = "tur ortası";
