@@ -971,7 +971,7 @@ Request Log: title */
 /* No comment provided by engineer. */
 "Send to Developer" = "Kirim ke Developer";
 
-/* Account Settings */
+/* Account Settings: shown when the current account's session has expired */
 "Session expired!" = "Sesi berakhir!";
 
 /* Top-Level Tab Title */
@@ -1002,7 +1002,7 @@ Login Form: button */
 /* Login Form */
 "Sign In with your Riot account" = "Masuk menggunakan akun Riot Anda";
 
-/* Account Settings */
+/* Account Settings: button */
 "Sign Out" = "Keluar";
 
 /* Login Form: button/header */
