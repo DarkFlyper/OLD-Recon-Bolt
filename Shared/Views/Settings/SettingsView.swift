@@ -18,28 +18,12 @@ struct SettingsView: View {
 				AccountSettingsView(accountManager: accountManager)
 				
 				Section(header: Text("Settings", comment: "Settings: section")) {
-					Picker("Theme", selection: $settings.theme) {
-						ForEach(AppSettings.Theme.allCases, id: \.self) { theme in
-							theme.name
-								.tag(theme)
-						}
-					}
+					mainSettings()
 					
 					NavigationLink {
-						AppIconPicker(manager: iconManager)
-					} label: {
-						HStack {
-							Text("App Icon")
-							Spacer()
-							iconManager.currentIcon.name
-								.foregroundStyle(.secondary)
-						}
-					}
-					
-					Toggle("Vibrate when Match Found", isOn: $settings.vibrateOnMatchFound)
-					
-					NavigationLink("Advanced Settings") {
 						AdvancedSettingsView(accountManager: accountManager, assetManager: assetManager)
+					} label: {
+						Label("Advanced Settings", systemImage: "gearshape.2")
 					}
 				}
 				
@@ -68,6 +52,61 @@ struct SettingsView: View {
 			}
 		}
 		.navigationTitle("Settings")
+	}
+	
+	@ViewBuilder
+	func mainSettings() -> some View {
+		Picker(selection: $settings.theme) {
+			ForEach(AppSettings.Theme.allCases, id: \.self) { theme in
+				theme.name
+					.tag(theme)
+			}
+		} label: {
+			Label {
+				Text("Theme", comment: "Settings: picker")
+			} icon: {
+				Image(systemName: "sun.max")
+			}
+		}
+		
+		NavigationLink {
+			AppIconPicker(manager: iconManager)
+		} label: {
+			Label {
+				HStack {
+					Text("App Icon", comment: "Settings: button")
+					Spacer()
+					iconManager.currentIcon.name
+						.foregroundStyle(.secondary)
+				}
+			} icon: {
+				Image(systemName: "square.dashed")
+			}
+		}
+		
+		Link(destination: URL(string: UIApplication.openSettingsURLString)!) {
+			NavigationLink {} label: { // i just want the chevron lol
+				Label {
+					HStack {
+						Text("Change Language", comment: "Settings: button")
+						Spacer()
+						Image(systemName: "link")
+							.foregroundStyle(.secondary)
+					}
+				} icon: {
+					Image(systemName: "globe")
+				}
+			}
+			.tint(.primary)
+		}
+		
+		Toggle(isOn: $settings.vibrateOnMatchFound) {
+			Label {
+				Text("Vibrate when Match Found", comment: "Settings: toggle")
+			} icon: {
+				Image(systemName: "bell")
+			}
+		}
 	}
 }
 
