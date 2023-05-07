@@ -4,6 +4,7 @@ import Algorithms
 struct AgentInfoView: View {
 	let agent: AgentInfo
 	
+	@State var fullscreenImages: AssetImageCollection?
 	@State var activeAbilitySlot = AgentInfo.Ability.Slot.grenade // first ability
 	@Namespace private var segmentNamespace
 	
@@ -12,6 +13,7 @@ struct AgentInfoView: View {
 			ScrollView {
 				VStack(spacing: 16) {
 					portrait
+						.onTapGesture { fullscreenImages = [agent.fullPortrait, agent.displayIcon] }
 					
 					Group {
 						descriptionBox
@@ -24,6 +26,7 @@ struct AgentInfoView: View {
 			.background(Color.groupedBackground)
 			.coordinateSpace(name: "fixed")
 		}
+		.lightbox(for: $fullscreenImages)
 		.navigationBarTitleDisplayMode(.inline)
 	}
 	

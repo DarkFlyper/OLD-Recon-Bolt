@@ -164,3 +164,20 @@ extension ShapeStyle where Self == _BlendModeShapeStyle<Color> {
 	/// knocks out destination—for best results, combine with ``compositingGroup()``
 	static var negative: Self { .init(style: .white, blendMode: .destinationOut) }
 }
+
+/// button that looks like a ``NavigationLink``
+struct NavigationButton<Label: View>: View {
+	var action: () -> Void
+	@ViewBuilder var label: Label
+	
+	var body: some View {
+		Button(action: action) {
+			NavigationLink {} label: {
+				HStack {
+					label
+				}
+			}
+			.tint(.primary)
+		}
+	}
+}

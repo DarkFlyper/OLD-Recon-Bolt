@@ -4,6 +4,8 @@ import ValorantAPI
 struct BundleDetailsView: View {
 	var bundle: StoreBundle
 	
+	@State var fullscreenImages: AssetImageCollection?
+	
 	@Environment(\.assets) private var assets
 	
 	var body: some View {
@@ -11,8 +13,8 @@ struct BundleDetailsView: View {
 			List {
 				contents(for: info)
 			}
-			.background(Color.groupedBackground)
 			.navigationTitle(info.displayName)
+			.lightbox(for: $fullscreenImages)
 		} else {
 			VStack(spacing: 8) {
 				Text("Unknown bundle!")
@@ -29,6 +31,7 @@ struct BundleDetailsView: View {
 			info.displayIcon.view()
 				.listRowInsets(.init())
 				.aligningListRowSeparator()
+				.onTapGesture { fullscreenImages = [info.displayIcon] }
 			
 			if let extraDescription = info.extraDescription {
 				Text(extraDescription)
@@ -69,8 +72,10 @@ struct BundleDetailsView: View {
 				.padding(.vertical, 8)
 			}
 		} else if let buddy = item.info.buddy {
-			HStack {
-				let info = assets?.resolveBuddy(buddy)
+			let info = assets?.resolveBuddy(buddy)
+			NavigationButton {
+				fullscreenImages = info.map { [$0.displayIcon] }
+			} label: {
 				info?.displayIcon.view()
 					.frame(height: 60)
 				info.label()
@@ -78,14 +83,15 @@ struct BundleDetailsView: View {
 				priceLabel
 			}
 		} else if let card = item.info.card {
-			HStack {
-				let info = assets?.playerCards[card]
+			let info = assets?.playerCards[card]
+			NavigationButton {
+				fullscreenImages = info.map { [$0.largeArt, $0.wideArt, $0.smallArt] }
+			} label: {
 				info?.smallArt.view()
 					.frame(height: 60)
 				info.label()
 				Spacer()
 				priceLabel
-				// TODO: way to see more icon variants?
 			}
 		} else if let title = item.info.title {
 			HStack {
@@ -94,8 +100,10 @@ struct BundleDetailsView: View {
 				priceLabel
 			}
 		} else if let spray = item.info.spray {
-			HStack {
-				let info = assets?.sprays[spray]
+			let info = assets?.sprays[spray]
+			NavigationButton {
+				fullscreenImages = info.map { [$0.fullIcon, $0.displayIcon] }
+			} label: {
 				info?.bestIcon.view()
 					.frame(height: 60)
 				info.label()

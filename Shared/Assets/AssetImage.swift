@@ -5,19 +5,23 @@ import HandyOperators
 
 private let fileManager = FileManager.default
 
-struct AssetImage: Hashable {
+struct AssetImage: Hashable, Identifiable {
 	var url: URL
+	
+	var id: Self { self }
 	
 	@ViewBuilder
 	func view(
 		renderingMode: Image.TemplateRenderingMode? = nil,
 		aspectRatio: CGFloat? = nil,
+		maxScale: CGFloat? = nil,
 		shouldLoadImmediately: Bool = false
 	) -> some View {
 		ImageView(
 			image: self,
 			renderingMode: renderingMode,
 			aspectRatio: aspectRatio,
+			maxScale: maxScale,
 			shouldLoadImmediately: isInSwiftUIPreview || shouldLoadImmediately
 		)
 		.id(self)
@@ -76,6 +80,7 @@ struct AssetImage: Hashable {
 		var renderingMode: Image.TemplateRenderingMode?
 		/// aspect ratio for the placeholder shown when the image is not loaded
 		var aspectRatio: CGFloat?
+		var maxScale: CGFloat?
 		var shouldLoadImmediately: Bool = false
 		@State var loaded: UIImage?
 		
@@ -144,6 +149,10 @@ struct AssetImage: Hashable {
 					.resizable()
 					.scaledToFit()
 					.onChange(of: manager.cacheState(for: image)) { _ in self.loaded = nil }
+					.frame(
+						maxWidth: maxScale.map { $0 * loaded.size.width },
+						maxHeight: maxScale.map { $0 * loaded.size.height }
+					)
 			} else {
 				let _ = load()
 				Color.primary.opacity(0.1)

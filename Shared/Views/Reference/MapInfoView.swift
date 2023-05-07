@@ -6,6 +6,7 @@ struct MapInfoView: View {
 	let map: MapInfo
 	let magnificationScale = 3.0
 	
+	@State var fullscreenImages: AssetImageCollection?
 	@State var isZoomedIn = false
 	
 	@Environment(\.verticalSizeClass) private var verticalSizeClass
@@ -15,6 +16,7 @@ struct MapInfoView: View {
 			VStack(spacing: 16) {
 				MapImage.splash(map.id)
 					.frame(maxHeight: verticalSizeClass == .compact ? 300 : nil)
+					.onTapGesture { fullscreenImages = [map.splash, map.listViewIcon] }
 				
 				VStack(spacing: 8) {
 					Text(map.id.rawValue)
@@ -44,6 +46,7 @@ struct MapInfoView: View {
 				}
 			}
 		}
+		.lightbox(for: $fullscreenImages)
 		.clipped()
 		.navigationTitle(map.displayName)
 		.navigationBarTitleDisplayMode(.inline)
