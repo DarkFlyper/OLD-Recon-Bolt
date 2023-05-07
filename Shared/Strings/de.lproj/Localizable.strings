@@ -184,7 +184,7 @@ Competitive matches after your placements can be identified without their detail
 /* Asset Management */
 "Anything with images will not display correctly." = "Alles, was sich auf Bilder verlässt, wird nicht richtig angezeigt werden können.";
 
-/* No comment provided by engineer. */
+/* Settings: button */
 "App Icon" = "App-Icon";
 
 /* No comment provided by engineer. */
@@ -213,6 +213,9 @@ Competitive matches after your placements can be identified without their detail
 
 /* Win Rate Stats: side name */
 "Attacking" = "Angreifer";
+
+/* Settings: toggle */
+"Automatically Sign Back In" = "Automatisch neu anmelden";
 
 /* Store: available currency */
 "Available:" = "Verfügbar:";
@@ -273,10 +276,13 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Change Buddy" = "Talisman wechseln";
 
+/* Settings: button */
+"Change Language" = "Sprache ändern";
+
 /* No comment provided by engineer. */
 "Change Queue" = "Modus wechseln";
 
-/* Gun Customizer */
+/* Gun Customizer: button */
 "Change Skin" = "Skin wechseln";
 
 /* Store Widget: description */
@@ -389,6 +395,9 @@ Playtime Stats: section */
 
 /* Store */
 "Daily Offers" = "Tagesangebote";
+
+/* Weapon Reference: stats */
+"Damage" = "Schaden";
 
 /* App Theme */
 "Dark Mode" = "Dunkelmodus";
@@ -683,6 +692,9 @@ Wenn du deinen Benutzernamen nicht kennst oder keinen hast, kannst du das unter 
 /* No comment provided by engineer. */
 "Manage Local Storage" = "Lokalen Speicher verwalten";
 
+/* Settings: section */
+"Management" = "Verwalten";
+
 /* About Screen */
 "Many thanks to the volunteer translators from our Discord server who have been hard at working translating the app to new languages!" = "Vielen Dank an die freiwilligen Übersetzer unseres Discord-Servers, die hart daran gearbeitet haben, die App in neue Sprachen zu übersetzen!";
 
@@ -776,7 +788,7 @@ Wenn du deinen Benutzernamen nicht kennst oder keinen hast, kannst du das unter 
 /* No comment provided by engineer. */
 "No games played with premade teammates." = "Keine Spiele in einer Gruppe gespielt.";
 
-/* No comment provided by engineer. */
+/* Map Reference */
 "No minimap available!" = "Keine Minikarte verfügbar!";
 
 /* No comment provided by engineer. */
@@ -858,6 +870,9 @@ Playtime Stats: section */
 
 /* Weapon Reference */
 "Price" = "Preis";
+
+/* Badge applied to buttons that are exclusive to Pro, e.g. in the account settings */
+"Pro" = "Pro";
 
 /* App Icon Name */
 "Pro Blue" = "Pro-Blau";
@@ -1012,7 +1027,7 @@ Login Form: button */
 "Sign In with your Riot account" = "Mit Riot-Konto anmelden";
 
 /* Account Settings: button */
-"Sign Out" = "Abmelden";
+"Sign Out of All Accounts" = "Aus allen Konten abmelden";
 
 /* Login Form: button/header */
 "Sign in with Google/Apple/etc." = "Mit Google/Apple/etc. anmelden";
@@ -1092,7 +1107,7 @@ Login Form: button */
 /* No comment provided by engineer. */
 "The pro version lets you change the app icon! More icons might be coming in future updates." = "Mit der Pro-Version kannst du das App-Icon ändern! Zukünftige Updates bringen womöglich neue Icons mit sich.";
 
-/* No comment provided by engineer. */
+/* Settings: picker */
 "Theme" = "Erscheinungsbild";
 
 /* No comment provided by engineer. */
@@ -1100,6 +1115,9 @@ Login Form: button */
 
 /* Statistics error for iOS <16 */
 "This feature requires iOS 16 or newer." = "Diese Feature erfordert iOS 16 oder neuer.";
+
+/* Settings: toggle description */
+"This makes Recon Bolt automatically use your username & password to sign in again if you get signed out. If you have 2-factor authentication enabled, this may fail if it requires a new code, but it still works sometimes." = "Hiermit verwendet Recon Bolt automatisch deinen Benutzernamen und Passwort, um sich erneut anzumelden, wenn du abgemeldet wirst. Wenn du 2-Faktor-Authentifizierung aktiviert hast, kann das fehlschlagen, wenn ein neuer Code erforderlich ist, aber manchmal reicht es aus.";
 
 /* Stats: match loading */
 "To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "Um Statistiken auszuwerten, müssen wir zuerst Spiele zur Verarbeitung laden. Beachte, dass große Mengen lange brauchen können, besonders wenn sie zum ersten Mal heruntergeladen werden!";
@@ -1155,6 +1173,9 @@ Navigiere auf dieser Seite zu **Riot Account Sign-in** und gib dir einen Benutze
 /* placeholder */
 "Unknown Bundle" = "Unbekannte Sammlung";
 
+/* placeholder */
+"Unknown Card" = "Unbekannter Banner";
+
 /* Store */
 "Unknown Offer" = "Unbekanntes Angebot";
 
@@ -1171,6 +1192,9 @@ Navigiere auf dieser Seite zu **Riot Account Sign-in** und gib dir einen Benutze
 "Unknown Skin" = "Unbekannte Skin";
 
 /* placeholder */
+"Unknown Spray" = "Unbekanntes Graffiti";
+
+/* placeholder */
 "Unknown Title" = "Unbekannter Titel";
 
 /* Round Details: killed by unknown damage source/type */
@@ -1185,6 +1209,9 @@ Round Details: killed by unknown/unspecified weapon */
 
 /* Missions Box */
 "Unknown contract!" = "Unbekannter Auftrag!";
+
+/* Store Bundle Details: should never show, but if Riot adds a new kind of item to a bundle, this would show */
+"Unknown item of type %@" = "Unbekanntes Objekt des Typs %@";
 
 /* No comment provided by engineer. */
 "Unknown mission!" = "Unbekannte Mission!";
@@ -1210,7 +1237,7 @@ Round Details: killed by unknown/unspecified weapon */
 /* Reference */
 "Version %@" = "Version %@";
 
-/* No comment provided by engineer. */
+/* Settings: toggle */
 "Vibrate when Match Found" = "Vibrieren, wenn Spiel gefunden wird";
 
 /* Pro Store */
@@ -1218,6 +1245,9 @@ Round Details: killed by unknown/unspecified weapon */
 
 /* No comment provided by engineer. */
 "View Full Profile" = "Volles Profil anzeigen";
+
+/* Gun Customizer: button */
+"View Skin Details" = "Skin-Details anzeigen";
 
 /* Match List */
 "View Stats" = "Statistiken auswerten";

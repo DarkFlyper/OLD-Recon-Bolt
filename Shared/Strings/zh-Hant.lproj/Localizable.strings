@@ -186,7 +186,7 @@ Competitive matches after your placements can be identified without their detail
 /* Asset Management */
 "Anything with images will not display correctly." = "任何帶有圖片的東西都不會正確顯示。";
 
-/* No comment provided by engineer. */
+/* Settings: button */
 "App Icon" = "應用程式圖示";
 
 /* No comment provided by engineer. */
@@ -278,7 +278,7 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Change Queue" = "更換模式";
 
-/* Gun Customizer */
+/* Gun Customizer: button */
 "Change Skin" = "更換造型";
 
 /* Store Widget: description */
@@ -772,7 +772,7 @@ If you don't know your username or don't have one, you can fix that at [account.
 /* No comment provided by engineer. */
 "No games played with premade teammates." = "你沒有跟組隊成員玩過.";
 
-/* No comment provided by engineer. */
+/* Map Reference */
 "No minimap available!" = "沒有可用的小地圖!";
 
 /* No comment provided by engineer. */
@@ -998,9 +998,6 @@ Login Form: button */
 /* Login Form */
 "Sign In with your Riot account" = "登入你的拳頭帳號";
 
-/* Account Settings: button */
-"Sign Out" = "登出";
-
 /* Login Form: button/header */
 "Sign in with Google/Apple/etc." = "登入為 Google/Apple/etc.";
 
@@ -1079,7 +1076,7 @@ Login Form: button */
 /* No comment provided by engineer. */
 "The pro version lets you change the app icon! More icons might be coming in future updates." = "專業版允許您更改應用程式圖示！ 未來更新中可能會出現更多圖示。";
 
-/* No comment provided by engineer. */
+/* Settings: picker */
 "Theme" = "主題";
 
 /* No comment provided by engineer. */
@@ -1197,7 +1194,7 @@ Round Details: killed by unknown/unspecified weapon */
 /* Reference */
 "Version %@" = "版本 %@";
 
-/* No comment provided by engineer. */
+/* Settings: toggle */
 "Vibrate when Match Found" = "進入對戰時振動";
 
 /* Pro Store */

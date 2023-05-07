@@ -173,6 +173,33 @@
         <string>%lld filtrelendi</string>
       </dict>
     </dict>
+    <key>%lld/%lld loaded</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@loaded@</string>
+      <key>loaded</key>
+      <dict>
+        <key>one</key>
+        <string>%lld/%#@total@ yüklendi</string>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld/%#@total@ yüklendi</string>
+      </dict>
+      <key>total</key>
+      <dict>
+        <key>one</key>
+        <string>%lld</string>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld</string>
+      </dict>
+    </dict>
     <key>%lld/%lld owned</key>
     <dict>
       <key>NSStringLocalizedFormatKey</key>
@@ -198,6 +225,33 @@
         <string>lld</string>
         <key>other</key>
         <string>%lld</string>
+      </dict>
+    </dict>
+    <key>Data from %lld game(s) (%lld skipped lacking data)</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@games@ adresinden alınan veriler (%#@skipped@)</string>
+      <key>games</key>
+      <dict>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld oyunlar</string>
+        <key>one</key>
+        <string>%lld oyunlar</string>
+      </dict>
+      <key>skipped</key>
+      <dict>
+        <key>one</key>
+        <string>%lld eksik veri atlandı</string>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>%lld eksik veri atlandı</string>
       </dict>
     </dict>
   </dict>

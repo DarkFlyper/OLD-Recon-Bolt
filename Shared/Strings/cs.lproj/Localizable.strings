@@ -175,7 +175,7 @@ Competitive matches after your placements can be identified without their detail
 /* Asset Management */
 "Anything with images will not display correctly." = "Cokoli s obrázky se nezobrazí správně.";
 
-/* No comment provided by engineer. */
+/* Settings: button */
 "App Icon" = "Ikona aplikace";
 
 /* No comment provided by engineer. */
@@ -204,6 +204,9 @@ Competitive matches after your placements can be identified without their detail
 
 /* Win Rate Stats: side name */
 "Attacking" = "Útok";
+
+/* Settings: toggle */
+"Automatically Sign Back In" = "Automatické znovupřihlášení";
 
 /* Store: available currency */
 "Available:" = "K dispozici:";
@@ -267,7 +270,7 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Change Queue" = "Změnit herní mód";
 
-/* Gun Customizer */
+/* Gun Customizer: button */
 "Change Skin" = "Změna Skinu";
 
 /* Store Widget: description */
@@ -380,6 +383,9 @@ Playtime Stats: section */
 
 /* Store */
 "Daily Offers" = "Denní Nabídky";
+
+/* Weapon Reference: stats */
+"Damage" = "Poškození";
 
 /* App Theme */
 "Dark Mode" = "Tmavý Režim";
@@ -674,6 +680,9 @@ Pokud své uživatelské jméno neznáte nebo ho nemáte, můžete jej zjistit n
 /* No comment provided by engineer. */
 "Manage Local Storage" = "Správa Místního Uložiště";
 
+/* Settings: section */
+"Management" = "Správa";
+
 /* About Screen */
 "Many thanks to the volunteer translators from our Discord server who have been hard at working translating the app to new languages!" = "Děkujeme dobrovolným překladatelům z našeho Discord serveru, kteří usilovně pracují na překladu aplikace do nových jazyků!";
 
@@ -767,7 +776,7 @@ Pokud své uživatelské jméno neznáte nebo ho nemáte, můžete jej zjistit n
 /* No comment provided by engineer. */
 "No games played with premade teammates." = "Žádné zápasy hrané v party.";
 
-/* No comment provided by engineer. */
+/* Map Reference */
 "No minimap available!" = "Minimapa není k dispozici!";
 
 /* No comment provided by engineer. */
@@ -849,6 +858,9 @@ Playtime Stats: section */
 
 /* Weapon Reference */
 "Price" = "Cena";
+
+/* Badge applied to buttons that are exclusive to Pro, e.g. in the account settings */
+"Pro" = "Pro";
 
 /* App Icon Name */
 "Pro Blue" = "Pro Modrá";
@@ -1002,9 +1014,6 @@ Login Form: button */
 /* Login Form */
 "Sign In with your Riot account" = "Přihlaste se pomocí Riot účtu";
 
-/* Account Settings: button */
-"Sign Out" = "Odhlásit se";
-
 /* Login Form: button/header */
 "Sign in with Google/Apple/etc." = "Přihlaste se pomocí Google/Apple atd.";
 
@@ -1083,7 +1092,7 @@ Login Form: button */
 /* No comment provided by engineer. */
 "The pro version lets you change the app icon! More icons might be coming in future updates." = "Verze pro umožňuje změnit ikonu aplikace! Další ikony se mohou objevit v budoucích aktualizacích.";
 
-/* No comment provided by engineer. */
+/* Settings: picker */
 "Theme" = "Téma";
 
 /* No comment provided by engineer. */
@@ -1146,6 +1155,9 @@ Na této stránce přejděte na **Přihlášení k účtu Riot** a nastavte si u
 /* placeholder */
 "Unknown Bundle" = "Neznámá Kolekce";
 
+/* placeholder */
+"Unknown Card" = "Neznámá Karta";
+
 /* Store */
 "Unknown Offer" = "Neznámá Nabídka";
 
@@ -1162,6 +1174,9 @@ Na této stránce přejděte na **Přihlášení k účtu Riot** a nastavte si u
 "Unknown Skin" = "Neznámý Skin";
 
 /* placeholder */
+"Unknown Spray" = "Neznámý Sprej";
+
+/* placeholder */
 "Unknown Title" = "Neznámý Titul";
 
 /* Round Details: killed by unknown damage source/type */
@@ -1176,6 +1191,9 @@ Round Details: killed by unknown/unspecified weapon */
 
 /* Missions Box */
 "Unknown contract!" = "Neznámý kontrakt!";
+
+/* Store Bundle Details: should never show, but if Riot adds a new kind of item to a bundle, this would show */
+"Unknown item of type %@" = "Neznámá položka typu %@";
 
 /* No comment provided by engineer. */
 "Unknown mission!" = "Neznámý úkol!";
@@ -1201,7 +1219,7 @@ Round Details: killed by unknown/unspecified weapon */
 /* Reference */
 "Version %@" = "Verze %@";
 
-/* No comment provided by engineer. */
+/* Settings: toggle */
 "Vibrate when Match Found" = "Vibrovat při nalezení zápasu";
 
 /* Pro Store */

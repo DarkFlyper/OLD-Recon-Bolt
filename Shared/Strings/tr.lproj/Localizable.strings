@@ -44,6 +44,9 @@
 /* Shown at the bottom of the expandable playtime list when there are more entries available. */
 "%lld more" = "%lld daha fazla";
 
+/* Weapon Reference: stats */
+"%lld pellets" = "%lld peletler";
+
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
 "%lld to %lld credits" = "%lld %lld kredilerine";
 
@@ -173,7 +176,7 @@ Ancak, yerleştirmelerinizden sonraki rekabetçi eşleşmeler, ayrıntıları ol
 /* Asset Management */
 "Anything with images will not display correctly." = "Resim içeren hiçbir şey düzgün görüntülenmeyecektir.";
 
-/* No comment provided by engineer. */
+/* Settings: button */
 "App Icon" = "Uygulama Simgesi";
 
 /* No comment provided by engineer. */
@@ -202,6 +205,9 @@ Ancak, yerleştirmelerinizden sonraki rekabetçi eşleşmeler, ayrıntıları ol
 
 /* Win Rate Stats: side name */
 "Attacking" = "Saldırı";
+
+/* Settings: toggle */
+"Automatically Sign Back In" = "Otomatik Olarak Tekrar Aç";
 
 /* Store: available currency */
 "Available:" = "Mevcut:";
@@ -262,10 +268,13 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Change Buddy" = "Uğurluğu Değiştir";
 
+/* Settings: button */
+"Change Language" = "Dil";
+
 /* No comment provided by engineer. */
 "Change Queue" = "Oyun Modunu Değiştir";
 
-/* Gun Customizer */
+/* Gun Customizer: button */
 "Change Skin" = "Kaplamayı Değiştir";
 
 /* Store Widget: description */
@@ -379,7 +388,7 @@ Playtime Stats: section */
 /* Store */
 "Daily Offers" = "Günlük Teklifler";
 
-/* No comment provided by engineer. */
+/* Weapon Reference: stats */
 "Damage" = "Hasar";
 
 /* App Theme */
@@ -642,6 +651,9 @@ Weapon Reference: stats */
 "Loadout Delta" = "Yükleme Farkı";
 
 /* No comment provided by engineer. */
+"Loadout Delta is computed as the difference between the average loadout value of players on each team. For example, a loadout delta of +1000 means your team's loadouts were an average of 1000 credits more valuable than the enemy team's in that round." = "Yük Deltası, her takımdaki oyuncuların ortalama yük değeri arasındaki fark olarak hesaplanır. Örneğin, +1000lik bir yükleme deltası, takımınızın yüklemelerinin o turda düşman takımın yüklemelerinden ortalama 1000 kredi daha değerli olduğu anlamına gelir.";
+
+/* No comment provided by engineer. */
 "Loadout not loaded!" = "Ekipmanlar Yüklenemedi!";
 
 /* No comment provided by engineer. */
@@ -671,6 +683,9 @@ Kullanıcı adınızı bilmiyorsanız veya kullanıcı adınız yoksa, bunu [acc
 
 /* No comment provided by engineer. */
 "Manage Local Storage" = "Yerel Depolamayı Yönetme";
+
+/* Settings: section */
+"Management" = "Yönetim";
 
 /* About Screen */
 "Many thanks to the volunteer translators from our Discord server who have been hard at working translating the app to new languages!" = "Uygulamayı yeni dillere çevirmek için yoğun bir şekilde çalışan Discord sunucumuzdaki gönüllü çevirmenlere çok teşekkürler!";
@@ -765,8 +780,14 @@ Kullanıcı adınızı bilmiyorsanız veya kullanıcı adınız yoksa, bunu [acc
 /* No comment provided by engineer. */
 "No games played with premade teammates." = "Grup arkadaşlarıyla hiç oyun oynanmadı.";
 
-/* No comment provided by engineer. */
+/* Map Reference */
 "No minimap available!" = "Minimap mevcut değil!";
+
+/* No comment provided by engineer. */
+"No non-premade players encountered repeatedly. (Un)lucky you!" = "Hazır olmayan oyuncularla tekrar tekrar karşılaşılmadı.";
+
+/* No comment provided by engineer. */
+"Normalize Charts" = "Grafikleri Normalleştirme";
 
 /* Party Box */
 "Not Ready" = "Hazır değil";
@@ -810,6 +831,9 @@ Playtime Stats: section */
 "Overall" = "Genel olarak";
 
 /* No comment provided by engineer. */
+"Overdrive (Neon)" = "Overdrive (Neon)";
+
+/* No comment provided by engineer. */
 "Party" = "Grup";
 
 /* Scoreboard: party letter */
@@ -838,6 +862,9 @@ Playtime Stats: section */
 
 /* Weapon Reference */
 "Price" = "Fiyat";
+
+/* Badge applied to buttons that are exclusive to Pro, e.g. in the account settings */
+"Pro" = "Pro";
 
 /* App Icon Name */
 "Pro Blue" = "Pro Mavi";
@@ -936,6 +963,9 @@ Request Log: title */
 /* No comment provided by engineer. */
 "Retry" = "Yeniden Dene";
 
+/* Round Details: header */
+"Round %lld of %lld" = "Yuvarlak %lld of %lld";
+
 /* Round Details: title */
 "Round Details" = "Tur Ayrıntıları";
 
@@ -970,6 +1000,9 @@ Request Log: title */
 "Shotgun Pellets" = "Av Tüfeği Saçmaları";
 
 /* No comment provided by engineer. */
+"Show Unfetched Matches" = "Eşleşmemiş Eşleşmeleri Göster";
+
+/* No comment provided by engineer. */
 "Show all matches" = "Tüm maçları göster";
 
 /* No comment provided by engineer. */
@@ -986,7 +1019,7 @@ Login Form: button */
 "Sign In with your Riot account" = "Riot hesabınızla oturum açın";
 
 /* Account Settings: button */
-"Sign Out" = "Oturumu kapat";
+"Sign Out of All Accounts" = "Tüm Hesaplardan Çıkış";
 
 /* Login Form: button/header */
 "Sign in with Google/Apple/etc." = "Google/Apple/vb. ile oturum açın.";
@@ -1066,7 +1099,7 @@ Login Form: button */
 /* No comment provided by engineer. */
 "The pro version lets you change the app icon! More icons might be coming in future updates." = "Pro sürüm, uygulama simgesini değiştirmenize izin verir! Gelecek güncellemelerde daha fazla simge gelebilir.";
 
-/* No comment provided by engineer. */
+/* Settings: picker */
 "Theme" = "Tema";
 
 /* No comment provided by engineer. */
@@ -1074,6 +1107,9 @@ Login Form: button */
 
 /* Statistics error for iOS <16 */
 "This feature requires iOS 16 or newer." = "Bu özellik iOS 16 veya daha yenisini gerektirir.";
+
+/* Settings: toggle description */
+"This makes Recon Bolt automatically use your username & password to sign in again if you get signed out. If you have 2-factor authentication enabled, this may fail if it requires a new code, but it still works sometimes." = "Bu, oturumunuz kapatılırsa Recon Bolt'un tekrar oturum açmak için otomatik olarak kullanıcı adınızı ve parolanızı kullanmasını sağlar. 2 faktörlü kimlik doğrulamayı etkinleştirdiyseniz, yeni bir kod gerektiriyorsa bu başarısız olabilir, ancak yine de bazen çalışır.";
 
 /* Stats: match loading */
 "To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "İstatistik toplamak için öncelikle işlenecek maçları yüklememiz gerekir. Özellikle ilk kez indirirken büyük miktarların uzun zaman alabileceğini unutmayın!";
@@ -1099,6 +1135,9 @@ Hit Distribution Stats: region */
 
 /* Missions Box: header, shown when a mission is not daily or weekly (should not happen unless Riot changes something) */
 "Uncategorized Missions" = "Kategorize Edilmemiş Görevler";
+
+/* Shown when a match does not match the filter and its details have not been fetched. */
+"Unfetched" = "Getirilmedi";
 
 /* Hit Distribution Stats: footnote */
 "Unfortunately, Valorant doesn't store information about which weapon was used for each hit. All we get is the weapon you started the round with and what weapon you used for each kill. Recon Bolt guesses the weapon involved in each damage based on this information, but it cannot be perfect (and neither can any other tracker)." = "Ne yazık ki Valorant her vuruşta hangi silahın kullanıldığı bilgisini saklamıyor. Elimizdeki tek şey, tura hangi silahla başladığınız ve her öldürme için hangi silahı kullandığınız. Recon Bolt bu bilgilere dayanarak her hasarda kullanılan silahı tahmin eder, ancak mükemmel olamaz (ve başka herhangi bir izleyici de olamaz).";
@@ -1190,7 +1229,7 @@ Round Details: killed by unknown/unspecified weapon */
 /* Reference */
 "Version %@" = "Versiyon %@";
 
-/* No comment provided by engineer. */
+/* Settings: toggle */
 "Vibrate when Match Found" = "Maç Bulunduğunda Titret";
 
 /* Pro Store */
@@ -1198,6 +1237,9 @@ Round Details: killed by unknown/unspecified weapon */
 
 /* No comment provided by engineer. */
 "View Full Profile" = "Tam Profili Görüntüle";
+
+/* Gun Customizer: button */
+"View Skin Details" = "Cilt Detaylarını Görüntüle";
 
 /* Match List */
 "View Stats" = "İstatistikleri Görüntüle";
