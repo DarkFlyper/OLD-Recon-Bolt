@@ -283,6 +283,9 @@ Playtime Stats: section */
 /* Store */
 "Daily Offers" = "Ofertas diarias";
 
+/* No comment provided by engineer. */
+"Damage" = "Daño";
+
 /* App Theme */
 "Dark Mode" = "Modo oscuro";
 
@@ -847,6 +850,9 @@ En ese sitio, ve a **Inicio de sesión de cuenta de Riot** y establece un nombre
 /* placeholder */
 "Unknown Bundle" = "Paquete desconocido";
 
+/* placeholder */
+"Unknown Card" = "Tarjeta desconocida";
+
 /* Store */
 "Unknown Offer" = "Oferta desconocida";
 
@@ -861,6 +867,9 @@ En ese sitio, ve a **Inicio de sesión de cuenta de Riot** y establece un nombre
 
 /* placeholder */
 "Unknown Skin" = "Diseño desconocido";
+
+/* placeholder */
+"Unknown Spray" = "Grafiti desconocido";
 
 /* placeholder */
 "Unknown Title" = "Título desconocido";
@@ -954,7 +963,7 @@ Round Details: killed by unknown/unspecified weapon */
 "Your session has expired! Recon Bolt has tried to refresh it for you, but needs 2FA confirmation." = "¡Tu sesión ha expirado! Recon Bolt ha intentado actualizarla por ti, pero necesita la confirmación de 2FA.";
 
 /* No comment provided by engineer. */
-"iOS is a bit finnicky about this, so widgets may not refresh right away—feel free to restart if this doesn't help!" = "¡iOS es un poco quisquilloso sobre esto, es posible que los Widgets no se actualicen de inmediato; no dudes en reiniciar si esto no ayuda!";
+"iOS is a bit finnicky about this, so widgets may not refresh right away—feel free to reboot your device if this doesn't help!" = "¡iOS es un poco quisquilloso sobre esto, es posible que los Widgets no se actualicen de inmediato; no dudes en reiniciar si esto no ayuda!";
 
 /* Loadout: spray slot */
 "mid-round" = "mitad de ronda";
