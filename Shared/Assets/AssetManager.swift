@@ -9,24 +9,39 @@ final class AssetManager: ObservableObject {
 	@Published private(set) var error: Error?
 	private var isDownloading = false
 	
-	convenience init() {
-		self.init(assets: Self.stored)
+	var languageOverride: String? {
+		storage.languageOverride
+	}
+	
+	@Published private var storage = Storage()
+	
+	init() {
+		let storage = Storage()
+		self.storage = storage
+		self.assets = storage.assets
+		
+		Task { await tryLoadAssets() }
 	}
 	
 	private init(assets: AssetCollection?) {
-		_assets = .init(wrappedValue: assets)
+		self.assets = assets
 		
-		Task { await loadAssets() }
+		Task { await tryLoadAssets() }
 	}
 	
-	func loadAssets() async {
+	func setLanguageOverride(to language: String?) async {
+		storage.languageOverride = language
+		await tryLoadAssets()
+	}
+	
+	func tryLoadAssets() async {
 		guard !isDownloading else { return }
 		isDownloading = true
 		defer { isDownloading = false }
 		
 		self.error = nil
 		do {
-			assets = try await Self.loadAssets()
+			assets = try await loadAssets()
 		} catch {
 			self.error = error
 		}
@@ -35,7 +50,7 @@ final class AssetManager: ObservableObject {
 	func reset() async {
 		error = nil
 		assets = nil
-		Self.stored = nil
+		storage.assets = nil
 	}
 	
 	#if DEBUG
@@ -43,19 +58,27 @@ final class AssetManager: ObservableObject {
 	static let mockEmpty = AssetManager(assets: nil)
 	#endif
 	
-	static func loadAssets() async throws -> AssetCollection {
-		let client = AssetClient.shared
+	private func loadAssets() async throws -> AssetCollection {
+		let language = languageOverride
+		?? Bundle.preferredLocalizations(from: Locale.valorantLanguages).first
+		?? "en-US"
+		let client = AssetClient(language: language)
+		
 		let version = try await client.getCurrentVersion()
-		if let stored, stored.version == version, stored.language == client.language {
+		if let stored = storage.assets, stored.version == version, stored.language == language {
 			return stored
 		} else {
 			return try await client.collectAssets(for: version)
-			<- { Self.stored = $0 }
+			<- { storage.assets = $0 }
 		}
 	}
 	
-	@UserDefault("AssetManager.stored")
-	fileprivate static var stored: AssetCollection?
+	private struct Storage {
+		@UserDefault("AssetManager.stored", defaults: .shared)
+		var assets: AssetCollection?
+		@UserDefault("AssetManager.languageOverride", defaults: .shared)
+		var languageOverride: String?
+	}
 }
 
 extension AssetCollection: DefaultsValueConvertible {}

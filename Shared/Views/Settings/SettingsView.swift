@@ -84,6 +84,14 @@ struct SettingsView: View {
 			}
 		}
 		
+		Toggle(isOn: $settings.vibrateOnMatchFound) {
+			Label {
+				Text("Vibrate when Match Found", comment: "Settings: toggle")
+			} icon: {
+				Image(systemName: "bell")
+			}
+		}
+		
 		Link(destination: URL(string: UIApplication.openSettingsURLString)!) {
 			NavigationLink {} label: { // i just want the chevron lol
 				Label {
@@ -98,14 +106,6 @@ struct SettingsView: View {
 				}
 			}
 			.tint(.primary)
-		}
-		
-		Toggle(isOn: $settings.vibrateOnMatchFound) {
-			Label {
-				Text("Vibrate when Match Found", comment: "Settings: toggle")
-			} icon: {
-				Image(systemName: "bell")
-			}
 		}
 	}
 }

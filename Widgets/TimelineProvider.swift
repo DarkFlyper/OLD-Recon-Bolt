@@ -62,7 +62,7 @@ extension FetchingIntentTimelineProvider {
 				throw WidgetError.needProVersion
 			}
 			
-			await Managers.assets.loadAssets()
+			await Managers.assets.tryLoadAssets()
 			
 			let accountID = try configuration.accountID()
 			link.account = accountID

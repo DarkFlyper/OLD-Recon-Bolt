@@ -10,9 +10,25 @@
 			<key>Type</key>
 			<string>PSTitleValueSpecifier</string>
 			<key>Title</key>
+			<string>Asset Language Explanation</string>
+			<key>Key</key>
+			<string>Asset Language Explanation</string>
+			<key>DefaultValue</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>Help</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTitleValueSpecifier</string>
+			<key>Title</key>
 			<string>Language Explanation</string>
 			<key>Key</key>
-			<string>explanation</string>
+			<string>Language Explanation</string>
 			<key>DefaultValue</key>
 			<string></string>
 		</dict>

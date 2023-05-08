@@ -776,6 +776,9 @@ If you don't know your username or don't have one, you can fix that at [account.
 /* Stats: error details */
 "Match" = "Match";
 
+/* Asset Management: option to match assets language to app language */
+"Match App Language" = "Match App Language";
+
 /* Match Details: title */
 "Match Details" = "Match Details";
 
@@ -1063,6 +1066,9 @@ Request Log: title */
 
 /* Bookmark/Player List: section */
 "Search" = "Search";
+
+/* Asset Management: language picker title */
+"Select Language" = "Select Language";
 
 /* Hit Distribution Stats: error */
 "Select more matches to see data on hit distribution. Deathmatch, Escalation, and other modes don't provide the necessary information." = "Select more matches to see data on hit distribution. Deathmatch, Escalation, and other modes don't provide the necessary information.";

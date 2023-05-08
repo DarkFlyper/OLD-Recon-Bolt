@@ -3,13 +3,9 @@ import Protoquest
 import HandyOperators
 
 struct AssetClient {
-	static let shared = Self(
-		language: Bundle.preferredLocalizations(from: Locale.valorantLanguages).first ?? "en-US"
-	)
-	
 	let baseURL = URL(string: "https://valorant-api.com")!
 	
-	let language: String
+	var language: String
 	let networkLayer: Protolayer
 	
 	private let shouldTrace = true
