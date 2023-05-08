@@ -29,6 +29,9 @@
 /* No comment provided by engineer. */
 "%lld RR" = "%lld ĐXH";
 
+/* Weapon Reference: price, always at least 150 */
+"%lld credits" = "%lld credits";
+
 /* Storage Management */
 "%lld from other players" = "%lld từ những người chơi khác";
 
@@ -136,6 +139,12 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Agent Select" = "Chọn đặc vụ";
 
+/* Contract Picker */
+"Agent Unlockable" = "Đặc vụ có thể mở khoá";
+
+/* Contract Picker */
+"Agent Unlocked" = "Đặc vụ đã mở khoá";
+
 /* Statistics filter: button */
 "Agents" = "Đặc vụ";
 
@@ -196,6 +205,9 @@ Competitive matches after your placements can be identified without their detail
 /* Win Rate Stats: side name */
 "Attacking" = "Tấn công";
 
+/* Settings: toggle */
+"Automatically Sign Back In" = "Tự động đăng nhập lại";
+
 /* Store: available currency */
 "Available:" = "Khả dụng:";
 
@@ -251,6 +263,9 @@ Playtime Stats: section */
 
 /* No comment provided by engineer. */
 "Change Buddy" = "Đổi phụ kiện";
+
+/* Settings: button */
+"Change Language" = "Thay đổi ngôn ngữ";
 
 /* No comment provided by engineer. */
 "Change Queue" = "Đổi hàng chờ";
