@@ -1,0 +1,10 @@
+/* Shown in the iOS settings, where users are guided when trying to change the app language. */
+"Asset Language Explanation" = "Jika Anda ingin menggunakan bahasa yang berbeda dengan App Interface dan konten/aset game, Anda dapat mengubahnya di dalam aplikasi di Pengaturan Lanjutan > Kelola Aset -> Bahasa.";
+
+/* Shown in the iOS settings, where users are guided when trying to change the app language. This one is a section header. */
+"Help" = "Bantuan";
+
+/* Shown in the iOS settings, where users are guided when trying to change the app language. */
+"Language Explanation" = "Tidak dapat menemukan pengaturan bahasa? iOS hanya memungkinkan Anda menyesuaikan bahasa aplikasi jika Anda telah mengonfigurasi bahasa yang Anda mau lebih dari satu.
+
+Untuk mengubahnya, buka Umum -> Bahasa & Wilayah dan tambahkan bahasa baru (misalnya Bahasa Inggris) dibagian bawah daftar list.";
