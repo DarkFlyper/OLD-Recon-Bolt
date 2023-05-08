@@ -1,0 +1,9 @@
+/* Shown in the iOS settings, where users are guided when trying to change the app language. */
+"Asset Language Explanation" = "إذا كنت تريد استخدام لغة مختلفة لواجهة التطبيق ومحتوى / أصول اللعبة ، فيمكنك تغيير ذلك في التطبيق ضمن الإعدادات المتقدمة> إدارة الموارد > اللغة.";
+
+/* Shown in the iOS settings, where users are guided when trying to change the app language. This one is a section header. */
+"Help" = "ساعدني";
+
+/* Shown in the iOS settings, where users are guided when trying to change the app language. */
+"Language Explanation" = "لا يمكنك العثور على إعداد اللغة؟ يتيح لك iOS تخصيص لغة التطبيق فقط إذا كانت لديك اكثر من لغة واحدة مفضلة.
+لتغيير ذلك ، اذهب إلى عام> اللغة والمنطقة وأضف لغة جديدة (مثل الإنجليزية) إلى أسفل القائمة.";
