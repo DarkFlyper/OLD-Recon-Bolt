@@ -11,6 +11,12 @@
 /* used throughout the app to format percentages—placeholder is replaced by a number */
 "%@%%" = "%@%%";
 
+/* Weapon Reference: time in seconds (with decimal digits) */
+"%@s" = "%@s";
+
+/* Weapon Reference: stats */
+"%@°" = "%@°";
+
 /* Missions Box: always at least 3 */
 "%lld Future Weeklies" = "%lld Próximas semanales";
 
@@ -19,6 +25,12 @@
 
 /* No comment provided by engineer. */
 "%lld RR" = "%lld RR";
+
+/* Weapon Reference: stats */
+"%lld bullets" = "%lld balas";
+
+/* Weapon Reference: price, always at least 150 */
+"%lld credits" = "%lld créditos";
 
 /* Storage Management */
 "%lld from other players" = "%lld de otros jugadores";
@@ -29,8 +41,32 @@
 /* Hit Distribution Stats: hit count */
 "%lld hits" = "%lld disparos";
 
+/* Shown at the bottom of the expandable playtime list when there are more entries available. */
+"%lld more" = "%lld más";
+
+/* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
+"%lld to %lld credits" = "%lld a %lld créditos";
+
+/* Weapon Reference: stats: damage range */
+"%lld – %lldm" = "%lld - %lldm";
+
+/* No comment provided by engineer. */
+"%lld%%" = "%lld%%";
+
+/* No comment provided by engineer. */
+"%lld/%lld" = "%lld/%lld";
+
 /* Pro Features List */
 "(You can switch between available icons at any time.)" = "(Puedes cambiar entre los iconos disponibles en cada momento.)";
+
+/* No comment provided by engineer. */
+"+%lld XP" = "+%lld XP";
+
+/* Missions Widget: how many more weeklies are queued up after the current set */
+"+%lld queued" = "+%lld en cola";
+
+/* Store: night market discount */
+"-%lld%%" = "-%lld%%";
 
 /* No comment provided by engineer. */
 "2-Factor Authentication" = "Autentificación en 2 pasos";
@@ -40,6 +76,14 @@
 
 /* No comment provided by engineer. */
 "A 2FA code has been sent to your email address %@" = "El código de verificación en 2 pasos se ha enviado a tu correo %@";
+
+/* Match List Filter */
+"A match's queue is unknown until its details are fetched (by tapping it or performing the swipe action).
+Competitive matches after your placements can be identified without their details, however." = "La cola de una partida es desconocida hasta que se obtienen sus detalles (tocándola o deslizando)
+Sin embargo, las coincidencias competitivas después de tus colocaciones pueden identificarse sin sus detalles.";
+
+/* No comment provided by engineer. */
+"AFK: %lld" = "AFK: %lld";
 
 /* Settings: section */
 "About" = "Sobre";
@@ -85,6 +129,9 @@
 
 /* Statistics filter: button */
 "Agents" = "Agentes";
+
+/* Stats: match loading */
+"All %lld" = "Todos %lld";
 
 /* No comment provided by engineer. */
 "All Maps" = "Todos los mapas";
@@ -158,6 +205,9 @@ Playtime Stats: section */
 "By Map" = "Por mapa";
 
 /* Playtime Stats: section/title */
+"By Non-Premade Player" = "Por Jugador sin equipo";
+
+/* Playtime Stats: section/title */
 "By Premade Teammate" = "Por compañero en el equipo";
 
 /* Playtime Stats: section */
@@ -181,8 +231,14 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Career Summary" = "Resumen de carrera";
 
+/* Weapon Reference */
+"Category" = "Categoría";
+
 /* No comment provided by engineer. */
 "Change Buddy" = "Cambiar amuleto";
+
+/* Settings: button */
+"Change Language" = "Cambiar idioma";
 
 /* No comment provided by engineer. */
 "Change Queue" = "Cambiar cola";
@@ -217,8 +273,14 @@ Playtime Stats: section */
 /* Contract Picker: title */
 "Choose a Contract" = "Elige un contrato";
 
+/* Buddy Picker: alert shown when both instances of a buddy are in use */
+"Choose a weapon to take %@ from." = "Elige un arma para tomar %@.";
+
 /* Storage Management: button to delete all entries of a certain kind */
 "Clear All" = "Borrar todo";
+
+/* Skin Details: section */
+"Color Variants" = "Variantes de color";
 
 /* Contract Picker */
 "Completed" = "Completado";
@@ -229,8 +291,14 @@ Playtime Stats: section */
 /* Missions Box */
 "Contract complete!" = "¡Contrato completado!";
 
+/* Request Log: button to copy the request's body/contents (accessibility label) */
+"Copy Body" = "Copiar cuerpo";
+
 /* Stats: error details: accessibility label */
 "Copy Error" = "Copiar error";
+
+/* No comment provided by engineer. */
+"Copy Error Details" = "Copiar detalles del error";
 
 /* No comment provided by engineer. */
 "Copy Match ID" = "Copiar ID de partida";
@@ -295,6 +363,9 @@ Playtime Stats: section */
 /* App Theme */
 "Dark Mode" = "Modo oscuro";
 
+/* Stats: match loading */
+"Data going back to %@" = "Los datos vuelven a %@";
+
 /* No comment provided by engineer. */
 "Day" = "Día";
 
@@ -337,6 +408,24 @@ Playtime Stats: section */
 /* Request Log
 Stats: error details */
 "Error" = "Error";
+
+/* No comment provided by engineer. */
+"Error Details" = "Detalles del error";
+
+/* Asset Management */
+"Error downloading assets!" = "¡Error al descargar los archivos!";
+
+/* Request Log: title for an exchange */
+"Exchange" = "Intercambia";
+
+/* Request Log: title for detailed view of request body/contents */
+"Exchange Body" = "Cuerpo";
+
+/* Statistics Filter: button to exclude all agents */
+"Exclude All Agents" = "Excluir todo";
+
+/* Statistics Filter: button to exclude all queues */
+"Exclude All Queues" = "Excluir todo";
 
 /* Pro Features List */
 "Exclusive App Icon" = "Icono de la aplicación exclusive";
@@ -400,6 +489,9 @@ EL REPORTE DEL BUG VA AQUÍ
 Weapon Reference: stats */
 "Head" = "Cabeza";
 
+/* No comment provided by engineer. */
+"Headhunter (Chamber)" = "Cazador de cabezas (Chamber)";
+
 /* About Screen */
 "Hi! I'm Julian Dunskus, and I made this app.
 
@@ -429,6 +521,9 @@ Si has encontrado un error o tienes algún comentario, siempre estoy encantado d
 
 /* No comment provided by engineer. */
 "Identities" = "Identidades";
+
+/* Pro Features List */
+"If you have accounts in multiple regions to play with friends around the world, this is the feature for you!" = "Si tienes cuentas en varias regiones para jugar con amigos de todo el mundo, ¡esta es tu función!";
 
 /* No comment provided by engineer. */
 "Image failed to load!" = "¡Error al cargar la imagen!";
