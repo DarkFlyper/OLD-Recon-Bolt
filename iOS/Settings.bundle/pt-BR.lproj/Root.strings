@@ -3,3 +3,8 @@
 
 /* Shown in the iOS settings, where users are guided when trying to change the app language. This one is a section header. */
 "Help" = "Ajuda";
+
+/* Shown in the iOS settings, where users are guided when trying to change the app language. */
+"Language Explanation" = "Não consegue encontrar a configuração de idioma? O iOS só permite personalizar o idioma de um aplicativo se você tiver configurado suas preferências de idioma com mais de uma entrada.
+
+Para fazer essa alteração, acesse Geral > Idioma e Região e adicione um novo idioma (por exemplo, Inglês) no final da lista.";
