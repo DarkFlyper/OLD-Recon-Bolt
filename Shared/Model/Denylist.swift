@@ -1,6 +1,8 @@
 import Foundation
 import CryptoKit
 import Algorithms
+
+#if canImport(ValorantAPI)
 import ValorantAPI
 
 struct Denylist {
@@ -13,6 +15,7 @@ struct Denylist {
 		return !entries.contains { $0.matches(raw) }
 	}
 }
+#endif
 
 extension Sequence<UInt8> {
 	func hexEncoded() -> String {

@@ -1,11 +1,7 @@
 import Foundation
-import ValorantAPI
 
-let id = Player.ID()
-let toHash = id.rawID.description
+let toHash = "asdf"
 print(toHash)
-
-print(Denylist.allows(id))
 
 let hash = SaltedHash(salting: toHash)
 print(hash)

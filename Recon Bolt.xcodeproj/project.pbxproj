@@ -46,7 +46,6 @@
 		B920ED302A07CE28001213D0 /* Denylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = B920ED2E2A07CE28001213D0 /* Denylist.swift */; };
 		B920ED312A07CE57001213D0 /* Denylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = B920ED2E2A07CE28001213D0 /* Denylist.swift */; };
 		B920ED322A07D39E001213D0 /* Denylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = B920ED2E2A07CE28001213D0 /* Denylist.swift */; };
-		B920ED342A08F26D001213D0 /* ValorantAPI in Frameworks */ = {isa = PBXBuildFile; productRef = B920ED332A08F26D001213D0 /* ValorantAPI */; };
 		B9224D852921E8700056224F /* TransparentNavigationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9224D842921E8700056224F /* TransparentNavigationLink.swift */; };
 		B927614B266284B700CF2100 /* PlayerHighlightInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B927614A266284B700CF2100 /* PlayerHighlightInfo.swift */; };
 		B927719C284DBA1D00F25FC3 /* SprayAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B927719B284DBA1D00F25FC3 /* SprayAssets.swift */; };
@@ -754,7 +753,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B920ED342A08F26D001213D0 /* ValorantAPI in Frameworks */,
 				B920ED292A07C7ED001213D0 /* Algorithms in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1357,7 +1355,6 @@
 			name = "Denylist Hasher";
 			packageProductDependencies = (
 				B920ED282A07C7ED001213D0 /* Algorithms */,
-				B920ED332A08F26D001213D0 /* ValorantAPI */,
 			);
 			productName = "Denylist Hasher";
 			productReference = B920ED212A07C2A8001213D0 /* Denylist Hasher */;
@@ -2674,10 +2671,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B9EE6E732659D6DF007E28B5 /* XCRemoteSwiftPackageReference "swift-algorithms" */;
 			productName = Algorithms;
-		};
-		B920ED332A08F26D001213D0 /* ValorantAPI */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = ValorantAPI;
 		};
 		B932A11127912882009FAEE5 /* HandyOperators */ = {
 			isa = XCSwiftPackageProductDependency;
