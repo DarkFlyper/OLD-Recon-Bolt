@@ -211,18 +211,18 @@ private struct ImageManagerProvider: ViewModifier {
 extension AssetImage {
 	/// - returns: whether a new image was downloaded (false means old image is still correct)
 	func ensureDownloaded() async throws -> Bool {
-		let client = AssetClient.shared
+		let client = AssetImageClient.shared
 		
 		// don't download images that we already have (assuming size will always change when the image changes)
 		if let existingSize = fileManager.sizeOfItem(atPath: localURL.path) {
 			print("\(url) found existing size \(existingSize)")
-			let newSize = try await client.send(ImageSizeRequest(imageURL: url))
+			let newSize = try await client.sizeOfImage(at: url)
 			guard newSize != existingSize else { return false }
 		} else {
 			assert(!fileManager.fileExists(atPath: localURL.path))
 		}
 		
-		let imageData = try await client.send(ImageDownloadRequest(imageURL: url))
+		let imageData = try await client.imageData(at: url)
 		try fileManager.createDirectory(
 			at: localURL.deletingLastPathComponent(),
 			withIntermediateDirectories: true
@@ -239,26 +239,22 @@ extension FileManager {
 	}
 }
 
-private struct ImageDownloadRequest: GetDataRequest {
-	var imageURL: URL
+struct AssetImageClient {
+	static let shared = Self()
 	
-	var baseURLOverride: URL? {
-		imageURL
-	}
-}
-
-// TODO: use a hash instead
-private struct ImageSizeRequest: GetRequest {
-	var imageURL: URL
+	let networkLayer = Protolayer.urlSession()
 	
-	var baseURLOverride: URL? {
-		imageURL
+	// TODO: use a hash instead
+	func sizeOfImage(at url: URL) async throws -> Int {
+		let request = URLRequest(url: url) <- {
+			$0.httpMethod = "HEAD"
+		}
+		let response = try await networkLayer.send(request)
+		return .init(response.httpMetadata!.expectedContentLength)
 	}
 	
-	var httpMethod: String { "HEAD" }
-	
-	func decodeResponse(from raw: Protoresponse) throws -> Int {
-		.init(raw.httpMetadata!.expectedContentLength)
+	func imageData(at url: URL) async throws -> Data {
+		try await networkLayer.send(URLRequest(url: url)).body
 	}
 }
 
