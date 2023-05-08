@@ -698,6 +698,9 @@ Jika Anda tidak tahu nama pengguna Anda atau belum memilikinya, Anda dapat mempe
 /* Stats: error details */
 "Match" = "Pertandingan";
 
+/* Asset Management: option to match assets language to app language */
+"Match App Language" = "Sesuaikan Bahasa Aplikasi";
+
 /* Match Details: title */
 "Match Details" = "Detail Pertandingan";
 
@@ -979,6 +982,9 @@ Request Log: title */
 
 /* Bookmark/Player List: section */
 "Search" = "Pencarian";
+
+/* Asset Management: language picker title */
+"Select Language" = "Pilih Bahasa";
 
 /* Hit Distribution Stats: error */
 "Select more matches to see data on hit distribution. Deathmatch, Escalation, and other modes don't provide the necessary information." = "Pilih lebih banyak pertandingan untuk melihat data tentang distribusi hit. Deathmatch, Escalation, dan mode lainnya yang tidak memberikan informasi yang diperlukan.";

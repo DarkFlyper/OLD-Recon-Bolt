@@ -140,7 +140,7 @@ Competitive matches after your placements can be identified without their detail
 "Add multiple accounts and seamlessly switch between them at any time." = "Füge mehrere Konten hinzu, um jederzeit dazwischen zu wechseln.";
 
 /* No comment provided by engineer. */
-"Advanced Settings" = "Fortgeschrittene Einstellungen";
+"Advanced Settings" = "Erweiterte Einstellungen";
 
 /* Pro Store */
 "Advanced Stats" = "Ausführliche Statistiken";
@@ -707,6 +707,9 @@ Wenn du deinen Benutzernamen nicht kennst oder keinen hast, kannst du das unter 
 /* Stats: error details */
 "Match" = "Spiel";
 
+/* Asset Management: option to match assets language to app language */
+"Match App Language" = "App-Sprache verwenden";
+
 /* Match Details: title */
 "Match Details" = "Spieldetails";
 
@@ -988,6 +991,9 @@ Request Log: title */
 
 /* Bookmark/Player List: section */
 "Search" = "Suche";
+
+/* Asset Management: language picker title */
+"Select Language" = "Sprache auswählen";
 
 /* Hit Distribution Stats: error */
 "Select more matches to see data on hit distribution. Deathmatch, Escalation, and other modes don't provide the necessary information." = "Wähle mehr Spiele aus, um Daten zur Treffer-Verteilung einzusehen. Deathmatch, Eskalation und andere Modi bieten nicht die nötigen Daten.";

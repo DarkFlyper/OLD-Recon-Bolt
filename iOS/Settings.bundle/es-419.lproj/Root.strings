@@ -1,0 +1,10 @@
+/* Shown in the iOS settings, where users are guided when trying to change the app language. */
+"Asset Language Explanation" = "Si quieres utilizar otro idioma para la interfaz de la aplicación y sus contenidos, puedes hacerlo yendo en Ajustes avanzados -> Gestionar archivos -> Idioma.";
+
+/* Shown in the iOS settings, where users are guided when trying to change the app language. This one is a section header. */
+"Help" = "Ayuda";
+
+/* Shown in the iOS settings, where users are guided when trying to change the app language. */
+"Language Explanation" = "¿No encuentras el ajuste de idioma? iOS solo te permite personalizar el idioma de una app si has configurado tus idiomas preferidos con más de una entrada.
+
+Para cambiar esto, ve a General -> Idioma y región y añade un nuevo idioma (por ejemplo, inglés) al final de la lista.";
