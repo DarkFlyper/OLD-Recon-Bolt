@@ -46,6 +46,7 @@
 		B920ED302A07CE28001213D0 /* Denylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = B920ED2E2A07CE28001213D0 /* Denylist.swift */; };
 		B920ED312A07CE57001213D0 /* Denylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = B920ED2E2A07CE28001213D0 /* Denylist.swift */; };
 		B920ED322A07D39E001213D0 /* Denylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = B920ED2E2A07CE28001213D0 /* Denylist.swift */; };
+		B920ED372A08FA12001213D0 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B920ED352A08F803001213D0 /* Settings.bundle */; };
 		B9224D852921E8700056224F /* TransparentNavigationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9224D842921E8700056224F /* TransparentNavigationLink.swift */; };
 		B927614B266284B700CF2100 /* PlayerHighlightInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B927614A266284B700CF2100 /* PlayerHighlightInfo.swift */; };
 		B927719C284DBA1D00F25FC3 /* SprayAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B927719B284DBA1D00F25FC3 /* SprayAssets.swift */; };
@@ -429,6 +430,7 @@
 		B920ED212A07C2A8001213D0 /* Denylist Hasher */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Denylist Hasher"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B920ED232A07C2A8001213D0 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		B920ED2E2A07CE28001213D0 /* Denylist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Denylist.swift; sourceTree = "<group>"; };
+		B920ED352A08F803001213D0 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		B9224D842921E8700056224F /* TransparentNavigationLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransparentNavigationLink.swift; sourceTree = "<group>"; };
 		B927614A266284B700CF2100 /* PlayerHighlightInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerHighlightInfo.swift; sourceTree = "<group>"; };
 		B927719B284DBA1D00F25FC3 /* SprayAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprayAssets.swift; sourceTree = "<group>"; };
@@ -1025,6 +1027,7 @@
 			children = (
 				B941B64D25A5BC8A00F675C1 /* Info.plist */,
 				B967A1B829E30AB600AB4E92 /* InfoPlist.strings */,
+				B920ED352A08F803001213D0 /* Settings.bundle */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -1568,6 +1571,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B920ED372A08FA12001213D0 /* Settings.bundle in Resources */,
 				B997FF2929D2692900BB09FF /* example_config.json in Resources */,
 				B9F7A53D27DC5DAF00636DAF /* example_storefront.json in Resources */,
 				B90CB17926ACD76500804C27 /* Local in Resources */,

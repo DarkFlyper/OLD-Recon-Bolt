@@ -1,0 +1,5 @@
+/* Shown in the iOS settings, where users are guided when trying to change the app language. */
+"Language Explanation" = "Can't find the language setting? iOS only lets you customize an app's language if you've configured your preferred languages with more than one entry.
+
+To change this, go into General > Language & Region and add a new language (e.g. English) to the bottom of the list.";
+
