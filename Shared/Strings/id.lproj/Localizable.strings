@@ -205,6 +205,9 @@ Competitive matches after your placements can be identified without their detail
 /* Win Rate Stats: side name */
 "Attacking" = "Penyerang";
 
+/* Settings: toggle */
+"Automatically Sign Back In" = "Masuk Kembali secara otomatis";
+
 /* Store: available currency */
 "Available:" = "Tersedia:";
 
@@ -263,6 +266,9 @@ Playtime Stats: section */
 
 /* No comment provided by engineer. */
 "Change Buddy" = "Ubah Buddy";
+
+/* Settings: button */
+"Change Language" = "Ubah Bahasa";
 
 /* No comment provided by engineer. */
 "Change Queue" = "Ubah Mode";
@@ -380,6 +386,9 @@ Playtime Stats: section */
 
 /* Store */
 "Daily Offers" = "Penawaran Harian";
+
+/* Weapon Reference: stats */
+"Damage" = "Kerusakan";
 
 /* App Theme */
 "Dark Mode" = "Mode Gelap";
@@ -674,6 +683,9 @@ Jika Anda tidak tahu nama pengguna Anda atau belum memilikinya, Anda dapat mempe
 /* No comment provided by engineer. */
 "Manage Local Storage" = "Mengelola Penyimpanan Lokal";
 
+/* Settings: section */
+"Management" = "Manajemen";
+
 /* About Screen */
 "Many thanks to the volunteer translators from our Discord server who have been hard at working translating the app to new languages!" = "Terima kasih kepada para penerjemah volunteer dari server Discord kami yang telah bekerja keras menerjemahkan aplikasi ini banyak bahasa-bahasa yang ada!";
 
@@ -850,6 +862,9 @@ Playtime Stats: section */
 /* Weapon Reference */
 "Price" = "Harga";
 
+/* Badge applied to buttons that are exclusive to Pro, e.g. in the account settings */
+"Pro" = "Pro";
+
 /* App Icon Name */
 "Pro Blue" = "Pro Blue";
 
@@ -1002,6 +1017,9 @@ Login Form: button */
 /* Login Form */
 "Sign In with your Riot account" = "Masuk menggunakan akun Riot Anda";
 
+/* Account Settings: button */
+"Sign Out of All Accounts" = "Keluar dari Semua Akun";
+
 /* Login Form: button/header */
 "Sign in with Google/Apple/etc." = "Masuk menggunakan Google/Apple/dll.";
 
@@ -1089,6 +1107,9 @@ Login Form: button */
 /* Statistics error for iOS <16 */
 "This feature requires iOS 16 or newer." = "Fitur ini memerlukan setidaknya iOS 16 atau yang lebih baru.";
 
+/* Settings: toggle description */
+"This makes Recon Bolt automatically use your username & password to sign in again if you get signed out. If you have 2-factor authentication enabled, this may fail if it requires a new code, but it still works sometimes." = "Recon Bolt secara otomatis menggunakan username & kata sandi Anda untuk masuk kembali jika keluar. Jika Anda menggunakan autentikasi 2 faktor, ini mungkin akan gagal jika memerlukan kode verifikasi terbaru. Tetapi kadang-kadang masih dapat berfungsi.";
+
 /* Stats: match loading */
 "To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "Untuk mengumpulkan statistik, kita perlu memuat pertandingan untuk diproses. Perhatikan jika jumlah yang besar dapat memakan waktu lama terutama jika kita mengunduh untuk pertama kalinya!";
 
@@ -1143,6 +1164,9 @@ Di situs tersebut, buka **Masuk Akun Riot** dan tentukan nama pengguna dan kata 
 /* placeholder */
 "Unknown Bundle" = "Bundle tidak diketahui";
 
+/* placeholder */
+"Unknown Card" = "Kartu tidak diketahui";
+
 /* Store */
 "Unknown Offer" = "Penawaran tidak diketahui";
 
@@ -1159,6 +1183,9 @@ Di situs tersebut, buka **Masuk Akun Riot** dan tentukan nama pengguna dan kata 
 "Unknown Skin" = "Skin tidak diketahui";
 
 /* placeholder */
+"Unknown Spray" = "Grafiti tidak diketahui";
+
+/* placeholder */
 "Unknown Title" = "Title tidak diketahui";
 
 /* Round Details: killed by unknown damage source/type */
@@ -1173,6 +1200,9 @@ Round Details: killed by unknown/unspecified weapon */
 
 /* Missions Box */
 "Unknown contract!" = "Kontrak tidak diketahui!";
+
+/* Store Bundle Details: should never show, but if Riot adds a new kind of item to a bundle, this would show */
+"Unknown item of type %@" = "Jenis %@ Tidak diketahui";
 
 /* No comment provided by engineer. */
 "Unknown mission!" = "Misi tidak diketahui!";
@@ -1206,6 +1236,9 @@ Round Details: killed by unknown/unspecified weapon */
 
 /* No comment provided by engineer. */
 "View Full Profile" = "Lihat profil lengkap";
+
+/* Gun Customizer: button */
+"View Skin Details" = "Lihat Detail Skin";
 
 /* Match List */
 "View Stats" = "Lihat Statistik";
