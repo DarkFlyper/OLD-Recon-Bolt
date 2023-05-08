@@ -30,10 +30,10 @@
 "%lld RR" = "%lld KP";
 
 /* Weapon Reference: stats */
-"%lld bullets" = "%lld Mermiler";
+"%lld bullets" = "%lld Mermi";
 
 /* Weapon Reference: price, always at least 150 */
-"%lld credits" = "%lld krediler";
+"%lld credits" = "%lld Kredi";
 
 /* Storage Management */
 "%lld from other players" = "%lld diğer oyunculardan";
@@ -207,7 +207,7 @@ Ancak, yerleştirmelerinizden sonraki rekabetçi eşleşmeler, ayrıntıları ol
 "Attacking" = "Saldırı";
 
 /* Settings: toggle */
-"Automatically Sign Back In" = "Otomatik Olarak Tekrar Aç";
+"Automatically Sign Back In" = "Otomatik Olarak Tekrar Oturum Aç";
 
 /* Store: available currency */
 "Available:" = "Mevcut:";
@@ -699,6 +699,9 @@ Kullanıcı adınızı bilmiyorsanız veya kullanıcı adınız yoksa, bunu [acc
 /* Stats: error details */
 "Match" = "Maç";
 
+/* Asset Management: option to match assets language to app language */
+"Match App Language" = "Uygulama Diline Uy";
+
 /* Match Details: title */
 "Match Details" = "Maç Detayları";
 
@@ -981,6 +984,9 @@ Request Log: title */
 /* Bookmark/Player List: section */
 "Search" = "Arama";
 
+/* Asset Management: language picker title */
+"Select Language" = "Dil Seçiniz";
+
 /* Hit Distribution Stats: error */
 "Select more matches to see data on hit distribution. Deathmatch, Escalation, and other modes don't provide the necessary information." = "Hit dağılımı hakkındaki verileri görmek için daha fazla eşleşme seçin. Deathmatch, Escalation ve diğer modlar gerekli bilgileri sağlamaz.";
 
@@ -1019,7 +1025,7 @@ Login Form: button */
 "Sign In with your Riot account" = "Riot hesabınızla oturum açın";
 
 /* Account Settings: button */
-"Sign Out of All Accounts" = "Tüm Hesaplardan Çıkış";
+"Sign Out of All Accounts" = "Tüm Hesaplardan Çık";
 
 /* Login Form: button/header */
 "Sign in with Google/Apple/etc." = "Google/Apple/vb. ile oturum açın.";
@@ -1239,7 +1245,7 @@ Round Details: killed by unknown/unspecified weapon */
 "View Full Profile" = "Tam Profili Görüntüle";
 
 /* Gun Customizer: button */
-"View Skin Details" = "Cilt Detaylarını Görüntüle";
+"View Skin Details" = "Kaplama Detaylarını Görüntüle";
 
 /* Match List */
 "View Stats" = "İstatistikleri Görüntüle";
