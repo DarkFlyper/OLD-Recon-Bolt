@@ -1,3 +1,5 @@
+/* Pro Store: error restoring purchase */
+"A previous transaction was found, but it could not be verified! %@" = "Se ha encontrado una transacción anterior, ¡pero no se ha podido verificar! %@";
 
 /* error loading the account for a widget */
 "Could not load active account!" = "¡No se ha podido cargar la cuenta activa!";
@@ -12,6 +14,9 @@ You've probably signed into the wrong account; %@" = "¡Parece que esta cuenta n
 
 /* error loading the account for a widget. */
 "No account specified." = "Ninguna cuenta ha sido elegido.";
+
+/* Pro Store: error restoring purchase */
+"No previous transaction found!" = "¡No se ha encontrado ninguna transacción previa!";
 
 /* Riot API Error */
 "Please try again in %lld seconds." = "Por favor, prueba de nuevo en %lld segundos.";
