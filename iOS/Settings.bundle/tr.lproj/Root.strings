@@ -1,0 +1,10 @@
+/* Shown in the iOS settings, where users are guided when trying to change the app language. */
+"Asset Language Explanation" = "Uygulamanın arayüzü ve oyun içeriği/varlıkları için farklı bir dil kullanmak istiyorsanız, bunu uygulamada Gelişmiş Ayarlar > Varlıkları Yönet > Dil altında değiştirebilirsiniz.";
+
+/* Shown in the iOS settings, where users are guided when trying to change the app language. This one is a section header. */
+"Help" = "Yardım";
+
+/* Shown in the iOS settings, where users are guided when trying to change the app language. */
+"Language Explanation" = "Dil ayarını bulamıyor musunuz? iOS, yalnızca tercih ettiğiniz dilleri birden fazla girişle yapılandırdıysanız bir uygulamanın dilini özelleştirmenize izin verir.
+
+Bunu değiştirmek için Genel > Dil ve Bölge bölümüne gidin ve listenin en altına yeni bir dil (örneğin İngilizce) ekleyin.";
