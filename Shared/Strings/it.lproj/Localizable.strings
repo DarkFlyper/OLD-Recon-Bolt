@@ -699,6 +699,9 @@ Se non conosci il tuo nome utente o non ne hai uno, puoi risolvere il problema s
 /* Stats: error details */
 "Match" = "Partita";
 
+/* Asset Management: option to match assets language to app language */
+"Match App Language" = "Abbina la Lingua delle Risorse";
+
 /* Match Details: title */
 "Match Details" = "Dettagli delle Partita";
 
@@ -976,6 +979,9 @@ Request Log: title */
 
 /* Bookmark/Player List: section */
 "Search" = "Cerca";
+
+/* Asset Management: language picker title */
+"Select Language" = "Seleziona la Lingua";
 
 /* Hit Distribution Stats: error */
 "Select more matches to see data on hit distribution. Deathmatch, Escalation, and other modes don't provide the necessary information." = "Seleziona più partite per vedere i dati sulla distribuzione dei colpi. Deathmatch, Corsa alle Armi e altre modalità \"speciali\" non forniscono i dati necessari.";
