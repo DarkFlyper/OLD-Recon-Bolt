@@ -58,6 +58,9 @@ Jika Anda memiliki versi Pro, silakan tambahkan akun dengan kata sandi atau kred
 /* Riot API Error */
 "The resource could not be found." = "Sumber daya tidak dapat ditemukan.";
 
+/* Riot API Error */
+"This match could not be loaded! Valorant discards match details for older matches after a few months." = "Pertandingan ini tidak dapat dimuat! Valorant membuang data pertandingan untuk pertandingan yang lama setelah beberapa bulan.";
+
 /* Keychain error. */
 "Unexpected type found: %@" = "Jenis yang tidak diharapkan ditemukan: %@";
 
