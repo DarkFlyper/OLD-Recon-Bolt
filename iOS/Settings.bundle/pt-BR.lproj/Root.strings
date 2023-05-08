@@ -1,0 +1,5 @@
+/* Shown in the iOS settings, where users are guided when trying to change the app language. */
+"Asset Language Explanation" = "Se você deseja usar um idioma diferente para a interface do aplicativo e o conteúdo/arquivos do jogo, você pode alterar isso no aplicativo, em Configurações Avançadas > Gerenciar Arquivos > Idioma.";
+
+/* Shown in the iOS settings, where users are guided when trying to change the app language. This one is a section header. */
+"Help" = "Ajuda";
