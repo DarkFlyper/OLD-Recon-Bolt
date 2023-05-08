@@ -107,6 +107,8 @@ extension ValorantClient {
 		let manager = LocalDataProvider.shared.matchListManager
 		try await manager.autoUpdateObject(for: userID) { existing in
 			let list = existing ?? MatchList(userID: userID)
+			// never update match history for people on the denylist, but allow the first time
+			guard list.matches.isEmpty || userID == self.userID || Denylist.allows(userID) else { return list }
 			return try await list <- loadMatches <- autoFetchMatchListDetails
 		}
 	}
