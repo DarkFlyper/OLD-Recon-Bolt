@@ -205,6 +205,9 @@ Competitive matches after your placements can be identified without their detail
 /* Win Rate Stats: side name */
 "Attacking" = "Ataque";
 
+/* Settings: toggle */
+"Automatically Sign Back In" = "Voltar a iniciar sessão automaticamente";
+
 /* Store: available currency */
 "Available:" = "Disponível:";
 
@@ -263,6 +266,9 @@ Playtime Stats: section */
 
 /* No comment provided by engineer. */
 "Change Buddy" = "Mudar Chaveiro";
+
+/* Settings: button */
+"Change Language" = "Alterar idioma";
 
 /* No comment provided by engineer. */
 "Change Queue" = "Alterar fila";
@@ -380,6 +386,9 @@ Playtime Stats: section */
 
 /* Store */
 "Daily Offers" = "Ofertas diárias";
+
+/* Weapon Reference: stats */
+"Damage" = "Dano";
 
 /* App Theme */
 "Dark Mode" = "Modo escuro";
@@ -674,6 +683,9 @@ Se não souberes o teu nome de utilizador ou não tiveres um, podes corrigi-lo e
 /* No comment provided by engineer. */
 "Manage Local Storage" = "Gerir Armazenamento Local";
 
+/* Settings: section */
+"Management" = "Gestão";
+
 /* About Screen */
 "Many thanks to the volunteer translators from our Discord server who have been hard at working translating the app to new languages!" = "Muito obrigado aos tradutores voluntários do nosso servidor Discord que têm trabalhado arduamente na tradução da aplicação para novas línguas!";
 
@@ -685,6 +697,9 @@ Se não souberes o teu nome de utilizador ou não tiveres um, podes corrigi-lo e
 
 /* Stats: error details */
 "Match" = "Partida";
+
+/* Asset Management: option to match assets language to app language */
+"Match App Language" = "Corresponder ao idioma da aplicação";
 
 /* Match Details: title */
 "Match Details" = "Detalhes da Partida";
@@ -850,6 +865,9 @@ Playtime Stats: section */
 /* Weapon Reference */
 "Price" = "Preço";
 
+/* Badge applied to buttons that are exclusive to Pro, e.g. in the account settings */
+"Pro" = "Pro";
+
 /* App Icon Name */
 "Pro Blue" = "Pro Azul";
 
@@ -965,6 +983,9 @@ Request Log: title */
 /* Bookmark/Player List: section */
 "Search" = "Pesquisar";
 
+/* Asset Management: language picker title */
+"Select Language" = "Seleccionar idioma";
+
 /* Hit Distribution Stats: error */
 "Select more matches to see data on hit distribution. Deathmatch, Escalation, and other modes don't provide the necessary information." = "Selecione mais partidas para ver os dados de distribuição de tiros. Mata-Mata, Escalação e outros modos não provém as informações necessárias.";
 
@@ -1001,6 +1022,9 @@ Login Form: button */
 
 /* Login Form */
 "Sign In with your Riot account" = "Entrar com sua conta Riot";
+
+/* Account Settings: button */
+"Sign Out of All Accounts" = "Sair de todas as contas";
 
 /* Login Form: button/header */
 "Sign in with Google/Apple/etc." = "Entrar com Google/Apple/etc.";
@@ -1089,6 +1113,9 @@ Login Form: button */
 /* Statistics error for iOS <16 */
 "This feature requires iOS 16 or newer." = "Esta funcionalidade requer o iOS 16 ou mais recente.";
 
+/* Settings: toggle description */
+"This makes Recon Bolt automatically use your username & password to sign in again if you get signed out. If you have 2-factor authentication enabled, this may fail if it requires a new code, but it still works sometimes." = "Isto faz com que o Recon Bolt utilize automaticamente o seu nome de utilizador e a sua palavra-passe para iniciar sessão novamente, caso seja desconectado. Se tiveres a autenticação de 2 factores activada, isto pode falhar se for necessário um novo código, mas por vezes ainda funciona.";
+
 /* Stats: match loading */
 "To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "Para recolher estatísticas, precisamos primeiro de carregar correspondências para processar. Note-se que grandes quantidades podem demorar muito tempo, especialmente quando se descarrega pela primeira vez!";
 
@@ -1143,6 +1170,9 @@ Nesse site, navegue até **Riot Account Sign-in** e defina um nome de usuário e
 /* placeholder */
 "Unknown Bundle" = "Pacote Desconhecido";
 
+/* placeholder */
+"Unknown Card" = "Cartão desconhecido";
+
 /* Store */
 "Unknown Offer" = "Oferta desconhecida";
 
@@ -1159,6 +1189,9 @@ Nesse site, navegue até **Riot Account Sign-in** e defina um nome de usuário e
 "Unknown Skin" = "Pele Desconhecida";
 
 /* placeholder */
+"Unknown Spray" = "Spray desconhecido";
+
+/* placeholder */
 "Unknown Title" = "Título Desconhecido";
 
 /* Round Details: killed by unknown damage source/type */
@@ -1173,6 +1206,9 @@ Round Details: killed by unknown/unspecified weapon */
 
 /* Missions Box */
 "Unknown contract!" = "Contrato desconhecido!";
+
+/* Store Bundle Details: should never show, but if Riot adds a new kind of item to a bundle, this would show */
+"Unknown item of type %@" = "Item desconhecido do tipo %@";
 
 /* No comment provided by engineer. */
 "Unknown mission!" = "Missão desconhecida!";
@@ -1206,6 +1242,9 @@ Round Details: killed by unknown/unspecified weapon */
 
 /* No comment provided by engineer. */
 "View Full Profile" = "Ver perfil completo";
+
+/* Gun Customizer: button */
+"View Skin Details" = "Ver detalhes da Skin";
 
 /* Match List */
 "View Stats" = "Ver estatísticas";

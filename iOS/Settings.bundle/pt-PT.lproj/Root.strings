@@ -1,0 +1,10 @@
+/* Shown in the iOS settings, where users are guided when trying to change the app language. */
+"Asset Language Explanation" = "Se pretender utilizar um idioma diferente para a interface da aplicação e para o conteúdo/activos do jogo, pode alterá-lo na aplicação em Definições avançadas > Gerir activos > Idioma.";
+
+/* Shown in the iOS settings, where users are guided when trying to change the app language. This one is a section header. */
+"Help" = "Ajuda";
+
+/* Shown in the iOS settings, where users are guided when trying to change the app language. */
+"Language Explanation" = "Não consegue encontrar a definição de idioma? O iOS só permite personalizar o idioma de uma aplicação se tiver configurado os seus idiomas preferidos com mais do que uma entrada.
+
+Para alterar esta configuração, aceda a Geral > Idioma e região e adicione um novo idioma (por exemplo, inglês) no final da lista.";
