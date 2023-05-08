@@ -58,6 +58,9 @@ Se tiver o Pro, adicione uma conta usando as mesmas credenciais para substituí-
 /* Riot API Error */
 "The resource could not be found." = "A fonte não pôde ser encontrada.";
 
+/* Riot API Error */
+"This match could not be loaded! Valorant discards match details for older matches after a few months." = "Esta partida não pôde ser carregada! O Valorant descarta os detalhes das partidas mais antigas após alguns meses.";
+
 /* Keychain error. */
 "Unexpected type found: %@" = "Tipo imprevisto encontrado: %@";
 
