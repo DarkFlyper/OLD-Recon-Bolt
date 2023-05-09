@@ -44,6 +44,9 @@
 /* Shown at the bottom of the expandable playtime list when there are more entries available. */
 "%lld more" = "încă %lld";
 
+/* Weapon Reference: stats */
+"%lld pellets" = "%lld peleți";
+
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
 "%lld to %lld credits" = "între %lld și %lld credite";
 
@@ -149,6 +152,161 @@ Meciurile de Competitive de după cele de plasament pot fi totuși identificate 
 /* Stats: match loading */
 "All %lld" = "Toate %lld";
 
+/* No comment provided by engineer. */
+"All Maps" = "Toate hărțile";
+
+/* Statistics Filter: button to allow all agents */
+"Allow All Agents" = "Permiteți toate";
+
+/* Statistics Filter: button to allow all queues */
+"Allow All Queues" = "Permiteți toate";
+
+/* Default Error Alert Title */
+"An Error Occurred!" = "A apărut o eroare!";
+
+/* About Screen */
+"An invaluable API hosting all the assets (images, data, etc.) used throughout Valorant. This is where almost every image in the app comes from." = "Un API inestimabil care găzduiește toate activele (imagini, date etc.) utilizate în Valorant. De aici provin aproape toate imaginile din aplicație.";
+
+/* Statistics filter: shown when every agent is allowed */
+"Any Agent" = "Orice agent";
+
+/* Statistics filter: shown when every queue is allowed */
+"Any Queue" = "Orice coadă de așteptare";
+
+/* Asset Management */
+"Anything with images will not display correctly." = "Orice lucru cu imagini nu va fi afișat corect.";
+
+/* Settings: button */
+"App Icon" = "Iconița Aplicației";
+
+/* No comment provided by engineer. */
+"Are your assets outdated?" = "Sunt activele dumneavoastră depășite?";
+
+/* Pro Features List */
+"As thanks for your support, you get to show off your status with an exclusive app icon!" = "Ca mulțumire pentru sprijinul tău, poți să-ți arăți statutul cu o iconiță exclusivă a aplicației!";
+
+/* No comment provided by engineer. */
+"Assets" = "Active";
+
+/* Asset Management: shown before the newest version is fetched, so it's not know yet if the assets are up to date or outdated */
+"Assets complete." = "Activele sunt complete.";
+
+/* No comment provided by engineer. */
+"Assets not loaded!" = "Activele nu sunt încărcate!";
+
+/* Asset Management */
+"Assets out of date!" = "Activele sunt depășite!";
+
+/* No comment provided by engineer. */
+"Assets should be fetched automatically, but in case something went wrong, feel free to initiate the process manually." = "Activele ar trebui să fie preluate automat, dar în cazul în care ceva nu a mers bine, nu ezitați să inițiați procesul manual.";
+
+/* Asset Management */
+"Assets up to date!" = "Activele la zi!";
+
+/* Win Rate Stats: side name */
+"Attacking" = "Atacând";
+
+/* Settings: toggle */
+"Automatically Sign Back In" = "Conectați-vă automat din nou";
+
+/* Store: available currency */
+"Available:" = "Disponibil:";
+
+/* Hit Distribution Stats: average HS% */
+"Average: %@" = "Media: %@";
+
+/* Request Log: shown for bodies that are not decodable to text */
+"Binary Data" = "Date binare";
+
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
+"Body" = "Corp";
+
+/* Bookmark/Player List: section */
+"Bookmarks" = "Semne de carte";
+
+/* Gun Customizer: section */
+"Buddy" = "Buddy";
+
+/* Storage Management: section */
+"By Kind" = "După gen";
+
+/* Win Rate Stats: section
+Playtime Stats: section */
+"By Map" = "După harta";
+
+/* Playtime Stats: section/title */
+"By Non-Premade Player" = "De către Non-Premade Player";
+
+/* Playtime Stats: section/title */
+"By Premade Teammate" = "De Premade Teammate";
+
+/* Playtime Stats: section */
+"By Queue" = "Prin Coadă";
+
+/* Hit Distribution Stats: section */
+"By Weapon" = "De către arma";
+
+/* No comment provided by engineer. */
+"Cancel" = "Anulează";
+
+/* No comment provided by engineer. */
+"Cancel Matchmaking" = "Anulează Matchmaking";
+
+/* Top-Level Tab Title */
+"Career" = "Cariera";
+
+/* No comment provided by engineer. */
+"Career Summaries" = "Rezumate de carieră";
+
+/* No comment provided by engineer. */
+"Career Summary" = "Rezumat al carierei";
+
+/* Weapon Reference */
+"Category" = "Categorii";
+
+/* No comment provided by engineer. */
+"Change Buddy" = "Schimbă Buddy";
+
+/* Settings: button */
+"Change Language" = "Schimbă limba";
+
+/* No comment provided by engineer. */
+"Change Queue" = "Schimbare coadă";
+
+/* Gun Customizer: button */
+"Change Skin" = "Schimbați Skin-ul";
+
+/* Store Widget: description */
+"Check your current Valorant storefront." = "Verificați vitrina actuală a magazinului Valorant.";
+
+/* Missions Widget: description */
+"Check your progress on daily & weekly missions." = "Verifică-ți progresul în misiunile zilnice și săptămânale.";
+
+/* No comment provided by engineer. */
+"Choose App Icon" = "Alegeți pictograma aplicației";
+
+/* No comment provided by engineer. */
+"Choose Buddy" = "Alege Buddy";
+
+/* No comment provided by engineer. */
+"Choose Card" = "Alegeți cardul";
+
+/* No comment provided by engineer. */
+"Choose Skin" = "Alegeți Skin-ul";
+
+/* No comment provided by engineer. */
+"Choose Spray" = "Alegeți Spray";
+
+/* No comment provided by engineer. */
+"Choose Title" = "Alegeți titlul";
+
+/* Contract Picker: title */
+"Choose a Contract" = "Alegeți un contract";
+
+/* Buddy Picker: alert shown when both instances of a buddy are in use */
+"Choose a weapon to take %@ from." = "Alege o armă de la care să iei %@.";
+
 /* Storage Management: button to delete all entries of a certain kind */
 "Clear All" = "Șterge Tot";
 
@@ -170,8 +328,595 @@ Meciurile de Competitive de după cele de plasament pot fi totuși identificate 
 /* Stats: error details: accessibility label */
 "Copy Error" = "Eroare de Copiere";
 
+/* No comment provided by engineer. */
+"Copy Error Details" = "Copiază detaliile erorii";
+
+/* No comment provided by engineer. */
+"Copy Match ID" = "Copiati ID-ul meciului";
+
+/* No comment provided by engineer. */
+"Copy to Clipboard" = "Copiere în clipboard";
+
+/* No comment provided by engineer. */
+"Could Not Load Account!" = "Nu s-a putut încărca contul!";
+
+/* No comment provided by engineer. */
+"Could not Change App Icon!" = "Nu am putut schimba pictograma aplicației!";
+
+/* No comment provided by engineer. */
+"Could not delete files!" = "Nu s-a putut șterge fișiere!";
+
+/* No comment provided by engineer. */
+"Could not determine used storage!" = "Nu s-a putut determina spațiul folosit al dispozitivului!";
+
+/* No comment provided by engineer. */
+"Could not free up space!" = "Nu s-a putut elibera spațiu!";
+
+/* No comment provided by engineer. */
+"Could not look up %@" = "Nu s-a putut căuta %@";
+
+/* Login Form: error title */
+"Could not sign in!" = "Nu s-a putut autentifica!";
+
+/* About Screen: section */
+"Credits" = "Credite";
+
+/* Asset Management */
+"Current version: %@" = "Versiunea curentă: %@";
+
+/* No comment provided by engineer. */
+"Currently in agent select" = "În prezent, în selectarea agentului";
+
+/* No comment provided by engineer. */
+"Currently in-game" = "În prezent în joc";
+
+/* Queue Label: custom game */
+"Custom" = "Personalizat";
+
+/* Gun Customizer: title */
+"Customize %@" = "Personalizați %@";
+
+/* Gun Customizer: title */
+"Customize Gun" = "Personalizați arma";
+
+/* Missions Widget */
+"Daily" = "Zilnic";
+
+/* Missions Box: header */
+"Daily Missions" = "Misiuni zilnice";
+
+/* Store */
+"Daily Offers" = "Oferte zilnice";
+
+/* Weapon Reference: stats */
+"Damage" = "Daune";
+
+/* App Theme */
+"Dark Mode" = "Modul întunecat";
+
+/* Stats: match loading */
+"Data going back to %@" = "Date care se întorc la %@";
+
+/* No comment provided by engineer. */
+"Day" = "Zi";
+
+/* App Icon Name */
+"Default" = "Implicit";
+
+/* App Icon Picker: section */
+"Default Icon" = "Pictograma implicită";
+
+/* Win Rate Stats: side name */
+"Defending" = "Apărare";
+
+/* Storage Management: button to confirm deleting some matches */
+"Delete %lld Matches" = "Ștergeți %lld Meciuri";
+
+/* Match Details: button to view details by round */
+"Details by Round" = "Detalii în funcție de rundă";
+
+/* No comment provided by engineer. */
+"Discord Server" = "Server Discord";
+
+/* Hit Distribution Stats: section */
+"Distribution Over Time" = "Distribuția în timp";
+
+/* No comment provided by engineer. */
+"Done" = "Realizat";
+
+/* No comment provided by engineer. */
+"Download Assets Now" = "Descărcați Assets acum";
+
+/* Win Rate Stats: chart legend */
+"Draws" = "Egal";
+
+/* Request Log: shown in place of a status code (like 200 or 404) when sending failed. */
+"ERROR" = "EROARE";
+
+/* Match List: accessibility label */
+"Edit Filter" = "Editare filtru";
+
+/* No comment provided by engineer. */
+"Enter 2FA Code" = "Introduceți codul 2FA";
+
+/* Weapon Reference: stats */
+"Equip Time" = "Timp de echipare";
+
+/* Request Log
+Stats: error details */
+"Error" = "Eroare";
+
+/* No comment provided by engineer. */
+"Error Details" = "Detaliile eroare";
+
+/* Asset Management */
+"Error downloading assets!" = "Eroare la descărcarea activelor!";
+
+/* Request Log: title for an exchange */
+"Exchange" = "Schimb";
+
+/* Request Log: title for detailed view of request body/contents */
+"Exchange Body" = "Corp";
+
+/* Statistics Filter: button to exclude all agents */
+"Exclude All Agents" = "Excludeți toate";
+
+/* Statistics Filter: button to exclude all queues */
+"Exclude All Queues" = "Excludeți toate";
+
+/* Pro Features List */
+"Exclusive App Icon" = "Icoana exclusivă a aplicației";
+
+/* Round Details: killed by spike */
+"Exploded" = "Explodat";
+
+/* Pro Features List */
+"Family Sharing" = "Partajare în familie";
+
+/* Request Log: placeholder is replaced by error dump. */
+"Feedback Email Body" = "Ce a mers prost? Povestiți-mi despre eroarea pe care tocmai ați întâlnit-o:
+
+RAPORTUL TĂU DE EROARE AICI
+
+%@";
+
+/* Match List: accessibility label */
+"Fetch Details" = "Obține detalii";
+
+/* Statistics Filter: title (section) */
+"Filter" = "Filtru";
+
+/* No comment provided by engineer. */
+"Filter Maps" = "Filtrează mapele";
+
+/* No comment provided by engineer. */
+"Filter Match List" = "Filtrează lista meciurilor";
+
+/* No comment provided by engineer. */
+"Filter Queues" = "Filtrează Queues";
+
+/* No comment provided by engineer. */
+"Filtering by starting side will exclude any matches in single-round modes like Deathmatch, Escalation, etc." = "Filtrarea în funcție de partea de start va exclude toate meciurile din modurile cu o singură rundă, cum ar fi Deathmatch, Escalation, etc.";
+
+/* No comment provided by engineer. */
+"Find Match" = "Găsește meci";
+
+/* Party Box: placeholder shows time spent in queue */
+"Finding match… (%@)" = "Cautam meci... (%@)";
+
+/* Weapon Reference: stats */
+"Fire Rate" = "Rata de foc";
+
+/* Weapon Reference: stats */
+"First Bullet Spread" = "Răspândirea Primului Glonț";
+
+/* No comment provided by engineer. */
+"Force Refresh Widgets" = "Forțați reîmprospătarea widget-urilor";
+
+/* Contract Picker */
+"Free Agent" = "Agent liber";
+
+/* Storage Management: button to free up a certain amount of space */
+"Free up these %@" = "Eliberați aceste %@";
+
+/* Agent Select header: shown when timer reaches zero */
+"Game Started" = "Jocul a început";
+
+/* No comment provided by engineer. */
+"Game is not running!" = "Jocul nu rulează!";
+
+/* Pro Features List */
+"Gather statistics from anyone's games to gain insights on things like time played by mode/premade, headshot rate over time/by weapon, win rate over time/by map & side, and more!" = "Adunați statistici din jocurile oricui pentru a obține informații despre lucruri precum timpul jucat în funcție de mod/premade, rata de împușcare în cap în timp/pe arme, rata de victorie în timp/pe hartă și parte și multe altele!";
+
+/* Pro Features List */
+"Getting money from Recon Bolt gives me the flexibility and motivation to keep improving the app!" = "Obținerea de bani de la Recon Bolt îmi oferă flexibilitatea și motivația de a continua să îmbunătățesc aplicația!";
+
+/* No comment provided by engineer. */
+"GitHub Repo" = "GitHub Repo";
+
+/* No comment provided by engineer. */
+"Golden Gun" = "Arma de aur";
+
+/* Stats: date grouping size picker */
+"Group by" = "Grupați după";
+
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
+"Head" = "Cap";
+
+/* No comment provided by engineer. */
+"Headhunter (Chamber)" = "Headhunter (Chamber)";
+
+/* No comment provided by engineer. */
+"Loading request log…" = "Încărcarea jurnalului de cerere…";
+
+/* No comment provided by engineer. */
+"Loadout" = "Loadout";
+
+/* No comment provided by engineer. */
+"Loadout Delta" = "Loadout Delta";
+
+/* No comment provided by engineer. */
+"Loadout Delta is computed as the difference between the average loadout value of players on each team. For example, a loadout delta of +1000 means your team's loadouts were an average of 1000 credits more valuable than the enemy team's in that round." = "Loadout Delta este calculată ca diferență între valoarea medie de loadout a jucătorilor din fiecare echipă. De exemplu, un delta de încărcare de +1000 înseamnă că încărcăturile echipei tale au fost în medie cu 1000 de credite mai valoroase decât cele ale echipei inamice în runda respectivă.";
+
+/* No comment provided by engineer. */
+"Loadout not loaded!" = "Loadout nu este încărcat!";
+
+/* No comment provided by engineer. */
+"Lock In" = "Lock In";
+
+/* No comment provided by engineer. */
+"Lock In %@" = "Lock In %@";
+
+/* Bookmark/Player List: lookup button */
+"Look Up" = "Privește în sus";
+
+/* Login Form */
+"Looks like you're trying to enter your Riot ID (and tagline) as username! Your username is actually something else: it's what you use to sign into the Valorant launcher.
+
+If you don't know your username or don't have one, you can fix that at [account.riotgames.com](https://account.riotgames.com)." = "Se pare că încerci să introduci ID-ul tău Riot (și tagline) ca nume de utilizator! Numele tău de utilizator este de fapt altceva: este ceea ce folosești pentru a te conecta la lansatorul Valorant.
+
+Dacă nu știi numele tău de utilizator sau nu ai unul, poți rezolva asta la [account.riotgames.com](https://account.riotgames.com).";
+
+/* Win Rate Stats: chart legend */
+"Losses" = "Pierderi";
+
+/* Weapon Reference: stats */
+"Magazine Size" = "Dimensiunea revistei";
+
+/* No comment provided by engineer. */
+"Manage Assets" = "Gestionați activele";
+
+/* No comment provided by engineer. */
+"Manage Local Storage" = "Gestionați stocarea locală";
+
+/* Settings: section */
+"Management" = "Management";
+
+/* About Screen */
+"Many thanks to the volunteer translators from our Discord server who have been hard at working translating the app to new languages!" = "Multe mulțumiri traducătorilor voluntari de pe serverul nostru Discord care au lucrat din greu la traducerea aplicației în noi limbi!";
+
+/* No comment provided by engineer. */
+"Map" = "Hartă";
+
+/* No comment provided by engineer. */
+"Maps" = "Hărți";
+
+/* Stats: error details */
+"Match" = "Meci";
+
+/* Asset Management: option to match assets language to app language */
+"Match App Language" = "Potriviți limba aplicației";
+
+/* Match Details: title */
+"Match Details" = "Detalii despre meci";
+
+/* Match List: shown when a match didn't get past Agent Select (because someone dodged/left) */
+"Match Dodged" = "Meci evitat";
+
+/* No comment provided by engineer. */
+"Match Lists" = "Listă de meciuri";
+
+/* No comment provided by engineer. */
+"Match Loading Errors" = "Erori de încărcare a meciurilor";
+
+/* App Theme: automatically match the system theme */
+"Match System" = "Potrivește după sistem";
+
+/* Match List: section */
+"Matches" = "Meciuri";
+
+/* Stats: match loading */
+"Matches to load: **%lld**" = "Meciuri de încărcat: **%lld**";
+
+/* Party Box: shown when member's name is not yet loaded */
+"Member" = "Membru";
+
+/* Request Log */
+"Method" = "Metoda";
+
+/* Asset Management */
+"Missing assets!" = "Resurse Lipsă!";
+
+/* Missions Box */
+"Missing progress for contract!" = "Lipsesc progresele pentru contract!";
+
+/* No comment provided by engineer. */
+"Missing season data!" = "Datele sezonului lipsesc!";
+
+/* Missions Widget: title */
+"Missions" = "Misiuni";
+
+/* No comment provided by engineer. */
+"Missions not loaded!" = "Misiunile nu sunt încărcate!";
+
+/* No comment provided by engineer. */
+"Month" = "Luna";
+
+/* Pro Features List */
+"Multiple Account Support" = "Suport pentru conturi multiple";
+
+/* Pro Store */
+"Multiple Accounts" = "Conturi multiple";
+
+/* Bookmark/Player List: lookup name placeholder */
+"Name" = "Nume";
+
+/* Asset Management */
+"Newest available: %@" = "Cel mai nou disponibil: %@";
+
+/* Store */
+"Night Market" = "Piața de noapte";
+
+/* Buddy picker: option at the top to select no buddy */
+"No Buddy" = "Fără Buddy";
+
+/* No comment provided by engineer. */
+"No Spray" = "Fără Spray";
+
+/* No comment provided by engineer. */
+"No Title" = "Fără titlu";
+
+/* Gun Customizer: shown when a weapon has no buddy active */
+"No buddy selected!" = "Niciun buddy selectat!";
+
+/* Missions Box */
+"No contract active!" = "Nici un contract activ!";
+
+/* Win Rate Stats: by map */
+"No data" = "Nu există date";
+
+/* No comment provided by engineer. */
+"No games played with premade teammates." = "Fără jocuri jucate cu coechipieri premade.";
+
+/* Map Reference */
+"No minimap available!" = "Nu este disponibil minimapul!";
+
+/* No comment provided by engineer. */
+"No non-premade players encountered repeatedly. (Un)lucky you!" = "Niciun jucător non-premade nu a fost întâlnit în mod repetat. (Ne)norocosule!";
+
+/* No comment provided by engineer. */
+"Normalize Charts" = "Normalizarea graficelor";
+
+/* Party Box */
+"Not Ready" = "Nu este pregătit";
+
+/* Asset Management: button */
+"Reset" = "Resetare";
+
+/* Request Log: header */
+"Response" = "Răspuns";
+
+/* No comment provided by engineer. */
+"Response Code" = "Cod de răspuns";
+
+/* Pro Store: error alert title */
+"Restore Failed!" = "Restaurarea a eșuat!";
+
+/* Pro Store: button */
+"Restore Purchase" = "Restaurați achiziția";
+
+/* No comment provided by engineer. */
+"Retry" = "Reîncercare";
+
+/* Round Details: header */
+"Round %lld of %lld" = "Runda %lld din %lld";
+
+/* Round Details: title */
+"Round Details" = "Detaliile rundei";
+
+/* Win Rate Stats: section */
+"Rounds by Loadout Delta" = "Runde în funcție de Loadout Delta";
+
+/* Win Rate Stats: section */
+"Rounds by Side" = "Runde după echipa";
+
+/* Weapon Reference: stats */
+"Run Speed" = "Viteza de alergare";
+
+/* Bookmark/Player List: section */
+"Search" = "Căutare";
+
+/* Asset Management: language picker title */
+"Select Language" = "Selectați limba";
+
+/* Hit Distribution Stats: error */
+"Select more matches to see data on hit distribution. Deathmatch, Escalation, and other modes don't provide the necessary information." = "Selectați mai multe meciuri pentru a vedea datele privind distribuția loviturilor. Deathmatch, Escalation și alte moduri nu oferă informațiile necesare.";
+
+/* No comment provided by engineer. */
+"Send to Developer" = "Trimiteți la dezvoltator";
+
+/* Account Settings: shown when the current account's session has expired */
+"Session expired!" = "Sesiunea a expirat!";
+
+/* Top-Level Tab Title */
+"Settings" = "Setări";
+
+/* Playtime Stats: title for view of matches in common with another player */
+"Shared Matches" = "Meciuri partajate";
+
+/* Weapon Reference: stats */
+"Shotgun Pellets" = "Shotgun Pellets";
+
+/* No comment provided by engineer. */
+"Show Unfetched Matches" = "Afișați meciurile neexecutate";
+
+/* No comment provided by engineer. */
+"Show all matches" = "Afișați toate meciurile";
+
+/* No comment provided by engineer. */
+"Show details when found" = "Afișați detaliile atunci când sunt găsite";
+
+/* App Icon Description: pro blue */
+"Show off your pro status with an exclusive icon!" = "Arată-ți statutul de profesionist cu o pictogramă exclusivă!";
+
+/* Account Settings: button
+Login Form: button */
+"Sign In" = "Conectați-vă";
+
+/* Login Form */
+"Sign In with your Riot account" = "Autentificați-vă cu contul dumneavoastră Riot";
+
+/* Account Settings: button */
+"Sign Out of All Accounts" = "Deconectați-vă din toate conturile";
+
+/* Login Form: button/header */
+"Sign in with Google/Apple/etc." = "Conectați-vă cu Google/Apple/etc.";
+
+/* Skin Details: level name */
+"Skin Level %lld" = "Nivel %lld";
+
+/* Skin Details: section */
+"Skin Levels" = "Nivele de skin";
+
+/* Weapon Reference: button */
+"Skins" = "Skin-uri";
+
+/* Hit Distribution Stats: smoothing slider */
+"Smoothing" = "Smoothing";
+
+/* No comment provided by engineer. */
+"Spectator" = "Spectator";
+
+/* Round Details: Spike Event */
+"Spike Defused" = "Spike Dezamorsat";
+
+/* Round Details: Spike Event */
+"Spike Planted" = "Spike plantat";
+
+/* No comment provided by engineer. */
+"Start Matchmaking?" = "Începeți Matchmaking?";
+
+/* Win Rate Stats: accessibility label */
+"Starting Side" = "Partea de pornire";
+
+/* Win Rate Stats */
+"Starting Side:" = "Partea de pornire:";
+
+/* No comment provided by engineer. */
+"Statistics" = "Statistici";
+
+/* Statistics Pro purchase prompt */
+"Statistics not available!" = "Statisticile nu sunt disponibile!";
+
+/* Statistics Pro purchase prompt: 'Recon Bolt Pro' is inserted in the placeholder with a bolder font. */
+"Statistics require %@, a one-time purchase including a variety of features. Want to give them a look?" = "Statisticile necesită %@, o achiziție unică ce include o varietate de caracteristici. Doriți să le aruncați o privire?";
+
+/* Store Widget: title */
+"Store" = "Magazin";
+
+/* No comment provided by engineer. */
+"Store not loaded!" = "Magazinul nu este încărcat!";
+
+/* No comment provided by engineer. */
+"Storefront outdated!" = "Magazinul este outdatat!";
+
+/* Pro Features List */
+"Support Development :)" = "Sprijină dezvoltarea :)";
+
+/* Pro Store */
+"Support Further Development!" = "Sprijină dezvoltarea!";
+
+/* Missions Box: button */
+"Switch Contract" = "Schimba Contractul";
+
+/* Login Form: is this safe? */
+"TL;DR: you'll have to take my word for it, but Riot doesn't seem to mind." = "TL;DR: va trebui să mă credeți pe cuvânt, dar Riot nu pare să se supere.";
+
+/* Bookmark/Player List: lookup tag placeholder */
+"Tag" = "Etichetă";
+
+/* Pro Store */
+"Thank you for supporting Recon Bolt!" = "Vă mulțumim pentru susținerea Recon Bolt!";
+
+/* Login Form: is this safe? */
+"The code is open-source and visible on GitHub; you can build it yourself if you want to be sure of what's running." = "Codul este open-source și este vizibil pe GitHub; îl puteți construi singur dacă doriți să fiți sigur de ceea ce rulează.";
+
 /* Store */
 "Unknown Offer" = "Ofertă Necunoscută";
 
 /* placeholder */
 "Unknown Skin" = "Skin Necunoscut";
+
+/* No comment provided by engineer. */
+"Weapon Loadout" = "Echipează-ți armele";
+
+/* Weapon Reference: section */
+"Weapon Statistics" = "Statisticile armelor";
+
+/* No comment provided by engineer. */
+"Weapons" = "Arme";
+
+/* No comment provided by engineer. */
+"Week" = "Săptămâna";
+
+/* Missions Widget */
+"Weekly" = "Săptămânal";
+
+/* Missions Box: header */
+"Weekly Missions" = "Misiuni săptămânale";
+
+/* No comment provided by engineer. */
+"Widget Refresh Requested" = "Widget Refresh solicitat";
+
+/* No comment provided by engineer. */
+"Win Rate" = "Rata de câștig";
+
+/* Win Rate Stats: chart legend */
+"Wins" = "Câștiguri";
+
+/* No comment provided by engineer. */
+"Year" = "An";
+
+/* Match Details: footnote */
+"You can also tap a round's number in the kill breakdown above to quickly view its details." = "Puteți, de asemenea, să atingeți numărul unei runde în defalcarea de mai sus pentru a vedea rapid detaliile acesteia.";
+
+/* Login Form: is this safe? */
+"You can enable 2-factor authentication, so you'd at least have another layer of security if it went bad." = "Puteți activa autentificarea cu 2 factori, astfel încât să aveți cel puțin un alt nivel de securitate în caz de probleme.";
+
+/* Login Form: is this safe? */
+"Your credentials only ever leave your device in the form of a login request directly to Riot. They are never stored or sent anywhere else." = "Datele dvs. de identificare nu părăsesc niciodată dispozitivul dvs. decât sub forma unei cereri de conectare direct la Riot. Ele nu sunt niciodată stocate sau trimise în altă parte.";
+
+/* No comment provided by engineer. */
+"Your session has expired! Recon Bolt has tried to refresh it for you, but needs 2FA confirmation." = "Sesiunea dvs. a expirat! Recon Bolt a încercat să o reîmprospăteze pentru dvs., dar are nevoie de confirmarea 2FA.";
+
+/* No comment provided by engineer. */
+"iOS is a bit finnicky about this, so widgets may not refresh right away—feel free to reboot your device if this doesn't help!" = "iOS este puțin pretențios în această privință, așa că este posibil ca widget-urile să nu se actualizeze imediat - nu ezitați să reporniți dispozitivul dacă acest lucru nu vă ajută!";
+
+/* Loadout: spray slot */
+"mid-round" = "mijlocul rundei";
+
+/* Missions Widget: countdown label when the target is in the past. Should never really show up, since at this point there's new data. */
+"old" = "vechi";
+
+/* Loadout: spray slot */
+"post-round" = "după rundă";
+
+/* Loadout: spray slot */
+"pre-round" = "înainte-de-runda";
+
+/* Login Form */
+"signing in…" = "autentificare…";
+
+/* Loadout: unknown spray slot (should never appear unless Riot changes something) */
+"slot" = "slot";
