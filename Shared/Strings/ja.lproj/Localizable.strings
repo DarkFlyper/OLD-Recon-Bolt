@@ -86,7 +86,7 @@ Missions Box */
 Competitive matches after your placements can be identified without their details, however." = "試合のキューはデータを取る（タップするかスワイプする）まで知りません。
 振り分け戦の後のコンペティティブの試合はデータがなくても見つけられます。";
 
-/* No comment provided by engineer. */
+/* Match List: shown with a match's RR change when the player got an AFK Penalty (filled into the placeholder, including -) */
 "AFK: %lld" = "AFK: %lld";
 
 /* Career Summary: header for totals of all time */
