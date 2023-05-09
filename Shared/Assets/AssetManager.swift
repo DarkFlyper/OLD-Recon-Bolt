@@ -2,6 +2,7 @@ import SwiftUI
 import ValorantAPI
 import UserDefault
 import HandyOperators
+import WidgetKit
 
 @MainActor
 final class AssetManager: ObservableObject {
@@ -32,6 +33,7 @@ final class AssetManager: ObservableObject {
 	func setLanguageOverride(to language: String?) async {
 		storage.languageOverride = language
 		await tryLoadAssets()
+		WidgetCenter.shared.reloadAllTimelines()
 	}
 	
 	func tryLoadAssets() async {
