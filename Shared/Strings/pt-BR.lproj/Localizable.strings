@@ -106,7 +106,7 @@ Missions Box */
 "A match's queue is unknown until its details are fetched (by tapping it or performing the swipe action).
 Competitive matches after your placements can be identified without their details, however." = "A fila de uma partida é desconhecida até que seus detalhes sejam obtidos (clicando ou realizando a ação de deslizar). Partidas Competitivas depois da sua colocação inicial podem ser identificadas sem seus detalhes, entretanto.";
 
-/* No comment provided by engineer. */
+/* Match List: shown with a match's RR change when the player got an AFK Penalty (filled into the placeholder, including -) */
 "AFK: %lld" = "AFK: %lld";
 
 /* Career Summary: header for totals of all time */
@@ -1271,7 +1271,7 @@ Round Details: killed by unknown/unspecified weapon */
 /* Pro Features List */
 "View your storefront, daily/weekly missions, or current rank without even having to open the app!" = "Veja sua Loja, missões diárias/semanais ou rank atual sem precisar abrir o aplicativo!";
 
-/* No comment provided by engineer. */
+/* Match List: shown with a match's RR change when the player got a performance bonus (filled into the placeholder) */
 "WP: +%lld" = "MVP: +%lld";
 
 /* No comment provided by engineer. */
