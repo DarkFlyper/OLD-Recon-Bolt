@@ -1,1 +1,41 @@
-/* This file exists as a marker to combine the synthesized files from all targets. */
+/* No comment provided by engineer. */
+"Animation" = "الرسوم المتحركة";
+
+/* No comment provided by engineer. */
+"Attacker/Defender Swap" = "تبديل الجبهات مهاجم/مدافع";
+
+/* No comment provided by engineer. */
+"Champion's Aura" = "هالة البطل";
+
+/* No comment provided by engineer. */
+"Finisher" = "حركة النهاية";
+
+/* No comment provided by engineer. */
+"Fish Animation" = "حركات السمكة";
+
+/* No comment provided by engineer. */
+"Heartbeat & Map Sensor" = "دقات القلب وإشعارات الخريطة";
+
+/* No comment provided by engineer. */
+"Inspect & Kill Effects" = "التأثيرات للفصل وبعد القتل";
+
+/* No comment provided by engineer. */
+"Kill Banner" = "راية القتل";
+
+/* No comment provided by engineer. */
+"Kill Counter" = "عدد القتلى";
+
+/* No comment provided by engineer. */
+"Kill Effect" = "تأثير القتل";
+
+/* No comment provided by engineer. */
+"Randomizer" = "العشوائي";
+
+/* No comment provided by engineer. */
+"Sound Effects" = "تأثيرات الصوتية";
+
+/* No comment provided by engineer. */
+"VFX" = "تأثيرات الحركة";
+
+/* No comment provided by engineer. */
+"Voiceover" = "التعليق الصوتي";
