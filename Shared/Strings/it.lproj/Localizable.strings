@@ -98,7 +98,7 @@ Missions Box */
 Competitive matches after your placements can be identified without their details, however." = "La modalità di gioco di una partita è sconosciuta fino a quando non vengono recuperati i suoi dettagli (cliccandola).
 Tuttavia, le partite competitive possono essere identificate senza dover ottenere dettagli.";
 
-/* No comment provided by engineer. */
+/* Match List: shown with a match's RR change when the player got an AFK Penalty (filled into the placeholder, including -) */
 "AFK: %lld" = "AFK: %lld";
 
 /* Career Summary: header for totals of all time */
@@ -1262,7 +1262,7 @@ Round Details: killed by unknown/unspecified weapon */
 /* Pro Features List */
 "View your storefront, daily/weekly missions, or current rank without even having to open the app!" = "Visualizza il negozio, le missioni giornaliere/settimanali e il vostro grado attuale senza nemmeno dover aprire l'app!";
 
-/* No comment provided by engineer. */
+/* Match List: shown with a match's RR change when the player got a performance bonus (filled into the placeholder) */
 "WP: +%lld" = "WP: +%lld";
 
 /* No comment provided by engineer. */
