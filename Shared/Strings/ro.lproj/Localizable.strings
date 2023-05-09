@@ -547,6 +547,100 @@ Weapon Reference: stats */
 /* No comment provided by engineer. */
 "Headhunter (Chamber)" = "Headhunter (Chamber)";
 
+/* About Screen */
+"Hi! I'm Julian Dunskus, and I made this app.
+
+Recon Bolt started development in early 2021, back when it wasn't yet possible to see your RR gains and losses in the game, but the API offered those numbers. I made an app to see the numbers and better understand my rank changes.
+
+As you can guess, the scope expanded massively over time to what you're using now. I hope you're enjoying it!
+
+If you've encountered a bug or have some feedback, I'm always happy to hear it on the Discord Server or GitHub :)" = "Bună! Sunt Julian Dunskus și eu am creat această aplicație.
+
+Recon Bolt a început să fie dezvoltată la începutul anului 2021, pe vremea când încă nu era posibil să vezi câștigurile și pierderile tale RR în joc, dar API-ul oferea aceste cifre. Am făcut o aplicație pentru a vedea cifrele și pentru a înțelege mai bine schimbările de rang.
+
+După cum puteți ghici, domeniul de aplicare s-a extins masiv în timp până la ceea ce folosiți acum. Sper că vă bucurați de ea!
+
+Dacă ați întâlnit un bug sau aveți ceva feedback, sunt întotdeauna bucuros să îl aud pe serverul Discord sau pe GitHub :)";
+
+/* Hit Distribution Stats: title */
+"Hit Distribution" = "Distribuția loviturilor";
+
+/* Pro Store */
+"Home Screen Widgets" = "Widgeturi pentru ecranul de pornire";
+
+/* Pro Store */
+"I hope you enjoy the pro features :)" = "Sper sa te bucuri de funcțiile pro :)";
+
+/* Login Form: is this safe? */
+"I won't sugarcoat things. Due to the way this app uses the API, I believe there's no other way to sign in than to have people enter their credentials directly. Under those circumstances, there's really no good way for anyone to be sure their credentials remain safe. For what it's worth:" = "Nu voi îndulci lucrurile. Din cauza modului în care această aplicație folosește API-ul, cred că nu există altă modalitate de a vă conecta decât aceea de a le cere oamenilor să își introducă direct credențialele. În aceste circumstanțe, nu există nicio modalitate bună pentru oricine de a fi sigur că datele sale de identificare rămân în siguranță. Pentru ceea ce merită:";
+
+/* No comment provided by engineer. */
+"Identities" = "Identități";
+
+/* Pro Features List */
+"If you have accounts in multiple regions to play with friends around the world, this is the feature for you!" = "Dacă ai conturi în mai multe regiuni pentru a juca cu prietenii din întreaga lume, aceasta este funcția potrivită pentru tine!";
+
+/* Pro Features List */
+"If you have multiple accounts, you can configure separate widgets for each and have them on your Home Screen at the same time." = "Dacă aveți mai multe conturi, puteți configura widget-uri separate pentru fiecare dintre ele și le puteți afișa în același timp pe ecranul principal.";
+
+/* No comment provided by engineer. */
+"If your widgets seem broken, use this button to request an immediate refresh from iOS." = "Dacă widget-urile par să fie defecte, utilizați acest buton pentru a solicita o actualizare imediată de la iOS.";
+
+/* No comment provided by engineer. */
+"Image failed to load!" = "Imaginea nu a reușit să se încarce!";
+
+/* Asset Management */
+"In case something went wrong, use this button to force a full refetch of the assets and images." = "În cazul în care ceva nu a mers bine, utilizați acest buton pentru a forța o rechemare completă a activelor și a imaginilor.";
+
+/* Settings: section */
+"In-App Store" = "Magazin";
+
+/* Login Form: button/header */
+"Is this safe?" = "Este sigur?";
+
+/* No comment provided by engineer. */
+"Join the Discord Server" = "Alăturați-vă serverului Discord";
+
+/* Match Details: section */
+"Kills by Round" = "Ucideri în funcție de rundă";
+
+/* Asset Management: this row shows the language of the current assets */
+"Language" = "Limba";
+
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
+"Legs" = "Picioare";
+
+/* Bookmark/Player List: player level */
+"Level %lld" = "Nivel %lld";
+
+/* Contract Progress Bar */
+"Level %lld / %lld" = "Nivel %lld/%lld";
+
+/* No comment provided by engineer. */
+"Lifetime Peak" = "Lifetime Peak";
+
+/* App Theme */
+"Light Mode" = "Mod de lumină";
+
+/* About Screen: section */
+"Links" = "Links";
+
+/* Top-Level Tab Title */
+"Live" = "Live";
+
+/* No comment provided by engineer. */
+"Live Match" = "Meci în direct";
+
+/* Stats: match loading */
+"Load Data" = "Încarcă data";
+
+/* Match List */
+"Load Older Matches" = "Încărcați meciuri mai vechi";
+
+/* Pro Store */
+"Loading Store Info…" = "Încărcare Informații despre magazin…";
+
 /* No comment provided by engineer. */
 "Loading request log…" = "Încărcarea jurnalului de cerere…";
 
