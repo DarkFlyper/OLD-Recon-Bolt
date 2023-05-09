@@ -108,7 +108,7 @@ Competitive matches after your placements can be identified without their detail
 
 然而，您的位置後可以識別競爭性匹配，而無需其詳細資訊。";
 
-/* No comment provided by engineer. */
+/* Match List: shown with a match's RR change when the player got an AFK Penalty (filled into the placeholder, including -) */
 "AFK: %lld" = "掛機: %lld";
 
 /* Career Summary: header for totals of all time */
@@ -1218,7 +1218,7 @@ Round Details: killed by unknown/unspecified weapon */
 /* Pro Features List */
 "View your storefront, daily/weekly missions, or current rank without even having to open the app!" = "查看您的商店、每日/每週任務或當前排位，甚至無需開啟遊戲！";
 
-/* No comment provided by engineer. */
+/* Match List: shown with a match's RR change when the player got a performance bonus (filled into the placeholder) */
 "WP: +%lld" = "WP: +%lld";
 
 /* No comment provided by engineer. */
