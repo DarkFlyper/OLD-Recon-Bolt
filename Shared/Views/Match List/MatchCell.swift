@@ -154,11 +154,11 @@ struct MatchCell: View {
 			VStack(alignment: .trailing) {
 				Group {
 					if match.performanceBonus != 0 {
-						Text("WP: +\(match.performanceBonus)")
+						Text("WP: +\(match.performanceBonus)", comment: "Match List: shown with a match's RR change when the player got a performance bonus (filled into the placeholder)")
 							.foregroundColor(.green)
 					}
 					if match.afkPenalty != 0 {
-						Text("AFK: \(match.afkPenalty)")
+						Text("AFK: \(match.afkPenalty)", comment: "Match List: shown with a match's RR change when the player got an AFK Penalty (filled into the placeholder, including -)")
 							.foregroundColor(.red)
 					}
 				}
