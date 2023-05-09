@@ -86,8 +86,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/juliand665/UserDefault.git",
       "state" : {
-        "revision" : "9ec805ced9922e44cddf5734f5fa35be8dfcfd98",
-        "version" : "1.3.0"
+        "revision" : "01ecd19faf558571571e6a5ad72d5feae43b3cbf",
+        "version" : "1.3.1"
       }
     }
   ],
