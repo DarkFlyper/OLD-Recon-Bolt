@@ -827,7 +827,7 @@ Dacă nu știi numele tău de utilizator sau nu ai unul, poți rezolva asta la [
 
 /* Win Rate Stats: section
 Playtime Stats: section */
-"Over Time" = "Over Time";
+"Over Time" = "De-a lungul timpului";
 
 /* Hit Distribution Stats: section
 Playtime Stats: section */
@@ -855,7 +855,98 @@ Playtime Stats: section */
 "Players" = "Jucători";
 
 /* No comment provided by engineer. */
-"Playtime" = "Timpul de joc";
+"Playtime" = "Timpul jucat";
+
+/* No comment provided by engineer. */
+"Playtime Breakdown" = "Statistici despre timpul jucat";
+
+/* No comment provided by engineer. */
+"Please make sure you are ready to play by the time the game starts!" = "Vă rugăm să vă asigurați că sunteți gata să jucați până când începe jocul!";
+
+/* Weapon Reference */
+"Price" = "Preț";
+
+/* Badge applied to buttons that are exclusive to Pro, e.g. in the account settings */
+"Pro" = "Pro";
+
+/* App Icon Name */
+"Pro Blue" = "Pro Blue";
+
+/* No comment provided by engineer. */
+"Pro Features" = "Caracteristici Pro";
+
+/* App Icon Picker: section */
+"Pro Icons" = "Pictograme Pro";
+
+/* Pro Store: error alert title */
+"Purchase Failed!" = "Achiziția a eșuat!";
+
+/* Pro Store: button (placeholder filled with formatted currency) */
+"Purchase – %@" = "Achiziționează - %@";
+
+/* Statistics filter: button */
+"Queues" = "Queues";
+
+/* Weapon Reference: stats */
+"Range" = "Distanță";
+
+/* Rank Widget: title */
+"Rank" = "Rang";
+
+/* No comment provided by engineer. */
+"Rank %lld" = "Rang %lld";
+
+/* Rank Changes Widget: title */
+"Rank Changes" = "Modificări de rang";
+
+/* No comment provided by engineer. */
+"Rank Rating Changes" = "Modificări ale ratingului de rang";
+
+/* No comment provided by engineer. */
+"Rate on the App Store" = "Evaluează pe App Store";
+
+/* accessibility label */
+"Ready" = "Gata";
+
+/* No comment provided by engineer. */
+"Recon Bolt Pro" = "Recon Bolt Pro";
+
+/* Pro Features List */
+"Recon Bolt Pro supports Family Sharing, meaning if just one member of your iCloud family buys it, everyone can use it!" = "Recon Bolt Pro suportă Family Sharing, ceea ce înseamnă că dacă un singur membru al familiei tale iCloud îl cumpără, toți îl pot folosi!";
+
+/* Pro Features List */
+"Recon Bolt does not have and will never have ads. The only way it can make money is through in-app purchases." = "Recon Bolt nu are și nu va avea niciodată reclame. Singurul mod în care poate face bani este prin achiziții în aplicație.";
+
+/* Top-Level Tab Title */
+"Reference" = "Referință";
+
+/* Account Settings: button to refresh expired session */
+"Refresh" = "Reîmprospătare";
+
+/* No comment provided by engineer. */
+"Refresh automatically" = "Actualizare automată";
+
+/* Store Widget: next refresh time (hour & minute) */
+"Refreshes at %@" = "Se reîmprospătează la %@";
+
+/* Weapon Reference: stats */
+"Reload Time" = "Timp de reîncărcare";
+
+/* Match List: accessibility label */
+"Remove Bookmark" = "Eliminați marcajul";
+
+/* Asset Management: section */
+"Repair" = "Reparații";
+
+/* Request Log: header */
+"Request" = "Cerere";
+
+/* Advanced Settings: button to open request log
+Request Log: title */
+"Request Log" = "Cere Log";
+
+/* No comment provided by engineer. */
+"Requests" = "Cereri";
 
 /* Asset Management: button */
 "Reset" = "Resetare";
@@ -1008,11 +1099,171 @@ Login Form: button */
 /* Login Form: is this safe? */
 "The code is open-source and visible on GitHub; you can build it yourself if you want to be sure of what's running." = "Codul este open-source și este vizibil pe GitHub; îl puteți construi singur dacă doriți să fiți sigur de ceea ce rulează.";
 
+/* App Icon Description: default */
+"The default look of Recon Bolt." = "Aspectul implicit al lui Recon Bolt.";
+
+/* No comment provided by engineer. */
+"The pro version lets you change the app icon! More icons might be coming in future updates." = "Versiunea pro vă permite să schimbați pictograma aplicației! Este posibil să apară mai multe pictograme în actualizările viitoare.";
+
+/* Settings: picker */
+"Theme" = "Tema";
+
+/* No comment provided by engineer. */
+"These are the last %lld requests sent by the app, along with their responses." = "Acestea sunt ultimele cereri %lld trimise de aplicație, împreună cu răspunsurile acestora.";
+
+/* Statistics error for iOS <16 */
+"This feature requires iOS 16 or newer." = "Această funcție necesită iOS 16 sau o versiune mai nouă.";
+
+/* Settings: toggle description */
+"This makes Recon Bolt automatically use your username & password to sign in again if you get signed out. If you have 2-factor authentication enabled, this may fail if it requires a new code, but it still works sometimes." = "Acest lucru face ca Recon Bolt să utilizeze automat numele de utilizator și parola pentru a vă autentifica din nou, dacă vă deconectați. Dacă aveți activată autentificarea cu 2 factori, este posibil ca această operațiune să nu reușească dacă este necesar un nou cod, dar totuși funcționează uneori.";
+
+/* Stats: match loading */
+"To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "Pentru a aduna statistici, trebuie mai întâi să încărcăm meciurile pentru a le procesa. Rețineți că sumele mari pot dura mult timp, mai ales atunci când se descarcă pentru prima dată!";
+
+/* Win Rate Stats: side name
+Hit Distribution Stats: region */
+"Total" = "Total";
+
+/* No comment provided by engineer. */
+"Total Playtime" = "Timp total de joc";
+
+/* No comment provided by engineer. */
+"Total Space Used" = "Spațiul total utilizat";
+
+/* No comment provided by engineer. */
+"Tour de Force (Chamber)" = "Tour de Force (Chamber)";
+
+/* No comment provided by engineer. */
+"Twitter @juliand665" = "Twitter @juliand665";
+
+/* Request Log */
+"URL" = "URL";
+
+/* Missions Box: header, shown when a mission is not daily or weekly (should not happen unless Riot changes something) */
+"Uncategorized Missions" = "Misiuni necategorizate";
+
+/* Shown when a match does not match the filter and its details have not been fetched. */
+"Unfetched" = "Neîncercat";
+
+/* Hit Distribution Stats: footnote */
+"Unfortunately, Valorant doesn't store information about which weapon was used for each hit. All we get is the weapon you started the round with and what weapon you used for each kill. Recon Bolt guesses the weapon involved in each damage based on this information, but it cannot be perfect (and neither can any other tracker)." = "Din nefericire, Valorant nu stochează informații despre ce armă a fost folosită pentru fiecare lovitură. Tot ce primim este arma cu care ați început runda și ce armă ați folosit pentru fiecare lovitură. Recon Bolt ghicește arma implicată în fiecare avarie pe baza acestor informații, dar nu poate fi perfect (și nici orice alt tracker).";
+
+/* Login Form: sign in with google/apple/etc. */
+"Unfortunately, due to technical limitations, you cannot sign into Recon Bolt via your Google account, Apple ID, or anything but a Riot account.
+
+Assuming you signed up for Valorant using Google/Apple/etc., you can set up your account to add a username & password on Riot's site at [account.riotgames.com](https://account.riotgames.com). Note that your Riot ID is **not** the same as your username! If you've forgotten your username, you can reset it at [recovery.riotgames.com](https://recovery.riotgames.com).
+
+On that site, navigate to **Riot Account Sign-in** and set yourself a username and password. When you're done, you can use those same credentials to sign in above! Your social account will stay linked and you'll remain able to sign in with that on PC :)" = "Din nefericire, din cauza unor limitări tehnice, nu te poți conecta la Recon Bolt prin intermediul contului Google, Apple ID sau orice altceva în afară de un cont Riot.
+
+Presupunând că v-ați înregistrat pentru Valorant folosind Google/Apple/etc., vă puteți configura contul pentru a adăuga un nume de utilizator și o parolă pe site-ul Riot la [account.riotgames.com](https://account.riotgames.com). Rețineți că ID-ul Riot este **nu** același cu numele de utilizator! Dacă v-ați uitat numele de utilizator, îl puteți reseta la [recovery.riotgames.com](https://recovery.riotgames.com).
+
+Pe site-ul respectiv, navigați la **Riot Account Sign-in** și setați-vă un nume de utilizator și o parolă. După ce ai terminat, poți folosi aceleași credențiale pentru a te autentifica mai sus! Contul tău social va rămâne legat și vei putea în continuare să te conectezi cu acesta pe PC :)";
+
+/* Round Details: killed by unknown ability */
+"Unknown Ability" = "Abilitate necunoscută";
+
+/* placeholder */
+"Unknown Agent" = "Agent necunoscut";
+
+/* placeholder */
+"Unknown Buddy" = "Buddy necunoscut";
+
+/* placeholder */
+"Unknown Bundle" = "Bundle necunoscut";
+
+/* placeholder */
+"Unknown Card" = "Card necunoscut";
+
 /* Store */
 "Unknown Offer" = "Ofertă Necunoscută";
 
+/* No comment provided by engineer. */
+"Unknown Player" = "Jucător necunoscut";
+
+/* No comment provided by engineer. */
+"Unknown Queue" = "Queue necunoscut";
+
+/* Match List: should never appear unless assets are missing/outdated */
+"Unknown Rank" = "Rang necunoscut";
+
 /* placeholder */
 "Unknown Skin" = "Skin Necunoscut";
+
+/* placeholder */
+"Unknown Spray" = "Spray necunoscut";
+
+/* placeholder */
+"Unknown Title" = "Titlu necunoscut";
+
+/* Round Details: killed by unknown damage source/type */
+"Unknown Type" = "Tip necunoscut";
+
+/* Stats: label for a weapon that the app doesn't know for some reason
+Round Details: killed by unknown/unspecified weapon */
+"Unknown Weapon" = "Armă necunoscută";
+
+/* No comment provided by engineer. */
+"Unknown bundle!" = "Bundle necunoscut!";
+
+/* Missions Box */
+"Unknown contract!" = "Contract necunoscut!";
+
+/* Store Bundle Details: should never show, but if Riot adds a new kind of item to a bundle, this would show */
+"Unknown item of type %@" = "Element necunoscut de tip %@";
+
+/* No comment provided by engineer. */
+"Unknown mission!" = "Misiune necunoscută!";
+
+/* Asset Management: button */
+"Update Now" = "Actualizați acum";
+
+/* Match Details: button */
+"Update Ranks" = "Actualizarea rangurilor";
+
+/* Login Form */
+"Username" = "Nume utilizator";
+
+/* No comment provided by engineer. */
+"Users" = "Utilizatori";
+
+/* Win Rate Stats by Loadout Delta */
+"Value Difference (credits)" = "Diferența de valoare (credite)";
+
+/* Asset Management: this row shows the version of the current assets */
+"Version" = "Versiune";
+
+/* Reference */
+"Version %@" = "Versiunea %@";
+
+/* Settings: toggle */
+"Vibrate when Match Found" = "Vibrează când găsește meci";
+
+/* Pro Store */
+"View All Features" = "Vezi toate caracteristicile";
+
+/* No comment provided by engineer. */
+"View Full Profile" = "Vezi profilul complet";
+
+/* Gun Customizer: button */
+"View Skin Details" = "Vezi detaliile despre skin";
+
+/* Match List */
+"View Stats" = "Vezi statisticile";
+
+/* Statistics Pro purchase prompt: button */
+"View Store in Settings" = "Vizualizați Magazin în Setări";
+
+/* Rank Widget: description */
+"View your current rank." = "Vizualizați rangul tău actual.";
+
+/* Rank Changes Widget: description */
+"View your rank rating changes." = "Vizualizați modificările de rating.";
+
+/* Pro Features List */
+"View your storefront, daily/weekly missions, or current rank without even having to open the app!" = "Vizualizează-ți magazinul, misiunile zilnice/săptămânale sau rangul actual fără a fi nevoie să deschizi aplicația!";
+
+/* No comment provided by engineer. */
+"WP: +%lld" = "WP: +%lld";
 
 /* No comment provided by engineer. */
 "Weapon Loadout" = "Echipează-ți armele";
