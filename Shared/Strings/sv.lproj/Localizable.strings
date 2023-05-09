@@ -198,6 +198,25 @@ Weapon Reference: stats */
 /* Gun Customizer: section */
 "Buddy" = "Buddy";
 
+/* Storage Management: section */
+"By Kind" = "Av Kind";
+
+/* Win Rate Stats: section
+Playtime Stats: section */
+"By Map" = "Med kartan";
+
+/* Playtime Stats: section/title */
+"By Non-Premade Player" = "Av Non-Premade Player";
+
+/* Playtime Stats: section/title */
+"By Premade Teammate" = "Av Premade Teammate";
+
+/* Playtime Stats: section */
+"By Queue" = "Alla queues";
+
+/* Hit Distribution Stats: section */
+"By Weapon" = "Med vapen";
+
 /* No comment provided by engineer. */
 "Cancel" = "Avbryt";
 
@@ -213,8 +232,14 @@ Weapon Reference: stats */
 /* No comment provided by engineer. */
 "Career Summary" = "Karriär sammanfattning";
 
+/* Weapon Reference */
+"Category" = "Kategori";
+
 /* No comment provided by engineer. */
 "Change Buddy" = "Byt gun-buddy";
+
+/* Settings: button */
+"Change Language" = "Ändra språk";
 
 /* No comment provided by engineer. */
 "Change Queue" = "Byt queue";
@@ -254,6 +279,9 @@ Weapon Reference: stats */
 
 /* Storage Management: button to delete all entries of a certain kind */
 "Clear All" = "Rensa allt";
+
+/* Skin Details: section */
+"Color Variants" = "Färgvarianter";
 
 /* Contract Picker */
 "Completed" = "Slutfört";
@@ -330,6 +358,9 @@ Weapon Reference: stats */
 /* Store */
 "Daily Offers" = "Daglig Butik";
 
+/* Weapon Reference: stats */
+"Damage" = "Skador";
+
 /* App Theme */
 "Dark Mode" = "Mörkt läge";
 
@@ -377,6 +408,9 @@ Weapon Reference: stats */
 
 /* No comment provided by engineer. */
 "Enter 2FA Code" = "Ange 2FA-kod";
+
+/* Weapon Reference: stats */
+"Equip Time" = "Utrustningstid";
 
 /* Request Log
 Stats: error details */
@@ -432,16 +466,40 @@ DIN FELRAPPORT HÄR
 "Filter Queues" = "Filtrera köer";
 
 /* No comment provided by engineer. */
+"Filtering by starting side will exclude any matches in single-round modes like Deathmatch, Escalation, etc." = "Filtrering efter startsida utesluter alla matcher i lägen med en enda runda som Deathmatch, Escalation osv.";
+
+/* No comment provided by engineer. */
 "Find Match" = "Starta kö";
 
 /* Party Box: placeholder shows time spent in queue */
 "Finding match… (%@)" = "Hittar match… (%@)";
+
+/* Weapon Reference: stats */
+"Fire Rate" = "Eldhastighet";
+
+/* Weapon Reference: stats */
+"First Bullet Spread" = "Spridning av den första kulan";
+
+/* No comment provided by engineer. */
+"Force Refresh Widgets" = "Tvinga uppdatering av widgetar";
+
+/* Contract Picker */
+"Free Agent" = "Fri agent";
+
+/* Storage Management: button to free up a certain amount of space */
+"Free up these %@" = "Frigör dessa %@";
 
 /* Agent Select header: shown when timer reaches zero */
 "Game Started" = "Spelet har börjat";
 
 /* No comment provided by engineer. */
 "Game is not running!" = "Spelet körs inte just nu!";
+
+/* Pro Features List */
+"Gather statistics from anyone's games to gain insights on things like time played by mode/premade, headshot rate over time/by weapon, win rate over time/by map & side, and more!" = "Samla in statistik från någons spel för att få insikter om saker som speltid per läge/förhandstillverkning, skottfrekvens över tid/per vapen, vinstfrekvens över tid/per karta och sida och mycket mer!";
+
+/* Pro Features List */
+"Getting money from Recon Bolt gives me the flexibility and motivation to keep improving the app!" = "Att få pengar från Recon Bolt ger mig flexibilitet och motivation att fortsätta förbättra appen!";
 
 /* Pro Store */
 "I hope you enjoy the pro features :)" = "Jag hoppas att du gillar de nya pro-funktionerna :)";
