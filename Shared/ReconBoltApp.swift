@@ -1,4 +1,5 @@
 import SwiftUI
+import AVKit
 
 // TODO: remove this when FB9309847 (using implicit CGFloat–Double conversion breaks preview bounds display) is addressed
 typealias FloatLiteralType = CGFloat
@@ -26,7 +27,7 @@ struct ReconBoltApp: App {
 					settings: settings,
 					store: store
 				)
-				.onAppear { ReviewManager.registerUsage(points: 2) }
+				.onAppear { onLaunch() }
 				.environmentObject(bookmarkList)
 				.environmentObject(imageManager)
 				.environmentObject(settings)
@@ -42,6 +43,17 @@ struct ReconBoltApp: App {
 					imageManager.setVersion(version)
 				}
 			}
+		}
+	}
+	
+	private func onLaunch() {
+		ReviewManager.registerUsage(points: 2)
+		
+		// make videos play audio even in silent mode
+		do {
+			try AVAudioSession.sharedInstance().setCategory(.playback)
+		} catch {
+			print("could not set audio session category: \(error)")
 		}
 	}
 }
