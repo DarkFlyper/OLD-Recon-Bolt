@@ -58,6 +58,9 @@ Daca ai versiunea Pro, adaugă un cont utilizând aceleași date de logare pentr
 /* Riot API Error */
 "The resource could not be found." = "Resursa nu poate fi găsită.";
 
+/* Riot API Error */
+"This match could not be loaded! Valorant discards match details for older matches after a few months." = "Acest meci nu a putut fi încărcat! Valorant elimină detaliile meciurilor mai vechi după câteva luni.";
+
 /* Keychain error. */
 "Unexpected type found: %@" = "Tip neprevăzut găsit: %@";
 
