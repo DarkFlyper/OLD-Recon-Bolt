@@ -98,7 +98,7 @@ Missions Box */
 Competitive matches after your placements can be identified without their details, however." = "Coada unui meci e necunoscută până când detaliile lui sunt obținute (prin apăsarea lui sau prin swipe).
 Meciurile de Competitive de după cele de plasament pot fi totuși identificate fără detaliile lor.";
 
-/* No comment provided by engineer. */
+/* Match List: shown with a match's RR change when the player got an AFK Penalty (filled into the placeholder, including -) */
 "AFK: %lld" = "AFK: %lld";
 
 /* Career Summary: header for totals of all time */
@@ -1262,7 +1262,7 @@ Round Details: killed by unknown/unspecified weapon */
 /* Pro Features List */
 "View your storefront, daily/weekly missions, or current rank without even having to open the app!" = "Vizualizează-ți magazinul, misiunile zilnice/săptămânale sau rangul actual fără a fi nevoie să deschizi aplicația!";
 
-/* No comment provided by engineer. */
+/* Match List: shown with a match's RR change when the player got a performance bonus (filled into the placeholder) */
 "WP: +%lld" = "WP: +%lld";
 
 /* No comment provided by engineer. */
