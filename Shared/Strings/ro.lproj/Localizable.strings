@@ -795,6 +795,68 @@ Dacă nu știi numele tău de utilizator sau nu ai unul, poți rezolva asta la [
 /* Party Box */
 "Not Ready" = "Nu este pregătit";
 
+/* Hit Distribution Stats: error */
+"Not enough data!" = "Nu sunt suficiente date!";
+
+/* Account Settings */
+"Not signed in yet." = "Încă nu v-ați logat.";
+
+/* No comment provided by engineer. */
+"Not signed in!" = "Nu sunteți conectat!";
+
+/* Pro Features List */
+"Note: Statistics are only available on iOS 16 and newer." = "Notă: Statisticile sunt disponibile numai pe iOS 16 și mai nou.";
+
+/* Pro Features List */
+"Note: Widgets are only available on iOS 16 and newer." = "Notă: Widgeturile sunt disponibile numai pe iOS 16 și mai nou.";
+
+/* No comment provided by engineer. */
+"OK" = "OK";
+
+/* No comment provided by engineer. */
+"Official Website" = "Site-ul oficial";
+
+/* No comment provided by engineer. */
+"Open or swipe to fetch details." = "Deschideți sau glisați pentru a obține detalii.";
+
+/* Storage Management */
+"Other Players" = "Alți jucători";
+
+/* Buddy Picker: alert shown when both instances of a buddy are in use */
+"Out of instances!" = "Nu mai aveți instanțe!";
+
+/* Win Rate Stats: section
+Playtime Stats: section */
+"Over Time" = "Over Time";
+
+/* Hit Distribution Stats: section
+Playtime Stats: section */
+"Overall" = "În general";
+
+/* No comment provided by engineer. */
+"Overdrive (Neon)" = "Overdrive (Neon)";
+
+/* No comment provided by engineer. */
+"Party" = "Party";
+
+/* Scoreboard: party letter */
+"Party %@" = "Party %@";
+
+/* Login Form */
+"Password" = "Parola";
+
+/* Agent View: label for player who hasn't picked an agent yet */
+"Picking…" = "Selectează…";
+
+/* Match List: section */
+"Player" = "Jucător";
+
+/* Bookmark/Player List: title */
+"Players" = "Jucători";
+
+/* No comment provided by engineer. */
+"Playtime" = "Timpul de joc";
+
 /* Asset Management: button */
 "Reset" = "Resetare";
 
