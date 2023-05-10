@@ -1,0 +1,10 @@
+/* Shown in the iOS settings, where users are guided when trying to change the app language. */
+"Asset Language Explanation" = "Dacă doriți să folosiți o limbă diferită pentru interfața aplicației și pentru conținutul/activitățile jocului, puteți modifica acest lucru în aplicație, la Setări avansate > Gestionare active > Limbă.";
+
+/* Shown in the iOS settings, where users are guided when trying to change the app language. This one is a section header. */
+"Help" = "Ajutor";
+
+/* Shown in the iOS settings, where users are guided when trying to change the app language. */
+"Language Explanation" = "Nu găsiți setarea de limbă? iOS vă permite să personalizați limba unei aplicații numai dacă v-ați configurat limbile preferate cu mai multe intrări.
+
+Pentru a schimba acest lucru, accesați General > Limbă și regiune și adăugați o nouă limbă (de exemplu, engleză) în partea de jos a listei.";
