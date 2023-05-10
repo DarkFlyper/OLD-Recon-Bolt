@@ -107,7 +107,7 @@ Missions Box */
 Competitive matches after your placements can be identified without their details, however." = "قائمة انتظار المباراة غير معروفة حتى يتم جلب تفاصيلها (عن طريق النقر عليها أو تنفيذ إجراء التمرير).
 ومع ذلك ، يمكن التعرف على المطابقات التنافسية بعد مواضعك بدون تفاصيلها.";
 
-/* No comment provided by engineer. */
+/* Match List: shown with a match's RR change when the player got an AFK Penalty (filled into the placeholder, including -) */
 "AFK: %lld" = "AFK: %lld";
 
 /* Career Summary: header for totals of all time */
@@ -1271,7 +1271,7 @@ Round Details: killed by unknown/unspecified weapon */
 /* Pro Features List */
 "View your storefront, daily/weekly missions, or current rank without even having to open the app!" = "اعرض واجهة المتجر, المهام الاسبوعية واليومية, والمرتبة الحالية من دون فتح التطبيق!";
 
-/* No comment provided by engineer. */
+/* Match List: shown with a match's RR change when the player got a performance bonus (filled into the placeholder) */
 "WP: +%lld" = "مكافأة اضافية: +%lld";
 
 /* No comment provided by engineer. */

@@ -97,7 +97,7 @@ Missions Box */
 "A match's queue is unknown until its details are fetched (by tapping it or performing the swipe action).
 Competitive matches after your placements can be identified without their details, however." = "Antrean pertandingan tidak diketahui sampai data detail kami ambil. (Dengan cara membuka maupun menggeserkan). Namun, Pertandingan kompetitif setelah penempatan Anda dapat kami identifikasi tanpa detailnya.";
 
-/* No comment provided by engineer. */
+/* Match List: shown with a match's RR change when the player got an AFK Penalty (filled into the placeholder, including -) */
 "AFK: %lld" = "AFK: %lld";
 
 /* Career Summary: header for totals of all time */
@@ -1261,7 +1261,7 @@ Round Details: killed by unknown/unspecified weapon */
 /* Pro Features List */
 "View your storefront, daily/weekly missions, or current rank without even having to open the app!" = "Lihat store, misi harian/mingguan, atau Rank Anda saat ini tanpa perlu membuka aplikasi!";
 
-/* No comment provided by engineer. */
+/* Match List: shown with a match's RR change when the player got a performance bonus (filled into the placeholder) */
 "WP: +%lld" = "WP: +%lld";
 
 /* No comment provided by engineer. */
