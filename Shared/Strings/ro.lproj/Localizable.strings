@@ -633,7 +633,7 @@ Weapon Reference: stats */
 "Live Match" = "Meci în direct";
 
 /* Stats: match loading */
-"Load Data" = "Încarcă data";
+"Load Data" = "Încarcă datele";
 
 /* Match List */
 "Load Older Matches" = "Încărcați meciuri mai vechi";
