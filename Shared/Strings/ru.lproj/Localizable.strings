@@ -2,6 +2,9 @@
 /* Used for matches less than a day ago. %@ is replaced by the number of hours/minutes, e.g. '3h ago'. */
 "%@ ago" = "%@ назад";
 
+/* Weapon Reference: stats */
+"%@ bullets/sec" = "%@ пуль/сек";
+
 /* %@ is replaced by a fraction of wins vs. games played, e.g. '5/12 games won'. */
 "%@ games won" = "%@ матчей выиграно";
 
@@ -11,6 +14,12 @@
 /* used throughout the app to format percentages—placeholder is replaced by a number */
 "%@%%" = "%@%%";
 
+/* Weapon Reference: time in seconds (with decimal digits) */
+"%@s" = "%@с";
+
+/* Weapon Reference: stats */
+"%@°" = "%@°";
+
 /* Missions Box: always at least 3 */
 "%lld Future Weeklies" = "%lld Будущих еженедельных заданий";
 
@@ -19,6 +28,12 @@
 
 /* No comment provided by engineer. */
 "%lld RR" = "%lld РРИ";
+
+/* Weapon Reference: stats */
+"%lld bullets" = "%lld пуль";
+
+/* Weapon Reference: price, always at least 150 */
+"%lld credits" = "%lld кредитов";
 
 /* Storage Management */
 "%lld from other players" = "%lld от других игроков";
@@ -34,6 +49,9 @@
 
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
 "%lld to %lld credits" = "%lld до %lld кредитов";
+
+/* Weapon Reference: stats: damage range */
+"%lld – %lldm" = "%lld – %lldм";
 
 /* No comment provided by engineer. */
 "%lld%%" = "%lld%%";
@@ -128,6 +146,12 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "Agent Select" = "Выбор агента";
 
+/* Contract Picker */
+"Agent Unlockable" = "Разблокируемый агент";
+
+/* Contract Picker */
+"Agent Unlocked" = "Агент разблокирован";
+
 /* Statistics filter: button */
 "Agents" = "Агенты";
 
@@ -188,6 +212,9 @@ Competitive matches after your placements can be identified without their detail
 /* Win Rate Stats: side name */
 "Attacking" = "Атака";
 
+/* Settings: toggle */
+"Automatically Sign Back In" = "Автоматически входить обратно";
+
 /* Store: available currency */
 "Available:" = "Доступно:";
 
@@ -241,8 +268,14 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Career Summary" = "Краткие сведения о карьере";
 
+/* Weapon Reference */
+"Category" = "Категория";
+
 /* No comment provided by engineer. */
 "Change Buddy" = "Изменить брелок";
+
+/* Settings: button */
+"Change Language" = "Изменить язык";
 
 /* No comment provided by engineer. */
 "Change Queue" = "Изменить режим";
@@ -282,6 +315,9 @@ Playtime Stats: section */
 
 /* Storage Management: button to delete all entries of a certain kind */
 "Clear All" = "Очистить все";
+
+/* Skin Details: section */
+"Color Variants" = "Варианты расцветок";
 
 /* Contract Picker */
 "Completed" = "Завершено";
@@ -358,6 +394,9 @@ Playtime Stats: section */
 /* Store */
 "Daily Offers" = "Ежедневные предложения";
 
+/* Weapon Reference: stats */
+"Damage" = "Урон";
+
 /* App Theme */
 "Dark Mode" = "Темный режим";
 
@@ -405,6 +444,9 @@ Playtime Stats: section */
 
 /* No comment provided by engineer. */
 "Enter 2FA Code" = "Введите 2FA код";
+
+/* Weapon Reference: stats */
+"Equip Time" = "Время экипировки";
 
 /* Request Log
 Stats: error details */
@@ -468,8 +510,17 @@ Stats: error details */
 /* Party Box: placeholder shows time spent in queue */
 "Finding match… (%@)" = "Поиск матча... (%@)";
 
+/* Weapon Reference: stats */
+"Fire Rate" = "Скорострельность";
+
+/* Weapon Reference: stats */
+"First Bullet Spread" = "Разброс первой пули";
+
 /* No comment provided by engineer. */
 "Force Refresh Widgets" = "Принудительно обновить виджеты";
+
+/* Contract Picker */
+"Free Agent" = "Свободный агент";
 
 /* Storage Management: button to free up a certain amount of space */
 "Free up these %@" = "Освободить %@";
@@ -630,11 +681,17 @@ If you don't know your username or don't have one, you can fix that at [account.
 /* Win Rate Stats: chart legend */
 "Losses" = "Поражения";
 
+/* Weapon Reference: stats */
+"Magazine Size" = "Размер магазина";
+
 /* No comment provided by engineer. */
 "Manage Assets" = "Управление ресурсами";
 
 /* No comment provided by engineer. */
 "Manage Local Storage" = "Управление локальным хранилищем";
+
+/* Settings: section */
+"Management" = "Менеджмент";
 
 /* About Screen */
 "Many thanks to the volunteer translators from our Discord server who have been hard at working translating the app to new languages!" = "Большое спасибо переводчикам-добровольцам с нашего сервера Discord, которые усердно работают над переводом приложения на новые языки!";
@@ -647,6 +704,9 @@ If you don't know your username or don't have one, you can fix that at [account.
 
 /* Stats: error details */
 "Match" = "Матч";
+
+/* Asset Management: option to match assets language to app language */
+"Match App Language" = "Соответствие языку приложения";
 
 /* Match Details: title */
 "Match Details" = "Подробности матча";
@@ -809,6 +869,12 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Please make sure you are ready to play by the time the game starts!" = "Пожалуйста, убедитесь что вы будете готовы играть когда игра начнется!";
 
+/* Weapon Reference */
+"Price" = "Цена";
+
+/* Badge applied to buttons that are exclusive to Pro, e.g. in the account settings */
+"Pro" = "Pro";
+
 /* App Icon Name */
 "Pro Blue" = "Pro Blue";
 
@@ -826,6 +892,9 @@ Playtime Stats: section */
 
 /* Statistics filter: button */
 "Queues" = "Режимы";
+
+/* Weapon Reference: stats */
+"Range" = "Дистанция";
 
 /* Rank Widget: title */
 "Rank" = "Ранг";
