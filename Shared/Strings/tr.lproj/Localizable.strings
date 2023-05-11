@@ -21,10 +21,10 @@
 "%@°" = "%@°";
 
 /* Missions Box: always at least 3 */
-"%lld Future Weeklies" = "%lld Gelecek Hafta Görevleri";
+"%lld Future Weeklies" = "Gelecek Görevler (%lld)";
 
 /* Missions Box: always at least 3 */
-"%lld Queued-Up Weeklies" = "%lld Sırada Bekleyen Gelecek Hafta Görevleri";
+"%lld Queued-Up Weeklies" = "Geçmiş Görevler (%lld)";
 
 /* No comment provided by engineer. */
 "%lld RR" = "%lld KP";
