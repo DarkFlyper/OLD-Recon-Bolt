@@ -131,6 +131,8 @@ struct RankEntryView: TimelineEntryView {
 			if shouldShowRankName, let rank {
 				Text(rank.name)
 					.font(.callout.weight(.semibold))
+					.fixedSize()
+					.scaledToFit()
 					.opacity(0.8)
 					.blendMode(.plusLighter)
 			}
@@ -138,6 +140,8 @@ struct RankEntryView: TimelineEntryView {
 			if shouldShowRankRating {
 				footer()
 					.font(.caption)
+					.fixedSize()
+					.scaledToFit()
 					.foregroundStyle(.secondary)
 					.blendMode(.plusLighter)
 			}
