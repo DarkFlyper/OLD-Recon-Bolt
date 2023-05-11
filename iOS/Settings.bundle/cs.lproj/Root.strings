@@ -1,0 +1,10 @@
+/* Shown in the iOS settings, where users are guided when trying to change the app language. */
+"Asset Language Explanation" = "Pokud chcete používat jiný jazyk pro rozhraní aplikace a herního obsahu, můžete to v části \"Rozšířená Nastavení > \"Správa Assetů\" > \"Jazyk\" změnit.";
+
+/* Shown in the iOS settings, where users are guided when trying to change the app language. This one is a section header. */
+"Help" = "Pomoc";
+
+/* Shown in the iOS settings, where users are guided when trying to change the app language. */
+"Language Explanation" = "Nemůžete najít nastavení jazyku? iOS umožňuje přizpůsobit jazyk aplikace pouze v případě, že jste nakonfigurovali preferované jazyky s více než jednou položkou.
+
+Chcete-li to změnit, přejděte do nabídky Obecné > Jazyk a oblast a přidejte nový jazyk (např. angličtinu) na konec seznamu.";
