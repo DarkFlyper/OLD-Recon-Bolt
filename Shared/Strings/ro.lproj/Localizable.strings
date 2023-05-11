@@ -45,7 +45,7 @@
 "%lld more" = "încă %lld";
 
 /* Weapon Reference: stats */
-"%lld pellets" = "%lld peleți";
+"%lld pellets" = "%lld gloanțe";
 
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
 "%lld to %lld credits" = "între %lld și %lld credite";
@@ -1003,7 +1003,7 @@ Request Log: title */
 "Shared Matches" = "Meciuri partajate";
 
 /* Weapon Reference: stats */
-"Shotgun Pellets" = "Shotgun Pellets";
+"Shotgun Pellets" = "Peleți de Shotgun";
 
 /* No comment provided by engineer. */
 "Show Unfetched Matches" = "Afișați meciurile neexecutate";
