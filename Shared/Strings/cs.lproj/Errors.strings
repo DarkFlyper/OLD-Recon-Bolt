@@ -58,6 +58,9 @@ Pokud máte Pro, přidejte účet se stejnými přihlašovacími údaji a nahra�
 /* Riot API Error */
 "The resource could not be found." = "Zdroj nebyl nalezen.";
 
+/* Riot API Error */
+"This match could not be loaded! Valorant discards match details for older matches after a few months." = "Tento zápas nebylo možné načíst! Valorant po několika měsících maže podrobnosti starších zápasů.";
+
 /* Keychain error. */
 "Unexpected type found: %@" = "Nalezen neočekávaný typ: %@";
 
