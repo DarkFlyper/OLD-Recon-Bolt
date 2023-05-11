@@ -267,6 +267,9 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Change Buddy" = "Změnit Přívěšek";
 
+/* Settings: button */
+"Change Language" = "Změnit Jazyk";
+
 /* No comment provided by engineer. */
 "Change Queue" = "Změnit herní mód";
 
@@ -695,6 +698,9 @@ Pokud své uživatelské jméno neznáte nebo ho nemáte, můžete jej zjistit n
 /* Stats: error details */
 "Match" = "Zápas";
 
+/* Asset Management: option to match assets language to app language */
+"Match App Language" = "Sladit s jazykem aplikace";
+
 /* Match Details: title */
 "Match Details" = "Podrobnosti o zápase";
 
@@ -977,6 +983,9 @@ Request Log: title */
 /* Bookmark/Player List: section */
 "Search" = "Hledat";
 
+/* Asset Management: language picker title */
+"Select Language" = "Vybrat Jazyk";
+
 /* Hit Distribution Stats: error */
 "Select more matches to see data on hit distribution. Deathmatch, Escalation, and other modes don't provide the necessary information." = "Chcete-li zobrazit údaje o distribuci zásahů, vyberte více zápasů. Režimy Deathmatch, Escalation a další neposkytují potřebné informace.";
 
@@ -1013,6 +1022,9 @@ Login Form: button */
 
 /* Login Form */
 "Sign In with your Riot account" = "Přihlaste se pomocí Riot účtu";
+
+/* Account Settings: button */
+"Sign Out of All Accounts" = "Odhlásit se ze všech účtů";
 
 /* Login Form: button/header */
 "Sign in with Google/Apple/etc." = "Přihlaste se pomocí Google/Apple atd.";
@@ -1100,6 +1112,9 @@ Login Form: button */
 
 /* Statistics error for iOS <16 */
 "This feature requires iOS 16 or newer." = "Tato funkce vyžaduje iOS 16 nebo novější.";
+
+/* Settings: toggle description */
+"This makes Recon Bolt automatically use your username & password to sign in again if you get signed out. If you have 2-factor authentication enabled, this may fail if it requires a new code, but it still works sometimes." = "Pokud se odhlásíte, Recon Bolt automaticky použije vaše uživatelské jméno a heslo k opětovnému přihlášení. Pokud máte povoleno dvoufaktorové ověření, může to selhat, pokud je vyžadován nový kód, ale někdy to stále funguje.";
 
 /* Stats: match loading */
 "To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "Chcete-li shromažďovat statistiky, musíte nejprve načíst zápasy ke zpracování. Upozorňujeme, že velké objemy mohou trvat dlouho, zejména při prvním nahrávání!";
@@ -1227,6 +1242,9 @@ Round Details: killed by unknown/unspecified weapon */
 
 /* No comment provided by engineer. */
 "View Full Profile" = "Zobrazit Celý Profil";
+
+/* Gun Customizer: button */
+"View Skin Details" = "Zobrazit podrobnosti o skinu";
 
 /* Match List */
 "View Stats" = "Zobrazit Statistiky";
