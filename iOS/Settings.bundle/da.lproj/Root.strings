@@ -1,0 +1,10 @@
+/* Shown in the iOS settings, where users are guided when trying to change the app language. */
+"Asset Language Explanation" = "Hvis du ønsker at bruge et andet sprog til appens interface og spilindhold, kan du ændre dette i appens indstillinger > Fortrukket Sprog > Vælg herefter det ønskede sprog.";
+
+/* Shown in the iOS settings, where users are guided when trying to change the app language. This one is a section header. */
+"Help" = "Hjælp";
+
+/* Shown in the iOS settings, where users are guided when trying to change the app language. */
+"Language Explanation" = "Kan du ikke finde sprogindstillingen? iOS giver dig kun mulighed for at tilpasse sproget af en app, hvis du har konfigureret dine foretrukne sprog med mere end én angivelse.
+
+Hvis du vil ændre dette, skal du gå ind under Generelt > Sprog og region og tilføje et nyt sprog (f.eks. engelsk) nederst på listen.";

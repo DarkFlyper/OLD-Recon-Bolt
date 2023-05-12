@@ -590,7 +590,7 @@ Se avete riscontrato un bug o avete un feedback, sono sempre felice di ascoltarl
 "Image failed to load!" = "Immagine non caricata!";
 
 /* Asset Management */
-"In case something went wrong, use this button to force a full refetch of the assets and images." = "Nel caso in cui qualcosa sia andato storto, utilizzare questo pulsante per forzare un refetch completo delle risorse e delle immagini.";
+"In case something went wrong, use this button to force a full refetch of the assets and images." = "Nel caso in cui qualcosa sia andato storto, usa questo pulsante per riscaricare gli assets e le immagini.";
 
 /* Settings: section */
 "In-App Store" = "Negozio";
