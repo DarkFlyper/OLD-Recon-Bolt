@@ -1,11 +1,11 @@
 /* Pro Store: error restoring purchase */
-"A previous transaction was found, but it could not be verified! %@" = "È stata trovata una transazione precedente, ma non è stata verificata! %@";
+"A previous transaction was found, but it could not be verified! %@" = "È stata trovata una transazione precedente, ma non può essere verificata! %@";
 
 /* error loading the account for a widget */
 "Could not load active account!" = "Impossibile caricare l'account attivo!";
 
 /* Riot API Error */
-"Invalid Headers: %@" = "Headers non valido: %@";
+"Invalid Headers: %@" = "Headers non Valido: %@";
 
 /* wrong account error */
 "It looks like this account has never played Valorant!
@@ -15,7 +15,7 @@ You've probably signed into the wrong account; %@" = "Sembra che questo account 
 Probabilmente hai effettuato l'accesso con l'account sbagliato; %@";
 
 /* No comment provided by engineer. */
-"Keychain error for key '%@': %@" = "Errore keychain per la key '%@': %@";
+"Keychain error for key '%@': %@" = "Errore Keychain per la key '%@': %@";
 
 /* store widget error */
 "Malformed Offer" = "Errore del Widget del Negozio.";
@@ -24,14 +24,14 @@ Probabilmente hai effettuato l'accesso con l'account sbagliato; %@";
 "Malformed account." = "Errore nel caricare l'account per colpa di un Widget.";
 
 /* store widget error */
-"Missing Assets!" = "Risorse mancanti!";
+"Missing Assets!" = "Assets Mancanti!";
 
 /* No comment provided by engineer. */
 "Missing game configuration data for %@ region!" = "Dati di configurazione del gioco mancanti per la regione %@!";
 
 /* Should not happen anymore, but you never know ¯\_(ツ)_/¯ */
 "Missing session for account!
-If you have Pro, add an account using the same credentials to replace the account with a working version." = "Sessione mancante per account!
+If you have Pro, add an account using the same credentials to replace the account with a working version." = "Sessione mancante per l' account!
 Se hai la versione Pro, aggiungi un account utilizzando le stesse credenziali per sostituire l'account con una versione funzionante.";
 
 /* error loading the account for a widget. */
@@ -50,7 +50,7 @@ Se hai la versione Pro, aggiungi un account utilizzando le stesse credenziali pe
 "The API rejected your authorization." = "L'API ha rifiutato la tua autorizzazione.";
 
 /* Riot API Error */
-"The API returned an error code %lld, i.e. %@. %@" = "L'API ha restituito un codice di errore %lld, per esempio %@. %@";
+"The API returned an error code %lld, i.e. %@. %@" = "L'API ha restituito un codice di errore %lld, ovvero %@. %@";
 
 /* Riot API Error */
 "The API returned an error code %lld." = "L'API ha restituito un codice di errore %lld.";
@@ -65,10 +65,10 @@ Se hai la versione Pro, aggiungi un account utilizzando le stesse credenziali pe
 "Unexpected type found: %@" = "Tipo imprevisto trovato: %@";
 
 /* store widget error */
-"Unknown Offer" = "Offerta sconosciuta";
+"Unknown Offer" = "Offerta Sconosciuta";
 
 /* store widget error */
-"Unknown Skin" = "Skin sconosciuta";
+"Unknown Skin" = "Skin Sconosciuta";
 
 /* No comment provided by engineer. */
 "Unknown keychain error: %d" = "Errore sconosciuto del keychain: %d";
