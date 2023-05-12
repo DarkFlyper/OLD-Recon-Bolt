@@ -7,4 +7,4 @@
 /* Shown in the iOS settings, where users are guided when trying to change the app language. */
 "Language Explanation" = "Non riesci a trovare l'impostazione della lingua? iOS ti permette di personalizzare la lingua di un'app solo se hai configurato le tue lingue preferite con più di una voce.
 
-Per modificarla, vai in Generali > Lingua e Regione e aggiungi una nuova lingua (ad esempio l'inglese) in fondo all'elenco.";
+Per modificarla, vai in \"Generali\" > \"Lingua e zona\" e aggiungi una nuova lingua (ad esempio l'inglese) all'elenco.";
