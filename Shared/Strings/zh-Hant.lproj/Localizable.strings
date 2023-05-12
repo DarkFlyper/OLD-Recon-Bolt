@@ -450,7 +450,7 @@ Playtime Stats: section */
 "Enter 2FA Code" = "輸入驗證碼";
 
 /* Weapon Reference: stats */
-"Equip Time" = "裝備時間";
+"Equip Time" = "裝備速度";
 
 /* Request Log
 Stats: error details */
@@ -516,6 +516,9 @@ Stats: error details */
 
 /* Weapon Reference: stats */
 "Fire Rate" = "射速";
+
+/* Weapon Reference: stats */
+"First Bullet Spread" = "首發彈道偏移";
 
 /* No comment provided by engineer. */
 "Force Refresh Widgets" = "強制重新整理小工具";
@@ -681,6 +684,9 @@ If you don't know your username or don't have one, you can fix that at [account.
 
 /* Win Rate Stats: chart legend */
 "Losses" = "輸掉";
+
+/* Weapon Reference: stats */
+"Magazine Size" = "彈匣大小";
 
 /* No comment provided by engineer. */
 "Manage Assets" = "管理資源包";
@@ -983,7 +989,7 @@ Request Log: title */
 "Rounds by Side" = "按方回合";
 
 /* Weapon Reference: stats */
-"Run Speed" = "跑步速度";
+"Run Speed" = "跑速";
 
 /* Bookmark/Player List: section */
 "Search" = "搜尋";
@@ -1005,6 +1011,9 @@ Request Log: title */
 
 /* Playtime Stats: title for view of matches in common with another player */
 "Shared Matches" = "分享對戰";
+
+/* Weapon Reference: stats */
+"Shotgun Pellets" = "霰彈顆粒";
 
 /* No comment provided by engineer. */
 "Show Unfetched Matches" = "顯示未獲取的對戰";
@@ -1115,6 +1124,9 @@ Login Form: button */
 /* Statistics error for iOS <16 */
 "This feature requires iOS 16 or newer." = "這功能需要iOS 16或以上版本。";
 
+/* Settings: toggle description */
+"This makes Recon Bolt automatically use your username & password to sign in again if you get signed out. If you have 2-factor authentication enabled, this may fail if it requires a new code, but it still works sometimes." = "這可以令Recon Bolt在您退出登入時自動使用您的使用者名稱和密碼再次登入。 如果您啟用了雙重驗證，如果它需要新代碼，這可能有時失敗，但有時時有效。";
+
 /* Stats: match loading */
 "To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "為了收集統計資料，我們首先需要載入對戰記錄來處理。 請注意：大量數量可能需要很長時間，特別是第一次下載時！";
 
@@ -1169,6 +1181,9 @@ On that site, navigate to **Riot Account Sign-in** and set yourself a username a
 /* placeholder */
 "Unknown Bundle" = "未知組合包";
 
+/* placeholder */
+"Unknown Card" = "末知卡面";
+
 /* Store */
 "Unknown Offer" = "未知商品";
 
@@ -1185,6 +1200,9 @@ On that site, navigate to **Riot Account Sign-in** and set yourself a username a
 "Unknown Skin" = "未知造型";
 
 /* placeholder */
+"Unknown Spray" = "末知噴漆";
+
+/* placeholder */
 "Unknown Title" = "末知稱號";
 
 /* Round Details: killed by unknown damage source/type */
@@ -1199,6 +1217,9 @@ Round Details: killed by unknown/unspecified weapon */
 
 /* Missions Box */
 "Unknown contract!" = "末知契約!";
+
+/* Store Bundle Details: should never show, but if Riot adds a new kind of item to a bundle, this would show */
+"Unknown item of type %@" = "未知物品的類型 %@";
 
 /* No comment provided by engineer. */
 "Unknown mission!" = "未知任務！";
@@ -1232,6 +1253,9 @@ Round Details: killed by unknown/unspecified weapon */
 
 /* No comment provided by engineer. */
 "View Full Profile" = "看完整的個人資料";
+
+/* Gun Customizer: button */
+"View Skin Details" = "查看皮膚詳細";
 
 /* Match List */
 "View Stats" = "查看統計資料";
