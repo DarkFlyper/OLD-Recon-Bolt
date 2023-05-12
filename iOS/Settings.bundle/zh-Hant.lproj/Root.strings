@@ -1,3 +1,5 @@
+/* Shown in the iOS settings, where users are guided when trying to change the app language. */
+"Asset Language Explanation" = "如果您想使用其他語言作為介面和遊戲內容/資料，您可以在應用程式中在“進階設定”>“管理資料”>“語言”下進行更改。";
 
 /* Shown in the iOS settings, where users are guided when trying to change the app language. This one is a section header. */
 "Help" = "幫助";
