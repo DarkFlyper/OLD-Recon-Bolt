@@ -688,6 +688,9 @@ If you don't know your username or don't have one, you can fix that at [account.
 /* No comment provided by engineer. */
 "Manage Local Storage" = "管理本地儲存空間";
 
+/* Settings: section */
+"Management" = "管理";
+
 /* About Screen */
 "Many thanks to the volunteer translators from our Discord server who have been hard at working translating the app to new languages!" = "非常感謝來自我們Discord伺服器的自願翻譯人員，他們一直在努力將應用程式翻譯成新語言！";
 
@@ -699,6 +702,9 @@ If you don't know your username or don't have one, you can fix that at [account.
 
 /* Stats: error details */
 "Match" = "對戰";
+
+/* Asset Management: option to match assets language to app language */
+"Match App Language" = "符合應用程式語言";
 
 /* Match Details: title */
 "Match Details" = "回合詳情";
@@ -885,6 +891,9 @@ Playtime Stats: section */
 /* Statistics filter: button */
 "Queues" = "隊列";
 
+/* Weapon Reference: stats */
+"Range" = "距離";
+
 /* Rank Widget: title */
 "Rank" = "排位";
 
@@ -973,8 +982,14 @@ Request Log: title */
 /* Win Rate Stats: section */
 "Rounds by Side" = "按方回合";
 
+/* Weapon Reference: stats */
+"Run Speed" = "跑步速度";
+
 /* Bookmark/Player List: section */
 "Search" = "搜尋";
+
+/* Asset Management: language picker title */
+"Select Language" = "選擇語言";
 
 /* Hit Distribution Stats: error */
 "Select more matches to see data on hit distribution. Deathmatch, Escalation, and other modes don't provide the necessary information." = "選擇更多對戰以檢視命中分佈的資料。 死鬥、超激進戰和其他模式不提供必要的資訊。";
