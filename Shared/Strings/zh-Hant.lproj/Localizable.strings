@@ -216,6 +216,9 @@ Competitive matches after your placements can be identified without their detail
 /* Win Rate Stats: side name */
 "Attacking" = "攻擊方";
 
+/* Settings: toggle */
+"Automatically Sign Back In" = "自動重新登入";
+
 /* Store: available currency */
 "Available:" = "可用:";
 
@@ -274,6 +277,9 @@ Playtime Stats: section */
 
 /* No comment provided by engineer. */
 "Change Buddy" = "更換吊飾";
+
+/* Settings: button */
+"Change Language" = "更換語言";
 
 /* No comment provided by engineer. */
 "Change Queue" = "更換模式";
@@ -391,6 +397,9 @@ Playtime Stats: section */
 
 /* Store */
 "Daily Offers" = "每日商店";
+
+/* Weapon Reference: stats */
+"Damage" = "傷害";
 
 /* App Theme */
 "Dark Mode" = "黑暗模式";
@@ -855,6 +864,9 @@ Playtime Stats: section */
 /* Weapon Reference */
 "Price" = "價格";
 
+/* Badge applied to buttons that are exclusive to Pro, e.g. in the account settings */
+"Pro" = "專業版";
+
 /* App Icon Name */
 "Pro Blue" = "專業版藍色";
 
@@ -997,6 +1009,9 @@ Login Form: button */
 
 /* Login Form */
 "Sign In with your Riot account" = "登入你的拳頭帳號";
+
+/* Account Settings: button */
+"Sign Out of All Accounts" = "登出所有帳號";
 
 /* Login Form: button/header */
 "Sign in with Google/Apple/etc." = "登入為 Google/Apple/etc.";
