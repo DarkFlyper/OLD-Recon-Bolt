@@ -59,6 +59,9 @@ Si vous avez acheté Recon Bolt Pro, ajoutez votre compte en utilisant les même
 /* Riot API Error */
 "The resource could not be found." = "La ressource n'a pas pu être trouvée.";
 
+/* Riot API Error */
+"This match could not be loaded! Valorant discards match details for older matches after a few months." = "Ce match n'a pas pu être chargé ! Valorant supprime les détails des matchs les plus anciens après quelques mois.";
+
 /* Keychain error. */
 "Unexpected type found: %@" = "Type inattendu trouvé: %@";
 

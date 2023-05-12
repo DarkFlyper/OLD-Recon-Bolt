@@ -47,6 +47,9 @@
 /* Shown at the bottom of the expandable playtime list when there are more entries available. */
 "%lld more" = "Еще %lld";
 
+/* Weapon Reference: stats */
+"%lld pellets" = "%lld пуль";
+
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
 "%lld to %lld credits" = "%lld до %lld кредитов";
 
@@ -935,6 +938,9 @@ Playtime Stats: section */
 /* Store Widget: next refresh time (hour & minute) */
 "Refreshes at %@" = "Обновляется в %@";
 
+/* Weapon Reference: stats */
+"Reload Time" = "Время перезарядки";
+
 /* Match List: accessibility label */
 "Remove Bookmark" = "Удалить закладку";
 
@@ -981,8 +987,14 @@ Request Log: title */
 /* Win Rate Stats: section */
 "Rounds by Side" = "Раунды по стороне";
 
+/* Weapon Reference: stats */
+"Run Speed" = "Скорость бега";
+
 /* Bookmark/Player List: section */
 "Search" = "Поиск";
+
+/* Asset Management: language picker title */
+"Select Language" = "Выбрать язык";
 
 /* Hit Distribution Stats: error */
 "Select more matches to see data on hit distribution. Deathmatch, Escalation, and other modes don't provide the necessary information." = "Выберите больше матчей для получения данных по распределению попаданий. Бой насмерть, Эскалация, и другие режимы не предоставляют нужной информации.";
@@ -998,6 +1010,9 @@ Request Log: title */
 
 /* Playtime Stats: title for view of matches in common with another player */
 "Shared Matches" = "Совместные матчи";
+
+/* Weapon Reference: stats */
+"Shotgun Pellets" = "Пули дробовика";
 
 /* No comment provided by engineer. */
 "Show Unfetched Matches" = "Показывать незагруженные матчи";
@@ -1018,8 +1033,20 @@ Login Form: button */
 /* Login Form */
 "Sign In with your Riot account" = "Войдите в систему, используя свою учетную запись Riot";
 
+/* Account Settings: button */
+"Sign Out of All Accounts" = "Выйти из всех аккаунтов";
+
 /* Login Form: button/header */
 "Sign in with Google/Apple/etc." = "Войдите в систему с помощью Google/Apple/прочее.";
+
+/* Skin Details: level name */
+"Skin Level %lld" = "Уровень %lld";
+
+/* Skin Details: section */
+"Skin Levels" = "Уровень скина";
+
+/* Weapon Reference: button */
+"Skins" = "Скины";
 
 /* Hit Distribution Stats: smoothing slider */
 "Smoothing" = "Сглаживание";

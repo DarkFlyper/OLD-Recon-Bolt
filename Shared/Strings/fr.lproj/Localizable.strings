@@ -47,8 +47,14 @@
 /* Shown at the bottom of the expandable playtime list when there are more entries available. */
 "%lld more" = "%lld plus";
 
+/* Weapon Reference: stats */
+"%lld pellets" = "%lld Plombs";
+
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
 "%lld to %lld credits" = "%lld à %lld crédits";
+
+/* Weapon Reference: stats: damage range */
+"%lld – %lldm" = "%lld - %lldm";
 
 /* No comment provided by engineer. */
 "%lld%%" = "%lld%%";
@@ -144,6 +150,9 @@ Cependant, les parties compétitives qui ont lieu après votre placement de rang
 "Agent Select" = "Sélection des agents";
 
 /* Contract Picker */
+"Agent Unlockable" = "Agent déblocable";
+
+/* Contract Picker */
 "Agent Unlocked" = "Agent débloqué";
 
 /* Statistics filter: button */
@@ -206,6 +215,9 @@ Cependant, les parties compétitives qui ont lieu après votre placement de rang
 /* Win Rate Stats: side name */
 "Attacking" = "Attaquant";
 
+/* Settings: toggle */
+"Automatically Sign Back In" = "Se reconnecter automatiquement";
+
 /* Store: available currency */
 "Available:" = "Disponible:";
 
@@ -264,6 +276,9 @@ Playtime Stats: section */
 
 /* No comment provided by engineer. */
 "Change Buddy" = "Changer le porte-bonheur";
+
+/* Settings: button */
+"Change Language" = "Changer de langue";
 
 /* No comment provided by engineer. */
 "Change Queue" = "Changer de mode de jeu";
@@ -382,6 +397,9 @@ Playtime Stats: section */
 /* Store */
 "Daily Offers" = "Offre quotidienne";
 
+/* Weapon Reference: stats */
+"Damage" = "Dégât";
+
 /* App Theme */
 "Dark Mode" = "Mode Sombre";
 
@@ -493,6 +511,12 @@ TON MESSAGE D'ERREUR ICI
 
 /* Party Box: placeholder shows time spent in queue */
 "Finding match… (%@)" = "Recherche de partie... (%@)";
+
+/* Weapon Reference: stats */
+"Fire Rate" = "Cadence de tir";
+
+/* Weapon Reference: stats */
+"First Bullet Spread" = "Dispersion du premier tir";
 
 /* No comment provided by engineer. */
 "Force Refresh Widgets" = "Forcer l'actualisation des Widgets";
@@ -668,6 +692,9 @@ Si tu ne connais pas ton nom d'utilisateur ou si tu n'en as pas, tu peux le corr
 /* No comment provided by engineer. */
 "Manage Local Storage" = "Gérer le stockage local";
 
+/* Settings: section */
+"Management" = "Gestion";
+
 /* About Screen */
 "Many thanks to the volunteer translators from our Discord server who have been hard at working translating the app to new languages!" = "Un grand merci aux traducteurs bénévoles de notre serveur Discord qui ont travaillé dur pour traduire l'application dans de nouvelles langues !";
 
@@ -679,6 +706,9 @@ Si tu ne connais pas ton nom d'utilisateur ou si tu n'en as pas, tu peux le corr
 
 /* Stats: error details */
 "Match" = "Partie";
+
+/* Asset Management: option to match assets language to app language */
+"Match App Language" = "Faire correspondre la langue de l'application";
 
 /* Match Details: title */
 "Match Details" = "Détails de la partie";
@@ -844,6 +874,9 @@ Playtime Stats: section */
 /* Weapon Reference */
 "Price" = "Prix";
 
+/* Badge applied to buttons that are exclusive to Pro, e.g. in the account settings */
+"Pro" = "Pro";
+
 /* App Icon Name */
 "Pro Blue" = "Bleu Pro";
 
@@ -861,6 +894,9 @@ Playtime Stats: section */
 
 /* Statistics filter: button */
 "Queues" = "Files d'attente";
+
+/* Weapon Reference: stats */
+"Range" = "Distance";
 
 /* Rank Widget: title */
 "Rank" = "Rang";
@@ -950,8 +986,14 @@ Request Log: title */
 /* Win Rate Stats: section */
 "Rounds by Side" = "Manches par coté";
 
+/* Weapon Reference: stats */
+"Run Speed" = "Vitesse de déplacement";
+
 /* Bookmark/Player List: section */
 "Search" = "Chercher";
+
+/* Asset Management: language picker title */
+"Select Language" = "Sélectionner une langue";
 
 /* Hit Distribution Stats: error */
 "Select more matches to see data on hit distribution. Deathmatch, Escalation, and other modes don't provide the necessary information." = "Sélectionnez d'autres matchs pour obtenir des données sur la répartition des coups. Les modes Deathmatch, Escalade et autres ne fournissent pas les informations nécessaires.";
@@ -967,6 +1009,9 @@ Request Log: title */
 
 /* Playtime Stats: title for view of matches in common with another player */
 "Shared Matches" = "Parties partagées";
+
+/* Weapon Reference: stats */
+"Shotgun Pellets" = "Plombs de fusils a pompe";
 
 /* No comment provided by engineer. */
 "Show Unfetched Matches" = "Afficher les parties non recherchées";
@@ -987,11 +1032,20 @@ Login Form: button */
 /* Login Form */
 "Sign In with your Riot account" = "Connectez-vous avec votre compte Riot";
 
+/* Account Settings: button */
+"Sign Out of All Accounts" = "Se déconnecter de tous les comptes";
+
 /* Login Form: button/header */
 "Sign in with Google/Apple/etc." = "Se connecter avec Google/Apple/etc.";
 
 /* Skin Details: level name */
 "Skin Level %lld" = "Niveau %lld";
+
+/* Skin Details: section */
+"Skin Levels" = "Niveaux de skin";
+
+/* Weapon Reference: button */
+"Skins" = "Skins";
 
 /* Hit Distribution Stats: smoothing slider */
 "Smoothing" = "Lissage";
@@ -1068,6 +1122,9 @@ Login Form: button */
 /* Statistics error for iOS <16 */
 "This feature requires iOS 16 or newer." = "Cette fonctionnalité nécessite iOS 16 ou une version plus récente.";
 
+/* Settings: toggle description */
+"This makes Recon Bolt automatically use your username & password to sign in again if you get signed out. If you have 2-factor authentication enabled, this may fail if it requires a new code, but it still works sometimes." = "Cela permet à Recon Bolt d'utiliser automatiquement ton nom d'utilisateur et ton mot de passe pour se reconnecter si tu te déconnectes. Si l'authentification à deux facteurs est activée, cela peut échouer s'il faut un nouveau code, mais cela fonctionne quand même parfois.";
+
 /* Stats: match loading */
 "To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "Pour recueillir des statistiques, nous devons d'abord charger des parties à traiter. Notez que de grandes quantités peuvent prendre beaucoup de temps, surtout lors du premier téléchargement !";
 
@@ -1122,6 +1179,9 @@ Sur ce site, naviguez vers **Connexion au compte Riot** et définissez votre nom
 /* placeholder */
 "Unknown Bundle" = "Collection inconnue";
 
+/* placeholder */
+"Unknown Card" = "Carte inconnue";
+
 /* Store */
 "Unknown Offer" = "Offre inconnue";
 
@@ -1138,6 +1198,9 @@ Sur ce site, naviguez vers **Connexion au compte Riot** et définissez votre nom
 "Unknown Skin" = "Skin inconnu";
 
 /* placeholder */
+"Unknown Spray" = "Spray inconnu";
+
+/* placeholder */
 "Unknown Title" = "Titre inconnu";
 
 /* Round Details: killed by unknown damage source/type */
@@ -1152,6 +1215,9 @@ Round Details: killed by unknown/unspecified weapon */
 
 /* Missions Box */
 "Unknown contract!" = "Contrat inconnu !";
+
+/* Store Bundle Details: should never show, but if Riot adds a new kind of item to a bundle, this would show */
+"Unknown item of type %@" = "Élément inconnu du type %@";
 
 /* No comment provided by engineer. */
 "Unknown mission!" = "Mission inconnue !";
@@ -1185,6 +1251,9 @@ Round Details: killed by unknown/unspecified weapon */
 
 /* No comment provided by engineer. */
 "View Full Profile" = "Voir le profil complet";
+
+/* Gun Customizer: button */
+"View Skin Details" = "Voir les détails du skin";
 
 /* Match List */
 "View Stats" = "Voir les statistiques";
