@@ -1,5 +1,5 @@
 /* Shown in the iOS settings, where users are guided when trying to change the app language. */
-"Asset Language Explanation" = "Se vuoi utilizzare una lingua diversa per l'interfaccia dell'app e per i contenuti/assets del gioco, puoi cambiarla nell'app in Impostazioni avanzate > Gestisci Asset > Lingua.";
+"Asset Language Explanation" = "Se vuoi utilizzare una lingua diversa per l'interfaccia dell'app e per i contenuti/assets del gioco, puoi cambiarla nell'app in \"Impostazioni Avanzate\" > \"Gestisci Assets\" > \"Lingua\".";
 
 /* Shown in the iOS settings, where users are guided when trying to change the app language. This one is a section header. */
 "Help" = "Aiuto";
