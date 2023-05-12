@@ -5,10 +5,16 @@
 "Attacker/Defender Swap" = "Changement attaquant/défenseur";
 
 /* No comment provided by engineer. */
+"Champion's Aura" = "Aura de champion";
+
+/* No comment provided by engineer. */
 "Finisher" = "Finition";
 
 /* No comment provided by engineer. */
 "Fish Animation" = "Animation des poissons";
+
+/* No comment provided by engineer. */
+"Heartbeat & Map Sensor" = "Capteur de rythme cardiaque et capteur de carte";
 
 /* No comment provided by engineer. */
 "Inspect & Kill Effects" = "Inspecter et effets d'élimination";
