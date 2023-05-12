@@ -216,6 +216,9 @@ Competitive matches after your placements can be identified without their detail
 /* Win Rate Stats: side name */
 "Attacking" = "攻擊方";
 
+/* Settings: toggle */
+"Automatically Sign Back In" = "自動重新登入";
+
 /* Store: available currency */
 "Available:" = "可用:";
 
@@ -274,6 +277,9 @@ Playtime Stats: section */
 
 /* No comment provided by engineer. */
 "Change Buddy" = "更換吊飾";
+
+/* Settings: button */
+"Change Language" = "更換語言";
 
 /* No comment provided by engineer. */
 "Change Queue" = "更換模式";
@@ -392,6 +398,9 @@ Playtime Stats: section */
 /* Store */
 "Daily Offers" = "每日商店";
 
+/* Weapon Reference: stats */
+"Damage" = "傷害";
+
 /* App Theme */
 "Dark Mode" = "黑暗模式";
 
@@ -441,7 +450,7 @@ Playtime Stats: section */
 "Enter 2FA Code" = "輸入驗證碼";
 
 /* Weapon Reference: stats */
-"Equip Time" = "裝備時間";
+"Equip Time" = "裝備速度";
 
 /* Request Log
 Stats: error details */
@@ -507,6 +516,9 @@ Stats: error details */
 
 /* Weapon Reference: stats */
 "Fire Rate" = "射速";
+
+/* Weapon Reference: stats */
+"First Bullet Spread" = "首發彈道偏移";
 
 /* No comment provided by engineer. */
 "Force Refresh Widgets" = "強制重新整理小工具";
@@ -673,11 +685,17 @@ If you don't know your username or don't have one, you can fix that at [account.
 /* Win Rate Stats: chart legend */
 "Losses" = "輸掉";
 
+/* Weapon Reference: stats */
+"Magazine Size" = "彈匣大小";
+
 /* No comment provided by engineer. */
 "Manage Assets" = "管理資源包";
 
 /* No comment provided by engineer. */
 "Manage Local Storage" = "管理本地儲存空間";
+
+/* Settings: section */
+"Management" = "管理";
 
 /* About Screen */
 "Many thanks to the volunteer translators from our Discord server who have been hard at working translating the app to new languages!" = "非常感謝來自我們Discord伺服器的自願翻譯人員，他們一直在努力將應用程式翻譯成新語言！";
@@ -690,6 +708,9 @@ If you don't know your username or don't have one, you can fix that at [account.
 
 /* Stats: error details */
 "Match" = "對戰";
+
+/* Asset Management: option to match assets language to app language */
+"Match App Language" = "符合應用程式語言";
 
 /* Match Details: title */
 "Match Details" = "回合詳情";
@@ -855,6 +876,9 @@ Playtime Stats: section */
 /* Weapon Reference */
 "Price" = "價格";
 
+/* Badge applied to buttons that are exclusive to Pro, e.g. in the account settings */
+"Pro" = "專業版";
+
 /* App Icon Name */
 "Pro Blue" = "專業版藍色";
 
@@ -872,6 +896,9 @@ Playtime Stats: section */
 
 /* Statistics filter: button */
 "Queues" = "隊列";
+
+/* Weapon Reference: stats */
+"Range" = "距離";
 
 /* Rank Widget: title */
 "Rank" = "排位";
@@ -961,8 +988,14 @@ Request Log: title */
 /* Win Rate Stats: section */
 "Rounds by Side" = "按方回合";
 
+/* Weapon Reference: stats */
+"Run Speed" = "跑速";
+
 /* Bookmark/Player List: section */
 "Search" = "搜尋";
+
+/* Asset Management: language picker title */
+"Select Language" = "選擇語言";
 
 /* Hit Distribution Stats: error */
 "Select more matches to see data on hit distribution. Deathmatch, Escalation, and other modes don't provide the necessary information." = "選擇更多對戰以檢視命中分佈的資料。 死鬥、超激進戰和其他模式不提供必要的資訊。";
@@ -978,6 +1011,9 @@ Request Log: title */
 
 /* Playtime Stats: title for view of matches in common with another player */
 "Shared Matches" = "分享對戰";
+
+/* Weapon Reference: stats */
+"Shotgun Pellets" = "霰彈顆粒";
 
 /* No comment provided by engineer. */
 "Show Unfetched Matches" = "顯示未獲取的對戰";
@@ -997,6 +1033,9 @@ Login Form: button */
 
 /* Login Form */
 "Sign In with your Riot account" = "登入你的拳頭帳號";
+
+/* Account Settings: button */
+"Sign Out of All Accounts" = "登出所有帳號";
 
 /* Login Form: button/header */
 "Sign in with Google/Apple/etc." = "登入為 Google/Apple/etc.";
@@ -1085,6 +1124,9 @@ Login Form: button */
 /* Statistics error for iOS <16 */
 "This feature requires iOS 16 or newer." = "這功能需要iOS 16或以上版本。";
 
+/* Settings: toggle description */
+"This makes Recon Bolt automatically use your username & password to sign in again if you get signed out. If you have 2-factor authentication enabled, this may fail if it requires a new code, but it still works sometimes." = "這可以令Recon Bolt在您退出登入時自動使用您的使用者名稱和密碼再次登入。 如果您啟用了雙重驗證，如果它需要新代碼，這可能有時失敗，但有時時有效。";
+
 /* Stats: match loading */
 "To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "為了收集統計資料，我們首先需要載入對戰記錄來處理。 請注意：大量數量可能需要很長時間，特別是第一次下載時！";
 
@@ -1139,6 +1181,9 @@ On that site, navigate to **Riot Account Sign-in** and set yourself a username a
 /* placeholder */
 "Unknown Bundle" = "未知組合包";
 
+/* placeholder */
+"Unknown Card" = "末知卡面";
+
 /* Store */
 "Unknown Offer" = "未知商品";
 
@@ -1155,6 +1200,9 @@ On that site, navigate to **Riot Account Sign-in** and set yourself a username a
 "Unknown Skin" = "未知造型";
 
 /* placeholder */
+"Unknown Spray" = "末知噴漆";
+
+/* placeholder */
 "Unknown Title" = "末知稱號";
 
 /* Round Details: killed by unknown damage source/type */
@@ -1169,6 +1217,9 @@ Round Details: killed by unknown/unspecified weapon */
 
 /* Missions Box */
 "Unknown contract!" = "末知契約!";
+
+/* Store Bundle Details: should never show, but if Riot adds a new kind of item to a bundle, this would show */
+"Unknown item of type %@" = "未知物品的類型 %@";
 
 /* No comment provided by engineer. */
 "Unknown mission!" = "未知任務！";
@@ -1202,6 +1253,9 @@ Round Details: killed by unknown/unspecified weapon */
 
 /* No comment provided by engineer. */
 "View Full Profile" = "看完整的個人資料";
+
+/* Gun Customizer: button */
+"View Skin Details" = "查看皮膚詳細";
 
 /* Match List */
 "View Stats" = "查看統計資料";
