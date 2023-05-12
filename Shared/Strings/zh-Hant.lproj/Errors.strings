@@ -57,6 +57,9 @@ If you have Pro, add an account using the same credentials to replace the accoun
 /* Riot API Error */
 "The resource could not be found." = "找不到資源。";
 
+/* Riot API Error */
+"This match could not be loaded! Valorant discards match details for older matches after a few months." = "這對戰無法載入! 特戰英豪在幾個月後刪除了舊的對戰細節";
+
 /* Keychain error. */
 "Unexpected type found: %@" = "發現意外的類別：%@";
 
