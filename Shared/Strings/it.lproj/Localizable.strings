@@ -42,7 +42,7 @@
 "%lld hits" = "%lld colpi a segno";
 
 /* Shown at the bottom of the expandable playtime list when there are more entries available. */
-"%lld more" = "%lld Altro";
+"%lld more" = "%lld altro";
 
 /* Weapon Reference: stats */
 "%lld pellets" = "%lld pallini a segno";
@@ -85,7 +85,7 @@ Missions Box */
 "-%lld%%" = "-%lld%%";
 
 /* No comment provided by engineer. */
-"2-Factor Authentication" = "Autenticazione a 2 fattori";
+"2-Factor Authentication" = "Autenticazione a 2 Fattori";
 
 /* Missions Widget: countdown label when the target is in the future. e.g. '< 2d 3h' */
 "< %@" = "< %@";
@@ -126,19 +126,19 @@ Tuttavia, le partite competitive possono essere identificate senza dover ottener
 "Add Bookmark" = "Aggiungi Segnalibro";
 
 /* Account Settings */
-"Add another Account" = "Aggiungi un altro account";
+"Add another Account" = "Aggiungi un altro Account";
 
 /* Pro Features List */
 "Add multiple accounts and seamlessly switch between them at any time." = "Aggiungi più account e passa facilmente da uno all'altro in qualsiasi momento.";
 
 /* No comment provided by engineer. */
-"Advanced Settings" = "Impostazioni avanzate";
+"Advanced Settings" = "Impostazioni Avanzate";
 
 /* Pro Store */
-"Advanced Stats" = "Statistiche avanzate";
+"Advanced Stats" = "Statistiche Avanzate";
 
 /* No comment provided by engineer. */
-"Agent Select" = "Seleziona agente";
+"Agent Select" = "Seleziona Agente";
 
 /* Contract Picker */
 "Agent Unlockable" = "Agente Sbloccabile";
@@ -153,7 +153,7 @@ Tuttavia, le partite competitive possono essere identificate senza dover ottener
 "All %lld" = "All %lld";
 
 /* No comment provided by engineer. */
-"All Maps" = "Tutte le mappe";
+"All Maps" = "Tutte le Mappe";
 
 /* Statistics Filter: button to allow all agents */
 "Allow All Agents" = "Includi Tutti";
@@ -162,13 +162,13 @@ Tuttavia, le partite competitive possono essere identificate senza dover ottener
 "Allow All Queues" = "Includi Tutte";
 
 /* Default Error Alert Title */
-"An Error Occurred!" = "Si è verificato un errore!";
+"An Error Occurred!" = "Si è Verificato un Errore!";
 
 /* About Screen */
 "An invaluable API hosting all the assets (images, data, etc.) used throughout Valorant. This is where almost every image in the app comes from." = "Una preziosa API che ospita tutte le risorse (immagini, dati, ecc.) utilizzate in Valorant. Da qui provengono quasi tutte le immagini dell'applicazione.";
 
 /* Statistics filter: shown when every agent is allowed */
-"Any Agent" = "Tutti gli Agenti";
+"Any Agent" = "Qualsiasi Agente";
 
 /* Statistics filter: shown when every queue is allowed */
 "Any Queue" = "Qualsiasi Modalità";
@@ -177,7 +177,7 @@ Tuttavia, le partite competitive possono essere identificate senza dover ottener
 "Anything with images will not display correctly." = "Tutte le immagini non verranno visualizzate correttamente.";
 
 /* Settings: button */
-"App Icon" = "Icona dell'app";
+"App Icon" = "Icona dell'App";
 
 /* No comment provided by engineer. */
 "Are your assets outdated?" = "I tuoi asset sono obsoleti?";
@@ -198,7 +198,7 @@ Tuttavia, le partite competitive possono essere identificate senza dover ottener
 "Assets out of date!" = "Assets obsoleti!";
 
 /* No comment provided by engineer. */
-"Assets should be fetched automatically, but in case something went wrong, feel free to initiate the process manually." = "Gli Assets dovrebbero essere recuperati automaticamente, ma nel caso qualcosa andasse storto, avvia il processo manualmente.";
+"Assets should be fetched automatically, but in case something went wrong, feel free to initiate the process manually." = "Gli Assets dovrebbero essere recuperati automaticamente, nel caso qualcosa andasse storto, avvia il processo manualmente.";
 
 /* Asset Management */
 "Assets up to date!" = "Assets aggiornati!";
@@ -216,14 +216,14 @@ Tuttavia, le partite competitive possono essere identificate senza dover ottener
 "Average: %@" = "Media: %@";
 
 /* Request Log: shown for bodies that are not decodable to text */
-"Binary Data" = "Dati binari";
+"Binary Data" = "Dati Binari";
 
 /* Hit Distribution Stats: region
 Weapon Reference: stats */
 "Body" = "Corpo";
 
 /* Bookmark/Player List: section */
-"Bookmarks" = "Segnalibri";
+"Bookmarks" = "Preferiti";
 
 /* Gun Customizer: section */
 "Buddy" = "Accessori";
@@ -245,22 +245,22 @@ Playtime Stats: section */
 "By Queue" = "Per Modalità";
 
 /* Hit Distribution Stats: section */
-"By Weapon" = "Per arma";
+"By Weapon" = "Per Arma";
 
 /* No comment provided by engineer. */
 "Cancel" = "Annulla";
 
 /* No comment provided by engineer. */
-"Cancel Matchmaking" = "Annulla il matchmaking";
+"Cancel Matchmaking" = "Annulla il Matchmaking";
 
 /* Top-Level Tab Title */
 "Career" = "Carriera";
 
 /* No comment provided by engineer. */
-"Career Summaries" = "Carriera";
+"Career Summaries" = "Riassunto Carriera";
 
 /* No comment provided by engineer. */
-"Career Summary" = "Carriera in Sintesi";
+"Career Summary" = "Riassunto Carriera";
 
 /* Weapon Reference */
 "Category" = "Categoria";
@@ -278,28 +278,28 @@ Playtime Stats: section */
 "Change Skin" = "Cambia Skin";
 
 /* Store Widget: description */
-"Check your current Valorant storefront." = "Mostra il tuo negozio attuale di valorant.";
+"Check your current Valorant storefront." = "Mostra il tuo negozio attuale di Valorant.";
 
 /* Missions Widget: description */
 "Check your progress on daily & weekly missions." = "Controlla i progressi delle missioni giornaliere e settimanali.";
 
 /* No comment provided by engineer. */
-"Choose App Icon" = "Scegli l'icona dell'app";
+"Choose App Icon" = "Scegli l'Icona dell'App";
 
 /* No comment provided by engineer. */
-"Choose Buddy" = "Cambia Buddy";
+"Choose Buddy" = "Cambia Accessorio";
 
 /* No comment provided by engineer. */
-"Choose Card" = "Scegliere la carta";
+"Choose Card" = "Scegli il Banner";
 
 /* No comment provided by engineer. */
-"Choose Skin" = "Cambia Skin";
+"Choose Skin" = "Segli la Skin";
 
 /* No comment provided by engineer. */
-"Choose Spray" = "Scegliere lo spray";
+"Choose Spray" = "Scegli lo Spray";
 
 /* No comment provided by engineer. */
-"Choose Title" = "Scegliere il titolo";
+"Choose Title" = "Scegli il Titolo";
 
 /* Contract Picker: title */
 "Choose a Contract" = "Scegli un Contratto";
@@ -308,22 +308,22 @@ Playtime Stats: section */
 "Choose a weapon to take %@ from." = "Sceglie un'arma da cui prendere l'accessorio %@.";
 
 /* Storage Management: button to delete all entries of a certain kind */
-"Clear All" = "Cancella tutto";
+"Clear All" = "Cancella Tutto";
 
 /* Skin Details: section */
-"Color Variants" = "Varante Colore Skin";
+"Color Variants" = "Variante Colore Skin";
 
 /* Contract Picker */
 "Completed" = "Completato";
 
 /* Storage Management: title for alert to confirm deleting some matches */
-"Confirm Delete" = "Conferma Eliminazione";
+"Confirm Delete" = "Conferma l'Eliminazione";
 
 /* Missions Box */
 "Contract complete!" = "Contratto completato!";
 
 /* Request Log: button to copy the request's body/contents (accessibility label) */
-"Copy Body" = "Copiare il corpo";
+"Copy Body" = "Copia il Contenuto";
 
 /* Stats: error details: accessibility label */
 "Copy Error" = "Errore di copia";
@@ -341,7 +341,7 @@ Playtime Stats: section */
 "Could Not Load Account!" = "Impossibile caricare l'account!";
 
 /* No comment provided by engineer. */
-"Could not Change App Icon!" = "Impossibile cambiare l'icona dell'app!";
+"Could not Change App Icon!" = "Impossibile Cambiare l'Icona dell'App!";
 
 /* No comment provided by engineer. */
 "Could not delete files!" = "Impossibile eliminare i file!";
@@ -447,7 +447,7 @@ Stats: error details */
 "Error" = "Errore";
 
 /* No comment provided by engineer. */
-"Error Details" = "Dettagli sull'errore";
+"Error Details" = "Dettagli sull'Errore";
 
 /* Asset Management */
 "Error downloading assets!" = "Errore nel download degli asset!";
@@ -465,7 +465,7 @@ Stats: error details */
 "Exclude All Queues" = "Escludi Tutte";
 
 /* Pro Features List */
-"Exclusive App Icon" = "Icona Esclusiva dell' App";
+"Exclusive App Icon" = "Icona Esclusiva dell'App";
 
 /* Round Details: killed by spike */
 "Exploded" = "Esploso";
@@ -490,7 +490,7 @@ SEGNALA I BUG QUI
 "Filter Maps" = "Filtra per Mappe";
 
 /* No comment provided by engineer. */
-"Filter Match List" = "Filtra l'elenco delle Partite";
+"Filter Match List" = "Filtra l'Elenco delle Partite";
 
 /* No comment provided by engineer. */
 "Filter Queues" = "Filtra per Modalità";
@@ -511,7 +511,7 @@ SEGNALA I BUG QUI
 "First Bullet Spread" = "Diffusione del primo proiettile";
 
 /* No comment provided by engineer. */
-"Force Refresh Widgets" = "Forza l'aggiornamento dei widget";
+"Force Refresh Widgets" = "Forza l'Aggiornamento dei Widget";
 
 /* Contract Picker */
 "Free Agent" = "Agente Gratis";
@@ -651,7 +651,7 @@ Weapon Reference: stats */
 "Loadout Delta" = "Delta Equipaggiamento";
 
 /* No comment provided by engineer. */
-"Loadout Delta is computed as the difference between the average loadout value of players on each team. For example, a loadout delta of +1000 means your team's loadouts were an average of 1000 credits more valuable than the enemy team's in that round." = "Il delta dell' equipaggiamento è calcolato come la differenza tra il valore medio dell equipaggiamento dei giocatori di ogni squadra. Ad esempio, un delta di equipaggiamento di +1000 significa che l' equipaggiamento della propria squadra è stato in media di 1000 crediti più costoso di quello della squadra nemica in quel round.";
+"Loadout Delta is computed as the difference between the average loadout value of players on each team. For example, a loadout delta of +1000 means your team's loadouts were an average of 1000 credits more valuable than the enemy team's in that round." = "Il Delta dell'Equipaggiamento è calcolato come la differenza tra il valore medio dell equipaggiamento dei giocatori di ogni squadra. Ad esempio, un delta di equipaggiamento di +1000 significa che l'equipaggiamento della propria squadra è stato in media di 1000 crediti più costoso di quello della squadra nemica in quel round.";
 
 /* No comment provided by engineer. */
 "Loadout not loaded!" = "Loadout non caricato!";
@@ -846,7 +846,7 @@ Playtime Stats: section */
 "Password" = "Password";
 
 /* Agent View: label for player who hasn't picked an agent yet */
-"Picking…" = "Selezionando l'agente…";
+"Picking…" = "Selezionando l'Agente…";
 
 /* Match List: section */
 "Player" = "Giocatore";
@@ -858,7 +858,7 @@ Playtime Stats: section */
 "Playtime" = "Tempo di Gioco";
 
 /* No comment provided by engineer. */
-"Playtime Breakdown" = "Ripartizione dell'ora di gioco";
+"Playtime Breakdown" = "Suddivisione del Tempo di Gioco";
 
 /* No comment provided by engineer. */
 "Please make sure you are ready to play by the time the game starts!" = "Assicurati di essere pronto a giocare per l'inizio della partita!";
@@ -943,7 +943,7 @@ Playtime Stats: section */
 
 /* Advanced Settings: button to open request log
 Request Log: title */
-"Request Log" = "Log Richieste all'API";
+"Request Log" = "Log Richieste dell'Api";
 
 /* No comment provided by engineer. */
 "Requests" = "Log della Richiesta";
@@ -1100,7 +1100,7 @@ Login Form: button */
 "The code is open-source and visible on GitHub; you can build it yourself if you want to be sure of what's running." = "Il codice è open-source e visibile su GitHub; Potete controllarlo voi stessi se volete essere sicuri.";
 
 /* App Icon Description: default */
-"The default look of Recon Bolt." = "L' aspetto predefinito di Recon Bolt.";
+"The default look of Recon Bolt." = "L'aspetto predefinito di Recon Bolt.";
 
 /* No comment provided by engineer. */
 "The pro version lets you change the app icon! More icons might be coming in future updates." = "La versione Pro consente di cambiare l'icona dell'app! Potrebbero essere disponibili altre icone nei prossimi aggiornamenti.";
@@ -1175,7 +1175,7 @@ Sul sito, vai su **Accesso account Riot** e imposta un nome utente e una passwor
 "Unknown Card" = "Scheda Sconosciuta";
 
 /* Store */
-"Unknown Offer" = "Offerta sconosciuta";
+"Unknown Offer" = "Offerta Sconosciuta";
 
 /* No comment provided by engineer. */
 "Unknown Player" = "Giocatore Sconosciuto";
@@ -1187,7 +1187,7 @@ Sul sito, vai su **Accesso account Riot** e imposta un nome utente e una passwor
 "Unknown Rank" = "Grado sconosciuto";
 
 /* placeholder */
-"Unknown Skin" = "Skin sconosciuta";
+"Unknown Skin" = "Skin Sconosciuta";
 
 /* placeholder */
 "Unknown Spray" = "Spray Sconosciuto";
