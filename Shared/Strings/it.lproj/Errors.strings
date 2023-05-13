@@ -31,7 +31,7 @@ Probabilmente hai effettuato l'accesso con l'account sbagliato; %@";
 
 /* Should not happen anymore, but you never know ¯\_(ツ)_/¯ */
 "Missing session for account!
-If you have Pro, add an account using the same credentials to replace the account with a working version." = "Sessione mancante per l' account!
+If you have Pro, add an account using the same credentials to replace the account with a working version." = "Sessione mancante per l'account!
 Se hai la versione Pro, aggiungi un account utilizzando le stesse credenziali per sostituire l'account con una versione funzionante.";
 
 /* error loading the account for a widget. */
@@ -83,7 +83,7 @@ Se hai la versione Pro, aggiungi un account utilizzando le stesse credenziali pe
 "Widgets require Recon Bolt Pro!" = "I Widget richiedono Recon Bolt Pro!";
 
 /* Riot API Error */
-"You are sending too many requests." = "Stai inviando troppe richieste all' API; Rallenta.";
+"You are sending too many requests." = "Stai inviando troppe richieste all'API; Rallenta.";
 
 /* Riot API Error */
 "Your session could not be resumed. %@" = "Impossibile riprendere la sessione. %@";
@@ -95,7 +95,7 @@ Se hai la versione Pro, aggiungi un account utilizzando le stesse credenziali pe
 "Your token has expired. %@" = "Il tuo token è scaduto. %@";
 
 /* wrong account error */
-"this one has no Riot ID & Tagline." = "Questo non ha un Riot ID e una Tagline.";
+"this one has no Riot ID & Tagline." = "Questo account non ha un Riot ID e una Tagline.";
 
 /* wrong account error */
 "this one is:
