@@ -45,7 +45,7 @@
 "%lld more" = "%lld altro";
 
 /* Weapon Reference: stats */
-"%lld pellets" = "%lld pallini a segno";
+"%lld pellets" = "%lld pallini";
 
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
 "%lld to %lld credits" = "Da %lld a %lld crediti";
@@ -287,7 +287,7 @@ Playtime Stats: section */
 "Choose App Icon" = "Scegli l'Icona dell'App";
 
 /* No comment provided by engineer. */
-"Choose Buddy" = "Cambia Accessorio";
+"Choose Buddy" = "Scegli Accessorio";
 
 /* No comment provided by engineer. */
 "Choose Card" = "Scegli la Carta";
@@ -663,7 +663,7 @@ Weapon Reference: stats */
 "Lock In %@" = "Conferma %@";
 
 /* Bookmark/Player List: lookup button */
-"Look Up" = "Torna in Cima";
+"Look Up" = "Cerca";
 
 /* Login Form */
 "Looks like you're trying to enter your Riot ID (and tagline) as username! Your username is actually something else: it's what you use to sign into the Valorant launcher.
@@ -715,7 +715,7 @@ Se non conosci il tuo nome utente o non ne hai uno, puoi risolvere il problema s
 "Match Loading Errors" = "Errore di Caricamento delle Partite";
 
 /* App Theme: automatically match the system theme */
-"Match System" = "Sincronizza Tema con il Sistema";
+"Match System" = "Sincronizza con il Sistema";
 
 /* Match List: section */
 "Matches" = "Partita";
@@ -1034,7 +1034,7 @@ Login Form: button */
 "Skin Level %lld" = "Livello %lld";
 
 /* Skin Details: section */
-"Skin Levels" = "Livello della Skin";
+"Skin Levels" = "Livelli della Skin";
 
 /* Weapon Reference: button */
 "Skins" = "Skins";
