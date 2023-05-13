@@ -1,0 +1,10 @@
+/* Shown in the iOS settings, where users are guided when trying to change the app language. */
+"Asset Language Explanation" = "Ha más nyelvet szeretnél használni az alkalmazásban, akkor ezt az alkalmasában így tudod beállítani: Speciális beállítások > Fájlok kezelése > Nyelv";
+
+/* Shown in the iOS settings, where users are guided when trying to change the app language. This one is a section header. */
+"Help" = "Segítség";
+
+/* Shown in the iOS settings, where users are guided when trying to change the app language. */
+"Language Explanation" = "Nem találja a nyelvi beállítást? Az iOS csak akkor engedi testre szabni egy alkalmazás nyelvét, ha több bejegyzéssel is beállította a kívánt nyelveket.
+
+Ennek megváltoztatásához menj az Általános > Nyelv és régió menüpontba, és adj hozzá egy új nyelvet (pl. angol) a lista aljára.";

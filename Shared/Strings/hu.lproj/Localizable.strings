@@ -206,6 +206,9 @@ Az elhelyezés utáni versenyszerű mérkőzések azonban az adataik nélkül is
 /* Win Rate Stats: side name */
 "Attacking" = "Támadó";
 
+/* Settings: toggle */
+"Automatically Sign Back In" = "Automatikus visszajelentkezés";
+
 /* Store: available currency */
 "Available:" = "Elérhető:";
 
@@ -264,6 +267,9 @@ Playtime Stats: section */
 
 /* No comment provided by engineer. */
 "Change Buddy" = "Buddy váltás";
+
+/* Settings: button */
+"Change Language" = "Nyelv választás";
 
 /* No comment provided by engineer. */
 "Change Queue" = "Queue váltás";
@@ -382,6 +388,9 @@ Playtime Stats: section */
 /* Store */
 "Daily Offers" = "Nepi ajánlatok";
 
+/* Weapon Reference: stats */
+"Damage" = "Sebzés";
+
 /* App Theme */
 "Dark Mode" = "Sötét üzemmód";
 
@@ -429,6 +438,9 @@ Playtime Stats: section */
 
 /* No comment provided by engineer. */
 "Enter 2FA Code" = "2FA kód megadása";
+
+/* Weapon Reference: stats */
+"Equip Time" = "Felszerelési idő";
 
 /* Request Log
 Stats: error details */
@@ -494,6 +506,9 @@ HIBAJELENTÉSED ITT:
 
 /* Weapon Reference: stats */
 "Fire Rate" = "Tűzerő";
+
+/* Weapon Reference: stats */
+"First Bullet Spread" = "Első golyó szórása";
 
 /* No comment provided by engineer. */
 "Force Refresh Widgets" = "Widgetek kényszerfrissítése";
@@ -669,6 +684,9 @@ Ha nem tudod a felhasználóneved, vagy nincs, akkor ezt a [account.riotgames.co
 /* No comment provided by engineer. */
 "Manage Local Storage" = "Helyi tároló kezelése";
 
+/* Settings: section */
+"Management" = "Menedzsment";
+
 /* About Screen */
 "Many thanks to the volunteer translators from our Discord server who have been hard at working translating the app to new languages!" = "Köszönjük a Discord szerverünk önkéntes fordítóinak, akik keményen dolgoztak az alkalmazás új nyelvekre való fordításán!";
 
@@ -680,6 +698,9 @@ Ha nem tudod a felhasználóneved, vagy nincs, akkor ezt a [account.riotgames.co
 
 /* Stats: error details */
 "Match" = "Meccs";
+
+/* Asset Management: option to match assets language to app language */
+"Match App Language" = "Az alkalmazás nyelvével azonos";
 
 /* Match Details: title */
 "Match Details" = "A meccs részletei";
@@ -845,6 +866,9 @@ Playtime Stats: section */
 /* Weapon Reference */
 "Price" = "Ár";
 
+/* Badge applied to buttons that are exclusive to Pro, e.g. in the account settings */
+"Pro" = "Pro";
+
 /* App Icon Name */
 "Pro Blue" = "Pro Kék";
 
@@ -862,6 +886,9 @@ Playtime Stats: section */
 
 /* Statistics filter: button */
 "Queues" = "Queues";
+
+/* Weapon Reference: stats */
+"Range" = "Tartomány";
 
 /* Rank Widget: title */
 "Rank" = "Rang";
@@ -957,6 +984,9 @@ Request Log: title */
 /* Bookmark/Player List: section */
 "Search" = "Keresés";
 
+/* Asset Management: language picker title */
+"Select Language" = "Nyelv kiválasztása";
+
 /* Hit Distribution Stats: error */
 "Select more matches to see data on hit distribution. Deathmatch, Escalation, and other modes don't provide the necessary information." = "Válasszon ki több találatot a találati eloszlásra vonatkozó adatok megtekintéséhez. A Deathmatch, az Escalation és más módok nem adják meg a szükséges információkat.";
 
@@ -971,6 +1001,9 @@ Request Log: title */
 
 /* Playtime Stats: title for view of matches in common with another player */
 "Shared Matches" = "Megosztott meccsek";
+
+/* Weapon Reference: stats */
+"Shotgun Pellets" = "Shotgun golyók";
 
 /* No comment provided by engineer. */
 "Show Unfetched Matches" = "Mutasd meg a még nem rögzített meccseket";
@@ -991,8 +1024,20 @@ Login Form: button */
 /* Login Form */
 "Sign In with your Riot account" = "Bejelentkezés a Riot fiókoddal";
 
+/* Account Settings: button */
+"Sign Out of All Accounts" = "Kijelentkezés minden fiókból";
+
 /* Login Form: button/header */
 "Sign in with Google/Apple/etc." = "Jelentkezzen be a Google/Apple/etc. segítségével.";
+
+/* Skin Details: level name */
+"Skin Level %lld" = "Szint %lld";
+
+/* Skin Details: section */
+"Skin Levels" = "Kinézet szintek";
+
+/* Weapon Reference: button */
+"Skins" = "Kinézetek";
 
 /* Hit Distribution Stats: smoothing slider */
 "Smoothing" = "Simítás";
@@ -1069,6 +1114,9 @@ Login Form: button */
 /* Statistics error for iOS <16 */
 "This feature requires iOS 16 or newer." = "Ez a funkció iOS 16 vagy újabb iOS-t igényel.";
 
+/* Settings: toggle description */
+"This makes Recon Bolt automatically use your username & password to sign in again if you get signed out. If you have 2-factor authentication enabled, this may fail if it requires a new code, but it still works sometimes." = "Ezáltal a Recon Bolt automatikusan felhasználja a felhasználónevét és jelszavát az újbóli bejelentkezéshez, ha kijelentkezik. Ha engedélyezve van a 2-faktoros hitelesítés, akkor ez sikertelen lehet, ha új kódot igényel, de néha még működik.";
+
 /* Stats: match loading */
 "To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "A statisztikák összegyűjtéséhez először be kell töltenünk a feldolgozandó meccseket. Vegye figyelembe, hogy a nagy mennyiségek hosszú időt vehetnek igénybe, különösen, ha először töltjük le őket!";
 
@@ -1123,6 +1171,9 @@ Ezen az oldalon navigálj a **Riot Account Sign-in** menüpontra, és állíts b
 /* placeholder */
 "Unknown Bundle" = "Ismeretlen Bundle";
 
+/* placeholder */
+"Unknown Card" = "Ismeretlen kártya";
+
 /* Store */
 "Unknown Offer" = "Ismeretlen tétel";
 
@@ -1139,6 +1190,9 @@ Ezen az oldalon navigálj a **Riot Account Sign-in** menüpontra, és állíts b
 "Unknown Skin" = "Ismeretlen kinézet";
 
 /* placeholder */
+"Unknown Spray" = "Ismeretlen falfirka";
+
+/* placeholder */
 "Unknown Title" = "Ismeretlen szöveg";
 
 /* Round Details: killed by unknown damage source/type */
@@ -1153,6 +1207,9 @@ Round Details: killed by unknown/unspecified weapon */
 
 /* Missions Box */
 "Unknown contract!" = "Ismeretlen Contract!";
+
+/* Store Bundle Details: should never show, but if Riot adds a new kind of item to a bundle, this would show */
+"Unknown item of type %@" = "Ismeretlen típusú elem %@";
 
 /* No comment provided by engineer. */
 "Unknown mission!" = "Ismeretlen küldetés!";
@@ -1187,6 +1244,9 @@ Round Details: killed by unknown/unspecified weapon */
 /* No comment provided by engineer. */
 "View Full Profile" = "Teljes profil megtekintése";
 
+/* Gun Customizer: button */
+"View Skin Details" = "A kinézet részleteinek megtekintése";
+
 /* Match List */
 "View Stats" = "Statisztikák megtekintése";
 
@@ -1207,6 +1267,9 @@ Round Details: killed by unknown/unspecified weapon */
 
 /* No comment provided by engineer. */
 "Weapon Loadout" = "Fegyver felszerelés";
+
+/* Weapon Reference: section */
+"Weapon Statistics" = "Fegyver statisztikák";
 
 /* No comment provided by engineer. */
 "Weapons" = "Fegyverek";

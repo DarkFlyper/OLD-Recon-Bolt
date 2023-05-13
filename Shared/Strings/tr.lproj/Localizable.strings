@@ -9,7 +9,7 @@
 "%@ games won" = "%@ kazanılan oyunlar";
 
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph); placeholder is replaced by the percentage of rounds won, e.g. '57.3% won'. */
-"%@ won" = "%@ kazanıldı";
+"%@ won" = "%@ kazandı";
 
 /* used throughout the app to format percentages—placeholder is replaced by a number */
 "%@%%" = "%@%%";
@@ -21,7 +21,7 @@
 "%@°" = "%@°";
 
 /* Missions Box: always at least 3 */
-"%lld Future Weeklies" = "Gelecek Görevler (%lld)";
+"%lld Future Weeklies" = "Gelecek Haftalık Görevler (%lld)";
 
 /* Missions Box: always at least 3 */
 "%lld Queued-Up Weeklies" = "Geçmiş Görevler (%lld)";
@@ -395,7 +395,7 @@ Playtime Stats: section */
 "Dark Mode" = "Karanlık Mod";
 
 /* Stats: match loading */
-"Data going back to %@" = "%@'e giden veri";
+"Data going back to %@" = "%@'e kadar veriler";
 
 /* No comment provided by engineer. */
 "Day" = "Gün";
@@ -1118,7 +1118,7 @@ Login Form: button */
 "This makes Recon Bolt automatically use your username & password to sign in again if you get signed out. If you have 2-factor authentication enabled, this may fail if it requires a new code, but it still works sometimes." = "Bu, oturumunuz kapatılırsa Recon Bolt'un tekrar oturum açmak için otomatik olarak kullanıcı adınızı ve parolanızı kullanmasını sağlar. 2 faktörlü kimlik doğrulamayı etkinleştirdiyseniz, yeni bir kod gerektiriyorsa bu başarısız olabilir, ancak yine de bazen çalışır.";
 
 /* Stats: match loading */
-"To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "İstatistik toplamak için öncelikle işlenecek maçları yüklememiz gerekir. Özellikle ilk kez indirirken büyük miktarların uzun zaman alabileceğini unutmayın!";
+"To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "İstatistik toplamak için öncelikle gösterilecek maçları yüklememiz gerekir. Özellikle ilk kez indirirken büyük miktarların uzun zaman alabileceğini unutmayın!";
 
 /* Win Rate Stats: side name
 Hit Distribution Stats: region */
@@ -1187,7 +1187,7 @@ Bu sitede **Riot Hesabına Giriş** bölümüne gidin ve kendinize bir kullanıc
 "Unknown Rank" = "Bilinmeyen Rütbe";
 
 /* placeholder */
-"Unknown Skin" = "Bilinmeyen Kaplama";
+"Unknown Skin" = "Bilinmeyen Skin";
 
 /* placeholder */
 "Unknown Spray" = "Bilinmeyen Sprey";

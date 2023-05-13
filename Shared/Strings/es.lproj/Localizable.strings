@@ -395,7 +395,7 @@ Playtime Stats: section */
 "Damage" = "Daño";
 
 /* App Theme */
-"Dark Mode" = "Modo oscuro";
+"Dark Mode" = "Oscuro";
 
 /* Stats: match loading */
 "Data going back to %@" = "Los datos vuelven a %@";
@@ -624,7 +624,7 @@ Weapon Reference: stats */
 "Lifetime Peak" = "Pico máximo";
 
 /* App Theme */
-"Light Mode" = "Modo Claro";
+"Light Mode" = "Claro";
 
 /* About Screen: section */
 "Links" = "Enlaces";
@@ -1082,7 +1082,7 @@ Login Form: button */
 "Storefront outdated!" = "¡El escaparate está desactualizado!";
 
 /* Pro Features List */
-"Support Development :)" = "Apoya al desarrollo :)";
+"Support Development :)" = "Apoya el desarrollo :)";
 
 /* Pro Store */
 "Support Further Development!" = "¡Apoya el desarrollo!";
