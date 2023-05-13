@@ -3,3 +3,8 @@
 
 /* Shown in the iOS settings, where users are guided when trying to change the app language. This one is a section header. */
 "Help" = "幫助";
+
+/* Shown in the iOS settings, where users are guided when trying to change the app language. */
+"Language Explanation" = "找不到語言設定？iOS允許您自定義應用程式的語言，如果你已設定首選語言的話，你可以自己更改多一個語言
+
+想更改的話，請進入“基本”>“語言和地區”，然後新增一種新語言（例如 英語）到列表的底部。";
