@@ -395,7 +395,7 @@ Playtime Stats: section */
 "Dark Mode" = "Karanlık Mod";
 
 /* Stats: match loading */
-"Data going back to %@" = "%@'e giden veri";
+"Data going back to %@" = "%@'e kadar veriler";
 
 /* No comment provided by engineer. */
 "Day" = "Gün";
@@ -1118,7 +1118,7 @@ Login Form: button */
 "This makes Recon Bolt automatically use your username & password to sign in again if you get signed out. If you have 2-factor authentication enabled, this may fail if it requires a new code, but it still works sometimes." = "Bu, oturumunuz kapatılırsa Recon Bolt'un tekrar oturum açmak için otomatik olarak kullanıcı adınızı ve parolanızı kullanmasını sağlar. 2 faktörlü kimlik doğrulamayı etkinleştirdiyseniz, yeni bir kod gerektiriyorsa bu başarısız olabilir, ancak yine de bazen çalışır.";
 
 /* Stats: match loading */
-"To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "İstatistik toplamak için öncelikle işlenecek maçları yüklememiz gerekir. Özellikle ilk kez indirirken büyük miktarların uzun zaman alabileceğini unutmayın!";
+"To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "İstatistik toplamak için öncelikle gösterilecek maçları yüklememiz gerekir. Özellikle ilk kez indirirken büyük miktarların uzun zaman alabileceğini unutmayın!";
 
 /* Win Rate Stats: side name
 Hit Distribution Stats: region */
