@@ -137,7 +137,7 @@
       <key>queues</key>
       <dict>
         <key>one</key>
-        <string>%lld seçilen</string>
+        <string>%lld seçildi</string>
         <key>NSStringFormatSpecTypeKey</key>
         <string>NSStringPluralRuleType</string>
         <key>NSStringFormatValueTypeKey</key>
@@ -164,7 +164,7 @@
       <key>filtered</key>
       <dict>
         <key>one</key>
-        <string>%lld filtrelendi</string>
+        <string>%lld filtirelendi</string>
         <key>NSStringFormatSpecTypeKey</key>
         <string>NSStringPluralRuleType</string>
         <key>NSStringFormatValueTypeKey</key>
