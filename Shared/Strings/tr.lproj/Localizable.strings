@@ -9,7 +9,7 @@
 "%@ games won" = "%@ kazanılan oyunlar";
 
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph); placeholder is replaced by the percentage of rounds won, e.g. '57.3% won'. */
-"%@ won" = "%@ kazanıldı";
+"%@ won" = "%@ kazandı";
 
 /* used throughout the app to format percentages—placeholder is replaced by a number */
 "%@%%" = "%@%%";
@@ -21,7 +21,7 @@
 "%@°" = "%@°";
 
 /* Missions Box: always at least 3 */
-"%lld Future Weeklies" = "Gelecek Görevler (%lld)";
+"%lld Future Weeklies" = "Gelecek Haftalık Görevler (%lld)";
 
 /* Missions Box: always at least 3 */
 "%lld Queued-Up Weeklies" = "Geçmiş Görevler (%lld)";
@@ -1187,7 +1187,7 @@ Bu sitede **Riot Hesabına Giriş** bölümüne gidin ve kendinize bir kullanıc
 "Unknown Rank" = "Bilinmeyen Rütbe";
 
 /* placeholder */
-"Unknown Skin" = "Bilinmeyen Kaplama";
+"Unknown Skin" = "Bilinmeyen Skin";
 
 /* placeholder */
 "Unknown Spray" = "Bilinmeyen Sprey";
