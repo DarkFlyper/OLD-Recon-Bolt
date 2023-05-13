@@ -58,6 +58,9 @@ Ha rendelkezel Recon Bolt Pro előfizetéssel, kérlek jelentkezz be újra.";
 /* Riot API Error */
 "The resource could not be found." = "A forrás nem található.";
 
+/* Riot API Error */
+"This match could not be loaded! Valorant discards match details for older matches after a few months." = "Ezt a mérkőzést nem lehetett betölteni! A Valorant néhány hónap után törli a régebbi mérkőzések adatait.";
+
 /* Keychain error. */
 "Unexpected type found: %@" = "Váratlan típust találtunk: %@";
 
