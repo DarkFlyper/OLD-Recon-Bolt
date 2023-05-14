@@ -44,8 +44,14 @@
 /* Shown at the bottom of the expandable playtime list when there are more entries available. */
 "%lld more" = "%lld thêm";
 
+/* Weapon Reference: stats */
+"%lld pellets" = "%lld viên";
+
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
 "%lld to %lld credits" = "%lld đến %lld credits";
+
+/* Weapon Reference: stats: damage range */
+"%lld – %lldm" = "%lld – %lldm";
 
 /* No comment provided by engineer. */
 "%lld%%" = "%lld%%";
@@ -261,6 +267,9 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Career Summary" = "Tổng hợp danh vọng";
 
+/* Weapon Reference */
+"Category" = "Loại";
+
 /* No comment provided by engineer. */
 "Change Buddy" = "Đổi phụ kiện";
 
@@ -305,6 +314,9 @@ Playtime Stats: section */
 
 /* Storage Management: button to delete all entries of a certain kind */
 "Clear All" = "Xóa tất cả";
+
+/* Skin Details: section */
+"Color Variants" = "Mầu của skin";
 
 /* Contract Picker */
 "Completed" = "Hoàn thành";
@@ -381,6 +393,9 @@ Playtime Stats: section */
 /* Store */
 "Daily Offers" = "Ưu đãi hàng ngày";
 
+/* Weapon Reference: stats */
+"Damage" = "Sắt thương";
+
 /* App Theme */
 "Dark Mode" = "Chế độ tối";
 
@@ -428,6 +443,9 @@ Playtime Stats: section */
 
 /* No comment provided by engineer. */
 "Enter 2FA Code" = "Nhập mã xác thực 2 yếu tố";
+
+/* Weapon Reference: stats */
+"Equip Time" = "Tốc độ trang bị";
 
 /* Request Log
 Stats: error details */
@@ -491,8 +509,17 @@ BÁO CÁO LỖI CỦA BẠN TẠI ĐÂY
 /* Party Box: placeholder shows time spent in queue */
 "Finding match… (%@)" = "Đang tìm trận… (%@)";
 
+/* Weapon Reference: stats */
+"Fire Rate" = "Tốc độ bắn";
+
+/* Weapon Reference: stats */
+"First Bullet Spread" = "Độ lệch phát bắn đầu tiên";
+
 /* No comment provided by engineer. */
 "Force Refresh Widgets" = "Buộc làm mới tiện ích";
+
+/* Contract Picker */
+"Free Agent" = "Đặc vụ miễn phí";
 
 /* Storage Management: button to free up a certain amount of space */
 "Free up these %@" = "Giài phóng %@";
@@ -653,11 +680,17 @@ Nếu không biết tên người dùng của mình hoặc không có, bạn có
 /* Win Rate Stats: chart legend */
 "Losses" = "Thua";
 
+/* Weapon Reference: stats */
+"Magazine Size" = "Băng đạn";
+
 /* No comment provided by engineer. */
 "Manage Assets" = "Quản lý tài nguyên";
 
 /* No comment provided by engineer. */
 "Manage Local Storage" = "Quản lý bộ nhớ cục bộ";
+
+/* Settings: section */
+"Management" = "Quản lí";
 
 /* About Screen */
 "Many thanks to the volunteer translators from our Discord server who have been hard at working translating the app to new languages!" = "Gửi lời cảm ơn to lớn tới các phiên dịch viên tình nguyện từ Discord, những người đã làm việc chăm chỉ để dịch ứng dụng sang các ngôn ngữ mới!";
@@ -670,6 +703,9 @@ Nếu không biết tên người dùng của mình hoặc không có, bạn có
 
 /* Stats: error details */
 "Match" = "Trận";
+
+/* Asset Management: option to match assets language to app language */
+"Match App Language" = "Phù hợp với ngôn ngữ ứng dụng";
 
 /* Match Details: title */
 "Match Details" = "Chi tiết trận đấu";
@@ -832,6 +868,12 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Please make sure you are ready to play by the time the game starts!" = "Vui lòng đảm bảo rằng bạn đã sẵn sàng chơi khi trò chơi bắt đầu!";
 
+/* Weapon Reference */
+"Price" = "Giá";
+
+/* Badge applied to buttons that are exclusive to Pro, e.g. in the account settings */
+"Pro" = "Chuyên nghiệp";
+
 /* App Icon Name */
 "Pro Blue" = "Pro Blue";
 
@@ -849,6 +891,9 @@ Playtime Stats: section */
 
 /* Statistics filter: button */
 "Queues" = "Hàng chờ";
+
+/* Weapon Reference: stats */
+"Range" = "Phạm vi";
 
 /* Rank Widget: title */
 "Rank" = "Xếp hạng";
@@ -888,6 +933,9 @@ Playtime Stats: section */
 
 /* Store Widget: next refresh time (hour & minute) */
 "Refreshes at %@" = "Làm mới lúc %@";
+
+/* Weapon Reference: stats */
+"Reload Time" = "Tốc độ thay đạn";
 
 /* Match List: accessibility label */
 "Remove Bookmark" = "Xóa dấu trang";
@@ -935,8 +983,14 @@ Request Log: title */
 /* Win Rate Stats: section */
 "Rounds by Side" = "Vòng đấu theo bên";
 
+/* Weapon Reference: stats */
+"Run Speed" = "Tốc độ chạy";
+
 /* Bookmark/Player List: section */
 "Search" = "Tìm";
+
+/* Asset Management: language picker title */
+"Select Language" = "Chọn ngôn ngữ";
 
 /* Hit Distribution Stats: error */
 "Select more matches to see data on hit distribution. Deathmatch, Escalation, and other modes don't provide the necessary information." = "Chọn nhiều trận đấu hơn để xem dữ liệu về phân bố bắn trúng đích. Sinh tử, Tăng tiến và các chế độ khác không cung cấp thông tin cần thiết.";
@@ -952,6 +1006,9 @@ Request Log: title */
 
 /* Playtime Stats: title for view of matches in common with another player */
 "Shared Matches" = "Chia sẻ trận đấu";
+
+/* Weapon Reference: stats */
+"Shotgun Pellets" = "Súng săn số viên bắn ra";
 
 /* No comment provided by engineer. */
 "Show Unfetched Matches" = "Hiển thị các trận đấu chưa được tìm thấy";
@@ -972,8 +1029,20 @@ Login Form: button */
 /* Login Form */
 "Sign In with your Riot account" = "Đăng nhập tài khoản Riot của bạn";
 
+/* Account Settings: button */
+"Sign Out of All Accounts" = "Đăng xuất mọi tài khoản";
+
 /* Login Form: button/header */
 "Sign in with Google/Apple/etc." = "Đăng nhập bằng Google/Apple/v.v.";
+
+/* Skin Details: level name */
+"Skin Level %lld" = "Cấp %lld";
+
+/* Skin Details: section */
+"Skin Levels" = "Skin Levels";
+
+/* Weapon Reference: button */
+"Skins" = "Skins";
 
 /* Hit Distribution Stats: smoothing slider */
 "Smoothing" = "Làm mịn";
@@ -1050,6 +1119,9 @@ Login Form: button */
 /* Statistics error for iOS <16 */
 "This feature requires iOS 16 or newer." = "Tính năng này yêu cầu iOS 16 trở lên.";
 
+/* Settings: toggle description */
+"This makes Recon Bolt automatically use your username & password to sign in again if you get signed out. If you have 2-factor authentication enabled, this may fail if it requires a new code, but it still works sometimes." = "Điều này làm cho Recon Bolt tự động sử dụng tên người dùng và mật khẩu của bạn để đăng nhập lại nếu bạn đăng xuất. Nếu bạn đã bật xác thực 2 yếu tố, điều này có thể không thành công nếu yêu cầu mã mới, nhưng đôi khi nó vẫn hoạt động.";
+
 /* Stats: match loading */
 "To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "Để thu thập số liệu thống kê, trước tiên chúng tôi cần tải các trận đấu để xử lý. Lưu ý rằng số lượng lớn có thể mất nhiều thời gian, đặc biệt là khi tải xuống lần đầu tiên!";
 
@@ -1104,6 +1176,9 @@ Trên trang web đó, hãy điều hướng đến **Riot Account Sign-in** và 
 /* placeholder */
 "Unknown Bundle" = "Bộ sưu tập không xác định";
 
+/* placeholder */
+"Unknown Card" = "Thẻ người chơi không xác định";
+
 /* Store */
 "Unknown Offer" = "Ưu đãi không xác định";
 
@@ -1120,6 +1195,9 @@ Trên trang web đó, hãy điều hướng đến **Riot Account Sign-in** và 
 "Unknown Skin" = "Skin không xác định";
 
 /* placeholder */
+"Unknown Spray" = "Hình phun sơn không xác định";
+
+/* placeholder */
 "Unknown Title" = "Danh hiệu không xác định";
 
 /* Round Details: killed by unknown damage source/type */
@@ -1134,6 +1212,9 @@ Round Details: killed by unknown/unspecified weapon */
 
 /* Missions Box */
 "Unknown contract!" = "Giao kèo không xác định!";
+
+/* Store Bundle Details: should never show, but if Riot adds a new kind of item to a bundle, this would show */
+"Unknown item of type %@" = "Vật phẩm không thể xác định loại %@";
 
 /* No comment provided by engineer. */
 "Unknown mission!" = "Nhiệm vụ không xác định!";
@@ -1168,6 +1249,9 @@ Round Details: killed by unknown/unspecified weapon */
 /* No comment provided by engineer. */
 "View Full Profile" = "Xem toàn bộ hồ sơ";
 
+/* Gun Customizer: button */
+"View Skin Details" = "Xem thông tin skin";
+
 /* Match List */
 "View Stats" = "Xem chỉ số";
 
@@ -1188,6 +1272,9 @@ Round Details: killed by unknown/unspecified weapon */
 
 /* No comment provided by engineer. */
 "Weapon Loadout" = "Trang bị vũ khí";
+
+/* Weapon Reference: section */
+"Weapon Statistics" = "Thông số của vũ khí";
 
 /* No comment provided by engineer. */
 "Weapons" = "Vũ khí";
