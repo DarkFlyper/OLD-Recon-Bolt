@@ -58,6 +58,9 @@ Nếu bạn có Pro, thêm tài khoản sử dụng chung thông tin đăng nh�
 /* Riot API Error */
 "The resource could not be found." = "Không thể tìm thấy tài nguyên.";
 
+/* Riot API Error */
+"This match could not be loaded! Valorant discards match details for older matches after a few months." = "Không thể tải trận đấu này! Valorant loại bỏ chi tiết trận đấu cho các trận đấu cũ sau một vài tháng.";
+
 /* Keychain error. */
 "Unexpected type found: %@" = "Đã tìm thấy dữ liệu không mong muốn: %@";
 
