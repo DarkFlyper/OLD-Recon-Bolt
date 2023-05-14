@@ -2,7 +2,40 @@
 "Animation" = "Hình động";
 
 /* No comment provided by engineer. */
+"Attacker/Defender Swap" = "Bên tấn công/Bên phòng thủ";
+
+/* No comment provided by engineer. */
+"Champion's Aura" = "Hào quang nhà vô địch";
+
+/* No comment provided by engineer. */
+"Finisher" = "Kết liễu";
+
+/* No comment provided by engineer. */
+"Fish Animation" = "Hoạt ảnh cá bơi";
+
+/* No comment provided by engineer. */
+"Heartbeat & Map Sensor" = "Cảm biến nhịp tim";
+
+/* No comment provided by engineer. */
+"Inspect & Kill Effects" = "Hiệu úng xem và hạ gục";
+
+/* No comment provided by engineer. */
+"Kill Banner" = "Thông báo hạ gục";
+
+/* No comment provided by engineer. */
+"Kill Counter" = "Mạng hạ gục";
+
+/* No comment provided by engineer. */
+"Kill Effect" = "Hiệu ứng hạ gục";
+
+/* No comment provided by engineer. */
 "Randomizer" = "Ngẫu nhiên";
 
 /* No comment provided by engineer. */
+"Sound Effects" = "Hiệu ứng âm thanh";
+
+/* No comment provided by engineer. */
 "VFX" = "VFX";
+
+/* No comment provided by engineer. */
+"Voiceover" = "Lồng tiếng (Bản địa hóa)";

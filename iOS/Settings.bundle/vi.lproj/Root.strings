@@ -1,0 +1,10 @@
+/* Shown in the iOS settings, where users are guided when trying to change the app language. */
+"Asset Language Explanation" = "Nếu bạn muốn sử dụng một ngôn ngữ khác cho giao diện của ứng dụng và nội dung/tài nguyên trò chơi, bạn có thể thay đổi ngôn ngữ này trong ứng dụng ở phần Cài đặt nâng cao > Quản lý tài sản > Ngôn ngữ.";
+
+/* Shown in the iOS settings, where users are guided when trying to change the app language. This one is a section header. */
+"Help" = "Trợ giúp";
+
+/* Shown in the iOS settings, where users are guided when trying to change the app language. */
+"Language Explanation" = "Không thể tìm thấy cài đặt ngôn ngữ? iOS chỉ cho phép bạn tùy chỉnh ngôn ngữ của ứng dụng nếu bạn đã định cấu hình ngôn ngữ ưa thích của mình bằng nhiều mục nhập.
+
+Để thay đổi điều này, hãy vào Chung > Ngôn ngữ & Vùng và thêm một ngôn ngữ mới (ví dụ: tiếng Anh) vào cuối danh sách.";

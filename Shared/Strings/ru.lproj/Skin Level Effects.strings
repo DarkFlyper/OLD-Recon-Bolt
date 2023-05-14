@@ -1,1 +1,41 @@
-/* This file exists as a marker to combine the synthesized files from all targets. */
+/* No comment provided by engineer. */
+"Animation" = "Анимация";
+
+/* No comment provided by engineer. */
+"Attacker/Defender Swap" = "Атака/Защита";
+
+/* No comment provided by engineer. */
+"Champion's Aura" = "Аура Чемпиона";
+
+/* No comment provided by engineer. */
+"Finisher" = "Добивание";
+
+/* No comment provided by engineer. */
+"Fish Animation" = "Анимация \"Рыба\"";
+
+/* No comment provided by engineer. */
+"Heartbeat & Map Sensor" = "Датчик сердцебиения";
+
+/* No comment provided by engineer. */
+"Inspect & Kill Effects" = "Осмотр и убийство";
+
+/* No comment provided by engineer. */
+"Kill Banner" = "Оповещение";
+
+/* No comment provided by engineer. */
+"Kill Counter" = "Счетчик убийств";
+
+/* No comment provided by engineer. */
+"Kill Effect" = "Эффекты убийства";
+
+/* No comment provided by engineer. */
+"Randomizer" = "Рандомайзер";
+
+/* No comment provided by engineer. */
+"Sound Effects" = "Звуковые эффекты";
+
+/* No comment provided by engineer. */
+"VFX" = "Визуальный Эффект";
+
+/* No comment provided by engineer. */
+"Voiceover" = "Озвучивание";

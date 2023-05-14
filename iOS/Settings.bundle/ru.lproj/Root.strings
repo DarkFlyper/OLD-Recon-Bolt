@@ -1,0 +1,10 @@
+/* Shown in the iOS settings, where users are guided when trying to change the app language. */
+"Asset Language Explanation" = "Если вы хотите использовать другой язык приложения для интерфейса приложения и ресурсов, вы можете изменить язык приложения в \"Настройки\" > \"Расширенные настройки\" > \"Управление ресурсами\" > \"Язык\".";
+
+/* Shown in the iOS settings, where users are guided when trying to change the app language. This one is a section header. */
+"Help" = "Помощь";
+
+/* Shown in the iOS settings, where users are guided when trying to change the app language. */
+"Language Explanation" = "Не получается найти настройку языка? iOS позволяет настроить язык приложения только в том случае, если было выбрано несколько предпочитаемых языков.
+
+Чтобы изменить это, зайдите в \"Основные\" > \"Язык и регион\" и добавьте новый язык (например, английский) в нижнюю часть списка.";
