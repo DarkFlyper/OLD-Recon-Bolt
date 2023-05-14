@@ -29,6 +29,9 @@
 /* No comment provided by engineer. */
 "%lld RR" = "%lld ĐXH";
 
+/* Weapon Reference: stats */
+"%lld bullets" = "%lld viên";
+
 /* Weapon Reference: price, always at least 150 */
 "%lld credits" = "%lld credits";
 
@@ -45,7 +48,7 @@
 "%lld more" = "%lld thêm";
 
 /* Weapon Reference: stats */
-"%lld pellets" = "%lld viên";
+"%lld pellets" = "%lld mảnh";
 
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
 "%lld to %lld credits" = "%lld đến %lld credits";
@@ -1008,7 +1011,7 @@ Request Log: title */
 "Shared Matches" = "Chia sẻ trận đấu";
 
 /* Weapon Reference: stats */
-"Shotgun Pellets" = "Súng săn số viên bắn ra";
+"Shotgun Pellets" = "Súng săn mảnh";
 
 /* No comment provided by engineer. */
 "Show Unfetched Matches" = "Hiển thị các trận đấu chưa được tìm thấy";
