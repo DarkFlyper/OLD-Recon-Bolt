@@ -29,7 +29,7 @@
         <key>NSStringFormatValueTypeKey</key>
         <string>lld</string>
         <key>one</key>
-        <string>1 harita seçildi</string>
+        <string>%lld harita seçildi</string>
         <key>other</key>
         <string>%lld seçilen haritalar</string>
       </dict>
@@ -45,7 +45,7 @@
         <key>NSStringFormatValueTypeKey</key>
         <string>lld</string>
         <key>one</key>
-        <string>1 kuyruk seçildi</string>
+        <string>%lld kuyruk seçildi</string>
         <key>other</key>
         <string>%lld seçilen kuyruklar</string>
       </dict>
@@ -121,7 +121,7 @@
       <key>agents</key>
       <dict>
         <key>one</key>
-        <string>%lld seçilen</string>
+        <string>%lld seçildi</string>
         <key>NSStringFormatSpecTypeKey</key>
         <string>NSStringPluralRuleType</string>
         <key>NSStringFormatValueTypeKey</key>
@@ -157,7 +157,7 @@
         <key>NSStringFormatValueTypeKey</key>
         <string>lld</string>
         <key>one</key>
-        <string>bir maç</string>
+        <string>bir tane maç</string>
         <key>other</key>
         <string>%lld maçlar</string>
       </dict>
