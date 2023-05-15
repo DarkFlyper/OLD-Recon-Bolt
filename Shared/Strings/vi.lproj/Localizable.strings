@@ -875,7 +875,7 @@ Playtime Stats: section */
 "Price" = "Giá";
 
 /* Badge applied to buttons that are exclusive to Pro, e.g. in the account settings */
-"Pro" = "Chuyên nghiệp";
+"Pro" = "Pro";
 
 /* App Icon Name */
 "Pro Blue" = "Pro Blue";
