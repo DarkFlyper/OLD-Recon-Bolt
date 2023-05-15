@@ -456,7 +456,7 @@ Stats: error details */
 "Error downloading assets!" = "¡Error al descargar los archivos!";
 
 /* Request Log: title for an exchange */
-"Exchange" = "Intercambia";
+"Exchange" = "Intercambio";
 
 /* Request Log: title for detailed view of request body/contents */
 "Exchange Body" = "Cuerpo";
