@@ -67,10 +67,16 @@ struct LoadingSection: View {
 			.padding(.vertical, 4)
 			
 			if !fetcher.errors.isEmpty {
-				NavigationLink {
-					errorList()
-				} label: {
-					Text("\(fetcher.errors.count) Error(s)", comment: "Stats: match loading")
+				VStack(alignment: .leading, spacing: 4) {
+					NavigationLink {
+						errorList()
+					} label: {
+						Text("\(fetcher.errors.count) Error(s)", comment: "Stats: match loading")
+					}
+					
+					Text("The remaining \(fetcher.matches.count) matches loaded correctly and are displayed below.")
+						.font(.footnote)
+						.foregroundStyle(.secondary)
 				}
 			}
 		} header: {
