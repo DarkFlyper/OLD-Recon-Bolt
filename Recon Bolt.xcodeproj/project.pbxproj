@@ -679,6 +679,13 @@
 		B9AED04A27B08699009033C6 /* example_party.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_party.json; sourceTree = "<group>"; };
 		B9B11A6228D8F846006EC232 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		B9B11A6D28DD1407006EC232 /* ClientLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientLogView.swift; sourceTree = "<group>"; };
+		B9B89B112A128F1800095207 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Widgets.strings; sourceTree = "<group>"; };
+		B9B89B122A128F1800095207 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B9B89B132A128F1800095207 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = ko; path = ko.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
+		B9B89B142A128F1800095207 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Errors.strings; sourceTree = "<group>"; };
+		B9B89B152A128F1800095207 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Locations.strings; sourceTree = "<group>"; };
+		B9B89B162A128F1800095207 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = "ko.lproj/Skin Level Effects.strings"; sourceTree = "<group>"; };
+		B9B89B172A128F2300095207 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B9BC89D82939B6FB00B97626 /* AppIconPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconPicker.swift; sourceTree = "<group>"; };
 		B9BC89F1293A7D6F00B97626 /* WidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WidgetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9BC89F2293A7D6F00B97626 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -1547,6 +1554,7 @@
 				hu,
 				ro,
 				da,
+				ko,
 			);
 			mainGroup = B941B63D25A5BC8800F675C1;
 			packageReferences = (
@@ -2004,6 +2012,7 @@
 				B94288B329F8E85B00F9415B /* hu */,
 				B920ED3B2A099F54001213D0 /* ro */,
 				B964D3762A0E5F740097C1EB /* da */,
+				B9B89B122A128F1800095207 /* ko */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -2030,6 +2039,7 @@
 				B94288BF29F8EA9700F9415B /* tr */,
 				B964D37B2A0E6C040097C1EB /* da */,
 				B964D37C2A0E6C070097C1EB /* ro */,
+				B9B89B172A128F2300095207 /* ko */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -2057,6 +2067,7 @@
 				B94288B429F8E86200F9415B /* hu */,
 				B920ED3D2A099F58001213D0 /* ro */,
 				B964D3782A0E5F740097C1EB /* da */,
+				B9B89B142A128F1800095207 /* ko */,
 			);
 			name = Errors.strings;
 			sourceTree = "<group>";
@@ -2084,6 +2095,7 @@
 				B94288B529F8E86500F9415B /* hu */,
 				B920ED3E2A099F5B001213D0 /* ro */,
 				B964D3792A0E5F740097C1EB /* da */,
+				B9B89B152A128F1800095207 /* ko */,
 			);
 			name = Locations.strings;
 			sourceTree = "<group>";
@@ -2111,6 +2123,7 @@
 				B94288B729F8E86900F9415B /* hu */,
 				B920ED3C2A099F56001213D0 /* ro */,
 				B964D3772A0E5F740097C1EB /* da */,
+				B9B89B132A128F1800095207 /* ko */,
 			);
 			name = Localizable.stringsdict;
 			sourceTree = "<group>";
@@ -2138,6 +2151,7 @@
 				B94288B229F8E85400F9415B /* hu */,
 				B920ED3A2A099F19001213D0 /* ro */,
 				B964D3752A0E5F740097C1EB /* da */,
+				B9B89B112A128F1800095207 /* ko */,
 			);
 			name = Widgets.intentdefinition;
 			sourceTree = "<group>";
@@ -2165,6 +2179,7 @@
 				B98DF53729FEC60300A8A27A /* vi */,
 				B920ED3F2A099F5D001213D0 /* ro */,
 				B964D37A2A0E5F740097C1EB /* da */,
+				B9B89B162A128F1800095207 /* ko */,
 			);
 			name = "Skin Level Effects.strings";
 			sourceTree = "<group>";
