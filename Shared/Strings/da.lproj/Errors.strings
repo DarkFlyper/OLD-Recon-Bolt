@@ -14,6 +14,9 @@ You've probably signed into the wrong account; %@" = "Det ser ud til, at denne k
 
 Du har sandsynligvis logget ind på den forkerte konto; %@";
 
+/* No comment provided by engineer. */
+"Keychain error for key '%@': %@" = "Fejl i nøgleringen for nøglen '%@': %@";
+
 /* store widget error */
 "Malformed Offer" = "Fejlbehæftet tilbud";
 
@@ -81,3 +84,22 @@ Hvis du har Pro, skal du tilføje en konto med de samme legitimationsoplysninger
 
 /* Riot API Error */
 "You are sending too many requests." = "Du sender for mange anmodninger.";
+
+/* Riot API Error */
+"Your session could not be resumed. %@" = "Din session knune ikke genoptages. %@";
+
+/* Riot API Error */
+"Your session has expired! Please sign in again." = "Din session er udløbet! Log venligst på igen.";
+
+/* Riot API Error */
+"Your token has expired. %@" = "Din token er udløbet. %@";
+
+/* wrong account error */
+"this one has no Riot ID & Tagline." = "denne har ingen Riot ID og Tagline.";
+
+/* wrong account error */
+"this one is:
+
+%@" = "denne er:
+
+%@";
