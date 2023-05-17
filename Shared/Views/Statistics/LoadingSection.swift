@@ -85,14 +85,11 @@ struct LoadingSection: View {
 			let fetchedCount = sublist.count { fetcher.matches.keys.contains($0.id) }
 			Text("\(fetchedCount)/\(fetchCount) loaded", comment: "Stats: match loading")
 		}
-		.onReceive(
-			fetcher.objectWillChange
-				.debounce(for: 0.2, scheduler: DispatchQueue.main),
-			perform: { _ in
-				print("received")
-				fetchedMatches = sublist.compactMap { fetcher.matches[$0.id] }
-			}
-		)
+		.onReceive(fetcher.objectWillChange
+			.debounce(for: 0.2, scheduler: DispatchQueue.main)
+		) { _ in
+			fetchedMatches = sublist.compactMap { fetcher.matches[$0.id] }
+		}
 	}
 	
 	func errorList() -> some View {
@@ -162,9 +159,11 @@ struct LoadingSection: View {
 private final class MatchFetcher: ObservableObject {
 	@Published var matches: [Match.ID: MatchDetails] = [:]
 	@Published var errors: [Match.ID: Error] = [:]
+	@Published var fetchCount = 0 // so fetching less matches still changes the object
 	private var tokens: [Match.ID: AnyCancellable] = [:]
 	
-	func fetchMatches(withIDs ids: some Sequence<Match.ID>, load: @escaping ValorantLoadFunction) {
+	func fetchMatches(withIDs ids: some Collection<Match.ID>, load: @escaping ValorantLoadFunction) {
+		fetchCount = ids.count
 		for match in ids {
 			guard tokens[match] == nil else { continue }
 			tokens[match] = LocalDataProvider.shared.matchDetailsManager
