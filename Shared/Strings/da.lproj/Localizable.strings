@@ -17,6 +17,562 @@
 /* Weapon Reference: time in seconds (with decimal digits) */
 "%@s" = "%@s";
 
+/* Weapon Reference: stats */
+"%@°" = "%@°";
+
+/* Missions Box: always at least 3 */
+"%lld Future Weeklies" = "%lld Fremtidige ugentlige";
+
+/* Missions Box: always at least 3 */
+"%lld Queued-Up Weeklies" = "%lld Ugentlige i kø";
+
+/* No comment provided by engineer. */
+"%lld RR" = "%lld RR";
+
+/* Weapon Reference: stats */
+"%lld bullets" = "%lld skud";
+
+/* Weapon Reference: price, always at least 150 */
+"%lld credits" = "%lld credits";
+
+/* Storage Management */
+"%lld from other players" = "%lld fra andre spillere";
+
+/* Hit Distribution Stats: hit count */
+"%lld hits" = "%lld hits";
+
+/* Shown at the bottom of the expandable playtime list when there are more entries available. */
+"%lld more" = "%lld mere";
+
+/* Weapon Reference: stats */
+"%lld pellets" = "%lld pellets";
+
+/* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
+"%lld to %lld credits" = "%lld til %lld credits";
+
+/* Weapon Reference: stats: damage range */
+"%lld – %lldm" = "%lld - %lldm";
+
+/* No comment provided by engineer. */
+"%lld%%" = "%lld%%";
+
+/* No comment provided by engineer. */
+"%lld/%lld" = "%lld/%lld";
+
+/* Time Formatting: minutes & seconds (used in round details view) */
+"%lld:%@" = "%lld:%@";
+
+/* Time Formatting: minutes, seconds, & milliseconds (used in round details view) */
+"%lld:%@.%@" = "%lld:%@.%@";
+
+/* Contract Progress Bar
+Missions Box */
+"%lld / %lld XP" = "%lld/%lld XP";
+
+/* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
+"(%lld – %lld)" = "(%lld - %lld)";
+
+/* Pro Features List */
+"(You can switch between available icons at any time.)" = "(Du kan til enhver tid skifte mellem de tilgængelige ikoner.)";
+
+/* No comment provided by engineer. */
+"+%lld XP" = "+%lld XP";
+
+/* Missions Widget: how many more weeklies are queued up after the current set */
+"+%lld queued" = "+%lld i kø";
+
+/* Store: night market discount */
+"-%lld%%" = "-%lld%%";
+
+/* No comment provided by engineer. */
+"2-Factor Authentication" = "2-faktor-autentificering";
+
+/* Missions Widget: countdown label when the target is in the future. e.g. '< 2d 3h' */
+"< %@" = "< %@";
+
+/* No comment provided by engineer. */
+"A 2FA code has been sent to your email address %@" = "Der er blevet sendt en 2FA-kode til din e-mailadresse %@";
+
+/* Match List Filter */
+"A match's queue is unknown until its details are fetched (by tapping it or performing the swipe action).
+Competitive matches after your placements can be identified without their details, however." = "En kamps kø er ukendt, indtil dens detaljer hentes (ved at trykke på den eller ved at stryge den).
+competetive kampe efter dine placements kan dog identificeres uden deres detaljer.";
+
+/* Match List: shown with a match's RR change when the player got an AFK Penalty (filled into the placeholder, including -) */
+"AFK: %lld" = "AFK: %lld";
+
+/* Career Summary: header for totals of all time */
+"ALL TIME" = "ALL TIME";
+
+/* Settings: section */
+"About" = "Om";
+
+/* No comment provided by engineer. */
+"About Recon Bolt" = "Om Recon Bolt";
+
+/* Settings: section */
+"Accounts" = "Konti";
+
+/* Contract Picker: button */
+"Activate" = "Aktivér";
+
+/* Contract Picker */
+"Active" = "Aktiv";
+
+/* Missions Box: header */
+"Active Contract" = "Aktiv kontrakt";
+
+/* Match List: accessibility label */
+"Add Bookmark" = "Tilføj bogmærke";
+
+/* Account Settings */
+"Add another Account" = "Tilføj en anden konto";
+
+/* Pro Features List */
+"Add multiple accounts and seamlessly switch between them at any time." = "Tilføj flere konti, og skift problemfrit mellem dem når som helst.";
+
+/* No comment provided by engineer. */
+"Advanced Settings" = "Avancerede indstillinger";
+
+/* Pro Store */
+"Advanced Stats" = "Avanceret statistik";
+
+/* No comment provided by engineer. */
+"Agent Select" = "Agent Select";
+
+/* Contract Picker */
+"Agent Unlockable" = "Agent, ikke låsbar";
+
+/* Contract Picker */
+"Agent Unlocked" = "Agent låst op";
+
+/* Statistics filter: button */
+"Agents" = "Agenter";
+
+/* Stats: match loading */
+"All %lld" = "Alle %lld";
+
+/* No comment provided by engineer. */
+"All Maps" = "Alle Baner";
+
+/* Statistics Filter: button to allow all agents */
+"Allow All Agents" = "Tillad alle";
+
+/* Statistics Filter: button to allow all queues */
+"Allow All Queues" = "Tillad alle";
+
+/* Default Error Alert Title */
+"An Error Occurred!" = "Der er opstået en fejl!";
+
+/* About Screen */
+"An invaluable API hosting all the assets (images, data, etc.) used throughout Valorant. This is where almost every image in the app comes from." = "En uvurderlig API, der indeholder alle de aktiver (billeder, data osv.), der bruges i hele Valorant. Det er herfra næsten alle billeder i appen kommer.";
+
+/* Statistics filter: shown when every agent is allowed */
+"Any Agent" = "Enhver agent";
+
+/* Statistics filter: shown when every queue is allowed */
+"Any Queue" = "Alle køer";
+
+/* Asset Management */
+"Anything with images will not display correctly." = "Alt med billeder vil ikke blive vist korrekt.";
+
+/* Settings: button */
+"App Icon" = "App-ikon";
+
+/* No comment provided by engineer. */
+"Are your assets outdated?" = "Er dine aktiver forældede?";
+
+/* Pro Features List */
+"As thanks for your support, you get to show off your status with an exclusive app icon!" = "Som tak for din støtte kan du vise din status med et eksklusivt app-ikon!";
+
+/* No comment provided by engineer. */
+"Assets" = "Aktiver";
+
+/* Asset Management: shown before the newest version is fetched, so it's not know yet if the assets are up to date or outdated */
+"Assets complete." = "Aktiverne er komplette.";
+
+/* No comment provided by engineer. */
+"Assets not loaded!" = "Aktiver ikke indlæst!";
+
+/* Asset Management */
+"Assets out of date!" = "Aktiver forældet!";
+
+/* No comment provided by engineer. */
+"Assets should be fetched automatically, but in case something went wrong, feel free to initiate the process manually." = "Aktiverne skal hentes automatisk, men hvis der er gået noget galt, kan du starte processen manuelt, hvis du vil.";
+
+/* Asset Management */
+"Assets up to date!" = "Aktiver ajourført!";
+
+/* Win Rate Stats: side name */
+"Attacking" = "Attacking";
+
+/* Settings: toggle */
+"Automatically Sign Back In" = "Log Automatisk På Igen";
+
+/* Store: available currency */
+"Available:" = "Tilgængelig:";
+
+/* Hit Distribution Stats: average HS% */
+"Average: %@" = "Gennemsnit: %@";
+
+/* Request Log: shown for bodies that are not decodable to text */
+"Binary Data" = "Binære data";
+
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
+"Body" = "Krop";
+
+/* Bookmark/Player List: section */
+"Bookmarks" = "Bogmærker";
+
+/* Gun Customizer: section */
+"Buddy" = "Buddy";
+
+/* Storage Management: section */
+"By Kind" = "By Kind";
+
+/* Win Rate Stats: section
+Playtime Stats: section */
+"By Map" = "By Map";
+
+/* Playtime Stats: section/title */
+"By Non-Premade Player" = "Af Ikke-Premade Spiller";
+
+/* Playtime Stats: section/title */
+"By Premade Teammate" = "Af Premade Teammate";
+
+/* Playtime Stats: section */
+"By Queue" = "Af Queue";
+
+/* Hit Distribution Stats: section */
+"By Weapon" = "Af våben";
+
+/* No comment provided by engineer. */
+"Cancel" = "Annuller";
+
+/* No comment provided by engineer. */
+"Cancel Matchmaking" = "Annuller matchmaking";
+
+/* Top-Level Tab Title */
+"Career" = "Karriere";
+
+/* No comment provided by engineer. */
+"Career Summaries" = "Karriere Resume";
+
+/* No comment provided by engineer. */
+"Career Summary" = "Karriere Resume";
+
+/* Weapon Reference */
+"Category" = "Kategori";
+
+/* No comment provided by engineer. */
+"Change Buddy" = "Ændre Buddy";
+
+/* Settings: button */
+"Change Language" = "Skift sprog";
+
+/* No comment provided by engineer. */
+"Change Queue" = "Ændre køen";
+
+/* Gun Customizer: button */
+"Change Skin" = "Skift Skin";
+
+/* Store Widget: description */
+"Check your current Valorant storefront." = "Tjek din nuværende Valorant-butik.";
+
+/* Missions Widget: description */
+"Check your progress on daily & weekly missions." = "Tjek dine fremskridt på daglige og ugentlige missioner.";
+
+/* No comment provided by engineer. */
+"Choose App Icon" = "Vælg app-ikon";
+
+/* No comment provided by engineer. */
+"Choose Buddy" = "Vælg Buddy";
+
+/* No comment provided by engineer. */
+"Choose Card" = "Vælg kort";
+
+/* No comment provided by engineer. */
+"Choose Skin" = "Vælg Skin";
+
+/* No comment provided by engineer. */
+"Choose Spray" = "Vælg Spray";
+
+/* No comment provided by engineer. */
+"Choose Title" = "Vælg titel";
+
+/* Contract Picker: title */
+"Choose a Contract" = "Vælg en kontrakt";
+
+/* Buddy Picker: alert shown when both instances of a buddy are in use */
+"Choose a weapon to take %@ from." = "Vælg et våben til at tage %@ fra.";
+
+/* Storage Management: button to delete all entries of a certain kind */
+"Clear All" = "Ryd alt";
+
+/* Skin Details: section */
+"Color Variants" = "Farvevarianter";
+
+/* Contract Picker */
+"Completed" = "Færdiggjort";
+
+/* Storage Management: title for alert to confirm deleting some matches */
+"Confirm Delete" = "Bekræft Sletning";
+
+/* Missions Box */
+"Contract complete!" = "Kontrakten er afsluttet!";
+
+/* Request Log: button to copy the request's body/contents (accessibility label) */
+"Copy Body" = "Kopiér";
+
+/* Stats: error details: accessibility label */
+"Copy Error" = "Kopier fejl";
+
+/* No comment provided by engineer. */
+"Copy Error Details" = "Kopier fejl detaljer";
+
+/* No comment provided by engineer. */
+"Copy Match ID" = "Kopier match-ID";
+
+/* No comment provided by engineer. */
+"Copy to Clipboard" = "Kopier til udklipsholder";
+
+/* No comment provided by engineer. */
+"Could Not Load Account!" = "Kunne ikke indlæse konto!";
+
+/* No comment provided by engineer. */
+"Could not Change App Icon!" = "Kunne ikke ændre app-ikonet!";
+
+/* No comment provided by engineer. */
+"Could not delete files!" = "Kunne ikke slette filer!";
+
+/* No comment provided by engineer. */
+"Could not determine used storage!" = "Kunne ikke bestemme brugt opbevaring!";
+
+/* No comment provided by engineer. */
+"Could not free up space!" = "Kunne ikke frigøre plads!";
+
+/* No comment provided by engineer. */
+"Could not look up %@" = "Kunne ikke slå op på %@";
+
+/* Login Form: error title */
+"Could not sign in!" = "Kunne ikke logge ind!";
+
+/* About Screen: section */
+"Credits" = "Credits";
+
+/* Asset Management */
+"Current version: %@" = "Nuværende version: %@";
+
+/* No comment provided by engineer. */
+"Currently in agent select" = "I øjeblikket i agent select";
+
+/* No comment provided by engineer. */
+"Currently in-game" = "I øjeblikket i spillet";
+
+/* Queue Label: custom game */
+"Custom" = "Custom";
+
+/* Gun Customizer: title */
+"Customize %@" = "Tilpas %@";
+
+/* Gun Customizer: title */
+"Customize Gun" = "Tilpas våben";
+
+/* Missions Widget */
+"Daily" = "Dagligt";
+
+/* Missions Box: header */
+"Daily Missions" = "Daglige missioner";
+
+/* Store */
+"Daily Offers" = "Daglige tilbud";
+
+/* Weapon Reference: stats */
+"Damage" = "Skade";
+
+/* App Theme */
+"Dark Mode" = "Mørk tilstand";
+
+/* Stats: match loading */
+"Data going back to %@" = "Data, der går tilbage til %@";
+
+/* No comment provided by engineer. */
+"Day" = "Dag";
+
+/* App Icon Name */
+"Default" = "Standard";
+
+/* App Icon Picker: section */
+"Default Icon" = "Standardikon";
+
+/* Win Rate Stats: side name */
+"Defending" = "Defending";
+
+/* Storage Management: button to confirm deleting some matches */
+"Delete %lld Matches" = "Slet %lld Kampe";
+
+/* Match Details: button to view details by round */
+"Details by Round" = "Detaljer efter runde";
+
+/* No comment provided by engineer. */
+"Discord Server" = "Discord Server";
+
+/* Hit Distribution Stats: section */
+"Distribution Over Time" = "Fordeling over tid";
+
+/* No comment provided by engineer. */
+"Done" = "Udført";
+
+/* No comment provided by engineer. */
+"Download Assets Now" = "Hent aktiver nu";
+
+/* Win Rate Stats: chart legend */
+"Draws" = "Uafgjorte";
+
+/* Request Log: shown in place of a status code (like 200 or 404) when sending failed. */
+"ERROR" = "FEJL";
+
+/* Match List: accessibility label */
+"Edit Filter" = "Rediger filter";
+
+/* No comment provided by engineer. */
+"Enter 2FA Code" = "Indtast 2FA-kode";
+
+/* Weapon Reference: stats */
+"Equip Time" = "Udstyrstid";
+
+/* Request Log
+Stats: error details */
+"Error" = "Fejl";
+
+/* No comment provided by engineer. */
+"Error Details" = "Oplysninger om fejl";
+
+/* Asset Management */
+"Error downloading assets!" = "Fejl ved downloading af aktiver!";
+
+/* Request Log: title for an exchange */
+"Exchange" = "Udveksling";
+
+/* About Screen: section */
+"Links" = "Links";
+
+/* Top-Level Tab Title */
+"Live" = "Live";
+
+/* No comment provided by engineer. */
+"Live Match" = "Live kamp";
+
+/* Stats: match loading */
+"Load Data" = "Data om belastning";
+
+/* Match List */
+"Load Older Matches" = "Indlæs ældre kampe";
+
+/* Pro Store */
+"Loading Store Info…" = "Indlæser butiksoplysninger…";
+
+/* No comment provided by engineer. */
+"Loading request log…" = "Indlæsning af request log…";
+
+/* No comment provided by engineer. */
+"Loadout" = "Loadout";
+
+/* No comment provided by engineer. */
+"Loadout Delta" = "Loadout Delta";
+
+/* No comment provided by engineer. */
+"Loadout Delta is computed as the difference between the average loadout value of players on each team. For example, a loadout delta of +1000 means your team's loadouts were an average of 1000 credits more valuable than the enemy team's in that round." = "Loadout Delta beregnes som forskellen mellem den gennemsnitlige loadout-værdi for spillerne på hvert hold. Et loadout-delta på +1000 betyder f. eks., at dit holds loadouts i gennemsnit var 1000 credits mere værd end fjendens hold i den pågældende runde.";
+
+/* No comment provided by engineer. */
+"Loadout not loaded!" = "Loadout ikke indlæst!";
+
+/* No comment provided by engineer. */
+"Lock In" = "Lås ind";
+
+/* No comment provided by engineer. */
+"Lock In %@" = "Lås i %@";
+
+/* Bookmark/Player List: lookup button */
+"Look Up" = "Søg";
+
+/* Login Form */
+"Looks like you're trying to enter your Riot ID (and tagline) as username! Your username is actually something else: it's what you use to sign into the Valorant launcher.
+
+If you don't know your username or don't have one, you can fix that at [account.riotgames.com](https://account.riotgames.com)." = "Det ser ud til, at du forsøger at indtaste dit Riot ID (og tagline) som brugernavn! Dit brugernavn er faktisk noget andet: det er det, du bruger til at logge ind på Valorant-spillet
+
+Hvis du ikke kender dit brugernavn eller ikke har et, kan du rette det på [account.riotgames.com](https://account.riotgames.com).";
+
+/* Win Rate Stats: chart legend */
+"Losses" = "Tabte";
+
+/* Weapon Reference: stats */
+"Magazine Size" = "Magasin størrelse";
+
+/* No comment provided by engineer. */
+"Manage Assets" = "Administrer aktiver";
+
+/* No comment provided by engineer. */
+"Manage Local Storage" = "Administrer lokal lagring";
+
+/* Settings: section */
+"Management" = "Ledelse";
+
+/* About Screen */
+"Many thanks to the volunteer translators from our Discord server who have been hard at working translating the app to new languages!" = "Mange tak til de frivillige oversættere fra vores Discord Server, som har arbejdet hårdt på at oversætte appen til nye sprog!";
+
+/* No comment provided by engineer. */
+"Map" = "Bane";
+
+/* No comment provided by engineer. */
+"Maps" = "Baner";
+
+/* Stats: error details */
+"Match" = "Kamp";
+
+/* Asset Management: option to match assets language to app language */
+"Match App Language" = "Match app sprog";
+
+/* Match Details: title */
+"Match Details" = "Detaljer om kampen";
+
+/* Match List: shown when a match didn't get past Agent Select (because someone dodged/left) */
+"Match Dodged" = "Kamp undveget";
+
+/* No comment provided by engineer. */
+"Match Lists" = "Lister over kampe";
+
+/* No comment provided by engineer. */
+"Match Loading Errors" = "Fejl ved indlæsning af kampe";
+
+/* App Theme: automatically match the system theme */
+"Match System" = "Match System";
+
+/* Match List: section */
+"Matches" = "Kampe";
+
+/* Stats: match loading */
+"Matches to load: **%lld**" = "Kampe, der skal indlæses: **%lld**";
+
+/* Party Box: shown when member's name is not yet loaded */
+"Member" = "Medlem";
+
+/* Request Log */
+"Method" = "Metode";
+
+/* Asset Management */
+"Missing assets!" = "Manglende aktiver!";
+
+/* Missions Box */
+"Missing progress for contract!" = "Manglende fremskridt for kontrakt!";
+
+/* No comment provided by engineer. */
+"Missing season data!" = "Manglende session data!";
+
+/* Missions Widget: title */
+"Missions" = "Missioner";
+
 /* Store */
 "Unknown Offer" = "Ukendt tilbud";
 
