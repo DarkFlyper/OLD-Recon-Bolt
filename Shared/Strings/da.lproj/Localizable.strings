@@ -492,7 +492,7 @@ Stats: error details */
 "Lock In" = "Lås ind";
 
 /* No comment provided by engineer. */
-"Lock In %@" = "Lås i %@";
+"Lock In %@" = "Lås %@";
 
 /* Bookmark/Player List: lookup button */
 "Look Up" = "Søg";
