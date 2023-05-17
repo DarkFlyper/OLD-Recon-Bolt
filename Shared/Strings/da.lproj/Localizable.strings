@@ -1,4 +1,22 @@
 
+/* Used for matches less than a day ago. %@ is replaced by the number of hours/minutes, e.g. '3h ago'. */
+"%@ ago" = "%@ siden";
+
+/* Weapon Reference: stats */
+"%@ bullets/sec" = "%@ kugler/sek";
+
+/* %@ is replaced by a fraction of wins vs. games played, e.g. '5/12 games won'. */
+"%@ games won" = "%@ kampe vundet";
+
+/* Win Rate Stats by Loadout Delta: focused value (drag on graph); placeholder is replaced by the percentage of rounds won, e.g. '57.3% won'. */
+"%@ won" = "%@ vundet";
+
+/* used throughout the app to format percentages—placeholder is replaced by a number */
+"%@%%" = "%@%%";
+
+/* Weapon Reference: time in seconds (with decimal digits) */
+"%@s" = "%@s";
+
 /* Store */
 "Unknown Offer" = "Ukendt tilbud";
 
