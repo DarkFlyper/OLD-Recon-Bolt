@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="Resources/Icon Transparent.png" alt="Icon" width=512 />
+  <img src="Resources/Icons/Transparent/Icon Transparent.png" alt="Icon" width=512 />
 </p>
 
 # Recon Bolt
