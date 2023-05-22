@@ -573,6 +573,45 @@ Hvis du ikke kender dit brugernavn eller ikke har et, kan du rette det på [acco
 /* Missions Widget: title */
 "Missions" = "Missioner";
 
+/* No comment provided by engineer. */
+"Missions not loaded!" = "Missioner er ikke indlæst!";
+
+/* No comment provided by engineer. */
+"Month" = "Måned";
+
+/* Pro Features List */
+"Multiple Account Support" = "Støtte til flere konti";
+
+/* Pro Store */
+"Multiple Accounts" = "Flere konti";
+
+/* Bookmark/Player List: lookup name placeholder */
+"Name" = "Navn";
+
+/* Asset Management */
+"Newest available: %@" = "Nyeste tilgængelige: %@";
+
+/* Store */
+"Night Market" = "Night Market";
+
+/* Buddy picker: option at the top to select no buddy */
+"No Buddy" = "Ingen Budddy";
+
+/* No comment provided by engineer. */
+"No Spray" = "Ingen Spray";
+
+/* No comment provided by engineer. */
+"No Title" = "Ingen Titel";
+
+/* Gun Customizer: shown when a weapon has no buddy active */
+"No buddy selected!" = "Ingen buddy valgt!";
+
+/* Missions Box */
+"No contract active!" = "Ingen kontrakt er aktiv!";
+
+/* Win Rate Stats: by map */
+"No data" = "Ingen data";
+
 /* Store */
 "Unknown Offer" = "Ukendt tilbud";
 
