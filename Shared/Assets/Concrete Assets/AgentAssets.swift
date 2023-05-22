@@ -50,7 +50,7 @@ struct AgentInfo: AssetItem, Codable, Identifiable {
 		Ability.Slot.allCases.compactMap(ability)
 	}
 	
-	struct Role: Codable {
+	struct Role: Codable, Hashable {
 		typealias ID = ObjectID<Self, LowercaseUUID>
 		
 		private var uuid: ID

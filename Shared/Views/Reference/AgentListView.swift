@@ -4,13 +4,28 @@ struct AgentListView: View {
 	@Environment(\.assets) private var assets
 	
 	var body: some View {
-		List {
-			if let assets {
+		AssetsUnwrappingView { assets in
+			List {
 				let agents = assets.agents.values.sorted(on: \.displayName)
-				ForEach(agents) { agent in
-					NavigationLink(destination: AgentInfoView(agent: agent)) {
-						row(for: agent)
+				let groups = Dictionary(grouping: agents, by: \.role)
+					.sorted(on: \.key.displayName)
+				ForEach(groups, id: \.0.id) { (role: AgentInfo.Role, agents: [AgentInfo]) in
+					Section {
+						ForEach(agents) { agent in
+							NavigationLink(destination: AgentInfoView(agent: agent)) {
+								row(for: agent)
+							}
+						}
+					} header: {
+						Label {
+							Text(role.displayName)
+						} icon: {
+							role.displayIcon.view(renderingMode: .template)
+								.frame(height: 20)
+						}
+						.foregroundStyle(.secondary)
 					}
+					.headerProminence(.increased)
 				}
 			}
 		}
