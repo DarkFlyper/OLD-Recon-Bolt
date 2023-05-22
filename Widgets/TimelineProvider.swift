@@ -67,6 +67,11 @@ extension FetchingIntentTimelineProvider {
 			let accountID = try configuration.accountID()
 			link.account = accountID
 			let account = try await Managers.accounts.getAccount(for: accountID)
+			
+			guard await !account.client.getSession().hasExpired else {
+				throw APIError.sessionExpired(mfaRequired: true)
+			}
+			
 			location = account.location
 			if let version = await Managers.assets.assets?.version.riotClientVersion {
 				account.setClientVersion(version)
