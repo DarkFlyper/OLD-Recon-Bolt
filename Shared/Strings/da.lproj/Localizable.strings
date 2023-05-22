@@ -455,6 +455,113 @@ Stats: error details */
 /* Request Log: title for an exchange */
 "Exchange" = "Udveksling";
 
+/* Request Log: title for detailed view of request body/contents */
+"Exchange Body" = "Krop";
+
+/* Statistics Filter: button to exclude all agents */
+"Exclude All Agents" = "Eksluder Alle";
+
+/* Statistics Filter: button to exclude all queues */
+"Exclude All Queues" = "Eksluder Alle";
+
+/* Pro Features List */
+"Exclusive App Icon" = "Eksklusivt app-ikon";
+
+/* Round Details: killed by spike */
+"Exploded" = "Eksploderet";
+
+/* Pro Features List */
+"Family Sharing" = "Familiedeling";
+
+/* Request Log: placeholder is replaced by error dump. */
+"Feedback Email Body" = "Hvad gik galt? Fortæl mig om den fejl, du lige er stødt på:
+
+DIN FEJLRAPPORT HER
+
+%@";
+
+/* Match List: accessibility label */
+"Fetch Details" = "Hent oplysninger";
+
+/* Statistics Filter: title (section) */
+"Filter" = "Filter";
+
+/* No comment provided by engineer. */
+"Filter Maps" = "Filtrere kort";
+
+/* No comment provided by engineer. */
+"Filter Match List" = "Filtrere kampliste";
+
+/* No comment provided by engineer. */
+"Filter Queues" = "Filter køer";
+
+/* No comment provided by engineer. */
+"Filtering by starting side will exclude any matches in single-round modes like Deathmatch, Escalation, etc." = "Filtrering efter startside udelukker alle kampe i enkeltrundetilstande som Deathmatch, Escalation osv.";
+
+/* No comment provided by engineer. */
+"Find Match" = "Find Kamp";
+
+/* Party Box: placeholder shows time spent in queue */
+"Finding match… (%@)" = "Søger efter kamp… (%@)";
+
+/* Weapon Reference: stats */
+"Fire Rate" = "Fire Rate";
+
+/* Weapon Reference: stats */
+"First Bullet Spread" = "Første kugle spredt";
+
+/* No comment provided by engineer. */
+"Force Refresh Widgets" = "Tvinge opdatering af widgets";
+
+/* Contract Picker */
+"Free Agent" = "Gratis Agent";
+
+/* Storage Management: button to free up a certain amount of space */
+"Free up these %@" = "Frigør disse %@";
+
+/* Agent Select header: shown when timer reaches zero */
+"Game Started" = "Spillet startede";
+
+/* No comment provided by engineer. */
+"Game is not running!" = "Spillet kører ikke!";
+
+/* Pro Features List */
+"Gather statistics from anyone's games to gain insights on things like time played by mode/premade, headshot rate over time/by weapon, win rate over time/by map & side, and more!" = "Indsaml statistik fra alles spil for at få indsigt i ting som spilletid pr. tilstand/forudspillet, antal hovedskud over tid/pr. våben, antal sejre over tid/pr. kort og side og meget mere!";
+
+/* Pro Features List */
+"Getting money from Recon Bolt gives me the flexibility and motivation to keep improving the app!" = "At få penge fra Recon Bolt giver mig fleksibilitet og motivation til at blive ved med at forbedre appen!";
+
+/* No comment provided by engineer. */
+"GitHub Repo" = "GitHub Repo";
+
+/* No comment provided by engineer. */
+"Golden Gun" = "Gylden pistol";
+
+/* Stats: date grouping size picker */
+"Group by" = "Gruppere efter";
+
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
+"Head" = "Hoved";
+
+/* No comment provided by engineer. */
+"Headhunter (Chamber)" = "Headhunter (kammer)";
+
+/* About Screen */
+"Hi! I'm Julian Dunskus, and I made this app.
+
+Recon Bolt started development in early 2021, back when it wasn't yet possible to see your RR gains and losses in the game, but the API offered those numbers. I made an app to see the numbers and better understand my rank changes.
+
+As you can guess, the scope expanded massively over time to what you're using now. I hope you're enjoying it!
+
+If you've encountered a bug or have some feedback, I'm always happy to hear it on the Discord Server or GitHub :)" = "Hej! Jeg hedder Julian Dunskus, og jeg har lavet denne app.
+
+Recon Bolt startede i begyndelsen af 2021, dengang det endnu ikke var muligt at se dine RR-gevinster og -tab i spillet, men API'et tilbød disse tal. Jeg lavede en app for at se tallene og bedre forstå mine rangændringer.
+
+Som du kan gætte, blev omfanget udvidet massivt over tid til det, du bruger nu. Jeg håber, at du nyder det!
+
+Hvis du er stødt på en fejl eller har noget feedback, er jeg altid glad for at høre det på Discord-serveren eller GitHub :)";
+
 /* About Screen: section */
 "Links" = "Links";
 
@@ -492,7 +599,7 @@ Stats: error details */
 "Lock In" = "Lås ind";
 
 /* No comment provided by engineer. */
-"Lock In %@" = "Lås i %@";
+"Lock In %@" = "Lås %@";
 
 /* Bookmark/Player List: lookup button */
 "Look Up" = "Søg";
@@ -572,6 +679,183 @@ Hvis du ikke kender dit brugernavn eller ikke har et, kan du rette det på [acco
 
 /* Missions Widget: title */
 "Missions" = "Missioner";
+
+/* No comment provided by engineer. */
+"Missions not loaded!" = "Missioner er ikke indlæst!";
+
+/* No comment provided by engineer. */
+"Month" = "Måned";
+
+/* Pro Features List */
+"Multiple Account Support" = "Støtte til flere konti";
+
+/* Pro Store */
+"Multiple Accounts" = "Flere konti";
+
+/* Bookmark/Player List: lookup name placeholder */
+"Name" = "Navn";
+
+/* Asset Management */
+"Newest available: %@" = "Nyeste tilgængelige: %@";
+
+/* Store */
+"Night Market" = "Night Market";
+
+/* Buddy picker: option at the top to select no buddy */
+"No Buddy" = "Ingen Budddy";
+
+/* No comment provided by engineer. */
+"No Spray" = "Ingen Spray";
+
+/* No comment provided by engineer. */
+"No Title" = "Ingen Titel";
+
+/* Gun Customizer: shown when a weapon has no buddy active */
+"No buddy selected!" = "Ingen buddy valgt!";
+
+/* Missions Box */
+"No contract active!" = "Ingen kontrakt er aktiv!";
+
+/* Win Rate Stats: by map */
+"No data" = "Ingen data";
+
+/* No comment provided by engineer. */
+"No games played with premade teammates." = "Ingen spil er spillet med premates.";
+
+/* Map Reference */
+"No minimap available!" = "Ingen minimap tilgængelig!";
+
+/* No comment provided by engineer. */
+"No non-premade players encountered repeatedly. (Un)lucky you!" = "Ingen non-premades spillere blev spillet med gentagne gange. Du er (u)heldig!";
+
+/* No comment provided by engineer. */
+"Normalize Charts" = "Normalisere diagrammer";
+
+/* Party Box */
+"Not Ready" = "Ikke Klar";
+
+/* Hit Distribution Stats: error */
+"Not enough data!" = "Ikke nok data!";
+
+/* Account Settings */
+"Not signed in yet." = "Ikke logget ind endnu.";
+
+/* No comment provided by engineer. */
+"Not signed in!" = "Ikke logget ind!";
+
+/* Pro Features List */
+"Note: Statistics are only available on iOS 16 and newer." = "Bemærk: Statistikker er kun tilgængelige på iOS 16 og nyere.";
+
+/* Pro Features List */
+"Note: Widgets are only available on iOS 16 and newer." = "Bemærk: Widgets er kun tilgængelige på iOS 16 og nyere.";
+
+/* No comment provided by engineer. */
+"OK" = "OK";
+
+/* No comment provided by engineer. */
+"Official Website" = "Officiel websted";
+
+/* No comment provided by engineer. */
+"Open or swipe to fetch details." = "Åbn eller stryg for at hente detaljer.";
+
+/* Storage Management */
+"Other Players" = "Andre spillere";
+
+/* Buddy Picker: alert shown when both instances of a buddy are in use */
+"Out of instances!" = "Ikke flere tilfælde!";
+
+/* Win Rate Stats: section
+Playtime Stats: section */
+"Over Time" = "Over tid";
+
+/* Hit Distribution Stats: section
+Playtime Stats: section */
+"Overall" = "Samlet";
+
+/* No comment provided by engineer. */
+"Overdrive (Neon)" = "Overdrive (Neon)";
+
+/* No comment provided by engineer. */
+"Party" = "Party";
+
+/* No comment provided by engineer. */
+"Send to Developer" = "Send til udvikleren";
+
+/* Account Settings: shown when the current account's session has expired */
+"Session expired!" = "Sessionen er udløbet!";
+
+/* Top-Level Tab Title */
+"Settings" = "Indstillinger";
+
+/* Playtime Stats: title for view of matches in common with another player */
+"Shared Matches" = "Delte kampe";
+
+/* Weapon Reference: stats */
+"Shotgun Pellets" = "Shotgun Pellets";
+
+/* No comment provided by engineer. */
+"Show Unfetched Matches" = "Vis ikke hentede kampe";
+
+/* No comment provided by engineer. */
+"Show all matches" = "Vis alle kampe";
+
+/* No comment provided by engineer. */
+"Show details when found" = "Vis detaljer, når de er fundet";
+
+/* App Icon Description: pro blue */
+"Show off your pro status with an exclusive icon!" = "Vis din pro status med et eksklusivt ikon!";
+
+/* Account Settings: button
+Login Form: button */
+"Sign In" = "Log ind";
+
+/* Login Form */
+"Sign In with your Riot account" = "Log ind med din Riot-konto";
+
+/* Account Settings: button */
+"Sign Out of All Accounts" = "Log ud af alle konti";
+
+/* Login Form: button/header */
+"Sign in with Google/Apple/etc." = "Log på med Google/Apple/etc.";
+
+/* Skin Details: level name */
+"Skin Level %lld" = "Level %lld";
+
+/* Skin Details: section */
+"Skin Levels" = "Skin Levels";
+
+/* Weapon Reference: button */
+"Skins" = "Skins";
+
+/* Hit Distribution Stats: smoothing slider */
+"Smoothing" = "Udjævning";
+
+/* No comment provided by engineer. */
+"Spectator" = "Tilskuere";
+
+/* Round Details: Spike Event */
+"Spike Defused" = "Spike Defused";
+
+/* Round Details: Spike Event */
+"Spike Planted" = "Spike plantet";
+
+/* No comment provided by engineer. */
+"Start Matchmaking?" = "Start Matchmaking?";
+
+/* Win Rate Stats: accessibility label */
+"Starting Side" = "Startside";
+
+/* Win Rate Stats */
+"Starting Side:" = "Startside:";
+
+/* No comment provided by engineer. */
+"Statistics" = "Statistik";
+
+/* Statistics Pro purchase prompt */
+"Statistics not available!" = "Statistikker ikke tilgængelige!";
+
+/* Statistics Pro purchase prompt: 'Recon Bolt Pro' is inserted in the placeholder with a bolder font. */
+"Statistics require %@, a one-time purchase including a variety of features. Want to give them a look?" = "Statistikker kræver %@, et engangskøb, der omfatter en række forskellige funktioner. Vil du give dem et kig?";
 
 /* Store */
 "Unknown Offer" = "Ukendt tilbud";
