@@ -945,6 +945,9 @@ Login Form: button */
 /* Pro Store */
 "Thank you for supporting Recon Bolt!" = "Tak fordi du støtter Recon Bolt!";
 
+/* Login Form: is this safe? */
+"The code is open-source and visible on GitHub; you can build it yourself if you want to be sure of what's running." = "Koden er open source og kan ses på GitHub; du kan selv bygge den, hvis du vil være sikker på, hvad der kører.";
+
 /* Store */
 "Unknown Offer" = "Ukendt tilbud";
 
