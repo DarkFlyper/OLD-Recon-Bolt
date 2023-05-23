@@ -1255,3 +1255,75 @@ Round Details: killed by unknown/unspecified weapon */
 
 /* Rank Widget: description */
 "View your current rank." = "Se din nuværende rank.";
+
+/* Rank Changes Widget: description */
+"View your rank rating changes." = "Se dine ændringer i rank.";
+
+/* Pro Features List */
+"View your storefront, daily/weekly missions, or current rank without even having to open the app!" = "Se din butik, daglige/ugentlige missioner eller din aktuelle rank uden at du behøver at åbne appen!";
+
+/* Match List: shown with a match's RR change when the player got a performance bonus (filled into the placeholder) */
+"WP: +%lld" = "WP: +%lld";
+
+/* No comment provided by engineer. */
+"Weapon Loadout" = "Våben Loadout";
+
+/* Weapon Reference: section */
+"Weapon Statistics" = "Våbenstatistik";
+
+/* No comment provided by engineer. */
+"Weapons" = "Våben";
+
+/* No comment provided by engineer. */
+"Week" = "Uge";
+
+/* Missions Widget */
+"Weekly" = "Ugentligt";
+
+/* Missions Box: header */
+"Weekly Missions" = "Ugentlige missioner";
+
+/* No comment provided by engineer. */
+"Widget Refresh Requested" = "Anmodet om opdatering af Widgets";
+
+/* No comment provided by engineer. */
+"Win Rate" = "Vindingsrate";
+
+/* Win Rate Stats: chart legend */
+"Wins" = "Vundet";
+
+/* No comment provided by engineer. */
+"Year" = "År";
+
+/* Match Details: footnote */
+"You can also tap a round's number in the kill breakdown above to quickly view its details." = "Du kan også trykke på en rundes nummer i oversigten over drab for hurtigt at få vist detaljerne om runden.";
+
+/* Login Form: is this safe? */
+"You can enable 2-factor authentication, so you'd at least have another layer of security if it went bad." = "Du kan aktivere 2-faktor-godkendelse, så du i det mindste har endnu et sikkerhedslag, hvis det går galt.";
+
+/* Login Form: is this safe? */
+"Your credentials only ever leave your device in the form of a login request directly to Riot. They are never stored or sent anywhere else." = "Dine legitimationsoplysninger forlader kun din enhed i form af en loginanmodning direkte til Riot. De bliver aldrig gemt eller sendt andre steder.";
+
+/* No comment provided by engineer. */
+"Your session has expired! Recon Bolt has tried to refresh it for you, but needs 2FA confirmation." = "Din session er udløbet! Recon Bolt har forsøgt at opdatere den for dig, men har brug for en 2FA-bekræftelse.";
+
+/* No comment provided by engineer. */
+"iOS is a bit finnicky about this, so widgets may not refresh right away—feel free to reboot your device if this doesn't help!" = "iOS er en smule kræsne med dette, så widgets opdateres måske ikke med det samme - du er velkommen til at genstarte din enhed, hvis det ikke hjælper!";
+
+/* Loadout: spray slot */
+"mid-round" = "midtvejs i runden";
+
+/* Missions Widget: countdown label when the target is in the past. Should never really show up, since at this point there's new data. */
+"old" = "gamle";
+
+/* Loadout: spray slot */
+"post-round" = "efter runden";
+
+/* Loadout: spray slot */
+"pre-round" = "før-runde";
+
+/* Login Form */
+"signing in…" = "logger ind…";
+
+/* Loadout: unknown spray slot (should never appear unless Riot changes something) */
+"slot" = "slot";
