@@ -562,6 +562,67 @@ Som du kan gætte, blev omfanget udvidet massivt over tid til det, du bruger nu.
 
 Hvis du er stødt på en fejl eller har noget feedback, er jeg altid glad for at høre det på Discord-serveren eller GitHub :)";
 
+/* Hit Distribution Stats: title */
+"Hit Distribution" = "Fordeling af hits";
+
+/* Pro Store */
+"Home Screen Widgets" = "Widgets på startskærmen";
+
+/* Pro Store */
+"I hope you enjoy the pro features :)" = "Jeg håber, du får glæde af de pro funktioner :)";
+
+/* Login Form: is this safe? */
+"I won't sugarcoat things. Due to the way this app uses the API, I believe there's no other way to sign in than to have people enter their credentials directly. Under those circumstances, there's really no good way for anyone to be sure their credentials remain safe. For what it's worth:" = "Jeg vil lægge skjul på tingene. På grund af den måde, som denne app bruger API'et på, tror jeg ikke, at der er nogen anden måde at logge ind på end ved at få folk til at indtaste deres legitimationsoplysninger direkte. Under disse omstændigheder er der ikke rigtig nogen god måde for nogen at være sikker på, at deres legitimationsoplysninger forbliver sikre. For hvad det er værd:";
+
+/* No comment provided by engineer. */
+"Identities" = "Identiteter";
+
+/* Pro Features List */
+"If you have accounts in multiple regions to play with friends around the world, this is the feature for you!" = "Hvis du har konti i flere regioner for at spille med venner rundt om i verden, er dette den rette funktion for dig!";
+
+/* Pro Features List */
+"If you have multiple accounts, you can configure separate widgets for each and have them on your Home Screen at the same time." = "Hvis du har flere konti, kan du konfigurere separate widgets for hver konto og have dem på din startskærm på samme tid.";
+
+/* No comment provided by engineer. */
+"If your widgets seem broken, use this button to request an immediate refresh from iOS." = "Hvis dine widgets virker ødelagte, kan du bruge denne knap til at anmode om en øjeblikkelig opdatering fra iOS.";
+
+/* No comment provided by engineer. */
+"Image failed to load!" = "Billedet kunne ikke indlæses!";
+
+/* Asset Management */
+"In case something went wrong, use this button to force a full refetch of the assets and images." = "Hvis noget er gået galt, kan du bruge denne knap til at fremtvinge en fuld genindlæsning af aktiver og billeder.";
+
+/* Settings: section */
+"In-App Store" = "Butik";
+
+/* Login Form: button/header */
+"Is this safe?" = "Er det sikkert?";
+
+/* No comment provided by engineer. */
+"Join the Discord Server" = "Tilmeld dig Discord Serveren";
+
+/* Match Details: section */
+"Kills by Round" = "Dræbte pr. runde";
+
+/* Asset Management: this row shows the language of the current assets */
+"Language" = "Sprog";
+
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
+"Legs" = "Ben";
+
+/* Bookmark/Player List: player level */
+"Level %lld" = "Level %lld";
+
+/* Contract Progress Bar */
+"Level %lld / %lld" = "Level %lld / %lld";
+
+/* No comment provided by engineer. */
+"Lifetime Peak" = "Livstid Peak";
+
+/* App Theme */
+"Light Mode" = "Lys-tilstand";
+
 /* About Screen: section */
 "Links" = "Links";
 
@@ -778,6 +839,157 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Party" = "Party";
 
+/* Scoreboard: party letter */
+"Party %@" = "Party %@";
+
+/* Login Form */
+"Password" = "Adgangskode";
+
+/* Agent View: label for player who hasn't picked an agent yet */
+"Picking…" = "Vælger…";
+
+/* Match List: section */
+"Player" = "Spiller";
+
+/* Bookmark/Player List: title */
+"Players" = "Spillere";
+
+/* No comment provided by engineer. */
+"Playtime" = "Spilletid";
+
+/* No comment provided by engineer. */
+"Playtime Breakdown" = "Fordeling af spilletid";
+
+/* No comment provided by engineer. */
+"Please make sure you are ready to play by the time the game starts!" = "Sørg for at være klar til at spille, når spillet starter!";
+
+/* Weapon Reference */
+"Price" = "Pris";
+
+/* Badge applied to buttons that are exclusive to Pro, e.g. in the account settings */
+"Pro" = "Pro";
+
+/* App Icon Name */
+"Pro Blue" = "Pro Blå";
+
+/* No comment provided by engineer. */
+"Pro Features" = "Pro-funktioner";
+
+/* App Icon Picker: section */
+"Pro Icons" = "Pro-ikoner";
+
+/* Pro Store: error alert title */
+"Purchase Failed!" = "Køb mislykkedes!";
+
+/* Pro Store: button (placeholder filled with formatted currency) */
+"Purchase – %@" = "Køb - %@";
+
+/* Statistics filter: button */
+"Queues" = "Køer";
+
+/* Weapon Reference: stats */
+"Range" = "Range";
+
+/* Rank Widget: title */
+"Rank" = "Rank";
+
+/* No comment provided by engineer. */
+"Rank %lld" = "Rank %lld";
+
+/* Rank Changes Widget: title */
+"Rank Changes" = "Ændringer i rank";
+
+/* No comment provided by engineer. */
+"Rank Rating Changes" = "Ændringer i RR";
+
+/* No comment provided by engineer. */
+"Rate on the App Store" = "Bedøm i App Store";
+
+/* accessibility label */
+"Ready" = "Klar";
+
+/* No comment provided by engineer. */
+"Recon Bolt Pro" = "Recon Bolt Pro";
+
+/* Pro Features List */
+"Recon Bolt Pro supports Family Sharing, meaning if just one member of your iCloud family buys it, everyone can use it!" = "Recon Bolt Pro understøtter Familiedeling, hvilket betyder, at hvis blot ét medlem af din iCloud-familie køber den, kan alle bruge den!";
+
+/* Pro Features List */
+"Recon Bolt does not have and will never have ads. The only way it can make money is through in-app purchases." = "Recon Bolt har ikke og vil aldrig have reklamer. Den eneste måde Recon Bolt kan tjene penge på er gennem køb i appen.";
+
+/* Top-Level Tab Title */
+"Reference" = "Henvisning";
+
+/* Account Settings: button to refresh expired session */
+"Refresh" = "Opdater";
+
+/* No comment provided by engineer. */
+"Refresh automatically" = "Opdater automatisk";
+
+/* Store Widget: next refresh time (hour & minute) */
+"Refreshes at %@" = "Opfrisker på %@";
+
+/* Weapon Reference: stats */
+"Reload Time" = "Genindlæsningstid";
+
+/* Match List: accessibility label */
+"Remove Bookmark" = "Fjern bogmærke";
+
+/* Asset Management: section */
+"Repair" = "Reparation";
+
+/* Request Log: header */
+"Request" = "Anmodning";
+
+/* Advanced Settings: button to open request log
+Request Log: title */
+"Request Log" = "Logbog for anmodninger";
+
+/* No comment provided by engineer. */
+"Requests" = "Anmodninger";
+
+/* Asset Management: button */
+"Reset" = "Nulstil";
+
+/* Request Log: header */
+"Response" = "Svar";
+
+/* No comment provided by engineer. */
+"Response Code" = "Svarkode";
+
+/* Pro Store: error alert title */
+"Restore Failed!" = "Gendannelse mislykkedes!";
+
+/* Pro Store: button */
+"Restore Purchase" = "Gendan køb";
+
+/* No comment provided by engineer. */
+"Retry" = "Prøv igen";
+
+/* Round Details: header */
+"Round %lld of %lld" = "Runde %lld af %lld";
+
+/* Round Details: title */
+"Round Details" = "Runde Detaljer";
+
+/* Win Rate Stats: section */
+"Rounds by Loadout Delta" = "Runder af Loudout Delta";
+
+/* Win Rate Stats: section */
+"Rounds by Side" = "Runder pr. side";
+
+/* Weapon Reference: stats */
+"Run Speed" = "Løbe hastighed";
+
+/* Bookmark/Player List: section */
+"Search" = "Søg";
+
+/* Asset Management: language picker title */
+"Select Language" = "Vælg sprog";
+
+/* Hit Distribution Stats: error */
+"Select more matches to see data on hit distribution. Deathmatch, Escalation, and other modes don't provide the necessary information." = "Vælg flere kampe for at se data om fordelingen af hits. Deathmatch, Escalation og andre spil-typer giver ikke de nødvendige oplysninger.";
+
 /* No comment provided by engineer. */
 "Send to Developer" = "Send til udvikleren";
 
@@ -857,8 +1069,261 @@ Login Form: button */
 /* Statistics Pro purchase prompt: 'Recon Bolt Pro' is inserted in the placeholder with a bolder font. */
 "Statistics require %@, a one-time purchase including a variety of features. Want to give them a look?" = "Statistikker kræver %@, et engangskøb, der omfatter en række forskellige funktioner. Vil du give dem et kig?";
 
+/* Store Widget: title */
+"Store" = "Butik";
+
+/* No comment provided by engineer. */
+"Store not loaded!" = "Butik ikke indlæst!";
+
+/* No comment provided by engineer. */
+"Storefront outdated!" = "Butiks-side forældet!";
+
+/* Pro Features List */
+"Support Development :)" = "Støtte til udvikling :)";
+
+/* Pro Store */
+"Support Further Development!" = "Støt yderligere udvikling!";
+
+/* Missions Box: button */
+"Switch Contract" = "Skift kontrakt";
+
+/* Login Form: is this safe? */
+"TL;DR: you'll have to take my word for it, but Riot doesn't seem to mind." = "TL;DR: Du må tage mit ord for gode varer, men Riot lader ikke til at have noget imod det.";
+
+/* Bookmark/Player List: lookup tag placeholder */
+"Tag" = "Tag";
+
+/* Pro Store */
+"Thank you for supporting Recon Bolt!" = "Tak fordi du støtter Recon Bolt!";
+
+/* Login Form: is this safe? */
+"The code is open-source and visible on GitHub; you can build it yourself if you want to be sure of what's running." = "Koden er open source og kan ses på GitHub; du kan selv bygge den, hvis du vil være sikker på, hvad der kører.";
+
+/* App Icon Description: default */
+"The default look of Recon Bolt." = "Standard udseendet for Recon Bolt.";
+
+/* No comment provided by engineer. */
+"The pro version lets you change the app icon! More icons might be coming in future updates." = "I pro-versionen kan du ændre app-ikonet! Der kan komme flere ikoner i fremtidige opdateringer.";
+
+/* Settings: picker */
+"Theme" = "Tema";
+
+/* No comment provided by engineer. */
+"These are the last %lld requests sent by the app, along with their responses." = "Dette er de seneste %lld -forespørgsler, som appen har sendt, sammen med deres svar.";
+
+/* Statistics error for iOS <16 */
+"This feature requires iOS 16 or newer." = "Denne funktion kræver iOS 16 eller nyere.";
+
+/* Settings: toggle description */
+"This makes Recon Bolt automatically use your username & password to sign in again if you get signed out. If you have 2-factor authentication enabled, this may fail if it requires a new code, but it still works sometimes." = "Dette gør, at Recon Bolt automatisk bruger dit brugernavn og din adgangskode til at logge på igen, hvis du bliver logget ud. Hvis du har 2-faktor-autentifikation aktiveret, kan dette mislykkes, hvis det kræver en ny kode, men det virker stadig nogle gange.";
+
+/* Stats: match loading */
+"To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "For at indsamle statistikker skal vi først indlæse kampe, som vi skal behandle. Bemærk, at store mængder kan tage lang tid, især når du downloader for første gang!";
+
+/* Win Rate Stats: side name
+Hit Distribution Stats: region */
+"Total" = "I alt";
+
+/* No comment provided by engineer. */
+"Total Playtime" = "Samlet spilletid";
+
+/* No comment provided by engineer. */
+"Total Space Used" = "Samlet anvendt plads";
+
+/* No comment provided by engineer. */
+"Tour de Force (Chamber)" = "Tour de Force (Chamber)";
+
+/* No comment provided by engineer. */
+"Twitter @juliand665" = "Twitter @juliand665";
+
+/* Request Log */
+"URL" = "URL";
+
+/* Missions Box: header, shown when a mission is not daily or weekly (should not happen unless Riot changes something) */
+"Uncategorized Missions" = "Ikke-Kategoriseret Missioner";
+
+/* Shown when a match does not match the filter and its details have not been fetched. */
+"Unfetched" = "Unfetched";
+
+/* Hit Distribution Stats: footnote */
+"Unfortunately, Valorant doesn't store information about which weapon was used for each hit. All we get is the weapon you started the round with and what weapon you used for each kill. Recon Bolt guesses the weapon involved in each damage based on this information, but it cannot be perfect (and neither can any other tracker)." = "Desværre gemmer Valorant ikke oplysninger om, hvilket våben der blev brugt til hvert slag. Det eneste vi får er det våben, du startede runden med, og hvilket våben du brugte til hvert drab. Recon Bolt gætter på hvilket våben der er involveret i hver skade baseret på disse oplysninger, men det kan ikke være perfekt (og ingen andre kan tracke dette heller).";
+
+/* Login Form: sign in with google/apple/etc. */
+"Unfortunately, due to technical limitations, you cannot sign into Recon Bolt via your Google account, Apple ID, or anything but a Riot account.
+
+Assuming you signed up for Valorant using Google/Apple/etc., you can set up your account to add a username & password on Riot's site at [account.riotgames.com](https://account.riotgames.com). Note that your Riot ID is **not** the same as your username! If you've forgotten your username, you can reset it at [recovery.riotgames.com](https://recovery.riotgames.com).
+
+On that site, navigate to **Riot Account Sign-in** and set yourself a username and password. When you're done, you can use those same credentials to sign in above! Your social account will stay linked and you'll remain able to sign in with that on PC :)" = "På grund af tekniske begrænsninger kan du desværre ikke logge ind på Recon Bolt via din Google-konto, dit Apple ID eller noget andet end en Riot-konto.
+
+Hvis du har tilmeldt dig Valorant via Google/Apple/etc., kan du oprette din konto for at tilføje et brugernavn og en adgangskode på Riots websted på [account.riotgames.com](https://account.riotgames.com). Bemærk, at dit Riot ID **ikke** er det samme som dit brugernavn! Hvis du har glemt dit brugernavn, kan du nulstille det på [recovery.riotgames.com](https://recovery.riotgames.com).
+
+På dette websted skal du navigere til **Riot Account Sign-in** og angive et brugernavn og en adgangskode. Når du er færdig, kan du bruge de samme oplysninger til at logge ind ovenfor! Din sociale konto forbliver knyttet, og du vil fortsat kunne logge ind med den på pc'en :)";
+
+/* Round Details: killed by unknown ability */
+"Unknown Ability" = "Ukendt Ability";
+
+/* placeholder */
+"Unknown Agent" = "Ukendt agent";
+
+/* placeholder */
+"Unknown Buddy" = "Ukendt Buddy";
+
+/* placeholder */
+"Unknown Bundle" = "Ukendt Bundle";
+
+/* placeholder */
+"Unknown Card" = "Ukendt kort";
+
 /* Store */
 "Unknown Offer" = "Ukendt tilbud";
 
+/* No comment provided by engineer. */
+"Unknown Player" = "Ukendt spiller";
+
+/* No comment provided by engineer. */
+"Unknown Queue" = "Ukendt kø";
+
+/* Match List: should never appear unless assets are missing/outdated */
+"Unknown Rank" = "Ukendt Rank";
+
 /* placeholder */
 "Unknown Skin" = "Ukendt Skin";
+
+/* placeholder */
+"Unknown Spray" = "Ukendt Spray";
+
+/* placeholder */
+"Unknown Title" = "Ukendt Titel";
+
+/* Round Details: killed by unknown damage source/type */
+"Unknown Type" = "Ukendt Type";
+
+/* Stats: label for a weapon that the app doesn't know for some reason
+Round Details: killed by unknown/unspecified weapon */
+"Unknown Weapon" = "Ukendt våben";
+
+/* No comment provided by engineer. */
+"Unknown bundle!" = "Ukendt Bundle!";
+
+/* Missions Box */
+"Unknown contract!" = "Ukendt kontrakt!";
+
+/* Store Bundle Details: should never show, but if Riot adds a new kind of item to a bundle, this would show */
+"Unknown item of type %@" = "Ukendt genstand af typen %@";
+
+/* No comment provided by engineer. */
+"Unknown mission!" = "Ukendt mission!";
+
+/* Asset Management: button */
+"Update Now" = "Opdater nu";
+
+/* Match Details: button */
+"Update Ranks" = "Opdater Ranks";
+
+/* Login Form */
+"Username" = "Brugernavn";
+
+/* No comment provided by engineer. */
+"Users" = "Brugere";
+
+/* Win Rate Stats by Loadout Delta */
+"Value Difference (credits)" = "Værdiforskel (kreditter)";
+
+/* Asset Management: this row shows the version of the current assets */
+"Version" = "Version";
+
+/* Reference */
+"Version %@" = "Version %@";
+
+/* Settings: toggle */
+"Vibrate when Match Found" = "Vibrer, når der er fundet en kamp";
+
+/* Pro Store */
+"View All Features" = "Se alle funktioner";
+
+/* No comment provided by engineer. */
+"View Full Profile" = "Se hele profilen";
+
+/* Gun Customizer: button */
+"View Skin Details" = "Se detaljer om skins";
+
+/* Match List */
+"View Stats" = "Se statistik";
+
+/* Statistics Pro purchase prompt: button */
+"View Store in Settings" = "Vis butik i indstillinger";
+
+/* Rank Widget: description */
+"View your current rank." = "Se din nuværende rank.";
+
+/* Rank Changes Widget: description */
+"View your rank rating changes." = "Se dine ændringer i rank.";
+
+/* Pro Features List */
+"View your storefront, daily/weekly missions, or current rank without even having to open the app!" = "Se din butik, daglige/ugentlige missioner eller din aktuelle rank uden at du behøver at åbne appen!";
+
+/* Match List: shown with a match's RR change when the player got a performance bonus (filled into the placeholder) */
+"WP: +%lld" = "WP: +%lld";
+
+/* No comment provided by engineer. */
+"Weapon Loadout" = "Våben Loadout";
+
+/* Weapon Reference: section */
+"Weapon Statistics" = "Våbenstatistik";
+
+/* No comment provided by engineer. */
+"Weapons" = "Våben";
+
+/* No comment provided by engineer. */
+"Week" = "Uge";
+
+/* Missions Widget */
+"Weekly" = "Ugentligt";
+
+/* Missions Box: header */
+"Weekly Missions" = "Ugentlige missioner";
+
+/* No comment provided by engineer. */
+"Widget Refresh Requested" = "Anmodet om opdatering af Widgets";
+
+/* No comment provided by engineer. */
+"Win Rate" = "Vindingsrate";
+
+/* Win Rate Stats: chart legend */
+"Wins" = "Vundet";
+
+/* No comment provided by engineer. */
+"Year" = "År";
+
+/* Match Details: footnote */
+"You can also tap a round's number in the kill breakdown above to quickly view its details." = "Du kan også trykke på en rundes nummer i oversigten over drab for hurtigt at få vist detaljerne om runden.";
+
+/* Login Form: is this safe? */
+"You can enable 2-factor authentication, so you'd at least have another layer of security if it went bad." = "Du kan aktivere 2-faktor-godkendelse, så du i det mindste har endnu et sikkerhedslag, hvis det går galt.";
+
+/* Login Form: is this safe? */
+"Your credentials only ever leave your device in the form of a login request directly to Riot. They are never stored or sent anywhere else." = "Dine legitimationsoplysninger forlader kun din enhed i form af en loginanmodning direkte til Riot. De bliver aldrig gemt eller sendt andre steder.";
+
+/* No comment provided by engineer. */
+"Your session has expired! Recon Bolt has tried to refresh it for you, but needs 2FA confirmation." = "Din session er udløbet! Recon Bolt har forsøgt at opdatere den for dig, men har brug for en 2FA-bekræftelse.";
+
+/* No comment provided by engineer. */
+"iOS is a bit finnicky about this, so widgets may not refresh right away—feel free to reboot your device if this doesn't help!" = "iOS er en smule kræsne med dette, så widgets opdateres måske ikke med det samme - du er velkommen til at genstarte din enhed, hvis det ikke hjælper!";
+
+/* Loadout: spray slot */
+"mid-round" = "midtvejs i runden";
+
+/* Missions Widget: countdown label when the target is in the past. Should never really show up, since at this point there's new data. */
+"old" = "gamle";
+
+/* Loadout: spray slot */
+"post-round" = "efter runden";
+
+/* Loadout: spray slot */
+"pre-round" = "før-runde";
+
+/* Login Form */
+"signing in…" = "logger ind…";
+
+/* Loadout: unknown spray slot (should never appear unless Riot changes something) */
+"slot" = "slot";
