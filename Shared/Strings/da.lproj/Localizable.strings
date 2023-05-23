@@ -978,6 +978,18 @@ Request Log: title */
 /* Win Rate Stats: section */
 "Rounds by Side" = "Runder pr. side";
 
+/* Weapon Reference: stats */
+"Run Speed" = "Løbe hastighed";
+
+/* Bookmark/Player List: section */
+"Search" = "Søg";
+
+/* Asset Management: language picker title */
+"Select Language" = "Vælg sprog";
+
+/* Hit Distribution Stats: error */
+"Select more matches to see data on hit distribution. Deathmatch, Escalation, and other modes don't provide the necessary information." = "Vælg flere kampe for at se data om fordelingen af hits. Deathmatch, Escalation og andre spil-typer giver ikke de nødvendige oplysninger.";
+
 /* No comment provided by engineer. */
 "Send to Developer" = "Send til udvikleren";
 
@@ -1222,3 +1234,24 @@ Round Details: killed by unknown/unspecified weapon */
 
 /* Reference */
 "Version %@" = "Version %@";
+
+/* Settings: toggle */
+"Vibrate when Match Found" = "Vibrer, når der er fundet en kamp";
+
+/* Pro Store */
+"View All Features" = "Se alle funktioner";
+
+/* No comment provided by engineer. */
+"View Full Profile" = "Se hele profilen";
+
+/* Gun Customizer: button */
+"View Skin Details" = "Se detaljer om skins";
+
+/* Match List */
+"View Stats" = "Se statistik";
+
+/* Statistics Pro purchase prompt: button */
+"View Store in Settings" = "Vis butik i indstillinger";
+
+/* Rank Widget: description */
+"View your current rank." = "Se din nuværende rank.";
