@@ -562,6 +562,67 @@ Som du kan gætte, blev omfanget udvidet massivt over tid til det, du bruger nu.
 
 Hvis du er stødt på en fejl eller har noget feedback, er jeg altid glad for at høre det på Discord-serveren eller GitHub :)";
 
+/* Hit Distribution Stats: title */
+"Hit Distribution" = "Fordeling af hits";
+
+/* Pro Store */
+"Home Screen Widgets" = "Widgets på startskærmen";
+
+/* Pro Store */
+"I hope you enjoy the pro features :)" = "Jeg håber, du får glæde af de pro funktioner :)";
+
+/* Login Form: is this safe? */
+"I won't sugarcoat things. Due to the way this app uses the API, I believe there's no other way to sign in than to have people enter their credentials directly. Under those circumstances, there's really no good way for anyone to be sure their credentials remain safe. For what it's worth:" = "Jeg vil lægge skjul på tingene. På grund af den måde, som denne app bruger API'et på, tror jeg ikke, at der er nogen anden måde at logge ind på end ved at få folk til at indtaste deres legitimationsoplysninger direkte. Under disse omstændigheder er der ikke rigtig nogen god måde for nogen at være sikker på, at deres legitimationsoplysninger forbliver sikre. For hvad det er værd:";
+
+/* No comment provided by engineer. */
+"Identities" = "Identiteter";
+
+/* Pro Features List */
+"If you have accounts in multiple regions to play with friends around the world, this is the feature for you!" = "Hvis du har konti i flere regioner for at spille med venner rundt om i verden, er dette den rette funktion for dig!";
+
+/* Pro Features List */
+"If you have multiple accounts, you can configure separate widgets for each and have them on your Home Screen at the same time." = "Hvis du har flere konti, kan du konfigurere separate widgets for hver konto og have dem på din startskærm på samme tid.";
+
+/* No comment provided by engineer. */
+"If your widgets seem broken, use this button to request an immediate refresh from iOS." = "Hvis dine widgets virker ødelagte, kan du bruge denne knap til at anmode om en øjeblikkelig opdatering fra iOS.";
+
+/* No comment provided by engineer. */
+"Image failed to load!" = "Billedet kunne ikke indlæses!";
+
+/* Asset Management */
+"In case something went wrong, use this button to force a full refetch of the assets and images." = "Hvis noget er gået galt, kan du bruge denne knap til at fremtvinge en fuld genindlæsning af aktiver og billeder.";
+
+/* Settings: section */
+"In-App Store" = "Butik";
+
+/* Login Form: button/header */
+"Is this safe?" = "Er det sikkert?";
+
+/* No comment provided by engineer. */
+"Join the Discord Server" = "Tilmeld dig Discord Serveren";
+
+/* Match Details: section */
+"Kills by Round" = "Dræbte pr. runde";
+
+/* Asset Management: this row shows the language of the current assets */
+"Language" = "Sprog";
+
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
+"Legs" = "Ben";
+
+/* Bookmark/Player List: player level */
+"Level %lld" = "Level %lld";
+
+/* Contract Progress Bar */
+"Level %lld / %lld" = "Level %lld / %lld";
+
+/* No comment provided by engineer. */
+"Lifetime Peak" = "Livstid Peak";
+
+/* App Theme */
+"Light Mode" = "Lys-tilstand";
+
 /* About Screen: section */
 "Links" = "Links";
 
@@ -856,6 +917,33 @@ Login Form: button */
 
 /* Statistics Pro purchase prompt: 'Recon Bolt Pro' is inserted in the placeholder with a bolder font. */
 "Statistics require %@, a one-time purchase including a variety of features. Want to give them a look?" = "Statistikker kræver %@, et engangskøb, der omfatter en række forskellige funktioner. Vil du give dem et kig?";
+
+/* Store Widget: title */
+"Store" = "Butik";
+
+/* No comment provided by engineer. */
+"Store not loaded!" = "Butik ikke indlæst!";
+
+/* No comment provided by engineer. */
+"Storefront outdated!" = "Butiks-side forældet!";
+
+/* Pro Features List */
+"Support Development :)" = "Støtte til udvikling :)";
+
+/* Pro Store */
+"Support Further Development!" = "Støt yderligere udvikling!";
+
+/* Missions Box: button */
+"Switch Contract" = "Skift kontrakt";
+
+/* Login Form: is this safe? */
+"TL;DR: you'll have to take my word for it, but Riot doesn't seem to mind." = "TL;DR: Du må tage mit ord for gode varer, men Riot lader ikke til at have noget imod det.";
+
+/* Bookmark/Player List: lookup tag placeholder */
+"Tag" = "Tag";
+
+/* Pro Store */
+"Thank you for supporting Recon Bolt!" = "Tak fordi du støtter Recon Bolt!";
 
 /* Store */
 "Unknown Offer" = "Ukendt tilbud";
