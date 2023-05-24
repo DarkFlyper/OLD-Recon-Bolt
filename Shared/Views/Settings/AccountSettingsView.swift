@@ -5,6 +5,7 @@ struct AccountSettingsView: View {
 	@ObservedObject var accountManager: AccountManager
 	
 	@State var loginTarget: LoginTarget?
+	@State var isConfirmingSignOut = false
 	@Environment(\.ownsProVersion) private var ownsProVersion
 	
 	var body: some View {
@@ -40,11 +41,21 @@ struct AccountSettingsView: View {
 				}
 				
 				Button {
-					accountManager.clear()
+					isConfirmingSignOut = true
 				} label: {
 					Text("Sign Out of All Accounts", comment: "Account Settings: button")
 				}
 				.disabled(accountManager.storedAccounts.isEmpty)
+				.confirmationDialog(
+					Text("Are You Sure?", comment: "Account Settings: title for alert to confirm signing out of all accounts—not always visible; iOS decides when to show this"),
+					isPresented: $isConfirmingSignOut
+				) {
+					Button(role: .destructive) {
+						accountManager.clear()
+					} label: {
+						Text("Sign Out", comment: "Account Settings: button in alert to confirm signing out of all accounts")
+					}
+				}
 				
 				Toggle(isOn: $accountManager.shouldReauthAutomatically) {
 					VStack(alignment: .leading, spacing: 4) {
