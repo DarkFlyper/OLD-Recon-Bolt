@@ -189,6 +189,9 @@ Competitive matches after your placements can be identified without their detail
 /* Settings: button */
 "App Icon" = "應用程式圖示";
 
+/* Account Settings: title for alert to confirm signing out of all accounts—not always visible; iOS decides when to show this */
+"Are You Sure?" = "你確定?";
+
 /* No comment provided by engineer. */
 "Are your assets outdated?" = "你的資源包是過期的嗎？";
 
@@ -224,6 +227,9 @@ Competitive matches after your placements can be identified without their detail
 
 /* Hit Distribution Stats: average HS% */
 "Average: %@" = "平均: %@";
+
+/* Pro Store: warning title */
+"Before you Buy" = "購買之前";
 
 /* Request Log: shown for bodies that are not decodable to text */
 "Binary Data" = "二進制資料";
@@ -1033,6 +1039,9 @@ Login Form: button */
 
 /* Login Form */
 "Sign In with your Riot account" = "登入你的拳頭帳號";
+
+/* Account Settings: button in alert to confirm signing out of all accounts */
+"Sign Out" = "登出";
 
 /* Account Settings: button */
 "Sign Out of All Accounts" = "登出所有帳號";
