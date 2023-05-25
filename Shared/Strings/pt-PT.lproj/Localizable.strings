@@ -178,6 +178,9 @@ Competitive matches after your placements can be identified without their detail
 /* Settings: button */
 "App Icon" = "Ícone de aplicação";
 
+/* Account Settings: title for alert to confirm signing out of all accounts—not always visible; iOS decides when to show this */
+"Are You Sure?" = "Tem a certeza?";
+
 /* No comment provided by engineer. */
 "Are your assets outdated?" = "Os seus arquivos estão desatualizados?";
 
@@ -213,6 +216,9 @@ Competitive matches after your placements can be identified without their detail
 
 /* Hit Distribution Stats: average HS% */
 "Average: %@" = "Média: %@";
+
+/* Pro Store: warning title */
+"Before you Buy" = "Antes de comprar";
 
 /* Request Log: shown for bodies that are not decodable to text */
 "Binary Data" = "Dados binários";
@@ -1023,6 +1029,9 @@ Login Form: button */
 /* Login Form */
 "Sign In with your Riot account" = "Entrar com sua conta Riot";
 
+/* Account Settings: button in alert to confirm signing out of all accounts */
+"Sign Out" = "Finalizar sessão";
+
 /* Account Settings: button */
 "Sign Out of All Accounts" = "Sair de todas as contas";
 
@@ -1143,6 +1152,17 @@ Hit Distribution Stats: region */
 
 /* Shown when a match does not match the filter and its details have not been fetched. */
 "Unfetched" = "Não encontrado";
+
+/* Pro Store: warning text */
+"Unfortunately, Riot is now using their intellectual property rights to take down this app. I'm trying to discuss with them to find a way forward, but I currently cannot guarantee that the app will stay available. I believe it will remain installed if you currently have it, but I'm not sure if I'll still be able to verify Pro purchases.
+
+If you or someone you know works at Riot, get in touch with me—there's a few ways linked in the About Recon Bolt section below.
+
+I would still be grateful for your support if you do purchase it! But it's at your own risk because I cannot guarantee that you'll enjoy the promised features going forward :(" = "Infelizmente, a Riot está agora a utilizar os seus direitos de propriedade intelectual para desativar esta aplicação. Estou a tentar discutir com eles para encontrar uma solução, mas de momento não posso garantir que a aplicação permanecerá disponível. Acredito que se a tiver instalada, ela continuará assim, mas não tenho a certeza se conseguirei verificar as compras Pro.
+
+Se você ou alguém que conheça trabalha na Riot, por favor entre em contacto comigo - existem algumas formas de contacto disponíveis na secção \"Sobre Recon Bolt\" abaixo.
+
+Continuaria grato pelo seu apoio caso decida adquiri-lo! No entanto, fica por sua conta e risco, uma vez que não posso garantir que as funcionalidades prometidas sejam mantidas no futuro :(";
 
 /* Hit Distribution Stats: footnote */
 "Unfortunately, Valorant doesn't store information about which weapon was used for each hit. All we get is the weapon you started the round with and what weapon you used for each kill. Recon Bolt guesses the weapon involved in each damage based on this information, but it cannot be perfect (and neither can any other tracker)." = "Infelizmente, o Valorant não armazena as informações sobre qual arma foi usada para cada tiro. Tudo o que obtemos é a arma com a qual você começou na rodada e qual arma você usou para cada morte. O Recon Bolt adivinha a arma utilizada em cada dano com base nessas informações, mas não pode ser perfeito (nem qualquer outro tracker).";
