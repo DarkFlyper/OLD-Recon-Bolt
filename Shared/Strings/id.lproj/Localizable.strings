@@ -178,6 +178,9 @@ Competitive matches after your placements can be identified without their detail
 /* Settings: button */
 "App Icon" = "Ikon Aplikasi";
 
+/* Account Settings: title for alert to confirm signing out of all accounts—not always visible; iOS decides when to show this */
+"Are You Sure?" = "Apakah Anda Yakin?";
+
 /* No comment provided by engineer. */
 "Are your assets outdated?" = "Apakah aset Anda belum diperbarui?";
 
@@ -213,6 +216,9 @@ Competitive matches after your placements can be identified without their detail
 
 /* Hit Distribution Stats: average HS% */
 "Average: %@" = "Rata-rata: %@";
+
+/* Pro Store: warning title */
+"Before you Buy" = "Sebelum kamu membeli";
 
 /* Request Log: shown for bodies that are not decodable to text */
 "Binary Data" = "Data Binary";
@@ -1023,6 +1029,9 @@ Login Form: button */
 /* Login Form */
 "Sign In with your Riot account" = "Masuk menggunakan akun Riot Anda";
 
+/* Account Settings: button in alert to confirm signing out of all accounts */
+"Sign Out" = "Keluar";
+
 /* Account Settings: button */
 "Sign Out of All Accounts" = "Keluar dari Semua Akun";
 
@@ -1143,6 +1152,17 @@ Hit Distribution Stats: region */
 
 /* Shown when a match does not match the filter and its details have not been fetched. */
 "Unfetched" = "Data belum diambil";
+
+/* Pro Store: warning text */
+"Unfortunately, Riot is now using their intellectual property rights to take down this app. I'm trying to discuss with them to find a way forward, but I currently cannot guarantee that the app will stay available. I believe it will remain installed if you currently have it, but I'm not sure if I'll still be able to verify Pro purchases.
+
+If you or someone you know works at Riot, get in touch with me—there's a few ways linked in the About Recon Bolt section below.
+
+I would still be grateful for your support if you do purchase it! But it's at your own risk because I cannot guarantee that you'll enjoy the promised features going forward :(" = "Sayangnya, Riot sekarang menggunakan hak kekayaan intelektual mereka untuk menghapus aplikasi ini. Saya mencoba berdiskusi dengan mereka untuk mencari jalan keluar, tetapi saat ini saya tidak bisa menjamin bahwa aplikasi ini akan tetap tersedia. Saya yakin aplikasi ini akan tetap terinstal jika Anda saat ini memilikinya, tetapi saya tidak yakin apakah saya masih bisa memverifikasi pembelian Pro.
+
+Jika Anda atau seseorang yang Anda kenal bekerja di Riot, hubungi saya-ada beberapa cara yang ditautkan di bagian Tentang Recon Bolt di bawah ini.
+
+Saya tetap akan berterima kasih atas dukungan Anda jika Anda membelinya! Tetapi itu adalah risiko Anda sendiri karena saya tidak dapat menjamin bahwa Anda akan menikmati fitur-fitur yang dijanjikan di masa mendatang :(";
 
 /* Hit Distribution Stats: footnote */
 "Unfortunately, Valorant doesn't store information about which weapon was used for each hit. All we get is the weapon you started the round with and what weapon you used for each kill. Recon Bolt guesses the weapon involved in each damage based on this information, but it cannot be perfect (and neither can any other tracker)." = "Sayangnya, Valorant tidak menyimpan informasi tentang senjata yang digunakan setiap hit. Kami hanya mendapatkan data senjata yang Anda gunakan untuk memulai ronde dan senjata apa yang digunakan pada setiap bunuhnya. Recon Bolt menebak senjata yang terlibat dalam setiap damage berdasarkan informasi ini. Tetapi tidak sempurna (Begitu pula dengan aplikasi tracker lain-nya).";
