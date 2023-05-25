@@ -1318,20 +1318,8 @@ Round Details: killed by unknown/unspecified weapon */
 /* No comment provided by engineer. */
 "iOS is a bit finnicky about this, so widgets may not refresh right away—feel free to reboot your device if this doesn't help!" = "iOS khá chặt chẽ về vấn đề này, vì vậy các tiện ích có thể không làm mới ngay lập tức—vui lòng khởi động lại nếu điều này không giúp ích được gì!";
 
-/* Loadout: spray slot */
-"mid-round" = "giữa vòng đấu";
-
 /* Missions Widget: countdown label when the target is in the past. Should never really show up, since at this point there's new data. */
 "old" = "cũ";
 
-/* Loadout: spray slot */
-"post-round" = "sau vòng đấu";
-
-/* Loadout: spray slot */
-"pre-round" = "trước vòng đấu";
-
 /* Login Form */
 "signing in…" = "đang đăng nhập…";
-
-/* Loadout: unknown spray slot (should never appear unless Riot changes something) */
-"slot" = "chỗ";
