@@ -50,6 +50,22 @@ struct InAppStorefront: View {
 			Text("View All Features", comment: "Pro Store")
 		}
 		
+		VStack(alignment: .leading, spacing: 8) {
+			Text("Before you Buy", comment: "Pro Store: warning title")
+				.font(.title2.bold())
+			let text = String(localized: """
+Unfortunately, Riot is now using their intellectual property rights to take down this app. I'm trying to discuss with them to find a way forward, but I currently cannot guarantee that the app will stay available. I believe it will remain installed if you currently have it, but I'm not sure if I'll still be able to verify Pro purchases.
+
+If you or someone you know works at Riot, get in touch with me—there's a few ways linked in the About Recon Bolt section below.
+
+I would still be grateful for your support if you do purchase it! But it's at your own risk because I cannot guarantee that you'll enjoy the promised features going forward :(
+""", comment: "Pro Store: warning text")
+			
+			// custom paragraph spacing
+			let paragraphs = text.split(separator: "\n")
+			ForEach(paragraphs.indices, id: \.self) { Text(paragraphs[$0]) }
+		}
+		
 		if !store.ownsProVersion {
 			purchaseButton
 			restoreButton
