@@ -951,7 +951,7 @@ Playtime Stats: section */
 
 /* Advanced Settings: button to open request log
 Request Log: title */
-"Request Log" = "Registro de pedidos";
+"Request Log" = "Registro de requisições";
 
 /* No comment provided by engineer. */
 "Requests" = "Pedidos";
