@@ -180,17 +180,22 @@
 	"Sprays": [
 		{
 			"EquipSlotID": "5863985e-43ac-b05d-cb2d-139e72970014",
-			"SprayID": "8b820b5b-4988-4385-610e-d7923724de68",
-			"SprayLevelID": null
-		},
-		{
-			"EquipSlotID": "0814b2fe-4512-60a4-5288-1fbdcec6ca48",
-			"SprayID": "0e399ff1-44be-3289-23aa-5082090912fd",
+			"SprayID": "22ae8535-40b6-95a3-c5b1-98a184b8909f",
 			"SprayLevelID": null
 		},
 		{
 			"EquipSlotID": "04af080a-4071-487b-61c0-5b9c0cfaac74",
-			"SprayID": "7ad73709-4692-decb-ebea-31b637657065",
+			"SprayID": "cbcd99a5-49db-d39f-a060-67a781d1605a",
+			"SprayLevelID": null
+		},
+		{
+			"EquipSlotID": "0814b2fe-4512-60a4-5288-1fbdcec6ca48",
+			"SprayID": "e3b99844-449a-d21b-0612-8c95e74d7d9f",
+			"SprayLevelID": null
+		},
+		{
+			"EquipSlotID": "7cdc908e-4f69-9140-a604-899bd879eed1",
+			"SprayID": "0a6db78c-48b9-a32d-c47a-82be597584c1",
 			"SprayLevelID": null
 		}
 	],

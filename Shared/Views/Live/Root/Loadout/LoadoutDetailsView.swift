@@ -1,5 +1,6 @@
 import SwiftUI
 import ValorantAPI
+import CGeometry
 
 struct LoadoutDetailsView: View {
 	var fetchedLoadout: Loadout
@@ -92,13 +93,74 @@ private struct LoadoutCustomizer: View {
 	}
 	
 	var sprayPicker: some View {
-		HStack {
-			ForEach(Spray.Slot.ID.inOrder, id: \.self) { slot in
-				SprayCell(slot: slot, spray: $loadout.sprays[slot], inventory: inventory)
+		GeometryReader { geometry in
+			let circleRadius: CGFloat = geometry.size.width / 2
+			let center = CGPoint(x: circleRadius, y: circleRadius)
+			let innerRadius = 0.3 * circleRadius
+			let sprayCellSize = 0.9 * (circleRadius - innerRadius)
+			let slots = Spray.Slot.ID.inCCWOrder
+			let slotCount = CGFloat(slots.count)
+			let angleOffset = Angle.radians(CGFloat.pi / slotCount)
+			let lineWidth: CGFloat = 2
+			let spacing: CGFloat = 8
+			let areaColor = Color(uiColor: .secondarySystemFill)
+			let lineColor = Color.secondary
+			
+			ForEach(slots.indexed(), id: \.element) { index, slot in
+				let angle = Angle.radians(2 * CGFloat.pi * (CGFloat(index) / slotCount))
+				let path = Path.donutPart(
+					startAngle: angle - angleOffset,
+					endAngle: angle + angleOffset,
+					innerRadius: innerRadius,
+					outerRadius: circleRadius
+				)
+				
+				NavigationLink {
+					SprayPicker(selection: $loadout.sprays[slot], inventory: inventory)
+				} label: {
+					sprayIcon(for: slot)
+						.frame(width: sprayCellSize, height: sprayCellSize)
+						.position(center + CGVector(angle: angle.radians, length: (circleRadius + innerRadius) / 2))
+						.contentShape(path)
+						.background {
+							path.fill(areaColor)
+							path.stroke(lineWidth: lineWidth + 2 * spacing)
+								.blendMode(.destinationOut)
+							path.stroke(areaColor, lineWidth: lineWidth)
+							path.stroke(lineColor, lineWidth: lineWidth)
+						}
+				}
+				.buttonStyle(.plain)
+				.compositingGroup()
 			}
-			.frame(maxWidth: 128)
+			
+			ForEach(slots.indices, id: \.self) { index in
+				let angle = Angle.radians(2 * CGFloat.pi * (CGFloat(index) / slotCount))
+				
+				ZStack {
+					Capsule().stroke(lineWidth: lineWidth + spacing).blendMode(.destinationOut)
+					Capsule().fill(areaColor)
+					Capsule().fill(lineColor)
+				}
+				.frame(width: 1.2 * circleRadius - innerRadius, height: lineWidth)
+				.position(center + CGVector(dx: (circleRadius + innerRadius) / 2, dy: 0))
+				.rotationEffect(angle + angleOffset)
+			}
 		}
+		.compositingGroup()
+		.aspectRatio(1, contentMode: .fit)
+		.frame(maxWidth: 400)
 		.padding(.horizontal)
+	}
+	
+	@ViewBuilder
+	func sprayIcon(for slot: Spray.Slot.ID) -> some View {
+		if let spray = loadout.sprays[slot] {
+			(assets?.sprays[spray]?.bestIcon).view()
+				.frame(maxWidth: .infinity, maxHeight: .infinity)
+		} else {
+			Color.clear
+		}
 	}
 	
 	struct SprayCell: View {
@@ -110,39 +172,32 @@ private struct LoadoutCustomizer: View {
 		
 		var body: some View {
 			NavigationLink {
-				SprayPicker(selection: $spray, inventory: inventory, isMidRound: slot == .midRound)
+				SprayPicker(selection: $spray, inventory: inventory)
 			} label: {
-				VStack {
-					if let spray {
-						let info = assets?.sprays[spray]
-						(info?.bestIcon).view()
-							.aspectRatio(1, contentMode: .fit)
-					} else {
-						Color.clear
-					}
-					
-					slot.name
-						.font(.caption)
-						.foregroundColor(.secondary)
+				if let spray {
+					(assets?.sprays[spray]?.bestIcon).view()
+						.frame(maxWidth: .infinity, maxHeight: .infinity)
+				} else {
+					Color.clear
 				}
 			}
-			.buttonStyle(.bordered)
-			.buttonBorderShape(.roundedRectangle(radius: 8))
+			.buttonStyle(.plain)
 		}
 	}
 }
 
-extension Spray.Slot.ID {
-	var name: Text {
-		switch self {
-		case .preRound:
-			return Text("pre-round", comment: "Loadout: spray slot")
-		case .midRound:
-			return Text("mid-round", comment: "Loadout: spray slot")
-		case .postRound:
-			return Text("post-round", comment: "Loadout: spray slot")
-		default:
-			return Text("slot", comment: "Loadout: unknown spray slot (should never appear unless Riot changes something)")
+private extension Path {
+	static func donutPart(
+		startAngle: Angle, endAngle: Angle,
+		innerRadius: CGFloat, outerRadius: CGFloat
+	) -> Self {
+		.init {
+			let center = CGPoint(x: outerRadius, y: outerRadius)
+			let isClockwise = startAngle > endAngle
+			$0.addArc(center: center, radius: innerRadius, startAngle: startAngle, endAngle: endAngle, clockwise: isClockwise)
+			$0.addLine(to: center + .init(angle: endAngle.radians, length: outerRadius))
+			$0.addArc(center: center, radius: outerRadius, startAngle: endAngle, endAngle: startAngle, clockwise: !isClockwise)
+			$0.closeSubpath()
 		}
 	}
 }
@@ -150,12 +205,14 @@ extension Spray.Slot.ID {
 #if DEBUG
 struct LoadoutDetailsView_Previews: PreviewProvider {
 	static var previews: some View {
-		RefreshableBox(title: "Loadout", isExpanded: .constant(true)) {
-			LoadoutDetailsView(loadout: PreviewData.loadout, inventory: PreviewData.inventory)
-		} refresh: { _ in }
-			.forPreviews()
-			.navigationTitle("Loadout")
-			.withToolbar()
+		ScrollView {
+			RefreshableBox(title: "Loadout", isExpanded: .constant(true)) {
+				LoadoutDetailsView(loadout: PreviewData.loadout, inventory: PreviewData.inventory)
+			} refresh: { _ in }
+				.forPreviews()
+		}
+		.navigationTitle("Loadout")
+		.withToolbar()
 	}
 }
 #endif

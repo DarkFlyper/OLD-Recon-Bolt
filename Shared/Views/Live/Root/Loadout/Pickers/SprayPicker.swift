@@ -4,7 +4,6 @@ import ValorantAPI
 struct SprayPicker: View {
 	@Binding var selection: Spray.ID?
 	var inventory: Inventory
-	var isMidRound: Bool // some sprays cannot be equipped in the mid-round slot because they're too distracting
 	
 	var body: some View {
 		AssetsUnwrappingView { assets in
@@ -12,15 +11,15 @@ struct SprayPicker: View {
 				allItems: assets.sprays,
 				ownedItems: inventory.sprays
 			) { spray in
-				let isEnabled = !(isMidRound && spray.category == .contextual)
 				SelectableRow(selection: $selection, item: spray.id) {
 					spray.displayIcon.view()
 						.frame(width: 48, height: 48)
 					Text(spray.displayName)
+					if spray.category == .contextual {
+						Image(systemName: "exclamationmark.triangle")
+							.foregroundStyle(.secondary)
+					}
 				}
-				.opacity(isEnabled ? 1 : 0.5)
-				.saturation(isEnabled ? 1 : 0.5)
-				.disabled(!isEnabled)
 			} deselector: {
 				SelectableRow(selection: $selection, item: nil) {
 					Label("No Spray", systemImage: "xmark")
@@ -34,3 +33,15 @@ struct SprayPicker: View {
 extension SprayInfo: SearchableAsset {
 	var searchableText: String { displayName }
 }
+
+#if DEBUG
+struct SprayPicker_Previews: PreviewProvider, PreviewProviderWithAssets {
+	static func previews(assets: AssetCollection) -> some View {
+		SprayPicker(
+			selection: .constant(PreviewData.inventory.sprays.first!),
+			inventory: PreviewData.inventory
+		)
+		.withToolbar()
+	}
+}
+#endif
