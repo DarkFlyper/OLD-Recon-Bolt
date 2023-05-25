@@ -220,5 +220,19 @@
         <string>%lld data yang tidak disaring dilewatkan</string>
       </dict>
     </dict>
+    <key>The remaining %lld match(es) loaded correctly and are displayed below.</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@matches@ berhasil memuat dan ditampilkan dibawah ini.</string>
+      <key>matches</key>
+      <dict>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>Pertandingan%lld yang tersisa</string>
+      </dict>
+    </dict>
   </dict>
 </plist>
