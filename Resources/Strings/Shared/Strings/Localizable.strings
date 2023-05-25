@@ -241,6 +241,9 @@ Competitive matches after your placements can be identified without their detail
 /* Settings: button */
 "App Icon" = "App Icon";
 
+/* Account Settings: title for alert to confirm signing out of all accounts—not always visible; iOS decides when to show this */
+"Are You Sure?" = "Are You Sure?";
+
 /* No comment provided by engineer. */
 "Are your assets outdated?" = "Are your assets outdated?";
 
@@ -276,6 +279,9 @@ Competitive matches after your placements can be identified without their detail
 
 /* Hit Distribution Stats: average HS% */
 "Average: %@" = "Average: %@";
+
+/* Pro Store: warning title */
+"Before you Buy" = "Before you Buy";
 
 /* Request Log: shown for bodies that are not decodable to text */
 "Binary Data" = "Binary Data";
@@ -1113,6 +1119,9 @@ Login Form: button */
 /* Login Form */
 "Sign In with your Riot account" = "Sign In with your Riot account";
 
+/* Account Settings: button in alert to confirm signing out of all accounts */
+"Sign Out" = "Sign Out";
+
 /* Account Settings: button */
 "Sign Out of All Accounts" = "Sign Out of All Accounts";
 
@@ -1194,6 +1203,9 @@ Login Form: button */
 /* No comment provided by engineer. */
 "The pro version lets you change the app icon! More icons might be coming in future updates." = "The pro version lets you change the app icon! More icons might be coming in future updates.";
 
+/* Stats: match loading (Key in .stringsdict) */
+"The remaining %lld match(es) loaded correctly and are displayed below." = "The remaining %lld match(es) loaded correctly and are displayed below.";
+
 /* Settings: picker */
 "Theme" = "Theme";
 
@@ -1233,6 +1245,17 @@ Hit Distribution Stats: region */
 
 /* Shown when a match does not match the filter and its details have not been fetched. */
 "Unfetched" = "Unfetched";
+
+/* Pro Store: warning text */
+"Unfortunately, Riot is now using their intellectual property rights to take down this app. I'm trying to discuss with them to find a way forward, but I currently cannot guarantee that the app will stay available. I believe it will remain installed if you currently have it, but I'm not sure if I'll still be able to verify Pro purchases.
+
+If you or someone you know works at Riot, get in touch with me—there's a few ways linked in the About Recon Bolt section below.
+
+I would still be grateful for your support if you do purchase it! But it's at your own risk because I cannot guarantee that you'll enjoy the promised features going forward :(" = "Unfortunately, Riot is now using their intellectual property rights to take down this app. I'm trying to discuss with them to find a way forward, but I currently cannot guarantee that the app will stay available. I believe it will remain installed if you currently have it, but I'm not sure if I'll still be able to verify Pro purchases.
+
+If you or someone you know works at Riot, get in touch with me—there's a few ways linked in the About Recon Bolt section below.
+
+I would still be grateful for your support if you do purchase it! But it's at your own risk because I cannot guarantee that you'll enjoy the promised features going forward :(";
 
 /* Hit Distribution Stats: footnote */
 "Unfortunately, Valorant doesn't store information about which weapon was used for each hit. All we get is the weapon you started the round with and what weapon you used for each kill. Recon Bolt guesses the weapon involved in each damage based on this information, but it cannot be perfect (and neither can any other tracker)." = "Unfortunately, Valorant doesn't store information about which weapon was used for each hit. All we get is the weapon you started the round with and what weapon you used for each kill. Recon Bolt guesses the weapon involved in each damage based on this information, but it cannot be perfect (and neither can any other tracker).";
@@ -1405,23 +1428,11 @@ Round Details: killed by unknown/unspecified weapon */
 /* No comment provided by engineer. */
 "iOS is a bit finnicky about this, so widgets may not refresh right away—feel free to reboot your device if this doesn't help!" = "iOS is a bit finnicky about this, so widgets may not refresh right away—feel free to reboot your device if this doesn't help!";
 
-/* Loadout: spray slot */
-"mid-round" = "mid-round";
-
 /* Missions Widget: countdown label when the target is in the past. Should never really show up, since at this point there's new data. */
 "old" = "old";
 
-/* Loadout: spray slot */
-"post-round" = "post-round";
-
-/* Loadout: spray slot */
-"pre-round" = "pre-round";
-
 /* Login Form */
 "signing in…" = "signing in…";
-
-/* Loadout: unknown spray slot (should never appear unless Riot changes something) */
-"slot" = "slot";
 
 /* No comment provided by engineer. */
 "–" = "–";

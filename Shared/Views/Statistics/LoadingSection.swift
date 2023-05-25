@@ -74,7 +74,7 @@ struct LoadingSection: View {
 						Text("\(fetcher.errors.count) Error(s)", comment: "Stats: match loading")
 					}
 					
-					Text("The remaining \(fetcher.matches.count) matches loaded correctly and are displayed below.")
+					Text("The remaining \(fetcher.matches.count) match(es) loaded correctly and are displayed below.", comment: "Stats: match loading")
 						.font(.footnote)
 						.foregroundStyle(.secondary)
 				}
