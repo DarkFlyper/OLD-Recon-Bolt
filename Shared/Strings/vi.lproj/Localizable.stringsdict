@@ -220,5 +220,19 @@
         <string>%lld trận bị bỏ qua do thiếu dữ liệu</string>
       </dict>
     </dict>
+    <key>The remaining %lld match(es) loaded correctly and are displayed below.</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@matches@ đã tải thành công và đang hiên thị ở dưới.</string>
+      <key>matches</key>
+      <dict>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>Còn %lld trận</string>
+      </dict>
+    </dict>
   </dict>
 </plist>
