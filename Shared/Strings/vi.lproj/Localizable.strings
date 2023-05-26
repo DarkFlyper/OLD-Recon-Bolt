@@ -187,6 +187,9 @@ Competitive matches after your placements can be identified without their detail
 /* Settings: button */
 "App Icon" = "Biểu tượng ứng dụng";
 
+/* Account Settings: title for alert to confirm signing out of all accounts—not always visible; iOS decides when to show this */
+"Are You Sure?" = "Bạn Có Chắc Không?";
+
 /* No comment provided by engineer. */
 "Are your assets outdated?" = "Tài nguyên của bạn đã lỗi thời?";
 
@@ -222,6 +225,9 @@ Competitive matches after your placements can be identified without their detail
 
 /* Hit Distribution Stats: average HS% */
 "Average: %@" = "Trung bình: %@";
+
+/* Pro Store: warning title */
+"Before you Buy" = "Trước khi bạn mua";
 
 /* Request Log: shown for bodies that are not decodable to text */
 "Binary Data" = "Dữ liệu nhị phân";
@@ -1032,6 +1038,9 @@ Login Form: button */
 /* Login Form */
 "Sign In with your Riot account" = "Đăng nhập tài khoản Riot của bạn";
 
+/* Account Settings: button in alert to confirm signing out of all accounts */
+"Sign Out" = "Đăng Xuất";
+
 /* Account Settings: button */
 "Sign Out of All Accounts" = "Đăng xuất mọi tài khoản";
 
@@ -1152,6 +1161,17 @@ Hit Distribution Stats: region */
 
 /* Shown when a match does not match the filter and its details have not been fetched. */
 "Unfetched" = "Chưa tìm thấy";
+
+/* Pro Store: warning text */
+"Unfortunately, Riot is now using their intellectual property rights to take down this app. I'm trying to discuss with them to find a way forward, but I currently cannot guarantee that the app will stay available. I believe it will remain installed if you currently have it, but I'm not sure if I'll still be able to verify Pro purchases.
+
+If you or someone you know works at Riot, get in touch with me—there's a few ways linked in the About Recon Bolt section below.
+
+I would still be grateful for your support if you do purchase it! But it's at your own risk because I cannot guarantee that you'll enjoy the promised features going forward :(" = "Thật không may, Riot hiện đang sử dụng quyền sở hữu trí tuệ của họ để gỡ bỏ ứng dụng này. Tôi đang cố gắng thảo luận với họ để tìm cách giải quyết, nhưng hiện tại tôi không thể đảm bảo rằng ứng dụng sẽ vẫn khả dụng. Tôi tin rằng nó sẽ vẫn được cài đặt nếu bạn hiện đang có nó, nhưng tôi không chắc liệu tôi có thể xác minh các giao dịch mua Pro hay không.
+
+Nếu bạn hoặc ai đó bạn biết làm việc tại Riot, hãy liên hệ với tôi - có một vài cách được liên kết trong phần Giới thiệu về Recon Bolt bên dưới.
+
+Tôi vẫn sẽ biết ơn sự hỗ trợ của bạn nếu bạn mua nó! Nhưng đó là rủi ro của riêng bạn bởi vì tôi không thể đảm bảo rằng bạn sẽ tận hưởng các tính năng đã hứa trong tương lai :(";
 
 /* Hit Distribution Stats: footnote */
 "Unfortunately, Valorant doesn't store information about which weapon was used for each hit. All we get is the weapon you started the round with and what weapon you used for each kill. Recon Bolt guesses the weapon involved in each damage based on this information, but it cannot be perfect (and neither can any other tracker)." = "Thật không may, Valorant không lưu trữ thông tin về vũ khí nào được sử dụng cho mỗi lần bắn trúng đích. Tất cả những gì chúng tôi nhận được là vũ khí bạn bắt đầu hiệp đấu và vũ khí bạn sử dụng cho mỗi lần tiêu diệt. Recon Bolt đoán vũ khí đã gây sát thương dựa trên thông tin này, nhưng nó không thể hoàn toàn chính xác (và các trang thông số khác cũng vậy).";
@@ -1318,20 +1338,8 @@ Round Details: killed by unknown/unspecified weapon */
 /* No comment provided by engineer. */
 "iOS is a bit finnicky about this, so widgets may not refresh right away—feel free to reboot your device if this doesn't help!" = "iOS khá chặt chẽ về vấn đề này, vì vậy các tiện ích có thể không làm mới ngay lập tức—vui lòng khởi động lại nếu điều này không giúp ích được gì!";
 
-/* Loadout: spray slot */
-"mid-round" = "giữa vòng đấu";
-
 /* Missions Widget: countdown label when the target is in the past. Should never really show up, since at this point there's new data. */
 "old" = "cũ";
 
-/* Loadout: spray slot */
-"post-round" = "sau vòng đấu";
-
-/* Loadout: spray slot */
-"pre-round" = "trước vòng đấu";
-
 /* Login Form */
 "signing in…" = "đang đăng nhập…";
-
-/* Loadout: unknown spray slot (should never appear unless Riot changes something) */
-"slot" = "chỗ";

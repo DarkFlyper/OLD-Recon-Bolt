@@ -220,5 +220,19 @@
         <string>%lld 跳過缺少資料</string>
       </dict>
     </dict>
+    <key>The remaining %lld match(es) loaded correctly and are displayed below.</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@matches@ 正確加載並顯示在下方。</string>
+      <key>matches</key>
+      <dict>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>other</key>
+        <string>剩下的對戰</string>
+      </dict>
+    </dict>
   </dict>
 </plist>

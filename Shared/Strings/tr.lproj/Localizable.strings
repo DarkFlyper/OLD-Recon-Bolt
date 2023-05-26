@@ -1310,20 +1310,8 @@ Round Details: killed by unknown/unspecified weapon */
 /* No comment provided by engineer. */
 "iOS is a bit finnicky about this, so widgets may not refresh right away—feel free to reboot your device if this doesn't help!" = "iOS bu konuda biraz titizdir, bu nedenle widget'lar hemen yenilenmeyebilir; bu işe yaramazsa telefonu yeniden başlatmaktan çekinmeyin!";
 
-/* Loadout: spray slot */
-"mid-round" = "tur ortası";
-
 /* Missions Widget: countdown label when the target is in the past. Should never really show up, since at this point there's new data. */
 "old" = "eski";
 
-/* Loadout: spray slot */
-"post-round" = "tur sonrası";
-
-/* Loadout: spray slot */
-"pre-round" = "tur öncesi";
-
 /* Login Form */
 "signing in…" = "giriş yapılıyor...";
-
-/* Loadout: unknown spray slot (should never appear unless Riot changes something) */
-"slot" = "yuva";

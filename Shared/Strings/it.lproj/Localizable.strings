@@ -1310,20 +1310,8 @@ Round Details: killed by unknown/unspecified weapon */
 /* No comment provided by engineer. */
 "iOS is a bit finnicky about this, so widgets may not refresh right away—feel free to reboot your device if this doesn't help!" = "iOS è un po' pignolo su questo punto e i widgets potrebbero non aggiornarsi subito; Riavvia il telefono se questo non funziona!";
 
-/* Loadout: spray slot */
-"mid-round" = "Metà-round";
-
 /* Missions Widget: countdown label when the target is in the past. Should never really show up, since at this point there's new data. */
 "old" = "Obsoleto";
 
-/* Loadout: spray slot */
-"post-round" = "Post-round";
-
-/* Loadout: spray slot */
-"pre-round" = "Pre-round";
-
 /* Login Form */
 "signing in…" = "Accedendo…";
-
-/* Loadout: unknown spray slot (should never appear unless Riot changes something) */
-"slot" = "Slot";

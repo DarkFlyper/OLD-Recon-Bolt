@@ -1030,14 +1030,5 @@ Round Details: killed by unknown/unspecified weapon */
 /* No comment provided by engineer. */
 "Year" = "År";
 
-/* Loadout: spray slot */
-"post-round" = "efter rundan";
-
-/* Loadout: spray slot */
-"pre-round" = "pre-round";
-
 /* Login Form */
 "signing in…" = "loggar in…";
-
-/* Loadout: unknown spray slot (should never appear unless Riot changes something) */
-"slot" = "slot";
