@@ -1164,6 +1164,18 @@ Hit Distribution Stats: region */
 /* Shown when a match does not match the filter and its details have not been fetched. */
 "Unfetched" = "未獲取";
 
+/* Pro Store: warning text */
+"Unfortunately, Riot is now using their intellectual property rights to take down this app. I'm trying to discuss with them to find a way forward, but I currently cannot guarantee that the app will stay available. I believe it will remain installed if you currently have it, but I'm not sure if I'll still be able to verify Pro purchases.
+
+If you or someone you know works at Riot, get in touch with me—there's a few ways linked in the About Recon Bolt section below.
+
+I would still be grateful for your support if you do purchase it! But it's at your own risk because I cannot guarantee that you'll enjoy the promised features going forward :(" = "不幸的是，Riot 現在正在使用他們的知識產權來關閉這個應用程序。 我正在嘗試與他們討論以找到前進的方向，但我目前無法保證該應用程序將保持可用狀態。 我相信如果您目前擁有它，它會保持安裝狀態，但我不確定我是否仍然能夠驗證 Pro 購買。
+
+如果您或您認識的人在 Riot 工作，請與我聯繫——下面的關於 Recon Bolt 部分提供了幾種鏈接方式。
+
+如果您購買它，我仍然會感謝您的支持！ 但這需要您自擔風險，因為我不能保證您會享受未來承諾的功能:(
+:)";
+
 /* Hit Distribution Stats: footnote */
 "Unfortunately, Valorant doesn't store information about which weapon was used for each hit. All we get is the weapon you started the round with and what weapon you used for each kill. Recon Bolt guesses the weapon involved in each damage based on this information, but it cannot be perfect (and neither can any other tracker)." = "不幸的是，Valorant沒有儲存關於每次命中使用哪種武器的資訊。 我們得到的只是你開始回合的武器，以及你每次殺戮都用什麼武器。 Recon Bolt根據這些資訊猜測每種傷害所涉及的武器，但它不可能是完美的(任何其他Tracker也不行)";
 
