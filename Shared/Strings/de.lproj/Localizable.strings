@@ -187,6 +187,9 @@ Competitive matches after your placements can be identified without their detail
 /* Settings: button */
 "App Icon" = "App-Icon";
 
+/* Account Settings: title for alert to confirm signing out of all accounts—not always visible; iOS decides when to show this */
+"Are You Sure?" = "Bist du sicher?";
+
 /* No comment provided by engineer. */
 "Are your assets outdated?" = "Sind deine Assets aktuell?";
 
@@ -222,6 +225,9 @@ Competitive matches after your placements can be identified without their detail
 
 /* Hit Distribution Stats: average HS% */
 "Average: %@" = "Durchschnitt: %@";
+
+/* Pro Store: warning title */
+"Before you Buy" = "Bevor du zuschlägst";
 
 /* Request Log: shown for bodies that are not decodable to text */
 "Binary Data" = "Binäre Daten";
@@ -1032,6 +1038,9 @@ Login Form: button */
 /* Login Form */
 "Sign In with your Riot account" = "Mit Riot-Konto anmelden";
 
+/* Account Settings: button in alert to confirm signing out of all accounts */
+"Sign Out" = "Abmelden";
+
 /* Account Settings: button */
 "Sign Out of All Accounts" = "Aus allen Konten abmelden";
 
@@ -1152,6 +1161,17 @@ Hit Distribution Stats: region */
 
 /* Shown when a match does not match the filter and its details have not been fetched. */
 "Unfetched" = "Ungeladen";
+
+/* Pro Store: warning text */
+"Unfortunately, Riot is now using their intellectual property rights to take down this app. I'm trying to discuss with them to find a way forward, but I currently cannot guarantee that the app will stay available. I believe it will remain installed if you currently have it, but I'm not sure if I'll still be able to verify Pro purchases.
+
+If you or someone you know works at Riot, get in touch with me—there's a few ways linked in the About Recon Bolt section below.
+
+I would still be grateful for your support if you do purchase it! But it's at your own risk because I cannot guarantee that you'll enjoy the promised features going forward :(" = "Leider wendet Riot Games nun ihr Copyright an, um diese App zu entfernen. Ich versuche, mit ihnen eine Lösung zu finden, aber ich kann nicht garantieren, dass die App weiterhin verfügbar ist. Ich glaube, dass sie installiert bleibt, wenn du sie schon hast, aber ich bin mir nicht sicher, ob sie dann noch Pro-Käufe überprüfen kann.
+
+Wenn du oder jemand, den du kennst, bei Riot arbeitet, kannst du dich mit mir in Verbindung setzen - es gibt einige Möglichkeiten, die im Abschnitt \"Über Recon Bolt\" unten verlinkt sind.
+
+Ich wäre dir für deine Unterstützung dankbar, wenn du Pro kaufst! Aber das ist auf eigene Gefahr, denn ich kann nicht garantieren, dass du die versprochenen Funktionen auch in Zukunft genießen kannst :(";
 
 /* Hit Distribution Stats: footnote */
 "Unfortunately, Valorant doesn't store information about which weapon was used for each hit. All we get is the weapon you started the round with and what weapon you used for each kill. Recon Bolt guesses the weapon involved in each damage based on this information, but it cannot be perfect (and neither can any other tracker)." = "Leider speichert Valorant keine Informationen darüber, welche Waffe für die einzelnen Treffer verwendet wurde. Alles, was wir bekommen, ist die Waffe, mit der du die Runde begonnen hast, und welche Waffe du für jeden Kill benutzt hast. Recon Bolt errät die Waffe, die an jedem Schaden beteiligt war, auf Grundlage dieser Informationen, aber es (und jeder anderer Tracker) kann nicht perfekt sein.";
