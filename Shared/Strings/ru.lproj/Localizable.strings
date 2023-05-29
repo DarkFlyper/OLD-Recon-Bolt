@@ -1163,6 +1163,17 @@ Hit Distribution Stats: region */
 /* Shown when a match does not match the filter and its details have not been fetched. */
 "Unfetched" = "Не загружено";
 
+/* Pro Store: warning text */
+"Unfortunately, Riot is now using their intellectual property rights to take down this app. I'm trying to discuss with them to find a way forward, but I currently cannot guarantee that the app will stay available. I believe it will remain installed if you currently have it, but I'm not sure if I'll still be able to verify Pro purchases.
+
+If you or someone you know works at Riot, get in touch with me—there's a few ways linked in the About Recon Bolt section below.
+
+I would still be grateful for your support if you do purchase it! But it's at your own risk because I cannot guarantee that you'll enjoy the promised features going forward :(" = "К сожалению, сейчас Riot использует свои права на интеллектуальную собственность, чтобы удалить это приложение. Я пытаюсь обсудить с ними дальнейшие действия, но сейчас я не могу гарантировать, что приложение останется доступным. Я полагаю, что оно останется установленным, если оно установлено сейчас, но я не уверен, смогу ли я по-прежнему проверять покупки Pro.
+
+Если вы или кто-то из ваших знакомых работает в Riot, свяжитесь со мной - есть несколько способов, которые указаны в разделе \"О Recon Bolt\" ниже.
+
+Я по-прежнему буду благодарен вам за поддержку, если вы приобретете это! Но полностью на свой страх и риск, потому что я не могу гарантировать, что тебе понравятся обещанные функции в дальнейшем :(";
+
 /* Hit Distribution Stats: footnote */
 "Unfortunately, Valorant doesn't store information about which weapon was used for each hit. All we get is the weapon you started the round with and what weapon you used for each kill. Recon Bolt guesses the weapon involved in each damage based on this information, but it cannot be perfect (and neither can any other tracker)." = "К сожалению, Valorant не хранит информацию о том, какое оружие было использовано для каждого попадания. Все, что мы получаем - это информация о том, с каким оружием вы начали раунд и какое оружие вы использовали для каждого убийства. Recon Bolt угадывает оружие, задействованное в каждом нанесении урона, на основе этой информации, но он не может быть совершенным (как и любой другой трекер).";
 
