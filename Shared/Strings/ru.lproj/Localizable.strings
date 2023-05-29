@@ -188,6 +188,9 @@ Competitive matches after your placements can be identified without their detail
 /* Settings: button */
 "App Icon" = "Иконка приложения";
 
+/* Account Settings: title for alert to confirm signing out of all accounts—not always visible; iOS decides when to show this */
+"Are You Sure?" = "Вы уверены?";
+
 /* No comment provided by engineer. */
 "Are your assets outdated?" = "Возможно ресурсы устарели?";
 
@@ -223,6 +226,9 @@ Competitive matches after your placements can be identified without their detail
 
 /* Hit Distribution Stats: average HS% */
 "Average: %@" = "Среднее: %@";
+
+/* Pro Store: warning title */
+"Before you Buy" = "Перед покупкой";
 
 /* Request Log: shown for bodies that are not decodable to text */
 "Binary Data" = "Бинарные данные";
@@ -1032,6 +1038,9 @@ Login Form: button */
 
 /* Login Form */
 "Sign In with your Riot account" = "Войдите в систему, используя свою учетную запись Riot";
+
+/* Account Settings: button in alert to confirm signing out of all accounts */
+"Sign Out" = "Выйти";
 
 /* Account Settings: button */
 "Sign Out of All Accounts" = "Выйти из всех аккаунтов";
