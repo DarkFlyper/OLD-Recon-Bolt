@@ -179,6 +179,9 @@ Ancak, yerleştirmelerinizden sonraki rekabetçi eşleşmeler, ayrıntıları ol
 /* Settings: button */
 "App Icon" = "Uygulama Simgesi";
 
+/* Account Settings: title for alert to confirm signing out of all accounts—not always visible; iOS decides when to show this */
+"Are You Sure?" = "Emin misin?";
+
 /* No comment provided by engineer. */
 "Are your assets outdated?" = "Varlıklarınız güncelliğini yitirdi mi?";
 
@@ -214,6 +217,9 @@ Ancak, yerleştirmelerinizden sonraki rekabetçi eşleşmeler, ayrıntıları ol
 
 /* Hit Distribution Stats: average HS% */
 "Average: %@" = "Ortalama: %@";
+
+/* Pro Store: warning title */
+"Before you Buy" = "Satın Almadan Önce";
 
 /* Request Log: shown for bodies that are not decodable to text */
 "Binary Data" = "İkili Veri";
@@ -1024,6 +1030,9 @@ Login Form: button */
 /* Login Form */
 "Sign In with your Riot account" = "Riot hesabınızla oturum açın";
 
+/* Account Settings: button in alert to confirm signing out of all accounts */
+"Sign Out" = "Oturumu kapat";
+
 /* Account Settings: button */
 "Sign Out of All Accounts" = "Tüm Hesaplardan Çık";
 
@@ -1144,6 +1153,21 @@ Hit Distribution Stats: region */
 
 /* Shown when a match does not match the filter and its details have not been fetched. */
 "Unfetched" = "Getirilmedi";
+
+/* Pro Store: warning text */
+"Unfortunately, Riot is now using their intellectual property rights to take down this app. I'm trying to discuss with them to find a way forward, but I currently cannot guarantee that the app will stay available. I believe it will remain installed if you currently have it, but I'm not sure if I'll still be able to verify Pro purchases.
+
+If you or someone you know works at Riot, get in touch with me—there's a few ways linked in the About Recon Bolt section below.
+
+I would still be grateful for your support if you do purchase it! But it's at your own risk because I cannot guarantee that you'll enjoy the promised features going forward :(" = "Maalesef, Riot şu anda bu uygulamayı kaldırmak için fikri mülkiyet haklarını kullanıyor. İlerlemek için onlarla bir şekilde anlaşmaya çalışıyorum, ancak şu anda uygulamanın mevcut durumda kullanılabilir kalacağını garanti edemiyorum. Şu anda yüklü olanların muhtemelen yüklü kalacağını düşünüyorum, ancak Pro satın alımlarını hala doğrulayabileceğimden emin değilim.
+
+Eğer siz veya tanıdığınız biri Riot'ta çalışıyorsa, benimle iletişime geçin - aşağıda bulunan Recon Bolt bölümünde birkaç iletişim yöntemi mevcut.
+
+Eğer satın alırsanız desteğiniz için hala minnettar olacağım! Ancak ileride vaat edilen özelliklerden tam olarak yararlanabileceğinizi garanti edemem, bu yüzden risk size aittir :(
+
+Malesef, şu an için durum böyle :(
+
+";
 
 /* Hit Distribution Stats: footnote */
 "Unfortunately, Valorant doesn't store information about which weapon was used for each hit. All we get is the weapon you started the round with and what weapon you used for each kill. Recon Bolt guesses the weapon involved in each damage based on this information, but it cannot be perfect (and neither can any other tracker)." = "Ne yazık ki Valorant her vuruşta hangi silahın kullanıldığı bilgisini saklamıyor. Elimizdeki tek şey, tura hangi silahla başladığınız ve her öldürme için hangi silahı kullandığınız. Recon Bolt bu bilgilere dayanarak her hasarda kullanılan silahı tahmin eder, ancak mükemmel olamaz (ve başka herhangi bir izleyici de olamaz).";

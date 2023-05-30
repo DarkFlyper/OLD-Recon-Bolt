@@ -179,6 +179,9 @@ Meciurile de Competitive de după cele de plasament pot fi totuși identificate 
 /* Settings: button */
 "App Icon" = "Iconița Aplicației";
 
+/* Account Settings: title for alert to confirm signing out of all accounts—not always visible; iOS decides when to show this */
+"Are You Sure?" = "Esti Sigur?";
+
 /* No comment provided by engineer. */
 "Are your assets outdated?" = "Sunt activele dumneavoastră depășite?";
 
@@ -214,6 +217,9 @@ Meciurile de Competitive de după cele de plasament pot fi totuși identificate 
 
 /* Hit Distribution Stats: average HS% */
 "Average: %@" = "Media: %@";
+
+/* Pro Store: warning title */
+"Before you Buy" = "Înainte să cumperi";
 
 /* Request Log: shown for bodies that are not decodable to text */
 "Binary Data" = "Date binare";
@@ -1023,6 +1029,9 @@ Login Form: button */
 
 /* Login Form */
 "Sign In with your Riot account" = "Autentificați-vă cu contul dumneavoastră Riot";
+
+/* Account Settings: button in alert to confirm signing out of all accounts */
+"Sign Out" = "Deconectare";
 
 /* Account Settings: button */
 "Sign Out of All Accounts" = "Deconectați-vă din toate conturile";
