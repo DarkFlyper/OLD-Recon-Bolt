@@ -254,5 +254,21 @@
         <string>%lld Saltato per mancanza di dati</string>
       </dict>
     </dict>
+    <key>The remaining %lld match(es) loaded correctly and are displayed below.</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@matches@ caricati correttamente e mostrati qui sotto.</string>
+      <key>matches</key>
+      <dict>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>one</key>
+        <string>Una partita rimanente</string>
+        <key>other</key>
+        <string>%lld Partite rimanenti</string>
+      </dict>
+    </dict>
   </dict>
 </plist>
