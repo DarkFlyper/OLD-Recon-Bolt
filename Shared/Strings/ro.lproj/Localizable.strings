@@ -1154,6 +1154,17 @@ Hit Distribution Stats: region */
 /* Shown when a match does not match the filter and its details have not been fetched. */
 "Unfetched" = "Neîncercat";
 
+/* Pro Store: warning text */
+"Unfortunately, Riot is now using their intellectual property rights to take down this app. I'm trying to discuss with them to find a way forward, but I currently cannot guarantee that the app will stay available. I believe it will remain installed if you currently have it, but I'm not sure if I'll still be able to verify Pro purchases.
+
+If you or someone you know works at Riot, get in touch with me—there's a few ways linked in the About Recon Bolt section below.
+
+I would still be grateful for your support if you do purchase it! But it's at your own risk because I cannot guarantee that you'll enjoy the promised features going forward :(" = "Din păcate, Riot se folosește acum de drepturile de proprietate intelectuală pentru a retrage această aplicație. Încerc să discut cu ei pentru a găsi o cale de urmat, dar momentan nu pot garanta că aplicația va rămâne disponibilă. Cred că va rămâne instalată dacă o aveți în prezent, dar nu sunt sigur dacă voi mai putea verifica achizițiile Pro.
+
+Dacă tu sau cineva pe care îl cunoști lucrează la Riot, ia legătura cu mine - există câteva modalități legate în secțiunea Despre Recon Bolt de mai jos.
+
+Aș fi în continuare recunoscător pentru sprijinul tău dacă îl cumperi! Dar este pe propriul risc, deoarece nu pot garanta că vă veți bucura de funcțiile promise în continuare :(";
+
 /* Hit Distribution Stats: footnote */
 "Unfortunately, Valorant doesn't store information about which weapon was used for each hit. All we get is the weapon you started the round with and what weapon you used for each kill. Recon Bolt guesses the weapon involved in each damage based on this information, but it cannot be perfect (and neither can any other tracker)." = "Din nefericire, Valorant nu stochează informații despre ce armă a fost folosită pentru fiecare lovitură. Tot ce primim este arma cu care ați început runda și ce armă ați folosit pentru fiecare lovitură. Recon Bolt ghicește arma implicată în fiecare avarie pe baza acestor informații, dar nu poate fi perfect (și nici orice alt tracker).";
 
