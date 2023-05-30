@@ -179,6 +179,9 @@ Ancak, yerleştirmelerinizden sonraki rekabetçi eşleşmeler, ayrıntıları ol
 /* Settings: button */
 "App Icon" = "Uygulama Simgesi";
 
+/* Account Settings: title for alert to confirm signing out of all accounts—not always visible; iOS decides when to show this */
+"Are You Sure?" = "Emin misin?";
+
 /* No comment provided by engineer. */
 "Are your assets outdated?" = "Varlıklarınız güncelliğini yitirdi mi?";
 
@@ -214,6 +217,9 @@ Ancak, yerleştirmelerinizden sonraki rekabetçi eşleşmeler, ayrıntıları ol
 
 /* Hit Distribution Stats: average HS% */
 "Average: %@" = "Ortalama: %@";
+
+/* Pro Store: warning title */
+"Before you Buy" = "Satın Almadan Önce";
 
 /* Request Log: shown for bodies that are not decodable to text */
 "Binary Data" = "İkili Veri";
@@ -1023,6 +1029,9 @@ Login Form: button */
 
 /* Login Form */
 "Sign In with your Riot account" = "Riot hesabınızla oturum açın";
+
+/* Account Settings: button in alert to confirm signing out of all accounts */
+"Sign Out" = "Oturumu kapat";
 
 /* Account Settings: button */
 "Sign Out of All Accounts" = "Tüm Hesaplardan Çık";
