@@ -2,7 +2,7 @@
 "Animation" = "Hình động";
 
 /* No comment provided by engineer. */
-"Attacker/Defender Swap" = "Bên tấn công/Bên phòng thủ";
+"Attacker/Defender Swap" = "Đổi bên";
 
 /* No comment provided by engineer. */
 "Champion's Aura" = "Hào quang nhà vô địch";
@@ -14,10 +14,10 @@
 "Fish Animation" = "Hoạt ảnh cá bơi";
 
 /* No comment provided by engineer. */
-"Heartbeat & Map Sensor" = "Cảm biến nhịp tim";
+"Heartbeat & Map Sensor" = "Nhịp tim và cảm biến bản đồ";
 
 /* No comment provided by engineer. */
-"Inspect & Kill Effects" = "Hiệu úng xem và hạ gục";
+"Inspect & Kill Effects" = "Xem súng và hiệu ứng hạ gục";
 
 /* No comment provided by engineer. */
 "Kill Banner" = "Thông báo hạ gục";
