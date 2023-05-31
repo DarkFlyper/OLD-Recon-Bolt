@@ -223,7 +223,7 @@
     <key>The remaining %lld match(es) loaded correctly and are displayed below.</key>
     <dict>
       <key>NSStringLocalizedFormatKey</key>
-      <string>%#@matches@ đã tải thành công và đang hiên thị ở dưới.</string>
+      <string>%#@matches@ đã tải thành công và hiển thị ở dưới.</string>
       <key>matches</key>
       <dict>
         <key>NSStringFormatSpecTypeKey</key>
