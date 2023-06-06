@@ -19,7 +19,7 @@ extension PlayerTitleInfo: SimpleSearchableAsset {
 	static let assetPath = \AssetCollection.playerTitles
 	static let inventoryPath = \Inventory.titles
 	
-	var searchableText: String { displayName }
+	var searchableText: String { displayName ?? "" }
 	static var defaultItems: [ID] { [.noTitle] }
 }
 

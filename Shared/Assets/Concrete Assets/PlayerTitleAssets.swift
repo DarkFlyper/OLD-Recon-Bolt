@@ -16,8 +16,8 @@ private struct PlayerTitleInfoRequest: AssetDataRequest {
 struct PlayerTitleInfo: AssetItem, Codable, Identifiable {
 	private var uuid: ID
 	var id: PlayerTitle.ID { uuid }
-	/// This is `" "` (a singular space) for the default title.
-	var displayName: String
+	/// This is `nil` for the default title.
+	var displayName: String?
 	/// This is `nil` for the default title.
 	var titleText: String?
 	var isHiddenIfNotOwned: Bool
