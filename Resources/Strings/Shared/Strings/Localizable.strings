@@ -333,6 +333,9 @@ Playtime Stats: section */
 /* Weapon Reference */
 "Category" = "Category";
 
+/* App Icon Description: pride */
+"Celebrate LGBTQ Pride month with a colorful look!" = "Celebrate LGBTQ Pride month with a colorful look!";
+
 /* No comment provided by engineer. */
 "Change Buddy" = "Change Buddy";
 
@@ -976,6 +979,9 @@ Playtime Stats: section */
 /* Statistics filter: button */
 "Queues" = "Queues";
 
+/* App Icon Name */
+"Rainbow" = "Rainbow";
+
 /* Weapon Reference: stats */
 "Range" = "Range";
 
@@ -1140,6 +1146,12 @@ Login Form: button */
 /* Hit Distribution Stats: smoothing slider */
 "Smoothing" = "Smoothing";
 
+/* App Icon Picker: section */
+"Special Icons" = "Special Icons";
+
+/* App Icon Picker: section footer */
+"Special Icons are available year-round for Pro users, while free users can only select them during a certain time window." = "Special Icons are available year-round for Pro users, while free users can only select them during a certain time window.";
+
 /* No comment provided by engineer. */
 "Spectator" = "Spectator";
 
@@ -1200,7 +1212,7 @@ Login Form: button */
 /* App Icon Description: default */
 "The default look of Recon Bolt." = "The default look of Recon Bolt.";
 
-/* No comment provided by engineer. */
+/* App Icon Picker: section footer */
 "The pro version lets you change the app icon! More icons might be coming in future updates." = "The pro version lets you change the app icon! More icons might be coming in future updates.";
 
 /* Stats: match loading (Key in .stringsdict) */
