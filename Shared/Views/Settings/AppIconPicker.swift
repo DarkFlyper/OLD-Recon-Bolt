@@ -18,7 +18,15 @@ struct AppIconPicker: View {
 			} header: {
 				Text("Pro Icons", comment: "App Icon Picker: section")
 			} footer: {
-				Text("The pro version lets you change the app icon! More icons might be coming in future updates.")
+				Text("The pro version lets you change the app icon! More icons might be coming in future updates.", comment: "App Icon Picker: section footer")
+			}
+			
+			Section {
+				cell(for: .pride)
+			} header: {
+				Text("Special Icons", comment: "App Icon Picker: section")
+			} footer: {
+				Text("Special Icons are available year-round for Pro users, while free users can only select them during a certain time window.", comment: "App Icon Picker: section footer")
 			}
 		}
 		.navigationTitle("Choose App Icon")
@@ -26,7 +34,7 @@ struct AppIconPicker: View {
 	}
 	
 	func cell(for icon: AppIcon) -> some View {
-		let isAllowed = ownsProVersion || icon.key == nil || isInSwiftUIPreview
+		let isAllowed = ownsProVersion || icon.isFree || isInSwiftUIPreview
 		return AsyncButton {
 			do {
 				try await manager.select(icon)
@@ -102,19 +110,25 @@ final class AppIconManager: ObservableObject {
 }
 
 struct AppIcon: Identifiable, Equatable {
-	static let all = [`default`, proBlue]
+	static let all = [`default`, pride, proBlue]
 	static let `default` = Self(
-		key: nil,
+		key: nil, isFree: true,
 		name: Text("Default", comment: "App Icon Name"),
 		description: Text("The default look of Recon Bolt.", comment: "App Icon Description: default")
 	)
+	static let pride = Self(
+		key: "AppIconPride", isFree: Calendar.current.date(.now, matchesComponents: .init(month: 6)), // free during pride month
+		name: Text("Rainbow", comment: "App Icon Name"),
+		description: Text("Celebrate LGBTQ Pride month with a colorful look!", comment: "App Icon Description: pride")
+	)
 	static let proBlue = Self(
-		key: "AppIconProBlue",
+		key: "AppIconProBlue", isFree: false,
 		name: Text("Pro Blue", comment: "App Icon Name"),
 		description: Text("Show off your pro status with an exclusive icon!", comment: "App Icon Description: pro blue")
 	)
 	
 	var key: String?
+	var isFree: Bool
 	var name: Text
 	var description: Text
 	
