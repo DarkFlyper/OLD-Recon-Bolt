@@ -271,6 +271,9 @@ Playtime Stats: section */
 /* Weapon Reference */
 "Category" = "Categorii";
 
+/* App Icon Description: pride */
+"Celebrate LGBTQ Pride month with a colorful look!" = "Sărbătoriți luna mândriei LGBTQ cu un look colorat!";
+
 /* No comment provided by engineer. */
 "Change Buddy" = "Schimbă Buddy";
 
@@ -893,6 +896,9 @@ Playtime Stats: section */
 /* Statistics filter: button */
 "Queues" = "Queues";
 
+/* App Icon Name */
+"Rainbow" = "Curcubeu";
+
 /* Weapon Reference: stats */
 "Range" = "Distanță";
 
@@ -1051,6 +1057,12 @@ Login Form: button */
 /* Hit Distribution Stats: smoothing slider */
 "Smoothing" = "Smoothing";
 
+/* App Icon Picker: section */
+"Special Icons" = "Icoane speciale";
+
+/* App Icon Picker: section footer */
+"Special Icons are available year-round for Pro users, while free users can only select them during a certain time window." = "Icoanele speciale sunt disponibile pe tot parcursul anului pentru utilizatorii Pro, în timp ce utilizatorii gratuiți le pot selecta doar în timpul unei anumite perioade de timp.";
+
 /* No comment provided by engineer. */
 "Spectator" = "Spectator";
 
@@ -1111,7 +1123,7 @@ Login Form: button */
 /* App Icon Description: default */
 "The default look of Recon Bolt." = "Aspectul implicit al lui Recon Bolt.";
 
-/* No comment provided by engineer. */
+/* App Icon Picker: section footer */
 "The pro version lets you change the app icon! More icons might be coming in future updates." = "Versiunea pro vă permite să schimbați pictograma aplicației! Este posibil să apară mai multe pictograme în actualizările viitoare.";
 
 /* Settings: picker */

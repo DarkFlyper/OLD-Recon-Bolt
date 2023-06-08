@@ -1120,7 +1120,7 @@ Login Form: button */
 /* App Icon Description: default */
 "The default look of Recon Bolt." = "Внешний вид Recon Bolt по умолчанию.";
 
-/* No comment provided by engineer. */
+/* App Icon Picker: section footer */
 "The pro version lets you change the app icon! More icons might be coming in future updates." = "В версии pro вы можете изменить значок приложения! Другие иконки могут появиться в будущих обновлениях.";
 
 /* Settings: picker */

@@ -271,6 +271,9 @@ Playtime Stats: section */
 /* Weapon Reference */
 "Category" = "Categoria";
 
+/* App Icon Description: pride */
+"Celebrate LGBTQ Pride month with a colorful look!" = "Festeggia il mese del Pride LGBTQ con un look colorato!";
+
 /* No comment provided by engineer. */
 "Change Buddy" = "Cambia Accessorio";
 
@@ -893,6 +896,9 @@ Playtime Stats: section */
 /* Statistics filter: button */
 "Queues" = "Modalità";
 
+/* App Icon Name */
+"Rainbow" = "Arcobaleno";
+
 /* Weapon Reference: stats */
 "Range" = "Distanza";
 
@@ -1051,6 +1057,12 @@ Login Form: button */
 /* Hit Distribution Stats: smoothing slider */
 "Smoothing" = "Errore di Fuoco";
 
+/* App Icon Picker: section */
+"Special Icons" = "Icone Speciali";
+
+/* App Icon Picker: section footer */
+"Special Icons are available year-round for Pro users, while free users can only select them during a certain time window." = "Le Icone Speciali sono disponibili tutto l'anno per gli utenti Pro, mentre per gli utenti gratuiti sono disponibili solo per un periodo limitato.";
+
 /* No comment provided by engineer. */
 "Spectator" = "Spettatore";
 
@@ -1111,7 +1123,7 @@ Login Form: button */
 /* App Icon Description: default */
 "The default look of Recon Bolt." = "L'aspetto predefinito di Recon Bolt.";
 
-/* No comment provided by engineer. */
+/* App Icon Picker: section footer */
 "The pro version lets you change the app icon! More icons might be coming in future updates." = "La versione Pro consente di cambiare l'icona dell'app! Potrebbero essere disponibili altre icone nei prossimi aggiornamenti.";
 
 /* Settings: picker */

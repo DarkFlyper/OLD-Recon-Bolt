@@ -270,6 +270,9 @@ Playtime Stats: section */
 /* Weapon Reference */
 "Category" = "Kategorie";
 
+/* App Icon Description: pride */
+"Celebrate LGBTQ Pride month with a colorful look!" = "Oslavte měsíc LGBTQ s barevným vzhledem!";
+
 /* No comment provided by engineer. */
 "Change Buddy" = "Změnit Přívěšek";
 
@@ -892,6 +895,9 @@ Playtime Stats: section */
 /* Statistics filter: button */
 "Queues" = "Herní módy";
 
+/* App Icon Name */
+"Rainbow" = "Duha";
+
 /* Weapon Reference: stats */
 "Range" = "Vzdálenost";
 
@@ -1050,6 +1056,12 @@ Login Form: button */
 /* Hit Distribution Stats: smoothing slider */
 "Smoothing" = "Vyhlazování";
 
+/* App Icon Picker: section */
+"Special Icons" = "Speciální Ikony";
+
+/* App Icon Picker: section footer */
+"Special Icons are available year-round for Pro users, while free users can only select them during a certain time window." = "Speciální ikony jsou pro uživatele Pro dostupné celoročně, zatímco uživatelé zdarma si je mohou vybrat pouze v určitém časovém okně.";
+
 /* No comment provided by engineer. */
 "Spectator" = "Divák";
 
@@ -1110,7 +1122,7 @@ Login Form: button */
 /* App Icon Description: default */
 "The default look of Recon Bolt." = "Výchozí vzhled Recon Boltu.";
 
-/* No comment provided by engineer. */
+/* App Icon Picker: section footer */
 "The pro version lets you change the app icon! More icons might be coming in future updates." = "Verze pro umožňuje změnit ikonu aplikace! Další ikony se mohou objevit v budoucích aktualizacích.";
 
 /* Settings: picker */
