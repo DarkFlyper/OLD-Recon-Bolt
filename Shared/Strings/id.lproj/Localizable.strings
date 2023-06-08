@@ -270,6 +270,9 @@ Playtime Stats: section */
 /* Weapon Reference */
 "Category" = "Kategori";
 
+/* App Icon Description: pride */
+"Celebrate LGBTQ Pride month with a colorful look!" = "Rayakan bulan LGBTQ dengan tampilan penuh warna!";
+
 /* No comment provided by engineer. */
 "Change Buddy" = "Ubah Buddy";
 
@@ -892,6 +895,9 @@ Playtime Stats: section */
 /* Statistics filter: button */
 "Queues" = "Antrian";
 
+/* App Icon Name */
+"Rainbow" = "Pelangi";
+
 /* Weapon Reference: stats */
 "Range" = "Jangkauan";
 
@@ -1049,6 +1055,12 @@ Login Form: button */
 
 /* Hit Distribution Stats: smoothing slider */
 "Smoothing" = "Menghaluskan";
+
+/* App Icon Picker: section */
+"Special Icons" = "Ikon Spesial";
+
+/* App Icon Picker: section footer */
+"Special Icons are available year-round for Pro users, while free users can only select them during a certain time window." = "Ikon Spesial akan tersedia sepanjang tahun untuk pengguna Pro, sedangkan pengguna gratis hanya dapat memilihnya selama waktu tertentu.";
 
 /* No comment provided by engineer. */
 "Spectator" = "Penonton";
