@@ -893,6 +893,9 @@ Playtime Stats: section */
 /* Statistics filter: button */
 "Queues" = "Modalità";
 
+/* App Icon Name */
+"Rainbow" = "Arcobaleno";
+
 /* Weapon Reference: stats */
 "Range" = "Distanza";
 
@@ -1050,6 +1053,12 @@ Login Form: button */
 
 /* Hit Distribution Stats: smoothing slider */
 "Smoothing" = "Errore di Fuoco";
+
+/* App Icon Picker: section */
+"Special Icons" = "Icone Speciali";
+
+/* App Icon Picker: section footer */
+"Special Icons are available year-round for Pro users, while free users can only select them during a certain time window." = "Le Icone Speciali sono disponibili tutto l'anno per gli utenti Pro, mentre per gli utenti gratuiti sono disponibili solo per un periodo limitato.";
 
 /* No comment provided by engineer. */
 "Spectator" = "Spettatore";
