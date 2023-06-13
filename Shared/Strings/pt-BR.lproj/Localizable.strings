@@ -279,6 +279,9 @@ Playtime Stats: section */
 /* Weapon Reference */
 "Category" = "Categoria";
 
+/* App Icon Description: pride */
+"Celebrate LGBTQ Pride month with a colorful look!" = "Comemore o mês do Orgulho LGBTQ com um visual colorido!";
+
 /* No comment provided by engineer. */
 "Change Buddy" = "Mudar Chaveiro";
 
@@ -901,6 +904,9 @@ Playtime Stats: section */
 /* Statistics filter: button */
 "Queues" = "Filas";
 
+/* App Icon Name */
+"Rainbow" = "Arco-íris";
+
 /* Weapon Reference: stats */
 "Range" = "Alcance";
 
@@ -1058,6 +1064,12 @@ Login Form: button */
 
 /* Hit Distribution Stats: smoothing slider */
 "Smoothing" = "Suavizar";
+
+/* App Icon Picker: section */
+"Special Icons" = "Ícones especiais";
+
+/* App Icon Picker: section footer */
+"Special Icons are available year-round for Pro users, while free users can only select them during a certain time window." = "Os ícones especiais estão disponíveis durante todo o ano para os usuários Pro, enquanto os usuários gratuitos só podem selecioná-los durante um determinado período.";
 
 /* No comment provided by engineer. */
 "Spectator" = "Espectador";
