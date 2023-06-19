@@ -33,10 +33,9 @@ struct ClientLogView: View {
 									
 									if let code = exchange.statusCode {
 										Text("\(code)")
-											.foregroundColor(statusColor(forCode: code))
+											.foregroundColor(.primary)
 									} else {
 										Text("ERROR", comment: "Request Log: shown in place of a status code (like 200 or 404) when sending failed.")
-											.font(.body.smallCaps())
 											.foregroundColor(.red)
 									}
 									
@@ -45,6 +44,7 @@ struct ClientLogView: View {
 									Text(exchange.time, format: .dateTime)
 										.font(.footnote)
 								}
+								.font(.callout)
 								.foregroundColor(.secondary)
 							}
 							.padding(.vertical, 2)
@@ -59,19 +59,6 @@ struct ClientLogView: View {
 		}
 		.navigationTitle(Text("Request Log", comment: "Request Log: title"))
     }
-	
-	func statusColor(forCode code: Int) -> Color {
-		switch code {
-		case 200..<300:
-			return .green
-		case 300..<400:
-			return .yellow
-		case 400..<600:
-			return .red
-		default:
-			return .primary
-		}
-	}
 	
 	struct ExchangeView: View {
 		var exchange: ClientLog.Exchange
