@@ -92,6 +92,8 @@ struct LoadWithErrorAlerts {
 	}
 }
 
+extension LocalizedStringKey: @unchecked Sendable {} // trust me bro, it's fine
+
 private struct PresentedError: Identifiable {
 	let id = UUID()
 	

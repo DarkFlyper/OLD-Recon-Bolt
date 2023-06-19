@@ -73,7 +73,7 @@ struct AgentPickerView: View {
 							Image(systemName: "questionmark")
 								.font(.system(size: agentSize * 0.65, weight: .bold))
 								.foregroundColor(.white)
-								.frame(maxWidth: .infinity, maxHeight: .infinity)
+								.frame(width: agentSize, height: agentSize)
 						}
 					}
 				}
