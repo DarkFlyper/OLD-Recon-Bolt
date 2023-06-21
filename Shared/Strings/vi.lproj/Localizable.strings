@@ -279,6 +279,9 @@ Playtime Stats: section */
 /* Weapon Reference */
 "Category" = "Loại";
 
+/* App Icon Description: pride */
+"Celebrate LGBTQ Pride month with a colorful look!" = "Chào mừng tháng Tự hào LGBTQ với diện mạo đầy màu sắc!";
+
 /* No comment provided by engineer. */
 "Change Buddy" = "Đổi phụ kiện";
 
@@ -901,6 +904,9 @@ Playtime Stats: section */
 /* Statistics filter: button */
 "Queues" = "Hàng chờ";
 
+/* App Icon Name */
+"Rainbow" = "Cầu Vồng";
+
 /* Weapon Reference: stats */
 "Range" = "Phạm vi";
 
@@ -1058,6 +1064,12 @@ Login Form: button */
 
 /* Hit Distribution Stats: smoothing slider */
 "Smoothing" = "Làm mịn";
+
+/* App Icon Picker: section */
+"Special Icons" = "Icon đặc biệt";
+
+/* App Icon Picker: section footer */
+"Special Icons are available year-round for Pro users, while free users can only select them during a certain time window." = "Biểu tượng Đặc biệt có sẵn quanh năm cho người dùng Pro, trong khi người dùng miễn phí chỉ có thể chọn chúng trong một khoảng thời gian nhất định.";
 
 /* No comment provided by engineer. */
 "Spectator" = "Người xem";
