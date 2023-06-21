@@ -947,7 +947,7 @@ Playtime Stats: section */
 "Refresh automatically" = "Atualizar automaticamente";
 
 /* Store Widget: next refresh time (hour & minute) */
-"Refreshes at %@" = "Atualiza em %@";
+"Refreshes at %@" = "Atualiza às %@";
 
 /* Weapon Reference: stats */
 "Reload Time" = "Tempo de recarga";
