@@ -903,6 +903,9 @@ Playtime Stats: section */
 /* Statistics filter: button */
 "Queues" = "隊列";
 
+/* App Icon Name */
+"Rainbow" = "彩虹";
+
 /* Weapon Reference: stats */
 "Range" = "距離";
 
@@ -1060,6 +1063,9 @@ Login Form: button */
 
 /* Hit Distribution Stats: smoothing slider */
 "Smoothing" = "平滑度";
+
+/* App Icon Picker: section */
+"Special Icons" = "特別圖示";
 
 /* No comment provided by engineer. */
 "Spectator" = "旁觀者";
