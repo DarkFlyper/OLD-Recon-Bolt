@@ -10,12 +10,12 @@ struct UserLabel: View {
 	var body: some View {
 		HStack(spacing: 4) {
 			if let user {
-				Text(user.gameName)
-					.fontWeight(.semibold)
-				
-				Text("#\(user.tagLine)")
+				let tagLine = Text("#\(user.tagLine)")
 					.fontWeight(.regular)
-					.foregroundStyle(.secondary)
+					.foregroundColor(.secondary)
+				
+				Text("\(user.gameName) \(tagLine)")
+					.fontWeight(.semibold)
 			} else {
 				Text("Unknown Player")
 					.fontWeight(.semibold)

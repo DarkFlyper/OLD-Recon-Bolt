@@ -25,7 +25,12 @@ extension View {
 			id: id,
 			animation: animation,
 			shouldReportErrors: shouldReportErrors,
-			autoUpdate: shouldAutoUpdate ? Value.autoUpdate(for:using:) : nil
+			autoUpdate: !shouldAutoUpdate ? nil : { id, client in
+				// wait a bit first in case this view disappears and cancels the task
+				await Task.sleep(seconds: 0.1, tolerance: 0.01)
+				try Task.checkCancellation()
+				try await Value.autoUpdate(for: id, using: client)
+			}
 		))
 	}
 	

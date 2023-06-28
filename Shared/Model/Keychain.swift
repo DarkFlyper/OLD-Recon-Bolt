@@ -102,7 +102,6 @@ final class OSKeychain: Keychain {
 	}
 }
 
-
 #if DEBUG
 struct MockKeychain: Keychain {
 	func store(_ data: Data, forKey key: String) throws { throw MockError() }

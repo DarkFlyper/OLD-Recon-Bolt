@@ -52,6 +52,8 @@ private struct ValorantLoadModifier: ViewModifier {
 		await load {
 			do {
 				try await task(account.client)
+			} catch APIError.badResponseCode(400, _, let error) where error?.errorCode == "NO_PING_DATA" {
+				// ignore; this happens sometimes while loading in
 			} catch {
 				guard !Task.isCancelled else { return }
 				throw error
