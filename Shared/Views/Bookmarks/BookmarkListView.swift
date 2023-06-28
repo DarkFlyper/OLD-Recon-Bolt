@@ -4,6 +4,8 @@ import ValorantAPI
 struct BookmarkListView: View {
 	let userID: User.ID
 	@State var selection: SelectedBookmark? = .ownUser
+	@AppStorage("BookmarkListView.shouldAutoUpdateRanks")
+	var shouldAutoUpdateRanks = true
 	
 	@EnvironmentObject private var bookmarkList: BookmarkList
 	@StateObject var history = LookupHistory()
@@ -34,11 +36,23 @@ struct BookmarkListView: View {
 		
 		Section(header: Text("Bookmarks", comment: "Bookmark/Player List: section")) {
 			ForEach(bookmarkList.bookmarks, id: \.self) { entry in
-				userCell(id: entry.user)
+				userCell(id: entry.user, shouldAutoUpdate: shouldAutoUpdateRanks)
 					.environment(\.location, entry.location)
 			}
 			.onDelete { bookmarkList.bookmarks.remove(atOffsets: $0) }
 			.onMove { bookmarkList.bookmarks.move(fromOffsets: $0, toOffset: $1) }
+			
+			if !bookmarkList.bookmarks.isEmpty {
+				Toggle(isOn: $shouldAutoUpdateRanks) {
+					VStack(alignment: .leading, spacing: 4) {
+						Text("Automatically Update Ranks", comment: "Bookmark/Player List: toggle")
+						Text("This can cause a lot of requests. If you have many bookmarks or are often hitting the rate limit, you might prefer to turn this off.", comment: "Bookmark/Player List: toggle description")
+							.font(.footnote)
+							.foregroundStyle(.secondary)
+					}
+				}
+				.padding(.vertical, 8)
+			}
 		}
 		.headerProminence(.increased)
 		.valorantLoadTask(id: bookmarkList.bookmarks) {
@@ -60,9 +74,9 @@ struct BookmarkListView: View {
 	}
 	
 	@ViewBuilder
-	func userCell(id: User.ID?) -> some View {
+	func userCell(id: User.ID?, shouldAutoUpdate: Bool = false) -> some View {
 		let tag = SelectedBookmark(userID: id)
-		UserCell(userID: id ?? userID, isSelected: $selection.equals(tag))
+		UserCell(userID: id ?? userID, isSelected: $selection.equals(tag), shouldAutoUpdate: shouldAutoUpdate)
 			.id(tag)
 	}
 }

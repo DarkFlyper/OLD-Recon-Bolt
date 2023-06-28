@@ -4,6 +4,7 @@ import ValorantAPI
 struct UserCell: View {
 	let userID: User.ID
 	@Binding var isSelected: Bool
+	var shouldAutoUpdate = false
 	
 	@LocalData var user: User?
 	@LocalData var identity: Player.Identity?
@@ -38,7 +39,7 @@ struct UserCell: View {
 		.padding(.vertical, 8)
 		.withLocalData($user, id: userID)
 		.withLocalData($identity, id: userID)
-		.withLocalData($summary, id: userID, shouldAutoUpdate: true)
+		.withLocalData($summary, id: userID, shouldAutoUpdate: shouldAutoUpdate)
 	}
 }
 
