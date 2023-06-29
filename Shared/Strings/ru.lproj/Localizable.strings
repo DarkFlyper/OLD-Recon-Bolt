@@ -221,9 +221,6 @@ Competitive matches after your placements can be identified without their detail
 /* Settings: toggle */
 "Automatically Sign Back In" = "Автоматически входить обратно";
 
-/* Store: available currency */
-"Available:" = "Доступно:";
-
 /* Hit Distribution Stats: average HS% */
 "Average: %@" = "Среднее: %@";
 
@@ -233,8 +230,8 @@ Competitive matches after your placements can be identified without their detail
 /* Request Log: shown for bodies that are not decodable to text */
 "Binary Data" = "Бинарные данные";
 
-/* Hit Distribution Stats: region
-Weapon Reference: stats */
+/* Weapon Reference: stats
+Hit Distribution Stats: region */
 "Body" = "Тело";
 
 /* Bookmark/Player List: section */
@@ -555,8 +552,8 @@ Stats: error details */
 /* Stats: date grouping size picker */
 "Group by" = "Группировать по";
 
-/* Hit Distribution Stats: region
-Weapon Reference: stats */
+/* Weapon Reference: stats
+Hit Distribution Stats: region */
 "Head" = "Голова";
 
 /* No comment provided by engineer. */
@@ -622,8 +619,8 @@ Recon Bolt начал разрабатываться в начале 2021 год
 /* Asset Management: this row shows the language of the current assets */
 "Language" = "Язык";
 
-/* Hit Distribution Stats: region
-Weapon Reference: stats */
+/* Weapon Reference: stats
+Hit Distribution Stats: region */
 "Legs" = "Ноги";
 
 /* Bookmark/Player List: player level */
@@ -1032,8 +1029,8 @@ Request Log: title */
 /* App Icon Description: pro blue */
 "Show off your pro status with an exclusive icon!" = "Покажите свой статус Pro с помощью эксклюзивного значка!";
 
-/* Account Settings: button
-Login Form: button */
+/* Login Form: button
+Account Settings: button */
 "Sign In" = "Войти";
 
 /* Login Form */
@@ -1138,8 +1135,8 @@ Login Form: button */
 /* Stats: match loading */
 "To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "Чтобы собрать статистику, сначала нужно загрузить матчи для обработки. Обратите внимание, что большие объемы могут занять много времени, особенно при первой загрузке!";
 
-/* Win Rate Stats: side name
-Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Win Rate Stats: side name */
 "Total" = "Всего";
 
 /* No comment provided by engineer. */
@@ -1202,9 +1199,6 @@ On that site, navigate to **Riot Account Sign-in** and set yourself a username a
 
 /* placeholder */
 "Unknown Card" = "Неизвестная карточка";
-
-/* Store */
-"Unknown Offer" = "Неизвестное предложение";
 
 /* No comment provided by engineer. */
 "Unknown Player" = "Неизвестный игрок";
