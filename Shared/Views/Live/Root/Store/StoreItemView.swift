@@ -67,6 +67,10 @@ struct StoreItemView<Item: UntypedStoreItem, PriceLabel: View>: View {
 		} else if let title = item.title {
 			HStack {
 				HStack(spacing: 12) {
+					Image("Player Title")
+						.resizable()
+						.foregroundStyle(.secondary)
+						.frame(width: iconSize, height: iconSize)
 					PlayerTitleLabel(titleID: title)
 					Spacer()
 					priceLabel

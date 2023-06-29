@@ -194,9 +194,9 @@ struct StoreDetailsView: View {
 			(assets?.playerCards[.init(rawID: reward.itemID)]?.smallArt).view()
 				.cornerRadius(8)
 		case .titles:
-			Text("abc")
-				.underline()
-				.font(.system(size: 32, weight: .medium, design: .rounded))
+			Image("Player Title")
+				.resizable()
+				.foregroundStyle(.secondary)
 		default:
 			EmptyView()
 		}
