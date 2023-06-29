@@ -118,6 +118,12 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "About Recon Bolt" = "Sobre o Recon Bolt";
 
+/* Store: accessory section */
+"Accessories" = "Acessórios";
+
+/* Store: Accessory List: title */
+"Accessory Store" = "Loja de acessórios";
+
 /* Settings: section */
 "Accounts" = "Contas";
 
@@ -219,6 +225,9 @@ Competitive matches after your placements can be identified without their detail
 
 /* Settings: toggle */
 "Automatically Sign Back In" = "Iniciar sessão automaticamente";
+
+/* Bookmark/Player List: toggle */
+"Automatically Update Ranks" = "Atualizar Ranks Automaticamente";
 
 /* Hit Distribution Stats: average HS% */
 "Average: %@" = "Média: %@";
