@@ -1146,6 +1146,9 @@ Account Settings: button */
 /* No comment provided by engineer. */
 "These are the last %lld requests sent by the app, along with their responses." = "Estas são as últimas %lld solicitações enviadas pelo aplicativo, juntamente com suas respostas.";
 
+/* Bookmark/Player List: toggle description */
+"This can cause a lot of requests. If you have many bookmarks or are often hitting the rate limit, you might prefer to turn this off." = "Isto pode causar muitos pedidos. Se tiver muitos favoritos ou se atingir frequentemente o limite de solicitações, pode preferir desativar esta opção.";
+
 /* Statistics error for iOS <16 */
 "This feature requires iOS 16 or newer." = "Este recurso requer iOS 16 ou posterior.";
 
