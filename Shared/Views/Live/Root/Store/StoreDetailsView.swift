@@ -27,22 +27,24 @@ struct StoreDetailsView: View {
 				}
 			}
 			
-			NavigationLink {
-				AccessoryStoreView(
-					accessoryStore: storefront.accessoryStore
-				) {
-					HStack {
-						remainingTimeLabel(storefront.accessoryStore.remainingDuration)
-							.foregroundColor(.primary) // secondary relative to this
-						Spacer()
-						CurrencyLabel(amount: wallet[.kingdomCredits], currencyID: .kingdomCredits)
+			if let offers = storefront.accessoryStore.offers {
+				NavigationLink {
+					AccessoryStoreView(
+						accessoryStore: storefront.accessoryStore
+					) {
+						HStack {
+							remainingTimeLabel(storefront.accessoryStore.remainingDuration)
+								.foregroundColor(.primary) // secondary relative to this
+							Spacer()
+							CurrencyLabel(amount: wallet[.kingdomCredits], currencyID: .kingdomCredits)
+						}
 					}
+				} label: {
+					accessoryStoreCell(offers: offers)
+						.background(Color.tertiaryGroupedBackground)
+						.cornerRadius(8)
+						.tint(.primary)
 				}
-			} label: {
-				accessoryStoreCell()
-					.background(Color.tertiaryGroupedBackground)
-					.cornerRadius(8)
-					.tint(.primary)
 			}
 			
 			Divider()
@@ -157,10 +159,10 @@ struct StoreDetailsView: View {
 		.foregroundStyle(.secondary)
 	}
 	
-	func accessoryStoreCell() -> some View {
+	func accessoryStoreCell(offers: [Storefront.AccessoryStore.Offer]) -> some View {
 		VStack(spacing: 12) {
 			HStack {
-				ForEach(storefront.accessoryStore.offers, id: \.offer.id) { offer in
+				ForEach(offers, id: \.offer.id) { offer in
 					icon(for: offer.offer.rewards.first!)
 						.frame(width: 60, height: 60)
 				}
@@ -264,7 +266,7 @@ struct AccessoryStoreView<Footer: View>: View {
 	var body: some View {
 		List {
 			Section {
-				ForEach(accessoryStore.offers, id: \.offer.id, content: row(for:))
+				ForEach(accessoryStore.offers ?? [], id: \.offer.id, content: row(for:))
 			} footer: {
 				footer
 			}
