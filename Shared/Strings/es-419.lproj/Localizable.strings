@@ -215,9 +215,6 @@ Sin embargo, las coincidencias competitivas después de tus colocaciones pueden 
 /* Settings: toggle */
 "Automatically Sign Back In" = "Iniciar sesión automáticamente";
 
-/* Store: available currency */
-"Available:" = "Disponible:";
-
 /* Hit Distribution Stats: average HS% */
 "Average: %@" = "Media: %@";
 
@@ -227,8 +224,8 @@ Sin embargo, las coincidencias competitivas después de tus colocaciones pueden 
 /* Request Log: shown for bodies that are not decodable to text */
 "Binary Data" = "Data en binario";
 
-/* Hit Distribution Stats: region
-Weapon Reference: stats */
+/* Weapon Reference: stats
+Hit Distribution Stats: region */
 "Body" = "Cuerpo";
 
 /* Bookmark/Player List: section */
@@ -273,6 +270,9 @@ Playtime Stats: section */
 
 /* Weapon Reference */
 "Category" = "Categoría";
+
+/* App Icon Description: pride */
+"Celebrate LGBTQ Pride month with a colorful look!" = "¡Celebra el mes del Orgullo LGBTQ con un estilo lleno de color!";
 
 /* No comment provided by engineer. */
 "Change Buddy" = "Cambiar amuleto";
@@ -549,8 +549,8 @@ EL REPORTE DEL BUG VA AQUÍ
 /* Stats: date grouping size picker */
 "Group by" = "Ordenar por";
 
-/* Hit Distribution Stats: region
-Weapon Reference: stats */
+/* Weapon Reference: stats
+Hit Distribution Stats: region */
 "Head" = "Cabeza";
 
 /* No comment provided by engineer. */
@@ -616,8 +616,8 @@ Si has encontrado un error o tienes algún comentario, siempre estoy encantado d
 /* Asset Management: this row shows the language of the current assets */
 "Language" = "Idioma";
 
-/* Hit Distribution Stats: region
-Weapon Reference: stats */
+/* Weapon Reference: stats
+Hit Distribution Stats: region */
 "Legs" = "Piernas";
 
 /* Bookmark/Player List: player level */
@@ -896,6 +896,9 @@ Playtime Stats: section */
 /* Statistics filter: button */
 "Queues" = "Colas";
 
+/* App Icon Name */
+"Rainbow" = "Arcoíris";
+
 /* Weapon Reference: stats */
 "Range" = "Rango";
 
@@ -1026,8 +1029,8 @@ Request Log: title */
 /* App Icon Description: pro blue */
 "Show off your pro status with an exclusive icon!" = "¡Demuestra que eres pro con un icono exclusivo!";
 
-/* Account Settings: button
-Login Form: button */
+/* Login Form: button
+Account Settings: button */
 "Sign In" = "Registrate";
 
 /* Login Form */
@@ -1053,6 +1056,12 @@ Login Form: button */
 
 /* Hit Distribution Stats: smoothing slider */
 "Smoothing" = "Suavizado";
+
+/* App Icon Picker: section */
+"Special Icons" = "Iconos especiales";
+
+/* App Icon Picker: section footer */
+"Special Icons are available year-round for Pro users, while free users can only select them during a certain time window." = "Los Iconos Especiales están disponibles durante el año para los usuarios Pro, mientras que los usuarios normales solo pueden seleccionarlos durante una ventana de tiempo determinada.";
 
 /* No comment provided by engineer. */
 "Spectator" = "Espectador";
@@ -1132,8 +1141,8 @@ Login Form: button */
 /* Stats: match loading */
 "To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "Para recopilar estadísticas, primero tenemos que cargar partidas para procesarlas. Ten en cuenta que grandes cantidades pueden llevar mucho tiempo, ¡sobre todo si se descargan por primera vez!";
 
-/* Win Rate Stats: side name
-Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Win Rate Stats: side name */
 "Total" = "Total";
 
 /* No comment provided by engineer. */
@@ -1196,9 +1205,6 @@ En ese sitio, ve a **Inicio de sesión de cuenta de Riot** y establece un nombre
 
 /* placeholder */
 "Unknown Card" = "Tarjeta desconocida";
-
-/* Store */
-"Unknown Offer" = "Oferta desconocida";
 
 /* No comment provided by engineer. */
 "Unknown Player" = "Jugador desconocido";
