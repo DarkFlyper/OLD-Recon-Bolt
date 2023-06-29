@@ -212,9 +212,6 @@ Meciurile de Competitive de după cele de plasament pot fi totuși identificate 
 /* Settings: toggle */
 "Automatically Sign Back In" = "Conectați-vă automat din nou";
 
-/* Store: available currency */
-"Available:" = "Disponibil:";
-
 /* Hit Distribution Stats: average HS% */
 "Average: %@" = "Media: %@";
 
@@ -224,8 +221,8 @@ Meciurile de Competitive de după cele de plasament pot fi totuși identificate 
 /* Request Log: shown for bodies that are not decodable to text */
 "Binary Data" = "Date binare";
 
-/* Hit Distribution Stats: region
-Weapon Reference: stats */
+/* Weapon Reference: stats
+Hit Distribution Stats: region */
 "Body" = "Corp";
 
 /* Bookmark/Player List: section */
@@ -549,8 +546,8 @@ RAPORTUL TĂU DE EROARE AICI
 /* Stats: date grouping size picker */
 "Group by" = "Grupați după";
 
-/* Hit Distribution Stats: region
-Weapon Reference: stats */
+/* Weapon Reference: stats
+Hit Distribution Stats: region */
 "Head" = "Cap";
 
 /* No comment provided by engineer. */
@@ -616,8 +613,8 @@ Dacă ați întâlnit un bug sau aveți ceva feedback, sunt întotdeauna bucuros
 /* Asset Management: this row shows the language of the current assets */
 "Language" = "Limba";
 
-/* Hit Distribution Stats: region
-Weapon Reference: stats */
+/* Weapon Reference: stats
+Hit Distribution Stats: region */
 "Legs" = "Picioare";
 
 /* Bookmark/Player List: player level */
@@ -1029,8 +1026,8 @@ Request Log: title */
 /* App Icon Description: pro blue */
 "Show off your pro status with an exclusive icon!" = "Arată-ți statutul de profesionist cu o pictogramă exclusivă!";
 
-/* Account Settings: button
-Login Form: button */
+/* Login Form: button
+Account Settings: button */
 "Sign In" = "Conectați-vă";
 
 /* Login Form */
@@ -1141,8 +1138,8 @@ Login Form: button */
 /* Stats: match loading */
 "To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "Pentru a aduna statistici, trebuie mai întâi să încărcăm meciurile pentru a le procesa. Rețineți că sumele mari pot dura mult timp, mai ales atunci când se descarcă pentru prima dată!";
 
-/* Win Rate Stats: side name
-Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Win Rate Stats: side name */
 "Total" = "Total";
 
 /* No comment provided by engineer. */
@@ -1205,9 +1202,6 @@ Pe site-ul respectiv, navigați la **Riot Account Sign-in** și setați-vă un n
 
 /* placeholder */
 "Unknown Card" = "Card necunoscut";
-
-/* Store */
-"Unknown Offer" = "Ofertă Necunoscută";
 
 /* No comment provided by engineer. */
 "Unknown Player" = "Jucător necunoscut";
