@@ -211,9 +211,6 @@ Competitive matches after your placements can be identified without their detail
 /* Settings: toggle */
 "Automatically Sign Back In" = "Masuk Kembali secara otomatis";
 
-/* Store: available currency */
-"Available:" = "Tersedia:";
-
 /* Hit Distribution Stats: average HS% */
 "Average: %@" = "Rata-rata: %@";
 
@@ -223,8 +220,8 @@ Competitive matches after your placements can be identified without their detail
 /* Request Log: shown for bodies that are not decodable to text */
 "Binary Data" = "Data Binary";
 
-/* Hit Distribution Stats: region
-Weapon Reference: stats */
+/* Weapon Reference: stats
+Hit Distribution Stats: region */
 "Body" = "Badan";
 
 /* Bookmark/Player List: section */
@@ -548,8 +545,8 @@ LAPORKAN BUG ANDA DISINI
 /* Stats: date grouping size picker */
 "Group by" = "Dikelompokkan berdasarkan";
 
-/* Hit Distribution Stats: region
-Weapon Reference: stats */
+/* Weapon Reference: stats
+Hit Distribution Stats: region */
 "Head" = "Kepala";
 
 /* No comment provided by engineer. */
@@ -615,8 +612,8 @@ Jika Anda menemukan bug atau memiliki feedback, saya selalu senang mendengarnya 
 /* Asset Management: this row shows the language of the current assets */
 "Language" = "Bahasa";
 
-/* Hit Distribution Stats: region
-Weapon Reference: stats */
+/* Weapon Reference: stats
+Hit Distribution Stats: region */
 "Legs" = "Kaki";
 
 /* Bookmark/Player List: player level */
@@ -1028,8 +1025,8 @@ Request Log: title */
 /* App Icon Description: pro blue */
 "Show off your pro status with an exclusive icon!" = "Tunjukan status pro Anda dengan ikon eksklusif!";
 
-/* Account Settings: button
-Login Form: button */
+/* Login Form: button
+Account Settings: button */
 "Sign In" = "Masuk";
 
 /* Login Form */
@@ -1140,8 +1137,8 @@ Login Form: button */
 /* Stats: match loading */
 "To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "Untuk mengumpulkan statistik, kita perlu memuat pertandingan untuk diproses. Perhatikan jika jumlah yang besar dapat memakan waktu lama terutama jika kita mengunduh untuk pertama kalinya!";
 
-/* Win Rate Stats: side name
-Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Win Rate Stats: side name */
 "Total" = "Total";
 
 /* No comment provided by engineer. */
@@ -1204,9 +1201,6 @@ Di situs tersebut, buka **Masuk Akun Riot** dan tentukan nama pengguna dan kata 
 
 /* placeholder */
 "Unknown Card" = "Kartu tidak diketahui";
-
-/* Store */
-"Unknown Offer" = "Penawaran tidak diketahui";
 
 /* No comment provided by engineer. */
 "Unknown Player" = "Pemain tidak diketahui";

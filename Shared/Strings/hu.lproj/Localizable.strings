@@ -212,9 +212,6 @@ Az elhelyezés utáni versenyszerű mérkőzések azonban az adataik nélkül is
 /* Settings: toggle */
 "Automatically Sign Back In" = "Automatikus visszajelentkezés";
 
-/* Store: available currency */
-"Available:" = "Elérhető:";
-
 /* Hit Distribution Stats: average HS% */
 "Average: %@" = "Átlagosan: %@";
 
@@ -224,8 +221,8 @@ Az elhelyezés utáni versenyszerű mérkőzések azonban az adataik nélkül is
 /* Request Log: shown for bodies that are not decodable to text */
 "Binary Data" = "Bináris adatok";
 
-/* Hit Distribution Stats: region
-Weapon Reference: stats */
+/* Weapon Reference: stats
+Hit Distribution Stats: region */
 "Body" = "Test";
 
 /* Bookmark/Player List: section */
@@ -546,8 +543,8 @@ HIBAJELENTÉSED ITT:
 /* Stats: date grouping size picker */
 "Group by" = "Csoportosítás";
 
-/* Hit Distribution Stats: region
-Weapon Reference: stats */
+/* Weapon Reference: stats
+Hit Distribution Stats: region */
 "Head" = "Fej";
 
 /* No comment provided by engineer. */
@@ -613,8 +610,8 @@ Ha hibával találkoztál, vagy van valami visszajelzésed, mindig örömmel meg
 /* Asset Management: this row shows the language of the current assets */
 "Language" = "Nyelv";
 
-/* Hit Distribution Stats: region
-Weapon Reference: stats */
+/* Weapon Reference: stats
+Hit Distribution Stats: region */
 "Legs" = "Lábak";
 
 /* Bookmark/Player List: player level */
@@ -1023,8 +1020,8 @@ Request Log: title */
 /* App Icon Description: pro blue */
 "Show off your pro status with an exclusive icon!" = "Mutasd meg hoyg pro előfizető vagy egy egyedi ikonnal!";
 
-/* Account Settings: button
-Login Form: button */
+/* Login Form: button
+Account Settings: button */
 "Sign In" = "Bejelentkezés";
 
 /* Login Form */
@@ -1129,8 +1126,8 @@ Login Form: button */
 /* Stats: match loading */
 "To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "A statisztikák összegyűjtéséhez először be kell töltenünk a feldolgozandó meccseket. Vegye figyelembe, hogy a nagy mennyiségek hosszú időt vehetnek igénybe, különösen, ha először töltjük le őket!";
 
-/* Win Rate Stats: side name
-Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Win Rate Stats: side name */
 "Total" = "Összesen";
 
 /* No comment provided by engineer. */
@@ -1193,9 +1190,6 @@ Ezen az oldalon navigálj a **Riot Account Sign-in** menüpontra, és állíts b
 
 /* placeholder */
 "Unknown Card" = "Ismeretlen kártya";
-
-/* Store */
-"Unknown Offer" = "Ismeretlen tétel";
 
 /* No comment provided by engineer. */
 "Unknown Player" = "Ismeretlen játékos";

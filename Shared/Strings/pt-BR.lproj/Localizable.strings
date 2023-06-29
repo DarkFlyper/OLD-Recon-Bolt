@@ -220,9 +220,6 @@ Competitive matches after your placements can be identified without their detail
 /* Settings: toggle */
 "Automatically Sign Back In" = "Iniciar sessão automaticamente";
 
-/* Store: available currency */
-"Available:" = "Disponível:";
-
 /* Hit Distribution Stats: average HS% */
 "Average: %@" = "Média: %@";
 
@@ -232,8 +229,8 @@ Competitive matches after your placements can be identified without their detail
 /* Request Log: shown for bodies that are not decodable to text */
 "Binary Data" = "Dados do Binário";
 
-/* Hit Distribution Stats: region
-Weapon Reference: stats */
+/* Weapon Reference: stats
+Hit Distribution Stats: region */
 "Body" = "Corpo";
 
 /* Bookmark/Player List: section */
@@ -557,8 +554,8 @@ SEU RELATÓRIO DE BUG AQUI
 /* Stats: date grouping size picker */
 "Group by" = "Agrupar por";
 
-/* Hit Distribution Stats: region
-Weapon Reference: stats */
+/* Weapon Reference: stats
+Hit Distribution Stats: region */
 "Head" = "Cabeça";
 
 /* No comment provided by engineer. */
@@ -624,8 +621,8 @@ Se você encontrou um bug ou tem algum feedback, ficarei muito feliz em ouvir no
 /* Asset Management: this row shows the language of the current assets */
 "Language" = "Idioma";
 
-/* Hit Distribution Stats: region
-Weapon Reference: stats */
+/* Weapon Reference: stats
+Hit Distribution Stats: region */
 "Legs" = "Pernas";
 
 /* Bookmark/Player List: player level */
@@ -1037,8 +1034,8 @@ Request Log: title */
 /* App Icon Description: pro blue */
 "Show off your pro status with an exclusive icon!" = "Mostre seu status pro com um ícone exclusivo!";
 
-/* Account Settings: button
-Login Form: button */
+/* Login Form: button
+Account Settings: button */
 "Sign In" = "Entrar";
 
 /* Login Form */
@@ -1149,8 +1146,8 @@ Login Form: button */
 /* Stats: match loading */
 "To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "Para verificar as estatísticas, primeiro é necessário carregar as partidas para obter as informações. Observe que em grandes quantias podem levar mais tempo que o esperado, especialmente ao fazer o download delas pela primeira vez!";
 
-/* Win Rate Stats: side name
-Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Win Rate Stats: side name */
 "Total" = "Total";
 
 /* No comment provided by engineer. */
@@ -1214,9 +1211,6 @@ No site da Riot, vá para Login da Conta Riot e defina um nome de usuário e sen
 
 /* placeholder */
 "Unknown Card" = "Card desconhecido";
-
-/* Store */
-"Unknown Offer" = "Oferta desconhecida";
 
 /* No comment provided by engineer. */
 "Unknown Player" = "Jogador Desconhecido";

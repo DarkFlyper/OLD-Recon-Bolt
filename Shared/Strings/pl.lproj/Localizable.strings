@@ -57,9 +57,6 @@ w kolejce";
 /* Win Rate Stats: side name */
 "Attacking" = "atakuje";
 
-/* Store: available currency */
-"Available:" = "dostępny";
-
 /* Hit Distribution Stats: average HS% */
 "Average: %@" = "średnia";
 
@@ -93,10 +90,6 @@ Playtime Stats: section */
 
 /* No comment provided by engineer. */
 "Cancel Matchmaking" = "odwołać swatanie";
-
-/* Store */
-"Unknown Offer" = "Unknown offer
-Nieznana oferta";
 
 /* placeholder */
 "Unknown Skin" = "Unknown skin

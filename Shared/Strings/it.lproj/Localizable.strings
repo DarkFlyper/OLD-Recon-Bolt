@@ -212,9 +212,6 @@ Tuttavia, le partite competitive possono essere identificate senza dover ottener
 /* Settings: toggle */
 "Automatically Sign Back In" = "Accedi Automaticamente";
 
-/* Store: available currency */
-"Available:" = "Crediti Disponibili:";
-
 /* Hit Distribution Stats: average HS% */
 "Average: %@" = "Media: %@";
 
@@ -224,8 +221,8 @@ Tuttavia, le partite competitive possono essere identificate senza dover ottener
 /* Request Log: shown for bodies that are not decodable to text */
 "Binary Data" = "Dati Binari";
 
-/* Hit Distribution Stats: region
-Weapon Reference: stats */
+/* Weapon Reference: stats
+Hit Distribution Stats: region */
 "Body" = "Corpo";
 
 /* Bookmark/Player List: section */
@@ -549,8 +546,8 @@ SEGNALA I BUG QUI
 /* Stats: date grouping size picker */
 "Group by" = "Filtra per";
 
-/* Hit Distribution Stats: region
-Weapon Reference: stats */
+/* Weapon Reference: stats
+Hit Distribution Stats: region */
 "Head" = "Testa";
 
 /* No comment provided by engineer. */
@@ -616,8 +613,8 @@ Se avete riscontrato un bug o avete un feedback, sono sempre felice di ascoltarl
 /* Asset Management: this row shows the language of the current assets */
 "Language" = "Lingua";
 
-/* Hit Distribution Stats: region
-Weapon Reference: stats */
+/* Weapon Reference: stats
+Hit Distribution Stats: region */
 "Legs" = "Gambe";
 
 /* Bookmark/Player List: player level */
@@ -1029,8 +1026,8 @@ Request Log: title */
 /* App Icon Description: pro blue */
 "Show off your pro status with an exclusive icon!" = "Mostra il tuo Pro Status con un'icona Esclusiva!";
 
-/* Account Settings: button
-Login Form: button */
+/* Login Form: button
+Account Settings: button */
 "Sign In" = "Accedi";
 
 /* Login Form */
@@ -1141,8 +1138,8 @@ Login Form: button */
 /* Stats: match loading */
 "To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "Per raccogliere le statistiche, dobbiamo prima caricare le partite già elaborate da Valorant. Nota che grandi quantità di dati possono richiedere molto tempo, soprattutto quando si scaricano per la prima volta!";
 
-/* Win Rate Stats: side name
-Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Win Rate Stats: side name */
 "Total" = "Totale";
 
 /* No comment provided by engineer. */
@@ -1205,9 +1202,6 @@ Sul sito, vai su **Accesso account Riot** e imposta un nome utente e una passwor
 
 /* placeholder */
 "Unknown Card" = "Carta Sconosciuta";
-
-/* Store */
-"Unknown Offer" = "Offerta Sconosciuta";
 
 /* No comment provided by engineer. */
 "Unknown Player" = "Giocatore Sconosciuto";

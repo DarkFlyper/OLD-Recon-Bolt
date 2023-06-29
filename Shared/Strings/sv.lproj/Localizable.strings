@@ -179,17 +179,14 @@ Konkurrerande matchningar efter dina placeringar kan dock identifieras utan dera
 /* Win Rate Stats: side name */
 "Attacking" = "Attack";
 
-/* Store: available currency */
-"Available:" = "Tillgänglig:";
-
 /* Hit Distribution Stats: average HS% */
 "Average: %@" = "Genomsnittligt: %@";
 
 /* Request Log: shown for bodies that are not decodable to text */
 "Binary Data" = "Binära data";
 
-/* Hit Distribution Stats: region
-Weapon Reference: stats */
+/* Weapon Reference: stats
+Hit Distribution Stats: region */
 "Body" = "Body";
 
 /* Bookmark/Player List: section */
@@ -525,8 +522,8 @@ DIN FELRAPPORT HÄR
 /* Asset Management: this row shows the language of the current assets */
 "Language" = "Språk";
 
-/* Hit Distribution Stats: region
-Weapon Reference: stats */
+/* Weapon Reference: stats
+Hit Distribution Stats: region */
 "Legs" = "Ben";
 
 /* Bookmark/Player List: player level */
@@ -838,8 +835,8 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Show details when found" = "Visa info när du hittar game";
 
-/* Account Settings: button
-Login Form: button */
+/* Login Form: button
+Account Settings: button */
 "Sign In" = "Logga in";
 
 /* Login Form */
@@ -908,8 +905,8 @@ Login Form: button */
 /* Stats: match loading */
 "To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "För att samla in statistik måste vi först ladda in matcher för att bearbeta dem. Observera att stora mängder kan ta lång tid, särskilt när du laddar ner för första gången!";
 
-/* Win Rate Stats: side name
-Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Win Rate Stats: side name */
 "Total" = "Totalt";
 
 /* No comment provided by engineer. */

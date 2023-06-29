@@ -220,9 +220,6 @@ Competitive matches after your placements can be identified without their detail
 /* Settings: toggle */
 "Automatically Sign Back In" = "Automatisch neu anmelden";
 
-/* Store: available currency */
-"Available:" = "Verfügbar:";
-
 /* Hit Distribution Stats: average HS% */
 "Average: %@" = "Durchschnitt: %@";
 
@@ -232,8 +229,8 @@ Competitive matches after your placements can be identified without their detail
 /* Request Log: shown for bodies that are not decodable to text */
 "Binary Data" = "Binäre Daten";
 
-/* Hit Distribution Stats: region
-Weapon Reference: stats */
+/* Weapon Reference: stats
+Hit Distribution Stats: region */
 "Body" = "Körper";
 
 /* Bookmark/Player List: section */
@@ -554,8 +551,8 @@ DEINE FEHLERMELDUNG HIER
 /* Stats: date grouping size picker */
 "Group by" = "Gruppieren nach";
 
-/* Hit Distribution Stats: region
-Weapon Reference: stats */
+/* Weapon Reference: stats
+Hit Distribution Stats: region */
 "Head" = "Kopf";
 
 /* No comment provided by engineer. */
@@ -621,8 +618,8 @@ Wenn du auf einen Fehler gestoßen bist oder ein Feedback hast, freue ich mich i
 /* Asset Management: this row shows the language of the current assets */
 "Language" = "Sprache";
 
-/* Hit Distribution Stats: region
-Weapon Reference: stats */
+/* Weapon Reference: stats
+Hit Distribution Stats: region */
 "Legs" = "Beine";
 
 /* Bookmark/Player List: player level */
@@ -1031,8 +1028,8 @@ Request Log: title */
 /* App Icon Description: pro blue */
 "Show off your pro status with an exclusive icon!" = "Demonstriere deinen Pro-Status mit einem exklusiven Icon!";
 
-/* Account Settings: button
-Login Form: button */
+/* Login Form: button
+Account Settings: button */
 "Sign In" = "Anmelden";
 
 /* Login Form */
@@ -1137,8 +1134,8 @@ Login Form: button */
 /* Stats: match loading */
 "To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "Um Statistiken auszuwerten, müssen wir zuerst Spiele zur Verarbeitung laden. Beachte, dass große Mengen lange brauchen können, besonders wenn sie zum ersten Mal heruntergeladen werden!";
 
-/* Win Rate Stats: side name
-Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Win Rate Stats: side name */
 "Total" = "Insgesamt";
 
 /* No comment provided by engineer. */
@@ -1201,9 +1198,6 @@ Navigiere auf dieser Seite zu **Riot Account Sign-in** und gib dir einen Benutze
 
 /* placeholder */
 "Unknown Card" = "Unbekannter Banner";
-
-/* Store */
-"Unknown Offer" = "Unbekanntes Angebot";
 
 /* No comment provided by engineer. */
 "Unknown Player" = "Unbekannter Spieler";
