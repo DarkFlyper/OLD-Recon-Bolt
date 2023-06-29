@@ -118,6 +118,12 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "About Recon Bolt" = "Về Recon Bolt";
 
+/* Store: accessory section */
+"Accessories" = "Phụ kiện";
+
+/* Store: Accessory List: title */
+"Accessory Store" = "Cửa hàng phụ kiện";
+
 /* Settings: section */
 "Accounts" = "Tài khoản";
 
@@ -219,6 +225,9 @@ Competitive matches after your placements can be identified without their detail
 
 /* Settings: toggle */
 "Automatically Sign Back In" = "Tự động đăng nhập lại";
+
+/* Bookmark/Player List: toggle */
+"Automatically Update Ranks" = "Tự động cập nhật thứ hạng";
 
 /* Hit Distribution Stats: average HS% */
 "Average: %@" = "Trung bình: %@";
@@ -1136,6 +1145,9 @@ Account Settings: button */
 
 /* No comment provided by engineer. */
 "These are the last %lld requests sent by the app, along with their responses." = "Đây là %lld yêu cầu cuối cùng được gửi bởi ứng dụng, cùng với phản hồi của chúng.";
+
+/* Bookmark/Player List: toggle description */
+"This can cause a lot of requests. If you have many bookmarks or are often hitting the rate limit, you might prefer to turn this off." = "Điều này có thể gây ra rất nhiều yêu cầu. Nếu bạn có nhiều dấu trang hoặc thường xuyên đạt đến giới hạn, bạn có thể muốn tắt tính năng này.";
 
 /* Statistics error for iOS <16 */
 "This feature requires iOS 16 or newer." = "Tính năng này yêu cầu iOS 16 trở lên.";
