@@ -222,9 +222,6 @@ Competitive matches after your placements can be identified without their detail
 /* Settings: toggle */
 "Automatically Sign Back In" = "自動重新登入";
 
-/* Store: available currency */
-"Available:" = "可用:";
-
 /* Hit Distribution Stats: average HS% */
 "Average: %@" = "平均: %@";
 
@@ -234,8 +231,8 @@ Competitive matches after your placements can be identified without their detail
 /* Request Log: shown for bodies that are not decodable to text */
 "Binary Data" = "二進制資料";
 
-/* Hit Distribution Stats: region
-Weapon Reference: stats */
+/* Weapon Reference: stats
+Hit Distribution Stats: region */
 "Body" = "身體";
 
 /* Bookmark/Player List: section */
@@ -556,8 +553,8 @@ Stats: error details */
 /* Stats: date grouping size picker */
 "Group by" = "分類";
 
-/* Hit Distribution Stats: region
-Weapon Reference: stats */
+/* Weapon Reference: stats
+Hit Distribution Stats: region */
 "Head" = "頭";
 
 /* No comment provided by engineer. */
@@ -623,8 +620,8 @@ Recon Bolt於2021年當初開始開發，當時還無法在遊戲中看到您的
 /* Asset Management: this row shows the language of the current assets */
 "Language" = "語言";
 
-/* Hit Distribution Stats: region
-Weapon Reference: stats */
+/* Weapon Reference: stats
+Hit Distribution Stats: region */
 "Legs" = "腳";
 
 /* Bookmark/Player List: player level */
@@ -1036,8 +1033,8 @@ Request Log: title */
 /* App Icon Description: pro blue */
 "Show off your pro status with an exclusive icon!" = "您可以用獨家圖示炫耀專業版！";
 
-/* Account Settings: button
-Login Form: button */
+/* Login Form: button
+Account Settings: button */
 "Sign In" = "登入";
 
 /* Login Form */
@@ -1145,8 +1142,8 @@ Login Form: button */
 /* Stats: match loading */
 "To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "為了收集統計資料，我們首先需要載入對戰記錄來處理。 請注意：大量數量可能需要很長時間，特別是第一次下載時！";
 
-/* Win Rate Stats: side name
-Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Win Rate Stats: side name */
 "Total" = "總共";
 
 /* No comment provided by engineer. */
@@ -1210,9 +1207,6 @@ On that site, navigate to **Riot Account Sign-in** and set yourself a username a
 
 /* placeholder */
 "Unknown Card" = "末知卡面";
-
-/* Store */
-"Unknown Offer" = "未知商品";
 
 /* No comment provided by engineer. */
 "Unknown Player" = "未知玩家";
