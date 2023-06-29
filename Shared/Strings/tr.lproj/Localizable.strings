@@ -212,9 +212,6 @@ Ancak, yerleştirmelerinizden sonraki rekabetçi eşleşmeler, ayrıntıları ol
 /* Settings: toggle */
 "Automatically Sign Back In" = "Otomatik Olarak Tekrar Oturum Aç";
 
-/* Store: available currency */
-"Available:" = "Mevcut:";
-
 /* Hit Distribution Stats: average HS% */
 "Average: %@" = "Ortalama: %@";
 
@@ -224,8 +221,8 @@ Ancak, yerleştirmelerinizden sonraki rekabetçi eşleşmeler, ayrıntıları ol
 /* Request Log: shown for bodies that are not decodable to text */
 "Binary Data" = "İkili Veri";
 
-/* Hit Distribution Stats: region
-Weapon Reference: stats */
+/* Weapon Reference: stats
+Hit Distribution Stats: region */
 "Body" = "Vücut";
 
 /* Bookmark/Player List: section */
@@ -546,8 +543,8 @@ HATA RAPORUNUZ BURADA
 /* Stats: date grouping size picker */
 "Group by" = "Kategorilere Göre Gruplama";
 
-/* Hit Distribution Stats: region
-Weapon Reference: stats */
+/* Weapon Reference: stats
+Hit Distribution Stats: region */
 "Head" = "Kafa";
 
 /* No comment provided by engineer. */
@@ -613,8 +610,8 @@ Bir hatayla karşılaştıysanız veya geri bildiriminiz varsa, Discord Sunucusu
 /* Asset Management: this row shows the language of the current assets */
 "Language" = "Dil";
 
-/* Hit Distribution Stats: region
-Weapon Reference: stats */
+/* Weapon Reference: stats
+Hit Distribution Stats: region */
 "Legs" = "Bacaklar";
 
 /* Bookmark/Player List: player level */
@@ -1023,8 +1020,8 @@ Request Log: title */
 /* App Icon Description: pro blue */
 "Show off your pro status with an exclusive icon!" = "Özel bir simge ile profesyonel statünüzü gösterin!";
 
-/* Account Settings: button
-Login Form: button */
+/* Login Form: button
+Account Settings: button */
 "Sign In" = "Oturum Aç";
 
 /* Login Form */
@@ -1129,8 +1126,8 @@ Login Form: button */
 /* Stats: match loading */
 "To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "İstatistik toplamak için öncelikle gösterilecek maçları yüklememiz gerekir. Özellikle ilk kez indirirken büyük miktarların uzun zaman alabileceğini unutmayın!";
 
-/* Win Rate Stats: side name
-Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Win Rate Stats: side name */
 "Total" = "Toplam";
 
 /* No comment provided by engineer. */
@@ -1197,9 +1194,6 @@ Bu sitede **Riot Hesabına Giriş** bölümüne gidin ve kendinize bir kullanıc
 
 /* placeholder */
 "Unknown Card" = "Bilinmeyen Kart";
-
-/* Store */
-"Unknown Offer" = "Bilinmeyen Teklif";
 
 /* No comment provided by engineer. */
 "Unknown Player" = "Bilinmeyen Oyuncu";
