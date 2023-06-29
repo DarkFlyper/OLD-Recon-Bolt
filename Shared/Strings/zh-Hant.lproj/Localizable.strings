@@ -120,6 +120,12 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "About Recon Bolt" = "關於Recon Bolt";
 
+/* Store: accessory section */
+"Accessories" = "配件";
+
+/* Store: Accessory List: title */
+"Accessory Store" = "配件商店";
+
 /* Settings: section */
 "Accounts" = "帳號";
 
@@ -221,6 +227,9 @@ Competitive matches after your placements can be identified without their detail
 
 /* Settings: toggle */
 "Automatically Sign Back In" = "自動重新登入";
+
+/* Bookmark/Player List: toggle */
+"Automatically Update Ranks" = "自動更新排位";
 
 /* Hit Distribution Stats: average HS% */
 "Average: %@" = "平均: %@";
@@ -1132,6 +1141,9 @@ Account Settings: button */
 
 /* No comment provided by engineer. */
 "These are the last %lld requests sent by the app, along with their responses." = "以下是應用程式傳送的最後一個 %lld 的請求及回應";
+
+/* Bookmark/Player List: toggle description */
+"This can cause a lot of requests. If you have many bookmarks or are often hitting the rate limit, you might prefer to turn this off." = "這可能會導致很多請求。 如果您有很多書籤或經常達到速率限制，您可能更願意關閉它。";
 
 /* Statistics error for iOS <16 */
 "This feature requires iOS 16 or newer." = "這功能需要iOS 16或以上版本。";
