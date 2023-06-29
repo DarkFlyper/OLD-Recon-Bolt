@@ -12,9 +12,7 @@ struct StoreEntryProvider: FetchingIntentTimelineProvider {
 		context.link.destination = .store
 		
 		let store = try await context.client.getStorefront()
-		let offers = Dictionary(values: try await context.client.getStoreOffers())
-		let resolvedOffers = try store.skinsPanelLayout.singleItemOffers.map { offerID in
-			let offer = try offers[offerID] ??? UpdateError.unknownOffer
+		let resolvedOffers = try store.dailySkinStore.offers.map { offer in
 			let reward = try offer.rewards.first ??? UpdateError.malformedOffer
 			return try context.assets.resolveSkin(.init(rawID: reward.itemID)) ??? UpdateError.unknownSkin
 		}
@@ -32,7 +30,7 @@ struct StoreEntryProvider: FetchingIntentTimelineProvider {
 		}
 		
 		return StorefrontInfo(
-			nextRefresh: Date(timeIntervalSinceNow: store.skinsPanelLayout.remainingDuration + 1),
+			nextRefresh: Date(timeIntervalSinceNow: store.dailySkinStore.remainingDuration + 1),
 			skins: await resolvedOffers.concurrentMap(fetchStuff(for:))
 		)
 	}

@@ -3,7 +3,6 @@ import ValorantAPI
 
 struct StoreDetailsView: View {
 	var updateTime: Date
-	var offers: [StoreOffer.ID: StoreOffer]
 	var storefront: Storefront
 	var wallet: StoreWallet
 	
@@ -53,19 +52,11 @@ struct StoreDetailsView: View {
 				
 				Spacer()
 				
-				remainingTimeLabel(storefront.skinsPanelLayout.remainingDuration)
+				remainingTimeLabel(storefront.dailySkinStore.remainingDuration)
 			}
 			
-			ForEach(storefront.skinsPanelLayout.singleItemOffers, id: \.self) { offerID in
-				if let offer = offers[offerID] {
-					OfferCell(offer: offer)
-				} else {
-					Text("Unknown Offer", comment: "Store")
-						.foregroundStyle(.secondary)
-						.padding()
-						.frame(maxWidth: .infinity)
-						.background(Color.tertiaryGroupedBackground)
-				}
+			ForEach(storefront.dailySkinStore.offers) { offer in
+				OfferCell(offer: offer)
 			}
 			.cornerRadius(8)
 		}
@@ -240,7 +231,6 @@ struct StoreDetailsView_Previews: PreviewProvider {
 			RefreshableBox(title: "Store", isExpanded: .constant(true)) {
 				StoreDetailsView(
 					updateTime: .now,
-					offers: .init(values: PreviewData.storeOffers),
 					storefront: PreviewData.storefront,
 					wallet: PreviewData.storeWallet
 				)

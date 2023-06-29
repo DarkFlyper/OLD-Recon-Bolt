@@ -83,7 +83,7 @@ struct LiveView: View {
 			infoOrPlaceholder(placeholder: "Store not loaded!", storeInfo) { info in
 				StoreDetailsView(
 					updateTime: info.updateTime,
-					offers: info.offers, storefront: info.storefront, wallet: info.wallet
+					storefront: info.storefront, wallet: info.wallet
 				)
 			}
 		} refresh: {
@@ -181,18 +181,15 @@ private struct LoadoutInfo {
 
 private struct StoreInfo {
 	var updateTime: Date
-	var offers: [StoreOffer.ID: StoreOffer]
 	var storefront: Storefront
 	var wallet: StoreWallet
 }
 
 extension StoreInfo {
 	init(using client: ValorantClient) async throws {
-		async let offers = client.getStoreOffers()
 		async let storefront = client.getStorefront()
 		async let wallet = client.getStoreWallet()
 		
-		self.offers = try await .init(values: offers)
 		self.storefront = try await storefront
 		self.wallet = try await wallet
 		self.updateTime = .now
