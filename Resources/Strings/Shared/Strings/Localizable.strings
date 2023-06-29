@@ -172,6 +172,12 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "About Recon Bolt" = "About Recon Bolt";
 
+/* Store: accessory section */
+"Accessories" = "Accessories";
+
+/* Store: Accessory List: title */
+"Accessory Store" = "Accessory Store";
+
 /* Settings: section */
 "Accounts" = "Accounts";
 
@@ -274,8 +280,8 @@ Competitive matches after your placements can be identified without their detail
 /* Settings: toggle */
 "Automatically Sign Back In" = "Automatically Sign Back In";
 
-/* Store: available currency */
-"Available:" = "Available:";
+/* Bookmark/Player List: toggle */
+"Automatically Update Ranks" = "Automatically Update Ranks";
 
 /* Hit Distribution Stats: average HS% */
 "Average: %@" = "Average: %@";
@@ -286,8 +292,8 @@ Competitive matches after your placements can be identified without their detail
 /* Request Log: shown for bodies that are not decodable to text */
 "Binary Data" = "Binary Data";
 
-/* Hit Distribution Stats: region
-Weapon Reference: stats */
+/* Weapon Reference: stats
+Hit Distribution Stats: region */
 "Body" = "Body";
 
 /* Bookmark/Player List: section */
@@ -620,8 +626,8 @@ YOUR BUG REPORT HERE
 /* Stats: date grouping size picker */
 "Group by" = "Group by";
 
-/* Hit Distribution Stats: region
-Weapon Reference: stats */
+/* Weapon Reference: stats
+Hit Distribution Stats: region */
 "Head" = "Head";
 
 /* No comment provided by engineer. */
@@ -690,8 +696,8 @@ If you've encountered a bug or have some feedback, I'm always happy to hear it o
 /* Asset Management: this row shows the language of the current assets */
 "Language" = "Language";
 
-/* Hit Distribution Stats: region
-Weapon Reference: stats */
+/* Weapon Reference: stats
+Hit Distribution Stats: region */
 "Legs" = "Legs";
 
 /* Bookmark/Player List: player level */
@@ -1118,8 +1124,8 @@ Request Log: title */
 /* No comment provided by engineer. */
 "Side" = "Side";
 
-/* Account Settings: button
-Login Form: button */
+/* Login Form: button
+Account Settings: button */
 "Sign In" = "Sign In";
 
 /* Login Form */
@@ -1224,6 +1230,9 @@ Login Form: button */
 /* No comment provided by engineer. */
 "These are the last %lld requests sent by the app, along with their responses." = "These are the last %lld requests sent by the app, along with their responses.";
 
+/* Bookmark/Player List: toggle description */
+"This can cause a lot of requests. If you have many bookmarks or are often hitting the rate limit, you might prefer to turn this off." = "This can cause a lot of requests. If you have many bookmarks or are often hitting the rate limit, you might prefer to turn this off.";
+
 /* Statistics error for iOS <16 */
 "This feature requires iOS 16 or newer." = "This feature requires iOS 16 or newer.";
 
@@ -1233,8 +1242,8 @@ Login Form: button */
 /* Stats: match loading */
 "To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!";
 
-/* Win Rate Stats: side name
-Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Win Rate Stats: side name */
 "Total" = "Total";
 
 /* No comment provided by engineer. */
@@ -1297,9 +1306,6 @@ On that site, navigate to **Riot Account Sign-in** and set yourself a username a
 
 /* placeholder */
 "Unknown Card" = "Unknown Card";
-
-/* Store */
-"Unknown Offer" = "Unknown Offer";
 
 /* No comment provided by engineer. */
 "Unknown Player" = "Unknown Player";
