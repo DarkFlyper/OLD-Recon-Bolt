@@ -209,17 +209,14 @@ competetive kampe efter dine placements kan dog identificeres uden deres detalje
 /* Settings: toggle */
 "Automatically Sign Back In" = "Log Automatisk På Igen";
 
-/* Store: available currency */
-"Available:" = "Tilgængelig:";
-
 /* Hit Distribution Stats: average HS% */
 "Average: %@" = "Gennemsnit: %@";
 
 /* Request Log: shown for bodies that are not decodable to text */
 "Binary Data" = "Binære data";
 
-/* Hit Distribution Stats: region
-Weapon Reference: stats */
+/* Weapon Reference: stats
+Hit Distribution Stats: region */
 "Body" = "Krop";
 
 /* Bookmark/Player List: section */
@@ -540,8 +537,8 @@ DIN FEJLRAPPORT HER
 /* Stats: date grouping size picker */
 "Group by" = "Gruppere efter";
 
-/* Hit Distribution Stats: region
-Weapon Reference: stats */
+/* Weapon Reference: stats
+Hit Distribution Stats: region */
 "Head" = "Hoved";
 
 /* No comment provided by engineer. */
@@ -607,8 +604,8 @@ Hvis du er stødt på en fejl eller har noget feedback, er jeg altid glad for at
 /* Asset Management: this row shows the language of the current assets */
 "Language" = "Sprog";
 
-/* Hit Distribution Stats: region
-Weapon Reference: stats */
+/* Weapon Reference: stats
+Hit Distribution Stats: region */
 "Legs" = "Ben";
 
 /* Bookmark/Player List: player level */
@@ -1017,8 +1014,8 @@ Request Log: title */
 /* App Icon Description: pro blue */
 "Show off your pro status with an exclusive icon!" = "Vis din pro status med et eksklusivt ikon!";
 
-/* Account Settings: button
-Login Form: button */
+/* Login Form: button
+Account Settings: button */
 "Sign In" = "Log ind";
 
 /* Login Form */
@@ -1120,8 +1117,8 @@ Login Form: button */
 /* Stats: match loading */
 "To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "For at indsamle statistikker skal vi først indlæse kampe, som vi skal behandle. Bemærk, at store mængder kan tage lang tid, især når du downloader for første gang!";
 
-/* Win Rate Stats: side name
-Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Win Rate Stats: side name */
 "Total" = "I alt";
 
 /* No comment provided by engineer. */
@@ -1173,9 +1170,6 @@ På dette websted skal du navigere til **Riot Account Sign-in** og angive et bru
 
 /* placeholder */
 "Unknown Card" = "Ukendt kort";
-
-/* Store */
-"Unknown Offer" = "Ukendt tilbud";
 
 /* No comment provided by engineer. */
 "Unknown Player" = "Ukendt spiller";
