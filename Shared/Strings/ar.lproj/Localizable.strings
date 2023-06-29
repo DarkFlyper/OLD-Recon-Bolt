@@ -218,17 +218,14 @@ Competitive matches after your placements can be identified without their detail
 /* Settings: toggle */
 "Automatically Sign Back In" = "سجّل دخولي تلقائياً";
 
-/* Store: available currency */
-"Available:" = "في حسابك:";
-
 /* Hit Distribution Stats: average HS% */
 "Average: %@" = "على المعدل: %@";
 
 /* Request Log: shown for bodies that are not decodable to text */
 "Binary Data" = "البيانات الثنائية";
 
-/* Hit Distribution Stats: region
-Weapon Reference: stats */
+/* Weapon Reference: stats
+Hit Distribution Stats: region */
 "Body" = "طلقات الجسم";
 
 /* Bookmark/Player List: section */
@@ -549,8 +546,8 @@ Stats: error details */
 /* Stats: date grouping size picker */
 "Group by" = "جمّع حسب";
 
-/* Hit Distribution Stats: region
-Weapon Reference: stats */
+/* Weapon Reference: stats
+Hit Distribution Stats: region */
 "Head" = "ضربة الرأس";
 
 /* No comment provided by engineer. */
@@ -616,8 +613,8 @@ If you've encountered a bug or have some feedback, I'm always happy to hear it o
 /* Asset Management: this row shows the language of the current assets */
 "Language" = "اللغة";
 
-/* Hit Distribution Stats: region
-Weapon Reference: stats */
+/* Weapon Reference: stats
+Hit Distribution Stats: region */
 "Legs" = "ضربات الارجل";
 
 /* Bookmark/Player List: player level */
@@ -1026,8 +1023,8 @@ Request Log: title */
 /* App Icon Description: pro blue */
 "Show off your pro status with an exclusive icon!" = "تباهر بحالتك Pro بأستخدام ايقونة حصرية للتطبيق!";
 
-/* Account Settings: button
-Login Form: button */
+/* Login Form: button
+Account Settings: button */
 "Sign In" = "سجّل الدخول";
 
 /* Login Form */
@@ -1129,8 +1126,8 @@ Login Form: button */
 /* Stats: match loading */
 "To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "لجمع الإحصائيات ، نحتاج أولاً إلى تحميل المباريات وتفاصيلها. لاحظ أن الكميات الكبيرة يمكن أن تستغرق وقتًا طويلاً ، خاصة عند التنزيل لأول مرة!";
 
-/* Win Rate Stats: side name
-Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Win Rate Stats: side name */
 "Total" = "المجموع";
 
 /* No comment provided by engineer. */
@@ -1182,9 +1179,6 @@ On that site, navigate to **Riot Account Sign-in** and set yourself a username a
 
 /* placeholder */
 "Unknown Card" = "بطاقة غير معروفة";
-
-/* Store */
-"Unknown Offer" = "طلب غير معروف";
 
 /* No comment provided by engineer. */
 "Unknown Player" = "لاعب غير معروف";
