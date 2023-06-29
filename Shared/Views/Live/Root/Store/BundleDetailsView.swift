@@ -52,99 +52,12 @@ struct BundleDetailsView: View {
 		
 		ForEach(bundle.items) { item in
 			VStack {
-				itemView(for: item)
-			}
-			.frame(maxWidth: .infinity)
-			.aligningListRowSeparator()
-		}
-	}
-	
-	@ViewBuilder
-	func itemView(for item: StoreBundle.Item) -> some View {
-		let priceLabel = CurrencyLabel(amount: item.basePrice, currencyID: item.currencyID)
-			.foregroundStyle(.secondary)
-		
-		if let skinLevel = item.info.skinLevel {
-			let resolved = assets?.resolveSkin(skinLevel)
-			NavigationLink {
-				if let resolved {
-					SkinDetailsView(skin: resolved.skin)
+				StoreItemView(item: item.info, fullscreenImages: $fullscreenImages) {
+					CurrencyLabel(amount: item.basePrice, currencyID: item.currencyID)
+						.foregroundStyle(.secondary)
 				}
-			} label: {
-				VStack {
-					resolved?.displayIcon?.view()
-						.frame(height: 60)
-					HStack {
-						(resolved?.skin).label()
-							.frame(maxWidth: .infinity, alignment: .leading)
-						Spacer()
-						priceLabel
-					}
-				}
-				.padding(.vertical, 8)
 			}
-		} else if let buddy = item.info.buddy {
-			let info = assets?.resolveBuddy(buddy)
-			NavigationButton {
-				fullscreenImages = info.map { [$0.displayIcon] }
-			} label: {
-				info?.displayIcon.view()
-					.frame(height: 60)
-				info.label()
-				Spacer()
-				priceLabel
-			}
-		} else if let card = item.info.card {
-			let info = assets?.playerCards[card]
-			NavigationButton {
-				fullscreenImages = info.map { [$0.largeArt, $0.wideArt, $0.smallArt] }
-			} label: {
-				info?.smallArt.view()
-					.frame(height: 60)
-				info.label()
-				Spacer()
-				priceLabel
-			}
-		} else if let title = item.info.title {
-			HStack {
-				PlayerTitleLabel(titleID: title)
-				Spacer()
-				priceLabel
-			}
-		} else if let spray = item.info.spray {
-			let info = assets?.sprays[spray]
-			NavigationButton {
-				fullscreenImages = info.map { [$0.fullIcon, $0.displayIcon] }
-			} label: {
-				info?.bestIcon.view()
-					.frame(height: 60)
-				info.label()
-				Spacer()
-				priceLabel
-			}
-		} else {
-			Text("Unknown item of type \(item.info.itemTypeID.description)", comment: "Store Bundle Details: should never show, but if Riot adds a new kind of item to a bundle, this would show")
-				.foregroundStyle(.secondary)
-				.multilineTextAlignment(.center)
 		}
-	}
-}
-
-extension PlayerCardInfo? {
-	func label() -> some View {
-		UnwrappingView(
-			value: self?.displayName,
-			placeholder: Text("Unknown Card", comment: "placeholder")
-		)
-	}
-}
-
-extension SprayInfo? {
-	func label() -> some View {
-		UnwrappingView(
-			value: self?.displayName,
-			placeholder: Text("Unknown Spray", comment: "placeholder")
-		)
 	}
 }
 

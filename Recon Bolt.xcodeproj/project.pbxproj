@@ -156,6 +156,7 @@
 		B96A0CA3265ABBC700844674 /* SwiftUI+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96A0CA2265ABBC700844674 /* SwiftUI+Helpers.swift */; };
 		B96A0CAA265AE32200844674 /* MissionAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96A0CA9265AE32200844674 /* MissionAssets.swift */; };
 		B96A0CAD265B0FB500844674 /* ObjectiveAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96A0CAC265B0FB500844674 /* ObjectiveAssets.swift */; };
+		B96AD5C02A4D44580071DE88 /* StoreItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96AD5BF2A4D44580071DE88 /* StoreItemView.swift */; };
 		B9741478266F18A800892B5F /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9741477266F18A800892B5F /* String+Localization.swift */; };
 		B9766BB72750339700127FF2 /* ContractAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9766BB62750339700127FF2 /* ContractAssets.swift */; };
 		B97B5330283002700082CE1C /* MatchListFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97B532F283002700082CE1C /* MatchListFilter.swift */; };
@@ -638,6 +639,7 @@
 		B96A0CA2265ABBC700844674 /* SwiftUI+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUI+Helpers.swift"; sourceTree = "<group>"; };
 		B96A0CA9265AE32200844674 /* MissionAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionAssets.swift; sourceTree = "<group>"; };
 		B96A0CAC265B0FB500844674 /* ObjectiveAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectiveAssets.swift; sourceTree = "<group>"; };
+		B96AD5BF2A4D44580071DE88 /* StoreItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreItemView.swift; sourceTree = "<group>"; };
 		B9741477266F18A800892B5F /* String+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
 		B9766BB62750339700127FF2 /* ContractAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractAssets.swift; sourceTree = "<group>"; };
 		B97B532F283002700082CE1C /* MatchListFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListFilter.swift; sourceTree = "<group>"; };
@@ -1207,6 +1209,7 @@
 			children = (
 				B9F7A53827DC5D3D00636DAF /* StoreDetailsView.swift */,
 				B9F7A54227DD30C600636DAF /* BundleDetailsView.swift */,
+				B96AD5BF2A4D44580071DE88 /* StoreItemView.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -1846,6 +1849,7 @@
 				B9AEB7D727B0A03F0090A203 /* PartyInfoBox.swift in Sources */,
 				B94288A129F7A97700F9415B /* MediaSheets.swift in Sources */,
 				B9EF0F21263CFC870067176A /* MatchDetailsView.swift in Sources */,
+				B96AD5C02A4D44580071DE88 /* StoreItemView.swift in Sources */,
 				B97B5330283002700082CE1C /* MatchListFilter.swift in Sources */,
 				B9DCC24328C96F5400C03B90 /* AboutScreen.swift in Sources */,
 				B9613E6D29F4E58F0001A048 /* WeaponListView.swift in Sources */,
