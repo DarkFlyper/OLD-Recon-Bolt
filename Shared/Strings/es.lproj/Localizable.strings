@@ -113,6 +113,12 @@ Sin embargo, las coincidencias competitivas después de tus colocaciones pueden 
 /* No comment provided by engineer. */
 "About Recon Bolt" = "Sobre Recon Bolt";
 
+/* Store: accessory section */
+"Accessories" = "Accesorios";
+
+/* Store: Accessory List: title */
+"Accessory Store" = "Tienda de accesorios";
+
 /* Settings: section */
 "Accounts" = "Cuentas";
 
@@ -214,6 +220,9 @@ Sin embargo, las coincidencias competitivas después de tus colocaciones pueden 
 
 /* Settings: toggle */
 "Automatically Sign Back In" = "Iniciar sesión automáticamente";
+
+/* Bookmark/Player List: toggle */
+"Automatically Update Ranks" = "Actualizar automáticamente los rangos";
 
 /* Hit Distribution Stats: average HS% */
 "Average: %@" = "Media: %@";
@@ -1131,6 +1140,9 @@ Account Settings: button */
 
 /* No comment provided by engineer. */
 "These are the last %lld requests sent by the app, along with their responses." = "Estas son las últimas %lld solicitudes enviadas por la aplicación, junto con sus respuestas.";
+
+/* Bookmark/Player List: toggle description */
+"This can cause a lot of requests. If you have many bookmarks or are often hitting the rate limit, you might prefer to turn this off." = "Esto puede provocar muchas peticiones. Si tienes muchos marcadores o alcanzas a menudo el límite de velocidad, puede que prefieras desactivar esta opción.";
 
 /* Statistics error for iOS <16 */
 "This feature requires iOS 16 or newer." = "La función requiere de iOS 16 o superior.";
