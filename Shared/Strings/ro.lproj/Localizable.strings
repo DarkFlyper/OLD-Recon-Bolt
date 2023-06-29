@@ -110,6 +110,12 @@ Meciurile de Competitive de după cele de plasament pot fi totuși identificate 
 /* No comment provided by engineer. */
 "About Recon Bolt" = "Despre Recon Bolt";
 
+/* Store: accessory section */
+"Accessories" = "Accesorii";
+
+/* Store: Accessory List: title */
+"Accessory Store" = "Magazin de accesorii";
+
 /* Settings: section */
 "Accounts" = "Conturi";
 
@@ -211,6 +217,9 @@ Meciurile de Competitive de după cele de plasament pot fi totuși identificate 
 
 /* Settings: toggle */
 "Automatically Sign Back In" = "Conectați-vă automat din nou";
+
+/* Bookmark/Player List: toggle */
+"Automatically Update Ranks" = "Actualizare automată a rank-urilor";
 
 /* Hit Distribution Stats: average HS% */
 "Average: %@" = "Media: %@";
@@ -1128,6 +1137,9 @@ Account Settings: button */
 
 /* No comment provided by engineer. */
 "These are the last %lld requests sent by the app, along with their responses." = "Acestea sunt ultimele cereri %lld trimise de aplicație, împreună cu răspunsurile acestora.";
+
+/* Bookmark/Player List: toggle description */
+"This can cause a lot of requests. If you have many bookmarks or are often hitting the rate limit, you might prefer to turn this off." = "Acest lucru poate cauza o mulțime de cereri. Dacă aveți multe marcaje sau dacă atingeți des limita de viteză, este posibil să preferați să dezactivați această opțiune.";
 
 /* Statistics error for iOS <16 */
 "This feature requires iOS 16 or newer." = "Această funcție necesită iOS 16 sau o versiune mai nouă.";
