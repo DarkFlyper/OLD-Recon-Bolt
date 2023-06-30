@@ -110,6 +110,12 @@ Tuttavia, le partite competitive possono essere identificate senza dover ottener
 /* No comment provided by engineer. */
 "About Recon Bolt" = "Informazioni su Recon Bolt";
 
+/* Store: accessory section */
+"Accessories" = "Accessori";
+
+/* Store: Accessory List: title */
+"Accessory Store" = "Negozio di Accessori";
+
 /* Settings: section */
 "Accounts" = "Accounts";
 
