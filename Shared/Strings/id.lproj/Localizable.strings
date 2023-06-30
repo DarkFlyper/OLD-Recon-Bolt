@@ -109,6 +109,12 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "About Recon Bolt" = "Tentang Recon Bolt";
 
+/* Store: accessory section */
+"Accessories" = "Aksesoris";
+
+/* Store: Accessory List: title */
+"Accessory Store" = "Toko Aksesoris";
+
 /* Settings: section */
 "Accounts" = "Akun";
 
@@ -210,6 +216,9 @@ Competitive matches after your placements can be identified without their detail
 
 /* Settings: toggle */
 "Automatically Sign Back In" = "Masuk Kembali secara otomatis";
+
+/* Bookmark/Player List: toggle */
+"Automatically Update Ranks" = "Otomatis Memperbarui Rank";
 
 /* Hit Distribution Stats: average HS% */
 "Average: %@" = "Rata-rata: %@";
@@ -1127,6 +1136,9 @@ Account Settings: button */
 
 /* No comment provided by engineer. */
 "These are the last %lld requests sent by the app, along with their responses." = "Ini adalah %lld permintaan terakhir yang dikirim lewat aplikasi beserta dengan response nya.";
+
+/* Bookmark/Player List: toggle description */
+"This can cause a lot of requests. If you have many bookmarks or are often hitting the rate limit, you might prefer to turn this off." = "Hal ini dapat menyebabkan banyak permintaan. Jika Anda memiliki banyak bookmark atau sering mencapai batas kecepatan, Anda mungkin lebih suka mematikannya.";
 
 /* Statistics error for iOS <16 */
 "This feature requires iOS 16 or newer." = "Fitur ini memerlukan setidaknya iOS 16 atau yang lebih baru.";
