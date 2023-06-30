@@ -1,3 +1,60 @@
 
+/* Used for matches less than a day ago. %@ is replaced by the number of hours/minutes, e.g. '3h ago'. */
+"%@ ago" = "%@ 전";
+
 /* Weapon Reference: stats */
-"%@ bullets/sec" = "%@ 총알/초";
+"%@ bullets/sec" = "%@ 발/초";
+
+/* Missions Box: always at least 3 */
+"%lld Future Weeklies" = "%lld 미래 주간 임무";
+
+/* No comment provided by engineer. */
+"%lld RR" = "%lld RR";
+
+/* Weapon Reference: stats */
+"%lld bullets" = "%lld 총알";
+
+/* Weapon Reference: price, always at least 150 */
+"%lld credits" = "%lld 크레드";
+
+/* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
+"%lld to %lld credits" = "%lld %lld 크레드";
+
+/* Match List: shown with a match's RR change when the player got an AFK Penalty (filled into the placeholder, including -) */
+"AFK: %lld" = "AFK: %lld";
+
+/* No comment provided by engineer. */
+"About Recon Bolt" = "정찰용 화살 정보";
+
+/* Store: accessory section */
+"Accessories" = "액세서리";
+
+/* Store: Accessory List: title */
+"Accessory Store" = "액세서리 가게";
+
+/* Settings: section */
+"Accounts" = "계정";
+
+/* No comment provided by engineer. */
+"Lock In" = "선택 확정";
+
+/* No comment provided by engineer. */
+"Lock In %@" = "선택 확정 %@";
+
+/* No comment provided by engineer. */
+"Not signed in!" = "로그인하지 않았습니다!";
+
+/* Pro Store: error alert title */
+"Purchase Failed!" = "구매 실패!";
+
+/* Pro Store: button (placeholder filled with formatted currency) */
+"Purchase – %@" = "구매 - %@";
+
+/* Rank Widget: title */
+"Rank" = "랜크";
+
+/* No comment provided by engineer. */
+"Rank %lld" = "랜크 %lld";
+
+/* Missions Box: header */
+"Weekly Missions" = "주간 임무";
