@@ -1,0 +1,22 @@
+{
+	"RemainingLifetimeSeconds": 13177,
+	"BonusMilestonesPending": 0,
+	"Milestones": [
+		{
+			"Progress": 4,
+			"BonusApplied": true
+		},
+		{
+			"Progress": 3,
+			"BonusApplied": false
+		},
+		{
+			"Progress": 0,
+			"BonusApplied": false
+		},
+		{
+			"Progress": 0,
+			"BonusApplied": false
+		}
+	]
+}

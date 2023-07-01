@@ -3,33 +3,39 @@ import ValorantAPI
 
 struct ResolvedContracts {
 	let details: ContractDetails
+	let daily: DailyTicketProgress
 	let assets: AssetCollection?
 	
-	let dailies, weeklies, unknown: [MissionWithInfo]
+	let weeklies: [MissionWithInfo]
 	let upcomingMissions: [MissionInfo]?
 	let queuedUpWeeklies, futureWeeklies: [MissionInfo]?
 	
-	var dailyRefresh: Date? {
-		dailies.first?.mission.expirationTime
-	}
+	var dailyRefresh: Date?
 	
 	var weeklyRefresh: Date? {
 		details.missionMetadata.weeklyRefillTime
 	}
 	
-	init(details: ContractDetails, assets: AssetCollection?, seasons: SeasonCollection.Accessor?) {
-		self.details = details
+	init(progress: ContractsProgress, assets: AssetCollection?, seasons: SeasonCollection.Accessor?) {
+		self.details = progress.contracts
 		self.assets = assets
 		
+		if progress.daily.remainingTime > 0 {
+			self.daily = progress.daily
+			self.dailyRefresh = progress.dailyRefresh
+		} else {
+			self.daily = .zero
+			self.dailyRefresh = nil
+		}
+		
 		let missions: [MissionWithInfo] = details.missions
-			.map { ($0, assets?.missions[$0.id]) }
+			.map { .init(mission: $0, info: assets?.missions[$0.id]) }
 		
-		self.dailies = missions.filter { $0.info?.type == .daily }
-		self.weeklies = missions.filter { $0.info?.type == .weekly }
-		let covered = Set((dailies + weeklies).map(\.mission.id))
-		self.unknown = missions.filter { !covered.contains($0.mission.id) }
+		self.weeklies = missions
 		
-		self.upcomingMissions = seasons.flatMap { assets?.upcomingMissions(for: details, seasons: $0) }
+		self.upcomingMissions = seasons.flatMap { [details] in
+			assets?.upcomingMissions(for: details, seasons: $0)
+		}
 		if let upcomingMissions {
 			let now = Date.now
 			let futureStart = upcomingMissions.firstIndex { $0.activationDate! > now }
@@ -69,7 +75,12 @@ private extension AssetCollection {
 	}
 }
 
-typealias MissionWithInfo = (mission: Mission, info: MissionInfo?)
+struct MissionWithInfo: Identifiable {
+	var mission: Mission
+	var info: MissionInfo?
+	
+	var id: Mission.ID { mission.id }
+}
 
 struct ResolvedMission {
 	var name: String

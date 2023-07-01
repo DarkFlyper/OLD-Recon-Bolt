@@ -8,11 +8,11 @@ struct ContractsEntryProvider: FetchingIntentTimelineProvider {
 	func fetchValue(in context: inout FetchingContext) async throws -> Value {
 		context.link.destination = .missions
 		
-		let details = try await context.client.getContractDetails()
+		let progress = try await context.client.getContractsProgress()
 		let config = await GameConfigManager().config(for: context.client.location)
 		return .init(
 			contracts: .init(
-				details: details,
+				progress: progress,
 				assets: context.assets,
 				seasons: config.map(context.assets.seasons.with(_:))
 			)

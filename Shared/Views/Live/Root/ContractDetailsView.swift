@@ -7,105 +7,40 @@ struct ContractDetailsView: View {
 	@Environment(\.assets) private var assets
 	
 	var body: some View {
-		contractInfo
+		dailyProgress
 		currentMissionsInfo
 		upcomingMissionsInfo
 	}
 	
-	@ViewBuilder
-	var contractInfo: some View {
-		Divider()
-		
-		VStack {
-			Text("Active Contract", comment: "Missions Box: header")
-				.font(.headline)
-				.frame(maxWidth: .infinity, alignment: .leading)
-			
-			GroupBox {
-				// wish we could use guard statements…
-				if let activeContract = contracts.details.activeSpecialContract {
-					if let info = assets?.contracts[activeContract] {
-						if let contract = contracts.details.contracts.firstElement(withID: activeContract) {
-							overview(for: ContractData(contract: contract, info: info))
-						} else {
-							Text("Missing progress for contract!", comment: "Missions Box")
-						}
-					} else {
-						Text("Unknown contract!", comment: "Missions Box")
-							.foregroundStyle(.secondary)
-					}
-				} else {
-					Text("No contract active!", comment: "Missions Box")
-						.foregroundStyle(.secondary)
-				}
-				
-				Divider()
-				
-				NavigationLink(destination: ContractChooser(details: contracts.details)) {
-					HStack {
-						Text("Switch Contract", comment: "Missions Box: button")
-						Spacer()
-						Image(systemName: "chevron.forward")
-					}
-				}
-			}
-		}
-		.padding()
-	}
-	
-	@ViewBuilder
-	func overview(for data: ContractData) -> some View {
-		VStack(alignment: .leading) {
-			HStack {
-				if let id = data.info.content.agentID {
-					SquareAgentIcon(agentID: id)
-						.frame(height: 64)
-				}
-				
-				VStack(alignment: .leading) {
-					Text(data.info.displayName.localizedCapitalized) // capitalization is inconsistent in turkish assets
-						.fontWeight(.semibold)
-					
-					HStack {
-						let currentXP = data.contract.progression.totalEarned
-						
-						if !data.isComplete {
-							Text("\(currentXP) / \(data.totalXP) XP", comment: "Missions Box")
-								.font(.footnote)
-						} else {
-							Text("Contract complete!", comment: "Missions Box")
-						}
-					}
-					.foregroundColor(.secondary)
-				}
-				
-				Spacer()
-				
-				ContractLevelProgressView(data: data)
-			}
-			
-			ContractProgressBar(data: data)
+	var dailyProgress: some View {
+		Box(
+			title: Text("Daily Checkpoints"),
+			countdownTarget: contracts.dailyRefresh
+		) {
+			DailyTicketView(milestones: contracts.daily.milestones)
+				.frame(maxWidth: 420)
 		}
 	}
 	
 	@ViewBuilder
 	var currentMissionsInfo: some View {
-		CurrentMissionsList(
-			title: Text("Uncategorized Missions", comment: "Missions Box: header, shown when a mission is not daily or weekly (should not happen unless Riot changes something)"),
-			missions: contracts.unknown
-		)
-		
-		CurrentMissionsList(
-			title: Text("Daily Missions", comment: "Missions Box: header"),
-			missions: contracts.dailies,
-			countdownTarget: contracts.dailyRefresh
-		)
-		
-		CurrentMissionsList(
-			title: Text("Weekly Missions", comment: "Missions Box: header"),
-			missions: contracts.weeklies,
-			countdownTarget: contracts.weeklyRefresh
-		)
+		if !contracts.weeklies.isEmpty {
+			Divider()
+			
+			Box(
+				title: Text("Weekly Missions", comment: "Missions Box: header"),
+				countdownTarget: contracts.weeklyRefresh
+			) {
+				ForEach(contracts.weeklies) { mission in
+					if let info = mission.info {
+						MissionView(missionInfo: info, mission: mission.mission)
+					} else {
+						Text("Unknown mission!")
+							.foregroundStyle(.secondary)
+					}
+				}
+			}
+		}
 	}
 	
 	@ViewBuilder
@@ -113,7 +48,7 @@ struct ContractDetailsView: View {
 		if let upcomingMissions = contracts.upcomingMissions {
 			let now = Date.now
 			let futureStart = upcomingMissions.firstIndex { $0.activationDate! > now }
-				?? upcomingMissions.endIndex
+			?? upcomingMissions.endIndex
 			
 			UpcomingMissionsList(missions: upcomingMissions.prefix(upTo: futureStart)) {
 				Text("\($0) Queued-Up Weeklies", comment: "Missions Box: always at least 3")
@@ -121,6 +56,38 @@ struct ContractDetailsView: View {
 			UpcomingMissionsList(missions: upcomingMissions.suffix(from: futureStart)) {
 				Text("\($0) Future Weeklies", comment: "Missions Box: always at least 3")
 			}
+		}
+	}
+	
+	private struct Box<Content: View>: View {
+		let title: Text
+		let countdownTarget: Date?
+		@ViewBuilder var content: Content
+		
+		var body: some View {
+			VStack(spacing: 16) {
+				HStack(alignment: .lastTextBaseline) {
+					title
+						.font(.headline)
+						.multilineTextAlignment(.leading)
+					
+					Spacer()
+					
+					Group {
+						if let countdownTarget {
+							CountdownText(target: countdownTarget)
+							Image(systemName: "clock")
+						}
+					}
+					.font(.caption.weight(.medium))
+					.foregroundStyle(.secondary)
+				}
+				
+				GroupBox {
+					content
+				}
+			}
+			.padding(16)
 		}
 	}
 }

@@ -38,10 +38,12 @@ enum PreviewData {
 	static let strangeSummary = loadJSON(named: "strange_summary", as: CareerSummary.self)
 	
 	static let contractDetails = loadJSON(named: "example_contracts", as: ContractDetails.self)
+	static let dailyTicket = loadJSON(named: "example_daily_ticket", as: DailyTicketProgress.self)
 	static let gameConfig = loadJSON(named: "example_config", as: GameConfig.self)
+	static let contractsProgress = ContractsProgress(contracts: contractDetails, daily: dailyTicket)
 	@MainActor
 	static let resolvedContracts = ResolvedContracts(
-		details: contractDetails,
+		progress: contractsProgress,
 		assets: AssetManager.forPreviews.assets,
 		seasons: AssetManager.forPreviews.assets?.seasons.with(gameConfig)
 	)

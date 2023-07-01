@@ -31,12 +31,7 @@ struct MissionListView: TimelineEntryView {
 		HStack(alignment: .top, spacing: 0) {
 			Spacer()
 			
-			CurrentMissionsList(
-				title: Text("Daily", comment: "Missions Widget"),
-				expectedCount: 2,
-				missions: contracts.dailies,
-				countdownTarget: contracts.dailyRefresh
-			)
+			// TODO: daily ticket!
 			
 			Spacer()
 			
@@ -88,9 +83,9 @@ struct CurrentMissionsList: View {
 			VStack(spacing: 1) {
 				HStack(alignment: .top, spacing: 16) {
 					if !missions.isEmpty {
-						ForEach(missions, id: \.mission.id) { mission, missionInfo in
-							if let missionInfo {
-								MissionView(missionInfo: missionInfo, mission: mission)
+						ForEach(missions) { mission in
+							if let info = mission.info {
+								MissionView(missionInfo: info, mission: mission.mission)
 							} else {
 								Image(systemName: "questionmark")
 									.foregroundStyle(.secondary)

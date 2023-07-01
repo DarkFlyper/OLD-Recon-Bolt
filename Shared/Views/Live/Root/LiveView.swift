@@ -6,9 +6,9 @@ import UserDefault
 
 struct LiveView: View {
 	let userID: User.ID
-	@State var contractDetails: ContractDetails? {
+	@State var contractsProgress: ContractsProgress? {
 		didSet {
-			if let oldValue, let contractDetails, contractDetails != oldValue {
+			if let oldValue, let contractsProgress, contractsProgress.contracts != oldValue.contracts {
 				WidgetCenter.shared.reloadTimelines(ofKind: "view missions")
 			}
 		}
@@ -55,11 +55,11 @@ struct LiveView: View {
 	
 	var missionsBox: some View {
 		RefreshableBox(title: "Missions", isExpanded: $expandedBoxes.contains(.missions)) {
-			infoOrPlaceholder(placeholder: "Missions not loaded!", contractDetails) {
-				ContractDetailsView(contracts: .init(details: $0, assets: assets, seasons: seasons))
+			infoOrPlaceholder(placeholder: "Missions not loaded!", contractsProgress) {
+				ContractDetailsView(contracts: .init(progress: $0, assets: assets, seasons: seasons))
 			}
 		} refresh: {
-			contractDetails = try await $0.getContractDetails()
+			contractsProgress = try await $0.getContractsProgress()
 		}
 		.id(missionsBoxID)
 	}
@@ -221,7 +221,7 @@ struct LiveView_Previews: PreviewProvider {
 	static var previews: some View {
 		LiveView(
 			userID: PreviewData.userID,
-			contractDetails: PreviewData.contractDetails
+			contractsProgress: PreviewData.contractsProgress
 		)
 		.withToolbar()
 	}

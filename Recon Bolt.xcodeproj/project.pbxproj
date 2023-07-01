@@ -57,12 +57,7 @@
 		B92DC20126A33C3600200A01 /* ActRankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92DC20026A33C3600200A01 /* ActRankView.swift */; };
 		B9318366267810CE0099B13C /* AgentSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9318365267810CE0099B13C /* AgentSelectView.swift */; };
 		B9318369267813F00099B13C /* example_pregame.json in Resources */ = {isa = PBXBuildFile; fileRef = B9318368267813EF0099B13C /* example_pregame.json */; };
-		B932A0F927911064009FAEE5 /* ContractChooser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B932A0F827911064009FAEE5 /* ContractChooser.swift */; };
-		B932A0FC27912170009FAEE5 /* ContractLevelProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B932A0FB27912170009FAEE5 /* ContractLevelProgressView.swift */; };
 		B932A0FF279121B1009FAEE5 /* SquareAgentIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B932A0FE279121B1009FAEE5 /* SquareAgentIcon.swift */; };
-		B932A102279121E2009FAEE5 /* ContractProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B932A101279121E2009FAEE5 /* ContractProgressBar.swift */; };
-		B932A10527912208009FAEE5 /* ContractData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B932A10427912208009FAEE5 /* ContractData.swift */; };
-		B932A109279122B9009FAEE5 /* CurrentMissionsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B932A108279122B9009FAEE5 /* CurrentMissionsList.swift */; };
 		B932A10C279122FF009FAEE5 /* UpcomingMissionsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B932A10B279122FF009FAEE5 /* UpcomingMissionsList.swift */; };
 		B932A11227912882009FAEE5 /* HandyOperators in Frameworks */ = {isa = PBXBuildFile; productRef = B932A11127912882009FAEE5 /* HandyOperators */; };
 		B933591F28A589F100C1A0FB /* PlayerCardPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B933591E28A589F100C1A0FB /* PlayerCardPicker.swift */; };
@@ -157,6 +152,10 @@
 		B96A0CAA265AE32200844674 /* MissionAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96A0CA9265AE32200844674 /* MissionAssets.swift */; };
 		B96A0CAD265B0FB500844674 /* ObjectiveAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96A0CAC265B0FB500844674 /* ObjectiveAssets.swift */; };
 		B96AD5C02A4D44580071DE88 /* StoreItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96AD5BF2A4D44580071DE88 /* StoreItemView.swift */; };
+		B96AD5D22A4FE3B90071DE88 /* example_daily_ticket.json in Resources */ = {isa = PBXBuildFile; fileRef = B96AD5D12A4FE3B90071DE88 /* example_daily_ticket.json */; };
+		B96AD5D32A4FE3B90071DE88 /* example_daily_ticket.json in Resources */ = {isa = PBXBuildFile; fileRef = B96AD5D12A4FE3B90071DE88 /* example_daily_ticket.json */; };
+		B96AD5D52A4FEF020071DE88 /* DailyTicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96AD5D42A4FEF020071DE88 /* DailyTicketView.swift */; };
+		B96AD5D62A4FEF020071DE88 /* DailyTicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96AD5D42A4FEF020071DE88 /* DailyTicketView.swift */; };
 		B9741478266F18A800892B5F /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9741477266F18A800892B5F /* String+Localization.swift */; };
 		B9766BB72750339700127FF2 /* ContractAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9766BB62750339700127FF2 /* ContractAssets.swift */; };
 		B97B5330283002700082CE1C /* MatchListFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97B532F283002700082CE1C /* MatchListFilter.swift */; };
@@ -447,12 +446,7 @@
 		B92DC20026A33C3600200A01 /* ActRankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActRankView.swift; sourceTree = "<group>"; };
 		B9318365267810CE0099B13C /* AgentSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentSelectView.swift; sourceTree = "<group>"; };
 		B9318368267813EF0099B13C /* example_pregame.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_pregame.json; sourceTree = "<group>"; };
-		B932A0F827911064009FAEE5 /* ContractChooser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractChooser.swift; sourceTree = "<group>"; };
-		B932A0FB27912170009FAEE5 /* ContractLevelProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractLevelProgressView.swift; sourceTree = "<group>"; };
 		B932A0FE279121B1009FAEE5 /* SquareAgentIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareAgentIcon.swift; sourceTree = "<group>"; };
-		B932A101279121E2009FAEE5 /* ContractProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractProgressBar.swift; sourceTree = "<group>"; };
-		B932A10427912208009FAEE5 /* ContractData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractData.swift; sourceTree = "<group>"; };
-		B932A108279122B9009FAEE5 /* CurrentMissionsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentMissionsList.swift; sourceTree = "<group>"; };
 		B932A10B279122FF009FAEE5 /* UpcomingMissionsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMissionsList.swift; sourceTree = "<group>"; };
 		B932A10F2791272C009FAEE5 /* ValorantAPI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ValorantAPI; sourceTree = "<group>"; };
 		B933591E28A589F100C1A0FB /* PlayerCardPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCardPicker.swift; sourceTree = "<group>"; };
@@ -640,6 +634,8 @@
 		B96A0CA9265AE32200844674 /* MissionAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionAssets.swift; sourceTree = "<group>"; };
 		B96A0CAC265B0FB500844674 /* ObjectiveAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectiveAssets.swift; sourceTree = "<group>"; };
 		B96AD5BF2A4D44580071DE88 /* StoreItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreItemView.swift; sourceTree = "<group>"; };
+		B96AD5D12A4FE3B90071DE88 /* example_daily_ticket.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_daily_ticket.json; sourceTree = "<group>"; };
+		B96AD5D42A4FEF020071DE88 /* DailyTicketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTicketView.swift; sourceTree = "<group>"; };
 		B9741477266F18A800892B5F /* String+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
 		B9766BB62750339700127FF2 /* ContractAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractAssets.swift; sourceTree = "<group>"; };
 		B97B532F283002700082CE1C /* MatchListFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListFilter.swift; sourceTree = "<group>"; };
@@ -857,7 +853,6 @@
 				B90FFF3726B47FFD007BE950 /* LiveGameBox.swift */,
 				B9AEB7D627B0A03F0090A203 /* PartyInfoBox.swift */,
 				B90FFF3D26B4BC57007BE950 /* ContractDetailsView.swift */,
-				B932A10727912297009FAEE5 /* Contracts */,
 				B932A10E27912322009FAEE5 /* Missions */,
 				B9C2E910284E3B4A0007FC55 /* Loadout */,
 				B9C2E911284E3B5F0007FC55 /* Store */,
@@ -897,24 +892,12 @@
 			path = Live;
 			sourceTree = "<group>";
 		};
-		B932A10727912297009FAEE5 /* Contracts */ = {
-			isa = PBXGroup;
-			children = (
-				B932A10427912208009FAEE5 /* ContractData.swift */,
-				B932A101279121E2009FAEE5 /* ContractProgressBar.swift */,
-				B932A0FB27912170009FAEE5 /* ContractLevelProgressView.swift */,
-				B932A0F827911064009FAEE5 /* ContractChooser.swift */,
-				B932A0FE279121B1009FAEE5 /* SquareAgentIcon.swift */,
-			);
-			path = Contracts;
-			sourceTree = "<group>";
-		};
 		B932A10E27912322009FAEE5 /* Missions */ = {
 			isa = PBXGroup;
 			children = (
 				B932A10B279122FF009FAEE5 /* UpcomingMissionsList.swift */,
-				B932A108279122B9009FAEE5 /* CurrentMissionsList.swift */,
 				B90FFF3A26B48288007BE950 /* MissionView.swift */,
+				B96AD5D42A4FEF020071DE88 /* DailyTicketView.swift */,
 			);
 			path = Missions;
 			sourceTree = "<group>";
@@ -1165,6 +1148,7 @@
 				B9613E7029F4E8FB0001A048 /* LabeledRow.swift */,
 				B94288A029F7A97700F9415B /* MediaSheets.swift */,
 				B94288A229F7A99900F9415B /* SkinDetailsView.swift */,
+				B932A0FE279121B1009FAEE5 /* SquareAgentIcon.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -1274,6 +1258,7 @@
 				B9342C3D27A6D10300F232CB /* strange_summary.json */,
 				B9F9B4D926793F3000397AAB /* surrendered_match.json */,
 				B9F52331266EE57900DFF8DD /* example_contracts.json */,
+				B96AD5D12A4FE3B90071DE88 /* example_daily_ticket.json */,
 				B9318368267813EF0099B13C /* example_pregame.json */,
 				B9C3499F267AA9E800BE39B1 /* example_live_game.json */,
 				B9AED04A27B08699009033C6 /* example_party.json */,
@@ -1621,6 +1606,7 @@
 				B9F52332266EE57900DFF8DD /* example_contracts.json in Resources */,
 				B9C349A0267AA9E800BE39B1 /* example_live_game.json in Resources */,
 				B967A1C429E50ED800AB4E92 /* Errors.strings in Resources */,
+				B96AD5D22A4FE3B90071DE88 /* example_daily_ticket.json in Resources */,
 				B9F7A53C27DC5DAF00636DAF /* example_store_offers.json in Resources */,
 				B914AE8928480A270001781F /* example_loadout.json in Resources */,
 				B941B65A25A5BC8A00F675C1 /* Assets.xcassets in Resources */,
@@ -1661,6 +1647,7 @@
 				B99AA18B294B8B5500115120 /* example_party.json in Resources */,
 				B99AA18C294B8B5500115120 /* example_store_offers.json in Resources */,
 				B99AA18D294B8B5500115120 /* example_storefront.json in Resources */,
+				B96AD5D32A4FE3B90071DE88 /* example_daily_ticket.json in Resources */,
 				B99AA18E294B8B5500115120 /* example_store_wallet.json in Resources */,
 				B98DF51E29FEC5AD00A8A27A /* Skin Level Effects.strings in Resources */,
 				B9BC89FF293A7D7400B97626 /* Assets.xcassets in Resources */,
@@ -1713,7 +1700,6 @@
 				B9EE6E5F26589EB8007E28B5 /* MatchDetailsContainer.swift in Sources */,
 				B933592328A58A0D00C1A0FB /* SprayPicker.swift in Sources */,
 				B9FADF8B26A91E4700A0CA15 /* LookupCell.swift in Sources */,
-				B932A109279122B9009FAEE5 /* CurrentMissionsList.swift in Sources */,
 				B90B4FB826C5DD8E008A5B5A /* LeaderboardRankView.swift in Sources */,
 				B91D3DA426C8492F007D18B8 /* WeaponAssets.swift in Sources */,
 				B941B6DE25A7BC3800F675C1 /* View+Styling.swift in Sources */,
@@ -1750,7 +1736,6 @@
 				B9F65C4E2651EDA500C9C34A /* DynamicallyStroked.swift in Sources */,
 				B9EE0003267EDCB100C08119 /* LocalDataManager.swift in Sources */,
 				B9BC89D92939B6FB00B97626 /* AppIconPicker.swift in Sources */,
-				B932A0FC27912170009FAEE5 /* ContractLevelProgressView.swift in Sources */,
 				B9DCF9AE2642F8FD00C39EC4 /* AssetManager.swift in Sources */,
 				B9CD085927D2878000BD485A /* AgentListView.swift in Sources */,
 				B9224D852921E8700056224F /* TransparentNavigationLink.swift in Sources */,
@@ -1760,7 +1745,6 @@
 				B9131D65266AF6C600E85F46 /* ReferenceView.swift in Sources */,
 				B95B1A4C269CE1810080EC81 /* ScoreSummaryView.swift in Sources */,
 				B94091B825D09F0200EE5DF2 /* MatchListView.swift in Sources */,
-				B932A10527912208009FAEE5 /* ContractData.swift in Sources */,
 				B96A0CAD265B0FB500844674 /* ObjectiveAssets.swift in Sources */,
 				B9F65C472651D20200C9C34A /* AssetImageView.swift in Sources */,
 				B932A0FF279121B1009FAEE5 /* SquareAgentIcon.swift in Sources */,
@@ -1827,6 +1811,7 @@
 				B9C2E913284E3B9F0007FC55 /* SearchableAssetPicker.swift in Sources */,
 				B90B4B61267C22E700CACB95 /* PlayerCardImage.swift in Sources */,
 				B9B11A6E28DD1407006EC232 /* ClientLogView.swift in Sources */,
+				B96AD5D52A4FEF020071DE88 /* DailyTicketView.swift in Sources */,
 				B9CF2E6225A81B48004A1458 /* Styles.swift in Sources */,
 				B9F07CB726474EB7006CD4F5 /* AssetVersion.swift in Sources */,
 				B90B4B5B267C177D00CACB95 /* PlayerTitleAssets.swift in Sources */,
@@ -1835,7 +1820,6 @@
 				B939C81E294A5A4900ABD0C6 /* WidgetLink.swift in Sources */,
 				B939C8052948E80900ABD0C6 /* UserDefault+AppGroups.swift in Sources */,
 				B9613E7129F4E8FB0001A048 /* LabeledRow.swift in Sources */,
-				B932A102279121E2009FAEE5 /* ContractProgressBar.swift in Sources */,
 				B937C39229C22620008A4FFB /* Statistics.swift in Sources */,
 				B9C97DC7263CADFC001E4D1B /* ValorantAPI+Mock.swift in Sources */,
 				B90B4B5E267C223D00CACB95 /* MapImage.swift in Sources */,
@@ -1863,7 +1847,6 @@
 				B954A6DB26C8BED200A86CB9 /* WeaponImage.swift in Sources */,
 				B963C47626950FE90071E14A /* RankInfoView.swift in Sources */,
 				B90B4B64267C270500CACB95 /* CompetitiveTierImage.swift in Sources */,
-				B932A0F927911064009FAEE5 /* ContractChooser.swift in Sources */,
 				B909D294292361E0003A53D9 /* AppSettings.swift in Sources */,
 				B933592528A58A1800C1A0FB /* SkinPicker.swift in Sources */,
 				B9A11F51285296C400599719 /* UnwrappingView.swift in Sources */,
@@ -1911,6 +1894,7 @@
 				B9E861C3294FADFC004F8ADF /* IntentHelpers.swift in Sources */,
 				B99AA190294B8BC800115120 /* RoundData.swift in Sources */,
 				B97C8F32293BBED9002F6A07 /* Swift+Helpers.swift in Sources */,
+				B96AD5D62A4FEF020071DE88 /* DailyTicketView.swift in Sources */,
 				B9E4B8B229B83F1400E999D0 /* RankInfoView.swift in Sources */,
 				B94A8D5A294AB1F700AC5BCD /* ViewMissionsWidget.swift in Sources */,
 				B97C8F40293C4212002F6A07 /* AssetCollection.swift in Sources */,
