@@ -86,13 +86,15 @@ struct StoreDetailsView: View {
 		
 		HStack(spacing: 20) {
 			Image(systemName: "briefcase")
+				.foregroundStyle(.secondary)
 			
-			Spacer()
+			Spacer(minLength: 0)
 			
 			ForEach(Self.currencies, id: \.self) { currency in
 				CurrencyLabel(amount: wallet[currency], currencyID: currency)
 			}
 		}
+		.minimumScaleFactor(0.5)
 		.lineLimit(1)
 		.padding()
 	}
@@ -304,7 +306,6 @@ struct CurrencyLabel: View {
 	var body: some View {
 		HStack {
 			Text("\(amount)")
-				.monospacedDigit()
 			let currency = assets?.currencies[currencyID]
 			currency?.displayIcon.view(renderingMode: .template)
 				.frame(width: iconSize, height: iconSize)
