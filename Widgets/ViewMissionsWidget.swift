@@ -49,6 +49,7 @@ struct MissionListView: TimelineEntryView {
 		.frame(maxWidth: .infinity, maxHeight: .infinity)
 		.padding()
 		.background(Color.groupedBackground)
+		.foregroundStyle(.primary, .secondary, Color.primary.opacity(0.1))
 	}
 	
 	@ViewBuilder
@@ -119,6 +120,19 @@ struct MissionListView: TimelineEntryView {
 	}
 }
 
+/*
+extension View {
+	@ViewBuilder
+	func withWidgetBackground() -> some View {
+		if #available(iOSApplicationExtension 17.0, *) {
+			containerBackground(.background, for: .widget)
+		} else {
+			self
+		}
+	}
+}
+ */
+
 struct MissionView: View {
 	var missionInfo: MissionInfo
 	var mission: Mission?
@@ -146,13 +160,15 @@ struct MissionView: View {
 						CircularProgressView {
 							CircularProgressLayer(end: fractionComplete, color: .accentColor)
 						} base: {
-							Color.tertiaryGroupedBackground
+							Rectangle()
+								.foregroundStyle(.tertiary)
+								.opacity(0.75) // somehow this looks stronger than the others
 						}
 					}
 				} else {
 					Circle()
 						.stroke(lineWidth: 2)
-						.foregroundColor(isComplete ? .accentColor : .gray.opacity(0.1))
+						.foregroundColor(.accentColor)
 				}
 				
 				if isComplete {
@@ -160,7 +176,6 @@ struct MissionView: View {
 				}
 			}
 			.frame(width: 32, height: 32)
-			.foregroundColor(.accentColor)
 		}
 	}
 }

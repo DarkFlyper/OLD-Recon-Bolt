@@ -12,7 +12,7 @@ struct DailyTicketView: View {
 				if index < milestones.count - 1 {
 					Capsule()
 						.frame(height: 1)
-						.foregroundColor(milestone.wasRedeemed ? .accentColor : .primary.opacity(0.2))
+						.accentedOrFaded(shouldAccent: milestone.wasRedeemed)
 						.opacity(0.75)
 				}
 			}
@@ -29,7 +29,7 @@ struct DailyTicketView: View {
 				Circle()
 					.strokeBorder(lineWidth: thickness + (isComplete ? spacing : 0))
 					.frame(width: size, height: size)
-					.foregroundColor(isComplete ? .accentColor : .primary.opacity(0.2))
+					.accentedOrFaded(shouldAccent: isComplete)
 			}
 			
 			if milestone.wasRedeemed {
@@ -37,5 +37,11 @@ struct DailyTicketView: View {
 					.foregroundColor(.white)
 			}
 		}
+	}
+}
+
+extension View {
+	func accentedOrFaded(shouldAccent: Bool) -> some View {
+		foregroundStyle(shouldAccent ? AnyShapeStyle(.accentColor) : .init(.tertiary))
 	}
 }
