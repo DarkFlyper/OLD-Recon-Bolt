@@ -29,6 +29,8 @@ struct RefreshableBox<Content: View>: View {
 			.font(.title2.weight(.semibold))
 			
 			if isExpanded {
+				Divider()
+				
 				content()
 					.groupBoxStyle(NestedGroupBoxStyle())
 			}

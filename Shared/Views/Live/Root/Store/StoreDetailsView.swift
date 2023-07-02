@@ -13,8 +13,6 @@ struct StoreDetailsView: View {
 	private static let currencies: [Currency.ID] = [.valorantPoints, .radianitePoints, .kingdomCredits]
 	
 	var body: some View {
-		Divider()
-		
 		VStack(spacing: 16) {
 			ForEach(storefront.featuredBundle.bundles) { bundle in
 				NavigationLink {

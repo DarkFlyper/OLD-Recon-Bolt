@@ -10,8 +10,6 @@ struct LoadoutDetailsView: View {
 	@Environment(\.valorantLoad) private var load
 	
     var body: some View {
-		Divider()
-		
 		let loadoutBinding = Binding { loadout } set: { newLoadout in
 			loadout = newLoadout
 			Task {
@@ -23,7 +21,6 @@ struct LoadoutDetailsView: View {
 		
 		LoadoutCustomizer(loadout: loadoutBinding, inventory: inventory)
 			.buttonBorderShape(.capsule)
-			.padding(.bottom)
 			.task(id: fetchedLoadout.version) {
 				loadout = .init(fetchedLoadout)
 			}
@@ -43,9 +40,11 @@ private struct LoadoutCustomizer: View {
 	@Environment(\.assets) private var assets
 	
 	var body: some View {
+		cardPicker
+		
+		Divider()
+		
 		VStack(spacing: 16) {
-			cardPicker
-			
 			titlePicker
 			
 			sprayPicker
@@ -60,6 +59,7 @@ private struct LoadoutCustomizer: View {
 			}
 			.buttonStyle(.bordered)
 		}
+		.padding(.vertical)
 	}
 	
 	var cardPicker: some View {
@@ -97,7 +97,7 @@ private struct LoadoutCustomizer: View {
 			let circleRadius: CGFloat = geometry.size.width / 2
 			let center = CGPoint(x: circleRadius, y: circleRadius)
 			let innerRadius = 0.3 * circleRadius
-			let sprayCellSize = 0.9 * (circleRadius - innerRadius)
+			let sprayCellSize = 0.8 * (circleRadius - innerRadius)
 			let slots = Spray.Slot.ID.inCCWOrder
 			let slotCount = CGFloat(slots.count)
 			let angleOffset = Angle.radians(CGFloat.pi / slotCount)
