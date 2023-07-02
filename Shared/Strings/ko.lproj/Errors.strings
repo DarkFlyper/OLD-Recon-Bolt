@@ -6,3 +6,10 @@
 
 /* Riot API Error */
 "Invalid Headers: %@" = "잘못된 헤더: %@";
+
+/* wrong account error */
+"It looks like this account has never played Valorant!
+
+You've probably signed into the wrong account; %@" = "이 계정은 발로란트를 플레이한 적이 없는 것 같습니다!
+
+잘못된 계정으로 로그인한 것 같습니다.; %@";
