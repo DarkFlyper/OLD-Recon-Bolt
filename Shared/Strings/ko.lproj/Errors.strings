@@ -1,8 +1,8 @@
 /* Pro Store: error restoring purchase */
-"A previous transaction was found, but it could not be verified! %@" = "이전 거래가 발견되었지만, 확인할 수 없습니다! %@";
+"A previous transaction was found, but it could not be verified! %@" = "이전 거래가 발견되었으나, 불러올 수 없습니다 %@";
 
 /* error loading the account for a widget */
-"Could not load active account!" = "활성 계정을 로드할 수 없습니다!";
+"Could not load active account!" = "현재 로그인된 계정을 불러올 수 없습니다!";
 
 /* Riot API Error */
 "Invalid Headers: %@" = "잘못된 헤더: %@";

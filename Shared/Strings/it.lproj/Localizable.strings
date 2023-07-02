@@ -110,6 +110,12 @@ Tuttavia, le partite competitive possono essere identificate senza dover ottener
 /* No comment provided by engineer. */
 "About Recon Bolt" = "Informazioni su Recon Bolt";
 
+/* Store: accessory section */
+"Accessories" = "Accessori";
+
+/* Store: Accessory List: title */
+"Accessory Store" = "Negozio di Accessori";
+
 /* Settings: section */
 "Accounts" = "Accounts";
 
@@ -211,6 +217,9 @@ Tuttavia, le partite competitive possono essere identificate senza dover ottener
 
 /* Settings: toggle */
 "Automatically Sign Back In" = "Accedi Automaticamente";
+
+/* Bookmark/Player List: toggle */
+"Automatically Update Ranks" = "Aggiorna Automaticamente i Gradi";
 
 /* Hit Distribution Stats: average HS% */
 "Average: %@" = "Media: %@";
@@ -1128,6 +1137,9 @@ Account Settings: button */
 
 /* No comment provided by engineer. */
 "These are the last %lld requests sent by the app, along with their responses." = "Queste sono le ultime %lld richieste inviate all'API, insieme alle relative risposte.";
+
+/* Bookmark/Player List: toggle description */
+"This can cause a lot of requests. If you have many bookmarks or are often hitting the rate limit, you might prefer to turn this off." = "Questo può causare molte richieste all'API. Se hai molti preferiti o se stai spesso superando il limite di velocità, potresti preferire disattivare questa funzione.";
 
 /* Statistics error for iOS <16 */
 "This feature requires iOS 16 or newer." = "Questa funzione richiede iOS 16 o versioni successive.";
