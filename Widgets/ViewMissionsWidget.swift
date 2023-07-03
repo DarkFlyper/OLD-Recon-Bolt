@@ -156,6 +156,7 @@ struct MissionView: View {
 			ZStack {
 				if isComplete {
 					Circle()
+						.fill(.accentColor)
 				} else if let (progress, toComplete) = progress {
 					VStack(spacing: 4) {
 						let fractionComplete = CGFloat(progress) / CGFloat(toComplete)
@@ -169,7 +170,7 @@ struct MissionView: View {
 					}
 				} else {
 					Circle()
-						.stroke(lineWidth: 2)
+						.stroke(.accentColor, lineWidth: 2)
 				}
 				
 				if isComplete {
@@ -177,7 +178,6 @@ struct MissionView: View {
 						.foregroundColor(.white)
 				}
 			}
-			.foregroundColor(.accentColor)
 			.frame(width: 32, height: 32)
 		}
 	}
