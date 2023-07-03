@@ -15,6 +15,7 @@ struct AppIconPicker: View {
 			
 			Section {
 				cell(for: .proBlue)
+				cell(for: .prideDark)
 			} header: {
 				Text("Pro Icons", comment: "App Icon Picker: section")
 			} footer: {
@@ -79,13 +80,13 @@ extension AppIcon {
 			return Image("app icons/\(icon.key ?? "AppIcon")")
 				.resizable()
 				.aspectRatio(contentMode: .fit)
-				.background(Color.gray)
 				.mask { squircle }
 				.overlay {
 					squircle
 						.strokeBorder(.white.opacity(0.1), lineWidth: 1)
 						.blendMode(.plusLighter)
 				}
+				.shadow(color: .black.opacity(0.1), radius: 2, x: 0, y: 2)
 				.frame(width: size, height: size)
 		}
 	}
@@ -110,7 +111,7 @@ final class AppIconManager: ObservableObject {
 }
 
 struct AppIcon: Identifiable, Equatable {
-	static let all = [`default`, pride, proBlue]
+	static let all = [`default`, pride, proBlue, prideDark]
 	static let `default` = Self(
 		key: nil, isFree: true,
 		name: Text("Default", comment: "App Icon Name"),
@@ -119,12 +120,17 @@ struct AppIcon: Identifiable, Equatable {
 	static let pride = Self(
 		key: "AppIconPride", isFree: Calendar.current.date(.now, matchesComponents: .init(month: 6)), // free during pride month
 		name: Text("Rainbow", comment: "App Icon Name"),
-		description: Text("Celebrate LGBTQ Pride month with a colorful look!", comment: "App Icon Description: pride")
+		description: Text("Celebrate LGBTQ Pride month with a colorful look! (Free during June)", comment: "App Icon Description: pride")
 	)
 	static let proBlue = Self(
 		key: "AppIconProBlue", isFree: false,
 		name: Text("Pro Blue", comment: "App Icon Name"),
 		description: Text("Show off your pro status with an exclusive icon!", comment: "App Icon Description: pro blue")
+	)
+	static let prideDark = Self(
+		key: "AppIconPrideDark", isFree: false,
+		name: Text("Dark Rainbow", comment: "App Icon Name"),
+		description: Text("Celebrate LGBTQ Pride month, but in dark!", comment: "App Icon Description: pride")
 	)
 	
 	var key: String?
