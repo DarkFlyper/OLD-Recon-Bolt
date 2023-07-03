@@ -114,6 +114,12 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "About Recon Bolt" = "Über Recon Bolt";
 
+/* Store: accessory section */
+"Accessories" = "Accessoires";
+
+/* Store: Accessory List: title */
+"Accessory Store" = "Accessoires";
+
 /* Settings: section */
 "Accounts" = "Konten";
 
@@ -201,6 +207,9 @@ Competitive matches after your placements can be identified without their detail
 /* Settings: toggle */
 "Automatically Sign Back In" = "Automatisch neu anmelden";
 
+/* Bookmark/Player List: toggle */
+"Automatically Update Ranks" = "Ränge automatisch aktualisieren";
+
 /* Hit Distribution Stats: average HS% */
 "Average: %@" = "Durchschnitt: %@";
 
@@ -256,6 +265,12 @@ Playtime Stats: section */
 
 /* Weapon Reference */
 "Category" = "Kategorie";
+
+/* App Icon Description: pride */
+"Celebrate LGBTQ Pride month with a colorful look! (Free during June)" = "Feiere den LGBTQ Pride Month mit einem farbenfrohen Look! (Im Juni kostenlos)";
+
+/* App Icon Description: pride */
+"Celebrate LGBTQ Pride month, but in dark!" = "Feiere den LGBTQ Pride Month, aber in dunkel!";
 
 /* No comment provided by engineer. */
 "Change Buddy" = "Talisman wechseln";
@@ -365,6 +380,9 @@ Playtime Stats: section */
 /* Missions Widget */
 "Daily" = "Täglich";
 
+/* No comment provided by engineer. */
+"Daily Checkpoints" = "Tägliche Checkpoints";
+
 /* Store */
 "Daily Offers" = "Tagesangebote";
 
@@ -373,6 +391,9 @@ Playtime Stats: section */
 
 /* App Theme */
 "Dark Mode" = "Dunkelmodus";
+
+/* App Icon Name */
+"Dark Rainbow" = "Dunkler Regenbogen";
 
 /* Stats: match loading */
 "Data going back to %@" = "Daten gehen bis %@ zurück";
@@ -855,6 +876,9 @@ Playtime Stats: section */
 /* Statistics filter: button */
 "Queues" = "Spielmodi";
 
+/* App Icon Name */
+"Rainbow" = "Regenbogen";
+
 /* Weapon Reference: stats */
 "Range" = "Distanz";
 
@@ -1013,6 +1037,12 @@ Login Form: button */
 /* Hit Distribution Stats: smoothing slider */
 "Smoothing" = "Glättung";
 
+/* App Icon Picker: section */
+"Special Icons" = "Besondere Icons";
+
+/* App Icon Picker: section footer */
+"Special Icons are available year-round for Pro users, while free users can only select them during a certain time window." = "Besondere Icons sind für Pro-Nutzer das ganze Jahr über verfügbar, während kostenlose Nutzer sie nur während eines bestimmten Zeitfensters aktivieren können.";
+
 /* No comment provided by engineer. */
 "Spectator" = "Zuschauer";
 
@@ -1078,6 +1108,9 @@ Login Form: button */
 
 /* No comment provided by engineer. */
 "These are the last %lld requests sent by the app, along with their responses." = "Dies sind die letzten %lld Anfragen, die die App gemacht hat, zusammen mit ihren Antworten.";
+
+/* Bookmark/Player List: toggle description */
+"This can cause a lot of requests. If you have many bookmarks or are often hitting the rate limit, you might prefer to turn this off." = "Das kann eine Menge Anfragen verursachen. Wenn du viele Lesezeichen hast oder oft einen Fehler bekommst, dass du zu viele Anfragen auslöst, solltest du diese Funktion lieber ausschalten.";
 
 /* Statistics error for iOS <16 */
 "This feature requires iOS 16 or newer." = "Diese Feature erfordert iOS 16 oder neuer.";
