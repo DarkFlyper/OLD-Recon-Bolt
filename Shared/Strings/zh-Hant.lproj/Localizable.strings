@@ -74,10 +74,6 @@
 /* Time Formatting: minutes, seconds, & milliseconds (used in round details view) */
 "%lld:%@.%@" = "%lld:%@.%@";
 
-/* Contract Progress Bar
-Missions Box */
-"%lld / %lld XP" = "%lld / %lld 經驗值";
-
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
 "(%lld – %lld)" = "(%lld – %lld)";
 
@@ -129,15 +125,6 @@ Competitive matches after your placements can be identified without their detail
 /* Settings: section */
 "Accounts" = "帳號";
 
-/* Contract Picker: button */
-"Activate" = "激活";
-
-/* Contract Picker */
-"Active" = "啟用";
-
-/* Missions Box: header */
-"Active Contract" = "當前契約";
-
 /* Match List: accessibility label */
 "Add Bookmark" = "增加書籤";
 
@@ -155,12 +142,6 @@ Competitive matches after your placements can be identified without their detail
 
 /* No comment provided by engineer. */
 "Agent Select" = "選擇特務";
-
-/* Contract Picker */
-"Agent Unlockable" = "特務可解鎖";
-
-/* Contract Picker */
-"Agent Unlocked" = "特務已解鎖";
 
 /* Statistics filter: button */
 "Agents" = "特務";
@@ -240,8 +221,8 @@ Competitive matches after your placements can be identified without their detail
 /* Request Log: shown for bodies that are not decodable to text */
 "Binary Data" = "二進制資料";
 
-/* Weapon Reference: stats
-Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Body" = "身體";
 
 /* Bookmark/Player List: section */
@@ -323,9 +304,6 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Choose Title" = "更換稱號";
 
-/* Contract Picker: title */
-"Choose a Contract" = "選擇契約";
-
 /* Buddy Picker: alert shown when both instances of a buddy are in use */
 "Choose a weapon to take %@ from." = "選擇要換走 %@ 的武器。";
 
@@ -335,14 +313,8 @@ Playtime Stats: section */
 /* Skin Details: section */
 "Color Variants" = "幻彩顏色";
 
-/* Contract Picker */
-"Completed" = "已完成";
-
 /* Storage Management: title for alert to confirm deleting some matches */
 "Confirm Delete" = "確定刪除";
-
-/* Missions Box */
-"Contract complete!" = "契約完成!";
 
 /* Request Log: button to copy the request's body/contents (accessibility label) */
 "Copy Body" = "複製內容";
@@ -403,9 +375,6 @@ Playtime Stats: section */
 
 /* Missions Widget */
 "Daily" = "每日";
-
-/* Missions Box: header */
-"Daily Missions" = "每日任務";
 
 /* Store */
 "Daily Offers" = "每日商店";
@@ -535,9 +504,6 @@ Stats: error details */
 /* No comment provided by engineer. */
 "Force Refresh Widgets" = "強制重新整理小工具";
 
-/* Contract Picker */
-"Free Agent" = "免費特務";
-
 /* Storage Management: button to free up a certain amount of space */
 "Free up these %@" = "釋放這些 %@";
 
@@ -562,8 +528,8 @@ Stats: error details */
 /* Stats: date grouping size picker */
 "Group by" = "分類";
 
-/* Weapon Reference: stats
-Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Head" = "頭";
 
 /* No comment provided by engineer. */
@@ -629,15 +595,12 @@ Recon Bolt於2021年當初開始開發，當時還無法在遊戲中看到您的
 /* Asset Management: this row shows the language of the current assets */
 "Language" = "語言";
 
-/* Weapon Reference: stats
-Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Legs" = "腳";
 
 /* Bookmark/Player List: player level */
 "Level %lld" = "等級 %lld";
-
-/* Contract Progress Bar */
-"Level %lld / %lld" = "等級 %lld / %lld";
 
 /* No comment provided by engineer. */
 "Lifetime Peak" = "最高排位";
@@ -754,9 +717,6 @@ If you don't know your username or don't have one, you can fix that at [account.
 /* Asset Management */
 "Missing assets!" = "缺少資源包！";
 
-/* Missions Box */
-"Missing progress for contract!" = "缺少契約進度！";
-
 /* No comment provided by engineer. */
 "Missing season data!" = "缺少賽季資料！";
 
@@ -795,9 +755,6 @@ If you don't know your username or don't have one, you can fix that at [account.
 
 /* Gun Customizer: shown when a weapon has no buddy active */
 "No buddy selected!" = "沒有吊飾選取!";
-
-/* Missions Box */
-"No contract active!" = "沒有契約啟用!";
 
 /* Win Rate Stats: by map */
 "No data" = "沒有資料";
@@ -1042,8 +999,8 @@ Request Log: title */
 /* App Icon Description: pro blue */
 "Show off your pro status with an exclusive icon!" = "您可以用獨家圖示炫耀專業版！";
 
-/* Login Form: button
-Account Settings: button */
+/* Account Settings: button
+Login Form: button */
 "Sign In" = "登入";
 
 /* Login Form */
@@ -1115,9 +1072,6 @@ Account Settings: button */
 /* Pro Store */
 "Support Further Development!" = "支援進一步的開發！";
 
-/* Missions Box: button */
-"Switch Contract" = "更改契約";
-
 /* Login Form: is this safe? */
 "TL;DR: you'll have to take my word for it, but Riot doesn't seem to mind." = "太長了不要看：你必須相信我的話，但Riot似乎並不介意。";
 
@@ -1154,8 +1108,8 @@ Account Settings: button */
 /* Stats: match loading */
 "To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "為了收集統計資料，我們首先需要載入對戰記錄來處理。 請注意：大量數量可能需要很長時間，特別是第一次下載時！";
 
-/* Hit Distribution Stats: region
-Win Rate Stats: side name */
+/* Win Rate Stats: side name
+Hit Distribution Stats: region */
 "Total" = "總共";
 
 /* No comment provided by engineer. */
@@ -1172,9 +1126,6 @@ Win Rate Stats: side name */
 
 /* Request Log */
 "URL" = "網址";
-
-/* Missions Box: header, shown when a mission is not daily or weekly (should not happen unless Riot changes something) */
-"Uncategorized Missions" = "未分類的任務";
 
 /* Shown when a match does not match the filter and its details have not been fetched. */
 "Unfetched" = "未獲取";
@@ -1247,9 +1198,6 @@ Round Details: killed by unknown/unspecified weapon */
 
 /* No comment provided by engineer. */
 "Unknown bundle!" = "未知組合包！";
-
-/* Missions Box */
-"Unknown contract!" = "末知契約!";
 
 /* Store Bundle Details: should never show, but if Riot adds a new kind of item to a bundle, this would show */
 "Unknown item of type %@" = "未知物品的類型 %@";
