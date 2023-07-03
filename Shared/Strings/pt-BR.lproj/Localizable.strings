@@ -266,6 +266,12 @@ Playtime Stats: section */
 /* Weapon Reference */
 "Category" = "Categoria";
 
+/* App Icon Description: pride */
+"Celebrate LGBTQ Pride month with a colorful look! (Free during June)" = "Comemore o mês do Orgulho LGBTQ com um visual colorido! (Gratuito durante o mês de junho)";
+
+/* App Icon Description: pride */
+"Celebrate LGBTQ Pride month, but in dark!" = "Comemore o mês do Orgulho LGBTQ, mas no modo escuro!";
+
 /* No comment provided by engineer. */
 "Change Buddy" = "Mudar Chaveiro";
 
@@ -374,6 +380,9 @@ Playtime Stats: section */
 /* Missions Widget */
 "Daily" = "Diárias";
 
+/* No comment provided by engineer. */
+"Daily Checkpoints" = "Checkpoints Diários";
+
 /* Store */
 "Daily Offers" = "Ofertas diárias";
 
@@ -382,6 +391,9 @@ Playtime Stats: section */
 
 /* App Theme */
 "Dark Mode" = "Modo Escuro";
+
+/* App Icon Name */
+"Dark Rainbow" = "Arco-íris escuro";
 
 /* Stats: match loading */
 "Data going back to %@" = "Dados retornando para %@";
