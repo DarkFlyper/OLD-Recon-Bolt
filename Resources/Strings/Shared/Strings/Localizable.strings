@@ -115,10 +115,6 @@
 /* Time Formatting: minutes, seconds, & milliseconds (used in round details view) */
 "%lld:%@.%@" = "%lld:%@.%@";
 
-/* Contract Progress Bar
-Missions Box */
-"%lld / %lld XP" = "%lld / %lld XP";
-
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
 "(%lld – %lld)" = "(%lld – %lld)";
 
@@ -181,15 +177,6 @@ Competitive matches after your placements can be identified without their detail
 /* Settings: section */
 "Accounts" = "Accounts";
 
-/* Contract Picker: button */
-"Activate" = "Activate";
-
-/* Contract Picker */
-"Active" = "Active";
-
-/* Missions Box: header */
-"Active Contract" = "Active Contract";
-
 /* Match List: accessibility label */
 "Add Bookmark" = "Add Bookmark";
 
@@ -207,12 +194,6 @@ Competitive matches after your placements can be identified without their detail
 
 /* No comment provided by engineer. */
 "Agent Select" = "Agent Select";
-
-/* Contract Picker */
-"Agent Unlockable" = "Agent Unlockable";
-
-/* Contract Picker */
-"Agent Unlocked" = "Agent Unlocked";
 
 /* Statistics filter: button */
 "Agents" = "Agents";
@@ -292,8 +273,8 @@ Competitive matches after your placements can be identified without their detail
 /* Request Log: shown for bodies that are not decodable to text */
 "Binary Data" = "Binary Data";
 
-/* Weapon Reference: stats
-Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Body" = "Body";
 
 /* Bookmark/Player List: section */
@@ -340,7 +321,10 @@ Playtime Stats: section */
 "Category" = "Category";
 
 /* App Icon Description: pride */
-"Celebrate LGBTQ Pride month with a colorful look!" = "Celebrate LGBTQ Pride month with a colorful look!";
+"Celebrate LGBTQ Pride month with a colorful look! (Free during June)" = "Celebrate LGBTQ Pride month with a colorful look! (Free during June)";
+
+/* App Icon Description: pride */
+"Celebrate LGBTQ Pride month, but in dark!" = "Celebrate LGBTQ Pride month, but in dark!";
 
 /* No comment provided by engineer. */
 "Change Buddy" = "Change Buddy";
@@ -378,9 +362,6 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Choose Title" = "Choose Title";
 
-/* Contract Picker: title */
-"Choose a Contract" = "Choose a Contract";
-
 /* Buddy Picker: alert shown when both instances of a buddy are in use */
 "Choose a weapon to take %@ from." = "Choose a weapon to take %@ from.";
 
@@ -390,14 +371,8 @@ Playtime Stats: section */
 /* Skin Details: section */
 "Color Variants" = "Color Variants";
 
-/* Contract Picker */
-"Completed" = "Completed";
-
 /* Storage Management: title for alert to confirm deleting some matches */
 "Confirm Delete" = "Confirm Delete";
-
-/* Missions Box */
-"Contract complete!" = "Contract complete!";
 
 /* Request Log: button to copy the request's body/contents (accessibility label) */
 "Copy Body" = "Copy Body";
@@ -462,8 +437,8 @@ Playtime Stats: section */
 /* Missions Widget */
 "Daily" = "Daily";
 
-/* Missions Box: header */
-"Daily Missions" = "Daily Missions";
+/* No comment provided by engineer. */
+"Daily Checkpoints" = "Daily Checkpoints";
 
 /* Store */
 "Daily Offers" = "Daily Offers";
@@ -473,6 +448,9 @@ Playtime Stats: section */
 
 /* App Theme */
 "Dark Mode" = "Dark Mode";
+
+/* App Icon Name */
+"Dark Rainbow" = "Dark Rainbow";
 
 /* Hit Distribution Stats (Key in .stringsdict) */
 "Data from %lld game(s) (%lld skipped lacking data)" = "Data from %lld game(s) (%lld skipped lacking data)";
@@ -599,9 +577,6 @@ YOUR BUG REPORT HERE
 /* No comment provided by engineer. */
 "Force Refresh Widgets" = "Force Refresh Widgets";
 
-/* Contract Picker */
-"Free Agent" = "Free Agent";
-
 /* Storage Management: button to free up a certain amount of space */
 "Free up these %@" = "Free up these %@";
 
@@ -626,8 +601,8 @@ YOUR BUG REPORT HERE
 /* Stats: date grouping size picker */
 "Group by" = "Group by";
 
-/* Weapon Reference: stats
-Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Head" = "Head";
 
 /* No comment provided by engineer. */
@@ -696,15 +671,12 @@ If you've encountered a bug or have some feedback, I'm always happy to hear it o
 /* Asset Management: this row shows the language of the current assets */
 "Language" = "Language";
 
-/* Weapon Reference: stats
-Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Legs" = "Legs";
 
 /* Bookmark/Player List: player level */
 "Level %lld" = "Level %lld";
-
-/* Contract Progress Bar */
-"Level %lld / %lld" = "Level %lld / %lld";
 
 /* No comment provided by engineer. */
 "Lifetime Peak" = "Lifetime Peak";
@@ -824,9 +796,6 @@ If you don't know your username or don't have one, you can fix that at [account.
 /* Asset Management */
 "Missing assets!" = "Missing assets!";
 
-/* Missions Box */
-"Missing progress for contract!" = "Missing progress for contract!";
-
 /* No comment provided by engineer. */
 "Missing season data!" = "Missing season data!";
 
@@ -865,9 +834,6 @@ If you don't know your username or don't have one, you can fix that at [account.
 
 /* Gun Customizer: shown when a weapon has no buddy active */
 "No buddy selected!" = "No buddy selected!";
-
-/* Missions Box */
-"No contract active!" = "No contract active!";
 
 /* Win Rate Stats: by map */
 "No data" = "No data";
@@ -1124,8 +1090,8 @@ Request Log: title */
 /* No comment provided by engineer. */
 "Side" = "Side";
 
-/* Login Form: button
-Account Settings: button */
+/* Account Settings: button
+Login Form: button */
 "Sign In" = "Sign In";
 
 /* Login Form */
@@ -1200,9 +1166,6 @@ Account Settings: button */
 /* Pro Store */
 "Support Further Development!" = "Support Further Development!";
 
-/* Missions Box: button */
-"Switch Contract" = "Switch Contract";
-
 /* Login Form: is this safe? */
 "TL;DR: you'll have to take my word for it, but Riot doesn't seem to mind." = "TL;DR: you'll have to take my word for it, but Riot doesn't seem to mind.";
 
@@ -1242,8 +1205,8 @@ Account Settings: button */
 /* Stats: match loading */
 "To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!";
 
-/* Hit Distribution Stats: region
-Win Rate Stats: side name */
+/* Win Rate Stats: side name
+Hit Distribution Stats: region */
 "Total" = "Total";
 
 /* No comment provided by engineer. */
@@ -1260,9 +1223,6 @@ Win Rate Stats: side name */
 
 /* Request Log */
 "URL" = "URL";
-
-/* Missions Box: header, shown when a mission is not daily or weekly (should not happen unless Riot changes something) */
-"Uncategorized Missions" = "Uncategorized Missions";
 
 /* Shown when a match does not match the filter and its details have not been fetched. */
 "Unfetched" = "Unfetched";
@@ -1334,9 +1294,6 @@ Round Details: killed by unknown/unspecified weapon */
 
 /* No comment provided by engineer. */
 "Unknown bundle!" = "Unknown bundle!";
-
-/* Missions Box */
-"Unknown contract!" = "Unknown contract!";
 
 /* Store Bundle Details: should never show, but if Riot adds a new kind of item to a bundle, this would show */
 "Unknown item of type %@" = "Unknown item of type %@";
