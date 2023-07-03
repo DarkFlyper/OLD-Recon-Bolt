@@ -257,6 +257,12 @@ Playtime Stats: section */
 /* Weapon Reference */
 "Category" = "Kategori";
 
+/* App Icon Description: pride */
+"Celebrate LGBTQ Pride month with a colorful look! (Free during June)" = "Rayakan bulan LGBTQ dengan tampilan penuh warna! (Gratis selama di bulan Juni)";
+
+/* App Icon Description: pride */
+"Celebrate LGBTQ Pride month, but in dark!" = "Rayakan bulan LGBTQ, di dalam kegelapan!";
+
 /* No comment provided by engineer. */
 "Change Buddy" = "Ubah Buddy";
 
@@ -365,6 +371,9 @@ Playtime Stats: section */
 /* Missions Widget */
 "Daily" = "Harian";
 
+/* No comment provided by engineer. */
+"Daily Checkpoints" = "Checkpoint Harian";
+
 /* Store */
 "Daily Offers" = "Penawaran Harian";
 
@@ -373,6 +382,9 @@ Playtime Stats: section */
 
 /* App Theme */
 "Dark Mode" = "Mode Gelap";
+
+/* App Icon Name */
+"Dark Rainbow" = "Pelangi di dalam Kegelapan";
 
 /* Stats: match loading */
 "Data going back to %@" = "Mengembalikan data ke %@";
