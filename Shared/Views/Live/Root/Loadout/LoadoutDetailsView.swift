@@ -120,6 +120,7 @@ private struct LoadoutCustomizer: View {
 				} label: {
 					sprayIcon(for: slot)
 						.frame(width: sprayCellSize, height: sprayCellSize)
+						.mask(RoundedRectangle(cornerRadius: 16, style: .continuous))
 						.position(center + CGVector(angle: angle.radians, length: (circleRadius + innerRadius) / 2))
 						.contentShape(path)
 						.background {
