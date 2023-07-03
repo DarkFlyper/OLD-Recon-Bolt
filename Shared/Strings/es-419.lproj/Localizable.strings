@@ -68,10 +68,6 @@
 /* Time Formatting: minutes, seconds, & milliseconds (used in round details view) */
 "%lld:%@.%@" = "%lld:%@.%@";
 
-/* Contract Progress Bar
-Missions Box */
-"%lld / %lld XP" = "%lld/%lld XP";
-
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
 "(%lld – %lld)" = "(%lld - %lld)";
 
@@ -113,17 +109,14 @@ Sin embargo, las coincidencias competitivas después de tus colocaciones pueden 
 /* No comment provided by engineer. */
 "About Recon Bolt" = "Sobre Recon Bolt";
 
+/* Store: accessory section */
+"Accessories" = "Accesorios";
+
+/* Store: Accessory List: title */
+"Accessory Store" = "Tienda de accesorios";
+
 /* Settings: section */
 "Accounts" = "Cuentas";
-
-/* Contract Picker: button */
-"Activate" = "Activar";
-
-/* Contract Picker */
-"Active" = "Activo";
-
-/* Missions Box: header */
-"Active Contract" = "Contrato activo";
 
 /* Match List: accessibility label */
 "Add Bookmark" = "Añadir a Favoritos";
@@ -142,12 +135,6 @@ Sin embargo, las coincidencias competitivas después de tus colocaciones pueden 
 
 /* No comment provided by engineer. */
 "Agent Select" = "Seleccionar agente";
-
-/* Contract Picker */
-"Agent Unlockable" = "Agente para desbloquear";
-
-/* Contract Picker */
-"Agent Unlocked" = "Agente desbloqueado";
 
 /* Statistics filter: button */
 "Agents" = "Agentes";
@@ -215,6 +202,9 @@ Sin embargo, las coincidencias competitivas después de tus colocaciones pueden 
 /* Settings: toggle */
 "Automatically Sign Back In" = "Iniciar sesión automáticamente";
 
+/* Bookmark/Player List: toggle */
+"Automatically Update Ranks" = "Actualizar automáticamente los rangos";
+
 /* Hit Distribution Stats: average HS% */
 "Average: %@" = "Media: %@";
 
@@ -224,8 +214,8 @@ Sin embargo, las coincidencias competitivas después de tus colocaciones pueden 
 /* Request Log: shown for bodies that are not decodable to text */
 "Binary Data" = "Data en binario";
 
-/* Weapon Reference: stats
-Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Body" = "Cuerpo";
 
 /* Bookmark/Player List: section */
@@ -272,7 +262,10 @@ Playtime Stats: section */
 "Category" = "Categoría";
 
 /* App Icon Description: pride */
-"Celebrate LGBTQ Pride month with a colorful look!" = "¡Celebra el mes del Orgullo LGBTQ con un estilo lleno de color!";
+"Celebrate LGBTQ Pride month with a colorful look! (Free during June)" = "¡Celebra el mes del Orgullo LGBTQ con un estilo colorido! (Gratis durante el mes de junio)";
+
+/* App Icon Description: pride */
+"Celebrate LGBTQ Pride month, but in dark!" = "Celebra el mes del Orgullo LGBTQ, ¡ahora con un aspecto oscuro!";
 
 /* No comment provided by engineer. */
 "Change Buddy" = "Cambiar amuleto";
@@ -310,9 +303,6 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Choose Title" = "Elige título";
 
-/* Contract Picker: title */
-"Choose a Contract" = "Elige un contrato";
-
 /* Buddy Picker: alert shown when both instances of a buddy are in use */
 "Choose a weapon to take %@ from." = "Elige un arma para tomar %@.";
 
@@ -322,14 +312,8 @@ Playtime Stats: section */
 /* Skin Details: section */
 "Color Variants" = "Variantes de color";
 
-/* Contract Picker */
-"Completed" = "Completado";
-
 /* Storage Management: title for alert to confirm deleting some matches */
 "Confirm Delete" = "Confirmar eliminación";
-
-/* Missions Box */
-"Contract complete!" = "¡Contrato completado!";
 
 /* Request Log: button to copy the request's body/contents (accessibility label) */
 "Copy Body" = "Copiar cuerpo";
@@ -391,8 +375,8 @@ Playtime Stats: section */
 /* Missions Widget */
 "Daily" = "Diario";
 
-/* Missions Box: header */
-"Daily Missions" = "Misiones diarias";
+/* No comment provided by engineer. */
+"Daily Checkpoints" = "Puntos de control diarios";
 
 /* Store */
 "Daily Offers" = "Ofertas diarias";
@@ -402,6 +386,9 @@ Playtime Stats: section */
 
 /* App Theme */
 "Dark Mode" = "Oscuro";
+
+/* App Icon Name */
+"Dark Rainbow" = "Arco iris oscuro";
 
 /* Stats: match loading */
 "Data going back to %@" = "Los datos vuelven a %@";
@@ -522,9 +509,6 @@ EL REPORTE DEL BUG VA AQUÍ
 /* No comment provided by engineer. */
 "Force Refresh Widgets" = "Forzar reinicio de los Widgets";
 
-/* Contract Picker */
-"Free Agent" = "Agente gratuito";
-
 /* Storage Management: button to free up a certain amount of space */
 "Free up these %@" = "Liberar %@";
 
@@ -549,8 +533,8 @@ EL REPORTE DEL BUG VA AQUÍ
 /* Stats: date grouping size picker */
 "Group by" = "Ordenar por";
 
-/* Weapon Reference: stats
-Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Head" = "Cabeza";
 
 /* No comment provided by engineer. */
@@ -616,15 +600,12 @@ Si has encontrado un error o tienes algún comentario, siempre estoy encantado d
 /* Asset Management: this row shows the language of the current assets */
 "Language" = "Idioma";
 
-/* Weapon Reference: stats
-Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Legs" = "Piernas";
 
 /* Bookmark/Player List: player level */
 "Level %lld" = "Nivel %lld";
-
-/* Contract Progress Bar */
-"Level %lld / %lld" = "Nivel %lld / %lld";
 
 /* No comment provided by engineer. */
 "Lifetime Peak" = "Pico máximo";
@@ -741,9 +722,6 @@ Si no sabes tu nombre de usuario o no tienes uno, puedes arreglarlo en [account.
 /* Asset Management */
 "Missing assets!" = "¡Archivos incompletos!";
 
-/* Missions Box */
-"Missing progress for contract!" = "¡Falta progreso para el contrato!";
-
 /* No comment provided by engineer. */
 "Missing season data!" = "¡Faltan datos de la temporada!";
 
@@ -782,9 +760,6 @@ Si no sabes tu nombre de usuario o no tienes uno, puedes arreglarlo en [account.
 
 /* Gun Customizer: shown when a weapon has no buddy active */
 "No buddy selected!" = "¡Ningún amuleto seleccionado!";
-
-/* Missions Box */
-"No contract active!" = "¡Ningún contrato activo!";
 
 /* Win Rate Stats: by map */
 "No data" = "Sin datos";
@@ -1029,8 +1004,8 @@ Request Log: title */
 /* App Icon Description: pro blue */
 "Show off your pro status with an exclusive icon!" = "¡Demuestra que eres pro con un icono exclusivo!";
 
-/* Login Form: button
-Account Settings: button */
+/* Account Settings: button
+Login Form: button */
 "Sign In" = "Registrate";
 
 /* Login Form */
@@ -1105,9 +1080,6 @@ Account Settings: button */
 /* Pro Store */
 "Support Further Development!" = "¡Apoya el desarrollo!";
 
-/* Missions Box: button */
-"Switch Contract" = "Cambiar Contrato";
-
 /* Login Form: is this safe? */
 "TL;DR: you'll have to take my word for it, but Riot doesn't seem to mind." = "Resumen: tendrás que creerme, pero a Riot no parece importarle.";
 
@@ -1132,6 +1104,9 @@ Account Settings: button */
 /* No comment provided by engineer. */
 "These are the last %lld requests sent by the app, along with their responses." = "Estas son las últimas %lld solicitudes enviadas por la aplicación, junto con sus respuestas.";
 
+/* Bookmark/Player List: toggle description */
+"This can cause a lot of requests. If you have many bookmarks or are often hitting the rate limit, you might prefer to turn this off." = "Esto puede provocar muchas peticiones. Si tienes muchos marcadores o alcanzas a menudo el límite de velocidad, puede que prefieras desactivar esta opción.";
+
 /* Statistics error for iOS <16 */
 "This feature requires iOS 16 or newer." = "La función requiere de iOS 16 o superior.";
 
@@ -1141,8 +1116,8 @@ Account Settings: button */
 /* Stats: match loading */
 "To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "Para recopilar estadísticas, primero tenemos que cargar partidas para procesarlas. Ten en cuenta que grandes cantidades pueden llevar mucho tiempo, ¡sobre todo si se descargan por primera vez!";
 
-/* Hit Distribution Stats: region
-Win Rate Stats: side name */
+/* Win Rate Stats: side name
+Hit Distribution Stats: region */
 "Total" = "Total";
 
 /* No comment provided by engineer. */
@@ -1159,9 +1134,6 @@ Win Rate Stats: side name */
 
 /* Request Log */
 "URL" = "URL";
-
-/* Missions Box: header, shown when a mission is not daily or weekly (should not happen unless Riot changes something) */
-"Uncategorized Missions" = "Misiones sin categoría";
 
 /* Shown when a match does not match the filter and its details have not been fetched. */
 "Unfetched" = "Sin cargar";
@@ -1233,9 +1205,6 @@ Round Details: killed by unknown/unspecified weapon */
 
 /* No comment provided by engineer. */
 "Unknown bundle!" = "¡Amuleto desconocido!";
-
-/* Missions Box */
-"Unknown contract!" = "¡Contrato desconocido!";
 
 /* Store Bundle Details: should never show, but if Riot adds a new kind of item to a bundle, this would show */
 "Unknown item of type %@" = "Elemento desconocido de tipo %@";

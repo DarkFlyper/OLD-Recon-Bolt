@@ -74,10 +74,6 @@
 /* Time Formatting: minutes, seconds, & milliseconds (used in round details view) */
 "%lld:%@.%@" = "%lld:%@.%@";
 
-/* Contract Progress Bar
-Missions Box */
-"%lld / %lld XP" = "%lld/%lldXP";
-
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
 "(%lld – %lld)" = "(%lld – %lld)";
 
@@ -122,15 +118,6 @@ Competitive matches after your placements can be identified without their detail
 /* Settings: section */
 "Accounts" = "الحسابات";
 
-/* Contract Picker: button */
-"Activate" = "فعّل";
-
-/* Contract Picker */
-"Active" = "مفُعّل";
-
-/* Missions Box: header */
-"Active Contract" = "عقد مفُعّل";
-
 /* Match List: accessibility label */
 "Add Bookmark" = "أضف إشارة مرجعية";
 
@@ -148,12 +135,6 @@ Competitive matches after your placements can be identified without their detail
 
 /* No comment provided by engineer. */
 "Agent Select" = "اختيار العميل";
-
-/* Contract Picker */
-"Agent Unlockable" = "عميل يمكن تفعيله";
-
-/* Contract Picker */
-"Agent Unlocked" = "عميل مفعّل";
 
 /* Statistics filter: button */
 "Agents" = "العملاء";
@@ -224,8 +205,8 @@ Competitive matches after your placements can be identified without their detail
 /* Request Log: shown for bodies that are not decodable to text */
 "Binary Data" = "البيانات الثنائية";
 
-/* Weapon Reference: stats
-Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Body" = "طلقات الجسم";
 
 /* Bookmark/Player List: section */
@@ -307,9 +288,6 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Choose Title" = "اختر لقب";
 
-/* Contract Picker: title */
-"Choose a Contract" = "اختر عقد";
-
 /* Buddy Picker: alert shown when both instances of a buddy are in use */
 "Choose a weapon to take %@ from." = "اختر سلاح لتأخذ %@ منه";
 
@@ -319,14 +297,8 @@ Playtime Stats: section */
 /* Skin Details: section */
 "Color Variants" = "متغيرات الألوان";
 
-/* Contract Picker */
-"Completed" = "اكتمل";
-
 /* Storage Management: title for alert to confirm deleting some matches */
 "Confirm Delete" = "تأكيد الحذف";
-
-/* Missions Box */
-"Contract complete!" = "اكتمل العقد!";
 
 /* Request Log: button to copy the request's body/contents (accessibility label) */
 "Copy Body" = "نسخ المحتوى";
@@ -387,9 +359,6 @@ Playtime Stats: section */
 
 /* Missions Widget */
 "Daily" = "يومي";
-
-/* Missions Box: header */
-"Daily Missions" = "المهام اليومية";
 
 /* Store */
 "Daily Offers" = "عروض يومية";
@@ -519,9 +488,6 @@ Stats: error details */
 /* No comment provided by engineer. */
 "Force Refresh Widgets" = "إعادة تحميل الودجات بالقوة";
 
-/* Contract Picker */
-"Free Agent" = "عميل مجاني";
-
 /* Storage Management: button to free up a certain amount of space */
 "Free up these %@" = "قم بتفضية هذه %@";
 
@@ -546,8 +512,8 @@ Stats: error details */
 /* Stats: date grouping size picker */
 "Group by" = "جمّع حسب";
 
-/* Weapon Reference: stats
-Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Head" = "ضربة الرأس";
 
 /* No comment provided by engineer. */
@@ -613,15 +579,12 @@ If you've encountered a bug or have some feedback, I'm always happy to hear it o
 /* Asset Management: this row shows the language of the current assets */
 "Language" = "اللغة";
 
-/* Weapon Reference: stats
-Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Legs" = "ضربات الارجل";
 
 /* Bookmark/Player List: player level */
 "Level %lld" = "مستوى الحساب %lld";
-
-/* Contract Progress Bar */
-"Level %lld / %lld" = "مستوى %lld / %lld";
 
 /* No comment provided by engineer. */
 "Lifetime Peak" = "أعلى مرتبة على الإطلاق";
@@ -738,9 +701,6 @@ If you don't know your username or don't have one, you can fix that at [account.
 /* Asset Management */
 "Missing assets!" = "موارد مفقودة!";
 
-/* Missions Box */
-"Missing progress for contract!" = "تقدم العقد مفقود!";
-
 /* No comment provided by engineer. */
 "Missing season data!" = "معلومات الموسم مفقودة!";
 
@@ -779,9 +739,6 @@ If you don't know your username or don't have one, you can fix that at [account.
 
 /* Gun Customizer: shown when a weapon has no buddy active */
 "No buddy selected!" = "لم يتم اختيار ملحق!";
-
-/* Missions Box */
-"No contract active!" = "لم يتم تفعيل عقد!";
 
 /* Win Rate Stats: by map */
 "No data" = "لا توجد معلومات";
@@ -1023,8 +980,8 @@ Request Log: title */
 /* App Icon Description: pro blue */
 "Show off your pro status with an exclusive icon!" = "تباهر بحالتك Pro بأستخدام ايقونة حصرية للتطبيق!";
 
-/* Login Form: button
-Account Settings: button */
+/* Account Settings: button
+Login Form: button */
 "Sign In" = "سجّل الدخول";
 
 /* Login Form */
@@ -1090,9 +1047,6 @@ Account Settings: button */
 /* Pro Store */
 "Support Further Development!" = "ادعم التطوير على المدى الطويل!";
 
-/* Missions Box: button */
-"Switch Contract" = "بدّل العقد";
-
 /* Login Form: is this safe? */
 "TL;DR: you'll have to take my word for it, but Riot doesn't seem to mind." = "عليك أن تأخذ كلامي من أجل ذلك ، لكن يبدو أن شركة Riot لا تمانع.";
 
@@ -1126,8 +1080,8 @@ Account Settings: button */
 /* Stats: match loading */
 "To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "لجمع الإحصائيات ، نحتاج أولاً إلى تحميل المباريات وتفاصيلها. لاحظ أن الكميات الكبيرة يمكن أن تستغرق وقتًا طويلاً ، خاصة عند التنزيل لأول مرة!";
 
-/* Hit Distribution Stats: region
-Win Rate Stats: side name */
+/* Win Rate Stats: side name
+Hit Distribution Stats: region */
 "Total" = "المجموع";
 
 /* No comment provided by engineer. */
@@ -1144,9 +1098,6 @@ Win Rate Stats: side name */
 
 /* Request Log */
 "URL" = "الموقع";
-
-/* Missions Box: header, shown when a mission is not daily or weekly (should not happen unless Riot changes something) */
-"Uncategorized Missions" = "مهام غير مصنّفة";
 
 /* Shown when a match does not match the filter and its details have not been fetched. */
 "Unfetched" = "لم يتم تحضيره";
@@ -1207,9 +1158,6 @@ Round Details: killed by unknown/unspecified weapon */
 
 /* No comment provided by engineer. */
 "Unknown bundle!" = "حزمة غير معروفة!";
-
-/* Missions Box */
-"Unknown contract!" = "عقد غير معروف!";
 
 /* Store Bundle Details: should never show, but if Riot adds a new kind of item to a bundle, this would show */
 "Unknown item of type %@" = "عنصر غير معروف من النوع %@";

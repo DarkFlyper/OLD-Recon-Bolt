@@ -44,10 +44,6 @@
 /* Time Formatting: minutes, seconds, & milliseconds (used in round details view) */
 "%lld:%@.%@" = "%lld:%@.%@";
 
-/* Contract Progress Bar
-Missions Box */
-"%lld / %lld XP" = "%lld/%lld XP";
-
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
 "(%lld – %lld)" = "(%lld - %lld)";
 
@@ -91,15 +87,6 @@ Konkurrerande matchningar efter dina placeringar kan dock identifieras utan dera
 
 /* Settings: section */
 "Accounts" = "Konton";
-
-/* Contract Picker: button */
-"Activate" = "Aktivera";
-
-/* Contract Picker */
-"Active" = "Aktiv";
-
-/* Missions Box: header */
-"Active Contract" = "Aktivt kontrakt";
 
 /* Match List: accessibility label */
 "Add Bookmark" = "Lägg till som bokmärke";
@@ -185,8 +172,8 @@ Konkurrerande matchningar efter dina placeringar kan dock identifieras utan dera
 /* Request Log: shown for bodies that are not decodable to text */
 "Binary Data" = "Binära data";
 
-/* Weapon Reference: stats
-Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Body" = "Body";
 
 /* Bookmark/Player List: section */
@@ -268,9 +255,6 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Choose Title" = "Välj titel";
 
-/* Contract Picker: title */
-"Choose a Contract" = "Välj ett kontrakt";
-
 /* Buddy Picker: alert shown when both instances of a buddy are in use */
 "Choose a weapon to take %@ from." = "Välj ett vapen att ta bort %@ från.";
 
@@ -280,14 +264,8 @@ Playtime Stats: section */
 /* Skin Details: section */
 "Color Variants" = "Färgvarianter";
 
-/* Contract Picker */
-"Completed" = "Slutfört";
-
 /* Storage Management: title for alert to confirm deleting some matches */
 "Confirm Delete" = "Bekräfta att radera";
-
-/* Missions Box */
-"Contract complete!" = "Kontraktet är klart!";
 
 /* Request Log: button to copy the request's body/contents (accessibility label) */
 "Copy Body" = "Kopiera kroppen";
@@ -348,9 +326,6 @@ Playtime Stats: section */
 
 /* Missions Widget */
 "Daily" = "Daglig";
-
-/* Missions Box: header */
-"Daily Missions" = "Dagliga uppdrag";
 
 /* Store */
 "Daily Offers" = "Daglig Butik";
@@ -480,9 +455,6 @@ DIN FELRAPPORT HÄR
 /* No comment provided by engineer. */
 "Force Refresh Widgets" = "Tvinga uppdatering av widgetar";
 
-/* Contract Picker */
-"Free Agent" = "Fri agent";
-
 /* Storage Management: button to free up a certain amount of space */
 "Free up these %@" = "Frigör dessa %@";
 
@@ -522,15 +494,12 @@ DIN FELRAPPORT HÄR
 /* Asset Management: this row shows the language of the current assets */
 "Language" = "Språk";
 
-/* Weapon Reference: stats
-Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Legs" = "Ben";
 
 /* Bookmark/Player List: player level */
 "Level %lld" = "Nivå %lld";
-
-/* Contract Progress Bar */
-"Level %lld / %lld" = "Nivå %lld/%lld";
 
 /* No comment provided by engineer. */
 "Lifetime Peak" = "Livstid Peak";
@@ -635,9 +604,6 @@ Om du inte vet ditt användarnamn eller inte har något kan du hitta det på [ac
 /* Asset Management */
 "Missing assets!" = "Saknade tillgångar!";
 
-/* Missions Box */
-"Missing progress for contract!" = "Saknar framsteg för kontraktet!";
-
 /* No comment provided by engineer. */
 "Missing season data!" = "Uppgifter om säsong saknas!";
 
@@ -673,9 +639,6 @@ Om du inte vet ditt användarnamn eller inte har något kan du hitta det på [ac
 
 /* Gun Customizer: shown when a weapon has no buddy active */
 "No buddy selected!" = "Ingen buddy vald!";
-
-/* Missions Box */
-"No contract active!" = "Inget kontrakt är aktivt!";
 
 /* Win Rate Stats: by map */
 "No data" = "Ingen data";
@@ -835,8 +798,8 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Show details when found" = "Visa info när du hittar game";
 
-/* Login Form: button
-Account Settings: button */
+/* Account Settings: button
+Login Form: button */
 "Sign In" = "Logga in";
 
 /* Login Form */
@@ -875,9 +838,6 @@ Account Settings: button */
 /* No comment provided by engineer. */
 "Store not loaded!" = "Butiken är inte laddad!";
 
-/* Missions Box: button */
-"Switch Contract" = "Byt kontrakt";
-
 /* Login Form: is this safe? */
 "TL;DR: you'll have to take my word for it, but Riot doesn't seem to mind." = "TL;DR: Du får tro mig, men Riot verkar inte ha något emot det.";
 
@@ -905,8 +865,8 @@ Account Settings: button */
 /* Stats: match loading */
 "To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "För att samla in statistik måste vi först ladda in matcher för att bearbeta dem. Observera att stora mängder kan ta lång tid, särskilt när du laddar ner för första gången!";
 
-/* Hit Distribution Stats: region
-Win Rate Stats: side name */
+/* Win Rate Stats: side name
+Hit Distribution Stats: region */
 "Total" = "Totalt";
 
 /* No comment provided by engineer. */
@@ -920,9 +880,6 @@ Win Rate Stats: side name */
 
 /* No comment provided by engineer. */
 "Twitter @juliand665" = "Twitter @juliand665";
-
-/* Missions Box: header, shown when a mission is not daily or weekly (should not happen unless Riot changes something) */
-"Uncategorized Missions" = "Okategoriserade uppdrag";
 
 /* Shown when a match does not match the filter and its details have not been fetched. */
 "Unfetched" = "Unfetched";
@@ -954,9 +911,6 @@ Round Details: killed by unknown/unspecified weapon */
 
 /* No comment provided by engineer. */
 "Unknown bundle!" = "Okänt bundle!";
-
-/* Missions Box */
-"Unknown contract!" = "Okänt kontrakt!";
 
 /* No comment provided by engineer. */
 "Unknown mission!" = "Okänt uppdrag!";
