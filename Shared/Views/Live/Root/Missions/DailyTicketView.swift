@@ -22,15 +22,14 @@ struct DailyTicketView: View {
 	
 	func marker(for milestone: DailyTicketProgress.Milestone) -> some View {
 		let maxSize = 32.0
-		let thickness = (maxSize - 6) / 4 / 2
+		let layerThickness = maxSize / 4 / 2
 		func size(for index: Int) -> CGFloat {
-			6 + 2 * (CGFloat(index) * thickness)
+			2 * CGFloat(index) * layerThickness
 		}
 		
 		return ZStack {
 			let slot = Circle()
-				.strokeBorder(.faded, lineWidth: thickness)
-			slot.frame(size: size(for: 0))
+				.strokeBorder(.faded, lineWidth: layerThickness)
 			slot.frame(size: size(for: 2))
 			slot.frame(size: size(for: 4))
 			
