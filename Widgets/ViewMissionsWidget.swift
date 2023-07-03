@@ -49,7 +49,6 @@ struct MissionListView: TimelineEntryView {
 		.frame(maxWidth: .infinity, maxHeight: .infinity)
 		.padding()
 		.background(Color.groupedBackground)
-		.foregroundStyle(.primary, .secondary, Color.primary.opacity(0.1))
 	}
 	
 	@ViewBuilder
@@ -164,8 +163,7 @@ struct MissionView: View {
 							CircularProgressLayer(end: fractionComplete, color: .accentColor)
 						} base: {
 							Rectangle()
-								.foregroundStyle(.tertiary)
-								.opacity(0.75) // somehow this looks stronger than the others
+								.foregroundStyle(.faded)
 						}
 					}
 				} else {

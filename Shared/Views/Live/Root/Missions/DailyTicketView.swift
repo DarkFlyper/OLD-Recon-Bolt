@@ -1,6 +1,7 @@
 import SwiftUI
 import Collections
 import ValorantAPI
+import HandyOperators
 
 struct DailyTicketView: View {
 	var milestones: [DailyTicketProgress.Milestone]
@@ -12,7 +13,7 @@ struct DailyTicketView: View {
 				if index < milestones.count - 1 {
 					Capsule()
 						.frame(height: 1)
-						.accentedOrFaded(shouldAccent: milestone.isComplete)
+						.foregroundStyle(milestone.isComplete ? .accented : .faded)
 						.opacity(0.75)
 				}
 			}
@@ -20,22 +21,23 @@ struct DailyTicketView: View {
 	}
 	
 	func marker(for milestone: DailyTicketProgress.Milestone) -> some View {
-		ZStack {
-			// target: size 32 when maxed
-			let thickness = 10.0 / 3
-			let spacing = 1.0
-			ForEach(0..<4) { index in
-				let size: CGFloat = 6 + 2 * (CGFloat(index) * (thickness + spacing))
-				let isComplete = milestone.progress > index
-				Group {
-					if isComplete {
-						Circle()
-					} else {
-						Circle().strokeBorder(lineWidth: thickness)
-					}
-				}
-				.accentedOrFaded(shouldAccent: isComplete)
-				.frame(width: size, height: size)
+		let maxSize = 32.0
+		let thickness = (maxSize - 6) / 4 / 2
+		func size(for index: Int) -> CGFloat {
+			6 + 2 * (CGFloat(index) * thickness)
+		}
+		
+		return ZStack {
+			let slot = Circle()
+				.strokeBorder(.faded, lineWidth: thickness)
+			slot.frame(size: size(for: 0))
+			slot.frame(size: size(for: 2))
+			slot.frame(size: size(for: 4))
+			
+			if milestone.progress > 0 {
+				Circle()
+					.frame(size: size(for: milestone.progress))
+					.foregroundStyle(.accentColor)
 			}
 			
 			if milestone.isComplete {
@@ -46,8 +48,17 @@ struct DailyTicketView: View {
 	}
 }
 
-extension View {
-	func accentedOrFaded(shouldAccent: Bool) -> some View {
-		foregroundStyle(shouldAccent ? AnyShapeStyle(.accentColor) : .init(.tertiary))
+struct DailyTicketView_Previews: PreviewProvider {
+	static func milestone(progress: Int) -> DailyTicketProgress.Milestone {
+		.zero <- { $0.progress = progress }
+	}
+	
+	static var previews: some View {
+		VStack(spacing: 20) {
+			DailyTicketView(milestones: [4, 3, 2, 1].map(milestone(progress:)))
+			DailyTicketView(milestones: [4, 1, 0, 0].map(milestone(progress:)))
+		}
+		.padding()
+		.foregroundStyle(.primary, .secondary, Color.primary.opacity(0.1))
 	}
 }

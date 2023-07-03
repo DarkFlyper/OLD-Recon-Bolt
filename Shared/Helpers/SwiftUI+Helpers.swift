@@ -25,6 +25,12 @@ extension Color {
 }
 
 extension View {
+	func frame(size: CGFloat, alignment: Alignment = .center) -> some View {
+		frame(width: size, height: size, alignment: alignment)
+	}
+}
+
+extension View {
 	@ViewBuilder
 	func withToolbar(allowLargeTitles: Bool = true) -> some View {
 		NavigationView {
@@ -158,11 +164,6 @@ extension View {
 	func placeholder(`if` isPlaceholder: Bool) -> some View {
 		redacted(reason: isPlaceholder ? .placeholder : [])
 	}
-}
-
-extension ShapeStyle where Self == _BlendModeShapeStyle<Color> {
-	/// knocks out destination—for best results, combine with ``compositingGroup()``
-	static var negative: Self { .init(style: .white, blendMode: .destinationOut) }
 }
 
 /// button that looks like a ``NavigationLink``

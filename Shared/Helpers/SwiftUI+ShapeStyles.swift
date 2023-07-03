@@ -30,3 +30,27 @@ extension Color {
 		return .init(CGColor(colorSpace: colorSpace, components: &components)!)
 	}
 }
+
+extension ShapeStyle where Self == _BlendModeShapeStyle<Color> {
+	/// knocks out destination—for best results, combine with ``compositingGroup()``
+	static var negative: Self { .init(style: .white, blendMode: .destinationOut) }
+}
+
+extension ShapeStyle where Self == _AccentedOrFadedForegroundStyle {
+	static var accented: Self { .init(isAccented: true) }
+	static var faded: Self { .init(isAccented: false) }
+}
+
+// same type so they can be combined via ternary
+struct _AccentedOrFadedForegroundStyle: ShapeStyle {
+	var isAccented: Bool
+	
+	func _apply(to shape: inout _ShapeStyle_Shape) {
+		if isAccented {
+			Color.accentColor._apply(to: &shape)
+		} else {
+			// quaternary would be perfect for this but for some reason it's more opaque in widgets specifically??
+			HierarchicalShapeStyle.primary.opacity(0.1)._apply(to: &shape)
+		}
+	}
+}
