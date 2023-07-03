@@ -53,10 +53,6 @@
 /* Time Formatting: minutes, seconds, & milliseconds (used in round details view) */
 "%lld:%@.%@" = "%lld:%@.%@";
 
-/* Contract Progress Bar
-Missions Box */
-"%lld / %lld XP" = "%lld/%lld XP";
-
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
 "(%lld – %lld)" = "(%lld – %lld)";
 
@@ -100,15 +96,6 @@ Competitive matches after your placements can be identified without their detail
 
 /* Settings: section */
 "Accounts" = "アカウント";
-
-/* Contract Picker: button */
-"Activate" = "変える";
-
-/* Contract Picker */
-"Active" = "今";
-
-/* Missions Box: header */
-"Active Contract" = "今の契約";
 
 /* Match List: accessibility label */
 "Add Bookmark" = "ブックマークする";
