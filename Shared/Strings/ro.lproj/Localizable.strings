@@ -258,6 +258,12 @@ Playtime Stats: section */
 /* Weapon Reference */
 "Category" = "Categorii";
 
+/* App Icon Description: pride */
+"Celebrate LGBTQ Pride month with a colorful look! (Free during June)" = "Sărbătoriți luna mândriei LGBTQ cu un look colorat! (Gratuit în luna iunie)";
+
+/* App Icon Description: pride */
+"Celebrate LGBTQ Pride month, but in dark!" = "Sărbătoriți luna mândriei LGBTQ, dar pe întuneric!";
+
 /* No comment provided by engineer. */
 "Change Buddy" = "Schimbă Buddy";
 
@@ -366,6 +372,9 @@ Playtime Stats: section */
 /* Missions Widget */
 "Daily" = "Zilnic";
 
+/* No comment provided by engineer. */
+"Daily Checkpoints" = "Puncte de control zilnice";
+
 /* Store */
 "Daily Offers" = "Oferte zilnice";
 
@@ -374,6 +383,9 @@ Playtime Stats: section */
 
 /* App Theme */
 "Dark Mode" = "Modul întunecat";
+
+/* App Icon Name */
+"Dark Rainbow" = "Curcubeu întunecat";
 
 /* Stats: match loading */
 "Data going back to %@" = "Date care se întorc la %@";
