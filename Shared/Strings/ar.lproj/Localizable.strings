@@ -115,6 +115,12 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "About Recon Bolt" = "بشأن Recon Bolt";
 
+/* Store: accessory section */
+"Accessories" = "ملحقات";
+
+/* Store: Accessory List: title */
+"Accessory Store" = "متجر الملحقات";
+
 /* Settings: section */
 "Accounts" = "الحسابات";
 
@@ -169,6 +175,9 @@ Competitive matches after your placements can be identified without their detail
 /* Settings: button */
 "App Icon" = "ايقونة التطبيق";
 
+/* Account Settings: title for alert to confirm signing out of all accounts—not always visible; iOS decides when to show this */
+"Are You Sure?" = "هل أنت متأكد؟";
+
 /* No comment provided by engineer. */
 "Are your assets outdated?" = "هل مواردك قديمة؟";
 
@@ -199,8 +208,14 @@ Competitive matches after your placements can be identified without their detail
 /* Settings: toggle */
 "Automatically Sign Back In" = "سجّل دخولي تلقائياً";
 
+/* Bookmark/Player List: toggle */
+"Automatically Update Ranks" = "حدّث المراتب تلقائيا";
+
 /* Hit Distribution Stats: average HS% */
 "Average: %@" = "على المعدل: %@";
+
+/* Pro Store: warning title */
+"Before you Buy" = "قبل ان تشتري";
 
 /* Request Log: shown for bodies that are not decodable to text */
 "Binary Data" = "البيانات الثنائية";
