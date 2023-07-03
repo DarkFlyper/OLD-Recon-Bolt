@@ -154,7 +154,9 @@ struct MissionView: View {
 		
 		var body: some View {
 			ZStack {
-				if !isComplete, let (progress, toComplete) = progress {
+				if isComplete {
+					Circle()
+				} else if let (progress, toComplete) = progress {
 					VStack(spacing: 4) {
 						let fractionComplete = CGFloat(progress) / CGFloat(toComplete)
 						CircularProgressView {
@@ -168,13 +170,14 @@ struct MissionView: View {
 				} else {
 					Circle()
 						.stroke(lineWidth: 2)
-						.foregroundColor(.accentColor)
 				}
 				
 				if isComplete {
 					Image(systemName: "checkmark")
+						.foregroundColor(.white)
 				}
 			}
+			.foregroundColor(.accentColor)
 			.frame(width: 32, height: 32)
 		}
 	}

@@ -12,7 +12,7 @@ struct DailyTicketView: View {
 				if index < milestones.count - 1 {
 					Capsule()
 						.frame(height: 1)
-						.accentedOrFaded(shouldAccent: milestone.wasRedeemed)
+						.accentedOrFaded(shouldAccent: milestone.isComplete)
 						.opacity(0.75)
 				}
 			}
@@ -21,18 +21,24 @@ struct DailyTicketView: View {
 	
 	func marker(for milestone: DailyTicketProgress.Milestone) -> some View {
 		ZStack {
-			let thickness = 3.0
+			// target: size 32 when maxed
+			let thickness = 10.0 / 3
 			let spacing = 1.0
 			ForEach(0..<4) { index in
-				let size: CGFloat = 5 + 2 * (CGFloat(index) * (thickness + spacing))
+				let size: CGFloat = 6 + 2 * (CGFloat(index) * (thickness + spacing))
 				let isComplete = milestone.progress > index
-				Circle()
-					.strokeBorder(lineWidth: thickness + (isComplete ? spacing : 0))
-					.frame(width: size, height: size)
-					.accentedOrFaded(shouldAccent: isComplete)
+				Group {
+					if isComplete {
+						Circle()
+					} else {
+						Circle().strokeBorder(lineWidth: thickness)
+					}
+				}
+				.accentedOrFaded(shouldAccent: isComplete)
+				.frame(width: size, height: size)
 			}
 			
-			if milestone.wasRedeemed {
+			if milestone.isComplete {
 				Image(systemName: "checkmark")
 					.foregroundColor(.white)
 			}
