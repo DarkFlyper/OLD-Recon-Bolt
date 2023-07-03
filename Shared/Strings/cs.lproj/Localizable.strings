@@ -65,10 +65,6 @@
 /* Time Formatting: minutes, seconds, & milliseconds (used in round details view) */
 "%lld:%@.%@" = "%lld:%@.%@";
 
-/* Contract Progress Bar
-Missions Box */
-"%lld / %lld XP" = "%lld / %lld XP";
-
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
 "(%lld – %lld)" = "(%lld - %lld)";
 
@@ -112,15 +108,6 @@ Competitive matches after your placements can be identified without their detail
 /* Settings: section */
 "Accounts" = "Účty";
 
-/* Contract Picker: button */
-"Activate" = "Aktivovat";
-
-/* Contract Picker */
-"Active" = "Aktivní";
-
-/* Missions Box: header */
-"Active Contract" = "Aktivní Kontrakt";
-
 /* Match List: accessibility label */
 "Add Bookmark" = "Přidat do oblíbených";
 
@@ -138,12 +125,6 @@ Competitive matches after your placements can be identified without their detail
 
 /* No comment provided by engineer. */
 "Agent Select" = "Výběr Agenta";
-
-/* Contract Picker */
-"Agent Unlockable" = "Odemykatelný Agent";
-
-/* Contract Picker */
-"Agent Unlocked" = "Agent Odemčen";
 
 /* Statistics filter: button */
 "Agents" = "Agenti";
@@ -220,8 +201,8 @@ Competitive matches after your placements can be identified without their detail
 /* Request Log: shown for bodies that are not decodable to text */
 "Binary Data" = "Binární data";
 
-/* Weapon Reference: stats
-Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Body" = "Tělo";
 
 /* Bookmark/Player List: section */
@@ -267,9 +248,6 @@ Playtime Stats: section */
 /* Weapon Reference */
 "Category" = "Kategorie";
 
-/* App Icon Description: pride */
-"Celebrate LGBTQ Pride month with a colorful look!" = "Oslavte měsíc LGBTQ s barevným vzhledem!";
-
 /* No comment provided by engineer. */
 "Change Buddy" = "Změnit Přívěšek";
 
@@ -306,9 +284,6 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Choose Title" = "Vybrat Titul";
 
-/* Contract Picker: title */
-"Choose a Contract" = "Vybrat kontrakt";
-
 /* Buddy Picker: alert shown when both instances of a buddy are in use */
 "Choose a weapon to take %@ from." = "Vyberte zbraň, ze které chcete vzít %@.";
 
@@ -318,14 +293,8 @@ Playtime Stats: section */
 /* Skin Details: section */
 "Color Variants" = "Barevné Varianty";
 
-/* Contract Picker */
-"Completed" = "Dokončen";
-
 /* Storage Management: title for alert to confirm deleting some matches */
 "Confirm Delete" = "Potvrdit Smazání";
-
-/* Missions Box */
-"Contract complete!" = "Kontrakt dokončen!";
 
 /* Request Log: button to copy the request's body/contents (accessibility label) */
 "Copy Body" = "Kopírovat Tělo";
@@ -386,9 +355,6 @@ Playtime Stats: section */
 
 /* Missions Widget */
 "Daily" = "Denní";
-
-/* Missions Box: header */
-"Daily Missions" = "Denní Úkoly";
 
 /* Store */
 "Daily Offers" = "Denní Nabídky";
@@ -518,9 +484,6 @@ VAŠE HLÁŠENÍ CHYBY ZDE
 /* No comment provided by engineer. */
 "Force Refresh Widgets" = "Vynutit obnovení widgetů";
 
-/* Contract Picker */
-"Free Agent" = "Agent Zdarma";
-
 /* Storage Management: button to free up a certain amount of space */
 "Free up these %@" = "Uvolnit tyto %@";
 
@@ -545,8 +508,8 @@ VAŠE HLÁŠENÍ CHYBY ZDE
 /* Stats: date grouping size picker */
 "Group by" = "Seskupit podle";
 
-/* Weapon Reference: stats
-Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Head" = "Hlava";
 
 /* No comment provided by engineer. */
@@ -612,15 +575,12 @@ Pokud jste narazili na chybu nebo máte nějakou zpětnou vazbu, vždy si ji rá
 /* Asset Management: this row shows the language of the current assets */
 "Language" = "Jazyk";
 
-/* Weapon Reference: stats
-Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Legs" = "Nohy";
 
 /* Bookmark/Player List: player level */
 "Level %lld" = "Úroveň %lld";
-
-/* Contract Progress Bar */
-"Level %lld / %lld" = "Úroveň %lld/%lld";
 
 /* No comment provided by engineer. */
 "Lifetime Peak" = "Nejvyšší Dosažený Rank";
@@ -737,9 +697,6 @@ Pokud své uživatelské jméno neznáte nebo ho nemáte, můžete jej zjistit n
 /* Asset Management */
 "Missing assets!" = "Chybí assety!";
 
-/* Missions Box */
-"Missing progress for contract!" = "Žádné data pro tento kontrakt!";
-
 /* No comment provided by engineer. */
 "Missing season data!" = "Chybějící data o actu!";
 
@@ -778,9 +735,6 @@ Pokud své uživatelské jméno neznáte nebo ho nemáte, můžete jej zjistit n
 
 /* Gun Customizer: shown when a weapon has no buddy active */
 "No buddy selected!" = "Žádný vybraný přívěšek!";
-
-/* Missions Box */
-"No contract active!" = "Žádný aktivní kontrakt!";
 
 /* Win Rate Stats: by map */
 "No data" = "Žádné data";
@@ -1025,8 +979,8 @@ Request Log: title */
 /* App Icon Description: pro blue */
 "Show off your pro status with an exclusive icon!" = "Pochlubte se svým statusem Pro s exkluzivní ikonou!";
 
-/* Login Form: button
-Account Settings: button */
+/* Account Settings: button
+Login Form: button */
 "Sign In" = "Přihlásit se";
 
 /* Login Form */
@@ -1101,9 +1055,6 @@ Account Settings: button */
 /* Pro Store */
 "Support Further Development!" = "Podpořte Budoucí Vývoj!";
 
-/* Missions Box: button */
-"Switch Contract" = "Změnit Kontrakt";
-
 /* Login Form: is this safe? */
 "TL;DR: you'll have to take my word for it, but Riot doesn't seem to mind." = "Budete mě muset vzít za slovo, ale Riotu to zřejmě nevadí.";
 
@@ -1137,8 +1088,8 @@ Account Settings: button */
 /* Stats: match loading */
 "To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "Chcete-li shromažďovat statistiky, musíte nejprve načíst zápasy ke zpracování. Upozorňujeme, že velké objemy mohou trvat dlouho, zejména při prvním nahrávání!";
 
-/* Hit Distribution Stats: region
-Win Rate Stats: side name */
+/* Win Rate Stats: side name
+Hit Distribution Stats: region */
 "Total" = "Celkem";
 
 /* No comment provided by engineer. */
@@ -1155,9 +1106,6 @@ Win Rate Stats: side name */
 
 /* Request Log */
 "URL" = "URL";
-
-/* Missions Box: header, shown when a mission is not daily or weekly (should not happen unless Riot changes something) */
-"Uncategorized Missions" = "Nezařazené úkoly";
 
 /* Shown when a match does not match the filter and its details have not been fetched. */
 "Unfetched" = "Není načten";
@@ -1229,9 +1177,6 @@ Round Details: killed by unknown/unspecified weapon */
 
 /* No comment provided by engineer. */
 "Unknown bundle!" = "Neznámá kolekce!";
-
-/* Missions Box */
-"Unknown contract!" = "Neznámý kontrakt!";
 
 /* Store Bundle Details: should never show, but if Riot adds a new kind of item to a bundle, this would show */
 "Unknown item of type %@" = "Neznámá položka typu %@";
