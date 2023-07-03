@@ -65,10 +65,6 @@
 /* Time Formatting: minutes, seconds, & milliseconds (used in round details view) */
 "%lld:%@.%@" = "%lld:%@.%@";
 
-/* Contract Progress Bar
-Missions Box */
-"%lld / %lld XP" = "%lld / %lld XP";
-
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
 "(%lld – %lld)" = "(%lld – %lld)";
 
@@ -118,15 +114,6 @@ Competitive matches after your placements can be identified without their detail
 /* Settings: section */
 "Accounts" = "Akun";
 
-/* Contract Picker: button */
-"Activate" = "Aktifkan";
-
-/* Contract Picker */
-"Active" = "Aktif";
-
-/* Missions Box: header */
-"Active Contract" = "Kontrak Aktif";
-
 /* Match List: accessibility label */
 "Add Bookmark" = "Tambahkan Penanda";
 
@@ -144,12 +131,6 @@ Competitive matches after your placements can be identified without their detail
 
 /* No comment provided by engineer. */
 "Agent Select" = "Pilih Agen";
-
-/* Contract Picker */
-"Agent Unlockable" = "Agen Tidak Dapat Dikunci";
-
-/* Contract Picker */
-"Agent Unlocked" = "Agen Tidak Terkunci";
 
 /* Statistics filter: button */
 "Agents" = "Agen";
@@ -229,8 +210,8 @@ Competitive matches after your placements can be identified without their detail
 /* Request Log: shown for bodies that are not decodable to text */
 "Binary Data" = "Data Binary";
 
-/* Weapon Reference: stats
-Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Body" = "Badan";
 
 /* Bookmark/Player List: section */
@@ -276,9 +257,6 @@ Playtime Stats: section */
 /* Weapon Reference */
 "Category" = "Kategori";
 
-/* App Icon Description: pride */
-"Celebrate LGBTQ Pride month with a colorful look!" = "Rayakan bulan LGBTQ dengan tampilan penuh warna!";
-
 /* No comment provided by engineer. */
 "Change Buddy" = "Ubah Buddy";
 
@@ -315,9 +293,6 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Choose Title" = "Pilih Title";
 
-/* Contract Picker: title */
-"Choose a Contract" = "Pilih Kontrak Agen";
-
 /* Buddy Picker: alert shown when both instances of a buddy are in use */
 "Choose a weapon to take %@ from." = "Pilih senjata yang akan diambil dari %@.";
 
@@ -327,14 +302,8 @@ Playtime Stats: section */
 /* Skin Details: section */
 "Color Variants" = "Varian Warna";
 
-/* Contract Picker */
-"Completed" = "Selesai";
-
 /* Storage Management: title for alert to confirm deleting some matches */
 "Confirm Delete" = "Konfirmasi Hapus";
-
-/* Missions Box */
-"Contract complete!" = "Kontrak agen telah diselesaikan!";
 
 /* Request Log: button to copy the request's body/contents (accessibility label) */
 "Copy Body" = "Copy Body";
@@ -395,9 +364,6 @@ Playtime Stats: section */
 
 /* Missions Widget */
 "Daily" = "Harian";
-
-/* Missions Box: header */
-"Daily Missions" = "Misi Harian";
 
 /* Store */
 "Daily Offers" = "Penawaran Harian";
@@ -527,9 +493,6 @@ LAPORKAN BUG ANDA DISINI
 /* No comment provided by engineer. */
 "Force Refresh Widgets" = "Memaksa Refresh Widget";
 
-/* Contract Picker */
-"Free Agent" = "Agen Gratis";
-
 /* Storage Management: button to free up a certain amount of space */
 "Free up these %@" = "Membersihkan penyimpanan lokal %@";
 
@@ -554,8 +517,8 @@ LAPORKAN BUG ANDA DISINI
 /* Stats: date grouping size picker */
 "Group by" = "Dikelompokkan berdasarkan";
 
-/* Weapon Reference: stats
-Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Head" = "Kepala";
 
 /* No comment provided by engineer. */
@@ -621,15 +584,12 @@ Jika Anda menemukan bug atau memiliki feedback, saya selalu senang mendengarnya 
 /* Asset Management: this row shows the language of the current assets */
 "Language" = "Bahasa";
 
-/* Weapon Reference: stats
-Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Legs" = "Kaki";
 
 /* Bookmark/Player List: player level */
 "Level %lld" = "Level %lld";
-
-/* Contract Progress Bar */
-"Level %lld / %lld" = "Level %lld / %lld";
 
 /* No comment provided by engineer. */
 "Lifetime Peak" = "Rank Tertinggi";
@@ -746,9 +706,6 @@ Jika Anda tidak tahu nama pengguna Anda atau belum memilikinya, Anda dapat mempe
 /* Asset Management */
 "Missing assets!" = "Beberapa aset hilang!";
 
-/* Missions Box */
-"Missing progress for contract!" = "Tidak ada progress untuk kontrak!";
-
 /* No comment provided by engineer. */
 "Missing season data!" = "Data musim tidak ada!";
 
@@ -787,9 +744,6 @@ Jika Anda tidak tahu nama pengguna Anda atau belum memilikinya, Anda dapat mempe
 
 /* Gun Customizer: shown when a weapon has no buddy active */
 "No buddy selected!" = "Tidak ada Buddy yang dipilih!";
-
-/* Missions Box */
-"No contract active!" = "Tidak ada kontrak Agen yang aktif!";
 
 /* Win Rate Stats: by map */
 "No data" = "Tidak ada data";
@@ -1034,8 +988,8 @@ Request Log: title */
 /* App Icon Description: pro blue */
 "Show off your pro status with an exclusive icon!" = "Tunjukan status pro Anda dengan ikon eksklusif!";
 
-/* Login Form: button
-Account Settings: button */
+/* Account Settings: button
+Login Form: button */
 "Sign In" = "Masuk";
 
 /* Login Form */
@@ -1110,9 +1064,6 @@ Account Settings: button */
 /* Pro Store */
 "Support Further Development!" = "Dukung Pengembangan Lebih Lanjut!";
 
-/* Missions Box: button */
-"Switch Contract" = "Beralih Kontrak";
-
 /* Login Form: is this safe? */
 "TL;DR: you'll have to take my word for it, but Riot doesn't seem to mind." = "Inti: Anda dapat mempercayai kata-kata saya, sepertinya Riot tampaknya tidak keberatan.";
 
@@ -1149,8 +1100,8 @@ Account Settings: button */
 /* Stats: match loading */
 "To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "Untuk mengumpulkan statistik, kita perlu memuat pertandingan untuk diproses. Perhatikan jika jumlah yang besar dapat memakan waktu lama terutama jika kita mengunduh untuk pertama kalinya!";
 
-/* Hit Distribution Stats: region
-Win Rate Stats: side name */
+/* Win Rate Stats: side name
+Hit Distribution Stats: region */
 "Total" = "Total";
 
 /* No comment provided by engineer. */
@@ -1167,9 +1118,6 @@ Win Rate Stats: side name */
 
 /* Request Log */
 "URL" = "URL";
-
-/* Missions Box: header, shown when a mission is not daily or weekly (should not happen unless Riot changes something) */
-"Uncategorized Missions" = "Misi yang tidak memiliki kategori";
 
 /* Shown when a match does not match the filter and its details have not been fetched. */
 "Unfetched" = "Data belum diambil";
@@ -1241,9 +1189,6 @@ Round Details: killed by unknown/unspecified weapon */
 
 /* No comment provided by engineer. */
 "Unknown bundle!" = "Bundle tidak diketahui!";
-
-/* Missions Box */
-"Unknown contract!" = "Kontrak tidak diketahui!";
 
 /* Store Bundle Details: should never show, but if Riot adds a new kind of item to a bundle, this would show */
 "Unknown item of type %@" = "Jenis %@ Tidak diketahui";
