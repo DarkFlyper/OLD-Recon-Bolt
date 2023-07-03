@@ -65,10 +65,6 @@
 /* Time Formatting: minutes, seconds, & milliseconds (used in round details view) */
 "%lld:%@.%@" = "%lld:%@.%@";
 
-/* Contract Progress Bar
-Missions Box */
-"%lld / %lld XP" = "%lld / %lld XP";
-
 /* Win Rate Stats by Loadout Delta: focused value (drag on graph) */
 "(%lld – %lld)" = "(%lld – %lld)";
 
@@ -119,15 +115,6 @@ Meciurile de Competitive de după cele de plasament pot fi totuși identificate 
 /* Settings: section */
 "Accounts" = "Conturi";
 
-/* Contract Picker: button */
-"Activate" = "Activează";
-
-/* Contract Picker */
-"Active" = "Activ";
-
-/* Missions Box: header */
-"Active Contract" = "Contract Activ";
-
 /* Match List: accessibility label */
 "Add Bookmark" = "Adaugă un Bookmark";
 
@@ -145,12 +132,6 @@ Meciurile de Competitive de după cele de plasament pot fi totuși identificate 
 
 /* No comment provided by engineer. */
 "Agent Select" = "Agent Select";
-
-/* Contract Picker */
-"Agent Unlockable" = "Agent Deblocabil";
-
-/* Contract Picker */
-"Agent Unlocked" = "Agent Deblocat";
 
 /* Statistics filter: button */
 "Agents" = "Agenți";
@@ -230,8 +211,8 @@ Meciurile de Competitive de după cele de plasament pot fi totuși identificate 
 /* Request Log: shown for bodies that are not decodable to text */
 "Binary Data" = "Date binare";
 
-/* Weapon Reference: stats
-Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Body" = "Corp";
 
 /* Bookmark/Player List: section */
@@ -277,9 +258,6 @@ Playtime Stats: section */
 /* Weapon Reference */
 "Category" = "Categorii";
 
-/* App Icon Description: pride */
-"Celebrate LGBTQ Pride month with a colorful look!" = "Sărbătoriți luna mândriei LGBTQ cu un look colorat!";
-
 /* No comment provided by engineer. */
 "Change Buddy" = "Schimbă Buddy";
 
@@ -316,9 +294,6 @@ Playtime Stats: section */
 /* No comment provided by engineer. */
 "Choose Title" = "Alegeți titlul";
 
-/* Contract Picker: title */
-"Choose a Contract" = "Alegeți un contract";
-
 /* Buddy Picker: alert shown when both instances of a buddy are in use */
 "Choose a weapon to take %@ from." = "Alege o armă de la care să iei %@.";
 
@@ -328,14 +303,8 @@ Playtime Stats: section */
 /* Skin Details: section */
 "Color Variants" = "Variante de Culoare";
 
-/* Contract Picker */
-"Completed" = "Finalizat";
-
 /* Storage Management: title for alert to confirm deleting some matches */
 "Confirm Delete" = "Confirmă Ștergerea";
-
-/* Missions Box */
-"Contract complete!" = "Contract finalizat!";
 
 /* Request Log: button to copy the request's body/contents (accessibility label) */
 "Copy Body" = "Copiază conținutul";
@@ -396,9 +365,6 @@ Playtime Stats: section */
 
 /* Missions Widget */
 "Daily" = "Zilnic";
-
-/* Missions Box: header */
-"Daily Missions" = "Misiuni zilnice";
 
 /* Store */
 "Daily Offers" = "Oferte zilnice";
@@ -528,9 +494,6 @@ RAPORTUL TĂU DE EROARE AICI
 /* No comment provided by engineer. */
 "Force Refresh Widgets" = "Forțați reîmprospătarea widget-urilor";
 
-/* Contract Picker */
-"Free Agent" = "Agent liber";
-
 /* Storage Management: button to free up a certain amount of space */
 "Free up these %@" = "Eliberați aceste %@";
 
@@ -555,8 +518,8 @@ RAPORTUL TĂU DE EROARE AICI
 /* Stats: date grouping size picker */
 "Group by" = "Grupați după";
 
-/* Weapon Reference: stats
-Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Head" = "Cap";
 
 /* No comment provided by engineer. */
@@ -622,15 +585,12 @@ Dacă ați întâlnit un bug sau aveți ceva feedback, sunt întotdeauna bucuros
 /* Asset Management: this row shows the language of the current assets */
 "Language" = "Limba";
 
-/* Weapon Reference: stats
-Hit Distribution Stats: region */
+/* Hit Distribution Stats: region
+Weapon Reference: stats */
 "Legs" = "Picioare";
 
 /* Bookmark/Player List: player level */
 "Level %lld" = "Nivel %lld";
-
-/* Contract Progress Bar */
-"Level %lld / %lld" = "Nivel %lld/%lld";
 
 /* No comment provided by engineer. */
 "Lifetime Peak" = "Lifetime Peak";
@@ -747,9 +707,6 @@ Dacă nu știi numele tău de utilizator sau nu ai unul, poți rezolva asta la [
 /* Asset Management */
 "Missing assets!" = "Resurse Lipsă!";
 
-/* Missions Box */
-"Missing progress for contract!" = "Lipsesc progresele pentru contract!";
-
 /* No comment provided by engineer. */
 "Missing season data!" = "Datele sezonului lipsesc!";
 
@@ -788,9 +745,6 @@ Dacă nu știi numele tău de utilizator sau nu ai unul, poți rezolva asta la [
 
 /* Gun Customizer: shown when a weapon has no buddy active */
 "No buddy selected!" = "Niciun buddy selectat!";
-
-/* Missions Box */
-"No contract active!" = "Nici un contract activ!";
 
 /* Win Rate Stats: by map */
 "No data" = "Nu există date";
@@ -1035,8 +989,8 @@ Request Log: title */
 /* App Icon Description: pro blue */
 "Show off your pro status with an exclusive icon!" = "Arată-ți statutul de profesionist cu o pictogramă exclusivă!";
 
-/* Login Form: button
-Account Settings: button */
+/* Account Settings: button
+Login Form: button */
 "Sign In" = "Conectați-vă";
 
 /* Login Form */
@@ -1111,9 +1065,6 @@ Account Settings: button */
 /* Pro Store */
 "Support Further Development!" = "Sprijină dezvoltarea!";
 
-/* Missions Box: button */
-"Switch Contract" = "Schimba Contractul";
-
 /* Login Form: is this safe? */
 "TL;DR: you'll have to take my word for it, but Riot doesn't seem to mind." = "TL;DR: va trebui să mă credeți pe cuvânt, dar Riot nu pare să se supere.";
 
@@ -1150,8 +1101,8 @@ Account Settings: button */
 /* Stats: match loading */
 "To gather statistics, we first need to load matches to process. Note that large amounts can take a long time, especially when downloading for the first time!" = "Pentru a aduna statistici, trebuie mai întâi să încărcăm meciurile pentru a le procesa. Rețineți că sumele mari pot dura mult timp, mai ales atunci când se descarcă pentru prima dată!";
 
-/* Hit Distribution Stats: region
-Win Rate Stats: side name */
+/* Win Rate Stats: side name
+Hit Distribution Stats: region */
 "Total" = "Total";
 
 /* No comment provided by engineer. */
@@ -1168,9 +1119,6 @@ Win Rate Stats: side name */
 
 /* Request Log */
 "URL" = "URL";
-
-/* Missions Box: header, shown when a mission is not daily or weekly (should not happen unless Riot changes something) */
-"Uncategorized Missions" = "Misiuni necategorizate";
 
 /* Shown when a match does not match the filter and its details have not been fetched. */
 "Unfetched" = "Neîncercat";
@@ -1242,9 +1190,6 @@ Round Details: killed by unknown/unspecified weapon */
 
 /* No comment provided by engineer. */
 "Unknown bundle!" = "Bundle necunoscut!";
-
-/* Missions Box */
-"Unknown contract!" = "Contract necunoscut!";
 
 /* Store Bundle Details: should never show, but if Riot adds a new kind of item to a bundle, this would show */
 "Unknown item of type %@" = "Element necunoscut de tip %@";
