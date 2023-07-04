@@ -5,6 +5,15 @@
 /* Weapon Reference: stats */
 "%@ bullets/sec" = "%@ 발/초";
 
+/* Win Rate Stats by Loadout Delta: focused value (drag on graph); placeholder is replaced by the percentage of rounds won, e.g. '57.3% won'. */
+"%@ won" = "승률 %@";
+
+/* used throughout the app to format percentages—placeholder is replaced by a number */
+"%@%%" = "%@%%";
+
+/* Weapon Reference: time in seconds (with decimal digits) */
+"%@s" = "%@초";
+
 /* Missions Box: always at least 3 */
 "%lld Future Weeklies" = "%lld 미래 주간 임무";
 
@@ -23,17 +32,26 @@
 /* Match List: shown with a match's RR change when the player got an AFK Penalty (filled into the placeholder, including -) */
 "AFK: %lld" = "AFK: %lld";
 
+/* Settings: section */
+"About" = "정보";
+
 /* No comment provided by engineer. */
-"About Recon Bolt" = "정찰용 화살 정보";
+"About Recon Bolt" = "앱 정보";
 
 /* Store: accessory section */
 "Accessories" = "액세서리";
 
 /* Store: Accessory List: title */
-"Accessory Store" = "액세서리 가게";
+"Accessory Store" = "액세서리 상점";
 
 /* Settings: section */
 "Accounts" = "계정";
+
+/* Match List: accessibility label */
+"Add Bookmark" = "북마크 추가";
+
+/* Account Settings */
+"Add another Account" = "다른 계정 추가";
 
 /* No comment provided by engineer. */
 "Lock In" = "선택 확정";
@@ -51,7 +69,7 @@
 "Purchase – %@" = "구매 - %@";
 
 /* Rank Widget: title */
-"Rank" = "랜크";
+"Rank" = "티어";
 
 /* No comment provided by engineer. */
 "Rank %lld" = "랜크 %lld";
