@@ -5,6 +5,15 @@
 /* Weapon Reference: stats */
 "%@ bullets/sec" = "%@ 발/초";
 
+/* Win Rate Stats by Loadout Delta: focused value (drag on graph); placeholder is replaced by the percentage of rounds won, e.g. '57.3% won'. */
+"%@ won" = "승률 %@";
+
+/* used throughout the app to format percentages—placeholder is replaced by a number */
+"%@%%" = "%@%%";
+
+/* Weapon Reference: time in seconds (with decimal digits) */
+"%@s" = "%@초";
+
 /* Missions Box: always at least 3 */
 "%lld Future Weeklies" = "%lld 미래 주간 임무";
 
@@ -23,17 +32,56 @@
 /* Match List: shown with a match's RR change when the player got an AFK Penalty (filled into the placeholder, including -) */
 "AFK: %lld" = "AFK: %lld";
 
+/* Settings: section */
+"About" = "정보";
+
 /* No comment provided by engineer. */
-"About Recon Bolt" = "정찰용 화살 정보";
+"About Recon Bolt" = "앱 정보";
 
 /* Store: accessory section */
 "Accessories" = "액세서리";
 
 /* Store: Accessory List: title */
-"Accessory Store" = "액세서리 가게";
+"Accessory Store" = "액세서리 상점";
 
 /* Settings: section */
 "Accounts" = "계정";
+
+/* Match List: accessibility label */
+"Add Bookmark" = "북마크 추가";
+
+/* Account Settings */
+"Add another Account" = "다른 계정 추가";
+
+/* Pro Features List */
+"Add multiple accounts and seamlessly switch between them at any time." = "여러 계정을 추가하고 언제든지 계정 간에 원활하게 전환할 수 있습니다.";
+
+/* No comment provided by engineer. */
+"Advanced Settings" = "고급 설정";
+
+/* No comment provided by engineer. */
+"Agent Select" = "요원 선택";
+
+/* Statistics filter: button */
+"Agents" = "요원";
+
+/* Stats: match loading */
+"All %lld" = "전체 %lld";
+
+/* Default Error Alert Title */
+"An Error Occurred!" = "오류가 발생했습니다!";
+
+/* About Screen */
+"An invaluable API hosting all the assets (images, data, etc.) used throughout Valorant. This is where almost every image in the app comes from." = "발로란트 전체에서 사용되는 모든 자산(이미지, 데이터 등) 을 호스팅하는 중요한 API입니다. 앱의 거의 모든 이미지가 여기에서 제공됩니다.";
+
+/* Asset Management */
+"Anything with images will not display correctly." = "이미지를 포함하는 항목은 올바르게 표시되지 않습니다.";
+
+/* Settings: button */
+"App Icon" = "앱 아이콘";
+
+/* Account Settings: title for alert to confirm signing out of all accounts—not always visible; iOS decides when to show this */
+"Are You Sure?" = "계속하시겠습니까?";
 
 /* No comment provided by engineer. */
 "Lock In" = "선택 확정";
@@ -51,7 +99,7 @@
 "Purchase – %@" = "구매 - %@";
 
 /* Rank Widget: title */
-"Rank" = "랜크";
+"Rank" = "티어";
 
 /* No comment provided by engineer. */
 "Rank %lld" = "랜크 %lld";

@@ -268,6 +268,12 @@ Playtime Stats: section */
 /* Weapon Reference */
 "Category" = "分類";
 
+/* App Icon Description: pride */
+"Celebrate LGBTQ Pride month with a colorful look! (Free during June)" = "慶祝LGBTQ驕傲月！ 但用五顏六色的（6月免費）";
+
+/* App Icon Description: pride */
+"Celebrate LGBTQ Pride month, but in dark!" = "慶祝LGBTQ驕傲月，但黑暗！";
+
 /* No comment provided by engineer. */
 "Change Buddy" = "更換吊飾";
 
@@ -376,6 +382,9 @@ Playtime Stats: section */
 /* Missions Widget */
 "Daily" = "每日";
 
+/* No comment provided by engineer. */
+"Daily Checkpoints" = "每日檢查站";
+
 /* Store */
 "Daily Offers" = "每日商店";
 
@@ -384,6 +393,9 @@ Playtime Stats: section */
 
 /* App Theme */
 "Dark Mode" = "黑暗模式";
+
+/* App Icon Name */
+"Dark Rainbow" = "黑暗彩虹";
 
 /* Stats: match loading */
 "Data going back to %@" = "資料返回到 %@";
@@ -1029,6 +1041,9 @@ Login Form: button */
 
 /* App Icon Picker: section */
 "Special Icons" = "特別圖示";
+
+/* App Icon Picker: section footer */
+"Special Icons are available year-round for Pro users, while free users can only select them during a certain time window." = "專業使用者全年都有特殊圖示，而免費使用者只能在特定時間段內選擇特定的。";
 
 /* No comment provided by engineer. */
 "Spectator" = "旁觀者";
