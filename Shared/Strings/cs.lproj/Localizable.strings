@@ -105,6 +105,12 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "About Recon Bolt" = "O Recon Boltu";
 
+/* Store: accessory section */
+"Accessories" = "Příslušenství";
+
+/* Store: Accessory List: title */
+"Accessory Store" = "Obchod s příslušenstvím";
+
 /* Settings: section */
 "Accounts" = "Účty";
 
@@ -192,6 +198,9 @@ Competitive matches after your placements can be identified without their detail
 /* Settings: toggle */
 "Automatically Sign Back In" = "Automatické znovupřihlášení";
 
+/* Bookmark/Player List: toggle */
+"Automatically Update Ranks" = "Automaticky aktualizovat ranky";
+
 /* Hit Distribution Stats: average HS% */
 "Average: %@" = "Průměr: %@";
 
@@ -247,6 +256,12 @@ Playtime Stats: section */
 
 /* Weapon Reference */
 "Category" = "Kategorie";
+
+/* App Icon Description: pride */
+"Celebrate LGBTQ Pride month with a colorful look! (Free during June)" = "Oslavte měsíc LGBTQ s barevným vzhledem! (během června zdarma)";
+
+/* App Icon Description: pride */
+"Celebrate LGBTQ Pride month, but in dark!" = "Oslavte měsíc LGBTQ, ale potmě!";
 
 /* No comment provided by engineer. */
 "Change Buddy" = "Změnit Přívěšek";
@@ -356,6 +371,9 @@ Playtime Stats: section */
 /* Missions Widget */
 "Daily" = "Denní";
 
+/* No comment provided by engineer. */
+"Daily Checkpoints" = "Denní kontrolní body";
+
 /* Store */
 "Daily Offers" = "Denní Nabídky";
 
@@ -364,6 +382,9 @@ Playtime Stats: section */
 
 /* App Theme */
 "Dark Mode" = "Tmavý Režim";
+
+/* App Icon Name */
+"Dark Rainbow" = "Tmavá duha";
 
 /* Stats: match loading */
 "Data going back to %@" = "Data do %@";
@@ -1078,6 +1099,9 @@ Login Form: button */
 
 /* No comment provided by engineer. */
 "These are the last %lld requests sent by the app, along with their responses." = "%lld posledních požadavků odeslané aplikací a odpovědi na ně.";
+
+/* Bookmark/Player List: toggle description */
+"This can cause a lot of requests. If you have many bookmarks or are often hitting the rate limit, you might prefer to turn this off." = "To může způsobit spoustu požadavků. Pokud máte hodně záložek nebo často překračujete limit, můžete tuto funkci raději vypnout.";
 
 /* Statistics error for iOS <16 */
 "This feature requires iOS 16 or newer." = "Tato funkce vyžaduje iOS 16 nebo novější.";
