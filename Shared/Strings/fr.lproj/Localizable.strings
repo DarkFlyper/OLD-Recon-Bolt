@@ -115,6 +115,12 @@ Cependant, les parties compétitives qui ont lieu après votre placement de rang
 /* No comment provided by engineer. */
 "About Recon Bolt" = "À propos de Recon Bolt";
 
+/* Store: accessory section */
+"Accessories" = "Accessoires";
+
+/* Store: Accessory List: title */
+"Accessory Store" = "Boutique d'accessoires";
+
 /* Settings: section */
 "Accounts" = "Comptes";
 
@@ -258,6 +264,12 @@ Playtime Stats: section */
 /* Weapon Reference */
 "Category" = "Catégorie";
 
+/* App Icon Description: pride */
+"Celebrate LGBTQ Pride month with a colorful look! (Free during June)" = "Célébre le mois de la fierté LGBTQ avec un look coloré ! (Gratuit pendant le mois de juin)";
+
+/* App Icon Description: pride */
+"Celebrate LGBTQ Pride month, but in dark!" = "Célébre le mois de la fierté LGBTQ, mais en sombre !";
+
 /* No comment provided by engineer. */
 "Change Buddy" = "Changer le porte-bonheur";
 
@@ -374,6 +386,9 @@ Playtime Stats: section */
 
 /* App Theme */
 "Dark Mode" = "Mode Sombre";
+
+/* App Icon Name */
+"Dark Rainbow" = "Arc-en-ciel sombre";
 
 /* Stats: match loading */
 "Data going back to %@" = "Les données remontent au %@";
@@ -855,6 +870,9 @@ Playtime Stats: section */
 /* Statistics filter: button */
 "Queues" = "Files d'attente";
 
+/* App Icon Name */
+"Rainbow" = "Arc-en-ciel";
+
 /* Weapon Reference: stats */
 "Range" = "Distance";
 
@@ -1013,6 +1031,12 @@ Login Form: button */
 /* Hit Distribution Stats: smoothing slider */
 "Smoothing" = "Lissage";
 
+/* App Icon Picker: section */
+"Special Icons" = "Icônes spéciales";
+
+/* App Icon Picker: section footer */
+"Special Icons are available year-round for Pro users, while free users can only select them during a certain time window." = "Les icônes spéciales sont disponibles toute l'année pour les utilisateurs Pro, tandis que les utilisateurs gratuits ne peuvent les sélectionner que pendant une certaine période.";
+
 /* No comment provided by engineer. */
 "Spectator" = "Spectateur";
 
@@ -1078,6 +1102,9 @@ Login Form: button */
 
 /* No comment provided by engineer. */
 "These are the last %lld requests sent by the app, along with their responses." = "Il s'agit des dernières %lld demandes envoyées par l'application, ainsi que leurs réponses.";
+
+/* Bookmark/Player List: toggle description */
+"This can cause a lot of requests. If you have many bookmarks or are often hitting the rate limit, you might prefer to turn this off." = "Cela peut entraîner un grand nombre de demandes. Si tu as beaucoup de signets ou si tu atteins souvent la limite de débit, tu devrais peut-être désactiver cette fonction.";
 
 /* Statistics error for iOS <16 */
 "This feature requires iOS 16 or newer." = "Cette fonctionnalité nécessite iOS 16 ou une version plus récente.";
