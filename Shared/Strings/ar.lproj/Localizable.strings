@@ -267,6 +267,12 @@ Playtime Stats: section */
 /* Weapon Reference */
 "Category" = "الصنف";
 
+/* App Icon Description: pride */
+"Celebrate LGBTQ Pride month with a colorful look! (Free during June)" = "احتفل شهر الفخر مع مظهر جديد ملون! (مجاني في شهر حزيران)";
+
+/* App Icon Description: pride */
+"Celebrate LGBTQ Pride month, but in dark!" = "احتفل شهر الفخر مع مظهر جديد لكن في الظلام!";
+
 /* No comment provided by engineer. */
 "Change Buddy" = "غيّر ملحق السلاح";
 
@@ -375,6 +381,9 @@ Playtime Stats: section */
 /* Missions Widget */
 "Daily" = "يومي";
 
+/* No comment provided by engineer. */
+"Daily Checkpoints" = "نقاط التقدم اليومية";
+
 /* Store */
 "Daily Offers" = "عروض يومية";
 
@@ -383,6 +392,9 @@ Playtime Stats: section */
 
 /* App Theme */
 "Dark Mode" = "الوضع الداكن";
+
+/* App Icon Name */
+"Dark Rainbow" = "قوس قزح داكن";
 
 /* Stats: match loading */
 "Data going back to %@" = "المعلومات تعود الى %@";
@@ -865,6 +877,9 @@ Playtime Stats: section */
 /* Statistics filter: button */
 "Queues" = "الطوابير";
 
+/* App Icon Name */
+"Rainbow" = "قوس قزح";
+
 /* Weapon Reference: stats */
 "Range" = "النطاق";
 
@@ -1002,6 +1017,9 @@ Login Form: button */
 /* Login Form */
 "Sign In with your Riot account" = "سجّل الدخول بحساب Riot";
 
+/* Account Settings: button in alert to confirm signing out of all accounts */
+"Sign Out" = "تسجيل الخروج";
+
 /* Account Settings: button */
 "Sign Out of All Accounts" = "سجل الخروج من جميع الحسابات";
 
@@ -1019,6 +1037,12 @@ Login Form: button */
 
 /* Hit Distribution Stats: smoothing slider */
 "Smoothing" = "تنعيم";
+
+/* App Icon Picker: section */
+"Special Icons" = "ايقونات مميزة";
+
+/* App Icon Picker: section footer */
+"Special Icons are available year-round for Pro users, while free users can only select them during a certain time window." = "تتوفر الايقونات المميزة على مدار العام لمستخدمي Pro ، بينما يمكن للمستخدمين المجانيين استعمالها فقط خلال فترة زمنية معينة.";
 
 /* No comment provided by engineer. */
 "Spectator" = "مُشاهد";
@@ -1086,6 +1110,9 @@ Login Form: button */
 /* No comment provided by engineer. */
 "These are the last %lld requests sent by the app, along with their responses." = "هذه هي آخر %lld من الطلبات التي أرسلها التطبيق ، بالإضافة إلى استجاباتهم.";
 
+/* Bookmark/Player List: toggle description */
+"This can cause a lot of requests. If you have many bookmarks or are often hitting the rate limit, you might prefer to turn this off." = "هذا يمكن أن يسبب الكثير من الطلبات. إذا كان لديك العديد من الإشارات المرجعية أو غالبًا ما تصل إلى حد السعر ، فقد تفضل إيقاف تشغيل هذا.";
+
 /* Statistics error for iOS <16 */
 "This feature requires iOS 16 or newer." = "تتطلب هذه الميزة iOS 16 أو أحدث.";
 
@@ -1116,6 +1143,17 @@ Hit Distribution Stats: region */
 
 /* Shown when a match does not match the filter and its details have not been fetched. */
 "Unfetched" = "لم يتم تحضيره";
+
+/* Pro Store: warning text */
+"Unfortunately, Riot is now using their intellectual property rights to take down this app. I'm trying to discuss with them to find a way forward, but I currently cannot guarantee that the app will stay available. I believe it will remain installed if you currently have it, but I'm not sure if I'll still be able to verify Pro purchases.
+
+If you or someone you know works at Riot, get in touch with me—there's a few ways linked in the About Recon Bolt section below.
+
+I would still be grateful for your support if you do purchase it! But it's at your own risk because I cannot guarantee that you'll enjoy the promised features going forward :(" = "للأسف ، تستخدم شركة Riot الآن حقوق الملكية الفكرية الخاصة بها لإزالة هذا التطبيق. أحاول مناقشته معهم لإيجاد طريقة للمضي قدمًا ، لكن لا يمكنني حاليًا ضمان بقاء التطبيق متاحًا. أعتقد أنه سيظل مثبتًا إذا كان لديك حاليًا ، لكنني لست متأكدًا مما إذا كنت سأظل قادرًا على التحقق من مشتريات Pro.
+
+إذا كنت تعمل أنت أو أي شخص تعرفه في Riot ، فتواصل معي - هناك عدة طرق مرتبطة في قسم حول Recon Bolt أدناه.
+
+سأظل ممتنًا لدعمك إذا قمت بشرائه! لكن هذا على مسؤوليتك الخاصة لأنني لا أستطيع أن أضمن أنك ستستمتع بالميزات الموعودة في المستقبل :(";
 
 /* Hit Distribution Stats: footnote */
 "Unfortunately, Valorant doesn't store information about which weapon was used for each hit. All we get is the weapon you started the round with and what weapon you used for each kill. Recon Bolt guesses the weapon involved in each damage based on this information, but it cannot be perfect (and neither can any other tracker)." = "لسوء الحظ ، لا يقوم Valorant بتخزين المعلومات حول السلاح الذي تم استخدامه لكل ضربة. كل ما نحصل عليه هو السلاح الذي بدأت به الجولة والسلاح الذي استخدمته في كل عملية قتل. يخمن Recon Bolt السلاح المتضمن في كل ضرر بناءً على هذه المعلومات ، لكنه لا يمكن أن يكون مثاليًا (ولا يمكن لأي tracker آخر).";
