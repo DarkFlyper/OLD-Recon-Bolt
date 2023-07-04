@@ -266,6 +266,12 @@ Playtime Stats: section */
 /* Weapon Reference */
 "Category" = "Loại";
 
+/* App Icon Description: pride */
+"Celebrate LGBTQ Pride month with a colorful look! (Free during June)" = "Chào mừng tháng Tự hào LGBTQ với diện mạo đầy màu sắc! (Miễn phí trong tháng 6)";
+
+/* App Icon Description: pride */
+"Celebrate LGBTQ Pride month, but in dark!" = "Kỷ niệm tháng Tự hào LGBTQ, nhưng trong bóng tối!";
+
 /* No comment provided by engineer. */
 "Change Buddy" = "Đổi phụ kiện";
 
@@ -374,6 +380,9 @@ Playtime Stats: section */
 /* Missions Widget */
 "Daily" = "Hàng ngày";
 
+/* No comment provided by engineer. */
+"Daily Checkpoints" = "Điểm kiểm tra hàng ngày";
+
 /* Store */
 "Daily Offers" = "Ưu đãi hàng ngày";
 
@@ -382,6 +391,9 @@ Playtime Stats: section */
 
 /* App Theme */
 "Dark Mode" = "Chế độ tối";
+
+/* App Icon Name */
+"Dark Rainbow" = "Cầu vồng tối";
 
 /* Stats: match loading */
 "Data going back to %@" = "Dữ liệu trở lại đến %@";
