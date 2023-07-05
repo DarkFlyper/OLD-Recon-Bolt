@@ -106,6 +106,12 @@ Az elhelyezés utáni versenyszerű mérkőzések azonban az adataik nélkül is
 /* No comment provided by engineer. */
 "About Recon Bolt" = "A Recon Boltról";
 
+/* Store: accessory section */
+"Accessories" = "Kiegészítők";
+
+/* Store: Accessory List: title */
+"Accessory Store" = "Kiegészítő bolt";
+
 /* Settings: section */
 "Accounts" = "Fiókok";
 
@@ -193,6 +199,9 @@ Az elhelyezés utáni versenyszerű mérkőzések azonban az adataik nélkül is
 /* Settings: toggle */
 "Automatically Sign Back In" = "Automatikus visszajelentkezés";
 
+/* Bookmark/Player List: toggle */
+"Automatically Update Ranks" = "Rangok automatikus frissítése";
+
 /* Hit Distribution Stats: average HS% */
 "Average: %@" = "Átlagosan: %@";
 
@@ -248,6 +257,12 @@ Playtime Stats: section */
 
 /* Weapon Reference */
 "Category" = "Kategória";
+
+/* App Icon Description: pride */
+"Celebrate LGBTQ Pride month with a colorful look! (Free during June)" = "Ünnepeld az LMBTQ Pride hónapot egy színes megjelenéssel! (Júniusban ingyenes)";
+
+/* App Icon Description: pride */
+"Celebrate LGBTQ Pride month, but in dark!" = "Ünnepeld az LMBTQ Pride hónapot, de sötétben!";
 
 /* No comment provided by engineer. */
 "Change Buddy" = "Buddy váltás";
@@ -357,6 +372,9 @@ Playtime Stats: section */
 /* Missions Widget */
 "Daily" = "Napi";
 
+/* No comment provided by engineer. */
+"Daily Checkpoints" = "Napi ellenőrző pontok";
+
 /* Store */
 "Daily Offers" = "Nepi ajánlatok";
 
@@ -365,6 +383,9 @@ Playtime Stats: section */
 
 /* App Theme */
 "Dark Mode" = "Sötét üzemmód";
+
+/* App Icon Name */
+"Dark Rainbow" = "Sötét szivárvány";
 
 /* Stats: match loading */
 "Data going back to %@" = "Az adatok visszamennek ide: %@";
@@ -847,6 +868,9 @@ Playtime Stats: section */
 /* Statistics filter: button */
 "Queues" = "Queues";
 
+/* App Icon Name */
+"Rainbow" = "Szivárvány";
+
 /* Weapon Reference: stats */
 "Range" = "Tartomány";
 
@@ -1005,6 +1029,12 @@ Login Form: button */
 /* Hit Distribution Stats: smoothing slider */
 "Smoothing" = "Simítás";
 
+/* App Icon Picker: section */
+"Special Icons" = "Exklúzív ikonok";
+
+/* App Icon Picker: section footer */
+"Special Icons are available year-round for Pro users, while free users can only select them during a certain time window." = "Az Exklúzív ikonok egész évben elérhetőek a Pro felhasználók számára, míg az ingyenes felhasználók csak egy bizonyos időablakban választhatják ki őket.";
+
 /* No comment provided by engineer. */
 "Spectator" = "Néző";
 
@@ -1070,6 +1100,9 @@ Login Form: button */
 
 /* No comment provided by engineer. */
 "These are the last %lld requests sent by the app, along with their responses." = "Ezek az alkalmazás által küldött utolsó %lld kérések és a válaszok.";
+
+/* Bookmark/Player List: toggle description */
+"This can cause a lot of requests. If you have many bookmarks or are often hitting the rate limit, you might prefer to turn this off." = "Ez rengeteg kérést okozhat. Ha sok könyvjelzője van, vagy gyakran eléri a sebességhatárt, akkor ezt inkább kapcsolja ki.";
 
 /* Statistics error for iOS <16 */
 "This feature requires iOS 16 or newer." = "Ez a funkció iOS 16 vagy újabb iOS-t igényel.";

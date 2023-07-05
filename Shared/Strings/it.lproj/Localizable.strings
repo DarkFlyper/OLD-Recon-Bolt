@@ -258,6 +258,12 @@ Playtime Stats: section */
 /* Weapon Reference */
 "Category" = "Categoria";
 
+/* App Icon Description: pride */
+"Celebrate LGBTQ Pride month with a colorful look! (Free during June)" = "Festeggia il mese del Pride LGBTQ con un look colorato! (Free during June)";
+
+/* App Icon Description: pride */
+"Celebrate LGBTQ Pride month, but in dark!" = "Festeggia il mese del Pride LGBTQ, ora anche in tema scuro!";
+
 /* No comment provided by engineer. */
 "Change Buddy" = "Cambia Accessorio";
 
@@ -366,6 +372,9 @@ Playtime Stats: section */
 /* Missions Widget */
 "Daily" = "Giornaliero";
 
+/* No comment provided by engineer. */
+"Daily Checkpoints" = "Traguardi Giornalieri";
+
 /* Store */
 "Daily Offers" = "Offerte Giornaliere";
 
@@ -374,6 +383,9 @@ Playtime Stats: section */
 
 /* App Theme */
 "Dark Mode" = "Tema Scuro";
+
+/* App Icon Name */
+"Dark Rainbow" = "Arcobaleno Scuro";
 
 /* Stats: match loading */
 "Data going back to %@" = "Dati risalenti a %@";
