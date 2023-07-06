@@ -14,7 +14,7 @@ struct ContractDetailsView: View {
 	
 	var dailyProgress: some View {
 		Box(
-			title: Text("Daily Checkpoints"),
+			title: Text("Daily Checkpoints", comment: "Missions Box: header"),
 			countdownTarget: contracts.dailyRefresh
 		) {
 			DailyTicketView(milestones: contracts.daily.milestones)
