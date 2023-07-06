@@ -15,19 +15,23 @@ struct AppIconPicker: View {
 			
 			Section {
 				cell(for: .proBlue)
-				cell(for: .prideDark)
+				if isProud {
+					cell(for: .prideDark)
+				}
 			} header: {
 				Text("Pro Icons", comment: "App Icon Picker: section")
 			} footer: {
 				Text("The pro version lets you change the app icon! More icons might be coming in future updates.", comment: "App Icon Picker: section footer")
 			}
 			
-			Section {
-				cell(for: .pride)
-			} header: {
-				Text("Special Icons", comment: "App Icon Picker: section")
-			} footer: {
-				Text("Special Icons are available year-round for Pro users, while free users can only select them during a certain time window.", comment: "App Icon Picker: section footer")
+			if isProud {
+				Section {
+					cell(for: .pride)
+				} header: {
+					Text("Special Icons", comment: "App Icon Picker: section")
+				} footer: {
+					Text("Special Icons are available year-round for Pro users, while free users can only select them during a certain time window.", comment: "App Icon Picker: section footer")
+				}
 			}
 		}
 		.navigationTitle("Choose App Icon")
@@ -69,6 +73,8 @@ struct AppIconPicker: View {
 		.disabled(!isAllowed)
 	}
 }
+
+private let isProud = Locale.current.identifier.starts(with: "ru-")
 
 extension AppIcon {
 	struct Thumbnail: View {
