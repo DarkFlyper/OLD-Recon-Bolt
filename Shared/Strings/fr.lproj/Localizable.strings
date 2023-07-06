@@ -208,6 +208,9 @@ Cependant, les parties compétitives qui ont lieu après votre placement de rang
 /* Settings: toggle */
 "Automatically Sign Back In" = "Se reconnecter automatiquement";
 
+/* Bookmark/Player List: toggle */
+"Automatically Update Ranks" = "Actualiser automatiquement les rangs";
+
 /* Hit Distribution Stats: average HS% */
 "Average: %@" = "Moyenne : %@";
 
@@ -377,6 +380,9 @@ Playtime Stats: section */
 
 /* Missions Widget */
 "Daily" = "Quotidien";
+
+/* Missions Box: header */
+"Daily Checkpoints" = "Checkpoints journaliers";
 
 /* Store */
 "Daily Offers" = "Offre quotidienne";
