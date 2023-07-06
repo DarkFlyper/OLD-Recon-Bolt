@@ -115,6 +115,12 @@ Competitive matches after your placements can be identified without their detail
 /* No comment provided by engineer. */
 "About Recon Bolt" = "О Recon Bolt";
 
+/* Store: accessory section */
+"Accessories" = "Аксессуары";
+
+/* Store: Accessory List: title */
+"Accessory Store" = "Магазин аксессуаров";
+
 /* Settings: section */
 "Accounts" = "Аккаунты";
 
@@ -202,6 +208,9 @@ Competitive matches after your placements can be identified without their detail
 /* Settings: toggle */
 "Automatically Sign Back In" = "Автоматически входить обратно";
 
+/* Bookmark/Player List: toggle */
+"Automatically Update Ranks" = "Автоматически Обновлять Ранги";
+
 /* Hit Distribution Stats: average HS% */
 "Average: %@" = "Среднее: %@";
 
@@ -257,6 +266,12 @@ Playtime Stats: section */
 
 /* Weapon Reference */
 "Category" = "Категория";
+
+/* App Icon Description: pride */
+"Celebrate LGBTQ Pride month with a colorful look! (Free during June)" = "-";
+
+/* App Icon Description: pride */
+"Celebrate LGBTQ Pride month, but in dark!" = "-";
 
 /* No comment provided by engineer. */
 "Change Buddy" = "Изменить брелок";
@@ -366,6 +381,9 @@ Playtime Stats: section */
 /* Missions Widget */
 "Daily" = "Ежедневные";
 
+/* Missions Box: header */
+"Daily Checkpoints" = "Ежедневные задания";
+
 /* Store */
 "Daily Offers" = "Ежедневные предложения";
 
@@ -374,6 +392,9 @@ Playtime Stats: section */
 
 /* App Theme */
 "Dark Mode" = "Темный режим";
+
+/* App Icon Name */
+"Dark Rainbow" = "-";
 
 /* Stats: match loading */
 "Data going back to %@" = "Данные до %@";
@@ -856,6 +877,9 @@ Playtime Stats: section */
 /* Statistics filter: button */
 "Queues" = "Режимы";
 
+/* App Icon Name */
+"Rainbow" = "-";
+
 /* Weapon Reference: stats */
 "Range" = "Дистанция";
 
@@ -1014,6 +1038,12 @@ Login Form: button */
 /* Hit Distribution Stats: smoothing slider */
 "Smoothing" = "Сглаживание";
 
+/* App Icon Picker: section */
+"Special Icons" = "Специальные иконки";
+
+/* App Icon Picker: section footer */
+"Special Icons are available year-round for Pro users, while free users can only select them during a certain time window." = "Специальные иконки доступны круглый год для пользователей Pro, в то время как бесплатные пользователи могут выбрать их только в течение определенного временного промежутка.";
+
 /* No comment provided by engineer. */
 "Spectator" = "Зритель";
 
@@ -1079,6 +1109,9 @@ Login Form: button */
 
 /* No comment provided by engineer. */
 "These are the last %lld requests sent by the app, along with their responses." = "Это последние запросы: %lld, отправленные приложением, а также ответы на них.";
+
+/* Bookmark/Player List: toggle description */
+"This can cause a lot of requests. If you have many bookmarks or are often hitting the rate limit, you might prefer to turn this off." = "Автоматическое обновление рангов использует много запросов к API. Если имеется множество закладок, это может привести к ошибкам, в таком случае лучше отключить данную функцию, чтобы не иметь проблем с взаимодействием с API Valorant.";
 
 /* Statistics error for iOS <16 */
 "This feature requires iOS 16 or newer." = "Функция требует iOS 16 и выше.";
