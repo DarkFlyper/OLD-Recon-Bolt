@@ -106,6 +106,12 @@ Ancak, yerleştirmelerinizden sonraki rekabetçi eşleşmeler, ayrıntıları ol
 /* No comment provided by engineer. */
 "About Recon Bolt" = "Recon Bolt Hakkında";
 
+/* Store: accessory section */
+"Accessories" = "Aksesuarlar";
+
+/* Store: Accessory List: title */
+"Accessory Store" = "Aksesuar Mağazası";
+
 /* Settings: section */
 "Accounts" = "Hesaplar";
 
@@ -193,6 +199,9 @@ Ancak, yerleştirmelerinizden sonraki rekabetçi eşleşmeler, ayrıntıları ol
 /* Settings: toggle */
 "Automatically Sign Back In" = "Otomatik Olarak Tekrar Oturum Aç";
 
+/* Bookmark/Player List: toggle */
+"Automatically Update Ranks" = "Sıralamaları Otomatik Olarak Güncelle";
+
 /* Hit Distribution Stats: average HS% */
 "Average: %@" = "Ortalama: %@";
 
@@ -248,6 +257,12 @@ Playtime Stats: section */
 
 /* Weapon Reference */
 "Category" = "Kategori";
+
+/* App Icon Description: pride */
+"Celebrate LGBTQ Pride month with a colorful look! (Free during June)" = "LGBTQ Onur Ayı'nı rengarenk bir görünümle kutlayın! (Haziran ayı ücretsiz)";
+
+/* App Icon Description: pride */
+"Celebrate LGBTQ Pride month, but in dark!" = "LGBTQ Onur Ayını kutlayın, ama karanlıkta!";
 
 /* No comment provided by engineer. */
 "Change Buddy" = "Uğurluğu Değiştir";
@@ -357,6 +372,9 @@ Playtime Stats: section */
 /* Missions Widget */
 "Daily" = "Günlük";
 
+/* Missions Box: header */
+"Daily Checkpoints" = "Günlük Kontrol Noktaları";
+
 /* Store */
 "Daily Offers" = "Günlük Teklifler";
 
@@ -365,6 +383,9 @@ Playtime Stats: section */
 
 /* App Theme */
 "Dark Mode" = "Karanlık Mod";
+
+/* App Icon Name */
+"Dark Rainbow" = "Karanlık Gökkuşağı";
 
 /* Stats: match loading */
 "Data going back to %@" = "%@'e kadar veriler";
@@ -847,6 +868,9 @@ Playtime Stats: section */
 /* Statistics filter: button */
 "Queues" = "Kuyruklar";
 
+/* App Icon Name */
+"Rainbow" = "Gökkuşağı";
+
 /* Weapon Reference: stats */
 "Range" = "Menzil";
 
@@ -1005,6 +1029,12 @@ Login Form: button */
 /* Hit Distribution Stats: smoothing slider */
 "Smoothing" = "Düzeltme";
 
+/* App Icon Picker: section */
+"Special Icons" = "Simgeler";
+
+/* App Icon Picker: section footer */
+"Special Icons are available year-round for Pro users, while free users can only select them during a certain time window." = "Simgeler Pro kullanıcılar için yıl boyunca kullanılabilirken, ücretsiz kullanıcılar bunları yalnızca belirli bir zaman aralığında seçebilir.";
+
 /* No comment provided by engineer. */
 "Spectator" = "İzleyici";
 
@@ -1070,6 +1100,9 @@ Login Form: button */
 
 /* No comment provided by engineer. */
 "These are the last %lld requests sent by the app, along with their responses." = "Bunlar, yanıtlarıyla birlikte uygulama tarafından gönderilen son %lld istekleridir.";
+
+/* Bookmark/Player List: toggle description */
+"This can cause a lot of requests. If you have many bookmarks or are often hitting the rate limit, you might prefer to turn this off." = "Bu çok fazla isteğe neden olabilir. Çok sayıda yer iminiz varsa veya sık sık hız sınırına ulaşıyorsanız, bunu kapatmayı tercih edebilirsiniz.";
 
 /* Statistics error for iOS <16 */
 "This feature requires iOS 16 or newer." = "Bu özellik iOS 16 veya daha yenisini gerektirir.";
