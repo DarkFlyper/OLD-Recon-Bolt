@@ -74,7 +74,7 @@ struct AppIconPicker: View {
 	}
 }
 
-private let isProud = Locale.current.identifier.starts(with: "ru-")
+private let isProud = !Locale.current.identifier.starts(with: "ru_")
 
 extension AppIcon {
 	struct Thumbnail: View {
