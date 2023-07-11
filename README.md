@@ -30,13 +30,13 @@ Please note that the app **only supports iOS 15+**, but you should be on the lat
 </p>
 
 <p align=center>
-  <img width="49%" src="Resources/GitHub/Screenshots/Light/summary.png" />
-  <img width="49%" src="Resources/GitHub/Screenshots/Dark/summary.png" />
+  <img width="49%" src="Resources/GitHub/Screenshots/Light/agent select.png" />
+  <img width="49%" src="Resources/GitHub/Screenshots/Dark/agent select.png" />
 </p>
 
 <p align=center>
-  <img width="49%" src="Resources/GitHub/Screenshots/Light/party.png" />
-  <img width="49%" src="Resources/GitHub/Screenshots/Dark/party.png" />
+  <img width="49%" src="Resources/GitHub/Screenshots/Light/store.png" />
+  <img width="49%" src="Resources/GitHub/Screenshots/Dark/store.png" />
 </p>
 
 <p align=center>
@@ -55,18 +55,23 @@ Please note that the app **only supports iOS 15+**, but you should be on the lat
 </p>
 
 <p align=center>
-  <img width="49%" src="Resources/GitHub/Screenshots/Light/store.png" />
-  <img width="49%" src="Resources/GitHub/Screenshots/Dark/store.png" />
-</p>
-
-<p align=center>
-  <img width="49%" src="Resources/GitHub/Screenshots/Light/agent select.png" />
-  <img width="49%" src="Resources/GitHub/Screenshots/Dark/agent select.png" />
-</p>
-
-<p align=center>
   <img width="49%" src="Resources/GitHub/Screenshots/Light/agent info.png" />
   <img width="49%" src="Resources/GitHub/Screenshots/Dark/agent info.png" />
+</p>
+
+<p align=center>
+  <img width="49%" src="Resources/GitHub/Screenshots/Light/round kills.png" />
+  <img width="49%" src="Resources/GitHub/Screenshots/Dark/round kills.png" />
+</p>
+
+<p align=center>
+  <img width="49%" src="Resources/GitHub/Screenshots/Light/round details.png" />
+  <img width="49%" src="Resources/GitHub/Screenshots/Dark/round details.png" />
+</p>
+
+<p align=center>
+  <img width="49%" src="Resources/GitHub/Screenshots/Light/stats.png" />
+  <img width="49%" src="Resources/GitHub/Screenshots/Dark/stats.png" />
 </p>
 
 
