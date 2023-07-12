@@ -20,7 +20,7 @@ private struct PlayerModifier: ViewModifier {
 				.overlay(alignment: .topLeading) { SheetCloseButton() }
 				.edgesIgnoringSafeArea(.all)
 		}
-		.onReceive(NotificationCenter.default.publisher(for: AVPlayerItem.didPlayToEndTimeNotification)) { _ in
+		.onReceive(NotificationCenter.default.publisher(for: .AVPlayerItemDidPlayToEndTime)) { _ in
 			player = nil
 		}
 	}
