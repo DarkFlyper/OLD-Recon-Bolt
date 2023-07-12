@@ -8,26 +8,36 @@ extension View {
 	}
 }
 
+extension CGColorSpace {
+	static let sRGBSpace = CGColorSpace(name: sRGB)!
+}
+
 extension Color {
+	func adjustingSRGBComponents(_ adjust: (inout [CGFloat]) -> Void) -> Self {
+		var components = cgColor!.converted(to: .sRGBSpace, intent: .defaultIntent, options: nil)!.components!
+		adjust(&components)
+		return .init(CGColor(colorSpace: .sRGBSpace, components: &components)!)
+	}
+	
 	func darkened(strength: CGFloat) -> Self {
 		guard strength > 0 else { return self }
-		let colorSpace = CGColorSpace(name: CGColorSpace.sRGB)!
 		
-		let color = cgColor!.converted(to: colorSpace, intent: .defaultIntent, options: nil)!
-		
-		var components = color.components!
-		var remaining = strength
-		for i in [1, 0, 2] { // darken green, then red, then blue—results in pretty hue-shifting
-			if components[i] < remaining {
-				remaining -= components[i]
-				components[i] = 0
-			} else {
-				components[i] -= remaining
-				break
+		return adjustingSRGBComponents { components in
+			var remaining = strength
+			for i in [1, 0, 2] { // darken green, then red, then blue—results in pretty hue-shifting
+				if components[i] < remaining {
+					remaining -= components[i]
+					components[i] = 0
+				} else {
+					components[i] -= remaining
+					break
+				}
 			}
 		}
-		
-		return .init(CGColor(colorSpace: colorSpace, components: &components)!)
+	}
+	
+	func opaque() -> Self {
+		adjustingSRGBComponents { $0[3] = 1 }
 	}
 }
 

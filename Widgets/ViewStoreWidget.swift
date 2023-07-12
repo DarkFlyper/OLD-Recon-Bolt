@@ -119,7 +119,7 @@ struct StoreGrid: View {
 						let isUltraCompact = isCompact && configuration.showRefreshTime != 0
 						Text(skin.name)
 							.font(.caption2)
-							.foregroundColor(skin.tierColor?.opacity(10), adjustedFor: colorScheme)
+							.foregroundColor(skin.tierColor?.opaque(), adjustedFor: colorScheme)
 							.fixedSize(horizontal: false, vertical: true)
 							.frame(height: isCompact ? 10 : nil) // fake smaller height to ensure all cells stay the same size
 							.lineLimit(isShowingIcon || isUltraCompact ? 1 : 2)
@@ -138,7 +138,7 @@ struct StoreGrid: View {
 							.padding(4)
 					}
 				}
-				.background(skin.tierColor?.opacity(1.5))
+				.background(skin.tierColor?.opaque().opacity(0.2))
 				.mask(ContainerRelativeShape())
 				.padding(spacing)
 			}

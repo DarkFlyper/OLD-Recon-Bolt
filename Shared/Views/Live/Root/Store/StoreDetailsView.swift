@@ -249,8 +249,8 @@ struct OfferCell: View {
 				}
 			}
 			.padding(12)
-			.foregroundColor(tier?.color?.opacity(10), adjustedFor: colorScheme)
-			.background(tier?.color?.opacity(1.0))
+			.foregroundColor(tier?.color?.opaque(), adjustedFor: colorScheme)
+			.background(tier?.color?.opaque().opacity(0.2))
 		}
 		.disabled(resolved == nil)
 	}
