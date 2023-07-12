@@ -223,12 +223,20 @@ extension AssetImage {
 		}
 		
 		let imageData = try await client.imageData(at: url)
+		guard !imageData.isEmpty else {
+			print("got empty image data for \(self)")
+			throw FetchError.noDataReceived
+		}
 		try fileManager.createDirectory(
 			at: localURL.deletingLastPathComponent(),
 			withIntermediateDirectories: true
 		)
 		try imageData.write(to: localURL, options: .atomic)
 		return true
+	}
+	
+	private enum FetchError: Error {
+		case noDataReceived
 	}
 }
 
